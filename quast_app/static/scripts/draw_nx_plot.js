@@ -1,13 +1,13 @@
-/**
- * Created with PyCharm.
- * User: vladsaveliev
- * Date: 11.07.12
- * Time: 19:59
- * To change this template use File | Settings | File Templates.
- */
 
 function drawNxPlot(filenames, listsOfLengths, title,
-                    refLength, plotPlaceholder, legendPlaceholder) {
+                    refLength, div, legendPlaceholder) {
+
+    div.html(
+        "<div class='plot'>" +
+            "<p>" + title + "</p>" +
+            "<div style='width: 580px; height: 400px;' id='" + title + "-plot-placeholder'></div>" +
+        "</div>"
+    );
 
     var plotsN = listsOfLengths.length;
     var plotsData = new Array(plotsN);
@@ -56,7 +56,7 @@ function drawNxPlot(filenames, listsOfLengths, title,
         }
     }
 
-    $.plot(plotPlaceholder, plotsData, {
+    $.plot($('#' + title + '-plot-placeholder'), plotsData, {
             shadowSize: 0,
             colors: ["#FF5900", "#008FFF", "#168A16", "#7C00FF", "#FF0080"],
             legend: {
@@ -69,7 +69,7 @@ function drawNxPlot(filenames, listsOfLengths, title,
             },
             yaxis: {
                 min: 0,
-                labelWidth: 80,
+                labelWidth: 120,
                 reserveSpace: true,
                 lineWidth: 0.5,
                 color: '#000',

@@ -5,7 +5,7 @@ from django.shortcuts import render_to_response
 from django.utils.encoding import smart_str
 from django import forms
 
-defalt_dir = '../quast_results_archive_json/latest/'
+defalt_dir = 'quast_results_archive_json/latest/'
 
 report_fn  =            'report.json'
 contigs_fn =            'contigs_lengths.json'

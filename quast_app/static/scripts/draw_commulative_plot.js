@@ -1,12 +1,13 @@
-/**
- * Created with PyCharm.
- * User: vladsaveliev
- * Date: 10.07.12
- * Time: 13:11
- * To change this template use File | Settings | File Templates.
- */
 
-function drawCommulativePlot(filenames, lists_of_lengths, plotPlaceholder, legendPlaceholder) {
+
+function drawCommulativePlot(filenames, lists_of_lengths, div, legendPlaceholder) {
+
+    div.html(
+        "<div class='plot'>" +
+            "<p>Commulative length</p>" +
+            "<div style='width: 580px; height: 400px;' id='commulative-plot-placeholder'></div>" +
+        "</div>"
+    );
 
     var plotsN = lists_of_lengths.length;
     var plotsData = new Array(plotsN);
@@ -42,7 +43,7 @@ function drawCommulativePlot(filenames, lists_of_lengths, plotPlaceholder, legen
         }
     }
 
-    $.plot(plotPlaceholder, plotsData, {
+    $.plot($('#commulative-plot-placeholder'), plotsData, {
             shadowSize: 0,
             colors: ["#FF5900", "#008FFF", "#168A16", "#7C00FF", "#FF0080"],
             legend: {
@@ -55,7 +56,7 @@ function drawCommulativePlot(filenames, lists_of_lengths, plotPlaceholder, legen
             },
             yaxis: {
                 min: 0,
-                labelWidth: 80,
+                labelWidth: 120,
                 reserveSpace: true,
                 lineWidth: 0.5,
                 color: '#000',

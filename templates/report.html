@@ -3,35 +3,54 @@
 {% block extra_head %}
     <script type="text/javascript">
         $(document).ready(function() {
+            var report = null;
+            var contigsLengths = null;
+            var alignedContigsLengths = null;
+            var referenceLength = null;
 
-            var report = JSON.parse($('#report-json').html());
+            try {
+                report = JSON.parse($('#report-json').html());
+            } catch (e) {
+                report = null;
+            }
+            if (report) {
+                document.title += ('of ' + report.date);
+                $('#subheader').append('of ' + report.date);
+                buildTotalReport(report);
+            }
 
-            document.title = 'Report of ' + report.date;
+            try {
+                contigsLengths = JSON.parse($('#contigs-lengths-json').html());
+            } catch (e) {
+                contigsLengths = null;
+            }
+            if (contigsLengths) {
+                drawCommulativePlot(contigsLengths.filenames, contigsLengths.lists_of_lengths, $('#commulative-plot-div'), null);
+                drawNxPlot(contigsLengths.filenames, contigsLengths.lists_of_lengths, 'Nx', null, $('#nx-plot-div'), null);
+            }
 
-            $('#subheader').append('<span class="date">' + report.date + '</span>');
+            try {
+                alignedContigsLengths = JSON.parse($('#aligned-contigs-lengths-json').html());
+            } catch (e) {
+                alignedContigsLengths = null;
+            }
 
-            buildTotalReport(report);
+            if (alignedContigsLengths) {
+                drawNxPlot(alignedContigsLengths.filenames, alignedContigsLengths.lists_of_lengths, 'NAx', null, $('#nax-plot-div'), null);
+            }
 
-            var contigsLengths = JSON.parse($('#contigs-lengths-json').html());
+            try {
+                referenceLength = JSON.parse($('#reference-length-json').html()).reflen;
+            } catch (e) {
+                referenceLength = null;
+            }
 
-            drawCommulativePlot(contigsLengths.filenames, contigsLengths.lists_of_lengths,
-                    $('#commulative-plot-placeholder'), null);
-
-            drawNxPlot(contigsLengths.filenames, contigsLengths.lists_of_lengths, 'Nx', null,
-                    $('#nx-plot-placeholder'), null);
-
-            var alignedContigsLengths = JSON.parse($('#aligned-contigs-lengths-json').html());
-
-            drawNxPlot(alignedContigsLengths.filenames, alignedContigsLengths.lists_of_lengths,
-                    'NAx', null, $('#nax-plot-placeholder'), null);
-
-            var referenceLength = JSON.parse($('#reference-length-json').html()).reflen;
-
-            drawNxPlot(contigsLengths.filenames, contigsLengths.lists_of_lengths, 'NGx',
-                    referenceLength, $('#ngx-plot-placeholder'), null);
-
-            drawNxPlot(alignedContigsLengths.filenames, alignedContigsLengths.lists_of_lengths,
-                    'NGAx', referenceLength, $('#ngax-plot-placeholder'), null);
+            if (contigsLengths && referenceLength) {
+                drawNxPlot(contigsLengths.filenames, contigsLengths.lists_of_lengths, 'NGx',referenceLength, $('#ngx-plot-div'), null);
+            }
+            if (alignedContigsLengths && referenceLength) {
+                drawNxPlot(alignedContigsLengths.filenames, alignedContigsLengths.lists_of_lengths, 'NGAx', referenceLength, $('#ngax-plot-div'), null);
+            }
         });
     </script>
 
@@ -45,12 +64,14 @@
         }
         #report {
             float: left;
+            margin-bottom: 50px;
+            margin-right: 100px;
         }
         #report table {
             margin-left: -2px;
         }
         #report td {
-            padding: 0 2em 0 0;
+            padding: 0 1em 0 0;
             margin:  0;
         }
         #report tr:first-child {
@@ -61,13 +82,13 @@
         }
         .plots {
             float: left;
-            margin-left: 1em;
+            margin-left: -125px;
         }
         .plot {
             margin-bottom: 40px;
         }
         .plot > p {
-            margin-left: 85px;
+            margin-left: 125px;
             margin-top: 2px;
             font-weight: bold;
         }
@@ -86,29 +107,15 @@
     </div>
 
     <div class='plots'>
-        <div class='plot'>
-            <p>Commulative length</p>
-            <div id='commulative-plot-placeholder'></div>
+        <div id='commulative-plot-div'>
         </div>
-
-        <div class='plot'>
-            <p>Nx</p>
-            <div id='nx-plot-placeholder'></div>
+        <div id='nx-plot-div'>
         </div>
-
-        <div class='plot'>
-            <p>NAx</p>
-            <div id='nax-plot-placeholder'></div>
+        <div id='ngx-plot-div'>
         </div>
-
-        <div class='plot'>
-            <p>NGx</p>
-            <div id='ngx-plot-placeholder'></div>
+        <div id='nax-plot-div'>
         </div>
-
-        <div class='plot'>
-            <p>NGAx</p>
-            <div id='ngax-plot-placeholder'></div>
+        <div id='ngax-plot-div'>
         </div>
     </div>
 
