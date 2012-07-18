@@ -70,6 +70,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/files" or "C:/www/django/files".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    '/Users/vladsaveliev/Dropbox/bio/quast-website/static/',
 )
 
 # List of finder classes that know how to find files files in
