@@ -1,5 +1,4 @@
 
-
 function toPrettyString(num) {
     if (num < 10000) {
         return num.toString();

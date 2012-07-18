@@ -2,26 +2,30 @@ import os
 import subprocess
 from django.http import Http404, HttpResponse
 from django.shortcuts import render_to_response
-from django.utils.encoding import smart_str
 from django import forms
 
 defalt_dir = 'quast_results_archive_json/latest/'
 
-report_fn  =            'report.json'
-contigs_fn =            'contigs_lengths.json'
-aligned_contigs_fn =    'aligned_contigs_lengths.json'
-assemblies_lengths_fn = 'assemblies_lengths.json'
-reference_length_fn =   'ref_length.json'
+report_fn  =                    'report.json'
+contigs_lengths_fn =            'contigs_lengths.json'
+aligned_contigs_lengths_fn =    'aligned_contigs_lengths.json'
+assemblies_lengths_fn =         'assemblies_lengths.json'
+reference_length_fn =           'ref_length.json'
+contigs_fn =                    'contigs.json'
+genes_fn =                      'genes.json'
+operons_fn =                    'operons.json'
 
 
 def response_with_report(template, dir):
+    p = os.path.abspath(dir + report_fn)
+
     try:
-        report = open(dir + report_fn).read()
+        report = open(p).read()
     except IOError:
         raise Http404
 
     try:
-        contigs_lengths = open(dir + contigs_fn).read()
+        contigs_lengths = open(dir + contigs_lengths_fn).read()
     except IOError:
         raise Http404
 
@@ -31,12 +35,27 @@ def response_with_report(template, dir):
         raise Http404
 
     try:
-        aligned_contigs_lengths = open(dir + aligned_contigs_fn).read()
+        aligned_contigs_lengths = open(dir + aligned_contigs_lengths_fn).read()
     except IOError:
         pass
 
     try:
         reference_length = open(dir + reference_length_fn).read()
+    except IOError:
+        pass
+
+    try:
+        contigs = open(dir + contigs_fn).read()
+    except IOError:
+        pass
+
+    try:
+        genes = open(dir + genes_fn).read()
+    except IOError:
+        pass
+
+    try:
+        operons = open(dir + operons_fn).read()
     except IOError:
         pass
 
@@ -46,6 +65,9 @@ def response_with_report(template, dir):
         'alignedContigsLengths' : aligned_contigs_lengths,
         'assembliesLengths' : assemblies_lengths,
         'referenceLength' : reference_length,
+        'contigs' : contigs,
+        'genes' : genes,
+        'operons' : operons,
     })
 
 
