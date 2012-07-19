@@ -17,27 +17,20 @@
     </script>
 
     <style type='text/css'>
-        #subheader {
-            margin-top: -13px;
-            margin-bottom: 20px;
-        }
-        #report * {
-            font-size: 1em;
+        .report-and-plots {
+            margin-top: 20px;
         }
         #report {
             float: left;
             margin-bottom: 50px;
             margin-right: 100px;
         }
-        #report table {
-            margin-left: -2px;
-        }
         #report td {
             padding: 0 1em 0 0;
             margin:  0;
         }
-        #report tr:first-child {
-            font-weight: bold;
+        #report * {
+            white-space: nowrap;
         }
         .json-code {
             display: none;
@@ -49,10 +42,11 @@
         .plot {
             margin-bottom: 40px;
         }
-        .plot > p {
-            margin-left: 125px;
-            margin-top: 2px;
+        .plot-header {
+            margin-left: 124px;
             font-weight: bold;
+            height: 1.5em;
+            display: block;
         }
         .plot > div {
             width: 580px;
@@ -62,9 +56,12 @@
 {% endblock %}
 
 {% block content %}
-    <div id='subheader'>
-    </div>
+<div id='header'>
+    <h1>Quast report</h1>
+    <div id='subheader'></div>
+</div>
 
+<div class='report-and-plots'>
     <div id='report'>
     </div>
 
@@ -111,4 +108,5 @@
             {{ operons }}
         </div>
     </div>
+</div>
 {% endblock %}

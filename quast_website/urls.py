@@ -20,7 +20,7 @@ urlpatterns = patterns('',
     url(r'^$', 'quast_app.views.index'),
     url(r'^latestreport/', 'quast_app.views.latestreport'),
     url(r'^assess/', 'quast_app.views.assess'),
-    # url(r'^manual.html$', 'quast_app.views.manual'),
+    url(r'^manual.html$', 'quast_app.views.manual'),
 )
 
 urlpatterns += staticfiles_urlpatterns()

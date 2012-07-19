@@ -1,0 +1,44 @@
+.underline {
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+
+a:link.underline {
+    border-color: #b2ccf0;
+}
+
+a:visited.underline {
+    border-color: #e0b2e0;
+}
+
+a:visited.underline.fresh, a:visited.underline.footer {
+    border-color: #b2ccf0;
+}
+
+a:hover.underline {
+    border-color: #f0b2b2 ! important;
+}
+
+/*Для ссылок на черном фоне*/
+.blackbg a:link.underline
+{
+    border-color: #00337a;
+}
+
+.blackbg a:visited.underline
+{
+    border-color: #4d004d;
+}
+
+.blackbg a:hover.underline
+{
+    border-color: #7b0101 ! important;
+}
+
+div.bottabs p {
+    line-height: 1.4
+}
+
+div.toptabs p {
+    line-height: 1.4
+}

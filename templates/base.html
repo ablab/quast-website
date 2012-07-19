@@ -1,13 +1,23 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-                      "http://www.w3.org/TR/html4/loose.dtd">
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>{% block title %}{% endblock %}</title>
 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Quast assembly assessment tool"/>
+    <meta name="author" content="Algorithmic Biology Lab"/>
+
     <script type="text/javascript" src="/static/scripts/jquery-1.7.2.min.js"></script>
 
-    {% block extra_head %}{% endblock %}
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css"/>
+    <!-- <link rel="stylesheet" href="/static/bootstrap/css/bootstrap-responsive.css"/> -->
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="/static/css/links.css"/>
 
     <style type="text/css">
         body {
@@ -15,46 +25,148 @@
             padding-bottom: 30px;
             font-family: Verdana, Arial, sans-serif;
             font-size: 13px;
+            color: black;
+            line-height: 1.3em;
         }
-        .top {
+        .top-panel {
             background-color: #333;
             color: white;
         }
-        .all {
+        .content {
             margin-left: 100px;
             padding-top: 20px;
-            clear: both;
         }
-
         ul.menu {
             margin: 0 0 0 100px;
-            padding: 1.5em 2em 3em 0;
+            padding: 1em 0 2.7em 0;
             list-style-type: none;
+            min-width: 800px;
+        }
+        ul.menu > li:first-child {
+            margin-left: -0.8em;
         }
         ul.menu a {
             float: left;
-            padding-right: 2em;
+            padding-right: 1em;
+            padding-left: 1em;
             color: white;
             font-size: 1.2em;
+            text-decoration: underline;
         }
         ul.menu a:hover {
-            color: red;
+            color: #DDDDDD;
         }
-        ul.menu li.current a {
+        ul.menu li.active a {
             pointer-events: none;
             cursor: default;
             text-decoration: none;
             color: #AAA;
         }
-
-        .clear_float {
-            clear: both;
+        a {
+            text-decoration: underline;
+        }
+        .tooltip-link {
+            color: black;
+            text-decoration: none;
+            border-bottom: 1px dashed black;
+        }
+        .tooltip-link:hover {
+            color: black;
+            text-decoration: none;
+        }
+        .dotted-link {
+            text-decoration: none;
+            border-bottom: 1px dashed #0088cc;
+        }
+        .dotted-link:hover {
+            text-decoration: none;
+            border-bottom-color: #005580;
+        }
+        .tooltip {
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+        .tooltip.in {
+            opacity: 1;
+        }
+        .tooltip-inner {
+            text-align: left;
         }
     </style>
+    <style type="text/css">
+        /*.all {*/
+            /*margin-left: 100px;*/
+            /*padding-top: 20px;*/
+        /*}*/
+
+        /*a {*/
+            /*text-decoration: underline;*/
+        /*}*/
+
+        /*a.disabled {*/
+            /*pointer-events: none;*/
+            /*cursor: default;*/
+            /*text-decoration: none;*/
+            /*color: #AAA;*/
+        /*}*/
+
+        /*.navbar .brand:hover {*/
+            /*text-decoration: underline;*/
+        /*}*/
+
+        /*.navbar .navbar-link {*/
+            /*color: white;*/
+        /*}*/
+
+        /*.navbar .nav > li > a {*/
+            /*color: white;*/
+            /*text-decoration: underline;*/
+        /*}*/
+
+        /*.navbar .nav > li > a:hover {*/
+            /*color: white;*/
+            /*text-decoration: underline;*/
+            /*background-color: transparent;*/
+        /*}*/
+
+        /*.navbar .nav .active > a,*/
+        /*.navbar .nav .active > a:hover {*/
+            /*color: #999999;*/
+            /*text-decoration: none;*/
+            /*background-color: #222222;*/
+            /*pointer-events: none;*/
+            /*cursor: default;*/
+        /*}*/
+    </style>
+
+    {% block extra_head %}{% endblock %}
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("[rel=tooltip]").tooltip({
+                animation: false,
+            });
+        });
+    </script>
 </head>
 
 <body>
-    <div class='top'>
+{#    <div class="navbar">#}
+{#        <div class="navbar-inner">#}
+{#            <div class="container">#}
+{#                <a class="brand {% block brand-link-class %}{% endblock %}" href="/">Quast</a>#}
+{#                <div>#}
+{#                    <ul class="nav">#}
+{#                        <li class='{% block index-menu-li-class        %}{% endblock %}'><a href='/'>            About Quast            </a></li>#}
+{#                        <li class='{% block latestreport-menu-li-class %}{% endblock %}'><a href='/latestreport'>Latest report          </a></li>#}
+{#                        <li class='{% block assess-menu-li-class       %}{% endblock %}'><a href='/assess'>      Assess assembly quality</a></li>#}
+{#                    </ul>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+
+    <div class='top-panel'>
         <ul class='menu'>
             <li class='{% block        index-menu-li-class %}{% endblock %}'><a href='/'>            About Quast            </a></li>
             <li class='{% block latestreport-menu-li-class %}{% endblock %}'><a href='/latestreport'>Latest report          </a></li>
@@ -63,11 +175,17 @@
         <span class='clear_float'></span>
     </div>
 
-    <div class="all">
-        <h1>{% block header %}{% endblock %}</h1>
-        <div>{% block content %}{% endblock %}</div>
+    <div class='content'>
+        {% block content %}{% endblock %}
     </div>
 
-    <div style='clear: both;'></div>
+    <div class='json-code'>
+        <div id='glossary-json'>
+            {{ glossary }}
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/static/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/static/bootstrap/js/bootstrap-tooltip-vlad.js"></script>
 </body>
 </html>

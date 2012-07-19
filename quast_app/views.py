@@ -4,6 +4,8 @@ from django.http import Http404, HttpResponse
 from django.shortcuts import render_to_response
 from django import forms
 
+glossary_path = 'static/glossary.json'
+
 defalt_dir = 'quast_results_archive_json/latest/'
 
 report_fn  =                    'report.json'
@@ -17,10 +19,10 @@ operons_fn =                    'operons.json'
 
 
 def response_with_report(template, dir):
-    p = os.path.abspath(dir + report_fn)
+    glossary = open(glossary_path).read()
 
     try:
-        report = open(p).read()
+        report = open(dir + report_fn).read()
     except IOError:
         raise Http404
 
@@ -60,6 +62,7 @@ def response_with_report(template, dir):
         pass
 
     return render_to_response(template, {
+        'glossary' : glossary,
         'report' : report,
         'contigsLenghts' : contigs_lengths,
         'alignedContigsLengths' : aligned_contigs_lengths,
@@ -85,12 +88,8 @@ def latestreport(request):
 #        return HttpResponse(contents)
 
 def manual(request):
-    try:
-        contents = open('../manual.html')
-    except IOError:
-        raise Http404
-    else:
-        return HttpResponse(contents)
+    contents = open('static/manual.html').read()
+    return HttpResponse(contents)
 
 #def tar_archive(request, version):
 #    path = '/Users/vladsaveliev/Dropbox/bio/quast/quast_website/quast' + version + '.tar.gz'
@@ -138,7 +137,7 @@ def assess(request):
 
     else:
         form = UploadForm()
-    return render_to_response('assess.html', {'form' : form})
+    return render_to_response('assess.html', { 'form' : form })
 
 
 
