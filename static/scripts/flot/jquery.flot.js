@@ -1563,7 +1563,7 @@
                     continue;
                 
                 ctx.strokeStyle = axis.options.tickColor || $.color.parse(axis.options.color).scale('a', 0.22).toString();
-                ctx.lineWidth = axis.options.lineWidth; // 0.3; // changed by Vlad Saveliev
+                ctx.lineWidth = axis.options.lineWidth; // was 1, changed by Vlad Saveliev
 
                 // find the edges
                 if (axis.direction == "x") {

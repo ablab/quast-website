@@ -1,65 +1,44 @@
 import os
 import subprocess
+import datetime
 from django.http import Http404, HttpResponse
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, render
 from django import forms
 
 glossary_path = 'static/glossary.json'
 
-defalt_dir = 'quast_results_archive_json/latest/'
 
-report_fn  =                    'report.json'
-contigs_lengths_fn =            'contigs_lengths.json'
-aligned_contigs_lengths_fn =    'aligned_contigs_lengths.json'
-assemblies_lengths_fn =         'assemblies_lengths.json'
-reference_length_fn =           'ref_length.json'
-contigs_fn =                    'contigs.json'
-genes_fn =                      'genes.json'
-operons_fn =                    'operons.json'
+def index(request):
+    glossary = open(glossary_path).read()
+    return render_to_response('index.html', {
+        'glossary' : glossary,
+    })
+
+
+def manual(request):
+    contents = open('static/manual.html').read()
+    return HttpResponse(contents)
 
 
 def response_with_report(template, dir):
     glossary = open(glossary_path).read()
 
-    try:
-        report = open(dir + report_fn).read()
-    except IOError:
-        raise Http404
+    def get(name, is_required=False, msg=None):
+        try:
+            return open(os.path.join(dir, name + '.json')).read()
+        except IOError:
+            if is_required:
+                raise Http404(msg)
+            return None
 
-    try:
-        contigs_lengths = open(dir + contigs_lengths_fn).read()
-    except IOError:
-        raise Http404
-
-    try:
-        assemblies_lengths = open(dir + assemblies_lengths_fn).read()
-    except IOError:
-        raise Http404
-
-    try:
-        aligned_contigs_lengths = open(dir + aligned_contigs_lengths_fn).read()
-    except IOError:
-        pass
-
-    try:
-        reference_length = open(dir + reference_length_fn).read()
-    except IOError:
-        pass
-
-    try:
-        contigs = open(dir + contigs_fn).read()
-    except IOError:
-        pass
-
-    try:
-        genes = open(dir + genes_fn).read()
-    except IOError:
-        pass
-
-    try:
-        operons = open(dir + operons_fn).read()
-    except IOError:
-        pass
+    report                  = get('report', is_required=True)
+    contigs_lengths         = get('contigs_lengths', is_required=True)
+    reference_length        = get('ref_length')
+    assemblies_lengths      = get('assemblies_lengths')
+    aligned_contigs_lengths = get('aligned_contigs_lengths')
+    contigs                 = get('contigs')
+    genes                   = get('genes')
+    operons                 = get('operons')
 
     return render_to_response(template, {
         'glossary' : glossary,
@@ -75,7 +54,128 @@ def response_with_report(template, dir):
 
 
 def latestreport(request):
-    return response_with_report('latest-report.html', defalt_dir)
+    return response_with_report('latest-report.html', 'quast_results_archive_json/latest/')
+
+
+quast_path = os.path.abspath('../quast/')
+quast_py_path = os.path.join(quast_path, 'quast.py')
+
+
+def assess_with_quast(contigs_path, reference_path, genes_path, operons_path):
+    if contigs_path:
+        if os.path.isfile(quast_py_path):
+            result_path = create_unique_dir('results')
+
+            os.chdir(quast_path)
+
+            args = [quast_py_path, contigs_path]
+            if reference_path:
+                args.append('-R')
+                args.append(reference_path)
+
+            if genes_path:
+                args.append('-G')
+                args.append(genes_path)
+
+            if operons_path:
+                args.append('-O')
+                args.append(operons_path)
+
+            args.append('-J')
+            args.append(result_path)
+
+            proc = subprocess.Popen(args, stdout=subprocess.PIPE)
+            while True:
+                line = proc.stdout.readline()
+                if line != '':
+                    print 'Quast: ', line,
+                else:
+                    break
+            proc.wait()
+
+            os.chdir('../quast-website')
+
+            return result_path
+
+    raise Http404
+
+
+class UploadAssemblyForm(forms.Form):
+    contigs     = forms.FileField()
+    reference   = forms.FileField(required=False)
+    genes       = forms.FileField(required=False)
+    operons     = forms.FileField(required=False)
+
+
+def create_unique_dir(dir_name):
+    dir_name = dir_name + '_' + datetime.datetime.now().strftime('%Y_%m_%d_%H_%M_%S')
+
+    if os.path.isdir(dir_name):
+        i = 2
+        base_dir_name = dir_name
+        while os.path.isdir(dir_name):
+            dir_name = base_dir_name + '_' + str(i)
+            i += 1
+
+    if not os.path.isdir(dir_name):
+        os.makedirs(dir_name)
+
+    return os.path.abspath(dir_name)
+
+
+def handle_uploaded_file(dir_path, f):
+    fn = os.path.join(dir_path, f.name)
+
+    with open(fn, 'wb+') as destination:
+        for chunk in f.chunks():
+            destination.write(chunk)
+    return fn
+
+
+# request.FILES is a dictionary of UploadedFile objects, where files are contigs,
+# and optionally a reference, genes and operons.
+def assess(request):
+    contigs_path = reference_path = operons_path = genes_path = None
+
+    if request.method == 'POST':
+        form = UploadAssemblyForm(request.POST, request.FILES, label_suffix='')
+
+        if form.is_valid():
+            data_dir_path = create_unique_dir('input')
+
+            contigs = request.FILES.get('contigs')
+            if contigs:
+                contigs_path = handle_uploaded_file(data_dir_path, contigs)
+
+            reference = request.FILES.get('reference')
+            if reference:
+                reference_path = handle_uploaded_file(data_dir_path, reference)
+
+            genes = request.FILES.get('genes')
+            if genes:
+                genes_path = handle_uploaded_file(data_dir_path, genes)
+
+            operons = request.FILES.get('operons')
+            if operons:
+                operons_path = handle_uploaded_file(data_dir_path, operons)
+
+            results_dir = assess_with_quast(contigs_path, reference_path, genes_path, operons_path)
+            return response_with_report('assess-report.html', results_dir)
+        else:
+            raise Http404
+
+    else:
+        form = UploadAssemblyForm(label_suffix='')
+
+    return render(request, 'assess.html', {'form' : form })
+
+
+
+
+
+
+
+
 
 #static_path = 'quast_app/static/'
 #
@@ -87,9 +187,6 @@ def latestreport(request):
 #    else:
 #        return HttpResponse(contents)
 
-def manual(request):
-    contents = open('static/manual.html').read()
-    return HttpResponse(contents)
 
 #def tar_archive(request, version):
 #    path = '/Users/vladsaveliev/Dropbox/bio/quast/quast_website/quast' + version + '.tar.gz'
@@ -101,50 +198,6 @@ def manual(request):
 #        return response
 #    else:
 #        raise Http404
-
-def index(request):
-    return render_to_response('index.html')
-
-
-
-def assess_with_quast(files):
-    contigs = [files['contigs1']]
-    reference = files['reference']
-    genes = files['genes']
-    operons = files['operons']
-    if contigs:
-        if reference and operons and genes:
-            subprocess.call('../quast.py --save-archive -R test/reference.fa.gz -G test/genes.txt '
-                + '-O test/operons.txt test/allpaths_full_ecoli.fasta test/SPAdes_full_ecoli.fasta')
-            response_with_report('assess-report.html', defalt_dir)
-
-
-class UploadForm(forms.Form):
-    contigs1    = forms.FileField()
-    reference   = forms.FileField()
-    genes       = forms.FileField()
-    operons     = forms.FileField()
-
-
-def assess(request):
-    if request.method == 'POST':
-        form = UploadForm(request.POST, request.FILES)
-        if form.is_valid():
-            results_dir = assess_with_quast(request.FILES)
-            return response_with_report('assess-report.html', results_dir)
-        else:
-            raise Http404
-
-    else:
-        form = UploadForm()
-    return render_to_response('assess.html', { 'form' : form })
-
-
-
-
-
-
-
 
 
 

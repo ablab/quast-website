@@ -7,18 +7,17 @@
 {% block header %}Assess assembly quality{% endblock %}
 
 {% block content %}
-    <form action="/load/" method="post">
-        <p>Contigs</p>
-        <p>Reference</p>
-        <p>Genes</p>
-        <p>Operons</p>
-        <p>Reference</p>
+    <form enctype="multipart/form-data" action="/assess/" method="post">{% csrf_token %}
+        {{ form.as_p }}
+{#        <p>Contigs</p>#}
+{#        <input id="contigs-file" type="file" class="file-input" name="contigs">#}
+{#        <p>Reference</p>#}
+{#        <input id="reference-file" type="file" class="file-input" name="reference">#}
+{#        <p>Genes</p>#}
+{#        <input id="genes-file" type="file" class="file-input" name="genes">#}
+{#        <p>Operons</p>#}
+{#        <input id="operons-file" type="file" class="file-input" name="operons">#}
 
-        {% csrf_token %}
-        {% for choice in poll.choice_set.all %}
-            <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
-            <label for="choice{{ forloop.counter }}">   {{ choice.choice }}</label><br />
-        {% endfor %}
-        <input type="submit" value="Load" />
+        <input type="submit" value="Assess" />
     </form>
 {% endblock %}

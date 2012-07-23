@@ -2,26 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c46a07c8-135b-4533-9d1f-181de5840982" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/bootstrap/js/bootstrap-tooltip-vlad.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/quast-1.0.0.tar.gz" afterPath="$PROJECT_DIR$/static/quast-1.0.0.tar.gz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quast_app/views.py" afterPath="$PROJECT_DIR$/quast_app/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quast_website/urls.py" afterPath="$PROJECT_DIR$/quast_website/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bootstrap/css/bootstrap.css" afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bootstrap/js/bootstrap.js" afterPath="$PROJECT_DIR$/static/bootstrap/js/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/links.css" afterPath="$PROJECT_DIR$/static/css/links.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/glossary.json" afterPath="$PROJECT_DIR$/static/glossary.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/scripts/build_report.js" afterPath="$PROJECT_DIR$/static/scripts/build_report.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/scripts/build_total_report.js" afterPath="$PROJECT_DIR$/static/scripts/build_total_report.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/scripts/draw_commulative_plot.js" afterPath="$PROJECT_DIR$/static/scripts/draw_commulative_plot.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/scripts/draw_genes_plot.js" afterPath="$PROJECT_DIR$/static/scripts/draw_genes_plot.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/scripts/draw_nx_plot.js" afterPath="$PROJECT_DIR$/static/scripts/draw_nx_plot.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/scripts/number_to_pretty_string.js" afterPath="$PROJECT_DIR$/static/scripts/number_to_pretty_string.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/assess-report.html" afterPath="$PROJECT_DIR$/templates/assess-report.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/scripts/flot/jquery.flot.js" afterPath="$PROJECT_DIR$/static/scripts/flot/jquery.flot.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/assess.html" afterPath="$PROJECT_DIR$/templates/assess.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/latest-report.html" afterPath="$PROJECT_DIR$/templates/latest-report.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/report.html" afterPath="$PROJECT_DIR$/templates/report.html" />
     </list>
     <ignored path="quast-website.iws" />
@@ -43,15 +31,16 @@
     <favorites_list name="quast-website" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.41347522">
+    <splitter split-orientation="horizontal" split-proportion="0.43049645">
       <split-first>
         <leaf>
-          <file leaf-file-name="base.html" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/templates/base.html">
+          <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/quast_app/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="16" column="39" selection-start="750" selection-end="750" vertical-scroll-proportion="0.30379745">
+                <state line="68" column="11" selection-start="2040" selection-end="2040" vertical-scroll-proportion="0.67066896">
                   <folding>
-                    <element signature="tag#style#1;tag#head#0;tag#html#0" expanded="false" />
+                    <marker date="1343043760000" expanded="true" signature="598:764" placeholder="..." />
+                    <marker date="1343043760000" expanded="true" signature="3133:3513" placeholder="..." />
                   </folding>
                 </state>
               </provider>
@@ -61,10 +50,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="report.html" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/templates/report.html">
+          <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="31" column="19" selection-start="1281" selection-end="1281" vertical-scroll-proportion="0.6138614">
+                <state line="32" column="7" selection-start="292" selection-end="292" vertical-scroll-proportion="0.6442953">
                   <folding />
                 </state>
               </provider>
@@ -85,22 +74,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/templates/assess.html" />
-        <option value="$PROJECT_DIR$/templates/assess-report.html" />
-        <option value="$PROJECT_DIR$/quast_website/urls.py" />
-        <option value="$PROJECT_DIR$/quast_app/views.py" />
-        <option value="$PROJECT_DIR$/static/scripts/draw_commulative_plot.js" />
         <option value="$PROJECT_DIR$/static/scripts/draw_genes_plot.js" />
         <option value="$PROJECT_DIR$/static/scripts/build_report.js" />
         <option value="$PROJECT_DIR$/static/bootstrap/css/bootstrap.css" />
-        <option value="$PROJECT_DIR$/static/scripts/build_total_report.js" />
         <option value="$PROJECT_DIR$/static/scripts/draw_nx_plot.js" />
         <option value="$PROJECT_DIR$/static/scripts/number_to_pretty_string.js" />
         <option value="$PROJECT_DIR$/static/glossary.json" />
         <option value="$PROJECT_DIR$/static/bootstrap/js/bootstrap.js" />
-        <option value="$PROJECT_DIR$/templates/report.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/static/scripts/build_total_report.js" />
+        <option value="$PROJECT_DIR$/templates/report.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/static/scripts/flot/jquery.flot.js" />
+        <option value="$PROJECT_DIR$/quast_website/urls.py" />
+        <option value="$PROJECT_DIR$/templates/assess.html" />
+        <option value="$PROJECT_DIR$/quast_app/views.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -228,68 +217,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quast-website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quast-website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quast-website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quast-website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quast-website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quast-website" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="quast_website" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -325,11 +252,11 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="preferences.sourceCode.HTML" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="preferences.sourceCode.HTML" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -372,6 +299,25 @@
       <option name="MULTIPROCESS" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="quast-website" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <method />
+    </configuration>
     <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -391,25 +337,6 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <module name="quast-website" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -500,17 +427,17 @@
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45769623" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925585" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16071428" sideWeight="0.67991847" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39959225" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16071428" sideWeight="0.6085627" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39143732" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32008156" sideWeight="0.8833333" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32008156" sideWeight="0.8833333" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -571,119 +498,85 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/assess.html">
+    <entry file="file://$PROJECT_DIR$/static/scripts/flot/jquery.flot.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="38" selection-start="116" selection-end="116" vertical-scroll-proportion="0.07594936">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/scripts/draw_genes_plot.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="101" selection-start="102" selection-end="102" vertical-scroll-proportion="0.018376723">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quast_app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="45" selection-start="790" selection-end="790" vertical-scroll-proportion="0.44104135">
-          <folding>
-            <marker date="1342700189000" expanded="true" signature="735:1961" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/scripts/jquery-1.7.2.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/scripts/build_report.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="722" selection-end="722" vertical-scroll-proportion="0.45614034">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bootstrap/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4269" column="15" selection-start="78778" selection-end="78778" vertical-scroll-proportion="0.51454824">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/scripts/build_total_report.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="25" selection-start="828" selection-end="828" vertical-scroll-proportion="0.4777948">
-          <folding />
-        </state>
+        <state line="1415" column="35" selection-start="59307" selection-end="59307" vertical-scroll-proportion="0.8118022" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/scripts/draw_nx_plot.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="27" selection-start="1165" selection-end="1165" vertical-scroll-proportion="0.7350689">
+        <state line="74" column="14" selection-start="2124" selection-end="2124" vertical-scroll-proportion="0.475976" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/scripts/jquery-1.7.2.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="26" selection-start="65208" selection-end="65208" vertical-scroll-proportion="0.036753446" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quast_website/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="923" selection-end="923" vertical-scroll-proportion="0.46846846" />
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/forms/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="506" selection-end="506" vertical-scroll-proportion="0.39652175" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quast_app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/assess.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="26" selection-start="348" selection-end="348" vertical-scroll-proportion="0.22956522">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/scripts/draw_commulative_plot.js">
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/django/core/handlers/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="38" selection-start="472" selection-end="472" vertical-scroll-proportion="0.28708133">
+        <state line="110" column="0" selection-start="4677" selection-end="4677" vertical-scroll-proportion="0.3327616">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/glossary.json">
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/subprocess.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="60" selection-start="5557" selection-end="5557" vertical-scroll-proportion="0.4777948">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bootstrap/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1016" column="24" selection-start="28813" selection-end="28813" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/bootstrap/js/bootstrap-tooltip-vlad.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/scripts/number_to_pretty_string.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="1" selection-start="232" selection-end="232" vertical-scroll-proportion="0.14414415">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="14" selection-start="979" selection-end="979" vertical-scroll-proportion="0.56962025">
+        <state line="726" column="28" selection-start="24248" selection-end="24248" vertical-scroll-proportion="0.55574614">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/report.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="19" selection-start="1281" selection-end="1281" vertical-scroll-proportion="0.6138614">
+        <state line="91" column="45" selection-start="2585" selection-end="2585" vertical-scroll-proportion="1.9430605">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/quast_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="39" selection-start="750" selection-end="750" vertical-scroll-proportion="0.30379745">
+        <state line="68" column="11" selection-start="2040" selection-end="2040" vertical-scroll-proportion="0.67066896">
           <folding>
-            <element signature="tag#style#1;tag#head#0;tag#html#0" expanded="false" />
+            <marker date="1343043760000" expanded="true" signature="598:764" placeholder="..." />
+            <marker date="1343043760000" expanded="true" signature="3133:3513" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/scripts/build_report.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="5" selection-start="1505" selection-end="1505" vertical-scroll-proportion="0.47341338">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="7" selection-start="292" selection-end="292" vertical-scroll-proportion="0.6442953">
+          <folding />
         </state>
       </provider>
     </entry>
