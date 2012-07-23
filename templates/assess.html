@@ -6,9 +6,47 @@
 
 {% block header %}Assess assembly quality{% endblock %}
 
+{% block extra_head %}
+    <style type="text/css">
+        .file_label {
+            float: left;
+        }
+        .file_input {
+            display: inline-block;
+            clear: both;
+        }
+        .file_input_td {
+            clear: both;
+        }
+        .file_label_td {
+            float: left;
+        }
+    </style>
+{% endblock %}
+
 {% block content %}
     <form enctype="multipart/form-data" action="/assess/" method="post">{% csrf_token %}
-        {{ form.as_p }}
+        <tr>
+            <td class='file_label_td'><label class='file_label' for="id_contigs">Contigs</label></td>
+            <td class='file_input_td'><input class='file_input' type="file" name="contigs" id="id_contigs" /></td>
+        </tr>
+        <tr>
+            <td class='file_label_td'><label class='file_label' for="id_reference">Reference</label></td>
+            <td class='file_input_td'><input class='file_input' type="file" name="reference" id="id_reference" /></td></tr>
+        <tr>
+            <td class='file_label_td'><label class='file_label' for="id_genes">Genes</label></td>
+            <td class='file_input_td'><input class='file_input' type="file" name="genes" id="id_genes" /></td>
+        </tr>
+        <tr>
+            <td class='file_label_td'><label class='file_label' for="id_operons">Operons</label></td>
+            <td class='file_input_td'><input class='file_input' type="file" name="operons" id="id_operons" /></td>
+        </tr>
+
+        {##}
+{#        <p>#}
+{#            <label for='id_contigs'>Contigs</label> <input >#}
+{#        </p>#}
+
 {#        <p>Contigs</p>#}
 {#        <input id="contigs-file" type="file" class="file-input" name="contigs">#}
 {#        <p>Reference</p>#}
