@@ -8,41 +8,39 @@
 
 {% block extra_head %}
     <style type="text/css">
-        .file_label {
-            float: left;
-        }
-        .file_input {
-            display: inline-block;
-            clear: both;
-        }
-        .file_input_td {
-            clear: both;
-        }
-        .file_label_td {
-            float: left;
-        }
+    .upload-form-table td {
+        padding-right: 1em;
+    }
+    .file_label {
+        margin-top: 5px;
+    }
     </style>
 {% endblock %}
 
 {% block content %}
     <form enctype="multipart/form-data" action="/assess/" method="post">{% csrf_token %}
-        <tr>
-            <td class='file_label_td'><label class='file_label' for="id_contigs">Contigs</label></td>
-            <td class='file_input_td'><input class='file_input' type="file" name="contigs" id="id_contigs" /></td>
-        </tr>
-        <tr>
-            <td class='file_label_td'><label class='file_label' for="id_reference">Reference</label></td>
-            <td class='file_input_td'><input class='file_input' type="file" name="reference" id="id_reference" /></td></tr>
-        <tr>
-            <td class='file_label_td'><label class='file_label' for="id_genes">Genes</label></td>
-            <td class='file_input_td'><input class='file_input' type="file" name="genes" id="id_genes" /></td>
-        </tr>
-        <tr>
-            <td class='file_label_td'><label class='file_label' for="id_operons">Operons</label></td>
-            <td class='file_input_td'><input class='file_input' type="file" name="operons" id="id_operons" /></td>
-        </tr>
+        <table class='upload-form-table'>
+            <tr>
+                <td class='file_label_td'><label class='file_label' for="id_contigs">Contigs</label></td>
+                <td class='file_input_td'><input class='file_input' type="file" name="contigs" id="id_contigs" /></td>
+            </tr>
+            <tr>
+                <td class='file_label_td'><label class='file_label' for="id_reference">Reference</label></td>
+                <td class='file_input_td'><input class='file_input' type="file" name="reference" id="id_reference" /></td>
+            </tr>
+            <tr>
+                <td class='file_label_td'><label class='file_label' for="id_genes">Genes</label></td>
+                <td class='file_input_td'><input class='file_input' type="file" name="genes" id="id_genes" /></td>
+            </tr>
+            <tr>
+                <td class='file_label_td'><label class='file_label' for="id_operons">Operons</label></td>
+                <td class='file_input_td'><input class='file_input' type="file" name="operons" id="id_operons" /></td>
 
-        {##}
+            </tr>
+        </table>
+
+        <input class="btn" type="submit" value="Load and assess quality" style="margin-top: 5px;"/>
+
 {#        <p>#}
 {#            <label for='id_contigs'>Contigs</label> <input >#}
 {#        </p>#}
@@ -56,6 +54,5 @@
 {#        <p>Operons</p>#}
 {#        <input id="operons-file" type="file" class="file-input" name="operons">#}
 
-        <input type="submit" value="Assess" />
     </form>
 {% endblock %}

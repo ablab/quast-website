@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c46a07c8-135b-4533-9d1f-181de5840982" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/scripts/draw_commulative_plot.js" afterPath="$PROJECT_DIR$/static/scripts/draw_commulative_plot.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/scripts/draw_genes_plot.js" afterPath="$PROJECT_DIR$/static/scripts/draw_genes_plot.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/scripts/draw_nx_plot.js" afterPath="$PROJECT_DIR$/static/scripts/draw_nx_plot.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/assess.html" afterPath="$PROJECT_DIR$/templates/assess.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/report.html" afterPath="$PROJECT_DIR$/templates/report.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
     </list>
     <ignored path="quast-website.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,13 +24,13 @@
     <favorites_list name="quast-website" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.77446806">
+    <splitter split-orientation="horizontal" split-proportion="0.66476464">
       <split-first>
         <leaf>
-          <file leaf-file-name="report.html" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/templates/report.html">
+          <file leaf-file-name="assess.html" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/templates/assess.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="18" column="27" selection-start="987" selection-end="987" vertical-scroll-proportion="0.22523461">
+                <state line="19" column="19" selection-start="399" selection-end="399" vertical-scroll-proportion="0.36893204">
                   <folding />
                 </state>
               </provider>
@@ -44,10 +40,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/quast_website/__init__.py">
+          <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/templates/base.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+                <state line="53" column="33" selection-start="1781" selection-end="1781" vertical-scroll-proportion="0.6213592">
                   <folding />
                 </state>
               </provider>
@@ -73,7 +69,6 @@
         <option value="$PROJECT_DIR$/static/glossary.json" />
         <option value="$PROJECT_DIR$/static/bootstrap/js/bootstrap.js" />
         <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/static/scripts/flot/jquery.flot.js" />
         <option value="$PROJECT_DIR$/quast_website/urls.py" />
         <option value="$PROJECT_DIR$/quast_app/views.py" />
@@ -82,16 +77,16 @@
         <option value="$PROJECT_DIR$/static/scripts/draw_genes_plot.js" />
         <option value="$PROJECT_DIR$/static/scripts/draw_nx_plot.js" />
         <option value="$PROJECT_DIR$/static/scripts/draw_commulative_plot.js" />
-        <option value="$PROJECT_DIR$/templates/assess.html" />
         <option value="$PROJECT_DIR$/templates/report.html" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/templates/assess.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1680" />
-    <option name="y" value="39" />
+    <option name="y" value="22" />
     <option name="width" value="1680" />
-    <option name="height" value="1050" />
+    <option name="height" value="722" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -415,8 +410,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1680" y="39" width="1680" height="1050" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="22" width="1680" height="722" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45769623" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -509,28 +504,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quast_website/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="31" selection-start="1645" selection-end="1645" vertical-scroll-proportion="0.40434784">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/scripts/number_to_pretty_string.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/latest-report.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -565,27 +539,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="6" selection-start="964" selection-end="964" vertical-scroll-proportion="0.362878">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/assess-report.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/assess.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="12" selection-start="659" selection-end="659" vertical-scroll-proportion="0.35036495">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/scripts/build_report.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="24" selection-start="906" selection-end="906" vertical-scroll-proportion="0.18097208">
@@ -602,7 +555,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/report.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="27" selection-start="987" selection-end="987" vertical-scroll-proportion="0.22523461">
+        <state line="50" column="21" selection-start="1713" selection-end="1713" vertical-scroll-proportion="0.1616267">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/latest-report.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="6" selection-start="964" selection-end="964" vertical-scroll-proportion="0.362878">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/assess-report.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quast_website/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="33" selection-start="1781" selection-end="1781" vertical-scroll-proportion="0.6213592">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/assess.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="19" selection-start="399" selection-end="399" vertical-scroll-proportion="0.36893204">
           <folding />
         </state>
       </provider>
