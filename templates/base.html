@@ -8,16 +8,14 @@
     <meta name="description" content="Quast assembly assessment tool"/>
     <meta name="author" content="Algorithmic Biology Lab"/>
 
-    <script type="text/javascript" src="/static/scripts/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}scripts/jquery-1.7.2.min.js"></script>
 
     <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css"/>
-    <!-- <link rel="stylesheet" href="/static/bootstrap/css/bootstrap-responsive.css"/> -->
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap-responsive.css"/>
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
         <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-    <link rel="stylesheet" href="/static/css/links.css"/>
 
     <style type="text/css">
         body {
@@ -27,6 +25,17 @@
             font-size: 12px;
             color: black;
             line-height: 1.3em;
+        }
+        a {
+            text-decoration: none;
+            border-bottom: 1px solid;
+            border-color: #A0D2EB; /*rgba(0, 88, cc, 0.3);*/
+        }
+        a:hover {
+            text-decoration: none;
+            border-bottom: 1px solid;
+            color: #0088cc;
+            border-color: #55B2E0; /*#005580;*/
         }
         .top-panel {
             background-color: #333;
@@ -47,24 +56,37 @@
         }
         ul.menu a {
             float: left;
-            padding-right: 1em;
             padding-left: 1em;
+            padding-right: 1em;
+
+            text-decoration: none;
+            border: 0px;
+        }
+        ul.menu a span {
+            font-size: 1em;
             color: white;
-            font-size: 1.2em;
-            text-decoration: underline;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid;
+            border-color: #AAA;
         }
         ul.menu a:hover {
             color: #DDDDDD;
+            text-decoration: none;
+        }
+        ul.menu a:hover span {
+            border-color: #CCC;
         }
         ul.menu li.active a {
             pointer-events: none;
             cursor: default;
+        }
+        ul.menu li.active a span {
             text-decoration: none;
             color: #AAA;
+            border: 0px;
         }
-        a {
-            text-decoration: underline;
-        }
+
         .tooltip-link {
             color: black;
             text-decoration: none;
@@ -171,9 +193,9 @@
 
     <div class='top-panel'>
         <ul class='menu'>
-            <li class='{% block        index-menu-li-class %}{% endblock %}'><a href='/'>            About Quast            </a></li>
-            <li class='{% block latestreport-menu-li-class %}{% endblock %}'><a href='/latestreport'>Latest report          </a></li>
-            <li class='{% block       assess-menu-li-class %}{% endblock %}'><a href='/assess'>      Assess assembly quality</a></li>
+            <li class='{% block        index-menu-li-class %}{% endblock %}'><a href='/'>            <span>About Quast            </span></a></li>
+            <li class='{% block latestreport-menu-li-class %}{% endblock %}'><a href='/latestreport'><span>Latest report          </span></a></li>
+            <li class='{% block     evaluate-menu-li-class %}{% endblock %}'><a href='/evaluate'>    <span>Load and evaluate data </span></a></li>
         </ul>
         <span class='clear_float'></span>
     </div>

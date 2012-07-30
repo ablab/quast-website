@@ -6,7 +6,7 @@
     <!–[if lte IE 8]><script type="text/javascript" src="/static/scripts/flot/excanvas.min.js"></script><![endif]–>
 
     <script type="text/javascript" src="/static/scripts/build_total_report.js"></script>
-    <script type="text/javascript" src="/static/scripts/draw_commulative_plot.js"></script>
+    <script type="text/javascript" src="/static/scripts/draw_cumulative_plot.js"></script>
     <script type="text/javascript" src="/static/scripts/draw_nx_plot.js"></script>
     <script type="text/javascript" src="/static/scripts/number_to_pretty_string.js"></script>
     <script type="text/javascript" src="/static/scripts/draw_genes_plot.js"></script>
@@ -48,10 +48,6 @@
             height: 1.5em;
             display: block;
         }
-        .plot > div {
-            width: 580px;
-            height: 400px;
-        }
     </style>
 {% endblock %}
 
@@ -66,7 +62,7 @@
     </div>
 
     <div class='plots'>
-        <div id='commulative-plot-div'>
+        <div id='cumulative-plot-div'>
         </div>
         <div id='nx-plot-div'>
         </div>

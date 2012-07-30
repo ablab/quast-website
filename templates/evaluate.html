@@ -1,0 +1,440 @@
+{% extends "base.html" %}
+
+{% block title %}Quast: Evaluate{% endblock %}
+
+{% block evaluate-menu-li-class %}active{% endblock %}
+
+{% block header %}Load and evaluate data{% endblock %}
+
+{% block extra_head %}
+    <script src="/static/ajaxuploader/fileuploader.js"></script>
+    <link href="/static/ajaxuploader/fileuploader.css" media="screen" rel="stylesheet" type="text/css"/>
+
+    <style>
+    .uploader_div {
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    .small-upload-drop-area {
+        width: 200px;
+    }
+
+    .upload-drop-area {
+        width: 300px;
+    }
+
+    .upload-drop-area, .small-upload-drop-area {
+        margin-top: 10px;
+
+        height: 11em;
+        z-index: 2;
+
+        background: #FAFAD4; /* #FCFCCA; */
+        border: 2px dashed #AAA;
+        border-radius: 7px;
+        -moz-border-radius: 7px;
+        -webkit-border-radius: 7px;
+        -khtml-border-radius: 7px;
+
+        vertical-align: middle;
+        color: #AAA;
+    }
+    .upload-drop-area:hover, .small-upload-drop-area:hover {
+        border-color: #444;
+    }
+    .upload-drop-area p, .small-upload-drop-area p {
+        margin-top: 4.7em;
+        text-align: center;
+    }
+    .upload-drop-area:hover p, .small-upload-drop-area:hover p {
+        color: #444;
+    }
+    .upload-drop-area-active {
+        background: #FCFCA2;
+        border-color: #444;
+        color: #444;
+    }
+    .upload-list {
+        margin: 5px 0px;
+        padding: 0;
+        list-style: none;
+    }
+    .upload-list li {
+        margin: 0;
+        padding: 0;
+        line-height: 15px;
+        font-size: 12px;
+    }
+    </style>
+
+    <script>
+        $(function() {
+            var contigs_uploader = new qq.FileUploader({
+                action: "{% url contigs_ajax_upload %}",
+                element: $('#contigs-uploader')[0],
+                multiple: true,
+                onComplete: function(id, fileName, responseJSON) {
+                    if (responseJSON.success) {
+
+                    }
+                },
+                onAllComplete: function(uploads) {
+                    // uploads is an array of maps
+                    // the maps look like this: {file: FileObject, response: JSONServerResponse}
+                },
+                params: {
+                    'csrf_token': '{{ csrf_token }}',
+                    'csrf_name': 'csrfmiddlewaretoken',
+                    'csrf_xname': 'X-CSRFToken',
+                },
+                messages: {
+                },
+                template: '<div class="qq-uploader">' +
+                        '<button class="btn">Select files with contigs</button>' +
+                        '<div class="upload-drop-area"><p>Drop files with contigs here</p></div>' +
+                        '<ul class="upload-list"></ul>' +
+                        '</div>',
+                fileTemplate: '<li>' +
+                        '<span class="qq-upload-file"></span>' +
+                        '<span class="qq-upload-spinner"></span>' +
+                        '<span class="qq-upload-size"></span>' +
+                        '<a class="qq-upload-cancel" href="#">Cancel</a>' +
+                        '<span class="qq-upload-failed-text">Failed</span>' +
+                        '</li>',
+                classes: {
+                    // used to get elements from templates
+                    button: 'btn',
+                    drop: 'upload-drop-area',
+                    dropActive: 'upload-drop-area-active',
+                    list: 'upload-list',
+
+                    file: 'qq-upload-file',
+                    spinner: 'qq-upload-spinner',
+                    size: 'qq-upload-size',
+                    cancel: 'qq-upload-cancel',
+
+                    // added to list item when upload completes
+                    // used in css to hide progress spinner
+                    success: 'qq-upload-success',
+                    fail: 'qq-upload-fail'
+                }
+            });
+
+            var reference_uploader = new qq.FileUploader({
+                action: "{% url reference_ajax_upload %}",
+                element: $('#reference-uploader')[0],
+                multiple: false,
+                onComplete: function(id, fileName, responseJSON) {
+                    if (responseJSON.success) {
+
+                    }
+                },
+                onAllComplete: function(uploads) {
+                    // uploads is an array of maps
+                    // the maps look like this: {file: FileObject, response: JSONServerResponse}
+                },
+                params: {
+                    'csrf_token': '{{ csrf_token }}',
+                    'csrf_name': 'csrfmiddlewaretoken',
+                    'csrf_xname': 'X-CSRFToken',
+                },
+                messages: {
+                },
+                template: '<div class="qq-uploader">' +
+                        '<button class="btn">Select reference file</button>' +
+                        '<div class="small-upload-drop-area"><p>Drop a file with reference here</p></div>' +
+                        '<ul class="upload-list"></ul>' +
+                        '</div>',
+                fileTemplate: '<li>' +
+                        '<span class="qq-upload-file"></span>' +
+                        '<span class="qq-upload-spinner"></span>' +
+                        '<span class="qq-upload-size"></span>' +
+                        '<a class="qq-upload-cancel" href="#">Cancel</a>' +
+                        '<span class="qq-upload-failed-text">Failed</span>' +
+                        '</li>',
+                classes: {
+                    // used to get elements from templates
+                    button: 'btn',
+                    drop: 'small-upload-drop-area',
+                    dropActive: 'upload-drop-area-active',
+                    list: 'upload-list',
+
+                    file: 'qq-upload-file',
+                    spinner: 'qq-upload-spinner',
+                    size: 'qq-upload-size',
+                    cancel: 'qq-upload-cancel',
+
+                    // added to list item when upload completes
+                    // used in css to hide progress spinner
+                    success: 'qq-upload-success',
+                    fail: 'qq-upload-fail'
+                }
+            });
+
+            var genes_uploader = new qq.FileUploader({
+                action: "{% url genes_ajax_upload %}",
+                element: $('#genes-uploader')[0],
+                multiple: false,
+                onComplete: function(id, fileName, responseJSON) {
+                    if (responseJSON.success) {
+
+                    }
+                },
+                onAllComplete: function(uploads) {
+                    // uploads is an array of maps
+                    // the maps look like this: {file: FileObject, response: JSONServerResponse}
+                },
+                params: {
+                    'csrf_token': '{{ csrf_token }}',
+                    'csrf_name': 'csrfmiddlewaretoken',
+                    'csrf_xname': 'X-CSRFToken',
+                },
+                messages: {
+                },
+                template: '<div class="qq-uploader">' +
+                        '<button class="btn">Select genes file</button>' +
+                        '<div class="small-upload-drop-area"><p>Drop a file with genes here</p></div>' +
+                        '<ul class="upload-list"></ul>' +
+                        '</div>',
+                fileTemplate: '<li>' +
+                        '<span class="qq-upload-file"></span>' +
+                        '<span class="qq-upload-spinner"></span>' +
+                        '<span class="qq-upload-size"></span>' +
+                        '<a class="qq-upload-cancel" href="#">Cancel</a>' +
+                        '<span class="qq-upload-failed-text">Failed</span>' +
+                        '</li>',
+                classes: {
+                    // used to get elements from templates
+                    button: 'btn',
+                    drop: 'small-upload-drop-area',
+                    dropActive: 'upload-drop-area-active',
+                    list: 'upload-list',
+
+                    file: 'qq-upload-file',
+                    spinner: 'qq-upload-spinner',
+                    size: 'qq-upload-size',
+                    cancel: 'qq-upload-cancel',
+
+                    // added to list item when upload completes
+                    // used in css to hide progress spinner
+                    success: 'qq-upload-success',
+                    fail: 'qq-upload-fail'
+                }
+            });
+
+            var operons_uploader = new qq.FileUploader({
+                action: "{% url operons_ajax_upload %}",
+                element: $('#operons-uploader')[0],
+                multiple: false,
+                onComplete: function(id, fileName, responseJSON) {
+                    if (responseJSON.success) {
+
+                    }
+                },
+                onAllComplete: function(uploads) {
+                    // uploads is an array of maps
+                    // the maps look like this: {file: FileObject, response: JSONServerResponse}
+                },
+                params: {
+                    'csrf_token': '{{ csrf_token }}',
+                    'csrf_name': 'csrfmiddlewaretoken',
+                    'csrf_xname': 'X-CSRFToken',
+                },
+                messages: {
+                },
+                template: '<div class="qq-uploader">' +
+                        '<button class="btn">Select operons file</button>' +
+                        '<div class="small-upload-drop-area"><p>Drop a file with operons here</p></div>' +
+                        '<ul class="upload-list"></ul>' +
+                        '</div>',
+                fileTemplate: '<li>' +
+                        '<span class="qq-upload-file"></span>' +
+                        '<span class="qq-upload-spinner"></span>' +
+                        '<span class="qq-upload-size"></span>' +
+                        '<a class="qq-upload-cancel" href="#">Cancel</a>' +
+                        '<span class="qq-upload-failed-text">Failed</span>' +
+                        '</li>',
+                classes: {
+                    // used to get elements from templates
+                    button: 'btn',
+                    drop: 'small-upload-drop-area',
+                    dropActive: 'upload-drop-area-active',
+                    list: 'upload-list',
+
+                    file: 'qq-upload-file',
+                    spinner: 'qq-upload-spinner',
+                    size: 'qq-upload-size',
+                    cancel: 'qq-upload-cancel',
+
+                    // added to list item when upload completes
+                    // used in css to hide progress spinner
+                    success: 'qq-upload-success',
+                    fail: 'qq-upload-fail'
+                }
+            });
+        });
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div id="contigs-uploader" class="uploader_div">
+        <noscript>
+            <p>Please enable JavaScript to upload files.</p>
+        </noscript>
+    </div>
+
+    <div id="reference-uploader" class="uploader_div">
+        <noscript>
+            <p>Please enable JavaScript to upload files.</p>
+        </noscript>
+    </div>
+
+    <div id="genes-uploader" class="uploader_div">
+        <noscript>
+            <p>Please enable JavaScript to upload files.</p>
+        </noscript>
+    </div>
+
+    <div id="operons-uploader" class="uploader_div">
+        <noscript>
+            <p>Please enable JavaScript to upload files.</p>
+        </noscript>
+    </div>
+
+    <div style="clear: both"></div>
+
+    <a class="btn-large btn-inverse" href="/report">Evaluate with Quast</a>
+
+    <style type="text/css">
+            /*.qq-upload-button {*/
+            /*display: inline-block;*/
+            /**display: inline;*/
+            /*padding: 4px 10px 4px;*/
+            /*margin-bottom: 0;*/
+            /**margin-left: .3em;*/
+            /*font-size: 13px;*/
+            /*line-height: 18px;*/
+            /**line-height: 20px;*/
+            /*color: #333333;*/
+            /*text-align: center;*/
+            /*text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);*/
+            /*vertical-align: middle;*/
+            /*cursor: pointer;*/
+            /*background-color: #f5f5f5;*/
+            /**background-color: #e6e6e6;*/
+            /*background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);*/
+            /*background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));*/
+            /*background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);*/
+            /*background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);*/
+            /*background-image: linear-gradient(top, #ffffff, #e6e6e6);*/
+            /*background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);*/
+            /*background-repeat: repeat-x;*/
+            /*border: 1px solid #cccccc;*/
+            /**border: 0;*/
+            /*border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);*/
+            /*border-color: #e6e6e6 #e6e6e6 #bfbfbf;*/
+            /*border-bottom-color: #b3b3b3;*/
+            /*-webkit-border-radius: 4px;*/
+            /*-moz-border-radius: 4px;*/
+            /*border-radius: 4px;*/
+            /*filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);*/
+            /*filter: progid:dximagetransform.microsoft.gradient(enabled=false);*/
+            /**zoom: 1;*/
+            /*-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);*/
+            /*-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);*/
+            /*box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);*/
+        /*}*/
+
+        /*.qq-upload-button:hover,*/
+        /*.qq-upload-button:active,*/
+        /*.qq-upload-button.active,*/
+        /*.qq-upload-button.disabled,*/
+        /*.qq-upload-button[disabled] {*/
+            /*background-color: #e6e6e6;*/
+            /**background-color: #d9d9d9;*/
+        /*}*/
+
+        /*.qq-upload-button:active,*/
+        /*.qq-upload-button.active {*/
+            /*background-color: #cccccc \9;*/
+        /*}*/
+
+        /*.qq-upload-button:first-child {*/
+            /**margin-left: 0;*/
+        /*}*/
+
+        /*.qq-upload-button:hover {*/
+            /*color: #333333;*/
+            /*text-decoration: none;*/
+            /*background-color: #e6e6e6;*/
+            /**background-color: #d9d9d9;*/
+            /* Buttons in IE7 don't get borders, so darken on hover */
+
+            /*background-position: 0 -15px;*/
+            /*-webkit-transition: background-position 0.1s linear;*/
+            /*-moz-transition: background-position 0.1s linear;*/
+            /*-ms-transition: background-position 0.1s linear;*/
+            /*-o-transition: background-position 0.1s linear;*/
+            /*transition: background-position 0.1s linear;*/
+        /*}*/
+
+        /*.qq-upload-button:focus {*/
+            /*outline: thin dotted #333;*/
+            /*outline: 5px auto -webkit-focus-ring-color;*/
+            /*outline-offset: -2px;*/
+        /*}*/
+
+        /*.qq-upload-button.active,*/
+        /*.qq-upload-button:active {*/
+            /*background-color: #e6e6e6;*/
+            /*background-color: #d9d9d9 \9;*/
+            /*background-image: none;*/
+            /*outline: 0;*/
+            /*-webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);*/
+            /*-moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);*/
+            /*box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);*/
+        /*}*/
+
+        /*.qq-upload-button.disabled,*/
+        /*.qq-upload-button[disabled] {*/
+            /*cursor: default;*/
+            /*background-color: #e6e6e6;*/
+            /*background-image: none;*/
+            /*opacity: 0.65;*/
+            /*filter: alpha(opacity=65);*/
+            /*-webkit-box-shadow: none;*/
+            /*-moz-box-shadow: none;*/
+            /*box-shadow: none;*/
+        /*}*/
+
+        /*.qq-uploader { position:relative; width: 100%;}*/
+
+        /*.qq-upload-button-hover {background:#cc0000;}*/
+        /*.qq-upload-button-focus {outline:1px dotted black;}*/
+
+        /*.qq-upload-drop-area {*/
+            /*position:absolute; top:0; left:0; width:100%; height:100%; min-height: 70px; z-index:2;*/
+            /*background:#DDDDDD;border:3px black dotted; text-align:center;*/
+        /*}*/
+        /*.qq-upload-drop-area span {*/
+            /*display:block; position:absolute; top: 50%; width:100%; margin-top:-8px; font-size:16px;*/
+        /*}*/
+        /*.qq-upload-drop-area-active {background:#AAAAAA;border:3px black dotted}*/
+
+        /*.qq-upload-list {margin:5px 0px; padding:0; list-style:none;}*/
+        /*.qq-upload-list li { margin:0; padding:0; line-height:15px; font-size:12px;}*/
+        /*.qq-upload-file, .qq-upload-spinner, .qq-upload-size, .qq-upload-cancel, .qq-upload-failed-text {*/
+            /*margin-right: 7px;*/
+        /*}*/
+
+        /*.qq-upload-file {}*/
+        /*.qq-upload-spinner {display:inline-block; background: url("/static/ajaxuploader/loading.gif"); width:15px; height:15px; vertical-align:text-bottom;}*/
+        /*.qq-upload-size,.qq-upload-cancel {font-size:11px;}*/
+
+        /*.qq-upload-failed-text {display:none;}*/
+        /*.qq-upload-fail .qq-upload-failed-text {display:inline;}*/
+
+    </style>
+{% endblock %}

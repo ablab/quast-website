@@ -1,10 +1,10 @@
 
-function drawCommulativePlot(filenames, lists_of_lengths, div, legendPlaceholder, glossary) {
+function drawCumulativePlot(filenames, lists_of_lengths, div, legendPlaceholder, glossary) {
 
     div.html(
         "<div class='plot'>" +
-            "<span class='plot-header'>Commulative length</span>" +
-            "<div style='width: 580px; height: 400px;' id='commulative-plot-placeholder'></div>" +
+            "<span class='plot-header'>Cumulative length</span>" +
+            "<div style='width: 800px; height: 600px;' id='cumulative-plot-placeholder'></div>" +
         "</div>"
     );
 
@@ -47,7 +47,7 @@ function drawCommulativePlot(filenames, lists_of_lengths, div, legendPlaceholder
     }
 
 
-    $.plot($('#commulative-plot-placeholder'), plotsData, {
+    $.plot($('#cumulative-plot-placeholder'), plotsData, {
             shadowSize: 0,
             colors: ["#FF5900", "#008FFF", "#168A16", "#7C00FF", "#FF0080"],
             legend: {

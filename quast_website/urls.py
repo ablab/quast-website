@@ -5,6 +5,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
+from quast_app import views
 
 urlpatterns = patterns('',
     # Examples:
@@ -18,9 +19,18 @@ urlpatterns = patterns('',
     # url(r'^admin/', include(admin.site.urls)),
 
     url(r'^$', 'quast_app.views.index'),
-    url(r'^latestreport/', 'quast_app.views.latestreport'),
+    url(r'^latestreport/', 'quast_app.views.latest'),
     url(r'^assess/', 'quast_app.views.assess'),
-    url(r'^manual.html$', 'quast_app.views.manual'),
+    url(r'^manual$', 'quast_app.views.manual'),
+    url(r'^manual\.html$', 'quast_app.views.manual'),
+
+    url(r'^evaluate$', 'quast_app.views.evaluate'),
+    url(r'^contigs-ajax-upload$', views.contigs_uploader, name="contigs_ajax_upload"),
+    url(r'^reference-ajax-upload$', views.reference_uploader, name="reference_ajax_upload"),
+    url(r'^genes-ajax-upload$', views.genes_uploader, name="genes_ajax_upload"),
+    url(r'^operons-ajax-upload$', views.operons_uploader, name="operons_ajax_upload"),
+    url(r'^report$', 'quast_app.views.evaluate_get_report'),
 )
 
 urlpatterns += staticfiles_urlpatterns()
+
