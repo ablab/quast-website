@@ -54,6 +54,7 @@ def response_with_report(template, dir):
     contigs                 = get('contigs')
     genes                   = get('genes')
     operons                 = get('operons')
+    gc_info                 = get('gc')
 
     return render_to_response(template, {
         'glossary' : glossary,
@@ -65,7 +66,8 @@ def response_with_report(template, dir):
         'contigs' : contigs,
         'genes' : genes,
         'operons' : operons,
-        })
+        'gcInfo' : gc_info,
+    })
 
 
 def latest(request):
@@ -115,7 +117,7 @@ def assess_upload_with_quast(adp_upload_path):
 def assess_with_quast(contigs_paths, reference_path=None, genes_path=None, operons_path=None):
     if len(contigs_paths) > 0:
         if os.path.isfile(quast_py_path):
-            result_path = create_unique_dir('results')
+            result_path = create_unique_dir('results/results')
 
             old_dir = os.getcwd()
             os.chdir(quast_path)
@@ -139,7 +141,6 @@ def assess_with_quast(contigs_paths, reference_path=None, genes_path=None, opero
             out = ''
             err = ''
             try:
-
                 proc = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                 while True:
                     line = proc.stderr.readline()
@@ -197,7 +198,6 @@ def handle_uploaded_file(dir_path, f):
     return fn
 
 
-
 # request.FILES is a dictionary of UploadedFile objects, where files are contigs,
 # and optionally a reference, genes and operons.
 def assess(request):
@@ -239,7 +239,7 @@ from django.template import RequestContext
 from ajaxuploader.views import AjaxFileUploader
 
 def evaluate(request):
-    request.session['upload_directory'] = create_unique_dir('input')
+    request.session['upload_directory'] = create_unique_dir('input/input')
 
     return render_to_response('evaluate.html', {
         'glossary' : glossary,

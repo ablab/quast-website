@@ -1,4 +1,9 @@
 # Django settings for quast_website project.
+import os
+
+
+ENV_ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), '../quast_virtualenv'))
+
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -131,7 +136,8 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'quast_app',
-    'ajaxuploader'
+    'ajaxuploader',
+    'djcelery',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -162,3 +168,21 @@ LOGGING = {
         },
     }
 }
+
+
+# celery setup
+BROKER_URL = "redis://localhost:6379/0"
+
+CELERY_RESULT_BACKEND = 'redis://'
+CELERY_REDIS_HOST = "localhost"
+CELERY_REDIS_PORT = 6379
+
+#CELERY_ENABLE_UTC = True
+#CELERY_STORE_ERRORS_EVEN_IF_IGNORED = True
+#CELERY_TASK_RESULT_EXPIRES = 60*60
+#CELERY_SEND_TASK_ERROR_EMAILS = True
+#CELERY_SEND_EVENTS = True
+#CELERYBEAT_SCHEDULER = "djcelery.schedulers.DatabaseScheduler"
+
+import djcelery
+djcelery.setup_loader()

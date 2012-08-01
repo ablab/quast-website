@@ -51,6 +51,9 @@ function drawNxPlot(filenames, listsOfLengths, title,
         if (plotsData[i].data[0][1] > maxY) {
             maxY = plotsData[i].data[0][1];
         }
+
+        var lastPt = plotsData[i].data[plotsData[i].data.length-1];
+        plotsData[i].data.push([lastPt[0], 0]);
     }
 
     for (i = 0; i < plotsN; i++) {
@@ -69,9 +72,7 @@ function drawNxPlot(filenames, listsOfLengths, title,
 //        }
 //    }
 
-
-
-    $.plot($('#' + title + '-plot-placeholder'), plotsData, {
+    var plot = $.plot($('#' + title + '-plot-placeholder'), plotsData, {
             shadowSize: 0,
             colors: ["#FF5900", "#008FFF", "#168A16", "#7C00FF", "#FF0080"],
             legend: {
@@ -88,21 +89,8 @@ function drawNxPlot(filenames, listsOfLengths, title,
                 reserveSpace: true,
                 lineWidth: 0.5,
                 color: '#000',
-                tickFormatter: function (val, axis) {
-                    if (val == 0) {
-                        return 0;
-                    } else if (val > 1000000) {
-                        return (val / 1000000).toFixed(1) + ' Mbp';
-                    } else if (val > 1000) {
-                        if (val + axis.tickSize >= 1000000 || val > maxY + 1) {
-                            return (val / 1000).toFixed(0) + ' Kbp';
-                        } else {
-                            return (val / 1000).toFixed(0);
-                        }
-                    } else {
-                        return val.toFixed(0) + ' bp';
-                    }
-                },
+                tickFormatter: getBpTickFormatter(maxY),
+                minTickSize: 1,
             },
             xaxis: {
                 min: 0,
@@ -117,6 +105,7 @@ function drawNxPlot(filenames, listsOfLengths, title,
                     }
                 }
             },
+            minTickSize: 1,
         }
     );
 }

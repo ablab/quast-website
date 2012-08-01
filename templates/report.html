@@ -5,10 +5,11 @@
     <script type="text/javascript" src="/static/scripts/flot/jquery.flot.js"></script>
     <!–[if lte IE 8]><script type="text/javascript" src="/static/scripts/flot/excanvas.min.js"></script><![endif]–>
 
+    <script type="text/javascript" src="/static/scripts/utils.js"></script>
     <script type="text/javascript" src="/static/scripts/build_total_report.js"></script>
     <script type="text/javascript" src="/static/scripts/draw_cumulative_plot.js"></script>
     <script type="text/javascript" src="/static/scripts/draw_nx_plot.js"></script>
-    <script type="text/javascript" src="/static/scripts/number_to_pretty_string.js"></script>
+    <script type="text/javascript" src="/static/scripts/draw_gc_plot.js"></script>
     <script type="text/javascript" src="/static/scripts/draw_genes_plot.js"></script>
     <script type="text/javascript" src="/static/scripts/build_report.js"></script>
 
@@ -19,34 +20,77 @@
     <style type='text/css'>
         .report-and-plots {
             margin-top: 20px;
+            margin-left: -125px;
         }
-        #report {
+        /*#report {*/
+            /*float: left;*/
+            /*margin-bottom: 50px;*/
+            /*margin-right: 100px;*/
+        /*}*/
+        /*#report td {*/
+            /*padding: 0 1em 0 0;*/
+            /*margin:  0;*/
+        /*}*/
+        /*#report td {*/
+            /*white-space: nowrap*/
+        /*}*/
+
+        /*.report-table-header {*/
+        /*font-weight: bold;*/
+        /*}*/
+        /*.plots {*/
+        /*float: left;*/
+        /*margin-left: -125px;*/
+        /*}*/
+        /*.plot-wrapper {*/
+        /*margin-bottom: 40px;*/
+        /*}*/
+        /*.plot-header {*/
+        /*margin-left: 124px;*/
+        /*font-weight: bold;*/
+        /*height: 1.5em;*/
+        /*display: block;*/
+        /*}*/
+        /*.plot > div {*/
+        /*width: 850px;*/
+        /*height: 600px;*/
+        /*}*/
+
+        .blocks > div {
             float: left;
-            margin-bottom: 50px;
-            margin-right: 100px;
-        }
-        #report td {
-            padding: 0 1em 0 0;
-            margin:  0;
-        }
-        #report td {
-            white-space: nowrap
+            margin-bottom: 5.5em;
+            margin-top: 0px;
         }
         .report-table-header {
             font-weight: bold;
         }
-        .plots {
-            float: left;
-            margin-left: -125px;
-        }
-        .plot {
-            margin-bottom: 40px;
+        .plot-wrapper {
+            padding-right: 80px;
         }
         .plot-header {
-            margin-left: 124px;
+            margin-left: 125px;
             font-weight: bold;
             height: 1.5em;
             display: block;
+        }
+        .blocks > div#cumulative-plot-div {
+            margin-bottom: 5.5em;
+            padding-right: 0;
+        }
+        .blocks > div:last-child {
+            margin-bottom: 40px;
+        }
+        #report {
+            margin-left: 125px;
+            min-width: 726px;
+            margin-bottom: 1em;
+        }
+        #report td {
+            padding: 0 1em 0 0;
+            margin: 0;
+        }
+        #report td {
+            white-space: nowrap
         }
     </style>
 {% endblock %}
@@ -58,23 +102,25 @@
 </div>
 
 <div class='report-and-plots'>
-    <div id='report'>
-    </div>
+    <div class='blocks'>
+        <div id='report'>
+        </div>
 
-    <div class='plots'>
-        <div id='cumulative-plot-div'>
+        <div class='plot-wrapper' id='cumulative-plot-div'>
         </div>
-        <div id='nx-plot-div'>
+        <div class='plot-wrapper' id='nx-plot-div'>
         </div>
-        <div id='ngx-plot-div'>
+        <div class='plot-wrapper' id='ngx-plot-div'>
         </div>
-        <div id='nax-plot-div'>
+        <div class='plot-wrapper' id='nax-plot-div'>
         </div>
-        <div id='ngax-plot-div'>
+        <div class='plot-wrapper' id='ngax-plot-div'>
         </div>
-        <div id='genes-plot-div'>
+        <div class='plot-wrapper' id='genes-plot-div'>
         </div>
-        <div id='operons-plot-div'>
+        <div class='plot-wrapper' id='operons-plot-div'>
+        </div>
+        <div class='plot-wrapper' id='gc-plot-div'>
         </div>
     </div>
 
@@ -102,6 +148,9 @@
         </div>
         <div id='operons-json'>
             {{ operons }}
+        </div>
+        <div id='gc-json'>
+            {{ gcInfo }}
         </div>
     </div>
 </div>
