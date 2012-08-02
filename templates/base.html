@@ -28,14 +28,24 @@
         }
         a {
             text-decoration: none;
-            border-bottom: 1px solid;
-            border-color: #A0D2EB; /*rgba(0, 88, cc, 0.3);*/
+            color: #0c4f72;
+            border-bottom: 1px solid #487b95;
+            border-color: #487b95; /* #487b95 */
+            border-color: rgba(12, 79, 114, 0.2); /* #0c4f72; */ /* #a0d2eb; */ /*rgba(0, 88, cc, 0.3);*/
+        }
+        a:visited {
+            text-decoration: none;
+            color: #8C66B2;
+            border-bottom: 1px solid #8c66b2;
+            border-color: #8c66b2;
+            border-color: rgba(102, 51, 153, 0.2);
         }
         a:hover {
             text-decoration: none;
-            border-bottom: 1px solid;
-            color: #0088cc;
-            border-color: #55B2E0; /*#005580;*/
+            color: #b33; /* #0088cc; */
+            border-bottom: 1px solid #ffcccc;
+            border-color: #ffcccc;
+            border-color: rgba(255, 0, 0, 0.2); /* #55b2e0; */ /*#005580;*/
         }
         .top-panel {
             background-color: #333;
@@ -58,7 +68,6 @@
             float: left;
             padding-left: 1em;
             padding-right: 1em;
-
             text-decoration: none;
             border: 0px;
         }
@@ -87,22 +96,32 @@
             border: 0px;
         }
 
-        .tooltip-link {
-            color: black;
+        .tooltip-link,
+        .tooltip-link:visited {
             text-decoration: none;
-            border-bottom: 1px dashed #888888;
+            color: #000;
+            border-bottom: 1px dashed #000;
         }
         .tooltip-link:hover {
-            color: black;
             text-decoration: none;
+            color: #b33;
+            border-bottom: 1px dashed #b33;
         }
+
         .dotted-link {
             text-decoration: none;
-            border-bottom: 1px dashed #0088cc;
+            color: #0c4f72;
+            border-bottom: 1px dashed #487b95;
+            border-color: #487b95; /* #487b95 */
+            border-color: rgba(12, 79, 114, 0.2);
         }
         .dotted-link:hover {
             text-decoration: none;
-            border-bottom-color: #005580;
+            color: #b33; /* #0088cc; */
+            border-bottom: 1px dashed #ffcccc;
+            border-color: #ffcccc;
+            border-color: rgba(255, 0, 0, 0.2);
+
         }
         .tooltip {
             font-size: 0.9em;

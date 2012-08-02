@@ -2,8 +2,8 @@ import os
 
 
 development = True
-dp_static = 'static/'
-dp_home = ''
+static_dirpath = 'static/'
+home_dirpath = ''
 quast_path = os.path.abspath('../quast/')
 
 
@@ -17,7 +17,7 @@ from quast_app.upload_backend import ContigsUploadBackend, ReferenceUploadBacken
 
 
 glossary = '{}'
-with open(os.path.join(dp_static, 'glossary.json')) as f:
+with open(os.path.join(static_dirpath, 'glossary.json')) as f:
     glossary = f.read()
 
 
@@ -28,7 +28,7 @@ def index(request):
 
 
 def manual(request):
-    with open(os.path.join(dp_static, 'manual.html')) as f:
+    with open(os.path.join(static_dirpath, 'manual.html')) as f:
         return HttpResponse(f.read())
 
 
@@ -71,7 +71,7 @@ def response_with_report(template, dir):
 
 
 def latest(request):
-    path = os.path.join(dp_home, 'latest_results/')
+    path = os.path.join(home_dirpath, 'latest_results/')
     response = response_with_report('latest-report.html', path)
     return response
 
@@ -138,20 +138,23 @@ def assess_with_quast(contigs_paths, reference_path=None, genes_path=None, opero
             args.append('-J')
             args.append(result_path)
 
-            out = ''
-            err = ''
-            try:
-                proc = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-                while True:
-                    line = proc.stderr.readline()
-                    if line != '':
-                        out = out + 'Quast err ' + line + '\n'
-                    else:
-                        break
-                proc.wait()
+            from celery_start_quast import start_quast
+            start_quast(args)
 
-            except Exception as e:
-                raise Exception(out + err + '\n' + e.strerror)
+#            out = ''
+#            err = ''
+#            try:
+#                proc = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+#                while True:
+#                    line = proc.stderr.readline()
+#                    if line != '':
+#                        out = out + 'Quast err ' + line + '\n'
+#                    else:
+#                        break
+#                proc.wait()
+#
+#            except Exception as e:
+#                raise Exception(out + err + '\n' + e.strerror)
 
             os.chdir(old_dir)
             return result_path
@@ -174,7 +177,7 @@ class UploadAssemblyForm(forms.Form):
 
 
 def create_unique_dir(dir_name):
-    dir_path = dp_home + dir_name + '_' + datetime.datetime.now().strftime('%Y_%m_%d_%H_%M_%S')
+    dir_path = home_dirpath + dir_name + '_' + datetime.datetime.now().strftime('%Y_%m_%d_%H_%M_%S')
 
     if os.path.isdir(dir_path):
         i = 2

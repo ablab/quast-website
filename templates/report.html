@@ -3,6 +3,7 @@
 {% block extra_head %}
     <script type="text/javascript" src="/static/scripts/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="/static/scripts/flot/jquery.flot.js"></script>
+    <script type="text/javascript" src="/static/scripts/flot/jquery.flot.dashes.js"></script>
     <!–[if lte IE 8]><script type="text/javascript" src="/static/scripts/flot/excanvas.min.js"></script><![endif]–>
 
     <script type="text/javascript" src="/static/scripts/utils.js"></script>
@@ -17,7 +18,7 @@
         $(document).ready(buildReport);
     </script>
 
-    <style type='text/css'>
+    <style>
         .report-and-plots {
             margin-top: 20px;
             margin-left: -125px;

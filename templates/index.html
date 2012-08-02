@@ -9,24 +9,66 @@
 {% block header %}Quast{% endblock %}
 
 {% block content %}
+<style>
+    ul.mdash {
+        margin-top: -0.7em;
+        text-indent: -1.3em;
+    }
+    ul.mdash li {
+        margin-bottom: 5px;
+        list-style-type: none;
+        line-height: 1.3em;
+        /*behavior: expression( !this.before ? this.before = this.innerHTML = '&mdash;&nbsp;' + this.innerHTML : '' );*/
+    }
+    ul.mdash li:before {
+        content: '\2014\a0';
+    }
+</style>
+
 <div>
-    <div style="max-width: 800px;">
-        <p class=".lead">
-            <h1>Quast</h1>
+    <h1>Quast</h1>
+    <p>
+        <i>A quality assesment tool</i>
+    </p>
+    <br>
+
+    <div style="max-width: 400px; float: left; margin-right: 80px;">
+        <p>
+            Quast evaluates genome assemblies by computing various metrics:
+            <ul class="mdash">
+                <li><span class='define' key='N50'>N50</span>, length of the shortest contig from all the longer contigs that cover 50% of all assembly
+                <li><span class='define' key='NG50'>NG50</span>, where the reference genome is being covered</li>
+                <li><span class='define' key='NA50'>NA50</span> and <span class='define' key='NGA50'>NGA50</span>, where aligned blocks instead of contigs are taken</li>
+                <li>Number of <span class='define' key='# ORFs >= x bp'>open reading frames</span></li>
+                <li><span class='define' key='Genes covered'>Genes</span> and <span class='define' key='Operons covered'>operons</span> covered</li>
+                <li>Misassemblies, misassembled and unaligned contigs or contigs bases</li>
+            </ul>
+            <p>Builds convenient plots:
+            <ul class="mdash">
+                <li>for cumulative contigs length</li>
+                <li>all kinds of N-metrics</li>
+                <li>genes and operons fully covered</li>
+                <li>GC content</li>
+            </ul>
+
+        <br>
+
+
+    </div>
+
+    <div style="float: left; max-width: 300px;">
+        <p class='.lead'>
+            <a href="/static/quast-1.0.0.tar.gz" class='btn btn-primary btn-large' style='text-align: left;'>Download source code</a>
         </p>
-        <p class=".lead">
-            Quast is a quality assesment tool.
-        </p>
-        <p class=".lead">
+        <p class='.lead'>
             For installation details and usage instructions,
-            please read <a href="/manual.html">manual</a>.<br>
-            You can download <a href="/static/quast-1.0.0.tar.gz">the latest source code</a>.
+            please read <a href="/manual.html">the manual</a>.<br>
         </p>
-        <p class=".lead">
+        </br>
+        <p class=".lead"><i>
             We will be thankful if you help us make Quast better by sending your comments, bug reports, and suggestions
             to&nbsp;<a href="mailto:quast.support@bioinf.spbau.ru">quast.support@bioinf.spbau.ru</a>.
-        </p>
-
+        </i></p>
     </div>
 </div>
 {% endblock %}

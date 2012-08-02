@@ -1,6 +1,5 @@
 
 function drawGenesPlot(filenames, filesContigs, genes, found, kind, div, legendPlaceholder,  glossary) {
-
     div.html(
         "<div class='plot'>" +
             "<span class='plot-header'>" + kind[0].toUpperCase() + kind.slice(1) + "s covered</span>" +

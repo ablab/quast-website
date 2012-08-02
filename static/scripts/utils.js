@@ -82,3 +82,24 @@ function getContigNumberTickFormatter(maxX) {
         return val;
     }
 }
+
+function addTooltipIfDefenitionExists(glossary, string, dictKey) {
+    if (!dictKey) {
+        dictKey = string;
+    }
+    if (glossary.hasOwnProperty(dictKey)) {
+        return '<a class="tooltip-link" href="#" rel="tooltip" title="' +
+            dictKey + ' ' + glossary[dictKey] + '">' + string + '</a>';
+    } else {
+        return string;
+    }
+}
+
+
+
+
+
+
+
+
+

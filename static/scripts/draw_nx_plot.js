@@ -1,16 +1,9 @@
 
 function drawNxPlot(filenames, listsOfLengths, title,
                     refLength, div, legendPlaceholder, glossary) {
-
-    var titleHtml = title;
-    if (glossary.hasOwnProperty(title)) {
-        titleHtml = "<a class='tooltip-link' href='#' rel='tooltip' title='" + title + " "
-            + glossary[title] + "'>" + title + "</a>"
-    }
-
     div.html(
         "<div class='plot'>" +
-            "<span class='plot-header'>" + titleHtml + "</span>" +
+            "<span class='plot-header'>" + addTooltipIfDefenitionExists(glossary, title) + "</span>" +
             "<div style='width: 800px; height: 600px;' id='" + title + "-plot-placeholder'></div>" +
         "</div>"
     );
