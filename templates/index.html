@@ -1,54 +1,40 @@
 {% extends "base.html" %}
 
-{% block title %}About Quast{% endblock %}
+{% block title %}About QUAST{% endblock %}
 
 {% block index-menu-li-class %}active{% endblock %}
 
 {% block brand-link-class %}disabled{% endblock %}
 
-{% block header %}Quast{% endblock %}
-
 {% block content %}
-<style>
-    ul.mdash {
-        margin-top: -0.7em;
-        text-indent: -1.3em;
-    }
-    ul.mdash li {
-        margin-bottom: 5px;
-        list-style-type: none;
-        line-height: 1.3em;
-        /*behavior: expression( !this.before ? this.before = this.innerHTML = '&mdash;&nbsp;' + this.innerHTML : '' );*/
-    }
-    ul.mdash li:before {
-        content: '\2014\a0';
-    }
+<style xmlns="http://www.w3.org/1999/html">
 </style>
 
 <div>
-    <h1>Quast</h1>
+    <h1 style='letter-spacing: .10em; margin-right: -.10em;'>QUAST</h1>
     <p>
-        <i>A quality assesment tool</i>
+        <span class='highlight'>A quality assesment tool</span>
     </p>
     <br>
 
     <div style="max-width: 400px; float: left; margin-right: 80px;">
         <p>
-            Quast evaluates genome assemblies by computing various metrics:
+            <span class='smallcapitals'>QUAST</span> evaluates genome assemblies by computing various metrics:
             <ul class="mdash">
-                <li><span class='define' key='N50'>N50</span>, length of the shortest contig from all the longer contigs that cover 50% of all assembly
-                <li><span class='define' key='NG50'>NG50</span>, where the reference genome is being covered</li>
-                <li><span class='define' key='NA50'>NA50</span> and <span class='define' key='NGA50'>NGA50</span>, where aligned blocks instead of contigs are taken</li>
-                <li>Number of <span class='define' key='# ORFs >= x bp'>open reading frames</span></li>
-                <li><span class='define' key='Genes covered'>Genes</span> and <span class='define' key='Operons covered'>operons</span> covered</li>
-                <li>Misassemblies, misassembled and unaligned contigs or contigs bases</li>
+                <li><span class='define' key='N50'><span class='smallcapitals'>N</span>50</span>, length of the shortest contig from all that cover 50% of all assembly;</li>
+                <li><span class='define' key='NG50'><span class='smallcapitals'>NG</span>50</span>, where the reference genome is being covered;</li>
+                <li><span class='define' key='NA50'><span class='smallcapitals'>NA</span>50</span> and <span class='define' key='NGA50'><span class='smallcapitals'>NGA</span>50</span>, where aligned blocks instead of contigs are taken;</li>
+                <li>misassemblies, misassembled and unaligned contigs or contigs bases;</li>
+                <li>number of <span class='define' key='# ORFs >= x bp'>open reading frames</span>;</li>
+                <li><span class='define' key='Genes covered'>genes</span> and <span class='define' key='Operons covered'>operons</span> covered.</li>
             </ul>
-            <p>Builds convenient plots:
+            <div style="height: 1em;"></div>
+            <p>Builds convenient plots for different metrics:</p>
             <ul class="mdash">
-                <li>for cumulative contigs length</li>
-                <li>all kinds of N-metrics</li>
-                <li>genes and operons fully covered</li>
-                <li>GC content</li>
+                <li>cumulative contigs length,</li>
+                <li>all kinds of N-metrics,</li>
+                <li>genes and operons covered,</li>
+                <li><span class='smallcapitals'>GC</span> content.</li>
             </ul>
 
         <br>
@@ -58,7 +44,7 @@
 
     <div style="float: left; max-width: 300px;">
         <p class='.lead'>
-            <a href="/static/quast-1.0.0.tar.gz" class='btn btn-primary btn-large' style='text-align: left;'>Download source code</a>
+            <a href="/static/quast-1.0.tar.gz" class='btn btn-primary btn-large' style='text-align: left;'>Download source code</a>
         </p>
         <p class='.lead'>
             For installation details and usage instructions,
@@ -66,7 +52,7 @@
         </p>
         </br>
         <p class=".lead"><i>
-            We will be thankful if you help us make Quast better by sending your comments, bug reports, and suggestions
+            We will be thankful if you help us make <span class='smallcapitals'>QUAST</span> better by sending your comments, bug reports, and suggestions
             to&nbsp;<a href="mailto:quast.support@bioinf.spbau.ru">quast.support@bioinf.spbau.ru</a>.
         </i></p>
     </div>

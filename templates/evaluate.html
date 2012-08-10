@@ -10,8 +10,10 @@
     <script src="/static/ajaxuploader/fileuploader.js"></script>
     <link href="/static/ajaxuploader/fileuploader.css" media="screen" rel="stylesheet" type="text/css"/>
 
+    <link rel="stylesheet" href="/static/chosen/chosen.css" />
+
     <style>
-    .uploader_div {
+    .uploader-div {
         float: left;
         margin-right: 20px;
         margin-bottom: 20px;
@@ -27,6 +29,8 @@
 
     .upload-drop-area, .small-upload-drop-area {
         margin-top: 10px;
+        margin-right: 10px;
+        float: left;
 
         height: 11em;
         z-index: 2;
@@ -41,400 +45,438 @@
         vertical-align: middle;
         color: #AAA;
     }
+
     .upload-drop-area:hover, .small-upload-drop-area:hover {
         border-color: #444;
     }
+
     .upload-drop-area p, .small-upload-drop-area p {
         margin-top: 4.7em;
         text-align: center;
     }
+
     .upload-drop-area:hover p, .small-upload-drop-area:hover p {
         color: #444;
     }
+
     .upload-drop-area-active {
         background: #FCFCA2;
         border-color: #444;
         color: #444;
     }
+
+    .upload-list-div {
+        float: left;
+    }
+
     .upload-list {
-        margin: 5px 0px;
+        margin: 5px 10px 5px 0px;
         padding: 0;
         list-style: none;
     }
+
     .upload-list li {
         margin: 0;
         padding: 0;
         line-height: 15px;
         font-size: 12px;
     }
+
+    a.btn {
+        color: white;
+    }
+
+    #add-dataset-wrapper {
+        background-color: #E8E8E8;
+        width: 500px;
+        padding: 10px 10px 10px 10px;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    #id_name_created {
+        width: 296px;
+    }
+    #id_name_selected {
+        width: 304px;
+    }
     </style>
 
     <script>
         $(function() {
-            var contigs_uploader = new qq.FileUploader({
-                action: "{% url contigs_ajax_upload %}",
-                element: $('#contigs-uploader')[0],
+            var uploaders = [];
+
+            var paramters = [{
+                action: '{% url contigs_ajax_upload %}',
+                element_id: '#contigs-uploader',
                 multiple: true,
-                onComplete: function(id, fileName, responseJSON) {
-                    if (responseJSON.success) {
+                btnText: 'Select files with contigs',
+                areaText: 'or drop files with contigs here',
+                areaClass: 'upload-drop-area',
+                uploaded: '{% for fname in contigs_fnames %}<li>{{ fname }}</li>{% endfor %}',
+            },
+{#            {#}
+{#                action: '{% url reference_ajax_upload %}',#}
+{#                element_id: '#reference-uploader',#}
+{#                multiple: false,#}
+{#                btnText: 'Select a file with reference',#}
+{#                areaText: 'Drop a file with reference here',#}
+{#                areaClass: 'small-upload-drop-area',#}
+{#                uploaded: '<li>{{ reference_fname }}</li>'#}
+{#            },#}
+{#            {#}
+{#                action: '{% url genes_ajax_upload %}',#}
+{#                element_id: '#genes-uploader',#}
+{#                multiple: false,#}
+{#                btnText: 'Select a file with genes',#}
+{#                areaText: 'Drop a file with genes here',#}
+{#                areaClass: 'small-upload-drop-area',#}
+{#                uploaded: '<li>{{ genes_fname }}</li>'#}
+{#            },#}
+{#            {#}
+{#                action: '{% url operons_ajax_upload %}',#}
+{#                element_id: '#operons-uploader',#}
+{#                multiple: false,#}
+{#                btnText: 'Select a file with operons',#}
+{#                areaText: 'Drop a file with operons here',#}
+{#                areaClass: 'small-upload-drop-area',#}
+{#                uploaded: '<li>{{ operons_fname }}</li>'#}
+{#            },#}
+            ];
 
-                    }
-                },
-                onAllComplete: function(uploads) {
-                    // uploads is an array of maps
-                    // the maps look like this: {file: FileObject, response: JSONServerResponse}
-                },
-                params: {
-                    'csrf_token': '{{ csrf_token }}',
-                    'csrf_name': 'csrfmiddlewaretoken',
-                    'csrf_xname': 'X-CSRFToken',
-                },
-                messages: {
-                },
-                template: '<div class="qq-uploader">' +
-                        '<button class="btn">Select files with contigs</button>' +
-                        '<div class="upload-drop-area"><p>Drop files with contigs here</p></div>' +
-                        '<ul class="upload-list"></ul>' +
+            for (var i = 0; i < paramters.length; i++) {
+                uploaders.push(new qq.FileUploader({
+                    action: paramters[i].action,
+                    element: $(paramters[i].element_id)[0],
+                    multiple: paramters[i].multiple,
+                    onComplete: function(id, fileName, responseJSON) {
+                        if (responseJSON.success) {
+
+                        }
+                    },
+                    onAllComplete: function(uploads) {
+                        // uploads is an array of maps
+                        // the maps look like this: {file: FileObject, response: JSONServerResponse}
+                    },
+                    params: {
+                        'csrf_token': '{{ csrf_token }}',
+                        'csrf_name': 'csrfmiddlewaretoken',
+                        'csrf_xname': 'X-CSRFToken',
+                    },
+                    messages: {
+                    },
+                    template:
+                        '<div class="qq-uploader">' +
+                            '<button class="btn">' + paramters[i].btnText + '</button>' +
+                            '<div>' +
+                                '<div class="' + paramters[i].areaClass + '">' +
+                                    '<p>' + paramters[i].areaText + '</p>' +
+                                '</div>' +
+                                '<div class="upload-list-div">' +
+                                    '<ul class="upload-list">' + paramters[i].uploaded + '</ul>' +
+                                '</div>' +
+                            '</div>' +
                         '</div>',
-                fileTemplate: '<li>' +
-                        '<span class="qq-upload-file"></span>' +
-                        '<span class="qq-upload-spinner"></span>' +
-                        '<span class="qq-upload-size"></span>' +
-                        '<a class="qq-upload-cancel" href="#">Cancel</a>' +
-                        '<span class="qq-upload-failed-text">Failed</span>' +
+                    fileTemplate:
+                        '<li>' +
+                            '<span class="qq-upload-file"></span>' +
+                            '<span class="qq-upload-spinner"></span>' +
+                            '<span class="qq-upload-size"></span>' +
+                            '<a class="qq-upload-cancel" href="#">Cancel</a>' +
+                            '<span class="qq-upload-failed-text">Failed</span>' +
                         '</li>',
-                classes: {
-                    // used to get elements from templates
-                    button: 'btn',
-                    drop: 'upload-drop-area',
-                    dropActive: 'upload-drop-area-active',
-                    list: 'upload-list',
+                    classes: {
+                        // used to get elements from templates
+                        button: 'btn',
+                        drop: paramters[i].areaClass,
+                        dropActive: 'upload-drop-area-active',
+                        list: 'upload-list',
 
-                    file: 'qq-upload-file',
-                    spinner: 'qq-upload-spinner',
-                    size: 'qq-upload-size',
-                    cancel: 'qq-upload-cancel',
+                        file: 'qq-upload-file',
+                        spinner: 'qq-upload-spinner',
+                        size: 'qq-upload-size',
+                        cancel: 'qq-upload-cancel',
 
-                    // added to list item when upload completes
-                    // used in css to hide progress spinner
-                    success: 'qq-upload-success',
-                    fail: 'qq-upload-fail'
-                }
-            });
-
-            var reference_uploader = new qq.FileUploader({
-                action: "{% url reference_ajax_upload %}",
-                element: $('#reference-uploader')[0],
-                multiple: false,
-                onComplete: function(id, fileName, responseJSON) {
-                    if (responseJSON.success) {
-
+                        // added to list item when upload completes
+                        // used in css to hide progress spinner
+                        success: 'qq-upload-success',
+                        fail: 'qq-upload-fail'
                     }
-                },
-                onAllComplete: function(uploads) {
-                    // uploads is an array of maps
-                    // the maps look like this: {file: FileObject, response: JSONServerResponse}
-                },
-                params: {
-                    'csrf_token': '{{ csrf_token }}',
-                    'csrf_name': 'csrfmiddlewaretoken',
-                    'csrf_xname': 'X-CSRFToken',
-                },
-                messages: {
-                },
-                template: '<div class="qq-uploader">' +
-                        '<button class="btn">Select reference file</button>' +
-                        '<div class="small-upload-drop-area"><p>Drop a file with reference here</p></div>' +
-                        '<ul class="upload-list"></ul>' +
-                        '</div>',
-                fileTemplate: '<li>' +
-                        '<span class="qq-upload-file"></span>' +
-                        '<span class="qq-upload-spinner"></span>' +
-                        '<span class="qq-upload-size"></span>' +
-                        '<a class="qq-upload-cancel" href="#">Cancel</a>' +
-                        '<span class="qq-upload-failed-text">Failed</span>' +
-                        '</li>',
-                classes: {
-                    // used to get elements from templates
-                    button: 'btn',
-                    drop: 'small-upload-drop-area',
-                    dropActive: 'upload-drop-area-active',
-                    list: 'upload-list',
-
-                    file: 'qq-upload-file',
-                    spinner: 'qq-upload-spinner',
-                    size: 'qq-upload-size',
-                    cancel: 'qq-upload-cancel',
-
-                    // added to list item when upload completes
-                    // used in css to hide progress spinner
-                    success: 'qq-upload-success',
-                    fail: 'qq-upload-fail'
-                }
-            });
-
-            var genes_uploader = new qq.FileUploader({
-                action: "{% url genes_ajax_upload %}",
-                element: $('#genes-uploader')[0],
-                multiple: false,
-                onComplete: function(id, fileName, responseJSON) {
-                    if (responseJSON.success) {
-
-                    }
-                },
-                onAllComplete: function(uploads) {
-                    // uploads is an array of maps
-                    // the maps look like this: {file: FileObject, response: JSONServerResponse}
-                },
-                params: {
-                    'csrf_token': '{{ csrf_token }}',
-                    'csrf_name': 'csrfmiddlewaretoken',
-                    'csrf_xname': 'X-CSRFToken',
-                },
-                messages: {
-                },
-                template: '<div class="qq-uploader">' +
-                        '<button class="btn">Select genes file</button>' +
-                        '<div class="small-upload-drop-area"><p>Drop a file with genes here</p></div>' +
-                        '<ul class="upload-list"></ul>' +
-                        '</div>',
-                fileTemplate: '<li>' +
-                        '<span class="qq-upload-file"></span>' +
-                        '<span class="qq-upload-spinner"></span>' +
-                        '<span class="qq-upload-size"></span>' +
-                        '<a class="qq-upload-cancel" href="#">Cancel</a>' +
-                        '<span class="qq-upload-failed-text">Failed</span>' +
-                        '</li>',
-                classes: {
-                    // used to get elements from templates
-                    button: 'btn',
-                    drop: 'small-upload-drop-area',
-                    dropActive: 'upload-drop-area-active',
-                    list: 'upload-list',
-
-                    file: 'qq-upload-file',
-                    spinner: 'qq-upload-spinner',
-                    size: 'qq-upload-size',
-                    cancel: 'qq-upload-cancel',
-
-                    // added to list item when upload completes
-                    // used in css to hide progress spinner
-                    success: 'qq-upload-success',
-                    fail: 'qq-upload-fail'
-                }
-            });
-
-            var operons_uploader = new qq.FileUploader({
-                action: "{% url operons_ajax_upload %}",
-                element: $('#operons-uploader')[0],
-                multiple: false,
-                onComplete: function(id, fileName, responseJSON) {
-                    if (responseJSON.success) {
-
-                    }
-                },
-                onAllComplete: function(uploads) {
-                    // uploads is an array of maps
-                    // the maps look like this: {file: FileObject, response: JSONServerResponse}
-                },
-                params: {
-                    'csrf_token': '{{ csrf_token }}',
-                    'csrf_name': 'csrfmiddlewaretoken',
-                    'csrf_xname': 'X-CSRFToken',
-                },
-                messages: {
-                },
-                template: '<div class="qq-uploader">' +
-                        '<button class="btn">Select operons file</button>' +
-                        '<div class="small-upload-drop-area"><p>Drop a file with operons here</p></div>' +
-                        '<ul class="upload-list"></ul>' +
-                        '</div>',
-                fileTemplate: '<li>' +
-                        '<span class="qq-upload-file"></span>' +
-                        '<span class="qq-upload-spinner"></span>' +
-                        '<span class="qq-upload-size"></span>' +
-                        '<a class="qq-upload-cancel" href="#">Cancel</a>' +
-                        '<span class="qq-upload-failed-text">Failed</span>' +
-                        '</li>',
-                classes: {
-                    // used to get elements from templates
-                    button: 'btn',
-                    drop: 'small-upload-drop-area',
-                    dropActive: 'upload-drop-area-active',
-                    list: 'upload-list',
-
-                    file: 'qq-upload-file',
-                    spinner: 'qq-upload-spinner',
-                    size: 'qq-upload-size',
-                    cancel: 'qq-upload-cancel',
-
-                    // added to list item when upload completes
-                    // used in css to hide progress spinner
-                    success: 'qq-upload-success',
-                    fail: 'qq-upload-fail'
-                }
-            });
+                }));
+            }
         });
+
+        function datasetSelectOnchange() {
+            $('#dataset-select option:selected').each(function() {
+                if ($(this).attr('value') == 'custom-dataset') {
+                    $('#add-dataset').show();
+                } else {
+                    $('#add-dataset').hide();
+                }
+            });
+        }
+
+        function showHideAddDataset() {
+            if ($('#add-dataset').is(':visible')) {
+                $('#add-dataset').hide();
+                $('#dataset-name-select-input').prop('disabled', false);
+                set_selected();
+            } else {
+                $('#add-dataset').show();
+                $('#dataset-name-select-input').prop('disabled', true);
+                set_created();
+            }
+        }
+
+        function set_selected() {
+            $('#id_created_or_selected').prop('value', 'selected');
+        }
+
+        function set_created() {
+            $('#id_created_or_selected').prop('value', 'created');
+        }
     </script>
 {% endblock %}
 
 {% block content %}
-    <div id="contigs-uploader" class="uploader_div">
-        <noscript>
-            <p>Please enable JavaScript to upload files.</p>
-        </noscript>
+    <h1 style='font-size: 2em'>Evaluate assembly with <span style='letter-spacing: .10em; margin-right: -.10em;'>QUAST</span></h1>
+    <br>
+
+    <noscript>
+        <div><br>
+            Unfortunately, <span style="font-weight: bold">JavaScript</span> in your browser <span style="font-weight: bold">is disabled</span> or is not supported.</br>
+            We need JavaScript to process data and build reports.
+        </div>
+    </noscript>
+
+    <div id='uploaders'>
+        <div id="contigs-uploader" class="uploader-div"></div>
+        <div style="clear: both"></div>
+
+        <form enctype="multipart/form-data" action="/evaluate/" method="POST">{% csrf_token %}
+            {% comment %}@declare id="id_name_selected"{% endcomment %}
+            <label for="id_name_selected">
+                Dataset<br/>
+                {{ dataset_form.name_selected }}
+            </label>
+
+            <div id='errors-wrapper' style="display: none">
+                {{ dataset_form.errors }}
+            </div>
+            <div id='created-or-selected-wrapper' style="display: none">
+                {{ dataset_form.created_or_selected }}
+            </div>
+            <br/>
+
+{#            <select name="name_selected" class="chzn-select" id="dataset-select" style="width:350px;" tabindex="2" onchange="datasetSelectOnchange()">#}
+{#                {% for dataset in datasets %}#}
+{#                <option value="{{ dataset.name }}">{{ dataset.name }}</option>#}
+{#                {% endfor %}#}
+{#                <option value="custom-dataset">Add dataset...</option>#}
+{#            </select>#}
+{#            <div style="clear: both"></div>#}
+
+            <div id="add-dataset-wrapper">
+                <a class="dotted-link" onclick="showHideAddDataset()">Different dataset</a>
+                <div id="add-dataset" style="display: none;">
+                    <br/>
+                    {% comment %}@declare id="id_name_created"{% endcomment %}
+                    <label for='id_name_created'>Dataset name<br/>
+                    {{ dataset_form.name_created }}</label>
+                    {% comment %}@declare id="id_reference"{% endcomment %}
+                    <label for='id_reference'>Reference<br/>
+                    {{ dataset_form.reference }}</label>
+                    {% comment %}@declare id="id_genes"{% endcomment %}
+                    <label for='id_genes'>Genes<br/>
+                    {{ dataset_form.genes }}</label>
+                    {% comment %}@declare id="id_operons"{% endcomment %}
+                    <label for='id_operons'>Operons<br/>
+                    {{ dataset_form.operons }}</label>
+    {#              <table>#}
+    {#                  <tr>{% comment %}@declare id="id_name_created"{% endcomment %}#}
+    {#                      <td><label for='id_name_created'>Dataset name</label></td>#}
+    {#                      <td>{{ dataset_form.name_created }}</td>#}
+    {#                  </tr>#}
+    {#                  <tr>{% comment %}@declare id="id_reference"{% endcomment %}#}
+    {#                      <td><label for='id_reference'>Reference</label></td>#}
+    {#                      <td>{{ dataset_form.reference }}</td>#}
+    {#                  </tr>#}
+    {#                  <tr>{% comment %}@declare id="id_genes"{% endcomment %}#}
+    {#                      <td><label for='id_genes'>Genes</label></td>#}
+    {#                      <td>{{ dataset_form.genes }}</td>#}
+    {#                  </tr>#}
+    {#                  <tr>{% comment %}@declare id="id_operons"{% endcomment %}#}
+    {#                      <td><label for='id_operons'>Operons</label></td>#}
+    {#                      <td>{{ dataset_form.operons }}</td>#}
+    {#                  </tr>#}
+    {#              </table>#}
+                </div>
+            </div><br>
+
+            <div style="float: left;
+                        margin-right: 10px;">
+                <input class="btn btn-large btn-inverse" type="submit" value="Evaluate">
+            </div>
+            <div style="visibility: {% if not report_id %}visible{% else %}hidden{% endif %};
+                        float: left;"
+                 id="{{ report_id }}">
+                <p>
+                    Link to your report:<br>
+                    <a href="/report/{{ report_id }}">quast.bioinf.spbau.ru/report/{{ report_id }}</a>
+                </p>
+            </div>
+            <div style="clear: both"></div>
+
+        </form>
+{#        <div id="reference-uploader" class="uploader-div">#}
+{#        </div>#}
+{##}
+{#        <div id="genes-uploader" class="uploader-div">#}
+{#        </div>#}
+{##}
+{#        <div id="operons-uploader" class="uploader-div">#}
+{#        </div>#}
     </div>
 
-    <div id="reference-uploader" class="uploader_div">
-        <noscript>
-            <p>Please enable JavaScript to upload files.</p>
-        </noscript>
-    </div>
 
-    <div id="genes-uploader" class="uploader_div">
-        <noscript>
-            <p>Please enable JavaScript to upload files.</p>
-        </noscript>
-    </div>
 
-    <div id="operons-uploader" class="uploader_div">
-        <noscript>
-            <p>Please enable JavaScript to upload files.</p>
-        </noscript>
-    </div>
+    <script src="/static/chosen/chosen.jquery.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(".chzn-select").chosen();
+        $(".chzn-select-deselect").chosen({allow_single_deselect:true});
 
-    <div style="clear: both"></div>
+        set_selected();
+//        datasetSelectOnchange();
+    </script>
 
-    <a class="btn-large btn-inverse" href="/report">Evaluate with Quast</a>
-
-    <style type="text/css">
-            /*.qq-upload-button {*/
-            /*display: inline-block;*/
-            /**display: inline;*/
-            /*padding: 4px 10px 4px;*/
-            /*margin-bottom: 0;*/
-            /**margin-left: .3em;*/
-            /*font-size: 13px;*/
-            /*line-height: 18px;*/
-            /**line-height: 20px;*/
-            /*color: #333333;*/
-            /*text-align: center;*/
-            /*text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);*/
-            /*vertical-align: middle;*/
-            /*cursor: pointer;*/
-            /*background-color: #f5f5f5;*/
-            /**background-color: #e6e6e6;*/
-            /*background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);*/
-            /*background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));*/
-            /*background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);*/
-            /*background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);*/
-            /*background-image: linear-gradient(top, #ffffff, #e6e6e6);*/
-            /*background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);*/
-            /*background-repeat: repeat-x;*/
-            /*border: 1px solid #cccccc;*/
-            /**border: 0;*/
-            /*border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);*/
-            /*border-color: #e6e6e6 #e6e6e6 #bfbfbf;*/
-            /*border-bottom-color: #b3b3b3;*/
-            /*-webkit-border-radius: 4px;*/
-            /*-moz-border-radius: 4px;*/
-            /*border-radius: 4px;*/
-            /*filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);*/
-            /*filter: progid:dximagetransform.microsoft.gradient(enabled=false);*/
-            /**zoom: 1;*/
-            /*-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);*/
-            /*-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);*/
-            /*box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);*/
-        /*}*/
-
-        /*.qq-upload-button:hover,*/
-        /*.qq-upload-button:active,*/
-        /*.qq-upload-button.active,*/
-        /*.qq-upload-button.disabled,*/
-        /*.qq-upload-button[disabled] {*/
-            /*background-color: #e6e6e6;*/
-            /**background-color: #d9d9d9;*/
-        /*}*/
-
-        /*.qq-upload-button:active,*/
-        /*.qq-upload-button.active {*/
-            /*background-color: #cccccc \9;*/
-        /*}*/
-
-        /*.qq-upload-button:first-child {*/
-            /**margin-left: 0;*/
-        /*}*/
-
-        /*.qq-upload-button:hover {*/
-            /*color: #333333;*/
-            /*text-decoration: none;*/
-            /*background-color: #e6e6e6;*/
-            /**background-color: #d9d9d9;*/
-            /* Buttons in IE7 don't get borders, so darken on hover */
-
-            /*background-position: 0 -15px;*/
-            /*-webkit-transition: background-position 0.1s linear;*/
-            /*-moz-transition: background-position 0.1s linear;*/
-            /*-ms-transition: background-position 0.1s linear;*/
-            /*-o-transition: background-position 0.1s linear;*/
-            /*transition: background-position 0.1s linear;*/
-        /*}*/
-
-        /*.qq-upload-button:focus {*/
-            /*outline: thin dotted #333;*/
-            /*outline: 5px auto -webkit-focus-ring-color;*/
-            /*outline-offset: -2px;*/
-        /*}*/
-
-        /*.qq-upload-button.active,*/
-        /*.qq-upload-button:active {*/
-            /*background-color: #e6e6e6;*/
-            /*background-color: #d9d9d9 \9;*/
-            /*background-image: none;*/
-            /*outline: 0;*/
-            /*-webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);*/
-            /*-moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);*/
-            /*box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);*/
-        /*}*/
-
-        /*.qq-upload-button.disabled,*/
-        /*.qq-upload-button[disabled] {*/
-            /*cursor: default;*/
-            /*background-color: #e6e6e6;*/
-            /*background-image: none;*/
-            /*opacity: 0.65;*/
-            /*filter: alpha(opacity=65);*/
-            /*-webkit-box-shadow: none;*/
-            /*-moz-box-shadow: none;*/
-            /*box-shadow: none;*/
-        /*}*/
-
-        /*.qq-uploader { position:relative; width: 100%;}*/
-
-        /*.qq-upload-button-hover {background:#cc0000;}*/
-        /*.qq-upload-button-focus {outline:1px dotted black;}*/
-
-        /*.qq-upload-drop-area {*/
-            /*position:absolute; top:0; left:0; width:100%; height:100%; min-height: 70px; z-index:2;*/
-            /*background:#DDDDDD;border:3px black dotted; text-align:center;*/
-        /*}*/
-        /*.qq-upload-drop-area span {*/
-            /*display:block; position:absolute; top: 50%; width:100%; margin-top:-8px; font-size:16px;*/
-        /*}*/
-        /*.qq-upload-drop-area-active {background:#AAAAAA;border:3px black dotted}*/
-
-        /*.qq-upload-list {margin:5px 0px; padding:0; list-style:none;}*/
-        /*.qq-upload-list li { margin:0; padding:0; line-height:15px; font-size:12px;}*/
-        /*.qq-upload-file, .qq-upload-spinner, .qq-upload-size, .qq-upload-cancel, .qq-upload-failed-text {*/
-            /*margin-right: 7px;*/
-        /*}*/
-
-        /*.qq-upload-file {}*/
-        /*.qq-upload-spinner {display:inline-block; background: url("/static/ajaxuploader/loading.gif"); width:15px; height:15px; vertical-align:text-bottom;}*/
-        /*.qq-upload-size,.qq-upload-cancel {font-size:11px;}*/
-
-        /*.qq-upload-failed-text {display:none;}*/
-        /*.qq-upload-fail .qq-upload-failed-text {display:inline;}*/
-
-    </style>
+{#    <style type="text/css">#}
+{#            /*.qq-upload-button {*/#}
+{#            /*display: inline-block;*/#}
+{#            /**display: inline;*/#}
+{#            /*padding: 4px 10px 4px;*/#}
+{#            /*margin-bottom: 0;*/#}
+{#            /**margin-left: .3em;*/#}
+{#            /*font-size: 13px;*/#}
+{#            /*line-height: 18px;*/#}
+{#            /**line-height: 20px;*/#}
+{#            /*color: #333333;*/#}
+{#            /*text-align: center;*/#}
+{#            /*text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);*/#}
+{#            /*vertical-align: middle;*/#}
+{#            /*cursor: pointer;*/#}
+{#            /*background-color: #f5f5f5;*/#}
+{#            /**background-color: #e6e6e6;*/#}
+{#            /*background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);*/#}
+{#            /*background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));*/#}
+{#            /*background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);*/#}
+{#            /*background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);*/#}
+{#            /*background-image: linear-gradient(top, #ffffff, #e6e6e6);*/#}
+{#            /*background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);*/#}
+{#            /*background-repeat: repeat-x;*/#}
+{#            /*border: 1px solid #cccccc;*/#}
+{#            /**border: 0;*/#}
+{#            /*border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);*/#}
+{#            /*border-color: #e6e6e6 #e6e6e6 #bfbfbf;*/#}
+{#            /*border-bottom-color: #b3b3b3;*/#}
+{#            /*-webkit-border-radius: 4px;*/#}
+{#            /*-moz-border-radius: 4px;*/#}
+{#            /*border-radius: 4px;*/#}
+{#            /*filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);*/#}
+{#            /*filter: progid:dximagetransform.microsoft.gradient(enabled=false);*/#}
+{#            /**zoom: 1;*/#}
+{#            /*-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);*/#}
+{#            /*-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);*/#}
+{#            /*box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);*/#}
+{#        /*}*/#}
+{##}
+{#        /*.qq-upload-button:hover,*/#}
+{#        /*.qq-upload-button:active,*/#}
+{#        /*.qq-upload-button.active,*/#}
+{#        /*.qq-upload-button.disabled,*/#}
+{#        /*.qq-upload-button[disabled] {*/#}
+{#            /*background-color: #e6e6e6;*/#}
+{#            /**background-color: #d9d9d9;*/#}
+{#        /*}*/#}
+{##}
+{#        /*.qq-upload-button:active,*/#}
+{#        /*.qq-upload-button.active {*/#}
+{#            /*background-color: #cccccc \9;*/#}
+{#        /*}*/#}
+{##}
+{#        /*.qq-upload-button:first-child {*/#}
+{#            /**margin-left: 0;*/#}
+{#        /*}*/#}
+{##}
+{#        /*.qq-upload-button:hover {*/#}
+{#            /*color: #333333;*/#}
+{#            /*text-decoration: none;*/#}
+{#            /*background-color: #e6e6e6;*/#}
+{#            /**background-color: #d9d9d9;*/#}
+{#            /* Buttons in IE7 don't get borders, so darken on hover */#}
+{##}
+{#            /*background-position: 0 -15px;*/#}
+{#            /*-webkit-transition: background-position 0.1s linear;*/#}
+{#            /*-moz-transition: background-position 0.1s linear;*/#}
+{#            /*-ms-transition: background-position 0.1s linear;*/#}
+{#            /*-o-transition: background-position 0.1s linear;*/#}
+{#            /*transition: background-position 0.1s linear;*/#}
+{#        /*}*/#}
+{##}
+{#        /*.qq-upload-button:focus {*/#}
+{#            /*outline: thin dotted #333;*/#}
+{#            /*outline: 5px auto -webkit-focus-ring-color;*/#}
+{#            /*outline-offset: -2px;*/#}
+{#        /*}*/#}
+{##}
+{#        /*.qq-upload-button.active,*/#}
+{#        /*.qq-upload-button:active {*/#}
+{#            /*background-color: #e6e6e6;*/#}
+{#            /*background-color: #d9d9d9 \9;*/#}
+{#            /*background-image: none;*/#}
+{#            /*outline: 0;*/#}
+{#            /*-webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);*/#}
+{#            /*-moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);*/#}
+{#            /*box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);*/#}
+{#        /*}*/#}
+{##}
+{#        /*.qq-upload-button.disabled,*/#}
+{#        /*.qq-upload-button[disabled] {*/#}
+{#            /*cursor: default;*/#}
+{#            /*background-color: #e6e6e6;*/#}
+{#            /*background-image: none;*/#}
+{#            /*opacity: 0.65;*/#}
+{#            /*filter: alpha(opacity=65);*/#}
+{#            /*-webkit-box-shadow: none;*/#}
+{#            /*-moz-box-shadow: none;*/#}
+{#            /*box-shadow: none;*/#}
+{#        /*}*/#}
+{##}
+{#        /*.qq-uploader { position:relative; width: 100%;}*/#}
+{##}
+{#        /*.qq-upload-button-hover {background:#cc0000;}*/#}
+{#        /*.qq-upload-button-focus {outline:1px dotted black;}*/#}
+{##}
+{#        /*.qq-upload-drop-area {*/#}
+{#            /*position:absolute; top:0; left:0; width:100%; height:100%; min-height: 70px; z-index:2;*/#}
+{#            /*background:#DDDDDD;border:3px black dotted; text-align:center;*/#}
+{#        /*}*/#}
+{#        /*.qq-upload-drop-area span {*/#}
+{#            /*display:block; position:absolute; top: 50%; width:100%; margin-top:-8px; font-size:16px;*/#}
+{#        /*}*/#}
+{#        /*.qq-upload-drop-area-active {background:#AAAAAA;border:3px black dotted}*/#}
+{##}
+{#        /*.qq-upload-list {margin:5px 0px; padding:0; list-style:none;}*/#}
+{#        /*.qq-upload-list li { margin:0; padding:0; line-height:15px; font-size:12px;}*/#}
+{#        /*.qq-upload-file, .qq-upload-spinner, .qq-upload-size, .qq-upload-cancel, .qq-upload-failed-text {*/#}
+{#            /*margin-right: 7px;*/#}
+{#        /*}*/#}
+{##}
+{#        /*.qq-upload-file {}*/#}
+{#        /*.qq-upload-spinner {display:inline-block; background: url("/static/ajaxuploader/loading.gif"); width:15px; height:15px; vertical-align:text-bottom;}*/#}
+{#        /*.qq-upload-size,.qq-upload-cancel {font-size:11px;}*/#}
+{##}
+{#        /*.qq-upload-failed-text {display:none;}*/#}
+{#        /*.qq-upload-fail .qq-upload-failed-text {display:inline;}*/#}
+{##}
+{#    </style>#}
 {% endblock %}

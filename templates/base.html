@@ -109,6 +109,7 @@
         }
 
         .dotted-link {
+            cursor: pointer;
             text-decoration: none;
             color: #0c4f72;
             border-bottom: 1px dashed #487b95;
@@ -135,6 +136,30 @@
         }
         .json-code {
             display: none;
+        }
+        .smallcapitals {
+            font-size: .875em;
+            letter-spacing: .15em;
+            margin-right: -.15em;
+        }
+        .highlight {
+            background-color:#FFF9B5;
+            padding: 0px 3px;
+            margin-left: -3px;
+        }
+        ul.mdash {
+            margin: -0.7em 0 0 0;
+            padding: 0 0 0 2em;
+        }
+        ul.mdash li {
+            margin-bottom: 5px;
+            list-style-type: none;
+            line-height: 1.3em;
+            text-indent: -1.3em;
+            behavior: expression(!this.before ? this.before = this.innerHTML = '&mdash;&nbsp;' + this.innerHTML : '');
+        }
+        ul.mdash li:before {
+            content: '\2014\a0';
         }
     </style>
     <style type="text/css">
@@ -212,7 +237,7 @@
 
     <div class='top-panel'>
         <ul class='menu'>
-            <li class='{% block        index-menu-li-class %}{% endblock %}'><a href='/'>            <span>About Quast            </span></a></li>
+            <li class='{% block        index-menu-li-class %}{% endblock %}'><a href='/'>            <span>About <span class='.smallcapitals'>QUAST</span>            </span></a></li>
             <li class='{% block latestreport-menu-li-class %}{% endblock %}'><a href='/latestreport'><span>Latest report          </span></a></li>
             <li class='{% block     evaluate-menu-li-class %}{% endblock %}'><a href='/evaluate'>    <span>Load and evaluate data </span></a></li>
         </ul>

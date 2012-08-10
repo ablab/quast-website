@@ -18,18 +18,21 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
 
-    url(r'^$', 'quast_app.views.index'),
-    url(r'^latestreport/', 'quast_app.views.latest'),
-    url(r'^assess/', 'quast_app.views.assess'),
-    url(r'^manual$', 'quast_app.views.manual'),
+    url(r'^/?$', 'quast_app.views.index'),
+    url(r'^latestreport/?', 'quast_app.views.latest'),
+#    url(r'^assess/', 'quast_app.views.assess'),
+    url(r'^manual/?$', 'quast_app.views.manual'),
+    url(r'^LICENSE$', 'quast_app.views.license'),
     url(r'^manual\.html$', 'quast_app.views.manual'),
 
-    url(r'^evaluate$', 'quast_app.views.evaluate'),
+    url(r'^evaluate/?$', 'quast_app.views.evaluate'),
     url(r'^contigs-ajax-upload$', views.contigs_uploader, name="contigs_ajax_upload"),
-    url(r'^reference-ajax-upload$', views.reference_uploader, name="reference_ajax_upload"),
-    url(r'^genes-ajax-upload$', views.genes_uploader, name="genes_ajax_upload"),
-    url(r'^operons-ajax-upload$', views.operons_uploader, name="operons_ajax_upload"),
-    url(r'^report$', 'quast_app.views.evaluate_get_report'),
+    url(r'^report/(?P<report_id>.+)/?$', 'quast_app.views.report'),
+#   url(r'^reference-ajax-upload$', views.reference_uploader, name="reference_ajax_upload"),
+#   url(r'^genes-ajax-upload$', views.genes_uploader, name="genes_ajax_upload"),
+#   url(r'^operons-ajax-upload$', views.operons_uploader, name="operons_ajax_upload"),
+
+    url(r'^do_stuff$', 'quast_app.do_stuff.do_stuff')
 )
 
 urlpatterns += staticfiles_urlpatterns()

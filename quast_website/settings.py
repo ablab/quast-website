@@ -1,12 +1,18 @@
-# Django settings for quast_website project.
-import os
 
-
-ENV_ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), '../quast_virtualenv'))
-
-
+PRODUCTION = False
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+DEVELOPMENT = True
+
+home_dirpath = '/Users/vladsaveliev/Dropbox/bio/quast-website'
+import os
+static_dirpath = os.path.join(home_dirpath, 'static/')
+quast_dirpath = os.path.join(home_dirpath, '../quast/')
+
+
+# Django settings for quast_website project.
+ENV_ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), '../quast_virtualenv'))
+
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -16,12 +22,14 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '',                      # Or path to database file if using sqlite3.
-        'USER': '',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+       #'ENGINE': 'django_mongodb_engine',                                  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'ENGINE': 'django.db.backends.sqlite3',                             # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': os.path.join(home_dirpath, 'sqlite_quast_db'),                 # Or path to database file if using sqlite3.
+       #'USER': '',                                                         # Not used with sqlite3.
+       #'PASSWORD': '',                                                     # Not used with sqlite3.
+       #'HOST': '',                                                         # Set to empty string for localhost. Not used with sqlite3.
+       #'PORT': '',                                                         # Set to empty string for default. Not used with sqlite3.
+       #'SUPPORT_TRANSACTIONS': False,
     }
 }
 
@@ -64,7 +72,7 @@ MEDIA_URL = '/files/'
 # Don't put anything in this directory yourself; store your files files
 # in apps' "files/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/files/files.lawrence.com/files/"
-STATIC_ROOT = 'collected_static'
+STATIC_ROOT = '/collected_static/'
 
 # URL prefix for files files.
 # Example: "http://files.lawrence.com/files/"
@@ -75,8 +83,9 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/files" or "C:/www/django/files".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    '/Users/vladsaveliev/Dropbox/bio/quast-website/static/',
 )
+if not PRODUCTION:
+    STATICFILES_DIRS += ('/Users/vladsaveliev/Dropbox/bio/quast-website/static/',)
 
 # List of finder classes that know how to find files files in
 # various locations.
@@ -115,14 +124,18 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-SESSION_ENGINE = 'django.contrib.sessions.backends.file'
-
-ROOT_URLCONF = 'quast_website.urls'
+if PRODUCTION:
+    ROOT_URLCONF = 'urls'
+else:
+    ROOT_URLCONF = 'quast_website.urls'
 
 # Python dotted path to the WSGI application used by Djasngo's runserver.
 WSGI_APPLICATION = 'quast_website.wsgi.application'
 
-TEMPLATE_DIRS = ('templates',)
+if PRODUCTION:
+    TEMPLATE_DIRS = ('var/www/quast/quast_website/templates',)
+else:
+    TEMPLATE_DIRS = ('templates',)
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -169,13 +182,67 @@ LOGGING = {
     }
 }
 
+# Celery with sqlite
+BROKER_URL = 'sqla+sqlite:///celerydb.sqlite'
+# http://docs.celeryproject.org/en/latest/configuration.html#conf-database-result-backend
+CELERY_RESULT_DBURI = "sqlite:///celerydb.sqlite"
 
-# celery setup
-BROKER_URL = 'redis://localhost:6379/0'
 
-CELERY_RESULT_BACKEND = 'redis://'
-CELERY_REDIS_HOST = "localhost"
-CELERY_REDIS_PORT = 6379
+## setting up session
+# http://mongoengine-odm.readthedocs.org/en/latest/django.html#sessions
+# SESSION_ENGINE = 'mongoengine.django.sessions'
+#
+# from mongoengine import connect
+# connect('sessiondb')
+
+
+## Celery with mongo
+## http://packages.python.org/celery/getting-started/brokers/mongodb.html
+#BROKER_URL = 'mongodb://localhost:27017/celery_db'
+#
+## http://packages.python.org/celery/configuration.html#conf-mongodb-result-backend
+#CELERY_RESULT_BACKEND = "mongodb"
+#CELERY_MONGODB_BACKEND_SETTINGS = {
+#    "host": "localhost",
+#    "port": 27017,
+#    "database": "celery_db",
+#    "taskmeta_collection": "run_quast_taskmeta_collection",
+#}
+
+import djcelery
+djcelery.setup_loader()
+
+
+input_root_dirpath = os.path.join(home_dirpath, 'input')
+results_root_dirpath = os.path.join(home_dirpath, 'results')
+datasets_root_dirpath = os.path.join(home_dirpath, 'datasets')
+quast_py_path = os.path.join(quast_dirpath, 'quast.py')
+
+
+#Redis and celery
+
+#SESSION_ENGINE = 'redis_sessions.session'
+#
+#BROKER_HOST = 'localhost' #"192.168.1.33"
+#BROKER_BACKEND = 'redis://localhost:6379/0'
+#
+#REDIS_PORT = 6379
+#REDIS_HOST = 'localhost' #"192.168.1.33"
+#
+#REDIS_DB = 0
+#REDIS_CONNECT_RETRY = True
+#
+#CELERY_SEND_EVENTS = True
+#CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
+#CELERYBEAT_SCHEDULER = "djcelery.schedulers.DatabaseScheduler"
+#if DEBUG:
+#    CELERY_ALWAYS_EAGER = True
+
+
+#Redis and celery redundant
+
+#CELERY_REDIS_HOST = "localhost"
+#CELERY_REDIS_PORT = 6379
 
 #CELERY_ENABLE_UTC = True
 #CELERY_STORE_ERRORS_EVEN_IF_IGNORED = True
@@ -184,5 +251,4 @@ CELERY_REDIS_PORT = 6379
 #CELERY_SEND_EVENTS = True
 #CELERYBEAT_SCHEDULER = "djcelery.schedulers.DatabaseScheduler"
 
-import djcelery
-djcelery.setup_loader()
+
