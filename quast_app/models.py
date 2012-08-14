@@ -18,8 +18,7 @@
 #    class Meta:
 #        model = Dataset
 
-
-
+from time import strptime
 from autoslug.fields import AutoSlugField
 from django.db import models
 
@@ -39,28 +38,31 @@ class Dataset(models.Model):
         return self.name
 
 
-class ContigsFileName(models.Model):
+class ContigsFile(models.Model):
     fname = models.FilePathField()
     user_session = models.ForeignKey('UserSession')
-#    quast_session = models.ForeignKey('QuastSession', null=True)
+    file_index = models.CharField(max_length=256)
+#   quast_session = models.ForeignKey('QuastSession', null=True)
 
 
 class QuastSession(models.Model):
     user_session = models.ForeignKey(UserSession)
     dataset = models.ForeignKey(Dataset)
     task_id = models.CharField(max_length=1024, null=True)
-    contigs_filenames = models.ManyToManyField(ContigsFileName, through='QuastSession_ContigsFileName')
+    contigs_files = models.ManyToManyField(ContigsFile, through='QuastSession_ContigsFile')
 
     date = models.DateTimeField(auto_now_add=True)
-    report_id = AutoSlugField(populate_from='date', unique=True)
+    report_id = AutoSlugField(populate_from=(lambda instance: instance.date.strftime('%Y.%m.%d_%H:%M:%S.%f')),
+                              unique=True,
+                              slugify=(lambda s: s))
 
     def get_results_reldirpath(self):
-        return self.user_session.session_key + '/' + self.date.strftime('%Y-%m-%d_%H-%M-%S-%f')
+        return self.user_session.session_key + '/' + self.date.strftime('%Y-%m-%d_%H-%M-%S.%f')
 
 
-class QuastSession_ContigsFileName(models.Model):
+class QuastSession_ContigsFile(models.Model):
     quast_session = models.ForeignKey(QuastSession)
-    contigs_filename = models.ForeignKey(ContigsFileName)
+    contigs_file = models.ForeignKey(ContigsFile)
 
 
 
@@ -71,16 +73,23 @@ class DatasetForm(forms.Form):
 
     name_selected = fields.ChoiceField(
         required=False,
-        choices=[(d.name, d.name) for d in Dataset.objects.all()],
+#        choices=[(d.name, d.name) for d in Dataset.objects.all()],
         widget=widgets.Select(attrs={'class': 'chzn-select',
                                      'data-placeholder': 'Select dataset...'})
     )
 
-    name_created = fields.CharField(required=False,
-        widget=widgets.TextInput(attrs={'id': 'dataset-name-add-input'}))
+    name_created = fields.CharField(required=False, widget=widgets.TextInput())
     reference = fields.FileField(required=False)
     genes = fields.FileField(required=False)
     operons = fields.FileField(required=False)
 
     initial={'created_or_selected': 'selected'}
 
+    def __init__(self, *args, **kwargs):
+        super(DatasetForm, self).__init__(*args, **kwargs)
+        self.fields['name_selected'] = fields.ChoiceField(
+            required=False,
+            choices=[(d.name, d.name) for d in Dataset.objects.all()],
+            widget=widgets.Select(attrs={'class': 'chzn-select',
+                                         'data-placeholder': 'Select dataset...'})
+        )

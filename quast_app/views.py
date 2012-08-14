@@ -30,9 +30,9 @@ def license(request):
         return HttpResponse(f.read(), content_type='text/plain')
 
 
-def latest(request):
-    path = os.path.join(settings.home_dirpath, 'latest_results/')
-    response = response_with_report('latest-report.html', path)
+def example(request):
+    path = os.path.join(settings.home_dirpath, 'example/')
+    response = response_with_report('example-report.html', path)
     return response
 
 
@@ -144,28 +144,36 @@ def latest(request):
 from django.middleware.csrf import get_token
 from django.template import RequestContext
 from ajaxuploader.views import AjaxFileUploader
-from quast_app.models import UserSession, Dataset, QuastSession, ContigsFileName, DatasetForm, QuastSession_ContigsFileName
+from quast_app.models import UserSession, Dataset, QuastSession, ContigsFile, DatasetForm, QuastSession_ContigsFile
 
+#if not request.session.exists(request.session.session_key):
+#request.session.create()
 
 def evaluate(request):
+    if not request.session.exists(request.session.session_key):
+        request.session.create()
+
     user_session_key = request.session.session_key
     try:
         user_session = UserSession.objects.get(session_key=user_session_key)
     except UserSession.DoesNotExist:
         user_session = create_user_session(user_session_key)
 
-    contigs_fnames = [cfname.fname for cfname in user_session.contigsfilename_set.all()]
+    contigs_fnames = [c_f.fname for c_f in user_session.contigsfile_set.all()]
 
     if request.method == 'POST':
         dataset_form = DatasetForm(request.POST)
 #        dataset_form.fields['name_selected'].choices = dataset_choices
         if dataset_form.is_valid():
-            if not user_session.contigsfilename_set:
+            if not user_session.contigsfile_set:
                 return HttpResponseBadRequest('No contigs provided')
                 #TODO: join this validation with form validation.
 
             dataset = get_dataset(request, dataset_form)
             quast_session = start_quast_session(user_session, dataset)
+
+            report_id = quast_session.report_id
+            print report_id
 
             return render_to_response('evaluate.html', {
                 'glossary': glossary,
@@ -206,18 +214,23 @@ def get_dataset(request, dataset_form):
     if dataset_form.cleaned_data['created_or_selected'] == 'created':
         name = dataset_form.data['name_created']
         if Dataset.objects.filter(name=name).exists():
-            return HttpResponseBadRequest('Dataset already exists')
+            dataset = Dataset.objects.get(name=name)
             #TODO: invalidate
         else:
             dataset = Dataset(name=name)
+            dataset.save()
+
+            path = os.path.join(settings.datasets_root_dirpath, dataset.dirname) #, posted_file.name)
+            os.makedirs(path)
 
             for kind in ['reference', 'genes', 'operons']:
                 posted_file = request.FILES.get(kind)
                 if posted_file:
-                    with open(os.path.join(dataset.dirname, posted_file.name), 'wb+') as f:
-                        for chunk in f.chunks():
+                    with open(os.path.join(path, posted_file.name), 'wb+') as f:
+                        for chunk in posted_file.chunks():
                             f.write(chunk)
                     setattr(dataset, kind + '_fname', posted_file.name)
+
     else:
         name = dataset_form.data['name_selected']
         try:
@@ -245,7 +258,8 @@ def report(request, report_id):
             print result.state
             print result.id
             print quast_session.task_id
-            if result.ready():
+            print result.result
+            if result.ready() and result.result == 0:
 #                print 'Quast stdout:'
 #                print result.stdout
 #                print 'Quast stderr:'
@@ -291,16 +305,15 @@ def start_quast_session(user_session, dataset):
     )
     quast_session.save()
 
-    for c_fn in user_session.contigsfilename_set.all():
-        QuastSession_ContigsFileName.objects.create(quast_session=quast_session, contigs_filename=c_fn)
+    for c_fn in user_session.contigsfile_set.all():
+        QuastSession_ContigsFile.objects.create(quast_session=quast_session, contigs_file=c_fn)
 
     input_dirpath = os.path.join(settings.input_root_dirpath, user_session.input_dirname)
 
-
     # Preparing contigs filepaths
     print quast_session.get_results_reldirpath()
-    contigs_fnames = quast_session.contigs_filenames.all()
-    contigs_fpaths = [os.path.join(input_dirpath, 'contigs', c_fn.fname) for c_fn in contigs_fnames]
+    contigs_files = quast_session.contigs_files.all()
+    contigs_fpaths = [os.path.join(input_dirpath, c_f.fname) for c_f in contigs_files]
 
     # Preparing results directory
     result_dirpath = os.path.join(settings.results_root_dirpath, quast_session.get_results_reldirpath())
@@ -336,11 +349,11 @@ def start_quast_session(user_session, dataset):
 
 def assess_with_quast(res_dirpath, contigs_paths, reference_path=None, genes_path=None, operons_path=None):
     if len(contigs_paths) > 0:
-        if os.path.isfile(settings.quast_py_path):
+        if os.path.isfile(settings.quast_py_fpath):
           # old_dir = os.getcwd()
           # os.chdir(settings.quast_path)
 
-            args = [settings.quast_py_path] + contigs_paths
+            args = [settings.quast_py_fpath] + contigs_paths
             if reference_path:
                 args.append('-R')
                 args.append(reference_path)
@@ -362,8 +375,8 @@ def assess_with_quast(res_dirpath, contigs_paths, reference_path=None, genes_pat
           # os.chdir(old_dir)
             return result
         else:
-            if not os.path.isfile(settings.quast_py_path):
-                raise Exception('quast_py_path ' + settings.quast_py_path + ' is not file')
+            if not os.path.isfile(settings.quast_py_fpath):
+                raise Exception('quast_py_fpath ' + settings.quast_py_fpath + ' is not file')
     else:
         raise Exception('it has to be a least one contigs file')
 

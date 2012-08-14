@@ -1,17 +1,33 @@
 
+# False, if Django development server on Vlad's MacBook;
+# True, if Apache on Morality.
 PRODUCTION = False
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-DEVELOPMENT = True
 
-home_dirpath = '/Users/vladsaveliev/Dropbox/bio/quast-website'
 import os
-static_dirpath = os.path.join(home_dirpath, 'static/')
-quast_dirpath = os.path.join(home_dirpath, '../quast/')
+# my PRODUCTION-depending options. Further in settings there
+# are some other PRODUCTION-depending options.
+if PRODUCTION:
+    home_dirpath = '/var/www/quast/'
+    quast_dirpath = os.path.join(home_dirpath, 'quast_tool/')
+else:
+    home_dirpath = '/Users/vladsaveliev/Dropbox/bio/quast-website'
+    quast_dirpath = os.path.join(home_dirpath, '../quast/')
+
+
+env_dirpath = os.path.join(home_dirpath, 'quast_virtualenv')
+static_dirpath = os.path.join(home_dirpath, 'static')
+input_root_dirpath = os.path.join(home_dirpath, 'input')
+results_root_dirpath = os.path.join(home_dirpath, 'results')
+datasets_root_dirpath = os.path.join(home_dirpath, 'datasets')
+quast_py_fpath = os.path.join(quast_dirpath, 'quast.py')
+quastdb_fpath = os.path.join(home_dirpath, 'quast.sqlite')
+celerydb_fpath = os.path.join(home_dirpath, 'celery.sqlite')
 
 
 # Django settings for quast_website project.
-ENV_ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), '../quast_virtualenv'))
 
 
 ADMINS = (
@@ -24,7 +40,7 @@ DATABASES = {
     'default': {
        #'ENGINE': 'django_mongodb_engine',                                  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'ENGINE': 'django.db.backends.sqlite3',                             # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': os.path.join(home_dirpath, 'sqlite_quast_db'),                 # Or path to database file if using sqlite3.
+        'NAME': quastdb_fpath,                                              # Or path to database file if using sqlite3.
        #'USER': '',                                                         # Not used with sqlite3.
        #'PASSWORD': '',                                                     # Not used with sqlite3.
        #'HOST': '',                                                         # Set to empty string for localhost. Not used with sqlite3.
@@ -40,7 +56,7 @@ DATABASES = {
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'Europe/Moscow'
+TIME_ZONE = None
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -182,10 +198,12 @@ LOGGING = {
     }
 }
 
+#BROKER_URL = 'redis://localhost/0'
+#BROKER_URL = 'amqp://guest:guest@localhost:5672//'
 # Celery with sqlite
-BROKER_URL = 'sqla+sqlite:///celerydb.sqlite'
+BROKER_URL = 'sqla+sqlite:///' + celerydb_fpath
 # http://docs.celeryproject.org/en/latest/configuration.html#conf-database-result-backend
-CELERY_RESULT_DBURI = "sqlite:///celerydb.sqlite"
+CELERY_RESULT_DBURI = 'sqlite:///' + celerydb_fpath
 
 
 ## setting up session
@@ -212,11 +230,6 @@ CELERY_RESULT_DBURI = "sqlite:///celerydb.sqlite"
 import djcelery
 djcelery.setup_loader()
 
-
-input_root_dirpath = os.path.join(home_dirpath, 'input')
-results_root_dirpath = os.path.join(home_dirpath, 'results')
-datasets_root_dirpath = os.path.join(home_dirpath, 'datasets')
-quast_py_path = os.path.join(quast_dirpath, 'quast.py')
 
 
 #Redis and celery

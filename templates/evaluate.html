@@ -35,8 +35,9 @@
         height: 11em;
         z-index: 2;
 
-        background: #FAFAD4; /* #FCFCCA; */
-        border: 2px dashed #AAA;
+        background: #E8E8E8;
+        /*background: #FAFAD4;*/ /* #FCFCCA; */
+        border: 1px dashed #AAA;
         border-radius: 7px;
         -moz-border-radius: 7px;
         -webkit-border-radius: 7px;
@@ -60,7 +61,8 @@
     }
 
     .upload-drop-area-active {
-        background: #FCFCA2;
+        background: #E8E8E8;
+        /*background: #FCFCA2;*/
         border-color: #444;
         color: #444;
     }
@@ -95,10 +97,14 @@
     }
 
     #id_name_created {
-        width: 296px;
+        width: 294px;
     }
     #id_name_selected {
-        width: 304px;
+        width: 303px;
+    }
+
+    .qq-upload-remove {
+        font-size: 0.9em;
     }
     </style>
 
@@ -108,46 +114,24 @@
 
             var paramters = [{
                 action: '{% url contigs_ajax_upload %}',
-                element_id: '#contigs-uploader',
+                removeLink: '{% url contigs_ajax_remove %}',
+                initializeUploadsLink: '{% url contigs_ajax_initialize_uploads %}',
+                elementId: '#contigs-uploader',
                 multiple: true,
                 btnText: 'Select files with contigs',
                 areaText: 'or drop files with contigs here',
                 areaClass: 'upload-drop-area',
-                uploaded: '{% for fname in contigs_fnames %}<li>{{ fname }}</li>{% endfor %}',
-            },
-{#            {#}
-{#                action: '{% url reference_ajax_upload %}',#}
-{#                element_id: '#reference-uploader',#}
-{#                multiple: false,#}
-{#                btnText: 'Select a file with reference',#}
-{#                areaText: 'Drop a file with reference here',#}
-{#                areaClass: 'small-upload-drop-area',#}
-{#                uploaded: '<li>{{ reference_fname }}</li>'#}
-{#            },#}
-{#            {#}
-{#                action: '{% url genes_ajax_upload %}',#}
-{#                element_id: '#genes-uploader',#}
-{#                multiple: false,#}
-{#                btnText: 'Select a file with genes',#}
-{#                areaText: 'Drop a file with genes here',#}
-{#                areaClass: 'small-upload-drop-area',#}
-{#                uploaded: '<li>{{ genes_fname }}</li>'#}
-{#            },#}
-{#            {#}
-{#                action: '{% url operons_ajax_upload %}',#}
-{#                element_id: '#operons-uploader',#}
-{#                multiple: false,#}
-{#                btnText: 'Select a file with operons',#}
-{#                areaText: 'Drop a file with operons here',#}
-{#                areaClass: 'small-upload-drop-area',#}
-{#                uploaded: '<li>{{ operons_fname }}</li>'#}
-{#            },#}
-            ];
+                uploaded: '{% for fname in contigs_fnames %}<li>{{ fname }} &nbsp;' +
+//                    '<a class="dotted-link" style="font-size: 0.8em;" href="#">Remove</a>' +
+                    '</li>{% endfor %}',
+            },];
 
             for (var i = 0; i < paramters.length; i++) {
                 uploaders.push(new qq.FileUploader({
                     action: paramters[i].action,
-                    element: $(paramters[i].element_id)[0],
+                    removeLink: paramters[i].removeLink,
+                    initializeUploadsLink: paramters[i].initializeUploadsLink,
+                    element: $(paramters[i].elementId)[0],
                     multiple: paramters[i].multiple,
                     onComplete: function(id, fileName, responseJSON) {
                         if (responseJSON.success) {
@@ -173,7 +157,7 @@
                                     '<p>' + paramters[i].areaText + '</p>' +
                                 '</div>' +
                                 '<div class="upload-list-div">' +
-                                    '<ul class="upload-list">' + paramters[i].uploaded + '</ul>' +
+                                    '<ul class="upload-list"></ul>' +
                                 '</div>' +
                             '</div>' +
                         '</div>',
@@ -182,8 +166,10 @@
                             '<span class="qq-upload-file"></span>' +
                             '<span class="qq-upload-spinner"></span>' +
                             '<span class="qq-upload-size"></span>' +
-                            '<a class="qq-upload-cancel" href="#">Cancel</a>' +
+                            '<a class="dotted-link qq-upload-cancel" href="#">Cancel</a>' +
+                            '<a class="dotted-link qq-upload-remove" href="#">Remove</a>' +
                             '<span class="qq-upload-failed-text">Failed</span>' +
+//                            '<a class="dotted-link" style="font-size: 0.8em;" href="#">Remove</a>' +
                         '</li>',
                     classes: {
                         // used to get elements from templates
@@ -196,6 +182,7 @@
                         spinner: 'qq-upload-spinner',
                         size: 'qq-upload-size',
                         cancel: 'qq-upload-cancel',
+                        remove: 'qq-upload-remove',
 
                         // added to list item when upload completes
                         // used in css to hide progress spinner
@@ -205,24 +192,18 @@
                 }));
             }
         });
-
-        function datasetSelectOnchange() {
-            $('#dataset-select option:selected').each(function() {
-                if ($(this).attr('value') == 'custom-dataset') {
-                    $('#add-dataset').show();
-                } else {
-                    $('#add-dataset').hide();
-                }
-            });
-        }
+//
+//        $('#add-dataset-wrapper').click(
+//            $('#add-dataset-toggle-link').
+//        );
 
         function showHideAddDataset() {
             if ($('#add-dataset').is(':visible')) {
-                $('#add-dataset').hide();
+                $('#add-dataset').hide('fast');
                 $('#dataset-name-select-input').prop('disabled', false);
                 set_selected();
             } else {
-                $('#add-dataset').show();
+                $('#add-dataset').show('fast');
                 $('#dataset-name-select-input').prop('disabled', true);
                 set_created();
             }
@@ -249,11 +230,11 @@
         </div>
     </noscript>
 
-    <div id='uploaders'>
-        <div id="contigs-uploader" class="uploader-div"></div>
-        <div style="clear: both"></div>
+    <div id='form-wrapper'>
+        <form enctype="multipart/form-data" action="/evaluate/run/" method="POST">{% csrf_token %}
+            <div id="contigs-uploader" class="uploader-div"></div>
+            <div style="clear: both"></div>
 
-        <form enctype="multipart/form-data" action="/evaluate/" method="POST">{% csrf_token %}
             {% comment %}@declare id="id_name_selected"{% endcomment %}
             <label for="id_name_selected">
                 Dataset<br/>
@@ -277,7 +258,7 @@
 {#            <div style="clear: both"></div>#}
 
             <div id="add-dataset-wrapper">
-                <a class="dotted-link" onclick="showHideAddDataset()">Different dataset</a>
+                <a class="dotted-link" id="add-dataset-toggle-link" onclick="showHideAddDataset()">Different dataset</a>
                 <div id="add-dataset" style="display: none;">
                     <br/>
                     {% comment %}@declare id="id_name_created"{% endcomment %}
@@ -315,9 +296,9 @@
 
             <div style="float: left;
                         margin-right: 10px;">
-                <input class="btn btn-large btn-inverse" type="submit" value="Evaluate">
+                <input class="btn btn-large btn-inverse {% if report_id %}disabled{% endif %}" type="submit" value="Evaluate">
             </div>
-            <div style="visibility: {% if not report_id %}visible{% else %}hidden{% endif %};
+            <div style="visibility: {% if report_id %}visible{% else %}hidden{% endif %};
                         float: left;"
                  id="{{ report_id }}">
                 <p>
@@ -344,7 +325,6 @@
     <script type="text/javascript">
         $(".chzn-select").chosen();
         $(".chzn-select-deselect").chosen({allow_single_deselect:true});
-
         set_selected();
 //        datasetSelectOnchange();
     </script>
