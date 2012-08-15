@@ -54,14 +54,14 @@ class QuastSession(models.Model):
     task_id = models.CharField(max_length=1024, null=True)
     contigs_files = models.ManyToManyField(ContigsFile, through='QuastSession_ContigsFile')
 
-    date = models.DateTimeField(auto_now_add=True)
+    date = models.DateTimeField()
 
     report_id = AutoSlugField(populate_from=(lambda instance: instance.date.strftime('%d_%b_%Y_%H:%M:%S.%f')),
                               unique=True,
                               slugify=(lambda s: s))
 
     def get_results_reldirpath(self):
-        return self.user_session.session_key + '/' + self.date.strftime('%d_%b_%Y_%H:%M:%S.%f')
+        return self.user_session.session_key + '/' + self.report_id.__str__()
 
 
 class QuastSession_ContigsFile(models.Model):

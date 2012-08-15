@@ -31,6 +31,7 @@ urlpatterns = patterns('',
     url(r'^contigs-ajax-remove$', views.contigs_uploader.remove, name='contigs_ajax_remove'),
     url(r'^contigs-ajax-initialize-uploads$', views.contigs_uploader.initialize_uploads, name='contigs_ajax_initialize_uploads'),
 
+    url(r'^reports/?$', 'quast_app.views.reports'),
     url(r'^report/(?P<report_id>.+)/?$', 'quast_app.views.report'),
 
 #   url(r'^reference-ajax-upload$', views.reference_uploader, name="reference_ajax_upload"),

@@ -291,7 +291,7 @@
             <div id="contigs-uploader" class="uploader-div"></div>
             <div style="clear: both"></div>
 
-        <form enctype="multipart/form-data" action="/evaluate/run/" method="POST">{% csrf_token %}
+        <form enctype="multipart/form-data" action="/evaluate/" method="POST">{% csrf_token %}
             {% comment %}@declare id="id_name_selected"{% endcomment %}
             <label for="id_name_selected">
                 Dataset<br/>

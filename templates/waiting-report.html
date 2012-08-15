@@ -5,11 +5,3 @@
     <p><a href="{{ report_id }}">Link to your report</a></p>
     <p></p>
 {% endblock %}
-
-
-"id" integer NOT NULL PRIMARY KEY,
-"user_session_id" integer NOT NULL REFERENCES "quast_app_usersession" ("id"),
-"dataset_id" integer NOT NULL REFERENCES "quast_app_dataset" ("id"),
-"task_id" varchar(1024),
-"date" datetime NOT NULL,
-"report_id" varchar(50) NOT NULL UNIQUE

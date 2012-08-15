@@ -5,7 +5,7 @@ from django.forms import forms
 import os
 import shutil
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseBadRequest, Http404
-from django.shortcuts import render_to_response, render
+from django.shortcuts import render_to_response, render, redirect
 from quast_app import tasks
 from quast_app.upload_backend import ContigsUploadBackend, ReferenceUploadBackend, GenesUploadBackend, OperonsUploadBackend
 from quast_website import settings
@@ -73,16 +73,17 @@ def evaluate(request):
             quast_session = start_quast_session(user_session, dataset, now_datetime)
 
             report_id = quast_session.report_id
-            print report_id
 
-            return render_to_response('evaluate.html', {
-                'glossary': glossary,
-                'csrf_token': get_token(request),
-                'session_key': user_session_key,
-                'contigs_fnames': contigs_fnames,
-                'dataset_form': dataset_form,
-                'report_id': quast_session.report_id,
-                }, context_instance = RequestContext(request))
+            return redirect('/reports/', after_evaluateion=True)
+
+#            return render_to_response('reports.html', {
+#                'glossary': glossary,
+#                'csrf_token': get_token(request),
+#                'session_key': user_session_key,
+#                'contigs_fnames': contigs_fnames,
+#                'dataset_form': dataset_form,
+#                'report_id': quast_session.report_id,
+#                }, context_instance = RequestContext(request))
     else:
         dataset_form = DatasetForm()
 #        dataset_form.fields['name_selected'].choices = dataset_choices
@@ -94,6 +95,59 @@ def evaluate(request):
         'contigs_fnames': contigs_fnames,
         'dataset_form': dataset_form,
         }, context_instance = RequestContext(request))
+
+
+
+def reports(request, after_evaluation=False):
+    if not request.session.exists(request.session.session_key):
+        request.session.create()
+
+    user_session_key = request.session.session_key
+    try:
+        user_session = UserSession.objects.get(session_key=user_session_key)
+    except UserSession.DoesNotExist:
+        user_session = create_user_session(user_session_key)
+
+
+    quast_sessions_dicts = []
+    quast_sessions = user_session.quastsession_set.all()
+    if quast_sessions.exists():
+        quast_sessions = sorted(quast_sessions, cmp=lambda qs1, qs2: 1 if qs1.date < qs2.date else -1)
+
+        if after_evaluation:
+            last = quast_sessions[0]
+            result = tasks.start_quast.AsyncResult(last.task_id)
+            if result and result.state == 'SUCCESS':
+                return redirect('/report/', report_id=last.report_id)
+
+        for qs in quast_sessions:
+            result = tasks.start_quast.AsyncResult(qs.task_id)
+            state = 'FAILURE'
+            if result:
+                if result.state == 'PENDING':
+                    state = 'PENDING'
+                if result.state == 'STARTED':
+                    state = 'PENDING'
+                if result.state == 'FAILURE':
+                    state = 'FAILURE'
+                if result.state == 'SUCCESS':
+                    state = 'SUCCESS'
+
+            quast_session_dict = {
+                'date': qs.date, #. strftime('%d %b %Y %H:%M:%S'),
+                'report_link': '/report/' + qs.report_id,
+                'with_dataset': True if qs.dataset else False,
+                'dataset_name': qs.dataset.name if qs.dataset and qs.dataset.remember else '',
+                'state': state,
+                'highlight_last': after_evaluation,
+            }
+            quast_sessions_dicts.append(quast_session_dict)
+
+        return render_to_response('reports.html', {
+            'glossary': glossary,
+            'quast_sessions': quast_sessions_dicts,
+        })
+
 
 
 def create_user_session(user_session_key):
@@ -218,6 +272,7 @@ def start_quast_session(user_session, dataset, now_datetime):
         user_session = user_session,
         dataset = dataset,
         date = now_datetime,
+
     )
     quast_session.save()
 
