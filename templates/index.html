@@ -7,28 +7,39 @@
 {% block brand-link-class %}disabled{% endblock %}
 
 {% block content %}
-<style xmlns="http://www.w3.org/1999/html">
-</style>
+    <style>
+        a.btn:visited {
+            color: white;
+        }
+        a.btn:hover {
+            color: white;
+        }
+        a.btn:active {
+            color: white;
+        }
+    </style>
 
-<div>
-    <h1 style='letter-spacing: .10em; margin-right: -.10em;'>QUAST</h1>
-    <p>
-        <span class='highlight'>A quality assesment tool</span>
-    </p>
-    <br>
+    <div>
+        <div>
+            <p>
+            <h1 style='letter-spacing: .10em; margin-right: -.10em;'>QUAST</h1>
+            <div style='margin-top: 0;'>
+                <span style='font-weight: bold;'>Quality Assesment Tool for Genome Assemblies</span><br>
+            </div>
+        </div>
 
-    <div style="max-width: 400px; float: left; margin-right: 80px;">
-        <p>
-            <span class='smallcapitals'>QUAST</span> evaluates genome assemblies by computing various metrics:
+        <div style="max-width: 400px; float: left; margin-right: 80px;">
+            <p>
+                <span class='smallcapitals'>QUAST</span> evaluates genome assemblies by computing various metrics:
             <ul class="mdash">
-                <li><span class='define' key='N50'><span class='smallcapitals'>N</span>50</span>, length of the shortest contig from all that cover 50% of all assembly;</li>
-                <li><span class='define' key='NG50'><span class='smallcapitals'>NG</span>50</span>, where the reference genome is being covered;</li>
-                <li><span class='define' key='NA50'><span class='smallcapitals'>NA</span>50</span> and <span class='define' key='NGA50'><span class='smallcapitals'>NGA</span>50</span>, where aligned blocks instead of contigs are taken;</li>
-                <li>misassemblies, misassembled and unaligned contigs or contigs bases;</li>
-                <li>number of <span class='define' key='# ORFs >= x bp'>open reading frames</span>;</li>
-                <li><span class='define' key='Genes covered'>genes</span> and <span class='define' key='Operons covered'>operons</span> covered.</li>
+                <li><span class='define' key='N50'><span n class='smallcapitals'>N</span>50</span>, length of the shortest contig from all that cover 50% of all assembly,</li>
+                <li><span class='define' key='NG50'><span class='smallcapitals'>NG</span>50</span>, where the reference genome is being covered,</li>
+                <li><span class='define' key='NA50'><span class='smallcapitals'>NA</span>50</span> and <span class='define' key='NGA50'><span class='smallcapitals'>NGA</span>50</span>, where aligned blocks instead of contigs are taken,</li>
+                <li>misassemblies, misassembled and unaligned contigs or contigs bases,</li>
+                <li>number of <span class='define' key='# ORFs >= x bp'>open reading frames</span>,</li>
+                <li><span class='define' key='Genes covered'>genes</span> and <span class='define' key='Operons covered'>operons</span> covered,</li>
+                <li>and other metrics.</li>
             </ul>
-            <div style="height: 1em;"></div>
             <p>Builds convenient plots for different metrics:</p>
             <ul class="mdash">
                 <li>cumulative contigs length,</li>
@@ -36,26 +47,24 @@
                 <li>genes and operons covered,</li>
                 <li><span class='smallcapitals'>GC</span> content.</li>
             </ul>
-            <div style="height: 1em;"></div>
-            <p>You can check out <a href='/example/'>an example of report</a>.</p>
-        <br>
+            <p>You can check out <a href='/example/'>a sample report</a>.</p>
+            <br>
 
 
+        </div>
+
+        <div style="float: left; max-width: 300px;">
+            <p>
+                <a href="https://sourceforge.net/projects/quast/files/" class='btn btn-primary btn-large' style='text-align: left;'>Download source code</a>
+            </p>
+            <p>
+                For installation details and usage instructions,
+                please read <a href="/manual.html">the manual</a>.<br>
+            </p>
+            <p><i>
+                We will be thankful if you help us make <span class='smallcapitals'>QUAST</span> better by sending your comments, bug reports, and suggestions
+                to&nbsp;<a href="mailto:quast.support@bioinf.spbau.ru">quast.support@bioinf.spbau.ru</a>.
+            </i></p>
+        </div>
     </div>
-
-    <div style="float: left; max-width: 300px;">
-        <p class='.lead'>
-            <a href="/static/quast-1.0.tar.gz" class='btn btn-primary btn-large' style='text-align: left;'>Download source code</a>
-        </p>
-        <p class='.lead'>
-            For installation details and usage instructions,
-            please read <a href="/manual.html">the manual</a>.<br>
-        </p>
-        </br>
-        <p class=".lead"><i>
-            We will be thankful if you help us make <span class='smallcapitals'>QUAST</span> better by sending your comments, bug reports, and suggestions
-            to&nbsp;<a href="mailto:quast.support@bioinf.spbau.ru">quast.support@bioinf.spbau.ru</a>.
-        </i></p>
-    </div>
-</div>
 {% endblock %}

@@ -10,6 +10,7 @@ with open(os.path.join(settings.static_dirpath, 'glossary.json')) as f:
 def do_stuff(request):
     dataset = Dataset(
         name = 'E. coli, first 10K',
+        remember = True,
         genes_fname = 'genes_10K.gff',
         operons_fname = 'operons_10K.gff',
         reference_fname = 'reference_10K.fasta.gz',
@@ -19,6 +20,7 @@ def do_stuff(request):
 
     dataset = Dataset(
         name = 'E. coli',
+        remember = True,
         genes_fname = 'genes.gff',
         operons_fname = 'operons.gff',
         reference_fname = 'reference.fasta.gz',

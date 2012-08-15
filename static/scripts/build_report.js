@@ -24,8 +24,8 @@ function buildReport() {
     }
 
     if (report) {
-        document.title += (' of ' + report.date);
-        $('#subheader').append('of ' + report.date);
+        document.title += ('. Report of ' + report.date);
+        $('#subheader').append('Report of ' + report.date);
         buildTotalReport(report, glossary);
     }
 

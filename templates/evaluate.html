@@ -97,7 +97,7 @@
     }
 
     #id_name_created {
-        width: 294px;
+        width: 350px;
     }
     #id_name_selected {
         width: 303px;
@@ -106,6 +106,21 @@
     .qq-upload-remove {
         font-size: 0.9em;
     }
+
+    .qq-uploader > button {
+        margin-left: 0;
+    }
+
+    .form_table td {
+        padding-right: 20px;
+        padding-bottom: 1em;
+        vertical-align: baseline;
+    }
+
+    .form_table {
+        margin-left: -2px;
+    }
+
     </style>
 
     <script>
@@ -231,16 +246,17 @@
     </noscript>
 
     <div id='form-wrapper'>
-        <form enctype="multipart/form-data" action="/evaluate/run/" method="POST">{% csrf_token %}
             <div id="contigs-uploader" class="uploader-div"></div>
             <div style="clear: both"></div>
 
+        <form enctype="multipart/form-data" action="/evaluate/run/" method="POST">{% csrf_token %}
             {% comment %}@declare id="id_name_selected"{% endcomment %}
             <label for="id_name_selected">
                 Dataset<br/>
                 {{ dataset_form.name_selected }}
             </label>
 
+            <br>
             <div id='errors-wrapper' style="display: none">
                 {{ dataset_form.errors }}
             </div>
@@ -261,41 +277,43 @@
                 <a class="dotted-link" id="add-dataset-toggle-link" onclick="showHideAddDataset()">Different dataset</a>
                 <div id="add-dataset" style="display: none;">
                     <br/>
-                    {% comment %}@declare id="id_name_created"{% endcomment %}
-                    <label for='id_name_created'>Dataset name<br/>
-                    {{ dataset_form.name_created }}</label>
-                    {% comment %}@declare id="id_reference"{% endcomment %}
-                    <label for='id_reference'>Reference<br/>
-                    {{ dataset_form.reference }}</label>
-                    {% comment %}@declare id="id_genes"{% endcomment %}
-                    <label for='id_genes'>Genes<br/>
-                    {{ dataset_form.genes }}</label>
-                    {% comment %}@declare id="id_operons"{% endcomment %}
-                    <label for='id_operons'>Operons<br/>
-                    {{ dataset_form.operons }}</label>
-    {#              <table>#}
-    {#                  <tr>{% comment %}@declare id="id_name_created"{% endcomment %}#}
-    {#                      <td><label for='id_name_created'>Dataset name</label></td>#}
-    {#                      <td>{{ dataset_form.name_created }}</td>#}
-    {#                  </tr>#}
-    {#                  <tr>{% comment %}@declare id="id_reference"{% endcomment %}#}
-    {#                      <td><label for='id_reference'>Reference</label></td>#}
-    {#                      <td>{{ dataset_form.reference }}</td>#}
-    {#                  </tr>#}
-    {#                  <tr>{% comment %}@declare id="id_genes"{% endcomment %}#}
-    {#                      <td><label for='id_genes'>Genes</label></td>#}
-    {#                      <td>{{ dataset_form.genes }}</td>#}
-    {#                  </tr>#}
-    {#                  <tr>{% comment %}@declare id="id_operons"{% endcomment %}#}
-    {#                      <td><label for='id_operons'>Operons</label></td>#}
-    {#                      <td>{{ dataset_form.operons }}</td>#}
-    {#                  </tr>#}
-    {#              </table>#}
+{#                    {% comment %}@declare id="id_name_created"{% endcomment %}#}
+{#                    <label for='id_name_created'>Dataset name#}
+{#                    {{ dataset_form.name_created }}</label>#}
+{#                    {% comment %}@declare id="id_reference"{% endcomment %}#}
+{#                    <label for='id_reference'>Reference<br/>#}
+{#                    {{ dataset_form.reference }}</label>#}
+{#                    {% comment %}@declare id="id_genes"{% endcomment %}#}
+{#                    <label for='id_genes'>Genes<br/>#}
+{#                    {{ dataset_form.genes }}</label>#}
+{#                    {% comment %}@declare id="id_operons"{% endcomment %}#}
+{#                    <label for='id_operons'>Operons<br/>#}
+{#                    {{ dataset_form.operons }}</label>#}
+                  <table class='form_table'>
+                      <tr>{% comment %}@declare id="id_name_created"{% endcomment %}
+                          <td><label for='id_name_created'>Dataset name</label></td>
+                          <td>{{ dataset_form.name_created }}<br>
+                              If you fill the name, we will remember this dataset
+                          </td>
+                      </tr>
+                      <tr>{% comment %}@declare id="id_reference"{% endcomment %}
+                          <td><label for='id_reference'>Reference</label></td>
+                          <td>{{ dataset_form.reference }}</td>
+                      </tr>
+                      <tr>{% comment %}@declare id="id_genes"{% endcomment %}
+                          <td><label for='id_genes'>Genes</label></td>
+                          <td>{{ dataset_form.genes }}</td>
+                      </tr>
+                      <tr>{% comment %}@declare id="id_operons"{% endcomment %}
+                          <td><label for='id_operons'>Operons</label></td>
+                          <td>{{ dataset_form.operons }}</td>
+                      </tr>
+                  </table>
                 </div>
             </div><br>
 
             <div style="float: left;
-                        margin-right: 10px;">
+                        margin-right: 10px; margin-top: 7px;">
                 <input class="btn btn-large btn-inverse {% if report_id %}disabled{% endif %}" type="submit" value="Evaluate">
             </div>
             <div style="visibility: {% if report_id %}visible{% else %}hidden{% endif %};
@@ -309,14 +327,6 @@
             <div style="clear: both"></div>
 
         </form>
-{#        <div id="reference-uploader" class="uploader-div">#}
-{#        </div>#}
-{##}
-{#        <div id="genes-uploader" class="uploader-div">#}
-{#        </div>#}
-{##}
-{#        <div id="operons-uploader" class="uploader-div">#}
-{#        </div>#}
     </div>
 
 
@@ -326,137 +336,5 @@
         $(".chzn-select").chosen();
         $(".chzn-select-deselect").chosen({allow_single_deselect:true});
         set_selected();
-//        datasetSelectOnchange();
     </script>
-
-{#    <style type="text/css">#}
-{#            /*.qq-upload-button {*/#}
-{#            /*display: inline-block;*/#}
-{#            /**display: inline;*/#}
-{#            /*padding: 4px 10px 4px;*/#}
-{#            /*margin-bottom: 0;*/#}
-{#            /**margin-left: .3em;*/#}
-{#            /*font-size: 13px;*/#}
-{#            /*line-height: 18px;*/#}
-{#            /**line-height: 20px;*/#}
-{#            /*color: #333333;*/#}
-{#            /*text-align: center;*/#}
-{#            /*text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);*/#}
-{#            /*vertical-align: middle;*/#}
-{#            /*cursor: pointer;*/#}
-{#            /*background-color: #f5f5f5;*/#}
-{#            /**background-color: #e6e6e6;*/#}
-{#            /*background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);*/#}
-{#            /*background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));*/#}
-{#            /*background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);*/#}
-{#            /*background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);*/#}
-{#            /*background-image: linear-gradient(top, #ffffff, #e6e6e6);*/#}
-{#            /*background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);*/#}
-{#            /*background-repeat: repeat-x;*/#}
-{#            /*border: 1px solid #cccccc;*/#}
-{#            /**border: 0;*/#}
-{#            /*border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);*/#}
-{#            /*border-color: #e6e6e6 #e6e6e6 #bfbfbf;*/#}
-{#            /*border-bottom-color: #b3b3b3;*/#}
-{#            /*-webkit-border-radius: 4px;*/#}
-{#            /*-moz-border-radius: 4px;*/#}
-{#            /*border-radius: 4px;*/#}
-{#            /*filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);*/#}
-{#            /*filter: progid:dximagetransform.microsoft.gradient(enabled=false);*/#}
-{#            /**zoom: 1;*/#}
-{#            /*-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);*/#}
-{#            /*-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);*/#}
-{#            /*box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);*/#}
-{#        /*}*/#}
-{##}
-{#        /*.qq-upload-button:hover,*/#}
-{#        /*.qq-upload-button:active,*/#}
-{#        /*.qq-upload-button.active,*/#}
-{#        /*.qq-upload-button.disabled,*/#}
-{#        /*.qq-upload-button[disabled] {*/#}
-{#            /*background-color: #e6e6e6;*/#}
-{#            /**background-color: #d9d9d9;*/#}
-{#        /*}*/#}
-{##}
-{#        /*.qq-upload-button:active,*/#}
-{#        /*.qq-upload-button.active {*/#}
-{#            /*background-color: #cccccc \9;*/#}
-{#        /*}*/#}
-{##}
-{#        /*.qq-upload-button:first-child {*/#}
-{#            /**margin-left: 0;*/#}
-{#        /*}*/#}
-{##}
-{#        /*.qq-upload-button:hover {*/#}
-{#            /*color: #333333;*/#}
-{#            /*text-decoration: none;*/#}
-{#            /*background-color: #e6e6e6;*/#}
-{#            /**background-color: #d9d9d9;*/#}
-{#            /* Buttons in IE7 don't get borders, so darken on hover */#}
-{##}
-{#            /*background-position: 0 -15px;*/#}
-{#            /*-webkit-transition: background-position 0.1s linear;*/#}
-{#            /*-moz-transition: background-position 0.1s linear;*/#}
-{#            /*-ms-transition: background-position 0.1s linear;*/#}
-{#            /*-o-transition: background-position 0.1s linear;*/#}
-{#            /*transition: background-position 0.1s linear;*/#}
-{#        /*}*/#}
-{##}
-{#        /*.qq-upload-button:focus {*/#}
-{#            /*outline: thin dotted #333;*/#}
-{#            /*outline: 5px auto -webkit-focus-ring-color;*/#}
-{#            /*outline-offset: -2px;*/#}
-{#        /*}*/#}
-{##}
-{#        /*.qq-upload-button.active,*/#}
-{#        /*.qq-upload-button:active {*/#}
-{#            /*background-color: #e6e6e6;*/#}
-{#            /*background-color: #d9d9d9 \9;*/#}
-{#            /*background-image: none;*/#}
-{#            /*outline: 0;*/#}
-{#            /*-webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);*/#}
-{#            /*-moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);*/#}
-{#            /*box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);*/#}
-{#        /*}*/#}
-{##}
-{#        /*.qq-upload-button.disabled,*/#}
-{#        /*.qq-upload-button[disabled] {*/#}
-{#            /*cursor: default;*/#}
-{#            /*background-color: #e6e6e6;*/#}
-{#            /*background-image: none;*/#}
-{#            /*opacity: 0.65;*/#}
-{#            /*filter: alpha(opacity=65);*/#}
-{#            /*-webkit-box-shadow: none;*/#}
-{#            /*-moz-box-shadow: none;*/#}
-{#            /*box-shadow: none;*/#}
-{#        /*}*/#}
-{##}
-{#        /*.qq-uploader { position:relative; width: 100%;}*/#}
-{##}
-{#        /*.qq-upload-button-hover {background:#cc0000;}*/#}
-{#        /*.qq-upload-button-focus {outline:1px dotted black;}*/#}
-{##}
-{#        /*.qq-upload-drop-area {*/#}
-{#            /*position:absolute; top:0; left:0; width:100%; height:100%; min-height: 70px; z-index:2;*/#}
-{#            /*background:#DDDDDD;border:3px black dotted; text-align:center;*/#}
-{#        /*}*/#}
-{#        /*.qq-upload-drop-area span {*/#}
-{#            /*display:block; position:absolute; top: 50%; width:100%; margin-top:-8px; font-size:16px;*/#}
-{#        /*}*/#}
-{#        /*.qq-upload-drop-area-active {background:#AAAAAA;border:3px black dotted}*/#}
-{##}
-{#        /*.qq-upload-list {margin:5px 0px; padding:0; list-style:none;}*/#}
-{#        /*.qq-upload-list li { margin:0; padding:0; line-height:15px; font-size:12px;}*/#}
-{#        /*.qq-upload-file, .qq-upload-spinner, .qq-upload-size, .qq-upload-cancel, .qq-upload-failed-text {*/#}
-{#            /*margin-right: 7px;*/#}
-{#        /*}*/#}
-{##}
-{#        /*.qq-upload-file {}*/#}
-{#        /*.qq-upload-spinner {display:inline-block; background: url("/static/ajaxuploader/loading.gif"); width:15px; height:15px; vertical-align:text-bottom;}*/#}
-{#        /*.qq-upload-size,.qq-upload-cancel {font-size:11px;}*/#}
-{##}
-{#        /*.qq-upload-failed-text {display:none;}*/#}
-{#        /*.qq-upload-fail .qq-upload-failed-text {display:inline;}*/#}
-{##}
-{#    </style>#}
 {% endblock %}

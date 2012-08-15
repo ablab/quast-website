@@ -1,3 +1,4 @@
+# coding=utf-8
 #from django.db import models
 #from django.forms import ModelForm
 #
@@ -29,6 +30,8 @@ class UserSession(models.Model):
 
 class Dataset(models.Model):
     name = models.CharField(max_length=1024)
+    remember = models.BooleanField()
+
     reference_fname = models.FilePathField(null=True)
     genes_fname = models.FilePathField(null=True)
     operons_fname = models.FilePathField(null=True)
@@ -47,17 +50,18 @@ class ContigsFile(models.Model):
 
 class QuastSession(models.Model):
     user_session = models.ForeignKey(UserSession)
-    dataset = models.ForeignKey(Dataset)
+    dataset = models.ForeignKey(Dataset, null=True)
     task_id = models.CharField(max_length=1024, null=True)
     contigs_files = models.ManyToManyField(ContigsFile, through='QuastSession_ContigsFile')
 
     date = models.DateTimeField(auto_now_add=True)
-    report_id = AutoSlugField(populate_from=(lambda instance: instance.date.strftime('%Y.%m.%d_%H:%M:%S.%f')),
+
+    report_id = AutoSlugField(populate_from=(lambda instance: instance.date.strftime('%d_%b_%Y_%H:%M:%S.%f')),
                               unique=True,
                               slugify=(lambda s: s))
 
     def get_results_reldirpath(self):
-        return self.user_session.session_key + '/' + self.date.strftime('%Y-%m-%d_%H-%M-%S.%f')
+        return self.user_session.session_key + '/' + self.date.strftime('%d_%b_%Y_%H:%M:%S.%f')
 
 
 class QuastSession_ContigsFile(models.Model):
@@ -89,7 +93,7 @@ class DatasetForm(forms.Form):
         super(DatasetForm, self).__init__(*args, **kwargs)
         self.fields['name_selected'] = fields.ChoiceField(
             required=False,
-            choices=[(d.name, d.name) for d in Dataset.objects.all()],
+            choices=[(d.name, d.name) for d in Dataset.objects.all() if d.remember] + [('no dataset', 'no dataset')],
             widget=widgets.Select(attrs={'class': 'chzn-select',
                                          'data-placeholder': 'Select dataset...'})
         )

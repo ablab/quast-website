@@ -1,4 +1,5 @@
 import sys
+import datetime
 from celery.app.task import Task
 import os
 import shutil
@@ -31,8 +32,10 @@ def license(request):
 
 
 def example(request):
-    path = os.path.join(settings.home_dirpath, 'example/')
-    response = response_with_report('example-report.html', path)
+    results_dirpath = os.path.join(settings.home_dirpath, 'example/')
+    response = response_with_report('example-report.html',
+                                    results_dirpath,
+                                    'E.coli',)
     return response
 
 
@@ -169,8 +172,12 @@ def evaluate(request):
                 return HttpResponseBadRequest('No contigs provided')
                 #TODO: join this validation with form validation.
 
-            dataset = get_dataset(request, dataset_form)
-            quast_session = start_quast_session(user_session, dataset)
+            from datetime import datetime
+            now_datetime = datetime.now()
+            now_str = now_datetime.strftime('%d_%b_%Y_%H:%M:%S.%f')
+
+            dataset = get_dataset(request, dataset_form, now_str)
+            quast_session = start_quast_session(user_session, dataset, now_datetime)
 
             report_id = quast_session.report_id
             print report_id
@@ -210,33 +217,47 @@ def create_user_session(user_session_key):
     return user_session
 
 
-def get_dataset(request, dataset_form):
+def get_dataset(request, dataset_form, now_str):
     if dataset_form.cleaned_data['created_or_selected'] == 'created':
         name = dataset_form.data['name_created']
-        if Dataset.objects.filter(name=name).exists():
-            dataset = Dataset.objects.get(name=name)
-            #TODO: invalidate
-        else:
-            dataset = Dataset(name=name)
-            dataset.save()
 
-            path = os.path.join(settings.datasets_root_dirpath, dataset.dirname) #, posted_file.name)
-            os.makedirs(path)
+        def init_folders(dataset):
+            dataset_dirpath = os.path.join(settings.datasets_root_dirpath, dataset.dirname) #, posted_file.name)
+            os.makedirs(dataset_dirpath)
 
             for kind in ['reference', 'genes', 'operons']:
                 posted_file = request.FILES.get(kind)
                 if posted_file:
-                    with open(os.path.join(path, posted_file.name), 'wb+') as f:
+                    with open(os.path.join(dataset_dirpath, posted_file.name), 'wb+') as f:
                         for chunk in posted_file.chunks():
                             f.write(chunk)
                     setattr(dataset, kind + '_fname', posted_file.name)
 
+        if name == '':
+            dataset = Dataset(name=now_str, remember=False)
+            dataset.save()
+            init_folders(dataset)
+            dataset.save()
+
+        elif not Dataset.objects.filter(name=name).exists():
+            dataset = Dataset(name=name, remember=True)
+            dataset.save()
+            init_folders(dataset)
+            dataset.save()
+
+        else:
+            dataset = Dataset.objects.get(name=name)
+            #TODO: invalidate
+
     else:
         name = dataset_form.data['name_selected']
-        try:
-            dataset = Dataset.objects.get(name=name)
-        except Dataset.DoesNotExist:
-            return HttpResponseBadRequest('Dataset does not exist')
+        if name == 'no dataset':
+            dataset = None
+        else:
+            try:
+                dataset = Dataset.objects.get(name=name)
+            except Dataset.DoesNotExist:
+                return HttpResponseBadRequest('Dataset does not exist')
 
     return dataset
 
@@ -264,9 +285,15 @@ def report(request, report_id):
 #                print result.stdout
 #                print 'Quast stderr:'
 #                print result.stderr
+
+                header = 'Quality assessment'
+                if quast_session.dataset and quast_session.dataset.remember:
+                    header = quast_session.dataset.name
+
                 return response_with_report(
                     'assess-report.html',
-                    os.path.join(settings.results_root_dirpath, quast_session.get_results_reldirpath())
+                    os.path.join(settings.results_root_dirpath, quast_session.get_results_reldirpath()),
+                    header,
                 )
 
             else:
@@ -297,11 +324,12 @@ contigs_uploader = AjaxFileUploader(backend=ContigsUploadBackend)
 #operons_uploader = AjaxFileUploader(backend=OperonsUploadBackend)
 
 
-def start_quast_session(user_session, dataset):
+def start_quast_session(user_session, dataset, now_datetime):
     # Creating new Quast session object
     quast_session = QuastSession(
         user_session = user_session,
-        dataset = dataset
+        dataset = dataset,
+        date = now_datetime,
     )
     quast_session.save()
 
@@ -325,8 +353,8 @@ def start_quast_session(user_session, dataset):
             i += 1
     if not os.path.isdir(result_dirpath):
         os.makedirs(result_dirpath)
+
     # Preparing dataset files
-    dataset = quast_session.dataset
     reference_fpath = None
     genes_fpath = None
     operons_fpath = None
@@ -381,14 +409,14 @@ def assess_with_quast(res_dirpath, contigs_paths, reference_path=None, genes_pat
         raise Exception('it has to be a least one contigs file')
 
 
-def response_with_report(template, dir):
+def response_with_report(template, results_dirpath, header):
     if dir is None:
         raise Exception('No results directory.')
 
     def get(name, is_required=False, msg=None):
         contents = ''
         try:
-            f = open(os.path.join(dir, name + '.json'))
+            f = open(os.path.join(results_dirpath, name + '.json'))
             contents = f.read()
         except IOError:
             if is_required:
@@ -407,6 +435,7 @@ def response_with_report(template, dir):
 
     return render_to_response(template, {
             'glossary' : glossary,
+
             'report' : report,
             'contigsLenghts' : contigs_lengths,
             'alignedContigsLengths' : aligned_contigs_lengths,
@@ -416,6 +445,8 @@ def response_with_report(template, dir):
             'genes' : genes,
             'operons' : operons,
             'gcInfo' : gc_info,
+
+            'header' : header,
         }
     )
 

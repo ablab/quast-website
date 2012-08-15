@@ -115,8 +115,8 @@ function drawGCPlot(filenames, listsOfGCInfo, div, legendPlaceholder, glossary) 
                 reserveSpace: true,
                 lineWidth: 0.5,
                 color: '#000',
-                tickFormatter: getBpTickFormatter(maxY),
                 minTickSize: 1,
+                tickFormatter: getBpTickFormatter(maxY),
             },
             xaxis: {
                 min: 0,
@@ -129,7 +129,7 @@ function drawGCPlot(filenames, listsOfGCInfo, div, legendPlaceholder, glossary) 
                     } else {
                         return val;
                     }
-                }
+                },
             },
             minTickSize: 1,
         }
