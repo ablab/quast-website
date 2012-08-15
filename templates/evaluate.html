@@ -121,6 +121,23 @@
         margin-left: -2px;
     }
 
+    ul.errorlist {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        color: #b33;
+    }
+    ul.errorlist li {
+        margin-bottom: 0.7em;
+        list-style-type: none;
+    }
+    ul.errorlist li:after {
+        content: ',';
+    }
+    ul.errorlist li:last-child:after {
+        content: '.';
+    }
+
+
     </style>
 
     <script>
@@ -150,12 +167,37 @@
                     multiple: paramters[i].multiple,
                     onComplete: function(id, fileName, responseJSON) {
                         if (responseJSON.success) {
-
+                            $('#evaluate-button').prop('disabled', false);
+                            $('#evaluate-button').removeClass('disabled');
                         }
                     },
                     onAllComplete: function(uploads) {
+                        if (uploads.length > 0) {
+                            $('#evaluate-button').prop('disabled', false);
+                            $('#evaluate-button').removeClass('disabled');
+                        }
                         // uploads is an array of maps
                         // the maps look like this: {file: FileObject, response: JSONServerResponse}
+                    },
+                    onRemove: function() {
+                        var number_of_files = -1;
+                        $('.qq-upload-file').each(function(index) {
+                            number_of_files++;
+                        });
+
+                        if (number_of_files <= 0) {
+                            $('#evaluate-button').prop('disabled', true);
+                            $('#evaluate-button').addClass('disabled');
+                        }
+                    },
+                    onInitFiles: function(files){
+                        if (!files || files.length == 0) {
+                            $('#evaluate-button').prop('disabled', true);
+                            $('#evaluate-button').addClass('disabled');
+                        } else {
+                            $('#evaluate-button').prop('disabled', false);
+                            $('#evaluate-button').removeClass('disabled');
+                        }
                     },
                     params: {
                         'csrf_token': '{{ csrf_token }}',
@@ -257,11 +299,9 @@
             </label>
 
             <br>
-            <div id='errors-wrapper' style="display: none">
-                {{ dataset_form.errors }}
-            </div>
             <div id='created-or-selected-wrapper' style="display: none">
                 {{ dataset_form.created_or_selected }}
+                {{ dataset_form.name_selected.errors }}
             </div>
             <br/>
 
@@ -274,7 +314,7 @@
 {#            <div style="clear: both"></div>#}
 
             <div id="add-dataset-wrapper">
-                <a class="dotted-link" id="add-dataset-toggle-link" onclick="showHideAddDataset()">Different dataset</a>
+                <a class="dotted-link" id="add-dataset-toggle-link" onclick="showHideAddDataset()">Another dataset</a>
                 <div id="add-dataset" style="display: none;">
                     <br/>
 {#                    {% comment %}@declare id="id_name_created"{% endcomment %}#}
@@ -293,29 +333,40 @@
                       <tr>{% comment %}@declare id="id_name_created"{% endcomment %}
                           <td><label for='id_name_created'>Dataset name</label></td>
                           <td>{{ dataset_form.name_created }}<br>
-                              If you fill the name, we will remember this dataset
+                              If you fill the name field, we will remember this dataset
+                              {{ dataset_form.name_created.errors }}
                           </td>
                       </tr>
                       <tr>{% comment %}@declare id="id_reference"{% endcomment %}
                           <td><label for='id_reference'>Reference</label></td>
-                          <td>{{ dataset_form.reference }}</td>
+                          <td>{{ dataset_form.reference }}
+                              {{ dataset_form.reference.errors }}
+                          </td>
                       </tr>
                       <tr>{% comment %}@declare id="id_genes"{% endcomment %}
                           <td><label for='id_genes'>Genes</label></td>
-                          <td>{{ dataset_form.genes }}</td>
+                          <td>{{ dataset_form.genes }}
+                              {{ dataset_form.genes.errors }}
+                          </td>
                       </tr>
                       <tr>{% comment %}@declare id="id_operons"{% endcomment %}
                           <td><label for='id_operons'>Operons</label></td>
-                          <td>{{ dataset_form.operons }}</td>
+                          <td>{{ dataset_form.operons }}
+                              {{ dataset_form.operons.errors }}
+                          </td>
                       </tr>
                   </table>
                 </div>
             </div><br>
 
-            <div style="float: left;
-                        margin-right: 10px; margin-top: 7px;">
-                <input class="btn btn-large btn-inverse {% if report_id %}disabled{% endif %}" type="submit" value="Evaluate">
+            <div id='errors-wrapper' style="display: block">
+                {{ dataset_form.non_field_errors }}
             </div>
+
+            <div style="float: left; margin-right: 10px; margin-top: 7px; margin-left: -2px;">
+                <input id='evaluate-button' class="btn btn-large btn-inverse" type="submit" value="Evaluate">
+            </div>
+
             <div style="visibility: {% if report_id %}visible{% else %}hidden{% endif %};
                         float: left;"
                  id="{{ report_id }}">

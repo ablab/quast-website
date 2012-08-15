@@ -275,15 +275,8 @@ qq.FileUploaderBasic = function(o){
         onComplete: function(id, fileName, responseJSON){},
         onAllComplete: function(completed_files){},
         onCancel: function(id, fileName){},
-        onRemove: function(serverIndex){
-            $.ajax({
-                url: this.removeLink,
-                type: 'GET',
-                data: { file_index: serverIndex },
-            }).done(function() {
-            });
-        },
-
+        onRemove: function(serverIndex){},
+        onInitFiles: function(files){},
         // messages                
         messages: {
             typeError: "{file} has invalid extension. Only {extensions} are allowed.",
@@ -315,37 +308,37 @@ qq.FileUploaderBasic.prototype = {
         this._options.params = params;
     },
     getInProgress: function(){
-        return this._filesInProgress;         
+        return this._filesInProgress;
     },
     _createUploadButton: function(element){
         var self = this;
-        
+
         return new qq.UploadButton({
             element: element,
             multiple: this._options.multiple && qq.UploadHandlerXhr.isSupported(),
             onChange: function(input){
                 self._onInputChange(input);
-            }        
-        });           
-    },    
+            }
+        });
+    },
     _createUploadHandler: function(){
         var self = this,
-            handlerClass;        
-        
-        if(qq.UploadHandlerXhr.isSupported()){           
-            handlerClass = 'UploadHandlerXhr';                        
+            handlerClass;
+
+        if(qq.UploadHandlerXhr.isSupported()){
+            handlerClass = 'UploadHandlerXhr';
         } else {
             handlerClass = 'UploadHandlerForm';
         }
 
         var handler = new qq[handlerClass]({
             debug: this._options.debug,
-            action: this._options.action,         
+            action: this._options.action,
             maxConnections: this._options.maxConnections,
-            onProgress: function(id, fileName, loaded, total){                
+            onProgress: function(id, fileName, loaded, total){
                 self._onProgress(id, fileName, loaded, total);
-                self._options.onProgress(id, fileName, loaded, total);                    
-            },            
+                self._options.onProgress(id, fileName, loaded, total);
+            },
             onComplete: function(id, fileName, result){
                 self._onComplete(id, fileName, result);
                 self._options.onComplete(id, fileName, result);
@@ -358,49 +351,54 @@ qq.FileUploaderBasic.prototype = {
                 self._options.onCancel(id, fileName);
             },
             onRemove : function(serverIndex){
+                $.ajax({
+                    url: self._options.removeLink,
+                    type: 'GET',
+                    data: { file_index: serverIndex },
+                });
                 self._options.onRemove(serverIndex);
             }
         });
 
         return handler;
-    },    
+    },
     _preventLeaveInProgress: function(){
         var self = this;
-        
+
         qq.attach(window, 'beforeunload', function(e){
             if (!self._filesInProgress){return;}
-            
+
             var e = e || window.event;
             // for ie, ff
             e.returnValue = self._options.messages.onLeave;
             // for webkit
-            return self._options.messages.onLeave;             
-        });        
-    },    
-    _onSubmit: function(id, fileName){
-        this._filesInProgress++;  
+            return self._options.messages.onLeave;
+        });
     },
-    _onProgress: function(id, fileName, loaded, total){        
+    _onSubmit: function(id, fileName){
+        this._filesInProgress++;
+    },
+    _onProgress: function(id, fileName, loaded, total){
     },
     _onComplete: function(id, fileName, result){
-        this._filesInProgress--;                 
+        this._filesInProgress--;
         if (result.error){
             this._options.showMessage(result.error);
-        }             
+        }
     },
     _onCancel: function(id, fileName){
-        this._filesInProgress--;        
+        this._filesInProgress--;
     },
     _onInputChange: function(input){
-        if (this._handler instanceof qq.UploadHandlerXhr){                
-            this._uploadFileList(input.files);                   
-        } else {             
-            if (this._validateFile(input)){                
-                this._uploadFile(input);                                    
-            }                      
-        }               
-        this._button.reset();   
-    },  
+        if (this._handler instanceof qq.UploadHandlerXhr){
+            this._uploadFileList(input.files);
+        } else {
+            if (this._validateFile(input)){
+                this._uploadFile(input);
+            }
+        }
+        this._button.reset();
+    },
     _uploadFileList: function(files){
         var list_length = 0;
         for (var i=0; i<files.length; i++){
@@ -409,25 +407,25 @@ qq.FileUploaderBasic.prototype = {
             }
             list_length++;
         }
-        
+
         for (var i=0; i<files.length; i++){
-            this._uploadFile(files[i]);        
-        }        
-    },       
-    _uploadFile: function(fileContainer){      
+            this._uploadFile(files[i]);
+        }
+    },
+    _uploadFile: function(fileContainer){
         var id = this._handler.add(fileContainer);
         var fileName = this._handler.getName(id);
-        
+
         if (this._options.onSubmit(id, fileName) !== false){
             this._onSubmit(id, fileName);
             this._handler.upload(id, this._options.params);
         }
-    },      
+    },
     _validateFile: function(file, list_length){
         var name, size;
-        
+
         if (file.value){
-            // it is a file input            
+            // it is a file input
             // get input value and remove path to normalize
             name = file.value.replace(/.*(\/|\\)/, "");
         } else {
@@ -436,21 +434,21 @@ qq.FileUploaderBasic.prototype = {
             size = file.fileSize != null ? file.fileSize : file.size;
         }
 
-        if (! this._isAllowedExtension(name)){            
+        if (! this._isAllowedExtension(name)){
             this._error('typeError', name);
             return false;
-            
-        } else if (size === 0){            
+
+        } else if (size === 0){
             this._error('emptyError', name);
             return false;
-                                                     
-        } else if (size && this._options.sizeLimit && size > this._options.sizeLimit){            
+
+        } else if (size && this._options.sizeLimit && size > this._options.sizeLimit){
             this._error('sizeError', name);
             return false;
-                        
+
         } else if (size && size < this._options.minSizeLimit){
             this._error('minSizeError', name);
-            return false;            
+            return false;
         } else if (this._options.filesLimit){
 
             if (list_length == undefined || list_length == NaN){
@@ -474,47 +472,47 @@ qq.FileUploaderBasic.prototype = {
                 return false;
             }
         }
-        
-        return true;                
+
+        return true;
     },
     _error: function(code, fileName){
-        var message = this._options.messages[code];        
+        var message = this._options.messages[code];
         function r(name, replacement){ message = message.replace(name, replacement); }
-        
-        r('{file}', this._formatFileName(fileName));        
+
+        r('{file}', this._formatFileName(fileName));
         r('{extensions}', this._options.allowedExtensions.join(', '));
         r('{sizeLimit}', this._formatSize(this._options.sizeLimit));
         r('{minSizeLimit}', this._formatSize(this._options.minSizeLimit));
         r('{filesLimit}', this._options.filesLimit);
-        
-        this._options.showMessage(message);                
+
+        this._options.showMessage(message);
     },
     _formatFileName: function(name){
         if (name.length > 33){
-            name = name.slice(0, 19) + '...' + name.slice(-13);    
+            name = name.slice(0, 19) + '...' + name.slice(-13);
         }
         return name;
     },
     _isAllowedExtension: function(fileName){
         var ext = (-1 !== fileName.indexOf('.')) ? fileName.replace(/.*[.]/, '').toLowerCase() : '';
         var allowed = this._options.allowedExtensions;
-        
-        if (!allowed.length){return true;}        
-        
+
+        if (!allowed.length){return true;}
+
         for (var i=0; i<allowed.length; i++){
-            if (allowed[i].toLowerCase() == ext){ return true;}    
+            if (allowed[i].toLowerCase() == ext){ return true;}
         }
-        
+
         return false;
-    },    
+    },
     _formatSize: function(bytes){
-        var i = -1;                                    
+        var i = -1;
         do {
             bytes = bytes / 1024;
-            i++;  
+            i++;
         } while (bytes > 99);
-        
-        return Math.max(bytes, 0.1).toFixed(1) + ['kB', 'MB', 'GB', 'TB', 'PB', 'EB'][i];          
+
+        return Math.max(bytes, 0.1).toFixed(1) + ['kB', 'MB', 'GB', 'TB', 'PB', 'EB'][i];
     }
 };
     
@@ -709,6 +707,10 @@ qq.extend(qq.FileUploader.prototype, {
                     var fileInfo = data.uploads[i];
                     self._addToList(id, fileInfo.fileName, fileInfo.file_index);
                 }
+                self._options.onInitFiles(data.uploads);
+            }
+            else {
+                self._options.onInitFiles([]);
             }
         });
     },
@@ -1105,7 +1107,7 @@ qq.extend(qq.UploadHandlerForm.prototype, {
 
             qq.remove(iframe);
         }
-    },     
+    },
     _upload: function(id, params){
         var input = this._inputs[id];
         

@@ -1,6 +1,7 @@
 import sys
 import datetime
 from celery.app.task import Task
+from django.forms import forms
 import os
 import shutil
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseBadRequest, Http404
@@ -39,111 +40,6 @@ def example(request):
     return response
 
 
-#def assess_upload_with_quast(upload_dirpath, res_dirpath):
-#    if os.path.isdir(upload_dirpath):
-#        contigs_dirpath = os.path.join(upload_dirpath, 'contigs')
-#        reference_dirpath = os.path.join(upload_dirpath, 'reference')
-#        genes_dirpath = os.path.join(upload_dirpath, 'genes')
-#        operons_dirpath = os.path.join(upload_dirpath, 'operons')
-#
-#        contigs_fpaths = []
-#
-#        if not os.path.isdir(contigs_dirpath):
-#            raise Exception('adp_contigs_path ' + contigs_dirpath + ' is not dir')
-#        else:
-#            for fn in os.listdir(contigs_dirpath):
-#                fpath = os.path.join(contigs_dirpath, fn)
-#                if os.path.isfile(fpath):
-#                    contigs_fpaths.append(fpath)
-#
-#        if not os.path.isdir(reference_dirpath) or os.listdir(reference_dirpath) == 0:
-#            reference_fpath = None
-#        else:
-#            reference_fpath = os.path.join(reference_dirpath, os.listdir(reference_dirpath)[0])
-#
-#        if not os.path.isdir(genes_dirpath) or os.listdir(genes_dirpath) == 0:
-#            genes_fpath = None
-#        else:
-#            genes_fpath = os.path.join(genes_dirpath, os.listdir(genes_dirpath)[0])
-#
-#        if not os.path.isdir(operons_dirpath) or os.listdir(operons_dirpath) == 0:
-#            operons_fpath = None
-#        else:
-#            operons_fpath = os.path.join(operons_dirpath, os.listdir(operons_dirpath)[0])
-#
-#        return assess_with_quast(res_dirpath, contigs_fpaths, reference_fpath, genes_fpath, operons_fpath)
-
-
-
-#class UploadAssemblyForm(forms.Form):
-#    contigs     = forms.FileField()
-#    reference   = forms.FileField(required=False)
-#    genes       = forms.FileField(required=False)
-#    operons     = forms.FileField(required=False)
-
-
-#
-#def create_unique_dir(dir_name):
-#    dir_path = settings.home_dirpath + dir_name + '_' + datetime.datetime.now().strftime('%Y_%m_%d_%H_%M_%S')
-#
-#    if os.path.isdir(dir_path):
-#        i = 2
-#        base_dir_path = dir_path
-#        while os.path.isdir(dir_path):
-#            dir_path = base_dir_path + '_' + str(i)
-#            i += 1
-#
-#    if not os.path.isdir(dir_path):
-#        os.makedirs(dir_path)
-#
-#    return os.path.abspath(dir_path)
-
-
-#def handle_uploaded_file(dir_path, f):
-#    fn = os.path.join(dir_path, f.name)
-#
-#    with open(fn, 'wb+') as destination:
-#        for chunk in f.chunks():
-#            destination.write(chunk)
-#    return fn
-
-
-# request.FILES is a dictionary of UploadedFile objects, where files are contigs,
-# and optionally a reference, genes and operons.
-#def assess(request):
-#    contigs_path = reference_path = operons_path = genes_path = None
-#
-#    if request.method == 'POST':
-#        form = UploadAssemblyForm(request.POST, request.FILES, label_suffix='')
-#
-#        if form.is_valid():
-#            data_dir_path = create_unique_dir('input/input')
-#
-#            contigs = request.FILES.get('contigs')
-#            if contigs:
-#                contigs_path = handle_uploaded_file(data_dir_path, contigs)
-#
-#            reference = request.FILES.get('reference')
-#            if reference:
-#                reference_path = handle_uploaded_file(data_dir_path, reference)
-#
-#            genes = request.FILES.get('genes')
-#            if genes:
-#                genes_path = handle_uploaded_file(data_dir_path, genes)
-#
-#            operons = request.FILES.get('operons')
-#            if operons:
-#                operons_path = handle_uploaded_file(data_dir_path, operons)
-#
-#            results_dir = assess_with_quast(contigs_path, reference_path, genes_path, operons_path)
-#            return response_with_report('assess-report.html', results_dir)
-#
-#    else:
-#        form = UploadAssemblyForm(label_suffix='')
-#
-#    return render(request, 'assess.html', {'form' : form })
-
-
 from django.middleware.csrf import get_token
 from django.template import RequestContext
 from ajaxuploader.views import AjaxFileUploader
@@ -166,12 +62,9 @@ def evaluate(request):
 
     if request.method == 'POST':
         dataset_form = DatasetForm(request.POST)
+        dataset_form.set_user_session(user_session)
 #        dataset_form.fields['name_selected'].choices = dataset_choices
         if dataset_form.is_valid():
-            if not user_session.contigsfile_set:
-                return HttpResponseBadRequest('No contigs provided')
-                #TODO: join this validation with form validation.
-
             from datetime import datetime
             now_datetime = datetime.now()
             now_str = now_datetime.strftime('%d_%b_%Y_%H:%M:%S.%f')
@@ -281,11 +174,6 @@ def report(request, report_id):
             print quast_session.task_id
             print result.result
             if result.ready() and result.result == 0:
-#                print 'Quast stdout:'
-#                print result.stdout
-#                print 'Quast stderr:'
-#                print result.stderr
-
                 header = 'Quality assessment'
                 if quast_session.dataset and quast_session.dataset.remember:
                     header = quast_session.dataset.name
@@ -378,9 +266,6 @@ def start_quast_session(user_session, dataset, now_datetime):
 def assess_with_quast(res_dirpath, contigs_paths, reference_path=None, genes_path=None, operons_path=None):
     if len(contigs_paths) > 0:
         if os.path.isfile(settings.quast_py_fpath):
-          # old_dir = os.getcwd()
-          # os.chdir(settings.quast_path)
-
             args = [settings.quast_py_fpath] + contigs_paths
             if reference_path:
                 args.append('-R')
@@ -400,7 +285,6 @@ def assess_with_quast(res_dirpath, contigs_paths, reference_path=None, genes_pat
             from tasks import start_quast
             result = start_quast.delay(args)
 
-          # os.chdir(old_dir)
             return result
         else:
             if not os.path.isfile(settings.quast_py_fpath):

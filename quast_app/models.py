@@ -78,8 +78,10 @@ class DatasetForm(forms.Form):
     name_selected = fields.ChoiceField(
         required=False,
 #        choices=[(d.name, d.name) for d in Dataset.objects.all()],
-        widget=widgets.Select(attrs={'class': 'chzn-select',
-                                     'data-placeholder': 'Select dataset...'})
+        widget=widgets.Select(attrs={
+            'class': 'chzn-select',
+            'data-placeholder': 'Select dataset...'
+        })
     )
 
     name_created = fields.CharField(required=False, widget=widgets.TextInput())
@@ -94,6 +96,21 @@ class DatasetForm(forms.Form):
         self.fields['name_selected'] = fields.ChoiceField(
             required=False,
             choices=[(d.name, d.name) for d in Dataset.objects.all() if d.remember] + [('no dataset', 'no dataset')],
-            widget=widgets.Select(attrs={'class': 'chzn-select',
-                                         'data-placeholder': 'Select dataset...'})
+            widget=widgets.Select(attrs={
+                'class': 'chzn-select',
+                'data-placeholder': 'Select dataset...'
+            })
         )
+
+    def set_user_session(self, user_session):
+        self.user_session = user_session
+
+    def clean(self):
+        cleaned_data = super(DatasetForm, self).clean()
+
+        if self.user_session:
+            if not self.user_session.contigsfile_set or \
+               not self.user_session.contigsfile_set.all().exists():
+                raise forms.ValidationError('No contigs provided')
+
+        return cleaned_data
