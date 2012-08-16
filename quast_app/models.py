@@ -1,10 +1,17 @@
-
+import shutil
 from autoslug.fields import AutoSlugField
 from django.db import models
+from django.db.models.signals import post_delete, pre_delete
+from django.dispatch import receiver
+import os
+from quast_website import settings
 
 class UserSession(models.Model):
     session_key = models.CharField(max_length=256)
     input_dirname = models.CharField(max_length=2048)
+
+    def __unicode__(self):
+        return self.session_key
 
 
 class Dataset(models.Model):
@@ -16,8 +23,16 @@ class Dataset(models.Model):
     operons_fname = models.CharField(null=True, max_length=2048)
 
     dirname = AutoSlugField(populate_from='name', unique=True)
+
     def __unicode__(self):
         return self.name
+
+@receiver(pre_delete, sender=Dataset)
+def delete_dataset_callback(sender, **kwargs):
+    dataset = sender
+#    dataset_dirpath = os.path.join(settings.datasets_root_dirpath, dataset.dirname)
+#    shutil.rmtree(dataset_dirpath)
+
 
 
 class ContigsFile(models.Model):
@@ -25,6 +40,17 @@ class ContigsFile(models.Model):
     user_session = models.ForeignKey('UserSession')
     file_index = models.CharField(max_length=256)
 #   quast_session = models.ForeignKey('QuastSession', null=True)
+
+    def __unicode__(self):
+        return self.fname
+
+@receiver(pre_delete, sender=ContigsFile)
+def delete_contigsfile_callback(sender, **kwargs):
+    contigs_file = sender
+
+#    contigs_fpath = os.path.join(settings.input_root_dirpath, contigs_file.user_session.input_dirname, contigs_file.fname)
+#    if os.path.isfile(contigs_fpath):
+#        os.remove(contigs_fpath)
 
 
 class QuastSession(models.Model):
@@ -42,6 +68,8 @@ class QuastSession(models.Model):
     def get_results_reldirpath(self):
         return self.user_session.session_key + '/' + self.report_id.__str__()
 
+    def __unicode__(self):
+        return self.date.strftime('%d %b %Y %H:%M:%S.%f')
 
 class QuastSession_ContigsFile(models.Model):
     quast_session = models.ForeignKey(QuastSession)
@@ -98,19 +126,19 @@ class DatasetForm(forms.Form):
 from django.contrib import admin
 class UserSessionAdmin(admin.ModelAdmin):
     pass
-admin.site.register(UserSession, UserSessionAdmin)
-
 
 class DatasetAdmin(admin.ModelAdmin):
     pass
-admin.site.register(Dataset, DatasetAdmin)
-
 
 class ContigsFileAdmin(admin.ModelAdmin):
     pass
-admin.site.register(ContigsFile, ContigsFileAdmin)
-
 
 class QuastSessionAdmin(admin.ModelAdmin):
     pass
+
+
+
+admin.site.register(ContigsFile, ContigsFileAdmin)
+admin.site.register(Dataset, DatasetAdmin)
+admin.site.register(UserSession, UserSessionAdmin)
 admin.site.register(QuastSession, QuastSessionAdmin)
