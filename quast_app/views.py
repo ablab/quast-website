@@ -142,10 +142,10 @@ def reports(request, after_evaluation=False):
             }
             quast_sessions_dicts.append(quast_session_dict)
 
-        return render_to_response('reports.html', {
-            'glossary': glossary,
-            'quast_sessions': quast_sessions_dicts,
-        })
+    return render_to_response('reports.html', {
+        'glossary': glossary,
+        'quast_sessions': quast_sessions_dicts,
+    })
 
 
 

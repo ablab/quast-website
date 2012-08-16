@@ -27,6 +27,9 @@
 
     <h1>Latest Reports</h1>
     <table class='table_reports'>
+        {% if not quast_sessions %}
+            Here you will find your <a href="/evaluate/">quality assessment</a> reports.
+        {% endif %}
         {% for quast_session in quast_sessions %}
             <tr>
                 <td>

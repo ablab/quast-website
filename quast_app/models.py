@@ -4,16 +4,16 @@ from django.db import models
 
 class UserSession(models.Model):
     session_key = models.CharField(max_length=256)
-    input_dirname = models.FilePathField()
+    input_dirname = models.CharField(max_length=2048)
 
 
 class Dataset(models.Model):
     name = models.CharField(max_length=1024)
     remember = models.BooleanField()
 
-    reference_fname = models.FilePathField(null=True)
-    genes_fname = models.FilePathField(null=True)
-    operons_fname = models.FilePathField(null=True)
+    reference_fname = models.CharField(null=True, max_length=2048)
+    genes_fname = models.CharField(null=True, max_length=2048)
+    operons_fname = models.CharField(null=True, max_length=2048)
 
     dirname = AutoSlugField(populate_from='name', unique=True)
     def __unicode__(self):
@@ -21,7 +21,7 @@ class Dataset(models.Model):
 
 
 class ContigsFile(models.Model):
-    fname = models.FilePathField()
+    fname = models.CharField(max_length=2048)
     user_session = models.ForeignKey('UserSession')
     file_index = models.CharField(max_length=256)
 #   quast_session = models.ForeignKey('QuastSession', null=True)
@@ -56,7 +56,7 @@ class DatasetForm(forms.Form):
 
     name_selected = fields.ChoiceField(
         required=False,
-#        choices=[(d.name, d.name) for d in Dataset.objects.all()],
+        #        choices=[(d.name, d.name) for d in Dataset.objects.all()],
         widget=widgets.Select(attrs={
             'class': 'chzn-select',
             'data-placeholder': 'Select dataset...'
@@ -88,7 +88,7 @@ class DatasetForm(forms.Form):
         cleaned_data = super(DatasetForm, self).clean()
 
         if self.user_session:
-            if not self.user_session.contigsfile_set or \
+            if not self.user_session.contigsfile_set or\
                not self.user_session.contigsfile_set.all().exists():
                 raise forms.ValidationError('No contigs provided')
 

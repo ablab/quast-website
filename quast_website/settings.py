@@ -31,21 +31,21 @@ celerydb_fpath = os.path.join(home_dirpath, 'celery.sqlite')
 
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+# ('Your Name', 'your_email@example.com'),
 )
 
 MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-       #'ENGINE': 'django_mongodb_engine',                                  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        #'ENGINE': 'django_mongodb_engine',                                  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'ENGINE': 'django.db.backends.sqlite3',                             # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': quastdb_fpath,                                              # Or path to database file if using sqlite3.
-       #'USER': '',                                                         # Not used with sqlite3.
-       #'PASSWORD': '',                                                     # Not used with sqlite3.
-       #'HOST': '',                                                         # Set to empty string for localhost. Not used with sqlite3.
-       #'PORT': '',                                                         # Set to empty string for default. Not used with sqlite3.
-       #'SUPPORT_TRANSACTIONS': False,
+        #'USER': '',                                                         # Not used with sqlite3.
+        #'PASSWORD': '',                                                     # Not used with sqlite3.
+        #'HOST': '',                                                         # Set to empty string for localhost. Not used with sqlite3.
+        #'PORT': '',                                                         # Set to empty string for default. Not used with sqlite3.
+        #'SUPPORT_TRANSACTIONS': False,
     }
 }
 
@@ -96,9 +96,9 @@ STATIC_URL = '/static/'
 
 # Additional locations of files files
 STATICFILES_DIRS = (
-    # Put strings here, like "/home/html/files" or "C:/www/django/files".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+# Put strings here, like "/home/html/files" or "C:/www/django/files".
+# Always use forward slashes, even on Windows.
+# Don't forget to use absolute paths, not relative paths.
 )
 if not PRODUCTION:
     STATICFILES_DIRS += ('/Users/vladsaveliev/Dropbox/bio/quast-website/static/',)
@@ -108,8 +108,8 @@ if not PRODUCTION:
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
-)
+    #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    )
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '3ikccwwfa*6q7yw7^4-j_y*3&amp;6+o!j5zte!h2#%&amp;&amp;js6@hi12d'
@@ -118,17 +118,17 @@ SECRET_KEY = '3ikccwwfa*6q7yw7^4-j_y*3&amp;6+o!j5zte!h2#%&amp;&amp;js6@hi12d'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
-)
+    #     'django.template.loaders.eggs.Loader',
+    )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-#    'django.core.context_processors.debug',
-#    'django.core.context_processors.i18n',
-#    'django.core.context_processors.files',
-#    'django.core.context_processors.files',
+    #    'django.core.context_processors.debug',
+    #    'django.core.context_processors.i18n',
+    #    'django.core.context_processors.files',
+    #    'django.core.context_processors.files',
     'django.contrib.auth.context_processors.auth',
     'django.contrib.messages.context_processors.messages',
-)
+    )
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
@@ -138,7 +138,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
-)
+    )
 
 if PRODUCTION:
     ROOT_URLCONF = 'urls'
@@ -149,7 +149,7 @@ else:
 WSGI_APPLICATION = 'quast_website.wsgi.application'
 
 if PRODUCTION:
-    TEMPLATE_DIRS = ('var/www/quast/quast_website/templates',)
+    TEMPLATE_DIRS = (os.path.join(home_dirpath, 'quast_website/templates',))
 else:
     TEMPLATE_DIRS = ('templates',)
 
@@ -167,7 +167,7 @@ INSTALLED_APPS = (
     'quast_app',
     'ajaxuploader',
     'djcelery',
-)
+    )
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
@@ -194,8 +194,8 @@ LOGGING = {
             'handlers': ['mail_admins'],
             'level': 'ERROR',
             'propagate': True,
-        },
-    }
+            },
+        }
 }
 
 #BROKER_URL = 'redis://localhost/0'

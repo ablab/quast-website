@@ -23,7 +23,7 @@ urlpatterns = patterns('',
     url(r'^reports/?$', 'quast_app.views.reports'),
     url(r'^report/(?P<report_id>.+)/?$', 'quast_app.views.report'),
 
-    url(r'^do_stuff$', 'quast_app.do_stuff.do_stuff'),
+    url(r'^do_stuff/?$', 'quast_app.do_stuff.do_stuff'),
 
     # Examples:
     # url(r'^$', 'quast_website.views.home', name='home'),
