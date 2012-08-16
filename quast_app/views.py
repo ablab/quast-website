@@ -72,8 +72,6 @@ def evaluate(request):
             dataset = get_dataset(request, dataset_form, now_str)
             quast_session = start_quast_session(user_session, dataset, now_datetime)
 
-            report_id = quast_session.report_id
-
             return redirect('/reports/', after_evaluateion=True)
 
 #            return render_to_response('reports.html', {
@@ -96,6 +94,13 @@ def evaluate(request):
         'dataset_form': dataset_form,
         }, context_instance = RequestContext(request))
 
+
+state_map = {
+    'PENDING': 'PENDING',
+    'STARTED': 'PENDING',
+    'FAILURE': 'FAILURE',
+    'SUCCESS': 'SUCCESS',
+}
 
 
 def reports(request, after_evaluation=False):
@@ -122,23 +127,17 @@ def reports(request, after_evaluation=False):
 
         for qs in quast_sessions:
             result = tasks.start_quast.AsyncResult(qs.task_id)
-            state = 'FAILURE'
-            if result:
-                if result.state == 'PENDING':
-                    state = 'PENDING'
-                if result.state == 'STARTED':
-                    state = 'PENDING'
-                if result.state == 'FAILURE':
-                    state = 'FAILURE'
-                if result.state == 'SUCCESS':
-                    state = 'SUCCESS'
+            state = result.state
+            state_repr = 'FAILURE'
+            if result and state in state_map:
+                state_repr = state_map[state]
 
             quast_session_dict = {
                 'date': qs.date, #. strftime('%d %b %Y %H:%M:%S'),
                 'report_link': '/report/' + qs.report_id,
                 'with_dataset': True if qs.dataset else False,
                 'dataset_name': qs.dataset.name if qs.dataset and qs.dataset.remember else '',
-                'state': state,
+                'state': state_repr,
                 'highlight_last': after_evaluation,
             }
             quast_sessions_dicts.append(quast_session_dict)
@@ -222,12 +221,9 @@ def report(request, report_id):
         if request.method == 'GET':
             quast_session = QuastSession.objects.get(report_id=report_id)
             result = tasks.start_quast.AsyncResult(quast_session.task_id)
+            state = result.state
 
-            print result.state
-            print result.id
-            print quast_session.task_id
-            print result.result
-            if result.ready() and result.result == 0:
+            if state == 'SUCCESS':
                 header = 'Quality assessment'
                 if quast_session.dataset and quast_session.dataset.remember:
                     header = quast_session.dataset.name
@@ -237,13 +233,16 @@ def report(request, report_id):
                     os.path.join(settings.results_root_dirpath, quast_session.get_results_reldirpath()),
                     header,
                 )
-
             else:
+                state_repr = 'FAILURE'
+                if result and state in state_map:
+                    state_repr = state_map[state]
+
                 return render_to_response('waiting-report.html', {
                     'glossary' : glossary,
                     'csrf_token': get_token(request),
                     'session_key' : request.session.session_key,
-                    'state': result.state,
+                    'state': state_repr,
                     'report_id': report_id,
                 }, context_instance = RequestContext(request))
 

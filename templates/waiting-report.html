@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <p>Status: {{ state|lower }}</p>
-    <p><a href="{{ report_id }}">Link to your report</a></p>
-    <p></p>
+    {% if state == 'PENDING' %}
+        <span class="state_pending">Task is being evaluated.</span>
+    {% elif state == 'FAILURE' %}
+        <span class="state_failure">Task caused some error, try to restart with another data.</span>
+    {% endif %}
 {% endblock %}

@@ -16,7 +16,9 @@
         padding-right: 10px;
     }
     .state_pending {
-        color: blue;
+        background-color:#FFF9B5;
+        padding: 0px 3px;
+        margin-left: -3px;
     }
     .state_failure {
         color: red;
@@ -28,11 +30,11 @@
         {% for quast_session in quast_sessions %}
             <tr>
                 <td>
-                    {% if quast_session.state == 'SUCCESS' %}
+{#                    {% if quast_session.state == 'SUCCESS' %}#}
                     <a href="{{ quast_session.report_link }}">{{ quast_session.date|date:'d M Y, H:i:s' }}</a>
-                    {% else %}
-                    {{ quast_session.date|date:'d M Y, H:i:s' }}
-                    {% endif %}
+{#                    {% else %}#}
+{#                    {{ quast_session.date|date:'d M Y, H:i:s' }}#}
+{#                    {% endif %}#}
                 </td>
                 <td>
                     {% if quast_session.with_dataset %}{{ quast_session.dataset_name }}{% endif %}

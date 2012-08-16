@@ -35,6 +35,17 @@ class MyBaseUploadBackend(AbstractUploadBackend):
         return {'file_index': file_index }
 
     def update_filename(self, request, filename):
+        dirpath = os.path.join(settings.input_root_dirpath, self.user_session.input_dirname)
+        fpath = os.path.join(dirpath, filename)
+
+        i = 2
+        base_fpath = fpath
+        base_filename = filename
+        while os.path.isfile(fpath):
+            fpath = str(base_fpath) + '__' + str(i)
+            filename = str(base_filename) + '__' + str(i)
+            i += 1
+
         return filename
 
     def remove(self, request):
