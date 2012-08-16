@@ -1,25 +1,4 @@
-# coding=utf-8
-#from django.db import models
-#from django.forms import ModelForm
-#
-#class Session(models.Model):
-#    session_key = models.CharField(max_length=100)
-#
-#
-#
-#class Dataset(models.Model):
-#    name = models.CharField(max_length=1000)
-#    selected = True
-#    reference_file = models.FileField()
-#    genes_file = models.FileField()
-#    operons_file = models.FileField()
-#
-#
-#class DatasetForm(ModelForm):
-#    class Meta:
-#        model = Dataset
 
-from time import strptime
 from autoslug.fields import AutoSlugField
 from django.db import models
 
@@ -114,3 +93,24 @@ class DatasetForm(forms.Form):
                 raise forms.ValidationError('No contigs provided')
 
         return cleaned_data
+
+
+from django.contrib import admin
+class UserSessionAdmin(admin.ModelAdmin):
+    pass
+admin.site.register(UserSession, UserSessionAdmin)
+
+
+class DatasetAdmin(admin.ModelAdmin):
+    pass
+admin.site.register(Dataset, DatasetAdmin)
+
+
+class ContigsFileAdmin(admin.ModelAdmin):
+    pass
+admin.site.register(ContigsFile, ContigsFileAdmin)
+
+
+class QuastSessionAdmin(admin.ModelAdmin):
+    pass
+admin.site.register(QuastSession, QuastSessionAdmin)

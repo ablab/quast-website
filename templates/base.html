@@ -19,7 +19,8 @@
     <style type="text/css">
         body {
             margin: 0;
-            padding-bottom: 30px;
+            padding-bottom: 23px;
+            margin-bottom: 23px;
             font-family: Lucida Grande, Verdana, Arial, sans-serif;
             font-size: 12px;
             color: black;
@@ -159,6 +160,38 @@
         ul.mdash li:before {
             content: '\2014\a0';
         }
+
+
+
+        a.icon_link {
+            border: 0px solid black;
+            display: block;
+            float: right;
+            margin-right: 73px;
+            opacity: 0.5;
+        }
+        a.icon_link:hover {
+            opacity: 1;
+        }
+        .admin_icon {
+            background: url("/static/small_lock_icon.gif") no-repeat;
+            height: 16px;
+            width: 16px;
+            display: block;
+        }
+        .clear_float {
+            clear: both;
+        }
+
+        .bottom-line {
+            margin: 100px 80px 15px 0;
+            border-bottom: 1px #D0D0D0 solid;
+        }
+
+        .copyright {
+            float: left;
+            opacity: 0.5;
+        }
     </style>
     <style type="text/css">
         /*.all {*/
@@ -244,7 +277,26 @@
 
     <div class='content'>
         {% block content %}{% endblock %}
+
+        <div class='clear_float'></div>
+
+        <div class="bottom-line"></div>
+
+        <div class='clear_float'>
+            <span class='copyright'>© 2011—2012, St. Petersburg University of the Russain Academy of Sciences</span>
+            <a class='icon_link' id="admin_link" href="/admin/">
+                <span class="admin_icon">&nbsp;</span>
+            </a>
+        </div>
+
     </div>
+
+
+
+
+
+
+
 
     <div class='json-code'>
         <div id='glossary-json'>
@@ -254,5 +306,6 @@
 
     <script type="text/javascript" src="/static/bootstrap/js/bootstrap.js"></script>
     <script type="text/javascript" src="/static/bootstrap/js/bootstrap-tooltip-vlad.js"></script>
+
 </body>
 </html>

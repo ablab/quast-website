@@ -121,14 +121,14 @@ TEMPLATE_LOADERS = (
 #     'django.template.loaders.eggs.Loader',
 )
 
-#TEMPLATE_CONTEXT_PROCESSORS = (
+TEMPLATE_CONTEXT_PROCESSORS = (
 #    'django.core.context_processors.debug',
 #    'django.core.context_processors.i18n',
 #    'django.core.context_processors.files',
 #    'django.core.context_processors.files',
-#    'django.contrib.auth.context_processors.auth',
-#    'django.contrib.messages.context_processors.messages',
-#)
+    'django.contrib.auth.context_processors.auth',
+    'django.contrib.messages.context_processors.messages',
+)
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
@@ -161,7 +161,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+    'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'quast_app',
