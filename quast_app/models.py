@@ -18,9 +18,9 @@ class Dataset(models.Model):
     name = models.CharField(max_length=1024)
     remember = models.BooleanField()
 
-    reference_fname = models.CharField(null=True, max_length=2048)
-    genes_fname = models.CharField(null=True, max_length=2048)
-    operons_fname = models.CharField(null=True, max_length=2048)
+    reference_fname = models.CharField(null=True, blank=True, max_length=2048)
+    genes_fname = models.CharField(null=True, blank=True, max_length=2048)
+    operons_fname = models.CharField(null=True, blank=True, max_length=2048)
 
     dirname = AutoSlugField(populate_from='name', unique=True)
 
@@ -32,7 +32,7 @@ def delete_dataset_callback(sender, **kwargs):
     dataset = sender
 
     # this don't work because django calls pre_delete AFTER foreign keys collected and prepared for
-    # deletion, so dataset.dirname fails
+    # deletion, so dataset.dirname fails 
 #    dataset_dirpath = os.path.join(settings.datasets_root_dirpath, dataset.dirname)
 #    shutil.rmtree(dataset_dirpath)
 
@@ -126,11 +126,23 @@ class DatasetForm(forms.Form):
         return cleaned_data
 
 
+
+class AdminDatasetForm(forms.Form):
+    def __init__(self, *args, **kwargs):
+        super(AdminDatasetForm, self).__init__(*args, **kwargs)
+        self.fields['reference_fname'].required = False
+
+    class Meta:
+         model = Dataset
+
+
 from django.contrib import admin
+
 class UserSessionAdmin(admin.ModelAdmin):
     pass
 
 class DatasetAdmin(admin.ModelAdmin):
+#    form = AdminDatasetForm
     pass
 
 class ContigsFileAdmin(admin.ModelAdmin):
@@ -140,8 +152,9 @@ class QuastSessionAdmin(admin.ModelAdmin):
     pass
 
 
-
 admin.site.register(ContigsFile, ContigsFileAdmin)
 admin.site.register(Dataset, DatasetAdmin)
 admin.site.register(UserSession, UserSessionAdmin)
 admin.site.register(QuastSession, QuastSessionAdmin)
+
+

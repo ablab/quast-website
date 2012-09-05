@@ -1,17 +1,21 @@
-from django.conf.urls import patterns, include, url
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
+
+from django.conf.urls import patterns, include, url
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
 from quast_app import views
 
 urlpatterns = patterns('',
     url(r'^/?$', 'quast_app.views.index'),
-    url(r'^example/?', 'quast_app.views.example'),
+    url(r'^example/?$', 'quast_app.views.example'),
     url(r'^manual/?$', 'quast_app.views.manual'),
     url(r'^LICENSE$', 'quast_app.views.license'),
     url(r'^manual\.html$', 'quast_app.views.manual'),
+    url(r'^idba/?$', 'quast_app.views.idba'),
+    url(r'^idba\.html$', 'quast_app.views.idba'),
 
     url(r'^evaluate/?$', 'quast_app.views.evaluate'),
     url(r'^evaluate/?$', 'quast_app.views.evaluate'),

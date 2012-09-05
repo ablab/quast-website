@@ -26,6 +26,9 @@ def manual(request):
     with open(os.path.join(settings.static_dirpath, 'manual.html')) as f:
         return HttpResponse(f.read())
 
+def idba(request): 
+    with open(os.path.join(settings.static_dirpath, 'idba.html')) as f:
+        return HttpResponse(f.read())
 
 def license(request):
     with open(os.path.join(settings.static_dirpath, 'LICENSE')) as f:
