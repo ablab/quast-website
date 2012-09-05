@@ -30,6 +30,9 @@ class Dataset(models.Model):
 @receiver(pre_delete, sender=Dataset)
 def delete_dataset_callback(sender, **kwargs):
     dataset = sender
+
+    # this don't work because django calls pre_delete AFTER foreign keys collected and prepared for
+    # deletion, so dataset.dirname fails
 #    dataset_dirpath = os.path.join(settings.datasets_root_dirpath, dataset.dirname)
 #    shutil.rmtree(dataset_dirpath)
 

@@ -1,10 +1,11 @@
 """
 Copyright (c) 2003-2007  Gustavo Niemeyer <gustavo@niemeyer.net>
 
-This module offers extensions to the standard Python
+This module offers extensions to the standard python 2.3+
 datetime module.
 """
-__license__ = "Simplified BSD"
+__author__ = "Gustavo Niemeyer <gustavo@niemeyer.net>"
+__license__ = "PSF License"
 
 import datetime
 
@@ -51,7 +52,7 @@ def easter(year, method=EASTER_WESTERN):
     """
 
     if not (1 <= method <= 3):
-        raise ValueError("invalid method")
+        raise ValueError, "invalid method"
 
     # g - Golden year - 1
     # c - Century
@@ -87,5 +88,5 @@ def easter(year, method=EASTER_WESTERN):
     p = i-j+e
     d = 1+(p+27+(p+6)//40)%31
     m = 3+(p+26)//30
-    return datetime.date(int(y), int(m), int(d))
+    return datetime.date(int(y),int(m),int(d))
 
