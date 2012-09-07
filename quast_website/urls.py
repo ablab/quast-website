@@ -14,8 +14,8 @@ urlpatterns = patterns('',
     url(r'^manual/?$', 'quast_app.views.manual'),
     url(r'^LICENSE$', 'quast_app.views.license'),
     url(r'^manual\.html$', 'quast_app.views.manual'),
-    url(r'^idba/?$', 'quast_app.views.idba'),
-    url(r'^idba\.html$', 'quast_app.views.idba'),
+
+    url(r'^ecoli/?$', 'quast_app.views.ecoli'),
 
     url(r'^evaluate/?$', 'quast_app.views.evaluate'),
     url(r'^evaluate/?$', 'quast_app.views.evaluate'),

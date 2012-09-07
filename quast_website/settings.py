@@ -1,34 +1,35 @@
 
-# False, if Django development server on Vlad's MacBook;
-# True, if Apache on Morality.
-PRODUCTION = False
+# Vlad's MacBook
+development = True
+home_dirpath = '/Users/vladsaveliev/Dropbox/bio/quast'
+
+# Morality
+#development = False
+#home_dirpath = '/var/www/quast'
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+import sys
 import os
-# my PRODUCTION-depending options. Further in settings there
-# are some other PRODUCTION-depending options.
-if PRODUCTION:
-    home_dirpath = '/var/www/quast/'
-    quast_dirpath = os.path.join(home_dirpath, 'quast_tool/')
-else:
-    home_dirpath = '/Users/vladsaveliev/Dropbox/bio/quast-website'
-    quast_dirpath = os.path.join(home_dirpath, '../quast/')
 
+if development:
+    sys.path.append(os.path.join(home_dirpath, 'quast_website'))
 
-env_dirpath = os.path.join(home_dirpath, 'quast_virtualenv')
-static_dirpath = os.path.join(home_dirpath, 'static')
-input_root_dirpath = os.path.join(home_dirpath, 'input')
-results_root_dirpath = os.path.join(home_dirpath, 'results')
-datasets_root_dirpath = os.path.join(home_dirpath, 'datasets')
-quast_py_fpath = os.path.join(quast_dirpath, 'quast.py')
-quastdb_fpath = os.path.join(home_dirpath, 'quast.sqlite')
-celerydb_fpath = os.path.join(home_dirpath, 'celery.sqlite')
+quast_dirpath           = os.path.join(home_dirpath, 'quast_tool')
+env_dirpath             = os.path.join(home_dirpath, 'quast_virtualenv')
+templates_dirpath       = os.path.join(home_dirpath, 'quast_website/templates')
+static_dirpath          = os.path.join(home_dirpath, 'static')
+input_root_dirpath      = os.path.join(home_dirpath, 'input')
+results_root_dirpath    = os.path.join(home_dirpath, 'results')
+datasets_root_dirpath   = os.path.join(home_dirpath, 'datasets')
+quastdb_fpath           = os.path.join(home_dirpath, 'quast.sqlite')
+celerydb_fpath          = os.path.join(home_dirpath, 'celery.sqlite')
+
+quast_py_fpath          = os.path.join(quast_dirpath, 'quast.py')
 
 
 # Django settings for quast_website project.
-
 
 ADMINS = (
 # ('Your Name', 'your_email@example.com'),
@@ -100,8 +101,8 @@ STATICFILES_DIRS = (
 # Always use forward slashes, even on Windows.
 # Don't forget to use absolute paths, not relative paths.
 )
-if not PRODUCTION:
-    STATICFILES_DIRS += ('/Users/vladsaveliev/Dropbox/bio/quast-website/static/',)
+if development:
+    STATICFILES_DIRS += (static_dirpath,)
 
 # List of finder classes that know how to find files files in
 # various locations.
@@ -140,18 +141,12 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
     )
 
-if PRODUCTION:
-    ROOT_URLCONF = 'urls'
-else:
-    ROOT_URLCONF = 'quast_website.urls'
+ROOT_URLCONF = 'urls'
 
 # Python dotted path to the WSGI application used by Djasngo's runserver.
 WSGI_APPLICATION = 'quast_website.wsgi.application'
 
-if PRODUCTION:
-    TEMPLATE_DIRS = (os.path.join(home_dirpath, 'quast_website/templates',))
-else:
-    TEMPLATE_DIRS = ('templates',)
+TEMPLATE_DIRS = (templates_dirpath,)
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -263,5 +258,10 @@ djcelery.setup_loader()
 #CELERY_SEND_TASK_ERROR_EMAILS = True
 #CELERY_SEND_EVENTS = True
 #CELERYBEAT_SCHEDULER = "djcelery.schedulers.DatabaseScheduler"
+
+
+
+
+
 
 

@@ -1,0 +1,60 @@
+{% extends "report.html" %}
+
+{% block title %}Ecoli{% endblock %}
+
+{% block header %}
+    <h1>SPAdes - IDBA collaboration</h1>
+
+    <p>
+        This page is created for collaboration between <a href="http://bioinf.spbau.ru/en/spades">SPAdes</a> and <a href="http://i.cs.hku.hk/~alse/hkubrg/projects/idba_ud/">IDBA-UD</a> genome assemblers developers.
+    </p>
+
+    <h2>Data set</h2>
+    <p>
+        Our test data set is <b><i>E. coli</i> K-12, strain MG1655, single cell MDA, lane 1</b>. It is downloaded from <a href="http://bix.ucsd.edu/projects/singlecell/nbt_data.html">UCSD website.</a>
+        Direct link to the data set is <a href="http://bix.ucsd.edu/projects/singlecell/nbt_data/ecoli_mda_lane1.fastq.bz2">here</a> (you should enter Username: <b>single-cell</b> and Password: <b>SanDiegoCA</b>).
+    </p>
+
+    The data set statistics:
+    <ul>
+        <li># reads: 29,124,078</li>
+        <li>Read length: 2 x 100</li>
+        <li>Insert size &#956;: 266.8</li>
+        <li>Insert size &#963;: 56.4</li>
+    </ul>
+
+    Reference for this data set can be downloaded from <a href="http://www.ncbi.nlm.nih.gov/nuccore/49175990?report=fasta">NIH website</a>.
+    Click on "Send" near the top right; select "Complete Record"; destination "File"; format "FASTA"; and save it.
+
+    <h2>Assemblies</h2>
+
+    <p>SPAdes assemblies:
+        <br>
+        <a href="http://quast.bioinf.spbau.ru/static/assemblies/SPAdes2.1.fasta">SPAdes version 2.1</a>
+        <br>
+        <a href="http://quast.bioinf.spbau.ru/static/assemblies/SPAdes2.2.fasta">SPAdes version 2.2</a>
+        <br>
+        <a href="http://quast.bioinf.spbau.ru/static/assemblies/SPAdes_latest.fasta">SPAdes latest version (not released)</a>
+    </p>
+
+    <p>IDBA-UD assembly (<b>created by ABLab</b>):
+        <br>
+        <a href="http://quast.bioinf.spbau.ru/static/assemblies/IDBA-UD_contig.fasta">IDBA-UD contigs (not scaffolds!)</a>
+    </p>
+
+    <h2>Quality assessment</h2>
+
+    <p>
+        Results of comparison presented below were obtained with <a href="http://quast.bioinf.spbau.ru/">QUAST</a> -- our quality assessment tool.
+        QUAST website is not released yet but it is very close to it and you can use it for quality assessment.
+        <br>
+        Console version of QUAST version 1.0 is available on <a href="http://sourceforge.net/p/quast/wiki/Home/">sourceforge website</a>. However, it is preferable to use
+        web-based version of the tool because it is based on QUAST version 1.0.1.
+    </p>
+
+    <span>QUAST report <span id='subheader'></span></span>
+
+    <p>
+        Contigs of length >= 200 bp are used.
+    </p>
+{% endblock %}

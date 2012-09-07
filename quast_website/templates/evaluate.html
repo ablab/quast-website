@@ -294,7 +294,7 @@
         <form enctype="multipart/form-data" action="/evaluate/" method="POST">{% csrf_token %}
             {% comment %}@declare id="id_name_selected"{% endcomment %}
             <label for="id_name_selected">
-                Dataset<br/>
+                Data set<br/>
                 {{ dataset_form.name_selected }}
             </label>
 
@@ -331,9 +331,9 @@
 {#                    {{ dataset_form.operons }}</label>#}
                   <table class='form_table'>
                       <tr>{% comment %}@declare id="id_name_created"{% endcomment %}
-                          <td><label for='id_name_created'>Dataset name</label></td>
+                          <td><label for='id_name_created'>Data set name</label></td>
                           <td>{{ dataset_form.name_created }}<br>
-                              If you fill the name field, we will remember this dataset
+                              If you fill the name field, we will remember this data set
                               {{ dataset_form.name_created.errors }}
                           </td>
                       </tr>

@@ -26,9 +26,6 @@ def manual(request):
     with open(os.path.join(settings.static_dirpath, 'manual.html')) as f:
         return HttpResponse(f.read())
 
-def idba(request): 
-    with open(os.path.join(settings.static_dirpath, 'idba.html')) as f:
-        return HttpResponse(f.read())
 
 def license(request):
     with open(os.path.join(settings.static_dirpath, 'LICENSE')) as f:
@@ -274,8 +271,8 @@ def start_quast_session(user_session, dataset, now_datetime):
         user_session = user_session,
         dataset = dataset,
         date = now_datetime,
-
     )
+
     quast_session.save()
 
     for c_fn in user_session.contigsfile_set.all():
@@ -390,6 +387,10 @@ def response_with_report(template, results_dirpath, header):
             'header' : header,
         }
     )
+
+
+def ecoli(request):
+    return response_with_report('ecoli.html', os.path.join(settings.home_dirpath, 'ecoli'), 'Ecoli')
 
 
 #static_path = 'quast_app/static/'
