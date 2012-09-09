@@ -12,7 +12,7 @@ from quast_website import settings
 
 
 glossary = '{}'
-with open(os.path.join(settings.static_dirpath, 'glossary.json')) as f:
+with open(os.path.join(settings.glossary_path)) as f:
     glossary = f.read()
 
 
@@ -38,6 +38,11 @@ def example(request):
                                     results_dirpath,
                                     'E.coli',)
     return response
+
+
+def report_scripts(request, script_name):
+    with open(os.path.join(settings.reports_scripts_dirpath, script_name)) as f:
+        return HttpResponse(f.read(), content_type='application/javascript')
 
 
 from django.middleware.csrf import get_token

@@ -17,6 +17,10 @@ if development:
     sys.path.append(os.path.join(home_dirpath, 'quast_website'))
 
 quast_dirpath           = os.path.join(home_dirpath, 'quast_tool')
+quast_py_fpath          = os.path.join(quast_dirpath, 'quast.py')
+reports_scripts_dirpath = os.path.join(quast_dirpath, 'libs/html_saver/report-scripts')
+glossary_path           = os.path.join(quast_dirpath, 'libs/html_saver/glossary.json')
+
 env_dirpath             = os.path.join(home_dirpath, 'quast_virtualenv')
 templates_dirpath       = os.path.join(home_dirpath, 'quast_website/templates')
 static_dirpath          = os.path.join(home_dirpath, 'static')
@@ -26,13 +30,12 @@ datasets_root_dirpath   = os.path.join(home_dirpath, 'datasets')
 quastdb_fpath           = os.path.join(home_dirpath, 'quast.sqlite')
 celerydb_fpath          = os.path.join(home_dirpath, 'celery.sqlite')
 
-quast_py_fpath          = os.path.join(quast_dirpath, 'quast.py')
 
 
 # Django settings for quast_website project.
 
 ADMINS = (
-# ('Your Name', 'your_email@example.com'),
+    ('Vlad Saveliev', 'vladsaveliev@me.com'),
 )
 
 MANAGERS = ADMINS
