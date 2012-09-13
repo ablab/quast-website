@@ -1,0 +1,231 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                      "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+    <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="flot/jquery.flot.min.js"></script>
+    <script type="text/javascript" src="flot/jquery.flot.dashes.js"></script>
+    <!-[if lte IE 8]><script type="text/javascript" src="flot/excanvas.min.js"></script><![endif]->
+
+    <script type="text/javascript" src="report-scripts/utils.js"></script>
+    <script type="text/javascript" src="report-scripts/build_total_report.js"></script>
+    <script type="text/javascript" src="report-scripts/draw_cumulative_plot.js"></script>
+    <script type="text/javascript" src="report-scripts/draw_nx_plot.js"></script>
+    <script type="text/javascript" src="report-scripts/draw_gc_plot.js"></script>
+    <script type="text/javascript" src="report-scripts/draw_genes_plot.js"></script>
+    <script type="text/javascript" src="report-scripts/build_report.js"></script>
+
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css"/>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="ie_html5.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript">
+        $(document).ready(buildReport);
+    </script>
+
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding-bottom: 30px;
+            font-family: Lucida Grande, Verdana, Arial, sans-serif;
+            font-size: 12px;
+            color: black;
+            line-height: 1.3em;
+        }
+        .content {
+            margin-left: 0;
+            padding-top: 50px;
+            clear: both;
+        }
+
+        a {
+            text-decoration: underline;
+        }
+
+        #header {
+            display: block;
+            width: 100%;
+            margin-bottom: 2em;
+            font-size: 1.5em;
+            margin-left: 125px;
+        }
+
+        #subheader { /* not used in Quast html report */
+            margin-top: -13px;
+            margin-bottom: 20px;
+        }
+
+        #report {
+            margin-left: 125px;
+            min-width: 726px;
+        }
+        #report td {
+            padding: 0 1em 0 0;
+            margin: 0;
+        }
+        #report td {
+            white-space: nowrap
+        }
+        .report-table-header {
+            font-weight: bold;
+        }
+
+        .json-code {
+            display: none;
+        }
+        /*
+        .plots {
+            margin-left: 1em;
+        }*/
+        .blocks > div {
+            float: left;
+            margin-bottom: 5.5em;
+            margin-top: 0px;
+        }
+        .blocks > div#cumulative-plot-div {
+            margin-bottom: 5.5em;
+            padding-right: 0;
+        }
+        .blocks > div#report {
+            margin-bottom: 1em;
+        }
+        .blocks > div:last-child {
+            margin-bottom: 40px;
+        }
+        .plot-wrapper {
+            padding-right: 50px;
+        }
+
+        .plot-header {
+            margin-left: 125px;
+            font-weight: bold;
+            height: 1.5em;
+            display: block;
+        }
+
+        .tooltip-link {
+            color: black;
+            text-decoration: none;
+            border-bottom: 1px dashed black;
+        }
+        .tooltip-link:hover {
+            color: black;
+            text-decoration: none;
+        }
+        .dotted-link {
+            text-decoration: none;
+            border-bottom: 1px dashed #0088cc;
+        }
+        .dotted-link:hover {
+            text-decoration: none;
+            border-bottom-color: #005580;
+        }
+        .tooltip {
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+        .tooltip.in {
+            opacity: 1;
+        }
+        .tooltip-inner {
+            text-align: left;
+        }
+        .smallcapitals {
+            font-size: .875em;
+            letter-spacing: .15em;
+            margin-right: -.15em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div id='header'>
+            <span class='smallcapitals'>QUAST</span> report<br><br>
+            <span style='font-size: 0.7em;'>
+            <span id='subheader'>Loading...</span>
+            <span id='mincontig'></span>
+        	</span>
+        </div>
+
+        <noscript>
+            <div style="margin-left: 125px;">
+                Unfortunately, <span style="font-weight: bold">JavaScript</span> in your browser <span style="font-weight: bold">is disabled</span> or is not supported.</br>
+                We need JavaScript to build report and plots.
+            </div>
+        </noscript>
+
+        <div class='blocks'>
+            <div id='report'>
+            </div>
+            <div class='plot-wrapper' id='cumulative-plot-div'>
+            </div>
+            <div class='plot-wrapper' id='nx-plot-div'>
+            </div>
+            <div class='plot-wrapper' id='ngx-plot-div'>
+            </div>
+            <div class='plot-wrapper' id='nax-plot-div'>
+            </div>
+            <div class='plot-wrapper' id='ngax-plot-div'>
+            </div>
+            <div class='plot-wrapper' id='genes-plot-div'>
+            </div>
+            <div class='plot-wrapper' id='operons-plot-div'>
+            </div>
+            <div class='plot-wrapper' id='gc-plot-div'>
+            </div>
+        </div>
+    </div>
+
+
+<div class='json-code'>
+        <div id='report-json'>
+            {{ report }}
+        </div>
+        <div id="contigs-lengths-json">
+            {{ contigsLenghts }}
+        </div>
+        <div id='aligned-contigs-lengths-json'>
+            {{ alignedContigsLengths }}
+        </div>
+        <div id='assemblies-lengths-json'>
+            {{ assembliesLengths }}
+        </div>
+        <div id='reference-length-json'>
+            {{ referenceLength }}
+        </div>
+        <div id='contigs-json'>
+            {{ contigs }}
+        </div>
+        <div id='genes-json'>
+            {{ genes }}
+        </div>
+        <div id='operons-json'>
+            {{ operons }}
+        </div>
+        <div id='gc-json'>
+            {{ gcInfos }}
+        </div>
+    </div>
+
+    <div class='json-code'>
+        <div id='glossary-json'>
+            {{ glossary }}
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("[rel=tooltip]").tooltip({
+                animation: false,
+            });
+        });
+    </script>
+
+    <script type="text/javascript" src="bootstrap/bootstrap-tooltip-5px-lower.js"></script>
+
+</body>
+</html>
