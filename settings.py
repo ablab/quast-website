@@ -1,31 +1,24 @@
 import sys
 import os
 
+if os.environ.get('DEVELOPMENT', None):
+    DEBUG = True
+    TEMPLATE_DEBUG = DEBUG
 
-DEBUG = True
-TEMPLATE_DEBUG = DEBUG
 
-source_dirpath = os.path.abspath(os.path.dirname(__file__))
-home_dirpath = os.path.join(source_dirpath, '..')
+SOURCE_DIRPATH = os.path.abspath(os.path.dirname(__file__))
+HOME_DIRPATH = os.path.join(SOURCE_DIRPATH, '..')
 
-quast_dirpath           = os.path.join(source_dirpath, 'quast_tool')
-quast_py_fpath          = os.path.join(quast_dirpath, 'quast.py')
-reports_scripts_dirpath = os.path.join(quast_dirpath, 'libs/html_saver/report-scripts')
-glossary_path           = os.path.join(quast_dirpath, 'libs/html_saver/glossary.json')
+QUAST_DIRPATH           = os.path.join(SOURCE_DIRPATH, 'quast_tool')
+QUAST_PY_FPATH          = os.path.join(QUAST_DIRPATH, 'quast.py')
+REPORT_SCRIPTS_DIRPATH  = os.path.join(QUAST_DIRPATH, 'libs/html_saver/report-scripts')
+GLOSSARY_PATH           = os.path.join(QUAST_DIRPATH, 'libs/html_saver/glossary.json')
 
-env_dirpath             = os.path.join(home_dirpath, 'virtualenv')
-templates_dirpath       = os.path.join(source_dirpath, 'templates')
-static_dirpath          = os.path.join(source_dirpath, 'static')
+EXAMPLE_DIRPATH         = os.path.join(SOURCE_DIRPATH, 'example')
 
-example_dirpath         = os.path.join(source_dirpath, 'example')
-
-input_root_dirpath      = os.path.join(home_dirpath, 'input')
-results_root_dirpath    = os.path.join(home_dirpath, 'results')
-datasets_root_dirpath   = os.path.join(home_dirpath, 'datasets')
-
-quastdb_fpath           = os.path.join(home_dirpath, 'quast.sqlite')
-celerydb_fpath          = os.path.join(home_dirpath, 'celery.sqlite')
-
+INPUT_ROOT_DIRPATH      = os.path.join(HOME_DIRPATH, 'input')
+RESULT_ROOT_DIRPATH     = os.path.join(HOME_DIRPATH, 'results')
+DATASETS_ROOT_DIRPATH   = os.path.join(HOME_DIRPATH, 'datasets')
 
 
 # Django settings for quast_website project.
@@ -33,14 +26,13 @@ celerydb_fpath          = os.path.join(home_dirpath, 'celery.sqlite')
 ADMINS = (
     ('Vlad Saveliev', 'vladsaveliev@me.com'),
 )
-
 MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
         #'ENGINE': 'django_mongodb_engine',                                  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'ENGINE': 'django.db.backends.sqlite3',                             # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': quastdb_fpath,                                              # Or path to database file if using sqlite3.
+        'ENGINE': 'django.db.backends.sqlite3',                              # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': os.path.join(HOME_DIRPATH, 'quast.sqlite'),                  # Or path to database file if using sqlite3.
         #'USER': '',                                                         # Not used with sqlite3.
         #'PASSWORD': '',                                                     # Not used with sqlite3.
         #'HOST': '',                                                         # Set to empty string for localhost. Not used with sqlite3.
@@ -101,7 +93,7 @@ STATICFILES_DIRS = (
 # Don't forget to use absolute paths, not relative paths.
 )
 
-STATICFILES_DIRS += (static_dirpath,)
+STATICFILES_DIRS += (os.path.join(SOURCE_DIRPATH, 'static'),)
 
 # List of finder classes that know how to find files files in
 # various locations.
@@ -145,7 +137,7 @@ ROOT_URLCONF = 'urls'
 # Python dotted path to the WSGI application used by Djasngo's runserver.
 WSGI_APPLICATION = 'wsgi.application'
 
-TEMPLATE_DIRS = (templates_dirpath,)
+TEMPLATE_DIRS = (os.path.join(SOURCE_DIRPATH, 'templates'),)
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -195,6 +187,7 @@ LOGGING = {
 #BROKER_URL = 'redis://localhost/0'
 # BROKER_URL = 'amqp'
 # Celery with sqlite
+celerydb_fpath          = os.path.join(HOME_DIRPATH, 'celery.sqlite')
 BROKER_URL = 'sqla+sqlite:///' + celerydb_fpath
 # http://docs.celeryproject.org/en/latest/configuration.html#conf-database-result-backend
 CELERY_RESULT_DBURI = 'sqlite:///' + celerydb_fpath
@@ -257,7 +250,6 @@ djcelery.setup_loader()
 #CELERY_SEND_TASK_ERROR_EMAILS = True
 #CELERY_SEND_EVENTS = True
 #CELERYBEAT_SCHEDULER = "djcelery.schedulers.DatabaseScheduler"
-
 
 
 

@@ -3,9 +3,8 @@ from django.http import HttpResponseBadRequest
 import os
 import random
 from ajaxuploader.backends.base import AbstractUploadBackend
-from quast_app.models import ContigsFile, UserSession
-import settings
-
+from models import ContigsFile, UserSession
+from django.conf import settings
 
 class MyBaseUploadBackend(AbstractUploadBackend):
     def __init__(self, dirname, **kwargs):
@@ -13,7 +12,7 @@ class MyBaseUploadBackend(AbstractUploadBackend):
         self.user_session = None
 
     def setup(self, filename):
-        dirpath = os.path.join(settings.input_root_dirpath, self.user_session.input_dirname)
+        dirpath = os.path.join(settings.INPUT_ROOT_DIRPATH, self.user_session.input_dirname)
         try:
             os.makedirs(dirpath)
         except:
@@ -35,7 +34,7 @@ class MyBaseUploadBackend(AbstractUploadBackend):
         return {'file_index': file_index }
 
     def update_filename(self, request, filename):
-        dirpath = os.path.join(settings.input_root_dirpath, self.user_session.input_dirname)
+        dirpath = os.path.join(settings.INPUT_ROOT_DIRPATH, self.user_session.input_dirname)
         fpath = os.path.join(dirpath, filename)
 
         i = 2
@@ -58,7 +57,7 @@ class MyBaseUploadBackend(AbstractUploadBackend):
         if contigs_file.user_session != self.user_session:
             return HttpResponseBadRequest('This file does not belong to this session')
 
-        contigs_fpath = os.path.join(settings.input_root_dirpath, self.user_session.input_dirname, contigs_file.fname)
+        contigs_fpath = os.path.join(settings.INPUT_ROOT_DIRPATH, self.user_session.input_dirname, contigs_file.fname)
         if os.path.isfile(contigs_fpath):
             os.remove(contigs_fpath)
         contigs_file.delete()

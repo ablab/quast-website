@@ -3,9 +3,9 @@ import shutil
 import sys
 import os
 from celery.task import task
-import settings
+from django.conf import settings
 
-quast_path = settings.quast_dirpath
+quast_path = settings.QUAST_DIRPATH
 
 @task()
 def start_quast(args):

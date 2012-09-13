@@ -6,13 +6,13 @@ import os
 import shutil
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseBadRequest, Http404
 from django.shortcuts import render_to_response, render, redirect
-from quast_app import tasks
-from quast_app.upload_backend import ContigsUploadBackend, ReferenceUploadBackend, GenesUploadBackend, OperonsUploadBackend
-import settings
+import tasks
+from upload_backend import ContigsUploadBackend, ReferenceUploadBackend, GenesUploadBackend, OperonsUploadBackend
+from django.conf import settings
 
 
 glossary = '{}'
-with open(os.path.join(settings.glossary_path)) as f:
+with open(os.path.join(settings.GLOSSARY_PATH)) as f:
     glossary = f.read()
 
 
@@ -23,17 +23,17 @@ def index(request):
 
 
 def manual(request):
-    with open(os.path.join(settings.static_dirpath, 'manual.html')) as f:
+    with open(os.path.join(settings.STATIC_DIRPATH, 'manual.html')) as f:
         return HttpResponse(f.read())
 
 
 def license(request):
-    with open(os.path.join(settings.static_dirpath, 'LICENSE')) as f:
+    with open(os.path.join(settings.STATIC_DIRPATH, 'LICENSE')) as f:
         return HttpResponse(f.read(), content_type='text/plain')
 
 
 def example(request):
-    results_dirpath = os.path.join(settings.example_dirpath)
+    results_dirpath = os.path.join(settings.EXAMPLE_DIRPATH)
     response = response_with_report('example-report.html',
                                     results_dirpath,
                                     'E.coli',)
@@ -41,14 +41,14 @@ def example(request):
 
 
 def report_scripts(request, script_name):
-    with open(os.path.join(settings.reports_scripts_dirpath, script_name)) as f:
+    with open(os.path.join(settings.REPORT_SCRIPTS_DIRPATH, script_name)) as f:
         return HttpResponse(f.read(), content_type='application/javascript')
 
 
 from django.middleware.csrf import get_token
 from django.template import RequestContext
 from ajaxuploader.views import AjaxFileUploader
-from quast_app.models import UserSession, Dataset, QuastSession, ContigsFile, DatasetForm, QuastSession_ContigsFile
+from models import UserSession, Dataset, QuastSession, ContigsFile, DatasetForm, QuastSession_ContigsFile
 
 #if not request.session.exists(request.session.session_key):
 #request.session.create()
@@ -155,7 +155,7 @@ def reports(request, after_evaluation=False):
 
 
 def create_user_session(user_session_key):
-    input_dirpath = os.path.join(settings.input_root_dirpath, user_session_key)
+    input_dirpath = os.path.join(settings.INPUT_ROOT_DIRPATH, user_session_key)
     if os.path.isdir(input_dirpath):
         shutil.rmtree(input_dirpath)
     os.makedirs(input_dirpath)
@@ -173,7 +173,7 @@ def get_dataset(request, dataset_form, now_str):
         name = dataset_form.data['name_created']
 
         def init_folders(dataset):
-            dataset_dirpath = os.path.join(settings.datasets_root_dirpath, dataset.dirname) #, posted_file.name)
+            dataset_dirpath = os.path.join(settings.DATASETS_ROOT_DIRPATH, dataset.dirname) #, posted_file.name)
             os.makedirs(dataset_dirpath)
 
             for kind in ['reference', 'genes', 'operons']:
@@ -235,7 +235,7 @@ def report(request, report_id):
 
                 return response_with_report(
                     'assess-report.html',
-                    os.path.join(settings.results_root_dirpath, quast_session.get_results_reldirpath()),
+                    os.path.join(settings.RESULTS_ROOT_DIRPATH, quast_session.get_results_reldirpath()),
                     header,
                 )
             else:
@@ -283,7 +283,7 @@ def start_quast_session(user_session, dataset, now_datetime):
     for c_fn in user_session.contigsfile_set.all():
         QuastSession_ContigsFile.objects.create(quast_session=quast_session, contigs_file=c_fn)
 
-    input_dirpath = os.path.join(settings.input_root_dirpath, user_session.input_dirname)
+    input_dirpath = os.path.join(settings.INPUT_ROOT_DIRPATH, user_session.input_dirname)
 
     # Preparing contigs filepaths
     print quast_session.get_results_reldirpath()
@@ -291,7 +291,7 @@ def start_quast_session(user_session, dataset, now_datetime):
     contigs_fpaths = [os.path.join(input_dirpath, c_f.fname) for c_f in contigs_files]
 
     # Preparing results directory
-    result_dirpath = os.path.join(settings.results_root_dirpath, quast_session.get_results_reldirpath())
+    result_dirpath = os.path.join(settings.RESULTS_ROOT_DIRPATH, quast_session.get_results_reldirpath())
     if os.path.isdir(result_dirpath):
         i = 2
         base_dir_path = result_dirpath
@@ -307,13 +307,13 @@ def start_quast_session(user_session, dataset, now_datetime):
     operons_fpath = None
     if dataset:
         if dataset.reference_fname:
-            reference_fpath = os.path.join(settings.datasets_root_dirpath, dataset.dirname, dataset.reference_fname)
+            reference_fpath = os.path.join(settings.DATASETS_ROOT_DIRPATH, dataset.dirname, dataset.reference_fname)
 
         if dataset.genes_fname:
-            genes_fpath = os.path.join(settings.datasets_root_dirpath, dataset.dirname, dataset.genes_fname)
+            genes_fpath = os.path.join(settings.DATASETS_ROOT_DIRPATH, dataset.dirname, dataset.genes_fname)
 
         if dataset.operons_fname:
-            operons_fpath = os.path.join(settings.datasets_root_dirpath, dataset.dirname, dataset.operons_fname)
+            operons_fpath = os.path.join(settings.DATASETS_ROOT_DIRPATH, dataset.dirname, dataset.operons_fname)
 
     # Running Quast
     result = assess_with_quast(result_dirpath, contigs_fpaths, reference_fpath, genes_fpath, operons_fpath)
@@ -324,8 +324,8 @@ def start_quast_session(user_session, dataset, now_datetime):
 
 def assess_with_quast(res_dirpath, contigs_paths, reference_path=None, genes_path=None, operons_path=None):
     if len(contigs_paths) > 0:
-        if os.path.isfile(settings.quast_py_fpath):
-            args = [settings.quast_py_fpath] + contigs_paths
+        if os.path.isfile(settings.QUAST_PY_FPATH):
+            args = [settings.QUAST_PY_FPATH] + contigs_paths
             if reference_path:
                 args.append('-R')
                 args.append(reference_path)
@@ -346,8 +346,8 @@ def assess_with_quast(res_dirpath, contigs_paths, reference_path=None, genes_pat
 
             return result
         else:
-            if not os.path.isfile(settings.quast_py_fpath):
-                raise Exception('quast_py_fpath ' + settings.quast_py_fpath + ' is not file')
+            if not os.path.isfile(settings.QUAST_PY_FPATH):
+                raise Exception('quast_py_fpath ' + settings.QUAST_PY_FPATH + ' is not file')
     else:
         raise Exception('it has to be a least one contigs file')
 
@@ -395,7 +395,7 @@ def response_with_report(template, results_dirpath, header):
 
 
 def ecoli(request):
-    return response_with_report('ecoli.html', os.path.join(settings.home_dirpath, 'ecoli'), 'Ecoli')
+    return response_with_report('ecoli.html', os.path.join(settings.HOME_DIRPATH, 'ecoli'), 'Ecoli')
 
 
 #static_path = 'quast_app/static/'
