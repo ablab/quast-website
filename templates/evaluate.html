@@ -1,0 +1,391 @@
+{% extends "base.html" %}
+
+{% block title %}Quast: Evaluate{% endblock %}
+
+{% block evaluate-menu-li-class %}active{% endblock %}
+
+{% block header %}Load and evaluate data{% endblock %}
+
+{% block extra_head %}
+    <script src="/static/ajaxuploader/fileuploader.js"></script>
+    <link href="/static/ajaxuploader/fileuploader.css" media="screen" rel="stylesheet" type="text/css"/>
+
+    <link rel="stylesheet" href="/static/chosen/chosen.css" />
+
+    <style>
+    .uploader-div {
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    .small-upload-drop-area {
+        width: 200px;
+    }
+
+    .upload-drop-area {
+        width: 300px;
+    }
+
+    .upload-drop-area, .small-upload-drop-area {
+        margin-top: 10px;
+        margin-right: 10px;
+        float: left;
+
+        height: 11em;
+        z-index: 2;
+
+        background: #E8E8E8;
+        /*background: #FAFAD4;*/ /* #FCFCCA; */
+        border: 1px dashed #AAA;
+        border-radius: 7px;
+        -moz-border-radius: 7px;
+        -webkit-border-radius: 7px;
+        -khtml-border-radius: 7px;
+
+        vertical-align: middle;
+        color: #AAA;
+    }
+
+    .upload-drop-area:hover, .small-upload-drop-area:hover {
+        border-color: #444;
+    }
+
+    .upload-drop-area p, .small-upload-drop-area p {
+        margin-top: 4.7em;
+        text-align: center;
+    }
+
+    .upload-drop-area:hover p, .small-upload-drop-area:hover p {
+        color: #444;
+    }
+
+    .upload-drop-area-active {
+        background: #E8E8E8;
+        /*background: #FCFCA2;*/
+        border-color: #444;
+        color: #444;
+    }
+
+    .upload-list-div {
+        float: left;
+    }
+
+    .upload-list {
+        margin: 5px 10px 5px 0px;
+        padding: 0;
+        list-style: none;
+    }
+
+    .upload-list li {
+        margin: 0;
+        padding: 0;
+        line-height: 15px;
+        font-size: 12px;
+    }
+
+    a.btn {
+        color: white;
+    }
+
+    #add-dataset-wrapper {
+        background-color: #E8E8E8;
+        width: 500px;
+        padding: 10px 10px 10px 10px;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    #id_name_created {
+        width: 350px;
+    }
+    #id_name_selected {
+        width: 303px;
+    }
+
+    .qq-upload-remove {
+        font-size: 0.9em;
+    }
+
+    .qq-uploader > button {
+        margin-left: 0;
+    }
+
+    .form_table td {
+        padding-right: 20px;
+        padding-bottom: 1em;
+        vertical-align: baseline;
+    }
+
+    .form_table {
+        margin-left: -2px;
+    }
+
+    ul.errorlist {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        color: #b33;
+    }
+    ul.errorlist li {
+        margin-bottom: 0.7em;
+        list-style-type: none;
+    }
+    ul.errorlist li:after {
+        content: ',';
+    }
+    ul.errorlist li:last-child:after {
+        content: '.';
+    }
+
+
+    </style>
+
+    <script>
+        $(function() {
+            var uploaders = [];
+
+            var paramters = [{
+                action: '{% url contigs_ajax_upload %}',
+                removeLink: '{% url contigs_ajax_remove %}',
+                initializeUploadsLink: '{% url contigs_ajax_initialize_uploads %}',
+                elementId: '#contigs-uploader',
+                multiple: true,
+                btnText: 'Select files with contigs',
+                areaText: 'or drop files with contigs here',
+                areaClass: 'upload-drop-area',
+                uploaded: '{% for fname in contigs_fnames %}<li>{{ fname }} &nbsp;' +
+//                    '<a class="dotted-link" style="font-size: 0.8em;" href="#">Remove</a>' +
+                    '</li>{% endfor %}',
+            },];
+
+            for (var i = 0; i < paramters.length; i++) {
+                uploaders.push(new qq.FileUploader({
+                    action: paramters[i].action,
+                    removeLink: paramters[i].removeLink,
+                    initializeUploadsLink: paramters[i].initializeUploadsLink,
+                    element: $(paramters[i].elementId)[0],
+                    multiple: paramters[i].multiple,
+                    onComplete: function(id, fileName, responseJSON) {
+                        if (responseJSON.success) {
+                            $('#evaluate-button').prop('disabled', false);
+                            $('#evaluate-button').removeClass('disabled');
+                        }
+                    },
+                    onAllComplete: function(uploads) {
+                        if (uploads.length > 0) {
+                            $('#evaluate-button').prop('disabled', false);
+                            $('#evaluate-button').removeClass('disabled');
+                        }
+                        // uploads is an array of maps
+                        // the maps look like this: {file: FileObject, response: JSONServerResponse}
+                    },
+                    onRemove: function() {
+                        var number_of_files = -1;
+                        $('.qq-upload-file').each(function(index) {
+                            number_of_files++;
+                        });
+
+                        if (number_of_files <= 0) {
+                            $('#evaluate-button').prop('disabled', true);
+                            $('#evaluate-button').addClass('disabled');
+                        }
+                    },
+                    onInitFiles: function(files){
+                        if (!files || files.length == 0) {
+                            $('#evaluate-button').prop('disabled', true);
+                            $('#evaluate-button').addClass('disabled');
+                        } else {
+                            $('#evaluate-button').prop('disabled', false);
+                            $('#evaluate-button').removeClass('disabled');
+                        }
+                    },
+                    params: {
+                        'csrf_token': '{{ csrf_token }}',
+                        'csrf_name': 'csrfmiddlewaretoken',
+                        'csrf_xname': 'X-CSRFToken',
+                    },
+                    messages: {
+                    },
+                    template:
+                        '<div class="qq-uploader">' +
+                            '<button class="btn">' + paramters[i].btnText + '</button>' +
+                            '<div>' +
+                                '<div class="' + paramters[i].areaClass + '">' +
+                                    '<p>' + paramters[i].areaText + '</p>' +
+                                '</div>' +
+                                '<div class="upload-list-div">' +
+                                    '<ul class="upload-list"></ul>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>',
+                    fileTemplate:
+                        '<li>' +
+                            '<span class="qq-upload-file"></span>' +
+                            '<span class="qq-upload-spinner"></span>' +
+                            '<span class="qq-upload-size"></span>' +
+                            '<a class="dotted-link qq-upload-cancel" href="#">Cancel</a>' +
+                            '<a class="dotted-link qq-upload-remove" href="#">Remove</a>' +
+                            '<span class="qq-upload-failed-text">Failed</span>' +
+//                            '<a class="dotted-link" style="font-size: 0.8em;" href="#">Remove</a>' +
+                        '</li>',
+                    classes: {
+                        // used to get elements from templates
+                        button: 'btn',
+                        drop: paramters[i].areaClass,
+                        dropActive: 'upload-drop-area-active',
+                        list: 'upload-list',
+
+                        file: 'qq-upload-file',
+                        spinner: 'qq-upload-spinner',
+                        size: 'qq-upload-size',
+                        cancel: 'qq-upload-cancel',
+                        remove: 'qq-upload-remove',
+
+                        // added to list item when upload completes
+                        // used in css to hide progress spinner
+                        success: 'qq-upload-success',
+                        fail: 'qq-upload-fail'
+                    }
+                }));
+            }
+        });
+//
+//        $('#add-dataset-wrapper').click(
+//            $('#add-dataset-toggle-link').
+//        );
+
+        function showHideAddDataset() {
+            if ($('#add-dataset').is(':visible')) {
+                $('#add-dataset').hide('fast');
+                $('#dataset-name-select-input').prop('disabled', false);
+                set_selected();
+            } else {
+                $('#add-dataset').show('fast');
+                $('#dataset-name-select-input').prop('disabled', true);
+                set_created();
+            }
+        }
+
+        function set_selected() {
+            $('#id_created_or_selected').prop('value', 'selected');
+        }
+
+        function set_created() {
+            $('#id_created_or_selected').prop('value', 'created');
+        }
+    </script>
+{% endblock %}
+
+{% block content %}
+    <h1 style='font-size: 2em'>Quality Assessment</h1>
+    <br>
+
+    <noscript>
+        <div><br>
+            Unfortunately, <span style="font-weight: bold">JavaScript</span> in your browser <span style="font-weight: bold">is disabled</span> or is not supported.</br>
+            We need JavaScript to process data and build reports.
+        </div>
+    </noscript>
+
+    <div id='form-wrapper'>
+            <div id="contigs-uploader" class="uploader-div"></div>
+            <div style="clear: both"></div>
+
+        <form enctype="multipart/form-data" action="/evaluate/" method="POST">{% csrf_token %}
+            {% comment %}@declare id="id_name_selected"{% endcomment %}
+            <label for="id_name_selected">
+                Data set<br/>
+                {{ dataset_form.name_selected }}
+            </label>
+
+            <br>
+            <div id='created-or-selected-wrapper' style="display: none">
+                {{ dataset_form.created_or_selected }}
+                {{ dataset_form.name_selected.errors }}
+            </div>
+            <br/>
+
+{#            <select name="name_selected" class="chzn-select" id="dataset-select" style="width:350px;" tabindex="2" onchange="datasetSelectOnchange()">#}
+{#                {% for dataset in datasets %}#}
+{#                <option value="{{ dataset.name }}">{{ dataset.name }}</option>#}
+{#                {% endfor %}#}
+{#                <option value="custom-dataset">Add dataset...</option>#}
+{#            </select>#}
+{#            <div style="clear: both"></div>#}
+
+            <div id="add-dataset-wrapper">
+                <a class="dotted-link" id="add-dataset-toggle-link" onclick="showHideAddDataset()">Another dataset</a>
+                <div id="add-dataset" style="display: none;">
+                    <br/>
+{#                    {% comment %}@declare id="id_name_created "{% endcomment %}#}
+{#                    <label for='id_name_created'>Dataset name#}
+{#                    {{ dataset_form.name_created }}</label>#}
+{#                    {% comment %}@declare id="id_reference"{% endcomment %}#}
+{#                    <label for='id_reference'>Reference<br/>#}
+{#                    {{ dataset_form.reference }}</label>#}
+{#                    {% comment %}@declare id="id_genes"{% endcomment %}#}
+{#                    <label for='id_genes'>Genes<br/>#}
+{#                    {{ dataset_form.genes }}</label>#}
+{#                    {% comment %}@declare id="id_operons"{% endcomment %}#}
+{#                    <label for='id_operons'>Operons<br/>#}
+{#                    {{ dataset_form.operons }}</label>#}
+                  <table class='form_table'>
+                      <tr>{% comment %}@declare id="id_name_created"{% endcomment %}
+                          <td><label for='id_name_created'>Data set name</label></td>
+                          <td>{{ dataset_form.name_created }}<br>
+                              If you fill the name field, we will remember this data set
+                              {{ dataset_form.name_created.errors }}
+                          </td>
+                      </tr>
+                      <tr>{% comment %}@declare id="id_reference"{% endcomment %}
+                          <td><label for='id_reference'>Reference</label></td>
+                          <td>{{ dataset_form.reference }}
+                              {{ dataset_form.reference.errors }}
+                          </td>
+                      </tr>
+                      <tr>{% comment %}@declare id="id_genes"{% endcomment %}
+                          <td><label for='id_genes'>Genes</label></td>
+                          <td>{{ dataset_form.genes }}
+                              {{ dataset_form.genes.errors }}
+                          </td>
+                      </tr>
+                      <tr>{% comment %}@declare id="id_operons"{% endcomment %}
+                          <td><label for='id_operons'>Operons</label></td>
+                          <td>{{ dataset_form.operons }}
+                              {{ dataset_form.operons.errors }}
+                          </td>
+                      </tr>
+                  </table>
+                </div>
+            </div><br>
+
+            <div id='errors-wrapper' style="display: block">
+                {{ dataset_form.non_field_errors }}
+            </div>
+
+            <div style="float: left; margin-right: 10px; margin-top: 7px; margin-left: -2px;">
+                <input id='evaluate-button' class="btn btn-large btn-inverse" type="submit" value="Evaluate">
+            </div>
+
+            <div style="visibility: {% if report_id %}visible{% else %}hidden{% endif %};
+                        float: left;"
+                 id="{{ report_id }}">
+                <p>
+                    Link to your report:<br>
+                    <a href="/report/{{ report_id }}">quast.bioinf.spbau.ru/report/{{ report_id }}</a>
+                </p>
+            </div>
+            <div style="clear: both"></div>
+
+        </form>
+    </div>
+
+
+
+    <script src="/static/chosen/chosen.jquery.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(".chzn-select").chosen();
+        $(".chzn-select-deselect").chosen({allow_single_deselect:true});
+        set_selected();
+    </script>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Latest reports{% endblock %}
+
+{% block reports-menu-li-class %}active{% endblock %}
+
+{% block content %}
+    <style type="text/css">
+    .table_reports {
+        margin-left: -3px;
+    }
+    .table_reports tr {
+        /*line-height: 2em;*/
+    }
+    .table_reports td {
+        padding-right: 10px;
+    }
+    .state_pending {
+        background-color:#FFF9B5;
+        padding: 0px 3px;
+        margin-left: -3px;
+    }
+    .state_failure {
+        color: red;
+    }
+    </style>
+
+    <h1>Latest Reports</h1>
+    <table class='table_reports'>
+        {% if not quast_sessions %}
+            Here you will find your <a href="/evaluate/">quality assessment</a> reports.
+        {% endif %}
+        {% for quast_session in quast_sessions %}
+            <tr>
+                <td>
+{#                    {% if quast_session.state == 'SUCCESS' %}#}
+                    <a href="{{ quast_session.report_link }}">{{ quast_session.date|date:'d M Y, H:i:s' }}</a>
+{#                    {% else %}#}
+{#                    {{ quast_session.date|date:'d M Y, H:i:s' }}#}
+{#                    {% endif %}#}
+                </td>
+                <td>
+                    {% if quast_session.with_dataset %}{{ quast_session.dataset_name }}{% endif %}
+                </td>
+                <td>
+                    {% if quast_session.state == 'PENDING' %}
+                        <span class="state_pending">task is being evaluated</span>
+                    {% elif quast_session.state == 'FAILURE' %}
+                        <span class="state_failure">task caused some error, try to restart with another data</span>
+                    {% endif %}
+{#                    state = 'task is in queue and waiting to be evaluated'#}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
