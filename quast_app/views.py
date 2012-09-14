@@ -23,7 +23,7 @@ def index(request):
 
 
 def manual(request):
-    with open(os.path.join(settings.STATIC_DIRPATH, 'manual.html')) as f:
+    with open(settings.MANUAL_FPATH) as f:
         return HttpResponse(f.read())
 
 

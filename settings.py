@@ -13,6 +13,7 @@ QUAST_DIRPATH           = os.path.join(SOURCE_DIRPATH, 'quast_tool')
 QUAST_PY_FPATH          = os.path.join(QUAST_DIRPATH, 'quast.py')
 REPORT_SCRIPTS_DIRPATH  = os.path.join(QUAST_DIRPATH, 'libs/html_saver/report-scripts')
 GLOSSARY_PATH           = os.path.join(QUAST_DIRPATH, 'libs/html_saver/glossary.json')
+MANUAL_FPATH            = os.path.join(QUAST_DIRPATH, 'manual.html')
 
 EXAMPLE_DIRPATH         = os.path.join(SOURCE_DIRPATH, 'example')
 
@@ -187,7 +188,7 @@ LOGGING = {
 #BROKER_URL = 'redis://localhost/0'
 # BROKER_URL = 'amqp'
 # Celery with sqlite
-celerydb_fpath          = os.path.join(HOME_DIRPATH, 'celery.sqlite')
+celerydb_fpath = os.path.join(HOME_DIRPATH, 'celery.sqlite')
 BROKER_URL = 'sqla+sqlite:///' + celerydb_fpath
 # http://docs.celeryproject.org/en/latest/configuration.html#conf-database-result-backend
 CELERY_RESULT_DBURI = 'sqlite:///' + celerydb_fpath

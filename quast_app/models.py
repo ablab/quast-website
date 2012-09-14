@@ -90,7 +90,7 @@ class DatasetForm(forms.Form):
         #        choices=[(d.name, d.name) for d in Dataset.objects.all()],
         widget=widgets.Select(attrs={
             'class': 'chzn-select',
-            'data-placeholder': 'Select dataset...'
+            'data-placeholder': 'Select data set...'
         })
     )
 
@@ -105,10 +105,10 @@ class DatasetForm(forms.Form):
         super(DatasetForm, self).__init__(*args, **kwargs)
         self.fields['name_selected'] = fields.ChoiceField(
             required=False,
-            choices=[(d.name, d.name) for d in Dataset.objects.all() if d.remember] + [('no dataset', 'no dataset')],
+            choices=[(d.name, d.name) for d in Dataset.objects.all() if d.remember] + [('no data set', 'no data set')],
             widget=widgets.Select(attrs={
                 'class': 'chzn-select',
-                'data-placeholder': 'Select dataset...'
+                'data-placeholder': 'Select data set...'
             })
         )
 
