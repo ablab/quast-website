@@ -22,8 +22,9 @@ REPORT_SCRIPTS_DIRPATH = os.path.join(QUAST_DIRPATH, 'libs/html_saver/report-scr
 GLOSSARY_PATH          = os.path.join(QUAST_DIRPATH, 'libs/html_saver/glossary.json')
 MANUAL_FPATH           = os.path.join(QUAST_DIRPATH, 'manual.html')
 
-EXAMPLE_DIRPATH        = os.path.join(SOURCE_DIRPATH, 'app/files/example')
-ECOLI_DIRPATH          = os.path.join(SOURCE_DIRPATH, 'app/files/ecoli')
+APP_DIRPATH            = os.path.join(SOURCE_DIRPATH, 'quast_app')
+EXAMPLE_DIRPATH        = os.path.join(APP_DIRPATH, 'files/example')
+ECOLI_DIRPATH          = os.path.join(APP_DIRPATH, 'files/ecoli')
 
 
 # Django settings for quast_website project.
