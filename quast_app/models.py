@@ -4,7 +4,8 @@ from django.db import models
 from django.db.models.signals import post_delete, pre_delete
 from django.dispatch import receiver
 import os
-import settings
+from django.conf import settings
+
 
 class UserSession(models.Model):
     session_key = models.CharField(max_length=256)

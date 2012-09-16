@@ -5,12 +5,10 @@ import os
 from celery.task import task
 from django.conf import settings
 
-quast_path = settings.QUAST_DIRPATH
-
 @task()
 def start_quast(args):
-    if not quast_path in sys.path:
-        sys.path.insert(1, quast_path)
+    if not settings.QUAST_DIRPATH in sys.path:
+        sys.path.insert(1, settings.QUAST_DIRPATH)
     import quast
 
     result = quast.main(args[1:])

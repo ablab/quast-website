@@ -6,20 +6,24 @@ if os.environ.get('DEVELOPMENT', None):
     TEMPLATE_DEBUG = DEBUG
 
 
-SOURCE_DIRPATH = os.path.abspath(os.path.dirname(__file__))
-HOME_DIRPATH = os.path.join(SOURCE_DIRPATH, '..')
+SOURCE_DIRPATH         = os.path.abspath(os.path.dirname(__file__))
+HOME_DIRPATH           = os.path.join(SOURCE_DIRPATH, '..')
 
-QUAST_DIRPATH           = os.path.join(SOURCE_DIRPATH, 'quast_tool')
-QUAST_PY_FPATH          = os.path.join(QUAST_DIRPATH, 'quast.py')
-REPORT_SCRIPTS_DIRPATH  = os.path.join(QUAST_DIRPATH, 'libs/html_saver/report-scripts')
-GLOSSARY_PATH           = os.path.join(QUAST_DIRPATH, 'libs/html_saver/glossary.json')
-MANUAL_FPATH            = os.path.join(QUAST_DIRPATH, 'manual.html')
+DATA_DIRPATH           = os.path.join(HOME_DIRPATH, 'data')
+INPUT_ROOT_DIRPATH     = os.path.join(DATA_DIRPATH, 'input')
+RESULT_ROOT_DIRPATH    = os.path.join(DATA_DIRPATH, 'results')
+DATA_SETS_ROOT_DIRPATH = os.path.join(DATA_DIRPATH, 'data_sets')
+celerydb_fpath         = os.path.join(DATA_DIRPATH, 'celery.sqlite')
+quastdb_fpath          = os.path.join(DATA_DIRPATH, 'quast.sqlite')
 
-EXAMPLE_DIRPATH         = os.path.join(SOURCE_DIRPATH, 'example')
+QUAST_DIRPATH          = os.path.join(SOURCE_DIRPATH, 'quast_tool')
+QUAST_PY_FPATH         = os.path.join(QUAST_DIRPATH, 'quast.py')
+REPORT_SCRIPTS_DIRPATH = os.path.join(QUAST_DIRPATH, 'libs/html_saver/report-scripts')
+GLOSSARY_PATH          = os.path.join(QUAST_DIRPATH, 'libs/html_saver/glossary.json')
+MANUAL_FPATH           = os.path.join(QUAST_DIRPATH, 'manual.html')
 
-INPUT_ROOT_DIRPATH      = os.path.join(HOME_DIRPATH, 'input')
-RESULT_ROOT_DIRPATH     = os.path.join(HOME_DIRPATH, 'results')
-DATASETS_ROOT_DIRPATH   = os.path.join(HOME_DIRPATH, 'datasets')
+EXAMPLE_DIRPATH        = os.path.join(SOURCE_DIRPATH, 'app/files/example')
+ECOLI_DIRPATH          = os.path.join(SOURCE_DIRPATH, 'app/files/ecoli')
 
 
 # Django settings for quast_website project.
@@ -33,7 +37,7 @@ DATABASES = {
     'default': {
         #'ENGINE': 'django_mongodb_engine',                                  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'ENGINE': 'django.db.backends.sqlite3',                              # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': os.path.join(HOME_DIRPATH, 'quast.sqlite'),                  # Or path to database file if using sqlite3.
+        'NAME': quastdb_fpath,                                               # Or path to database file if using sqlite3.
         #'USER': '',                                                         # Not used with sqlite3.
         #'PASSWORD': '',                                                     # Not used with sqlite3.
         #'HOST': '',                                                         # Set to empty string for localhost. Not used with sqlite3.
@@ -147,13 +151,11 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Uncomment the next line to enable the admin:
     'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
+    'django.contrib.admindocs',
+    'djcelery',
     'quast_app',
     'ajaxuploader',
-    'djcelery',
     )
 
 # A sample logging configuration. The only tangible logging
@@ -188,7 +190,6 @@ LOGGING = {
 #BROKER_URL = 'redis://localhost/0'
 # BROKER_URL = 'amqp'
 # Celery with sqlite
-celerydb_fpath = os.path.join(HOME_DIRPATH, 'celery.sqlite')
 BROKER_URL = 'sqla+sqlite:///' + celerydb_fpath
 # http://docs.celeryproject.org/en/latest/configuration.html#conf-database-result-backend
 CELERY_RESULT_DBURI = 'sqlite:///' + celerydb_fpath

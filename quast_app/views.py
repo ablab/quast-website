@@ -173,7 +173,7 @@ def get_dataset(request, dataset_form, now_str):
         name = dataset_form.data['name_created']
 
         def init_folders(dataset):
-            dataset_dirpath = os.path.join(settings.DATASETS_ROOT_DIRPATH, dataset.dirname) #, posted_file.name)
+            dataset_dirpath = os.path.join(settings.DATA_SETS_ROOT_DIRPATH, dataset.dirname) #, posted_file.name)
             os.makedirs(dataset_dirpath)
 
             for kind in ['reference', 'genes', 'operons']:
@@ -307,13 +307,13 @@ def start_quast_session(user_session, dataset, now_datetime):
     operons_fpath = None
     if dataset:
         if dataset.reference_fname:
-            reference_fpath = os.path.join(settings.DATASETS_ROOT_DIRPATH, dataset.dirname, dataset.reference_fname)
+            reference_fpath = os.path.join(settings.DATA_SETS_ROOT_DIRPATH, dataset.dirname, dataset.reference_fname)
 
         if dataset.genes_fname:
-            genes_fpath = os.path.join(settings.DATASETS_ROOT_DIRPATH, dataset.dirname, dataset.genes_fname)
+            genes_fpath = os.path.join(settings.DATA_SETS_ROOT_DIRPATH, dataset.dirname, dataset.genes_fname)
 
         if dataset.operons_fname:
-            operons_fpath = os.path.join(settings.DATASETS_ROOT_DIRPATH, dataset.dirname, dataset.operons_fname)
+            operons_fpath = os.path.join(settings.DATA_SETS_ROOT_DIRPATH, dataset.dirname, dataset.operons_fname)
 
     # Running Quast
     result = assess_with_quast(result_dirpath, contigs_fpaths, reference_fpath, genes_fpath, operons_fpath)
@@ -395,10 +395,10 @@ def response_with_report(template, results_dirpath, header):
 
 
 def ecoli(request):
-    return response_with_report('ecoli.html', os.path.join(settings.HOME_DIRPATH, 'ecoli'), 'Ecoli')
+    return response_with_report('ecoli.html', os.path.join(settings.ECOLI_DIRPATH), 'Ecoli')
 
 
-#static_path = 'quast_app/static/'
+#static_path = 'app/static/'
 #
 #def get_static_file(request, path):
 #    try:

@@ -1,4 +1,8 @@
+# File types
 *.py[co]
+*.swo
+*.swp
+*.swn
 
 # Packages
 *.egg
@@ -20,10 +24,11 @@ pip-log.txt
 .coverage
 .tox
 
-#Translations
+# Translations
 *.mo
 
-#Mr Developer
-.mr.developer.cfg
-
+# OS generated files
 .DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
