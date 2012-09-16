@@ -11,7 +11,7 @@ HOME_DIRPATH           = os.path.join(SOURCE_DIRPATH, '..')
 
 DATA_DIRPATH           = os.path.join(HOME_DIRPATH, 'data')
 INPUT_ROOT_DIRPATH     = os.path.join(DATA_DIRPATH, 'input')
-RESULT_ROOT_DIRPATH    = os.path.join(DATA_DIRPATH, 'results')
+RESULTS_ROOT_DIRPATH   = os.path.join(DATA_DIRPATH, 'results')
 DATA_SETS_ROOT_DIRPATH = os.path.join(DATA_DIRPATH, 'data_sets')
 celerydb_fpath         = os.path.join(DATA_DIRPATH, 'celery.sqlite')
 quastdb_fpath          = os.path.join(DATA_DIRPATH, 'quast.sqlite')
