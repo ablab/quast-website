@@ -1,0 +1,15 @@
+# Deployment #
+cd quast/quast-website
+
+Locally push everything to Github
+    git all
+    git commit -m 'comment'
+    git up
+    git push
+
+On Morality, pull changes
+    git pull
+...and restart Apache
+    sudo apachectl graceful
+
+data and virtualenv directories stay different for development and deployment.
