@@ -341,15 +341,21 @@ def assess_with_quast(res_dirpath, contigs_paths, reference_path=None, genes_pat
             args.append('-J')
             args.append(res_dirpath)
 
+            # Draw no plots
+            args.append('-p')
+
+            args.append('-o')
+            args.append(os.path.join(res_dirpath, 'regular_report'))
+
             from tasks import start_quast
             result = start_quast.delay(args)
 
             return result
         else:
             if not os.path.isfile(settings.QUAST_PY_FPATH):
-                raise Exception('quast_py_fpath ' + settings.QUAST_PY_FPATH + ' is not file')
+                raise Exception('quast_py_fpath ' + settings.QUAST_PY_FPATH + ' is not a file')
     else:
-        raise Exception('it has to be a least one contigs file')
+        raise Exception('no files with assemblies')
 
 
 def response_with_report(template, results_dirpath, header):

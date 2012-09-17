@@ -13,6 +13,9 @@ def start_quast(args):
 
     result = quast.main(args[1:])
     reload(quast)
+
+
+
     return result
 
 #   out = ''
