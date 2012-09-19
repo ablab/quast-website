@@ -26,6 +26,16 @@
         color: black;
         line-height: 1.3em;
     }
+    .first-column {
+        width: 500px;
+        float: left;
+        margin-right: 50px;
+        margin-bottom: 30px;
+    }
+    .second-column {
+        max-width: 300px;
+        float: left;
+    }
     a {
         text-decoration: none;
         color: #0c4f72;
@@ -161,13 +171,12 @@
         content: '\2014\a0';
     }
 
-
-
     a.icon_link {
         border: 0px solid black;
         display: block;
         float: right;
-        margin-right: 73px;
+        margin-right: 68px;
+        margin-left: 10px;
         opacity: 0.5;
     }
     a.icon_link:hover {
@@ -182,15 +191,33 @@
     .clear_float {
         clear: both;
     }
-
     .bottom-line {
         margin: 100px 80px 15px 0;
         border-bottom: 1px #D0D0D0 solid;
     }
-
     .copyright {
-        float: left;
         opacity: 0.5;
+        float: left;
+    }
+    .email a {
+        opacity: 0.5;
+    }
+    .email a {
+        color: black;
+        border-color: #888;
+    }
+    .email a:hover, .email:hover a {
+        opacity: 1;
+        color: black;
+        border-color: #000;
+    }
+    .footer table {
+        width: 100%;
+        padding: 0;
+        margin: -3px;
+    }
+    .footer td {
+        vertical-align: top;
     }
 </style>
 <style type="text/css">
@@ -282,15 +309,44 @@
 
     <div class="bottom-line"></div>
 
-    <div class='clear_float'></div>
+{#    <div class='clear_float'></div>#}
 
-    <div>
-        <span class='copyright'>© 2012, St. Petersburg Academic University of the Russian Academy of Sciences</span>
-        <a class='icon_link' id="admin_link" href="/admin/">
-            <span class="admin_icon">&nbsp;</span>
-        </a>
+{#    <div>#}
+{#        <span class='copyright'>© 2012, St. Petersburg Academic University of the Russian Academy of Sciences</span>#}
+{#        <a class='icon_link' id="admin_link" href="/admin/">#}
+{#            <span class="admin_icon">&nbsp;</span>#}
+{#        </a>#}
+{#    </div>#}
+
+    <div class='clear_float'></div>
+    <div class='footer'>
+        <table style="width: 100%">
+        <tr>
+            <td>
+                <div class="first-column">
+                    <span class='copyright'>© 2012, St. Petersburg Academic University of the Russian Academy of Sciences</span>
+                </div>
+                <div class="second-column">
+                    <span class='email'><a href="mailto:quast.support@bioinf.spbau.ru">quast.support@bioinf.spbau.ru</a></span>
+                </div>
+            </td>
+            <td>
+                <a class='icon_link' id="admin_link" href="/admin/"><span class="admin_icon">&nbsp;</span></a>
+            </td>
+        </tr>
+        </table>
     </div>
 
+{#    <div class='clear_float'></div>#}
+{#    <div class='footer'>#}
+{#        <table>#}
+{#            <tr>#}
+{#                <td><span class='copyright'>© 2012, St. Petersburg Academic University of the Russian Academy of Sciences&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>#}
+{#                <td><span class='email'><a href="mailto:quast.support@bioinf.spbau.ru">quast.support@bioinf.spbau.ru</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>#}
+{#                <td><a class='icon_link' id="admin_link" href="/admin/"><span class="admin_icon">&nbsp;</span></a></td>#}
+{#            </tr>#}
+{#        </table>#}
+{#    </div>#}
 </div>
 
 <div class='json-code'>
