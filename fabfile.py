@@ -21,6 +21,7 @@ def all():
     local("git all")
 
 def commit(comment):
+
     local("git commit -m '%s'" % comment)
 
 def add_commit(comment):
@@ -33,10 +34,13 @@ def up():
 def push():
     local("git push")
 
-def git(comment):
-    add_commit(comment)
+def upush():
     up()
     push()
+
+def git(comment):
+    add_commit(comment)
+    upush()
 
 
 
