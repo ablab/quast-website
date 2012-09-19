@@ -8,6 +8,7 @@ if os.environ.get('DEVELOPMENT', None):
 
 SOURCE_DIRPATH         = os.path.abspath(os.path.dirname(__file__))
 HOME_DIRPATH           = os.path.join(SOURCE_DIRPATH, '..')
+VIRTUALENV_PATH        = os.path.join(HOME_DIRPATH, 'virtualenv')
 
 DATA_DIRPATH           = os.path.join(HOME_DIRPATH, 'data')
 INPUT_ROOT_DIRPATH     = os.path.join(DATA_DIRPATH, 'input')
