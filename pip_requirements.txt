@@ -1,3 +1,20 @@
+# https://github.com/ablab/quast-website.git
+# cd quast
+# easy_install pip
+# pip install virtualenv
+# virtualenv virtualenv
+# source virtualenv/bin/activate
+# cd quast-website
+# pip install -r pip_requirements.txt
+#
+# sudo apt-get install sqlite3
+# sudo apt-get install python-dev
+# sudo apt-get install libevent-dev
+# OR
+# brew install libevent
+# export CFLAGS=-I/brew/include
+# brew install sqlite3
+
 gevent
 django
 hg+https://bitbucket.org/Jeffrey/gevent-websocket#egg=gevent-websocket
