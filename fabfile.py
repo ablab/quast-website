@@ -1,18 +1,20 @@
-
+import sys
 from fabric.api import *
 from fabric import network
 from fabric.contrib import files
 from fabric import operations, utils
 
 env.hosts = ['saveliev@192.168.222.254', 'saveliev@194.85.238.21']
+set(fab_user='alex',
+    fab_hosts=['clientsite.com'],
+    root='/home/alex/websites/',
+    site='clientsite')
 
 def reboot():
     sudo("apachectl graceful")
 
 def test():
     local("../virtualenv/bin/python manage.py test quast_app")
-
-
 
 def st():
     local("git st")
@@ -21,12 +23,12 @@ def all():
     local("git all")
 
 def commit(comment):
-
-    local("git commit -m '%s'" % comment)
+    with settings(warn_only=True):
+        return local("git commit -m '%s'" % comment)
 
 def add_commit(comment):
     all()
-    commit(comment)
+    return commit(comment)
 
 def up():
     local("git up")
@@ -39,7 +41,7 @@ def upush():
     push()
 
 def git(comment):
-    add_commit(comment)
+    res = add_commit(comment)
     upush()
 
 

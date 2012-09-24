@@ -4,6 +4,18 @@
 
 {% block reports-menu-li-class %}active{% endblock %}
 
+{% block extra_head %}
+{#    <head>#}
+{#        {% load socketio_tags %}#}
+{#        {% socketio %}#}
+{#        <script>#}
+{#            var socket = new io.Socket();#}
+{#            socket.connect();#}
+{#            // etc#}
+{#        </script>#}
+{#    </head>#}
+{% endblock %}
+
 {% block content %}
     <style type="text/css">
     .table_reports {
@@ -24,6 +36,17 @@
         color: red;
     }
     </style>
+
+{##}
+{#    <script src="/socket.io/socket.io.js"></script>#}
+{#    <script>#}
+{#        var socket = io.connect('http://localhost');#}
+{#        socket.on('news', function (data) {#}
+{#            console.log(data);#}
+{#            socket.emit('my other event', { my: 'data' });#}
+{#        });#}
+{#    </script>#}
+
 
     <h1>Latest Reports</h1>
     <table class='table_reports'>

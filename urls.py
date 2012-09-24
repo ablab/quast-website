@@ -22,7 +22,7 @@ urlpatterns = patterns('',
     url(r'^evaluate/?$', 'quast_app.views.evaluate'),
     url(r'^evaluate/?$', 'quast_app.views.evaluate'),
 
-    url(r'^contigs-ajax-upload$', views.contigs_uploader, name='contigs_ajax_upload'),
+    url(r'^contigs-ajax-upload$', views.contigs_uploader.upload, name='contigs_ajax_upload'),
     url(r'^contigs-ajax-remove$', views.contigs_uploader.remove, name='contigs_ajax_remove'),
     url(r'^contigs-ajax-initialize-uploads$', views.contigs_uploader.initialize_uploads, name='contigs_ajax_initialize_uploads'),
 
@@ -42,3 +42,6 @@ urlpatterns = patterns('',
 
 urlpatterns += staticfiles_urlpatterns()
 
+urlpatterns += patterns('',
+    url('', include('django_socketio.urls')),
+)

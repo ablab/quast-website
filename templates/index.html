@@ -24,45 +24,50 @@
             <h1 style='letter-spacing: .10em; margin-right: -.10em;'>QUAST</h1>
         </div>
 
-        <div class='first-column'>
-            <div style='margin-top: -10px;'>
-                <p style='font-weight: bold;'>QUality ASsesment Tool for genome assemblies</p>
-            </div>
+        <table class='layout-table'>
+            <tr>
+                <td class='layout-table-td layout-table-fst-td'>
+                    <div style='max-width: 450px;'>
+                        <div style='margin-top: -10px;'>
+                            <p style='font-weight: bold;'>QUality ASsesment Tool for genome assemblies</p>
+                        </div>
 
-            <p><span class='smallcapitals'>QUAST</span> evaluates genome assemblies by computing various metrics:
-            <ul class="mdash">
-                <li><span class='define' key='N50'><span n class='smallcapitals'>N</span>50</span>, length of the shortest contig from all that cover 50% of all assembly,</li>
-                <li><span class='define' key='NG50'><span class='smallcapitals'>NG</span>50</span>, where the reference genome is being covered,</li>
-                <li><span class='define' key='NA50'><span class='smallcapitals'>NA</span>50</span> and <span class='define' key='NGA50'><span class='smallcapitals'>NGA</span>50</span>, where aligned blocks instead of contigs are taken,</li>
-                <li>misassemblies, misassembled and unaligned contigs or contigs bases,</li>
-                <li><span class='define' key='Genes covered'>genes</span> and <span class='define' key='Operons covered'>operons</span> covered,</li>
-                <li>and other metrics.</li>
-            </ul>
-            <p>Builds convenient plots for different metrics:</p>
-            <ul class="mdash">
-                <li>cumulative contigs length,</li>
-                <li>all kinds of N-metrics,</li>
-                <li>genes and operons covered,</li>
-                <li><span class='smallcapitals'>GC</span> content.</li>
-            </ul>
-
-        </div>
-
-        <div style="float: left; max-width: 300px; margin-top: -10px">
-            <p>
-                <a href="https://sourceforge.net/projects/quast/files/" class='btn btn-primary btn-large' style='text-align: left;'>Download source code</a>
-            </p>
-            <p>
-                For installation details and usage instructions,
-                please read <a href="http://sourceforge.net/p/quast/wiki/Home/">the manual</a>.<br>
-            </p>
-            <p style="margin-top: 30px;"><i>
-                We will be thankful if you help us make <span class='smallcapitals'>QUAST</span> better by sending your comments, bug reports, and suggestions
-                to&nbsp;<a href="mailto:quast.support@bioinf.spbau.ru">quast.support@bioinf.spbau.ru</a>.
-            </i></p>
-
-            <p style="margin-top: 30px;">You can check out <a href='/example/'>a sample report</a>.</p>
-
-        </div>
+                        <p><span class='smallcapitals'>QUAST</span> evaluates genome assemblies by computing various metrics:
+                        <ul class="mdash">
+                            <li><span class='define' key='N50'><span class='smallcapitals'>N</span>50</span>, length of the shortest contig from all that cover 50% of all assembly,</li>
+                            <li><span class='define' key='NG50'><span class='smallcapitals'>NG</span>50</span>, where the reference genome is being covered,</li>
+                            <li><span class='define' key='NA50'><span class='smallcapitals'>NA</span>50</span> and <span class='define' key='NGA50'><span class='smallcapitals'>NGA</span>50</span>, where aligned blocks instead of contigs are taken,</li>
+                            <li>misassemblies, misassembled and unaligned contigs or contigs bases,</li>
+                            <li><span class='define' key='Genes covered'>genes</span> and <span class='define' key='Operons covered'>operons</span> covered,</li>
+                            <li>and other metrics.</li>
+                        </ul>
+                        <p>Builds convenient plots for different metrics:</p>
+                        <ul class="mdash">
+                            <li>cumulative contigs length,</li>
+                            <li>all kinds of N-metrics,</li>
+                            <li>genes and operons covered,</li>
+                            <li><span class='smallcapitals'>GC</span> content.</li>
+                        </ul>
+                        <p style="">You can check out <a href='/example/'>a sample report</a>.</p>
+                    </div>
+                </td>
+                <td class='layout-table-td layout-table-snd-td'>
+                    <div style='max-width: 300px;'>
+{#        <div style="float: left; max-width: 300px; margin-top: -10px">#}
+                        <p>
+                            <a href="https://sourceforge.net/projects/quast/files/" class='btn btn-primary btn-large' style='text-align: left;'>Download source code</a>
+                        </p>
+                        <p>
+                            For installation details and usage instructions,
+                            please read <a href="http://sourceforge.net/p/quast/wiki/Home/">the manual</a>.<br>
+                        </p>
+                        <p style="margin-top: 30px;"><i>
+                            We will be thankful if you help us make <span class='smallcapitals'>QUAST</span> better by sending your comments, bug reports, and suggestions
+                            to&nbsp;<a href="mailto:quast.support@bioinf.spbau.ru">quast.support@bioinf.spbau.ru</a>.
+                        </i></p>
+                    </div>
+                </td>
+            </tr>
+        </table>
     </div>
 {% endblock %}

@@ -12,7 +12,7 @@ class AjaxFileUploader(object):
             backend = LocalUploadBackend
         self.get_backend = lambda: backend(**kwargs)
 
-    def __call__(self, request):
+    def upload(self, request):
         return self._ajax_upload(request)
 
     def remove(self, request):
@@ -87,6 +87,8 @@ class AjaxFileUploader(object):
         backend = self.get_backend()
         backend.user_session = user_session
         backend.remove(request)
+
+        return HttpResponse()
 
 
     def _ajax_initialize_uploads(self, request):

@@ -1,4 +1,5 @@
 from io import BufferedWriter, FileIO
+from django.db import DatabaseError
 from django.http import HttpResponseBadRequest
 import os
 import random
@@ -59,8 +60,21 @@ class MyBaseUploadBackend(AbstractUploadBackend):
 
         contigs_fpath = os.path.join(settings.INPUT_ROOT_DIRPATH, self.user_session.input_dirname, contigs_file.fname)
         if os.path.isfile(contigs_fpath):
-            os.remove(contigs_fpath)
-        contigs_file.delete()
+            try:
+                os.remove(contigs_fpath)
+            except IOError as e:
+                with open(settings.LOG_FILE) as f:
+                    f.write(e.message)
+
+        try:
+            contigs_file.delete()
+        except DatabaseError as e:
+            with open(settings.LOG_FILE) as f:
+                f.write(e.message)
+        except Exception as e:
+            with open(settings.LOG_FILE) as f:
+                f.write(e.message)
+
         return True
 
     def get_uploads(self, request):

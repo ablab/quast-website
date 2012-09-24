@@ -16,12 +16,14 @@ RESULTS_ROOT_DIRPATH   = os.path.join(DATA_DIRPATH, 'results')
 DATA_SETS_ROOT_DIRPATH = os.path.join(DATA_DIRPATH, 'data_sets')
 celerydb_fpath         = os.path.join(DATA_DIRPATH, 'celery.sqlite')
 quastdb_fpath          = os.path.join(DATA_DIRPATH, 'quast.sqlite')
+LOG_FILE               = os.path.join(DATA_DIRPATH, 'log.txt')
 
 QUAST_DIRPATH          = os.path.join(SOURCE_DIRPATH, 'quast_tool')
 QUAST_PY_FPATH         = os.path.join(QUAST_DIRPATH, 'quast.py')
 REPORT_SCRIPTS_DIRPATH = os.path.join(QUAST_DIRPATH, 'libs/html_saver/report-scripts')
 GLOSSARY_PATH          = os.path.join(QUAST_DIRPATH, 'libs/html_saver/glossary.json')
 MANUAL_FPATH           = os.path.join(QUAST_DIRPATH, 'manual.html')
+LICENSE_FPATH          = os.path.join(QUAST_DIRPATH, 'LICENSE')
 
 APP_DIRPATH            = os.path.join(SOURCE_DIRPATH, 'quast_app')
 EXAMPLE_DIRPATH        = os.path.join(APP_DIRPATH, 'files/example')
@@ -76,12 +78,12 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/files/files.lawrence.com/files/"
-MEDIA_ROOT = '/files/'
+MEDIA_ROOT = '/collected_downloads/'
 
 # URL that handles the files served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://files.lawrence.com/files/", "http://example.com/files/"
-MEDIA_URL = '/files/'
+MEDIA_URL = '/downloads/'
 
 # Absolute path to the directory files files should be collected to.
 # Don't put anything in this directory yourself; store your files files
@@ -107,7 +109,7 @@ STATICFILES_DIRS += (os.path.join(SOURCE_DIRPATH, 'static'),)
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
     )
 
 # Make this unique, and don't share it with anybody.
@@ -158,6 +160,7 @@ INSTALLED_APPS = (
     'djcelery',
     'quast_app',
     'ajaxuploader',
+    'django_socketio',
     )
 
 # A sample logging configuration. The only tangible logging

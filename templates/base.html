@@ -19,22 +19,33 @@
 <style type="text/css">
     body {
         margin: 0;
-        padding-bottom: 23px;
-        margin-bottom: 23px;
+{#        padding-bottom: 23px;#}
+{#        margin-bottom: 23px;#}
         font-family: Lucida Grande, Verdana, Arial, sans-serif;
         font-size: 12px;
         color: black;
         line-height: 1.3em;
     }
-    .first-column {
-        width: 500px;
-        float: left;
-        margin-right: 50px;
-        margin-bottom: 30px;
+    .layout-table {
+        width: 100%;
+{#        border: 1px solid green;#}
+{#        min-width: 500px;#}
     }
-    .second-column {
-        max-width: 300px;
-        float: left;
+    .layout-table td.layout-table-td {
+{#        margin-right: 20px;#}
+        vertical-align: top;
+{#        border: 1px solid blue;#}
+    }
+    .layout-table td.layout-table-fst-td {
+        min-width: 200px;
+        width: 50%;
+        padding-right: 50px;
+    }
+    .layout-table td.layout-table-snd-td {
+        min-width: 200px;
+    }
+    .layout-table td.layout-table-trd-td {
+{#        border: 1px solid red;#}
     }
     a {
         text-decoration: none;
@@ -60,16 +71,18 @@
     .top-panel {
         background-color: #333;
         color: white;
+        min-width: 650px;
     }
     .content {
         margin-left: 100px;
         padding-top: 20px;
+{#        padding-right: 20px;#}
     }
     ul.menu {
         margin: 0 0 0 100px;
-        padding: 1em 0 2.3em 0;
+        padding: 1em 20px 2.3em 0;
         list-style-type: none;
-        min-width: 800px;
+{#        min-width: 800px;#}
     }
     ul.menu > li:first-child {
         margin-left: -0.8em;
@@ -132,7 +145,6 @@
         border-bottom: 1px dashed #ffcccc;
         border-color: #ffcccc;
         border-color: rgba(255, 0, 0, 0.2);
-
     }
     .tooltip {
         font-size: 0.9em;
@@ -174,9 +186,6 @@
     a.icon_link {
         border: 0px solid black;
         display: block;
-        float: right;
-        margin-right: 68px;
-        margin-left: 10px;
         opacity: 0.5;
     }
     a.icon_link:hover {
@@ -185,14 +194,33 @@
     .admin_icon {
         background: url("/static/pics/small_lock_icon.gif") no-repeat;
         height: 16px;
-        width: 16px;
+        width: 10px;
         display: block;
+{#        margin-right: 17px;#}
+        bottom: 0px;
+        float: right;
     }
     .clear_float {
         clear: both;
     }
+    .footer {
+        margin-top: 80px;
+        margin-bottom: 20px;
+        margin-left: 100px;
+        display: none;  /* become visible by script when page loaded */
+    }
+    .footer table {
+{#        width: 100%;#}
+{#        padding: 0;#}
+{#        margin: -3px;#}
+    }
+    .footer td {
+{#        vertical-align: top;#}
+    }
     .bottom-line {
-        margin: 100px 80px 15px 0;
+        margin-bottom: 15px;
+        margin-right: 73px;
+{#        margin: 100px 80px 15px 0;#}
         border-bottom: 1px #D0D0D0 solid;
     }
     .copyright {
@@ -211,59 +239,8 @@
         color: black;
         border-color: #000;
     }
-    .footer table {
-        width: 100%;
-        padding: 0;
-        margin: -3px;
-    }
-    .footer td {
-        vertical-align: top;
-    }
 </style>
 <style type="text/css">
-        /*.all {*/
-        /*margin-left: 100px;*/
-        /*padding-top: 20px;*/
-        /*}*/
-
-        /*a {*/
-        /*text-decoration: underline;*/
-        /*}*/
-
-        /*a.disabled {*/
-        /*pointer-events: none;*/
-        /*cursor: default;*/
-        /*text-decoration: none;*/
-        /*color: #AAA;*/
-        /*}*/
-
-        /*.navbar .brand:hover {*/
-        /*text-decoration: underline;*/
-        /*}*/
-
-        /*.navbar .navbar-link {*/
-        /*color: white;*/
-        /*}*/
-
-        /*.navbar .nav > li > a {*/
-        /*color: white;*/
-        /*text-decoration: underline;*/
-        /*}*/
-
-        /*.navbar .nav > li > a:hover {*/
-        /*color: white;*/
-        /*text-decoration: underline;*/
-        /*background-color: transparent;*/
-        /*}*/
-
-        /*.navbar .nav .active > a,*/
-        /*.navbar .nav .active > a:hover {*/
-        /*color: #999999;*/
-        /*text-decoration: none;*/
-        /*background-color: #222222;*/
-        /*pointer-events: none;*/
-        /*cursor: default;*/
-        /*}*/
 </style>
 
 {% block extra_head %}{% endblock %}
@@ -274,41 +251,33 @@
             animation: false,
         });
     });
+
+    jQuery.event.add(window, "load", resizeContent);
+    jQuery.event.add(window, "resize", resizeContent);
+
+    function resizeContent() {
+        var h = $(window).height();
+        var w = $(window).width();
+        $(".content").css('min-height', (h-200));
+        $(".footer").css('display', 'block');
+    }
 </script>
 </head>
 
 <body>
-{#    <div class="navbar">#}
-{#        <div class="navbar-inner">#}
-{#            <div class="container">#}
-{#                <a class="brand {% block brand-link-class %}{% endblock %}" href="/">Quast</a>#}
-{#                <div>#}
-{#                    <ul class="nav">#}
-{#                        <li class='{% block index-menu-li-class        %}{% endblock %}'><a href='/'>            About Quast            </a></li>#}
-{#                        <li class='{% block latestreport-menu-li-class %}{% endblock %}'><a href='/latestreport'>Latest report          </a></li>#}
-{#                        <li class='{% block assess-menu-li-class       %}{% endblock %}'><a href='/assess'>      Assess assembly quality</a></li>#}
-{#                    </ul>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
+    <div class='top-panel'>
+        <ul class='menu'>
+            <li class='{% block    index-menu-li-class %}{% endblock %}'><a href='/'>             <span>About <span class='.smallcapitals'>QUAST</span></span></a></li>
+            <li class='{% block evaluate-menu-li-class %}{% endblock %}'><a href='/evaluate/'>    <span>Quality assessment                             </span></a></li>
+            <li class='{% block  reports-menu-li-class %}{% endblock %}'><a href='/reports/'>     <span>Latest reports                                 </span></a></li>
+            <li class='{% block  example-menu-li-class %}{% endblock %}'><a href='/example/'>     <span>Example                                 </span></a></li>
+        </ul>
+        <span class='clear_float'></span>
+    </div>
 
-<div class='top-panel'>
-    <ul class='menu'>
-        <li class='{% block    index-menu-li-class %}{% endblock %}'><a href='/'>             <span>About <span class='.smallcapitals'>QUAST</span></span></a></li>
-        <li class='{% block evaluate-menu-li-class %}{% endblock %}'><a href='/evaluate/'>    <span>Quality assessment                             </span></a></li>
-        <li class='{% block  reports-menu-li-class %}{% endblock %}'><a href='/reports/'>     <span>Latest reports                                 </span></a></li>
-    </ul>
-    <span class='clear_float'></span>
-</div>
-
-<div class='content'>
-    {% block content %}{% endblock %}
-
-    <div class='clear_float'></div>
-
-    <div class="bottom-line"></div>
-
+    <div class='content'>
+        {% block content %}{% endblock %}
+    </div>
 {#    <div class='clear_float'></div>#}
 
 {#    <div>#}
@@ -318,25 +287,39 @@
 {#        </a>#}
 {#    </div>#}
 
-    <div class='clear_float'></div>
     <div class='footer'>
-        <table style="width: 100%">
-        <tr>
-            <td>
-                <div class="first-column">
-                    <span class='copyright'>© 2012, St. Petersburg Academic University of the Russian Academy of Sciences</span>
-                </div>
-                <div class="second-column">
-                    <span class='email'><a href="mailto:quast.support@bioinf.spbau.ru">quast.support@bioinf.spbau.ru</a></span>
-                </div>
-            </td>
-            <td>
-                <a class='icon_link' id="admin_link" href="/admin/"><span class="admin_icon">&nbsp;</span></a>
-            </td>
-        </tr>
+        <table class='layout-table'>
+            <tr>
+                <td colspan="2">
+                    <div class="bottom-line"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class='layout-table-td layout-table-fst-td'>
+                    <span class='copyright'>© 2012, St.&nbsp;Petersburg Academic University</span>
+                </td>
+
+                <td class='layout-table-td layout-table-snd-td'>
+                    <table style="margin: -4px;
+                                  vertical-align: top;
+                                  padding: 0 16px 0 0;
+                                  width: 100%;">
+{#                                  border: 1px solid red;">#}
+                        <tr>
+                            <td style="padding-right: 20px;">
+                                <span class='email'><a href="mailto:quast.support@bioinf.spbau.ru">quast.support@bioinf.spbau.ru</a></span>
+                            </td>
+                            <td style="padding-right: 50px;">
+                                <a class='icon_link' id="admin_link" style="" href="/admin/"><span class="admin_icon">&nbsp;</span></a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
         </table>
     </div>
-
+{#        <div class="second-column" style='border: 1px solid red;'>#}
+{#        </div>#}
 {#    <div class='clear_float'></div>#}
 {#    <div class='footer'>#}
 {#        <table>#}
@@ -347,7 +330,6 @@
 {#            </tr>#}
 {#        </table>#}
 {#    </div>#}
-</div>
 
 <div class='json-code'>
     <div id='glossary-json'>

@@ -28,7 +28,7 @@ def manual(request):
 
 
 def license(request):
-    with open(os.path.join(settings.STATIC_DIRPATH, 'LICENSE')) as f:
+    with open(settings.LICENSE_FPATH) as f:
         return HttpResponse(f.read(), content_type='text/plain')
 
 
