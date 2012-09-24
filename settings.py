@@ -3,7 +3,15 @@ import os
 
 if os.environ.get('DEVELOPMENT', None):
     DEBUG = True
-    TEMPLATE_DEBUG = DEBUG
+    db_engine = 'django.db.backends.sqlite3'
+
+else:
+    DEBUG = False
+    db_engine = 'django.db.backends.sqlite3'
+#    db_engine = 'postgresql_psycopg2'
+
+
+TEMPLATE_DEBUG = DEBUG
 
 
 SOURCE_DIRPATH         = os.path.abspath(os.path.dirname(__file__))
@@ -40,7 +48,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         #'ENGINE': 'django_mongodb_engine',                                  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'ENGINE': 'django.db.backends.sqlite3',                              # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'ENGINE': db_engine,                              # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': quastdb_fpath,                                               # Or path to database file if using sqlite3.
         #'USER': '',                                                         # Not used with sqlite3.
         #'PASSWORD': '',                                                     # Not used with sqlite3.
@@ -257,9 +265,5 @@ djcelery.setup_loader()
 #CELERY_SEND_TASK_ERROR_EMAILS = True
 #CELERY_SEND_EVENTS = True
 #CELERYBEAT_SCHEDULER = "djcelery.schedulers.DatabaseScheduler"
-
-
-
-
 
 

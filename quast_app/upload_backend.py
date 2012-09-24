@@ -63,16 +63,16 @@ class MyBaseUploadBackend(AbstractUploadBackend):
             try:
                 os.remove(contigs_fpath)
             except IOError as e:
-                with open(settings.LOG_FILE) as f:
+                with open(settings.LOG_FILE, 'w') as f:
                     f.write(e.message)
 
         try:
             contigs_file.delete()
         except DatabaseError as e:
-            with open(settings.LOG_FILE) as f:
+            with open(settings.LOG_FILE, 'w') as f:
                 f.write(e.message)
         except Exception as e:
-            with open(settings.LOG_FILE) as f:
+            with open(settings.LOG_FILE, 'w') as f:
                 f.write(e.message)
 
         return True
@@ -101,14 +101,5 @@ class GenesUploadBackend(MyBaseUploadBackend):
 class OperonsUploadBackend(MyBaseUploadBackend):
     def __init__(self, **kwargs):
         super(OperonsUploadBackend, self).__init__('operons', **kwargs)
-
-
-
-
-
-
-
-
-
 
 

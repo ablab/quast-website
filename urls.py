@@ -42,6 +42,6 @@ urlpatterns = patterns('',
 
 urlpatterns += staticfiles_urlpatterns()
 
-#urlpatterns += patterns('',
-#    url('', include('django_socketio.urls')),
-#)
+urlpatterns += patterns('',
+    url('', include('django_socketio.urls')),
+)
