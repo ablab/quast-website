@@ -33,7 +33,7 @@ Locally push everything to Github:
 
 On Morality, pull changes:
     git pull
-Restart Apache:
+Gracefully restart Apache:
     sudo apachectl graceful
 
-Data and virtualenv directories kept different for development and deployment.
+Data and virtualenv directories are kept different for development and deployment.
