@@ -20,7 +20,6 @@ Both:
     cd quast-website
     pip install -r pip_requirements.txt
 
-
 ***************************************************
 DEPLOYING CHANGES
 cd quast/quast-website

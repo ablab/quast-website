@@ -168,7 +168,7 @@ INSTALLED_APPS = (
     'djcelery',
     'quast_app',
     'ajaxuploader',
-    'django_socketio',
+#    'django_socketio',
     )
 
 # A sample logging configuration. The only tangible logging
