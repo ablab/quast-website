@@ -35,7 +35,7 @@ import sys
 # add_to_path([
 #     # os.path.normpath('/var/www/quality/virtualenv/lib/python2.7/site-packages'),
 # ])
-from socketio.server import SocketIOServer
+#from socketio.server import SocketIOServer
 
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 
