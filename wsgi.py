@@ -35,7 +35,6 @@ import sys
 # add_to_path([
 #     # os.path.normpath('/var/www/quality/virtualenv/lib/python2.7/site-packages'),
 # ])
-#from socketio.server import SocketIOServer
 
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 
@@ -49,10 +48,6 @@ application = get_wsgi_application()
 
 import djcelery
 djcelery.setup_loader()
-
-#PORT = 9000
-#print 'Listening on port %s and on port 843 (flash policy server)' % PORT
-#SocketIOServer(('', PORT), application, resource="socket.io").serve_forever()
 
 # Apply WSGI middleware here.
 # from helloworld.wsgi import HelloWorldApplication
