@@ -41,7 +41,20 @@ def save(filename, what):
 def save_total_report(output_dir, min_contig):
     import reporting
     table = reporting.table()
-    table = [[table[i][j] for i in xrange(len(table))] for j in xrange(len(table[0]))]
+
+    def try_convert_back_to_number(str):
+        try:
+            val = int(str)
+        except ValueError:
+            try:
+                val = float(str)
+            except ValueError:
+                val = str
+
+        return val
+
+
+    table = [[try_convert_back_to_number(table[i][j]) for i in xrange(len(table))] for j in xrange(len(table[0]))]
 
     # TODO: check correctness, not sure that header and result are correct:
     header = table[0]
@@ -50,10 +63,10 @@ def save_total_report(output_dir, min_contig):
     t = datetime.datetime.now()
 
     return save(output_dir + total_report_fn, {
-            'date' : t.strftime('%d %B %Y, %A, %H:%M:%S'),
-            'header' : header,
-            'results' : results,
-            'min_contig' : min_contig
+        'date' : t.strftime('%d %B %Y, %A, %H:%M:%S'),
+        'header' : header,
+        'results' : results,
+        'min_contig' : min_contig
     })
 
 def save_contigs_lengths(output_dir, filenames, lists_of_lengths):
@@ -89,7 +102,7 @@ def save_contigs(output_dir, filenames, contigs):
     return save(output_dir + contigs_fn, {
         'filenames' : map(os.path.basename, filenames),
         'contigs' : dict((os.path.basename(fn), blocks) for (fn, blocks) in contigs.items()),
-    })
+        })
 
 
 def save_genes(output_dir, genes, found):
@@ -97,7 +110,7 @@ def save_genes(output_dir, genes, found):
     return save(output_dir + genes_fn, {
         'genes' : genes,
         'found' : found,
-    })
+        })
 
 
 def save_operons(output_dir, operons, found):
@@ -105,14 +118,14 @@ def save_operons(output_dir, operons, found):
     return save(output_dir + operons_fn, {
         'operons' : operons,
         'found' : found,
-    })
+        })
 
 
 def save_GC_info(output_dir, filenames, lists_of_GC_info):
     return save(output_dir + gc_fn, {
         'filenames' : map(os.path.basename, filenames),
         'lists_of_gc_info' : lists_of_GC_info,
-    })
+        })
 
 
 
