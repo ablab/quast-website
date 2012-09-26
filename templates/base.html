@@ -119,6 +119,16 @@
         border: 0px;
     }
 
+    .tooltip {
+        font-size: 0.9em;
+        margin-bottom: 5px;
+    }
+    .tooltip.in {
+        opacity: 1;
+    }
+    .tooltip-inner {
+        text-align: left;
+    }
     .tooltip-link,
     .tooltip-link:visited {
         text-decoration: none;
@@ -145,16 +155,6 @@
         border-bottom: 1px dashed #ffcccc;
         border-color: #ffcccc;
         border-color: rgba(255, 0, 0, 0.2);
-    }
-    .tooltip {
-        font-size: 0.9em;
-        margin-bottom: 5px;
-    }
-    .tooltip.in {
-        opacity: 1;
-    }
-    .tooltip-inner {
-        text-align: left;
     }
     .json-code {
         display: none;
@@ -340,5 +340,16 @@
 <script type="text/javascript" src="/static/bootstrap/js/bootstrap.js"></script>
 <script type="text/javascript" src="/static/bootstrap/js/bootstrap-tooltip-vlad.js"></script>
 
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-35127857-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
 </body>
 </html>
