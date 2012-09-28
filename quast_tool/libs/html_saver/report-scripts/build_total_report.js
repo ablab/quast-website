@@ -63,10 +63,6 @@ function buildTotalReport(report, glossary) {
             var RED_HUE = 0;
             var GREEN_HUE = 130;
 
-            if (max == 0) {
-                var a = 0;
-            }
-
             if (max == min) {
                 $(cells).css('color', 'hsl(' + GREEN_HUE + ', 80%, 50%)');
             } else {
@@ -78,10 +74,9 @@ function buildTotalReport(report, glossary) {
                     $(this).css('color', 'hsl(' + hue + ', 80%, 50%)');
                 });
             }
-
         }).mouseleave(function() {
-                $(this).parent().find('td:[number]').css('color', 'black');
-            });
+            $(this).parent().find('td:[number]').css('color', 'black');
+        });
     });
 
     $('#report').append(table);
