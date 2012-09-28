@@ -57,15 +57,33 @@
         /*height: 600px;*/
         /*}*/
 
+        #report .report-table-header {
+            font-weight: bold;
+        }
+        #report tr:first-child td {
+{#            border-bottom: 1px solid #ccc;#}
+{#            padding-bottom: 0px;#}
+        }
+
+        #report {
+            font-size: 1em;
+            margin-left: 125px;
+            min-width: 726px;
+            margin-bottom: 1em;
+         }
+        #report td {
+            padding: 2px 1em 0 0;
+            margin: 0;
+        }
+        #report td {
+            white-space: nowrap
+        }
         .blocks > div {
             float: left;
             margin-bottom: 5.5em;
             margin-top: 0px;
         }
 
-        .report-table-header {
-            font-weight: bold;
-        }
         .plot-wrapper {
             padding-right: 80px;
         }
@@ -82,20 +100,10 @@
         .blocks > div:last-child {
             margin-bottom: 40px;
         }
-        #report {
-            margin-left: 125px;
-            min-width: 726px;
-            margin-bottom: 1em;
-        }
-        #report td {
-            padding: 0 1em 0 0;
-            margin: 0;
-        }
-        #report td {
-            white-space: nowrap
-        }
     </style>
+    {% block extra_extra_head %}{% endblock %}
 {% endblock %}
+
 
 {% block content %}
 <div id='header'>

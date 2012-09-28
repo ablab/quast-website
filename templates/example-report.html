@@ -1,7 +1,15 @@
 {% extends "report.html" %}
 
-{% block title %}Sample report{% endblock %}
+{% block title %}Sample report {% endblock %}
 
 {% block example-menu-li-class %}active{% endblock %}
 
 {% block header %}Example{% endblock %}
+
+{% block extra_extra_head %}
+<script type="text/javascript">
+    $(document).ready(function() {
+        document.title = 'Sample report';
+    });
+</script>
+{% endblock %}
