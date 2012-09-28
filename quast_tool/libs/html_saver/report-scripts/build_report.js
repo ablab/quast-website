@@ -24,12 +24,8 @@ function buildReport() {
     }
 
     if (report) {
-        if (document.title != 'Sample report' && report.date != "") {
-            document.title += report.date;
-            $('#subheader').html(report.date + '.');
-        } else {
-            $('#subheader').hide();
-        }
+        document.title += (report.date);
+        $('#subheader').html(report.date + '.');
         $('#mincontig').append('Contigs of length ≥ ' + report.min_contig + ' bp are used.');
         buildTotalReport(report, glossary);
     }

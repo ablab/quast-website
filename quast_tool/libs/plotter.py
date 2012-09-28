@@ -10,7 +10,7 @@ from libs import fastaparser
 
 # Supported plot formats: .emf, .eps, .pdf, .png, .ps, .raw, .rgba, .svg, .svgz
 #plots_format = '.svg'
-plots_format = '.png'
+plots_format = '.pdf'
 
 
 matplotlib_error = False
@@ -48,7 +48,7 @@ def y_formatter(ylabel, max_y):
         ylabel += '(bp)'
     elif max_y <= 3 * 1e+6:
         mkfunc = lambda x, pos: '%d' % (x * 1e-3)
-        ylabel += '(Kbp)'
+        ylabel += '(kbp)'
     else:
         mkfunc = lambda x, pos: '%d' % (x * 1e-6)
         ylabel += '(Mbp)'
@@ -116,7 +116,7 @@ def cumulative_plot(reference, filenames, lists_of_lengths, plot_filename, title
     # Put a legend below current axis
     try: # for matplotlib <= 2009-12-09
         ax.legend(legend_list, loc='upper center', bbox_to_anchor=(0.5, -0.1), fancybox=True,
-            shadow=False, ncol=n_columns)
+            shadow=True, ncol=n_columns)
     except ZeroDivisionError:
         pass
 
@@ -141,9 +141,7 @@ def cumulative_plot(reference, filenames, lists_of_lengths, plot_filename, title
         matplotlib.pyplot.savefig(all_pdf, format='pdf')
 
 
-    # common routine for Nx-plot and NGx-plot (and probably for others Nyx-plots in the future)
-
-
+# common routine for Nx-plot and NGx-plot (and probably for others Nyx-plots in the future)
 def Nx_plot(filenames, lists_of_lengths, plot_filename, title='Nx', reference_lengths=[], all_pdf=None):
     if matplotlib_error:
         return
@@ -223,7 +221,7 @@ def Nx_plot(filenames, lists_of_lengths, plot_filename, title='Nx', reference_le
 
 
 # routine for GC-plot    
-def GC_content_plot(filenames, lists_of_GC_info, plot_filename, all_pdf=None):
+def GC_content_plot(reference, filenames, lists_of_GC_info, plot_filename, all_pdf=None):
     bin_size = 1.0
     title = 'GC content'
 
@@ -239,7 +237,10 @@ def GC_content_plot(filenames, lists_of_GC_info, plot_filename, all_pdf=None):
     color_id = 0
     max_y = 0
 
-    for id, (filename, GC_info) in enumerate(itertools.izip(filenames, lists_of_GC_info)):
+    allfilenames = filenames
+    if reference:
+        allfilenames = filenames + [reference]
+    for id, (filename, GC_info) in enumerate(itertools.izip(allfilenames, lists_of_GC_info)):
         # GC_info = [(contig_length, GC_percent)]
         # sorted_GC_info = sorted(GC_info, key=lambda GC_info_contig: GC_info_contig[1])
         # calculate values for the plot
@@ -261,16 +262,23 @@ def GC_content_plot(filenames, lists_of_GC_info, plot_filename, all_pdf=None):
         max_y = max(max_y, max(vals_bp))
 
         # for log scale
-        for id, bp in enumerate(vals_bp):
+        for id2, bp in enumerate(vals_bp):
             if bp == 0:
-                vals_bp[id] = 0.1
+                vals_bp[id2] = 0.1
 
         # add to plot
-        if color_id < len(colors):
-            matplotlib.pyplot.plot(vals_GC, vals_bp, color=colors[color_id % len(colors)], lw=linewidth)
+        if reference and (id == len(allfilenames) - 1):
+            color = '#000000'
+            ls = 'dashed'
+        elif color_id < len(colors):
+            color=colors[color_id % len(colors)]
+            ls = 'solid'
         else:
-            matplotlib.pyplot.plot(vals_GC, vals_bp, color=colors[color_id % len(colors)], lw=linewidth, ls='dashed')
+            color=colors[color_id % len(colors)]
+            ls = 'dashed'
+        matplotlib.pyplot.plot(vals_GC, vals_bp, color=color, lw=linewidth, ls=ls)
         color_id += 1
+
 
     if with_title:
         matplotlib.pyplot.title(title)
@@ -280,15 +288,17 @@ def GC_content_plot(filenames, lists_of_GC_info, plot_filename, all_pdf=None):
     box = ax.get_position()
     ax.set_position([box.x0, box.y0 + box.height * 0.2, box.width, box.height * 0.8])
     # Put a legend below current axis
+    legend_list = map(os.path.basename, allfilenames)
+    if reference:
+        legend_list[-1] = 'Reference'
     try: # for matplotlib <= 2009-12-09
-        ax.legend(map(os.path.basename, filenames), loc='upper center', bbox_to_anchor=(0.5, -0.1), fancybox=True,
+        ax.legend(legend_list, loc='upper center', bbox_to_anchor=(0.5, -0.1), fancybox=True,
             shadow=True, ncol=n_columns)
     except ZeroDivisionError:
         pass
 
-    ylabel = 'Bases in contigs '
+    ylabel = '# windows'
     #ylabel, mkfunc = y_formatter(ylabel, max_y)
-    ylabel += '(bp)'
     matplotlib.pyplot.xlabel('GC (%)', fontsize=axes_fontsize)
     matplotlib.pyplot.ylabel(ylabel, fontsize=axes_fontsize)
 
@@ -300,7 +310,7 @@ def GC_content_plot(filenames, lists_of_GC_info, plot_filename, all_pdf=None):
     ax.yaxis.set_major_locator(yLocator)
     ax.xaxis.set_major_locator(xLocator)
 
-    ax.set_yscale('symlog', linthreshy=0.5)
+    #ax.set_yscale('symlog', linthreshy=0.5)
     #ax.invert_xaxis()
     #matplotlib.pyplot.ylim(matplotlib.pyplot.ylim()[::-1])
 
@@ -355,17 +365,17 @@ def genes_operons_plot(filenames, files_contigs, genes, found, plot_filename, ti
         color_id += 1
 
     matplotlib.pyplot.xlabel('Contig index', fontsize=axes_fontsize)
-    matplotlib.pyplot.ylabel('Cumulative no. ' + title, fontsize=axes_fontsize)
+    matplotlib.pyplot.ylabel('Cumulative # complete ' + title, fontsize=axes_fontsize)
     if with_title:
-        matplotlib.pyplot.title('Cumulative number of ' + title)
-    matplotlib.pyplot.grid(False)
+        matplotlib.pyplot.title('Cumulative # complete ' + title)
+    matplotlib.pyplot.grid(with_grid)
     ax = matplotlib.pyplot.gca()
     # Shink current axis's height by 20% on the bottom
     box = ax.get_position()
-    ax.set_position([box.x0 + box.width * 0.2, box.y0 + box.height * 0.1, box.width * 0.8, box.height * 0.9])
+    ax.set_position([box.x0, box.y0 + box.height * 0.2, box.width, box.height * 0.8])
     # Put a legend below current axis
     ax.legend(map(os.path.basename, filenames), loc='upper center', bbox_to_anchor=(0.5, -0.1), fancybox=True,
-        shadow=False, ncol=4)
+        shadow=True, ncol=4)
 
     xLocator, yLocator = get_locators()
     ax.yaxis.set_major_locator(yLocator)

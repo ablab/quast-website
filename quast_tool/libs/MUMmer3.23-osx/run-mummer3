@@ -13,7 +13,7 @@ set ref = $1
 set qry = $2
 set pfx = $3
 
-set bindir = /Users/vladsaveliev/Dropbox/bio/quast_release_1.1/libs/MUMmer3.23-osx
+set bindir = /Users/vladsaveliev/Dropbox/bio/quast_master/libs/MUMmer3.23-osx
 
 if($ref == '' || $qry == '' || $pfx == '') then
     echo "USAGE: $0 <fasta reference> <multi-fasta query> <prefix>"

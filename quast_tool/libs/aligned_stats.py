@@ -7,7 +7,7 @@
 import os
 import itertools
 import fastaparser
-from libs import reporting
+from libs import reporting, qconfig
 from qutils import id_to_str
 
 __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
@@ -51,7 +51,7 @@ def do(reference, filenames, nucmer_dir, output_dir, all_pdf, draw_plots, json_o
 
     ########################################################################
 
-    nucmer_prefix = os.path.join(os.path.join(__location__, ".."), nucmer_dir + '/nucmer_')
+    nucmer_prefix = os.path.join(os.path.join(__location__, ".."), nucmer_dir, 'nucmer_output')
 
     ########################################################################
     report_dict = {'header' : []}
@@ -67,7 +67,7 @@ def do(reference, filenames, nucmer_dir, output_dir, all_pdf, draw_plots, json_o
     print 'Processing .coords files...'
     for id, filename in enumerate(filenames):
         print ' ', id_to_str(id), os.path.basename(filename)
-        nucmer_filename = nucmer_prefix + os.path.basename(filename) + '.coords.filtered'
+        nucmer_filename = os.path.join(nucmer_prefix, os.path.basename(filename) + '.coords.filtered')
         assembly_lengths.append(sum(fastaparser.get_lengths_from_fastafile(filename)))
         if not os.path.isfile(nucmer_filename):
             print '  ERROR: nucmer coord file (' + nucmer_filename + ') not found, skipping...'
@@ -84,14 +84,24 @@ def do(reference, filenames, nucmer_dir, output_dir, all_pdf, draw_plots, json_o
         nga50 = N50.NG50(lens, reference_length)
         na75 = N50.NG50(lens, assembly_len, 75)
         nga75 = N50.NG50(lens, reference_length, 75)
+        la50 = N50.LG50(lens, assembly_len)
+        lga50 = N50.LG50(lens, reference_length)
+        la75 = N50.LG50(lens, assembly_len, 75)
+        lga75 = N50.LG50(lens, reference_length, 75)
         print ' ', id_to_str(id), os.path.basename(filename), \
             ', NA50 =', na50, \
-            ', NGA50 =', nga50
+            ', NGA50 =', nga50, \
+            ', LA50 =', la50,\
+            ', LGA50 =', lga50
         report = reporting.get(filename)
         report.add_field(reporting.Fields.NA50, na50)
         report.add_field(reporting.Fields.NGA50, nga50)
         report.add_field(reporting.Fields.NA75, na75)
         report.add_field(reporting.Fields.NGA75, nga75)
+        report.add_field(reporting.Fields.LA50, la50)
+        report.add_field(reporting.Fields.LGA50, lga50)
+        report.add_field(reporting.Fields.LA75, la75)
+        report.add_field(reporting.Fields.LGA75, lga75)
 
     ########################################################################
 
@@ -102,9 +112,10 @@ def do(reference, filenames, nucmer_dir, output_dir, all_pdf, draw_plots, json_o
         json_saver.save_assembly_lengths(json_output_dir, filenames, assembly_lengths)
 
     # saving to html
-    from libs.html_saver import html_saver
-    html_saver.save_aligned_contigs_lengths(results_dir, filenames, lists_of_lengths)
-    html_saver.save_assembly_lengths(results_dir, filenames, assembly_lengths)
+    if qconfig.html_report:
+        from libs.html_saver import html_saver
+        html_saver.save_aligned_contigs_lengths(results_dir, filenames, lists_of_lengths)
+        html_saver.save_assembly_lengths(results_dir, filenames, assembly_lengths)
 
     if draw_plots:
         # Drawing cumulative plot (aligned contigs)...

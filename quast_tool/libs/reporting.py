@@ -22,52 +22,93 @@ from libs import qconfig
 
 reports = {} # basefilename -> Report
 keys_order = [] # for printing in appropriate order
+min_contig = None # for printing info about min contig in TXT reports
 
 # Available fields for report, values (strings) should be unique!
 class Fields:
+    MISASSEMBLIES_GROUP = 'Structural variations'
+    GENES_GROUP = 'Genes and operons'
+    ALIGNED_GROUP = 'Aligned'
+
     NAME = 'Assembly'
     CONTIGS = ('# contigs (>= %d bp)', tuple(qconfig.contig_thresholds))
     TOTALLENS = ('Total length (>= %d bp)', tuple(qconfig.contig_thresholds))
     N50 = 'N50'
+    L50 = 'L50'
     NG50 = 'NG50'
+    LG50 = 'LG50'
     N75 = 'N75'
+    L75 = 'L75'
     NG75 = 'NG75'
+    LG75 = 'LG75'
     NUMCONTIGS = '# contigs'
     LARGCONTIG = 'Largest contig'
     TOTALLEN = 'Total length'
     GC = 'GC (%)'
     REFLEN = 'Reference length'
     REFGC = 'Reference GC (%)'
-    AVGIDY = 'Average %IDY'
     MISLOCAL = '# local misassemblies'
     MISASSEMBL = '# misassemblies'
     MISCONTIGS = '# misassembled contigs'
     MISCONTIGSBASES = 'Misassembled contigs length'
-    MISUNALIGNED = '# misassembled and unaligned'
     UNALIGNED = '# unaligned contigs'
     UNALIGNEDBASES = 'Unaligned contigs length'
+    AVGIDY = 'Average %IDY'
     AMBIGUOUS = '# ambiguous contigs'
     AMBIGUOUSBASES = 'Ambiguous contigs length'
-    SNPS = '# mismatches'
-    SUBSERROR = '# mismatches per 100 Kbp'
+    MISMATCHES = '# mismatches'
+    INDELS = '# indels'
+    SUBSERROR = '# mismatches per 100 kbp'
+    INDELSERROR = '# indels per 100 kbp'
+    UNCALLED = '# N'
+    UNCALLED_PERCENT = "N's (%)"
     NA50 = 'NA50'
+    LA50 = 'LA50'
     NGA50 = 'NGA50'
+    LGA50 = 'LGA50'
     NA75 = 'NA75'
+    LA75 = 'LA75'
     NGA75 = 'NGA75'
+    LGA75 = 'LGA75'
     MAPPEDGENOME = 'Genome fraction (%)'
+    DUPLICATION_RATIO = 'Duplication ratio'
     GENES = '# genes'
     OPERONS = '# operons'
     GENEMARKUNIQUE = '# predicted genes (unique)'
     GENEMARK = ('# predicted genes (>= %d bp)', tuple(qconfig.genes_lengths))
 
     # order as printed in report:
-    order = [NAME, CONTIGS, TOTALLENS, NUMCONTIGS, LARGCONTIG, TOTALLEN, REFLEN, N50, NG50, N75, NG75,             
-             # AVGIDY, 
-	         MISASSEMBL, MISCONTIGS, MISCONTIGSBASES, MISLOCAL, # MISUNALIGNED,
-             UNALIGNED, UNALIGNEDBASES, AMBIGUOUS, AMBIGUOUSBASES, 
-             MAPPEDGENOME, GC, REFGC, SUBSERROR, GENES, OPERONS, GENEMARKUNIQUE, GENEMARK,
-             NA50, NGA50, NA75, NGA75]
-    
+    order = [NAME, CONTIGS, TOTALLENS, NUMCONTIGS, LARGCONTIG, TOTALLEN, REFLEN,
+             N50, L50, NG50, LG50, N75, L75, NG75, LG75,
+             MISASSEMBLIES_GROUP, MISASSEMBL, MISCONTIGS, MISCONTIGSBASES,
+             UNALIGNED, UNALIGNEDBASES, AMBIGUOUS, AMBIGUOUSBASES,
+             GENES_GROUP, MAPPEDGENOME, GC, REFGC,
+             UNCALLED_PERCENT, SUBSERROR, INDELSERROR, GENES, OPERONS, GENEMARKUNIQUE, GENEMARK,
+             NA50, LA50, NGA50, LGA50, NA75, LA75, NGA75, LGA75]
+
+    MIS_ALL_EXTENSIVE = '# misassemblies'
+    MIS_RELOCATION = '    # relocations'
+    MIS_TRANSLOCATION = '    # translocations'
+    MIS_INVERTION = '    # inversions'
+    MIS_EXTENSIVE_CONTIGS = '# misassembled contigs'
+    MIS_EXTENSIVE_BASES = 'Misassembled contigs length'
+    MIS_LOCAL = '# local misassemblies'
+
+    # for detailed misassemblies report
+    misassemblies_order = [NAME, MIS_ALL_EXTENSIVE, MIS_RELOCATION, MIS_TRANSLOCATION, MIS_INVERTION,
+                           MIS_EXTENSIVE_CONTIGS, MIS_EXTENSIVE_BASES, MIS_LOCAL, MISMATCHES, INDELS]
+
+    UNALIGNED_FULL_CNTGS = '# fully unaligned contigs'
+    UNALIGNED_FULL_LENGTH = 'Fully unaligned length'
+    UNALIGNED_PART_CNTGS = '# partially unaligned contigs'
+    UNALIGNED_PART_WITH_MISASSEMBLY = '    # with misassembly'
+    UNALIGNED_PART_SIGNIFICANT_PARTS = '    # both parts are significant'
+    UNALIGNED_PART_LENGTH = 'Partially unaligned length'
+
+    # for detailed unaligned report
+    unaligned_order = [NAME, UNALIGNED_FULL_CNTGS, UNALIGNED_FULL_LENGTH, UNALIGNED_PART_CNTGS,
+                       UNALIGNED_PART_WITH_MISASSEMBLY, UNALIGNED_PART_SIGNIFICANT_PARTS, UNALIGNED_PART_LENGTH, UNCALLED]
+
     # GAGE fields
     GAGE_NUMCONTIGS = 'Contigs #'
     GAGE_MINCONTIG = 'Min contig'
@@ -122,19 +163,25 @@ class Report(object):
         assert field in Fields.__dict__.itervalues(), 'Unknown field: %s' % field
         return self.d.get(field, '')
 
-def get(name):
-    name = os.path.basename(name)
-    if name not in keys_order:
-        keys_order.append(name)
-    return reports.setdefault(name, Report(name))
+def get(filename):
+    filename = os.path.basename(filename)
+    if filename not in keys_order:
+        keys_order.append(filename)
+    return reports.setdefault(filename, Report(filename))
+
+def delete(filename):
+    filename = os.path.basename(filename)
+    if filename in keys_order:
+        keys_order.remove(filename)
+    if filename in reports.keys():
+        reports.pop(filename)
 
 def reporting_filter(value):
     if value == "":
         return False
     return True
 
-def table(gage_mode=False):
-    order = Fields.gage_order if gage_mode else Fields.order
+def table(order=Fields.order):
     ans = []
     for field in order:
         if isinstance(field, tuple): # TODO: rewrite it nicer
@@ -156,7 +203,7 @@ def table(gage_mode=False):
                 ans.append([field] + [str(y) for y in ls])
     return ans
 
-def save_txt(filename, table, min_contig = None):
+def save_txt(filename, table):
     # determine width of columns for nice spaces
     colwidth = [0] * len(table[0])
     for line in table:
@@ -177,24 +224,68 @@ def save_tsv(filename, table):
         print >>file, '\t'.join(line)
     file.close()
 
-def save(output_dirpath, min_contig, gage_mode=False):
+def save_tex(filename, table):
+    file = open(filename, 'a')
+    # Header
+    print >>file, '\\begin{table}[ht]'
+    print >>file, '\\begin{center}'
+    print >>file, '\\caption{(Contigs of length $\geq$ ' + str(min_contig) + ' are used)}'
+    print >>file, '\\begin{tabular}{|l*{' + str(len(table[0]) - 1) + '}{|r}|}'
+    print >>file, '\\hline'
+    # Body
+    for line in table:
+        row = ' & '.join(line)
+        # escape characters
+        for esc_char in "\\ % $ # _ { } ~ ^".split():
+            row = row.replace(esc_char, '\\' + esc_char)
+        # more pretty '>='
+        row = row.replace('>=', '$\\geq$')
+        row += ' \\\\ \\hline'
+        print >>file, row
+    # Footer
+    print >>file, '\\end{tabular}'
+    print >>file, '\\end{center}'
+    print >>file, '\\end{table}'
+    file.close()
+
+
+def save(output_dirpath, report_name, transposed_report_name, order):
     # Where total report will be saved
-    if not gage_mode:
-        print 'Summarizing...'
-    tab = table(gage_mode)
+    tab = table(order)
 
-    gage_prefix = "gage_" if gage_mode else "" 
     print '  Creating total report...'
-    report_txt_filename = os.path.join(output_dirpath, gage_prefix + "report") + '.txt'
-    report_tsv_filename = os.path.join(output_dirpath, gage_prefix + "report") + '.tsv'
-    save_txt(report_txt_filename, tab, min_contig)
+    report_txt_filename = os.path.join(output_dirpath, report_name) + '.txt'
+    report_tsv_filename = os.path.join(output_dirpath, report_name) + '.tsv'
+    report_tex_filename = os.path.join(output_dirpath, report_name) + '.tex'
+    save_txt(report_txt_filename, tab)
     save_tsv(report_tsv_filename, tab)
-    print '    Saved to', report_txt_filename, 'and', report_tsv_filename
+    save_tex(report_tex_filename, tab)
+    print '    Saved to', report_txt_filename, ',', os.path.basename(report_tsv_filename), \
+          'and', os.path.basename(report_tex_filename)
 
-    print '  Transposed version of total report...'
-    tab = [[tab[i][j] for i in xrange(len(tab))] for j in xrange(len(tab[0]))]
-    report_txt_filename = os.path.join(output_dirpath, gage_prefix + "transposed_report") + '.txt'
-    report_tsv_filename = os.path.join(output_dirpath, gage_prefix + "transposed_report") + '.tsv'
-    save_txt(report_txt_filename, tab, min_contig)
-    save_tsv(report_tsv_filename, tab)
-    print '    Saved to', report_txt_filename, 'and', report_tsv_filename
+    if transposed_report_name:
+        print '  Transposed version of total report...'
+        tab = [[tab[i][j] for i in xrange(len(tab))] for j in xrange(len(tab[0]))]
+        report_txt_filename = os.path.join(output_dirpath, transposed_report_name) + '.txt'
+        report_tsv_filename = os.path.join(output_dirpath, transposed_report_name) + '.tsv'
+        report_tex_filename = os.path.join(output_dirpath, transposed_report_name) + '.tex'
+        save_txt(report_txt_filename, tab)
+        save_tsv(report_tsv_filename, tab)
+        save_tex(report_tex_filename, tab)
+        print '    Saved to', report_txt_filename, ',', os.path.basename(report_tsv_filename),\
+              'and', os.path.basename(report_tex_filename)
+
+def save_gage(output_dirpath):
+    save(output_dirpath, "gage_report", "gage_transposed_report", Fields.gage_order)
+
+
+def save_total(output_dirpath):
+    print 'Summarizing...'
+    save(output_dirpath, "report", "transposed_report", Fields.order)
+
+
+def save_misassemblies(output_dirpath):
+    save(output_dirpath, "misassemblies_report", "", Fields.misassemblies_order)
+
+def save_unaligned(output_dirpath):
+    save(output_dirpath, "unaligned_report", "", Fields.unaligned_order)

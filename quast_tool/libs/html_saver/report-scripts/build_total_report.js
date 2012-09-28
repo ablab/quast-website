@@ -3,24 +3,29 @@ function buildTotalReport(report, glossary) {
     var table = '';
     table += '<table cellspacing="0" class="report-table">';
 
-    for (var i = 0; i < report.header.length; i++) {
+    delete report.header[17];
+    delete report.header['Average %IDY'];
+
+
+    for (var col = 0; col < report.header.length; col++) {
         var keyCell;
 
-        if (i == 0) {
+        if (col == 0) {
             keyCell = '<span class="report-table-header"></span>';
             table += '<tr><td><span style="">' + keyCell + '</span></td>';
         } else {
-            keyCell = addTooltipIfDefenitionExists(glossary, report.header[i]);
+            keyCell = addTooltipIfDefenitionExists(glossary, report.header[col]);
             table += '<tr class="content-row"><td><span style="">' + keyCell + '</span></td>';
         }
 
-        for (var j = 0; j < report.results.length; j++) {
-            var value = report.results[j][i];
+        for (var row = 0; row < report.results.length; row++) {
+            var value = report.results[row][col];
             var valueCell = value;
 
-            if (i == 0) {
+            if (col == 0) {
                 valueCell = '<span class="report-table-header">' + value + '</span>';
                 table += '<td><span>' + valueCell + '</span></td>';
+
             } else {
                 if (value == 'None' /* && report.header[i].substr(0,2) == 'NG' */) {
                     valueCell = '-';
@@ -69,9 +74,11 @@ function buildTotalReport(report, glossary) {
             }
 
         }).mouseleave(function() {
-            $(this).parent().find('td:[number]').css('color', 'black');
-        });
+                $(this).parent().find('td:[number]').css('color', 'black');
+            });
     });
 
     $('#report').append(table);
 }
+
+
