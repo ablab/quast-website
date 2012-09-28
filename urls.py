@@ -18,6 +18,7 @@ urlpatterns = patterns('',
     url(r'^report-scripts/(?P<script_name>[1-9a-z_\-]+.js)/?$', 'quast_app.views.report_scripts'),
 
     url(r'^ecoli/?$', 'quast_app.views.ecoli'),
+    url(r'^benchmarking/?$', 'quast_app.views.benchmarking'),
 
     url(r'^evaluate/?$', 'quast_app.views.evaluate'),
     url(r'^evaluate/?$', 'quast_app.views.evaluate'),

@@ -45,6 +45,11 @@ def example(request):
     return response
 
 
+
+def benchmarking(request):
+    return render_to_response('benchmarking.html', add_template_args_by_defualt({}))
+
+
 def report_scripts(request, script_name):
     with open(os.path.join(settings.REPORT_SCRIPTS_DIRPATH, script_name)) as f:
         return HttpResponse(f.read(), content_type='application/javascript')
