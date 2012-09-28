@@ -3,15 +3,21 @@ function buildTotalReport(report, glossary) {
     var table = '';
     table += '<table cellspacing="0" class="report-table">';
 
-    delete report.header[17];
-    delete report.header['Average %IDY'];
-
-
     for (var col = 0; col < report.header.length; col++) {
         var keyCell;
 
+        if (report.header[col] == '# misassemblies') {
+            table += '<tr class="subheader-tr"><td colspan="' + (report.results.length+1) + '"><b>Structural variations</b></td></tr>'
+        }
+        if (report.header[col] == 'Genome fraction (%)') {
+            table += '<tr class="subheader-tr"><td colspan="' + (report.results.length+1) + '"><b>Genes and operons</b></td></tr>'
+        }
+        if (report.header[col] == 'NA50') {
+            table += '<tr class="subheader-tr"><td colspan="' + (report.results.length+1) + '"><b>Aligned</b></td></tr>'
+        }
+
         if (col == 0) {
-            keyCell = '<span class="report-table-header"></span>';
+            keyCell = '<span class="report-table-header">Basic stats</span>';
             table += '<tr><td><span style="">' + keyCell + '</span></td>';
         } else {
             keyCell = addTooltipIfDefenitionExists(glossary, report.header[col]);
