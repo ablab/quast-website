@@ -133,7 +133,7 @@
     .tooltip-link:visited {
         text-decoration: none;
         color: #000;
-        border-bottom: 1px dashed #000;
+        border-bottom: 1px dashed #bbb;
     }
     .tooltip-link:hover {
         text-decoration: none;
@@ -240,8 +240,6 @@
         border-color: #000;
     }
 </style>
-<style type="text/css">
-</style>
 
 {% block extra_head %}{% endblock %}
 
@@ -263,6 +261,7 @@
     }
 </script>
 
+{% if google_analitycs %}
 <script type="text/javascript">
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-35127857-1']);
@@ -274,6 +273,7 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
 </script>
+{% endif %}
 </head>
 
 <body>

@@ -16,10 +16,15 @@ with open(os.path.join(settings.GLOSSARY_PATH)) as f:
     glossary = f.read()
 
 
+def add_template_args_by_defualt(new_args):
+    together = dict(new_args)
+    together['glossary'] = glossary
+    together['google-analytics'] = settings.GOOGLE_ANALYTICS
+    return together
+
+
 def index(request):
-    return render_to_response('index.html', {
-        'glossary' : glossary,
-    })
+    return render_to_response('index.html', add_template_args_by_defualt({}))
 
 
 def manual(request):
@@ -91,13 +96,12 @@ def evaluate(request):
         dataset_form = DatasetForm()
 #        dataset_form.fields['name_selected'].choices = dataset_choices
 
-    return render_to_response('evaluate.html', {
-        'glossary': glossary,
+    return render_to_response('evaluate.html', add_template_args_by_defualt({
         'csrf_token': get_token(request),
         'session_key': user_session_key,
         'contigs_fnames': contigs_fnames,
         'dataset_form': dataset_form,
-        }, context_instance = RequestContext(request))
+        }), context_instance = RequestContext(request))
 
 
 state_map = {
@@ -147,10 +151,9 @@ def reports(request, after_evaluation=False):
             }
             quast_sessions_dicts.append(quast_session_dict)
 
-    return render_to_response('reports.html', {
-        'glossary': glossary,
+    return render_to_response('reports.html', add_template_args_by_defualt({
         'quast_sessions': quast_sessions_dicts,
-    })
+    }))
 
 
 
@@ -243,13 +246,12 @@ def report(request, report_id):
                 if result and state in state_map:
                     state_repr = state_map[state]
 
-                return render_to_response('waiting-report.html', {
-                    'glossary' : glossary,
+                return render_to_response('waiting-report.html', add_template_args_by_defualt({
                     'csrf_token': get_token(request),
                     'session_key' : request.session.session_key,
                     'state': state_repr,
                     'report_id': report_id,
-                }, context_instance = RequestContext(request))
+                }), context_instance = RequestContext(request))
 
         if request.method == 'POST':
             #check status of quast session, return result
@@ -382,9 +384,7 @@ def response_with_report(template, results_dirpath, header):
     operons                 = get('operons')
     gc_info                 = get('gc')
 
-    return render_to_response(template, {
-            'glossary' : glossary,
-
+    return render_to_response(template, add_template_args_by_defualt({
             'report' : report,
             'contigsLenghts' : contigs_lengths,
             'alignedContigsLengths' : aligned_contigs_lengths,
@@ -396,7 +396,7 @@ def response_with_report(template, results_dirpath, header):
             'gcInfo' : gc_info,
 
             'header' : header,
-        }
+        })
     )
 
 

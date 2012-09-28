@@ -3,10 +3,11 @@ import os
 
 if os.environ.get('DEVELOPMENT', None):
     DEBUG = True
+    GOOGLE_ANALYTICS = False
     db_engine = 'django.db.backends.sqlite3'
-
 else:
     DEBUG = False
+    GOOGLE_ANALYTICS = True
     db_engine = 'django.db.backends.sqlite3'
 #    db_engine = 'postgresql_psycopg2'
 
