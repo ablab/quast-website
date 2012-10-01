@@ -119,6 +119,7 @@
         padding-right: 20px;
         padding-bottom: 1em;
         vertical-align: baseline;
+        white-space: nowrap;
     }
 
     .form_table {
@@ -141,10 +142,32 @@
         content: '.';
     }
 
-
+    #add-dataset-toggle-link {
+        width: 100%;
+        margin: -10px -10px -15px -10px;
+        padding: 10px 10px 0 10px;
+        height: 30px;
+        cursor: pointer;
+{#        border: 1px solid red;#}
+    }
     </style>
 
     <script>
+        $(document).ready(function() {
+            $("#add-dataset-toggle-link").mouseenter(function() {
+                $(this).find('a').css('color', '#b33');
+                $(this).find('a').css('border-bottom', '1px dashed #ffcccc');
+                $(this).find('a').css('border-color', '1px dashed #ffcccc');
+                $(this).find('a').css('border-color', 'rgba(255, 0, 0, 0.2)');
+            }).mouseleave(function() {
+                /*TODO*/
+                $(this).find('a').css('color', '#0c4f72');
+                $(this).find('a').css('border-bottom', '1px dashed #487b95');
+                $(this).find('a').css('border-color', '#487b95');
+                $(this).find('a').css('border-color', 'rgba(12, 79, 114, 0.2)');
+            });
+        });
+
         $(function() {
             var uploaders = [];
 
@@ -259,6 +282,7 @@
 //        );
 
         function showHideAddDataset() {
+{#            $('#add-dataset-toggle-link>a').#}
             if ($('#add-dataset').is(':visible')) {
                 $('#add-dataset').hide('fast');
                 $('#dataset-name-select-input').prop('disabled', false);
@@ -296,7 +320,7 @@
 
         <form enctype="multipart/form-data" action="/evaluate/" method="POST">{% csrf_token %}
             {% comment %}@declare id="id_name_selected"{% endcomment %}
-            <label for="id_min_contig">
+            <label for="id_min_contig">{% comment %}@declare id="id_min_contig"{% endcomment %}
                 Skip contigs shorter than {{ dataset_form.min_contig }}bp<br>
                 {{ dataset_form.min_contig.errors }}
             </label>
@@ -321,7 +345,10 @@
 {#            <div style="clear: both"></div>#}
 
             <div id="add-dataset-wrapper">
-                <a class="dotted-link" id="add-dataset-toggle-link" onclick="showHideAddDataset()">Another data set</a>
+                <div id="add-dataset-toggle-link"
+                     onclick="showHideAddDataset()">
+                    <a class='dotted-link'>Another data set</a>
+                </div>
                 <div id="add-dataset" style="display: none;">
                     <br/>
 {#                    {% comment %}@declare id="id_name_created "{% endcomment %}#}
