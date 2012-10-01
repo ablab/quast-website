@@ -1,0 +1,25 @@
+Correcting contig files...
+
+  WARNING! SPAdes_contigs_1.fasta will not be processed because it doesn't have contigs >= 1500 bp.
+
+
+  WARNING! SPAdes_contigs_2.fasta will not be processed because it doesn't have contigs >= 1500 bp.
+
+  Done.
+QUAST: a quality assessment tool.
+Usage: python quast.py [options] contig files
+
+Options:
+-o           <dirname>       directory to store all result files [default: quast_results/results_<datetime>]
+-R           <filename>      reference genome file
+-G/--genes   <filename>      annotated genes file
+-O/--operons <filename>      annotated operons file
+--min-contig <int>           lower threshold for contig length [default: 1500]
+
+Advanced options:
+--gage                              this flag starts QUAST in "GAGE mode"
+--contig-thresholds   <int,int,..>  comma-separated list of contig length thresholds [default: [500, 1000]]
+--genemark-thresholds <int,int,..>  comma-separated list of threshold lengths of genes to search with GeneMark [default is [0, 300, 1500, 3000]]
+--not-circular                      this flag should be set if the genome is not circular (e.g., it is an eukaryote)
+
+-h/--help           print this usage message

@@ -21,7 +21,6 @@ urlpatterns = patterns('',
     url(r'^benchmarking/?$', 'quast_app.views.benchmarking'),
 
     url(r'^evaluate/?$', 'quast_app.views.evaluate'),
-    url(r'^evaluate/?$', 'quast_app.views.evaluate'),
 
     url(r'^contigs-ajax-upload$', views.contigs_uploader.upload, name='contigs_ajax_upload'),
     url(r'^contigs-ajax-remove$', views.contigs_uploader.remove, name='contigs_ajax_remove'),

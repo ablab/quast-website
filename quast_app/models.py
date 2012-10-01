@@ -61,6 +61,7 @@ class QuastSession(models.Model):
     user_session = models.ForeignKey(UserSession)
     dataset = models.ForeignKey(Dataset, null=True)
     task_id = models.CharField(max_length=1024, null=True)
+    min_contig = models.IntegerField()
     contigs_files = models.ManyToManyField(ContigsFile, through='QuastSession_ContigsFile')
 
     date = models.DateTimeField()
@@ -74,6 +75,7 @@ class QuastSession(models.Model):
 
     def __unicode__(self):
         return self.date.strftime('%d %b %Y %H:%M:%S.%f')
+
 
 class QuastSession_ContigsFile(models.Model):
     quast_session = models.ForeignKey(QuastSession)
@@ -125,7 +127,6 @@ class DatasetForm(forms.Form):
                 raise forms.ValidationError('No contigs provided')
 
         return cleaned_data
-
 
 
 class AdminDatasetForm(forms.Form):

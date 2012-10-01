@@ -26,20 +26,16 @@ min_contig = None # for printing info about min contig in TXT reports
 
 # Available fields for report, values (strings) should be unique!
 class Fields:
-    MISASSEMBLIES_GROUP = 'Structural variations'
-    GENES_GROUP = 'Genes and operons'
-    ALIGNED_GROUP = 'Aligned'
-
     NAME = 'Assembly'
     CONTIGS = ('# contigs (>= %d bp)', tuple(qconfig.contig_thresholds))
     TOTALLENS = ('Total length (>= %d bp)', tuple(qconfig.contig_thresholds))
     N50 = 'N50'
-    L50 = 'L50'
     NG50 = 'NG50'
-    LG50 = 'LG50'
     N75 = 'N75'
-    L75 = 'L75'
     NG75 = 'NG75'
+    L50 = 'L50'
+    LG50 = 'LG50'
+    L75 = 'L75'
     LG75 = 'LG75'
     NUMCONTIGS = '# contigs'
     LARGCONTIG = 'Largest contig'
@@ -47,13 +43,13 @@ class Fields:
     GC = 'GC (%)'
     REFLEN = 'Reference length'
     REFGC = 'Reference GC (%)'
+    AVGIDY = 'Average %IDY'
     MISLOCAL = '# local misassemblies'
     MISASSEMBL = '# misassemblies'
     MISCONTIGS = '# misassembled contigs'
     MISCONTIGSBASES = 'Misassembled contigs length'
     UNALIGNED = '# unaligned contigs'
     UNALIGNEDBASES = 'Unaligned contigs length'
-    AVGIDY = 'Average %IDY'
     AMBIGUOUS = '# ambiguous contigs'
     AMBIGUOUSBASES = 'Ambiguous contigs length'
     MISMATCHES = '# mismatches'
@@ -63,12 +59,12 @@ class Fields:
     UNCALLED = '# N'
     UNCALLED_PERCENT = "N's (%)"
     NA50 = 'NA50'
-    LA50 = 'LA50'
     NGA50 = 'NGA50'
-    LGA50 = 'LGA50'
     NA75 = 'NA75'
-    LA75 = 'LA75'
     NGA75 = 'NGA75'
+    LA50 = 'LA50'
+    LGA50 = 'LGA50'
+    LA75 = 'LA75'
     LGA75 = 'LGA75'
     MAPPEDGENOME = 'Genome fraction (%)'
     DUPLICATION_RATIO = 'Duplication ratio'
@@ -79,12 +75,11 @@ class Fields:
 
     # order as printed in report:
     order = [NAME, CONTIGS, TOTALLENS, NUMCONTIGS, LARGCONTIG, TOTALLEN, REFLEN,
-             N50, L50, NG50, LG50, N75, L75, NG75, LG75,
-             MISASSEMBLIES_GROUP, MISASSEMBL, MISCONTIGS, MISCONTIGSBASES,
-             UNALIGNED, UNALIGNEDBASES, AMBIGUOUS, AMBIGUOUSBASES,
-             GENES_GROUP, MAPPEDGENOME, GC, REFGC,
+             N50, NG50, N75, NG75, L50, LG50, L75, LG75,
+             AVGIDY, MISASSEMBL, MISCONTIGS, MISCONTIGSBASES,
+             UNALIGNED, UNALIGNEDBASES, AMBIGUOUS, AMBIGUOUSBASES, MAPPEDGENOME, GC, REFGC,
              UNCALLED_PERCENT, SUBSERROR, INDELSERROR, GENES, OPERONS, GENEMARKUNIQUE, GENEMARK,
-             NA50, LA50, NGA50, LGA50, NA75, LA75, NGA75, LGA75]
+             NA50, NGA50, NA75, NGA75, LA50, LGA50, LA75, LGA75]
 
     MIS_ALL_EXTENSIVE = '# misassemblies'
     MIS_RELOCATION = '    # relocations'

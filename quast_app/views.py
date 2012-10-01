@@ -222,12 +222,14 @@ def get_dataset(request, dataset_form, now_str):
 
 
 def report(request, report_id):
+    if not request.session.exists(request.session.session_key):
+        request.session.create()
+
     user_session_key = request.session.session_key
     try:
         user_session = UserSession.objects.get(session_key=user_session_key)
     except UserSession.DoesNotExist:
-        #TODO: invalidate
-        return HttpResponseBadRequest('We do not recognize you.')
+        user_session = create_user_session(user_session_key)
 
 
     if QuastSession.objects.filter(report_id=report_id).exists():
