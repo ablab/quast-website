@@ -78,23 +78,21 @@
         padding-top: 20px;
 {#        padding-right: 20px;#}
     }
-    ul.menu {
-        margin: 0 0 0 100px;
-        padding: 1em 20px 2.3em 0;
-        list-style-type: none;
-{#        min-width: 800px;#}
+
+    .menu-table {
+        margin: 0 0 0 86px;
+        padding: 1em 20px 1em 0;
     }
-    ul.menu > li:first-child {
-        margin-left: -0.8em;
+    .menu-table > tr > td:first-child {
+{#        margin-left: -0.8em;#}
     }
-    ul.menu a {
-        float: left;
+    .menu-table a {
         padding-left: 1em;
         padding-right: 1em;
         text-decoration: none;
         border: 0px;
     }
-    ul.menu a span {
+    .menu-table a span {
         font-size: 1em;
         color: white;
         letter-spacing: 2px;
@@ -102,22 +100,65 @@
         border-bottom: 1px solid;
         border-color: #AAA;
     }
-    ul.menu a:hover {
+    .menu-table a:hover {
         color: #DDDDDD;
         text-decoration: none;
     }
-    ul.menu a:hover span {
+    .menu-table a:hover span {
         border-color: #CCC;
     }
-    ul.menu li.active a {
+    .menu-table li.active a {
         pointer-events: none;
         cursor: default;
     }
-    ul.menu li.active a span {
+    .menu-table li.active a span {
         text-decoration: none;
         color: #AAA;
         border: 0px;
     }
+
+{#    .menu {#}
+{#        margin: 0 0 0 100px;#}
+{#        padding: 1em 20px 2.3em 0;#}
+{#        list-style-type: none;#}
+    {#        min-width: 800px;#}
+{#    }#}
+{#    ul.menu > li:first-child {#}
+{#        margin-left: -0.8em;#}
+{#    }#}
+{#    ul.menu a {#}
+{#        float: left;#}
+{#        display: inline-block;#}
+{#        white-space: nowrap;#}
+{#        padding-left: 1em;#}
+{#        padding-right: 1em;#}
+{#        text-decoration: none;#}
+{#        border: 0px;#}
+{#    }#}
+{#    ul.menu a span {#}
+{#        font-size: 1em;#}
+{#        color: white;#}
+{#        letter-spacing: 2px;#}
+{#        text-transform: uppercase;#}
+{#        border-bottom: 1px solid;#}
+{#        border-color: #AAA;#}
+{#    }#}
+{#    ul.menu a:hover {#}
+{#        color: #DDDDDD;#}
+{#        text-decoration: none;#}
+{#    }#}
+{#    ul.menu a:hover span {#}
+{#        border-color: #CCC;#}
+{#    }#}
+{#    ul.menu li.active a {#}
+{#        pointer-events: none;#}
+{#        cursor: default;#}
+{#    }#}
+{#    ul.menu li.active a span {#}
+{#        text-decoration: none;#}
+{#        color: #AAA;#}
+{#        border: 0px;#}
+{#    }#}
 
     .tooltip {
         font-size: 0.9em;
@@ -205,7 +246,7 @@
     }
     .footer {
         margin-top: 80px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         margin-left: 100px;
         display: none;  /* become visible by script when page loaded */
     }
@@ -277,15 +318,30 @@
 </head>
 
 <body>
+{#    <div class='top-panel'>#}
+{#        <ul class='menu'>#}
+{#            <li class='{% block    index-menu-li-class %}{% endblock %}'><a href='/'>             <span>About <span class='.smallcapitals'>QUAST</span></span></a></li>#}
+{#            <li class='{% block evaluate-menu-li-class %}{% endblock %}'><a href='/evaluate/'>    <span>Quality assessment                             </span></a></li>#}
+{#            <li class='{% block  reports-menu-li-class %}{% endblock %}'><a href='/reports/'>     <span>Latest reports                                 </span></a></li>#}
+{#            <li class='{% block  example-menu-li-class %}{% endblock %}'><a href='/example/'>     <span>Example                                 </span></a></li>#}
+{#        </ul>#}
+{#        <span class='clear_float'></span>#}
+{#    </div>#}
+
     <div class='top-panel'>
-        <ul class='menu'>
-            <li class='{% block    index-menu-li-class %}{% endblock %}'><a href='/'>             <span>About <span class='.smallcapitals'>QUAST</span></span></a></li>
-            <li class='{% block evaluate-menu-li-class %}{% endblock %}'><a href='/evaluate/'>    <span>Quality assessment                             </span></a></li>
-            <li class='{% block  reports-menu-li-class %}{% endblock %}'><a href='/reports/'>     <span>Latest reports                                 </span></a></li>
-            <li class='{% block  example-menu-li-class %}{% endblock %}'><a href='/example/'>     <span>Example                                 </span></a></li>
-        </ul>
-        <span class='clear_float'></span>
+        <table class='menu-table'>
+            <tr>
+                <td class='{% block    index-menu-li-class %}{% endblock %}'><a href='/'>             <span>About <span class='.smallcapitals'>QUAST</span></span></a></td>
+                <td class='{% block evaluate-menu-li-class %}{% endblock %}'><a href='/evaluate/'>    <span>Quality assessment                             </span></a></td>
+                <td class='{% block  reports-menu-li-class %}{% endblock %}'><a href='/reports/'>     <span>Latest reports                                 </span></a></td>
+                <td class='{% block  example-menu-li-class %}{% endblock %}'><a href='/example/'>     <span>Example                                        </span></a></td>
+            </tr>
+        </table>
     </div>
+{#        <li class='{% block    index-menu-li-class %}{% endblock %}'><a href='/'>             <span>About <span class='.smallcapitals'>QUAST</span></span></a></li>#}
+{#        <li class='{% block evaluate-menu-li-class %}{% endblock %}'><a href='/evaluate/'>    <span>Quality assessment                             </span></a></li>#}
+{#        <li class='{% block  reports-menu-li-class %}{% endblock %}'><a href='/reports/'>     <span>Latest reports                                 </span></a></li>#}
+{#        <li class='{% block  example-menu-li-class %}{% endblock %}'><a href='/example/'>     <span>Example                                        </span></a></li>#}
 
     <div class='content'>
         {% block content %}{% endblock %}
