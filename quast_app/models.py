@@ -4,6 +4,7 @@ from django.db import models
 from django.db.models.signals import post_delete, pre_delete
 from django.dispatch import receiver
 import os
+import sys
 from django.conf import settings
 
 
@@ -61,7 +62,6 @@ class QuastSession(models.Model):
     user_session = models.ForeignKey(UserSession)
     dataset = models.ForeignKey(Dataset, null=True)
     task_id = models.CharField(max_length=1024, null=True)
-    min_contig = models.IntegerField()
     contigs_files = models.ManyToManyField(ContigsFile, through='QuastSession_ContigsFile')
 
     date = models.DateTimeField()
@@ -84,8 +84,23 @@ class QuastSession_ContigsFile(models.Model):
 
 
 from django.forms import forms, fields, widgets
+if not settings.QUAST_DIRPATH in sys.path:
+    sys.path.insert(1, settings.QUAST_DIRPATH)
+from libs import qconfig
 
 class DatasetForm(forms.Form):
+    def __init__(self, *args, **kwargs):
+        super(DatasetForm, self).__init__(*args, **kwargs)
+        self.fields['name_selected'] = fields.ChoiceField(
+            required=False,
+            choices=[(d.name, d.name) for d in Dataset.objects.all()
+                     if d.remember] + [('no data set', 'no data set')],
+            widget=widgets.Select(attrs={
+                'class': 'chzn-select',
+                'data-placeholder': 'Select data set...'
+            })
+        )
+
     created_or_selected = fields.CharField(initial='selected')
 
     name_selected = fields.ChoiceField(
@@ -98,21 +113,22 @@ class DatasetForm(forms.Form):
     )
 
     name_created = fields.CharField(required=False, widget=widgets.TextInput())
+
+    min_contig = fields.IntegerField(min_value=0, required=False, initial=0)
+
     reference = fields.FileField(required=False)
     genes = fields.FileField(required=False)
     operons = fields.FileField(required=False)
 
-    initial={'created_or_selected': 'selected'}
+    initial={
+        'created_or_selected': 'selected'
+    }
 
-    def __init__(self, *args, **kwargs):
-        super(DatasetForm, self).__init__(*args, **kwargs)
-        self.fields['name_selected'] = fields.ChoiceField(
+    def set_min_contig(self, min_contig):
+        self.fields['min_contig'] = fields.IntegerField(
+            min_value=0,
             required=False,
-            choices=[(d.name, d.name) for d in Dataset.objects.all() if d.remember] + [('no data set', 'no data set')],
-            widget=widgets.Select(attrs={
-                'class': 'chzn-select',
-                'data-placeholder': 'Select data set...'
-            })
+            initial=min_contig
         )
 
     def set_user_session(self, user_session):

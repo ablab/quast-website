@@ -63,6 +63,10 @@ from models import UserSession, Dataset, QuastSession, ContigsFile, DatasetForm,
 #if not request.session.exists(request.session.session_key):
 #request.session.create()
 
+if not settings.QUAST_DIRPATH in sys.path:
+    sys.path.insert(1, settings.QUAST_DIRPATH)
+from libs import qconfig
+
 def evaluate(request):
     if not request.session.exists(request.session.session_key):
         request.session.create()
@@ -84,12 +88,19 @@ def evaluate(request):
             now_datetime = datetime.now()
             now_str = now_datetime.strftime('%d_%b_%Y_%H:%M:%S.%f')
 
+            min_contig = dataset_form.cleaned_data['min_contig']
+            request.session['min_contig'] = min_contig
             dataset = get_dataset(request, dataset_form, now_str)
-            quast_session = start_quast_session(user_session, dataset, now_datetime)
+            quast_session = start_quast_session(user_session, dataset, min_contig, now_datetime)
 
             return redirect('/reports/', after_evaluateion=True)
+        else:
+            min_contig = request.session.get('min_contig') or qconfig.min_contig
+            request.session['min_contig'] = min_contig
+            dataset_form.set_min_contig(min_contig)
 
-#            return render_to_response('reports.html', {
+
+    #            return render_to_response('reports.html', {
 #                'glossary': glossary,
 #                'csrf_token': get_token(request),
 #                'session_key': user_session_key,
@@ -99,7 +110,10 @@ def evaluate(request):
 #                }, context_instance = RequestContext(request))
     else:
         dataset_form = DatasetForm()
-#        dataset_form.fields['name_selected'].choices = dataset_choices
+        min_contig = request.session.get('min_contig') or qconfig.min_contig
+        dataset_form.set_min_contig(min_contig)
+
+    #        dataset_form.fields['name_selected'].choices = dataset_choices
 
     return render_to_response('evaluate.html', add_template_args_by_defualt({
         'csrf_token': get_token(request),
@@ -279,7 +293,7 @@ contigs_uploader = AjaxFileUploader(backend=ContigsUploadBackend)
 #operons_uploader = AjaxFileUploader(backend=OperonsUploadBackend)
 
 
-def start_quast_session(user_session, dataset, now_datetime):
+def start_quast_session(user_session, dataset, min_contig, now_datetime):
     # Creating new Quast session object
     quast_session = QuastSession(
         user_session = user_session,
@@ -325,13 +339,13 @@ def start_quast_session(user_session, dataset, now_datetime):
             operons_fpath = os.path.join(settings.DATA_SETS_ROOT_DIRPATH, dataset.dirname, dataset.operons_fname)
 
     # Running Quast
-    result = assess_with_quast(result_dirpath, contigs_fpaths, reference_fpath, genes_fpath, operons_fpath)
+    result = assess_with_quast(result_dirpath, contigs_fpaths, min_contig, reference_fpath, genes_fpath, operons_fpath)
     quast_session.task_id = result.id
     quast_session.save()
     return quast_session
 
 
-def assess_with_quast(res_dirpath, contigs_paths, reference_path=None, genes_path=None, operons_path=None):
+def assess_with_quast(res_dirpath, contigs_paths, min_contig=0, reference_path=None, genes_path=None, operons_path=None):
     if len(contigs_paths) > 0:
         if os.path.isfile(settings.QUAST_PY_FPATH):
             args = [settings.QUAST_PY_FPATH] + contigs_paths
@@ -346,6 +360,10 @@ def assess_with_quast(res_dirpath, contigs_paths, reference_path=None, genes_pat
             if operons_path:
                 args.append('-O')
                 args.append(operons_path)
+
+            if min_contig:
+                args.append('--min-contig')
+                args.append(min_contig)
 
             args.append('-J')
             args.append(res_dirpath)

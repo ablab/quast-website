@@ -107,6 +107,10 @@
         font-size: 0.9em;
     }
 
+    #id_min_contig {
+        width: 80px;
+    }
+
     .qq-uploader > button {
         margin-left: 0;
     }
@@ -288,22 +292,19 @@
     </noscript>
 
     <div id='form-wrapper'>
-        <div id="contigs-uploader" class="uploader-div"></div>
-
-        <div style="clear: both"></div>
+        <div id="contigs-uploader" class="uploader-div"></div><div style="clear: both"></div>
 
         <form enctype="multipart/form-data" action="/evaluate/" method="POST">{% csrf_token %}
             {% comment %}@declare id="id_name_selected"{% endcomment %}
-            <div>
-                Skip contigs shorter than<br>
-                {{ dataset_form.min_contig }}
-            </div>
-
+            <label for="id_min_contig">
+                Skip contigs shorter than {{ dataset_form.min_contig }}bp<br>
+                {{ dataset_form.min_contig.errors }}
+            </label>
+            <br>
             <label for="id_name_selected">
                 Data set<br/>
                 {{ dataset_form.name_selected }}
             </label>
-
             <br>
             <div id='created-or-selected-wrapper' style="display: none">
                 {{ dataset_form.created_or_selected }}
@@ -338,7 +339,7 @@
                   <table class='form_table'>
                       <tr>{% comment %}@declare id="id_name_created"{% endcomment %}
                           <td><label for='id_name_created'>Data set name</label></td>
-                          <td>{{ dataset_form.name_created }}<br>
+                          <td>{{ dataset_form.name_created }}<span style='font-size: 8px;'>&nbsp;</span><br>
                               If you fill the name field, we will remember this data set
                               {{ dataset_form.name_created.errors }}
                           </td>
