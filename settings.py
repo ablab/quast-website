@@ -115,7 +115,7 @@ STATICFILES_DIRS = (
     )
 
 STATICFILES_DIRS += (
-    os.path.join(SOURCE_DIRPATH, 'static'),
+    os.path.join(SOURCE_DIRPATH, 'static_all'),
     os.path.join(QUAST_DIRPATH, 'libs/html_saver/static'),
     )
 
