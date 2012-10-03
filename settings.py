@@ -90,7 +90,7 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/files/files.lawrence.com/files/"
-MEDIA_ROOT = 'collected_media/'
+MEDIA_ROOT = 'media/'
 
 # URL that handles the files served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -101,7 +101,7 @@ MEDIA_URL = 'media/'
 # Don't put anything in this directory yourself; store your files files
 # in apps' "files/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/files/files.lawrence.com/files/"
-STATIC_ROOT = 'collected_static/'
+STATIC_ROOT = 'static/'
 
 # URL prefix for files files.
 # Example: "http://files.lawrence.com/files/"
