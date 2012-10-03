@@ -9,23 +9,15 @@
 <meta name="author" content="Algorithmic Biology Lab"/>
 
 <script type="text/javascript" src="/static/jquery-1.7.2.min.js"></script>
+<link rel="stylesheet" href="/static/bootstrap/bootstrap.min.css"/>
+<link rel="stylesheet" href="/static/common.css"/>
 
-<link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css"/>
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
-        <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
 
 <style type="text/css">
-    body {
-        margin: 0;
-{#        padding-bottom: 23px;#}
-{#        margin-bottom: 23px;#}
-        font-family: Lucida Grande, Verdana, Arial, sans-serif;
-        font-size: 12px;
-        color: black;
-        line-height: 1.3em;
-    }
     .layout-table {
         width: 100%;
 {#        border: 1px solid green;#}
@@ -47,27 +39,6 @@
     .layout-table td.layout-table-trd-td {
 {#        border: 1px solid red;#}
     }
-    a {
-        text-decoration: none;
-        color: #0c4f72;
-        border-bottom: 1px solid #487b95;
-        border-color: #487b95; /* #487b95 */
-        border-color: rgba(12, 79, 114, 0.2); /* #0c4f72; */ /* #a0d2eb; */ /*rgba(0, 88, cc, 0.3);*/
-    }
-    a:visited {
-        text-decoration: none;
-        color: #8C66B2;
-        border-bottom: 1px solid #8c66b2;
-        border-color: #8c66b2;
-        border-color: rgba(102, 51, 153, 0.2);
-    }
-    a:hover {
-        text-decoration: none;
-        color: #b33; /* #0088cc; */
-        border-bottom: 1px solid #ffcccc;
-        border-color: #ffcccc;
-        border-color: rgba(255, 0, 0, 0.2); /* #55b2e0; */ /*#005580;*/
-    }
     .top-panel {
         background-color: #333;
         color: white;
@@ -78,7 +49,6 @@
         padding-top: 20px;
 {#        padding-right: 20px;#}
     }
-
     .menu-table {
         margin: 0 0 0 86px;
         padding: 1em 20px 1em 0;
@@ -160,70 +130,19 @@
 {#        border: 0px;#}
 {#    }#}
 
-    .tooltip {
-        font-size: 0.9em;
-        margin-bottom: 5px;
+    /* Footer */
+    .footer {
+        margin-top: 75px;
+        margin-bottom: 15px;
+        margin-left: 100px;
+        display: none;  /* become visible by script when page loaded */
     }
-    .tooltip.in {
-        opacity: 1;
+    .bottom-line {
+        margin-bottom: 15px;
+        margin-right: 73px;
+    {#        margin: 100px 80px 15px 0;#}
+        border-bottom: 1px #D0D0D0 solid;
     }
-    .tooltip-inner {
-        text-align: left;
-    }
-    .tooltip-link,
-    .tooltip-link:visited {
-        text-decoration: none;
-        color: #000;
-        border-bottom: 1px dashed #bbb;
-    }
-    .tooltip-link:hover {
-        text-decoration: none;
-        color: #b33;
-        border-bottom: 1px dashed #b33;
-    }
-
-    .dotted-link {
-        cursor: pointer;
-        text-decoration: none;
-        color: #0c4f72;
-        border-bottom: 1px dashed #487b95;
-        border-color: #487b95; /* #487b95 */
-        border-color: rgba(12, 79, 114, 0.2);
-    }
-    .dotted-link:hover {
-        text-decoration: none;
-        color: #b33; /* #0088cc; */
-        border-bottom: 1px dashed #ffcccc;
-        border-color: #ffcccc;
-        border-color: rgba(255, 0, 0, 0.2);
-    }
-    .json-code {
-        display: none;
-    }
-    .smallcapitals {
-        font-size: .875em;
-        letter-spacing: .15em;
-        margin-right: -.15em;
-    }
-    .highlight {
-        background-color:#FFF9B5;
-        padding: 0px 3px;
-        margin-left: -3px;
-    }
-    ul.mdash {
-        margin: -1em 0 0 0;
-        padding: 0 0 0 2em;
-    }
-    ul.mdash li {
-        margin-bottom: 0.7em;
-        list-style-type: none;
-        text-indent: -1.3em;
-        behavior: expression(!this.before ? this.before = this.innerHTML = '&mdash;&nbsp;' + this.innerHTML : '');
-    }
-    ul.mdash li:before {
-        content: '\2014\a0';
-    }
-
     a.icon_link {
         border: 0px solid black;
         display: block;
@@ -241,29 +160,6 @@
         bottom: 0px;
         float: right;
     }
-    .clear_float {
-        clear: both;
-    }
-    .footer {
-        margin-top: 80px;
-        margin-bottom: 10px;
-        margin-left: 100px;
-        display: none;  /* become visible by script when page loaded */
-    }
-    .footer table {
-{#        width: 100%;#}
-{#        padding: 0;#}
-{#        margin: -3px;#}
-    }
-    .footer td {
-{#        vertical-align: top;#}
-    }
-    .bottom-line {
-        margin-bottom: 15px;
-        margin-right: 73px;
-{#        margin: 100px 80px 15px 0;#}
-        border-bottom: 1px #D0D0D0 solid;
-    }
     .copyright {
         opacity: 0.5;
         float: left;
@@ -280,6 +176,7 @@
         color: black;
         border-color: #000;
     }
+    /*********/
 </style>
 
 {% block extra_head %}{% endblock %}

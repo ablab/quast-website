@@ -321,7 +321,7 @@
         <form enctype="multipart/form-data" action="/evaluate/" method="POST">{% csrf_token %}
             {% comment %}@declare id="id_name_selected"{% endcomment %}
             <label for="id_min_contig">{% comment %}@declare id="id_min_contig"{% endcomment %}
-                Skip contigs shorter than {{ dataset_form.min_contig }}bp<br>
+                Skip contigs shorter than {{ dataset_form.min_contig }}<span style='font-size: 8px;'> </span>bp<br>
                 {{ dataset_form.min_contig.errors }}
             </label>
             <br>

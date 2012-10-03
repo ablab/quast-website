@@ -50,15 +50,16 @@ def benchmarking(request):
     return render_to_response('benchmarking.html', add_template_args_by_defualt({}))
 
 
-def report_scripts(request, script_name):
-    with open(os.path.join(settings.REPORT_SCRIPTS_DIRPATH, script_name)) as f:
-        return HttpResponse(f.read(), content_type='application/javascript')
+#def report_scripts(request, script_name):
+#    with open(os.path.join(settings.REPORT_SCRIPTS_DIRPATH, script_name)) as f:
+#        return HttpResponse(f.read(), content_type='application/javascript')
 
 
 from django.middleware.csrf import get_token
 from django.template import RequestContext
 from ajaxuploader.views import AjaxFileUploader
-from models import UserSession, Dataset, QuastSession, ContigsFile, DatasetForm, QuastSession_ContigsFile
+from models import UserSession, Dataset, QuastSession, ContigsFile, QuastSession_ContigsFile
+from forms import DatasetForm
 
 #if not request.session.exists(request.session.session_key):
 #request.session.create()

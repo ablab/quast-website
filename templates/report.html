@@ -6,114 +6,21 @@
     <script type="text/javascript" src="/static/flot/jquery.flot.dashes.js"></script>
     <!–[if lte IE 8]><script type="text/javascript" src="/static/flot/excanvas.min.js"></script><![endif]–>
 
-    <script type="text/javascript" src="/report-scripts/utils.js"></script>
-    <script type="text/javascript" src="/report-scripts/build_total_report.js"></script>
-    <script type="text/javascript" src="/report-scripts/draw_cumulative_plot.js"></script>
-    <script type="text/javascript" src="/report-scripts/draw_nx_plot.js"></script>
-    <script type="text/javascript" src="/report-scripts/draw_gc_plot.js"></script>
-    <script type="text/javascript" src="/report-scripts/draw_genes_plot.js"></script>
-    <script type="text/javascript" src="/report-scripts/build_report.js"></script>
+    <script type="text/javascript" src="/static/scripts/utils.js"></script>
+    <script type="text/javascript" src="/static/scripts/build_total_report.js"></script>
+    <script type="text/javascript" src="/static/scripts/draw_cumulative_plot.js"></script>
+    <script type="text/javascript" src="/static/scripts/draw_nx_plot.js"></script>
+    <script type="text/javascript" src="/static/scripts/draw_gc_plot.js"></script>
+    <script type="text/javascript" src="/static/scripts/draw_genes_plot.js"></script>
+    <script type="text/javascript" src="/static/scripts/build_report.js"></script>
 
     <script type="text/javascript">
         $(document).ready(buildReport);
     </script>
 
-    <style>
-        .report-and-plots {
-            margin-top: 20px;
-            margin-left: -125px;
-        }
-        /*#report {*/
-            /*float: left;*/
-            /*margin-bottom: 50px;*/
-            /*margin-right: 100px;*/
-        /*}*/
-        /*#report td {*/
-            /*padding: 0 1em 0 0;*/
-            /*margin:  0;*/
-        /*}*/
-        /*#report td {*/
-            /*white-space: nowrap*/
-        /*}*/
-
-        /*.report-table-header {*/
-        /*font-weight: bold;*/
-        /*}*/
-        /*.plots {*/
-        /*float: left;*/
-        /*margin-left: -125px;*/
-        /*}*/
-        /*.plot-wrapper {*/
-        /*margin-bottom: 40px;*/
-        /*}*/
-        /*.plot-header {*/
-        /*margin-left: 124px;*/
-        /*font-weight: bold;*/
-        /*height: 1.5em;*/
-        /*display: block;*/
-        /*}*/
-        /*.plot > div {*/
-        /*width: 850px;*/
-        /*height: 600px;*/
-        /*}*/
-
-        #report .report-table-header {
-            font-weight: bold;
-        }
-        #report tr:first-child td {
-{#            border-bottom: 1px solid #ccc;#}
-{#            padding-bottom: 0px;#}
-            border-bottom: 1px solid #bbb;
-        }
-        #report {
-            font-size: 1em;
-            margin-left: 125px;
-            min-width: 726px;
-            margin-bottom: 1em;
-        }
-        #report td {
-            padding: 2px 1em 0 0;
-            margin: 0;
-        }
-        #report td:last-child {
-            padding-right: 0;
-        }
-        #report td {
-            white-space: nowrap
-        }
-
-        .subheader-tr td {
-            height: 20px;
-            vertical-align: bottom;
-            border-bottom: 1px solid #bbb;
-        }
-
-        .blocks > div {
-            float: left;
-            margin-bottom: 5.5em;
-            margin-top: 0px;
-        }
-
-        .plot-wrapper {
-            padding-right: 80px;
-        }
-        .plot-header {
-            margin-left: 125px;
-            font-weight: bold;
-            height: 1.5em;
-            display: block;
-        }
-        .blocks > div#cumulative-plot-div {
-            margin-bottom: 5.5em;
-            padding-right: 0;
-        }
-        .blocks > div:last-child {
-            margin-bottom: 40px;
-        }
-    </style>
+    <link rel="stylesheet" href="/static/report.css"/>
     {% block extra_extra_head %}{% endblock %}
 {% endblock %}
-
 
 {% block content %}
 <div id='header'>
@@ -128,6 +35,8 @@
         We need JavaScript to build report and plots.
     </div>
 </noscript>
+
+<br>
 
 <div class='report-and-plots'>
     <div class='blocks'>

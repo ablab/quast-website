@@ -15,28 +15,27 @@ else:
 TEMPLATE_DEBUG = DEBUG
 
 
-SOURCE_DIRPATH         = os.path.abspath(os.path.dirname(__file__))
-HOME_DIRPATH           = os.path.join(SOURCE_DIRPATH, '..')
-VIRTUALENV_PATH        = os.path.join(HOME_DIRPATH, 'virtualenv')
+SOURCE_DIRPATH          = os.path.abspath(os.path.dirname(__file__))
+HOME_DIRPATH            = os.path.join(SOURCE_DIRPATH, '..')
+VIRTUALENV_PATH         = os.path.join(HOME_DIRPATH, 'virtualenv')
 
-DATA_DIRPATH           = os.path.join(HOME_DIRPATH, 'data')
-INPUT_ROOT_DIRPATH     = os.path.join(DATA_DIRPATH, 'input')
-RESULTS_ROOT_DIRPATH   = os.path.join(DATA_DIRPATH, 'results')
-DATA_SETS_ROOT_DIRPATH = os.path.join(DATA_DIRPATH, 'data_sets')
-celerydb_fpath         = os.path.join(DATA_DIRPATH, 'celery.sqlite')
-quastdb_fpath          = os.path.join(DATA_DIRPATH, 'quast.sqlite')
-LOG_FILE               = os.path.join(DATA_DIRPATH, 'log.txt')
+DATA_DIRPATH            = os.path.join(HOME_DIRPATH, 'data')
+INPUT_ROOT_DIRPATH      = os.path.join(DATA_DIRPATH, 'input')
+RESULTS_ROOT_DIRPATH    = os.path.join(DATA_DIRPATH, 'results')
+DATA_SETS_ROOT_DIRPATH  = os.path.join(DATA_DIRPATH, 'data_sets')
+celerydb_fpath          = os.path.join(DATA_DIRPATH, 'celery.sqlite')
+quastdb_fpath           = os.path.join(DATA_DIRPATH, 'quast.sqlite')
+LOG_FILE                = os.path.join(DATA_DIRPATH, 'log.txt')
 
-QUAST_DIRPATH          = os.path.join(SOURCE_DIRPATH, 'quast_tool')
-QUAST_PY_FPATH         = os.path.join(QUAST_DIRPATH, 'quast.py')
-REPORT_SCRIPTS_DIRPATH = os.path.join(QUAST_DIRPATH, 'libs/html_saver/report-scripts')
-GLOSSARY_PATH          = os.path.join(QUAST_DIRPATH, 'libs/html_saver/glossary.json')
-MANUAL_FPATH           = os.path.join(QUAST_DIRPATH, 'manual.html')
-LICENSE_FPATH          = os.path.join(QUAST_DIRPATH, 'LICENSE')
+QUAST_DIRPATH           = os.path.join(SOURCE_DIRPATH, 'quast_tool')
+QUAST_PY_FPATH          = os.path.join(QUAST_DIRPATH, 'quast.py')
+GLOSSARY_PATH           = os.path.join(QUAST_DIRPATH, 'libs/html_saver/glossary.json')
+MANUAL_FPATH            = os.path.join(QUAST_DIRPATH, 'manual.html')
+LICENSE_FPATH           = os.path.join(QUAST_DIRPATH, 'LICENSE')
 
-APP_DIRPATH            = os.path.join(SOURCE_DIRPATH, 'quast_app')
-EXAMPLE_DIRPATH        = os.path.join(APP_DIRPATH, 'files/example')
-ECOLI_DIRPATH          = os.path.join(APP_DIRPATH, 'files/ecoli')
+APP_DIRPATH             = os.path.join(SOURCE_DIRPATH, 'quast_app')
+EXAMPLE_DIRPATH         = os.path.join(APP_DIRPATH, 'files/example')
+ECOLI_DIRPATH           = os.path.join(APP_DIRPATH, 'files/ecoli')
 
 
 # Django settings for quast_website project.
@@ -110,12 +109,15 @@ STATIC_URL = '/static/'
 
 # Additional locations of files files
 STATICFILES_DIRS = (
-# Put strings here, like "/home/html/files" or "C:/www/django/files".
-# Always use forward slashes, even on Windows.
-# Don't forget to use absolute paths, not relative paths.
-)
+    # Put strings here, like "/home/html/files" or "C:/www/django/files".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+    )
 
-STATICFILES_DIRS += (os.path.join(SOURCE_DIRPATH, 'static'),)
+STATICFILES_DIRS += (
+    os.path.join(SOURCE_DIRPATH, 'static'),
+    os.path.join(QUAST_DIRPATH, 'libs/html_saver/static'),
+    )
 
 # List of finder classes that know how to find files files in
 # various locations.

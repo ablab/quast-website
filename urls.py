@@ -15,7 +15,7 @@ urlpatterns = patterns('',
     url(r'^LICENSE$', 'quast_app.views.license'),
     url(r'^manual\.html$', 'quast_app.views.manual'),
 
-    url(r'^report-scripts/(?P<script_name>[1-9a-z_\-]+.js)/?$', 'quast_app.views.report_scripts'),
+  # url(r'^report-scripts/(?P<script_name>[1-9a-z_\-]+.js)/?$', 'quast_app.views.report_scripts'),
 
     url(r'^ecoli/?$', 'quast_app.views.ecoli'),
     url(r'^benchmarking/?$', 'quast_app.views.benchmarking'),
