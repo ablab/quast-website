@@ -400,7 +400,7 @@ def response_with_report(template, results_dirpath, header):
                 raise Exception(name + ' is not found but required.')
         return contents
 
-    report                  = get('report', is_required=True)
+    report                  = get('total_report', is_required=True)
     contigs_lengths         = get('contigs_lengths', is_required=True)
     reference_length        = get('ref_length')
     assemblies_lengths      = get('assemblies_lengths')
@@ -411,7 +411,7 @@ def response_with_report(template, results_dirpath, header):
     gc_info                 = get('gc')
 
     return render_to_response(template, add_template_args_by_defualt({
-            'report' : report,
+            'totalReport' : report,
             'contigsLenghts' : contigs_lengths,
             'alignedContigsLengths' : aligned_contigs_lengths,
             'assembliesLengths' : assemblies_lengths,

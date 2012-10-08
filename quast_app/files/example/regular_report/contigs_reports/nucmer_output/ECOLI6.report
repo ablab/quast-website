@@ -1,0 +1,87 @@
+/Users/vladsaveliev/Dropbox/bio/quast/data/results/305034655494f38ea9c9599226f50c99/08_Oct_2012_15:53:17.866506/regular_report/corrected_input/reference.fasta /Users/vladsaveliev/Dropbox/bio/quast/data/results/305034655494f38ea9c9599226f50c99/08_Oct_2012_15:53:17.866506/regular_report/corrected_input/ECOLI6
+NUCMER
+
+                               [REF]                [QRY]
+[Sequences]
+TotalSeqs                          1                  604
+AlignedSeqs               1(100.00%)          149(24.67%)
+UnalignedSeqs               0(0.00%)          455(75.33%)
+
+[Bases]
+TotalBases                   4639675              4830505
+AlignedBases         4637594(99.96%)      4631880(95.89%)
+UnalignedBases           2081(0.04%)        198625(4.11%)
+
+[Alignments]
+1-to-1                           121                  121
+TotalLength                  4605576              4605660
+AvgLength                   38062.61             38063.31
+AvgIdentity                    99.97                99.97
+
+M-to-M                           237                  237
+TotalLength                  4677117              4677223
+AvgLength                   19734.67             19735.12
+AvgIdentity                    99.97                99.97
+
+[Feature Estimates]
+Breakpoints                      472                   91
+Relocations                        0                    2
+Translocations                   114                    0
+Inversions                         0                    0
+
+Insertions                        96                   69
+InsertionSum                   43801                32276
+InsertionAvg                  456.26               467.77
+
+TandemIns                          6                    0
+TandemInsSum                     785                    0
+TandemInsAvg                  130.83                 0.00
+
+[SNPs]
+TotalSNPs                        895                  895
+AT                         57(6.37%)            43(4.80%)
+AC                       116(12.96%)           90(10.06%)
+AG                        93(10.39%)            71(7.93%)
+TA                         43(4.80%)            57(6.37%)
+TC                         64(7.15%)            84(9.39%)
+TG                       111(12.40%)           98(10.95%)
+CA                        90(10.06%)          116(12.96%)
+CT                         84(9.39%)            64(7.15%)
+CG                         40(4.47%)            28(3.13%)
+GA                         71(7.93%)           93(10.39%)
+GT                        98(10.95%)          111(12.40%)
+GC                         28(3.13%)            40(4.47%)
+
+TotalGSNPs                       631                  631
+AT                         33(5.23%)            32(5.07%)
+AC                       102(16.16%)           67(10.62%)
+AG                         62(9.83%)            46(7.29%)
+TA                         32(5.07%)            33(5.23%)
+TC                         42(6.66%)            49(7.77%)
+TG                        89(14.10%)           71(11.25%)
+CA                        67(10.62%)          102(16.16%)
+CT                         49(7.77%)            42(6.66%)
+CG                         24(3.80%)            14(2.22%)
+GA                         46(7.29%)            62(9.83%)
+GT                        71(11.25%)           89(14.10%)
+GC                         14(2.22%)            24(3.80%)
+
+TotalIndels                      119                  119
+A.                         11(9.24%)           33(27.73%)
+T.                          3(2.52%)           33(27.73%)
+C.                          3(2.52%)           25(21.01%)
+G.                          2(1.68%)             9(7.56%)
+.A                        33(27.73%)            11(9.24%)
+.T                        33(27.73%)             3(2.52%)
+.C                        25(21.01%)             3(2.52%)
+.G                          9(7.56%)             2(1.68%)
+
+TotalGIndels                      61                   61
+A.                          2(3.28%)           20(32.79%)
+T.                          2(3.28%)           20(32.79%)
+C.                          0(0.00%)           12(19.67%)
+G.                          1(1.64%)             4(6.56%)
+.A                        20(32.79%)             2(3.28%)
+.T                        20(32.79%)             2(3.28%)
+.C                        12(19.67%)             0(0.00%)
+.G                          4(6.56%)             1(1.64%)

@@ -1,4 +1,105 @@
 
+function buildNewTotalReport(assembliesNames, report, glossary) {
+    var table = '';
+    table += '<table cellspacing="0" class="report-table">';
+
+    for (var group_n = 0; group_n < report.length; group_n++) {
+        var group = report[group_n];
+        var groupName = group[0];
+        var metrics = group[1];
+        var width = assembliesNames.length + 1;
+
+        if (group_n == 0) {
+            table += '<tr class="header-tr"><td>' + groupName + '</td>';
+
+            for (var assembly_n = 0; assembly_n < assembliesNames.length; assembly_n++) {
+                var assemblyName = assembliesNames[assembly_n];
+                table += '<td>' + assemblyName + '</td>';
+            }
+
+        } else {
+            table +=
+                '<tr class="subheader-tr">' +
+                '<td colspan="' + width + '">' + groupName + '</td>' +
+                '</tr>';
+        }
+
+        for (var metric_n = 0; metric_n < metrics.length; metric_n++) {
+            var metric = metrics[metric_n];
+            var metricName = metric[0];
+            var values = metric[1];
+
+            table +=
+                '<tr class="content-row">' +
+                '<td><span class="metric-name">'
+                    + addTooltipIfDefenitionExists(glossary, metricName) +
+                    '</span>' +
+                    '</td>';
+
+            for (var value_n = 0; value_n < values.length; value_n++) {
+                var value = values[value_n];
+
+                if (value == null) {
+                    table += '<td><span>-</span></td>';
+                } else {
+                    if (typeof value == 'number') {
+                        table +=
+                            '<td number="' + value + '"><span>'
+                            + toPrettyString(value) + '</span></td>';
+                    } else {
+                        var num = parseFloat(value);
+                        if (num != null) {
+                            table += '<td number="' + num + '"><span>' + value + '</span></td>';
+                        } else {
+                            table += '<td><span>' + toPrettyString(value) + '</span></td>';
+                        }
+                    }
+                }
+            }
+        }
+        table += '</tr>';
+    }
+    table += '</table>';
+
+    $('#report').append(table);
+
+    $(document).ready(function() {
+        $(".report-table td:[number]").mouseenter(function() {
+            var cells = $(this).parent().find('td:[number]');
+            var numbers = $.map(cells, function(cell) { return $(cell).attr('number'); });
+
+            var min = Math.min.apply(null, numbers);
+            var max = Math.max.apply(null, numbers);
+
+            var RED_HUE = 0;
+            var GREEN_HUE = 130;
+
+            if (max == min) {
+                $(cells).css('color', 'hsl(' + GREEN_HUE + ', 80%, 50%)');
+            } else {
+                var k = (GREEN_HUE - RED_HUE) / (max - min);
+
+                cells.each(function(i) {
+                    var number = numbers[i];
+                    var hue = (number - min)*k;
+                    $(this).css('color', 'hsl(' + hue + ', 80%, 50%)');
+                });
+            }
+        }).mouseleave(function() {
+            $(this).parent().find('td:[number]').css('color', 'black');
+        });
+    });
+}
+
+
+
+
+
+
+
+
+
+
 function buildTotalReport(report, glossary) {
     var table = '';
     table += '<table cellspacing="0" class="report-table">';

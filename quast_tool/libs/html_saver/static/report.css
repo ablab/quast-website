@@ -31,10 +31,8 @@
     width: 850px;
 }
 
-#report .report-table-header {
+#report .header-tr td, #report .subheader-tr td {
     font-weight: bold;
-}
-#report tr:first-child td {
     border-bottom: 1px solid #bbb;
 }
 #report {
@@ -56,7 +54,6 @@
 #report .subheader-tr td {
     height: 20px;
     vertical-align: bottom;
-    border-bottom: 1px solid #bbb;
 }
 
 
@@ -92,3 +89,12 @@
     /*display: block;*/
 /*}*/
 
+
+
+
+#report .report-table-header {
+    font-weight: bold;
+}
+#report tr:first-child td {
+    border-bottom: 1px solid #bbb;
+}

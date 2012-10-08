@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="debeaa17-5cbc-4210-9e08-6926e68ceec5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/html_saver/report.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/libs/json_saver.py" afterPath="$PROJECT_DIR$/libs/html_saver/json_saver.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/html_saver/html_saver.py" afterPath="$PROJECT_DIR$/libs/html_saver/html_saver.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/html_saver/report-scripts/build_total_report.js" afterPath="$PROJECT_DIR$/libs/html_saver/report-scripts/build_total_report.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/html_saver/template.html" afterPath="$PROJECT_DIR$/libs/html_saver/template.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manual.html" afterPath="$PROJECT_DIR$/manual.html" />
-    </list>
+    <list default="true" id="debeaa17-5cbc-4210-9e08-6926e68ceec5" name="Default" comment="" />
     <ignored path="quast_tool.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,13 +24,13 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.49582633">
+    <splitter split-orientation="horizontal" split-proportion="0.52974737">
       <split-first>
         <leaf>
-          <file leaf-file-name="report.css" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/libs/html_saver/report.css">
+          <file leaf-file-name="run_test.sh" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/run_test.sh">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="70" column="5" selection-start="1235" selection-end="1235" vertical-scroll-proportion="1.7223198">
+                <state line="34" column="54" selection-start="1764" selection-end="1764" vertical-scroll-proportion="0.44212523">
                   <folding />
                 </state>
               </provider>
@@ -47,16 +40,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="template.html" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/libs/html_saver/template.html">
+          <file leaf-file-name="quast.py" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/quast.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="28" column="26" selection-start="1412" selection-end="1412" vertical-scroll-proportion="0.7354597">
-                  <folding>
-                    <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#noscript#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#span#0;n#div#0;n#noscript#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#span#1;n#div#0;n#noscript#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
+                <state line="450" column="8" selection-start="20315" selection-end="20315" vertical-scroll-proportion="0.40319362">
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -76,22 +64,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/libs/basic_stats.py" />
-        <option value="$PROJECT_DIR$/libs/html_saver/glossary.json" />
-        <option value="$PROJECT_DIR$/libs/json_saver.py" />
-        <option value="$PROJECT_DIR$/libs/contigs_analyzer.py" />
-        <option value="$PROJECT_DIR$/CHANGES" />
-        <option value="$PROJECT_DIR$/libs/reporting.py" />
-        <option value="$PROJECT_DIR$/quast.py" />
-        <option value="$PROJECT_DIR$/run_test.sh" />
         <option value="$PROJECT_DIR$/quast_results/latest/contigs_reports/unaligned_report.txt" />
         <option value="$PROJECT_DIR$/quast_results/latest/contigs_reports/misassemblies_report.txt" />
-        <option value="$PROJECT_DIR$/libs/genemark.py" />
         <option value="$PROJECT_DIR$/VERSION" />
-        <option value="$PROJECT_DIR$/manual.html" />
-        <option value="$PROJECT_DIR$/libs/html_saver/html_saver.py" />
         <option value="$PROJECT_DIR$/libs/html_saver/report.css" />
         <option value="$PROJECT_DIR$/libs/html_saver/template.html" />
+        <option value="$PROJECT_DIR$/libs/html_saver/html_saver.py" />
+        <option value="$PROJECT_DIR$/libs/reporting_html.py" />
+        <option value="$PROJECT_DIR$/libs/basic_stats.py" />
+        <option value="$PROJECT_DIR$/libs/aligned_stats.py" />
+        <option value="$PROJECT_DIR$/libs/genome_analyzer.py" />
+        <option value="$PROJECT_DIR$/manual.html" />
+        <option value="$PROJECT_DIR$/libs/contigs_analyzer.py" />
+        <option value="$PROJECT_DIR$/libs/reporting.py" />
+        <option value="$PROJECT_DIR$/libs/genemark.py" />
+        <option value="$PROJECT_DIR$/quast.py" />
+        <option value="$PROJECT_DIR$/run_test.sh" />
       </list>
     </option>
   </component>
@@ -126,6 +114,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -144,48 +133,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quast_master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quast_master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quast_master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="quast_master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html_saver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="options.lastSelected" value="Errors" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../quast_release_1.2" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
@@ -194,8 +150,8 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -224,11 +180,14 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/libs" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/libs/html_saver" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.ecoli 10k">
+  <component name="RunManager" selected="Python.ecoli 10k no genes">
     <configuration default="true" type="tests" factoryName="Nosetests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -304,7 +263,9 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/quast.py" />
       <option name="PARAMETERS" value="run_test_data/ECOLI2.fasta run_test_data/ECOLI3.fasta run_test_data/ECOLI6.fasta run_test_data/ECOLI7.fasta -G run_test_data/genes.txt -O run_test_data/operons.txt -R run_test_data/reference.fa.gz -j" />
       <option name="MULTIPROCESS" value="true" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
@@ -320,7 +281,7 @@
       <module name="quast_tool" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/quast.py" />
-      <option name="PARAMETERS" value="&quot;test_data/assembly_10K_1.fasta&quot; -G test_data/genes_10K.txt -O test_data/operons_10K.txt -R &quot;test_data/reference_10K.fasta.gz&quot;" />
+      <option name="PARAMETERS" value="&quot;test_data/assembly_10K_1.fasta&quot; &quot;test_data/assembly_10K_2.fasta&quot; -G test_data/genes_10K.txt -O test_data/operons_10K.txt -R &quot;test_data/reference_10K.fasta.gz&quot; -j" />
       <option name="MULTIPROCESS" value="true" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
@@ -376,7 +337,7 @@
       <module name="quast_tool" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/quast.py" />
-      <option name="PARAMETERS" value="&quot;test_data/assembly_10K_1.fasta&quot; -O test_data/operons_10K.txt -R &quot;test_data/reference_10K.fasta.gz&quot;" />
+      <option name="PARAMETERS" value="&quot;test_data/assembly_10K_1.fasta&quot;" />
       <option name="MULTIPROCESS" value="true" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
@@ -441,23 +402,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1436" height="878" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32951945" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32951945" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298611" sideWeight="0.67048055" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995194" sideWeight="0.78197676" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16573817" sideWeight="0.686747" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34819278" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14554317" sideWeight="0.65180725" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34819278" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31325302" sideWeight="0.9968685" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28674698" sideWeight="0.9968685" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33524027" sideWeight="0.9610251" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33493975" sideWeight="0.9610251" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -514,74 +475,70 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="28" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/quast.py</url>
+          <line>450</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="34" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/run_on_a_project.py">
+    <entry file="file://$PROJECT_DIR$/VERSION">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="1031" selection-end="1031" vertical-scroll-proportion="0.70428014">
-          <folding />
-        </state>
+        <state line="0" column="3" selection-start="3" selection-end="3" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/html_saver/json_saver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/html_saver/template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="21" selection-start="1240" selection-end="1240" vertical-scroll-proportion="-1.9247136" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/html_saver/glossary.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="21" selection-start="3657" selection-end="3657" vertical-scroll-proportion="0.41243863" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/basic_stats.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="21" selection-start="339" selection-end="339" vertical-scroll-proportion="0.022653721" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/aligned_stats.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="11" selection-start="4794" selection-end="4798" vertical-scroll-proportion="0.3614865" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/genome_analyzer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="32" selection-start="6318" selection-end="6320" vertical-scroll-proportion="0.8484849">
-          <folding />
-        </state>
+        <state line="33" column="21" selection-start="1129" selection-end="1129" vertical-scroll-proportion="0.7804054" />
       </provider>
     </entry>
-    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.5/lib/python2.5/platform.py">
+    <entry file="file://$PROJECT_DIR$/libs/N50.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="38" selection-start="2763" selection-end="2763" vertical-scroll-proportion="0.6969697">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.73058635" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/contigs_analyzer.py">
+    <entry file="file://$PROJECT_DIR$/libs/reporting_html.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="747" column="21" selection-start="37522" selection-end="37522" vertical-scroll-proportion="0.41317365">
-          <folding>
-            <marker date="1349193171000" expanded="true" signature="57446:57817" placeholder="..." />
-          </folding>
-        </state>
+        <state line="83" column="17" selection-start="2749" selection-end="2749" vertical-scroll-proportion="0.44237918" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/VERSION">
+    <entry file="file://$PROJECT_DIR$/libs/html_saver/html_saver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="3" selection-start="3" selection-end="3" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quast.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="9" selection-start="2235" selection-end="2235" vertical-scroll-proportion="0.46402878">
-          <folding>
-            <marker date="1349026096000" expanded="true" signature="7984:19077" placeholder="..." />
-            <marker date="1349026096000" expanded="true" signature="19061:19077" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run_test.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="42" selection-start="588" selection-end="588" vertical-scroll-proportion="0.3602941">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/genemark.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="25" selection-start="1785" selection-end="1785" vertical-scroll-proportion="0.30882353">
-          <folding />
-        </state>
+        <state line="43" column="14" selection-start="1362" selection-end="1391" vertical-scroll-proportion="0.56661046" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/manual.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="431" column="0" selection-start="20605" selection-end="20605" vertical-scroll-proportion="0.46351084">
+        <state line="384" column="68" selection-start="18041" selection-end="18041" vertical-scroll-proportion="0.4784876">
           <folding>
             <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -599,41 +556,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/reporting.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="22" selection-start="893" selection-end="893" vertical-scroll-proportion="0.19362745">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/html_saver/json_saver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/html_saver/html_saver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="0" selection-start="4629" selection-end="4629" vertical-scroll-proportion="0.4852941">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/html_saver/report.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="5" selection-start="1235" selection-end="1235" vertical-scroll-proportion="1.7223198">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/html_saver/template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="26" selection-start="1412" selection-end="1412" vertical-scroll-proportion="0.7354597">
+        <state line="278" column="10" selection-start="11011" selection-end="11011" vertical-scroll-proportion="0.39130434">
           <folding>
-            <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#noscript#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#noscript#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#noscript#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1349445783000" expanded="true" signature="1021:2686" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/genemark.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="10" selection-start="292" selection-end="292" vertical-scroll-proportion="0.16955018">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/contigs_analyzer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1006" column="23" selection-start="52214" selection-end="52214" vertical-scroll-proportion="0.38754326">
+          <folding>
+            <marker date="1349448105000" expanded="true" signature="4209:4221" placeholder="..." />
+            <marker date="1349448105000" expanded="true" signature="58919:58930" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quast.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="450" column="8" selection-start="20315" selection-end="20315" vertical-scroll-proportion="0.40319362">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_test.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="54" selection-start="1764" selection-end="1764" vertical-scroll-proportion="0.44212523">
+          <folding />
         </state>
       </provider>
     </entry>

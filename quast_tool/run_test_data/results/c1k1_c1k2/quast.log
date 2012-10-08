@@ -9,12 +9,7 @@ Contigs files:
 Calculating N50 and L50...
   #1: SPAdes_contigs_1 , N50 = 1000 , L50 = 1 , Total length = 1000 , GC % =  50.70 , N's % =  0.00000
   #2: SPAdes_contigs_2 , N50 = 760 , L50 = 1 , Total length = 760 , GC % =  51.05 , N's % =  0.00000
-Running GeneMark tool...
-  #1: SPAdes_contigs_1 
-Environment Error occurs:  [Errno 8] Exec format error
-  #2: SPAdes_contigs_2 
-Environment Error occurs:  [Errno 8] Exec format error
-  Done
+Warning! GeneMark tool for gene prediction doesn't work on Mac OS X.
 Summarizing...
   Creating total report...
     Saved to /Users/vladsaveliev/Dropbox/bio/quast_master/run_test_data/results/c1k1_c1k2/report.txt , report.tsv and report.tex

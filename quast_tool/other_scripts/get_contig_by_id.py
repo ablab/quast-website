@@ -1,20 +1,40 @@
 #!/usr/bin/python
 
-# Convert contigs (i.e a reference) for experiment of running SPAdes on E. coli MC reads in "IonTorrent" mode
-# (all series of repeated nucleotides are changed to single nucleotides).
+# Get contigs with specified IDs from provided Fasta file and print them to stdout
 
 import sys
 import os
+import re
+
+sys.path.append(os.path.join(os.path.abspath(sys.path[0]), '../libs'))
+
 import fastaparser
 
 # MAIN
-if len(sys.argv) < 3:
-	print("Usage: " + sys.argv[0] + " <input fasta> <contig id>")	
+if len(sys.argv) != 3:
+	print("Usage: " + sys.argv[0] + " <input fasta> <contig id or file with list of contig ids>")	
 	sys.exit()
 
-new_fasta = []
-for name, seq in fastaparser.read_fasta(sys.argv[1]): 
-    if name == sys.argv[2]:
-        print '>' + name
-        print seq
-        break
+if os.path.isfile(sys.argv[2]):
+    list_of_ids = []
+    for line in open(sys.argv[2]):
+        list_of_ids.append(line.strip())
+else:
+    list_of_ids = [sys.argv[2]]
+
+origin_fasta = fastaparser.read_fasta(sys.argv[1])
+dict_of_all_contigs = dict()
+selected_contigs = []
+for (name, seq) in origin_fasta:
+    corr_name = re.sub(r'\W', '', re.sub(r'\s', '_', name))
+    dict_of_all_contigs[corr_name] = seq
+
+for name in list_of_ids:
+    if name in dict_of_all_contigs:
+        selected_contigs.append((name, dict_of_all_contigs[name]))
+    else:
+        print >> sys.stderr, "Contig", name, "(cor name:", corr_name, ") not found!"
+
+for (name, seq) in selected_contigs:
+    print '>' + name
+    print seq    

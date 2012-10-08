@@ -17,7 +17,8 @@ except:
         print 'Warning! Can\'t build html report - please install python-simplejson'
         simplejson_error = True
 
-total_report_fn       = '/report.json'
+total_report_fn   = '/total_report.json'
+old_total_report_fn       = '/old_total_report.json'
 contigs_lengths_fn    = '/contigs_lengths.json'
 ref_length_fn         = '/ref_length.json'
 aligned_contigs_fn    = '/aligned_contigs_lengths.json'
@@ -40,6 +41,20 @@ def save(filename, what):
 
 def save_total_report(output_dir, min_contig):
     from libs import reporting
+    assemblies_names = reporting.assemblies_order
+    report = reporting.grouped_table()
+    t = datetime.datetime.now()
+
+    return save(output_dir + total_report_fn, {
+        'date': t.strftime('%d %B %Y, %A, %H:%M:%S'),
+        'assembliesNames': assemblies_names,
+        'report': report,
+        'minContig': min_contig,
+    })
+
+
+def save_old_total_report(output_dir, min_contig):
+    from libs import reporting
     table = reporting.table()
 
     def try_convert_back_to_number(str):
@@ -50,9 +65,7 @@ def save_total_report(output_dir, min_contig):
                 val = float(str)
             except ValueError:
                 val = str
-
         return val
-
 
     table = [[try_convert_back_to_number(table[i][j]) for i in xrange(len(table))] for j in xrange(len(table[0]))]
 
@@ -62,12 +75,13 @@ def save_total_report(output_dir, min_contig):
 
     t = datetime.datetime.now()
 
-    return save(output_dir + total_report_fn, {
+    return save(output_dir + old_total_report_fn, {
             'date' : t.strftime('%d %B %Y, %A, %H:%M:%S'),
             'header' : header,
             'results' : results,
-            'min_contig' : min_contig
+            'min_contig' : min_contig,
     })
+
 
 def save_contigs_lengths(output_dir, filenames, lists_of_lengths):
     lists_of_lengths = [sorted(list, reverse=True) for list in lists_of_lengths]

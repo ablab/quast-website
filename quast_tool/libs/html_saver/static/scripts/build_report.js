@@ -1,6 +1,6 @@
 
 function buildReport() {
-    var report = null;
+    var totalReport = null;
     var contigsLengths = null;
     var alignedContigsLengths = null;
     var referenceLength = null;
@@ -18,19 +18,20 @@ function buildReport() {
     }
 
     try {
-        report = JSON.parse($('#report-json').html());
+        totalReport = JSON.parse($('#total-report-json').html());
     } catch (e) {
-        report = null;
+        totalReport = null;
     }
 
-    if (report) {
-        document.title += (report.date);
-        $('#subheader').html(report.date + '.');
-        $('#mincontig').append('Contigs of length ≥ ' + report.min_contig + ' bp are used.');
-        buildTotalReport(report, glossary);
+    if (totalReport) {
+        document.title += (totalReport.date);
+        $('#subheader').html(totalReport.date + '.');
+        $('#mincontig').append('Contigs of length ≥ ' + totalReport.minContig + ' bp are used.');
+//        buildTotalReport(report, glossary);
+        buildNewTotalReport(totalReport.assembliesNames, totalReport.report, glossary);
     }
 
-    report = null;
+    totalReport = null;
 
     try {
         contigsLengths = JSON.parse($('#contigs-lengths-json').html());

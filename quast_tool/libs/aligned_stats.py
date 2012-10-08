@@ -70,7 +70,7 @@ def do(reference, filenames, nucmer_dir, output_dir, all_pdf, draw_plots, json_o
         nucmer_filename = os.path.join(nucmer_prefix, os.path.basename(filename) + '.coords.filtered')
         assembly_lengths.append(sum(fastaparser.get_lengths_from_fastafile(filename)))
         if not os.path.isfile(nucmer_filename):
-            print '  ERROR: nucmer coord file (' + nucmer_filename + ') not found, skipping...'
+            print '  Error: nucmer .coords.filtered file (' + nucmer_filename + ') not found, skipping...'
             lists_of_lengths.append([0])
         else:
             lists_of_lengths.append(get_lengths_from_coordfile(nucmer_filename))
@@ -107,13 +107,13 @@ def do(reference, filenames, nucmer_dir, output_dir, all_pdf, draw_plots, json_o
 
     # saving to JSON
     if json_output_dir:
-        from html_saver import json_saver
+        from libs.html_saver import json_saver
         json_saver.save_aligned_contigs_lengths(json_output_dir, filenames, lists_of_lengths)
         json_saver.save_assembly_lengths(json_output_dir, filenames, assembly_lengths)
 
     # saving to html
     if qconfig.html_report:
-        from html_saver import html_saver
+        from libs.html_saver import html_saver
         html_saver.save_aligned_contigs_lengths(results_dir, filenames, lists_of_lengths)
         html_saver.save_assembly_lengths(results_dir, filenames, assembly_lengths)
 

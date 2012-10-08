@@ -89,11 +89,19 @@
     }
 
     #add-dataset-wrapper {
-        background-color: #E8E8E8;
-        width: 500px;
-        padding: 10px 10px 10px 10px;
-        margin-left: -10px;
-        margin-right: -10px;
+{#        background-color: #E8E8E8;#}
+{#        width: 500px;#}
+{#        padding: 10px 10px 10px 10px;#}
+{#        margin-left: -10px;#}
+{#        margin-right: -10px;#}
+    }
+    .submit-wrapper {
+{#        background-color: #E8E8E8;#}
+{#        width: 500px;#}
+{#        padding: 10px 10px 10px 10px;#}
+{#        margin-left: -10px;#}
+{#        margin-right: -10px;#}
+
     }
 
     #id_name_created {
@@ -393,24 +401,25 @@
                 </div>
             </div><br>
 
-            <div id='errors-wrapper' style="display: block">
-                {{ dataset_form.non_field_errors }}
-            </div>
+            <div class="submit-wrapper">
+                <div id='errors-wrapper' style="display: block">
+                    {{ dataset_form.non_field_errors }}
+                </div>
 
-            <div style="float: left; margin-right: 10px; margin-top: 7px; margin-left: -2px;">
-                <input id='evaluate-button' class="btn btn-large btn-inverse" type="submit" value="Evaluate">
-            </div>
+                <div style="float: left; margin-right: 10px; margin-top: 7px; margin-left: -2px;">
+                    <input id='evaluate-button' class="btn btn-large btn-inverse" type="submit" value="Evaluate">
+                </div>
 
-            <div style="visibility: {% if report_id %}visible{% else %}hidden{% endif %};
-                        float: left;"
-                 id="{{ report_id }}">
-                <p>
-                    Link to your report:<br>
-                    <a href="/report/{{ report_id }}">quast.bioinf.spbau.ru/report/{{ report_id }}</a>
-                </p>
+                <div style="visibility: {% if report_id %}visible{% else %}hidden{% endif %};
+                            float: left;"
+                     id="{{ report_id }}">
+                    <p>
+                        Link to your report:<br>
+                        <a href="/report/{{ report_id }}">quast.bioinf.spbau.ru/report/{{ report_id }}</a>
+                    </p>
+                </div>
+                <div style="clear: both"></div>
             </div>
-            <div style="clear: both"></div>
-
         </form>
     </div>
 

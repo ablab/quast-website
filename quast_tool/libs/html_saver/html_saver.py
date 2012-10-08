@@ -23,26 +23,26 @@ static_dirpath = get_real_path(static_dirname)
 support_dirname = 'report_html_files'
 scripts_inserted = False
 support_files = [
-    'static/jquery-1.7.2.min.js',
-    'static/flot/jquery.flot.min.js',
-    'static/flot/excanvas.min.js',
-    'static/flot/jquery.flot.dashes.js',
-    'static/scripts/build_total_report.js',
-    'static/scripts/draw_cumulative_plot.js',
-    'static/scripts/draw_nx_plot.js',
-    'static/scripts/draw_gc_plot.js',
-    'static/scripts/utils.js',
-    'static/scripts/draw_genes_plot.js',
-    'static/scripts/build_report.js',
+    'static/jquery-1.7.2.min.js'
+    'static/flot/jquery.flot.min.js'
+    'static/flot/excanvas.min.js'
+    'static/flot/jquery.flot.dashes.js'
+    'static/scripts/build_total_report.js'
+    'static/scripts/draw_cumulative_plot.js'
+    'static/scripts/draw_nx_plot.js'
+    'static/scripts/draw_gc_plot.js'
+    'static/scripts/utils.js'
+    'static/scripts/draw_genes_plot.js'
+    'static/scripts/build_report.js'
     'static/ie_html5.js'
     'static/jquery-1.7.2.min.js'
+    'static/bootstrap-tooltip-5px-lower.min.js'
     'static/report.css'
     'static/common.css'
-    'bootstrap-tooltip-5px-lower.min.js'
 ]
 
 def init(results_dirpath):
-#    shutil.copy(template_fpath, os.path.join(results_dirpath, report_fname))
+#    shutil.copy(template_fpath,     os.path.join(results_dirpath, report_fname))
     support_dirpath = os.path.join(results_dirpath, support_dirname)
     shutil.copytree(static_dirpath, support_dirpath)
     with open(template_fpath) as template_file:
@@ -112,7 +112,7 @@ def save_total_report(results_dirpath, min_contig):
     json_fpath = json_saver.save_total_report(results_dirpath, min_contig)
     if json_fpath:
         print '  HTML version of total report...'
-        append(results_dirpath, json_fpath, 'report')
+        append(results_dirpath, json_fpath, 'totalReport')
         print '    Saved to', os.path.join(results_dirpath, report_fname)
 
 

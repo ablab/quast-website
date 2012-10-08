@@ -21,12 +21,13 @@ from libs import qconfig
 ####################################################################################
 
 reports = {} # basefilename -> Report
-keys_order = [] # for printing in appropriate order
+assemblies_order = [] # for printing in appropriate order
 min_contig = None # for printing info about min contig in TXT reports
 
 # Available fields for report, values (strings) should be unique!
 class Fields:
     NAME = 'Assembly'
+    # Basic stats
     CONTIGS = ('# contigs (>= %d bp)', tuple(qconfig.contig_thresholds))
     TOTALLENS = ('Total length (>= %d bp)', tuple(qconfig.contig_thresholds))
     N50 = 'N50'
@@ -44,6 +45,8 @@ class Fields:
     REFLEN = 'Reference length'
     REFGC = 'Reference GC (%)'
     AVGIDY = 'Average %IDY'
+
+    # Misassemblies
     MISLOCAL = '# local misassemblies'
     MISASSEMBL = '# misassemblies'
     MISCONTIGS = '# misassembled contigs'
@@ -56,8 +59,11 @@ class Fields:
     INDELS = '# indels'
     SUBSERROR = '# mismatches per 100 kbp'
     INDELSERROR = '# indels per 100 kbp'
+
     UNCALLED = '# N'
     UNCALLED_PERCENT = "N's (%)"
+
+    # Unaligned
     NA50 = 'NA50'
     NGA50 = 'NGA50'
     NA75 = 'NA75'
@@ -66,6 +72,8 @@ class Fields:
     LGA50 = 'LGA50'
     LA75 = 'LA75'
     LGA75 = 'LGA75'
+
+    # Genes and operons
     MAPPEDGENOME = 'Genome fraction (%)'
     DUPLICATION_RATIO = 'Duplication ratio'
     GENES = '# genes'
@@ -74,12 +82,12 @@ class Fields:
     GENEMARK = ('# predicted genes (>= %d bp)', tuple(qconfig.genes_lengths))
 
     # order as printed in report:
-    order = [NAME, CONTIGS, TOTALLENS, NUMCONTIGS, LARGCONTIG, TOTALLEN, REFLEN,
-             N50, NG50, N75, NG75, L50, LG50, L75, LG75, #AVGIDY,
+    order = [NAME, CONTIGS, TOTALLENS, NUMCONTIGS, LARGCONTIG, TOTALLEN, REFLEN, GC,
+             N50, L50, NG50, LG50, N75, L75, NG75, LG75, #AVGIDY,
              MISASSEMBL, MISCONTIGS, MISCONTIGSBASES,
-             UNALIGNED, UNALIGNEDBASES, AMBIGUOUS, AMBIGUOUSBASES, MAPPEDGENOME, DUPLICATION_RATIO, GC, REFGC,
+             UNALIGNED, UNALIGNEDBASES, AMBIGUOUS, AMBIGUOUSBASES, MAPPEDGENOME, DUPLICATION_RATIO, REFGC,
              UNCALLED_PERCENT, SUBSERROR, INDELSERROR, GENES, OPERONS, GENEMARKUNIQUE, GENEMARK,
-             NA50, NGA50, NA75, NGA75, LA50, LGA50, LA75, LGA75]
+             NA50, LA50, NGA50, LGA50, NA75, LA75, NGA75, LGA75]
 
     MIS_ALL_EXTENSIVE = '# misassemblies'
     MIS_RELOCATION = '    # relocations'
@@ -138,10 +146,40 @@ class Fields:
                   GAGE_RELOCATION, GAGE_TRANSLOCATION, GAGE_NUMCORCONTIGS, GAGE_CORASMBLYSIZE, GAGE_MINCORCONTIG, GAGE_MAXCORCOTING,
                   GAGE_CORN50]
 
+    grouped_order = [
+        ('Basic stats', [CONTIGS, TOTALLENS, NUMCONTIGS, LARGCONTIG, TOTALLEN, REFLEN,
+                         N50, NG50, N75, NG75, L50, LG50, L75, LG75,
+                         UNCALLED, UNCALLED_PERCENT, GC, REFGC]),
+
+        ('Misassemblies', [MIS_ALL_EXTENSIVE, MIS_EXTENSIVE_CONTIGS, MIS_EXTENSIVE_BASES,
+                           MIS_RELOCATION, MIS_TRANSLOCATION, MIS_INVERTION,
+                           MIS_LOCAL, SUBSERROR, INDELS, INDELSERROR]),
+
+        ('Unaligned', [UNALIGNED_FULL_CNTGS, UNALIGNED_FULL_LENGTH, UNALIGNED_PART_CNTGS,
+                       UNALIGNED_PART_WITH_MISASSEMBLY, UNALIGNED_PART_SIGNIFICANT_PARTS,
+                       UNALIGNED_PART_LENGTH,]),
+
+        ('Ambiguous', [AMBIGUOUS, AMBIGUOUSBASES,]),
+
+        ('Genes and operons', [MAPPEDGENOME, DUPLICATION_RATIO, GENES, OPERONS,
+                               GENEMARKUNIQUE, GENEMARK]),
+
+        ('Aligned', [NA50, NGA50, NA75, NGA75, LA50, LGA50, LA75, LGA75,]),
+    ]
+
+    quality = {
+        'More is better': [TOTALLENS, LARGCONTIG, TOTALLEN, N50, NG50, N75, NG75, NA50, NGA50, NA75, NGA75,
+                           MAPPEDGENOME, GENES, OPERONS, GENEMARKUNIQUE, GENEMARK],
+        'Less is better': [CONTIGS, NUMCONTIGS, L50, LG50, L75, LG75, UNCALLED, UNCALLED_PERCENT,
+                           LA50, LGA50, LA75, LGA75,],
+        'Equal': [REFLEN, GC, REFGC, DUPLICATION_RATIO,]
+    }
+
+    for name, metrics in filter(lambda (name, metrics): name in ['Misassemblies', 'Unaligned', 'Ambiguous'], grouped_order):
+        quality['Less is better'].extend(metrics)
 
 # Report for one filename, dict: field -> value
 class Report(object):
-
     def __init__(self, name):
         self.d = {}
         self.add_field(Fields.NAME, name)
@@ -160,14 +198,14 @@ class Report(object):
 
 def get(filename):
     filename = os.path.basename(filename)
-    if filename not in keys_order:
-        keys_order.append(filename)
+    if filename not in assemblies_order:
+        assemblies_order.append(filename)
     return reports.setdefault(filename, Report(filename))
 
 def delete(filename):
     filename = os.path.basename(filename)
-    if filename in keys_order:
-        keys_order.remove(filename)
+    if filename in assemblies_order:
+        assemblies_order.remove(filename)
     if filename in reports.keys():
         reports.pop(filename)
 
@@ -176,27 +214,66 @@ def reporting_filter(value):
         return False
     return True
 
+
 def table(order=Fields.order):
-    ans = []
+    table = []
     for field in order:
         if isinstance(field, tuple): # TODO: rewrite it nicer
-            for i, x in enumerate(field[1]):
-                ls = []
-                for name in keys_order:
-                    report = get(name)
+            for i, feature in enumerate(field[1]):
+                values = []
+                for assembly_name in assemblies_order:
+                    report = get(assembly_name)
                     value = report.get_field(field)
-                    ls.append(value[i] if i < len(value) else None)
-                if filter(reporting_filter, ls): # have at least one element
-                    ans.append([field[0] % x] + [str(y) for y in ls])
+                    values.append(value[i] if i < len(value) else None)
+                if filter(reporting_filter, values): # have at least one element
+                    table.append([field[0] % feature] + [str(val) for val in values])
         else:
-            ls = []
-            for name in keys_order:
-                report = get(name)
+            values = []
+            for assembly_name in assemblies_order:
+                report = get(assembly_name)
                 value = report.get_field(field)
-                ls.append(value)
-            if filter(reporting_filter, ls): # have at least one element
-                ans.append([field] + [str(y) for y in ls])
-    return ans
+                values.append(value)
+            if filter(reporting_filter, values): # have at least one element
+                table.append([field] + [str(val) for val in values])
+    return table
+
+
+#ATTENTION! Contents numeric values, needed to be converted to strings
+def grouped_table(grouped_order=Fields.grouped_order):
+    table = []
+
+    def append_line(rows, field, pattern=None, feature=None, i=None):
+        values = []
+        
+        for assembly_name in assemblies_order:
+            report = get(assembly_name)
+            value = report.get_field(field)
+            if feature is None:
+                values.append(value)
+            else:
+                values.append(value[i] if i < len(value) else None)
+                
+        if filter(reporting_filter, values):
+            row_header = field if (feature is None) else pattern % feature
+            #ATTENTION! Contents numeric values, needed to be converted to strings.
+            rows.append([row_header] + [values])
+
+        return values
+    
+
+    for group_name, metrics in grouped_order:
+        rows = []
+        table.append((group_name, rows))
+
+        for field in metrics:
+            if isinstance(field, tuple): # TODO: rewrite it nicer
+                for i, feature in enumerate(field[1]):
+                    append_line(rows, field, field[0], feature, i)
+            else:
+                append_line(rows, field)
+
+    return table
+
 
 def save_txt(filename, table):
     # determine width of columns for nice spaces
@@ -204,7 +281,7 @@ def save_txt(filename, table):
     for line in table:
         for i, x in enumerate(line):
             colwidth[i] = max(colwidth[i], len(x))
-    # output it
+        # output it
     file = open(filename, 'a')
     if min_contig:
         print >>file, 'Contigs of length >= %d are used' % min_contig
@@ -233,11 +310,11 @@ def save_tex(filename, table):
         # escape characters
         for esc_char in "\\ % $ # _ { } ~ ^".split():
             row = row.replace(esc_char, '\\' + esc_char)
-        # more pretty '>='
+            # more pretty '>='
         row = row.replace('>=', '$\\geq$')
         row += ' \\\\ \\hline'
         print >>file, row
-    # Footer
+        # Footer
     print >>file, '\\end{tabular}'
     print >>file, '\\end{center}'
     print >>file, '\\end{table}'
@@ -255,8 +332,8 @@ def save(output_dirpath, report_name, transposed_report_name, order):
     save_txt(report_txt_filename, tab)
     save_tsv(report_tsv_filename, tab)
     save_tex(report_tex_filename, tab)
-    print '    Saved to', report_txt_filename, ',', os.path.basename(report_tsv_filename), \
-          'and', os.path.basename(report_tex_filename)
+    print '    Saved to', report_txt_filename, ',', os.path.basename(report_tsv_filename),\
+    'and', os.path.basename(report_tex_filename)
 
     if transposed_report_name:
         print '  Transposed version of total report...'
@@ -268,7 +345,7 @@ def save(output_dirpath, report_name, transposed_report_name, order):
         save_tsv(report_tsv_filename, tab)
         save_tex(report_tex_filename, tab)
         print '    Saved to', report_txt_filename, ',', os.path.basename(report_tsv_filename),\
-              'and', os.path.basename(report_tex_filename)
+        'and', os.path.basename(report_tex_filename)
 
 def save_gage(output_dirpath):
     save(output_dirpath, "gage_report", "gage_transposed_report", Fields.gage_order)

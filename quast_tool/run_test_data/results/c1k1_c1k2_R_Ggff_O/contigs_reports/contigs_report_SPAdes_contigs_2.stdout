@@ -2,9 +2,10 @@ Aligning contigs to reference...
 	Running Nucmer...
 Parsing coords...
 Loading Assembly...
-Loading Reference...
+Loading reference...
 	Loaded [gi|49175990|ref|NC_000913.2|_Escherichia_coli_str._K-12_substr._MG1655,_complete_genome,_cropped_to_first_1000_nucleotides]
-Loading Regions...
+Loading SNPs...
+Loading regions...
 	No regions given, using whole reference.
 	Total Regions: 1
 	Total Region Length: 1000
@@ -21,6 +22,13 @@ Analyzing coverage...
 	Reference gi|49175990|ref|NC_000913.2|_Escherichia_coli_str._K-12_substr._MG1655,_complete_genome,_cropped_to_first_1000_nucleotides: 3 total alignments. 1 total regions.
 		Region: 1 to 1000 (999 bp)
 
+			Align 1: 1 600 | 1 600 | 600 600 | 100.0 | gi|49175990|ref|NC_000913.2|_Escherichia_coli_str._K-12_substr._MG1655,_complete_genome,_cropped_to_first_1000_nucleotides NODE_0
+				Next Alignment: 841 1000 | 601 760 | 160 160 | 100.0 | gi|49175990|ref|NC_000913.2|_Escherichia_coli_str._K-12_substr._MG1655,_complete_genome,_cropped_to_first_1000_nucleotides NODE_0
+				Gap between this and next alignment: 600 to 841 (240 bp)
+				Contig start coord: 1
+			Align 2: 841 1000 | 601 760 | 160 160 | 100.0 | gi|49175990|ref|NC_000913.2|_Escherichia_coli_str._K-12_substr._MG1655,_complete_genome,_cropped_to_first_1000_nucleotides NODE_0
+			END in current alignment.  Modifying 1000 to 1000.
+				Contig start coord: 601
 	Local Misassemblies: 1
 	Misassemblies: 0
 		Relocations: 0
@@ -36,3 +44,17 @@ Ambiguous Contigs: 0
 Ambiguous Contig Bases: 0
 Mismatches: 0
 Single Nucleotide Indels: 0
+	SNPs: 0
+	Insertions: 0
+	Deletions: 0
+	Positive Gaps: 1
+		Internal Gaps:  1
+		External Gaps:  0
+		External Gap Total:  0
+		External Gap Average: 0
+	Negative Gaps: 0
+		Internal Overlaps:  0
+		External Overlaps:  0
+		External Overlaps Total:  0
+		External Overlaps Average: 0
+	Redundant Contigs: 0 (0)

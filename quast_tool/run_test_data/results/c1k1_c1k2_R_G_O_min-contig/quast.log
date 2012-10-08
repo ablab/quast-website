@@ -1,29 +1,57 @@
 Correcting contig files...
-
-  WARNING! SPAdes_contigs_1.fasta will not be processed because it doesn't have contigs >= 1500 bp.
-
-
-  WARNING! SPAdes_contigs_2.fasta will not be processed because it doesn't have contigs >= 1500 bp.
-
+  run_test_data/SPAdes_contigs_1.fasta ==> SPAdes_contigs_1
+  run_test_data/SPAdes_contigs_2.fasta ==> SPAdes_contigs_2
   Done.
-QUAST: a quality assessment tool.
-Usage: python quast.py [options] contig files
-
-Options with arguments
--o  --output-dir             directory to store all result files [default: quast_results/results_<datetime>]
--R           <filename>      reference genome file
--G/--genes   <filename>      annotated genes file
--O/--operons <filename>      annotated operons file
--M  --min-contig             lower threshold for contig length [default: 1500]
--t  --contig-thresholds      comma-separated list of contig length thresholds [default: [500, 1000]]
--e  --genemark-thresholds    comma-separated list of threshold lengths of genes to search with GeneMark [default: [0, 300, 1500, 3000]]
-
-Options without arguments
--g  --gage                   use Gage (results are in gage_report.txt)
--n  --not-circular           genome is not circular (e.g., it is an eukaryote)
--j  --save-json              save the output also in the JSON format
--J  --save-json-to <path>    save the JSON-output to a particular path
--p  --plain-report-no-plots  plain text report only, don't draw plots (to make quast faster)
-
--d  --debug                  run in debug mode
--h  --help                   print this usage message
+Warning! Can't draw plots - please install python-matplotlib
+Reference genome:
+  /Users/vladsaveliev/Dropbox/bio/quast_master/run_test_data/results/c1k1_c1k2_R_G_O_min-contig/corrected_input/reference_1K.fa , Reference length = 1000 , Reference GC % = 50.70
+Contigs files: 
+  #1: SPAdes_contigs_1
+  #2: SPAdes_contigs_2
+Calculating N50 and L50...
+  #1: SPAdes_contigs_1 , N50 = 1000 , L50 = 1 , Total length = 1000 , GC % =  50.70 , N's % =  0.00000
+  #2: SPAdes_contigs_2 , N50 = 760 , L50 = 1 , Total length = 760 , GC % =  51.05 , N's % =  0.00000
+Making MUMmer... (it may take several minutes on the first run)
+Running contigs analyzer...
+  #1: SPAdes_contigs_1 ...
+    Logging to files /Users/vladsaveliev/Dropbox/bio/quast_master/run_test_data/results/c1k1_c1k2_R_G_O_min-contig/contigs_reports/contigs_report_SPAdes_contigs_1.stdout and contigs_report_SPAdes_contigs_1.stderr...
+    Running Nucmer... 
+    Running SympAlign...
+    Cleaned 1 down to 1
+    Additionally cleaned 1 down to 0
+    Sympaligning is finished.
+    Analysis is finished.
+  #2: SPAdes_contigs_2 ...
+    Logging to files /Users/vladsaveliev/Dropbox/bio/quast_master/run_test_data/results/c1k1_c1k2_R_G_O_min-contig/contigs_reports/contigs_report_SPAdes_contigs_2.stdout and contigs_report_SPAdes_contigs_2.stderr...
+    Running Nucmer... 
+    Running SympAlign...
+    Cleaned 2 down to 2
+    Additionally cleaned 2 down to 0
+    Sympaligning is finished.
+    Analysis is finished.
+  Creating total report...
+    Saved to /Users/vladsaveliev/Dropbox/bio/quast_master/run_test_data/results/c1k1_c1k2_R_G_O_min-contig/contigs_reports/misassemblies_report.txt , misassemblies_report.tsv and misassemblies_report.tex
+  Creating total report...
+    Saved to /Users/vladsaveliev/Dropbox/bio/quast_master/run_test_data/results/c1k1_c1k2_R_G_O_min-contig/contigs_reports/unaligned_report.txt , unaligned_report.tsv and unaligned_report.tex
+  Done.
+Running NA-NGA tool...
+Processing .coords files...
+  #1: SPAdes_contigs_1
+  #2: SPAdes_contigs_2
+Calculating NA50 and NGA50...
+  #1: SPAdes_contigs_1 , NA50 = 1000 , NGA50 = 1000 , LA50 = 1 , LGA50 = 1
+  #2: SPAdes_contigs_2 , NA50 = 1360 , NGA50 = 1360 , LA50 = 1 , LGA50 = 1
+Running Genome analyzer...
+  Loaded 2 genes
+  Loaded 1 operons
+  #1: SPAdes_contigs_1 ...
+  #2: SPAdes_contigs_2 ...
+  Done
+Summarizing...
+  Creating total report...
+    Saved to /Users/vladsaveliev/Dropbox/bio/quast_master/run_test_data/results/c1k1_c1k2_R_G_O_min-contig/report.txt , report.tsv and report.tex
+  Transposed version of total report...
+    Saved to /Users/vladsaveliev/Dropbox/bio/quast_master/run_test_data/results/c1k1_c1k2_R_G_O_min-contig/transposed_report.txt , transposed_report.tsv and transposed_report.tex
+  HTML version of total report...
+    Saved to /Users/vladsaveliev/Dropbox/bio/quast_master/run_test_data/results/c1k1_c1k2_R_G_O_min-contig/report.html
+Done.
