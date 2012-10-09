@@ -17,8 +17,8 @@ except:
         print 'Warning! Can\'t build html report - please install python-simplejson'
         simplejson_error = True
 
-total_report_fn   = '/total_report.json'
-old_total_report_fn       = '/old_total_report.json'
+total_report_fn       = '/total_report.json'
+old_total_report_fn   = '/old_total_report.json'
 contigs_lengths_fn    = '/contigs_lengths.json'
 ref_length_fn         = '/ref_length.json'
 aligned_contigs_fn    = '/aligned_contigs_lengths.json'
@@ -140,19 +140,6 @@ def save_GC_info(output_dir, filenames, lists_of_GC_info):
         'filenames' : map(os.path.basename, filenames),
         'lists_of_gc_info' : lists_of_GC_info,
     })
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

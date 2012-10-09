@@ -148,7 +148,7 @@ class Fields:
 
     grouped_order = [
         ('Basic stats', [CONTIGS, TOTALLENS, NUMCONTIGS, LARGCONTIG, TOTALLEN, REFLEN,
-                         N50, NG50, N75, NG75, L50, LG50, L75, LG75,
+                         N50, N75, NG50, NG75, L50, L75, LG50, LG75,
                          UNCALLED, UNCALLED_PERCENT, GC, REFGC]),
 
         ('Misassemblies', [MIS_ALL_EXTENSIVE, MIS_EXTENSIVE_CONTIGS, MIS_EXTENSIVE_BASES,
@@ -164,19 +164,34 @@ class Fields:
         ('Genes and operons', [MAPPEDGENOME, DUPLICATION_RATIO, GENES, OPERONS,
                                GENEMARKUNIQUE, GENEMARK]),
 
-        ('Aligned', [NA50, NGA50, NA75, NGA75, LA50, LGA50, LA75, LGA75,]),
+        ('Aligned', [NA50, NA75, NGA50, NGA75, LA50, LA75, LGA50, LGA75,]),
     ]
 
-    quality = {
-        'More is better': [TOTALLENS, LARGCONTIG, TOTALLEN, N50, NG50, N75, NG75, NA50, NGA50, NA75, NGA75,
-                           MAPPEDGENOME, GENES, OPERONS, GENEMARKUNIQUE, GENEMARK],
-        'Less is better': [CONTIGS, NUMCONTIGS, L50, LG50, L75, LG75, UNCALLED, UNCALLED_PERCENT,
-                           LA50, LGA50, LA75, LGA75,],
-        'Equal': [REFLEN, GC, REFGC, DUPLICATION_RATIO,]
-    }
+    class Quality:
+        MORE_IS_BETTER='More is better'
+        LESS_IS_BETTER='Less is better'
+        EQUAL='Equal'
+
+    quality_dict = {
+        Quality.MORE_IS_BETTER:
+            [TOTALLENS, LARGCONTIG, TOTALLEN, N50, NG50, N75, NG75, NA50, NGA50, NA75, NGA75, MAPPEDGENOME, GENES,
+             OPERONS, GENEMARKUNIQUE, GENEMARK,],
+        Quality.LESS_IS_BETTER:
+            [CONTIGS, NUMCONTIGS, L50, LG50, L75, LG75, UNCALLED, UNCALLED_PERCENT,
+             LA50, LGA50, LA75, LGA75,],
+        Quality.EQUAL:
+            [REFLEN, GC, REFGC, DUPLICATION_RATIO,],
+        }
 
     for name, metrics in filter(lambda (name, metrics): name in ['Misassemblies', 'Unaligned', 'Ambiguous'], grouped_order):
-        quality['Less is better'].extend(metrics)
+        quality_dict['Less is better'].extend(metrics)
+
+
+def get_quality(metric):
+    for quality, metrics in Fields.quality_dict.iteritems():
+        if metric in Fields.quality_dict[quality]:
+            return quality
+
 
 # Report for one filename, dict: field -> value
 class Report(object):
@@ -196,11 +211,13 @@ class Report(object):
         assert field in Fields.__dict__.itervalues(), 'Unknown field: %s' % field
         return self.d.get(field, '')
 
+
 def get(filename):
     filename = os.path.basename(filename)
     if filename not in assemblies_order:
         assemblies_order.append(filename)
     return reports.setdefault(filename, Report(filename))
+
 
 def delete(filename):
     filename = os.path.basename(filename)
@@ -208,6 +225,7 @@ def delete(filename):
         assemblies_order.remove(filename)
     if filename in reports.keys():
         reports.pop(filename)
+
 
 def reporting_filter(value):
     if value == "":
@@ -243,6 +261,7 @@ def grouped_table(grouped_order=Fields.grouped_order):
     table = []
 
     def append_line(rows, field, pattern=None, feature=None, i=None):
+        quality = get_quality(field)
         values = []
         
         for assembly_name in assemblies_order:
@@ -252,14 +271,16 @@ def grouped_table(grouped_order=Fields.grouped_order):
                 values.append(value)
             else:
                 values.append(value[i] if i < len(value) else None)
-                
-        if filter(reporting_filter, values):
-            row_header = field if (feature is None) else pattern % feature
-            #ATTENTION! Contents numeric values, needed to be converted to strings.
-            rows.append([row_header] + [values])
 
-        return values
-    
+        if filter(reporting_filter, values):
+            metric_name = field if (feature is None) else pattern % feature
+            #ATTENTION! Contents numeric values, needed to be converted to strings.
+            rows.append({
+                'metricName': metric_name,
+                'quality': quality,
+                'values': values,
+            })
+
 
     for group_name, metrics in grouped_order:
         rows = []
@@ -290,11 +311,13 @@ def save_txt(filename, table):
         print >>file, '  '.join('%-*s' % (c, l) for c, l in zip(colwidth, line))
     file.close()
 
+
 def save_tsv(filename, table):
     file = open(filename, 'a')
     for line in table:
         print >>file, '\t'.join(line)
     file.close()
+
 
 def save_tex(filename, table):
     file = open(filename, 'a')
@@ -347,6 +370,7 @@ def save(output_dirpath, report_name, transposed_report_name, order):
         print '    Saved to', report_txt_filename, ',', os.path.basename(report_tsv_filename),\
         'and', os.path.basename(report_tex_filename)
 
+
 def save_gage(output_dirpath):
     save(output_dirpath, "gage_report", "gage_transposed_report", Fields.gage_order)
 
@@ -358,6 +382,7 @@ def save_total(output_dirpath):
 
 def save_misassemblies(output_dirpath):
     save(output_dirpath, "misassemblies_report", "", Fields.misassemblies_order)
+
 
 def save_unaligned(output_dirpath):
     save(output_dirpath, "unaligned_report", "", Fields.unaligned_order)

@@ -1,9 +1,11 @@
 
 
-function drawCumulativePlot(filenames, lists_of_lengths, reference_length, div, legendPlaceholder, glossary) {
+function drawCumulativePlot(filenames, lists_of_lengths,
+                            reference_length, div,
+                            legendPlaceholder, glossary) {
     var title = 'Cumulative length';
     div.html(
-        "<span class='plot-header'>" + addTooltipIfDefenitionExists(glossary, title) + "</span>" +
+        "<span class='plot-header'>" + addTooltipIfDefinitionExists(glossary, title) + "</span>" +
         "<div class='plot-placeholder' id='cumulative-plot-placeholder'></div>"
     );
 
@@ -67,7 +69,7 @@ function drawCumulativePlot(filenames, lists_of_lengths, reference_length, div, 
     if (reference_length) {
         plotsData = [({
             data: [[0, reference_length], [maxX, reference_length]],
-            label: 'Reference, ' + toPrettyStringWithDimencion(reference_length, 'bp'),
+            label: 'Reference, ' + toPrettyStringWithDimension(reference_length, 'bp'),
             dashes: {
                 show: true,
                 lineWidth: 1,
@@ -109,7 +111,7 @@ function drawCumulativePlot(filenames, lists_of_lengths, reference_length, div, 
             labelWidth: 50,
             reserveSpace: true,
             tickFormatter: function (val, axis) {
-                return '<div style="">' + toPrettyStringWithDimencion(reference_length, 'bp') +
+                return '<div style="">' + toPrettyStringWithDimension(reference_length, 'bp') +
                     ' <span style="margin-left: -0.2em;">(reference)</span></div>';
             },
             minTickSize: 1,

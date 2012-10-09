@@ -32,7 +32,7 @@ function buildNewTotalReport(assembliesNames, report, glossary) {
             table +=
                 '<tr class="content-row">' +
                 '<td><span class="metric-name">'
-                    + addTooltipIfDefenitionExists(glossary, metricName) +
+                    + addTooltipIfDefinitionExists(glossary, metricName) +
                     '</span>' +
                     '</td>';
 
@@ -116,7 +116,7 @@ function buildTotalReport(report, glossary) {
             keyCell = '<span class="report-table-header">Basic stats</span>';
             table += '<tr><td><span style="">' + keyCell + '</span></td>';
         } else {
-            keyCell = addTooltipIfDefenitionExists(glossary, report.header[col]);
+            keyCell = addTooltipIfDefinitionExists(glossary, report.header[col]);
             table += '<tr class="content-row"><td><span style="">' + keyCell + '</span></td>';
         }
 

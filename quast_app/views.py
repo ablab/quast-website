@@ -451,11 +451,3 @@ def ecoli(request):
 #        return response
 #    else:
 #        raise Http404
-
-
-
-
-
-
-
-

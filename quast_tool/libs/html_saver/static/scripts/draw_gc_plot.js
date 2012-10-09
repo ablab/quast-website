@@ -160,7 +160,7 @@ function drawGCPlot(filenames, listsOfGCInfo, div, legendPh, glossary) {
     legendPlaceholder = legendPh;
     div.html(
         "<div style='width: 675px;'>" +
-        "<div class='plot-header' style='float: left'>" + addTooltipIfDefenitionExists(glossary, title) + "</div>" +
+        "<div class='plot-header' style='float: left'>" + addTooltipIfDefinitionExists(glossary, title) + "</div>" +
         "<div id='change-scale' style='float: right; margin-right: 3px; visibility: hidden;'>" +
         "<span id='normal_scale_label'>" +
         normal_scale_span +

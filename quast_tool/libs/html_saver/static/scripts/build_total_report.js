@@ -1,5 +1,5 @@
 
-function buildNewTotalReport(assembliesNames, report, glossary) {
+function buildTotalReport(assembliesNames, report, glossary) {
     var table = '';
     table += '<table cellspacing="0" class="report-table">';
 
@@ -26,13 +26,14 @@ function buildNewTotalReport(assembliesNames, report, glossary) {
 
         for (var metric_n = 0; metric_n < metrics.length; metric_n++) {
             var metric = metrics[metric_n];
-            var metricName = metric[0];
-            var values = metric[1];
+            var metricName = metric.metricName;
+            var quality = metric.quality;
+            var values = metric.values;
 
             table +=
-                '<tr class="content-row">' +
+                '<tr class="content-row" quality="' + quality + '">' +
                 '<td><span class="metric-name">'
-                    + addTooltipIfDefenitionExists(glossary, metricName) +
+                    + addTooltipIfDefinitionExists(glossary, metricName) +
                     '</span>' +
                     '</td>';
 
@@ -67,6 +68,7 @@ function buildNewTotalReport(assembliesNames, report, glossary) {
         $(".report-table td:[number]").mouseenter(function() {
             var cells = $(this).parent().find('td:[number]');
             var numbers = $.map(cells, function(cell) { return $(cell).attr('number'); });
+            var quality = $(this).parent().attr('quality');
 
             var min = Math.min.apply(null, numbers);
             var max = Math.max.apply(null, numbers);
@@ -74,14 +76,23 @@ function buildNewTotalReport(assembliesNames, report, glossary) {
             var RED_HUE = 0;
             var GREEN_HUE = 130;
 
+            var maxHue = GREEN_HUE;
+            var minHue = RED_HUE;
+
+            if (quality == 'Less is better') {
+                maxHue = RED_HUE;
+                minHue = GREEN_HUE;
+            }
+
             if (max == min) {
                 $(cells).css('color', 'hsl(' + GREEN_HUE + ', 80%, 50%)');
             } else {
-                var k = (GREEN_HUE - RED_HUE) / (max - min);
+                var k = (maxHue - minHue) / (max - min);
 
                 cells.each(function(i) {
                     var number = numbers[i];
-                    var hue = (number - min)*k;
+                    var hue = minHue + (number - min)*k;
+
                     $(this).css('color', 'hsl(' + hue + ', 80%, 50%)');
                 });
             }
@@ -100,7 +111,7 @@ function buildNewTotalReport(assembliesNames, report, glossary) {
 
 
 
-function buildTotalReport(report, glossary) {
+function buildNewTotalReport(report, glossary) {
     var table = '';
     table += '<table cellspacing="0" class="report-table">';
 
@@ -121,7 +132,7 @@ function buildTotalReport(report, glossary) {
             keyCell = '<span class="report-table-header">Basic stats</span>';
             table += '<tr><td><span style="">' + keyCell + '</span></td>';
         } else {
-            keyCell = addTooltipIfDefenitionExists(glossary, report.header[col]);
+            keyCell = addTooltipIfDefinitionExists(glossary, report.header[col]);
             table += '<tr class="content-row"><td><span style="">' + keyCell + '</span></td>';
         }
 
