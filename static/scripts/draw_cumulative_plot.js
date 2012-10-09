@@ -1,6 +1,8 @@
 
 
-function drawCumulativePlot(filenames, lists_of_lengths, reference_length, div, legendPlaceholder, glossary) {
+function drawCumulativePlot(filenames, lists_of_lengths,
+                            reference_length, div,
+                            legendPlaceholder, glossary) {
     var title = 'Cumulative length';
     div.html(
         "<span class='plot-header'>" + addTooltipIfDefinitionExists(glossary, title) + "</span>" +

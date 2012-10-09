@@ -9,7 +9,7 @@ function toPrettyString(num) {
     }
 }
 
-function toPrettyStringWithDimencion(num, dimension) {
+function toPrettyStringWithDimension(num, dimension) {
     if (num <= 9999) {
         return '<span style="word-spacing:-1px;">' + num.toString() + '&nbsp;' + dimension + '</span>';
     } else {
@@ -140,7 +140,7 @@ function getContigNumberTickFormatter(maxX) {
     }
 }
 
-function addTooltipIfDefenitionExists(glossary, string, dictKey) {
+function addTooltipIfDefinitionExists(glossary, string, dictKey) {
     if (!dictKey) {
         dictKey = string;
     }

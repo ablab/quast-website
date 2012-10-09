@@ -28,7 +28,7 @@ function buildReport() {
         $('#subheader').html(totalReport.date + '.');
         $('#mincontig').append('Contigs of length ≥ ' + totalReport.minContig + ' bp are used.');
 //        buildTotalReport(report, glossary);
-        buildNewTotalReport(totalReport.assembliesNames, totalReport.report, glossary);
+        buildTotalReport(totalReport.assembliesNames, totalReport.report, glossary);
     }
 
     totalReport = null;
@@ -40,8 +40,8 @@ function buildReport() {
     }
 
     if (contigsLengths) {
-        drawCumulativePlot(contigsLengths.filenames, contigsLengths.lists_of_lengths, referenceLength, $('#cumulative-plot-div'), null,  glossary);
-        drawNxPlot(contigsLengths.filenames, contigsLengths.lists_of_lengths, 'Nx', null, $('#nx-plot-div'), null,  glossary);
+//        drawCumulativePlot(contigsLengths.filenames, contigsLengths.lists_of_lengths, referenceLength, $('#cumulative-plot-div'), null,  glossary);
+//        drawNxPlot(contigsLengths.filenames, contigsLengths.lists_of_lengths, 'Nx', null, $('#nx-plot-div'), null,  glossary);
     }
 
     try {
@@ -51,14 +51,14 @@ function buildReport() {
     }
 
     if (alignedContigsLengths) {
-        drawNxPlot(alignedContigsLengths.filenames, alignedContigsLengths.lists_of_lengths, 'NAx', null, $('#nax-plot-div'), null,  glossary);
+//        drawNxPlot(alignedContigsLengths.filenames, alignedContigsLengths.lists_of_lengths, 'NAx', null, $('#nax-plot-div'), null,  glossary);
     }
 
     if (contigsLengths && referenceLength) {
-        drawNxPlot(contigsLengths.filenames, contigsLengths.lists_of_lengths, 'NGx',referenceLength, $('#ngx-plot-div'), null,  glossary);
+//        drawNxPlot(contigsLengths.filenames, contigsLengths.lists_of_lengths, 'NGx',referenceLength, $('#ngx-plot-div'), null,  glossary);
     }
     if (alignedContigsLengths && referenceLength) {
-        drawNxPlot(alignedContigsLengths.filenames, alignedContigsLengths.lists_of_lengths, 'NGAx', referenceLength, $('#ngax-plot-div'), null,  glossary);
+//        drawNxPlot(alignedContigsLengths.filenames, alignedContigsLengths.lists_of_lengths, 'NGAx', referenceLength, $('#ngax-plot-div'), null,  glossary);
     }
 
     contigsLengths = null;
@@ -85,10 +85,10 @@ function buildReport() {
 
     if (contigs) {
         if (genes) {
-            drawGenesPlot(contigs.filenames, contigs.contigs, genes.genes, genes.found, 'gene', $('#genes-plot-div'), null,  glossary);
+//            drawGenesPlot(contigs.filenames, contigs.contigs, genes.genes, genes.found, 'gene', $('#genes-plot-div'), null,  glossary);
         }
         if (operons) {
-            drawGenesPlot(contigs.filenames, contigs.contigs, operons.operons, operons.found, 'operon', $('#operons-plot-div'), null,  glossary);
+//            drawGenesPlot(contigs.filenames, contigs.contigs, operons.operons, operons.found, 'operon', $('#operons-plot-div'), null,  glossary);
         }
     }
 
@@ -103,7 +103,7 @@ function buildReport() {
     }
 
     if (gcInfos) {
-        drawGCPlot(gcInfos.filenames, gcInfos.lists_of_gc_info, $('#gc-plot-div'), null, glossary);
+//        drawGCPlot(gcInfos.filenames, gcInfos.lists_of_gc_info, $('#gc-plot-div'), null, glossary);
     }
 
     gcInfos = null;
