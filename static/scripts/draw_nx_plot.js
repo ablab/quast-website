@@ -1,65 +1,86 @@
 
-function drawNxPlot(filenames, listsOfLengths, title,
-                    refLength, div, legendPlaceholder, glossary) {
+var nx = {
+    maxY: 0,
+    maxYTick: 0,
+    plotsData: null,
+    draw: null,
+    redraw: null,
+    kind: null,
+};
 
-    var titleHtml = title;
-    if (glossary.hasOwnProperty(title)) {
-        titleHtml = "<a class='tooltip-link' href='#' rel='tooltip' title='" + title + " "
-            + glossary[title] + "'>" + title + "</a>"
-    }
+function drawNxPlot(name, colors, filenames, listsOfLengths, refLength,
+                    div, legendPlaceholder, glossary) {
 
-    div.html(
-        "<span class='plot-header'>" + titleHtml + "</span>" +
-        "<div class='plot-placeholder' id='" + title + "-plot-placeholder'></div>"
-    );
+//    var titleHtml = title;
+//    if (glossary.hasOwnProperty(title)) {
+//        titleHtml = "<a class='tooltip-link' href='#' rel='tooltip' title='" + title + " "
+//            + glossary[title] + "'>" + title + "</a>"
+//    }
 
-    var plotsN = listsOfLengths.length;
-    var plotsData = new Array(plotsN);
+//    div.html(
+//        "<span class='plot-header'>" + titleHtml + "</span>" +
+//        "<div class='plot-placeholder' id='" + title + "-plot-placeholder'></div>"
+//    );
 
-    var maxY = 0;
-
-    for (var i = 0; i < plotsN; i++) {
-        var lengths = listsOfLengths[i];
-
-        var size = lengths.length;
-
-        var sumLen = 0;
-        for (var j = 0; j < lengths.length; j++) {
-            sumLen += lengths[j];
-        }
-        if (refLength) {
-            sumLen = refLength;
-        }
-
-        plotsData[i] = {
-            data: new Array(),
-            label: filenames[i],
+    if (nx.kind != name) {
+        nx = {
+            maxY: 0,
+            maxYTick: 0,
+            plotsData: null,
+            draw: null,
+            redraw: null,
+            kind: name,
         };
-        plotsData[i].data.push([0.0, lengths[0]]);
-        var currentLen = 0;
-        var x = 0.0;
-
-        for (var k = 0; k < size; k++) {
-            currentLen += lengths[k];
-            plotsData[i].data.push([x, lengths[k]]);
-            x = currentLen * 100.0 / sumLen;
-            plotsData[i].data.push([x, lengths[k]]);
-        }
-
-        if (plotsData[i].data[0][1] > maxY) {
-            maxY = plotsData[i].data[0][1];
-        }
-
-        var lastPt = plotsData[i].data[plotsData[i].data.length-1];
-        plotsData[i].data.push([lastPt[0], 0]);
     }
 
-    for (i = 0; i < plotsN; i++) {
-        plotsData[i].lines = {
-            show: true,
-            lineWidth: 1,
+    if (nx.plotsData == null || nx.draw == null || nx.redraw == null) {
+        var plotsN = filenames.length;
+        nx.plotsData = new Array(plotsN);
+
+        for (var i = 0; i < plotsN; i++) {
+            var lengths = listsOfLengths[i];
+
+            var size = lengths.length;
+
+            var sumLen = 0;
+            for (var j = 0; j < lengths.length; j++) {
+                sumLen += lengths[j];
+            }
+            if (refLength) {
+                sumLen = refLength;
+            }
+
+            nx.plotsData[i] = {
+                data: [],
+                label: filenames[i],
+                number: i,
+                color: colors[i],
+            };
+            nx.plotsData[i].data.push([0.0, lengths[0]]);
+            var currentLen = 0;
+            var x = 0.0;
+
+            for (var k = 0; k < size; k++) {
+                currentLen += lengths[k];
+                nx.plotsData[i].data.push([x, lengths[k]]);
+                x = currentLen * 100.0 / sumLen;
+                nx.plotsData[i].data.push([x, lengths[k]]);
+            }
+
+            if (nx.plotsData[i].data[0][1] > nx.maxY) {
+                nx.maxY = nx.plotsData[i].data[0][1];
+            }
+
+            var lastPt = nx.plotsData[i].data[nx.plotsData[i].data.length-1];
+            nx.plotsData[i].data.push([lastPt[0], 0]);
         }
-    }
+
+        for (i = 0; i < plotsN; i++) {
+            nx.plotsData[i].lines = {
+                show: true,
+                lineWidth: 1,
+            }
+        }
 
 //    for (i = 0; i < plotsN; i++) {
 //        plotsData[i].points = {
@@ -70,43 +91,74 @@ function drawNxPlot(filenames, listsOfLengths, title,
 //        }
 //    }
 
-    var colors = ["#FF5900", "#008FFF", "#168A16", "#7C00FF", "#00B7FF", "#FF0080", "#7AE01B", "#782400", "#E01B6A"];
-
-    var plot = $.plot($('#' + title + '-plot-placeholder'), plotsData, {
-            shadowSize: 0,
-            colors: colors,
-            legend: {
-                container: legendPlaceholder,
-                position: 'ne',
-                labelBoxBorderColor: '#FFF',
-            },
-            grid: {
-                borderWidth: 1,
-            },
-            yaxis: {
-                min: 0,
-                labelWidth: 120,
-                reserveSpace: true,
-                lineWidth: 0.5,
-                color: '#000',
-                tickFormatter: getBpTickFormatter(maxY),
-                minTickSize: 1,
-            },
-            xaxis: {
-                min: 0,
-                max: 100,
-                lineWidth: 0.5,
-                color: '#000',
-                tickFormatter: function (val, axis) {
-                    if (val == 100) {
-                        return '&nbsp;100%'
-                    } else {
-                        return val;
-                    }
+        nx.draw = function(plotsData, colors) {
+            var plot = $.plot(div, plotsData, {
+                    shadowSize: 0,
+                    colors: colors,
+                    legend: {
+                        container: $('useless-invisible-element-that-does-not-even-exist'),
+                    },
+                    grid: {
+                        borderWidth: 1,
+                    },
+                    yaxis: {
+                        min: 0,
+//                        max: nx.maxY,
+                        labelWidth: 120,
+                        reserveSpace: true,
+                        lineWidth: 0.5,
+                        color: '#000',
+                        tickFormatter: getBpTickFormatter(nx.maxY),
+                        minTickSize: 1,
+                    },
+                    xaxis: {
+                        min: 0,
+                        max: 100,
+                        lineWidth: 0.5,
+                        color: '#000',
+                        tickFormatter: function (val, axis) {
+                            if (val == 100) {
+                                return '&nbsp;100%'
+                            } else {
+                                return val;
+                            }
+                        }
+                    },
+                    minTickSize: 1,
                 }
-            },
-            minTickSize: 1,
+            );
+        };
+
+        nx.redraw = function() {
+            var newPlotsData = [];
+            var newColors = [];
+
+            $('#legend-placeholder').find('input:checked').each(function() {
+                var number = $(this).attr('name');
+                if (number && nx.plotsData) {
+                    var series = nx.plotsData.filter(function(series) {
+                        return series.number == number;
+                    })[0];
+                    newPlotsData.push(series);
+                    newColors.push(series.color);
+                }
+            });
+
+            if (newPlotsData.length == 0) {
+                newPlotsData.push({
+                    data: [],
+                });
+                newColors.push('#FFF');
+            }
+
+            nx.draw(newPlotsData, newColors);
         }
-    );
+    }
+
+    $.each(nx.plotsData, function(i, series) {
+        $('#legend-placeholder').find('#label_' + series.number + '_id').click(nx.redraw);
+    });
+
+    nx.redraw();
 }
 

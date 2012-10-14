@@ -1,4 +1,5 @@
 
+
 function toPrettyString(num) {
     if (num <= 9999) {
         return num.toString();
@@ -151,12 +152,3 @@ function addTooltipIfDefinitionExists(glossary, string, dictKey) {
         return string;
     }
 }
-
-
-
-
-
-
-
-
-

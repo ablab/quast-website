@@ -1,144 +1,203 @@
 
+var cumulative = {
+    maxX: 0,
+    maxY: 0,
+    maxYTick: 0,
+    plotsData: null,
+    draw: null,
+    redraw: null,
+    colors: [],
+};
 
-function drawCumulativePlot(filenames, lists_of_lengths,
-                            reference_length, div,
-                            legendPlaceholder, glossary) {
-    var title = 'Cumulative length';
-    div.html(
-        "<span class='plot-header'>" + addTooltipIfDefinitionExists(glossary, title) + "</span>" +
-        "<div class='plot-placeholder' id='cumulative-plot-placeholder'></div>"
-    );
+function drawCumulativePlot(name, colors, filenames, listsOfLengths, referenceLength,
+                            placeholder, legendPlaceholder, glossary) {
+//    var title = 'Cumulative length';
+//    div.html(
+//        "<span class='plot-header'>" + addTooltipIfDefinitionExists(glossary, title) + "</span>" +
+//        "<div class='plot-placeholder' id='cumulative-plot-placeholder'></div>"
+//    );
 
-    var plotsN = lists_of_lengths.length;
-    var plotsData = new Array(plotsN);
+//    var divName = 'cumulative-plot-placeholder';
+//    div.html(
+//        "<span class='dotted-link' id='>" + title + "'</span>" +
+//        "<div class='plot-placeholder' id='" + divName + "></div>"
+//    );
 
-    var maxX = 0;
-    var maxY = 0;
+//    div.find('.dotted-link').click(showHidePlot('#' + divName));
 
-    if (reference_length) {
-        maxY = reference_length;
-    }
+//    var colors = ["#FF5900", "#008FFF", "#168A16", "#782400", "#FFDD00", "#FF0080", "#7AE01B", "#7C00FF", "#E01B6A"];
 
-    for (var i = 0; i < plotsN; i++) {
-        var lengths = lists_of_lengths[i];
-        var size = lengths.length;
+    if (cumulative.plotsData == null || cumulative.draw == null || cumulative.redraw == null) {
+        cumulative.plotsData = [];
+        var plotsN = filenames.length;
 
-        plotsData[i] = {
-            data: new Array(size+1),
-            label: filenames[i],
-        };
+        if (referenceLength) {
+            cumulative.maxY = referenceLength;
+        }
 
-        plotsData[i].data[0] = [0, 0];
+        for (var i = 0; i < plotsN; i++) {
+            var lengths = listsOfLengths[i];
+            var size = lengths.length;
 
-        var y = 0;
-        for (var j = 0; j < size; j++) {
-            y += lengths[j];
-            plotsData[i].data[j+1] = [j+1, y];
-            if (y > maxY) {
-                maxY = y;
+            cumulative.plotsData[i] = {
+                data: new Array(size+1),
+                label: filenames[i],
+                number: i,
+                color: colors[i],
+            };
+
+            cumulative.plotsData[i].data[0] = [0, 0];
+
+            var y = 0;
+            for (var j = 0; j < size; j++) {
+                y += lengths[j];
+                cumulative.plotsData[i].data[j+1] = [j+1, y];
+                if (y > cumulative.maxY) {
+                    cumulative.maxY = y;
+                }
+            }
+
+            if (size > cumulative.maxX) {
+                cumulative.maxX = size;
             }
         }
 
-        if (size > maxX) {
-            maxX = size;
+        for (i = 0; i < plotsN; i++) {
+            cumulative.plotsData[i].lines = {
+                show: true,
+                lineWidth: 1,
+            }
         }
-    }
 
-    for (i = 0; i < plotsN; i++) {
-        plotsData[i].lines = {
-            show: true,
-            lineWidth: 1,
+        for (i = 0; i < plotsN; i++) {
+            cumulative.colors.push(cumulative.plotsData[i].color);
         }
-    }
 
-    var maxYTick = getMaxDecimalTick(maxY);
+        cumulative.maxYTick = getMaxDecimalTick(cumulative.maxY);
 
-//    In order to draw dots instead of lines
-//
-//    for (i = 0; i < plotsN; i++) {
-//        plotsData[i].points = {
-//            show: true,
-//            radius: 1,
-//            fill: 1,
-//            fillColor: false,
-//        }
+    //    In order to draw dots instead of lines
+    //
+    //    for (i = 0; i < plotsN; i++) {
+    //        plotsData[i].points = {
+    //            show: true,
+    //            radius: 1,
+    //            fill: 1,
+    //            fillColor: false,
+    //        }
+    //    }
+
+        if (referenceLength) {
+            cumulative.plotsData.push({
+                data: [[0, referenceLength], [cumulative.maxX, referenceLength]],
+                label: 'Reference,&nbsp;' + toPrettyStringWithDimension(referenceLength, 'bp'),
+                dashes: {
+                    show: true,
+                    lineWidth: 1,
+                },
+                yaxis: 1,
+                number: cumulative.plotsData.length,
+                color: '#000000',
+            });
+
+            cumulative.colors.push('#000000');
+
+    //        plotsData = [({
+    //            data: [[0, referenceLength], [maxX, referenceLength]],
+    //            dashes: {
+    //                show: true,
+    //                lineWidth: 1,
+    //            },
+    //            number: plotsData.length,
+    //        })].concat(plotsData);
+        }
+
+
+//    if (referenceLength) {
+//        yaxes.push({
+//            ticks: [referenceLength],
+//            min: 0,
+//            max: maxYTick,
+//            position: 'right',
+////            labelWidth: 50,
+//            reserveSpace: true,
+//            tickFormatter: function (val, axis) {
+//                return '<div style="">' + toPrettyStringWithDimension(referenceLength, 'bp') +
+//                    ' <span style="margin-left: -0.2em;">(reference)</span></div>';
+//            },
+//            minTickSize: 1,
+//        });
 //    }
-
-    var colors = ["#FF5900", "#008FFF", "#168A16", "#7C00FF", "#00B7FF", "#FF0080", "#7AE01B", "#782400", "#E01B6A"];
-
-    if (reference_length) {
-        plotsData = [({
-            data: [[0, reference_length], [maxX, reference_length]],
-            label: 'Reference, ' + toPrettyStringWithDimension(reference_length, 'bp'),
-            dashes: {
-                show: true,
-                lineWidth: 1,
-            },
-            yaxis: 2,
-        })].concat(plotsData);
-
-        plotsData = [({
-            data: [[0, reference_length], [maxX, reference_length]],
-            dashes: {
-                show: true,
-                lineWidth: 1,
-            },
-        })].concat(plotsData);
-
-        colors = ["#000000"].concat(colors);
-        colors = ["#000000"].concat(colors);
-    }
-
-    var yaxis = {
-        min: 0,
-        max: maxYTick,
-        labelWidth: 120,
-        reserveSpace: true,
-        lineWidth: 0.5,
-        color: '#000',
-        tickFormatter: getBpTickFormatter(maxY),
-        minTickSize: 1,
-    };
-
-    var yaxes = [yaxis];
-
-    if (reference_length) {
-        yaxes.push({
-            ticks: [reference_length],
+        var yaxis = {
             min: 0,
-            max: maxYTick,
-            position: 'rigth',
-            labelWidth: 50,
+            max: cumulative.maxYTick,
+            labelWidth: 120,
             reserveSpace: true,
-            tickFormatter: function (val, axis) {
-                return '<div style="">' + toPrettyStringWithDimension(reference_length, 'bp') +
-                    ' <span style="margin-left: -0.2em;">(reference)</span></div>';
-            },
+            lineWidth: 0.5,
+            color: '#000000',
+            tickFormatter: getBpTickFormatter(cumulative.maxY),
             minTickSize: 1,
-        });
+        };
+        var yaxes = [yaxis];
+
+        cumulative.draw = function(plotsData, colors) {
+            var plot = $.plot(placeholder, plotsData, {
+                shadowSize: 0,
+                colors: cumulative.colors,
+                legend: {
+                    container: $('useless-invisible-element-that-does-not-even-exist'),
+                },
+    //            legend: {
+    //                container: legendPlaceholder,
+    //                position: 'se',
+    //                labelBoxBorderColor: '#FFF',
+    //                labelFormatter: labelFormatter,
+    //            },
+                grid: {
+                    borderWidth: 1,
+                },
+                yaxes: yaxes,
+                xaxis: {
+                    min: 0,
+                    max: cumulative.maxX,
+                    lineWidth: 0.5,
+                    color: '#000',
+                    tickFormatter: getContigNumberTickFormatter(cumulative.maxX),
+                    minTickSize: 1,
+                },
+            });
+        };
+
+        cumulative.redraw = function() {
+            var newPlotsData = [];
+            var newColors = [];
+
+            $('#legend-placeholder').find('input:checked').each(function() {
+                var number = $(this).attr('name');
+                if (number && cumulative.plotsData) {
+                    var series = cumulative.plotsData.filter(function(series) {
+                        return series.number == number;
+                    })[0];
+                    newPlotsData.push(series);
+                    newColors.push(series.color);
+                }
+            });
+
+            if (newPlotsData.length == 0) {
+                newPlotsData.push({
+                    data: [],
+                });
+                newColors.push('#FFF');
+            }
+
+            cumulative.draw(newPlotsData, newColors);
+        };
     }
 
-    var plot = $.plot($('#cumulative-plot-placeholder'), plotsData, {
-            shadowSize: 0,
-            colors: colors,
-            legend: {
-                container: legendPlaceholder,
-                position: 'se',
-                labelBoxBorderColor: '#FFF',
-            },
-            grid: {
-                borderWidth: 1,
-            },
-            yaxes: yaxes,
-            xaxis: {
-                min: 0,
-                lineWidth: 0.5,
-                color: '#000',
-                tickFormatter: getContigNumberTickFormatter(maxX),
-                minTickSize: 1,
-            },
-        }
-    );
+    $.each(cumulative.plotsData, function(i, series) {
+        $('#legend-placeholder').find('#label_' + series.number + '_id').click(cumulative.redraw);
+    });
+
+    cumulative.redraw();
 
     // var o = plot.pointOffset({ x: 0, y: 0});
     // $('#cumulative-plot-placeholder').append(
