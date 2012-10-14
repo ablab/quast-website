@@ -28,8 +28,12 @@ min_contig = None # for printing info about min contig in TXT reports
 class Fields:
     NAME = 'Assembly'
     # Basic stats
+    NUMCONTIGS = '# contigs'
     CONTIGS = ('# contigs (>= %d bp)', tuple(qconfig.contig_thresholds))
+    LARGCONTIG = 'Largest contig'
+    TOTALLEN = 'Total length'
     TOTALLENS = ('Total length (>= %d bp)', tuple(qconfig.contig_thresholds))
+    REFLEN = 'Reference length'
     N50 = 'N50'
     NG50 = 'NG50'
     N75 = 'N75'
@@ -38,11 +42,7 @@ class Fields:
     LG50 = 'LG50'
     L75 = 'L75'
     LG75 = 'LG75'
-    NUMCONTIGS = '# contigs'
-    LARGCONTIG = 'Largest contig'
-    TOTALLEN = 'Total length'
     GC = 'GC (%)'
-    REFLEN = 'Reference length'
     REFGC = 'Reference GC (%)'
     AVGIDY = 'Average %IDY'
 
@@ -147,7 +147,7 @@ class Fields:
                   GAGE_CORN50]
 
     grouped_order = [
-        ('Basic stats', [CONTIGS, TOTALLENS, NUMCONTIGS, LARGCONTIG, TOTALLEN, REFLEN,
+        ('Basic stats', [NUMCONTIGS, CONTIGS, LARGCONTIG, TOTALLEN, TOTALLENS, REFLEN,
                          N50, N75, NG50, NG75, L50, L75, LG50, LG75,
                          UNCALLED, UNCALLED_PERCENT, GC, REFGC]),
 

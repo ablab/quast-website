@@ -1,8 +1,12 @@
 
-.blocks > div {
-    float: left;
-    margin-bottom: 5.5em;
-    margin-top: 0px;
+/*.blocks > div {*/
+    /*float: left;*/
+    /*margin-bottom: 5.5em;*/
+    /*margin-top: 40px;*/
+/*}*/
+
+.plot-switch {
+    margin-left: 10px;
 }
 
 .plot-wrapper {
@@ -22,14 +26,40 @@
     height: 1.5em;
     display: block;
 }
-.plot-placeholder {
-    width: 800px;
-    height: 600px;
+
+.plots {
+    margin-bottom: 0px;
+}
+.plots td{
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+#legend-placeholder {
+    margin-top: -2px;
+    margin-left: -5px;
+}
+.legendColorBox div {
+    display: none;
+}
+#legend-placeholder td {
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+#plot-placeholder {
+    width: 900px;
+    height: 500px;
     margin-left: -125px;
+    margin-right: 20px;
+    float: left;
 }
-.plot-placeholder#cumulative-plot-placeholder {
-    width: 850px;
+#all-switches {
+    width: 780px;
 }
+/*.cumulative-plot-placeholder {*/
+    /*width: 957px;*/
+/*}*/
 
 #report .header-tr td, #report .subheader-tr td {
     font-weight: bold;

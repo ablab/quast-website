@@ -39,27 +39,51 @@
 <br>
 
 <div class='report-and-plots'>
-    <div class='blocks'>
-        <div id='report'>
-        </div>
-
-        <div class='plot-wrapper' id='cumulative-plot-div'>
-        </div>
-        <div class='plot-wrapper' id='nx-plot-div'>
-        </div>
-        <div class='plot-wrapper' id='ngx-plot-div'>
-        </div>
-        <div class='plot-wrapper' id='nax-plot-div'>
-        </div>
-        <div class='plot-wrapper' id='ngax-plot-div'>
-        </div>
-        <div class='plot-wrapper' id='genes-plot-div'>
-        </div>
-        <div class='plot-wrapper' id='operons-plot-div'>
-        </div>
-        <div class='plot-wrapper' id='gc-plot-div'>
-        </div>
+    <div id='report'>
     </div>
+
+    <br>
+    <div class='plots'>
+        <table id='all-switches' style='margin: -3px;'>
+            <tr>
+                <td>
+                    <div id='plots-switches'><b>Plots:</b></div>
+                </td>
+                <td style='text-align: right;'>
+                    <span id='scale-placeholder'></span>
+                </td>
+            </tr>
+        </table>
+        <table style="margin: -3px;">
+            <tr>
+                <td>
+                    <div id='plot-placeholder'></div>
+                </td>
+                <td>
+                    <div id='legend-placeholder'></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+{#    <div class='blocks'>#}
+{#        <div class='plot-wrapper' id='cumulative-plot-div'>#}
+{#        </div>#}
+{#        <div class='plot-wrapper' id='nx-plot-div'>#}
+{#        </div>#}
+{#        <div class='plot-wrapper' id='ngx-plot-div'>#}
+{#        </div>#}
+{#        <div class='plot-wrapper' id='nax-plot-div'>#}
+{#        </div>#}
+{#        <div class='plot-wrapper' id='ngax-plot-div'>#}
+{#        </div>#}
+{#        <div class='plot-wrapper' id='genes-plot-div'>#}
+{#        </div>#}
+{#        <div class='plot-wrapper' id='operons-plot-div'>#}
+{#        </div>#}
+{#        <div class='plot-wrapper' id='gc-plot-div'>#}
+{#        </div>#}
+{#    </div>#}
 
     <div class='json-code'>
         <div id='total-report-json'>

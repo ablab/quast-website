@@ -1,5 +1,5 @@
 
-function filterAndSumGCinfo(GC_info, condition) {
+function filterAndSumGcInfo(GC_info, condition) {
     var contigs_lengths_cur_bin = [];
     for (var j = 0; j < GC_info.length; j++) {
         var GC = GC_info[j];
@@ -17,43 +17,42 @@ function filterAndSumGCinfo(GC_info, condition) {
     return val_bp;
 }
 
-// Initial array of colors. If there are more assemblies, no more colors
-// are generated for some reason.
-// This problem appeared in the cumulative plot drawer, where I add
-// two additional black colors for the reference line.
-var colors = ["#FF5900", "#008FFF", "#168A16", "#7C00FF", "#00B7FF", "#FF0080", "#7AE01B", "#782400", "#E01B6A"];
 
-var plotPlaceholderName = '#gc-plot-placeholder';
+var gc = {
+    maxY: 0,
+    plot: null,
+    plotsData: null,
+    draw: null,
+    redraw: null,
+    minPow: 0,
+    ticks: null,
+    placeholder: null,
+    legendPlaceholder: null,
+    colors: null,
+};
 
-var plot;
-var plotsData;
-var maxY;
-var minPow;
-var ticks;
-var legendPlaceholder;
 
-function drawInNormalScale() {
-    if (plotsData == null || maxY == null) {
+function drawInNormalScale(plotsData, colors) {
+    if (plotsData == null || gc.maxY == null) {
         return;
     }
-    plot = $.plot($(plotPlaceholderName), plotsData, {
+    gc.plot = $.plot(gc.placeholder, plotsData, {
             shadowSize: 0,
             colors: colors,
             legend: {
-                container: legendPlaceholder,
-                position: 'ne',
-                labelBoxBorderColor: '#FFF',
+                container: $('useless-invisible-element-that-does-not-even-exist'),
             },
             grid: {
                 borderWidth: 1,
             },
             yaxis: {
                 min: 0,
+//                max: gc.maxY,
                 labelWidth: 120,
                 reserveSpace: true,
                 lineWidth: 0.5,
                 color: '#000',
-                tickFormatter: getBpTickFormatter(maxY),
+                tickFormatter: getBpTickFormatter(gc.maxY),
                 minTickSize: 1,
             },
             xaxis: {
@@ -74,30 +73,30 @@ function drawInNormalScale() {
     );
 }
 
-function drawInLogarighmicScale() {
-    if (plotsData == null || maxY == null || minPow == null) {
+
+function drawInLogarithmicScale(plotsData, colors) {
+    if (plotsData == null || gc.maxY == null || gc.minPow == null) {
         return;
     }
-    plot = $.plot($(plotPlaceholderName), plotsData, {
+    gc.plot = $.plot(gc.placeholder, plotsData, {
             shadowSize: 0,
             colors: colors,
             legend: {
-                container: legendPlaceholder,
-                position: 'ne',
-                labelBoxBorderColor: '#FFF',
+                container: $('useless-invisible-element-that-does-not-even-exist'),
             },
             grid: {
                 borderWidth: 1,
             },
             yaxis: {
-                min: Math.pow(10, minPow),
+                min: Math.pow(10, gc.minPow),
+//                max: gc.maxY,
                 labelWidth: 120,
                 reserveSpace: true,
                 lineWidth: 0.5,
                 color: '#000',
-                tickFormatter: getBpLogTickFormatter(maxY),
+                tickFormatter: getBpLogTickFormatter(gc.maxY),
                 minTickSize: 1,
-                ticks: ticks,
+                ticks: gc.ticks,
 
                 transform:  function(v) {
                     return Math.log(v + 0.0001)/*move away from zero*/ / Math.log(10);
@@ -125,131 +124,170 @@ function drawInLogarighmicScale() {
     );
 }
 
+
 function setLogScale() {
     $('#normal_scale_label').html(normal_scale_a);
     $('#log_scale_label').html(log_scale_span);
-    drawInLogarighmicScale();
+    gc.draw = drawInLogarithmicScale;
+    gc.redraw();
 }
+
 
 function setNormalScale() {
     $('#normal_scale_label').html(normal_scale_span);
     $('#log_scale_label').html(log_scale_a);
-    drawInNormalScale();
+    gc.draw = drawInNormalScale;
+    gc.redraw();
 }
 
 var normal_scale_span =
-    "<span>" +
-        'Normal scale' +
+    "<span class='selected-switch'>" +
+        'Normal' +
         "</span>";
 var normal_scale_a =
     "<a class='dotted-link' onClick='setNormalScale()'>" +
-        'Normal scale' +
+        'Normal' +
         "</a>";
 var log_scale_span =
-    "<span>" +
-        'Logarithmic scale' +
+    "<span class='selected-switch'>" +
+        'logarithmic' +
         "</span>";
 var log_scale_a =
     "<a class='dotted-link' onClick='setLogScale()'>" +
-        'Logarithmic scale' +
+        'logarithmic' +
         "</a>";
 
 
-function drawGCPlot(filenames, listsOfGCInfo, div, legendPh, glossary) {
-    var title = 'GC content';
-    legendPlaceholder = legendPh;
-    div.html(
-        "<div style='width: 675px;'>" +
-        "<div class='plot-header' style='float: left'>" + addTooltipIfDefinitionExists(glossary, title) + "</div>" +
-        "<div id='change-scale' style='float: right; margin-right: 3px; visibility: hidden;'>" +
-        "<span id='normal_scale_label'>" +
-        normal_scale_span +
-        "</span>&nbsp;/&nbsp;<span id='log_scale_label'>" +
-        log_scale_a +
-        "</span>" +
-        "</div>" +
-        "<div style='clear: both'>" +
-        "</div>" +
-        "<div class='plot-placeholder' id='gc-plot-placeholder'></div>" +
+function drawGCPlot(name, colors, filenames, listsOfGCInfo, reflen,
+                    plotPh, legendPh, glossary, scalePh) {
+    $(scalePh).html(
+        "<div id='change-scale' style='margin-right: 3px; visibility: hidden;'>" +
+            "<span id='normal_scale_label'>" +
+            normal_scale_span +
+            "</span>&nbsp;/&nbsp;" +
+            "<span id='log_scale_label'>" +
+            log_scale_a +
+            "</span> scale" +
         "</div>"
     );
 
-    var bin_size = 1.0;
-    var plotsN = filenames.length;
-    plotsData = new Array(plotsN);
+    if (gc.plotsData == null || gc.draw == null || gc.redraw == null) {
+        gc.legendPlaceholder = legendPh;
+        gc.placeholder = plotPh;
+        gc.colors = colors;
 
-    maxY = 0;
-    var minY = Number.MAX_VALUE;
+        var bin_size = 1.0;
+        var plotsN = filenames.length;
+        gc.plotsData = new Array(plotsN);
 
-    function updateMinY(y) {
-        if (y < minY && y != 0) {
-            minY = y;
+        gc.maxY = 0;
+        var minY = Number.MAX_VALUE;
+
+        function updateMinY(y) {
+            if (y < minY && y != 0) {
+                minY = y;
+            }
         }
-    }
-    function updateMaxY(y) {
-        if (y > maxY) {
-            maxY = y;
+        function updateMaxY(y) {
+            if (y > gc.maxY) {
+                gc.maxY = y;
+            }
         }
-    }
 
-    for (var i = 0; i < plotsN; i++) {
-        plotsData[i] = {
-            data: [],
-            label: filenames[i],
-        };
+        for (var i = 0; i < plotsN; i++) {
+            gc.plotsData[i] = {
+                data: [],
+                label: filenames[i],
+                number: i,
+                color: colors[i],
+            };
 
-        var GC_info = listsOfGCInfo[i];
-        var cur_bin = 0.0;
+            var GC_info = listsOfGCInfo[i];
+            var cur_bin = 0.0;
 
-        var x = cur_bin;
-        var y = filterAndSumGCinfo(GC_info, function(GC_percent) {
-            return GC_percent == cur_bin;
-        });
-        plotsData[i].data.push([x, y]);
-
-        updateMinY(y);
-        updateMaxY(y);
-
-        while (cur_bin < 100.0 - bin_size) {
-            cur_bin += bin_size;
-
-            x = cur_bin;
-            y = filterAndSumGCinfo(GC_info, function(GC_percent) {
-                return GC_percent > (cur_bin - bin_size) && GC_percent <= cur_bin;
+            var x = cur_bin;
+            var y = filterAndSumGcInfo(GC_info, function(GC_percent) {
+                return GC_percent == cur_bin;
             });
-            plotsData[i].data.push([x, y]);
+            gc.plotsData[i].data.push([x, y]);
+
+            updateMinY(y);
+            updateMaxY(y);
+
+            while (cur_bin < 100.0 - bin_size) {
+                cur_bin += bin_size;
+
+                x = cur_bin;
+                y = filterAndSumGcInfo(GC_info, function(GC_percent) {
+                    return GC_percent > (cur_bin - bin_size) && GC_percent <= cur_bin;
+                });
+                gc.plotsData[i].data.push([x, y]);
+
+                updateMinY(y);
+                updateMaxY(y);
+            }
+
+            x = 100.0;
+            y = filterAndSumGcInfo(GC_info, function(GC_percent) {
+                return GC_percent > cur_bin && GC_percent <= 100.0;
+            });
+
+            gc.plotsData[i].data.push([x, y]);
 
             updateMinY(y);
             updateMaxY(y);
         }
 
-        x = 100.0;
-        y = filterAndSumGCinfo(GC_info, function(GC_percent) {
-            return GC_percent > cur_bin && GC_percent <= 100.0;
-        });
-        plotsData[i].data.push([x, y]);
-
-        updateMinY(y);
-        updateMaxY(y);
-    }
-
-    for (i = 0; i < plotsN; i++) {
-        plotsData[i].lines = {
-            show: true,
-            lineWidth: 1,
+        for (i = 0; i < plotsN; i++) {
+            gc.plotsData[i].lines = {
+                show: true,
+                lineWidth: 1,
+            }
         }
-    }
 
-    // Calculate the minimum possible non-zero Y to clip useless bottoms
-    // of logarithmic plots.
-    var maxYTick = getMaxDecimalTick(maxY);
-    minPow = Math.round(Math.log(minY) / Math.log(10));
-    ticks = [];
-    for (var pow = minPow; Math.pow(10, pow) < maxYTick; pow++) {
-        ticks.push(Math.pow(10, pow));
-    }
-    ticks.push(Math.pow(10, pow));
+        // Calculate the minimum possible non-zero Y to clip useless bottoms
+        // of logarithmic plots.
+        var maxYTick = getMaxDecimalTick(gc.maxY);
+        gc.minPow = Math.round(Math.log(minY) / Math.log(10));
+        gc.ticks = [];
+        for (var pow = gc.minPow; Math.pow(10, pow) < maxYTick; pow++) {
+            gc.ticks.push(Math.pow(10, pow));
+        }
+        gc.ticks.push(Math.pow(10, pow));
 
-    drawInNormalScale();
-    $('#change-scale').css('visibility', 'visible');
+        gc.draw = drawInNormalScale;
+
+        gc.redraw = function() {
+            var newPlotsData = [];
+            var newColors = [];
+
+            $('#legend-placeholder').find('input:checked').each(function() {
+                var number = $(this).attr('name');
+                if (number && gc.plotsData) {
+                    var series = gc.plotsData.filter(function(series) {
+                        return series.number == number;
+                    })[0];
+                    newPlotsData.push(series);
+                    newColors.push(series.color);
+                }
+            });
+
+            if (newPlotsData.length == 0) {
+                newPlotsData.push({
+                    data: [],
+                });
+                newColors.push('#FFF');
+            }
+
+            gc.draw(newPlotsData, newColors);
+        };
+
+        $.each(gc.plotsData, function(i, series) {
+            $('#legend-placeholder').find('#label_' + series.number + '_id').click(gc.redraw);
+        });
+
+        gc.redraw();
+
+        $('#change-scale').css('visibility', 'visible');
+    }
 }

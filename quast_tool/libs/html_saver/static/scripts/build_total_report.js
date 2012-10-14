@@ -32,10 +32,10 @@ function buildTotalReport(assembliesNames, report, glossary) {
 
             table +=
                 '<tr class="content-row" quality="' + quality + '">' +
-                '<td><span class="metric-name">'
-                    + addTooltipIfDefinitionExists(glossary, metricName) +
+                '<td><span class="metric-name">' +
+                    addTooltipIfDefinitionExists(glossary, metricName) +
                     '</span>' +
-                    '</td>';
+                '</td>';
 
             for (var value_n = 0; value_n < values.length; value_n++) {
                 var value = values[value_n];
@@ -101,15 +101,6 @@ function buildTotalReport(assembliesNames, report, glossary) {
         });
     });
 }
-
-
-
-
-
-
-
-
-
 
 function buildNewTotalReport(report, glossary) {
     var table = '';

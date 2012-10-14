@@ -400,7 +400,11 @@ def response_with_report(template, results_dirpath, header):
                 raise Exception(name + ' is not found but required.')
         return contents
 
-    report                  = get('total_report', is_required=True)
+    try:
+        report = get('total_report', is_required=True)
+    except Exception, e:
+        report = get('report', is_required=True)
+
     contigs_lengths         = get('contigs_lengths', is_required=True)
     reference_length        = get('ref_length')
     assemblies_lengths      = get('assemblies_lengths')
