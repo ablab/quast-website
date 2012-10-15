@@ -23,6 +23,8 @@
 {% endblock %}
 
 {% block content %}
+{% block extra_content %}{% endblock %}
+
 <div id='header'>
     <h1>{% block header %}{% endblock %}</h1>
     <div id='subheader'>Loading...</div>
@@ -42,21 +44,18 @@
     <div id='report'>
     </div>
 
-    <br>
     <div class='plots'>
-        <table id='all-switches' style='margin: -3px;'>
-            <tr>
+        <table style='margin: -3px;'>
+            <tr id='all-switches'>
                 <td>
                     <div id='plots-switches'><b>Plots:</b></div>
                 </td>
-                <td style='text-align: right;'>
+                <td style='text-align: right; padding-right: 22px;'>
                     <span id='scale-placeholder'></span>
                 </td>
             </tr>
-        </table>
-        <table style="margin: -3px;">
             <tr>
-                <td>
+                <td colspan="2">
                     <div id='plot-placeholder'></div>
                 </td>
                 <td>

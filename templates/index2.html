@@ -1,0 +1,120 @@
+{% extends "report.html" %}
+
+{% block title %}About QUAST{% endblock %}
+
+{% block index-menu-li-class %}active{% endblock %}
+
+{% block brand-link-class %}disabled{% endblock %}
+
+{% block extra_content %}
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap-responsive.min.css"/>
+
+    <style>
+        a.btn:visited {
+            color: white;
+        }
+        a.btn:hover {
+            color: white;
+        }
+        a.btn:active {
+            color: white;
+        }
+        #header {
+            display: none;
+        }
+    </style>
+    
+    <div>
+        <div>
+            <h1 style='letter-spacing: .10em; margin-right: -.10em;'>QUAST</h1>
+        </div>
+
+        <table class='layout-table'>
+            <tr>
+                <td>
+                <div style='margin-top: -17px;'>
+                    <p><b>QUality ASsesment Tool for genome assemblies</b>
+                        by <a href="http://bioinf.spbau.ru/en">Algorithmic Biology Lab</a></p>
+                </div>
+                </td>
+            </tr>
+
+            <tr style="height: 20px;">
+            </tr>
+
+            <tr style="background-color: #f5f5ff;">
+                <td class='layout-table-td layout-table-fst-td'>
+                    <div style='background-color: #f5f5ff; margin-left: -200px; padding-left: 200px; margin-right: -500px; padding-right: 500px;'>
+{#                        <table style="margin-left: -3px; margin-top: -3px;" >#}
+{#                            <tr>#}
+{#                                <td style="vertical-align: top; padding-right: 0px;">#}
+
+                                <div class='row-fluid'>
+                                    <div class="span6" style="padding-right: 10px;">
+{#                                <div style="width: 100%;">#}
+{#                                    <div style="display: inline-block; vertical-align: top; margin-right: 20px; max-width: 400px; min-width: 150px;">#}
+{#                                    <div style="display: block; float: left; min-width: 200px; width: 50%; vertical-align: top;">#}
+                                        <p style="margin-top: 11px; font-weight: bold;"><span class='smallcapitals'>QUAST</span> evaluates genome assemblies by computing various metrics</p>
+                                        <ul class="list">
+                                            <li><span class='define' key='N50'><span class='smallcapitals'>N</span>50</span>, length of the shortest contig from all that cover 50% of all assembly</li>
+                                            <li><span class='define' key='NG50'><span class='smallcapitals'>NG</span>50</span>, where the reference genome is being covered</li>
+                                            <li><span class='define' key='NA50'><span class='smallcapitals'>NA</span>50</span> and <span class='define' key='NGA50'><span class='smallcapitals'>NGA</span>50</span>, where aligned blocks instead of contigs are taken</li>
+                                            <li>misassemblies, misassembled and unaligned contigs or contigs bases</li>
+                                            <li><span class='define' key='Genes covered'>genes</span> and <span class='define' key='Operons covered'>operons</span> covered</li>
+                                            <li>and other metrics</li>
+                                        </ul>
+                                    </div>
+{#                                </td>#}
+{##}
+                                    <div class="span6" style="padding-right: 10px;">
+{#                                <td style="vertical-align: top; padding-right: 30px;">#}
+{#                                    <div style="display: block;">#}
+{#                                    <div style="display: inline-block; min-width: 150px;">#}
+                                        <p style="font-weight: bold;">Builds convenient plots for different metrics</p>
+                                        <ul class="list">
+                                            <li>cumulative contigs length</li>
+                                            <li>all kinds of N-metrics</li>
+                                            <li>genes and operons covered</li>
+                                            <li><span class='smallcapitals'>GC</span> content</li>
+                                        </ul>
+                                    </div>
+                                    <div style="clear: both;"></div>
+                                </div>
+{#                                </td>#}
+{#                            </tr>#}
+{#                        </table>#}
+                    </div>
+                </td>
+
+                <td class='layout-table-td layout-table-snd-td' style="background-color: #f5f5ff; margin: -3px;">
+                    <div style="background-color: #f5f5ff; margin-left: -53px; padding-left: 53px; margin-top: -3px; padding-top: 3px;">
+                    <div style='max-width: 300px; margin-top: 0px;'>
+{#        <div style="float: left; max-width: 300px; margin-top: -10px">#}
+                        <p>
+                            <a href="https://sourceforge.net/projects/quast/files/" class='btn btn-primary btn-large' style='text-align: left;'>Download source code</a>
+                        </p>
+                        <p>
+                            For installation details and usage instructions,
+                            please read <a href="https://sourceforge.net/p/quast/wiki/Manual%201.2/">the manual</a>.<br>
+                        </p>
+                        <p style="margin-top: 30px;"><i>
+                            We will be thankful if you help us make <span class='smallcapitals'>QUAST</span> better by sending your comments, bug reports, and suggestions
+                            to&nbsp;<a href="mailto:quast.support@bioinf.spbau.ru">quast.support@bioinf.spbau.ru</a>.
+                        </i></p>
+                    </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div style="clear: both;"></div>
+
+    <div style="height: 30px;">
+    </div>
+
+{#    <p style="">You can check out a sample report:</p>#}
+{% endblock %}
+
+
+

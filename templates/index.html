@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "report.html" %}
 
 {% block title %}About QUAST{% endblock %}
 
@@ -6,7 +6,9 @@
 
 {% block brand-link-class %}disabled{% endblock %}
 
-{% block content %}
+{% block extra_content %}
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap-responsive.min.css"/>
+
     <style>
         a.btn:visited {
             color: white;
@@ -17,58 +19,100 @@
         a.btn:active {
             color: white;
         }
+        #header {
+            display: none;
+        }
     </style>
     
-    <div>
-        <div>
+    <div style="">
+        <div style="width: 100%;">
             <h1 style='letter-spacing: .10em; margin-right: -.10em;'>QUAST</h1>
         </div>
 
-        <table class='layout-table'>
-            <tr>
-                <td class='layout-table-td layout-table-fst-td'>
-                    <div style='max-width: 450px;'>
-                        <div style='margin-top: -17px;'>
-                            <p><b>QUality ASsesment Tool for genome assemblies</b><br>
-                            by <a href="http://bioinf.spbau.ru/en">Algorithmic Biology Lab</a></p>
-                        </div>
+        <div style='margin-top: -7px; width: 100%;'>
+            <p><b>QUality ASsesment Tool for genome assemblies</b>
+                by <a href="http://bioinf.spbau.ru/en">Algorithmic Biology Lab</a></p>
+        </div>
 
-                        <p style="margin-top: 27px;"><span class='smallcapitals'>QUAST</span> evaluates genome assemblies by computing various metrics:
-                        <ul class="mdash">
-                            <li><span class='define' key='N50'><span class='smallcapitals'>N</span>50</span>, length of the shortest contig from all that cover 50% of all assembly,</li>
-                            <li><span class='define' key='NG50'><span class='smallcapitals'>NG</span>50</span>, where the reference genome is being covered,</li>
-                            <li><span class='define' key='NA50'><span class='smallcapitals'>NA</span>50</span> and <span class='define' key='NGA50'><span class='smallcapitals'>NGA</span>50</span>, where aligned blocks instead of contigs are taken,</li>
-                            <li>misassemblies, misassembled and unaligned contigs or contigs bases,</li>
-                            <li><span class='define' key='Genes covered'>genes</span> and <span class='define' key='Operons covered'>operons</span> covered,</li>
-                            <li>and other metrics.</li>
-                        </ul>
-                        <p>Builds convenient plots for different metrics:</p>
-                        <ul class="mdash">
-                            <li>cumulative contigs length,</li>
-                            <li>all kinds of N-metrics,</li>
-                            <li>genes and operons covered,</li>
-                            <li><span class='smallcapitals'>GC</span> content.</li>
-                        </ul>
-                        <p style="">You can check out <a href='/example/'>a sample report</a>.</p>
+        <div style="height: 20px; width: 100%;">
+        </div>
+
+        <div style="background-color: #f5f5ff; width: 100%; margin-left: -203px; padding-left: 200px;">
+        <table >
+            <tr>
+                <td style="vertical-align: top; padding-right: 20px;">
+                    <div style=''>
+                        <div class='row-fluid'>
+                            <div class="span6" style="padding-right: 10px;">
+                                <p style="margin-top: 11px; font-weight: bold;"><span class='smallcapitals'>QUAST</span> evaluates genome assemblies by computing various metrics</p>
+                                <ul class="list">
+                                    <li><span class='define' key='N50'><span class='smallcapitals'>N</span>50</span>, length of the shortest contig from all that cover 50% of all assembly</li>
+                                    <li><span class='define' key='NG50'><span class='smallcapitals'>NG</span>50</span>, where the reference genome is being covered</li>
+                                    <li><span class='define' key='NA50'><span class='smallcapitals'>NA</span>50</span> and <span class='define' key='NGA50'><span class='smallcapitals'>NGA</span>50</span>, where aligned blocks instead of contigs are taken</li>
+                                    <li>misassemblies, misassembled and unaligned contigs or contigs bases</li>
+                                    <li><span class='define' key='Genes covered'>genes</span> and <span class='define' key='Operons covered'>operons</span> covered</li>
+                                    <li>and other metrics</li>
+                                </ul>
+                            </div>
+                            <div class="span6" style="padding-right: 10px;">
+                                <p style="font-weight: bold;">Builds convenient plots for different metrics</p>
+                                <ul class="list">
+                                    <li>cumulative contigs length</li>
+                                    <li>all kinds of N-metrics</li>
+                                    <li>genes and operons covered</li>
+                                    <li><span class='smallcapitals'>GC</span> content</li>
+                                </ul>
+                            </div>
+                            <div style="clear: both;"></div>
+                        </div>
                     </div>
                 </td>
-                <td class='layout-table-td layout-table-snd-td'>
-                    <div style='max-width: 300px; margin-top: -15px;'>
-{#        <div style="float: left; max-width: 300px; margin-top: -10px">#}
-                        <p>
-                            <a href="https://sourceforge.net/projects/quast/files/" class='btn btn-primary btn-large' style='text-align: left;'>Download source code</a>
-                        </p>
-                        <p>
-                            For installation details and usage instructions,
-                            please read <a href="https://sourceforge.net/p/quast/wiki/Manual%201.2/">the manual</a>.<br>
-                        </p>
-                        <p style="margin-top: 30px;"><i>
-                            We will be thankful if you help us make <span class='smallcapitals'>QUAST</span> better by sending your comments, bug reports, and suggestions
-                            to&nbsp;<a href="mailto:quast.support@bioinf.spbau.ru">quast.support@bioinf.spbau.ru</a>.
-                        </i></p>
+
+                <td style="vertical-align: top;">
+                    <div class="row-fluid">
+                        <div class="span12" style='max-width: 300px; margin-top: 0px; margin-bottom: 30px;'>
+                {#        <div style="float: left; max-width: 300px; margin-top: -10px">#}
+                            <p>
+                                <a href="https://sourceforge.net/projects/quast/files/" class='btn btn-primary btn-large' style='text-align: left;'>Download source code</a>
+                            </p>
+                            <p>
+                                For installation details and usage instructions,
+                                please read <a href="https://sourceforge.net/p/quast/wiki/Manual%201.2/">the manual</a>.<br>
+                            </p>
+                            <p style="margin-top: 30px;"><i>
+                                We will be thankful if you help us make <span class='smallcapitals'>QUAST</span> better by sending your comments, bug reports, and suggestions
+                                to&nbsp;<a href="mailto:quast.support@bioinf.spbau.ru">quast.support@bioinf.spbau.ru</a>.
+                            </i></p>
+                        </div>
+
+{#                        <div class='span6' style="max-width: 300px; padding-left: 40px; padding-right: 30px;">#}
+{#                            <p><b>7 Oct 2012</b><br> <span style="margin-left: -0.4em;">”</span>QUAST: Quality Assessment for Genome Assemblies” paper was submitted to <a href="http://bioinformatics.oxfordjournals.org/">Bioinformatics</a>.</p>#}
+{#                        </div>#}
                     </div>
                 </td>
             </tr>
         </table>
+        </div>
     </div>
+
+    <div style="clear: both;"></div>
+
+    <div style="height: 30px;">
+    </div>
+
+    <div>
+        <p>
+            <a style="font-size: 2em;" href="evaluate">Quality Assessment</a>
+        </p>
+        <br>
+        <p>
+            <b>Report Example</b><br>
+            Comparison of four different assemblies of E. coli.
+        </p>
+    </div>
+
+{#    <p style="">You can check out a sample report:</p>#}
 {% endblock %}
+
+
+

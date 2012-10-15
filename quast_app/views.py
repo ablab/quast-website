@@ -24,7 +24,10 @@ def add_template_args_by_defualt(new_args):
 
 
 def index(request):
-    return render_to_response('index.html', add_template_args_by_defualt({}))
+    example_dirpath = os.path.join(settings.EXAMPLE_DIRPATH)
+    return response_with_report('index.html',
+                                example_dirpath,
+                                'E.coli',)
 
 
 def manual(request):
@@ -38,9 +41,9 @@ def license(request):
 
 
 def example(request):
-    results_dirpath = os.path.join(settings.EXAMPLE_DIRPATH)
+    example_dirpath = os.path.join(settings.EXAMPLE_DIRPATH)
     response = response_with_report('example-report.html',
-                                    results_dirpath,
+                                    example_dirpath,
                                     'E.coli',)
     return response
 
@@ -431,7 +434,9 @@ def response_with_report(template, results_dirpath, header):
 
 
 def ecoli(request):
-    return response_with_report('ecoli.html', os.path.join(settings.ECOLI_DIRPATH), 'Ecoli')
+    return response_with_report('ecoli.html',
+                                os.path.join(settings.ECOLI_DIRPATH),
+                                'E.coli')
 
 
 #static_path = 'app/static/'

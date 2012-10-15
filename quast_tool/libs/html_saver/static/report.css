@@ -13,11 +13,11 @@
     padding-right: 80px;
 }
 .plot-wrapper#cumulative-plot-div {
-    margin-bottom: 5.5em;
-    padding-right: 0;
+    /*margin-bottom: 5.5em;*/
+    /*padding-right: 0;*/
 }
 .plot-wrapper:last-child {
-    margin-bottom: 40px;
+    /*margin-bottom: 0px;*/
 }
 
 .plot-header {
@@ -48,15 +48,13 @@
 }
 
 #plot-placeholder {
-    width: 900px;
-    height: 500px;
+    width: 800px;
+    height: 600px;
     margin-left: -125px;
     margin-right: 20px;
     float: left;
 }
-#all-switches {
-    width: 780px;
-}
+
 /*.cumulative-plot-placeholder {*/
     /*width: 957px;*/
 /*}*/
@@ -70,6 +68,8 @@
     margin-left: 0px;
     min-width: 726px;
     margin-bottom: 1em;
+
+    float: left;
 }
 #report td {
     padding: 2px 1em 0 0;
@@ -128,3 +128,5 @@
 #report tr:first-child td {
     border-bottom: 1px solid #bbb;
 }
+
+

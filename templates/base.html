@@ -20,6 +20,8 @@
 <style type="text/css">
     .layout-table {
         width: 100%;
+        margin-left: -3px;
+        margin-top: -3px;
 {#        border: 1px solid green;#}
 {#        min-width: 500px;#}
     }
@@ -47,7 +49,8 @@
     .content {
         margin-left: 100px;
         padding-top: 20px;
-        margin-bottom: 100px;
+        margin-bottom: 80px;
+        padding-bottom: 50px;
 {#        padding-right: 20px;#}
     }
     .menu-table {
@@ -133,12 +136,12 @@
 
     /* Footer */
     .footer {
-        margin-top: 75px;
         margin-bottom: 15px;
         margin-left: 98px;
         display: none;  /* become visible by script when page loaded */
     }
     .bottom-line {
+        margin-top: 30px;
         margin-bottom: 15px;
         margin-right: 73px;
     {#        margin: 100px 80px 15px 0;#}
@@ -195,7 +198,7 @@
     function resizeContent() {
         var h = $(window).height();
         var w = $(window).width();
-        $(".content").css('min-height', (h-200));
+        $(".content").css('min-height', (h-270));
         $(".footer").css('display', 'block');
     }
 </script>
@@ -253,6 +256,8 @@
 {#            <span class="admin_icon">&nbsp;</span>#}
 {#        </a>#}
 {#    </div>#}
+
+
 
     <div class='footer'>
         <table class='layout-table'>
