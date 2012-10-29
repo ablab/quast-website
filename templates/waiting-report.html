@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 
+{% block logo_class %}dark_bg_link{% endblock %}
+
 {% block content %}
+    <br>
+    <br>
+
     {% if state == 'PENDING' %}
         <span class="state_pending">Task is being evaluated.</span>
     {% elif state == 'FAILURE' %}
