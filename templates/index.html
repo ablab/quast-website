@@ -495,7 +495,7 @@
                                     {% for quast_session in quast_sessions %}
 {#                                    <tr class='highlighted_tr'>#}
 
-                                    <tr{% if highlight_last and forloop.counter == 1 %} class='highlighted_tr'{% endif %}>
+                                    <tr{% if highlight_last and forloop.counter == 1 %} class='highlighted_tr' style="display: none;"{% endif %}>
 {#                                    <tr>#}
                                         <td>
                                             {% if quast_session.state != 'FAILURE' %}
