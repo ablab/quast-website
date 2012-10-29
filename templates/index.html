@@ -90,6 +90,14 @@
                 }
             });
         });
+{##}
+{#        function set_selected() {#}
+{#            $('#id_created_or_selected').prop('value', 'selected');#}
+{#        }#}
+{##}
+{#        function set_created() {#}
+{#            $('#id_created_or_selected').prop('value', 'created');#}
+{#        }#}
 
 {#        $('#another-data-set-input').click(checkAnotherDataSet);#}
 
@@ -531,7 +539,7 @@
         <script type="text/javascript">
             $(".chzn-select").chosen();
             $(".chzn-select-deselect").chosen({allow_single_deselect:true});
-            set_selected();
+{#            set_selected();#}
         </script>
 
         <br><br><br>
