@@ -47,7 +47,7 @@ function buildReport() {
         } else {
             $(plotPlaceholder).removeClass('cumulative-plot-placeholder');
             if (toRemoveRefLabel) {
-                var el = $('#reference-label')
+                var el = $('#reference-label');
                 el.remove();
                 toRemoveRefLabel = false;
             }
@@ -79,7 +79,7 @@ function buildReport() {
     try { referenceLength = JSON.parse($('#reference-length-json').html()).reflen; } catch (e) { referenceLength = null; }
     try { totalReport = JSON.parse($('#total-report-json').html()); } catch (e) { totalReport = null; }
     if (totalReport) {
-        document.title += (totalReport.date);
+//        document.title += (totalReport.date);
         $('#subheader').html(totalReport.date + '.');
         $('#mincontig').append('Contigs of length ≥ ' + totalReport.minContig + ' bp are used.');
         buildTotalReport(totalReport.assembliesNames, totalReport.report, glossary);
@@ -184,5 +184,6 @@ function buildReport() {
 
     gcInfos = null;
 
+    return 1;
 }
 

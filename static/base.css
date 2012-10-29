@@ -1,0 +1,191 @@
+body {
+    min-width: 800px;
+    /*border: 1px solid green;*/
+}
+
+.layout-table {
+    width: 99%;
+    margin-left: -3px;
+    margin-top: -3px;
+    /*border: 1px solid green;*/
+/*{#        min-width: 500px;#}*/
+}
+.layout-table td.layout-table-td {
+/*{#        margin-right: 20px;#}*/
+    vertical-align: top;
+    /*border: 1px solid blue;*/
+}
+.layout-table td.layout-table-fst-td {
+    min-width: 400px;
+    width: 60%;
+    padding-right: 50px;
+}
+.layout-table td.layout-table-snd-td {
+    min-width: 200px;
+}
+.layout-table td.layout-table-trd-td {
+}
+.top-panel {
+    background-color: #444;
+    color: white;
+    min-width: 650px;
+    padding: 10px 10px 10px 150px;
+}
+.top-panel {
+    text-shadow: -1px -1px 0px #111;
+}
+.content {
+    margin-left: 150px;
+    /*padding-top: 20px;*/
+    margin-bottom: 0px;
+    padding-bottom: 50px;
+/*{#        padding-right: 20px;#}*/
+}
+.menu-table {
+    margin: 0 0 0 136px;
+    padding: 1em 20px 1em 0;
+}
+.menu-table > tr > td:first-child {
+/*{#        margin-left: -0.8em;#}*/
+}
+.menu-table a {
+    padding-left: 1em;
+    padding-right: 1em;
+    text-decoration: none;
+    border: 0px;
+}
+.menu-table a span {
+    font-size: 1em;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 1px solid;
+    border-color: #AAA;
+}
+.menu-table a:hover {
+    color: #DDDDDD;
+    text-decoration: none;
+}
+.menu-table a:hover span {
+    border-color: #CCC;
+}
+
+.active, .active:hover, .active:visited {
+    pointer-events: none;
+    cursor: text;
+    color: white;
+    border: 0px;
+}
+
+/*{#    .menu {#}*/
+/*{#        margin: 0 0 0 100px;#}*/
+/*{#        padding: 1em 20px 2.3em 0;#}*/
+/*{#        list-style-type: none;#}*/
+/*{#        min-width: 800px;#}*/
+/*{#    }#}*/
+/*{#    ul.menu > li:first-child {#}*/
+/*{#        margin-left: -0.8em;#}*/
+/*{#    }#}*/
+/*{#    ul.menu a {#}*/
+/*{#        float: left;#}*/
+/*{#        display: inline-block;#}*/
+/*{#        white-space: nowrap;#}*/
+/*{#        padding-left: 1em;#}*/
+/*{#        padding-right: 1em;#}*/
+/*{#        text-decoration: none;#}*/
+/*{#        border: 0px;#}*/
+/*{#    }#}*/
+/*{#    ul.menu a span {#}*/
+/*{#        font-size: 1em;#}*/
+/*{#        color: white;#}*/
+/*{#        letter-spacing: 2px;#}*/
+/*{#        text-transform: uppercase;#}*/
+/*{#        border-bottom: 1px solid;#}*/
+/*{#        border-color: #AAA;#}*/
+/*{#    }#}*/
+/*{#    ul.menu a:hover {#}*/
+/*{#        color: #DDDDDD;#}*/
+/*{#        text-decoration: none;#}*/
+/*{#    }#}*/
+/*{#    ul.menu a:hover span {#}*/
+/*{#        border-color: #CCC;#}*/
+/*{#    }#}*/
+/*{#    ul.menu li.active a {#}*/
+/*{#        pointer-events: none;#}*/
+/*{#        cursor: default;#}*/
+/*{#    }#}*/
+/*{#    ul.menu li.active a span {#}*/
+/*{#        text-decoration: none;#}*/
+/*{#        color: #AAA;#}*/
+/*{#        border: 0px;#}*/
+/*{#    }#}*/
+
+/* Footer */
+.footer {
+    margin-bottom: 15px;
+    margin-left: 150px;
+    display: none;  /* become visible by script when page loaded */
+}
+.bottom-line {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 73px;
+/*{#        margin: 100px 80px 15px 0;#}*/
+    border-bottom: 1px #D0D0D0 solid;
+}
+a.icon_link {
+    border: 0px solid black;
+    display: block;
+    opacity: 0.5;
+}
+a.icon_link:hover {
+    opacity: 1;
+}
+.admin_icon {
+    background: url("/static/pics/small_lock_icon.gif") no-repeat;
+    height: 16px;
+    width: 10px;
+    display: block;
+/*{#        margin-right: 17px;#}*/
+    bottom: 0px;
+    float: right;
+}
+.copyright {
+    opacity: 0.5;
+    float: left;
+}
+.email a {
+    opacity: 0.5;
+}
+.email a {
+    color: black;
+    border-color: #888;
+}
+.email a:hover, .email:hover a {
+    opacity: 1;
+    color: black;
+    border-color: #000;
+}
+/*********/
+
+.hs {
+    /* Полупробел для
+  разделения разрядов чисел:
+  10<span class="hs"></span>000 */
+    margin-left: .2em;
+}
+
+.rhs {
+    /* Полупробел на случай,
+  если реальный пробел важен,
+  например между ценой и валютой:
+  1<span class="rhs">&nbsp;</span>$ */
+    font-size: 50%;
+    line-height: 1;
+}
+
+/*9490<span class="rhs"> </span>€<br/>*/
+/*12<span class="hs"></span>650<span class="rhs"> </span>$<br/>*/
+/*379<span class="hs"></span>000<span*/
+    /*class="rhs"> </span><span class="b-rub">Р</span><br/>*/
+/*100<span class="hs"></span>500<span class="rhs"> </span>+*/

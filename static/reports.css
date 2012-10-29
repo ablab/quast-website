@@ -1,0 +1,40 @@
+
+.table_reports {
+    margin-left: -3px;
+    white-space: nowrap;
+}
+.table_reports tr {
+    /*line-height: 2em;*/
+}
+.table_reports td {
+    padding-right: 10px;
+}
+.state_pending {
+    background-color:#FFF9B5;
+    padding: 0px 3px;
+    margin-left: -3px;
+}
+.state_failure {
+    color: red;
+}
+
+.highlighted_tr {
+    display: hidden;
+}
+
+.highlighted_tr td:first-child+td {
+    /*background-color: #2f5b96;*/
+    /*color: white;*/
+}
+.highlighted_tr td:first-child+td span {
+    /*background-color: #2f5b96;*/
+    /*padding: 1px 1px 1px 5px;*/
+    /*margin-left: -5px;*/
+}
+.highlighted_tr td:first-child {
+    /*background-color: #2f5b96;*/
+    /*color: white;*/
+}
+.highlighted_tr td:first-child a {
+    /*color: white;*/
+}

@@ -27,6 +27,16 @@ a:hover {
     border-color: #ffcccc;
     border-color: rgba(255, 0, 0, 0.2); /* #55b2e0; */ /*#005580;*/
 }
+a.dark_bg_link {
+    color: white; /* #0088cc; */
+    border-bottom: 1px solid #cccccc;
+    border-color: #cccccc;
+}
+a.dark_bg_link:hover {
+    color: white; /* #0088cc; */
+    border-bottom: 1px solid white;
+}
+
 
 .dotted-link {
     cursor: pointer;
@@ -43,6 +53,7 @@ a:hover {
     border-color: #ffcccc;
     border-color: rgba(255, 0, 0, 0.2);
 }
+
 .selected-switch {
     background-color: #fafad2;
 }

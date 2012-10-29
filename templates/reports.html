@@ -1,42 +1,25 @@
 {% extends "base.html" %}
 
-{% block title %}Latest reports{% endblock %}
+{% block title %}Reports{% endblock %}
+
+{% block logo_class %}dark_bg_link{% endblock %}
 
 {% block reports-menu-li-class %}active{% endblock %}
 
 {% block extra_head %}
+    <link rel="stylesheet" href="/static/reports.css">
 {% endblock %}
 
 {% block content %}
-    <style type="text/css">
-    .table_reports {
-        margin-left: -3px;
-        white-space: nowrap;
-    }
-    .table_reports tr {
-        /*line-height: 2em;*/
-    }
-    .table_reports td {
-        padding-right: 10px;
-    }
-    .state_pending {
-        background-color:#FFF9B5;
-        padding: 0px 3px;
-        margin-left: -3px;
-    }
-    .state_failure {
-        color: red;
-    }
-    </style>
-
-
-    <h1>Latest Reports</h1>
+    <br>
+    <h1>Reports</h1>
     <table class='table_reports'>
         {% if not quast_sessions %}
-            Here you will find your <a href="/evaluate/">quality assessment</a> reports. You can check out <a href='/example/'>an example</a>.
+            Here you will find your <a href="/">quality assessment</a> reports. You can check out <a href='/#example'>an example</a>.
         {% endif %}
         {% for quast_session in quast_sessions %}
-            <tr>
+{#            <tr class='highlighted_tr'>#}
+            <tr{% if highlight_last and forloop.counter == 1 %} class='highlighted_tr'{% endif %}>
                 <td>
 {#                    {% if quast_session.state == 'SUCCESS' %}#}
                     <a href="{{ quast_session.report_link }}">{{ quast_session.date|date:'d M Y, H:i:s' }}</a>
@@ -51,7 +34,7 @@
                     {% if quast_session.state == 'PENDING' %}
                         <span class="state_pending">task is being evaluated</span>
                     {% elif quast_session.state == 'FAILURE' %}
-                        <span class="state_failure">task caused some error, try to restart with another data</span>
+                        <span class="state_failure">evaluation failed</span>
                     {% endif %}
 {#                    state = 'task is in queue and waiting to be evaluated'#}
                 </td>

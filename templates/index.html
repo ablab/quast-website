@@ -1,74 +1,295 @@
 {% extends "report.html" %}
 
-{% block title %}About QUAST{% endblock %}
+{% block title %}QUAST{% endblock %}
 
 {% block index-menu-li-class %}active{% endblock %}
 
+{% block logo_class %}active{% endblock %}
+
 {% block brand-link-class %}disabled{% endblock %}
 
+{% block extra_extra_head %}
+<script src="/static/ajaxuploader/fileuploader.js"></script>
+<link href="/static/ajaxuploader/fileuploader.css" media="screen" rel="stylesheet" type="text/css"/>
+
+<link rel="stylesheet" href="/static/chosen/chosen.css" />
+<link rel="stylesheet" href="/static/evaluate.css" />
+<link rel="stylesheet" href="/static/bootstrap/css/bootstrap-responsive.min.css"/>
+<link rel="stylesheet" href="/static/index.css"/>
+<link rel="stylesheet" href="/static/reports.css"/>
+
+<script type="text/javascript">
+    $(function() {
+        {% if highlight_last %}
+            $('.highlighted_tr').hide().fadeIn('slow');
+        {% endif %}
+
+        $('.full-report').css('display', 'none');
+
+{#        function scroll(event) {#}
+{#            $('.full-report').fadeToggle('fast');#}
+{#            event.preventDefault();#}
+{#            $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);#}
+{#        }#}
+
+        $('#report_example_anchor').click(function(event){
+            var fullReport = $('.full-report');
+            var wasHidden = (fullReport.css('display') == 'none');
+            if (wasHidden) {
+                fullReport.stop().fadeToggle('fast');
+            }
+            event.preventDefault();
+            $('html,body').animate({scrollTop:$(this.hash).offset().top + 20}, 500);
+        });
+
+        $("#report_example_toggle").click(function(event) {
+            var fullReport = $('.full-report');
+            var wasHidden = (fullReport.css('display') == 'none');
+            fullReport.stop().fadeToggle('fast');
+            if (wasHidden) {
+                event.preventDefault();
+                $('html,body').animate({scrollTop:$(this.hash).offset().top + 20}, 500);
+            }
+        });
+    });
+
+    $(function() {
+        $("#add-dataset-toggle-link").mouseenter(function() {
+            $(this).find('.dotted-link').css('color', '#b33');
+            $(this).find('.dotted-link').css('border-bottom', '1px dashed #ffcccc');
+            $(this).find('.dotted-link').css('border-color', '1px dashed #ffcccc');
+            $(this).find('.dotted-link').css('border-color', 'rgba(255, 0, 0, 0.2)');
+        }).mouseleave(function() {
+            $(this).find('.dotted-link').css('color', '#0c4f72');
+            $(this).find('.dotted-link').css('border-bottom', '1px dashed #487b95');
+            $(this).find('.dotted-link').css('border-color', '#487b95');
+            $(this).find('.dotted-link').css('border-color', 'rgba(12, 79, 114, 0.2)');
+        });
+
+{#        $("#id_is_created")[0].onclick = null;#}
+{#        $('#id_is_created').click(function(event) {#}
+{#            event.preventDefault();#}
+{#            var checkBox = $('#id_is_created');#}
+{#            checkBox.prop('checked', !checkBox.prop('checked'));#}
+{#            event.stopPropagation();#}
+{#        });#}
+
+        $('#add-dataset-toggle-link').click(function(event) {
+            event.preventDefault();
+
+            var checkBox = $('#id_is_created');
+            var addDataset = $('#add-dataset');
+
+            addDataset.stop().slideToggle('fast', function() {
+                $('#id_name_created').focus();
+
+                if (addDataset.is(':visible')) {
+                    checkBox.prop('checked', true);
+                } else {
+                    checkBox.prop('checked', false);
+                }
+            });
+        });
+
+{#        $('#another-data-set-input').click(checkAnotherDataSet);#}
+
+{#        function checkAnotherDataSet() {#}
+{#            var nameSelectInput = $('#id_created');#}
+{#            var idCreatedOrSelected = $('id_created_or_selected');#}
+
+{#            var addDataSet = $('#add-dataset');#}
+{#            if (addDataSet.is(':visible')) { //TODO: CHECK IT!!!!! Maybe needed to check display:none#}
+            {#                nameSelectInput.prop('disabled', false);#}
+{#                idCreatedOrSelected.prop('value', 'selected');#}
+{#            } else {#}
+            {#                nameSelectInput.prop('disabled', true);#}
+{#                idCreatedOrSelected.prop('value', 'created');#}
+{#            }#}
+{#        }#}
+
+    });
+
+    $(function() {
+        var uploaders = [];
+
+        var uploaders = [{
+            action: '{% url contigs_ajax_upload %}',
+            removeLink: '{% url contigs_ajax_remove %}',
+            initializeUploadsLink: '{% url contigs_ajax_initialize_uploads %}',
+            elementId: '#contigs-uploader',
+            multiple: true,
+            btnText: 'Add files',
+            areaText: 'drop files here',
+            areaClass: 'upload-drop-area',
+            uploaded: '{% for fname in contigs_fnames %}<li>{{ fname }} &nbsp;' +
+                // '<a class="dotted-link" style="font-size: 0.8em;" href="#">Remove</a>' +
+                '</li>{% endfor %}',
+        },];
+
+        for (var i = 0; i < uploaders.length; i++) {
+            uploaders.push(new qq.FileUploader({
+                action: uploaders[i].action,
+                removeLink: uploaders[i].removeLink,
+                initializeUploadsLink: uploaders[i].initializeUploadsLink,
+                element: $(uploaders[i].elementId)[0],
+                multiple: uploaders[i].multiple,
+                onComplete: function(id, fileName, responseJSON) {
+                    if (responseJSON.success) {
+                        $('#evaluate-button').prop('disabled', false);
+                        $('#evaluate-button').removeClass('disabled');
+                        $('#area-text').css('display', 'none');
+                    }
+                },
+                onAllComplete: function(uploads) {
+                    if (uploads.length > 0) {
+                        $('#evaluate-button').prop('disabled', false);
+                        $('#evaluate-button').removeClass('disabled');
+                        $('#area-text').css('display', 'none');
+                    }
+                    // uploads is an array of maps
+                    // the maps look like this: {file: FileObject, response: JSONServerResponse}
+                },
+                onRemove: function() {
+                    var number_of_files = -1;
+                    $('.qq-upload-file').each(function(index) {
+                        number_of_files++;
+                    });
+
+                    if (number_of_files <= 0) {
+                        $('#evaluate-button').prop('disabled', true);
+                        $('#evaluate-button').addClass('disabled');
+                        $('#area-text').css('display', 'block');
+                    }
+                },
+                onInitFiles: function(files){
+                    if (!files || files.length == 0) {
+                        $('#evaluate-button').prop('disabled', true);
+                        $('#evaluate-button').addClass('disabled');
+                        $('#area-text').css('display', 'block');
+                    } else {
+                        $('#evaluate-button').prop('disabled', false);
+                        $('#evaluate-button').removeClass('disabled');
+                        $('#area-text').css('display', 'none');
+                    }
+                },
+                params: {
+                    'csrf_token': '{{ csrf_token }}',
+                    'csrf_name': 'csrfmiddlewaretoken',
+                    'csrf_xname': 'X-CSRFToken',
+                },
+                messages: {
+                },
+                template:
+                        '<div class="qq-uploader">' +
+                            '<button class="btn">' + uploaders[i].btnText + '</button>' +
+                            '<div>' +
+                                '<div class="' + uploaders[i].areaClass + '">' +
+                                    '<div class="upload-list-div">' +
+                                        '<ul class="upload-list"></ul>' +
+                                    '</div>' +
+                                    '<div id="area-text" style="margin-top: 55px; margin-left: 90px; opacity: 0.5;">' + uploaders[i].areaText + '</div>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>',
+                fileTemplate:
+                        '<li>' +
+                        '<span class="qq-upload-file"></span>' +
+                        '<span class="qq-upload-spinner"></span>' +
+                        '<span class="qq-upload-size"></span>' +
+                        '<a class="dotted-link qq-upload-cancel" href="#">Cancel</a>' +
+{#                        '<a class="dotted-link qq-upload-remove" href="#" style="opacity: 0.5;"><img src="/static/pics/delete_icon.png" height=7></a>' +#}
+                                '<a class="dotted-link qq-upload-remove" href="#">remove</a>' +
+                        '<span class="qq-upload-failed-text">Failed</span>' +
+                     // '<a class="dotted-link" style="font-size: 0.8em;" href="#">Remove</a>' +
+                        '</li>',
+                classes: {
+                    // used to get elements from templates
+                    button: 'btn',
+                    drop: uploaders[i].areaClass,
+                    dropActive: 'upload-drop-area-active',
+                    list: 'upload-list',
+
+                    file: 'qq-upload-file',
+                    spinner: 'qq-upload-spinner',
+                    size: 'qq-upload-size',
+                    cancel: 'qq-upload-cancel',
+                    remove: 'qq-upload-remove',
+
+                    // added to list item when upload completes
+                    // used in css to hide progress spinner
+                    success: 'qq-upload-success',
+                    fail: 'qq-upload-fail'
+                }
+            }));
+        }
+    });
+
+    //        $('#add-dataset-wrapper').click(
+    //            $('#add-dataset-toggle-link').
+    //        );
+
+
+{#    function showHideAddDataset() {#}
+    {#            $('#add-dataset-toggle-link>a').#}
+{#        if ($('#add-dataset').is(':visible')) {#}
+{#            $('#add-dataset').hide('fast');#}
+{#            $('#dataset-name-select-input').prop('disabled', false);#}
+{#            set_selected();#}
+{#        } else {#}
+{#            $('#add-dataset').show('fast');#}
+{#            $('#dataset-name-select-input').prop('disabled', true);#}
+{#            set_created();#}
+{#        }#}
+{#    }#}
+
+</script>
+{% endblock %}
+
 {% block extra_content %}
-    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap-responsive.min.css"/>
-
-    <style>
-        a.btn:visited {
-            color: white;
-        }
-        a.btn:hover {
-            color: white;
-        }
-        a.btn:active {
-            color: white;
-        }
-        #header {
-            display: none;
-        }
-    </style>
-    
-    <div style="">
-        <div style="width: 100%;">
-            <h1 style='letter-spacing: .10em; margin-right: -.10em;'>QUAST</h1>
-        </div>
-
-        <div style='margin-top: -7px; width: 100%;'>
-            <p><b>QUality ASsesment Tool for Genome Assemblies</b>
-                by <a href="http://bioinf.spbau.ru/en">Algorithmic Biology Lab</a></p>
-        </div>
-
-        <div style="height: 20px; width: 100%;">
-        </div>
-
-        <div style="background-color: #f0f0ff; width: 100%; margin-left: -203px; padding-left: 200px;">
-        <table>
+    <div id="index">
+        <div class="blue-panel">
+        <table class="layout-table">
             <tr>
-                <td style="vertical-align: top; padding-right: 20px;">
+                <td class="layout-table-td layout-table-fst-td" style="vertical-align: top; padding-right: 20px;">
                     <div style=''>
-                        <div class='row-fluid'>
-                            <div class="span6" style="padding-right: 10px;">
-                                <p style="margin-top: 11px; font-weight: bold;"><span class='smallcapitals'>QUAST</span> evaluates genome assemblies by computing various metrics</p>
-                                <ul class="list">
-                                    <li><span class='define' key='N50'><span class='smallcapitals'>N</span>50</span>, length of the shortest contig from all that cover 50% of all assembly</li>
-                                    <li><span class='define' key='NG50'><span class='smallcapitals'>NG</span>50</span>, where the reference genome is being covered</li>
-                                    <li><span class='define' key='NA50'><span class='smallcapitals'>NA</span>50</span> and <span class='define' key='NGA50'><span class='smallcapitals'>NGA</span>50</span>, where aligned blocks instead of contigs are taken</li>
-                                    <li>misassemblies, misassembled and unaligned contigs or contigs bases</li>
-                                    <li><span class='define' key='Genes covered'>genes</span> and <span class='define' key='Operons covered'>operons</span> covered</li>
-                                    <li>and other metrics</li>
-                                </ul>
-                            </div>
-                            <div class="span6" style="padding-right: 10px;">
-                                <p style="font-weight: bold;"><span class='smallcapitals'>QUAST</span> builds convenient plots for different metrics</p>
-                                <ul class="list">
-                                    <li>cumulative contigs length</li>
-                                    <li>all kinds of N-metrics</li>
-                                    <li>genes and operons covered</li>
-                                    <li><span class='smallcapitals'>GC</span> content</li>
-                                </ul>
-                            </div>
+{#                        <div class='row-fluid'>#}
+                        <table>
+                            <tr>
+                            <td style="vertical-align: top; width: 50%; padding-right: 30px;">
+                                <div class="" style="padding-right: 10px;">
+                                    <p style="margin-top: 11px; font-weight: bold;"><span class='smallcapitals'>QUAST</span> evaluates genome assemblies by computing various metrics</p>
+                                    <ul class="list">
+                                        <li><span class='define' key='N50'><span class='smallcapitals'>N</span>50</span>, length of the shortest contig from all that cover 50% of all assembly</li>
+                                        <li><span class='define' key='NG50'><span class='smallcapitals'>NG</span>50</span>, where the reference genome is being covered</li>
+                                        <li><span class='define' key='NA50'><span class='smallcapitals'>NA</span>50</span> and <span class='define' key='NGA50'><span class='smallcapitals'>NGA</span>50</span>, where aligned blocks instead of contigs are taken</li>
+                                        <li>misassemblies, misassembled and unaligned contigs or contigs bases</li>
+                                        <li><span class='define' key='Genes covered'>genes</span> and <span class='define' key='Operons covered'>operons</span> covered</li>
+                                        <li>and other metrics</li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td style="vertical-align: top;">
+                                <div class="" style="padding-right: 10px;">
+                                    <p style="font-weight: bold;">Builds convenient plots for different metrics</p>
+                                    <ul class="list">
+                                        <li>cumulative contigs length</li>
+                                        <li>all kinds of N-metrics</li>
+                                        <li>genes and operons covered</li>
+                                        <li><span class='smallcapitals'>GC</span> content</li>
+                                    </ul>
+                                    <a class="dotted-link" id="report_example_anchor" href="#reportexample">Report example</a>
+                                    <br>
+                                    <br>
+                                </div>
                             <div style="clear: both;"></div>
-                        </div>
+                            </td>
+                            </tr>
+                        </table>
+{#                        </div>#}
                     </div>
                 </td>
 
-                <td style="vertical-align: top;">
+                <td class="layout-table-td layout-table-snd-td" style="vertical-align: top;">
                     <div class="row-fluid">
                         <div class="span12" style='max-width: 300px; margin-top: 0px; margin-bottom: 30px;'>
                 {#        <div style="float: left; max-width: 300px; margin-top: -10px">#}
@@ -100,15 +321,225 @@
     <div style="height: 30px;">
     </div>
 
-    <div>
-        <p>
-            <a style="font-size: 2em;" href="evaluate">Quality Assessment</a>
-        </p>
-        <br>
-        <p>
-            <b>Report Example</b><br>
-            Comparison of four different assemblies of E. coli.
-        </p>
+    <div id="quality_assessment">
+{#        <p>#}
+{#            <a style="font-size: 2em;" href="evaluate">Quality Assessment</a>#}
+{#        </p>#}
+
+        <h2 style='font-size: 1.8em; font-weight: normal;'>Quality Assessment</h2>
+
+        <noscript>
+            <div><br>
+                Unfortunately, <span style="font-weight: bold">JavaScript</span> in your browser <span style="font-weight: bold">is disabled</span> or is not supported.</br>
+                We need JavaScript to process data and build reports.
+            </div>
+        </noscript>
+
+        <table class="layout-table">
+            <tr>
+            <td class="layout-table-td layout-table-fst-td">
+                <div id='form-wrapper'>
+                    <table class='form-layout-table'>
+                        <tr>
+                            <td class='form-layout-td' style="padding-top: 3px;"><h3>Contigs</h3></td>
+
+                            <td class='form-layout-td'>
+                                <div id="contigs-uploader" class="uploader-div" style="margin-bottom: 10px;"></div><div style="clear: both"></div>
+
+                                <label for="id_min_contig">{% comment %}@declare id="id_min_contig"{% endcomment %}
+                                    Skip contigs shorter than {{ dataset_form.min_contig }}<span style='font-size: 8px;'> </span>bp<br>
+                                    {{ dataset_form.min_contig.errors }}
+                                </label>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <form enctype="multipart/form-data" action="/" method="POST">{% csrf_token %}
+                        <table class='form-layout-table'>
+                            <tr>
+                                <td class='form-layout-td' style="padding: 0px;"><h3>Data set</h3></td>
+
+                                <td class='form-layout-td'>{% comment %}@declare id="id_name_selected"{% endcomment %}
+                                    <label for="id_name_selected">
+                                        {{ dataset_form.name_selected }}
+                                    </label>
+                                    <div style="display: none">
+                                        {{ dataset_form.name_selected.errors }}
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class='form-layout-td' style="padding-top: 9px;"></td>
+
+                                <td class='form-layout-td'>
+                                    <div id="add-dataset-toggle-link" style="margin-left: -15px; padding-left: 15px;">
+                                        <div style="margin-left: -14px;">
+                                            <label for="id_is_created">
+                                                <input type="checkbox" class='dotted-link' name="is_created" id="id_is_created"/>
+{#                                                {{ dataset_form.created_or_selected }}#}
+                                                <a class='dotted-link'>Another data set</a>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+
+{#                                    <select name="name_selected" class="chzn-select" id="dataset-select" style="width:350px;" tabindex="2" onchange="datasetSelectOnchange()">#}
+{#                                            {% for dataset in datasets %}#}
+{#                                            <option value="{{ dataset.name }}">{{ dataset.name }}</option>#}
+{#                                            {% endfor %}#}
+{#                                            <option value="custom-dataset">Add dataset...</option>#}
+{#                                        </select>#}
+{#                                        <div style="clear: both"></div>#}
+                        <div id="add-dataset" style="display: none;">
+{#                                                {% comment %}@declare id="id_name_created "{% endcomment %}#}
+{#                                                <label for='id_name_created'>Dataset name#}
+{#                                                {{ dataset_form.name_created }}</label>#}
+{#                                                {% comment %}@declare id="id_reference"{% endcomment %}#}
+{#                                                <label for='id_reference'>Reference<br/>#}
+{#                                                {{ dataset_form.reference }}</label>#}
+{#                                                {% comment %}@declare id="id_genes"{% endcomment %}#}
+{#                                                <label for='id_genes'>Genes<br/>#}
+{#                                                {{ dataset_form.genes }}</label>#}
+{#                                                {% comment %}@declare id="id_operons"{% endcomment %}#}
+{#                                                <label for='id_operons'>Operons<br/>#}
+{#                                                {{ dataset_form.operons }}</label>#}
+                            <table class='form-layout-table'>
+                                <tr>{% comment %}@declare id="id_name_created"{% endcomment %}
+                                    <td class='form-layout-td'><label for='id_name_created'>Title</label></td>
+                                    <td class='form-layout-td'>{{ dataset_form.name_created }}<span style='font-size: 8px;'>&nbsp;</span><br>
+                                        If you fill this field, we will remember this data set with this title
+                                        {{ dataset_form.name_created.errors }}
+                                        <br><br>
+                                    </td>
+                                </tr>
+                                <tr>{% comment %}@declare id="id_reference"{% endcomment %}
+                                    <td class='form-layout-td'><label for='id_reference'>Reference</label></td>
+                                    <td class='form-layout-td'>{{ dataset_form.reference }}
+                                        {{ dataset_form.reference.errors }}
+                                        <br><br>
+                                    </td>
+                                </tr>
+                                <tr>{% comment %}@declare id="id_genes"{% endcomment %}
+                                    <td class='form-layout-td'><label for='id_genes'>Genes</label></td>
+                                    <td class='form-layout-td'>{{ dataset_form.genes }}
+                                        {{ dataset_form.genes.errors }}
+                                        <br><br>
+                                    </td>
+                                </tr>
+                                <tr>{% comment %}@declare id="id_operons"{% endcomment %}
+                                    <td class='form-layout-td'><label for='id_operons'>Operons</label></td>
+                                    <td class='form-layout-td'>{{ dataset_form.operons }}
+                                        {{ dataset_form.operons.errors }}
+                                        <br><br>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <br>
+
+                        <div class="submit-wrapper">
+                            <div id='errors-wrapper' style="display: block">
+                                {{ dataset_form.non_field_errors }}
+                            </div>
+
+                            <div id="evaluate-button-wrapper">
+                                <input id='evaluate-button' class="btn btn-large btn-inverse" type="submit" value="Evaluate">
+
+                                <div style="visibility: {% if highlight_last %}visible{% else %}hidden{% endif %};
+                                            float: right;"
+                                     id="{{ report_id }}">
+                                    <p>
+{#                                        <a href="{{ latest_report_link}}">Report</a>#}
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div style="clear: both"></div>
+                        </div>
+                    </form>
+                </div>
+            </td>
+            <td class="layout-table-td layout-table-snd-td">
+                <div id="latest_reports" style="margin-left: 0px; margin-top: 15px;">
+                    <table class='form-layout-table'>
+                        {% if quast_sessions %}
+                        <tr>
+                            <td class='form-layout-td' style="padding: 0px; padding-right: 0px; vertical-align: top;">
+                                <h3 style="margin-top: 3px; ">Reports&nbsp;&nbsp;</h3>
+                            </td>
+                        {% endif %}
+{#                            <div style="float: left; margin: -12px 25px 0 0;">#}
+{##}
+{#                            </div>#}
+                            <td>
+                                <table style="margin-top: 0px;" class='table_reports'>
+{#                                    <tr>#}
+{#                                        {% if quast_sessions %}#}
+{#                                        <td>#}
+{#                                            <h3 style="margin-top: -40px;">Reports</h3>#}
+{#                                        </td>#}
+{#                                        {% endif %}#}
+{#                                    </tr>#}
+                                    {% for quast_session in quast_sessions %}
+{#                                    <tr class='highlighted_tr'>#}
+
+                                    <tr{% if highlight_last and forloop.counter == 1 %} class='highlighted_tr'{% endif %}>
+{#                                    <tr>#}
+                                        <td>
+                                            {% if quast_session.state != 'FAILURE' %}
+                                            <a href="{{ quast_session.report_link }}">{{ quast_session.date|date:'d M Y, H:i:s' }}</a>
+                                            {% else %}
+                                            {{ quast_session.date|date:'d M Y, H:i:s' }}
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            {% if quast_session.with_dataset %}<span>{{ quast_session.dataset_name }}</span>{% endif %}
+                                        </td>
+                                        <td>
+                                            {% if quast_session.state == 'PENDING' %}
+                                                <span class="state_pending">evaluation in progress</span>
+                                            {% elif quast_session.state == 'FAILURE' %}
+                                                <span class="state_failure">failed</span>
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                    {% if show_more_link %}
+                                        <tr><td></td></tr>
+                                        <tr><td><a href="/reports/">Older reports</a></td></tr>
+                                    {% endif %}
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <div style="clear: both;"></div>
+                </div>
+            </td>
+            </tr>
+        </table>
+
+        <div style="clear: both;"></div>
+
+        <script src="/static/chosen/chosen.jquery.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(".chzn-select").chosen();
+            $(".chzn-select-deselect").chosen({allow_single_deselect:true});
+            set_selected();
+        </script>
+
+        <br><br><br>
+
+         {# anchor #}
+        <span id="reportexample"></span>
+        <h2><a class='dotted-link' id='report_example_toggle' href="#reportexample">Report Example</a></h2>
+        <p class='full-report'>Comparison of 4 different E. coli assemblies with one dataset.</p>
     </div>
 
 {#    <p style="">You can check out a sample report:</p>#}

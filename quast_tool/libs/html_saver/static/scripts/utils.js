@@ -4,20 +4,16 @@ function toPrettyString(num) {
     if (num <= 9999) {
         return num.toString();
     } else {
-        return '<span style="word-spacing: -1px;">' +
-            num.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g,'$1&nbsp;') +
-            '</span>';
+        return num.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g,'$1<span class="hs"></span>');
     }
 }
 
 function toPrettyStringWithDimension(num, dimension) {
     if (num <= 9999) {
-        return '<span style="word-spacing:-1px;">' + num.toString() + '&nbsp;' + dimension + '</span>';
+        return num.toString() + '<span class="rhs">&nbsp;</span>' + dimension;
     } else {
-        return '<span style="word-spacing: -1px;">' +
-            num.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1&nbsp;')
-            + '&nbsp;' + dimension +
-            '</span>';
+        return num.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g,'$1<span class="hs"></span>')
+            + '<span class="rhs">&nbsp;</span>' + dimension;
     }
 }
 

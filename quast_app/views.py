@@ -1,10 +1,11 @@
 import sys
 import datetime
 from celery.app.task import Task
+from django.core.urlresolvers import reverse
 from django.forms import forms
 import os
 import shutil
-from django.http import HttpResponse, HttpResponseNotFound, HttpResponseBadRequest, Http404
+from django.http import HttpResponse, HttpResponseNotFound, HttpResponseBadRequest, Http404, HttpResponseRedirect
 from django.shortcuts import render_to_response, render, redirect
 import tasks
 from upload_backend import ContigsUploadBackend, ReferenceUploadBackend, GenesUploadBackend, OperonsUploadBackend
@@ -23,11 +24,10 @@ def add_template_args_by_defualt(new_args):
     return together
 
 
-def index(request):
-    example_dirpath = os.path.join(settings.EXAMPLE_DIRPATH)
-    return response_with_report('index.html',
-                                example_dirpath,
-                                'E.coli',)
+template_args_by_default = {
+    'glossary': glossary,
+    'google-analytics': settings.GOOGLE_ANALYTICS,
+}
 
 
 def manual(request):
@@ -42,15 +42,18 @@ def license(request):
 
 def example(request):
     example_dirpath = os.path.join(settings.EXAMPLE_DIRPATH)
-    response = response_with_report('example-report.html',
-                                    example_dirpath,
-                                    'E.coli',)
-    return response
-
+    response_dict = get_report_response_dict(example_dirpath, 'E.coli')
+    return render_to_response('example-report.html', response_dict)
 
 
 def benchmarking(request):
-    return render_to_response('benchmarking.html', add_template_args_by_defualt({}))
+    return render_to_response('benchmarking.html', template_args_by_default)
+
+
+def ecoli(request):
+    return render_to_response('ecoli.html',
+          get_report_response_dict(os.path.join(settings.ECOLI_DIRPATH), 'E.coli')
+    )
 
 
 #def report_scripts(request, script_name):
@@ -71,6 +74,143 @@ if not settings.QUAST_DIRPATH in sys.path:
     sys.path.insert(1, settings.QUAST_DIRPATH)
 from libs import qconfig
 
+
+contigs_uploader = AjaxFileUploader(backend=ContigsUploadBackend)
+#reference_uploader = AjaxFileUploader(backend=ReferenceUploadBackend)
+#genes_uploader = AjaxFileUploader(backend=GenesUploadBackend)
+#operons_uploader = AjaxFileUploader(backend=OperonsUploadBackend)
+
+
+state_map = {
+    'PENDING': 'PENDING',
+    'STARTED': 'PENDING',
+    'FAILURE': 'FAILURE',
+    'SUCCESS': 'SUCCESS',
+}
+
+
+def index(request):
+    if not request.session.exists(request.session.session_key):
+        request.session.create()
+
+    user_session_key = request.session.session_key
+    try:
+        user_session = UserSession.objects.get(session_key=user_session_key)
+    except UserSession.DoesNotExist:
+        user_session = create_user_session(user_session_key)
+
+    response_dict = template_args_by_default
+    response_dict['session_key'] = user_session_key
+
+
+    # EVALUATE
+    contigs_fnames = [c_f.fname for c_f in user_session.contigsfile_set.all()]
+
+    if request.method == 'POST':
+        data_set_form = DatasetForm(request.POST)
+        data_set_form.set_user_session(user_session)
+        #        dataset_form.fields['name_selected'].choices = dataset_choices
+        if data_set_form.is_valid():
+            from datetime import datetime
+            now_datetime = datetime.now()
+            now_str = now_datetime.strftime('%d_%b_%Y_%H:%M:%S.%f')
+
+            min_contig = data_set_form.cleaned_data['min_contig']
+            request.session['min_contig'] = min_contig
+            data_set = get_dataset(request, data_set_form, now_str)
+            quast_session = start_quast_session(user_session, data_set, min_contig, now_datetime)
+#            return HttpResponseRedirect(reverse('quast_app.views.index', kwargs={'after_evaluation': True}))
+            request.session['after_evaluation'] = True
+            return redirect(index)
+
+        else:
+            min_contig = request.session.get('min_contig') or qconfig.min_contig
+            request.session['min_contig'] = min_contig
+            data_set_form.set_min_contig(min_contig)
+
+    else:
+        data_set_form = DatasetForm()
+        min_contig = request.session.get('min_contig') or qconfig.min_contig
+        data_set_form.set_min_contig(min_contig)
+
+    response_dict = dict(response_dict.items() + {
+        'csrf_token': get_token(request),
+        'contigs_fnames': contigs_fnames,
+        'dataset_form': data_set_form,
+    }.items())
+
+
+    # REPORTS
+    reports_dict = get_reports_response_dict(
+        user_session,
+        after_evaluation=request.session.get('after_evaluation', False),
+        limit=13)
+    response_dict = dict(response_dict.items() + reports_dict.items())
+    request.session['after_evaluation'] = False
+
+
+    # EXAMPLE
+    example_dirpath = os.path.join(settings.EXAMPLE_DIRPATH)
+    example_dict = get_report_response_dict(example_dirpath, 'E.coli')
+    response_dict = dict(response_dict.items() + example_dict.items())
+
+    return render_to_response(
+        'index.html',
+        response_dict,
+        context_instance = RequestContext(request)
+    )
+
+
+def get_evaluate_response_dict(request, user_session, url):
+    contigs_fnames = [c_f.fname for c_f in user_session.contigsfile_set.all()]
+
+    if request.method == 'POST':
+        data_set_form = DatasetForm(request.POST)
+        data_set_form.set_user_session(user_session)
+        #        dataset_form.fields['name_selected'].choices = dataset_choices
+        if data_set_form.is_valid():
+            from datetime import datetime
+            now_datetime = datetime.now()
+            now_str = now_datetime.strftime('%d_%b_%Y_%H:%M:%S.%f')
+
+            min_contig = data_set_form.cleaned_data['min_contig']
+            request.session['min_contig'] = min_contig
+            data_set = get_dataset(request, data_set_form, now_str)
+            quast_session = start_quast_session(user_session, data_set, min_contig, now_datetime)
+
+            return redirect(url, after_evaluation=True)
+
+        else:
+            min_contig = request.session.get('min_contig') or qconfig.min_contig
+            request.session['min_contig'] = min_contig
+            data_set_form.set_min_contig(min_contig)
+
+        #            return render_to_response('reports.html', {
+        #                'glossary': glossary,
+        #                'csrf_token': get_token(request),
+        #                'session_key': user_session_key,
+        #                'contigs_fnames': contigs_fnames,
+        #                'dataset_form': dataset_form,
+        #                'report_id': quast_session.report_id,
+        #                }, context_instance = RequestContext(request))
+    else:
+        data_set_form = DatasetForm()
+        min_contig = request.session.get('min_contig') or qconfig.min_contig
+        data_set_form.set_min_contig(min_contig)
+
+    #        dataset_form.fields['name_selected'].choices = dataset_choices
+
+    response_dict = template_args_by_default
+    response_dict = dict(response_dict.items() + {
+        'csrf_token': get_token(request),
+        'contigs_fnames': contigs_fnames,
+        'dataset_form': data_set_form,
+    }.items())
+
+    return response_dict
+
+
+
 def evaluate(request):
     if not request.session.exists(request.session.session_key):
         request.session.create()
@@ -81,58 +221,55 @@ def evaluate(request):
     except UserSession.DoesNotExist:
         user_session = create_user_session(user_session_key)
 
-    contigs_fnames = [c_f.fname for c_f in user_session.contigsfile_set.all()]
-
-    if request.method == 'POST':
-        dataset_form = DatasetForm(request.POST)
-        dataset_form.set_user_session(user_session)
-#        dataset_form.fields['name_selected'].choices = dataset_choices
-        if dataset_form.is_valid():
-            from datetime import datetime
-            now_datetime = datetime.now()
-            now_str = now_datetime.strftime('%d_%b_%Y_%H:%M:%S.%f')
-
-            min_contig = dataset_form.cleaned_data['min_contig']
-            request.session['min_contig'] = min_contig
-            dataset = get_dataset(request, dataset_form, now_str)
-            quast_session = start_quast_session(user_session, dataset, min_contig, now_datetime)
-
-            return redirect('/reports/', after_evaluateion=True)
-        else:
-            min_contig = request.session.get('min_contig') or qconfig.min_contig
-            request.session['min_contig'] = min_contig
-            dataset_form.set_min_contig(min_contig)
+    response_dict = get_evaluate_response_dict(request, user_session, '/evaluate/')
+    return render_to_response('evaluate.html', response_dict, context_instance = RequestContext(request))
 
 
-    #            return render_to_response('reports.html', {
-#                'glossary': glossary,
-#                'csrf_token': get_token(request),
-#                'session_key': user_session_key,
-#                'contigs_fnames': contigs_fnames,
-#                'dataset_form': dataset_form,
-#                'report_id': quast_session.report_id,
-#                }, context_instance = RequestContext(request))
-    else:
-        dataset_form = DatasetForm()
-        min_contig = request.session.get('min_contig') or qconfig.min_contig
-        dataset_form.set_min_contig(min_contig)
 
-    #        dataset_form.fields['name_selected'].choices = dataset_choices
+def get_reports_response_dict(user_session, after_evaluation=False, limit=None):
+    quast_sessions_dict = []
 
-    return render_to_response('evaluate.html', add_template_args_by_defualt({
-        'csrf_token': get_token(request),
-        'session_key': user_session_key,
-        'contigs_fnames': contigs_fnames,
-        'dataset_form': dataset_form,
-        }), context_instance = RequestContext(request))
+    quast_sessions = user_session.quastsession_set.order_by('-date')
+    if limit:
+        quast_sessions = quast_sessions[:limit+1]
 
+    show_more_link = False
 
-state_map = {
-    'PENDING': 'PENDING',
-    'STARTED': 'PENDING',
-    'FAILURE': 'FAILURE',
-    'SUCCESS': 'SUCCESS',
-}
+    if quast_sessions.exists():
+#        quast_sessions.sort(cmp=lambda qs1, qs2: 1 if qs1.date < qs2.date else -1)
+
+#        if after_evaluation:
+#            last = quast_sessions[0]
+#            result = tasks.start_quast.AsyncResult(last.task_id)
+#            if result and result.state == 'SUCCESS':
+#                return redirect('/report/', report_id=last.report_id)
+
+        for i, qs in enumerate(quast_sessions):
+            if i == limit:
+                show_more_link = True
+            else:
+                result = tasks.start_quast.AsyncResult(qs.task_id)
+                state = result.state
+                state_repr = 'FAILURE'
+                if result and state in state_map:
+                    state_repr = state_map[state]
+
+                quast_session_info = {
+                    'date': qs.date, #. strftime('%d %b %Y %H:%M:%S'),
+                    'report_link': '/report/' + qs.report_id,
+                    'with_dataset': True if qs.dataset else False,
+                    'dataset_name': qs.dataset.name if qs.dataset and qs.dataset.remember else '',
+                    'state': state_repr,
+                }
+                quast_sessions_dict.append(quast_session_info)
+
+    return {
+        'quast_sessions': quast_sessions_dict,
+        'show_more_link': show_more_link,
+        'highlight_last': after_evaluation,
+#        'highlight_last': True,
+        'latest_report_link': quast_sessions_dict[0]['report_link'] if after_evaluation else None
+    }
 
 
 def reports(request, after_evaluation=False):
@@ -145,38 +282,8 @@ def reports(request, after_evaluation=False):
     except UserSession.DoesNotExist:
         user_session = create_user_session(user_session_key)
 
-
-    quast_sessions_dicts = []
-    quast_sessions = user_session.quastsession_set.all()
-    if quast_sessions.exists():
-        quast_sessions = sorted(quast_sessions, cmp=lambda qs1, qs2: 1 if qs1.date < qs2.date else -1)
-
-        if after_evaluation:
-            last = quast_sessions[0]
-            result = tasks.start_quast.AsyncResult(last.task_id)
-            if result and result.state == 'SUCCESS':
-                return redirect('/report/', report_id=last.report_id)
-
-        for qs in quast_sessions:
-            result = tasks.start_quast.AsyncResult(qs.task_id)
-            state = result.state
-            state_repr = 'FAILURE'
-            if result and state in state_map:
-                state_repr = state_map[state]
-
-            quast_session_dict = {
-                'date': qs.date, #. strftime('%d %b %Y %H:%M:%S'),
-                'report_link': '/report/' + qs.report_id,
-                'with_dataset': True if qs.dataset else False,
-                'dataset_name': qs.dataset.name if qs.dataset and qs.dataset.remember else '',
-                'state': state_repr,
-                'highlight_last': after_evaluation,
-            }
-            quast_sessions_dicts.append(quast_session_dict)
-
-    return render_to_response('reports.html', add_template_args_by_defualt({
-        'quast_sessions': quast_sessions_dicts,
-    }))
+    response_dict = get_reports_response_dict(user_session, after_evaluation)
+    return render_to_response('reports.html', response_dict)
 
 
 
@@ -195,7 +302,7 @@ def create_user_session(user_session_key):
 
 
 def get_dataset(request, dataset_form, now_str):
-    if dataset_form.cleaned_data['created_or_selected'] == 'created':
+    if dataset_form.cleaned_data['is_created'] == True:
         name = dataset_form.data['name_created']
 
         def init_folders(dataset):
@@ -256,45 +363,44 @@ def report(request, report_id):
             result = tasks.start_quast.AsyncResult(quast_session.task_id)
             state = result.state
 
+            response_dict = template_args_by_default
+
             if state == 'SUCCESS':
                 header = 'Quality assessment'
                 if quast_session.dataset and quast_session.dataset.remember:
                     header = quast_session.dataset.name
 
-                return response_with_report(
-                    'assess-report.html',
+                response_dict = dict(response_dict.items() + get_report_response_dict(
                     os.path.join(settings.RESULTS_ROOT_DIRPATH, quast_session.get_results_reldirpath()),
-                    header,
-                )
+                    header
+                ).items())
+
+                return render_to_response('assess-report.html', response_dict)
+
             else:
                 state_repr = 'FAILURE'
                 if result and state in state_map:
                     state_repr = state_map[state]
 
-                return render_to_response('waiting-report.html', add_template_args_by_defualt({
+                response_dict = dict(response_dict.items() + {
                     'csrf_token': get_token(request),
                     'session_key' : request.session.session_key,
                     'state': state_repr,
                     'report_id': report_id,
-                }), context_instance = RequestContext(request))
+                }.items())
+
+                return render_to_response('waiting-report.html', response_dict, context_instance = RequestContext(request))
 
         if request.method == 'POST':
             #check status of quast session, return result
-            pass
+            raise Http404()
 
     else:
         if request.method == 'GET':
             raise Http404()
 
         if request.method == 'POST':
-            pass
-
-
-
-contigs_uploader = AjaxFileUploader(backend=ContigsUploadBackend)
-#reference_uploader = AjaxFileUploader(backend=ReferenceUploadBackend)
-#genes_uploader = AjaxFileUploader(backend=GenesUploadBackend)
-#operons_uploader = AjaxFileUploader(backend=OperonsUploadBackend)
+            raise Http404()
 
 
 def start_quast_session(user_session, dataset, min_contig, now_datetime):
@@ -389,7 +495,7 @@ def assess_with_quast(res_dirpath, contigs_paths, min_contig=0, reference_path=N
         raise Exception('no files with assemblies')
 
 
-def response_with_report(template, results_dirpath, header):
+def get_report_response_dict(results_dirpath, header):
     if dir is None:
         raise Exception('No results directory.')
 
@@ -417,26 +523,21 @@ def response_with_report(template, results_dirpath, header):
     operons                 = get('operons')
     gc_info                 = get('gc')
 
-    return render_to_response(template, add_template_args_by_defualt({
-            'totalReport' : report,
-            'contigsLenghts' : contigs_lengths,
-            'alignedContigsLengths' : aligned_contigs_lengths,
-            'assembliesLengths' : assemblies_lengths,
-            'referenceLength' : reference_length,
-            'contigs' : contigs,
-            'genes' : genes,
-            'operons' : operons,
-            'gcInfo' : gc_info,
+    return {
+        'totalReport' : report,
+        'contigsLenghts' : contigs_lengths,
+        'alignedContigsLengths' : aligned_contigs_lengths,
+        'assembliesLengths' : assemblies_lengths,
+        'referenceLength' : reference_length,
+        'contigs' : contigs,
+        'genes' : genes,
+        'operons' : operons,
+        'gcInfo' : gc_info,
 
-            'header' : header,
-        })
-    )
+        'header' : header,
+    }
 
 
-def ecoli(request):
-    return response_with_report('ecoli.html',
-                                os.path.join(settings.ECOLI_DIRPATH),
-                                'E.coli')
 
 
 #static_path = 'app/static/'

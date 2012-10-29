@@ -101,7 +101,7 @@ def do(filenames, genes_lengths, output_dir, lib_dir):
                 geneseq += line.strip()
 
         print ', Genes =', len(genes), 'unique,', max_gene_id, 'total'
-        print '    GeneMark output', genemark_out_filename
+        print '     GeneMark output', genemark_out_filename
         report.add_field(reporting.Fields.GENEMARKUNIQUE, len(genes))
         report.add_field(reporting.Fields.GENEMARK, cnt)
 

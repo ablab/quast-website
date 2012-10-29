@@ -23,7 +23,8 @@ class DatasetForm(forms.Form):
             })
         )
 
-    created_or_selected = fields.CharField(initial='selected')
+#    created_or_selected = fields.CharField(initial='selected')
+    is_created = fields.BooleanField(initial=False, required=False)
 
     name_selected = fields.ChoiceField(
         required=False,

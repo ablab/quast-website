@@ -11,187 +11,13 @@
 <script type="text/javascript" src="/static/jquery-1.7.2.min.js"></script>
 <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css"/>
 <link rel="stylesheet" href="/static/common.css"/>
-
+<link rel="stylesheet" href="/static/base.css"/>
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
     <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-<style type="text/css">
-    .layout-table {
-        width: 100%;
-        margin-left: -3px;
-        margin-top: -3px;
-{#        border: 1px solid green;#}
-{#        min-width: 500px;#}
-    }
-    .layout-table td.layout-table-td {
-{#        margin-right: 20px;#}
-        vertical-align: top;
-{#        border: 1px solid blue;#}
-    }
-    .layout-table td.layout-table-fst-td {
-        min-width: 200px;
-        width: 50%;
-        padding-right: 50px;
-    }
-    .layout-table td.layout-table-snd-td {
-        min-width: 200px;
-    }
-    .layout-table td.layout-table-trd-td {
-{#        border: 1px solid red;#}
-    }
-    .top-panel {
-        background-color: #333;
-        color: white;
-        min-width: 650px;
-    }
-    .content {
-        margin-left: 100px;
-        padding-top: 20px;
-        margin-bottom: 80px;
-        padding-bottom: 50px;
-{#        padding-right: 20px;#}
-    }
-    .menu-table {
-        margin: 0 0 0 86px;
-        padding: 1em 20px 1em 0;
-    }
-    .menu-table > tr > td:first-child {
-{#        margin-left: -0.8em;#}
-    }
-    .menu-table a {
-        padding-left: 1em;
-        padding-right: 1em;
-        text-decoration: none;
-        border: 0px;
-    }
-    .menu-table a span {
-        font-size: 1em;
-        color: white;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        border-bottom: 1px solid;
-        border-color: #AAA;
-    }
-    .menu-table a:hover {
-        color: #DDDDDD;
-        text-decoration: none;
-    }
-    .menu-table a:hover span {
-        border-color: #CCC;
-    }
-    .menu-table li.active a {
-        pointer-events: none;
-        cursor: default;
-    }
-    .menu-table li.active a span {
-        text-decoration: none;
-        color: #AAA;
-        border: 0px;
-    }
-
-{#    .menu {#}
-{#        margin: 0 0 0 100px;#}
-{#        padding: 1em 20px 2.3em 0;#}
-{#        list-style-type: none;#}
-    {#        min-width: 800px;#}
-{#    }#}
-{#    ul.menu > li:first-child {#}
-{#        margin-left: -0.8em;#}
-{#    }#}
-{#    ul.menu a {#}
-{#        float: left;#}
-{#        display: inline-block;#}
-{#        white-space: nowrap;#}
-{#        padding-left: 1em;#}
-{#        padding-right: 1em;#}
-{#        text-decoration: none;#}
-{#        border: 0px;#}
-{#    }#}
-{#    ul.menu a span {#}
-{#        font-size: 1em;#}
-{#        color: white;#}
-{#        letter-spacing: 2px;#}
-{#        text-transform: uppercase;#}
-{#        border-bottom: 1px solid;#}
-{#        border-color: #AAA;#}
-{#    }#}
-{#    ul.menu a:hover {#}
-{#        color: #DDDDDD;#}
-{#        text-decoration: none;#}
-{#    }#}
-{#    ul.menu a:hover span {#}
-{#        border-color: #CCC;#}
-{#    }#}
-{#    ul.menu li.active a {#}
-{#        pointer-events: none;#}
-{#        cursor: default;#}
-{#    }#}
-{#    ul.menu li.active a span {#}
-{#        text-decoration: none;#}
-{#        color: #AAA;#}
-{#        border: 0px;#}
-{#    }#}
-
-    /* Footer */
-    .footer {
-        margin-bottom: 15px;
-        margin-left: 98px;
-        display: none;  /* become visible by script when page loaded */
-    }
-    .bottom-line {
-        margin-top: 30px;
-        margin-bottom: 15px;
-        margin-right: 73px;
-    {#        margin: 100px 80px 15px 0;#}
-        border-bottom: 1px #D0D0D0 solid;
-    }
-    a.icon_link {
-        border: 0px solid black;
-        display: block;
-        opacity: 0.5;
-    }
-    a.icon_link:hover {
-        opacity: 1;
-    }
-    .admin_icon {
-        background: url("/static/pics/small_lock_icon.gif") no-repeat;
-        height: 16px;
-        width: 10px;
-        display: block;
-{#        margin-right: 17px;#}
-        bottom: 0px;
-        float: right;
-    }
-    .copyright {
-        opacity: 0.5;
-        float: left;
-    }
-    .email a {
-        opacity: 0.5;
-    }
-    .email a {
-        color: black;
-        border-color: #888;
-    }
-    .email a:hover, .email:hover a {
-        opacity: 1;
-        color: black;
-        border-color: #000;
-    }
-    /*********/
-</style>
-
-{% block extra_head %}{% endblock %}
-
 <script type="text/javascript">
-    $(document).ready(function() {
-        $("[rel=tooltip]").tooltip({
-            animation: false,
-        });
-    });
-
     jQuery.event.add(window, "load", resizeContent);
     jQuery.event.add(window, "resize", resizeContent);
 
@@ -202,6 +28,8 @@
         $(".footer").css('display', 'block');
     }
 </script>
+
+{% block extra_head %}{% endblock %}
 
 {% if google_analitycs %}
 <script type="text/javascript">
@@ -219,7 +47,7 @@
 </head>
 
 <body>
-{#    <div class='top-panel'>#}
+    <div class='top-panel'>
 {#        <ul class='menu'>#}
 {#            <li class='{% block    index-menu-li-class %}{% endblock %}'><a href='/'>             <span>About <span class='.smallcapitals'>QUAST</span></span></a></li>#}
 {#            <li class='{% block evaluate-menu-li-class %}{% endblock %}'><a href='/evaluate/'>    <span>Quality assessment                             </span></a></li>#}
@@ -227,18 +55,30 @@
 {#            <li class='{% block  example-menu-li-class %}{% endblock %}'><a href='/example/'>     <span>Example                                 </span></a></li>#}
 {#        </ul>#}
 {#        <span class='clear_float'></span>#}
-{#    </div>#}
 
-    <div class='top-panel'>
-        <table class='menu-table'>
-            <tr>
-                <td class='{% block    index-menu-li-class %}{% endblock %}'><a href='/'>             <span>About <span class='.smallcapitals'>QUAST</span></span></a></td>
-                <td class='{% block evaluate-menu-li-class %}{% endblock %}'><a href='/evaluate/'>    <span>Quality assessment                             </span></a></td>
-                <td class='{% block  reports-menu-li-class %}{% endblock %}'><a href='/reports/'>     <span>Latest reports                                 </span></a></td>
-{#                <td class='{% block  example-menu-li-class %}{% endblock %}'><a href='/example/'>     <span>Example                                        </span></a></td>#}
-            </tr>
-        </table>
+        <div style="width: 100%;">
+            <h1 style='letter-spacing: .10em; margin-right: -.10em;'>
+                <a href="/" class='{% block logo_class %}{% endblock %}'>QUAST</a>
+            </h1>
+
+            <div style='margin-top: -7px; width: 100%;'>
+                <p><b>QUality ASsesment Tool for Genome Assemblies</b>
+                    by <a href="http://bioinf.spbau.ru/en" class='dark_bg_link'>Algorithmic Biology Lab</a>
+                </p>
+            </div>
+        </div>
     </div>
+
+{#    <div class='top-panel'>#}
+{#        <table class='menu-table'>#}
+{#            <tr>#}
+{#                <td class='{% block    index-menu-li-class %}{% endblock %}'><a href='/'>             <span>About <span class='.smallcapitals'>QUAST</span></span></a></td>#}
+{#                <td class='{% block evaluate-menu-li-class %}{% endblock %}'><a href='/evaluate/'>    <span>Quality assessment                             </span></a></td>#}
+{#                <td class='{% block  reports-menu-li-class %}{% endblock %}'><a href='/reports/'>     <span>Latest reports                                 </span></a></td>#}
+{#                <td class='{% block  example-menu-li-class %}{% endblock %}'><a href='/example/'>     <span>Example                                        </span></a></td>#}
+{#            </tr>#}
+{#        </table>#}
+{#    </div>#}
 {#        <li class='{% block    index-menu-li-class %}{% endblock %}'><a href='/'>             <span>About <span class='.smallcapitals'>QUAST</span></span></a></li>#}
 {#        <li class='{% block evaluate-menu-li-class %}{% endblock %}'><a href='/evaluate/'>    <span>Quality assessment                             </span></a></li>#}
 {#        <li class='{% block  reports-menu-li-class %}{% endblock %}'><a href='/reports/'>     <span>Latest reports                                 </span></a></li>#}
@@ -311,5 +151,13 @@
 
 <script type="text/javascript" src="/static/bootstrap/js/bootstrap.js"></script>
 <script type="text/javascript" src="/static/bootstrap/js/bootstrap-tooltip-vlad.js"></script>
+<script type="text/javascript">
+{#    $().load(function() {#}
+        {#        alert('docu/ment ready');#}
+        $("[rel=tooltip]").tooltip({
+            animation: false,
+        });
+{#    });#}
+</script>
 </body>
 </html>

@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% block logo_class %}dark_bg_link{% endblock %}
+
 {% block extra_head %}
     <script type="text/javascript" src="/static/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="/static/flot/jquery.flot.js"></script>
@@ -15,7 +17,16 @@
     <script type="text/javascript" src="/static/scripts/build_report.js"></script>
 
     <script type="text/javascript">
-        $(document).ready(buildReport);
+    </script>
+
+    <script type="text/javascript">
+        $(buildReport);
+
+        $(function() {
+            $("[rel=tooltip]").tooltip({
+                animation: false,
+            });
+        });
     </script>
 
     <link rel="stylesheet" href="/static/report.css"/>
@@ -25,93 +36,96 @@
 {% block content %}
 {% block extra_content %}{% endblock %}
 
-<div id='header'>
-    <h1>{% block header %}{% endblock %}</h1>
-    <div id='subheader'>Loading...</div>
-    <span id='mincontig'></span>
+<div class='full-report'>
+    <div id='header'>
+        <h1>{% block header %}{% endblock %}</h1>
+        <div id='subheader'>Loading...</div>
+        <span id='mincontig'></span>
+    </div>
+
+    <noscript>
+        <div><br>
+            Unfortunately, <span style="font-weight: bold">JavaScript</span> in your browser <span style="font-weight: bold">is disabled</span> or is not supported.</br>
+            We need JavaScript to build report and plots.
+        </div>
+    </noscript>
+
+    <br>
+
+    <div class='report-and-plots'>
+        <div id='report'>
+        </div>
+
+        <div class='plots'>
+            <table style='margin: -3px;'>
+                <tr id='all-switches'>
+                    <td>
+                        <div id='plots-switches'><b>Plots:</b></div>
+                    </td>
+                    <td style='text-align: right; padding-right: 22px;'>
+                        <span id='scale-placeholder'></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div id='plot-placeholder'></div>
+                    </td>
+                    <td>
+                        <div id='legend-placeholder'></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    {#    <div class='blocks'>#}
+    {#        <div class='plot-wrapper' id='cumulative-plot-div'>#}
+    {#        </div>#}
+    {#        <div class='plot-wrapper' id='nx-plot-div'>#}
+    {#        </div>#}
+    {#        <div class='plot-wrapper' id='ngx-plot-div'>#}
+    {#        </div>#}
+    {#        <div class='plot-wrapper' id='nax-plot-div'>#}
+    {#        </div>#}
+    {#        <div class='plot-wrapper' id='ngax-plot-div'>#}
+    {#        </div>#}
+    {#        <div class='plot-wrapper' id='genes-plot-div'>#}
+    {#        </div>#}
+    {#        <div class='plot-wrapper' id='operons-plot-div'>#}
+    {#        </div>#}
+    {#        <div class='plot-wrapper' id='gc-plot-div'>#}
+    {#        </div>#}
+    {#    </div>#}
+
+        <div class='json-code'>
+            <div id='total-report-json'>
+                {{ totalReport }}
+            </div>
+            <div id="contigs-lengths-json">
+                {{ contigsLenghts }}
+            </div>
+            <div id='aligned-contigs-lengths-json'>
+                {{ alignedContigsLengths }}
+            </div>
+            <div id='assemblies-lengths-json'>
+                {{ assembliesLengths }}
+            </div>
+            <div id='reference-length-json'>
+                {{ referenceLength }}
+            </div>
+            <div id='contigs-json'>
+                {{ contigs }}
+            </div>
+            <div id='genes-json'>
+                {{ genes }}
+            </div>
+            <div id='operons-json'>
+                {{ operons }}
+            </div>
+            <div id='gc-json'>
+                {{ gcInfo }}
+            </div>
+        </div>
+    </div>
 </div>
 
-<noscript>
-    <div><br>
-        Unfortunately, <span style="font-weight: bold">JavaScript</span> in your browser <span style="font-weight: bold">is disabled</span> or is not supported.</br>
-        We need JavaScript to build report and plots.
-    </div>
-</noscript>
-
-<br>
-
-<div class='report-and-plots'>
-    <div id='report'>
-    </div>
-
-    <div class='plots'>
-        <table style='margin: -3px;'>
-            <tr id='all-switches'>
-                <td>
-                    <div id='plots-switches'><b>Plots:</b></div>
-                </td>
-                <td style='text-align: right; padding-right: 22px;'>
-                    <span id='scale-placeholder'></span>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <div id='plot-placeholder'></div>
-                </td>
-                <td>
-                    <div id='legend-placeholder'></div>
-                </td>
-            </tr>
-        </table>
-    </div>
-
-{#    <div class='blocks'>#}
-{#        <div class='plot-wrapper' id='cumulative-plot-div'>#}
-{#        </div>#}
-{#        <div class='plot-wrapper' id='nx-plot-div'>#}
-{#        </div>#}
-{#        <div class='plot-wrapper' id='ngx-plot-div'>#}
-{#        </div>#}
-{#        <div class='plot-wrapper' id='nax-plot-div'>#}
-{#        </div>#}
-{#        <div class='plot-wrapper' id='ngax-plot-div'>#}
-{#        </div>#}
-{#        <div class='plot-wrapper' id='genes-plot-div'>#}
-{#        </div>#}
-{#        <div class='plot-wrapper' id='operons-plot-div'>#}
-{#        </div>#}
-{#        <div class='plot-wrapper' id='gc-plot-div'>#}
-{#        </div>#}
-{#    </div>#}
-
-    <div class='json-code'>
-        <div id='total-report-json'>
-            {{ totalReport }}
-        </div>
-        <div id="contigs-lengths-json">
-            {{ contigsLenghts }}
-        </div>
-        <div id='aligned-contigs-lengths-json'>
-            {{ alignedContigsLengths }}
-        </div>
-        <div id='assemblies-lengths-json'>
-            {{ assembliesLengths }}
-        </div>
-        <div id='reference-length-json'>
-            {{ referenceLength }}
-        </div>
-        <div id='contigs-json'>
-            {{ contigs }}
-        </div>
-        <div id='genes-json'>
-            {{ genes }}
-        </div>
-        <div id='operons-json'>
-            {{ operons }}
-        </div>
-        <div id='gc-json'>
-            {{ gcInfo }}
-        </div>
-    </div>
-</div>
 {% endblock %}
