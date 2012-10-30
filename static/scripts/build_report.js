@@ -88,13 +88,13 @@ function buildReport() {
         return 1;
     }
 
-    filenames.forEach(function(filename, i) {
+    for (var i = 0; i < filenames.length; i++) {
         var id = 'label_' + i + '_id';
         $('#legend-placeholder').append('<div>' +
             '<label for="' + id + '" style="color: ' + colors[i] + '">' +
-            '<input type="checkbox" name="' + i + '" checked="checked" id="' + id + '">&nbsp;' + filename + '</label>' +
+            '<input type="checkbox" name="' + i + '" checked="checked" id="' + id + '">&nbsp;' + filenames[i] + '</label>' +
             '</div>');
-    });
+    }
 
     try { contigsLengths = JSON.parse($('#contigs-lengths-json').html()); } catch (e) { contigsLengths = null; }
     if (contigsLengths) {
