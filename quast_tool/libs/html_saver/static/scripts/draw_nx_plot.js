@@ -141,10 +141,10 @@ function drawNxPlot(name, colors, filenames, listsOfLengths, refLength,
                         var series = nx.plotsData[i];
                         i++;
                     } while (series.number != number && i <= nx.plotsData.length);
-                    if (i != nx.plotsData.length) {
-                        newPlotsData.push(series);
-                        newColors.push(series.color);
-                    }
+//                    if (i != nx.plotsData.length) {
+                    newPlotsData.push(series);
+                    newColors.push(series.color);
+//                    }
                 }
             });
 

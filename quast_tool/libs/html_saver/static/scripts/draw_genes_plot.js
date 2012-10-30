@@ -156,10 +156,10 @@ function drawGenesPlot(name, colors, filenames, data, referenceLength,
                         var series = gns.plotsData[i];
                         i++;
                     } while (series.number != number && i <= gns.plotsData.length);
-                    if (i != gns.plotsData.length) {
-                        newPlotsData.push(series);
-                        newColors.push(series.color);
-                    }
+//                    if (i != gns.plotsData.length) {
+                    newPlotsData.push(series);
+                    newColors.push(series.color);
+//                    }
                 }
             });
 

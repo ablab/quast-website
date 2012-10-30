@@ -269,10 +269,10 @@ function drawGCPlot(name, colors, filenames, listsOfGCInfo, reflen,
                         var series = gc.plotsData[i];
                         i++;
                     } while (series.number != number && i <= gc.plotsData.length);
-                    if (i != gc.plotsData.length) {
-                        newPlotsData.push(series);
-                        newColors.push(series.color);
-                    }
+//                    if (i != gc.plotsData.length) {
+                    newPlotsData.push(series);
+                    newColors.push(series.color);
+//                    }
                 }
             });
 
