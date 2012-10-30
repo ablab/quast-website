@@ -173,12 +173,16 @@ function drawCumulativePlot(name, colors, filenames, listsOfLengths, referenceLe
 
             $('#legend-placeholder').find('input:checked').each(function() {
                 var number = $(this).attr('name');
-                if (number && cumulative.plotsData) {
-                    var series = cumulative.plotsData.filter(function(series) {
-                        return series.number == number;
-                    })[0];
-                    newPlotsData.push(series);
-                    newColors.push(series.color);
+                if (number && cumulative.plotsData && cumulative.plotsData.length > 0) {
+                    i = 0;
+                    do {
+                        var series = cumulative.plotsData[i];
+                        i++;
+                    } while (series.number != number && i <= cumulative.plotsData.length);
+                    if (i != cumulative.plotsData.length) {
+                        newPlotsData.push(series);
+                        newColors.push(series.color);
+                    }
                 }
             });
 

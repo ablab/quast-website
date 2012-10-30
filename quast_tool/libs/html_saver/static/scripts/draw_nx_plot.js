@@ -135,12 +135,16 @@ function drawNxPlot(name, colors, filenames, listsOfLengths, refLength,
 
             $('#legend-placeholder').find('input:checked').each(function() {
                 var number = $(this).attr('name');
-                if (number && nx.plotsData) {
-                    var series = nx.plotsData.filter(function(series) {
-                        return series.number == number;
-                    })[0];
-                    newPlotsData.push(series);
-                    newColors.push(series.color);
+                if (number && nx.plotsData && nx.plotsData.length > 0) {
+                    i = 0;
+                    do {
+                        var series = nx.plotsData[i];
+                        i++;
+                    } while (series.number != number && i <= nx.plotsData.length);
+                    if (i != nx.plotsData.length) {
+                        newPlotsData.push(series);
+                        newColors.push(series.color);
+                    }
                 }
             });
 

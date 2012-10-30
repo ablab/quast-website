@@ -263,12 +263,16 @@ function drawGCPlot(name, colors, filenames, listsOfGCInfo, reflen,
 
             $('#legend-placeholder').find('input:checked').each(function() {
                 var number = $(this).attr('name');
-                if (number && gc.plotsData) {
-                    var series = gc.plotsData.filter(function(series) {
-                        return series.number == number;
-                    })[0];
-                    newPlotsData.push(series);
-                    newColors.push(series.color);
+                if (number && gc.plotsData && gc.plotsData.length > 0) {
+                    i = 0;
+                    do {
+                        var series = gc.plotsData[i];
+                        i++;
+                    } while (series.number != number && i <= gc.plotsData.length);
+                    if (i != gc.plotsData.length) {
+                        newPlotsData.push(series);
+                        newColors.push(series.color);
+                    }
                 }
             });
 

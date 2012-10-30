@@ -150,12 +150,16 @@ function drawGenesPlot(name, colors, filenames, data, referenceLength,
 
             $('#legend-placeholder').find('input:checked').each(function() {
                 var number = $(this).attr('name');
-                if (number && gns.plotsData) {
-                    var series = gns.plotsData.filter(function(series) {
-                        return series.number == number;
-                    })[0];
-                    newPlotsData.push(series);
-                    newColors.push(series.color);
+                if (number && gns.plotsData && gns.plotsData.length > 0) {
+                    i = 0;
+                    do {
+                        var series = gns.plotsData[i];
+                        i++;
+                    } while (series.number != number && i <= gns.plotsData.length);
+                    if (i != gns.plotsData.length) {
+                        newPlotsData.push(series);
+                        newColors.push(series.color);
+                    }
                 }
             });
 
