@@ -17,7 +17,34 @@ function buildReport() {
     var legendPlaceholder = document.getElementById('legend-placeholder');
     var scalePlaceholder = document.getElementById('scale-placeholder');
 
-    var colors = ["#FF5900", "#008FFF", "#168A16", "#7C00FF", "#00B7FF", "#FF0080", "#7AE01B", "#782400", "#E01B6A"];
+//    var colors = ["#FF5900", "#008FFF", "#168A16", "#7C00FF", "#00B7FF", "#FF0080", "#7AE01B", "#782400", "#E01B6A"];
+    var colors = [
+        '#0000FF', //blue
+        '#008000', //green
+        '#FFA500', //orange
+        '#CCCC00', //yellow
+        '#00FFFF', //aqua
+        '#FF0000', //red
+        '#800000', //maroon
+        '#FF00FF', //fushua
+        '#808080', //gray
+        '#000080', //navy
+        '#808000', //olive
+        '#800080', //purple
+        '#00FF00', //lime
+        '#008080', //team
+    ];
+
+    function distinctColors(count) {
+        var colors = [];
+        for(var hue = 0; hue < 360; hue += 360 / count) {
+            var color = hsvToRgb(hue, 100, 100);
+            var colorStr = '#' + color[0].toString(16) + color[1].toString(16) + color[2].toString(16);
+                colors.push();
+        }
+        return colors;
+    }
+
     var filenames;
 
     function getToggleFunction(name, drawPlot, data, refLen) {
@@ -79,22 +106,29 @@ function buildReport() {
     try { referenceLength = JSON.parse($('#reference-length-json').html()).reflen; } catch (e) { referenceLength = null; }
     try { totalReport = JSON.parse($('#total-report-json').html()); } catch (e) { totalReport = null; }
     if (totalReport) {
+        filenames = totalReport.assembliesNames;
+
+        if (filenames.length == 0) {
+            return 1;
+        }
+
+//        colors = distinctColors(filenames.length);
+
 //        document.title += (totalReport.date);
         $('#subheader').html(totalReport.date + '.');
         $('#mincontig').append('Contigs of length ≥ ' + totalReport.minContig + ' bp are used.');
-        buildTotalReport(totalReport.assembliesNames, totalReport.report, glossary);
-        filenames = totalReport.assembliesNames;
+        buildTotalReport(filenames, totalReport.report, glossary);
     } else {
         return 1;
     }
 
-    for (var i = 0; i < filenames.length; i++) {
+    filenames.forEach(function(filename, i) {
         var id = 'label_' + i + '_id';
         $('#legend-placeholder').append('<div>' +
             '<label for="' + id + '" style="color: ' + colors[i] + '">' +
-            '<input type="checkbox" name="' + i + '" checked="checked" id="' + id + '">&nbsp;' + filenames[i] + '</label>' +
+            '<input type="checkbox" name="' + i + '" checked="checked" id="' + id + '">&nbsp;' + filename + '</label>' +
             '</div>');
-    }
+    });
 
     try { contigsLengths = JSON.parse($('#contigs-lengths-json').html()); } catch (e) { contigsLengths = null; }
     if (contigsLengths) {
