@@ -179,10 +179,10 @@ function drawCumulativePlot(name, colors, filenames, listsOfLengths, referenceLe
                         var series = cumulative.plotsData[i];
                         i++;
                     } while (series.number != number && i <= cumulative.plotsData.length);
-                    if (i != cumulative.plotsData.length) {
-                        newPlotsData.push(series);
-                        newColors.push(series.color);
-                    }
+//                    if (i != cumulative.plotsData.length) {
+                    newPlotsData.push(series);
+                    newColors.push(series.color);
+//                    }
                 }
             });
 
