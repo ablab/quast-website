@@ -49,7 +49,7 @@ class MyBaseUploadBackend(AbstractUploadBackend):
         return filename
 
     def remove(self, request):
-        file_index = request.GET['file_index']
+        file_index = request.GET['fileIndex']
         try:
             contigs_file = ContigsFile.objects.get(file_index=file_index)
         except ContigsFile.DoesNotExist:
@@ -79,7 +79,11 @@ class MyBaseUploadBackend(AbstractUploadBackend):
 
     def get_uploads(self, request):
         contigs_files = ContigsFile.objects.filter(user_session=self.user_session)
-        return [{"fileName": c_f.fname, "file_index": c_f.file_index} for c_f in contigs_files]
+        return [{"fileName": c_f.fname,
+                 "fileIndex": c_f.file_index,
+#                 "fileSize": c_f.file_size if c_f.file_size else None,
+                 }
+                for c_f in contigs_files]
 
 
 

@@ -166,7 +166,7 @@ qq.children = function(element){
 };
 
 qq.getByClass = function(element, className){
-    if (element.querySelectorAll){
+    if (element && element.querySelectorAll){
         return element.querySelectorAll('.' + className);
     }
 
@@ -354,7 +354,7 @@ qq.FileUploaderBasic.prototype = {
                 $.ajax({
                     url: self._options.removeLink,
                     type: 'GET',
-                    data: { file_index: serverIndex },
+                    data: { fileIndex: serverIndex },
                 });
                 self._options.onRemove(serverIndex);
             }
@@ -568,10 +568,12 @@ qq.FileUploader = function(o){
     // overwrite options with user supplied    
     qq.extend(this._options, o);       
 
-    this._element = this._options.element;
-    this._element.innerHTML = this._options.template;        
-    this._listElement = this._options.listElement || this._find(this._element, 'list');
-    
+    if (this._options.element) {
+        this._element = this._options.element;
+        this._element.innerHTML = this._options.template;
+        this._listElement = this._options.listElement || this._find(this._element, 'list');
+    }
+
     this._classes = this._options.classes;
         
     this._button = this._createUploadButton(this._find(this._element, 'button'));        
@@ -671,7 +673,7 @@ qq.extend(qq.FileUploader.prototype, {
         if (result.success){
             qq.addClass(item, this._classes.success);
             this._find(item, 'remove').style.display = "inline";
-            item.serverIndex = result.file_index;
+            item.serverIndex = result.fileIndex;
         } else {
             qq.addClass(item, this._classes.fail);
         }         
@@ -682,13 +684,13 @@ qq.extend(qq.FileUploader.prototype, {
 
         var fileElement = this._find(item, 'file');        
         qq.setText(fileElement, this._formatFileName(fileName));
-        this._find(item, 'size').style.display = 'none';
 
         if (typeof (serverIndex) != "undefined") {
             item.serverIndex = serverIndex;
             this._find(item, 'cancel').style.display = 'none';
             this._find(item, 'spinner').style.display = 'none';
         } else {
+            this._find(item, 'size').style.display = 'none';
             this._find(item, 'remove').style.display = 'none';
         }
 
@@ -705,7 +707,11 @@ qq.extend(qq.FileUploader.prototype, {
             if (data) {
                 for (var i = 0; i < data.uploads.length; ++i) {
                     var fileInfo = data.uploads[i];
-                    self._addToList(id, fileInfo.fileName, fileInfo.file_index);
+                    fileInfo.name = fileInfo.fileName;
+                    fileInfo.size = fileInfo.fileSize;
+
+                    var id = self._handler.add(fileInfo);
+                    self._addToList(id, fileInfo.fileName, fileInfo.fileIndex);
                 }
                 self._options.onInitFiles(data.uploads);
             }
@@ -1267,11 +1273,10 @@ qq.extend(qq.UploadHandlerXhr.prototype, {
      * Returns id to use with upload, cancel
      **/    
     add: function(file){
-        if (!(file instanceof File)){
-            throw new Error('Passed obj is not a File (in qq.UploadHandlerXhr)');
-        }
-                
-        return this._files.push(file) - 1;        
+//        if (!(file instanceof File)){
+//            throw new Error('Passed obj is not a File (in qq.UploadHandlerXhr)');
+//        }
+        return this._files.push(file) - 1;
     },
     getName: function(id){
         var file = this._files[id];

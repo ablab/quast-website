@@ -44,6 +44,7 @@ class ContigsFile(models.Model):
     fname = models.CharField(max_length=2048)
     user_session = models.ForeignKey('UserSession')
     file_index = models.CharField(max_length=256)
+#    file_size = models.IntegerField(null=True, blank=True)
 #   quast_session = models.ForeignKey('QuastSession', null=True)
 
     def __unicode__(self):
