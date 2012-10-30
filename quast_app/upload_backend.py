@@ -81,6 +81,7 @@ class MyBaseUploadBackend(AbstractUploadBackend):
         contigs_files = ContigsFile.objects.filter(user_session=self.user_session)
         return [{"fileName": c_f.fname,
                  "fileIndex": c_f.file_index,
+                 "file_index": c_f.file_index,
 #                 "fileSize": c_f.file_size if c_f.file_size else None,
                  }
                 for c_f in contigs_files]
