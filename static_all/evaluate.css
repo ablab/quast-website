@@ -1,5 +1,5 @@
 .uploader-div {
-    float: left;
+    /*float: left;*/
     margin-right: 20px;
     margin-bottom: 20px;
 }
@@ -9,17 +9,19 @@
 }
 
 .upload-drop-area {
-    min-width: 290px;
+    min-width: 285px;
 }
 
 .upload-drop-area, .small-upload-drop-area {
     margin-top: 10px;
-    margin-right: 10px;
+    /*margin-right: 5px;*/
     padding-left: 15px;
+    padding-right: 5px;
     /*float: left;*/
 
     min-height: 11em;
-    z-index: 2;
+    max-height: 11em;
+    z-index: 10;
     overflow-y: scroll;
 
     /*background: #E8E8E8;*/

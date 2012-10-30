@@ -626,6 +626,7 @@ qq.extend(qq.FileUploader.prototype, {
         });
                 
         dropArea.style.display = 'block';
+//        $(dropArea).fadeIn('slow');
 
         qq.attach(document, 'dragenter', function(e){     
             if (!dz._isValidFileDrag(e)) return; 

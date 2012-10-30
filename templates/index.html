@@ -18,7 +18,14 @@
 <link rel="stylesheet" href="/static/index.css"/>
 <link rel="stylesheet" href="/static/reports.css"/>
 
+<script src="/static/chosen/chosen.jquery.js" type="text/javascript"></script>
+
 <script type="text/javascript">
+    $(function() {
+        $(".chzn-select").chosen();
+        $(".chzn-select-deselect").chosen({allow_single_deselect:true});
+    })
+
     $(function() {
         {% if highlight_last %}
             $('.highlighted_tr').hide().fadeIn('slow');
@@ -352,7 +359,7 @@
                             <td class='form-layout-td' style="padding-top: 3px;"><h3>Contigs</h3></td>
 
                             <td class='form-layout-td'>
-                                <div id="contigs-uploader" class="uploader-div" style="margin-bottom: 10px;"></div><div style="clear: both"></div>
+                                <div id="contigs-uploader" class="uploader-div" style="margin-bottom: 10px; height: 175px;"></div><div style="clear: both"></div>
 
                                 <label for="id_min_contig">{% comment %}@declare id="id_min_contig"{% endcomment %}
                                     Skip contigs shorter than {{ dataset_form.min_contig }}<span style='font-size: 8px;'> </span>bp<br>
@@ -535,10 +542,7 @@
 
         <div style="clear: both;"></div>
 
-        <script src="/static/chosen/chosen.jquery.js" type="text/javascript"></script>
         <script type="text/javascript">
-            $(".chzn-select").chosen();
-            $(".chzn-select-deselect").chosen({allow_single_deselect:true});
 {#            set_selected();#}
         </script>
 
