@@ -114,7 +114,7 @@ def do(reference, filenames, output_dir, all_pdf, draw_plots, json_output_dir, r
             ', L50 =', l50,\
             ', Total length =', total_length, \
             ', GC % = ', '%.2f' % total_GC,\
-            ', N\'s % = ', '%.5f' % (float(100 * number_of_Ns) / float(total_length))\
+            ', # N\'s per 100 kbp = ' + ' %.2f' % (float(number_of_Ns) * 100000.0 / float(total_length))\
 
         report.add_field(reporting.Fields.N50, n50)
         report.add_field(reporting.Fields.L50, l50)
