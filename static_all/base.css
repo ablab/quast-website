@@ -30,7 +30,7 @@ body {
     background-color: #444;
     color: white;
     min-width: 650px;
-    padding: 10px 10px 10px 150px;
+    padding: 5px 10px 5px 150px;
 }
 .top-panel {
     text-shadow: -1px -1px 0px #111;
@@ -166,4 +166,19 @@ a.icon_link:hover {
     opacity: 1;
     color: black;
     border-color: #000;
+}
+
+/*.beta {*/
+    /*font-size: 0.6em;*/
+    /*font-weight: normal;*/
+    /*font-style: italic;*/
+    /*margin-left: 4px;*/
+    /*vertical-align: super;*/
+/*}*/
+.beta {
+    font-size: 0.9em;
+    font-weight: lighter;
+    /*font-style: italic;*/
+    /*margin-left: 6px;*/
+    /*vertical-align: super;*/
 }

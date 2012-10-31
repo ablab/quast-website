@@ -94,6 +94,7 @@ def do(reference, filenames, nucmer_dir, output_dir, all_pdf, draw_plots, json_o
             ', LA50 =', la50,\
             ', LGA50 =', lga50
         report = reporting.get(filename)
+        report.add_field(reporting.Fields.LARGALIGN, max(lens))
         report.add_field(reporting.Fields.NA50, na50)
         report.add_field(reporting.Fields.NGA50, nga50)
         report.add_field(reporting.Fields.NA75, na75)

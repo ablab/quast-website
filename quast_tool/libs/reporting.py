@@ -53,10 +53,11 @@ class Fields:
     AMBIGUOUS = '# ambiguous contigs'
     AMBIGUOUSBASES = 'Ambiguous contigs length'
 
-    UNCALLED = '# N'
-    UNCALLED_PERCENT = "N's (%)"
+    UNCALLED = "# N's"
+    UNCALLED_PERCENT = "# N's per 100 kbp"
 
     # Unaligned
+    LARGALIGN = 'Largest alignment'
     NA50 = 'NA50'
     NGA50 = 'NGA50'
     NA75 = 'NA75'
@@ -148,8 +149,7 @@ class Fields:
 
     grouped_order = [
         ('Basic stats', [NUMCONTIGS, CONTIGS, LARGCONTIG, TOTALLEN, TOTALLENS, REFLEN,
-                         N50, N75, NG50, NG75, L50, L75, LG50, LG75,
-                         UNCALLED, UNCALLED_PERCENT,]),
+                         N50, N75, NG50, NG75, L50, L75, LG50, LG75,]),
 
         ('Misassemblies', [MIS_ALL_EXTENSIVE, MIS_EXTENSIVE_CONTIGS, MIS_EXTENSIVE_BASES,
                            MIS_RELOCATION, MIS_TRANSLOCATION, MIS_INVERTION,
@@ -161,11 +161,12 @@ class Fields:
 
         ('Ambiguous', [AMBIGUOUS, AMBIGUOUSBASES,]),
 
-        ('Genome representation and its functional elements', [MAPPEDGENOME, DUPLICATION_RATIO, GENES, OPERONS,
-                                   GENEMARKUNIQUE, GENEMARK, GC, REFGC,
-                                   MISMATCHES, SUBSERROR, INDELS, INDELSERROR]),
+        ('Genome stats', [MAPPEDGENOME, DUPLICATION_RATIO, GENES, OPERONS,
+                        GENEMARKUNIQUE, GENEMARK, GC, REFGC,
+                        MISMATCHES, SUBSERROR, INDELS, INDELSERROR,
+                        UNCALLED, UNCALLED_PERCENT,]),
 
-        ('Aligned', [NA50, NA75, NGA50, NGA75, LA50, LA75, LGA50, LGA75,]),
+        ('Aligned', [LARGALIGN, NA50, NA75, NGA50, NGA75, LA50, LA75, LGA50, LGA75,]),
     ]
 
     main_metrics = [NUMCONTIGS, LARGCONTIG, TOTALLEN, NG50, UNCALLED_PERCENT,

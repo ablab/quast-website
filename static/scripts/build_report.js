@@ -131,7 +131,7 @@ function buildReport() {
 
             var link = $('#extended_report_link');
             if (link.html() == 'Extended report') {
-                link.html('Compact report');
+                link.html('Short report');
             } else {
                 link.html('Extended report')
 
