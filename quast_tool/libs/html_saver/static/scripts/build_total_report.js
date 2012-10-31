@@ -19,7 +19,7 @@ function buildTotalReport(assembliesNames, report, glossary, qualities, mainMetr
 
         } else {
             table +=
-                '<tr class="subheader-tr">' +
+                '<tr class="subheader-tr" id="group_' + group_n + '" style="display: none;">' +
                 '<td colspan="' + width + '">' + groupName + '</td>' +
                 '</tr>';
         }
@@ -33,8 +33,15 @@ function buildTotalReport(assembliesNames, report, glossary, qualities, mainMetr
             var trClass = 'content-row';
             if ($.inArray(metricName, mainMetrics) > -1) {
                 trClass = 'content-row';
+
+                (function(group_n) {
+                    var id = '#group_' + group_n;
+                    $(function() {
+                        $(id).show();
+                    });
+                })(group_n);
             } else {
-                trClass = 'content-row-hidden';
+                trClass = 'row_hidden';
             }
 
             table +=

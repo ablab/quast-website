@@ -141,6 +141,8 @@ function buildReport() {
         return 1;
     }
 
+    $(plotsSwitchesDiv).html('<b>Plots:</b>');
+
     filenames.forEach(function(filename, i) {
         var id = 'label_' + i + '_id';
         $('#legend-placeholder').append('<div>' +
