@@ -361,22 +361,21 @@
             <tr>
             <td class="layout-table-td layout-table-fst-td">
                 <div id='form-wrapper'>
-                    <table class='form-layout-table'>
-                        <tr>
-                            <td class='form-layout-td' style="padding-top: 3px;"><h3>Contigs</h3></td>
-
-                            <td class='form-layout-td'>
-                                <div id="contigs-uploader" class="uploader-div" style="margin-bottom: 10px; height: 175px;"></div><div style="clear: both"></div>
-
-                                <label for="id_min_contig">{% comment %}@declare id="id_min_contig"{% endcomment %}
-                                    Skip contigs shorter than {{ dataset_form.min_contig }}<span style='font-size: 8px;'> </span>bp<br>
-                                    {{ dataset_form.min_contig.errors }}
-                                </label>
-                            </td>
-                        </tr>
-                    </table>
-
                     <form enctype="multipart/form-data" action="/" method="POST">{% csrf_token %}
+                        <table class='form-layout-table'>
+                            <tr>
+                                <td class='form-layout-td' style="padding-top: 3px;"><h3>Contigs</h3></td>
+
+                                <td class='form-layout-td'>
+                                    <div id="contigs-uploader" class="uploader-div" style="margin-bottom: 10px; height: 175px;"></div><div style="clear: both"></div>
+
+                                    <label for="id_min_contig">{% comment %}@declare id="id_min_contig"{% endcomment %}
+                                        Skip contigs shorter than {{ dataset_form.min_contig }}<span style='font-size: 8px;'> </span>bp<br>
+                                        {{ dataset_form.min_contig.errors }}
+                                    </label>
+                                </td>
+                            </tr>
+                        </table>
                         <table class='form-layout-table'>
                             <tr>
                                 <td class='form-layout-td' style="padding: 0px;"><h3>Data set</h3></td>
@@ -399,7 +398,7 @@
                                         <div style="margin-left: 0px;">
                                             <label for="id_is_created">
                                                 <input type="checkbox" class='dotted-link' name="is_created" id="id_is_created"/>
-{#                                                {{ dataset_form.created_or_selected }}#}
+    {#                                                {{ dataset_form.created_or_selected }}#}
                                                 <a class='dotted-link'>Another data set</a>
                                             </label>
                                         </div>
@@ -409,26 +408,26 @@
                         </table>
 
 
-{#                                    <select name="name_selected" class="chzn-select" id="dataset-select" style="width:350px;" tabindex="2" onchange="datasetSelectOnchange()">#}
-{#                                            {% for dataset in datasets %}#}
-{#                                            <option value="{{ dataset.name }}">{{ dataset.name }}</option>#}
-{#                                            {% endfor %}#}
-{#                                            <option value="custom-dataset">Add dataset...</option>#}
-{#                                        </select>#}
-{#                                        <div style="clear: both"></div>#}
+    {#                                    <select name="name_selected" class="chzn-select" id="dataset-select" style="width:350px;" tabindex="2" onchange="datasetSelectOnchange()">#}
+    {#                                            {% for dataset in datasets %}#}
+    {#                                            <option value="{{ dataset.name }}">{{ dataset.name }}</option>#}
+    {#                                            {% endfor %}#}
+    {#                                            <option value="custom-dataset">Add dataset...</option>#}
+    {#                                        </select>#}
+    {#                                        <div style="clear: both"></div>#}
                         <div id="add-dataset" style="display: none;">
-{#                                                {% comment %}@declare id="id_name_created "{% endcomment %}#}
-{#                                                <label for='id_name_created'>Dataset name#}
-{#                                                {{ dataset_form.name_created }}</label>#}
-{#                                                {% comment %}@declare id="id_reference"{% endcomment %}#}
-{#                                                <label for='id_reference'>Reference<br/>#}
-{#                                                {{ dataset_form.reference }}</label>#}
-{#                                                {% comment %}@declare id="id_genes"{% endcomment %}#}
-{#                                                <label for='id_genes'>Genes<br/>#}
-{#                                                {{ dataset_form.genes }}</label>#}
-{#                                                {% comment %}@declare id="id_operons"{% endcomment %}#}
-{#                                                <label for='id_operons'>Operons<br/>#}
-{#                                                {{ dataset_form.operons }}</label>#}
+    {#                                                {% comment %}@declare id="id_name_created "{% endcomment %}#}
+    {#                                                <label for='id_name_created'>Dataset name#}
+    {#                                                {{ dataset_form.name_created }}</label>#}
+    {#                                                {% comment %}@declare id="id_reference"{% endcomment %}#}
+    {#                                                <label for='id_reference'>Reference<br/>#}
+    {#                                                {{ dataset_form.reference }}</label>#}
+    {#                                                {% comment %}@declare id="id_genes"{% endcomment %}#}
+    {#                                                <label for='id_genes'>Genes<br/>#}
+    {#                                                {{ dataset_form.genes }}</label>#}
+    {#                                                {% comment %}@declare id="id_operons"{% endcomment %}#}
+    {#                                                <label for='id_operons'>Operons<br/>#}
+    {#                                                {{ dataset_form.operons }}</label>#}
                             <table class='form-layout-table'>
                                 <tr>{% comment %}@declare id="id_name_created"{% endcomment %}
                                     <td class='form-layout-td'><label for='id_name_created'>Title</label></td>
