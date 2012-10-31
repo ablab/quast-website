@@ -22,17 +22,17 @@ function buildReport() {
         '#0000FF', //blue
         '#008000', //green
         '#FFA500', //orange
-        '#00FFFF', //aqua
         '#FF0000', //red
         '#FF00FF', //fushua
         '#CCCC00', //yellow
         '#800000', //maroon
+        '#00CCCC', //aqua
         '#808080', //gray
-        '#000080', //navy
-        '#808000', //olive
         '#800080', //purple
-        '#00FF00', //lime
+        '#808000', //olive
+        '#000080', //navy
         '#008080', //team
+        '#00FF00', //lime
     ];
 
     function distinctColors(count) {
