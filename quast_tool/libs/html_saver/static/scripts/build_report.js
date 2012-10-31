@@ -22,11 +22,11 @@ function buildReport() {
         '#0000FF', //blue
         '#008000', //green
         '#FFA500', //orange
-        '#CCCC00', //yellow
         '#00FFFF', //aqua
         '#FF0000', //red
-        '#800000', //maroon
         '#FF00FF', //fushua
+        '#CCCC00', //yellow
+        '#800000', //maroon
         '#808080', //gray
         '#000080', //navy
         '#808000', //olive
@@ -112,12 +112,31 @@ function buildReport() {
             return 1;
         }
 
+        var qualities = null;
+        var mainMetrics = null;
+        try { qualities = JSON.parse($('#qualities-json').html()); } catch (e) { alert(e.stack); qualities = null; }
+        try { mainMetrics = JSON.parse($('#main-metrics-json').html()); } catch (e) { alert(e.message); mainMetrics = null; }
+
 //        colors = distinctColors(filenames.length);
 
 //        document.title += (totalReport.date);
         $('#subheader').html(totalReport.date + '.');
         $('#mincontig').append('Contigs of length ≥ ' + totalReport.minContig + ' bp are used.');
-        buildTotalReport(filenames, totalReport.report, glossary);
+        $('#extended_link').append('<a class="dotted-link" id="extended_report_link">Extended report</a>');
+
+        buildTotalReport(filenames, totalReport.report, glossary, qualities, mainMetrics);
+
+        $('#extended_report_link').click(function() {
+            $('.content-row-hidden').fadeToggle('fast');
+
+            var link = $('#extended_report_link');
+            if (link.html() == 'Extended report') {
+                link.html('Compact report');
+            } else {
+                link.html('Extended report')
+
+            }
+        })
     } else {
         return 1;
     }

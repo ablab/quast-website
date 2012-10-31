@@ -4,10 +4,10 @@
 
 {% block extra_head %}
     <script type="text/javascript" src="/static/jquery-1.7.2.min.js"></script>
+    <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="../excanvas.min.js"></script><![endif]-->
     <script type="text/javascript" src="/static/flot/jquery.flot.js"></script>
-    <script type="text/javascript" src="/static/flot/jquery.flot.dashes.js"></script>
     <script type="text/javascript" src="/static/flot/jquery.flot.resize.js"></script>
-    <!–[if lte IE 8]><script type="text/javascript" src="/static/flot/excanvas.min.js"></script><![endif]–>
+    <script type="text/javascript" src="/static/flot/jquery.flot.dashes.js"></script>
 
     <script type="text/javascript" src="/static/scripts/hsvToRgb.js"></script>
     <script type="text/javascript" src="/static/scripts/utils.js"></script>
@@ -18,8 +18,9 @@
     <script type="text/javascript" src="/static/scripts/draw_genes_plot.js"></script>
     <script type="text/javascript" src="/static/scripts/build_report.js"></script>
 
-    <script type="text/javascript">
-    </script>
+    <link rel="stylesheet" href="/static/report.css"/>
+
+    {% block before_report_extra_head %}{% endblock %}
 
     <script type="text/javascript">
         $(buildReport);
@@ -31,8 +32,8 @@
         });
     </script>
 
-    <link rel="stylesheet" href="/static/report.css"/>
-    {% block extra_extra_head %}{% endblock %}
+    {% block after_report_extra_head %}{% endblock %}
+
 {% endblock %}
 
 {% block content %}
@@ -44,6 +45,8 @@
         <h1>{% block header %}{% endblock %}</h1>
         <div id='subheader'>Loading...</div>
         <span id='mincontig'></span>
+        <br><br>
+        <span id="extended_link"></span>
     </div>
 
     <noscript>
@@ -71,7 +74,7 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <div id='plot-placeholder'></div>
+                        <div id='plot-placeholder' style=''></div>
                     </td>
                     <td>
                         <div id='legend-placeholder'></div>
@@ -106,6 +109,13 @@
             <div id='total-report-json'>
                 {{ totalReport }}
             </div>
+            <div id='qualities-json'>
+                {{ qualities }}
+            </div>
+            <div id='main-metrics-json'>
+                {{ mainMetrics }}
+            </div>
+
             <div id="contigs-lengths-json">
                 {{ contigsLenghts }}
             </div>

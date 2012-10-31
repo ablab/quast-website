@@ -1,5 +1,5 @@
 
-function buildTotalReport(assembliesNames, report, glossary) {
+function buildTotalReport(assembliesNames, report, glossary, qualities, mainMetrics) {
     var table = '';
     table += '<table cellspacing="0" class="report-table">';
 
@@ -30,8 +30,15 @@ function buildTotalReport(assembliesNames, report, glossary) {
             var quality = metric.quality;
             var values = metric.values;
 
+            var trClass = 'content-row';
+            if ($.inArray(metricName, mainMetrics) > -1) {
+                trClass = 'content-row';
+            } else {
+                trClass = 'content-row-hidden';
+            }
+
             table +=
-                '<tr class="content-row" quality="' + quality + '">' +
+                '<tr class="' + trClass + '" quality="' + quality + '">' +
                 '<td><span class="metric-name">' +
                     addTooltipIfDefinitionExists(glossary, metricName) +
                     '</span>' +

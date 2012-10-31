@@ -8,236 +8,183 @@
 
 {% block brand-link-class %}disabled{% endblock %}
 
-{% block extra_extra_head %}
-<script src="/static/ajaxuploader/fileuploader.js"></script>
-<link href="/static/ajaxuploader/fileuploader.css" media="screen" rel="stylesheet" type="text/css"/>
+{% block before_report_extra_head %}
+    <script src="/static/ajaxuploader/fileuploader.js"></script>
+    <link href="/static/ajaxuploader/fileuploader.css" media="screen" rel="stylesheet" type="text/css"/>
 
-<link rel="stylesheet" href="/static/chosen/chosen.css" />
-<link rel="stylesheet" href="/static/evaluate.css" />
-<link rel="stylesheet" href="/static/bootstrap/css/bootstrap-responsive.min.css"/>
-<link rel="stylesheet" href="/static/index.css"/>
-<link rel="stylesheet" href="/static/reports.css"/>
+    <link rel="stylesheet" href="/static/chosen/chosen.css" />
+    <link rel="stylesheet" href="/static/evaluate.css" />
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap-responsive.min.css"/>
+    <link rel="stylesheet" href="/static/index.css"/>
+    <link rel="stylesheet" href="/static/reports.css"/>
 
-<script src="/static/chosen/chosen.jquery.js" type="text/javascript"></script>
+    <script src="/static/chosen/chosen.jquery.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-    $(function() {
-        $(".chzn-select").chosen();
-        $(".chzn-select-deselect").chosen({allow_single_deselect:true});
-    })
-
-    $(function() {
-        {% if highlight_last %}
-            $('.highlighted_tr').hide().fadeIn('slow');
-        {% endif %}
-
-        $('.full-report').css('display', 'none');
-
-{#        function scroll(event) {#}
-{#            $('.full-report').fadeToggle('fast');#}
-{#            event.preventDefault();#}
-{#            $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);#}
-{#        }#}
-
-        $('#report_example_anchor').click(function(event){
-            var fullReport = $('.full-report');
-            var wasHidden = (fullReport.css('display') == 'none');
-            if (wasHidden) {
-                fullReport.stop().fadeToggle('fast');
-            }
-            event.preventDefault();
-            $('html,body').animate({scrollTop:$(this.hash).offset().top + 20}, 500);
+    <script>
+        $(function() {
+            {% if highlight_last %}
+                $('.highlighted_tr').hide().fadeIn('slow');
+            {% endif %}
         });
 
-        $("#report_example_toggle").click(function(event) {
-            var fullReport = $('.full-report');
-            var wasHidden = (fullReport.css('display') == 'none');
-            fullReport.stop().fadeToggle('fast');
-            if (wasHidden) {
-                event.preventDefault();
-                $('html,body').animate({scrollTop:$(this.hash).offset().top + 20}, 500);
-            }
-        });
-    });
-
-    $(function() {
-        $("#add-dataset-toggle-link").mouseenter(function() {
-            $(this).find('.dotted-link').css('color', '#b33');
-            $(this).find('.dotted-link').css('border-bottom', '1px dashed #ffcccc');
-            $(this).find('.dotted-link').css('border-color', '1px dashed #ffcccc');
-            $(this).find('.dotted-link').css('border-color', 'rgba(255, 0, 0, 0.2)');
-        }).mouseleave(function() {
-            $(this).find('.dotted-link').css('color', '#0c4f72');
-            $(this).find('.dotted-link').css('border-bottom', '1px dashed #487b95');
-            $(this).find('.dotted-link').css('border-color', '#487b95');
-            $(this).find('.dotted-link').css('border-color', 'rgba(12, 79, 114, 0.2)');
+        $(function() {
+            $(".chzn-select").chosen();
+            $(".chzn-select-deselect").chosen({allow_single_deselect:true});
         });
 
-{#        $("#id_is_created")[0].onclick = null;#}
-{#        $('#id_is_created').click(function(event) {#}
-{#            event.preventDefault();#}
-{#            var checkBox = $('#id_is_created');#}
-{#            checkBox.prop('checked', !checkBox.prop('checked'));#}
-{#            event.stopPropagation();#}
-{#        });#}
-
-        $('#add-dataset-toggle-link').click(function(event) {
-            event.preventDefault();
-
-            var checkBox = $('#id_is_created');
-            var addDataset = $('#add-dataset');
-
-            addDataset.stop().slideToggle('fast', function() {
-                $('#id_name_created').focus();
-
-                if (addDataset.is(':visible')) {
-                    checkBox.prop('checked', true);
-                } else {
-                    checkBox.prop('checked', false);
-                }
-            });
-        });
-{##}
-{#        function set_selected() {#}
-{#            $('#id_created_or_selected').prop('value', 'selected');#}
-{#        }#}
-{##}
-{#        function set_created() {#}
-{#            $('#id_created_or_selected').prop('value', 'created');#}
-{#        }#}
-
-{#        $('#another-data-set-input').click(checkAnotherDataSet);#}
-
-{#        function checkAnotherDataSet() {#}
-{#            var nameSelectInput = $('#id_created'1);#}
-{#            var idCreatedOrSelected = $('id_created_or_selected');#}
-
-{#            var addDataSet = $('#add-dataset');#}
-{#            if (addDataSet.is(':visible')) { //TODO: CHECK IT!!!!! Maybe needed to check display:none#}
-            {#                nameSelectInput.prop('disabled', false);#}
-{#                idCreatedOrSelected.prop('value', 'selected');#}
-{#            } else {#}
-            {#                nameSelectInput.prop('disabled', true);#}
-{#                idCreatedOrSelected.prop('value', 'created');#}
-{#            }#}
-{#        }#}
-
-    });
-
-    $(function() {
-        var uploaders = [];
-
-        var uploaders = [{
-            action: '{% url contigs_ajax_upload %}',
-            removeLink: '{% url contigs_ajax_remove %}',
-            initializeUploadsLink: '{% url contigs_ajax_initialize_uploads %}',
-            elementId: '#contigs-uploader',
-            multiple: true,
-            btnText: 'Add files',
-            areaText: 'drop files here',
-            areaClass: 'upload-drop-area',
-            uploaded: '{% for fname in contigs_fnames %}<li>{{ fname }} &nbsp;' +
-                // '<a class="dotted-link" style="font-size: 0.8em;" href="#">Remove</a>' +
-                '</li>{% endfor %}',
-        },];
-
-        for (var i = 0; i < uploaders.length; i++) {
-            uploaders.push(new qq.FileUploader({
-                action: uploaders[i].action,
-                removeLink: uploaders[i].removeLink,
-                initializeUploadsLink: uploaders[i].initializeUploadsLink,
-                element: $(uploaders[i].elementId)[0],
-                multiple: uploaders[i].multiple,
-                onComplete: function(id, fileName, responseJSON) {
-                    if (responseJSON.success) {
-                        $('#evaluate-button').prop('disabled', false);
-                        $('#evaluate-button').removeClass('disabled');
-                        $('#area-text').css('display', 'none');
-                    }
-                },
-                onAllComplete: function(uploads) {
-                    if (uploads.length > 0) {
-                        $('#evaluate-button').prop('disabled', false);
-                        $('#evaluate-button').removeClass('disabled');
-                        $('#area-text').css('display', 'none');
-                    }
-                    // uploads is an array of maps
-                    // the maps look like this: {file: FileObject, response: JSONServerResponse}
-                },
-                onRemove: function() {
-                    var number_of_files = -1;
-                    $('.qq-upload-file').each(function(index) {
-                        number_of_files++;
+        $(function() {
+            $("#add-dataset-toggle-link").mouseenter(function() {
+                $(this).find('.dotted-link').css('color', '#b33');
+                $(this).find('.dotted-link').css('border-bottom', '1px dashed #ffcccc');
+                $(this).find('.dotted-link').css('border-color', '1px dashed #ffcccc');
+                $(this).find('.dotted-link').css('border-color', 'rgba(255, 0, 0, 0.2)');
+            }).mouseleave(function() {
+                        $(this).find('.dotted-link').css('color', '#0c4f72');
+                        $(this).find('.dotted-link').css('border-bottom', '1px dashed #487b95');
+                        $(this).find('.dotted-link').css('border-color', '#487b95');
+                        $(this).find('.dotted-link').css('border-color', 'rgba(12, 79, 114, 0.2)');
                     });
 
-                    if (number_of_files <= 0) {
-                        $('#evaluate-button').prop('disabled', true);
-                        $('#evaluate-button').addClass('disabled');
-                        $('#area-text').css('display', 'block');
-                    }
-                },
-                onInitFiles: function(files){
-                    if (!files || files.length == 0) {
-                        $('#evaluate-button').prop('disabled', true);
-                        $('#evaluate-button').addClass('disabled');
-                        $('#area-text').css('display', 'block');
+            {#        $("#id_is_created")[0].onclick = null;#}
+            {#        $('#id_is_created').click(function(event) {#}
+            {#            event.preventDefault();#}
+            {#            var checkBox = $('#id_is_created');#}
+            {#            checkBox.prop('checked', !checkBox.prop('checked'));#}
+            {#            event.stopPropagation();#}
+            {#        });#}
+
+            $('#add-dataset-toggle-link').click(function(event) {
+                event.preventDefault();
+
+                var checkBox = $('#id_is_created');
+                var addDataset = $('#add-dataset');
+
+                addDataset.stop().slideToggle('fast', function() {
+                    $('#id_name_created').focus();
+
+                    if (addDataset.is(':visible')) {
+                        checkBox.prop('checked', true);
                     } else {
-                        $('#evaluate-button').prop('disabled', false);
-                        $('#evaluate-button').removeClass('disabled');
-                        $('#area-text').css('display', 'none');
+                        checkBox.prop('checked', false);
                     }
-                },
-                params: {
-                    'csrf_token': '{{ csrf_token }}',
-                    'csrf_name': 'csrfmiddlewaretoken',
-                    'csrf_xname': 'X-CSRFToken',
-                },
-                messages: {
-                },
-                template:
-                        '<div class="qq-uploader">' +
-                            '<button class="btn">' + uploaders[i].btnText + '</button>' +
-                            '<div>' +
-                                '<div class="' + uploaders[i].areaClass + '">' +
-                                    '<div class="upload-list-div">' +
-                                        '<ul class="upload-list"></ul>' +
+                });
+            });
+        });
+
+        $(function() {
+            var uploaders = [];
+
+            var parameters = [{
+                action: '{% url contigs_ajax_upload %}',
+                removeLink: '{% url contigs_ajax_remove %}',
+                initializeUploadsLink: '{% url contigs_ajax_initialize_uploads %}',
+                elementId: '#contigs-uploader',
+                multiple: true,
+                btnText: 'Add files',
+                areaText: 'drop files here',
+                areaClass: 'upload-drop-area',
+                uploaded: '{% for fname in contigs_fnames %}<li>{{ fname }} &nbsp;' +
+                    // '<a class="dotted-link" style="font-size: 0.8em;" href="#">Remove</a>' +
+                    '</li>{% endfor %}',
+            },];
+
+            for (var i = 0; i < parameters.length; i++) {
+                uploaders.push(new qq.FileUploader({
+                    action: parameters[i].action,
+                    removeLink: parameters[i].removeLink,
+                    initializeUploadsLink: parameters[i].initializeUploadsLink,
+                    element: $(parameters[i].elementId)[0],
+                    multiple: parameters[i].multiple,
+                    onComplete: function(id, fileName, responseJSON) {
+                        if (responseJSON.success) {
+                            $('#evaluate-button').prop('disabled', false);
+                            $('#evaluate-button').removeClass('disabled');
+                            $('#area-text').css('display', 'none');
+                        }
+                    },
+                    onAllComplete: function(uploads) {
+                        if (uploads.length > 0) {
+                            $('#evaluate-button').prop('disabled', false);
+                            $('#evaluate-button').removeClass('disabled');
+                            $('#area-text').css('display', 'none');
+                        }
+                        // uploads is an array of maps
+                        // the maps look like this: {file: FileObject, response: JSONServerResponse}
+                    },
+                    onRemove: function() {
+                        var number_of_files = -1;
+                        $('.qq-upload-file').each(function(index) {
+                            number_of_files++;
+                        });
+
+                        if (number_of_files <= 0) {
+                            $('#evaluate-button').prop('disabled', true);
+                            $('#evaluate-button').addClass('disabled');
+                            $('#area-text').css('display', 'block');
+                        }
+                    },
+                    onInitFiles: function(files){
+                        if (!files || files.length == 0) {
+                            $('#evaluate-button').prop('disabled', true);
+                            $('#evaluate-button').addClass('disabled');
+                            $('#area-text').css('display', 'block');
+                        } else {
+                            $('#evaluate-button').prop('disabled', false);
+                            $('#evaluate-button').removeClass('disabled');
+                            $('#area-text').css('display', 'none');
+                        }
+                    },
+                    params: {
+                        'csrf_token': '{{ csrf_token }}',
+                        'csrf_name': 'csrfmiddlewaretoken',
+                        'csrf_xname': 'X-CSRFToken',
+                    },
+                    messages: {
+                    },
+                    template:
+                            '<div class="qq-uploader">' +
+                                '<button class="btn">' + parameters[i].btnText + '</button>' +
+                                '<div>' +
+                                    '<div class="' + parameters[i].areaClass + '">' +
+                                        '<div class="upload-list-div">' +
+                                            '<ul class="upload-list"></ul>' +
+                                        '</div>' +
+                                        '<div id="area-text" style="margin-top: 55px; margin-left: 90px; opacity: 0.5;">' + parameters[i].areaText + '</div>' +
                                     '</div>' +
-                                    '<div id="area-text" style="margin-top: 55px; margin-left: 90px; opacity: 0.5;">' + uploaders[i].areaText + '</div>' +
                                 '</div>' +
-                            '</div>' +
-                        '</div>',
-                fileTemplate:
-                        '<li>' +
-                        '<span class="qq-upload-file"></span>' +
-                        '<span class="qq-upload-spinner"></span>' +
-                        '<span class="qq-upload-size"></span>' +
-                        '<a class="dotted-link qq-upload-cancel" href="#">cancel</a>' +
-{#                        '<a class="dotted-link qq-upload-remove" href="#" style="opacity: 0.5;"><img src="/static/pics/delete_icon.png" height=7></a>' +#}
-                                '<a class="dotted-link qq-upload-remove" href="#">remove</a>' +
-                        '<span class="qq-upload-failed-text">Failed</span>' +
-                     // '<a class="dotted-link" style="font-size: 0.8em;" href="#">Remove</a>' +
-                        '</li>',
-                classes: {
-                    // used to get elements from templates
-                    button: 'btn',
-                    drop: uploaders[i].areaClass,
-                    dropActive: 'upload-drop-area-active',
-                    list: 'upload-list',
+                            '</div>',
+                    fileTemplate:
+                            '<li>' +
+                            '<span class="qq-upload-file"></span>' +
+                            '<span class="qq-upload-spinner"></span>' +
+                            '<span class="qq-upload-size"></span>' +
+                            '<a class="dotted-link qq-upload-cancel" href="#">cancel</a>' +
+    {#                        '<a class="dotted-link qq-upload-remove" href="#" style="opacity: 0.5;"><img src="/static/pics/delete_icon.png" height=7></a>' +#}
+                                    '<a class="dotted-link qq-upload-remove" href="#">remove</a>' +
+                            '<span class="qq-upload-failed-text">Failed</span>' +
+                         // '<a class="dotted-link" style="font-size: 0.8em;" href="#">Remove</a>' +
+                            '</li>',
+                    classes: {
+                        // used to get elements from templates
+                        button: 'btn',
+                        drop: parameters[i].areaClass,
+                        dropActive: 'upload-drop-area-active',
+                        list: 'upload-list',
 
-                    file: 'qq-upload-file',
-                    spinner: 'qq-upload-spinner',
-                    size: 'qq-upload-size',
-                    cancel: 'qq-upload-cancel',
-                    remove: 'qq-upload-remove',
+                        file: 'qq-upload-file',
+                        spinner: 'qq-upload-spinner',
+                        size: 'qq-upload-size',
+                        cancel: 'qq-upload-cancel',
+                        remove: 'qq-upload-remove',
 
-                    // added to list item when upload completes
-                    // used in css to hide progress spinner
-                    success: 'qq-upload-success',
-                    fail: 'qq-upload-fail'
-                }
-            }));
-        }
-    });
+                        // added to list item when upload completes
+                        // used in css to hide progress spinner
+                        success: 'qq-upload-success',
+                        fail: 'qq-upload-fail'
+                    }
+                }));
+            }
+        });
 
     //        $('#add-dataset-wrapper').click(
     //            $('#add-dataset-toggle-link').
@@ -257,7 +204,67 @@
 {#        }#}
 {#    }#}
 
-</script>
+    </script>
+{% endblock %}
+
+{% block after_report_extra_head %}
+    <script type="text/javascript">
+        $(function() {
+
+            $('.full-report').css('display', 'none');
+
+            {#        function scroll(event) {#}
+            {#            $('.full-report').fadeToggle('fast');#}
+            {#            event.preventDefault();#}
+            {#            $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);#}
+            {#        }#}
+
+            $('#report_example_anchor').click(function(event){
+                var fullReport = $('.full-report');
+                var wasHidden = (fullReport.css('display') == 'none');
+                if (wasHidden) {
+                    fullReport.stop().fadeToggle('fast');
+                }
+                event.preventDefault();
+                $('html,body').animate({scrollTop:$(this.hash).offset().top + 20}, 500);
+            });
+
+            $("#report_example_toggle").click(function(event) {
+                var fullReport = $('.full-report');
+                var wasHidden = (fullReport.css('display') == 'none');
+                fullReport.stop().fadeToggle('fast');
+                if (wasHidden) {
+                    event.preventDefault();
+                    $('html,body').animate({scrollTop:$(this.hash).offset().top + 20}, 500);
+                }
+            });
+        });
+
+        {##}
+        {#        function set_selected() {#}
+        {#            $('#id_created_or_selected').prop('value', 'selected');#}
+        {#        }#}
+        {##}
+        {#        function set_created() {#}
+        {#            $('#id_created_or_selected').prop('value', 'created');#}
+        {#        }#}
+
+        {#        $('#another-data-set-input').click(checkAnotherDataSet);#}
+
+        {#        function checkAnotherDataSet() {#}
+        {#            var nameSelectInput = $('#id_created'1);#}
+        {#            var idCreatedOrSelected = $('id_created_or_selected');#}
+
+        {#            var addDataSet = $('#add-dataset');#}
+        {#            if (addDataSet.is(':visible')) { //TODO: CHECK IT!!!!! Maybe needed to check display:none#}
+        {#                nameSelectInput.prop('disabled', false);#}
+        {#                idCreatedOrSelected.prop('value', 'selected');#}
+        {#            } else {#}
+        {#                nameSelectInput.prop('disabled', true);#}
+        {#                idCreatedOrSelected.prop('value', 'created');#}
+        {#            }#}
+        {#        }#}
+    </script>
 {% endblock %}
 
 {% block extra_content %}
@@ -552,6 +559,7 @@
         <span id="reportexample"></span>
         <h2><a class='dotted-link' id='report_example_toggle' href="#reportexample">Report Example</a></h2>
         <p class='full-report'>Comparison of 4 different E. coli assemblies with one dataset.</p>
+        <div id="extended_link" class='full-report'></div>
     </div>
 
 {#    <p style="">You can check out a sample report:</p>#}

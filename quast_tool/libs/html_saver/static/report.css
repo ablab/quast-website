@@ -30,10 +30,12 @@
 .plots {
     margin-bottom: 0px;
     /*float: right;*/
+    /*border: 1px solid green;*/
 }
-.plots td{
+.plots td {
     vertical-align: top;
     white-space: nowrap;
+    /*border: 1px solid red;*/
 }
 
 #legend-placeholder {
@@ -49,11 +51,20 @@
 }
 
 #plot-placeholder {
-    width: 800px;
+    width: 900px;
     height: 600px;
+
+    /*min-width: 500px;*/
+    /*min-height: 500px;*/
+    /*width: 100%;*/
+    /*min-height: 400px;*/
+    /*height: 50%;*/
+
     margin-left: -125px;
     margin-right: 20px;
     float: left;
+
+    /*border: 1px solid blue;*/
 }
 
 /*.cumulative-plot-placeholder {*/
@@ -87,6 +98,10 @@
 #report .subheader-tr td {
     height: 20px;
     vertical-align: bottom;
+}
+
+.content-row-hidden {
+    display: none;
 }
 
 

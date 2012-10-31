@@ -510,9 +510,9 @@ def get_report_response_dict(results_dirpath, header):
         return contents
 
     try:
-        report = get('total_report', is_required=True)
+        total_report = get('total_report', is_required=True)
     except Exception, e:
-        report = get('report', is_required=True)
+        total_report = get('report', is_required=True)
 
     contigs_lengths         = get('contigs_lengths', is_required=True)
     reference_length        = get('ref_length')
@@ -523,8 +523,16 @@ def get_report_response_dict(results_dirpath, header):
     operons                 = get('operons')
     gc_info                 = get('gc')
 
+    if not settings.QUAST_DIRPATH in sys.path:
+        sys.path.insert(1, settings.QUAST_DIRPATH)
+    from libs import reporting
+
+    import json
+    quality_dict = json.dumps(reporting.Fields.quality_dict)
+    main_metrics = json.dumps(reporting.get_main_metrics())
+
     return {
-        'totalReport' : report,
+        'totalReport' : total_report,
         'contigsLenghts' : contigs_lengths,
         'alignedContigsLengths' : aligned_contigs_lengths,
         'assembliesLengths' : assemblies_lengths,
@@ -535,9 +543,10 @@ def get_report_response_dict(results_dirpath, header):
         'gcInfo' : gc_info,
 
         'header' : header,
+
+        'qualities': quality_dict,
+        'mainMetrics': main_metrics,
     }
-
-
 
 
 #static_path = 'app/static/'

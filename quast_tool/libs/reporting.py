@@ -83,11 +83,11 @@ class Fields:
 
     # order as printed in report:
     order = [NAME, CONTIGS, TOTALLENS, NUMCONTIGS, LARGCONTIG, TOTALLEN, REFLEN, GC,
-             N50, L50, NG50, LG50, N75, L75, NG75, LG75, #AVGIDY,
+             N50, NG50, N75, NG75,
              MISASSEMBL, MISCONTIGS, MISCONTIGSBASES,
              UNALIGNED, UNALIGNEDBASES, AMBIGUOUS, AMBIGUOUSBASES, MAPPEDGENOME, DUPLICATION_RATIO, REFGC,
              UNCALLED_PERCENT, SUBSERROR, INDELSERROR, GENES, OPERONS, GENEMARKUNIQUE, GENEMARK,
-             NA50, LA50, NGA50, LGA50, NA75, LA75, NGA75, LGA75]
+             NA50, NGA50, NA75, NGA75]
 
     MIS_ALL_EXTENSIVE = '# misassemblies'
     MIS_RELOCATION = '    # relocations'
@@ -167,6 +167,13 @@ class Fields:
         ('Aligned', [NA50, NA75, NGA50, NGA75, LA50, LA75, LGA50, LGA75,]),
     ]
 
+    main_metrics = [NAME, CONTIGS, TOTALLENS, NUMCONTIGS, LARGCONTIG, TOTALLEN, REFLEN, GC,
+                    N50, NG50, N75, NG75,
+                    MIS_ALL_EXTENSIVE, MIS_EXTENSIVE_CONTIGS, MIS_EXTENSIVE_BASES,
+                    UNALIGNED_FULL_CNTGS, UNALIGNED_FULL_LENGTH, AMBIGUOUS, AMBIGUOUSBASES, MAPPEDGENOME, DUPLICATION_RATIO, REFGC,
+                    UNCALLED_PERCENT, SUBSERROR, INDELSERROR, GENES, OPERONS, GENEMARKUNIQUE, GENEMARK,
+                    NA50, NGA50, NA75, NGA75]
+
     class Quality:
         MORE_IS_BETTER='More is better'
         LESS_IS_BETTER='Less is better'
@@ -185,6 +192,29 @@ class Fields:
 
     for name, metrics in filter(lambda (name, metrics): name in ['Misassemblies', 'Unaligned', 'Ambiguous'], grouped_order):
         quality_dict['Less is better'].extend(metrics)
+
+
+
+def get_main_metrics():
+    lists = map(take_tuple_metric_apart, Fields.main_metrics)
+    m_metrics = []
+    for l in lists:
+        for m in l:
+            m_metrics.append(m)
+    return m_metrics
+
+
+def take_tuple_metric_apart(field):
+    metrics = []
+
+    if isinstance(field, tuple): # TODO: rewrite it nicer
+        thresholds = map(int, ''.join(field[1]).split(','))
+        for i, feature in enumerate(thresholds):
+            metrics.append(field[0] % feature)
+    else:
+        metrics = [field]
+
+    return metrics
 
 
 def get_quality(metric):
@@ -279,6 +309,7 @@ def grouped_table(grouped_order=Fields.grouped_order):
                 'metricName': metric_name,
                 'quality': quality,
                 'values': values,
+                'isMain': field in Fields.main_metrics
             })
 
 
