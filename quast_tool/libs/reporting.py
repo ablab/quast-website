@@ -161,7 +161,7 @@ class Fields:
 
         ('Ambiguous', [AMBIGUOUS, AMBIGUOUSBASES,]),
 
-        ('Genome representation', [MAPPEDGENOME, DUPLICATION_RATIO, GENES, OPERONS,
+        ('Genome representation and its functional elements', [MAPPEDGENOME, DUPLICATION_RATIO, GENES, OPERONS,
                                    GENEMARKUNIQUE, GENEMARK, GC, REFGC,
                                    MISMATCHES, SUBSERROR, INDELS, INDELSERROR]),
 

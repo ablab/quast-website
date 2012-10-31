@@ -42,7 +42,8 @@ def license(request):
 
 def example(request):
     example_dirpath = os.path.join(settings.EXAMPLE_DIRPATH)
-    response_dict = get_report_response_dict(example_dirpath, 'E.coli')
+    report_response_dict = get_report_response_dict(example_dirpath, 'E.coli')
+    response_dict = dict(report_response_dict.items() + template_args_by_default.items())
     return render_to_response('example-report.html', response_dict)
 
 
@@ -51,9 +52,10 @@ def benchmarking(request):
 
 
 def ecoli(request):
-    return render_to_response('ecoli.html',
-          get_report_response_dict(os.path.join(settings.ECOLI_DIRPATH), 'E.coli')
-    )
+    json_dirpath = os.path.join(settings.ECOLI_DIRPATH)
+    report_response_dict = get_report_response_dict(json_dirpath, 'E.coli')
+    response_dict = dict(report_response_dict.items() + template_args_by_default.items())
+    return render_to_response('ecoli.html', response_dict)
 
 
 #def report_scripts(request, script_name):

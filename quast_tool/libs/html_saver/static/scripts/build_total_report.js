@@ -19,7 +19,7 @@ function buildTotalReport(assembliesNames, report, glossary, qualities, mainMetr
 
         } else {
             table +=
-                '<tr class="subheader-tr" id="group_' + group_n + '" style="display: none;">' +
+                '<tr class="subheader-tr row_hidden" id="group_' + group_n + '">' +
                 '<td colspan="' + width + '">' + groupName + '</td>' +
                 '</tr>';
         }
@@ -37,7 +37,7 @@ function buildTotalReport(assembliesNames, report, glossary, qualities, mainMetr
                 (function(group_n) {
                     var id = '#group_' + group_n;
                     $(function() {
-                        $(id).show();
+                        $(id).removeClass('row_hidden');
                     });
                 })(group_n);
             } else {

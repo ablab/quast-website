@@ -127,7 +127,7 @@ function buildReport() {
         buildTotalReport(filenames, totalReport.report, glossary, qualities, mainMetrics);
 
         $('#extended_report_link').click(function() {
-            $('.content-row-hidden').fadeToggle('fast');
+            $('.row_hidden').fadeToggle('fast');
 
             var link = $('#extended_report_link');
             if (link.html() == 'Extended report') {
