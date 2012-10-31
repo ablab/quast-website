@@ -19,10 +19,10 @@ function buildReport() {
 
 //    var colors = ["#FF5900", "#008FFF", "#168A16", "#7C00FF", "#00B7FF", "#FF0080", "#7AE01B", "#782400", "#E01B6A"];
     var colors = [
+        '#FF0000', //red
         '#0000FF', //blue
         '#008000', //green
         '#FFA500', //orange
-        '#FF0000', //red
         '#FF00FF', //fushua
         '#CCCC00', //yellow
         '#800000', //maroon
