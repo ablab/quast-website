@@ -171,7 +171,7 @@ class Fields:
     main_metrics = [NUMCONTIGS, LARGCONTIG, TOTALLEN, NG50, UNCALLED_PERCENT,
                     MISASSEMBL, MISCONTIGSBASES,
                     MAPPEDGENOME, SUBSERROR, INDELSERROR,
-                    GENES, OPERONS, GENEMARKUNIQUE, GENEMARK, GC, REFGC,]
+                    GENES, OPERONS, GENEMARKUNIQUE, GENEMARK,]
 
     class Quality:
         MORE_IS_BETTER='More is better'
