@@ -167,26 +167,3 @@ a.icon_link:hover {
     color: black;
     border-color: #000;
 }
-/*********/
-
-.hs {
-    /* Полупробел для
-  разделения разрядов чисел:
-  10<span class="hs"></span>000 */
-    margin-left: .2em;
-}
-
-.rhs {
-    /* Полупробел на случай,
-  если реальный пробел важен,
-  например между ценой и валютой:
-  1<span class="rhs">&nbsp;</span>$ */
-    font-size: 50%;
-    line-height: 1;
-}
-
-/*9490<span class="rhs"> </span>€<br/>*/
-/*12<span class="hs"></span>650<span class="rhs"> </span>$<br/>*/
-/*379<span class="hs"></span>000<span*/
-    /*class="rhs"> </span><span class="b-rub">Р</span><br/>*/
-/*100<span class="hs"></span>500<span class="rhs"> </span>+*/

@@ -335,13 +335,13 @@ def get_dataset(request, dataset_form, now_str):
 
     else:
         name = dataset_form.data['name_selected']
-        if name == 'no dataset':
+        if name == 'no data set':
             dataset = None
         else:
             try:
                 dataset = Dataset.objects.get(name=name)
             except Dataset.DoesNotExist:
-                return HttpResponseBadRequest('Dataset does not exist')
+                return HttpResponseBadRequest('Data set does not exist')
 
     return dataset
 
