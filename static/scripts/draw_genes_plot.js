@@ -6,6 +6,7 @@ var gns = {
     draw: null,
     redraw: null,
     kind: null,
+    yAxisLabeled: false,
 };
 
 function drawGenesPlot(name, colors, filenames, data, referenceLength,
@@ -25,6 +26,8 @@ function drawGenesPlot(name, colors, filenames, data, referenceLength,
             kind: name,
         };
     }
+
+    gns.yAxisLabeled = false;
 
     if (gns.plotsData == null || gns.draw == null || gns.redraw == null) {
         var contigsInfos = data.contigsInfos;
@@ -121,7 +124,8 @@ function drawGenesPlot(name, colors, filenames, data, referenceLength,
                     lineWidth: 0.5,
                     color: '#000',
                     tickFormatter: function (val, axis) {
-                        if (val > gns.maxY) {
+                        if (!gns.yAxisLabeled && val > gns.maxY) {
+                            gns.yAxisLabeled = true;
                             var res = val + ' ' + kind;
                             if (val > 1) {
                                 res += 's'

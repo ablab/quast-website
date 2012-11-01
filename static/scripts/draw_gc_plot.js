@@ -29,11 +29,13 @@ var gc = {
     placeholder: null,
     legendPlaceholder: null,
     colors: null,
+    yAxisLabeled: false,
 };
 
 function windowsTickFormatter(v, axis) {
     var val = v.toFixed();
-    if (val > gc.maxY) {
+    if (!gc.yAxisLabeled && val > gc.maxY) {
+        gc.yAxisLabeled = true;
         var res = val + ' window';
         if (val > 1) {
             res += 's'
@@ -48,6 +50,9 @@ function drawInNormalScale(plotsData, colors) {
     if (plotsData == null || gc.maxY == null) {
         return;
     }
+
+    gc.yAxisLabeled = false;
+
     gc.plot = $.plot(gc.placeholder, plotsData, {
             shadowSize: 0,
             colors: colors,
@@ -59,7 +64,7 @@ function drawInNormalScale(plotsData, colors) {
             },
             yaxis: {
                 min: 0,
-//                max: gc.maxY,
+//                max: gc.maxY + 0.1 * gc.maxY,
                 labelWidth: 120,
                 reserveSpace: true,
                 lineWidth: 0.5,
@@ -90,6 +95,9 @@ function drawInLogarithmicScale(plotsData, colors) {
     if (plotsData == null || gc.maxY == null || gc.minPow == null) {
         return;
     }
+
+    gc.yAxisLabeled = false;
+    
     gc.plot = $.plot(gc.placeholder, plotsData, {
             shadowSize: 0,
             colors: colors,
