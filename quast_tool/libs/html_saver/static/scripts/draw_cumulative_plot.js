@@ -203,6 +203,8 @@ function drawCumulativePlot(name, colors, filenames, listsOfLengths, referenceLe
 
     cumulative.redraw();
 
+    $('#contigs_are_ordered').show();
+
 //    placeholder.resize(function () {
 //        alert("Placeholder is now "
 //            + $(this).width() + "x" + $(this).height()

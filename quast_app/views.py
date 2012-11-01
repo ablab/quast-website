@@ -17,13 +17,6 @@ with open(os.path.join(settings.GLOSSARY_PATH)) as f:
     glossary = f.read()
 
 
-def add_template_args_by_defualt(new_args):
-    together = dict(new_args)
-    together['glossary'] = glossary
-    together['google-analytics'] = settings.GOOGLE_ANALYTICS
-    return together
-
-
 template_args_by_default = {
     'glossary': glossary,
     'google-analytics': settings.GOOGLE_ANALYTICS,

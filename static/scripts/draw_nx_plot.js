@@ -164,5 +164,7 @@ function drawNxPlot(name, colors, filenames, listsOfLengths, refLength,
     });
 
     nx.redraw();
+
+    $('#contigs_are_ordered').hide();
 }
 

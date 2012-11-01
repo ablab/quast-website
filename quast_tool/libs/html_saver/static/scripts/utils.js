@@ -70,7 +70,7 @@ function getBpTickFormatter(maxY) {
             res = myToFixed(res);
 
             if (val > maxY + 1 || val + axis.tickSize >= 1000000) {
-                res = res + ' Kbp';
+                res = res + ' kbp';
             }
         } else if (val >= 1) {
             res = myToFixed(val);
@@ -82,6 +82,39 @@ function getBpTickFormatter(maxY) {
         return '<span style="word-spacing: -1px;">' + res + '</span>';
     }
 }
+//
+//function getWindowsTickFormatter(maxY) {
+//    return function(val, axis) {
+//        var res;
+//
+//        if (val == 0) {
+//            res = 0;
+//
+//        } else if (val >= 1000000) {
+//            res = val / 1000000;
+//            res = myToFixed(res);
+//
+//            if (val > maxY + 1 || val + axis.tickSize >= 1000000000) {
+//                res = res + ' windowes Mbp';
+//            }
+//        } else if (val >= 1000) {
+//            res = val / 1000;
+//            res = myToFixed(res);
+//
+//            if (val > maxY + 1 || val + axis.tickSize >= 1000000) {
+//                res = res + ' kbp';
+//            }
+//        } else if (val >= 1) {
+//            res = myToFixed(val);
+//
+//            if (val > maxY + 1 || val + axis.tickSize >= 1000) {
+//                res = res + ' bp';
+//            }
+//        }
+//        return '<span style="word-spacing: -1px;">' + res + '</span>';
+//    }
+//}
+
 
 function getBpLogTickFormatter(maxY) {
     return function(val, axis) {
@@ -102,7 +135,7 @@ function getBpLogTickFormatter(maxY) {
             res = myToFixed(res);
 
             if (val > maxY + 1 || val + axis.tickSize >= 1000000) {
-                res = res + ' Kbp';
+                res = res + ' kbp';
             }
         } else if (val >= 1) {
             res = myToFixed(val);
@@ -122,7 +155,7 @@ function getContigNumberTickFormatter(maxX) {
             var lastDigit = valStr[valStr.length-1];
             var beforeLastDigit = valStr[valStr.length-2];
 
-            var res = val + "'th";
+            var res = val + "th";
 
             if (lastDigit == '1' && beforeLastDigit != '1') {
                 res = val + "'st";

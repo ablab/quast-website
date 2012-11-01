@@ -31,6 +31,18 @@ var gc = {
     colors: null,
 };
 
+function windowsTickFormatter(v, axis) {
+    var val = v.toFixed();
+    if (val > gc.maxY) {
+        var res = val + ' window';
+        if (val > 1) {
+            res += 's'
+        }
+        return res;
+    } else {
+        return val;
+    }
+}
 
 function drawInNormalScale(plotsData, colors) {
     if (plotsData == null || gc.maxY == null) {
@@ -52,7 +64,7 @@ function drawInNormalScale(plotsData, colors) {
                 reserveSpace: true,
                 lineWidth: 0.5,
                 color: '#000',
-                tickFormatter: getBpTickFormatter(gc.maxY),
+                tickFormatter: windowsTickFormatter,
                 minTickSize: 1,
             },
             xaxis: {
@@ -94,7 +106,7 @@ function drawInLogarithmicScale(plotsData, colors) {
                 reserveSpace: true,
                 lineWidth: 0.5,
                 color: '#000',
-                tickFormatter: getBpLogTickFormatter(gc.maxY),
+                tickFormatter: windowsTickFormatter,
                 minTickSize: 1,
                 ticks: gc.ticks,
 
@@ -285,13 +297,17 @@ function drawGCPlot(name, colors, filenames, listsOfGCInfo, reflen,
 
             gc.draw(newPlotsData, newColors);
         };
-
-        $.each(gc.plotsData, function(i, series) {
-            $('#legend-placeholder').find('#label_' + series.number + '_id').click(gc.redraw);
-        });
-
-        gc.redraw();
-
-        $('#change-scale').css('visibility', 'visible');
     }
+
+    $.each(gc.plotsData, function(i, series) {
+        $('#legend-placeholder').find('#label_' + series.number + '_id').click(gc.redraw);
+    });
+
+    gc.redraw();
+
+    $('#change-scale').css('visibility', 'visible');
+
+    $('#contigs_are_ordered').hide();
+
+//    $('#contigs_are_ordered').html('');
 }

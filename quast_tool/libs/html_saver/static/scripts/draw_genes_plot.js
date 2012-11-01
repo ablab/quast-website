@@ -121,7 +121,7 @@ function drawGenesPlot(name, colors, filenames, data, referenceLength,
                     lineWidth: 0.5,
                     color: '#000',
                     tickFormatter: function (val, axis) {
-                        if (val > gns.maxY + 1) {
+                        if (val > gns.maxY) {
                             var res = val + ' ' + kind;
                             if (val > 1) {
                                 res += 's'
@@ -179,5 +179,7 @@ function drawGenesPlot(name, colors, filenames, data, referenceLength,
     });
 
     gns.redraw();
+
+    $('#contigs_are_ordered').show();
 }
 
