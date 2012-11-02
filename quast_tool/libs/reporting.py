@@ -148,7 +148,7 @@ class Fields:
                   GAGE_CORN50]
 
     grouped_order = [
-        ('Basic stats', [NUMCONTIGS, CONTIGS, LARGCONTIG, TOTALLEN, TOTALLENS, REFLEN,
+        ('Basic statistics', [NUMCONTIGS, CONTIGS, LARGCONTIG, TOTALLEN, TOTALLENS, REFLEN,
                          N50, N75, NG50, NG75, L50, L75, LG50, LG75,]),
 
         ('Misassemblies', [MIS_ALL_EXTENSIVE, 
@@ -162,12 +162,12 @@ class Fields:
 
         ('Ambiguous', [AMBIGUOUS, AMBIGUOUSBASES,]),
 
-        ('Genome stats', [MAPPEDGENOME, DUPLICATION_RATIO, GENES, OPERONS,
+        ('Genome statistics', [MAPPEDGENOME, DUPLICATION_RATIO, GENES, OPERONS,
                         GENEMARKUNIQUE, GENEMARK, GC, REFGC,
                         MISMATCHES, SUBSERROR, INDELS, INDELSERROR,
                         UNCALLED, UNCALLED_PERCENT,]),
 
-        ('Aligned', [LARGALIGN, NA50, NA75, NGA50, NGA75, LA50, LA75, LGA50, LGA75,]),
+        ('Aligned statistics', [LARGALIGN, NA50, NA75, NGA50, NGA75, LA50, LA75, LGA50, LGA75,]),
     ]
 
     main_metrics = [NUMCONTIGS, LARGCONTIG, TOTALLEN, NG50, UNCALLED_PERCENT,
