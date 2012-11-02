@@ -151,8 +151,9 @@ class Fields:
         ('Basic stats', [NUMCONTIGS, CONTIGS, LARGCONTIG, TOTALLEN, TOTALLENS, REFLEN,
                          N50, N75, NG50, NG75, L50, L75, LG50, LG75,]),
 
-        ('Misassemblies', [MIS_ALL_EXTENSIVE, MIS_EXTENSIVE_CONTIGS, MIS_EXTENSIVE_BASES,
+        ('Misassemblies', [MIS_ALL_EXTENSIVE, 
                            MIS_RELOCATION, MIS_TRANSLOCATION, MIS_INVERTION,
+                           MIS_EXTENSIVE_CONTIGS, MIS_EXTENSIVE_BASES,
                            MIS_LOCAL]),
 
         ('Unaligned', [UNALIGNED_FULL_CNTGS, UNALIGNED_FULL_LENGTH, UNALIGNED_PART_CNTGS,
