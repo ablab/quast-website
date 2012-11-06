@@ -54,19 +54,25 @@ function buildTotalReport(assembliesNames, report, glossary, qualities, mainMetr
             for (var value_n = 0; value_n < values.length; value_n++) {
                 var value = values[value_n];
 
-                if (value == null) {
+                if (value === null || value === '') {
                     table += '<td><span>-</span></td>';
                 } else {
-                    if (typeof value == 'number') {
+                    if (typeof value === 'number') {
                         table +=
                             '<td number="' + value + '"><span>'
                             + toPrettyString(value) + '</span></td>';
                     } else {
-                        var num = parseFloat(value);
-                        if (num != null) {
-                            table += '<td number="' + num + '"><span>' + value + '</span></td>';
+                        var result = /([0-9\.]+)(.*)/.exec(value);
+                        var num = parseFloat(result[1]);
+                        var rest = result[2];
+//                        alert('value = ' + value + ' result = ' + result);
+
+//                        var num = parseFloat(value);
+
+                        if (num !== null) {
+                            table += '<td number="' + num + '"><span>' + toPrettyString(num) + rest + '</span></td>';
                         } else {
-                            table += '<td><span>' + toPrettyString(value) + '</span></td>';
+                            table += '<td><span>' + value + '</span></td>';
                         }
                     }
                 }

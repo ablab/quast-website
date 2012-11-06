@@ -85,6 +85,7 @@ function buildReport() {
     }
 
     var firstPlot = true;
+
     function makePlot(name, title, drawPlot, data, refLen) {
         var switchSpan = document.createElement('span');
         switchSpan.id = name + '-switch';

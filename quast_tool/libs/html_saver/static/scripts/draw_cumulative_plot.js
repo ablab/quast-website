@@ -165,6 +165,14 @@ function drawCumulativePlot(name, colors, filenames, listsOfLengths, referenceLe
                     minTickSize: 1,
                 },
             });
+
+            $(placeholder).bind("plothover", function(event, pos, item) {
+               if (item) {
+                   var x = item.datapoint[0];
+
+                   $("#clickdata").text("")
+               }
+            });
         };
 
         cumulative.redraw = function() {

@@ -1,10 +1,31 @@
 
+function isInt(num) {
+    return num % 1 === 0;
+}
+
+function isFloat(num) {
+    return !isInt(num);
+}
 
 function toPrettyString(num) {
-    if (num <= 9999) {
-        return num.toString();
+    if (typeof num === 'number') {
+        if (num <= 9999) {
+            return num.toString();
+
+//            if (isFloat(num)) {
+//                if (num <= 9) {
+//                    return num.toFixed(3);
+//                } else {
+//                    return num.toFixed(2);
+//                }
+//            } else {
+//                return num.toFixed(0);
+//            }
+        } else {
+            return num.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g,'$1<span class="hs"></span>');
+        }
     } else {
-        return num.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g,'$1<span class="hs"></span>');
+        return num;
     }
 }
 
@@ -17,11 +38,15 @@ function toPrettyStringWithDimension(num, dimension) {
     }
 }
 
-function myToFixed(num) {
-    if (num % 1 != 0) {
-        return num.toFixed(1);
+function twoDigitsAfterDot(num) {
+    if (typeof num === 'number') {
+        if (isFloat(num)) {
+            return num.toFixed(2);
+        } else {
+            return num;
+        }
     } else {
-        return num.toFixed(0);
+        return num;
     }
 }
 
@@ -60,20 +85,20 @@ function getBpTickFormatter(maxY) {
 
         } else if (val >= 1000000) {
             res = val / 1000000;
-            res = myToFixed(res);
+            res = twoDigitsAfterDot(res);
 
             if (val > maxY + 1 || val + axis.tickSize >= 1000000000) {
                 res = res + ' Mbp';
             }
         } else if (val >= 1000) {
             res = val / 1000;
-            res = myToFixed(res);
+            res = twoDigitsAfterDot(res);
 
             if (val > maxY + 1 || val + axis.tickSize >= 1000000) {
                 res = res + ' kbp';
             }
         } else if (val >= 1) {
-            res = myToFixed(val);
+            res = twoDigitsAfterDot(val);
 
             if (val > maxY + 1 || val + axis.tickSize >= 1000) {
                 res = res + ' bp';
@@ -125,20 +150,20 @@ function getBpLogTickFormatter(maxY) {
 
         } else if (val >= 1000000) {
             res = val / 1000000;
-            res = myToFixed(res);
+            res = twoDigitsAfterDot(res);
 
             if (val > maxY + 1 || val + axis.tickSize >= 1000000000) {
                 res = res + ' Mbp';
             }
         } else if (val >= 1000) {
             res = val / 1000;
-            res = myToFixed(res);
+            res = twoDigitsAfterDot(res);
 
             if (val > maxY + 1 || val + axis.tickSize >= 1000000) {
                 res = res + ' kbp';
             }
         } else if (val >= 1) {
-            res = myToFixed(val);
+            res = twoDigitsAfterDot(val);
 
             if (val > maxY + 1 || val + axis.tickSize >= 1000) {
                 res = res + ' bp';
