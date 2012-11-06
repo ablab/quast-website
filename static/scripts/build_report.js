@@ -66,7 +66,7 @@ function buildReport() {
                             '<input type="checkbox" name="' + filenames.length +
                             '" checked="checked" id="label_' + filenames.length +
                             '_id">&nbsp;' + 'Reference,&nbsp;' +
-                            toPrettyStringWithDimension(referenceLength, 'bp') +
+                            toPrettyString(referenceLength, 'bp') +
                         '</label>' +
                     '</div>');
             }
@@ -85,6 +85,7 @@ function buildReport() {
     }
 
     var firstPlot = true;
+
     function makePlot(name, title, drawPlot, data, refLen) {
         var switchSpan = document.createElement('span');
         switchSpan.id = name + '-switch';

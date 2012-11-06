@@ -89,7 +89,7 @@ function drawCumulativePlot(name, colors, filenames, listsOfLengths, referenceLe
         if (referenceLength) {
             cumulative.plotsData.push({
                 data: [[0, referenceLength], [cumulative.maxX, referenceLength]],
-                label: 'Reference,&nbsp;' + toPrettyStringWithDimension(referenceLength, 'bp'),
+                label: 'Reference,&nbsp;' + toPrettyString(referenceLength, 'bp'),
                 dashes: {
                     show: true,
                     lineWidth: 1,

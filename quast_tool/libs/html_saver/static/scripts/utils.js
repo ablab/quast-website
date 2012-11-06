@@ -7,10 +7,10 @@ function isFloat(num) {
     return !isInt(num);
 }
 
-function toPrettyString(num) {
+function toPrettyString(num, unit) {
     if (typeof num === 'number') {
         if (num <= 9999) {
-            return num.toString();
+            return num.toString() + (unit ? '<span class="rhs">&nbsp;</span>' + unit : '');
 
 //            if (isFloat(num)) {
 //                if (num <= 9) {
@@ -21,34 +21,36 @@ function toPrettyString(num) {
 //            } else {
 //                return num.toFixed(0);
 //            }
+
         } else {
-            return num.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g,'$1<span class="hs"></span>');
+            return num.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g,'$1<span class="hs"></span>') +
+                (unit ? '<span class="rhs">&nbsp;</span>' + unit : '');
         }
     } else {
         return num;
     }
 }
-
-function toPrettyStringWithDimension(num, dimension) {
-    if (num <= 9999) {
-        return num.toString() + '<span class="rhs">&nbsp;</span>' + dimension;
-    } else {
-        return num.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g,'$1<span class="hs"></span>')
-            + '<span class="rhs">&nbsp;</span>' + dimension;
-    }
-}
-
-function twoDigitsAfterDot(num) {
-    if (typeof num === 'number') {
-        if (isFloat(num)) {
-            return num.toFixed(2);
-        } else {
-            return num;
-        }
-    } else {
-        return num;
-    }
-}
+//
+//function toPrettyStringWithUnit(num, unit) {
+//    if (num <= 9999) {
+//        return num.toString() + '<span class="rhs">&nbsp;</span>' + unit;
+//    } else {
+//        return num.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g,'$1<span class="hs"></span>')
+//            + '<span class="rhs">&nbsp;</span>' + unit;
+//    }
+//}
+//
+//function twoDigitsAfterDot(num) {
+//    if (typeof num === 'number') {
+//        if (isFloat(num)) {
+//            return num.toFixed(2);
+//        } else {
+//            return num;
+//        }
+//    } else {
+//        return num;
+//    }
+//}
 
 function getMaxDecimalTick(maxY) {
     var maxYTick = maxY;
@@ -85,28 +87,33 @@ function getBpTickFormatter(maxY) {
 
         } else if (val >= 1000000) {
             res = val / 1000000;
-            res = twoDigitsAfterDot(res);
 
             if (val > maxY + 1 || val + axis.tickSize >= 1000000000) {
-                res = res + ' Mbp';
+                res = toPrettyString(res, 'Mbp');
+            } else {
+                res = toPrettyString(res);
             }
         } else if (val >= 1000) {
             res = val / 1000;
-            res = twoDigitsAfterDot(res);
 
             if (val > maxY + 1 || val + axis.tickSize >= 1000000) {
-                res = res + ' kbp';
+                res = toPrettyString(res, 'kbp');
+            } else {
+                res = toPrettyString(res);
             }
         } else if (val >= 1) {
-            res = twoDigitsAfterDot(val);
+            res = val;
 
             if (val > maxY + 1 || val + axis.tickSize >= 1000) {
-                res = res + ' bp';
+                res = toPrettyString(res, 'bp');
+            } else {
+                res = toPrettyString(res);
             }
         }
         return '<span style="word-spacing: -1px;">' + res + '</span>';
     }
 }
+
 //
 //function getWindowsTickFormatter(maxY) {
 //    return function(val, axis) {
@@ -140,37 +147,8 @@ function getBpTickFormatter(maxY) {
 //    }
 //}
 
-
 function getBpLogTickFormatter(maxY) {
-    return function(val, axis) {
-        var res;
-
-        if (val == 0) {
-            res = 0;
-
-        } else if (val >= 1000000) {
-            res = val / 1000000;
-            res = twoDigitsAfterDot(res);
-
-            if (val > maxY + 1 || val + axis.tickSize >= 1000000000) {
-                res = res + ' Mbp';
-            }
-        } else if (val >= 1000) {
-            res = val / 1000;
-            res = twoDigitsAfterDot(res);
-
-            if (val > maxY + 1 || val + axis.tickSize >= 1000000) {
-                res = res + ' kbp';
-            }
-        } else if (val >= 1) {
-            res = twoDigitsAfterDot(val);
-
-            if (val > maxY + 1 || val + axis.tickSize >= 1000) {
-                res = res + ' bp';
-            }
-        }
-        return '<span style="word-spacing: -1px;">' + res + '</span>';
-    }
+    return getBpTickFormatter(maxY);
 }
 
 function getContigNumberTickFormatter(maxX) {
@@ -183,11 +161,11 @@ function getContigNumberTickFormatter(maxX) {
             var res = val + "th";
 
             if (lastDigit == '1' && beforeLastDigit != '1') {
-                res = val + "'st";
+                res = val + "st";
             } else if (lastDigit == '2' && beforeLastDigit != '1') {
-                res = val + "'nd";
+                res = val + "nd";
             } else if (lastDigit == '3' && beforeLastDigit != '1') {
-                res = val + "'rd";
+                res = val + "rd";
             }
             return "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + res + "&nbsp;contig";
         }

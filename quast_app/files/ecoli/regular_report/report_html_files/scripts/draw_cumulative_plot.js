@@ -75,7 +75,7 @@ function drawCumulativePlot(filenames, listsOfLengths, referenceLength,
     if (referenceLength) {
         plotsData = [({
             data: [[0, referenceLength], [maxX, referenceLength]],
-            label: 'Reference, ' + toPrettyStringWithDimension(referenceLength, 'bp'),
+            label: 'Reference, ' + toPrettyStringWithUnit(referenceLength, 'bp'),
             dashes: {
                 show: true,
                 lineWidth: 1,
@@ -117,7 +117,7 @@ function drawCumulativePlot(filenames, listsOfLengths, referenceLength,
             labelWidth: 50,
             reserveSpace: true,
             tickFormatter: function (val, axis) {
-                return '<div style="">' + toPrettyStringWithDimension(referenceLength, 'bp') +
+                return '<div style="">' + toPrettyStringWithUnit(referenceLength, 'bp') +
                     ' <span style="margin-left: -0.2em;">(reference)</span></div>';
             },
             minTickSize: 1,

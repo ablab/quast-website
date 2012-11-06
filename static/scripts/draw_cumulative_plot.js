@@ -89,7 +89,7 @@ function drawCumulativePlot(name, colors, filenames, listsOfLengths, referenceLe
         if (referenceLength) {
             cumulative.plotsData.push({
                 data: [[0, referenceLength], [cumulative.maxX, referenceLength]],
-                label: 'Reference,&nbsp;' + toPrettyStringWithDimension(referenceLength, 'bp'),
+                label: 'Reference,&nbsp;' + toPrettyString(referenceLength, 'bp'),
                 dashes: {
                     show: true,
                     lineWidth: 1,
@@ -164,6 +164,14 @@ function drawCumulativePlot(name, colors, filenames, listsOfLengths, referenceLe
                     tickFormatter: getContigNumberTickFormatter(cumulative.maxX),
                     minTickSize: 1,
                 },
+            });
+
+            $(placeholder).bind("plothover", function(event, pos, item) {
+               if (item) {
+                   var x = item.datapoint[0];
+
+                   $("#clickdata").text("")
+               }
             });
         };
 

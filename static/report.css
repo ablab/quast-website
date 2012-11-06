@@ -88,12 +88,12 @@
 #report td {
     padding: 2px 1em 0 0;
     margin: 0;
+    white-space: nowrap;
+    min-width: 100px;
+    max-width: 200px;
 }
 #report td:last-child {
     padding-right: 0;
-}
-#report td {
-    white-space: nowrap
 }
 #report .subheader-tr td {
     height: 20px;
