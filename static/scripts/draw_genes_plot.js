@@ -2,7 +2,7 @@
 var gns = {
     maxY: 0,
     maxYTick: 0,
-    plotsData: null,
+    series: null,
     draw: null,
     redraw: null,
     kind: null,
@@ -20,7 +20,7 @@ function drawGenesPlot(name, colors, filenames, data, referenceLength,
         gns = {
             maxY: 0,
             maxYTick: 0,
-            plotsData: null,
+            series: null,
             draw: null,
             redraw: null,
             kind: name,
@@ -29,14 +29,14 @@ function drawGenesPlot(name, colors, filenames, data, referenceLength,
 
     gns.yAxisLabeled = false;
 
-    if (gns.plotsData == null || gns.draw == null || gns.redraw == null) {
+    if (gns.series == null || gns.draw == null || gns.redraw == null) {
         var contigsInfos = data.contigsInfos;
         var genes = data.genes;
         var found = data.found;
         var kind = data.kind;
 
         var plotsN = filenames.length;
-        gns.plotsData = new Array(plotsN);
+        gns.series = new Array(plotsN);
 
         gns.maxY = 0;
         gns.maxX = 0;
@@ -48,7 +48,7 @@ function drawGenesPlot(name, colors, filenames, data, referenceLength,
                 found[i] = 0
             }
 
-            gns.plotsData[fi] = {
+            gns.series[fi] = {
                 data: [[0, 0]],
                 label: filenames[fi],
                 number: fi,
@@ -78,10 +78,10 @@ function drawGenesPlot(name, colors, filenames, data, referenceLength,
                     }
                 }
 
-                gns.plotsData[fi].data.push([contigNo, totalFull]);
+                gns.series[fi].data.push([contigNo, totalFull]);
 
-                if (gns.plotsData[fi].data[k][1] > gns.maxY) {
-                    gns.maxY = gns.plotsData[fi].data[k][1];
+                if (gns.series[fi].data[k][1] > gns.maxY) {
+                    gns.maxY = gns.series[fi].data[k][1];
                 }
             }
 
@@ -91,7 +91,7 @@ function drawGenesPlot(name, colors, filenames, data, referenceLength,
         }
 
         for (i = 0; i < plotsN; i++) {
-            gns.plotsData[i].lines = {
+            gns.series[i].lines = {
                 show: true,
                 lineWidth: 1,
             }
@@ -154,12 +154,12 @@ function drawGenesPlot(name, colors, filenames, data, referenceLength,
 
             $('#legend-placeholder').find('input:checked').each(function() {
                 var number = $(this).attr('name');
-                if (number && gns.plotsData && gns.plotsData.length > 0) {
+                if (number && gns.series && gns.series.length > 0) {
                     i = 0;
                     do {
-                        var series = gns.plotsData[i];
+                        var series = gns.series[i];
                         i++;
-                    } while (series.number != number && i <= gns.plotsData.length);
+                    } while (series.number != number && i <= gns.series.length);
 //                    if (i != gns.plotsData.length) {
                     newPlotsData.push(series);
                     newColors.push(series.color);
@@ -178,7 +178,7 @@ function drawGenesPlot(name, colors, filenames, data, referenceLength,
         }
     }
 
-    $.each(gns.plotsData, function(i, series) {
+    $.each(gns.series, function(i, series) {
         $('#legend-placeholder').find('#label_' + i + '_id').click(gns.redraw);
     });
 

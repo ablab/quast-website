@@ -2,7 +2,7 @@
 var nx = {
     maxY: 0,
     maxYTick: 0,
-    plotsData: null,
+    series: null,
     draw: null,
     redraw: null,
     kind: null,
@@ -26,16 +26,16 @@ function drawNxPlot(name, colors, filenames, listsOfLengths, refLength,
         nx = {
             maxY: 0,
             maxYTick: 0,
-            plotsData: null,
+            series: null,
             draw: null,
             redraw: null,
             kind: name,
         };
     }
 
-    if (nx.plotsData == null || nx.draw == null || nx.redraw == null) {
+    if (nx.series == null || nx.draw == null || nx.redraw == null) {
         var plotsN = filenames.length;
-        nx.plotsData = new Array(plotsN);
+        nx.series = new Array(plotsN);
 
         for (var i = 0; i < plotsN; i++) {
             var lengths = listsOfLengths[i];
@@ -50,33 +50,33 @@ function drawNxPlot(name, colors, filenames, listsOfLengths, refLength,
                 sumLen = refLength;
             }
 
-            nx.plotsData[i] = {
+            nx.series[i] = {
                 data: [],
                 label: filenames[i],
                 number: i,
                 color: colors[i],
             };
-            nx.plotsData[i].data.push([0.0, lengths[0]]);
+            nx.series[i].data.push([0.0, lengths[0]]);
             var currentLen = 0;
             var x = 0.0;
 
             for (var k = 0; k < size; k++) {
                 currentLen += lengths[k];
-                nx.plotsData[i].data.push([x, lengths[k]]);
+                nx.series[i].data.push([x, lengths[k]]);
                 x = currentLen * 100.0 / sumLen;
-                nx.plotsData[i].data.push([x, lengths[k]]);
+                nx.series[i].data.push([x, lengths[k]]);
             }
 
-            if (nx.plotsData[i].data[0][1] > nx.maxY) {
-                nx.maxY = nx.plotsData[i].data[0][1];
+            if (nx.series[i].data[0][1] > nx.maxY) {
+                nx.maxY = nx.series[i].data[0][1];
             }
 
-            var lastPt = nx.plotsData[i].data[nx.plotsData[i].data.length-1];
-            nx.plotsData[i].data.push([lastPt[0], 0]);
+            var lastPt = nx.series[i].data[nx.series[i].data.length-1];
+            nx.series[i].data.push([lastPt[0], 0]);
         }
 
         for (i = 0; i < plotsN; i++) {
-            nx.plotsData[i].lines = {
+            nx.series[i].lines = {
                 show: true,
                 lineWidth: 1,
             }
@@ -135,12 +135,12 @@ function drawNxPlot(name, colors, filenames, listsOfLengths, refLength,
 
             $('#legend-placeholder').find('input:checked').each(function() {
                 var number = $(this).attr('name');
-                if (number && nx.plotsData && nx.plotsData.length > 0) {
+                if (number && nx.series && nx.series.length > 0) {
                     i = 0;
                     do {
-                        var series = nx.plotsData[i];
+                        var series = nx.series[i];
                         i++;
-                    } while (series.number != number && i <= nx.plotsData.length);
+                    } while (series.number != number && i <= nx.series.length);
 //                    if (i != nx.plotsData.length) {
                     newPlotsData.push(series);
                     newColors.push(series.color);
@@ -159,7 +159,7 @@ function drawNxPlot(name, colors, filenames, listsOfLengths, refLength,
         }
     }
 
-    $.each(nx.plotsData, function(i, series) {
+    $.each(nx.series, function(i, series) {
         $('#legend-placeholder').find('#label_' + series.number + '_id').click(nx.redraw);
     });
 

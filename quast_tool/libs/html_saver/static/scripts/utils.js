@@ -11,7 +11,6 @@ function toPrettyString(num, unit) {
     if (typeof num === 'number') {
         if (num <= 9999) {
             return num.toString() + (unit ? '<span class="rhs">&nbsp;</span>' + unit : '');
-
 //            if (isFloat(num)) {
 //                if (num <= 9) {
 //                    return num.toFixed(3);
@@ -21,7 +20,6 @@ function toPrettyString(num, unit) {
 //            } else {
 //                return num.toFixed(0);
 //            }
-
         } else {
             return num.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g,'$1<span class="hs"></span>') +
                 (unit ? '<span class="rhs">&nbsp;</span>' + unit : '');
@@ -30,27 +28,28 @@ function toPrettyString(num, unit) {
         return num;
     }
 }
-//
-//function toPrettyStringWithUnit(num, unit) {
-//    if (num <= 9999) {
-//        return num.toString() + '<span class="rhs">&nbsp;</span>' + unit;
-//    } else {
-//        return num.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g,'$1<span class="hs"></span>')
-//            + '<span class="rhs">&nbsp;</span>' + unit;
-//    }
-//}
-//
-//function twoDigitsAfterDot(num) {
-//    if (typeof num === 'number') {
-//        if (isFloat(num)) {
-//            return num.toFixed(2);
-//        } else {
-//            return num;
-//        }
-//    } else {
-//        return num;
-//    }
-//}
+
+function ordinalNumberToPrettyString(num, unit) {
+    var numStr = num.toString();
+    var lastDigit = numStr[numStr.length-1];
+    var beforeLastDigit = numStr[numStr.length-2];
+
+    var res = toPrettyString(num);
+
+    if (lastDigit == '1' && beforeLastDigit != '1') {
+        res += "st";
+    } else if (lastDigit == '2' && beforeLastDigit != '1') {
+        res += "nd";
+    } else if (lastDigit == '3' && beforeLastDigit != '1') {
+        res += "rd";
+    } else {
+        res += 'th';
+    }
+
+    res += (unit ? '<span class="rhs">&nbsp;</span>' + unit : '');
+
+    return res;
+}
 
 function getMaxDecimalTick(maxY) {
     var maxYTick = maxY;
@@ -154,22 +153,10 @@ function getBpLogTickFormatter(maxY) {
 function getContigNumberTickFormatter(maxX) {
     return function (val, axis) {
         if (typeof axis.tickSize == 'number' && val > maxX - axis.tickSize) {
-            var valStr = val.toString();
-            var lastDigit = valStr[valStr.length-1];
-            var beforeLastDigit = valStr[valStr.length-2];
-
-            var res = val + "th";
-
-            if (lastDigit == '1' && beforeLastDigit != '1') {
-                res = val + "st";
-            } else if (lastDigit == '2' && beforeLastDigit != '1') {
-                res = val + "nd";
-            } else if (lastDigit == '3' && beforeLastDigit != '1') {
-                res = val + "rd";
-            }
-            return "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + res + "&nbsp;contig";
+            return "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + ordinalNumberToPrettyString(val, 'contig');
+        } else {
+            return val;
         }
-        return val;
     }
 }
 
@@ -184,3 +171,77 @@ function addTooltipIfDefinitionExists(glossary, string, dictKey) {
         return string;
     }
 }
+
+var tipElementExists = false;
+function showTip(pageX, pageY, offset, plotWidth, plotHeight,
+                 series, centralSeriesIndex, xIndex, xStr, position) {
+    const LINE_HEIGHT = 16; // pixels
+
+    position = ((position != null) ? position : 'bottom right');
+//    pageY -= LINE_HEIGHT * (centralSeriesIndex + 1.5);
+
+    if (!tipElementExists) {
+        $('<div id="plot_tip" class="white_stroked"></div>').appendTo('body');
+
+        $('<div id="plot_tip_vertical_rule"></div>').css({
+            height: plotHeight,
+        }).appendTo('body');
+
+        $('<div id="plot_tip_horizontal_rule"></div>').css({
+            width: plotWidth,
+        }).appendTo('body');
+
+        tipElementExists = true;
+    }
+
+    $('#plot_tip').html('').css({
+        top: pageY + 5,
+        left: pageX + 10,
+    }).show();
+
+    $('#plot_tip_vertical_rule').html('').css({
+        top: offset.top,
+        left: pageX,
+    }).show();
+
+    $('#plot_tip_horizontal_rule').html('').css({
+        top: pageY,
+        left: offset.left,
+    }).show();
+
+    $('<div>' + xStr + '</div>').css({
+        height: LINE_HEIGHT,
+    }).appendTo('#plot_tip');
+
+    var sortedYsAndColors = [];
+    for (var i = 0; i < series.length; i++) {
+        sortedYsAndColors.push({
+            y: (series[i].data[xIndex] || series[i].data[series[i].data.length - 1])[1],
+            color: series[i].color,
+            label: (series[i].isReference ? 'Reference' : series[i].label),
+            isCurrent: i == centralSeriesIndex,
+        });
+    }
+    sortedYsAndColors.sort(function(a, b) { return a.y < b.y;});
+
+    for (i = 0; i < sortedYsAndColors.length; i++) {
+        var item =sortedYsAndColors[i];
+
+        $('<div id="tip_line' + i + '">' + toPrettyString(item.y)
+            + ', <span style="color: ' + item.color + ';">' + item.label + '</span></div>').css({
+            height: LINE_HEIGHT,
+            "font-weight": item.isCurrent ? "bold" : "normal",
+        }).appendTo('#plot_tip');
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

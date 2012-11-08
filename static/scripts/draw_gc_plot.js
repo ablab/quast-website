@@ -21,7 +21,7 @@ function filterAndSumGcInfo(GC_info, condition) {
 var gc = {
     maxY: 0,
     plot: null,
-    plotsData: null,
+    series: null,
     draw: null,
     redraw: null,
     minPow: 0,
@@ -191,14 +191,14 @@ function drawGCPlot(name, colors, filenames, listsOfGCInfo, reflen,
         "</div>"
     );
 
-    if (gc.plotsData == null || gc.draw == null || gc.redraw == null) {
+    if (gc.series == null || gc.draw == null || gc.redraw == null) {
         gc.legendPlaceholder = legendPh;
         gc.placeholder = plotPh;
         gc.colors = colors;
 
         var bin_size = 1.0;
         var plotsN = filenames.length;
-        gc.plotsData = new Array(plotsN);
+        gc.series = new Array(plotsN);
 
         gc.maxY = 0;
         var minY = Number.MAX_VALUE;
@@ -215,7 +215,7 @@ function drawGCPlot(name, colors, filenames, listsOfGCInfo, reflen,
         }
 
         for (var i = 0; i < plotsN; i++) {
-            gc.plotsData[i] = {
+            gc.series[i] = {
                 data: [],
                 label: filenames[i],
                 number: i,
@@ -229,7 +229,7 @@ function drawGCPlot(name, colors, filenames, listsOfGCInfo, reflen,
             var y = filterAndSumGcInfo(GC_info, function(GC_percent) {
                 return GC_percent == cur_bin;
             });
-            gc.plotsData[i].data.push([x, y]);
+            gc.series[i].data.push([x, y]);
 
             updateMinY(y);
             updateMaxY(y);
@@ -241,7 +241,7 @@ function drawGCPlot(name, colors, filenames, listsOfGCInfo, reflen,
                 y = filterAndSumGcInfo(GC_info, function(GC_percent) {
                     return GC_percent > (cur_bin - bin_size) && GC_percent <= cur_bin;
                 });
-                gc.plotsData[i].data.push([x, y]);
+                gc.series[i].data.push([x, y]);
 
                 updateMinY(y);
                 updateMaxY(y);
@@ -252,14 +252,14 @@ function drawGCPlot(name, colors, filenames, listsOfGCInfo, reflen,
                 return GC_percent > cur_bin && GC_percent <= 100.0;
             });
 
-            gc.plotsData[i].data.push([x, y]);
+            gc.series[i].data.push([x, y]);
 
             updateMinY(y);
             updateMaxY(y);
         }
 
         for (i = 0; i < plotsN; i++) {
-            gc.plotsData[i].lines = {
+            gc.series[i].lines = {
                 show: true,
                 lineWidth: 1,
             }
@@ -283,12 +283,12 @@ function drawGCPlot(name, colors, filenames, listsOfGCInfo, reflen,
 
             $('#legend-placeholder').find('input:checked').each(function() {
                 var number = $(this).attr('name');
-                if (number && gc.plotsData && gc.plotsData.length > 0) {
+                if (number && gc.series && gc.series.length > 0) {
                     i = 0;
                     do {
-                        var series = gc.plotsData[i];
+                        var series = gc.series[i];
                         i++;
-                    } while (series.number != number && i <= gc.plotsData.length);
+                    } while (series.number != number && i <= gc.series.length);
 //                    if (i != gc.plotsData.length) {
                     newPlotsData.push(series);
                     newColors.push(series.color);
@@ -307,7 +307,7 @@ function drawGCPlot(name, colors, filenames, listsOfGCInfo, reflen,
         };
     }
 
-    $.each(gc.plotsData, function(i, series) {
+    $.each(gc.series, function(i, series) {
         $('#legend-placeholder').find('#label_' + series.number + '_id').click(gc.redraw);
     });
 

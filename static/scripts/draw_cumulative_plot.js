@@ -3,7 +3,7 @@ var cumulative = {
     maxX: 0,
     maxY: 0,
     maxYTick: 0,
-    plotsData: null,
+    series: null,
     draw: null,
     redraw: null,
     colors: [],
@@ -27,31 +27,33 @@ function drawCumulativePlot(name, colors, filenames, listsOfLengths, referenceLe
 
 //    var colors = ["#FF5900", "#008FFF", "#168A16", "#782400", "#FFDD00", "#FF0080", "#7AE01B", "#7C00FF", "#E01B6A"];
 
-    if (cumulative.plotsData == null || cumulative.draw == null || cumulative.redraw == null) {
-        cumulative.plotsData = [];
+    if (cumulative.series == null || cumulative.draw == null || cumulative.redraw == null) {
+        cumulative.series = [];
         var plotsN = filenames.length;
 
         if (referenceLength) {
             cumulative.maxY = referenceLength;
         }
 
+        cumulative.colors = colors;
+
         for (var i = 0; i < plotsN; i++) {
             var lengths = listsOfLengths[i];
             var size = lengths.length;
 
-            cumulative.plotsData[i] = {
+            cumulative.series[i] = {
                 data: new Array(size+1),
                 label: filenames[i],
                 number: i,
                 color: colors[i],
             };
 
-            cumulative.plotsData[i].data[0] = [0, 0];
+            cumulative.series[i].data[0] = [0, 0];
 
             var y = 0;
             for (var j = 0; j < size; j++) {
                 y += lengths[j];
-                cumulative.plotsData[i].data[j+1] = [j+1, y];
+                cumulative.series[i].data[j+1] = [j+1, y];
                 if (y > cumulative.maxY) {
                     cumulative.maxY = y;
                 }
@@ -62,40 +64,47 @@ function drawCumulativePlot(name, colors, filenames, listsOfLengths, referenceLe
             }
         }
 
-        for (i = 0; i < plotsN; i++) {
-            cumulative.plotsData[i].lines = {
-                show: true,
-                lineWidth: 1,
-            }
+        var lineColors = [];
+
+        for (i = 0; i < colors.length; i++) {
+            lineColors.push(changeColor(colors[i], 0.9, false));
         }
 
         for (i = 0; i < plotsN; i++) {
-            cumulative.colors.push(cumulative.plotsData[i].color);
+            cumulative.series[i].lines = {
+                show: true,
+                lineWidth: 1,
+//                color: lineColors[i],
+            };
+      //    In order to draw dots instead of lines
+            cumulative.series[i].points = {
+                show: false,
+                radius: 1,
+                fill: 1,
+                fillColor: false,
+            };
+        }
+
+        for (i = 0; i < plotsN; i++) {
+            cumulative.colors.push(cumulative.series[i].color);
         }
 
         cumulative.maxYTick = getMaxDecimalTick(cumulative.maxY);
 
-    //    In order to draw dots instead of lines
-    //
-    //    for (i = 0; i < plotsN; i++) {
-    //        plotsData[i].points = {
-    //            show: true,
-    //            radius: 1,
-    //            fill: 1,
-    //            fillColor: false,
-    //        }
-    //    }
+        for (i = 0; i < plotsN; i++) {
+        }
 
         if (referenceLength) {
-            cumulative.plotsData.push({
+            cumulative.series.push({
                 data: [[0, referenceLength], [cumulative.maxX, referenceLength]],
                 label: 'Reference,&nbsp;' + toPrettyString(referenceLength, 'bp'),
+                isReference: true,
                 dashes: {
                     show: true,
                     lineWidth: 1,
                 },
                 yaxis: 1,
-                number: cumulative.plotsData.length,
+                number: cumulative.series.length,
                 color: '#000000',
             });
 
@@ -139,8 +148,8 @@ function drawCumulativePlot(name, colors, filenames, listsOfLengths, referenceLe
         };
         var yaxes = [yaxis];
 
-        cumulative.draw = function(plotsData, colors) {
-            var plot = $.plot(placeholder, plotsData, {
+        cumulative.draw = function(series, colors) {
+            var plot = $.plot(placeholder, series, {
                 shadowSize: 0,
                 colors: cumulative.colors,
                 legend: {
@@ -154,6 +163,9 @@ function drawCumulativePlot(name, colors, filenames, listsOfLengths, referenceLe
     //            },
                 grid: {
                     borderWidth: 1,
+                    hoverable: true,
+                    autoHighlight: false,
+                    mouseActiveRadius: 1000,
                 },
                 yaxes: yaxes,
                 xaxis: {
@@ -166,46 +178,61 @@ function drawCumulativePlot(name, colors, filenames, listsOfLengths, referenceLe
                 },
             });
 
+            var prevPoint = null;
             $(placeholder).bind("plothover", function(event, pos, item) {
-               if (item) {
-                   var x = item.datapoint[0];
+                if (item) {
+                    if (prevPoint != item.dataIndex) {
+                        prevPoint = item.dataIndex;
 
-                   $("#clickdata").text("")
-               }
+                        var x = item.datapoint[0];
+
+                        showTip(item.pageX, item.pageY, plot.offset(),
+                                plot.width(), plot.height(),
+                                series, item.seriesIndex, item.dataIndex,
+                                ordinalNumberToPrettyString(x, 'contig') + ':',
+                                'bottom right');
+                    }
+                } else {
+                    $('#plot_tip').hide();
+                    $('#plot_tip_vertical_rule').hide();
+                    $('#plot_tip_horizontal_rule').hide();
+                    prevPoint = null;
+                }
             });
         };
 
         cumulative.redraw = function() {
-            var newPlotsData = [];
+            var newSeries = [];
             var newColors = [];
 
             $('#legend-placeholder').find('input:checked').each(function() {
                 var number = $(this).attr('name');
-                if (number && cumulative.plotsData && cumulative.plotsData.length > 0) {
+                if (number && cumulative.series && cumulative.series.length > 0) {
                     i = 0;
                     do {
-                        var series = cumulative.plotsData[i];
+                        var series = cumulative.series[i];
                         i++;
-                    } while (series.number != number && i <= cumulative.plotsData.length);
+                    } while (series.number != number && i <= cumulative.series.length);
+
 //                    if (i != cumulative.plotsData.length) {
-                    newPlotsData.push(series);
+                    newSeries.push(series);
                     newColors.push(series.color);
 //                    }
                 }
             });
 
-            if (newPlotsData.length == 0) {
-                newPlotsData.push({
+            if (newSeries.length == 0) {
+                newSeries.push({
                     data: [],
                 });
                 newColors.push('#FFF');
             }
 
-            cumulative.draw(newPlotsData, newColors);
+            cumulative.draw(newSeries, newColors);
         };
     }
 
-    $.each(cumulative.plotsData, function(i, series) {
+    $.each(cumulative.series, function(i, series) {
         $('#legend-placeholder').find('#label_' + series.number + '_id').click(cumulative.redraw);
     });
 
