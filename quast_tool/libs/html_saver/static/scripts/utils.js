@@ -1,4 +1,37 @@
 
+/**********/
+/* COLORS */
+
+// var colors = ["#FF5900", "#008FFF", "#168A16", "#7C00FF", "#00B7FF", "#FF0080", "#7AE01B", "#782400", "#E01B6A"];
+var colors = [
+    '#FF0000', //red
+    '#0000FF', //blue
+    '#008000', //green
+    '#FFA500', //orange
+    '#FF00FF', //fushua
+    '#CCCC00', //yellow
+    '#800000', //maroon
+    '#00CCCC', //aqua
+    '#808080', //gray
+    '#800080', //purple
+    '#808000', //olive
+    '#000080', //navy
+    '#008080', //team
+    '#00FF00', //lime
+];
+
+function distinctColors(count) {
+    var colors = [];
+    for(var hue = 0; hue < 360; hue += 360 / count) {
+        var color = hsvToRgb(hue, 100, 100);
+        var colorStr = '#' + color[0].toString(16) + color[1].toString(16) + color[2].toString(16);
+        colors.push();
+    }
+    return colors;
+}
+
+/**************/
+/* FORMATTING */
 function isInt(num) {
     return num % 1 === 0;
 }
@@ -9,21 +42,22 @@ function isFloat(num) {
 
 function toPrettyString(num, unit) {
     if (typeof num === 'number') {
+        var str;
         if (num <= 9999) {
-            return num.toString() + (unit ? '<span class="rhs">&nbsp;</span>' + unit : '');
-//            if (isFloat(num)) {
-//                if (num <= 9) {
-//                    return num.toFixed(3);
-//                } else {
-//                    return num.toFixed(2);
-//                }
-//            } else {
-//                return num.toFixed(0);
-//            }
+            if (isFloat(num)) {
+                if (num <= 9) {
+                    str = num.toFixed(3);
+                } else {
+                    str = num.toFixed(2);
+                }
+            } else {
+                str = num.toFixed(0);
+            }
         } else {
-            return num.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g,'$1<span class="hs"></span>') +
-                (unit ? '<span class="rhs">&nbsp;</span>' + unit : '');
+            str = num.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g,'$1<span class="hs"></span>');
         }
+        str += (unit ? '<span class="rhs">&nbsp;</span>' + unit : '');
+        return str;
     } else {
         return num;
     }
@@ -113,38 +147,19 @@ function getBpTickFormatter(maxY) {
     }
 }
 
-//
-//function getWindowsTickFormatter(maxY) {
-//    return function(val, axis) {
-//        var res;
-//
-//        if (val == 0) {
-//            res = 0;
-//
-//        } else if (val >= 1000000) {
-//            res = val / 1000000;
-//            res = myToFixed(res);
-//
-//            if (val > maxY + 1 || val + axis.tickSize >= 1000000000) {
-//                res = res + ' windowes Mbp';
-//            }
-//        } else if (val >= 1000) {
-//            res = val / 1000;
-//            res = myToFixed(res);
-//
-//            if (val > maxY + 1 || val + axis.tickSize >= 1000000) {
-//                res = res + ' kbp';
-//            }
-//        } else if (val >= 1) {
-//            res = myToFixed(val);
-//
-//            if (val > maxY + 1 || val + axis.tickSize >= 1000) {
-//                res = res + ' bp';
-//            }
-//        }
-//        return '<span style="word-spacing: -1px;">' + res + '</span>';
-//    }
-//}
+function windowsTickFormatter(v, axis) {
+    var val = v.toFixed(0);
+    if (!gc.yAxisLabeled && val > gc.maxY) {
+        gc.yAxisLabeled = true;
+        var res = val + ' window';
+        if (val > 1) {
+            res += 's'
+        }
+        return res;
+    } else {
+        return val;
+    }
+}
 
 function getBpLogTickFormatter(maxY) {
     return getBpTickFormatter(maxY);
@@ -160,6 +175,8 @@ function getContigNumberTickFormatter(maxX) {
     }
 }
 
+/*********************/
+/* GLOSSARY TOOLTIPS */
 function addTooltipIfDefinitionExists(glossary, string, dictKey) {
     if (!dictKey) {
         dictKey = string;
@@ -172,6 +189,33 @@ function addTooltipIfDefinitionExists(glossary, string, dictKey) {
     }
 }
 
+/*************/
+/* PLOT TIPS */
+function bindTip(placeholder, series, plot, xToPrettyStringFunction, xUnit, position) {
+    var prevPoint = null;
+
+    $(placeholder).bind("plothover", function(event, pos, item) {
+        if (item) {
+            if (prevPoint != item.dataIndex) {
+                prevPoint = item.dataIndex;
+
+                var x = item.datapoint[0];
+
+                showTip(item.pageX, item.pageY, plot.offset(),
+                    plot.width(), plot.height(),
+                    series, item.seriesIndex, item.dataIndex,
+                    xToPrettyStringFunction(x, xUnit) + ':',
+                    position);
+            }
+        } else {
+            $('#plot_tip').hide();
+            $('#plot_tip_vertical_rule').hide();
+            $('#plot_tip_horizontal_rule').hide();
+            prevPoint = null;
+        }
+    });
+}
+
 var tipElementExists = false;
 function showTip(pageX, pageY, offset, plotWidth, plotHeight,
                  series, centralSeriesIndex, xIndex, xStr, position) {
@@ -179,6 +223,8 @@ function showTip(pageX, pageY, offset, plotWidth, plotHeight,
 
     position = ((position != null) ? position : 'bottom right');
 //    pageY -= LINE_HEIGHT * (centralSeriesIndex + 1.5);
+
+    var directions = position.split(' ');
 
     if (!tipElementExists) {
         $('<div id="plot_tip" class="white_stroked"></div>').appendTo('body');
@@ -195,7 +241,7 @@ function showTip(pageX, pageY, offset, plotWidth, plotHeight,
     }
 
     $('#plot_tip').html('').css({
-        top: pageY + 5,
+        top: pageY + 5 - ((directions[0] == 'top') ? LINE_HEIGHT * (series.length + 2) : 0),
         left: pageX + 10,
     }).show();
 

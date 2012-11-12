@@ -1,16 +1,39 @@
 
 var nx = {
-    maxY: 0,
-    maxYTick: 0,
-    series: null,
-    draw: null,
-    redraw: null,
-    kind: null,
-};
+    nx: {
+        isInitialized: false,
+        maxY: 0,
+        maxYTick: 0,
+        series: null,
+        showWithData: null,
+    },
 
-function drawNxPlot(name, colors, filenames, listsOfLengths, refLength,
-                    div, legendPlaceholder, glossary) {
+    nax: {
+        isInitialized: false,
+        maxY: 0,
+        maxYTick: 0,
+        series: null,
+        showWithData: null,
+    },
 
+    ngx: {
+        isInitialized: false,
+        maxY: 0,
+        maxYTick: 0,
+        series: null,
+        showWithData: null,
+    },
+
+    ngax: {
+        isInitialized: false,
+        maxY: 0,
+        maxYTick: 0,
+        series: null,
+        showWithData: null,
+    },
+
+    draw: function (name, colors, filenames, listsOfLengths, refLength,
+                    placeholder, legendPlaceholder, glossary) {
 //    var titleHtml = title;
 //    if (glossary.hasOwnProperty(title)) {
 //        titleHtml = "<a class='tooltip-link' href='#' rel='tooltip' title='" + title + " "
@@ -22,149 +45,122 @@ function drawNxPlot(name, colors, filenames, listsOfLengths, refLength,
 //        "<div class='plot-placeholder' id='" + title + "-plot-placeholder'></div>"
 //    );
 
-    if (nx.kind != name) {
-        nx = {
-            maxY: 0,
-            maxYTick: 0,
-            series: null,
-            draw: null,
-            redraw: null,
-            kind: name,
-        };
-    }
+        var info = nx[name];
 
-    if (nx.series == null || nx.draw == null || nx.redraw == null) {
-        var plotsN = filenames.length;
-        nx.series = new Array(plotsN);
+        if (!info.isInitialized) {
+            var plotsN = filenames.length;
+            info.series = new Array(plotsN);
 
-        for (var i = 0; i < plotsN; i++) {
-            var lengths = listsOfLengths[i];
+            for (var i = 0; i < plotsN; i++) {
+                var lengths = listsOfLengths[i];
 
-            var size = lengths.length;
+                var size = lengths.length;
 
-            var sumLen = 0;
-            for (var j = 0; j < lengths.length; j++) {
-                sumLen += lengths[j];
-            }
-            if (refLength) {
-                sumLen = refLength;
-            }
-
-            nx.series[i] = {
-                data: [],
-                label: filenames[i],
-                number: i,
-                color: colors[i],
-            };
-            nx.series[i].data.push([0.0, lengths[0]]);
-            var currentLen = 0;
-            var x = 0.0;
-
-            for (var k = 0; k < size; k++) {
-                currentLen += lengths[k];
-                nx.series[i].data.push([x, lengths[k]]);
-                x = currentLen * 100.0 / sumLen;
-                nx.series[i].data.push([x, lengths[k]]);
-            }
-
-            if (nx.series[i].data[0][1] > nx.maxY) {
-                nx.maxY = nx.series[i].data[0][1];
-            }
-
-            var lastPt = nx.series[i].data[nx.series[i].data.length-1];
-            nx.series[i].data.push([lastPt[0], 0]);
-        }
-
-        for (i = 0; i < plotsN; i++) {
-            nx.series[i].lines = {
-                show: true,
-                lineWidth: 1,
-            }
-        }
-
-//    for (i = 0; i < plotsN; i++) {
-//        plotsData[i].points = {
-//            show: true,
-//            radius: 1,
-//            fill: 1,
-//            fillColor: false,
-//        }
-//    }
-
-        nx.draw = function(plotsData, colors) {
-            var plot = $.plot(div, plotsData, {
-                    shadowSize: 0,
-                    colors: colors,
-                    legend: {
-                        container: $('useless-invisible-element-that-does-not-even-exist'),
-                    },
-                    grid: {
-                        borderWidth: 1,
-                    },
-                    yaxis: {
-                        min: 0,
-//                        max: nx.maxY,
-                        labelWidth: 120,
-                        reserveSpace: true,
-                        lineWidth: 0.5,
-                        color: '#000',
-                        tickFormatter: getBpTickFormatter(nx.maxY),
-                        minTickSize: 1,
-                    },
-                    xaxis: {
-                        min: 0,
-                        max: 100,
-                        lineWidth: 0.5,
-                        color: '#000',
-                        tickFormatter: function (val, axis) {
-                            if (val == 100) {
-                                return '&nbsp;100%'
-                            } else {
-                                return val;
-                            }
-                        }
-                    },
-                    minTickSize: 1,
+                var sumLen = 0;
+                for (var j = 0; j < lengths.length; j++) {
+                    sumLen += lengths[j];
                 }
-            );
-        };
-
-        nx.redraw = function() {
-            var newPlotsData = [];
-            var newColors = [];
-
-            $('#legend-placeholder').find('input:checked').each(function() {
-                var number = $(this).attr('name');
-                if (number && nx.series && nx.series.length > 0) {
-                    i = 0;
-                    do {
-                        var series = nx.series[i];
-                        i++;
-                    } while (series.number != number && i <= nx.series.length);
-//                    if (i != nx.plotsData.length) {
-                    newPlotsData.push(series);
-                    newColors.push(series.color);
-//                    }
+                if (refLength) {
+                    sumLen = refLength;
                 }
-            });
 
-            if (newPlotsData.length == 0) {
-                newPlotsData.push({
+                info.series[i] = {
                     data: [],
-                });
-                newColors.push('#FFF');
+                    label: filenames[i],
+                    number: i,
+                    color: colors[i],
+                };
+                info.series[i].data.push([0.0, lengths[0]]);
+                var currentLen = 0;
+                var x = 0.0;
+
+                for (var k = 0; k < size; k++) {
+                    currentLen += lengths[k];
+                    info.series[i].data.push([x, lengths[k]]);
+                    x = currentLen * 100.0 / sumLen;
+                    info.series[i].data.push([x, lengths[k]]);
+                }
+
+                if (info.series[i].data[0][1] > info.maxY) {
+                    info.maxY = info.series[i].data[0][1];
+                }
+
+                var lastPt = info.series[i].data[info.series[i].data.length-1];
+                info.series[i].data.push([lastPt[0], 0]);
             }
 
-            nx.draw(newPlotsData, newColors);
+            for (i = 0; i < plotsN; i++) {
+                info.series[i].lines = {
+                    show: true,
+                    lineWidth: 1,
+                }
+            }
+
+            //    for (i = 0; i < plotsN; i++) {
+            //        plotsData[i].points = {
+            //            show: true,
+            //            radius: 1,
+            //            fill: 1,
+            //            fillColor: false,
+            //        }
+            //    }
+
+            info.showWithData = function(series, colors) {
+                var plot = $.plot(placeholder, series, {
+                        shadowSize: 0,
+                        colors: colors,
+                        legend: {
+                            container: $('useless-invisible-element-that-does-not-even-exist'),
+                        },
+                        grid: {
+                            borderWidth: 1,
+                            hoverable: true,
+                            autoHighlight: false,
+                            mouseActiveRadius: 1000,
+                        },
+                        yaxis: {
+                            min: 0,
+//                        max: info.maxY,
+                            labelWidth: 120,
+                            reserveSpace: true,
+                            lineWidth: 0.5,
+                            color: '#000',
+                            tickFormatter: getBpTickFormatter(info.maxY),
+                            minTickSize: 1,
+                        },
+                        xaxis: {
+                            min: 0,
+                            max: 100,
+                            lineWidth: 0.5,
+                            color: '#000',
+                            tickFormatter: function (val, axis) {
+                                if (val == 100) {
+                                    return '&nbsp;100%'
+                                } else {
+                                    return val;
+                                }
+                            }
+                        },
+                        minTickSize: 1,
+                    }
+                );
+                bindTip(placeholder, series, plot, toPrettyString, '%', 'top right');
+
+            };
+
+            info.isInitialized = true;
         }
+
+        $.each(info.series, function(i, series) {
+            $('#legend-placeholder').find('#label_' + series.number + '_id').click(function() {
+                showPlotWithInfo(info);
+            });
+        });
+
+        showPlotWithInfo(info);
+
+        $('#contigs_are_ordered').hide();
     }
+};
 
-    $.each(nx.series, function(i, series) {
-        $('#legend-placeholder').find('#label_' + series.number + '_id').click(nx.redraw);
-    });
-
-    nx.redraw();
-
-    $('#contigs_are_ordered').hide();
-}
 

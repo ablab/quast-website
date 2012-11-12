@@ -66,6 +66,8 @@
     margin-right: 20px;
     float: left;
 
+    z-index: 2;
+
     /*border: 1px solid blue;*/
 }
 
@@ -149,7 +151,8 @@
 }
 
 #contigs_are_ordered {
-    z-index: -4;
+    z-index: 0;
+
     position: relative;
 }
 
@@ -160,7 +163,10 @@
 #plot_tip {
     position: absolute;
     opacity: 1;
-    z-index: -2;
+    padding: 2px 5px 2px 5px;
+
+    z-index: 1;
+
     /*background-image: url("/static/pics/semi-transparent-10px.png");*/
 }
 

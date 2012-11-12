@@ -1,10 +1,45 @@
+function showPlotWithInfo(info) {
+    var newSeries = [];
+    var newColors = [];
+
+    $('#legend-placeholder').find('input:checked').each(function() {
+        var number = $(this).attr('name');
+        if (number && info.series && info.series.length > 0) {
+            i = 0;
+            do {
+                var series = info.series[i];
+                i++;
+            } while (series.number != number && i <= info.series.length);
+            //
+            if (i <= info.series.length) {
+                newSeries.push(series);
+                newColors.push(series.color);
+            } else {
+                console.log('no series with number ' + number);
+            }
+        }
+    });
+
+    if (newSeries.length == 0) {
+        newSeries.push({
+            data: [],
+        });
+        newColors.push('#FFF');
+    }
+
+    info.showWithData(newSeries, newColors);
+}
 
 
 function buildReport() {
+    var assembliesNames;
+
     var totalReport = null;
-    var contigsLengths = null;
-    var alignedContigsLengths = null;
-    var referenceLength = 0;
+    var qualities = null;
+    var mainMetrics = null;
+    var contigsLens = null;
+    var alignedContigsLens = null;
+    var refLen = 0;
     var contigs = null;
     var genes = null;
     var operons = null;
@@ -16,36 +51,6 @@ function buildReport() {
     var plotPlaceholder = document.getElementById('plot-placeholder');
     var legendPlaceholder = document.getElementById('legend-placeholder');
     var scalePlaceholder = document.getElementById('scale-placeholder');
-
-//    var colors = ["#FF5900", "#008FFF", "#168A16", "#7C00FF", "#00B7FF", "#FF0080", "#7AE01B", "#782400", "#E01B6A"];
-    var colors = [
-        '#FF0000', //red
-        '#0000FF', //blue
-        '#008000', //green
-        '#FFA500', //orange
-        '#FF00FF', //fushua
-        '#CCCC00', //yellow
-        '#800000', //maroon
-        '#00CCCC', //aqua
-        '#808080', //gray
-        '#800080', //purple
-        '#808000', //olive
-        '#000080', //navy
-        '#008080', //team
-        '#00FF00', //lime
-    ];
-
-    function distinctColors(count) {
-        var colors = [];
-        for(var hue = 0; hue < 360; hue += 360 / count) {
-            var color = hsvToRgb(hue, 100, 100);
-            var colorStr = '#' + color[0].toString(16) + color[1].toString(16) + color[2].toString(16);
-                colors.push();
-        }
-        return colors;
-    }
-
-    var filenames;
 
     function getToggleFunction(name, drawPlot, data, refLen) {
         return function() {
@@ -59,14 +64,14 @@ function buildReport() {
     function togglePlots(name, drawPlot, data, refLen) {
         if (name == 'cumulative') {
             $(plotPlaceholder).addClass('cumulative-plot-placeholder');
-            if (referenceLength) {
+            if (refLen) {
                 $('#legend-placeholder').append(
                     '<div id="reference-label">' +
-                        '<label for="label_' + filenames.length + '_id" style="color: #000000;">' +
-                            '<input type="checkbox" name="' + filenames.length +
-                            '" checked="checked" id="label_' + filenames.length +
+                        '<label for="label_' + assembliesNames.length + '_id" style="color: #000000;">' +
+                            '<input type="checkbox" name="' + assembliesNames.length +
+                            '" checked="checked" id="label_' + assembliesNames.length +
                             '_id">&nbsp;' + 'Reference,&nbsp;' +
-                            toPrettyString(referenceLength, 'bp') +
+                            toPrettyString(refLen, 'bp') +
                         '</label>' +
                     '</div>');
             }
@@ -81,11 +86,10 @@ function buildReport() {
         }
 
         $(scalePlaceholder).html('');
-        drawPlot(name, colors, filenames, data, refLen, plotPlaceholder, legendPlaceholder, glossary, scalePlaceholder);
+        drawPlot(name, colors, assembliesNames, data, refLen, plotPlaceholder, legendPlaceholder, glossary, scalePlaceholder);
     }
 
     var firstPlot = true;
-
     function makePlot(name, title, drawPlot, data, refLen) {
         var switchSpan = document.createElement('span');
         switchSpan.id = name + '-switch';
@@ -104,47 +108,39 @@ function buildReport() {
         $(switchSpan).click(getToggleFunction(name, drawPlot, data, refLen));
     }
 
-    try { referenceLength = JSON.parse($('#reference-length-json').html()).reflen; } catch (e) { referenceLength = null; }
-    try { totalReport = JSON.parse($('#total-report-json').html()); } catch (e) { totalReport = null; }
-    if (totalReport) {
-        filenames = totalReport.assembliesNames;
-
-        if (filenames.length == 0) {
-            return 1;
+    function readJson(what) {
+        var result;
+        try {
+            result = JSON.parse($('#' + what + '-json').html());
+        } catch (e) {
+            result = null;
         }
-
-        var qualities = null;
-        var mainMetrics = null;
-        try { qualities = JSON.parse($('#qualities-json').html()); } catch (e) { alert(e.stack); qualities = null; }
-        try { mainMetrics = JSON.parse($('#main-metrics-json').html()); } catch (e) { alert(e.message); mainMetrics = null; }
-
-//        colors = distinctColors(filenames.length);
-
-//        document.title += (totalReport.date);
-        $('#subheader').html(totalReport.date + '.');
-        $('#mincontig').append('Contigs of length ≥ ' + totalReport.minContig + ' bp are used.');
-        $('#extended_link').append('<a class="dotted-link" id="extended_report_link">Extended report</a>');
-
-        buildTotalReport(filenames, totalReport.report, glossary, qualities, mainMetrics);
-
-        $('#extended_report_link').click(function() {
-            $('.row_hidden').fadeToggle('fast');
-
-            var link = $('#extended_report_link');
-            if (link.html() == 'Extended report') {
-                link.html('Short report');
-            } else {
-                link.html('Extended report')
-
-            }
-        })
-    } else {
-        return 1;
+        return result;
     }
+
+    /****************/
+    /* Total report */
+
+    if (!(totalReport = readJson('total-report')))
+        return 1;
+
+    assembliesNames = totalReport.assembliesNames;
+    if (assembliesNames.length == 0)
+        return 1;
+
+    qualities = readJson('qualities');
+    mainMetrics = readJson('main-metrics');
+    buildTotalReport(assembliesNames, totalReport.report, totalReport.date, totalReport.minContig, glossary, qualities, mainMetrics);
+
+    if (refLen = readJson('reference-length'))
+        refLen = refLen.reflen;
+
+    /****************/
+    /* Plots        */
 
     $(plotsSwitchesDiv).html('<b>Plots:</b>');
 
-    filenames.forEach(function(filename, i) {
+    assembliesNames.forEach(function(filename, i) {
         var id = 'label_' + i + '_id';
         $('#legend-placeholder').append('<div>' +
             '<label for="' + id + '" style="color: ' + colors[i] + '">' +
@@ -152,94 +148,56 @@ function buildReport() {
             '</div>');
     });
 
-    try { contigsLengths = JSON.parse($('#contigs-lengths-json').html()); } catch (e) { contigsLengths = null; }
-    if (contigsLengths) {
-        makePlot('cumulative', 'Cumulative length',
-            drawCumulativePlot,
-            contigsLengths.lists_of_lengths,
-            referenceLength
-        );
-        makePlot('nx', 'Nx',
-            drawNxPlot,
-            contigsLengths.lists_of_lengths,
-            null
-        );
-//        drawCumulativePlot(contigsLengths.filenames, contigsLengths.lists_of_lengths, referenceLength, $('#cumulative-plot-div'), null,  glossary);
-//        drawNxPlot(contigsLengths.filenames, contigsLengths.lists_of_lengths, 'Nx', null, $('#nx-plot-div'), null,  glossary);
+    if (contigsLens = readJson('contigs-lengths')) {
+        makePlot('cumulative', 'Cumulative length', cumulative.draw, contigsLens.lists_of_lengths, refLen);
+        makePlot('nx', 'Nx', nx.draw, contigsLens.lists_of_lengths, null);
     }
 
-    try { alignedContigsLengths = JSON.parse($('#aligned-contigs-lengths-json').html()); } catch (e) { alignedContigsLengths = null; }
+    if (alignedContigsLens = readJson('aligned-contigs-lengths'))
+        makePlot('nax', 'NAx', nx.draw, alignedContigsLens.lists_of_lengths, null);
 
-    if (alignedContigsLengths) {
-        makePlot('nax', 'NAx', drawNxPlot,
-            alignedContigsLengths.lists_of_lengths,
-            null
-        );
-//        drawNxPlot(alignedContigsLengths.filenames, alignedContigsLengths.lists_of_lengths, 'NAx', null, $('#nax-plot-div'), null,  glossary);
-    }
+    if (contigsLens && refLen)
+        makePlot('ngx', 'NGx', nx.draw, contigsLens.lists_of_lengths, refLen);
 
-    if (contigsLengths && referenceLength) {
-        makePlot('ngx', 'NGx', drawNxPlot,
-            contigsLengths.lists_of_lengths,
-            referenceLength
-        );
-//        drawNxPlot(contigsLengths.filenames, contigsLengths.lists_of_lengths, 'NGx',referenceLength, $('#ngx-plot-div'), null,  glossary);
-    }
-    if (alignedContigsLengths && referenceLength) {
-        makePlot('ngax', 'NGAx', drawNxPlot,
-            alignedContigsLengths.lists_of_lengths,
-            referenceLength
-        );
-//        drawNxPlot(alignedContigsLengths.filenames, alignedContigsLengths.lists_of_lengths, 'NGAx', referenceLength, $('#ngax-plot-div'), null,  glossary);
-    }
+    if (alignedContigsLens && refLen)
+        makePlot('ngax', 'NGAx', nx.draw, alignedContigsLens.lists_of_lengths, refLen);
 
-    contigsLengths = null;
-    alignedContigsLengths = null;
+    genes = readJson('genes');
+    operons = readJson('operons');
 
-    try { genes = JSON.parse($('#genes-json').html()); } catch (e) { genes = null; }
-    try { operons = JSON.parse($('#operons-json').html()); } catch (e) { operons = null; }
-    if (genes || operons) {
-        try { contigs = JSON.parse($('#contigs-json').html()); } catch (e) { contigs = null; }
-    }
+    if (genes || operons)
+        contigs = readJson('contigs');
 
     if (contigs) {
         if (genes) {
-            makePlot('genes', 'Genes', drawGenesPlot,  {
+            makePlot('genes', 'Genes', gns.draw,  {
                     contigsInfos: contigs.contigs,
                     genes: genes.genes,
                     found: genes.found,
                     kind: 'gene',
                 },
-                referenceLength
+                refLen
             );
-//            drawGenesPlot(contigs.filenames, contigs.contigs, genes.genes, genes.found, 'gene', $('#genes-plot-div'), null,  glossary);
         }
         if (operons) {
-            makePlot('operons', 'Operons', drawGenesPlot, {
+            makePlot('operons', 'Operons', gns.draw, {
                     contigsInfos: contigs.contigs,
                     genes: operons.operons,
                     found: operons.found,
                     kind: 'operon',
                 },
-                referenceLength
+                refLen
             );
-//            drawGenesPlot(contigs.filenames, contigs.contigs, operons.operons, operons.found, 'operon', $('#operons-plot-div'), null,  glossary);
         }
     }
 
-    contigs = null;
-    genes = null;
-    operons = null;
 
-    try { gcInfos = JSON.parse($('#gc-json').html()); } catch (e) { gcInfos = null; }
+    if (gcInfos = readJson('gc'))
+        makePlot('gc', 'GC content', gc.draw, gcInfos.lists_of_gc_info, refLen);
 
-    if (gcInfos) {
-        makePlot('gc', 'GC content', drawGCPlot, gcInfos.lists_of_gc_info, referenceLength);
-//        drawGCPlot(gcInfos.filenames, gcInfos.lists_of_gc_info, $('#gc-plot-div'), null, glossary);
-    }
-
-    gcInfos = null;
-
-    return 1;
+    return 0;
 }
+
+
+
 

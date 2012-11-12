@@ -1,5 +1,20 @@
 
-function buildTotalReport(assembliesNames, report, glossary, qualities, mainMetrics) {
+function buildTotalReport(assembliesNames, report, date, minContig, glossary, qualities, mainMetrics) {
+    $('#subheader').html(date + '.');
+    $('#mincontig').append('Contigs of length ≥ ' + minContig + ' bp are used.');
+    $('#extended_link').append('<a class="dotted-link" id="extended_report_link">Extended report</a>');
+    $('#extended_report_link').click(function() {
+        $('.row_hidden').fadeToggle('fast');
+
+        var link = $('#extended_report_link');
+        if (link.html() == 'Extended report') {
+            link.html('Short report');
+        } else {
+            link.html('Extended report')
+        }
+    });
+
+
     var table = '';
     table += '<table cellspacing="0" class="report-table">';
 
@@ -85,40 +100,41 @@ function buildTotalReport(assembliesNames, report, glossary, qualities, mainMetr
     $('#report').append(table);
 
 //    $().load(function() {
-        $(".report-table td:[number]").mouseenter(function() {
-            var cells = $(this).parent().find('td:[number]');
-            var numbers = $.map(cells, function(cell) { return $(cell).attr('number'); });
-            var quality = $(this).parent().attr('quality');
 
-            var min = Math.min.apply(null, numbers);
-            var max = Math.max.apply(null, numbers);
+    $(".report-table td[number]").mouseenter(function() {
+        var cells = $(this).parent().find('td[number]');
+        var numbers = $.map(cells, function(cell) { return $(cell).attr('number'); });
+        var quality = $(this).parent().attr('quality');
 
-            var RED_HUE = 0;
-            var GREEN_HUE = 130;
+        var min = Math.min.apply(null, numbers);
+        var max = Math.max.apply(null, numbers);
 
-            var maxHue = GREEN_HUE;
-            var minHue = RED_HUE;
+        var RED_HUE = 0;
+        var GREEN_HUE = 130;
 
-            if (quality == 'Less is better') {
-                maxHue = RED_HUE;
-                minHue = GREEN_HUE;
-            }
+        var maxHue = GREEN_HUE;
+        var minHue = RED_HUE;
 
-            if (max == min) {
-                $(cells).css('color', 'hsl(' + GREEN_HUE + ', 80%, 50%)');
-            } else {
-                var k = (maxHue - minHue) / (max - min);
+        if (quality == 'Less is better') {
+            maxHue = RED_HUE;
+            minHue = GREEN_HUE;
+        }
 
-                cells.each(function(i) {
-                    var number = numbers[i];
-                    var hue = minHue + (number - min)*k;
+        if (max == min) {
+            $(cells).css('color', 'hsl(' + GREEN_HUE + ', 80%, 50%)');
+        } else {
+            var k = (maxHue - minHue) / (max - min);
 
-                    $(this).css('color', 'hsl(' + hue + ', 80%, 50%)');
-                });
-            }
-        }).mouseleave(function() {
-            $(this).parent().find('td:[number]').css('color', 'black');
-        });
+            cells.each(function(i) {
+                var number = numbers[i];
+                var hue = minHue + (number - min)*k;
+
+                $(this).css('color', 'hsl(' + hue + ', 80%, 50%)');
+            });
+        }
+    }).mouseleave(function() {
+        $(this).parent().find('td[number]').css('color', 'black');
+    });
 //    });
 }
 //

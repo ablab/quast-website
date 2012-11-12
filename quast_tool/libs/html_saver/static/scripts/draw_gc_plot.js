@@ -1,59 +1,163 @@
 
-function filterAndSumGcInfo(GC_info, condition) {
-    var contigs_lengths_cur_bin = [];
-    for (var j = 0; j < GC_info.length; j++) {
-        var GC = GC_info[j];
-        var contig_length = GC[0];
-        var GC_percent = GC[1];
-
-        if (condition(GC_percent) == true) {
-            contigs_lengths_cur_bin.push(contig_length);
-        }
-    }
-    var val_bp = 0;
-    for (var j = 0; j < contigs_lengths_cur_bin.length; j++) {
-        val_bp += contigs_lengths_cur_bin[j];
-    }
-    return val_bp;
-}
+var normal_scale_span =
+    "<span class='selected-switch'>" +
+        'Normal' +
+        "</span>";
+var normal_scale_a =
+    "<a class='dotted-link' onClick='setNormalScale()'>" +
+        'Normal' +
+        "</a>";
+var log_scale_span =
+    "<span class='selected-switch'>" +
+        'logarithmic' +
+        "</span>";
+var log_scale_a =
+    "<a class='dotted-link' onClick='setLogScale()'>" +
+        'logarithmic' +
+        "</a>";
 
 
 var gc = {
+    isInitialized: false,
+
     maxY: 0,
     plot: null,
     series: null,
-    draw: null,
-    redraw: null,
+    showWithData: null,
     minPow: 0,
     ticks: null,
     placeholder: null,
     legendPlaceholder: null,
     colors: null,
     yAxisLabeled: false,
+
+    normal_scale_el: normal_scale_span,
+    log_scale_el: log_scale_a,
+
+    draw: function(name, colors, filenames, listsOfGCInfo, reflen,
+        placeholder, legendPlaceholder, glossary, scalePlaceholder) {
+        $(scalePlaceholder).html(
+            "<div id='change-scale' style='margin-right: 3px; visibility: hidden;'>" +
+                "<span id='normal_scale_label'>" +
+                gc.normal_scale_el +
+                "</span>&nbsp;/&nbsp;" +
+                "<span id='log_scale_label'>" +
+                gc.log_scale_el +
+                "</span> scale" +
+                "</div>"
+        );
+
+        if (!gc.isInitialized) {
+            gc.legendPlaceholder = legendPlaceholder;
+            gc.placeholder = placeholder;
+            gc.colors = colors;
+
+            var bin_size = 1.0;
+            var plotsN = filenames.length;
+            gc.series = new Array(plotsN);
+
+            gc.maxY = 0;
+            var minY = Number.MAX_VALUE;
+
+            function updateMinY(y) {
+                if (y < minY && y != 0) {
+                    minY = y;
+                }
+            }
+            function updateMaxY(y) {
+                if (y > gc.maxY) {
+                    gc.maxY = y;
+                }
+            }
+
+            for (var i = 0; i < plotsN; i++) {
+                gc.series[i] = {
+                    data: [],
+                    label: filenames[i],
+                    number: i,
+                    color: colors[i],
+                };
+
+                var GC_info = listsOfGCInfo[i];
+                var cur_bin = 0.0;
+
+                var x = cur_bin;
+                var y = filterAndSumGcInfo(GC_info, function(GC_percent) {
+                    return GC_percent == cur_bin;
+                });
+                gc.series[i].data.push([x, y]);
+
+                updateMinY(y);
+                updateMaxY(y);
+
+                while (cur_bin < 100.0 - bin_size) {
+                    cur_bin += bin_size;
+
+                    x = cur_bin;
+                    y = filterAndSumGcInfo(GC_info, function(GC_percent) {
+                        return GC_percent > (cur_bin - bin_size) && GC_percent <= cur_bin;
+                    });
+                    gc.series[i].data.push([x, y]);
+
+                    updateMinY(y);
+                    updateMaxY(y);
+                }
+
+                x = 100.0;
+                y = filterAndSumGcInfo(GC_info, function(GC_percent) {
+                    return GC_percent > cur_bin && GC_percent <= 100.0;
+                });
+
+                gc.series[i].data.push([x, y]);
+
+                updateMinY(y);
+                updateMaxY(y);
+            }
+
+            for (i = 0; i < plotsN; i++) {
+                gc.series[i].lines = {
+                    show: true,
+                    lineWidth: 1,
+                }
+            }
+
+            // Calculate the minimum possible non-zero Y to clip useless bottoms
+            // of logarithmic plots.
+            var maxYTick = getMaxDecimalTick(gc.maxY);
+            gc.minPow = Math.round(Math.log(minY) / Math.log(10));
+            gc.ticks = [];
+            for (var pow = gc.minPow; Math.pow(10, pow) < maxYTick; pow++) {
+                gc.ticks.push(Math.pow(10, pow));
+            }
+            gc.ticks.push(Math.pow(10, pow));
+
+            gc.showWithData = showInNormalScaleWithData;
+
+            gc.isInitialized = true;
+        }
+
+        $.each(gc.series, function(i, series) {
+            $('#legend-placeholder').find('#label_' + series.number + '_id').click(function() {
+                showPlotWithInfo(gc);
+            });
+        });
+
+        showPlotWithInfo(gc);
+
+        $('#change-scale').css('visibility', 'visible');
+
+        $('#contigs_are_ordered').hide();
+    }
 };
 
-function windowsTickFormatter(v, axis) {
-    var val = v.toFixed();
-    if (!gc.yAxisLabeled && val > gc.maxY) {
-        gc.yAxisLabeled = true;
-        var res = val + ' window';
-        if (val > 1) {
-            res += 's'
-        }
-        return res;
-    } else {
-        return val;
-    }
-}
 
-function drawInNormalScale(plotsData, colors) {
-    if (plotsData == null || gc.maxY == null) {
+function showInNormalScaleWithData(series, colors) {
+    if (series == null || gc.maxY == null)
         return;
-    }
 
     gc.yAxisLabeled = false;
 
-    gc.plot = $.plot(gc.placeholder, plotsData, {
+    gc.plot = $.plot(gc.placeholder, series, {
             shadowSize: 0,
             colors: colors,
             legend: {
@@ -61,6 +165,9 @@ function drawInNormalScale(plotsData, colors) {
             },
             grid: {
                 borderWidth: 1,
+                hoverable: true,
+                autoHighlight: false,
+                mouseActiveRadius: 1000,
             },
             yaxis: {
                 min: 0,
@@ -88,24 +195,29 @@ function drawInNormalScale(plotsData, colors) {
             minTickSize: 1,
         }
     );
+
+    bindTip(gc.placeholder, series, gc.plot, toPrettyString, '%', 'top right');;
 }
 
 
-function drawInLogarithmicScale(plotsData, colors) {
-    if (plotsData == null || gc.maxY == null || gc.minPow == null) {
+function showInLogarithmicScaleWithData(series, colors) {
+    if (series == null || gc.maxY == null || gc.minPow == null) {
         return;
     }
 
     gc.yAxisLabeled = false;
     
-    gc.plot = $.plot(gc.placeholder, plotsData, {
+    gc.plot = $.plot(gc.placeholder, series, {
             shadowSize: 0,
             colors: colors,
             legend: {
                 container: $('useless-invisible-element-that-does-not-even-exist'),
             },
             grid: {
+                hoverable: true,
                 borderWidth: 1,
+                autoHighlight: false,
+                mouseActiveRadius: 1000,
             },
             yaxis: {
                 min: Math.pow(10, gc.minPow),
@@ -142,180 +254,48 @@ function drawInLogarithmicScale(plotsData, colors) {
             minTickSize: 1,
         }
     );
+
+    bindTip(gc.placeholder, series, gc.plot, toPrettyString, '%', 'top right');
 }
 
 
 function setLogScale() {
-    $('#normal_scale_label').html(normal_scale_a);
-    $('#log_scale_label').html(log_scale_span);
-    gc.draw = drawInLogarithmicScale;
-    gc.redraw();
+    gc.normal_scale_el = normal_scale_a;
+    gc.log_scale_el = log_scale_span;
+    gc.showWithData = showInLogarithmicScaleWithData;
+
+    $('#normal_scale_label').html(gc.normal_scale_el);
+    $('#log_scale_label').html(gc.log_scale_el);
+    showPlotWithInfo(gc);
 }
 
 
 function setNormalScale() {
-    $('#normal_scale_label').html(normal_scale_span);
-    $('#log_scale_label').html(log_scale_a);
-    gc.draw = drawInNormalScale;
-    gc.redraw();
+    gc.normal_scale_el = normal_scale_span;
+    gc.log_scale_el = log_scale_a;
+    gc.showWithData = showInNormalScaleWithData;
+
+    $('#normal_scale_label').html(gc.normal_scale_el);
+    $('#log_scale_label').html(gc.log_scale_el);
+    showPlotWithInfo(gc);
 }
 
-var normal_scale_span =
-    "<span class='selected-switch'>" +
-        'Normal' +
-        "</span>";
-var normal_scale_a =
-    "<a class='dotted-link' onClick='setNormalScale()'>" +
-        'Normal' +
-        "</a>";
-var log_scale_span =
-    "<span class='selected-switch'>" +
-        'logarithmic' +
-        "</span>";
-var log_scale_a =
-    "<a class='dotted-link' onClick='setLogScale()'>" +
-        'logarithmic' +
-        "</a>";
 
 
-function drawGCPlot(name, colors, filenames, listsOfGCInfo, reflen,
-                    plotPh, legendPh, glossary, scalePh) {
-    $(scalePh).html(
-        "<div id='change-scale' style='margin-right: 3px; visibility: hidden;'>" +
-            "<span id='normal_scale_label'>" +
-            normal_scale_span +
-            "</span>&nbsp;/&nbsp;" +
-            "<span id='log_scale_label'>" +
-            log_scale_a +
-            "</span> scale" +
-        "</div>"
-    );
+function filterAndSumGcInfo(GC_info, condition) {
+    var contigs_lengths_cur_bin = [];
+    for (var j = 0; j < GC_info.length; j++) {
+        var GC = GC_info[j];
+        var contig_length = GC[0];
+        var GC_percent = GC[1];
 
-    if (gc.series == null || gc.draw == null || gc.redraw == null) {
-        gc.legendPlaceholder = legendPh;
-        gc.placeholder = plotPh;
-        gc.colors = colors;
-
-        var bin_size = 1.0;
-        var plotsN = filenames.length;
-        gc.series = new Array(plotsN);
-
-        gc.maxY = 0;
-        var minY = Number.MAX_VALUE;
-
-        function updateMinY(y) {
-            if (y < minY && y != 0) {
-                minY = y;
-            }
+        if (condition(GC_percent) == true) {
+            contigs_lengths_cur_bin.push(contig_length);
         }
-        function updateMaxY(y) {
-            if (y > gc.maxY) {
-                gc.maxY = y;
-            }
-        }
-
-        for (var i = 0; i < plotsN; i++) {
-            gc.series[i] = {
-                data: [],
-                label: filenames[i],
-                number: i,
-                color: colors[i],
-            };
-
-            var GC_info = listsOfGCInfo[i];
-            var cur_bin = 0.0;
-
-            var x = cur_bin;
-            var y = filterAndSumGcInfo(GC_info, function(GC_percent) {
-                return GC_percent == cur_bin;
-            });
-            gc.series[i].data.push([x, y]);
-
-            updateMinY(y);
-            updateMaxY(y);
-
-            while (cur_bin < 100.0 - bin_size) {
-                cur_bin += bin_size;
-
-                x = cur_bin;
-                y = filterAndSumGcInfo(GC_info, function(GC_percent) {
-                    return GC_percent > (cur_bin - bin_size) && GC_percent <= cur_bin;
-                });
-                gc.series[i].data.push([x, y]);
-
-                updateMinY(y);
-                updateMaxY(y);
-            }
-
-            x = 100.0;
-            y = filterAndSumGcInfo(GC_info, function(GC_percent) {
-                return GC_percent > cur_bin && GC_percent <= 100.0;
-            });
-
-            gc.series[i].data.push([x, y]);
-
-            updateMinY(y);
-            updateMaxY(y);
-        }
-
-        for (i = 0; i < plotsN; i++) {
-            gc.series[i].lines = {
-                show: true,
-                lineWidth: 1,
-            }
-        }
-
-        // Calculate the minimum possible non-zero Y to clip useless bottoms
-        // of logarithmic plots.
-        var maxYTick = getMaxDecimalTick(gc.maxY);
-        gc.minPow = Math.round(Math.log(minY) / Math.log(10));
-        gc.ticks = [];
-        for (var pow = gc.minPow; Math.pow(10, pow) < maxYTick; pow++) {
-            gc.ticks.push(Math.pow(10, pow));
-        }
-        gc.ticks.push(Math.pow(10, pow));
-
-        gc.draw = drawInNormalScale;
-
-        gc.redraw = function() {
-            var newPlotsData = [];
-            var newColors = [];
-
-            $('#legend-placeholder').find('input:checked').each(function() {
-                var number = $(this).attr('name');
-                if (number && gc.series && gc.series.length > 0) {
-                    i = 0;
-                    do {
-                        var series = gc.series[i];
-                        i++;
-                    } while (series.number != number && i <= gc.series.length);
-//                    if (i != gc.plotsData.length) {
-                    newPlotsData.push(series);
-                    newColors.push(series.color);
-//                    }
-                }
-            });
-
-            if (newPlotsData.length == 0) {
-                newPlotsData.push({
-                    data: [],
-                });
-                newColors.push('#FFF');
-            }
-
-            gc.draw(newPlotsData, newColors);
-        };
     }
-
-    $.each(gc.series, function(i, series) {
-        $('#legend-placeholder').find('#label_' + series.number + '_id').click(gc.redraw);
-    });
-
-    gc.redraw();
-
-    $('#change-scale').css('visibility', 'visible');
-
-    $('#contigs_are_ordered').hide();
-
-//    $('#contigs_are_ordered').html('');
+    var val_bp = 0;
+    for (var j = 0; j < contigs_lengths_cur_bin.length; j++) {
+        val_bp += contigs_lengths_cur_bin[j];
+    }
+    return val_bp;
 }
