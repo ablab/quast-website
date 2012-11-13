@@ -21,7 +21,7 @@ function showPlotWithInfo(info) {
         }
     });
 
-    if (newSeries.length == 0) {
+    if (newSeries.length === 0) {
         newSeries.push({
             data: [],
         });
@@ -63,7 +63,7 @@ function buildReport() {
 
     var toRemoveRefLabel = true;
     function togglePlots(name, drawPlot, data, refLen) {
-        if (name == 'cumulative') {
+        if (name === 'cumulative') {
             $(plotPlaceholder).addClass('cumulative-plot-placeholder');
             if (refLen) {
                 $('#legend-placeholder').append(
@@ -122,15 +122,18 @@ function buildReport() {
     /****************/
     /* Total report */
 
-    if (!(totalReport = readJson('total-report')))
+    if (!(totalReport = readJson('total-report'))) {
+        console.log("Error: cannot read #total-report-json");
         return 1;
+    }
 
     assembliesNames = totalReport.assembliesNames;
-    if (assembliesNames.length == 0)
-        return 1;
+//    if (assembliesNames.length === 0)
+//        console.log("Error: no assemblies");
+//        return 1;
 
-    qualities = readJson('qualities');
-    mainMetrics = readJson('main-metrics');
+//    qualities = readJson('qualities');
+//    mainMetrics = readJson('main-metrics');
     buildTotalReport(assembliesNames, totalReport.report, totalReport.date, totalReport.minContig, glossary, qualities, mainMetrics);
 
     if (refLen = readJson('reference-length'))
