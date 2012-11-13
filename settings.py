@@ -169,7 +169,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'object_tools',
+#    'object_tools',
     'django.contrib.admin',
     'django.contrib.admindocs',
     'djcelery',
