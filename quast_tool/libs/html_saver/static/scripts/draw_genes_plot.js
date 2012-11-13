@@ -34,9 +34,7 @@ var gns = {
         info.yAxisLabeled = false;
 
         if (!info.isInitialized) {
-            var contigsInfos = data.contigsInfos;
-            var genes = data.genes;
-            var found = data.found;
+            var filesFeatureInContigs = data.filesFeatureInContigs;
             var kind = data.kind;
 
             var plotsN = filenames.length;
@@ -47,10 +45,7 @@ var gns = {
 
             for (var fi = 0; fi < plotsN; fi++) {
                 var filename = filenames[fi];
-                var contigs = contigsInfos[filename];
-                for (var i = 0; i < genes.length; i++) {
-                    found[i] = 0
-                }
+                var featureInContigs = filesFeatureInContigs[filename];
 
                 info.series[fi] = {
                     data: [[0, 0]],
@@ -62,25 +57,9 @@ var gns = {
                 var contigNo = 0;
                 var totalFull = 0;
 
-                for (var k = 0; k < contigs.length; k++) {
-                    var alignedBlocks = contigs[k];
+                for (var k = 0; k < featureInContigs.length; k++) {
                     contigNo += 1;
-
-                    for (i = 0; i < genes.length; i++) {
-                        var g = genes[i];
-
-                        if (found[i] == 0) {
-                            for (var bi = 0; bi < alignedBlocks.length; bi++) {
-                                var block = alignedBlocks[bi];
-
-                                if (block[0] <= g[0] && g[1] <= block[1]) {
-                                    found[i] = 1;
-                                    totalFull += 1;
-                                    break;
-                                }
-                            }
-                        }
-                    }
+                    totalFull += featureInContigs[k];
 
                     info.series[fi].data.push([contigNo, totalFull]);
 
@@ -89,8 +68,8 @@ var gns = {
                     }
                 }
 
-                if (contigs.length > info.maxX) {
-                    info.maxX = contigs.length;
+                if (featureInContigs.length > info.maxX) {
+                    info.maxX = featureInContigs.length;
                 }
             }
 

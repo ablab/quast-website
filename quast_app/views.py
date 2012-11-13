@@ -513,18 +513,17 @@ def get_report_response_dict(results_dirpath, header):
     reference_length        = get('ref_length')
     assemblies_lengths      = get('assemblies_lengths')
     aligned_contigs_lengths = get('aligned_contigs_lengths')
-    contigs                 = get('contigs')
-    genes                   = get('genes')
-    operons                 = get('operons')
+    genes_in_contigs        = get('genes_in_contigs')
+    operons_in_contigs      = get('operons_in_contigs')
     gc_info                 = get('gc')
 
     if not settings.QUAST_DIRPATH in sys.path:
         sys.path.insert(1, settings.QUAST_DIRPATH)
     from libs import reporting
 
-    import json
-    quality_dict = json.dumps(reporting.Fields.quality_dict)
-    main_metrics = json.dumps(reporting.get_main_metrics())
+#    import json
+#    quality_dict = json.dumps(reporting.Fields.quality_dict)
+#    main_metrics = json.dumps(reporting.get_main_metrics())
 
     return {
         'totalReport' : total_report,
@@ -532,15 +531,14 @@ def get_report_response_dict(results_dirpath, header):
         'alignedContigsLengths' : aligned_contigs_lengths,
         'assembliesLengths' : assemblies_lengths,
         'referenceLength' : reference_length,
-        'contigs' : contigs,
-        'genes' : genes,
-        'operons' : operons,
+        'genesInContigs' : genes_in_contigs,
+        'operonsInContigs' : operons_in_contigs,
         'gcInfo' : gc_info,
 
         'header' : header,
 
-        'qualities': quality_dict,
-        'mainMetrics': main_metrics,
+#        'qualities': quality_dict,
+#        'mainMetrics': main_metrics,
     }
 
 

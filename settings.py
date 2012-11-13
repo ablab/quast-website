@@ -95,7 +95,7 @@ MEDIA_ROOT = 'media/'
 # URL that handles the files served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://files.lawrence.com/files/", "http://example.com/files/"
-MEDIA_URL = 'media/'
+MEDIA_URL = '/media/'
 
 # Absolute path to the directory files files should be collected to.
 # Don't put anything in this directory yourself; store your files files
@@ -105,17 +105,16 @@ STATIC_ROOT = 'static/'
 
 # URL prefix for files files.
 # Example: "http://files.lawrence.com/files/"
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+# IMPORTANT!!!! Note slash before 'static'.
+# Without it static/admin/ would become admin/static/admin
 
 # Additional locations of files files
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/files" or "C:/www/django/files".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    )
-
-STATICFILES_DIRS += (
-    os.path.join(SOURCE_DIRPATH, 'static_all'),
+    os.path.join(SOURCE_DIRPATH, 'static_webserver'),
     os.path.join(QUAST_DIRPATH, 'libs/html_saver/static'),
     )
 
@@ -170,6 +169,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'object_tools',
     'django.contrib.admin',
     'django.contrib.admindocs',
     'djcelery',

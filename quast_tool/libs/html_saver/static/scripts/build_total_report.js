@@ -46,7 +46,7 @@ function buildTotalReport(assembliesNames, report, date, minContig, glossary, qu
             var values = metric.values;
 
             var trClass = 'content-row';
-            if ($.inArray(metricName, mainMetrics) > -1) {
+            if (metric.isMain || $.inArray(metricName, mainMetrics) > -1) {
                 trClass = 'content-row';
 
                 (function(group_n) {

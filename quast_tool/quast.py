@@ -12,14 +12,17 @@ import shutil
 import re
 import getopt
 import subprocess
+from site import addsitedir
 
 __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
+
+addsitedir(os.path.join(__location__, 'env/site-packages'))
 
 #sys.path.append(os.path.join(os.path.abspath(sys.path[0]), 'libs'))
 #sys.path.append(os.path.join(os.path.abspath(sys.path[0]), '../spades_pipeline'))
 
 from libs import qconfig
-from libs.html_saver import json_saver
+from libs import fastaparser
 
 RELEASE_MODE=False
 
@@ -37,6 +40,7 @@ def usage():
         print >> sys.stderr, "--min-contig <int>           lower threshold for contig length [default: %s]" % qconfig.min_contig
         print >> sys.stderr, ""
         print >> sys.stderr, "Advanced options:"
+        print >> sys.stderr, "--scaffolds                         this flag informs QUAST that provided assemblies are scaffolds"
         print >> sys.stderr, "--gage                              this flag starts QUAST in \"GAGE mode\""
         print >> sys.stderr, "--contig-thresholds   <int,int,..>  comma-separated list of contig length thresholds [default: %s]" % qconfig.contig_thresholds
         print >> sys.stderr, "--genemark-thresholds <int,int,..>  comma-separated list of threshold lengths of genes to search with GeneMark [default is %s]" % qconfig.genes_lengths
@@ -54,6 +58,7 @@ def usage():
         print >> sys.stderr, "-e  --genemark-thresholds    comma-separated list of threshold lengths of genes to search with GeneMark [default: %s]" % qconfig.genes_lengths
         print >> sys.stderr, ""
         print >> sys.stderr, 'Options without arguments'
+        print >> sys.stderr, "-s  --scaffolds              this flag informs QUAST that provided assemblies are scaffolds"
         print >> sys.stderr, '-g  --gage                   use Gage (results are in gage_report.txt)'
         print >> sys.stderr, '-n  --not-circular           genome is not circular (e.g., it is an eukaryote)'
         print >> sys.stderr, "-j  --save-json              save the output also in the JSON format"
@@ -63,7 +68,7 @@ def usage():
         print >> sys.stderr, "-d  --debug                  run in debug mode"
         print >> sys.stderr, "-h  --help                   print this usage message"
 
-def check_file_existence(fpath, message=''):
+def assert_file_exists(fpath, message=''):
     if not os.path.isfile(fpath):
         print >> sys.stderr, "\nERROR! File not found (%s): %s\n" % (message, fpath)
         sys.exit(2)
@@ -75,7 +80,7 @@ def corrected_fname_for_nucmer(fpath):
     fname = os.path.basename(fpath)
 
     corr_fname = fname
-    corr_fname = re.sub('[^\w\._-]', '_', corr_fname).strip()
+    corr_fname = re.sub(r'[^\w\._\-|]', '_', corr_fname).strip()
 
     if corr_fname != fname:
         if os.path.isfile(os.path.join(dirpath, corr_fname)):
@@ -92,6 +97,28 @@ def corrected_fname_for_nucmer(fpath):
     return os.path.join(dirpath, corr_fname)
 
 
+def correct_fasta(original_fpath, corrected_fpath, is_reference=False):
+    modified_fasta_entries = []
+    for name, seq in fastaparser.read_fasta(original_fpath): # in tuples: (name, seq)
+        if (len(seq) >= qconfig.min_contig) or is_reference:
+            corr_name = re.sub(r'[^\w\._\-|]', '_', name)
+            # seq to uppercase, because we later looking only uppercase letters
+            corr_seq = seq.upper()
+            # removing \r (Nucmer fails on such sequences)
+            corr_seq = corr_seq.strip('\r')
+            # correcting alternatives (gage can't work with alternatives)
+            #dic = {'M': 'A', 'K': 'G', 'R': 'A', 'Y': 'C', 'W': 'A', 'S': 'C', 'V': 'A', 'B': 'C', 'H': 'A', 'D': 'A'}
+            dic = {'M': 'N', 'K': 'N', 'R': 'N', 'Y': 'N', 'W': 'N', 'S': 'N', 'V': 'N', 'B': 'N', 'H': 'N', 'D': 'N'}
+            pat = "(%s)" % "|".join( map(re.escape, dic.keys()) )
+            corr_seq = re.sub(pat, lambda m:dic[m.group()], corr_seq)
+            # checking that only A,C,G,T or N presented in sequence
+            if re.compile(r'[^ACGTN]').search(corr_seq):
+                return False
+            modified_fasta_entries.append((corr_name, corr_seq))
+    fastaparser.write_fasta_to_file(corrected_fpath, modified_fasta_entries)
+    return True
+
+
 def check_dir_name(fpath):
     dirname = os.path.dirname(fpath)
 
@@ -103,6 +130,8 @@ def check_dir_name(fpath):
 
 
 def main(args, lib_dir=os.path.join(__location__, 'libs')): # os.path.join(os.path.abspath(sys.path[0]), 'libs')):
+    print args
+
     if lib_dir == os.path.join(__location__, 'libs'):
         if ' ' in __location__:
             print >> sys.stderr, 'Error: we does not support spaces in paths. '
@@ -144,13 +173,13 @@ def main(args, lib_dir=os.path.join(__location__, 'libs')): # os.path.join(os.pa
             qconfig.make_latest_symlink = False
 
         elif opt in ('-G', "--genes"):
-            qconfig.genes = check_file_existence(arg, 'genes')
+            qconfig.genes = assert_file_exists(arg, 'genes')
 
         elif opt in ('-O', "--operons"):
-            qconfig.operons = check_file_existence(arg, 'operons')
+            qconfig.operons = assert_file_exists(arg, 'operons')
 
         elif opt in ('-R', "--reference"):
-            qconfig.reference = check_file_existence(arg, 'reference')
+            qconfig.reference = assert_file_exists(arg, 'reference')
 
         elif opt in ('-t', "--contig-thresholds"):
             qconfig.contig_thresholds = arg
@@ -168,6 +197,9 @@ def main(args, lib_dir=os.path.join(__location__, 'libs')): # os.path.join(os.pa
             qconfig.save_json = True
             qconfig.make_latest_symlink = False
             json_outputpath = arg
+
+        elif opt in ('-s', "--scaffolds"):
+            qconfig.scaffolds = True
 
         elif opt in ('-g', "--gage"):
             qconfig.with_gage = True
@@ -189,7 +221,7 @@ def main(args, lib_dir=os.path.join(__location__, 'libs')): # os.path.join(os.pa
             raise ValueError
 
     for c_fpath in contigs_fpaths:
-        check_file_existence(c_fpath, 'contigs')
+        assert_file_exists(c_fpath, 'contigs')
 
 #    old_contigs_fpaths = contigs_fpaths[:]
 #    contigs_fpaths = []
@@ -201,7 +233,7 @@ def main(args, lib_dir=os.path.join(__location__, 'libs')): # os.path.join(os.pa
 
 
     qconfig.contig_thresholds = map(int, qconfig.contig_thresholds.split(","))
-    qconfig.genes_lengths =  map(int, qconfig.genes_lengths.split(","))
+    qconfig.genes_lengths = map(int, qconfig.genes_lengths.split(","))
 
     ########################################################################
     ### CONFIG & CHECKS
@@ -217,7 +249,7 @@ def main(args, lib_dir=os.path.join(__location__, 'libs')): # os.path.join(os.pa
                 output_dirpath = str(base_dirpath) + '__' + str(i)
                 i += 1
         else:
-            print "\nWarning! Output directory already exists! Existing Nucmer aligns will be used!\n"
+            print "\nWarning! Output directory already exists! Existing Nucmer alignments can be used!\n"
 
     if not os.path.isdir(output_dirpath):
         os.makedirs(output_dirpath)
@@ -233,6 +265,8 @@ def main(args, lib_dir=os.path.join(__location__, 'libs')): # os.path.join(os.pa
 
         os.chdir(prev_dirpath)
 
+    from libs.html_saver import json_saver
+    reload(json_saver)
 
     # Json directory
     if qconfig.save_json:
@@ -275,21 +309,45 @@ def main(args, lib_dir=os.path.join(__location__, 'libs')): # os.path.join(os.pa
         shutil.rmtree(corrected_dirpath)
     os.mkdir(corrected_dirpath)
 
-    from libs import fastaparser
     # if reference in .gz format we should unzip it
     if qconfig.reference:
         ref_basename, ref_extension = os.path.splitext(qconfig.reference)
-        if ref_extension == ".gz":
-            unziped_reference_name = os.path.join(corrected_dirpath, os.path.basename(ref_basename))
-            # Renaming, because QUAST does not support non-alphabetic symbols or non-digits in names of files with contigs or references.
-            unziped_reference_name = corrected_fname_for_nucmer(unziped_reference_name)
-            unziped_reference = open(unziped_reference_name, 'w')
-            subprocess.call(['gunzip', qconfig.reference, '-c'], stdout=unziped_reference)
-            unziped_reference.close()
-            qconfig.reference = unziped_reference_name
+        corrected_and_unziped_reference_fname = os.path.join(corrected_dirpath, os.path.basename(ref_basename))
+        corrected_and_unziped_reference_fname = corrected_fname_for_nucmer(corrected_and_unziped_reference_fname)
+        # unzipping (if needed)
 
-    # we should remove input files with no contigs (e.g. if ll contigs are less than "min_contig" value)
-    contigs_to_remove = []
+        corrected_and_unziped_reference_file = open(corrected_and_unziped_reference_fname, 'w')
+        if ref_extension == ".gz":
+            subprocess.call(['gunzip', qconfig.reference, '-c'], stdout=corrected_and_unziped_reference_file)
+            qconfig.reference = corrected_and_unziped_reference_fname
+        corrected_and_unziped_reference_file.close()
+
+        # correcting
+        if not correct_fasta(qconfig.reference, corrected_and_unziped_reference_fname, True):
+            print "\n  Warning! Provided reference will be skipped because it contains non-ACGTN characters.\n"
+            qconfig.reference = ""
+        else:
+            qconfig.reference = corrected_and_unziped_reference_fname
+
+    def handle_fasta(contigs_fpath, corr_fpath):
+        lengths = fastaparser.get_lengths_from_fastafile(contigs_fpath)
+        if not sum(1 for l in lengths if l >= qconfig.min_contig):
+            print "\n  Warning! %s will be skipped because it doesn't have contigs >= %d bp.\n" % (os.path.basename(contigs_fpath), qconfig.min_contig)
+            return False
+
+        # correcting
+        if not correct_fasta(contigs_fpath, corr_fpath):
+            print "\n  Warning! %s will be skipped because it contains non-ACGTN characters.\n" % (os.path.basename(contigs_fpath))
+            return False
+
+        ## filling column "Assembly" with names of assemblies
+        report = reporting.get(corr_fpath)
+        ## filling columns "Number of contigs >=110 bp", ">=200 bp", ">=500 bp"
+        report.add_field(reporting.Fields.CONTIGS,   [sum(1 for l in lengths if l >= threshold) for threshold in qconfig.contig_thresholds])
+        report.add_field(reporting.Fields.TOTALLENS, [sum(l for l in lengths if l >= threshold) for threshold in qconfig.contig_thresholds])
+        return True
+
+
     ## removing from contigs' names special characters because:
     ## 1) Some embedded tools can fail on some strings with "...", "+", "-", etc
     ## 2) Nucmer fails on names like "contig 1_bla_bla", "contig 2_bla_bla" (it interprets as a contig's name only the first word of caption and gets ambiguous contigs names)
@@ -304,34 +362,51 @@ def main(args, lib_dir=os.path.join(__location__, 'libs')): # os.path.join(os.pa
                 i += 1
                 corr_fpath = os.path.join(corrected_dirpath, os.path.basename(basename + '__' + str(i)))
 
-        lengths = fastaparser.get_lengths_from_fastafile(contigs_fpath)
-        if not sum(1 for l in lengths if l >= qconfig.min_contig):
-            print "\n  Warning! %s will not be processed because it doesn't have contigs >= %d bp.\n" % (os.path.basename(contigs_fpath), qconfig.min_contig)
+        if not handle_fasta(contigs_fpath, corr_fpath):
             continue
-
-        ## filling column "Assembly" with names of assemblies
-        report = reporting.get(corr_fpath)
-        ## filling columns "Number of contigs >=110 bp", ">=200 bp", ">=500 bp"
-        report.add_field(reporting.Fields.CONTIGS,   [sum(1 for l in lengths if l >= threshold) for threshold in qconfig.contig_thresholds])
-        report.add_field(reporting.Fields.TOTALLENS, [sum(l for l in lengths if l >= threshold) for threshold in qconfig.contig_thresholds])
-
-        modified_fasta_entries = []
-        for name, seq in fastaparser.read_fasta(contigs_fpath): # in tuples: (name, seq)
-            if len(seq) >= qconfig.min_contig:
-                corr_name = re.sub(r'\W', '', re.sub(r'\s', '_', name))
-                # mauve and gage can't work with alternatives
-                dic = {'M': 'A', 'K': 'G', 'R': 'A', 'Y': 'C', 'W': 'A', 'S': 'C', 'V': 'A', 'B': 'C', 'H': 'A', 'D': 'A'}
-                pat = "(%s)" % "|".join( map(re.escape, dic.keys()) )
-                corr_seq = re.sub(pat, lambda m:dic[m.group()], seq)
-                modified_fasta_entries.append((corr_name, corr_seq))
-        fastaparser.write_fasta_to_file(corr_fpath, modified_fasta_entries)
 
         print '  %s ==> %s' % (contigs_fpath, os.path.basename(corr_fpath))
         new_contigs_fpaths.append(os.path.join(__location__, corr_fpath))
 
+        # if option --scaffolds is specified QUAST adds splitted version of assemblies to the comparison
+        if qconfig.scaffolds:
+            print "  splitting scaffolds into contigs:"
+            splitted_path = corr_fpath + '_splitted'
+            shutil.copy(corr_fpath, splitted_path)
+
+            splitted_fasta = []
+            contigs_counter = 0
+            for id, (name, seq) in enumerate(fastaparser.read_fasta(corr_fpath)):
+                i = 0
+                cur_contig_number = 1
+                cur_contig_start = 0
+                while (i < len(seq)) and (seq.find("N", i) != -1):
+                    start = seq.find("N", i)
+                    end = start + 1
+                    while (end != len(seq)) and (seq[end] == 'N'):
+                        end += 1
+
+                    i = end + 1
+                    if (end - start) >= qconfig.Ns_break_threshold:
+                        splitted_fasta.append((name.split()[0] + "_" + str(cur_contig_number), seq[cur_contig_start:start]))
+                        cur_contig_number += 1
+                        cur_contig_start = end
+
+                splitted_fasta.append((name.split()[0] + "_" + str(cur_contig_number), seq[cur_contig_start:]))
+                contigs_counter += cur_contig_number
+
+            fastaparser.write_fasta_to_file(splitted_path, splitted_fasta)
+            print "  %d scaffolds (%s) were broken into %d contigs (%s)" \
+                  % (id + 1, os.path.basename(corr_fpath), contigs_counter, os.path.basename(splitted_path))
+            if handle_fasta(splitted_path, splitted_path):
+                new_contigs_fpaths.append(os.path.join(__location__, splitted_path))
+
     print '  Done.'
     old_contigs_fpaths = contigs_fpaths
     contigs_fpaths = new_contigs_fpaths
+
+    from libs import qutils
+    qutils.assemblies_number = len(contigs_fpaths)
 
     if not contigs_fpaths:
         usage()
@@ -342,7 +417,7 @@ def main(args, lib_dir=os.path.join(__location__, 'libs')): # os.path.join(os.pa
         ### GAGE
         ########################################################################
         if not qconfig.reference:
-            print >> sys.stderr, "\nError! GAGE can't be run without reference!\n"
+            print >> sys.stderr, "\nError! GAGE can't be run without a reference!\n"
         else:
             from libs import gage
             gage.do(qconfig.reference, contigs_fpaths, output_dirpath, qconfig.min_contig, lib_dir)
@@ -362,99 +437,80 @@ def main(args, lib_dir=os.path.join(__location__, 'libs')): # os.path.join(os.pa
     basic_stats.do(qconfig.reference, contigs_fpaths, output_dirpath + '/basic_stats', all_pdf, qconfig.draw_plots,
         json_outputpath, output_dirpath)
 
-    nucmer_statuses = {}
-
+    aligned_fpaths = []
     if qconfig.reference:
         ########################################################################
         ### former PLANTAKOLYA, PLANTAGORA
         ########################################################################
         from libs import contigs_analyzer
         nucmer_statuses = contigs_analyzer.do(qconfig.reference, contigs_fpaths, qconfig.cyclic, output_dirpath + '/contigs_reports', lib_dir, qconfig.draw_plots)
-        for contigs_fpath, nucmer_status in nucmer_statuses.items():
-            if nucmer_status == contigs_analyzer.NucmerStatus.FAILED:
-                reporting.delete(contigs_fpath)
-                contigs_fpaths.remove(contigs_fpath)
-#            if nucmer_status == contigs_analyzer.NucmerStatus.NOT_ALIGNED:
-#                qconfig.reference = None
-
+        for contigs_fpath in contigs_fpaths:
+            if nucmer_statuses[contigs_fpath] == contigs_analyzer.NucmerStatus.OK:
+                aligned_fpaths.append(contigs_fpath)
 
     # Before continue evaluating, check if nucmer didn't skip all of the contigs files.
-    if len(contigs_fpaths) != 0:
-        if qconfig.reference:
-            aligned_contigs_fpaths = filter(lambda c_fpath: nucmer_statuses[c_fpath] == contigs_analyzer.NucmerStatus.OK, contigs_fpaths)
-
-            ##################################################
-            # ######################
-            ### NA and NGA ("aligned N and NG")
-            ########################################################################
-            from libs import aligned_stats
-            aligned_stats.do(qconfig.reference, aligned_contigs_fpaths, output_dirpath + '/contigs_reports',
-                output_dirpath + '/aligned_stats', all_pdf, qconfig.draw_plots, json_outputpath, output_dirpath)
-
-            ########################################################################
-            ### GENOME_ANALYZER
-            ########################################################################
-            from libs import genome_analyzer
-            genome_analyzer.do(qconfig.reference, aligned_contigs_fpaths, output_dirpath + '/contigs_reports',
-                output_dirpath + '/genome_stats', qconfig.genes, qconfig.operons, all_pdf, qconfig.draw_plots, json_outputpath, output_dirpath)
-
-        def add_empty_predicted_genes_fields():
-            # TODO: make it nicer (not output predicted genes if annotations are provided
-            for id, contigs_fpath in enumerate(contigs_fpaths):
-                report = reporting.get(contigs_fpath)
-                report.add_field(reporting.Fields.GENEMARKUNIQUE, "")
-                report.add_field(reporting.Fields.GENEMARK, [""] * len(qconfig.genes_lengths))
-
-        if not qconfig.genes:
-            ########################################################################
-            ### GeneMark
-            ########################################################################
-            import platform
-            if platform.system() == 'Darwin':
-                print >> sys.stderr, 'Warning! GeneMark tool for gene prediction doesn\'t work on Mac OS X.'
-                add_empty_predicted_genes_fields()
-            else:
-                from libs import genemark
-                genemark.do(contigs_fpaths, qconfig.genes_lengths, output_dirpath + '/predicted_genes', lib_dir)
-
-        else:
-            add_empty_predicted_genes_fields()
+    if len(aligned_fpaths) != 0 and qconfig.reference:
+        ##################################################
+        # ######################
+        ### NA and NGA ("aligned N and NG")
+        ########################################################################
+        from libs import aligned_stats
+        aligned_stats.do(qconfig.reference, aligned_fpaths, output_dirpath + '/contigs_reports',
+            output_dirpath + '/aligned_stats', all_pdf, qconfig.draw_plots, json_outputpath, output_dirpath)
 
         ########################################################################
-        ### TOTAL REPORT
+        ### GENOME_ANALYZER
         ########################################################################
-        reporting.save_total(output_dirpath)
+        from libs import genome_analyzer
+        genome_analyzer.do(qconfig.reference, aligned_fpaths, output_dirpath + '/contigs_reports',
+            output_dirpath + '/genome_stats', qconfig.genes, qconfig.operons, all_pdf, qconfig.draw_plots, json_outputpath, output_dirpath)
 
-        if json_outputpath:
-            json_saver.save_total_report(json_outputpath, qconfig.min_contig)
+    def add_empty_predicted_genes_fields():
+        # TODO: make it nicer (not output predicted genes if annotations are provided
+        for id, contigs_fpath in enumerate(contigs_fpaths):
+            report = reporting.get(contigs_fpath)
+            report.add_field(reporting.Fields.GENEMARKUNIQUE, "")
+            report.add_field(reporting.Fields.GENEMARK, [""] * len(qconfig.genes_lengths))
 
-        if qconfig.html_report:
-            from libs.html_saver import html_saver
-            html_saver.save_total_report(output_dirpath, qconfig.min_contig)
-
-        if qconfig.draw_plots and all_pdf:
-            print '  All pdf files are merged to', all_pdf_filename
-            all_pdf.close()
-
-        from libs import contigs_analyzer
-        for contigs_fpath, nucmer_status in nucmer_statuses.items():
-            if nucmer_status == contigs_analyzer.NucmerStatus.FAILED:
-                print 'Warning!', '\'' + os.path.basename(contigs_fpath) + '\'', 'skipped. Nucmer failed processing this contigs.'
-            if nucmer_status == contigs_analyzer.NucmerStatus.NOT_ALIGNED:
-                print 'Warning! Contigs in', '\'' + os.path.basename(contigs_fpath) + '\'', 'are not aligned on the reference. Most of the metrics are impossible to evaluate and going to be skipped.'
-
-        print 'Done.'
-        cleanup(corrected_dirpath, tee)
-        return 0
+    if not qconfig.genes:
+        ########################################################################
+        ### GeneMark
+        ########################################################################
+        from libs import genemark
+        genemark.do(contigs_fpaths, qconfig.genes_lengths, output_dirpath + '/predicted_genes', lib_dir)
 
     else:
-        print 'Error! Nucmer failed processing the file%s with contigs. ' \
-              'Check out if the contigs and the reference used are correct.%s' \
-                % ('s' if len(old_contigs_fpaths) > 1 else '',
-                   ' The problem concern all the files provided.' if len(old_contigs_fpaths) > 1 else '')
-        cleanup(corrected_dirpath, tee)
-        return 1
+        add_empty_predicted_genes_fields()
 
+    ########################################################################
+    ### TOTAL REPORT
+    ########################################################################
+    reporting.save_total(output_dirpath)
+
+    if json_outputpath:
+        json_saver.save_total_report(json_outputpath, qconfig.min_contig)
+
+    if qconfig.html_report:
+        from libs.html_saver import html_saver
+        html_saver.save_total_report(output_dirpath, qconfig.min_contig)
+
+    if qconfig.draw_plots and all_pdf:
+        print '  All pdf files are merged to', all_pdf_filename
+        all_pdf.close()
+
+    print 'Done.'
+    cleanup(corrected_dirpath, tee)
+    return 0
+
+#    else:
+#        print 'Warning! No contigs were aligned to the reference. Most of the metrics are impossible to evaluate and going to be skipped.'
+#        print 'Done.'
+#        print 'Warning! Nucmer failed processing the file%s with contigs. ' \
+#              'Check out if the contigs and the reference are correct.%s' \
+#                % ('s' if len(old_contigs_fpaths) > 1 else '',
+#                   ' The problem concerns all the files provided.' if len(old_contigs_fpaths) > 1 else '')
+#        cleanup(corrected_dirpath, tee)
+#        return 1
 
 
 def cleanup(corrected_dirpath, tee):

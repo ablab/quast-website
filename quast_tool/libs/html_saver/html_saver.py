@@ -20,10 +20,10 @@ report_fname = 'report.html'
 template_fpath = get_real_path('template.html')
 static_dirname = 'static'
 static_dirpath = get_real_path(static_dirname)
-support_dirname = 'report_html_files'
+aux_dirname = 'report_html_aux'
 scripts_inserted = False
-support_files = [
-    'static/jquery-1.7.2.min.js'
+aux_files = [
+    'static/jquery-1.8.2.min.js'
     'static/flot/jquery.flot.min.js'
     'static/flot/excanvas.min.js'
     'static/flot/jquery.flot.dashes.js'
@@ -32,10 +32,10 @@ support_files = [
     'static/scripts/draw_nx_plot.js'
     'static/scripts/draw_gc_plot.js'
     'static/scripts/utils.js'
+    'static/scripts/hsvToRgb.js'
     'static/scripts/draw_genes_plot.js'
     'static/scripts/build_report.js'
     'static/ie_html5.js'
-    'static/jquery-1.7.2.min.js'
     'static/bootstrap-tooltip-5px-lower.min.js'
     'static/report.css'
     'static/common.css'
@@ -43,11 +43,11 @@ support_files = [
 
 def init(results_dirpath):
 #    shutil.copy(template_fpath,     os.path.join(results_dirpath, report_fname))
-    support_dirpath = os.path.join(results_dirpath, support_dirname)
-    shutil.copytree(static_dirpath, support_dirpath)
+    aux_dirpath = os.path.join(results_dirpath, aux_dirname)
+    shutil.copytree(static_dirpath, aux_dirpath)
     with open(template_fpath) as template_file:
         html = template_file.read()
-        html = html.replace("/" + static_dirname, support_dirname)
+        html = html.replace("/" + static_dirname, aux_dirname)
         html = html.replace('{{ glossary }}', open(get_real_path('glossary.json')).read())
 
         with open(os.path.join(results_dirpath, report_fname), 'w') as f_html:
@@ -111,9 +111,8 @@ def append(results_dirpath, json_fpath, keyword):
 def save_total_report(results_dirpath, min_contig):
     json_fpath = json_saver.save_total_report(results_dirpath, min_contig)
     if json_fpath:
-        print '  HTML version of total report...'
         append(results_dirpath, json_fpath, 'totalReport')
-        print '    Saved to', os.path.join(results_dirpath, report_fname)
+        print '  HTML version to', os.path.join(results_dirpath, report_fname) + '.'
 
 
 def save_contigs_lengths(results_dirpath, filenames, lists_of_lengths):
@@ -140,26 +139,13 @@ def save_assembly_lengths(results_dirpath, filenames, assemblies_lengths):
         append(results_dirpath, json_fpath, 'assembliesLengths')
 
 
-def save_contigs(results_dirpath, filenames, contigs):
-    json_fpath = json_saver.save_contigs(results_dirpath, filenames, contigs)
+def save_features_in_contigs(results_dirpath, filenames, feature_name, feature_in_contigs):
+    json_fpath = json_saver.save_features_in_contigs(results_dirpath, filenames, feature_name, feature_in_contigs)
     if json_fpath:
-        append(results_dirpath, json_fpath, 'contigs')
+        append(results_dirpath, json_fpath, feature_name + 'InContigs')
 
 
 def save_GC_info(results_dirpath, filenames, lists_of_GC_info):
     json_fpath = json_saver.save_GC_info(results_dirpath, filenames, lists_of_GC_info)
     if json_fpath:
         append(results_dirpath, json_fpath, 'gcInfos')
-
-
-def save_genes(results_dirpath, genes, found):
-    json_fpath = json_saver.save_genes(results_dirpath, genes, found)
-    if json_fpath:
-        append(results_dirpath, json_fpath, 'genes')
-
-
-def save_operons(results_dirpath, operons, found):
-    json_fpath = json_saver.save_operons(results_dirpath, operons, found)
-    if json_fpath:
-        append(results_dirpath, json_fpath, 'operons')
-

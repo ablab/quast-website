@@ -22,6 +22,8 @@ logfile = "quast.log"
 corrected_dirname = "corrected_input"
 plots_filename = "plots.pdf"
 
+scaffolds = False
+Ns_break_threshold = 10
 debug = False
 draw_plots = True
 make_latest_symlink = True
@@ -31,6 +33,12 @@ operons = ''
 with_gage = False
 cyclic = True
 
-long_options = "output-dir= save-json-to= genes= operons= reference= contig-thresholds= min-contig= genemark-thresholds= save-json gage not-circular plain-report-no-plots help debug".split()
-short_options = "o:G:O:R:t:M:e:J:jpgnhd"
+long_options = "output-dir= save-json-to= genes= operons= reference= contig-thresholds= min-contig= " \
+               "genemark-thresholds= save-json gage not-circular plain-report-no-plots help debug scaffolds".split()
+short_options = "o:G:O:R:t:M:e:J:jpgnhds"
 
+# other constants. Can't be changed by command-line options
+
+# genome analyzer
+min_gap_size = 50 # for calculating number or gaps in genome coverage
+min_gene_overlap = 100 # to partial genes/operons finding

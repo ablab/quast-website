@@ -1,3 +1,4 @@
+
 function showPlotWithInfo(info) {
     var newSeries = [];
     var newColors = [];
@@ -20,7 +21,7 @@ function showPlotWithInfo(info) {
         }
     });
 
-    if (newSeries.length == 0) {
+    if (newSeries.length === 0) {
         newSeries.push({
             data: [],
         });
@@ -41,8 +42,8 @@ function buildReport() {
     var alignedContigsLens = null;
     var refLen = 0;
     var contigs = null;
-    var genes = null;
-    var operons = null;
+    var genesInContigs = null;
+    var operonsInContigs = null;
     var gcInfos = null;
 
     var glossary = JSON.parse($('#glossary-json').html());
@@ -62,18 +63,18 @@ function buildReport() {
 
     var toRemoveRefLabel = true;
     function togglePlots(name, drawPlot, data, refLen) {
-        if (name == 'cumulative') {
+        if (name === 'cumulative') {
             $(plotPlaceholder).addClass('cumulative-plot-placeholder');
             if (refLen) {
                 $('#legend-placeholder').append(
                     '<div id="reference-label">' +
                         '<label for="label_' + assembliesNames.length + '_id" style="color: #000000;">' +
-                            '<input type="checkbox" name="' + assembliesNames.length +
-                            '" checked="checked" id="label_' + assembliesNames.length +
-                            '_id">&nbsp;' + 'Reference,&nbsp;' +
-                            toPrettyString(refLen, 'bp') +
+                        '<input type="checkbox" name="' + assembliesNames.length +
+                        '" checked="checked" id="label_' + assembliesNames.length +
+                        '_id">&nbsp;' + 'Reference,&nbsp;' +
+                        toPrettyString(refLen, 'bp') +
                         '</label>' +
-                    '</div>');
+                        '</div>');
             }
             toRemoveRefLabel = true;
         } else {
@@ -121,15 +122,18 @@ function buildReport() {
     /****************/
     /* Total report */
 
-    if (!(totalReport = readJson('total-report')))
+    if (!(totalReport = readJson('total-report'))) {
+        console.log("Error: cannot read #total-report-json");
         return 1;
+    }
 
     assembliesNames = totalReport.assembliesNames;
-    if (assembliesNames.length == 0)
-        return 1;
+//    if (assembliesNames.length === 0)
+//        console.log("Error: no assemblies");
+//        return 1;
 
-    qualities = readJson('qualities');
-    mainMetrics = readJson('main-metrics');
+//    qualities = readJson('qualities');
+//    mainMetrics = readJson('main-metrics');
     buildTotalReport(assembliesNames, totalReport.report, totalReport.date, totalReport.minContig, glossary, qualities, mainMetrics);
 
     if (refLen = readJson('reference-length'))
@@ -162,35 +166,28 @@ function buildReport() {
     if (alignedContigsLens && refLen)
         makePlot('ngax', 'NGAx', nx.draw, alignedContigsLens.lists_of_lengths, refLen);
 
-    genes = readJson('genes');
-    operons = readJson('operons');
+    genesInContigs = readJson('genes-in-contigs');
+    operonsInContigs = readJson('operons-in-contigs');
 
-    if (genes || operons)
-        contigs = readJson('contigs');
+//    if (genesInContigs || operonsInContigs)
+//        contigs = readJson('contigs');
 
-    if (contigs) {
-        if (genes) {
-            makePlot('genes', 'Genes', gns.draw,  {
-                    contigsInfos: contigs.contigs,
-                    genes: genes.genes,
-                    found: genes.found,
-                    kind: 'gene',
-                },
-                refLen
-            );
-        }
-        if (operons) {
-            makePlot('operons', 'Operons', gns.draw, {
-                    contigsInfos: contigs.contigs,
-                    genes: operons.operons,
-                    found: operons.found,
-                    kind: 'operon',
-                },
-                refLen
-            );
-        }
+    if (genesInContigs) {
+        makePlot('genes', 'Genes', gns.draw,  {
+                filesFeatureInContigs: genesInContigs.genes_in_contigs,
+                kind: 'gene',
+            },
+            refLen
+        );
     }
-
+    if (operonsInContigs) {
+        makePlot('operons', 'Operons', gns.draw, {
+                filesFeatureInContigs: operonsInContigs.operons_in_contigs,
+                kind: 'operon',
+            },
+            refLen
+        );
+    }
 
     if (gcInfos = readJson('gc'))
         makePlot('gc', 'GC content', gc.draw, gcInfos.lists_of_gc_info, refLen);

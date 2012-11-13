@@ -11,6 +11,9 @@ def start_quast(args):
         sys.path.insert(1, settings.QUAST_DIRPATH)
     import quast
 
+    quast.qconfig.html_report = False
+    quast.qconfig.draw_plots = False
+
     result = quast.main(args[1:])
     reload(quast)
 
