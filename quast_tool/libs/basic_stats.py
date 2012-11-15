@@ -12,7 +12,7 @@ from libs import qconfig
 from qutils import id_to_str
 import reporting
 
-def GC_content(filename):
+def GC_content(filename):  
     """
        Returns percent of GC for assembly and list of tuples (contig_length, GC_percent)
     """
@@ -29,19 +29,19 @@ def GC_content(filename):
             ACGT_len = len(seq) - seq.count("N")
             if ACGT_len < (n / 2):
                 continue
-                # contig_length = len(seq)
+            # contig_length = len(seq)
             GC_amount = seq.count("G") + seq.count("C")
             #GC_info.append((contig_length, GC_amount * 100.0 / contig_length))
             GC_info.append((1, 100 * GC_amount / ACGT_len))
 
-        #        # sliding windows
-        #        seq = seq_full[0:n]
-        #        GC_amount = seq.count("G") + seq.count("C")
-        #        GC_info.append((1, GC_amount * 100.0 / n))
-        #        for i in range(len(seq_full) - n):
-        #            GC_amount = GC_amount - seq_full[i].count("G") - seq_full[i].count("C")
-        #            GC_amount = GC_amount + seq_full[i + n].count("G") + seq_full[i + n].count("C")
-        #            GC_info.append((1, GC_amount * 100.0 / n))
+#        # sliding windows
+#        seq = seq_full[0:n]
+#        GC_amount = seq.count("G") + seq.count("C")
+#        GC_info.append((1, GC_amount * 100.0 / n))
+#        for i in range(len(seq_full) - n):
+#            GC_amount = GC_amount - seq_full[i].count("G") - seq_full[i].count("C")
+#            GC_amount = GC_amount + seq_full[i + n].count("G") + seq_full[i + n].count("C")
+#            GC_info.append((1, GC_amount * 100.0 / n))
 
     if total_contig_length == 0:
         total_GC = None
@@ -52,7 +52,7 @@ def GC_content(filename):
 
 
 def do(reference, filenames, output_dir, all_pdf, draw_plots, json_output_dir, results_dir):
-
+    
     if not os.path.isdir(output_dir):
         os.mkdir(output_dir)
 
@@ -114,12 +114,12 @@ def do(reference, filenames, output_dir, all_pdf, draw_plots, json_output_dir, r
         total_length = sum(lengths_list)
         total_GC, GC_info = GC_content(filename)
         lists_of_GC_info.append(GC_info)
-        print ' ', id_to_str(id) + os.path.basename(filename) +\
-                   ', N50 = ' + str(n50) +\
-                   ', L50 = ' + str(l50) +\
-                   ', Total length = ' + str(total_length) +\
-                   ', GC % = ' + ('%.2f' % total_GC if total_GC is not None else 'undefined') +\
-                   ', # N\'s per 100 kbp = ' + ' %.2f' % (float(number_of_Ns) * 100000.0 / float(total_length))
+        print ' ', id_to_str(id) + os.path.basename(filename) + \
+            ', N50 = ' + str(n50) + \
+            ', L50 = ' + str(l50) + \
+            ', Total length = ' + str(total_length) + \
+            ', GC % = ' + ('%.2f' % total_GC if total_GC is not None else 'undefined') + \
+            ', # N\'s per 100 kbp = ' + ' %.2f' % (float(number_of_Ns) * 100000.0 / float(total_length))\
 
         report.add_field(reporting.Fields.N50, n50)
         report.add_field(reporting.Fields.L50, l50)
@@ -153,14 +153,14 @@ def do(reference, filenames, output_dir, all_pdf, draw_plots, json_output_dir, r
         import plotter
         ########################################################################import plotter
         plotter.cumulative_plot(reference, filenames, lists_of_lengths, output_dir + '/cumulative_plot', 'Cumulative length', all_pdf)
-
+    
         ########################################################################
         # Drawing GC content plot...
         lists_of_GC_info_with_ref = lists_of_GC_info
         if reference:
             total_GC, GC_info = GC_content(reference)
             lists_of_GC_info_with_ref.append(GC_info)
-            # Drawing cumulative plot...
+        # Drawing cumulative plot...
         plotter.GC_content_plot(reference, filenames, lists_of_GC_info_with_ref, output_dir + '/GC_content_plot', all_pdf)
 
         ########################################################################

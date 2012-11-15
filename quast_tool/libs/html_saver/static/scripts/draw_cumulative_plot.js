@@ -53,11 +53,11 @@ var cumulative = {
                 }
             }
 
-            var lineColors = [];
-
-            for (i = 0; i < colors.length; i++) {
-                lineColors.push(changeColor(colors[i], 0.9, false));
-            }
+//            var lineColors = [];
+//
+//            for (i = 0; i < colors.length; i++) {
+//                lineColors.push(changeColor(colors[i], 0.9, false));
+//            }
 
             for (i = 0; i < plotsN; i++) {
                 cumulative.series[i].lines = {

@@ -35,8 +35,8 @@ function buildTotalReport(assembliesNames, report, date, minContig, glossary, qu
         } else {
             table +=
                 '<tr class="subheader-tr row_hidden" id="group_' + group_n + '">' +
-                '<td colspan="' + width + '">' + groupName + '</td>' +
-                '</tr>';
+                    '<td colspan="' + width + '">' + groupName + '</td>' +
+                    '</tr>';
         }
 
         for (var metric_n = 0; metric_n < metrics.length; metric_n++) {
@@ -61,10 +61,10 @@ function buildTotalReport(assembliesNames, report, date, minContig, glossary, qu
 
             table +=
                 '<tr class="' + trClass + '" quality="' + quality + '">' +
-                '<td><span class="metric-name">' +
+                    '<td><span class="metric-name">' +
                     addTooltipIfDefinitionExists(glossary, metricName) +
                     '</span>' +
-                '</td>';
+                    '</td>';
 
             for (var value_n = 0; value_n < values.length; value_n++) {
                 var value = values[value_n];
@@ -75,7 +75,7 @@ function buildTotalReport(assembliesNames, report, date, minContig, glossary, qu
                     if (typeof value === 'number') {
                         table +=
                             '<td number="' + value + '"><span>'
-                            + toPrettyString(value) + '</span></td>';
+                                + toPrettyString(value) + '</span></td>';
                     } else {
                         var result = /([0-9\.]+)(.*)/.exec(value);
                         var num = parseFloat(result[1]);
@@ -133,8 +133,8 @@ function buildTotalReport(assembliesNames, report, date, minContig, glossary, qu
             });
         }
     }).mouseleave(function() {
-        $(this).parent().find('td[number]').css('color', 'black');
-    });
+            $(this).parent().find('td[number]').css('color', 'black');
+        });
 //    });
 }
 //

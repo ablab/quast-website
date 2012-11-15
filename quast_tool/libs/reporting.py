@@ -332,7 +332,7 @@ def table(order=Fields.order):
                 'quality': quality,
                 'values': values,
                 'isMain': field in Fields.main_metrics,
-                })
+            })
 
     for group_name, metrics in order:
         rows = []
@@ -421,7 +421,7 @@ def get_num_from_table_value(val):
         num = val
 
     elif isinstance(val, basestring):
-    # 'x + y part' format?
+                                                                      # 'x + y part' format?
         tokens = val.split()[0]                                       # tokens = [x, +, y, part]
         if len(tokens) >= 3:                                          # Yes, 'y + x part' format
             x, y = parse_number(tokens[0]), parse_number(tokens[2])
@@ -484,7 +484,7 @@ def save_tex(filename, table, is_transposed=False):
         # escape characters
         for esc_char in "\\ % $ # _ { } ~ ^".split():
             row = row.replace(esc_char, '\\' + esc_char)
-            # more pretty '>='
+        # more pretty '>='
         row = row.replace('>=', '$\\geq$')
         # pretty highlight
         row = row.replace('HIGHLIGHTEDSTART', '{\\bf ')
