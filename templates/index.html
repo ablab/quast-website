@@ -71,6 +71,8 @@
             });
         });
 
+        var allComplete = false;
+
         $(function() {
             var uploaders = [];
 
@@ -95,18 +97,24 @@
                     initializeUploadsLink: parameters[i].initializeUploadsLink,
                     element: $(parameters[i].elementId)[0],
                     multiple: parameters[i].multiple,
+                    onSubmit: function(id, fileName) {
+                        $('#evaluate-button').prop('disabled', false);
+                        $('#evaluate-button').removeClass('disabled');
+                        allComplete = false;
+                    },
                     onComplete: function(id, fileName, responseJSON) {
                         if (responseJSON.success) {
-                            $('#evaluate-button').prop('disabled', false);
-                            $('#evaluate-button').removeClass('disabled');
+{#                            $('#evaluate-button').prop('disabled', false);#}
+{#                            $('#evaluate-button').removeClass('disabled');#}
                             $('#area-text').css('display', 'none');
                         }
                     },
                     onAllComplete: function(uploads) {
                         if (uploads.length > 0) {
-                            $('#evaluate-button').prop('disabled', false);
-                            $('#evaluate-button').removeClass('disabled');
+{#                            $('#evaluate-button').prop('disabled', false);#}
+{#                            $('#evaluate-button').removeClass('disabled');#}
                             $('#area-text').css('display', 'none');
+                            allComplete = true;
                         }
                         // uploads is an array of maps
                         // the maps look like this: {file: FileObject, response: JSONServerResponse}
@@ -132,6 +140,7 @@
                             $('#evaluate-button').prop('disabled', false);
                             $('#evaluate-button').removeClass('disabled');
                             $('#area-text').css('display', 'none');
+                            allComplete = true;
                         }
                     },
                     params: {
@@ -185,6 +194,21 @@
                 }));
             }
         });
+
+        function validate(eval_form) {
+            $('#evaluate-button').prop('disabled', true);
+            $('#evaluate-button').addClass('disabled');
+
+            var check = function() {
+                if (allComplete){
+                    document.eval_form.submit();
+                } else {
+                    $('#contigs_loading_no_complete_label').show();
+                    setTimeout(check, 500); // check again in a second
+                }
+            };
+            check();
+        }
 
     //        $('#add-dataset-wrapper').click(
     //            $('#add-dataset-toggle-link').
@@ -361,7 +385,7 @@
             <tr>
             <td class="layout-table-td layout-table-fst-td">
                 <div id='form-wrapper'>
-                    <form enctype="multipart/form-data" action="/" method="POST">{% csrf_token %}
+                    <form enctype="multipart/form-data" name='eval_form' id="eval_form" action="/" method="POST">{% csrf_token %}
                         <table class='form-layout-table'>
                             <tr>
                                 <td class='form-layout-td' style="padding-top: 3px;"><h3>Contigs</h3></td>
@@ -468,7 +492,8 @@
                             </div>
 
                             <div id="evaluate-button-wrapper">
-                                <input id='evaluate-button' class="btn btn-large btn-inverse" type="submit" value="Evaluate">
+                                <input id='evaluate-button' class="btn btn-large btn-inverse" name="sumbitButton"
+                                       type="submit" value="Evaluate" onclick="validate('eval_form'); return false;">
 
                                 <div style="visibility: {% if highlight_last %}visible{% else %}hidden{% endif %};
                                             float: right;"
@@ -476,6 +501,9 @@
                                     <p>
 {#                                        <a href="{{ latest_report_link}}">Report</a>#}
                                     </p>
+                                </div>
+                                <div id='contigs_loading_no_complete_label' style="display: none; color: #2c2c2c; margin-top: 8px;">
+                                    Waiting for contigs to finish loading...
                                 </div>
                             </div>
 
