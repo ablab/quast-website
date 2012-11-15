@@ -1,19 +1,6 @@
 import sys
 import os
 
-if os.environ.get('DEVELOPMENT', None):
-    DEBUG = True
-    GOOGLE_ANALYTICS = False
-    db_engine = 'django.db.backends.sqlite3'
-else:
-    DEBUG = False
-    GOOGLE_ANALYTICS = True
-    db_engine = 'django.db.backends.sqlite3'
-#    db_engine = 'postgresql_psycopg2'
-
-
-TEMPLATE_DEBUG = DEBUG
-
 
 SOURCE_DIRPATH          = os.path.abspath(os.path.dirname(__file__))
 HOME_DIRPATH            = os.path.join(SOURCE_DIRPATH, '..')
@@ -38,6 +25,33 @@ EXAMPLE_DIRPATH         = os.path.join(APP_DIRPATH, 'files/example')
 ECOLI_DIRPATH           = os.path.join(APP_DIRPATH, 'files/ecoli')
 
 
+
+if os.environ.get('DEVELOPMENT', None):
+    DEBUG = True
+    GOOGLE_ANALYTICS = False
+    db_engine = 'django.db.backends.sqlite3'
+    db_name = quastdb_fpath
+#    db_engine = 'django.db.backends.mysql'
+#    db_name = 'quast'
+else:
+    DEBUG = False
+    GOOGLE_ANALYTICS = True
+    db_engine = 'django.db.backends.sqlite3'
+    db_name = quastdb_fpath
+
+TEMPLATE_DEBUG = DEBUG
+
+
+
+# BROKER_URL = 'redis://localhost/0'
+# BROKER_URL = 'amqp'
+# Celery with sqlite
+BROKER_URL = 'sqla+sqlite:///' + celerydb_fpath
+# http://docs.celeryproject.org/en/latest/configuration.html#conf-database-result-backend
+CELERY_RESULT_DBURI = 'sqlite:///' + celerydb_fpath
+
+
+
 # Django settings for quast_website project.
 
 ADMINS = (
@@ -47,11 +61,10 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        #'ENGINE': 'django_mongodb_engine',                                  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'ENGINE': db_engine,                              # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': quastdb_fpath,                                               # Or path to database file if using sqlite3.
-        #'USER': '',                                                         # Not used with sqlite3.
-        #'PASSWORD': '',                                                     # Not used with sqlite3.
+        'ENGINE': db_engine,                                                 # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': db_name,                                                     # Or path to database file if using sqlite3.
+        'USER': 'quast',                                                     # Not used with sqlite3.
+        'PASSWORD': '1234%!lol',                                             # Not used with sqlite3.
         #'HOST': '',                                                         # Set to empty string for localhost. Not used with sqlite3.
         #'PORT': '',                                                         # Set to empty string for default. Not used with sqlite3.
         #'SUPPORT_TRANSACTIONS': False,
@@ -169,12 +182,14 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-#    'object_tools',
+    'object_tools',
     'django.contrib.admin',
     'django.contrib.admindocs',
     'djcelery',
     'quast_app',
     'ajaxuploader',
+#    'south',
+#    'south_admin',
 #    'django_socketio',
     )
 
@@ -207,12 +222,6 @@ LOGGING = {
         }
 }
 
-#BROKER_URL = 'redis://localhost/0'
-# BROKER_URL = 'amqp'
-# Celery with sqlite
-BROKER_URL = 'sqla+sqlite:///' + celerydb_fpath
-# http://docs.celeryproject.org/en/latest/configuration.html#conf-database-result-backend
-CELERY_RESULT_DBURI = 'sqlite:///' + celerydb_fpath
 
 
 ## setting up session

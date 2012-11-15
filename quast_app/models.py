@@ -11,7 +11,7 @@ from django.conf import settings
 class UserSession(models.Model):
     session_key = models.CharField(max_length=256)
     input_dirname = models.CharField(max_length=2048)
-#    email = models.EmailField()
+#    email = models.EmailField(blank=True)
 
     def __unicode__(self):
         return self.session_key
