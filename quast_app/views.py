@@ -156,68 +156,68 @@ def index(request):
     )
 
 
-def get_evaluate_response_dict(request, user_session, url):
-    contigs_fnames = [c_f.fname for c_f in user_session.contigsfile_set.all()]
+#def get_evaluate_response_dict(request, user_session, url):
+#    contigs_fnames = [c_f.fname for c_f in user_session.contigsfile_set.all()]
+#
+#    if request.method == 'POST':
+#        data_set_form = DatasetForm(request.POST)
+#        data_set_form.set_user_session(user_session)
+#        #        dataset_form.fields['name_selected'].choices = dataset_choices
+#        if data_set_form.is_valid():
+#            from datetime import datetime
+#            now_datetime = datetime.now()
+#            now_str = now_datetime.strftime('%d_%b_%Y_%H:%M:%S.%f')
+#
+#            min_contig = data_set_form.cleaned_data['min_contig']
+#            request.session['min_contig'] = min_contig
+#            data_set = get_dataset(request, data_set_form, now_str)
+#            quast_session = start_quast_session(user_session, data_set, min_contig, now_datetime)
+#
+#            return redirect(url, after_evaluation=True)
+#
+#        else:
+#            min_contig = request.session.get('min_contig') or qconfig.min_contig
+#            request.session['min_contig'] = min_contig
+#            data_set_form.set_min_contig(min_contig)
+#
+#        #            return render_to_response('reports.html', {
+#        #                'glossary': glossary,
+#        #                'csrf_token': get_token(request),
+#        #                'session_key': user_session_key,
+#        #                'contigs_fnames': contigs_fnames,
+#        #                'dataset_form': dataset_form,
+#        #                'report_id': quast_session.report_id,
+#        #                }, context_instance = RequestContext(request))
+#    else:
+#        data_set_form = DatasetForm()
+#        min_contig = request.session.get('min_contig') or qconfig.min_contig
+#        data_set_form.set_min_contig(min_contig)
+#
+#    #        dataset_form.fields['name_selected'].choices = dataset_choices
+#
+#    response_dict = template_args_by_default
+#    response_dict = dict(response_dict.items() + {
+#        'csrf_token': get_token(request),
+#        'contigs_fnames': contigs_fnames,
+#        'dataset_form': data_set_form,
+#    }.items())
+#
+#    return response_dict
 
-    if request.method == 'POST':
-        data_set_form = DatasetForm(request.POST)
-        data_set_form.set_user_session(user_session)
-        #        dataset_form.fields['name_selected'].choices = dataset_choices
-        if data_set_form.is_valid():
-            from datetime import datetime
-            now_datetime = datetime.now()
-            now_str = now_datetime.strftime('%d_%b_%Y_%H:%M:%S.%f')
-
-            min_contig = data_set_form.cleaned_data['min_contig']
-            request.session['min_contig'] = min_contig
-            data_set = get_dataset(request, data_set_form, now_str)
-            quast_session = start_quast_session(user_session, data_set, min_contig, now_datetime)
-
-            return redirect(url, after_evaluation=True)
-
-        else:
-            min_contig = request.session.get('min_contig') or qconfig.min_contig
-            request.session['min_contig'] = min_contig
-            data_set_form.set_min_contig(min_contig)
-
-        #            return render_to_response('reports.html', {
-        #                'glossary': glossary,
-        #                'csrf_token': get_token(request),
-        #                'session_key': user_session_key,
-        #                'contigs_fnames': contigs_fnames,
-        #                'dataset_form': dataset_form,
-        #                'report_id': quast_session.report_id,
-        #                }, context_instance = RequestContext(request))
-    else:
-        data_set_form = DatasetForm()
-        min_contig = request.session.get('min_contig') or qconfig.min_contig
-        data_set_form.set_min_contig(min_contig)
-
-    #        dataset_form.fields['name_selected'].choices = dataset_choices
-
-    response_dict = template_args_by_default
-    response_dict = dict(response_dict.items() + {
-        'csrf_token': get_token(request),
-        'contigs_fnames': contigs_fnames,
-        'dataset_form': data_set_form,
-    }.items())
-
-    return response_dict
 
 
-
-def evaluate(request):
-    if not request.session.exists(request.session.session_key):
-        request.session.create()
-
-    user_session_key = request.session.session_key
-    try:
-        user_session = UserSession.objects.get(session_key=user_session_key)
-    except UserSession.DoesNotExist:
-        user_session = create_user_session(user_session_key)
-
-    response_dict = get_evaluate_response_dict(request, user_session, '/evaluate/')
-    return render_to_response('evaluate.html', response_dict, context_instance = RequestContext(request))
+#def evaluate(request):
+#    if not request.session.exists(request.session.session_key):
+#        request.session.create()
+#
+#    user_session_key = request.session.session_key
+#    try:
+#        user_session = UserSession.objects.get(session_key=user_session_key)
+#    except UserSession.DoesNotExist:
+#        user_session = create_user_session(user_session_key)
+#
+#    response_dict = get_evaluate_response_dict(request, user_session, '/evaluate/')
+#    return render_to_response('evaluate.html', response_dict, context_instance = RequestContext(request))
 
 
 
@@ -398,25 +398,16 @@ def report(request, report_id):
             raise Http404()
 
 
-def start_quast_session(user_session, dataset, min_contig, now_datetime):
+def start_quast_session(user_session, data_set, min_contig, now_datetime):
     # Creating new Quast session object
     quast_session = QuastSession(
         user_session = user_session,
-        dataset = dataset,
+        dataset = data_set,
         date = now_datetime,
     )
-
     quast_session.save()
 
-    for c_fn in user_session.contigsfile_set.all():
-        QuastSession_ContigsFile.objects.create(quast_session=quast_session, contigs_file=c_fn)
-
     input_dirpath = os.path.join(settings.INPUT_ROOT_DIRPATH, user_session.input_dirname)
-
-    # Preparing contigs filepaths
-    print quast_session.get_results_reldirpath()
-    contigs_files = quast_session.contigs_files.all()
-    contigs_fpaths = [os.path.join(input_dirpath, c_f.fname) for c_f in contigs_files]
 
     # Preparing results directory
     result_dirpath = os.path.join(settings.RESULTS_ROOT_DIRPATH, quast_session.get_results_reldirpath())
@@ -429,22 +420,47 @@ def start_quast_session(user_session, dataset, min_contig, now_datetime):
     if not os.path.isdir(result_dirpath):
         os.makedirs(result_dirpath)
 
-    # Preparing dataset files
+    # Preparing contigs files
+    contigs_files = user_session.contigsfile_set.all()
+
+    for c_fn in contigs_files:
+        QuastSession_ContigsFile.objects.create(quast_session=quast_session, contigs_file=c_fn)
+
+    contigs_results_tmp_dirpath = os.path.join(result_dirpath, 'contigs')
+    os.makedirs(contigs_results_tmp_dirpath)
+
+    user_contigs_fpaths = [os.path.join(input_dirpath, c_f.fname) for c_f in contigs_files]
+    quast_session_contigs_fpaths = [os.path.join(contigs_results_tmp_dirpath, c_f.fname) for c_f in contigs_files]
+
+    for user_c_fpath, quast_session_c_fpath in zip(user_contigs_fpaths, quast_session_contigs_fpaths):
+        shutil.copyfile(user_c_fpath, quast_session_c_fpath)
+
+    for user_c_fpath in user_contigs_fpaths:
+        os.remove(user_c_fpath)
+
+    contigs_files.delete()
+
+#    for contigs_file in contigs_files:
+#        contigs_file.user_session
+
+
+
+    # Preparing data set files
     reference_fpath = None
     genes_fpath = None
     operons_fpath = None
-    if dataset:
-        if dataset.reference_fname:
-            reference_fpath = os.path.join(settings.DATA_SETS_ROOT_DIRPATH, dataset.dirname, dataset.reference_fname)
+    if data_set:
+        if data_set.reference_fname:
+            reference_fpath = os.path.join(settings.DATA_SETS_ROOT_DIRPATH, data_set.dirname, data_set.reference_fname)
 
-        if dataset.genes_fname:
-            genes_fpath = os.path.join(settings.DATA_SETS_ROOT_DIRPATH, dataset.dirname, dataset.genes_fname)
+        if data_set.genes_fname:
+            genes_fpath = os.path.join(settings.DATA_SETS_ROOT_DIRPATH, data_set.dirname, data_set.genes_fname)
 
-        if dataset.operons_fname:
-            operons_fpath = os.path.join(settings.DATA_SETS_ROOT_DIRPATH, dataset.dirname, dataset.operons_fname)
+        if data_set.operons_fname:
+            operons_fpath = os.path.join(settings.DATA_SETS_ROOT_DIRPATH, data_set.dirname, data_set.operons_fname)
 
     # Running Quast
-    result = assess_with_quast(result_dirpath, contigs_fpaths, min_contig, reference_fpath, genes_fpath, operons_fpath)
+    result = assess_with_quast(result_dirpath, quast_session_contigs_fpaths, min_contig, reference_fpath, genes_fpath, operons_fpath)
     quast_session.task_id = result.id
     quast_session.save()
     return quast_session
