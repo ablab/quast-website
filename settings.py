@@ -49,6 +49,8 @@ TEMPLATE_DEBUG = DEBUG
 BROKER_URL = 'sqla+sqlite:///' + celerydb_fpath
 # http://docs.celeryproject.org/en/latest/configuration.html#conf-database-result-backend
 CELERY_RESULT_DBURI = 'sqlite:///' + celerydb_fpath
+CELERY_SEND_TASK_ERROR_EMAILS = True
+CELERY_SEND_EVENTS = True
 
 
 

@@ -1,0 +1,63 @@
+QUAST started:  ./quast.py test_data/assembly_10K_1.fasta test_data/assembly_10K_2.fasta -G test_data/genes_10K.txt -O test_data/operons_10K.txt -R test_data/reference_10K.fasta.gz -j 
+Version: 1.3 Build: 16.11.2012_20:32
+
+Correcting contig files...
+  test_data/assembly_10K_1.fasta ==> assembly_10K_1
+  test_data/assembly_10K_2.fasta ==> assembly_10K_2
+  Done.
+Reference genome:
+  /Users/vladsaveliev/Dropbox/bio/quast/quast-website/quast-1.3/quast_results/results_2012_11_16_20_39_03/corrected_input/reference_10K.fasta , Reference length = 10000 , Reference GC % = 52.07
+Contigs files: 
+  1  assembly_10K_1
+  2  assembly_10K_2
+Calculating N50 and L50...
+  1  assembly_10K_1, N50 = 3980, L50 = 1, Total length = 6710, GC % = 51.28, # N's per 100 kbp =  0.00
+  2  assembly_10K_2, N50 = 3360, L50 = 1, Total length = 5460, GC % = 52.44, # N's per 100 kbp =  0.00
+  Drawing cumulative plot... saved to /Users/vladsaveliev/Dropbox/bio/quast/quast-website/quast-1.3/quast_results/results_2012_11_16_20_39_03/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot... saved to /Users/vladsaveliev/Dropbox/bio/quast/quast-website/quast-1.3/quast_results/results_2012_11_16_20_39_03/basic_stats/GC_content_plot.pdf
+  Drawing Nx plot... saved to /Users/vladsaveliev/Dropbox/bio/quast/quast-website/quast-1.3/quast_results/results_2012_11_16_20_39_03/basic_stats/Nx_plot.pdf
+  Drawing NGx plot... saved to /Users/vladsaveliev/Dropbox/bio/quast/quast-website/quast-1.3/quast_results/results_2012_11_16_20_39_03/basic_stats/NGx_plot.pdf
+Compiling MUMmer...
+Running contigs analyzer...
+  1  assembly_10K_1...
+  2  assembly_10K_2...  1  Logging to files /Users/vladsaveliev/Dropbox/bio/quast/quast-website/quast-1.3/quast_results/results_2012_11_16_20_39_03/contigs_reports/contigs_report_assembly_10K_1.stdout and contigs_report_assembly_10K_1.stderr...
+
+  1  Running Nucmer...   2  Logging to files /Users/vladsaveliev/Dropbox/bio/quast/quast-website/quast-1.3/quast_results/results_2012_11_16_20_39_03/contigs_reports/contigs_report_assembly_10K_2.stdout and contigs_report_assembly_10K_2.stderr...
+
+  2  Running Nucmer... 
+  1  Analysis is finished.
+  2  Analysis is finished.
+  Creating total report...
+    Saved to /Users/vladsaveliev/Dropbox/bio/quast/quast-website/quast-1.3/quast_results/results_2012_11_16_20_39_03/contigs_reports/misassemblies_report.txt , misassemblies_report.tsv and misassemblies_report.tex
+  Creating total report...
+    Saved to /Users/vladsaveliev/Dropbox/bio/quast/quast-website/quast-1.3/quast_results/results_2012_11_16_20_39_03/contigs_reports/unaligned_report.txt , unaligned_report.tsv and unaligned_report.tex
+  Done.
+Running NA-NGA tool...
+Processing .coords files...
+  1  assembly_10K_1
+  2  assembly_10K_2
+Calculating NA50 and NGA50...
+  1  assembly_10K_1, Largest alignment = 2030, NA50 = 1952, NGA50 = 1610, LA50 = 2, LGA50 = 3
+  2  assembly_10K_2, Largest alignment = 2100, NA50 = 1471, NGA50 = 700, LA50 = 2, LGA50 = 4
+  Drawing cumulative plot... saved to /Users/vladsaveliev/Dropbox/bio/quast/quast-website/quast-1.3/quast_results/results_2012_11_16_20_39_03/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot... saved to /Users/vladsaveliev/Dropbox/bio/quast/quast-website/quast-1.3/quast_results/results_2012_11_16_20_39_03/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot... saved to /Users/vladsaveliev/Dropbox/bio/quast/quast-website/quast-1.3/quast_results/results_2012_11_16_20_39_03/aligned_stats/NGAx_plot.pdf
+Running Genome analyzer...
+  Loaded 10 genes
+  Loaded 2 operons
+  1  assembly_10K_1...
+  2  assembly_10K_2...
+  Drawing genes cumulative plot... saved to /Users/vladsaveliev/Dropbox/bio/quast/quast-website/quast-1.3/quast_results/results_2012_11_16_20_39_03/genome_stats/genes_cumulative_plot.pdf
+  Drawing # complete genes histogram... saved to /Users/vladsaveliev/Dropbox/bio/quast/quast-website/quast-1.3/quast_results/results_2012_11_16_20_39_03/genome_stats/complete_genes_histogram.pdf
+  Drawing operons cumulative plot... saved to /Users/vladsaveliev/Dropbox/bio/quast/quast-website/quast-1.3/quast_results/results_2012_11_16_20_39_03/genome_stats/operons_cumulative_plot.pdf
+  Drawing # complete operons histogram... saved to /Users/vladsaveliev/Dropbox/bio/quast/quast-website/quast-1.3/quast_results/results_2012_11_16_20_39_03/genome_stats/complete_operons_histogram.pdf
+  Drawing Genome fraction, % histogram... saved to /Users/vladsaveliev/Dropbox/bio/quast/quast-website/quast-1.3/quast_results/results_2012_11_16_20_39_03/genome_stats/genome_fraction_histogram.pdf
+  Done
+Summarizing...
+  Creating total report...
+    Saved to /Users/vladsaveliev/Dropbox/bio/quast/quast-website/quast-1.3/quast_results/results_2012_11_16_20_39_03/report.txt , report.tsv and report.tex
+  Transposed version of total report...
+    Saved to /Users/vladsaveliev/Dropbox/bio/quast/quast-website/quast-1.3/quast_results/results_2012_11_16_20_39_03/transposed_report.txt , transposed_report.tsv and transposed_report.tex
+  HTML version to /Users/vladsaveliev/Dropbox/bio/quast/quast-website/quast-1.3/quast_results/results_2012_11_16_20_39_03/report.html.
+  All pdf files are merged to /Users/vladsaveliev/Dropbox/bio/quast/quast-website/quast-1.3/quast_results/results_2012_11_16_20_39_03/plots.pdf
+Done.
