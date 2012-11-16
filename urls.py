@@ -11,8 +11,8 @@ from quast_app import views
 urlpatterns = patterns('',
     url(r'^/?$', 'quast_app.views.index'),
     url(r'^example/?$', 'quast_app.views.example'),
-    url(r'^manual_1.3/?$', 'quast_app.views.manual'),
-    url(r'^manual_1.3\.html$', 'quast_app.views.manual'),
+    url(r'^manual_1\.3/?$', 'quast_app.views.manual'),
+    url(r'^manual_1\.3\.html$', 'quast_app.views.manual'),
     url(r'^LICENSE$', 'quast_app.views.license'),
 
   # url(r'^report-scripts/(?P<script_name>[1-9a-z_\-]+.js)/?$', 'quast_app.views.report_scripts'),
