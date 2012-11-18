@@ -49,6 +49,8 @@ class MyBaseUploadBackend(AbstractUploadBackend):
         return filename
 
     def remove(self, request):
+        if 'fileIndex' not in request.GET:
+            return False
         file_index = request.GET['fileIndex']
         try:
             contigs_file = ContigsFile.objects.get(file_index=file_index)
