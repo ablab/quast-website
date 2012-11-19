@@ -16,33 +16,74 @@ def start_quast((args, quast_session)):
     quast.qconfig.draw_plots = False
 
     link = os.path.join(settings.REPORT_LINK_BASE, quast_session.report_id)
-    emails = ['vladsaveliev@me.com']
+
+    from_email = 'notification@quast.bioinf.spbau.ru'
+    my_email = 'vladsaveliev@me.com'
     if quast_session.user_session.email:
-        emails.append(quast_session.user_session.email)
+        user_email = quast_session.user_session.email
+    else:
+        user_email = None
 
     try:
         result = quast.main(args[1:])
 
-        send_mail(
-            subject='QUAST report is ready (' + quast_session.dataset.name + ')',
-            message='http://quast.boinf.spbau.ru/' + link,
-            from_email='notification@quast.bioinf.spbau.ru',
-            recipient_list=emails,
-            fail_silently=True
-        )
+        if quast_session.comment:
+            subject = 'QUAST report (%s)' % quast_session.comment[:200]
+        else:
+            subject = 'QUAST report (data set: %s)' % quast_session.dataset.name
 
-    except Exception as e:
         send_mail(
-            subject='QUAST failed (' + quast_session.dataset.name + ')',
-            message='''
+            subject = subject,
+            message = '''
             http://quast.boinf.spbau.ru/%s
 
+            data set: %s
+
+            %s
+            ''' % (link, quast_session.dataset.name, quast_session.comment),
+
+            from_email = from_email,
+            recipient_list = [my_email, user_email],
+            fail_silently = True
+        )
+    except Exception as e:
+        if quast_session.comment:
+            subject = 'QUAST failed (%s)' % quast_session.comment[:200]
+        else:
+            subject = 'QUAST failed (data set: %s)' % quast_session.dataset.name
+
+
+        send_mail(
+            subject = subject,
+            message = '''
+            http://quast.boinf.spbau.ru/%s
+
+            data set: %s
+
+            %s
+
             QUAST failed:
-            %e.msg
-            ''' % (link, str(e)),
-            from_email='notification@quast.bioinf.spbau.ru',
-            recipient_list=['vladsaveliev@me.com'],
-            fail_silently=True
+            %s.msg
+            ''' % (link, quast_session.dataset.name, quast_session.comment, str(e)),
+
+            from_email = from_email,
+            recipient_list = [my_email],
+            fail_silently = True
+        )
+
+        send_mail(
+            subject = subject,
+            message = '''
+            http://quast.boinf.spbau.ru/%s
+
+            data set: %s
+
+            %s
+            ''' % (link, quast_session.dataset.name, quast_session.comment),
+
+            from_email = from_email,
+            recipient_list = [user_email],
+            fail_silently = True
         )
         raise e
 

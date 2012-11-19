@@ -385,29 +385,31 @@
             <tr>
             <td class="layout-table-td layout-table-fst-td">
                 <div id='form-wrapper'>
-                    <table class='form-layout-table'>
-                        <tr>
-                            <td class='form-layout-td' style="padding-top: 3px;">
-                                <h3>Contigs</h3>
-                            </td>
-
-                            <td class='form-layout-td'>
-                                <div id="contigs-uploader" class="uploader-div" style="margin-bottom: 10px; height: 175px;"></div><div style="clear: both"></div>
-                            </td>
-                        </tr>
-                    </table>
-
-                    <label for="id_min_contig" tabindex="2">{% comment %}@declare id="id_min_contig"{% endcomment %}
-                        Skip contigs shorter than
-                        <span style='font-size: 8px;'>{{ dataset_form.min_contig }} </span>bp<br>
-                        {{ dataset_form.min_contig.errors }}
-                    </label>
-
                     <form enctype="multipart/form-data" name='eval_form' id="eval_form" action="/" method="POST">{% csrf_token %}
                         <table class='form-layout-table'>
                             <tr>
-                                <td class='form-layout-td' style="padding: 0px;">
-                                    <h3>Data set</h3>
+                                <td class='form-layout-td' style="padding-top: 3px;">
+                                    <div style="padding-top: 13px;">Contigs</div>
+                                </td>
+
+                                <td class='form-layout-td'>
+                                    <div id="contigs-uploader" class="uploader-div" style="margin-bottom: 10px; height: 175px;"></div><div style="clear: both"></div>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <label for="id_min_contig" tabindex="2">{% comment %}@declare id="id_min_contig"{% endcomment %}
+                            Skip contigs shorter than
+                            <span style='font-size: 8px;'>{{ dataset_form.min_contig }} </span>bp<br>
+                            {{ dataset_form.min_contig.errors }}
+                        </label>
+
+                        <br>
+
+                        <table class='form-layout-table'>
+                            <tr>
+                                <td class='form-layout-td' style="padding-top: 0px;">
+                                    <div style="padding-top: 13px;">Data set</div>
                                 </td>
 
                                 <td class='form-layout-td'>{% comment %}@declare id="id_name_selected"{% endcomment %}
@@ -436,8 +438,6 @@
                                 </td>
                             </tr>
                         </table>
-
-
     {#                                    <select name="name_selected" class="chzn-select" id="dataset-select" style="width:350px;" tabindex="2" onchange="datasetSelectOnchange()">#}
     {#                                            {% for dataset in datasets %}#}
     {#                                            <option value="{{ dataset.name }}">{{ dataset.name }}</option>#}
@@ -462,9 +462,9 @@
                                 <tr>{% comment %}@declare id="id_name_created"{% endcomment %}
                                     <td class='form-layout-td'><label for='id_name_created'>Title</label></td>
                                     <td class='form-layout-td'>{{ dataset_form.name_created }}<span style='font-size: 8px;'>&nbsp;</span><br>
-                                        If you fill this field, we will remember this data set with this title
+                                        <div class="comment_to_field">We will remember the data set with this title, if you fill this field.</div>
                                         {{ dataset_form.name_created.errors }}
-                                        <br><br>
+                                        <br>
                                     </td>
                                 </tr>
                                 <tr>{% comment %}@declare id="id_reference"{% endcomment %}
@@ -492,6 +492,24 @@
                         </div>
                         <br>
 
+                        <table class='form-layout-table'>
+                            <tr>{% comment %}@declare id="id_comment"{% endcomment %}
+                                <td class='form-layout-td'><label for='id_comment'>Comment</label></td>
+                                <td class='form-layout-td'>{{ dataset_form.comment }}
+                                    <br>
+                                </td>
+                            </tr>
+                            <tr>{% comment %}@declare id="id_email"{% endcomment %}
+                                <td class='form-layout-td'><label for='id_email'>Email</label></td>
+                                <td class='form-layout-td'>{{ dataset_form.email }}
+                                    <br>
+                                    <div class="comment_to_field">We will notify you when report will be ready, if you provide your email.</div>
+                                    <br>
+                                    <br>
+                                </td>
+                            </tr>
+                        </table>
+
                         <div class="submit-wrapper">
                             <div id='errors-wrapper' style="display: block">
                                 {{ dataset_form.non_field_errors }}
@@ -501,7 +519,7 @@
                                 <input id='evaluate-button'
                                        class="btn btn-large btn-inverse"
                                        name="sumbitButton"
-                                       tabindex="9"
+                                       tabindex="11"
                                        type="submit"
                                        value="Evaluate"
                                        onclick="validate('eval_form'); return false;">
@@ -594,7 +612,7 @@
 
          {# anchor #}
         <span id="reportexample"></span>
-        <h2><a class='dotted-link' id='report_example_toggle' href="#reportexample">Report Example</a></h2>
+        <h2><a class='dotted-link' id='report_example_toggle' href="#reportexample" tabindex="10">Report Example</a></h2>
         <p class='full-report'>Comparison of 4 different E. coli assemblies with one dataset.</p>
         <div id="extended_link" class='full-report'></div>
     </div>

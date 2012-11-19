@@ -11,7 +11,7 @@ from django.conf import settings
 class UserSession(models.Model):
     session_key = models.CharField(max_length=256)
     input_dirname = models.CharField(max_length=2048)
-    email = models.EmailField(blank=True)
+    email = models.EmailField(blank=True, null=True)
 
     def __unicode__(self):
         return self.session_key
@@ -62,9 +62,10 @@ def delete_contigsfile_callback(sender, **kwargs):
 
 class QuastSession(models.Model):
     user_session = models.ForeignKey(UserSession)
-    dataset = models.ForeignKey(Dataset, null=True)
-    task_id = models.CharField(max_length=1024, null=True)
+    dataset = models.ForeignKey(Dataset, blank=True, null=True)
+    task_id = models.CharField(max_length=1024, blank=True, null=True)
     contigs_files = models.ManyToManyField(ContigsFile, through='QuastSession_ContigsFile')
+    comment = models.TextField(max_length=200000, blank=True, null=True)
 
     date = models.DateTimeField()
 

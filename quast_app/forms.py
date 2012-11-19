@@ -45,7 +45,10 @@ class DatasetForm(forms.Form):
     genes = fields.FileField(required=False, widget=widgets.FileInput(attrs={'tabindex':'7'}))
     operons = fields.FileField(required=False, widget=widgets.FileInput(attrs={'tabindex':'8'}))
 
-    initial={
+    comment = fields.CharField(required=False, widget=widgets.Textarea(attrs={'tabindex':'9', 'rows': '2', 'style': 'width: 302px;'}))
+    email = fields.EmailField(required=False, widget=widgets.TextInput(attrs={'tabindex':'10', 'style': 'width: 302px;'}))
+
+    initial = {
         'created_or_selected': 'selected'
     }
 
@@ -56,12 +59,6 @@ class DatasetForm(forms.Form):
             initial=min_contig,
             widget=forms.TextInput(attrs={'tabindex':'2'})
         )
-
-#<input id="id_min_contig"
-#type="text"
-#name="min_contig"
-#tabindex="2"
-#value="{{ dataset_form.min_contig.value|default:''}}"/>
 
     def set_user_session(self, user_session):
         self.user_session = user_session

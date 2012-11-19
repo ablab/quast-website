@@ -112,9 +112,17 @@ def index(request):
 
             min_contig = data_set_form.cleaned_data['min_contig']
             request.session['min_contig'] = min_contig
+
+            email = data_set_form.cleaned_data.get('email')
+            if email:
+                user_session.email = email
+
+            comment = data_set_form.cleaned_data.get('comment')
+
             data_set = get_dataset(request, data_set_form, now_str)
-            quast_session = start_quast_session(user_session, data_set, min_contig, now_datetime)
+            quast_session = start_quast_session(user_session, data_set, min_contig, comment, now_datetime)
 #            return HttpResponseRedirect(reverse('quast_app.views.index', kwargs={'after_evaluation': True}))
+
             request.session['after_evaluation'] = True
             return redirect(index)
 
@@ -404,12 +412,13 @@ def report(request, report_id):
             raise Http404()
 
 
-def start_quast_session(user_session, data_set, min_contig, now_datetime):
+def start_quast_session(user_session, data_set, min_contig, comment, now_datetime):
     # Creating new Quast session object
     quast_session = QuastSession(
         user_session = user_session,
         dataset = data_set,
         date = now_datetime,
+        comment = comment,
     )
     quast_session.save()
 
