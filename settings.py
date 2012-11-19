@@ -25,6 +25,8 @@ EXAMPLE_DIRPATH         = os.path.join(APP_DIRPATH, 'files/example')
 ECOLI_DIRPATH           = os.path.join(APP_DIRPATH, 'files/ecoli')
 
 
+REPORT_LINK_BASE = '/report/'
+
 
 if os.environ.get('DEVELOPMENT', None):
     DEBUG = True

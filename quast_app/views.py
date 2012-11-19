@@ -251,7 +251,7 @@ def get_reports_response_dict(user_session, after_evaluation=False, limit=None):
 
                 quast_session_info = {
                     'date': qs.date, #. strftime('%d %b %Y %H:%M:%S'),
-                    'report_link': '/report/' + qs.report_id,
+                    'report_link': settings.REPORT_LINK_BASE + qs.report_id,
                     'with_dataset': True if qs.dataset else False,
                     'dataset_name': qs.dataset.name if qs.dataset and qs.dataset.remember else '',
                     'state': state_repr,
@@ -358,6 +358,7 @@ def report(request, report_id):
 
             state = ''
             if quast_session.task_id == '1045104510450145' or quast_session.task_id == 1045104510450145: # if the celery tasks have lost but we sure that this evaluated successfully
+                result = None
                 state = 'SUCCESS'
             else:
                 result = tasks.start_quast.AsyncResult(quast_session.task_id)
@@ -465,13 +466,13 @@ def start_quast_session(user_session, data_set, min_contig, now_datetime):
             operons_fpath = os.path.join(settings.DATA_SETS_ROOT_DIRPATH, data_set.dirname, data_set.operons_fname)
 
     # Running Quast
-    result = assess_with_quast(result_dirpath, quast_session_contigs_fpaths, min_contig, reference_fpath, genes_fpath, operons_fpath)
+    result = assess_with_quast(quast_session, result_dirpath, quast_session_contigs_fpaths, min_contig, reference_fpath, genes_fpath, operons_fpath)
     quast_session.task_id = result.id
     quast_session.save()
     return quast_session
 
 
-def assess_with_quast(res_dirpath, contigs_paths, min_contig=0, reference_path=None, genes_path=None, operons_path=None):
+def assess_with_quast(quast_session, res_dirpath, contigs_paths, min_contig=0, reference_path=None, genes_path=None, operons_path=None):
     if len(contigs_paths) > 0:
         if os.path.isfile(settings.QUAST_PY_FPATH):
             args = [settings.QUAST_PY_FPATH] + contigs_paths
@@ -501,7 +502,7 @@ def assess_with_quast(res_dirpath, contigs_paths, min_contig=0, reference_path=N
             args.append(os.path.join(res_dirpath, 'regular_report'))
 
             from tasks import start_quast
-            result = start_quast.delay(args)
+            result = start_quast.delay((args, quast_session))
 
             return result
         else:
