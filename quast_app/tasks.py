@@ -24,7 +24,7 @@ def start_quast((args, quast_session)):
         result = quast.main(args[1:])
 
         send_mail(
-            subject='QUAST report is ready (' + quast_session.dataset.name + ').',
+            subject='QUAST report is ready (' + quast_session.dataset.name + ')',
             message='http://quast.boinf.spbau.ru/' + link,
             from_email='notification@quast.bioinf.spbau.ru',
             recipient_list=emails,
