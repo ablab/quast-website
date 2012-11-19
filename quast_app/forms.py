@@ -19,7 +19,8 @@ class DatasetForm(forms.Form):
                      if d.remember] + [('no data set', 'no data set')],
             widget=widgets.Select(attrs={
                 'class': 'chzn-select',
-                'data-placeholder': 'Select data set...'
+                'data-placeholder': 'Select data set...',
+                'tabindex': '3',
             })
         )
 
@@ -35,13 +36,14 @@ class DatasetForm(forms.Form):
         })
     )
 
-    name_created = fields.CharField(required=False, widget=widgets.TextInput())
+    name_created = fields.CharField(required=False,
+                                    widget=widgets.TextInput(attrs={'tabindex':'5'}))
 
     min_contig = fields.IntegerField(min_value=0, required=False, initial=0)
 
-    reference = fields.FileField(required=False)
-    genes = fields.FileField(required=False)
-    operons = fields.FileField(required=False)
+    reference = fields.FileField(required=False, widget=widgets.FileInput(attrs={'tabindex':'6'}))
+    genes = fields.FileField(required=False, widget=widgets.FileInput(attrs={'tabindex':'7'}))
+    operons = fields.FileField(required=False, widget=widgets.FileInput(attrs={'tabindex':'8'}))
 
     initial={
         'created_or_selected': 'selected'
@@ -51,8 +53,15 @@ class DatasetForm(forms.Form):
         self.fields['min_contig'] = fields.IntegerField(
             min_value=0,
             required=False,
-            initial=min_contig
+            initial=min_contig,
+            widget=forms.TextInput(attrs={'tabindex':'2'})
         )
+
+#<input id="id_min_contig"
+#type="text"
+#name="min_contig"
+#tabindex="2"
+#value="{{ dataset_form.min_contig.value|default:''}}"/>
 
     def set_user_session(self, user_session):
         self.user_session = user_session

@@ -385,24 +385,30 @@
             <tr>
             <td class="layout-table-td layout-table-fst-td">
                 <div id='form-wrapper'>
+                    <table class='form-layout-table'>
+                        <tr>
+                            <td class='form-layout-td' style="padding-top: 3px;">
+                                <h3>Contigs</h3>
+                            </td>
+
+                            <td class='form-layout-td'>
+                                <div id="contigs-uploader" class="uploader-div" style="margin-bottom: 10px; height: 175px;"></div><div style="clear: both"></div>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <label for="id_min_contig" tabindex="2">{% comment %}@declare id="id_min_contig"{% endcomment %}
+                        Skip contigs shorter than
+                        <span style='font-size: 8px;'>{{ dataset_form.min_contig }} </span>bp<br>
+                        {{ dataset_form.min_contig.errors }}
+                    </label>
+
                     <form enctype="multipart/form-data" name='eval_form' id="eval_form" action="/" method="POST">{% csrf_token %}
                         <table class='form-layout-table'>
                             <tr>
-                                <td class='form-layout-td' style="padding-top: 3px;"><h3>Contigs</h3></td>
-
-                                <td class='form-layout-td'>
-                                    <div id="contigs-uploader" class="uploader-div" style="margin-bottom: 10px; height: 175px;"></div><div style="clear: both"></div>
-
-                                    <label for="id_min_contig">{% comment %}@declare id="id_min_contig"{% endcomment %}
-                                        Skip contigs shorter than {{ dataset_form.min_contig }}<span style='font-size: 8px;'> </span>bp<br>
-                                        {{ dataset_form.min_contig.errors }}
-                                    </label>
+                                <td class='form-layout-td' style="padding: 0px;">
+                                    <h3>Data set</h3>
                                 </td>
-                            </tr>
-                        </table>
-                        <table class='form-layout-table'>
-                            <tr>
-                                <td class='form-layout-td' style="padding: 0px;"><h3>Data set</h3></td>
 
                                 <td class='form-layout-td'>{% comment %}@declare id="id_name_selected"{% endcomment %}
                                     <label for="id_name_selected">
@@ -421,7 +427,7 @@
                                     <div id="add-dataset-toggle-link" style="margin-left: -15px; padding-left: 15px;">
                                         <div style="margin-left: 0px;">
                                             <label for="id_is_created">
-                                                <input type="checkbox" class='dotted-link' name="is_created" id="id_is_created"/>
+                                                <input type="checkbox" tabindex="4" class='dotted-link' name="is_created" id="id_is_created"/>
     {#                                                {{ dataset_form.created_or_selected }}#}
                                                 <a class='dotted-link'>Another data set</a>
                                             </label>
@@ -492,9 +498,13 @@
                             </div>
 
                             <div id="evaluate-button-wrapper">
-                                <input id='evaluate-button' class="btn btn-large btn-inverse" name="sumbitButton"
-                                       type="submit" value="Evaluate" onclick="validate('eval_form'); return false;">
-
+                                <input id='evaluate-button'
+                                       class="btn btn-large btn-inverse"
+                                       name="sumbitButton"
+                                       tabindex="9"
+                                       type="submit"
+                                       value="Evaluate"
+                                       onclick="validate('eval_form'); return false;">
                                 <div style="visibility: {% if highlight_last %}visible{% else %}hidden{% endif %};
                                             float: right;"
                                      id="{{ report_id }}">
