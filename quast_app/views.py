@@ -345,18 +345,22 @@ def report(request, report_id):
     if not request.session.exists(request.session.session_key):
         request.session.create()
 
-    user_session_key = request.session.session_key
-    try:
-        user_session = UserSession.objects.get(session_key=user_session_key)
-    except UserSession.DoesNotExist:
-        user_session = create_user_session(user_session_key)
+#    user_session_key = request.session.session_key
+#    try:
+#        user_session = UserSession.objects.get(session_key=user_session_key)
+#    except UserSession.DoesNotExist:
+#        user_session = create_user_session(user_session_key)
 
 
     if QuastSession.objects.filter(report_id=report_id).exists():
         if request.method == 'GET':
             quast_session = QuastSession.objects.get(report_id=report_id)
             result = tasks.start_quast.AsyncResult(quast_session.task_id)
-            state = result.state
+
+            if result:
+                state = result.state
+            else:
+                state = 'SUCCESS'
 
             response_dict = template_args_by_default
 
