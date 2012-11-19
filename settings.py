@@ -192,7 +192,7 @@ INSTALLED_APPS = (
     'djcelery',
     'quast_app',
     'ajaxuploader',
-#    'south',
+    'south',
 #    'south_admin',
 #    'django_socketio',
     )
