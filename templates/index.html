@@ -460,9 +460,9 @@
     {#                                                {{ dataset_form.operons }}</label>#}
                             <table class='form-layout-table'>
                                 <tr>{% comment %}@declare id="id_name_created"{% endcomment %}
-                                    <td class='form-layout-td'><label for='id_name_created'>Title</label></td>
+                                    <td class='form-layout-td'><label for='id_name_created'>Name</label></td>
                                     <td class='form-layout-td'>{{ dataset_form.name_created }}<span style='font-size: 8px;'>&nbsp;</span><br>
-                                        <div class="comment_to_field">We will remember the data set with this title, if you fill this field.</div>
+                                        <div class="comment_to_field">We will remember the data set with this name, if you fill in this field.</div>
                                         {{ dataset_form.name_created.errors }}
                                         <br>
                                     </td>
@@ -493,6 +493,15 @@
                         <br>
 
                         <table class='form-layout-table'>
+                            <tr>{% comment %}@declare id="id_caption"{% endcomment %}
+                                <td class='form-layout-td'><label for='id_caption'>Caption</label></td>
+                                <td class='form-layout-td'>{{ dataset_form.caption }}
+                                    <br>
+                                    <div class="comment_to_field">We will generate a link for your report using this caption.
+                                    <br>By default, the current date is used for generating a link and the name of the data set as a report title.
+                                    </div>
+                                </td>
+                            </tr>
                             <tr>{% comment %}@declare id="id_comment"{% endcomment %}
                                 <td class='form-layout-td'><label for='id_comment'>Comment</label></td>
                                 <td class='form-layout-td'>{{ dataset_form.comment }}
@@ -519,7 +528,7 @@
                                 <input id='evaluate-button'
                                        class="btn btn-large btn-inverse"
                                        name="sumbitButton"
-                                       tabindex="11"
+                                       tabindex="12"
                                        type="submit"
                                        value="Evaluate"
                                        onclick="validate('eval_form'); return false;">
@@ -541,19 +550,20 @@
                 </div>
             </td>
             <td class="layout-table-td layout-table-snd-td">
-                <div id="latest_reports" style="margin-left: 0px; margin-top: 15px;">
+                <div id="latest_reports" style="margin-left: 0px; margin-top: 10px;">
                     <table class='form-layout-table'>
                         {% if quast_sessions %}
                         <tr>
-                            <td class='form-layout-td' style="padding: 0px; padding-right: 0px; vertical-align: top;">
-                                <h3 style="margin-top: 3px; ">Reports&nbsp;&nbsp;</h3>
-                            </td>
+{#                            <td class='form-layout-td' style="padding: 0px; padding-right: 0px; vertical-align: top;">#}
+{#                                <h3 style="margin-top: 3px; ">Reports&nbsp;&nbsp;</h3>#}
+{#                            </td>#}
                         {% endif %}
 {#                            <div style="float: left; margin: -12px 25px 0 0;">#}
 {##}
 {#                            </div>#}
                             <td>
-                                <table style="margin-top: 0px;" class='table_reports'>
+                                <h3 style="margin-top: 3px; ">Reports&nbsp;&nbsp;</h3>
+                                <table style="margin-top: -5px;" class='table_reports'>
 {#                                    <tr>#}
 {#                                        {% if quast_sessions %}#}
 {#                                        <td>#}
@@ -582,6 +592,9 @@
                                             {% elif quast_session.state == 'FAILURE' %}
                                                 <span class="state_failure">failed</span>
                                             {% endif %}
+                                        </td>
+                                        <td>
+                                            {% if quast_session.caption %}{{ quast_session.caption|truncatechars:50 }}{% endif %}
                                         </td>
                                     </tr>
                                     {% endfor %}

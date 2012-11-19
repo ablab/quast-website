@@ -65,20 +65,25 @@ class QuastSession(models.Model):
     dataset = models.ForeignKey(Dataset, blank=True, null=True)
     task_id = models.CharField(max_length=1024, blank=True, null=True)
     contigs_files = models.ManyToManyField(ContigsFile, through='QuastSession_ContigsFile')
+    caption = models.CharField(max_length=1024, blank=True, null=True)
     comment = models.TextField(max_length=200000, blank=True, null=True)
 
     date = models.DateTimeField()
 
-    report_id = AutoSlugField(populate_from=(lambda instance: instance.date.strftime('%d_%b_%Y_%H:%M:%S.%f')),
-                              unique=True,
-                              slugify=(lambda s: s))
+    report_id = AutoSlugField(populate_from=(lambda instance:
+                                             instance.date.strftime('%d_%b_%Y_%H:%M:%S.%f') +
+                                            ('_' + instance.caption if instance.caption else '')),
+                              unique_with=('caption', 'date'))
 
     def get_results_reldirpath(self):
-        return self.user_session.session_key + '/' + self.report_id.__str__()
+        return self.user_session.session_key + '/' + str(self.report_id)
 
     def __unicode__(self):
-        return self.date.strftime('%d %b %Y %H:%M:%S.%f')
-
+        str = ''
+        if self.caption:
+            str = self.caption + ' '
+        str += self.date.strftime('%d %b %Y %H:%M:%S.%f')
+        return str
 
 class QuastSession_ContigsFile(models.Model):
     quast_session = models.ForeignKey(QuastSession)

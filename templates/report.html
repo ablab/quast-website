@@ -44,8 +44,10 @@
     <div id='header'>
         <br><br>
         <h1>{% block header %}{% endblock %}</h1>
-        <div id='subheader'>Loading...</div>
-        <span id='mincontig'></span>
+        {% if data_set_name %}<p>Data set: {{ data_set_name }}</p>{% endif %}
+        {% if comment %}<p>Comment: {{ comment }}</p>{% endif %}
+        <p id='subheader'>Loading...</p>
+        <p id='mincontig'></p>
         <br><br>
         <span id="extended_link"></span>
     </div>

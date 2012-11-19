@@ -35,7 +35,10 @@ def license(request):
 
 def example(request):
     example_dirpath = os.path.join(settings.EXAMPLE_DIRPATH)
-    report_response_dict = get_report_response_dict(example_dirpath, 'E.coli')
+    report_response_dict = get_report_response_dict(example_dirpath,
+                                                    caption='Example',
+                                                    comment='',
+                                                    data_set_name='E.coli')
     response_dict = dict(report_response_dict.items() + template_args_by_default.items())
     return render_to_response('example-report.html', response_dict)
 
@@ -46,7 +49,10 @@ def benchmarking(request):
 
 def ecoli(request):
     json_dirpath = os.path.join(settings.ECOLI_DIRPATH)
-    report_response_dict = get_report_response_dict(json_dirpath, 'E.coli')
+    report_response_dict = get_report_response_dict(json_dirpath,
+                                                    caption='SPAdes - IDBA collaboration',
+                                                    comment='',
+                                                    data_set_name='E.coli')
     response_dict = dict(report_response_dict.items() + template_args_by_default.items())
     return render_to_response('ecoli.html', response_dict)
 
@@ -116,11 +122,13 @@ def index(request):
             email = data_set_form.cleaned_data.get('email')
             if email:
                 user_session.email = email
+                user_session.save()
 
+            caption = data_set_form.cleaned_data.get('caption')
             comment = data_set_form.cleaned_data.get('comment')
 
             data_set = get_dataset(request, data_set_form, now_str)
-            quast_session = start_quast_session(user_session, data_set, min_contig, comment, now_datetime)
+            quast_session = start_quast_session(user_session, data_set, min_contig, caption, comment, now_datetime)
 #            return HttpResponseRedirect(reverse('quast_app.views.index', kwargs={'after_evaluation': True}))
 
             request.session['after_evaluation'] = True
@@ -136,6 +144,8 @@ def index(request):
         min_contig = request.session.get('min_contig') or qconfig.min_contig
         data_set_form.set_min_contig(min_contig)
 
+        data_set_form.set_email(user_session.email)
+
     response_dict = dict(response_dict.items() + {
         'csrf_token': get_token(request),
         'contigs_fnames': contigs_fnames,
@@ -147,14 +157,17 @@ def index(request):
     reports_dict = get_reports_response_dict(
         user_session,
         after_evaluation=request.session.get('after_evaluation', False),
-        limit=13)
+        limit=24)
     response_dict = dict(response_dict.items() + reports_dict.items())
     request.session['after_evaluation'] = False
 
 
     # EXAMPLE
     example_dirpath = os.path.join(settings.EXAMPLE_DIRPATH)
-    example_dict = get_report_response_dict(example_dirpath, 'E.coli')
+    example_dict = get_report_response_dict(example_dirpath,
+                                            caption='Example',
+                                            comment='',
+                                            data_set_name='E.coli')
     response_dict = dict(response_dict.items() + example_dict.items())
 
     return render_to_response(
@@ -260,6 +273,8 @@ def get_reports_response_dict(user_session, after_evaluation=False, limit=None):
                 quast_session_info = {
                     'date': qs.date, #. strftime('%d %b %Y %H:%M:%S'),
                     'report_link': settings.REPORT_LINK_BASE + qs.report_id,
+                    'comment' : qs.comment,
+                    'caption' : qs.caption,
                     'with_dataset': True if qs.dataset else False,
                     'dataset_name': qs.dataset.name if qs.dataset and qs.dataset.remember else '',
                     'state': state_repr,
@@ -375,13 +390,21 @@ def report(request, report_id):
             response_dict = template_args_by_default
 
             if state == 'SUCCESS':
-                header = 'Quality assessment'
                 if quast_session.dataset and quast_session.dataset.remember:
-                    header = quast_session.dataset.name
+                    data_set_name = quast_session.dataset.name
+                else:
+                    data_set_name = ''
+
+                if data_set_name == '' and not quast_session.caption:
+                    caption = 'Quality assessment'
+                else:
+                    caption = quast_session.caption
 
                 response_dict = dict(response_dict.items() + get_report_response_dict(
                     os.path.join(settings.RESULTS_ROOT_DIRPATH, quast_session.get_results_reldirpath()),
-                    header
+                    caption,
+                    quast_session.comment,
+                    data_set_name
                 ).items())
 
                 return render_to_response('assess-report.html', response_dict)
@@ -396,6 +419,8 @@ def report(request, report_id):
                     'session_key' : request.session.session_key,
                     'state': state_repr,
                     'report_id': report_id,
+                    'comment': quast_session.comment,
+                    'caption': quast_session.caption,
                 }.items())
 
                 return render_to_response('waiting-report.html', response_dict, context_instance = RequestContext(request))
@@ -412,12 +437,13 @@ def report(request, report_id):
             raise Http404()
 
 
-def start_quast_session(user_session, data_set, min_contig, comment, now_datetime):
+def start_quast_session(user_session, data_set, min_contig, caption, comment, now_datetime):
     # Creating new Quast session object
     quast_session = QuastSession(
         user_session = user_session,
         dataset = data_set,
         date = now_datetime,
+        caption = caption,
         comment = comment,
     )
     quast_session.save()
@@ -521,7 +547,7 @@ def assess_with_quast(quast_session, res_dirpath, contigs_paths, min_contig=0, r
         raise Exception('no files with assemblies')
 
 
-def get_report_response_dict(results_dirpath, header):
+def get_report_response_dict(results_dirpath, caption, comment, data_set_name):
     if dir is None:
         raise Exception('No results directory.')
 
@@ -556,6 +582,13 @@ def get_report_response_dict(results_dirpath, header):
 #    quality_dict = json.dumps(reporting.Fields.quality_dict)
 #    main_metrics = json.dumps(reporting.get_main_metrics())
 
+    if caption:
+        header = caption
+        data_set_name = data_set_name
+    else:
+        header = data_set_name
+        data_set_name = ''
+
     return {
         'totalReport' : total_report,
         'contigsLenghts' : contigs_lengths,
@@ -567,6 +600,8 @@ def get_report_response_dict(results_dirpath, header):
         'gcInfo' : gc_info,
 
         'header' : header,
+        'data_set_name' : data_set_name,
+        'comment' : comment,
 
 #        'qualities': quality_dict,
 #        'mainMetrics': main_metrics,
