@@ -370,6 +370,9 @@ def report(request, report_id):
                 if quast_session.dataset and quast_session.dataset.remember:
                     header = quast_session.dataset.name
 
+                with open(os.path.join(settings.DATA_DIRPATH, 'aaaa'), 'w'):
+                    os.path.join(settings.RESULTS_ROOT_DIRPATH, quast_session.get_results_reldirpath())
+
                 response_dict = dict(response_dict.items() + get_report_response_dict(
                     os.path.join(settings.RESULTS_ROOT_DIRPATH, quast_session.get_results_reldirpath()),
                     header
