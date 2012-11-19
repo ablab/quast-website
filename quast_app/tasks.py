@@ -29,7 +29,7 @@ def start_quast((args, quast_session)):
         send_mail(
             subject = subject,
             message = '''
-                http://quast.boinf.spbau.ru%s
+                http://quast.bioinf.spbau.ru%s
 
                 Data set: %s
 
