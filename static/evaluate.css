@@ -141,6 +141,10 @@ ul.errorlist li:last-child:after {
     cursor: pointer;
 }
 
+.form-layout-table input {
+    font-size: 1em;
+}
+
 .form-layout-table {
     padding: 0;
     margin-left: -80px;
@@ -185,6 +189,7 @@ h3 {
 }
 
 .comment_to_field {
-    width: 300px;
+    font-size: 0.9em;
+    width: 310px;
     white-space: normal;
 }
