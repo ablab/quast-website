@@ -73,7 +73,8 @@ class QuastSession(models.Model):
     report_id = AutoSlugField(populate_from=(lambda instance:
                                              instance.date.strftime('%d_%b_%Y_%H:%M:%S.%f') +
                                             ('_' + instance.caption if instance.caption else '')),
-                              unique_with=('caption', 'date'))
+                              unique_with=('caption', 'date'),
+                              slugify=lambda value: value.replace(' ', '_'))
 
     def get_results_reldirpath(self):
         return self.user_session.session_key + '/' + str(self.report_id)
