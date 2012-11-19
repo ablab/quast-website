@@ -23,7 +23,7 @@ def start_quast((args, quast_session)):
 
         if quast_session.caption:
             subject += ' (%s)' % quast_session.caption
-        else:
+        elif quast_session.dataset:
             subject += ' (data set: %s)' % quast_session.dataset.name
 
         send_mail(
@@ -38,7 +38,7 @@ def start_quast((args, quast_session)):
 
                 %s
                 ''' % (link,
-                       quast_session.dataset.name,
+                       quast_session.dataset.name if quast_session.dataset else '',
                        quast_session.caption,
                        quast_session.comment,
                        add_to_end),
