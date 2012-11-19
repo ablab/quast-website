@@ -357,7 +357,7 @@ def report(request, report_id):
             quast_session = QuastSession.objects.get(report_id=report_id)
 
             state = ''
-            if quast_session.task_id == 1045104510451045: # if the celery tasks have lost but we sure that this evaluated successfully
+            if quast_session.task_id == '1045104510450145' or quast_session.task_id == 1045104510450145: # if the celery tasks have lost but we sure that this evaluated successfully
                 state = 'SUCCESS'
             else:
                 result = tasks.start_quast.AsyncResult(quast_session.task_id)
