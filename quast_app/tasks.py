@@ -33,8 +33,8 @@ def start_quast((args, quast_session)):
 
     except Exception as e:
         send_mail(
-            subject='QUAST report is ready (' + quast_session.dataset.name + ').',
-            message='Link to your report: <a href="' + link + '">' + link + '</a>',
+            subject='QUAST report is ready (' + quast_session.dataset.name + ')',
+            message='http://quast.boinf.spbau.ru/' + link,
             from_email='notification@quast.bioinf.spbau.ru',
             recipient_list=['vladsaveliev@me.com'],
             fail_silently=True
