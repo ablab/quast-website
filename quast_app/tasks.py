@@ -17,19 +17,19 @@ def start_quast((args, quast_session)):
             return
 
         if fail:
-            subject = 'QUAST failed.'
+            subject = 'QUAST failed'
         else:
-            subject = 'QUAST report.'
+            subject = 'QUAST report'
 
         if quast_session.caption:
-            subject += ' ' + quast_session.caption
+            subject += ' (%s)' % quast_session.caption
         else:
             subject += ' (data set: %s)' % quast_session.dataset.name
 
         send_mail(
             subject = subject,
             message = '''
-                http://quast.boinf.spbau.ru/%s
+                http://quast.boinf.spbau.ru%s
 
                 Data set: %s
 
