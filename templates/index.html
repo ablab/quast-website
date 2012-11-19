@@ -100,13 +100,13 @@
                     onSubmit: function(id, fileName) {
                         $('#evaluate-button').prop('disabled', false);
                         $('#evaluate-button').removeClass('disabled');
+                        $('#area-text').css('display', 'none');
                         allComplete = false;
                     },
                     onComplete: function(id, fileName, responseJSON) {
                         if (responseJSON.success) {
 {#                            $('#evaluate-button').prop('disabled', false);#}
 {#                            $('#evaluate-button').removeClass('disabled');#}
-                            $('#area-text').css('display', 'none');
                         }
                     },
                     onAllComplete: function(uploads) {

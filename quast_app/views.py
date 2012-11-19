@@ -474,10 +474,7 @@ def start_quast_session(user_session, data_set, min_contig, caption, comment, no
     quast_session_contigs_fpaths = [os.path.join(contigs_results_tmp_dirpath, c_f.fname) for c_f in contigs_files]
 
     for user_c_fpath, quast_session_c_fpath in zip(user_contigs_fpaths, quast_session_contigs_fpaths):
-        shutil.copyfile(user_c_fpath, quast_session_c_fpath)
-
-    for user_c_fpath in user_contigs_fpaths:
-        os.remove(user_c_fpath)
+        shutil.move(user_c_fpath, quast_session_c_fpath)
 
     contigs_files.delete()
 
