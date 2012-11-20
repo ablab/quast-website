@@ -18,9 +18,9 @@ def start_quast((args, quast_session)):
             return
 
         if fail:
-            subject = 'QUAST failed'
+            subject = 'Quast failed'
         else:
-            subject = 'QUAST report'
+            subject = 'Quast report'
 
         if quast_session.caption:
             subject += ' (%s)' % quast_session.caption
