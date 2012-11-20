@@ -29,16 +29,15 @@ def start_quast((args, quast_session)):
 
         send_mail(
             subject = subject,
-            message = '''
+            message =
+'''%s
+
 http://quast.bioinf.spbau.ru%s
 
 Data set: %s
 
-%s
-%s
-
-%s
-''' % (link,
+Comment: %s
+%s''' % (link,
        quast_session.dataset.name if quast_session.dataset else '',
        quast_session.caption,
        quast_session.comment,
@@ -65,45 +64,38 @@ Data set: %s
 
         result = quast.main(args[1:])
 
-        add_to_end = '''
-
+        add_to_end =\
+'''
 User Email: %s
 
-session key: %s
+Session key: %s
 
-input dirname: %s
-
-args: %s
-''' % (user_email,
-       quast_session.user_session.session_key,
-       quast_session.user_session.input_dirname,
-       args)
+Args: %s''' % (
+    user_email,
+    quast_session.user_session.session_key,
+    args)
 
         send_result_mail(my_email, add_to_end=add_to_end)
         send_result_mail(user_email)
 
     except Exception as e:
         trace_back = traceback.format_exc()
-        add_to_end = '''
+        add_to_end =\
+'''
+User Email: %s
+
+Session key: %s
+
+Args: %s
 
 Exception: %s
 
-Traceback: %s
-
-User Email: %s
-
-session key: %s
-
-input dirname: %s
-
-args: %s
-''' % (str(e),
-       trace_back,
-       user_email,
-       quast_session.user_session.session_key,
-       quast_session.user_session.input_dirname,
-       args)
-
+Traceback: %s''' % (
+    user_email,
+    quast_session.user_session.session_key,
+    args,
+    str(e),
+    trace_back)
 
         send_result_mail(my_email, add_to_end, fail=True)
         send_result_mail(user_email, fail=True)
