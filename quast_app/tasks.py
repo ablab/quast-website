@@ -2,6 +2,7 @@ from shutil import copytree
 import shutil
 import sys
 import os
+import traceback
 from celery.task import task
 from django.conf import settings
 from django.core.mail import send_mail
@@ -29,19 +30,19 @@ def start_quast((args, quast_session)):
         send_mail(
             subject = subject,
             message = '''
-                http://quast.bioinf.spbau.ru%s
+http://quast.bioinf.spbau.ru%s
 
-                Data set: %s
+Data set: %s
 
-                %s
-                %s
+%s
+%s
 
-                %s
-                ''' % (link,
-                       quast_session.dataset.name if quast_session.dataset else '',
-                       quast_session.caption,
-                       quast_session.comment,
-                       add_to_end),
+%s
+''' % (link,
+       quast_session.dataset.name if quast_session.dataset else '',
+       quast_session.caption,
+       quast_session.comment,
+       add_to_end),
 
             from_email = from_email,
             recipient_list = [email],
@@ -64,11 +65,47 @@ def start_quast((args, quast_session)):
 
         result = quast.main(args[1:])
 
-        send_result_mail(my_email)
+        add_to_end = '''
+
+User Email: %s
+
+session key: %s
+
+input dirname: %s
+
+args: %s
+''' % (user_email,
+       quast_session.user_session.session_key,
+       quast_session.user_session.input_dirname,
+       args)
+
+        send_result_mail(my_email, add_to_end=add_to_end)
         send_result_mail(user_email)
 
     except Exception as e:
-        send_result_mail(my_email, add_to_end=str(e), fail=True)
+        trace_back = traceback.format_exc()
+        add_to_end = '''
+
+Exception: %s
+
+Traceback: %s
+
+User Email: %s
+
+session key: %s
+
+input dirname: %s
+
+args: %s
+''' % (str(e),
+       trace_back,
+       user_email,
+       quast_session.user_session.session_key,
+       quast_session.user_session.input_dirname,
+       args)
+
+
+        send_result_mail(my_email, add_to_end, fail=True)
         send_result_mail(user_email, fail=True)
         raise e
 

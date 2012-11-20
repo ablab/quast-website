@@ -82,6 +82,8 @@
                 initializeUploadsLink: '{% url contigs_ajax_initialize_uploads %}',
                 elementId: '#contigs-uploader',
                 multiple: true,
+                buttonClass: 'btn',
+                buttonTabIndex: 1,
                 btnText: 'Add files',
                 areaText: 'drop files here',
                 areaClass: 'upload-drop-area',
@@ -97,6 +99,8 @@
                     initializeUploadsLink: parameters[i].initializeUploadsLink,
                     element: $(parameters[i].elementId)[0],
                     multiple: parameters[i].multiple,
+                    buttonClass: parameters[i].buttonClass,
+                    buttonTabIndex: parameters[i].buttonTabIndex,
                     onSubmit: function(id, fileName) {
                         $('#evaluate-button').prop('disabled', false);
                         $('#evaluate-button').removeClass('disabled');
@@ -152,7 +156,7 @@
                     },
                     template:
                             '<div class="qq-uploader">' +
-                                '<button class="btn">' + parameters[i].btnText + '</button>' +
+                                '<span class="upload-button btn">' + parameters[i].btnText + '</span>' +
                                 '<div>' +
                                     '<div class="' + parameters[i].areaClass + '">' +
                                         '<div class="upload-list-div">' +
@@ -175,7 +179,7 @@
                             '</li>',
                     classes: {
                         // used to get elements from templates
-                        button: 'btn',
+                        button: 'upload-button',
                         drop: parameters[i].areaClass,
                         dropActive: 'upload-drop-area-active',
                         list: 'upload-list',
@@ -385,19 +389,18 @@
             <tr>
             <td class="layout-table-td layout-table-fst-td">
                 <div id='form-wrapper'>
+                    <table class='form-layout-table'>
+                        <tr>
+                            <td class='form-layout-td' style="padding-top: 3px;">
+                                <div style="padding-top: 13px;">Contigs</div>
+                            </td>
+
+                            <td class='form-layout-td'>
+                                <div id="contigs-uploader" class="uploader-div" style="margin-bottom: 10px; height: 175px;"></div><div style="clear: both"></div>
+                            </td>
+                        </tr>
+                    </table>
                     <form enctype="multipart/form-data" name='eval_form' id="eval_form" action="/" method="POST">{% csrf_token %}
-                        <table class='form-layout-table'>
-                            <tr>
-                                <td class='form-layout-td' style="padding-top: 3px;">
-                                    <div style="padding-top: 13px;">Contigs</div>
-                                </td>
-
-                                <td class='form-layout-td'>
-                                    <div id="contigs-uploader" class="uploader-div" style="margin-bottom: 10px; height: 175px;"></div><div style="clear: both"></div>
-                                </td>
-                            </tr>
-                        </table>
-
                         <label for="id_min_contig" tabindex="2">{% comment %}@declare id="id_min_contig"{% endcomment %}
                             Skip contigs shorter than
                             <span style='font-size: 8px;'>{{ dataset_form.min_contig }} </span>bp<br>

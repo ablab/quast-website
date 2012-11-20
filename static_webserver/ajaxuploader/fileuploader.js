@@ -262,6 +262,8 @@ qq.FileUploaderBasic = function(o){
         params: {},
         button: null,
         multiple: true,
+        buttonClass: '',
+        buttonTabIndex: null,
         maxConnections: 3,
         // validation        
         allowedExtensions: [],               
@@ -316,6 +318,8 @@ qq.FileUploaderBasic.prototype = {
         return new qq.UploadButton({
             element: element,
             multiple: this._options.multiple && qq.UploadHandlerXhr.isSupported(),
+            buttonClass: this._options.buttonClass,
+            buttonTabIndex: this._options.buttonTabIndex,
             onChange: function(input){
                 self._onInputChange(input);
             }
@@ -576,7 +580,7 @@ qq.FileUploader = function(o){
 
     this._classes = this._options.classes;
         
-    this._button = this._createUploadButton(this._find(this._element, 'button'));        
+    this._button = this._createUploadButton(this._find(this._element, 'button'));
     
     this._bindCancelEvent();
 //    this._bindRemoveEvent();
@@ -868,9 +872,11 @@ qq.UploadButton = function(o){
         element: null,  
         // if set to true adds multiple attribute to file input      
         multiple: false,
+        buttonTabIndex: null,
         // name attribute of file input
         name: 'file',
         onChange: function(input){},
+        buttonClass: '',
         hoverClass: 'qq-upload-button-hover',
         focusClass: 'qq-upload-button-focus'                       
     };
@@ -914,6 +920,7 @@ qq.UploadButton.prototype = {
                 
         input.setAttribute("type", "file");
         input.setAttribute("name", this._options.name);
+        input.className = input.className + this._options.buttonClass;
         
         qq.css(input, {
             position: 'absolute',
@@ -934,10 +941,20 @@ qq.UploadButton.prototype = {
         this._element.appendChild(input);
 
         var self = this;
+
+        qq.attach(input, 'onkeypress', function(e) {
+            if (!event) var event = window.event;
+            if (event.keyCode === 32) {
+                self._options.onChange(input);
+            }
+            return true;
+        });
         qq.attach(input, 'change', function(){
             self._options.onChange(input);
         });
-                
+        qq.attach(input, 'click', function(){
+            self._options.onChange(input);
+        });
         qq.attach(input, 'mouseover', function(){
             qq.addClass(self._element, self._options.hoverClass);
         });
@@ -956,6 +973,9 @@ qq.UploadButton.prototype = {
         if (window.attachEvent){
             // it is IE or Opera
             input.setAttribute('tabIndex', "-1");
+        } else {
+            if (this._options.buttonTabIndex)
+                input.setAttribute('tabIndex', self._options.buttonTabIndex);
         }
 
         return input;            
