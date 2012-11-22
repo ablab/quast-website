@@ -30,8 +30,8 @@ def start_quast((args, quast_session)):
         send_mail(
             subject = subject,
             message =
-                ('\n\n' + quast_session.caption if quast_session.caption else '') +
-                'http://quast.bioinf.spbau.ru' + link +
+                (quast_session.caption if quast_session.caption else '') +
+                '\n\nhttp://quast.bioinf.spbau.ru' + link +
                 ('\n\nData set: ' + quast_session.dataset.name if quast_session.dataset else '') +
                 ('\n\nComment: ' + quast_session.comment if quast_session.comment else '') +
                 add_to_end,
