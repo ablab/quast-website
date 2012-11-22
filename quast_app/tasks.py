@@ -14,7 +14,7 @@ def start_quast((args, quast_session)):
 
     from_email = 'notification@quast.bioinf.spbau.ru'
     def send_result_mail(email, add_to_end='', fail=False):
-        if email == '':
+        if email is None or email == '':
             return
 
         if fail:
@@ -30,19 +30,11 @@ def start_quast((args, quast_session)):
         send_mail(
             subject = subject,
             message =
-'''%s
-
-http://quast.bioinf.spbau.ru%s
-
-Data set: %s
-
-Comment: %s
-%s''' % (link,
-       quast_session.dataset.name if quast_session.dataset else '',
-       quast_session.caption,
-       quast_session.comment,
-       add_to_end),
-
+                ('\n\n' + quast_session.caption if quast_session.caption else '') +
+                'http://quast.bioinf.spbau.ru' + link +
+                ('\n\nData set: ' + quast_session.dataset.name if quast_session.dataset else '') +
+                ('\n\nComment: ' + quast_session.comment if quast_session.comment else '') +
+                add_to_end,
             from_email = from_email,
             recipient_list = [email],
             fail_silently = True
@@ -64,38 +56,22 @@ Comment: %s
 
         result = quast.main(args[1:])
 
-        add_to_end =\
-'''
-User Email: %s
-
-Session key: %s
-
-Args: %s''' % (
-    user_email,
-    quast_session.user_session.session_key,
-    args)
+        add_to_end = \
+            '\n\nUser email: ' + user_email + \
+            '\n\nSession key: ' + quast_session.user_session.session_key + \
+            '\n\nArgs: ' + args
 
         send_result_mail(my_email, add_to_end=add_to_end)
         send_result_mail(user_email)
 
     except Exception as e:
         trace_back = traceback.format_exc()
-        add_to_end =\
-'''
-User Email: %s
-
-Session key: %s
-
-Args: %s
-
-Exception: %s
-
-Traceback: %s''' % (
-    user_email,
-    quast_session.user_session.session_key,
-    args,
-    str(e),
-    trace_back)
+        add_to_end = \
+            '\n\nUser email: ' + user_email + \
+            '\n\nSession key: ' + quast_session.user_session.session_key + \
+            '\n\nArgs: ' + args + \
+            '\n\nException: ' + str(e) + \
+            '\n\nTraceback: ' + trace_back
 
         send_result_mail(my_email, add_to_end, fail=True)
         send_result_mail(user_email, fail=True)

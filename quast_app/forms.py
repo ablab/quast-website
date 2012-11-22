@@ -15,11 +15,10 @@ class DatasetForm(forms.Form):
         super(DatasetForm, self).__init__(*args, **kwargs)
         self.fields['name_selected'] = fields.ChoiceField(
             required=False,
-            choices=[(d.name, d.name) for d in Dataset.objects.all()
-                     if d.remember] + [('no data set', 'no data set')],
+            choices=[('', '')] + [(d.name, d.name) for d in Dataset.objects.all() if d.remember],
             widget=widgets.Select(attrs={
-                'class': 'chzn-select',
-                'data-placeholder': 'Select data set...',
+                'class': 'chzn-select-deselect',
+                'data-placeholder': 'unknown data set',
                 'tabindex': '3',
             })
         )
@@ -27,14 +26,15 @@ class DatasetForm(forms.Form):
 #    created_or_selected = fields.CharField(initial='selected')
     is_created = fields.BooleanField(initial=False, required=False)
 
-    name_selected = fields.ChoiceField(
-        required=False,
-        #        choices=[(d.name, d.name) for d in Dataset.objects.all()],
-        widget=widgets.Select(attrs={
-            'class': 'chzn-select',
-            'data-placeholder': 'Select data set...'
-        })
-    )
+#    name_selected = fields.ChoiceField(
+#        required=False,
+#        #        choices=[(d.name, d.name) for d in Dataset.objects.all()],
+#        widget=widgets.Select(attrs={
+#            'class': 'chzn-select-deselect',
+#            'data-placeholder': 'Select data set...',
+#            'allow_single_deselect': 'true',
+#        })
+#    )
 
     name_created = fields.CharField(required=False,
                                     widget=widgets.TextInput(attrs={'tabindex':'5'}))

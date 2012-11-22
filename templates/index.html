@@ -28,8 +28,11 @@
         });
 
         $(function() {
-            $(".chzn-select").chosen();
-            $(".chzn-select-deselect").chosen({allow_single_deselect:true});
+{#            $(".chzn-select").chosen();#}
+            $(".chzn-select-deselect").chosen({
+                allow_single_deselect:true,
+                no_results_text: "No results matched",
+            });
         });
 
         $(function() {
@@ -92,6 +95,9 @@
                     '</li>{% endfor %}',
             },];
 
+            var evaluateButton = $('#evaluate-button');
+            var areaText = $('#area-text');
+
             for (var i = 0; i < parameters.length; i++) {
                 uploaders.push(new qq.FileUploader({
                     action: parameters[i].action,
@@ -103,9 +109,9 @@
                     buttonClass: parameters[i].buttonClass,
                     buttonTabIndex: parameters[i].buttonTabIndex,
                     onSubmit: function(id, fileName) {
-                        $('#evaluate-button').prop('disabled', false);
-                        $('#evaluate-button').removeClass('disabled');
-                        $('#area-text').css('display', 'none');
+                        evaluateButton.prop('disabled', false);
+                        evaluateButton.removeClass('disabled');
+                        areaText.css('display', 'none');
                         allComplete = false;
                     },
                     onComplete: function(id, fileName, responseJSON) {
@@ -118,7 +124,7 @@
                         if (uploads.length > 0) {
 {#                            $('#evaluate-button').prop('disabled', false);#}
 {#                            $('#evaluate-button').removeClass('disabled');#}
-                            $('#area-text').css('display', 'none');
+                            areaText.css('display', 'none');
                             allComplete = true;
                         }
                         // uploads is an array of maps
@@ -131,20 +137,20 @@
                         });
 
                         if (number_of_files <= 0) {
-                            $('#evaluate-button').prop('disabled', true);
-                            $('#evaluate-button').addClass('disabled');
-                            $('#area-text').css('display', 'block');
+                            evaluateButton.prop('disabled', true);
+                            evaluateButton.addClass('disabled');
+                            areaText.css('display', 'block');
                         }
                     },
                     onInitFiles: function(files){
                         if (!files || files.length == 0) {
-                            $('#evaluate-button').prop('disabled', true);
-                            $('#evaluate-button').addClass('disabled');
-                            $('#area-text').css('display', 'block');
+                            evaluateButton.prop('disabled', true);
+                            evaluateButton.addClass('disabled');
+                            areaText.css('display', 'block');
                         } else {
-                            $('#evaluate-button').prop('disabled', false);
-                            $('#evaluate-button').removeClass('disabled');
-                            $('#area-text').css('display', 'none');
+                            evaluateButton.prop('disabled', false);
+                            evaluateButton.removeClass('disabled');
+                            areaText.css('display', 'none');
                             allComplete = true;
                         }
                     },
@@ -201,8 +207,9 @@
         });
 
         function validate(eval_form) {
-            $('#evaluate-button').prop('disabled', true);
-            $('#evaluate-button').addClass('disabled');
+            var evaluateButton = $('#evaluate-button');
+            evaluateButton.prop('disabled', true);
+            evaluateButton.addClass('disabled');
 
             var check = function() {
                 if (allComplete){
@@ -423,9 +430,15 @@
                                     <div style="display: none">
                                         {{ dataset_form.name_selected.errors }}
                                     </div>
+{#                                    <div id="unknown_data_set">#}
+{#                                        <label for="unknown_data_set_input">#}
+{#                                            <input type="checkbox" tabindex="4" id="unknown_data_set_input"/>#}
+{#                                            Unknown data set#}
+{#                                        </label>#}
+{#                                    </div>#}
+                                    <div style="height: 2px;"></div>
                                 </td>
                             </tr>
-
                             <tr>
                                 <td class='form-layout-td' style="padding-top: 9px;"></td>
 
@@ -435,7 +448,7 @@
                                             <label for="id_is_created">
                                                 <input type="checkbox" tabindex="4" class='dotted-link' name="is_created" id="id_is_created"/>
     {#                                                {{ dataset_form.created_or_selected }}#}
-                                                <a class='dotted-link'>Another data set</a>
+                                                <a class='dotted-link'>New data set</a>
                                             </label>
                                         </div>
                                     </div>
@@ -516,9 +529,13 @@
                                 <td class='form-layout-td'><label for='id_email'>Email</label></td>
                                 <td class='form-layout-td'>{{ dataset_form.email }}
                                     <br>
-                                    <div class="comment_to_field">We will notify you when report will be ready, if you provide your email.<br>
+                                    <div class="comment_to_field">
+                                        We will notify you when report will be ready, if you provide your email.<br>
                                         <div style="height: 5px;"></div>
-                                        Note that the message can be considered junk by your mail server or software.</div>
+                                        If something goes wrong with assessment, we'll report you right after the problem is fixed.<br>
+                                        <div style="height: 5px;"></div>
+                                        Note that the message can be considered junk by your mail server or software.<br>
+                                    </div>
                                     <br>
                                     <br>
                                 </td>

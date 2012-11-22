@@ -43,7 +43,20 @@
 <div class='full-report'>
     <div id='header'>
         <br><br>
-        <h1 id="header_element">{% block header %}{% endblock %}</h1>
+
+        <table style='width: 783px; margin: -4px;'>
+            <tr>
+                <td style="text-align: left; vertical-align: top;">
+                    <h1 id="header_element">{% block header %}{% endblock %}</h1>
+                </td>
+                <td style="text-align: right;">
+                    <a class='btn' style="margin-top: 20px;" id="download_report" href="/download-report/{{ report_id }}">
+                        Download report
+                    </a>
+                </td>
+            </tr>
+        </table>
+
         {% if data_set_name %}<p id="dataset_name_p">Data set: {{ data_set_name }}</p>{% endif %}
         {% if comment %}<p id="comment_p">Comment: {{ comment }}</p>{% endif %}
         <p id='subheader'>Loading...</p>

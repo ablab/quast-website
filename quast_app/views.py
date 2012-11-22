@@ -319,49 +319,49 @@ def create_user_session(user_session_key):
     return user_session
 
 
-def get_dataset(request, dataset_form, now_str):
-    if dataset_form.cleaned_data['is_created'] == True:
-        name = dataset_form.data['name_created']
+def get_dataset(request, data_set_form, now_str):
+    if data_set_form.cleaned_data['is_created'] == True:
+        name = data_set_form.data['name_created']
 
-        def init_folders(dataset):
-            dataset_dirpath = os.path.join(settings.DATA_SETS_ROOT_DIRPATH, dataset.dirname) #, posted_file.name)
-            os.makedirs(dataset_dirpath)
+        def init_folders(data_set):
+            data_set_dirpath = os.path.join(settings.DATA_SETS_ROOT_DIRPATH, data_set.dirname) #, posted_file.name)
+            os.makedirs(data_set_dirpath)
 
             for kind in ['reference', 'genes', 'operons']:
                 posted_file = request.FILES.get(kind)
                 if posted_file:
-                    with open(os.path.join(dataset_dirpath, posted_file.name), 'wb+') as f:
+                    with open(os.path.join(data_set_dirpath, posted_file.name), 'wb+') as f:
                         for chunk in posted_file.chunks():
                             f.write(chunk)
-                    setattr(dataset, kind + '_fname', posted_file.name)
+                    setattr(data_set, kind + '_fname', posted_file.name)
 
         if name == '':
-            dataset = Dataset(name=now_str, remember=False)
-            dataset.save()
-            init_folders(dataset)
-            dataset.save()
+            data_set = Dataset(name=now_str, remember=False)
+            data_set.save()
+            init_folders(data_set)
+            data_set.save()
 
         elif not Dataset.objects.filter(name=name).exists():
-            dataset = Dataset(name=name, remember=True)
-            dataset.save()
-            init_folders(dataset)
-            dataset.save()
+            data_set = Dataset(name=name, remember=True)
+            data_set.save()
+            init_folders(data_set)
+            data_set.save()
 
         else:
-            dataset = Dataset.objects.get(name=name)
+            data_set = Dataset.objects.get(name=name)
             #TODO: invalidate
 
     else:
-        name = dataset_form.data['name_selected']
-        if name == 'no data set':
-            dataset = None
+        name = data_set_form.data['name_selected']
+        if name == '' or name == 'no data set':
+            data_set = None
         else:
             try:
-                dataset = Dataset.objects.get(name=name)
+                data_set = Dataset.objects.get(name=name)
             except Dataset.DoesNotExist:
                 return HttpResponseBadRequest('Data set does not exist')
 
-    return dataset
+    return data_set
 
 
 def report(request, report_id):
@@ -373,7 +373,6 @@ def report(request, report_id):
 #        user_session = UserSession.objects.get(session_key=user_session_key)
 #    except UserSession.DoesNotExist:
 #        user_session = create_user_session(user_session_key)
-
 
     if QuastSession.objects.filter(report_id=report_id).exists():
         if request.method == 'GET':
@@ -388,6 +387,7 @@ def report(request, report_id):
                 state = result.state
 
             response_dict = template_args_by_default
+            response_dict['report_id'] = report_id
 
             if state == 'SUCCESS':
                 if quast_session.dataset and quast_session.dataset.remember:
@@ -404,7 +404,7 @@ def report(request, report_id):
                     os.path.join(settings.RESULTS_ROOT_DIRPATH, quast_session.get_results_reldirpath()),
                     caption,
                     quast_session.comment,
-                    data_set_name
+                    data_set_name,
                 ).items())
 
                 return render_to_response('assess-report.html', response_dict)
@@ -435,6 +435,62 @@ def report(request, report_id):
 
         if request.method == 'POST':
             raise Http404()
+
+
+def download_report(request, report_id):
+    if not request.session.exists(request.session.session_key):
+        request.session.create()
+
+    if QuastSession.objects.filter(report_id=report_id).exists():
+        quast_session = QuastSession.objects.get(report_id=report_id)
+
+        if quast_session.task_id == '1045104510450145' or quast_session.task_id == 1045104510450145:
+            # If the celery tasks have lost but we sure that this evaluated successfully
+            # If the next time you need to restore tasks already evaluated but the database
+            # is lost, put this task id to the quastsession record.
+            state = 'SUCCESS'
+        else:
+            result = tasks.start_quast.AsyncResult(quast_session.task_id)
+            state = result.state
+
+        response_dict = template_args_by_default
+        response_dict['report_id'] = report_id
+
+        if state == 'SUCCESS':
+            os.chdir(os.path.join(settings.RESULTS_ROOT_DIRPATH,
+                                  quast_session.get_results_reldirpath(),
+                                  settings.REGULAR_REPORT_DIRNAME))
+
+            report_fpath = settings.HTML_REPORT_FNAME
+            report_aux_dirpath = settings.HTML_REPORT_AUX_DIRNAME
+            zip_fname = 'quast_report_' + report_id + '.zip'
+
+            import zipfile, tempfile
+            from django.core.servers.basehttp import FileWrapper
+            temp_file = tempfile.TemporaryFile()
+            zip_file = zipfile.ZipFile(temp_file, 'w', zipfile.ZIP_DEFLATED)
+
+            zip_file.write(report_fpath)
+
+            def zip_dir(dirpath):
+                for root, dirs, files in os.walk(dirpath):
+                    for file in files:
+                        zip_file.write(os.path.join(root, file))
+                    for dir in dirs:
+                        zip_dir(dir)
+            zip_dir(report_aux_dirpath)
+
+            zip_file.close()
+
+            wrapper = FileWrapper(temp_file)
+            response = HttpResponse(wrapper, content_type='application/zip')
+            response['Content-Disposition'] = 'attachment; filename=%s' % zip_fname
+            response['X-Sendfile'] = temp_file.tell()
+            temp_file.seek(0)
+
+            return response
+
+    raise Http404()
 
 
 def start_quast_session(user_session, data_set, min_contig, caption, comment, now_datetime):

@@ -28,6 +28,7 @@ urlpatterns = patterns('',
 
     url(r'^reports/?$', 'quast_app.views.reports'),
     url(r'^report/(?P<report_id>.+)/?$', 'quast_app.views.report'),
+    url(r'^download-report/(?P<report_id>.+)$', 'quast_app.views.download_report'),
 
     url(r'^404', 'django.views.generic.simple.direct_to_template', {'template': '404.html'}),
     url(r'^500', 'django.views.generic.simple.direct_to_template', {'template': '500.html'}),
