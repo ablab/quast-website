@@ -96,7 +96,6 @@
             },];
 
             var evaluateButton = $('#evaluate-button');
-            var areaText = $('#area-text');
 
             for (var i = 0; i < parameters.length; i++) {
                 uploaders.push(new qq.FileUploader({
@@ -111,6 +110,7 @@
                     onSubmit: function(id, fileName) {
                         evaluateButton.prop('disabled', false);
                         evaluateButton.removeClass('disabled');
+                        var areaText = $('.area-text');
                         areaText.css('display', 'none');
                         allComplete = false;
                     },
@@ -124,6 +124,7 @@
                         if (uploads.length > 0) {
 {#                            $('#evaluate-button').prop('disabled', false);#}
 {#                            $('#evaluate-button').removeClass('disabled');#}
+                            var areaText = $('.area-text');
                             areaText.css('display', 'none');
                             allComplete = true;
                         }
@@ -139,10 +140,12 @@
                         if (number_of_files <= 0) {
                             evaluateButton.prop('disabled', true);
                             evaluateButton.addClass('disabled');
+                            var areaText = $('.area-text');
                             areaText.css('display', 'block');
                         }
                     },
                     onInitFiles: function(files){
+                        var areaText = $('.area-text');
                         if (!files || files.length == 0) {
                             evaluateButton.prop('disabled', true);
                             evaluateButton.addClass('disabled');
@@ -169,7 +172,7 @@
                                         '<div class="upload-list-div">' +
                                             '<ul class="upload-list"></ul>' +
                                         '</div>' +
-                                        '<div id="area-text" style="margin-top: 55px; margin-left: 90px; opacity: 0.5;">' + parameters[i].areaText + '</div>' +
+                                        '<div class="area-text" style="margin-top: 55px; margin-left: 90px; opacity: 0.5;">' + parameters[i].areaText + '</div>' +
                                     '</div>' +
                                 '</div>' +
                             '</div>',

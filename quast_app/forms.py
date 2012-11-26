@@ -15,7 +15,7 @@ class DatasetForm(forms.Form):
         super(DatasetForm, self).__init__(*args, **kwargs)
         self.fields['name_selected'] = fields.ChoiceField(
             required=False,
-            choices=[('', '')] + [(d.name, d.name) for d in Dataset.objects.all() if d.remember],
+            choices=self.__get_choices(),
             widget=widgets.Select(attrs={
                 'class': 'chzn-select-deselect',
                 'data-placeholder': 'unknown data set',
@@ -23,7 +23,11 @@ class DatasetForm(forms.Form):
             })
         )
 
+    def __get_choices(self):
+        return [('', '')] + [(d.name, d.name) for d in Dataset.objects.all() if d.remember]
+
 #    created_or_selected = fields.CharField(initial='selected')
+
     is_created = fields.BooleanField(initial=False, required=False)
 
 #    name_selected = fields.ChoiceField(
@@ -71,7 +75,11 @@ class DatasetForm(forms.Form):
             widget=widgets.TextInput(attrs={'tabindex':'10', 'style': 'width: 302px;'})
         )
 
-    def clean(self):
+    def set_default_data_set_name(self, data_set_name):
+        self.fields['name_selected'].initial = data_set_name
+
+
+    def clean(self):    # Validation
         cleaned_data = super(DatasetForm, self).clean()
 
         if self.user_session:

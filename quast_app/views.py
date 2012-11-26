@@ -128,23 +128,26 @@ def index(request):
             comment = data_set_form.cleaned_data.get('comment')
 
             data_set = get_dataset(request, data_set_form, now_str)
+
+            request.session['default_data_set_name'] = data_set.name
+
             quast_session = start_quast_session(user_session, data_set, min_contig, caption, comment, now_datetime)
 #            return HttpResponseRedirect(reverse('quast_app.views.index', kwargs={'after_evaluation': True}))
 
             request.session['after_evaluation'] = True
             return redirect(index)
 
-        else:
-            min_contig = request.session.get('min_contig') or qconfig.min_contig
-            request.session['min_contig'] = min_contig
-            data_set_form.set_min_contig(min_contig)
-
     else:
         data_set_form = DatasetForm()
+
         min_contig = request.session.get('min_contig') or qconfig.min_contig
         data_set_form.set_min_contig(min_contig)
 
         data_set_form.set_email(user_session.email)
+
+        default_data_set_name = request.session.get('default_data_set_name') or ''
+        data_set_form.set_default_data_set_name(default_data_set_name)
+
 
     response_dict = dict(response_dict.items() + {
         'csrf_token': get_token(request),

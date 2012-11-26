@@ -13,14 +13,14 @@ def start_quast((args, quast_session)):
     link = os.path.join(settings.REPORT_LINK_BASE, quast_session.report_id)
 
     from_email = 'notification@quast.bioinf.spbau.ru'
-    def send_result_mail(email, add_to_end='', fail=False):
+    def send_result_mail(email, to_me, add_to_end='', fail=False):
         if email is None or email == '':
             return
 
         if fail:
             subject = 'Quast failed'
         else:
-            subject = 'Quast report'
+            subject = 'Quast report' + (' OK' if to_me else '')
 
         if quast_session.caption:
             subject += ' (%s)' % quast_session.caption
@@ -56,13 +56,6 @@ def start_quast((args, quast_session)):
 
         result = quast.main(args[1:])
 
-        add_to_end = '\n\nUser email: ' + user_email + \
-                     '\n\nSession key: ' + quast_session.user_session.session_key + \
-                     '\n\nArgs: ' + str(args)
-
-        send_result_mail(my_email, add_to_end=add_to_end)
-        send_result_mail(user_email)
-
     except Exception as e:
         trace_back = traceback.format_exc()
         add_to_end = '\n\nUser email: ' + str(user_email) + \
@@ -71,12 +64,20 @@ def start_quast((args, quast_session)):
                      '\n\nException: ' + str(e) + \
                      '\n\nTraceback: ' + str(trace_back)
 
-        send_result_mail(my_email, add_to_end, fail=True)
-        send_result_mail(user_email, fail=True)
+        send_result_mail(my_email, to_me=True, add_to_end=add_to_end, fail=True)
+        send_result_mail(user_email, to_me=False, fail=True)
         raise e
 
-    reload(quast)
-    return result
+    else:
+        add_to_end = '\n\nUser email: ' + user_email +\
+                     '\n\nSession key: ' + quast_session.user_session.session_key +\
+                     '\n\nArgs: ' + str(args)
+
+        send_result_mail(my_email, to_me=True, add_to_end=add_to_end)
+        send_result_mail(user_email, to_me=False)
+
+        reload(quast)
+        return result
 
 #   out = ''
 #   err = ''
