@@ -13,35 +13,61 @@
 {% block content %}
     <br>
     <h1>Reports</h1>
-    <table class='table_reports'>
+    <div class='blocks_reports'>
         {% if not quast_sessions %}
             Here you will find your <a href="/">quality assessment</a> reports. You can check out <a href='/#example'>an example</a>.
         {% endif %}
-        {% for quast_session in quast_sessions %}
+{#        {% for quast_session in quast_sessions %}#}
 {#            <tr class='highlighted_tr'>#}
-            <tr{% if highlight_last and forloop.counter == 1 %} class='highlighted_tr'{% endif %}>
-                <td>
+{#            <tr{% if highlight_last and forloop.counter == 1 %} class='highlighted_tr'{% endif %}>#}
+{#                <td>#}
 {#                    {% if quast_session.state == 'SUCCESS' %}#}
-                    <a href="{{ quast_session.report_link }}">{{ quast_session.date|date:'d M Y, H:i:s' }}</a>
+{#                    <a href="{{ quast_session.report_link }}">{{ quast_session.date|date:'d M Y, H:i:s' }}</a>#}
 {#                    {% else %}#}
 {#                    {{ quast_session.date|date:'d M Y, H:i:s' }}#}
 {#                    {% endif %}#}
-                </td>
-                <td>
-                    {% if quast_session.with_dataset %}{{ quast_session.dataset_name }}{% endif %}
-                </td>
-                <td>
-                    {% if quast_session.state == 'PENDING' %}
-                        <span class="state_pending">task is being evaluated</span>
-                    {% elif quast_session.state == 'FAILURE' %}
-                        <span class="state_failure">evaluation failed</span>
-                    {% endif %}
+{#                </td>#}
+{#                <td>#}
+{#                    {% if quast_session.with_dataset %}{{ quast_session.dataset_name }}{% endif %}#}
+{#                </td>#}
+{#                <td>#}
+{#                    {% if quast_session.state == 'PENDING' %}#}
+{#                        <span class="state_pending">task is being evaluated</span>#}
+{#                    {% elif quast_session.state == 'FAILURE' %}#}
+{#                        <span class="state_failure">evaluation failed</span>#}
+{#                    {% endif %}#}
 {#                    state = 'task is in queue and waiting to be evaluated'#}
-                </td>
-                <td>
-                    {% if quast_session.caption %}{{ quast_session.caption|truncatechars:100 }}{% endif %}
-                </td>
-            </tr>
+{#                </td>#}
+{#                <td>#}
+{#                    {% if quast_session.caption %}{{ quast_session.caption|truncatechars:100 }}{% endif %}#}
+{#                </td>#}
+{#            </tr>#}
+{#        {% endfor %}#}
+
+        {% for quast_session in quast_sessions %}
+        <div{% if highlight_last and forloop.counter == 1 %} class='highlighted_tr report_block'{% else %} class='report_block'{% endif %}>
+            <div>
+                {% if quast_session.state != 'FAILURE' %}
+                    <a href="{{ quast_session.report_link }}">{{ quast_session.date|date:'d M Y, H:i:s' }}</a>
+                {% else %}
+                    {{ quast_session.date|date:'d M Y, H:i:s' }}
+                {% endif %}
+            </div>
+
+            {% if quast_session.caption %}
+                <div>
+                {{ quast_session.caption }} ({% endif %}{% if quast_session.dataset_name %}{{ quast_session.dataset_name|truncatechars:100 }}{% endif %}{% if quast_session.caption %})
+                </div>
+            {% endif %}
+
+            {% if quast_session.state == 'PENDING' %}
+                <div><span class="state_pending">evaluation in progress</span></div>
+            {% elif quast_session.state == 'FAILURE' %}
+                <div><span class="state_failure">failed</span></div>
+            {% endif %}
+        </div>
         {% endfor %}
-    </table>
+
+        <div style="clear: both;"></div>
+    </div>
 {% endblock %}

@@ -1,13 +1,19 @@
 
 .table_reports {
-    margin-left: -3px;
+    margin-left: -28px;
     white-space: nowrap;
+}
+.table_reports tr td:first-child {
+    width: 20px;
 }
 .table_reports tr {
     /*line-height: 2em;*/
 }
 .table_reports td {
-    padding-right: 10px;
+    padding-bottom: 20px;
+}
+.table_reports td div {
+    padding-bottom: 5px;
 }
 .state_pending {
     background-color:#FFF9B5;
@@ -33,4 +39,16 @@
 }
 .highlighted_tr td:first-child a {
     /*color: white;*/
+}
+
+
+
+.blocks_reports {
+}
+
+.report_block {
+    float: left;
+    margin-bottom: 50px;
+    margin-right: 70px;
+    width: 200px;
 }
