@@ -7,6 +7,9 @@ from celery.task import task
 from django.conf import settings
 from django.core.mail import send_mail
 
+import logging
+logger = logging.getLogger('quast')
+
 
 @task()
 def start_quast((args, quast_session)):

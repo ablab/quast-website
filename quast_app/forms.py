@@ -1,6 +1,9 @@
 import os
 import sys
 
+import logging
+logger = logging.getLogger('quast')
+
 from django.conf import settings
 from django.forms import forms, fields, widgets
 if not settings.QUAST_DIRPATH in sys.path:

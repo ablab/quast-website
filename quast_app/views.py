@@ -12,7 +12,7 @@ from upload_backend import ContigsUploadBackend, ReferenceUploadBackend, GenesUp
 from django.conf import settings
 
 import logging
-logger = logging.getLogger(__name__)
+logger = logging.getLogger('quast')
 
 glossary = '{}'
 with open(os.path.join(settings.GLOSSARY_PATH)) as f:

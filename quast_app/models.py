@@ -7,6 +7,10 @@ import os
 import sys
 from django.conf import settings
 
+import logging
+logger = logging.getLogger('quast')
+
+
 
 class UserSession(models.Model):
     session_key = models.CharField(max_length=256)

@@ -7,7 +7,7 @@ from ajaxuploader.backends.local import LocalUploadBackend
 from quast_app.models import UserSession
 
 import logging
-logger = logging.getLogger(__name__)
+logger = logging.getLogger('quast')
 
 
 class AjaxFileUploader(object):

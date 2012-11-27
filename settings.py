@@ -1,6 +1,9 @@
 import sys
 import os
 
+import logging
+logger = logging.getLogger('quast')
+
 
 SOURCE_DIRPATH              = os.path.abspath(os.path.dirname(__file__))
 HOME_DIRPATH                = os.path.join(SOURCE_DIRPATH, '..')
@@ -268,12 +271,9 @@ LOGGING = {
             'level': 'ERROR',
             'propagate': False,
         },
-        'quast_app': {
+        'quast': {
             'handlers': ['mail_admins', 'file', 'file_warnings', 'console'],
         },
-        'ajaxuploader': {
-            'handlers': ['mail_admins', 'file', 'file_warnings', 'console'],
-        }
     },
 }
 

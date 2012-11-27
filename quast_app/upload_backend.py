@@ -8,7 +8,7 @@ from models import ContigsFile, UserSession
 from django.conf import settings
 
 import logging
-logger = logging.getLogger(__name__)
+logger = logging.getLogger('quast')
 
 
 class MyBaseUploadBackend(AbstractUploadBackend):
