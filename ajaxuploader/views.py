@@ -6,6 +6,10 @@ from django.http import HttpResponse, HttpResponseBadRequest, Http404
 from ajaxuploader.backends.local import LocalUploadBackend
 from quast_app.models import UserSession
 
+import logging
+logger = logging.getLogger(__name__)
+
+
 class AjaxFileUploader(object):
     def __init__(self, backend=None, **kwargs):
         if backend is None:
@@ -17,6 +21,9 @@ class AjaxFileUploader(object):
 
     def remove(self, request):
         return self._ajax_remove(request)
+
+    def remove_all(self, request):
+        return self._ajax_remove_all(request)
 
     def initialize_uploads(self, request):
         return self._ajax_initialize_uploads(request)
@@ -82,13 +89,36 @@ class AjaxFileUploader(object):
         try:
             user_session = UserSession.objects.get(session_key=session_key)
         except UserSession.DoesNotExist:
-            return HttpResponseBadRequest('Can not recognise session key')
+            logger.error('_ajax_remove: Can not recognise session key')
+            return HttpResponse(json.dumps({
+                   'success': False,
+                   'message': 'Can not recognise session key'
+                   }, cls=DjangoJSONEncoder))
 
         backend = self.get_backend()
         backend.user_session = user_session
-        backend.remove(request)
 
-        return HttpResponse()
+        success, msg = backend.remove(request)
+        return HttpResponse(json.dumps({
+                   'success': success,
+                   'message': msg
+               }, cls=DjangoJSONEncoder))
+
+
+    def _ajax_remove_all(self, request):
+        success = False
+        session_key = request.session.session_key
+        try:
+            user_session = UserSession.objects.get(session_key=session_key)
+        except UserSession.DoesNotExist:
+            logger.error('_ajax_remove_all: Can not recognise session key')
+        else:
+            backend = self.get_backend()
+            backend.user_session = user_session
+            success = backend.remove_all(request)
+
+        #TODO response to nowhere
+        return None # HttpResponse(json.dumps({'success': success}, cls=DjangoJSONEncoder))
 
 
     def _ajax_initialize_uploads(self, request):

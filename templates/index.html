@@ -75,10 +75,9 @@
         });
 
         var allComplete = false;
+        var uploaders = [];
 
         $(function() {
-            var uploaders = [];
-
             var parameters = [{
                 action: '{% url contigs_ajax_upload %}',
                 removeLink: '{% url contigs_ajax_remove %}',
@@ -144,19 +143,19 @@
                             areaText.css('display', 'block');
                         }
                     },
-                    onInitFiles: function(files){
-                        var areaText = $('.area-text');
-                        if (!files || files.length == 0) {
-                            evaluateButton.prop('disabled', true);
-                            evaluateButton.addClass('disabled');
-                            areaText.css('display', 'block');
-                        } else {
-                            evaluateButton.prop('disabled', false);
-                            evaluateButton.removeClass('disabled');
-                            areaText.css('display', 'none');
-                            allComplete = true;
-                        }
-                    },
+{#                    onInitFiles: function(files){#}
+{#                        var areaText = $('.area-text');#}
+{#                        if (!files || files.length == 0) {#}
+{#                            evaluateButton.prop('disabled', true);#}
+{#                            evaluateButton.addClass('disabled');#}
+{#                            areaText.css('display', 'block');#}
+{#                        } else {#}
+{#                            evaluateButton.prop('disabled', false);#}
+{#                            evaluateButton.removeClass('disabled');#}
+{#                            areaText.css('display', 'none');#}
+{#                            allComplete = true;#}
+{#                        }#}
+{#                    },#}
                     params: {
                         'csrf_token': '{{ csrf_token }}',
                         'csrf_name': 'csrfmiddlewaretoken',
@@ -183,7 +182,7 @@
                             '<span class="qq-upload-size"></span>' +
                             '<a class="dotted-link qq-upload-cancel" href="#">cancel</a>' +
     {#                        '<a class="dotted-link qq-upload-remove" href="#" style="opacity: 0.5;"><img src="/static/pics/delete_icon.png" height=7></a>' +#}
-                                    '<a class="dotted-link qq-upload-remove" href="#">remove</a>' +
+                            '<a class="dotted-link qq-upload-remove" href="#">remove</a>' +
                             '<span class="qq-upload-failed-text">Failed</span>' +
                          // '<a class="dotted-link" style="font-size: 0.8em;" href="#">Remove</a>' +
                             '</li>',
@@ -209,13 +208,32 @@
             }
         });
 
+        $(window).unload(function() {
+            var fileNames = '';
+            $('.qq-upload-file').each(function(index, element) {
+                fileNames += element.innerText;
+                fileNames += '\n';
+            });
+            $.ajax({
+                url: '{% url contigs_ajax_remove_all %}',
+                type: 'GET',
+                data: { fileNames: fileNames, },
+            });
+        });
+
         function submitDataSetForm(dataSetForm) {
             var evaluateButton = $('#evaluate-button');
             evaluateButton.prop('disabled', true);
             evaluateButton.addClass('disabled');
 
             var check = function() {
-                if (allComplete){
+                if (allComplete) {
+                    var fnames = "";
+                    $('.qq-upload-file').each(function(index, element) {
+                        fnames += element.innerText;
+                        fnames += '\n'
+                    });
+                    document.eval_form.elements['contigs'].value = fnames;
                     document.eval_form.submit();
                 } else {
                     $('#contigs_loading_no_complete_label').show();
@@ -249,7 +267,6 @@
 {% block after_report_extra_head %}
     <script type="text/javascript">
         $(function() {
-
             $('.full-report').css('display', 'none');
 
             {#        function scroll(event) {#}
@@ -412,6 +429,10 @@
                         </tr>
                     </table>
                     <form enctype="multipart/form-data" name='eval_form' id="eval_form" action="/" method="POST">{% csrf_token %}
+                        <div style="display: none;">
+                            {{ dataset_form.contigs }}
+                        </div>
+
                         <label for="id_min_contig" tabindex="2">{% comment %}@declare id="id_min_contig"{% endcomment %}
                             Skip contigs shorter than
                             <span style='font-size: 8px;'>{{ dataset_form.min_contig }} </span>bp<br>

@@ -53,6 +53,8 @@ class DatasetForm(forms.Form):
     comment = fields.CharField(required=False, widget=widgets.Textarea(attrs={'tabindex':'10', 'rows': '2', 'style': 'width: 302px;'}))
     email = fields.EmailField(required=False, widget=widgets.TextInput(attrs={'tabindex':'11', 'style': 'width: 302px;'}))
 
+    contigs = fields.CharField(widget=forms.Textarea, validators=[])
+
     initial = {
         'created_or_selected': 'selected'
     }

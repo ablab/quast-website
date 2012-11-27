@@ -11,6 +11,8 @@ import tasks
 from upload_backend import ContigsUploadBackend, ReferenceUploadBackend, GenesUploadBackend, OperonsUploadBackend
 from django.conf import settings
 
+import logging
+logger = logging.getLogger(__name__)
 
 glossary = '{}'
 with open(os.path.join(settings.GLOSSARY_PATH)) as f:
@@ -105,8 +107,6 @@ def index(request):
 
 
     # EVALUATE
-    contigs_fnames = [c_f.fname for c_f in user_session.contigsfile_set.all()]
-
     if request.method == 'POST':
         data_set_form = DatasetForm(request.POST)
         data_set_form.set_user_session(user_session)
@@ -126,12 +126,15 @@ def index(request):
 
             caption = data_set_form.cleaned_data.get('caption')
             comment = data_set_form.cleaned_data.get('comment')
+            contigs_in_form = data_set_form.cleaned_data.get('contigs')
+            contigs_fnames = contigs_in_form.split('\r\n')[:-1]
 
             data_set = get_dataset(request, data_set_form, now_str)
 
-            request.session['default_data_set_name'] = data_set.name
+            if data_set:
+                request.session['default_data_set_name'] = data_set.name
 
-            quast_session = start_quast_session(user_session, data_set, min_contig, caption, comment, now_datetime)
+            quast_session = start_quast_session(user_session, contigs_fnames, data_set, min_contig, caption, comment, now_datetime)
 #            return HttpResponseRedirect(reverse('quast_app.views.index', kwargs={'after_evaluation': True}))
 
             request.session['after_evaluation'] = True
@@ -149,9 +152,10 @@ def index(request):
         data_set_form.set_default_data_set_name(default_data_set_name)
 
 
+    uploaded_contigs_fnames = [c_f.fname for c_f in user_session.contigsfile_set.all()]
     response_dict = dict(response_dict.items() + {
         'csrf_token': get_token(request),
-        'contigs_fnames': contigs_fnames,
+        'contigs_fnames': [],
         'dataset_form': data_set_form,
     }.items())
 
@@ -483,6 +487,9 @@ def download_report(request, report_id):
                         zip_dir(dir)
             zip_dir(report_aux_dirpath)
 
+            regular_report_dirpath = os.path.join(report_fpath, settings.REGULAR_REPORT_DIRNAME)
+            zip_dir(regular_report_dirpath)
+
             zip_file.close()
 
             wrapper = FileWrapper(temp_file)
@@ -496,7 +503,7 @@ def download_report(request, report_id):
     raise Http404()
 
 
-def start_quast_session(user_session, data_set, min_contig, caption, comment, now_datetime):
+def start_quast_session(user_session, contigs_fnames, data_set, min_contig, caption, comment, now_datetime):
     # Creating new Quast session object
     quast_session = QuastSession(
         user_session = user_session,
@@ -521,7 +528,8 @@ def start_quast_session(user_session, data_set, min_contig, caption, comment, no
         os.makedirs(result_dirpath)
 
     # Preparing contigs files
-    contigs_files = user_session.contigsfile_set.all()
+    all_contigs_files = user_session.contigsfile_set.all()
+    contigs_files = filter(lambda cf: cf.fname in contigs_fnames, all_contigs_files)
 
     for c_fn in contigs_files:
         QuastSession_ContigsFile.objects.create(quast_session=quast_session, contigs_file=c_fn)
@@ -535,7 +543,9 @@ def start_quast_session(user_session, data_set, min_contig, caption, comment, no
     for user_c_fpath, quast_session_c_fpath in zip(user_contigs_fpaths, quast_session_contigs_fpaths):
         shutil.move(user_c_fpath, quast_session_c_fpath)
 
-    contigs_files.delete()
+    for cf in contigs_files:
+        cf.delete()
+
 
 #    for contigs_file in contigs_files:
 #        contigs_file.user_session

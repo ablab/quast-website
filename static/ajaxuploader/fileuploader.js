@@ -679,6 +679,9 @@ qq.extend(qq.FileUploader.prototype, {
             qq.addClass(item, this._classes.success);
             this._find(item, 'remove').style.display = "inline";
             item.serverIndex = result.fileIndex;
+            if (result.filename) {
+                $(item).find('.' + this._classes.file).html(result.filename)
+            }
         } else {
             qq.addClass(item, this._classes.fail);
         }         
@@ -701,30 +704,30 @@ qq.extend(qq.FileUploader.prototype, {
 
         this._listElement.appendChild(item);
     },
-    _addInitFiles : function(id) {
-        var self = this;
-
-        $.ajax({
-            type: "GET",
-            url: this._options.initializeUploadsLink,
-            dataType: 'json',
-        }).done(function(data) {
-            if (data) {
-                for (var i = 0; i < data.uploads.length; ++i) {
-                    var fileInfo = data.uploads[i];
-                    fileInfo.name = fileInfo.fileName;
-                    fileInfo.size = fileInfo.fileSize;
-
-                    var id = self._handler.add(fileInfo);
-                    self._addToList(id, fileInfo.fileName, fileInfo.fileIndex);
-                }
-                self._options.onInitFiles(data.uploads);
-            }
-            else {
-                self._options.onInitFiles([]);
-            }
-        });
-    },
+//    _addInitFiles : function(id) {
+//        var self = this;
+//
+//        $.ajax({
+//            type: "GET",
+//            url: this._options.initializeUploadsLink,
+//            dataType: 'json',
+//        }).done(function(data) {
+//            if (data) {
+//                for (var i = 0; i < data.uploads.length; ++i) {
+//                    var fileInfo = data.uploads[i];
+//                    fileInfo.name = fileInfo.fileName;
+//                    fileInfo.size = fileInfo.fileSize;
+//
+//                    var id = self._handler.add(fileInfo);
+//                    self._addToList(id, fileInfo.fileName, fileInfo.fileIndex);
+//                }
+//                self._options.onInitFiles(data.uploads);
+//            }
+//            else {
+//                self._options.onInitFiles([]);
+//            }
+//        });
+//    },
     _getItemByFileId: function(id){
         var item = this._listElement.firstChild;        
         

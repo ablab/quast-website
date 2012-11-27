@@ -208,26 +208,77 @@ INSTALLED_APPS = (
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
+    },
     'filters': {
         'require_debug_false': {
             '()': 'django.utils.log.RequireDebugFalse'
-        }
+        },
+#        'require_debug_true': {
+#            '()': 'django.utils.log.RequireDebugTrue'
+#        },
     },
     'handlers': {
+        'console': {
+            'level': 'DEBUG',
+#            'filters': ['require_debug_true'],
+            'class': 'logging.StreamHandler',
+        },
         'mail_admins': {
-            'level': 'ERROR',
+            'level': 'WARNING',
             'filters': ['require_debug_false'],
-            'class': 'django.utils.log.AdminEmailHandler'
+            'class': 'django.utils.log.AdminEmailHandler',
+            'include_html': True,
+        },
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(HOME_DIRPATH, "logfile.txt"),
+            'maxBytes': 50000,
+            'backupCount': 2,
+            'formatter': 'verbose',
+        },
+        'file_warnings': {
+            'level': 'WARNING',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(HOME_DIRPATH, "logfile_errors.txt"),
+            'maxBytes': 50000,
+            'backupCount': 2,
+            'formatter': 'verbose',
         }
     },
     'loggers': {
-        'django.request': {
-            'handlers': ['mail_admins'],
+        'django': {
+            'handlers': ['mail_admins', 'file', 'file_warnings', 'console'],
             'level': 'ERROR',
-            'propagate': True,
-            },
+        },
+        'django.request': {
+            'handlers': ['mail_admins', 'file', 'file_warnings', 'console'],
+            'level': 'WARNING',
+            'propagate': False,
+        },
+        'django.db.backends': {
+            'handlers': ['mail_admins', 'file', 'file_warnings', 'console'],
+            'level': 'ERROR',
+            'propagate': False,
+        },
+        'quast_app': {
+            'handlers': ['mail_admins', 'file', 'file_warnings', 'console'],
+        },
+        'ajaxuploader': {
+            'handlers': ['mail_admins', 'file', 'file_warnings', 'console'],
         }
+    },
 }
+
+# Debug=False: Email on Error,   File on Debug
+# Debug=True:  Console on Debug, File on Debug
 
 
 
