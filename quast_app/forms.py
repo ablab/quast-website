@@ -57,10 +57,17 @@ class DatasetForm(forms.Form):
     email = fields.EmailField(required=False, widget=widgets.TextInput(attrs={'tabindex':'11', 'style': 'width: 302px;'}))
 
     contigs = fields.CharField(widget=forms.Textarea, validators=[])
+    report_id = fields.CharField(required=True, widget=widgets.TextInput)
 
     initial = {
         'created_or_selected': 'selected'
     }
+
+    def set_report_id(self, report_id):
+        self.fields['report_id'] = fields.CharField(
+            required=True,
+            widget=widgets.TextInput
+        )
 
     def set_min_contig(self, min_contig):
         self.fields['min_contig'] = fields.IntegerField(

@@ -259,6 +259,7 @@ qq.FileUploaderBasic = function(o){
         action: '/server/upload',
         removeLink: '/contigs-ajax-remove/',
         initializeUploadsLink: '/contigs-ajax-initialize-uploads/',
+        reportId: null,
         params: {},
         button: null,
         multiple: true,
@@ -338,6 +339,7 @@ qq.FileUploaderBasic.prototype = {
         var handler = new qq[handlerClass]({
             debug: this._options.debug,
             action: this._options.action,
+            reportId: this._options.reportId,
             maxConnections: this._options.maxConnections,
             onProgress: function(id, fileName, loaded, total){
                 self._onProgress(id, fileName, loaded, total);
@@ -358,7 +360,10 @@ qq.FileUploaderBasic.prototype = {
                 $.ajax({
                     url: self._options.removeLink,
                     type: 'GET',
-                    data: { fileIndex: serverIndex },
+                    data: {
+                        reportId: self._options.reportId,
+                        fileIndex: serverIndex,
+                    },
                 });
                 self._options.onRemove(serverIndex);
             }
@@ -704,30 +709,32 @@ qq.extend(qq.FileUploader.prototype, {
 
         this._listElement.appendChild(item);
     },
-//    _addInitFiles : function(id) {
-//        var self = this;
-//
-//        $.ajax({
-//            type: "GET",
-//            url: this._options.initializeUploadsLink,
-//            dataType: 'json',
-//        }).done(function(data) {
-//            if (data) {
-//                for (var i = 0; i < data.uploads.length; ++i) {
-//                    var fileInfo = data.uploads[i];
-//                    fileInfo.name = fileInfo.fileName;
-//                    fileInfo.size = fileInfo.fileSize;
-//
-//                    var id = self._handler.add(fileInfo);
-//                    self._addToList(id, fileInfo.fileName, fileInfo.fileIndex);
-//                }
-//                self._options.onInitFiles(data.uploads);
-//            }
-//            else {
-//                self._options.onInitFiles([]);
-//            }
-//        });
-//    },
+    _addInitFiles : function(id) {
+        var self = this;
+
+        $.ajax({
+            type: "GET",
+            url: this._options.initializeUploadsLink,
+            dataType: 'json',
+            data: { reportId: self._options.reportId, }
+
+        }).done(function(data) {
+            if (data) {
+                for (var i = 0; i < data.uploads.length; ++i) {
+                    var fileInfo = data.uploads[i];
+                    fileInfo.name = fileInfo.fileName;
+                    fileInfo.size = fileInfo.fileSize;
+
+                    var id = self._handler.add(fileInfo);
+                    self._addToList(id, fileInfo.fileName, fileInfo.fileIndex);
+                }
+                self._options.onInitFiles(data.uploads);
+            }
+            else {
+                self._options.onInitFiles([]);
+            }
+        });
+    },
     _getItemByFileId: function(id){
         var item = this._listElement.firstChild;        
         
@@ -991,9 +998,10 @@ qq.UploadButton.prototype = {
 qq.UploadHandlerAbstract = function(o){
     this._options = {
         debug: false,
-        action: '/upload.php',
+        action: '',
         // maximum number of concurrent uploads        
         maxConnections: 999,
+        reportId: null,
         onProgress: function(id, fileName, loaded, total){},
         onComplete: function(id, fileName, response){},
         onAllComplete: function(completed_files){},
@@ -1357,6 +1365,7 @@ qq.extend(qq.UploadHandlerXhr.prototype, {
             delete params.csrf_name ;
         }  
         params['qqfile'] = name;
+        params['reportId'] = this._options.reportId;
         var queryString = qq.obj2url(params, this._options.action);
 
         xhr.open("POST", queryString, true);

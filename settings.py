@@ -12,7 +12,7 @@ VIRTUALENV_PATH             = os.path.join(HOME_DIRPATH, 'virtualenv')
 DATA_DIRPATH                = os.path.join(HOME_DIRPATH, 'data')
 INPUT_ROOT_DIRPATH          = os.path.join(DATA_DIRPATH, 'input')
 RESULTS_ROOT_DIRPATH        = os.path.join(DATA_DIRPATH, 'results')
-REGULAR_REPORT_DIRNAME      = 'regular_report'
+REGULAR_REPORT_DIRNAME      = 'full_output'
 HTML_REPORT_FNAME           = 'report.html'
 HTML_REPORT_AUX_DIRNAME     = 'report_html_aux'
 DATA_SETS_ROOT_DIRPATH      = os.path.join(DATA_DIRPATH, 'data_sets')
@@ -85,6 +85,8 @@ DATABASE_OPTIONS = {
     "timeout": 20,
 }
 
+USE_TZ = True
+
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
@@ -92,7 +94,7 @@ DATABASE_OPTIONS = {
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = None
+TIME_ZONE = 'Europe/Moscow'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html

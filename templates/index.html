@@ -77,6 +77,22 @@
         var allComplete = false;
         var uploaders = [];
 
+        var initContigsFiles = false;
+
+        $(window).unload(function() {
+            var fileNames = '';
+            $('.qq-upload-file').each(function(index, element) {
+                fileNames += element.innerText;
+                fileNames += '\n';
+            });
+            $.ajax({
+                url: '{% url contigs_ajax_remove_all %}',
+                type: 'GET',
+                data: { fileNames: fileNames, reportId: '{{ report_id }}' },
+                async: false,
+            });
+        });
+
         $(function() {
             var parameters = [{
                 action: '{% url contigs_ajax_upload %}',
@@ -106,6 +122,8 @@
                     maxConnections: 1,
                     buttonClass: parameters[i].buttonClass,
                     buttonTabIndex: parameters[i].buttonTabIndex,
+                    reportId: "{{ report_id }}",
+                    debug: {% if debug %}true{% else %}false{% endif %},
                     onSubmit: function(id, fileName) {
                         evaluateButton.prop('disabled', false);
                         evaluateButton.removeClass('disabled');
@@ -143,19 +161,19 @@
                             areaText.css('display', 'block');
                         }
                     },
-{#                    onInitFiles: function(files){#}
-{#                        var areaText = $('.area-text');#}
-{#                        if (!files || files.length == 0) {#}
-{#                            evaluateButton.prop('disabled', true);#}
-{#                            evaluateButton.addClass('disabled');#}
-{#                            areaText.css('display', 'block');#}
-{#                        } else {#}
-{#                            evaluateButton.prop('disabled', false);#}
-{#                            evaluateButton.removeClass('disabled');#}
-{#                            areaText.css('display', 'none');#}
-{#                            allComplete = true;#}
-{#                        }#}
-{#                    },#}
+                    onInitFiles: function(files){
+                        var areaText = $('.area-text');
+                        if (!files || files.length == 0) {
+                            evaluateButton.prop('disabled', true);
+                            evaluateButton.addClass('disabled');
+                            areaText.css('display', 'block');
+                        } else {
+                            evaluateButton.prop('disabled', false);
+                            evaluateButton.removeClass('disabled');
+                            areaText.css('display', 'none');
+                            allComplete = true;
+                        }
+                    },
                     params: {
                         'csrf_token': '{{ csrf_token }}',
                         'csrf_name': 'csrfmiddlewaretoken',
@@ -208,35 +226,36 @@
             }
         });
 
-        $(window).unload(function() {
-            var fileNames = '';
-            $('.qq-upload-file').each(function(index, element) {
-                fileNames += element.innerText;
-                fileNames += '\n';
-            });
-            $.ajax({
-                url: '{% url contigs_ajax_remove_all %}',
-                type: 'GET',
-                data: { fileNames: fileNames, },
-            });
-        });
-
         function submitDataSetForm(dataSetForm) {
+            document.eval_form.elements['report_id'].value = '{{ report_id }}';
+
             var evaluateButton = $('#evaluate-button');
             evaluateButton.prop('disabled', true);
             evaluateButton.addClass('disabled');
 
+            var submitMessage = $('#sumbit_message');
+
             var check = function() {
                 if (allComplete) {
-                    var fnames = "";
-                    $('.qq-upload-file').each(function(index, element) {
-                        fnames += element.innerText;
-                        fnames += '\n'
-                    });
-                    document.eval_form.elements['contigs'].value = fnames;
-                    document.eval_form.submit();
+                    if ($('.qq-upload-fail')[0]) {
+                        $('#submit_message').html('Some loadings were failed ' +
+                                'and the sending was stopped. You may want to' +
+                                ' try again after reloading the page. If that doesn\'t' +
+                                ' help, please, report us: <a href="mailto:quast.support' +
+                                '@bioinf.spbau.ru">quast.support@bioinf.spbau.ru</a>').show();
+                        evaluateButton.prop('disabled', false);
+                        evaluateButton.removeClass('disabled');
+                    } else {
+                        var fnames = "";
+                        $('.qq-upload-file').each(function(index, element) {
+                            fnames += element.innerText;
+                            fnames += '\n'
+                        });
+                        document.eval_form.elements['contigs'].value = fnames;
+                        document.eval_form.submit();
+                    }
                 } else {
-                    $('#contigs_loading_no_complete_label').show();
+                    submitMessage.html('Waiting for contigs to finish loading...').show();
                     setTimeout(check, 500); // check again in a moment
                 }
             };
@@ -433,6 +452,10 @@
                             {{ dataset_form.contigs }}
                         </div>
 
+                        <div style="display: none;">
+                            {{ dataset_form.report_id }}
+                        </div>
+
                         <label for="id_min_contig" tabindex="2">{% comment %}@declare id="id_min_contig"{% endcomment %}
                             Skip contigs shorter than
                             <span style='font-size: 8px;'>{{ dataset_form.min_contig }} </span>bp<br>
@@ -581,13 +604,12 @@
                                        onclick="submitDataSetForm('eval_form'); return false;">
                                 <div style="visibility: {% if highlight_last %}visible{% else %}hidden{% endif %};
                                             float: right;"
-                                     id="{{ report_id }}">
+                                     id="{{ report_link }}">
                                     <p>
 {#                                        <a href="{{ latest_report_link}}">Report</a>#}
                                     </p>
                                 </div>
-                                <div id='contigs_loading_no_complete_label' style="display: none; color: #2c2c2c; margin-top: 8px;">
-                                    Waiting for contigs to finish loading...
+                                <div id='submit_message' style="display: none; color: #2c2c2c; margin-top: 8px;">
                                 </div>
                             </div>
 
@@ -638,7 +660,12 @@
 
                                             {% if quast_session.caption %}
                                             <div>
-                                                {{ quast_session.caption|truncatechars:100 }} ({% endif %}{% if quast_session.dataset_name %}{{ quast_session.dataset_name|truncatechars:100 }}{% endif %}{% if quast_session.caption %})
+                                                {{ quast_session.caption|truncatechars:100 }}
+                                            </div>
+                                            {% endif %}
+                                            {% if quast_session.dataset_name %}
+                                            <div>
+                                                Data set: {{ quast_session.dataset_name|truncatechars:100 }}
                                             </div>
                                             {% endif %}
 

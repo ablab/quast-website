@@ -66,7 +66,8 @@ def usage():
         print >> sys.stderr, '-b  --only-best-alignments   QUAST use only one alignment of contigs covering repeats (ambiguous)'
         print >> sys.stderr, "-j  --save-json              save the output also in the JSON format"
         print >> sys.stderr, "-J  --save-json-to <path>    save the JSON-output to a particular path"
-        print >> sys.stderr, "-p  --plain-report-no-plots  plain text report only, don't draw plots (to make quast faster)"
+        print >> sys.stderr, "`   --no-html                don't build html report"
+        print >> sys.stderr, "`   --no-plots               don't draw plots (to make quast faster)"
         print >> sys.stderr, ""
         print >> sys.stderr, "-d  --debug                  run in debug mode"
         print >> sys.stderr, "-h  --help                   print this usage message"
@@ -211,8 +212,11 @@ def main(args, lib_dir=os.path.join(__location__, 'libs')): # os.path.join(os.pa
         elif opt in ('-b', "--only-best-alignments"):
             qconfig.only_best_alignments = True
 
-        elif opt in ('-p', '--plain-report-no-plots'):
+        elif opt == '--no-plots':
             qconfig.draw_plots = False
+
+        elif opt == '--no-html':
+            qconfig.html_report = False
 
         elif opt in ('-d', "--debug"):
             qconfig.debug = True
@@ -449,6 +453,7 @@ def main(args, lib_dir=os.path.join(__location__, 'libs')): # os.path.join(os.pa
         for contigs_fpath in contigs_fpaths:
             if nucmer_statuses[contigs_fpath] == contigs_analyzer.NucmerStatus.OK:
                 aligned_fpaths.append(contigs_fpath)
+        reload(contigs_analyzer)
 
     # Before continue evaluating, check if nucmer didn't skip all of the contigs files.
     if len(aligned_fpaths) != 0 and qconfig.reference:

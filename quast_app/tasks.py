@@ -11,8 +11,37 @@ import logging
 logger = logging.getLogger('quast')
 
 
+#@task()
+#def remove_all_contigs(file_names):
+#    for fname in file_names:
+#        file =
+#
+#        contigs_fpath = os.path.join(settings.INPUT_ROOT_DIRPATH,
+#                                     self.user_session.input_dirname,
+#                                     contigs_file.fname)
+#        if os.path.isfile(contigs_fpath):
+#            try:
+#                os.remove(contigs_fpath)
+#            except IOError as e:
+#                logger.error('uploader_backend.remove_all: IOError when removing "%s": %s' % (fname, e.message))
+#        try:
+#            contigs_file.delete()
+#            logger.info('uploader_backend.remove_all: Successfully removed "%s"' % fname)
+#        except DatabaseError as e:
+#            logger.error('uploader_backend.remove_all: DatabaseError when removing "%s": %s' % (fname, e.message))
+#        except Exception as e:
+#            logger.error('uploader_backend.remove_all: Exception when removing "%s": %s' % (fname, e.message))
+
+
+
 @task()
 def start_quast((args, quast_session)):
+    command = ' '.join(args)
+    print '=' * 100
+    print 'Command:', command
+    print '-' * 100
+    logging.info('start_quast: running %s:' + command)
+
     link = os.path.join(settings.REPORT_LINK_BASE, quast_session.report_id)
 
     from_email = 'notification@quast.bioinf.spbau.ru'
@@ -47,15 +76,12 @@ def start_quast((args, quast_session)):
     if quast_session.user_session.email:
         user_email = quast_session.user_session.email
     else:
-        user_email = None
+        user_email = ''
 
     try:
         if not settings.QUAST_DIRPATH in sys.path:
             sys.path.insert(1, settings.QUAST_DIRPATH)
         import quast
-
-        quast.qconfig.html_report = False
-        quast.qconfig.draw_plots = False
 
         result = quast.main(args[1:])
 
@@ -79,8 +105,14 @@ def start_quast((args, quast_session)):
         send_result_mail(my_email, to_me=True, add_to_end=add_to_end)
         send_result_mail(user_email, to_me=False)
 
+        try:
+            shutil.rmtree(quast_session.get_evaluation_contigs_dirpath())
+        except Exception, e:
+            logging.error('start_quast: Error removing evaluation_contig dir:' + e.message)
+
         reload(quast)
         return result
+
 
 #   out = ''
 #   err = ''

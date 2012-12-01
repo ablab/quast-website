@@ -13,8 +13,12 @@ logger = logging.getLogger('quast')
 
 
 urlpatterns = patterns('',
+    url(r'^robots\.txt$', 'django.views.generic.simple.redirect_to', {'url': '/static/robots.txt'}),
+
     url(r'^/?$', 'quast_app.views.index'),
     url(r'^example/?$', 'quast_app.views.example'),
+    url(r'^manual/?$', 'quast_app.views.manual'),
+    url(r'^manual.html$', 'quast_app.views.manual'),
     url(r'^manual_1\.3/?$', 'quast_app.views.manual'),
     url(r'^manual_1\.3\.html$', 'quast_app.views.manual'),
     url(r'^LICENSE$', 'quast_app.views.license'),
@@ -32,8 +36,8 @@ urlpatterns = patterns('',
     url(r'^contigs-ajax-remove-all$', views.contigs_uploader.remove_all, name='contigs_ajax_remove_all'),
 
     url(r'^reports/?$', 'quast_app.views.reports'),
-    url(r'^report/(?P<report_id>.+)/?$', 'quast_app.views.report'),
-    url(r'^download-report/(?P<report_id>.+)$', 'quast_app.views.download_report'),
+    url(r'^report/(?P<link>.+)/?$', 'quast_app.views.report'),
+    url(r'^download-report/(?P<link>.+)$', 'quast_app.views.download_report'),
 
     url(r'^404', 'django.views.generic.simple.direct_to_template', {'template': '404.html'}),
     url(r'^500', 'django.views.generic.simple.direct_to_template', {'template': '500.html'}),

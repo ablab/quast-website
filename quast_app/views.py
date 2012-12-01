@@ -40,7 +40,8 @@ def example(request):
     report_response_dict = get_report_response_dict(example_dirpath,
                                                     caption='Example',
                                                     comment='',
-                                                    data_set_name='E.coli')
+                                                    data_set_name='E.coli',
+                                                    link='')
     response_dict = dict(report_response_dict.items() + template_args_by_default.items())
     return render_to_response('example-report.html', response_dict)
 
@@ -54,7 +55,8 @@ def ecoli(request):
     report_response_dict = get_report_response_dict(json_dirpath,
                                                     caption='SPAdes - IDBA collaboration',
                                                     comment='',
-                                                    data_set_name='E.coli')
+                                                    data_set_name='E.coli',
+                                                    link='')
     response_dict = dict(report_response_dict.items() + template_args_by_default.items())
     return render_to_response('ecoli.html', response_dict)
 
@@ -67,7 +69,7 @@ def ecoli(request):
 from django.middleware.csrf import get_token
 from django.template import RequestContext
 from ajaxuploader.views import AjaxFileUploader
-from models import UserSession, Dataset, QuastSession, ContigsFile, QuastSession_ContigsFile
+from models import UserSession, Dataset, QuastSession, slugify
 from forms import DatasetForm
 
 #if not request.session.exists(request.session.session_key):
@@ -93,6 +95,11 @@ state_map = {
 
 
 def index(request):
+    logging.info('Somebody opened index')
+
+    response_dict = template_args_by_default
+
+    # User session
     if not request.session.exists(request.session.session_key):
         request.session.create()
 
@@ -101,47 +108,101 @@ def index(request):
         user_session = UserSession.objects.get(session_key=user_session_key)
     except UserSession.DoesNotExist:
         user_session = create_user_session(user_session_key)
-
-    response_dict = template_args_by_default
     response_dict['session_key'] = user_session_key
+    response_dict['debug'] = settings.DEBUG
 
-
-    # EVALUATE
+    # Evaluation
     if request.method == 'POST':
         data_set_form = DatasetForm(request.POST)
         data_set_form.set_user_session(user_session)
-        #        dataset_form.fields['name_selected'].choices = dataset_choices
+
+        report_id = data_set_form.data.get('report_id')
+        if not report_id:
+            logging.error('quast_app.views.index: data_set_form.data.get(\'report_id\') is None')
+            return HttpResponseBadRequest('No report_id in form')
+        try:
+            quast_session = QuastSession.objects.get(report_id=report_id)
+        except QuastSession.DoesNotExist:
+            logging.error('quast_app.views.index: QuastSession with report_id=%s does not exist' % report_id)
+            return HttpResponseBadRequest('No quast session with report_id=%s' % report_id)
+
+        # Contigs fnames from this form
+#        contigs_in_form = data_set_form.data.get('contigs')
+#
+#        split = contigs_in_form.split('\r\n')
+#        if len(split) == 1:
+#            split = contigs_in_form.split('\n')
+#        if len(split) == 1:
+#            logging.error('quast_app.views.index: No contigs fnames got from "data_set_form.contigs": the value got is %s', str(contigs_in_form))
+#            return HttpResponseBadRequest("Error: no contigs loaded")
+
+#        contigs_fnames = split[:-1]
+
         if data_set_form.is_valid():
-            from datetime import datetime
-            now_datetime = datetime.now()
-            now_str = now_datetime.strftime('%d_%b_%Y_%H:%M:%S.%f')
+            quast_session.submited = True
 
             min_contig = data_set_form.cleaned_data['min_contig']
             request.session['min_contig'] = min_contig
+#            quast_session.min_contig = min_contig
 
             email = data_set_form.cleaned_data.get('email')
             if email:
                 user_session.email = email
-                user_session.save()
+
+            quast_session.comment = data_set_form.cleaned_data.get('comment')
 
             caption = data_set_form.cleaned_data.get('caption')
-            comment = data_set_form.cleaned_data.get('comment')
-            contigs_in_form = data_set_form.cleaned_data.get('contigs')
-            contigs_fnames = contigs_in_form.split('\r\n')[:-1]
+            quast_session.caption = caption
+            quast_session.generate_link()
 
-            data_set = get_dataset(request, data_set_form, now_str)
-
+            data_set = get_data_set(request, data_set_form, default_name=quast_session.report_id)
             if data_set:
                 request.session['default_data_set_name'] = data_set.name
+                quast_session.dataset = data_set
 
-            quast_session = start_quast_session(user_session, contigs_fnames, data_set, min_contig, caption, comment, now_datetime)
-#            return HttpResponseRedirect(reverse('quast_app.views.index', kwargs={'after_evaluation': True}))
+            quast_session.save()
+
+            # Starting Quast
+            quast_session = start_quast_session(quast_session, min_contig)
+            # return HttpResponseRedirect(reverse('quast_app.views.index', kwargs={'after_evaluation': True}))
 
             request.session['after_evaluation'] = True
             return redirect(index)
 
-    else:
+    elif request.method == 'GET':
+        # Creating quast_session
+        from django.utils import timezone
+        date = timezone.now()
+        report_id = date.strftime(QuastSession.get_report_id_format())
+
+        while QuastSession.objects.filter(report_id=report_id).exists():
+            date = timezone.now()
+            report_id = date.strftime(QuastSession.get_report_id_format())
+
+        quast_session = QuastSession(user_session=user_session,
+                                     date=date,
+                                     report_id=report_id,
+                                     submited=False)
+
+        quast_session.save()
+
+        result_dirpath = quast_session.get_dirpath()
+        if os.path.isdir(result_dirpath):
+            logging.critical('QuastSession.__init__: results_dirpath "%s" already exists' % result_dirpath)
+            return HttpResponseBadRequest()
+
+        os.makedirs(result_dirpath)
+        logging.info('QuastSession.__init__: created result dirpath: %s' % result_dirpath)
+
+        os.makedirs(quast_session.get_contigs_dirpath())
+        logging.info('QuastSession.__init__: created contigs dirpath: %s' % result_dirpath)
+
+        quast_session.save()
+        response_dict['report_id'] = quast_session.report_id
+
+        # Initializing data set form
         data_set_form = DatasetForm()
+        data_set_form.set_report_id(quast_session.report_id)
 
         min_contig = request.session.get('min_contig') or qconfig.min_contig
         data_set_form.set_min_contig(min_contig)
@@ -151,8 +212,15 @@ def index(request):
         default_data_set_name = request.session.get('default_data_set_name') or ''
         data_set_form.set_default_data_set_name(default_data_set_name)
 
+    else:
+        logging.warn('quast_app.views.index: Request method is %s' % request.method)
+        return HttpResponseBadRequest("GET and POST are only supported here")
 
-    uploaded_contigs_fnames = [c_f.fname for c_f in user_session.contigsfile_set.all()]
+
+    # GET or not valid POST
+
+    # uploaded_contigs_fnames = [c_f.fname for c_f in user_session.contigsfile_set.all()]
+
     response_dict = dict(response_dict.items() + {
         'csrf_token': get_token(request),
         'contigs_fnames': [],
@@ -174,7 +242,8 @@ def index(request):
     example_dict = get_report_response_dict(example_dirpath,
                                             caption='Example',
                                             comment='',
-                                            data_set_name='E.coli')
+                                            data_set_name='E.coli',
+                                            link='')
     response_dict = dict(response_dict.items() + example_dict.items())
 
     return render_to_response(
@@ -252,7 +321,7 @@ def index(request):
 def get_reports_response_dict(user_session, after_evaluation=False, limit=None):
     quast_sessions_dict = []
 
-    quast_sessions = user_session.quastsession_set.order_by('-date')
+    quast_sessions = user_session.quastsession_set.filter(submited=True).order_by('-date')
     if limit:
         quast_sessions = quast_sessions[:limit+1]
 
@@ -277,14 +346,19 @@ def get_reports_response_dict(user_session, after_evaluation=False, limit=None):
                 if result and state in state_map:
                     state_repr = state_map[state]
 
+                data_set = qs.dataset
+                if data_set:
+                    print str(data_set)
+
                 quast_session_info = {
                     'date': qs.date, #. strftime('%d %b %Y %H:%M:%S'),
-                    'report_link': settings.REPORT_LINK_BASE + qs.report_id,
+                    'report_link': settings.REPORT_LINK_BASE + (qs.link or qs.report_id),
                     'comment' : qs.comment,
                     'caption' : qs.caption,
                     'with_dataset': True if qs.dataset else False,
                     'dataset_name': qs.dataset.name if qs.dataset and qs.dataset.remember else '',
                     'state': state_repr,
+                    'report_id': qs.report_id,
                 }
                 quast_sessions_dict.append(quast_session_info)
 
@@ -292,7 +366,7 @@ def get_reports_response_dict(user_session, after_evaluation=False, limit=None):
         'quast_sessions': quast_sessions_dict,
         'show_more_link': show_more_link,
         'highlight_last': after_evaluation,
-#        'highlight_last': True,
+        # 'highlight_last': True,
         'latest_report_link': quast_sessions_dict[0]['report_link'] if after_evaluation else None
     }
 
@@ -311,7 +385,6 @@ def reports(request, after_evaluation=False):
     return render_to_response('reports.html', response_dict)
 
 
-
 def create_user_session(user_session_key):
     input_dirpath = os.path.join(settings.INPUT_ROOT_DIRPATH, user_session_key)
     if os.path.isdir(input_dirpath):
@@ -326,12 +399,13 @@ def create_user_session(user_session_key):
     return user_session
 
 
-def get_dataset(request, data_set_form, now_str):
+
+def get_data_set(request, data_set_form, default_name):
     if data_set_form.cleaned_data['is_created'] == True:
         name = data_set_form.data['name_created']
 
         def init_folders(data_set):
-            data_set_dirpath = os.path.join(settings.DATA_SETS_ROOT_DIRPATH, data_set.dirname) #, posted_file.name)
+            data_set_dirpath = data_set.get_dirpath() #, posted_file.name)
             os.makedirs(data_set_dirpath)
 
             for kind in ['reference', 'genes', 'operons']:
@@ -343,7 +417,7 @@ def get_dataset(request, data_set_form, now_str):
                     setattr(data_set, kind + '_fname', posted_file.name)
 
         if name == '':
-            data_set = Dataset(name=now_str, remember=False)
+            data_set = Dataset(name=default_name, remember=False)
             data_set.save()
             init_folders(data_set)
             data_set.save()
@@ -366,12 +440,13 @@ def get_dataset(request, data_set_form, now_str):
             try:
                 data_set = Dataset.objects.get(name=name)
             except Dataset.DoesNotExist:
+                logging.error('quast_app.views.get_data_set: name_created: Data set with name %s does not exits' % name)
                 return HttpResponseBadRequest('Data set does not exist')
 
     return data_set
 
 
-def report(request, report_id):
+def report(request, link):
     if not request.session.exists(request.session.session_key):
         request.session.create()
 
@@ -381,9 +456,13 @@ def report(request, report_id):
 #    except UserSession.DoesNotExist:
 #        user_session = create_user_session(user_session_key)
 
-    if QuastSession.objects.filter(report_id=report_id).exists():
+    found = QuastSession.objects.filter(link=link)
+    if not found.exists():
+        found = QuastSession.objects.filter(report_id=link)
+
+    if found.exists():
         if request.method == 'GET':
-            quast_session = QuastSession.objects.get(report_id=report_id)
+            quast_session = found[0]
 
             state = ''
             if quast_session.task_id == '1045104510450145' or quast_session.task_id == 1045104510450145: # if the celery tasks have lost but we sure that this evaluated successfully
@@ -394,7 +473,6 @@ def report(request, report_id):
                 state = result.state
 
             response_dict = template_args_by_default
-            response_dict['report_id'] = report_id
 
             if state == 'SUCCESS':
                 if quast_session.dataset and quast_session.dataset.remember:
@@ -408,10 +486,11 @@ def report(request, report_id):
                     caption = quast_session.caption
 
                 response_dict = dict(response_dict.items() + get_report_response_dict(
-                    os.path.join(settings.RESULTS_ROOT_DIRPATH, quast_session.get_results_reldirpath()),
+                    os.path.join(settings.RESULTS_ROOT_DIRPATH, quast_session.get_reldirpath()),
                     caption,
                     quast_session.comment,
                     data_set_name,
+                    link
                 ).items())
 
                 return render_to_response('assess-report.html', response_dict)
@@ -425,7 +504,7 @@ def report(request, report_id):
                     'csrf_token': get_token(request),
                     'session_key' : request.session.session_key,
                     'state': state_repr,
-                    'report_id': report_id,
+                    'link': link,
                     'comment': quast_session.comment,
                     'caption': quast_session.caption,
                 }.items())
@@ -437,21 +516,22 @@ def report(request, report_id):
             raise Http404()
 
     else:
-        if request.method == 'GET':
-            raise Http404()
-
-        if request.method == 'POST':
-            raise Http404()
+        raise Http404()
 
 
-def download_report(request, report_id):
+def download_report(request, link):
     if not request.session.exists(request.session.session_key):
         request.session.create()
 
-    if QuastSession.objects.filter(report_id=report_id).exists():
-        quast_session = QuastSession.objects.get(report_id=report_id)
+    found = QuastSession.objects.filter(link=link)
+    if not found.exists():
+        found = QuastSession.objects.filter(report_id=link)
 
-        if quast_session.task_id == '1045104510450145' or quast_session.task_id == 1045104510450145:
+    if found.exists():
+        quast_session = found[0]
+
+        if quast_session.task_id == '1045104510450145' or\
+           quast_session.task_id == 1045104510450145:
             # If the celery tasks have lost but we sure that this evaluated successfully
             # If the next time you need to restore tasks already evaluated but the database
             # is lost, put this task id to the quastsession record.
@@ -460,17 +540,28 @@ def download_report(request, report_id):
             result = tasks.start_quast.AsyncResult(quast_session.task_id)
             state = result.state
 
-        response_dict = template_args_by_default
-        response_dict['report_id'] = report_id
-
         if state == 'SUCCESS':
-            os.chdir(os.path.join(settings.RESULTS_ROOT_DIRPATH,
-                                  quast_session.get_results_reldirpath(),
+            regular_report_path = os.path.join(quast_session.get_dirpath(),
+                                               settings.REGULAR_REPORT_DIRNAME)
+            old_regular_report_path = os.path.join(quast_session.get_dirpath(),
+                                                   'regular_report')
+
+            if not os.path.exists(regular_report_path):
+                if os.path.exists(old_regular_report_path):
+                    os.rename(old_regular_report_path, regular_report_path)
+                else:
+                    logging.warning('quast_app_download_report:'
+                                    ' User tried to download report, '
+                                    'but neither %s nor %s exists' %
+                                    (settings.REGULAR_REPORT_DIRNAME, 'regular_report'))
+                    return Http404()
+
+            os.chdir(os.path.join(quast_session.get_dirpath(),
                                   settings.REGULAR_REPORT_DIRNAME))
 
             report_fpath = settings.HTML_REPORT_FNAME
             report_aux_dirpath = settings.HTML_REPORT_AUX_DIRNAME
-            zip_fname = 'quast_report_' + report_id + '.zip'
+            zip_fname = quast_session.get_download_name() + '.zip'
 
             import zipfile, tempfile
             from django.core.servers.basehttp import FileWrapper
@@ -487,9 +578,11 @@ def download_report(request, report_id):
                         zip_dir(dir)
             zip_dir(report_aux_dirpath)
 
-            regular_report_dirpath = os.path.join(report_fpath, settings.REGULAR_REPORT_DIRNAME)
-            zip_dir(regular_report_dirpath)
+            os.remove(settings.HTML_REPORT_FNAME)
+            shutil.rmtree(settings.HTML_REPORT_AUX_DIRNAME)
 
+            os.chdir('..')
+            zip_dir(settings.REGULAR_REPORT_DIRNAME)
             zip_file.close()
 
             wrapper = FileWrapper(temp_file)
@@ -503,56 +596,51 @@ def download_report(request, report_id):
     raise Http404()
 
 
-def start_quast_session(user_session, contigs_fnames, data_set, min_contig, caption, comment, now_datetime):
-    # Creating new Quast session object
-    quast_session = QuastSession(
-        user_session = user_session,
-        dataset = data_set,
-        date = now_datetime,
-        caption = caption,
-        comment = comment,
-    )
-    quast_session.save()
+def start_quast_session(quast_session, min_contig):
+  # Preparing results directory
+    result_dirpath = quast_session.get_dirpath()
 
-    input_dirpath = os.path.join(settings.INPUT_ROOT_DIRPATH, user_session.input_dirname)
-
-    # Preparing results directory
-    result_dirpath = os.path.join(settings.RESULTS_ROOT_DIRPATH, quast_session.get_results_reldirpath())
-    if os.path.isdir(result_dirpath):
-        i = 2
-        base_dir_path = result_dirpath
-        while os.path.isdir(result_dirpath):
-            result_dirpath = base_dir_path + '_' + str(i)
-            i += 1
-    if not os.path.isdir(result_dirpath):
-        os.makedirs(result_dirpath)
+#  if os.path.isdir(result_dirpath):
+#       i = 2
+#       base_dir_path = result_dirpath
+#       while os.path.isdir(result_dirpath):
+#           result_dirpath = base_dir_path + '_' + str(i)
+#           i += 1
+#  if not os.path.isdir(result_dirpath):
+#       os.makedirs(result_dirpath)
 
     # Preparing contigs files
-    all_contigs_files = user_session.contigsfile_set.all()
-    contigs_files = filter(lambda cf: cf.fname in contigs_fnames, all_contigs_files)
 
-    for c_fn in contigs_files:
-        QuastSession_ContigsFile.objects.create(quast_session=quast_session, contigs_file=c_fn)
+  # contigs_files = filter(lambda cf: cf.fname in contigs_fnames, all_contigs_files)
 
-    contigs_results_tmp_dirpath = os.path.join(result_dirpath, 'contigs')
-    os.makedirs(contigs_results_tmp_dirpath)
+    contigs_files = quast_session.contigs_files.all()
 
-    user_contigs_fpaths = [os.path.join(input_dirpath, c_f.fname) for c_f in contigs_files]
-    quast_session_contigs_fpaths = [os.path.join(contigs_results_tmp_dirpath, c_f.fname) for c_f in contigs_files]
+#    for c_fn in contigs_files:
+#        QuastSession_ContigsFile.objects.create(quast_session=quast_session, contigs_file=c_fn)
 
-    for user_c_fpath, quast_session_c_fpath in zip(user_contigs_fpaths, quast_session_contigs_fpaths):
-        shutil.move(user_c_fpath, quast_session_c_fpath)
+    evaluation_dirpath = quast_session.get_evaluation_contigs_dirpath()
 
-    for cf in contigs_files:
-        cf.delete()
+    os.rename(quast_session.get_contigs_dirpath(), evaluation_dirpath)
+
+   # evaluation_dirpath = quast_session.get_evaluation_contigs_dirpath() # os.path.join(result_dirpath, settings.CONTIGS_DIRNAME)
+   # os.makedirs(evaluation_dirpath)
+
+    evaluation_contigs_fpaths = [os.path.join(evaluation_dirpath, c_f.fname) for c_f in contigs_files]
+#    quast_session_contigs_fpaths = [os.path.join(contigs_results_tmp_dirpath, c_f.fname) for c_f in contigs_files]
+
+#    for user_c_fpath, quast_session_c_fpath in zip(user_contigs_fpaths, quast_session_contigs_fpaths):
+#        shutil.move(user_c_fpath, quast_session_c_fpath)
+
+#    for cf in contigs_files:
+#        cf.delete()
 
 
 #    for contigs_file in contigs_files:
 #        contigs_file.user_session
 
-
-
     # Preparing data set files
+    data_set = quast_session.dataset
+
     reference_fpath = None
     genes_fpath = None
     operons_fpath = None
@@ -567,13 +655,19 @@ def start_quast_session(user_session, contigs_fnames, data_set, min_contig, capt
             operons_fpath = os.path.join(settings.DATA_SETS_ROOT_DIRPATH, data_set.dirname, data_set.operons_fname)
 
     # Running Quast
-    result = assess_with_quast(quast_session, result_dirpath, quast_session_contigs_fpaths, min_contig, reference_fpath, genes_fpath, operons_fpath)
+    result = assess_with_quast(quast_session, evaluation_contigs_fpaths, min_contig, reference_fpath, genes_fpath, operons_fpath)
     quast_session.task_id = result.id
     quast_session.save()
     return quast_session
 
 
-def assess_with_quast(quast_session, res_dirpath, contigs_paths, min_contig=0, reference_path=None, genes_path=None, operons_path=None):
+def assess_with_quast(quast_session, contigs_paths, min_contig, reference_path=None, genes_path=None, operons_path=None):
+    contigs_files = quast_session.contigs_files.all()
+#    contigs_paths = [os.path.join(quast_session.get_contigs_dirpath(), c_f.fname) for c_f in contigs_files]
+
+    res_dirpath = quast_session.get_dirpath()
+#    min_contig = quast_session.min_contig
+
     if len(contigs_paths) > 0:
         if os.path.isfile(settings.QUAST_PY_FPATH):
             args = [settings.QUAST_PY_FPATH] + contigs_paths
@@ -591,18 +685,16 @@ def assess_with_quast(quast_session, res_dirpath, contigs_paths, min_contig=0, r
 
             if min_contig:
                 args.append('--min-contig')
-                args.append(min_contig)
+                args.append(str(min_contig))
 
             args.append('-J')
             args.append(res_dirpath)
 
-            # Draw no plots
-            args.append('-p')
-
             args.append('-o')
-            args.append(os.path.join(res_dirpath, 'regular_report'))
+            args.append(os.path.join(res_dirpath, settings.REGULAR_REPORT_DIRNAME))
 
             from tasks import start_quast
+#            tasks.start_quast((args, quast_session))
             result = start_quast.delay((args, quast_session))
 
             return result
@@ -613,7 +705,7 @@ def assess_with_quast(quast_session, res_dirpath, contigs_paths, min_contig=0, r
         raise Exception('no files with assemblies')
 
 
-def get_report_response_dict(results_dirpath, caption, comment, data_set_name):
+def get_report_response_dict(results_dirpath, caption, comment, data_set_name, link):
     if dir is None:
         raise Exception('No results directory.')
 
@@ -668,6 +760,7 @@ def get_report_response_dict(results_dirpath, caption, comment, data_set_name):
         'header' : header,
         'data_set_name' : data_set_name,
         'comment' : comment,
+        'link': link,
 
 #        'qualities': quality_dict,
 #        'mainMetrics': main_metrics,

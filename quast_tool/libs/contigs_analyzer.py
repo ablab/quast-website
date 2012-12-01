@@ -356,22 +356,32 @@ def plantakolya(cyclic, draw_plots, id, filename, nucmerfilename, myenv, output_
         # GAGE params of Nucmer
         #subprocess.call(['nucmer', '--maxmatch', '-p', nucmerfilename, '-l', '30', '-banded', reference, filename],
         #    stdout=open(logfilename_out, 'a'), stderr=logfile_err, env=myenv)
+        logfile_out = open(logfilename_out, 'a')
         subprocess.call(['nucmer', '--maxmatch', '-p', nucmerfilename, reference, filename],
-             stdout=open(logfilename_out, 'a'), stderr=logfile_err, env=myenv)
+             stdout=logfile_out, stderr=logfile_err, env=myenv)
+        logfile_out.close()
 
         # Filtering by IDY% = 95 (as GAGE did)
+        filtered_delta_file=open(filtered_delta_filename, 'w')
         subprocess.call(['delta-filter', '-i', '95', delta_filename],
-            stdout=open(filtered_delta_filename, 'w'), stderr=logfile_err, env=myenv)
+            stdout=filtered_delta_file, stderr=logfile_err, env=myenv)
+        filtered_delta_file.close()
+
         shutil.move(filtered_delta_filename, delta_filename)
 
         # disabling sympalign: part1
         #subprocess.call(['show-coords', '-B', delta_filename],
         #    stdout=open(coords_btab_filename, 'w'), stderr=logfile_err, env=myenv)
         tmp_coords_filename = coords_filename + '_tmp'
+        tmp_coords_file = open(tmp_coords_filename, 'w')
         subprocess.call(['show-coords', delta_filename],
-            stdout=open(tmp_coords_filename, 'w'), stderr=logfile_err, env=myenv)
+            stdout=tmp_coords_file, stderr=logfile_err, env=myenv)
+        tmp_coords_file.close()
+
+        logfile = open(logfilename_out, 'a')
         subprocess.call(['dnadiff', '-d', delta_filename, '-p', nucmerfilename],
-            stdout=open(logfilename_out, 'a'), stderr=logfile_err, env=myenv)
+            stdout=logfile, stderr=logfile_err, env=myenv)
+        logfile.close()
 
         # removing waste lines from coords file
         coords_file = open(coords_filename, 'w')
@@ -381,6 +391,7 @@ def plantakolya(cyclic, draw_plots, id, filename, nucmerfilename, myenv, output_
             header.append(line)
             if line.startswith('====='):
                 break
+
         coords_file.write(header[-2])
         coords_file.write(header[-1])
         for line in tmp_coords_file:
@@ -1198,10 +1209,16 @@ def do(reference, filenames, cyclic, output_dir, lib_dir, draw_plots):
     if not os.path.isdir(nucmer_output_dir):
         os.mkdir(nucmer_output_dir)
 
-    from joblib import Parallel, delayed
-    statuses_results_pairs = Parallel(n_jobs=len(filenames))(delayed(plantakolya_process)(
-        cyclic, draw_plots, nucmer_output_dir, fname, id, myenv, output_dir, reference)
-          for id, fname in enumerate(filenames))
+#    from joblib import Parallel, delayed
+#    statuses_results_pairs = Parallel(n_jobs=len(filenames))(delayed(plantakolya_process)(
+#        cyclic, draw_plots, nucmer_output_dir, fname, id, myenv, output_dir, reference)
+#          for id, fname in enumerate(filenames))
+
+    statuses_results_pairs = []
+    for id, fname in enumerate(filenames):
+        status, result = plantakolya_process(cyclic, draw_plots, nucmer_output_dir, fname, id, myenv, output_dir, reference)
+        statuses_results_pairs.append((status, result))
+
     # unzipping
     statuses, results = [x[0] for x in statuses_results_pairs], [x[1] for x in statuses_results_pairs]
 
