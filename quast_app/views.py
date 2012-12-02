@@ -830,6 +830,6 @@ def delete_session(request):
                 except Exception, e:
                     logger.warn('quast_app.views.delete_session: Error deleting contigs file %s: %s' % (fpath, e.message))
 
-    logger.error('quast_app.views.delete_session: Deleting quast_session with id=%s' % report_id)
+    logger.info('quast_app.views.delete_session: Deleting quast_session with id=%s' % report_id)
     quast_session.delete()
     return HttpResponse()
