@@ -823,11 +823,12 @@ def delete_session(request):
     if quast_session.contigs_files:
         fpaths = [os.path.join(quast_session.get_contigs_dirpath(), c_f.fname) for c_f in quast_session.contigs_files.all()]
         for fpath in fpaths:
-            try:
-                os.remove(fpath)
-                logger.info('quast_app.views.delete_session: Deleted contigs_file %s' % fpath)
-            except Exception, e:
-                logger.warn('quast_app.views.delete_session: Error contigs_file %s: %s' % (fpath, e.message))
+            if os.path.exists(fpath):
+                try:
+                    os.remove(fpath)
+                    logger.info('quast_app.views.delete_session: Deleted contigs_file %s' % fpath)
+                except Exception, e:
+                    logger.warn('quast_app.views.delete_session: Error deleting contigs file %s: %s' % (fpath, e.message))
 
     logger.error('quast_app.views.delete_session: Deleting quast_session with id=%s' % report_id)
     quast_session.delete()
