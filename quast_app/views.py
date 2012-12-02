@@ -457,11 +457,11 @@ def report(request, link):
     if not request.session.exists(request.session.session_key):
         request.session.create()
 
-#    user_session_key = request.session.session_key
-#    try:
-#        user_session = UserSession.objects.get(session_key=user_session_key)
-#    except UserSession.DoesNotExist:
-#        user_session = create_user_session(user_session_key)
+    user_session_key = request.session.session_key
+    try:
+        user_session = UserSession.objects.get(session_key=user_session_key)
+    except UserSession.DoesNotExist:
+        user_session = create_user_session(user_session_key)
 
     found = QuastSession.objects.filter(link=link)
     if not found.exists():
@@ -514,9 +514,14 @@ def report(request, link):
                     'link': link,
                     'comment': quast_session.comment,
                     'caption': quast_session.caption,
+                    'data_set_name': quast_session.dataset.name if quast_session.dataset else None,
+                    'email': user_session.email if user_session == quast_session.user_session else None,
+                    'fnames': [c_f.fname for c_f in quast_session.contigs_files.all()],
                 }.items())
 
-                return render_to_response('waiting-report.html', response_dict, context_instance = RequestContext(request))
+                return render_to_response('waiting-report.html',
+                                          response_dict,
+                                          context_instance = RequestContext(request))
 
         if request.method == 'POST':
             #check status of quast session, return result
