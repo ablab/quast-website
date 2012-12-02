@@ -35,6 +35,8 @@ urlpatterns = patterns('',
     url(r'^contigs-ajax-initialize-uploads$', views.contigs_uploader.initialize_uploads, name='contigs_ajax_initialize_uploads'),
     url(r'^contigs-ajax-remove-all$', views.contigs_uploader.remove_all, name='contigs_ajax_remove_all'),
 
+    url(r'^ajax-delete-session$', views.delete_session, name='ajax_delete_session'),
+
     url(r'^reports/?$', 'quast_app.views.reports'),
     url(r'^report/(?P<link>.+)/?$', 'quast_app.views.report'),
     url(r'^download-report/(?P<link>.+)$', 'quast_app.views.download_report'),

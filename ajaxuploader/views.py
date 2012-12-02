@@ -47,11 +47,11 @@ class AjaxFileUploader(object):
             return None
 
         if not report_id:
-            logging.error('reportId is None')
+            logging.error('ajaxuploader.views._ajax_upload: reportId is None')
             return None
 
         if report_id == u'undefined':
-            logging.error('reportId = "undefined"')
+            logging.error('ajaxuploader.views._ajax_upload: reportId = "undefined"')
             return None
 
 #        try:

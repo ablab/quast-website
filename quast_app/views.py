@@ -1,3 +1,4 @@
+
 import sys
 import datetime
 from celery.app.task import Task
@@ -5,6 +6,8 @@ from django.core.urlresolvers import reverse
 from django.forms import forms
 import os
 import shutil
+from django.utils import simplejson as json
+from django.core.serializers.json import DjangoJSONEncoder
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseBadRequest, Http404, HttpResponseRedirect
 from django.shortcuts import render_to_response, render, redirect
 import tasks
@@ -355,8 +358,6 @@ def get_reports_response_dict(user_session, after_evaluation=False, limit=None):
                     state_repr = state_map[state]
 
                 data_set = qs.dataset
-                if data_set:
-                    print str(data_set)
 
                 quast_session_info = {
                     'date': qs.date, #. strftime('%d %b %Y %H:%M:%S'),
@@ -797,3 +798,37 @@ def get_report_response_dict(results_dirpath, caption, comment, data_set_name, l
 #        return response
 #    else:
 #        raise Http404
+
+def delete_session(request):
+    try:
+        report_id = request.GET['reportId']
+    except KeyError:
+        logging.error('quast_app.views.delete_session: Request must contain reportId')
+        return HttpResponseBadRequest('Request must contain reportId')
+
+    if not report_id:
+        logging.error('quast_app.views.delete_session: reportId is None')
+        return HttpResponseBadRequest('reportId is None')
+
+    if report_id == u'undefined':
+        logging.error('quast_app.views.delete_session: reportId = "undefined"')
+        return HttpResponseBadRequest('reportId = "undefined"')
+
+    try:
+        quast_session = QuastSession.objects.get(report_id=report_id)
+    except QuastSession.DoesNotExist:
+        logger.error('quast_app.views.delete_session: No quast session with report_id=%s' % report_id)
+        return HttpResponseBadRequest('wrong reportId: no such quast-session')
+
+    if quast_session.contigs_files:
+        fpaths = [os.path.join(quast_session.get_contigs_dirpath(), c_f.fname) for c_f in quast_session.contigs_files.all()]
+        for fpath in fpaths:
+            try:
+                os.remove(fpath)
+                logger.info('quast_app.views.delete_session: Deleted contigs_file %s' % fpath)
+            except Exception, e:
+                logger.warn('quast_app.views.delete_session: Error contigs_file %s: %s' % (fpath, e.message))
+
+    logger.error('quast_app.views.delete_session: Deleting quast_session with id=%s' % report_id)
+    quast_session.delete()
+    return HttpResponse()
