@@ -27,7 +27,9 @@ class MyBaseUploadBackend(AbstractUploadBackend):
 
     def setup(self, filename):
         dirpath = self.quast_session.get_contigs_dirpath()
+        logger.info('uploader_backend.setup: filename is %s' % filename)
         logger.info('uploader_backend.setup: contigs dirpath is %s' % dirpath)
+
         if not os.path.exists(dirpath):
             logging.error('uploader_backend.setup: contigs directory doesn\'t exist')
             return False
@@ -49,6 +51,8 @@ class MyBaseUploadBackend(AbstractUploadBackend):
         c_fn.save()
         qc = QuastSession_ContigsFile(contigs_file=c_fn, quast_session=self.quast_session)
         qc.save()
+
+        logging.info('uploader_backend.upload_complete: %s' % filename)
 
         return {
             'file_index': file_index,

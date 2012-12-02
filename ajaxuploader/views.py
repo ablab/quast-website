@@ -17,15 +17,19 @@ class AjaxFileUploader(object):
         self.get_backend = lambda: backend(**kwargs)
 
     def upload(self, request):
+        logger.info('ajaxuploaer.views.upload')
         return self._ajax_upload(request)
 
     def remove(self, request):
+        logger.info('ajaxuploaer.views.remove')
         return self._ajax_remove(request)
 
     def remove_all(self, request):
+        logger.info('ajaxuploaer.views.remove_all')
         return self._ajax_remove_all(request)
 
     def initialize_uploads(self, request):
+        logger.info('ajaxuploaer.views.initialize_uploads')
         return self._ajax_initialize_uploads(request)
 
     def __extract_report_id(self, request):

@@ -22,6 +22,7 @@ with open(os.path.join(settings.GLOSSARY_PATH)) as f:
 template_args_by_default = {
     'glossary': glossary,
     'google-analytics': settings.GOOGLE_ANALYTICS,
+    'debug': settings.DEBUG,
 }
 
 
@@ -109,7 +110,6 @@ def index(request):
     except UserSession.DoesNotExist:
         user_session = create_user_session(user_session_key)
     response_dict['session_key'] = user_session_key
-    response_dict['debug'] = settings.DEBUG
 
     # Evaluation
     if request.method == 'POST':

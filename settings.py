@@ -275,6 +275,7 @@ LOGGING = {
         },
         'quast': {
             'handlers': ['mail_admins', 'file', 'file_warnings', 'console'],
+            'level': 'DEBUG',
         },
     },
 }
