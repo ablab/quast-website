@@ -74,23 +74,22 @@
             });
         });
 
+        var submitted = false;
+
         var allComplete = false;
         var uploaders = [];
 
         var initContigsFiles = false;
 
         $(window).unload(function() {
-{#            var fileNames = '';#}
-{#            $('.qq-upload-file').each(function(index, element) {#}
-{#                fileNames += element.innerText;#}
-{#                fileNames += '\n';#}
-{#            });#}
-            $.ajax({
-                url: '{% url ajax_delete_session %}',
-                type: 'GET',
-                data: { reportId: '{{ report_id }}' },
-                async: false,
-            });
+            if (!submitted) {
+                $.ajax({
+                    url: '{% url ajax_delete_session %}',
+                    type: 'GET',
+                    data: { reportId: '{{ report_id }}' },
+                    async: false,
+                });
+            }
         });
 
         $(function() {
@@ -251,6 +250,7 @@
                             fnames += element.innerText;
                             fnames += '\n'
                         });
+                        submitted = true;
                         document.eval_form.elements['contigs'].value = fnames;
                         document.eval_form.submit();
                     }
