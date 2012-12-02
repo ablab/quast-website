@@ -94,10 +94,10 @@ class DatasetForm(forms.Form):
     def clean(self):    # Validation
         cleaned_data = super(DatasetForm, self).clean()
 
-        if self.user_session:
-            if not self.user_session.contigsfile_set or\
-               not self.user_session.contigsfile_set.all().exists():
-                raise forms.ValidationError('No contigs provided')
+# if self.user_session:
+#     if not self.user_session.contigsfile_set or\
+#        not self.user_session.contigsfile_set.all().exists():
+#         raise forms.ValidationError('No contigs provided')
 
         return cleaned_data
 
