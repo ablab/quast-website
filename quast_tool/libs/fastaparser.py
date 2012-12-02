@@ -6,9 +6,8 @@
 
 import os
 import gzip
-import zipfile
 import bz2
-
+import zipfile
 import itertools
 # There exists pyfasta package -- http://pypi.python.org/pypi/pyfasta/
 # Use it !
@@ -87,18 +86,36 @@ def read_fasta(filename):
     if name or seq:
         yield name, seq
 
-def print_fasta(fasta):
+#def read_fasta(filename):
+#    """
+#        Returns list of FASTA entries (in tuples: name, seq)
+#    """
+#    first = True
+#    seq = ''
+#    name = ''
+#    file_ext = os.path.splitext(filename)[1]
+#    fastafile = gzip.open(filename) if file_ext == ".gz" else open(filename)
+#
+#    for line in fastafile:
+#        if line[0] == '>':
+#            if not first:
+#                yield name, seq
+#            first = False
+#            name = line.strip()[1:]
+#            seq = ''
+#        else:
+#            seq += line.strip()
+#    if name or seq:
+#        yield name, seq
+
+def write_fasta(fasta):
     for name, seq in fasta:
         print '>%s' % name
         for i in xrange(0,len(seq),60):
             print seq[i:i+60]
 
-def write_fasta(filename, fasta, header=None):
+def write_fasta_to_file(filename, fasta):
     outfile = open(filename, 'w')
-
-    if header:
-        outfile.write(header)
-
     for name, seq in fasta:
         outfile.write('>%s\n' % name)
         for i in xrange(0,len(seq),60):
@@ -111,4 +128,4 @@ def comp(letter):
 
 def rev_comp(seq):
     return ''.join(itertools.imap(comp, seq[::-1]))
-	
+
