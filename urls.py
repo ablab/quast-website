@@ -6,6 +6,7 @@ admin.autodiscover()
 from django.conf.urls import patterns, include, url
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
+from django.conf import settings
 from quast_app import views
 
 import logging
@@ -14,6 +15,9 @@ logger = logging.getLogger('quast')
 
 urlpatterns = patterns('',
     url(r'^robots\.txt$', 'django.views.generic.simple.redirect_to', {'url': '/static/robots.txt'}),
+    url(r'^favicon\.ico$', 'django.views.generic.simple.redirect_to',
+        {'url': '/static/img/favicon_debug.ico'
+        if settings.DEBUG else '/static/img/favicon.ico'}),
 
     url(r'^/?$', 'quast_app.views.index'),
     url(r'^example/?$', 'quast_app.views.example'),
