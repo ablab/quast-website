@@ -48,7 +48,7 @@
         <div{% if highlight_last and forloop.counter == 1 %} class='highlighted_tr report_block'{% else %} class='report_block'{% endif %}>
             <div>
                 {% if quast_session.state != 'FAILURE' %}
-                    <a href="{{ quast_session.link }}">{{ quast_session.date|date:'d M Y, H:i:s' }}</a>
+                    <a href="{{ quast_session.report_link }}">{{ quast_session.date|date:'d M Y, H:i:s' }}</a>
                 {% else %}
                     {{ quast_session.date|date:'d M Y, H:i:s' }}
                 {% endif %}

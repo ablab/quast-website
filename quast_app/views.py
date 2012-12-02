@@ -357,8 +357,6 @@ def get_reports_response_dict(user_session, after_evaluation=False, limit=None):
                 if result and state in state_map:
                     state_repr = state_map[state]
 
-                data_set = qs.dataset
-
                 quast_session_info = {
                     'date': qs.date, #. strftime('%d %b %Y %H:%M:%S'),
                     'report_link': settings.REPORT_LINK_BASE + (qs.link or qs.report_id),
