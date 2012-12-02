@@ -244,7 +244,7 @@ LOGGING = {
         'file': {
             'level': 'DEBUG',
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': os.path.join(HOME_DIRPATH, "logfile.txt"),
+            'filename': os.path.join(HOME_DIRPATH, "debug.log"),
             'maxBytes': 50000,
             'backupCount': 2,
             'formatter': 'verbose',
@@ -252,7 +252,7 @@ LOGGING = {
         'file_warnings': {
             'level': 'WARNING',
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': os.path.join(HOME_DIRPATH, "logfile_errors.txt"),
+            'filename': os.path.join(HOME_DIRPATH, "errors.log"),
             'maxBytes': 50000,
             'backupCount': 2,
             'formatter': 'verbose',
