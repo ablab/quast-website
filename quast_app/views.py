@@ -144,21 +144,26 @@ def index(request):
             min_contig = data_set_form.cleaned_data['min_contig']
             request.session['min_contig'] = min_contig
 #            quast_session.min_contig = min_contig
+            logging.info('quast_app.views.index.POST: min_contig = %d', min_contig)
 
             email = data_set_form.cleaned_data.get('email')
             if email:
                 user_session.email = email
+            logging.info('quast_app.views.index.POST: email = %s', email)
 
             quast_session.comment = data_set_form.cleaned_data.get('comment')
 
             caption = data_set_form.cleaned_data.get('caption')
             quast_session.caption = caption
+            logging.info('quast_app.views.index.POST: caption = %s', caption)
             quast_session.generate_link()
+            logging.info('quast_app.views.index.POST: link = %s', quast_session.link)
 
             data_set = get_data_set(request, data_set_form, default_name=quast_session.report_id)
             if data_set:
                 request.session['default_data_set_name'] = data_set.name
                 quast_session.dataset = data_set
+                logging.info('quast_app.views.index.POST: data set name = %s', data_set.name)
 
             quast_session.save()
 
@@ -168,6 +173,9 @@ def index(request):
 
             request.session['after_evaluation'] = True
             return redirect(index)
+        else:
+            logging.info('quast_app.views.index.POST: form invalid, errors are: = %s', str(data_set_form.errors.items()))
+
 
     elif request.method == 'GET':
         # Creating quast_session
@@ -614,6 +622,7 @@ def start_quast_session(quast_session, min_contig):
   # contigs_files = filter(lambda cf: cf.fname in contigs_fnames, all_contigs_files)
 
     contigs_files = quast_session.contigs_files.all()
+    logging.info('quast_app.views.index.POST: data set name = %s', str(contigs_files))
 
 #    for c_fn in contigs_files:
 #        QuastSession_ContigsFile.objects.create(quast_session=quast_session, contigs_file=c_fn)
