@@ -6,6 +6,9 @@
 
 import os
 import gzip
+import zipfile
+import bz2
+
 import itertools
 # There exists pyfasta package -- http://pypi.python.org/pypi/pyfasta/
 # Use it !
@@ -57,9 +60,22 @@ def read_fasta(filename):
     seq = ''
     name = ''
     file_ext = os.path.splitext(filename)[1]
-    fastafile = gzip.open(filename) if file_ext == ".gz" else open(filename)
+    if file_ext == '.gz':
+        fasta_file = gzip.open(filename)
+    elif file_ext == '.bz2':
+        fasta_file = bz2.BZ2File(filename)
+    elif file_ext == '.zip':
+        zfile = zipfile.ZipFile(filename)
+        names = zfile.namelist()
+        if len(names) == 0:
+            raise IOError('Reading %s: zip archive is empty' % filename)
+        fasta_file = zfile.open(names[0])
+    else:
+        fasta_file = open(filename)
 
-    for line in fastafile:
+    #    fasta_file = gzip.open(filename) if file_ext == ".gz" else open(filename)
+
+    for line in fasta_file:
         if line[0] == '>':
             if not first:
                 yield name, seq
@@ -71,14 +87,18 @@ def read_fasta(filename):
     if name or seq:
         yield name, seq
 
-def write_fasta(fasta):
+def print_fasta(fasta):
     for name, seq in fasta:
         print '>%s' % name
         for i in xrange(0,len(seq),60):
             print seq[i:i+60]
 
-def write_fasta_to_file(filename, fasta):
+def write_fasta(filename, fasta, header=None):
     outfile = open(filename, 'w')
+
+    if header:
+        outfile.write(header)
+
     for name, seq in fasta:
         outfile.write('>%s\n' % name)
         for i in xrange(0,len(seq),60):

@@ -104,8 +104,8 @@ def index(request):
     response_dict = template_args_by_default
 
     # User session
-    if not request.session.exists(request.session.session_key):
-        request.session.create()
+#    if not request.session.exists(request.session.session_key):
+#        request.session.create()
 
     user_session_key = request.session.session_key
     try:
@@ -379,8 +379,8 @@ def get_reports_response_dict(user_session, after_evaluation=False, limit=None):
 
 
 def reports(request, after_evaluation=False):
-    if not request.session.exists(request.session.session_key):
-        request.session.create()
+#    if not request.session.exists(request.session.session_key):
+#        request.session.create()
 
     user_session_key = request.session.session_key
     try:
@@ -454,8 +454,8 @@ def get_data_set(request, data_set_form, default_name):
 
 
 def report(request, link):
-    if not request.session.exists(request.session.session_key):
-        request.session.create()
+#    if not request.session.exists(request.session.session_key):
+#        request.session.create()
 
     user_session_key = request.session.session_key
     try:
@@ -532,8 +532,8 @@ def report(request, link):
 
 
 def download_report(request, link):
-    if not request.session.exists(request.session.session_key):
-        request.session.create()
+#    if not request.session.exists(request.session.session_key):
+#        request.session.create()
 
     found = QuastSession.objects.filter(link=link)
     if not found.exists():
