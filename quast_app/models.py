@@ -155,7 +155,7 @@ class QuastSession(models.Model):
         return '%d_%b_%Y_%H_%M_%S_%f_UTC'
 
     def generate_link(self):  # needs caption
-        if not self.caption:
+        if self.caption is None:
             logger.warn('QuastSession.get_report_link before setting up caption')
         time = self.date.strftime('%d_%b_%Y_%H:%M:%S_%f_UTC')
         self.link = time + slugify('_' +  self.caption if self.caption else '')
