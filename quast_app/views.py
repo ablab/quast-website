@@ -515,6 +515,8 @@ def report(request, link):
                 html_report_fpath = os.path.join(quast_session.get_dirpath(), settings.REGULAR_REPORT_DIRNAME, settings.HTML_REPORT_FNAME)
                 html_aux_report_dirpath = os.path.join(quast_session.get_dirpath(), settings.REGULAR_REPORT_DIRNAME, settings.HTML_REPORT_AUX_DIRNAME)
                 response_dict['download'] = os.path.exists(html_report_fpath) and os.path.exists(html_aux_report_dirpath)
+                if not response_dict['download']:
+                    logger.warn('download_report: html_report_fpath and html_aux_report_dirpath does not exist: \n%s\n%s' % (html_report_fpath, html_aux_report_dirpath))
 
                 return render_to_response('assess-report.html', response_dict)
 
