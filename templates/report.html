@@ -50,9 +50,11 @@
                     <h1 id="header_element">{% block header %}{% endblock %}</h1>
                 </td>
                 <td style="text-align: right;">
+                    {% if download %}
                     <a class='btn' style="margin-top: 20px;" id="download_report" href="/download-report/{{ link }}">
                         Download report
                     </a>
+                    {% endif %}
                 </td>
             </tr>
         </table>

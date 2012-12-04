@@ -512,6 +512,10 @@ def report(request, link):
                     link
                 ).items())
 
+                html_report_fpath = os.path.join(quast_session.get_dirpath(), settings.REGULAR_REPORT_DIRNAME, settings.HTML_REPORT_FNAME)
+                html_aux_report_dirpath = os.path.join(quast_session.get_dirpath(), settings.REGULAR_REPORT_DIRNAME, settings.HTML_REPORT_AUX_DIRNAME)
+                response_dict['download'] = os.path.exists(html_report_fpath) and os.path.exists(html_aux_report_dirpath)
+
                 return render_to_response('assess-report.html', response_dict)
 
             else:
@@ -778,6 +782,7 @@ def get_report_response_dict(results_dirpath, caption, comment, data_set_name, l
         'genesInContigs' : genes_in_contigs,
         'operonsInContigs' : operons_in_contigs,
         'gcInfo' : gc_info,
+        'download' : False,
 
         'header' : header,
         'data_set_name' : data_set_name,
