@@ -43,15 +43,15 @@ class AjaxFileUploader(object):
         try:
             report_id = request.GET['reportId']
         except KeyError:
-            logging.error('ajaxuploader.views._ajax_upload: Request must contain reportId')
+            logger.error('ajaxuploader.views._ajax_upload: Request must contain reportId')
             return None
 
         if not report_id:
-            logging.error('ajaxuploader.views._ajax_upload: reportId is None')
+            logger.error('ajaxuploader.views._ajax_upload: reportId is None')
             return None
 
         if report_id == u'undefined':
-            logging.error('ajaxuploader.views._ajax_upload: reportId = "undefined"')
+            logger.error('ajaxuploader.views._ajax_upload: reportId = "undefined"')
             return None
 
 #        try:

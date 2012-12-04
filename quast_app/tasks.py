@@ -40,7 +40,7 @@ def start_quast((args, quast_session)):
     print '=' * 100
     print 'Command:', command
     print '-' * 100
-    logging.info('start_quast: running %s:' + command)
+    logger.info('start_quast: running %s:' + command)
 
     link = os.path.join(settings.REPORT_LINK_BASE, quast_session.report_id)
 
@@ -108,7 +108,7 @@ def start_quast((args, quast_session)):
         try:
             shutil.rmtree(quast_session.get_evaluation_contigs_dirpath())
         except Exception, e:
-            logging.error('start_quast: Error removing evaluation_contig dir:' + e.message)
+            logger.error('start_quast: Error removing evaluation_contig dir:' + e.message)
 
         reload(quast)
         return result

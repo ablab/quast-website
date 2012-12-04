@@ -1,9 +1,6 @@
 import sys
 import os
 
-import logging
-logger = logging.getLogger('quast')
-
 
 SOURCE_DIRPATH              = os.path.abspath(os.path.dirname(__file__))
 HOME_DIRPATH                = os.path.join(SOURCE_DIRPATH, '..')
@@ -241,6 +238,12 @@ LOGGING = {
             'class': 'django.utils.log.AdminEmailHandler',
             'include_html': True,
         },
+        'mail_info': {
+            'level': 'INFO',
+            'filters': ['require_debug_false'],
+            'class': 'django.utils.log.AdminEmailHandler',
+            'include_html': True,
+            },
         'file': {
             'level': 'DEBUG',
             'class': 'logging.handlers.RotatingFileHandler',
@@ -275,6 +278,10 @@ LOGGING = {
         },
         'quast': {
             'handlers': ['mail_admins', 'file', 'file_warnings', 'console'],
+            'level': 'DEBUG',
+        },
+        'quast_mailer': {
+            'handlers': ['mail_info'],
             'level': 'DEBUG',
         },
     },

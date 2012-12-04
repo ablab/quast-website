@@ -16,6 +16,7 @@ from django.conf import settings
 
 import logging
 logger = logging.getLogger('quast')
+mailer = logging.getLogger('quast_mailer')
 
 glossary = '{}'
 with open(os.path.join(settings.GLOSSARY_PATH)) as f:
@@ -99,13 +100,13 @@ state_map = {
 
 
 def index(request):
-    logging.info('Somebody opened index')
+    logger.info('Somebody opened index')
 
     response_dict = template_args_by_default
 
 
     # User session
-    logging.info('quast_app.views.index: request.session.session_key = %s' % request.session.session_key)
+    logger.info('quast_app.views.index: request.session.session_key = %s' % request.session.session_key)
     if not request.session.exists(request.session.session_key):
         request.session.create()
 
@@ -118,17 +119,23 @@ def index(request):
 
     # Evaluation
     if request.method == 'POST':
+        log_msg = 'Somebody posted form:'
+        for k, v in request.POST.items():
+            log_msg += '\n\t%s:\t%s' % (str(k), str(v))
+        mailer.info(log_msg)
+        logger.info(log_msg)
+        
         data_set_form = DatasetForm(request.POST)
         data_set_form.set_user_session(user_session)
 
         report_id = data_set_form.data.get('report_id')
         if not report_id:
-            logging.error('quast_app.views.index: data_set_form.data.get(\'report_id\') is None')
+            logger.error('quast_app.views.index: data_set_form.data.get(\'report_id\') is None')
             return HttpResponseBadRequest('No report_id in form')
         try:
             quast_session = QuastSession.objects.get(report_id=report_id)
         except QuastSession.DoesNotExist:
-            logging.error('quast_app.views.index: QuastSession with report_id=%s does not exist' % report_id)
+            logger.error('quast_app.views.index: QuastSession with report_id=%s does not exist' % report_id)
             return HttpResponseBadRequest('No quast session with report_id=%s' % report_id)
 
         # Contigs fnames from this form
@@ -138,7 +145,7 @@ def index(request):
 #        if len(split) == 1:
 #            split = contigs_in_form.split('\n')
 #        if len(split) == 1:
-#            logging.error('quast_app.views.index: No contigs fnames got from "data_set_form.contigs": the value got is %s', str(contigs_in_form))
+#            logger.error('quast_app.views.index: No contigs fnames got from "data_set_form.contigs": the value got is %s', str(contigs_in_form))
 #            return HttpResponseBadRequest("Error: no contigs loaded")
 
 #        contigs_fnames = split[:-1]
@@ -149,26 +156,26 @@ def index(request):
             min_contig = data_set_form.cleaned_data['min_contig']
             request.session['min_contig'] = min_contig
 #            quast_session.min_contig = min_contig
-            logging.info('quast_app.views.index.POST: min_contig = %d', min_contig)
+            logger.info('quast_app.views.index.POST: min_contig = %d', min_contig)
 
             email = data_set_form.cleaned_data.get('email')
             if email:
                 user_session.email = email
-            logging.info('quast_app.views.index.POST: email = %s', email)
+            logger.info('quast_app.views.index.POST: email = %s', email)
 
             quast_session.comment = data_set_form.cleaned_data.get('comment')
 
             caption = data_set_form.cleaned_data.get('caption')
             quast_session.caption = caption
-            logging.info('quast_app.views.index.POST: caption = %s', caption)
+            logger.info('quast_app.views.index.POST: caption = %s', caption)
             quast_session.generate_link()
-            logging.info('quast_app.views.index.POST: link = %s', quast_session.link)
+            logger.info('quast_app.views.index.POST: link = %s', quast_session.link)
 
             data_set = get_data_set(request, data_set_form, default_name=quast_session.report_id)
             if data_set:
                 request.session['default_data_set_name'] = data_set.name
                 quast_session.dataset = data_set
-                logging.info('quast_app.views.index.POST: data set name = %s', data_set.name)
+                logger.info('quast_app.views.index.POST: data set name = %s', data_set.name)
 
             quast_session.save()
 
@@ -179,7 +186,7 @@ def index(request):
             request.session['after_evaluation'] = True
             return redirect(index)
         else:
-            logging.info('quast_app.views.index.POST: form invalid, errors are: = %s', str(data_set_form.errors.items()))
+            logger.info('quast_app.views.index.POST: form invalid, errors are: = %s', str(data_set_form.errors.items()))
 
 
     elif request.method == 'GET':
@@ -201,14 +208,14 @@ def index(request):
 
         result_dirpath = quast_session.get_dirpath()
         if os.path.isdir(result_dirpath):
-            logging.critical('QuastSession.__init__: results_dirpath "%s" already exists' % result_dirpath)
+            logger.critical('QuastSession.__init__: results_dirpath "%s" already exists' % result_dirpath)
             return HttpResponseBadRequest()
 
         os.makedirs(result_dirpath)
-        logging.info('QuastSession.__init__: created result dirpath: %s' % result_dirpath)
+        logger.info('QuastSession.__init__: created result dirpath: %s' % result_dirpath)
 
         os.makedirs(quast_session.get_contigs_dirpath())
-        logging.info('QuastSession.__init__: created contigs dirpath: %s' % result_dirpath)
+        logger.info('QuastSession.__init__: created contigs dirpath: %s' % result_dirpath)
 
         quast_session.save()
         response_dict['report_id'] = quast_session.report_id
@@ -226,7 +233,7 @@ def index(request):
         data_set_form.set_default_data_set_name(default_data_set_name)
 
     else:
-        logging.warn('quast_app.views.index: Request method is %s' % request.method)
+        logger.warn('quast_app.views.index: Request method is %s' % request.method)
         return HttpResponseBadRequest("GET and POST are only supported here")
 
 
@@ -381,7 +388,7 @@ def get_reports_response_dict(user_session, after_evaluation=False, limit=None):
 
 
 def reports(request, after_evaluation=False):
-    logging.info('quast_app.views.reports: request.session.session_key = %s' % request.session.session_key)
+    logger.info('quast_app.views.reports: request.session.session_key = %s' % request.session.session_key)
 
     if not request.session.exists(request.session.session_key):
         request.session.create()
@@ -451,14 +458,14 @@ def get_data_set(request, data_set_form, default_name):
             try:
                 data_set = Dataset.objects.get(name=name)
             except Dataset.DoesNotExist:
-                logging.error('quast_app.views.get_data_set: name_created: Data set with name %s does not exits' % name)
+                logger.error('quast_app.views.get_data_set: name_created: Data set with name %s does not exits' % name)
                 return HttpResponseBadRequest('Data set does not exist')
 
     return data_set
 
 
 def report(request, link):
-    logging.info('quast_app.views.report: request.session.session_key = %s' % request.session.session_key)
+    logger.info('quast_app.views.report: request.session.session_key = %s' % request.session.session_key)
     if not request.session.exists(request.session.session_key):
         request.session.create()
 
@@ -564,7 +571,7 @@ def download_report(request, link):
                 if os.path.exists(old_regular_report_path):
                     os.rename(old_regular_report_path, regular_report_path)
                 else:
-                    logging.warning('quast_app_download_report:'
+                    logger.warning('quast_app_download_report:'
                                     ' User tried to download report, '
                                     'but neither %s nor %s exists' %
                                     (settings.REGULAR_REPORT_DIRNAME, 'regular_report'))
@@ -628,7 +635,7 @@ def start_quast_session(quast_session, min_contig):
   # contigs_files = filter(lambda cf: cf.fname in contigs_fnames, all_contigs_files)
 
     contigs_files = quast_session.contigs_files.all()
-    logging.info('quast_app.views.index.POST: data set name = %s', str(contigs_files))
+    logger.info('quast_app.views.index.POST: data set name = %s', str(contigs_files))
 
 #    for c_fn in contigs_files:
 #        QuastSession_ContigsFile.objects.create(quast_session=quast_session, contigs_file=c_fn)
@@ -808,15 +815,15 @@ def delete_session(request):
     try:
         report_id = request.GET['reportId']
     except KeyError:
-        logging.error('quast_app.views.delete_session: Request must contain reportId')
+        logger.error('quast_app.views.delete_session: Request must contain reportId')
         return HttpResponseBadRequest('Request must contain reportId')
 
     if not report_id:
-        logging.error('quast_app.views.delete_session: reportId is None')
+        logger.error('quast_app.views.delete_session: reportId is None')
         return HttpResponseBadRequest('reportId is None')
 
     if report_id == u'undefined':
-        logging.error('quast_app.views.delete_session: reportId = "undefined"')
+        logger.error('quast_app.views.delete_session: reportId = "undefined"')
         return HttpResponseBadRequest('reportId = "undefined"')
 
     try:
