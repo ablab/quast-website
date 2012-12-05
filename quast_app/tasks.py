@@ -42,7 +42,7 @@ def start_quast((args, quast_session)):
     print '-' * 100
     logger.info('start_quast: running %s:' + command)
 
-    link = os.path.join(settings.REPORT_LINK_BASE, quast_session.report_id)
+    link = os.path.join(settings.REPORT_LINK_BASE, quast_session.link or quast_session.report_id)
 
     from_email = 'notification@quast.bioinf.spbau.ru'
     def send_result_mail(email, to_me, add_to_end='', fail=False):
