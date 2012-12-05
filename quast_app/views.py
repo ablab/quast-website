@@ -1,6 +1,6 @@
 
 import sys
-import datetime
+import time
 from celery.app.task import Task
 from django.core.urlresolvers import reverse
 from django.db import DatabaseError
@@ -115,7 +115,7 @@ def index(request):
             break
         except DatabaseError as e:
             logger.warn('data base is locked')
-            datetime.time.sleep(2)
+            time.sleep(2)
 
     user_session_key = request.session.session_key
     try:
