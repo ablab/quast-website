@@ -3,6 +3,7 @@ import sys
 import datetime
 from celery.app.task import Task
 from django.core.urlresolvers import reverse
+from django.db import DatabaseError
 from django.forms import forms
 import os
 import shutil
@@ -104,11 +105,17 @@ def index(request):
 
     response_dict = template_args_by_default
 
-
     # User session
     logger.info('quast_app.views.index: request.session.session_key = %s' % request.session.session_key)
-    if not request.session.exists(request.session.session_key):
-        request.session.create()
+
+    while 1:
+        try:
+            if not request.session.exists(request.session.session_key):
+                request.session.create()
+            break
+        except DatabaseError as e:
+            logger.warn('data base is locked')
+            datetime.time.sleep(2)
 
     user_session_key = request.session.session_key
     try:
