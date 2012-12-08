@@ -797,6 +797,7 @@ def get_report_response_dict(results_dirpath, caption, comment, data_set_name, l
         'data_set_name': data_set_name,
         'comment': comment,
         'link': settings.REPORT_LINK_BASE + link,
+        'downloadLink': settings.REPORT_LINK_BASE + 'download/' + link,
 
 #        'qualities': quality_dict,
 #        'mainMetrics': main_metrics,

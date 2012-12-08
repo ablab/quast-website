@@ -42,11 +42,11 @@ urlpatterns = patterns('',
     url(r'^ajax-delete-session$', views.delete_session, name='ajax_delete_session'),
 
     url(r'^reports/?$', 'quast_app.views.reports'),
+    url(r'^reports/download/(?P<link>.+)/?$', 'quast_app.views.download_report'),
+    url(r'^reports/(?P<link>.+)/?$', 'quast_app.views.report'),
     url(r'^report/?$', 'quast_app.views.reports'),
     url(r'^report/(?P<link>.+)/?$', 'quast_app.views.report'),
-    url(r'^reports/(?P<link>.+)/?$', 'quast_app.views.report'),
     url(r'^download-report/(?P<link>.+)$', 'quast_app.views.download_report'),
-    url(r'^reports/(?P<link>.+)/download/?$', 'quast_app.views.download_report'),
 
     url(r'^404', 'django.views.generic.simple.direct_to_template', {'template': '404.html'}),
     url(r'^500', 'django.views.generic.simple.direct_to_template', {'template': '500.html'}),
