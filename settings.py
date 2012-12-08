@@ -27,8 +27,7 @@ APP_DIRPATH                 = os.path.join(SOURCE_DIRPATH, 'quast_app')
 EXAMPLE_DIRPATH             = os.path.join(APP_DIRPATH, 'files/example')
 ECOLI_DIRPATH               = os.path.join(APP_DIRPATH, 'files/ecoli')
 
-
-REPORT_LINK_BASE = '/report/'
+REPORT_LINK_BASE = '/reports/'
 
 
 if os.environ.get('DEVELOPMENT', None):

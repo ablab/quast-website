@@ -783,20 +783,20 @@ def get_report_response_dict(results_dirpath, caption, comment, data_set_name, l
         data_set_name = ''
 
     return {
-        'totalReport' : total_report,
-        'contigsLenghts' : contigs_lengths,
-        'alignedContigsLengths' : aligned_contigs_lengths,
-        'assembliesLengths' : assemblies_lengths,
-        'referenceLength' : reference_length,
-        'genesInContigs' : genes_in_contigs,
-        'operonsInContigs' : operons_in_contigs,
-        'gcInfo' : gc_info,
-        'download' : False,
+        'totalReport': total_report,
+        'contigsLenghts': contigs_lengths,
+        'alignedContigsLengths': aligned_contigs_lengths,
+        'assembliesLengths': assemblies_lengths,
+        'referenceLength': reference_length,
+        'genesInContigs': genes_in_contigs,
+        'operonsInContigs': operons_in_contigs,
+        'gcInfo': gc_info,
+        'download': False,
 
-        'header' : header,
-        'data_set_name' : data_set_name,
-        'comment' : comment,
-        'link': link,
+        'header': header,
+        'data_set_name': data_set_name,
+        'comment': comment,
+        'link': settings.REPORT_LINK_BASE + link,
 
 #        'qualities': quality_dict,
 #        'mainMetrics': main_metrics,
