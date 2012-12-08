@@ -44,6 +44,7 @@ urlpatterns = patterns('',
     url(r'^reports/?$', 'quast_app.views.reports'),
     url(r'^report/?$', 'quast_app.views.reports'),
     url(r'^report/(?P<link>.+)/?$', 'quast_app.views.report'),
+    url(r'^reports/(?P<link>.+)/?$', 'quast_app.views.report'),
     url(r'^download-report/(?P<link>.+)$', 'quast_app.views.download_report'),
     url(r'^reports/(?P<link>.+)/download/?$', 'quast_app.views.download_report'),
 
