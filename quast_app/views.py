@@ -612,8 +612,8 @@ def download_report(request, link):
                         zip_dir(dir)
             zip_dir(report_aux_dirpath)
 
-            os.remove(settings.HTML_REPORT_FNAME)
-            shutil.rmtree(settings.HTML_REPORT_AUX_DIRNAME)
+#            os.remove(settings.HTML_REPORT_FNAME)
+#            shutil.rmtree(settings.HTML_REPORT_AUX_DIRNAME)
 
             os.chdir('..')
             zip_dir(settings.REGULAR_REPORT_DIRNAME)
