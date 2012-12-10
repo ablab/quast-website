@@ -161,7 +161,8 @@ class QuastSession(models.Model):
         self.link = time + slugify('_' +  self.caption if self.caption else '')
 
     def get_download_name(self):
-        return 'quast_report_' + self.report_id + slugify('_' +  self.caption if self.caption else '')
+        return 'quast_report_' + self.report_id + \
+               slugify('_' +  self.caption if self.caption else '')
 
     def get_reldirpath(self):
         return self.user_session.session_key + '/' + str(self.report_id)

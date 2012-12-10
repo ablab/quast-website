@@ -259,7 +259,7 @@ def index(request):
     reports_dict = get_reports_response_dict(
         user_session,
         after_evaluation=request.session.get('after_evaluation', False),
-        limit=7)
+        limit=4)
     response_dict = dict(response_dict.items() + reports_dict.items())
     request.session['after_evaluation'] = False
 
@@ -382,6 +382,7 @@ def get_reports_response_dict(user_session, after_evaluation=False, limit=None):
                     'dataset_name': qs.dataset.name if qs.dataset and qs.dataset.remember else '',
                     'state': state_repr,
                     'report_id': qs.report_id,
+                    'contigs': [cf.fname for cf in qs.contigs_files.all()],
                 }
                 quast_sessions_dict.append(quast_session_info)
 

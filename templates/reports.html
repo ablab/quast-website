@@ -56,7 +56,21 @@
 
             {% if quast_session.caption %}
                 <div>
-                {{ quast_session.caption }} ({% endif %}{% if quast_session.dataset_name %}{{ quast_session.dataset_name|truncatechars:100 }}{% endif %}{% if quast_session.caption %})
+                    {{ quast_session.caption|truncatechars:100 }}
+                </div>
+            {% endif %}
+            {% if quast_session.dataset_name %}
+                <div>
+                    Data set: {{ quast_session.dataset_name|truncatechars:100 }}
+                </div>
+            {% endif %}
+
+            {% if quast_session.contigs %}
+                <div style="margin-bottom: 0px;">
+                    Contigs:<br>
+                    {% for contig in quast_session.contigs %}
+                        <span style="margin-left: 10px;">{{ contig }}</span><br>
+                    {% endfor %}
                 </div>
             {% endif %}
 

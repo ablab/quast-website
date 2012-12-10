@@ -631,7 +631,7 @@
 {##}
 {#                            </div>#}
                             <td>
-                                <h3 style="margin-top: 3px; margin-left: 0px;"><a href="/reports/">Latest reports</a></h3>
+                                <h3 style="margin-top: 3px; margin-left: 0px;"><a href="/reports/">Reports</a></h3>
                                 <table style="margin-top: -5px;" class='table_reports'>
 {#                                    <tr>#}
 {#                                        {% if quast_sessions %}#}
@@ -646,7 +646,7 @@
                                     <tr{% if highlight_last and forloop.counter == 1 %} class='highlighted_tr' style="display: none;"{% endif %}>
 {#                                    <tr>#}
                                         <td style="vertical-align: top;">
-                                            <span>{{ forloop.counter }}.</span>
+                                            <span></span>
                                         </td>
 
                                         <td>
@@ -666,6 +666,15 @@
                                             {% if quast_session.dataset_name %}
                                             <div>
                                                 Data set: {{ quast_session.dataset_name|truncatechars:100 }}
+                                            </div>
+                                            {% endif %}
+
+                                            {% if quast_session.contigs %}
+                                            <div>
+                                                Contigs:<br>
+                                                {% for contig in quast_session.contigs %}
+                                                    <span style="margin-left: 10px;">{{ contig }}</span><br>
+                                                {% endfor %}
                                             </div>
                                             {% endif %}
 
