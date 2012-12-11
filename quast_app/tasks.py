@@ -44,7 +44,7 @@ def start_quast((args, quast_session)):
 
     link = os.path.join(settings.REPORT_LINK_BASE, quast_session.link or quast_session.report_id)
 
-    from_email = 'notification@quast.bioinf.spbau.ru'
+    from_email = 'quast.support@bioinf.spbau.ru'
     def send_result_mail(email, to_me, add_to_end='', fail=False):
         if email is None or email == '':
             return
