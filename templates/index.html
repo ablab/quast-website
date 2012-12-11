@@ -395,7 +395,7 @@
                             </p>
                             <p>
                                 For installation details and usage instructions,
-                                please read <a href="manual_1.3.html">the manual</a>.<br>
+                                please read <a href="manual.html">the manual</a>.<br>
                             </p>
                             <p style="margin-top: 30px;"><i>
                                 We will be thankful if you help us make <span class='smallcapitals'>QUAST</span> better by sending your comments, bug reports, and suggestions
@@ -467,7 +467,7 @@
                         <table class='form-layout-table'>
                             <tr>
                                 <td class='form-layout-td' style="padding-top: 0px;">
-                                    <div style="padding-top: 13px;">Data set</div>
+                                    <div style="padding-top: 13px;">Genome</div>
                                 </td>
 
                                 <td class='form-layout-td'>{% comment %}@declare id="id_name_selected"{% endcomment %}
@@ -535,21 +535,24 @@
                                     <td class='form-layout-td'><label for='id_reference'>Reference</label></td>
                                     <td class='form-layout-td'>{{ dataset_form.reference }}
                                         {{ dataset_form.reference.errors }}
-                                        <br><br>
+                                        <div class="comment_to_field">FASTA file with the reference genome sequence.
+                                        </div><br>
                                     </td>
                                 </tr>
                                 <tr>{% comment %}@declare id="id_genes"{% endcomment %}
                                     <td class='form-layout-td'><label for='id_genes'>Genes</label></td>
                                     <td class='form-layout-td'>{{ dataset_form.genes }}
                                         {{ dataset_form.genes.errors }}
-                                        <br><br>
+                                        <div class="comment_to_field">See <a href="http://quast.bioinf.spbau.ru/manual.html#sec2.2">manual</a> for file formats.
+                                        </div><br>
                                     </td>
                                 </tr>
                                 <tr>{% comment %}@declare id="id_operons"{% endcomment %}
                                     <td class='form-layout-td'><label for='id_operons'>Operons</label></td>
                                     <td class='form-layout-td'>{{ dataset_form.operons }}
                                         {{ dataset_form.operons.errors }}
-                                        <br><br>
+                                        <div class="comment_to_field">See <a href="http://quast.bioinf.spbau.ru/manual.html#sec2.2">manual</a> for file formats.
+                                        </div><br>
                                     </td>
                                 </tr>
                             </table>
@@ -561,15 +564,13 @@
                                 <td class='form-layout-td'><label for='id_caption'>Caption</label></td>
                                 <td class='form-layout-td'>{{ dataset_form.caption }}
                                     <br>
-                                    <div class="comment_to_field">We will generate a link for your report using this caption.
-                                    <br>By default, the current date is used for generating a link and the name of the data set as a report title.
-                                    </div>
                                 </td>
                             </tr>
                             <tr>{% comment %}@declare id="id_comment"{% endcomment %}
                                 <td class='form-layout-td'><label for='id_comment'>Comment</label></td>
                                 <td class='form-layout-td'>{{ dataset_form.comment }}
-                                    <br>
+                                    <div class="comment_to_field">Will appear in the report.
+                                    </div><br>
                                 </td>
                             </tr>
                             <tr>{% comment %}@declare id="id_email"{% endcomment %}
@@ -577,11 +578,11 @@
                                 <td class='form-layout-td'>{{ dataset_form.email }}
                                     <br>
                                     <div class="comment_to_field">
-                                        We will notify you when report will be ready, if you provide your email.<br>
+                                        If you provide an email address, we will notify you when the report is ready.<br>
                                         <div style="height: 5px;"></div>
-                                        If something goes wrong with assessment, we'll report you right after the problem is fixed.<br>
+                                        We will also contact you if there is a problem in running the assessment.<br>
                                         <div style="height: 5px;"></div>
-                                        Note that the message can be considered junk by your mail server or software.<br>
+                                        If you do not receive a notification, please check your junk mail folder.<br>
                                     </div>
                                     <br>
                                     <br>
@@ -665,7 +666,7 @@
                                             {% endif %}
                                             {% if quast_session.dataset_name %}
                                             <div>
-                                                Data set: {{ quast_session.dataset_name|truncatechars:100 }}
+                                                Genome: {{ quast_session.dataset_name|truncatechars:100 }}
                                             </div>
                                             {% endif %}
 
