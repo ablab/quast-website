@@ -33,13 +33,20 @@ REPORT_LINK_BASE = '/reports/'
 if os.environ.get('DEVELOPMENT', None):
     DEBUG = True
     GOOGLE_ANALYTICS = False
+    ADDRESS = 'http://127.0.0.1:8000/'
+
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
     db_engine = 'django.db.backends.sqlite3'
     db_name = quastdb_fpath
 #    db_engine = 'django.db.backends.mysql'
 #    db_name = 'quast'
+
 else:
     DEBUG = False
     GOOGLE_ANALYTICS = True
+    ADDRESS = 'http://quast.bioinf.spbau.ru/'
+
     db_engine = 'django.db.backends.sqlite3'
     db_name = quastdb_fpath
 
@@ -59,6 +66,8 @@ CELERY_SEND_EVENTS = True
 
 
 # Django settings for quast_website project.
+
+SUPPORT_EMAIL = 'quast.support@bioinf.spbau.ru'
 
 ADMINS = (
     ('Vlad Saveliev', 'vladsaveliev@me.com'),
@@ -208,10 +217,10 @@ INSTALLED_APPS = (
 # more details on how to customize your logging configuration.
 LOGGING = {
     'version': 1,
-    'disable_existing_loggers': False,
+    'disable_existing_loggers': True,
     'formatters': {
         'verbose': {
-            'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+            'format': '%(levelname)s %(asctime)s %(module)s.%(funcName)s line %(lineno)s: %(message)s'
         },
         'simple': {
             'format': '%(levelname)s %(message)s'
@@ -221,73 +230,72 @@ LOGGING = {
         'require_debug_false': {
             '()': 'django.utils.log.RequireDebugFalse'
         },
-#        'require_debug_true': {
-#            '()': 'django.utils.log.RequireDebugTrue'
-#        },
     },
     'handlers': {
-        'console': {
+        'console_debug': {
             'level': 'DEBUG',
-#            'filters': ['require_debug_true'],
             'class': 'logging.StreamHandler',
+            'formatter': 'verbose',
         },
-        'mail_admins': {
+        'mail_warning': {
             'level': 'WARNING',
             'filters': ['require_debug_false'],
             'class': 'django.utils.log.AdminEmailHandler',
             'include_html': True,
+            'formatter': 'verbose',
         },
         'mail_info': {
             'level': 'INFO',
             'filters': ['require_debug_false'],
             'class': 'django.utils.log.AdminEmailHandler',
             'include_html': True,
+            'formatter': 'verbose',
             },
-        'file': {
+        'file_django': {
+            'level': 'INFO',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(HOME_DIRPATH, "django.log"),
+            'maxBytes': 50000,
+            'backupCount': 5,
+        },
+        'file_debug': {
             'level': 'DEBUG',
             'class': 'logging.handlers.RotatingFileHandler',
             'filename': os.path.join(HOME_DIRPATH, "debug.log"),
             'maxBytes': 50000,
-            'backupCount': 2,
+            'backupCount': 5,
             'formatter': 'verbose',
         },
-        'file_warnings': {
+        'file_warning': {
             'level': 'WARNING',
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': os.path.join(HOME_DIRPATH, "errors.log"),
+            'filename': os.path.join(HOME_DIRPATH, "warning.log"),
             'maxBytes': 50000,
-            'backupCount': 2,
+            'backupCount': 100,
             'formatter': 'verbose',
         }
     },
     'loggers': {
         'django': {
-            'handlers': ['mail_admins', 'file', 'file_warnings', 'console'],
-            'level': 'ERROR',
+            'handlers': ['file_django', 'mail_warning', 'file_warning'],
+            'level': 'INFO',
         },
         'django.request': {
-            'handlers': ['mail_admins', 'file', 'file_warnings', 'console'],
-            'level': 'WARNING',
-            'propagate': False,
+            'propagate': True,
         },
         'django.db.backends': {
-            'handlers': ['mail_admins', 'file', 'file_warnings', 'console'],
-            'level': 'ERROR',
-            'propagate': False,
+            'propagate': True,
         },
         'quast': {
-            'handlers': ['mail_admins', 'file', 'file_warnings', 'console'],
+            'handlers': ['mail_warning', 'file_debug', 'file_warning', 'console_debug'],
             'level': 'DEBUG',
         },
         'quast_mailer': {
-            'handlers': ['mail_info'],
+            'handlers': ['mail_info', 'file_debug', 'file_warning', 'console_debug'],
             'level': 'DEBUG',
         },
     },
 }
-
-# Debug=False: Email on Error,   File on Debug
-# Debug=True:  Console on Debug, File on Debug
 
 
 

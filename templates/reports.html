@@ -28,7 +28,7 @@
 {#                    {% endif %}#}
 {#                </td>#}
 {#                <td>#}
-{#                    {% if quast_session.with_dataset %}{{ quast_session.dataset_name }}{% endif %}#}
+{#                    {% if quast_session.with_data_set %}{{ quast_session.data_set_name }}{% endif %}#}
 {#                </td>#}
 {#                <td>#}
 {#                    {% if quast_session.state == 'PENDING' %}#}
@@ -59,9 +59,9 @@
                     <b>{{ quast_session.caption|truncatechars:100 }}</b>
                 </div>
             {% endif %}
-            {% if quast_session.dataset_name %}
+            {% if quast_session.data_set_name %}
                 <div>
-                    Genome: {{ quast_session.dataset_name|truncatechars:100 }}
+                    Genome: {{ quast_session.data_set_name|truncatechars:100 }}
                 </div>
             {% endif %}
 

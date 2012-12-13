@@ -47,6 +47,7 @@
 
 <body>
     <div class='top-panel'>
+    <table class="layout-table">
 {#        <ul class='menu'>#}
 {#            <li class='{% block    index-menu-li-class %}{% endblock %}'><a href='/'>             <span>About <span class='.smallcapitals'>QUAST</span></span></a></li>#}
 {#            <li class='{% block evaluate-menu-li-class %}{% endblock %}'><a href='/evaluate/'>    <span>Quality assessment                             </span></a></li>#}
@@ -54,18 +55,22 @@
 {#            <li class='{% block  example-menu-li-class %}{% endblock %}'><a href='/example/'>     <span>Example                                 </span></a></li>#}
 {#        </ul>#}
 {#        <span class='clear_float'></span>#}
+        <tr>
+        <td class='layout-table-td layout-table-fst-td'>
+            <div style="width: 100%;">
+                <h1 style='letter-spacing: .10em; margin-right: -.10em;'>
+                    <a href="/" class='{% block logo_class %}{% endblock %}'>QUAST</a><span class='beta'> β</span>
+                </h1>
 
-        <div style="width: 100%;">
-            <h1 style='letter-spacing: .10em; margin-right: -.10em;'>
-                <a href="/" class='{% block logo_class %}{% endblock %}'>QUAST</a><span class='beta'> β</span>
-            </h1>
-
-            <div style='margin-top: -7px; width: 100%;'>
-                <p><b>QUality ASsesment Tool for Genome Assemblies</b>
-                    by <a href="http://bioinf.spbau.ru/en" class='dark_bg_link'>Algorithmic Biology Lab</a>
-                </p>
+                <div style='margin-top: -7px; width: 100%;'>
+                    <p><b>QUality ASsesment Tool for Genome Assemblies</b>
+                        by <a href="http://bioinf.spbau.ru/en" class='dark_bg_link'>Algorithmic Biology Lab</a>
+                    </p>
+                </div>
             </div>
-        </div>
+        </td>
+        </tr>
+    </table>
     </div>
 
 {#    <div class='top-panel'>#}
@@ -118,7 +123,7 @@
 {#                                  border: 1px solid red;">#}
                         <tr>
                             <td style="padding-right: 20px;">
-                                <span class='email'><a href="mailto:quast.support@bioinf.spbau.ru">quast.support@bioinf.spbau.ru</a></span>
+                                <span class='email'><a href="mailto:{{ support_email }}">{{ support_email }}</a></span>
                             </td>
                             <td style="padding-right: 50px;">
                                 <a class='icon_link' id="admin_link" style="" href="/admin/"><span class="admin_icon">&nbsp;</span></a>

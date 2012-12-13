@@ -37,21 +37,21 @@ class AjaxFileUploader(object):
 #        try:
 #            user_session = UserSession.objects.get(session_key=session_key)
 #        except UserSession.DoesNotExist:
-#            logging.error('ajaxuploader.views._ajax_upload: Cannot recognise session key: %s', str(session_key))
+#            logging.error('Cannot recognise session key: %s', str(session_key))
 #            return HttpResponseBadRequest('Cannot recognise session key')
 
         try:
             report_id = request.GET['reportId']
         except KeyError:
-            logger.error('ajaxuploader.views._ajax_upload: Request must contain reportId')
+            logger.error('Request must contain reportId')
             return None
 
         if not report_id:
-            logger.error('ajaxuploader.views._ajax_upload: reportId is None')
+            logger.error('reportId is None')
             return None
 
         if report_id == u'undefined':
-            logger.error('ajaxuploader.views._ajax_upload: reportId = "undefined"')
+            logger.error('reportId = "undefined"')
             return None
 
 #        try:
@@ -67,7 +67,7 @@ class AjaxFileUploader(object):
     def _ajax_upload(self, request):
         if request.method == "POST":
             if request.is_ajax():
-                logger.info('ajaxuploader.views._ajax_upload: request is ajax')
+                logger.info('request is ajax')
 
                 # the file is stored raw in the request
                 upload = request
@@ -78,12 +78,12 @@ class AjaxFileUploader(object):
                 try:
                     filename = request.GET['qqfile']
                 except KeyError:
-                    logger.error('ajaxuploader.views._ajax_upload: AJAX request does not contain qqfile')
+                    logger.error('AJAX request does not contain qqfile')
                     return HttpResponseBadRequest('AJAX request is not valid: must contain "qqfile"')
             # not an ajax upload, so it was the "basic" iframe version with
             # submission via form
             else:
-                logger.info('ajaxuploader.views._ajax_upload: request is not ajax, getting request.FILES')
+                logger.info('request is not ajax, getting request.FILES')
                 is_raw = False
                 if len(request.FILES) == 1:
                     # FILES is a dictionary in Django but Ajax Upload gives
@@ -95,22 +95,22 @@ class AjaxFileUploader(object):
                     # (and only) value in the dict.
                     upload = request.FILES.values()[0]
                 else:
-                    logger.error('ajaxuploader.views._ajax_upload: len(request.FILES) is not 1, but %d' % len(request.FILES))
+                    logger.error('len(request.FILES) is not 1, but %d' % len(request.FILES))
                     raise Http404("Bad Upload")
                 filename = upload.name
 
-            logger.info('ajaxuploader.views._ajax_upload: uploading file %s' % filename)
+            logger.info('uploading file %s' % filename)
 
             backend = self.get_backend()
             report_id = self.__extract_report_id(request)
             if not report_id:
-                logger.error('ajaxuploader.views._ajax_upload: no reportId')
+                logger.error('no reportId')
                 return HttpResponseBadRequest('No reportId')
-            logger.info('ajaxuploader.views._ajax_upload: report_id=%s' % report_id)
+            logger.info('report_id=%s' % report_id)
 
             res = backend.set_report_id(report_id)
             if not res:
-                logger.error('ajaxuploader.views._ajax_upload: no quast session')
+                logger.error('no quast session')
                 return HttpResponseBadRequest('No quast session, please reload the page')
 
             # custom filename handler
@@ -118,10 +118,10 @@ class AjaxFileUploader(object):
                         or filename)
             # save the file
             if not backend.setup(filename):
-                logger.error('ajaxuploader.views._ajax_upload: setup for %s failed' % filename)
+                logger.error('setup for %s failed' % filename)
                 return HttpResponseBadRequest('No quast session contigs directory, please reload the page')
             else:
-                logger.info('ajaxuploader.views._ajax_upload: setup for %s: success' % filename)
+                logger.info('setup for %s: success' % filename)
 
 
             success = backend.upload(upload, filename, is_raw)
@@ -195,7 +195,6 @@ class AjaxFileUploader(object):
 #            user_session = UserSession.objects.get(session_key=session_key)
 #        except UserSession.DoesNotExist:
 #            return HttpResponseBadRequest('Can not recognise session key')
-
 
         backend = self.get_backend()
         report_id = self.__extract_report_id(request)

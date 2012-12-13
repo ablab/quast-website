@@ -1,4 +1,3 @@
-from shutil import copytree
 import shutil
 import sys
 import os
@@ -35,7 +34,7 @@ logger = logging.getLogger('quast')
 
 
 @task()
-def start_quast((args, quast_session)):
+def start_quast((args, quast_session, user_session)):
     command = ' '.join(args)
     print '=' * 100
     print 'Command:', command
@@ -44,7 +43,6 @@ def start_quast((args, quast_session)):
 
     link = os.path.join(settings.REPORT_LINK_BASE, quast_session.link or quast_session.report_id)
 
-    from_email = 'quast.support@bioinf.spbau.ru'
     def send_result_mail(email, to_me, add_to_end='', fail=False):
         if email is None or email == '':
             return
@@ -56,25 +54,26 @@ def start_quast((args, quast_session)):
 
         if quast_session.caption:
             subject += ' (%s)' % quast_session.caption
-        elif quast_session.dataset:
-            subject += ' (data set: %s)' % quast_session.dataset.name
+        elif quast_session.data_set:
+            subject += ' (genome: %s)' % quast_session.data_set.name
 
         send_mail(
             subject = subject,
             message =
                 (quast_session.caption + '\n\n' if quast_session.caption else '') +
                 'http://quast.bioinf.spbau.ru' + link +
-                ('\n\nData set: ' + quast_session.dataset.name if quast_session.dataset else '') +
+                ('\n\nGenome: ' + quast_session.data_set.name if quast_session.data_set else '') +
                 ('\n\nComment: ' + quast_session.comment if quast_session.comment else '') +
+                '\n\n\nIn case of any problems, feel free to reply to this message' +
                 add_to_end,
-            from_email = from_email,
+            from_email = settings.SUPPORT_EMAIL,
             recipient_list = [email],
             fail_silently = True
         )
 
     my_email = 'vladsaveliev@me.com'
-    if quast_session.user_session.email:
-        user_email = quast_session.user_session.email
+    if quast_session.user:
+        user_email = quast_session.user.email
     else:
         user_email = ''
 
@@ -87,8 +86,9 @@ def start_quast((args, quast_session)):
 
     except Exception as e:
         trace_back = traceback.format_exc()
-        add_to_end = '\n\nUser email: ' + str(user_email) + \
-                     '\n\nSession key: ' + quast_session.user_session.session_key + \
+        add_to_end = '\n'+ \
+                     '\n\nUser email: ' + str(user_email) + \
+                     '\n\nSession key: ' + user_session.session_key + \
                      '\n\nArgs: ' + str(args) + \
                      '\n\nException: ' + str(e) + \
                      '\n\nTraceback: ' + str(trace_back)
@@ -98,8 +98,9 @@ def start_quast((args, quast_session)):
         raise e
 
     else:
-        add_to_end = '\n\nUser email: ' + user_email +\
-                     '\n\nSession key: ' + quast_session.user_session.session_key +\
+        add_to_end = '\n' + \
+                     '\n\nUser email: ' + user_email +\
+                     '\n\nSession key: ' + user_session.session_key +\
                      '\n\nArgs: ' + str(args)
 
         send_result_mail(my_email, to_me=True, add_to_end=add_to_end)
@@ -108,7 +109,7 @@ def start_quast((args, quast_session)):
         try:
             shutil.rmtree(quast_session.get_evaluation_contigs_dirpath())
         except Exception, e:
-            logger.error('start_quast: Error removing evaluation_contig dir:' + e.message)
+            logger.error('Error removing evaluation_contig dir:' + e.message)
 
         reload(quast)
         return result

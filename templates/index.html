@@ -36,7 +36,44 @@
         });
 
         $(function() {
-            $("#add-dataset-toggle-link").mouseenter(function() {
+            $('#login_link').click(function() {
+                $('#login_block').toggle('fast');
+            });
+
+            $('#authorize_submit').click(function() {
+                $('#login_error').hide();
+                $('#login_msg').hide();
+
+                var email = $('#email_input').val();
+                if (email == '') {
+                    $('#login_error').show();
+                    $('#email_input').focus();
+                }
+                $.ajax({
+                    type: 'GET',
+                    url: '{% url ask_password_link %}',
+                    dataType: 'text',
+                    data: 'email=' + email,
+                }).done(function(msg) {
+                    $('#login_msg').html(msg).show();
+  {#                $('#login_form').hide();#}
+  {#                $('#is_authorized_email').html(email);#}
+  {#                $('#is_authorized_div').show();#}
+                }).fail(function(msg) {
+                    $('#login_error').html(msg).show();
+                    $('#email_input').focus();
+                });
+                return false;
+            });
+
+            $('#is_authorized_email').click(function() {
+{#                $('#is_authorized_div').toggle();#}
+                $('#login_form').toggle('fast');
+            });
+        });
+
+        $(function() {
+            $("#add-data-set-toggle-link").mouseenter(function() {
                 $(this).find('.dotted-link').css('color', '#b33');
                 $(this).find('.dotted-link').css('border-bottom', '1px dashed #ffcccc');
                 $(this).find('.dotted-link').css('border-color', '1px dashed #ffcccc');
@@ -56,16 +93,16 @@
             {#            event.stopPropagation();#}
             {#        });#}
 
-            $('#add-dataset-toggle-link').click(function(event) {
+            $('#add-data-set-toggle-link').click(function(event) {
                 event.preventDefault();
 
                 var checkBox = $('#id_is_created');
-                var addDataset = $('#add-dataset');
+                var addDataSet = $('#add-data_set');
 
-                addDataset.stop().slideToggle('fast', function() {
+                addDataSet.stop().slideToggle('fast', function() {
                     $('#id_name_created').focus();
 
-                    if (addDataset.is(':visible')) {
+                    if (addDataSet.is(':visible')) {
                         checkBox.prop('checked', true);
                     } else {
                         checkBox.prop('checked', false);
@@ -262,19 +299,19 @@
             check();
         }
 
-    //        $('#add-dataset-wrapper').click(
-    //            $('#add-dataset-toggle-link').
+    //        $('#add-data_set-wrapper').click(
+    //            $('#add-data-set-toggle-link').
     //        );
 
 
 {#    function showHideAddDataset() {#}
-    {#            $('#add-dataset-toggle-link>a').#}
-{#        if ($('#add-dataset').is(':visible')) {#}
-{#            $('#add-dataset').hide('fast');#}
+    {#            $('#add-data-set-toggle-link>a').#}
+{#        if ($('#add-data_set').is(':visible')) {#}
+{#            $('#add-data_set').hide('fast');#}
 {#            $('#dataset-name-select-input').prop('disabled', false);#}
 {#            set_selected();#}
 {#        } else {#}
-{#            $('#add-dataset').show('fast');#}
+{#            $('#add-data_set').show('fast');#}
 {#            $('#dataset-name-select-input').prop('disabled', true);#}
 {#            set_created();#}
 {#        }#}
@@ -330,7 +367,7 @@
         {#            var nameSelectInput = $('#id_created'1);#}
         {#            var idCreatedOrSelected = $('id_created_or_selected');#}
 
-        {#            var addDataSet = $('#add-dataset');#}
+        {#            var addDataSet = $('#add-data_set');#}
         {#            if (addDataSet.is(':visible')) { //TODO: CHECK IT!!!!! Maybe needed to check display:none#}
         {#                nameSelectInput.prop('disabled', false);#}
         {#                idCreatedOrSelected.prop('value', 'selected');#}
@@ -374,7 +411,7 @@
                                         <li>genes and operons covered</li>
                                         <li><span class='smallcapitals'>GC</span> content</li>
                                     </ul>
-                                    <a class="dotted-link" id="report_example_anchor" href="#reportexample">Report example</a>
+                                    <a class="dotted-link js" id="report_example_anchor" href="#reportexample">Report example</a>
                                     <br>
                                     <br>
                                 </div>
@@ -391,7 +428,7 @@
                         <div class="span12" style='max-width: 300px; margin-top: 0px; margin-bottom: 30px;'>
                 {#        <div style="float: left; max-width: 300px; margin-top: -10px">#}
                             <p>
-                                <a href="https://sourceforge.net/projects/quast/files/" class='btn btn-primary btn-large' style='text-align: left;'>Download source code</a>
+                                <a href="https://sourceforge.net/projects/quast/files/" class='btn btn-primary btn-large' style='text-align: left; margin-left: 1px;'>Download source code</a>
                             </p>
                             <p>
                                 For installation details and usage instructions,
@@ -423,8 +460,6 @@
 {#            <a style="font-size: 2em;" href="evaluate">Quality Assessment</a>#}
 {#        </p>#}
 
-        <h2 style='font-size: 1.8em; font-weight: normal;'>Quality Assessment</h2>
-
         <noscript>
             <div><br>
                 Unfortunately, <span style="font-weight: bold">JavaScript</span> in your browser <span style="font-weight: bold">is disabled</span> or is not supported.</br>
@@ -435,6 +470,7 @@
         <table class="layout-table">
             <tr>
             <td class="layout-table-td layout-table-fst-td">
+                <h2 style='font-size: 1.8em; font-weight: normal;'>Quality Assessment</h2>
                 <div id='form-wrapper'>
                     <table class='form-layout-table'>
                         <tr>
@@ -449,17 +485,17 @@
                     </table>
                     <form enctype="multipart/form-data" name='eval_form' id="eval_form" action="/" method="POST">{% csrf_token %}
                         <div style="display: none;">
-                            {{ dataset_form.contigs }}
+                            {{ data_set_form.contigs }}
                         </div>
 
                         <div style="display: none;">
-                            {{ dataset_form.report_id }}
+                            {{ data_set_form.report_id }}
                         </div>
 
                         <label for="id_min_contig" tabindex="2">{% comment %}@declare id="id_min_contig"{% endcomment %}
                             Skip contigs shorter than
-                            <span style='font-size: 8px;'>{{ dataset_form.min_contig }} </span>bp<br>
-                            {{ dataset_form.min_contig.errors }}
+                            <span style='font-size: 8px;'>{{ data_set_form.min_contig }} </span>bp<br>
+                            {{ data_set_form.min_contig.errors }}
                         </label>
 
                         <br>
@@ -472,10 +508,10 @@
 
                                 <td class='form-layout-td'>{% comment %}@declare id="id_name_selected"{% endcomment %}
                                     <label for="id_name_selected">
-                                        {{ dataset_form.name_selected }}
+                                        {{ data_set_form.name_selected }}
                                     </label>
                                     <div style="display: none">
-                                        {{ dataset_form.name_selected.errors }}
+                                        {{ data_set_form.name_selected.errors }}
                                     </div>
 {#                                    <div id="unknown_data_set">#}
 {#                                        <label for="unknown_data_set_input">#}
@@ -490,12 +526,12 @@
                                 <td class='form-layout-td' style="padding-top: 9px;"></td>
 
                                 <td class='form-layout-td'>
-                                    <div id="add-dataset-toggle-link" style="margin-left: -15px; padding-left: 15px;">
+                                    <div id="add-data-set-toggle-link" style="margin-left: -15px; padding-left: 15px;">
                                         <div style="margin-left: 0px;">
                                             <label for="id_is_created">
                                                 <input type="checkbox" tabindex="4" class='dotted-link' name="is_created" id="id_is_created"/>
-    {#                                                {{ dataset_form.created_or_selected }}#}
-                                                <a class='dotted-link'>New data set</a>
+    {#                                                {{ data_set_form.created_or_selected }}#}
+                                                <a class='dotted-link'>Another genome</a>
                                             </label>
                                         </div>
                                     </div>
@@ -509,48 +545,48 @@
     {#                                            <option value="custom-dataset">Add dataset...</option>#}
     {#                                        </select>#}
     {#                                        <div style="clear: both"></div>#}
-                        <div id="add-dataset" style="display: none;">
+                        <div id="add-data_set" style="display: none;">
     {#                                                {% comment %}@declare id="id_name_created "{% endcomment %}#}
     {#                                                <label for='id_name_created'>Dataset name#}
-    {#                                                {{ dataset_form.name_created }}</label>#}
+    {#                                                {{ data_set_form.name_created }}</label>#}
     {#                                                {% comment %}@declare id="id_reference"{% endcomment %}#}
     {#                                                <label for='id_reference'>Reference<br/>#}
-    {#                                                {{ dataset_form.reference }}</label>#}
+    {#                                                {{ data_set_form.reference }}</label>#}
     {#                                                {% comment %}@declare id="id_genes"{% endcomment %}#}
     {#                                                <label for='id_genes'>Genes<br/>#}
-    {#                                                {{ dataset_form.genes }}</label>#}
+    {#                                                {{ data_set_form.genes }}</label>#}
     {#                                                {% comment %}@declare id="id_operons"{% endcomment %}#}
     {#                                                <label for='id_operons'>Operons<br/>#}
-    {#                                                {{ dataset_form.operons }}</label>#}
+    {#                                                {{ data_set_form.operons }}</label>#}
                             <table class='form-layout-table'>
                                 <tr>{% comment %}@declare id="id_name_created"{% endcomment %}
                                     <td class='form-layout-td'><label for='id_name_created'>Name</label></td>
-                                    <td class='form-layout-td'>{{ dataset_form.name_created }}<span style='font-size: 8px;'>&nbsp;</span><br>
+                                    <td class='form-layout-td'>{{ data_set_form.name_created }}<span style='font-size: 8px;'>&nbsp;</span><br>
                                         <div class="comment_to_field">We will remember the data set with this name, if you fill in this field.</div>
-                                        {{ dataset_form.name_created.errors }}
+                                        {{ data_set_form.name_created.errors }}
                                         <br>
                                     </td>
                                 </tr>
                                 <tr>{% comment %}@declare id="id_reference"{% endcomment %}
                                     <td class='form-layout-td'><label for='id_reference'>Reference</label></td>
-                                    <td class='form-layout-td'>{{ dataset_form.reference }}
-                                        {{ dataset_form.reference.errors }}
+                                    <td class='form-layout-td'>{{ data_set_form.reference }}
+                                        {{ data_set_form.reference.errors }}
                                         <div class="comment_to_field">FASTA file with the reference genome sequence.
                                         </div><br>
                                     </td>
                                 </tr>
                                 <tr>{% comment %}@declare id="id_genes"{% endcomment %}
                                     <td class='form-layout-td'><label for='id_genes'>Genes</label></td>
-                                    <td class='form-layout-td'>{{ dataset_form.genes }}
-                                        {{ dataset_form.genes.errors }}
+                                    <td class='form-layout-td'>{{ data_set_form.genes }}
+                                        {{ data_set_form.genes.errors }}
                                         <div class="comment_to_field">See <a href="http://quast.bioinf.spbau.ru/manual.html#sec2.2">manual</a> for file formats.
                                         </div><br>
                                     </td>
                                 </tr>
                                 <tr>{% comment %}@declare id="id_operons"{% endcomment %}
                                     <td class='form-layout-td'><label for='id_operons'>Operons</label></td>
-                                    <td class='form-layout-td'>{{ dataset_form.operons }}
-                                        {{ dataset_form.operons.errors }}
+                                    <td class='form-layout-td'>{{ data_set_form.operons }}
+                                        {{ data_set_form.operons.errors }}
                                         <div class="comment_to_field">See <a href="http://quast.bioinf.spbau.ru/manual.html#sec2.2">manual</a> for file formats.
                                         </div><br>
                                     </td>
@@ -562,37 +598,38 @@
                         <table class='form-layout-table'>
                             <tr>{% comment %}@declare id="id_caption"{% endcomment %}
                                 <td class='form-layout-td'><label for='id_caption'>Caption</label></td>
-                                <td class='form-layout-td'>{{ dataset_form.caption }}
-                                    <br>
-                                </td>
-                            </tr>
-                            <tr>{% comment %}@declare id="id_comment"{% endcomment %}
-                                <td class='form-layout-td'><label for='id_comment'>Comment</label></td>
-                                <td class='form-layout-td'>{{ dataset_form.comment }}
+                                <td class='form-layout-td'>{{ data_set_form.caption }}
                                     <div class="comment_to_field">Will appear in the report.
                                     </div><br>
                                 </td>
                             </tr>
-                            <tr>{% comment %}@declare id="id_email"{% endcomment %}
-                                <td class='form-layout-td'><label for='id_email'>Email</label></td>
-                                <td class='form-layout-td'>{{ dataset_form.email }}
-                                    <br>
-                                    <div class="comment_to_field">
-                                        If you provide an email address, we will notify you when the report is ready.<br>
-                                        <div style="height: 5px;"></div>
-                                        We will also contact you if there is a problem in running the assessment.<br>
-                                        <div style="height: 5px;"></div>
-                                        If you do not receive a notification, please check your junk mail folder.<br>
-                                    </div>
-                                    <br>
-                                    <br>
-                                </td>
-                            </tr>
+{#                            <tr>{% comment %}@declare id="id_comment"{% endcomment %}#}
+{#                                <td class='form-layout-td'><label for='id_comment'>Comment</label></td>#}
+{#                                <td class='form-layout-td'>{{ data_set_form.comment }}#}
+{#                                    <div class="comment_to_field">Will appear in the report.#}
+{#                                    </div><br>#}
+{#                                </td>#}
+{#                            </tr>#}
+{#                            <tr>{% comment %}@declare id="id_email"{% endcomment %}#}
+{#                                <td class='form-layout-td'><label for='id_email'>Email</label></td>#}
+{#                                <td class='form-layout-td'>{{ data_set_form.email }}#}
+{#                                    <br>#}
+{#                                    <div class="comment_to_field">#}
+{#                                        If you provide an email address, we will notify you when the report is ready.<br>#}
+{#                                        <div style="height: 5px;"></div>#}
+{#                                        We will also contact you if there is a problem in running the assessment.<br>#}
+{#                                        <div style="height: 5px;"></div>#}
+{#                                        If you do not receive a notification, please check your junk mail folder.<br>#}
+{#                                    </div>#}
+{#                                    <br>#}
+{#                                    <br>#}
+{#                                </td>#}
+{#                            </tr>#}
                         </table>
 
                         <div class="submit-wrapper">
                             <div id='errors-wrapper' style="display: block">
-                                {{ dataset_form.non_field_errors }}
+                                {{ data_set_form.non_field_errors }}
                             </div>
 
                             <div id="evaluate-button-wrapper">
@@ -621,19 +658,52 @@
             </td>
             <td class="layout-table-td layout-table-snd-td">
                 <div id="latest_reports" style="margin-left: 0px; margin-top: 10px;">
+{#                    <div style="margin-top: 25px; margin-left: -2px; margin-bottom: 5px;">#}
+{#                        <a class="dotted-link js" id="login_link">Log in</a>#}
+{#                    </div>#}
+
+                    <div id="login_block" style="display: block; margin-top: 25px; margin-bottom: 30px;">
+                        <div id="is_authorized_div"
+                             style="display: {% if not is_authorized %}none{% else %}block{% endif %};
+                                     margin-left: -2px; margin-bottom: 5px;">
+                            <a class="dotted-link js" id="is_authorized_email">{{ email }}</a>
+                        </div>
+
+                        <form id="login_form"
+                              style="display: {% if is_authorized %}none{% else %}block{% endif %};
+                                     margin-bottom: 20px;">
+
+                            <label for="email_input" style="margin-left: -41px;">Email:</label>
+                            <input type="text" name="email" id="email_input" style="width: 200px;">
+                            <input type="submit" value="Log in" id="authorize_submit">
+                            <br>
+                            <span id="login_error" style="color: red; display: none;"></span>
+                            <span id="login_msg" style="display: none;"></span>
+                            <br>
+                            <div class="comment_to_field"
+                                 style="display: {% if is_authorized %}none{% else %}block{% endif %};
+                                        margin-left: -2px; width: 220px;">
+                                When you authorize with this address later, you will see your data sets and reports.<br>
+                                <div style="height: 5px;"></div>
+                                We will also notify you when a report is ready and contact you if there is a problem in running the assessment.<br>
+                                <div style="height: 5px;"></div>
+                                If you do not receive a notification, please check your junk mail folder.<br>
+                            </div>
+                        </form>
+                    </div>
+
+                    {% if quast_sessions|length > 0 %}
                     <table style="margin-left: -5px;">
-                        {% if quast_sessions %}
                         <tr>
 {#                            <td class='form-layout-td' style="padding: 0px; padding-right: 0px; vertical-align: top;">#}
 {#                                <h3 style="margin-top: 3px; ">Reports&nbsp;&nbsp;</h3>#}
 {#                            </td>#}
-                        {% endif %}
 {#                            <div style="float: left; margin: -12px 25px 0 0;">#}
 {##}
 {#                            </div>#}
                             <td>
-                                <h3 style="margin-top: 3px; margin-left: 0px;"><a href="/reports/">Reports</a></h3>
-                                <table style="margin-top: -5px;" class='table_reports'>
+                                <h3 style="margin-top: 0px; margin-left: 0px;"><a href="/reports/">Reports</a></h3>
+                                <div style="margin-top: -5px;" class='blocks_reports'>
 {#                                    <tr>#}
 {#                                        {% if quast_sessions %}#}
 {#                                        <td>#}
@@ -644,13 +714,14 @@
                                     {% for quast_session in quast_sessions %}
 {#                                    <tr class='highlighted_tr'>#}
 
-                                    <tr{% if highlight_last and forloop.counter == 1 %} class='highlighted_tr' style="display: none;"{% endif %}>
+                                    <div{% if highlight_last and forloop.counter == 1 %} class='highlighted_tr report_block' style="display: none;"
+                                    {% else %} class='report_block'{% endif %}>
 {#                                    <tr>#}
-                                        <td style="vertical-align: top;">
-                                            <span></span>
-                                        </td>
+{#                                        <td style="vertical-align: top;">#}
+{#                                            <span></span>#}
+{#                                        </td>#}
 
-                                        <td>
+                                        <div style="float: left;">
                                             <div>
                                                 {% if quast_session.state != 'FAILURE' %}
                                                 <a href="{{ quast_session.report_link }}">{{ quast_session.date|date:'d M Y, H:i:s' }}</a>
@@ -664,9 +735,9 @@
                                                 {{ quast_session.caption|truncatechars:100 }}
                                             </div>
                                             {% endif %}
-                                            {% if quast_session.dataset_name %}
+                                            {% if quast_session.data_set_name %}
                                             <div>
-                                                Genome: {{ quast_session.dataset_name|truncatechars:100 }}
+                                                Genome: {{ quast_session.data_set_name|truncatechars:100 }}
                                             </div>
                                             {% endif %}
 
@@ -684,27 +755,30 @@
                                             {% elif quast_session.state == 'FAILURE' %}
                                                 <div><span class="state_failure">failed</span></div>
                                             {% endif %}
-                                        </td>
+                                        </div>
 {#                                        <td>#}
-{#                                            {% if quast_session.with_dataset %}<span>{{ quast_session.dataset_name }}</span>{% endif %}#}
+{#                                            {% if quast_session.with_data_set %}<span>{{ quast_session.dataset_name }}</span>{% endif %}#}
 {#                                        </td>#}
 {#                                        </td>#}
 {#                                        <td>#}
 {#                                            {% if quast_session.caption %}{{ quast_session.caption|truncatechars:50 }}{% endif %}#}
 {#                                        </td>#}
-                                    </tr>
+                                    </div>
                                     {% endfor %}
 {#                                    {% if show_more_link %}#}
 {#                                        <tr><td></td></tr>#}
 {#                                        <tr><td><a href="/reports/">Older reports</a></td></tr>#}
 {#                                    {% endif %}#}
-                                    <tr>
-                                        <td>&nbsp;</td>
-                                    </tr>
-                                </table>
+{#                                    <tr>#}
+{#                                        <td>&nbsp;</td>#}
+{#                                    </tr>#}
+
+                                    <div style="clear: both;"></div>
+                                </div>
                             </td>
                         </tr>
                     </table>
+                    {% endif %}
                     <div style="clear: both;"></div>
                 </div>
             </td>
@@ -721,8 +795,8 @@
 
          {# anchor #}
         <span id="reportexample"></span>
-        <h2><a class='dotted-link' id='report_example_toggle' href="#reportexample" tabindex="10">Report Example</a></h2>
-        <p class='full-report'>Comparison of 4 different E. coli assemblies with one dataset.</p>
+        <h2><a class='dotted-link js' id='report_example_toggle' href="#reportexample" tabindex="10">Report Example</a></h2>
+        <p class='full-report'>Comparison of 4 different E. coli assemblies with one data set.</p>
         <div id="extended_link" class='full-report'></div>
     </div>
 

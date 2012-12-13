@@ -79,6 +79,20 @@ body {
     border: 0px;
 }
 
+#login_link {
+    color: #0099C5;
+    text-shadow: none;
+    border-bottom: 1px dashed #0077B5;
+    /*border-color: #487b95;*/
+    /*border-color: rgba(12, 79, 114, 1);*/
+}
+#login_link:hover {
+    text-decoration: none;
+    color: #b33 !important;
+    border-bottom: 1px dashed #b33 !important;
+}
+
+
 /*{#    .menu {#}*/
 /*{#        margin: 0 0 0 100px;#}*/
 /*{#        padding: 1em 20px 2.3em 0;#}*/

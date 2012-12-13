@@ -8,36 +8,14 @@ from django.db import models
 class Migration(SchemaMigration):
 
     def forwards(self, orm):
-        # Deleting field 'QuastSession.min_contig'
-        db.delete_column('quast_app_quastsession', 'min_contig')
+        # Adding unique constraint on 'UserSession', fields ['session_key']
+        db.create_unique('quast_app_usersession', ['session_key'])
 
-        # Adding field 'QuastSession.link'
-        db.add_column('quast_app_quastsession', 'link',
-                      self.gf('django.db.models.fields.CharField')(max_length=2048, null=True, blank=True),
-                      keep_default=False)
-
-
-        # Changing field 'QuastSession.report_id'
-        db.alter_column('quast_app_quastsession', 'report_id', self.gf('django.db.models.fields.CharField')(unique=True, max_length=256))
-
-        # Changing field 'Dataset.dirname'
-        db.alter_column('quast_app_dataset', 'dirname', self.gf('autoslug.fields.AutoSlugField')(unique=True, max_length=50, populate_from='name', unique_with=()))
 
     def backwards(self, orm):
-        # Adding field 'QuastSession.min_contig'
-        db.add_column('quast_app_quastsession', 'min_contig',
-                      self.gf('django.db.models.fields.IntegerField')(null=True, blank=True),
-                      keep_default=False)
+        # Removing unique constraint on 'UserSession', fields ['session_key']
+        db.delete_unique('quast_app_usersession', ['session_key'])
 
-        # Deleting field 'QuastSession.link'
-        db.delete_column('quast_app_quastsession', 'link')
-
-
-        # Changing field 'QuastSession.report_id'
-        db.alter_column('quast_app_quastsession', 'report_id', self.gf('autoslug.fields.AutoSlugField')(max_length=50, unique_with=(), unique=True, populate_from=None))
-
-        # Changing field 'Dataset.dirname'
-        db.alter_column('quast_app_dataset', 'dirname', self.gf('autoslug.fields.AutoSlugField')(max_length=50, unique_with=(), unique=True, populate_from=None))
 
     models = {
         'quast_app.contigsfile': {
@@ -82,7 +60,9 @@ class Migration(SchemaMigration):
             'email': ('django.db.models.fields.EmailField', [], {'max_length': '75', 'null': 'True', 'blank': 'True'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'input_dirname': ('django.db.models.fields.CharField', [], {'max_length': '2048'}),
-            'session_key': ('django.db.models.fields.CharField', [], {'max_length': '256'})
+            'is_authorised': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
+            'password': ('django.db.models.fields.CharField', [], {'max_length': '256', 'null': 'True', 'blank': 'True'}),
+            'session_key': ('django.db.models.fields.CharField', [], {'unique': 'True', 'max_length': '256'})
         }
     }
 

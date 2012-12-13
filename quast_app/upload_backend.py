@@ -22,16 +22,16 @@ class MyBaseUploadBackend(AbstractUploadBackend):
             self.quast_session = QuastSession.objects.get(report_id=self.report_id)
             return True
         except QuastSession.DoesNotExist:
-            logger.error('uploader_backend.set_report_id: No quast session with report_id=%s' % self.report_id)
+            logger.error('No quast session with report_id=%s' % self.report_id)
             return False
 
     def setup(self, filename):
         dirpath = self.quast_session.get_contigs_dirpath()
-        logger.info('uploader_backend.setup: filename is %s' % filename)
-        logger.info('uploader_backend.setup: contigs dirpath is %s' % dirpath)
+        logger.info('filename is %s' % filename)
+        logger.info('contigs dirpath is %s' % dirpath)
 
         if not os.path.exists(dirpath):
-            logger.error('uploader_backend.setup: contigs directory doesn\'t exist')
+            logger.error('contigs directory doesn\'t exist')
             return False
 
         fpath = os.path.join(dirpath, filename)
@@ -52,7 +52,7 @@ class MyBaseUploadBackend(AbstractUploadBackend):
         qc = QuastSession_ContigsFile(contigs_file=c_fn, quast_session=self.quast_session)
         qc.save()
 
-        logger.info('uploader_backend.upload_complete: %s' % filename)
+        logger.info('%s' % filename)
 
         return {
             'file_index': file_index,
@@ -60,10 +60,10 @@ class MyBaseUploadBackend(AbstractUploadBackend):
 
     def update_filename(self, request, filename):
         dirpath = self.quast_session.get_contigs_dirpath()
-        logger.info('uploader_backend.update_filename: contigs dirpath is %s' % dirpath)
+        logger.info('contigs dirpath is %s' % dirpath)
 
         fpath = os.path.join(dirpath, filename)
-        logger.info('uploader_backend.update_filename: file path is %s' % fpath)
+        logger.info('file path is %s' % fpath)
 
         i = 2
         base_fpath = fpath
@@ -77,21 +77,21 @@ class MyBaseUploadBackend(AbstractUploadBackend):
 
     def remove(self, request):
         if 'fileIndex' not in request.GET:
-            logger.error('uploader_backend.remove: Request.GET must contain "fileIndex"')
+            logger.error('Request.GET must contain "fileIndex"')
             return False, 'Request.GET must contain "fileIndex"'
 
         file_index = request.GET['fileIndex']
         try:
             contigs_file = self.quast_session.contigs_files.get(file_index=file_index)
         except ContigsFile.DoesNotExist:
-            logger.error('uploader_backend.remove: No file with such index %d in this quast_session' % file_index)
+            logger.error('No file with such index %d in this quast_session' % file_index)
             return False, 'No file with such index'
 
         success, msg = self.__remove(contigs_file)
         return success, msg
 
 #        if contigs_file.user_session != self.user_session:
-#            logger.error('uploader_backend.remove: This file (%s) belongs to session %s, this session is %s'
+#            logger.error('This file (%s) belongs to session %s, this session is %s'
 #                         % (fname, str(contigs_file.user_session ), str(self.user_session.session_key)))
 #            return False, 'This file does not belong to this session'
 
@@ -105,16 +105,16 @@ class MyBaseUploadBackend(AbstractUploadBackend):
             try:
                 os.remove(contigs_fpath)
             except IOError as e:
-                logger.error('uploader_backend.__remove: IOError when removing "%s", fileIndex=%d": %s' % (fname, file_index, e.message))
+                logger.error('IOError when removing "%s", fileIndex=%d": %s' % (fname, file_index, e.message))
                 return False, 'Cannot remove file'
 
         try:
             contigs_file.delete()
         except DatabaseError as e:
-            logger.warn('uploader_backend.__remove: DatabaseError when removing "%s", fileIndex=%d: %s' % (fname, file_index, e.message))
+            logger.warn('DatabaseError when removing "%s", fileIndex=%d: %s' % (fname, file_index, e.message))
             return False, 'Data base error when removing file'
         except Exception as e:
-            logger.error('uploader_backend.__remove: Exception when removing "%s", fileIndex=%d: %s' % (fname, file_index, e.message))
+            logger.error('Exception when removing "%s", fileIndex=%d: %s' % (fname, file_index, e.message))
             return False, 'Data base exception when removing file'
 
         return True, ''

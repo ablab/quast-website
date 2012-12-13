@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("#add-dataset-toggle-link").mouseenter(function() {
+    $("#add-data-set-toggle-link").mouseenter(function() {
         $(this).find('a').css('color', '#b33');
         $(this).find('a').css('border-bottom', '1px dashed #ffcccc');
         $(this).find('a').css('border-color', '1px dashed #ffcccc');
@@ -122,17 +122,17 @@ $(function() {
     }
 });
 
-//        $('#add-dataset-wrapper').click(
-//            $('#add-dataset-toggle-link').
+//        $('#add-data_set-wrapper').click(
+//            $('#add-data-set-toggle-link').
 //        );
 
 function showHideAddDataset() {
-    if ($('#add-dataset').is(':visible')) {
-        $('#add-dataset').hide('fast');
+    if ($('#add-data_set').is(':visible')) {
+        $('#add-data_set').hide('fast');
         $('#dataset-name-select-input').prop('disabled', false);
         set_selected();
     } else {
-        $('#add-dataset').show('fast');
+        $('#add-data_set').show('fast');
         $('#dataset-name-select-input').prop('disabled', true);
         set_created();
     }

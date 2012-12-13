@@ -15,7 +15,7 @@
 
     <script>
         $(document).ready(function() {
-            $("#add-dataset-toggle-link").mouseenter(function() {
+            $("#add-data-set-toggle-link").mouseenter(function() {
                 $(this).find('a').css('color', '#b33');
                 $(this).find('a').css('border-bottom', '1px dashed #ffcccc');
                 $(this).find('a').css('border-color', '1px dashed #ffcccc');
@@ -138,18 +138,18 @@
             }
         });
 
-//        $('#add-dataset-wrapper').click(
-//            $('#add-dataset-toggle-link').
+//        $('#add-data_set-wrapper').click(
+//            $('#add-data-set-toggle-link').
 //        );
 
         function showHideAddDataset() {
-{#            $('#add-dataset-toggle-link>a').#}
-            if ($('#add-dataset').is(':visible')) {
-                $('#add-dataset').hide('fast');
+{#            $('#add-data-set-toggle-link>a').#}
+            if ($('#add-data_set').is(':visible')) {
+                $('#add-data_set').hide('fast');
                 $('#dataset-name-select-input').prop('disabled', false);
                 set_selected();
             } else {
-                $('#add-dataset').show('fast');
+                $('#add-data_set').show('fast');
                 $('#dataset-name-select-input').prop('disabled', true);
                 set_created();
             }
@@ -182,18 +182,18 @@
         <form enctype="multipart/form-data" action="/evaluate/" method="POST">{% csrf_token %}
             {% comment %}@declare id="id_name_selected"{% endcomment %}
             <label for="id_min_contig">{% comment %}@declare id="id_min_contig"{% endcomment %}
-                Skip contigs shorter than {{ dataset_form.min_contig }}<span style='font-size: 8px;'> </span>bp<br>
-                {{ dataset_form.min_contig.errors }}
+                Skip contigs shorter than {{ data_set_form.min_contig }}<span style='font-size: 8px;'> </span>bp<br>
+                {{ data_set_form.min_contig.errors }}
             </label>
             <br>
             <label for="id_name_selected">
                 Data set<br/>
-                {{ dataset_form.name_selected }}
+                {{ data_set_form.name_selected }}
             </label>
             <br>
             <div id='created-or-selected-wrapper' style="display: none">
-                {{ dataset_form.created_or_selected }}
-                {{ dataset_form.name_selected.errors }}
+                {{ data_set_form.created_or_selected }}
+                {{ data_set_form.name_selected.errors }}
             </div>
             <br/>
 
@@ -205,49 +205,49 @@
 {#            </select>#}
 {#            <div style="clear: both"></div>#}
 
-            <div id="add-dataset-wrapper">
-                <div id="add-dataset-toggle-link"
+            <div id="add-data_set-wrapper">
+                <div id="add-data-set-toggle-link"
                      onclick="showHideAddDataset()">
                     <a class='dotted-link'>Another data set</a>
                 </div>
-                <div id="add-dataset" style="display: none;">
+                <div id="add-data_set" style="display: none;">
                     <br/>
 {#                    {% comment %}@declare id="id_name_created "{% endcomment %}#}
 {#                    <label for='id_name_created'>Dataset name#}
-{#                    {{ dataset_form.name_created }}</label>#}
+{#                    {{ data_set_form.name_created }}</label>#}
 {#                    {% comment %}@declare id="id_reference"{% endcomment %}#}
 {#                    <label for='id_reference'>Reference<br/>#}
-{#                    {{ dataset_form.reference }}</label>#}
+{#                    {{ data_set_form.reference }}</label>#}
 {#                    {% comment %}@declare id="id_genes"{% endcomment %}#}
 {#                    <label for='id_genes'>Genes<br/>#}
-{#                    {{ dataset_form.genes }}</label>#}
+{#                    {{ data_set_form.genes }}</label>#}
 {#                    {% comment %}@declare id="id_operons"{% endcomment %}#}
 {#                    <label for='id_operons'>Operons<br/>#}
-{#                    {{ dataset_form.operons }}</label>#}
+{#                    {{ data_set_form.operons }}</label>#}
                   <table class='form_table'>
                       <tr>{% comment %}@declare id="id_name_created"{% endcomment %}
                           <td><label for='id_name_created'>Data set name</label></td>
-                          <td>{{ dataset_form.name_created }}<span style='font-size: 8px;'>&nbsp;</span><br>
+                          <td>{{ data_set_form.name_created }}<span style='font-size: 8px;'>&nbsp;</span><br>
                               If you fill the name field, we will remember this data set
-                              {{ dataset_form.name_created.errors }}
+                              {{ data_set_form.name_created.errors }}
                           </td>
                       </tr>
                       <tr>{% comment %}@declare id="id_reference"{% endcomment %}
                           <td><label for='id_reference'>Reference</label></td>
-                          <td>{{ dataset_form.reference }}
-                              {{ dataset_form.reference.errors }}
+                          <td>{{ data_set_form.reference }}
+                              {{ data_set_form.reference.errors }}
                           </td>
                       </tr>
                       <tr>{% comment %}@declare id="id_genes"{% endcomment %}
                           <td><label for='id_genes'>Genes</label></td>
-                          <td>{{ dataset_form.genes }}
-                              {{ dataset_form.genes.errors }}
+                          <td>{{ data_set_form.genes }}
+                              {{ data_set_form.genes.errors }}
                           </td>
                       </tr>
                       <tr>{% comment %}@declare id="id_operons"{% endcomment %}
                           <td><label for='id_operons'>Operons</label></td>
-                          <td>{{ dataset_form.operons }}
-                              {{ dataset_form.operons.errors }}
+                          <td>{{ data_set_form.operons }}
+                              {{ data_set_form.operons.errors }}
                           </td>
                       </tr>
                   </table>
@@ -256,7 +256,7 @@
 
             <div class="submit-wrapper">
                 <div id='errors-wrapper' style="display: block">
-                    {{ dataset_form.non_field_errors }}
+                    {{ data_set_form.non_field_errors }}
                 </div>
 
                 <div style="float: left; margin-right: 10px; margin-top: 7px; margin-left: -2px;">

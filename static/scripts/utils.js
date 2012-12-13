@@ -182,7 +182,7 @@ function addTooltipIfDefinitionExists(glossary, string, dictKey) {
         dictKey = string;
     }
     if (glossary.hasOwnProperty(dictKey)) {
-        return '<a class="tooltip-link" href="#" rel="tooltip" title="' +
+        return '<a class="tooltip-link" rel="tooltip" title="' +
             dictKey + ' ' + glossary[dictKey] + '">' + string + '</a>';
     } else {
         return string;

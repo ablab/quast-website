@@ -44,25 +44,31 @@
     <div id='header'>
         <br><br>
 
-        <table style='width: 783px; margin: -4px;'>
+        <table style='margin: -4px;'>
             <tr>
-                <td style="text-align: left; vertical-align: top;">
+                <td style="width: 500px; text-align: left; vertical-align: top;">
                     <h1 id="header_element">{% block header %}{% endblock %}</h1>
+                    {% if data_set_name %}<p id="dataset_name_p">Genome: {{ data_set_name }}</p>{% endif %}
+                    {% if comment %}<p id="comment_p">Comment: {{ comment }}</p>{% endif %}
+                    <p id='subheader'>Loading...</p>
+                    <p id='mincontig'></p>
                 </td>
-                <td style="text-align: right;">
-                    {% if download %}
+                {% if download %}
+                <td style="text-align: left;">
                     <a class='btn' style="margin-top: 20px;" id="download_report" href="{{ downloadLink }}">
                         Download report
                     </a>
-                    {% endif %}
+                    <p style="text-align: left;">
+                        Additionally tables and plots in Latex, <br>
+                        PDF and simple text.<br>
+                        <div class='small_line_indent'></div>
+                        Detailed contigs and genome statistics.
+                    </p>
                 </td>
+                {% endif %}
             </tr>
         </table>
 
-        {% if data_set_name %}<p id="dataset_name_p">Genome: {{ data_set_name }}</p>{% endif %}
-        {% if comment %}<p id="comment_p">Comment: {{ comment }}</p>{% endif %}
-        <p id='subheader'>Loading...</p>
-        <p id='mincontig'></p>
         <br><br>
         <span id="extended_link"></span>
     </div>
