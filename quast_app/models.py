@@ -99,7 +99,8 @@ class UserSession(models.Model):
 
         user_session = UserSession(
             session_key=session_key,
-            input_dirname=session_key)
+            input_dirname=session_key
+        )
 
         # input_dirpath = os.path.join(settings.INPUT_ROOT_DIRPATH, user_session.input_dirname)
         # if os.path.isdir(input_dirpath):

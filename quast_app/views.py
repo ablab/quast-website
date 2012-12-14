@@ -77,12 +77,12 @@ def ecoli(request):
 
 
 def index(request):
-    user_session = get_session(request.session, 'index')
+    user_session = get_session(request, 'index')
     return index_view(user_session, template_args_by_default, request)
 
 
 def report(request, link):
-    user_session = get_session(request.session, 'report')
+    user_session = get_session(request, 'report')
     return report_view(user_session, template_args_by_default, request, link)
 
 
@@ -91,22 +91,34 @@ def download_report(request, link):
 
 
 def reports(request):
-    user_session = get_session(request.session, 'reports')
+    user_session = get_session(request, 'reports')
     return reports_view(user_session, template_args_by_default, request)
 
 
-def get_session(session, page):
-    # User session
-    session_key = session.session_key
+def get_session(request, page):
+    session_key = request.COOKIES.get(settings.SESSION_COOKIE_NAME, None)
+    logger.info('request.COOKIES.get(settings.SESSION_COOKIE_NAME, None) = %s', session_key)
+
+    session_key = request.session.session_key
     logger.info('Somebody opened %s with request.session.session_key = %s'
                 % (page, session_key))
+
+    if not session_key:
+        from django.utils.crypto import get_random_string
+        session_key = get_random_string(
+            length=20,
+            allowed_chars='abcdefghjkmnpqrstuvwxyz'
+                          'ABCDEFGHJKLMNPQRSTUVWXYZ'
+                          '123456789'
+        )
+        logger.warn('session_key is None. Generating new one: %s', session_key)
 
     tries = 10
     for i in range(tries):
         try:
-            if not session.exists(session.session_key):
-                session.create()
-            break
+            if not request.session.exists(session_key):
+                request.session.create()
+                break
         except DatabaseError as e:
             if i < tries - 1:
                 logger.warn('Database is locked, try #%d' % i)
