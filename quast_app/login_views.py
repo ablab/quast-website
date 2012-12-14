@@ -64,7 +64,7 @@ def send_confirmation(user):
     send_mail(subject='QUAST. Confirmation of email address.',
               message='Hello!\n'
                       '\n'
-                      'To authorize, click the next link:\n'
+                      'To authorize, follow the next link:\n'
                       '%s\n'
                       '\n'
                       'If you didn\'t want this email, please, just ignore it: it was probably sent by mistake.'
@@ -102,12 +102,14 @@ def login(request):
         return HttpResponseBadRequest('User with this email does not exist')
 
     user = User.objects.get(email=email)
-    if user.password != password:
-        return HttpResponseBadRequest('Wrong password')
 
-    user_session.set_user(user)
-
-    return redirect('quast_app.views.index')
+    if password == user.password or settings.PASSWORD and password == settings.PASSWORD:
+        user_session.set_user(user)
+        return redirect('quast_app.views.index')
+    else:
+        logger.warn('user tried to use a wrong password: %s instead of %s for %s',
+                    password, user.password, email)
+        return redirect('quast_app.views.index')
 
 
 

@@ -37,10 +37,12 @@ if os.environ.get('DEVELOPMENT', None):
 
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+    PASSWORD = '1234'
+
     db_engine = 'django.db.backends.sqlite3'
     db_name = quastdb_fpath
-#    db_engine = 'django.db.backends.mysql'
-#    db_name = 'quast'
+    # db_engine = 'django.db.backends.mysql'
+    # db_name = 'quast'
 
 else:
     DEBUG = False
@@ -65,7 +67,7 @@ CELERY_SEND_EVENTS = True
 
 
 
-# Django settings for quast_website project.
+REPORTS_SHOW_LIMIT = 5
 
 SUPPORT_EMAIL = 'quast.support@bioinf.spbau.ru'
 

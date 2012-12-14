@@ -41,27 +41,34 @@
             });
 
             $('#authorize_submit').click(function() {
-                $('#login_error').hide();
-                $('#login_msg').hide();
+                var login_error = $('#login_error'),
+                    login_msg   = $('#login_msg'),
+                    email_input = $('#email_input');
 
-                var email = $('#email_input').val();
+                login_error.hide();
+                login_msg.hide();
+
+                var email = email_input.val();
                 if (email == '') {
-                    $('#login_error').show();
-                    $('#email_input').focus();
+                    login_error.show();
+                    email_input.focus();
                 }
                 $.ajax({
                     type: 'GET',
                     url: '{% url ask_password_link %}',
                     dataType: 'text',
                     data: 'email=' + email,
+
                 }).done(function(msg) {
-                    $('#login_msg').html(msg).show();
-  {#                $('#login_form').hide();#}
-  {#                $('#is_authorized_email').html(email);#}
-  {#                $('#is_authorized_div').show();#}
-                }).fail(function(msg) {
-                    $('#login_error').html(msg.responseText).show();
-                    $('#email_input').focus();
+                    login_msg.html(msg).show();
+
+                }).fail(function(xhr) {
+                    var msg = 'Error. Try reloading page.';
+                    if (xhr.status && xhr.status == 400) {
+                        msg = xhr.responseText;
+                    }
+                    login_error.html(msg).show();
+                    email_input.focus();
                 });
                 return false;
             });
@@ -707,60 +714,81 @@
 {##}
 {#                            </div>#}
                             <td>
-                                <h3 style="margin-top: 0px; margin-left: 0px;"><a href="/reports/">Reports</a></h3>
-                                <div style="margin-top: -5px;" class='blocks_reports'>
-{#                                    <tr>#}
-{#                                        {% if quast_sessions %}#}
-{#                                        <td>#}
-{#                                            <h3 style="margin-top: -40px;">Reports</h3>#}
-{#                                        </td>#}
-{#                                        {% endif %}#}
-{#                                    </tr>#}
+                                <table id='table_reports' style="margin-top: -5px;">
+                                    {% if quast_sessions %}
+                                    <tr class='reports_header_tr'>
+                                        <td>
+                                            <span style="font-size: 1.2em;"><a href="/reports/">Reports</a></span>
+                                        </td>
+                                        <td>
+                                            Genome
+                                        </td>
+                                        <td>
+                                            Contigs
+                                        </td>
+                                    </tr>
+
+                                    <tr class='reports_line_tr'>
+                                        <td colspan="3" style="border-top: 1px solid #bbb;"></td>
+                                    </tr>
+                                    {% endif %}
+
                                     {% for quast_session in quast_sessions %}
-{#                                    <tr class='highlighted_tr'>#}
-
-                                    <div{% if highlight_last and forloop.counter == 1 %} class='highlighted_tr report_block' style="display: none;"
-                                    {% else %} class='report_block'{% endif %}>
-{#                                    <tr>#}
-{#                                        <td style="vertical-align: top;">#}
-{#                                            <span></span>#}
-{#                                        </td>#}
-
-                                        <div style="float: left;">
+                                    <tr{% if highlight_last and forloop.counter == 1 %} class='highlighted_tr' style="display: none;"
+                                        {% else %} class=''{% endif %}>
+                                        <td class='caption_td wrapword' style="width: 170px;">
                                             <div>
-                                                {% if quast_session.state != 'FAILURE' %}
-                                                <a href="{{ quast_session.report_link }}">{{ quast_session.date|date:'d M Y, H:i:s' }}</a>
-                                                {% else %}
-                                                {{ quast_session.date|date:'d M Y, H:i:s' }}
+                                                <div>
+{#                                                    <div style="width: 40px; float: left;">#}
+{#                                                    </div>#}
+                                                    <a href="{{ quast_session.report_link }}">
+                                                        {% if quast_session.caption %}
+                                                            {{ quast_session.caption|truncatewords:20|truncatechars:200 }}
+                                                        {% else %}
+                                                            {{ quast_session.date|date:'d M Y, H:i' }}
+                                                        {% endif %}
+                                                    </a>
+                                                </div>
+
+                                                {% if quast_session.caption %}
+                                                    <div style="margin-top: 3px;">
+                                                        {{ quast_session.date|date:'d M Y, H:i' }}
+                                                    </div>
+                                                {% endif %}
+
+                                                {% if quast_session.state == 'PENDING' %}
+                                                    <div style="margin-top: 3px;"><span class="state_pending">in progress</span></div>
+                                                {% elif quast_session.state == 'FAILURE' %}
+                                                    <div style="margin-top: 3px;"><span class="state_failure">failed</span></div>
                                                 {% endif %}
                                             </div>
 
-                                            {% if quast_session.caption %}
-                                            <div>
-                                                {{ quast_session.caption|truncatechars:100 }}
-                                            </div>
-                                            {% endif %}
-                                            {% if quast_session.data_set_name %}
-                                            <div>
-                                                Genome: {{ quast_session.data_set_name|truncatechars:100 }}
-                                            </div>
-                                            {% endif %}
-
+                                        </td>
+                                        <td class='contigs_td wrapword'>
                                             {% if quast_session.contigs %}
-                                            <div>
-                                                Contigs:<br>
-                                                {% for contig in quast_session.contigs %}
-                                                    <span style="margin-left: 10px;">{{ contig }}</span><br>
-                                                {% endfor %}
-                                            </div>
+                                                <div>
+                                                    {#                                                            <div style="clear: both"></div>#}
+                                                    {#                                                            <div style="float: left; width: 70px;">Contigs:</div>#}
+                                                    {#                                                            <div style="margin-left: 70px;">#}
+                                                    {% for contig in quast_session.contigs %}
+                                                        <div style="margin-bottom: 5px;">{{ contig }}</div>
+                                                    {% endfor %}
+                                                    {#                                                            </div>#}
+                                                </div>
                                             {% endif %}
-
-                                            {% if quast_session.state == 'PENDING' %}
-                                                <div><span class="state_pending">evaluation in progress</span></div>
-                                            {% elif quast_session.state == 'FAILURE' %}
-                                                <div><span class="state_failure">failed</span></div>
-                                            {% endif %}
-                                        </div>
+                                        </td>
+                                        <td class='genome_td wrapword'>
+                                                {% if quast_session.data_set_name %}
+                                                    <div style="margin-bottom: 5px;">
+{#                                                            <div style="float: left; width: 70px;">Genome:</div>#}
+{#                                                            <div style="margin-left: 70px;">#}
+                                                            {{ quast_session.data_set_name|truncatechars:100 }}
+{#                                                            </div>#}
+{#                                                            <div style="clear: both"></div>#}
+                                                    </div>
+                                                {% endif %}
+                                        </td>
+                                    </tr>
 {#                                        <td>#}
 {#                                            {% if quast_session.with_data_set %}<span>{{ quast_session.dataset_name }}</span>{% endif %}#}
 {#                                        </td>#}
@@ -768,7 +796,6 @@
 {#                                        <td>#}
 {#                                            {% if quast_session.caption %}{{ quast_session.caption|truncatechars:50 }}{% endif %}#}
 {#                                        </td>#}
-                                    </div>
                                     {% endfor %}
 {#                                    {% if show_more_link %}#}
 {#                                        <tr><td></td></tr>#}
@@ -779,10 +806,24 @@
 {#                                    </tr>#}
 
                                     <div style="clear: both;"></div>
-                                </div>
+                                </table>
                             </td>
                         </tr>
                     </table>
+
+                    <script>
+                        function set_report_table_widths() {
+                            var table_reports = $('#table_reports');
+                            var table_width = table_reports.width();
+                            var rest_columns_width = (table_width-200) / 2;
+                            var value = rest_columns_width + 'px';
+                            $('.genome_td').css('width', value);
+                            $('.contigs_td').css('width', value);
+                        }
+{#                        $.event.add(window, "load", set_report_table_widths);#}
+{#                        $.event.add(window, "resize", set_report_table_widths);#}
+                    </script>
+
                     {% endif %}
                     <div style="clear: both;"></div>
                 </div>

@@ -135,7 +135,7 @@ def index_view(user_session, response_dict, request):
     reports_dict = get_reports_response_dict(
         user_session,
         after_evaluation=request.session.get('after_evaluation', False),
-        limit=4)
+        limit=settings.REPORTS_SHOW_LIMIT)
     response_dict = dict(response_dict.items() + reports_dict.items())
     request.session['after_evaluation'] = False
 

@@ -46,21 +46,31 @@
 
         <table style='margin: -4px;'>
             <tr>
-                <td style="width: 500px; text-align: left; vertical-align: top;">
-                    <h1 id="header_element">{% block header %}{% endblock %}</h1>
+                <td style="width: 530px; text-align: left; padding-right: 100px; vertical-align: top;">
+                    <h1 id="header_element"
+                        style="{% if header|length > 100 %}
+                                  font-size: 1em; padding-top: 12px;
+                               {% else %}{% if header|length > 50 %}
+                                  font-size: 1.5em;
+                               {% else %}
+                                  font-size: 2em;
+                               {% endif %}{% endif %}">
+                        {% block header %}{% endblock %}
+                    </h1>
                     {% if data_set_name %}<p id="dataset_name_p">Genome: {{ data_set_name }}</p>{% endif %}
                     {% if comment %}<p id="comment_p">Comment: {{ comment }}</p>{% endif %}
                     <p id='subheader'>Loading...</p>
                     <p id='mincontig'></p>
                 </td>
+
                 {% if download %}
-                <td style="text-align: left;">
+                <td style="text-align: left; vertical-align: top;">
                     <a class='btn' style="margin-top: 20px;" id="download_report" href="{{ downloadLink }}">
                         Download report
                     </a>
                     <p style="text-align: left;">
-                        Additionally tables and plots in Latex, <br>
-                        PDF and simple text.<br>
+                        This report and additionally tables<br>
+                        and plots in Latex, PDF and simple text.<br>
                         <div class='small_line_indent'></div>
                         Detailed contigs and genome statistics.
                     </p>

@@ -155,3 +155,15 @@ ul.mdash li:before {
 /*379<span class="hs"></span>000<span*/
 /*class="rhs"> </span><span class="b-rub">Р</span><br/>*/
 /*100<span class="hs"></span>500<span class="rhs"> </span>+*/
+
+/* for wrapping long words with no spaces */
+/* http://stackoverflow.com/questions/3247358/css-how-do-i-wrap-text-with-no-whitespace-inside-a-td */
+.wrapword {
+    white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    white-space: pre-wrap;       /* css-3 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    word-break: break-all;
+    white-space: normal;
+}

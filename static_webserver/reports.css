@@ -1,20 +1,29 @@
 
-.table_reports {
-    margin-left: -28px;
-    white-space: nowrap;
+#table_reports {
+    margin-left: -4px;
+    min-width: 400px;
 }
-.table_reports tr td:first-child {
-    width: 20px;
-}
-.table_reports tr {
-    /*line-height: 2em;*/
-}
-.table_reports td {
+#table_reports tr td {
+    margin-right: 0;
+    margin-left: 0;
     padding-bottom: 20px;
+    padding-right: 20px;
+    vertical-align: top;
 }
-.table_reports td div {
-    padding-bottom: 5px;
+#table_reports tr td:first-child {
+
 }
+#table_reports .reports_header_tr {
+    height: 0px; !important
+}
+#table_reports .reports_header_tr td {
+    padding-bottom: 0px;
+    vertical-align: bottom;
+}
+#table_reports .reports_line_tr td {
+    padding-bottom: 0px; !important
+}
+
 .state_pending {
     background-color:#FFF9B5;
     padding: 0px 3px;
