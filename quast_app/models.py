@@ -101,10 +101,10 @@ class UserSession(models.Model):
             session_key=session_key,
             input_dirname=session_key)
 
-        input_dirpath = os.path.join(settings.INPUT_ROOT_DIRPATH, self.input_dirname)
-        if os.path.isdir(input_dirpath):
-            shutil.rmtree(input_dirpath)
-        os.makedirs(input_dirpath)
+        # input_dirpath = os.path.join(settings.INPUT_ROOT_DIRPATH, user_session.input_dirname)
+        # if os.path.isdir(input_dirpath):
+        #     shutil.rmtree(input_dirpath)
+        # os.makedirs(input_dirpath)
 
         return user_session
 

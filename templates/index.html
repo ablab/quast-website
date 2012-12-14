@@ -60,7 +60,7 @@
   {#                $('#is_authorized_email').html(email);#}
   {#                $('#is_authorized_div').show();#}
                 }).fail(function(msg) {
-                    $('#login_error').html(msg).show();
+                    $('#login_error').html(msg.responseText).show();
                     $('#email_input').focus();
                 });
                 return false;
@@ -68,7 +68,12 @@
 
             $('#is_authorized_email').click(function() {
 {#                $('#is_authorized_div').toggle();#}
-                $('#login_form').toggle('fast');
+                var login_form = $('#login_form');
+
+                login_form.toggle('fast');
+                if (login_form.is(':visible')) {
+                    $('#email_input').focus();
+                }
             });
         });
 
@@ -676,10 +681,10 @@
                             <label for="email_input" style="margin-left: -41px;">Email:</label>
                             <input type="text" name="email" id="email_input" style="width: 200px;">
                             <input type="submit" value="Log in" id="authorize_submit">
-                            <br>
-                            <span id="login_error" style="color: red; display: none;"></span>
-                            <span id="login_msg" style="display: none;"></span>
-                            <br>
+
+                            <div id="login_error" style="color: FireBrick; display: none; margin-left: -2px;"></div>
+                            <div id="login_msg" style="display: none; margin-left: -2px;"></div>
+
                             <div class="comment_to_field"
                                  style="display: {% if is_authorized %}none{% else %}block{% endif %};
                                         margin-left: -2px; width: 220px;">

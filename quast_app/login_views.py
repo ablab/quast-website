@@ -3,6 +3,9 @@ from django.http import HttpResponse, HttpResponseNotFound, HttpResponseBadReque
 from django.conf import settings
 from django.shortcuts import redirect
 
+from django.core.validators import validate_email
+from django.core.exceptions import ValidationError
+
 from models import User, UserSession, DataSet, QuastSession
 
 
@@ -13,9 +16,16 @@ mailer = logging.getLogger('quast_mailer')
 
 def ask_password(request):
     email = request.GET.get('email')
-    if not email:
+    if email is None:
         logger.error('No email in GET request')
         return HttpResponseBadRequest('No email in GET request')
+
+    if email == '':
+        return HttpResponseBadRequest('Please, specify your email')
+    try:
+        validate_email(email)
+    except ValidationError:
+        return HttpResponseBadRequest('Incorrect email')
 
     mailer.info('Email = %s' % email)
 
