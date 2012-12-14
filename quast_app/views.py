@@ -115,6 +115,10 @@ def get_session(session, page):
                 logger.error('Database is locked (tried %d times)' % tries)
                 raise
 
+    logger.info('session.create(): session_key = %s' % session_key)
+    if not session_key:
+        logger.error('session_key is None')
+
     user_session = UserSession.get_or_create(session_key)
     return user_session
 
