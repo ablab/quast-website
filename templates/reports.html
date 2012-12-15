@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Reports{% endblock %}
+{% block title %}Reports | QUAST{% endblock %}
 
 {% block logo_class %}dark_bg_link{% endblock %}
 
@@ -44,43 +44,137 @@
 {#            </tr>#}
 {#        {% endfor %}#}
 
-        {% for quast_session in quast_sessions %}
-        <div{% if highlight_last and forloop.counter == 1 %} class='highlighted_tr report_block'{% else %} class='report_block'{% endif %}>
-            <div>
-                {% if quast_session.state != 'FAILURE' %}
-                    <a href="{{ quast_session.report_link }}">{{ quast_session.date|date:'d M Y, H:i:s' }}</a>
-                {% else %}
-                    {{ quast_session.date|date:'d M Y, H:i:s' }}
-                {% endif %}
-            </div>
+        <table id='table_reports' style="margin-top: -5px;">
+            {% if quast_sessions %}
+                <tr class='reports_header_tr'>
+                    <td>
+                        <span style="font-size: 1.2em;"><a href="/reports/">Reports</a></span>
+                    </td>
+                    <td>
+                        Contigs
+                    </td>
+                    <td>
+                        Genome
+                    </td>
+                </tr>
 
-            {% if quast_session.caption %}
-                <div>
-                    <b>{{ quast_session.caption|truncatechars:100 }}</b>
-                </div>
-            {% endif %}
-            {% if quast_session.data_set_name %}
-                <div>
-                    Genome: {{ quast_session.data_set_name|truncatechars:100 }}
-                </div>
+                <tr class='reports_line_tr'>
+                    <td colspan="3" style="border-top: 1px solid #bbb;"></td>
+                </tr>
             {% endif %}
 
-            {% if quast_session.contigs %}
-                <div style="margin-bottom: 0px;">
-                    Contigs:<br>
-                    {% for contig in quast_session.contigs %}
-                        <span style="margin-left: 10px;">{{ contig }}</span><br>
-                    {% endfor %}
-                </div>
-            {% endif %}
+            {% for quast_session in quast_sessions %}
+                <tr{% if highlight_last and forloop.counter == 1 %} class='highlighted_tr' style="display: none;"
+                {% else %} class=''{% endif %}>
+                    <td class='caption_td wrapword' style="width: 170px;">
+                        <div>
+                            <div>
+                                {#                                                    <div style="width: 40px; float: left;">#}
+                                {#                                                    </div>#}
+                                <a href="{{ quast_session.report_link }}">
+                                    {% if quast_session.caption %}
+                                        {{ quast_session.caption|truncatewords:20|truncatechars:200 }}
+                                    {% else %}
+                                        {{ quast_session.date|date:'d M Y, H:i' }}
+                                    {% endif %}
+                                </a>
+                            </div>
 
-            {% if quast_session.state == 'PENDING' %}
-                <div><span class="state_pending">evaluation in progress</span></div>
-            {% elif quast_session.state == 'FAILURE' %}
-                <div><span class="state_failure">failed</span></div>
-            {% endif %}
-        </div>
-        {% endfor %}
+                            {% if quast_session.caption %}
+                                <div style="margin-top: 3px;">
+                                    {{ quast_session.date|date:'d M Y, H:i' }}
+                                </div>
+                            {% endif %}
+
+                            {% if quast_session.state == 'PENDING' %}
+                                <div style="margin-top: 3px;"><span class="state_pending">in progress</span></div>
+                            {% elif quast_session.state == 'FAILURE' %}
+                                <div style="margin-top: 3px;"><span class="state_failure">failed</span></div>
+                            {% endif %}
+                        </div>
+
+                    </td>
+                    <td class='contigs_td wrapword'>
+                        {% if quast_session.contigs %}
+                            <div>
+                                {#                                                            <div style="clear: both"></div>#}
+                                {#                                                            <div style="float: left; width: 70px;">Contigs:</div>#}
+                                {#                                                            <div style="margin-left: 70px;">#}
+                                {% for contig in quast_session.contigs %}
+                                    <div style="margin-bottom: 5px;">{{ contig }}</div>
+                                {% endfor %}
+                                {#                                                            </div>#}
+                            </div>
+                        {% endif %}
+                    </td>
+                    <td class='genome_td wrapword'>
+                        {% if quast_session.data_set_name %}
+                            <div style="margin-bottom: 5px;">
+                                {#                                                            <div style="float: left; width: 70px;">Genome:</div>#}
+                                {#                                                            <div style="margin-left: 70px;">#}
+                                {{ quast_session.data_set_name|truncatechars:100 }}
+                                {#                                                            </div>#}
+                                {#                                                            <div style="clear: both"></div>#}
+                            </div>
+                        {% endif %}
+                    </td>
+                </tr>
+                {#                                        <td>#}
+                {#                                            {% if quast_session.with_data_set %}<span>{{ quast_session.dataset_name }}</span>{% endif %}#}
+                {#                                        </td>#}
+                {#                                        </td>#}
+                {#                                        <td>#}
+                {#                                            {% if quast_session.caption %}{{ quast_session.caption|truncatechars:50 }}{% endif %}#}
+                {#                                        </td>#}
+            {% endfor %}
+            {#                                    {% if show_more_link %}#}
+            {#                                        <tr><td></td></tr>#}
+            {#                                        <tr><td><a href="/reports/">Older reports</a></td></tr>#}
+            {#                                    {% endif %}#}
+            {#                                    <tr>#}
+            {#                                        <td>&nbsp;</td>#}
+            {#                                    </tr>#}
+
+            <div style="clear: both;"></div>
+        </table>
+
+{#        {% for quast_session in quast_sessions %}#}
+{#        <div{% if highlight_last and forloop.counter == 1 %} class='highlighted_tr report_block'{% else %} class='report_block'{% endif %}>#}
+{#            <div>#}
+{#                {% if quast_session.state != 'FAILURE' %}#}
+{#                    <a href="{{ quast_session.report_link }}">{{ quast_session.date|date:'d M Y, H:i:s' }}</a>#}
+{#                {% else %}#}
+{#                    {{ quast_session.date|date:'d M Y, H:i:s' }}#}
+{#                {% endif %}#}
+{#            </div>#}
+{##}
+{#            {% if quast_session.caption %}#}
+{#                <div>#}
+{#                    <b>{{ quast_session.caption|truncatechars:100 }}</b>#}
+{#                </div>#}
+{#            {% endif %}#}
+{#            {% if quast_session.data_set_name %}#}
+{#                <div>#}
+{#                    Genome: {{ quast_session.data_set_name|truncatechars:100 }}#}
+{#                </div>#}
+{#            {% endif %}#}
+{##}
+{#            {% if quast_session.contigs %}#}
+{#                <div style="margin-bottom: 0px;">#}
+{#                    Contigs:<br>#}
+{#                    {% for contig in quast_session.contigs %}#}
+{#                        <span style="margin-left: 10px;">{{ contig }}</span><br>#}
+{#                    {% endfor %}#}
+{#                </div>#}
+{#            {% endif %}#}
+{##}
+{#            {% if quast_session.state == 'PENDING' %}#}
+{#                <div><span class="state_pending">evaluation in progress</span></div>#}
+{#            {% elif quast_session.state == 'FAILURE' %}#}
+{#                <div><span class="state_failure">failed</span></div>#}
+{#            {% endif %}#}
+{#        </div>#}
+{#        {% endfor %}#}
 
         <div style="clear: both;"></div>
     </div>

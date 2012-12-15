@@ -22,7 +22,7 @@ task_state_map = {
 }
 
 
-def get_report_response_dict(results_dirpath, caption, comment, data_set_name, link):
+def get_report_response_dict(results_dirpath, caption, comment, data_set_name, link, set_title=False):
     if dir is None:
         raise Exception('No results directory.')
 
@@ -78,6 +78,8 @@ def get_report_response_dict(results_dirpath, caption, comment, data_set_name, l
         'download': False,
 
         'header': header,
+        'set_title': set_title,
+
         'data_set_name': data_set_name,
         'comment': comment,
         'link': settings.REPORT_LINK_BASE + link,
@@ -115,11 +117,12 @@ def report_view(user_session, response_dict, request, link):
                     caption = quast_session.caption
 
                 response_dict = dict(response_dict.items() + get_report_response_dict(
-                    os.path.join(settings.RESULTS_ROOT_DIRPATH, quast_session.get_reldirpath()),
+                    quast_session.get_dirpath(),
                     caption,
                     quast_session.comment,
                     data_set_name,
-                    link
+                    link,
+                    set_title=True,
                 ).items())
 
                 html_report_fpath = os.path.join(quast_session.get_dirpath(), settings.REGULAR_REPORT_DIRNAME, settings.HTML_REPORT_FNAME)

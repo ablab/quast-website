@@ -1,3 +1,7 @@
+String.prototype.trunc =
+    function(n){
+        return this.substr(0, n-1) + (this.length > n ? '&hellip;' : '');
+    };
 
 function buildTotalReport(assembliesNames, report, date, minContig, glossary, qualities, mainMetrics) {
     $('#subheader').html('<p>' + date + '</p>');
@@ -29,6 +33,13 @@ function buildTotalReport(assembliesNames, report, date, minContig, glossary, qu
 
             for (var assembly_n = 0; assembly_n < assembliesNames.length; assembly_n++) {
                 var assemblyName = assembliesNames[assembly_n];
+                if (assemblyName.length > 30) {
+                    assemblyName =
+                        '<span class="tooltip-link" rel="tooltip" title="' + assemblyName + '">' +
+                        assemblyName.trunc(30) +
+                        '</span>'
+                }
+
                 table += '<td>' + assemblyName + '</td>';
             }
 

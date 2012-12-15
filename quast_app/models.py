@@ -28,18 +28,22 @@ class User(models.Model):
 
     @staticmethod
     def create(email):
-        password = get_random_string(
+        user = User(
+            email=email,
+            input_dirname=email.replace('@', '_')
+        )
+        user.save()
+        user.generate_password()
+        return user
+
+    def generate_password(self):
+        self.password = get_random_string(
             length=12,
             allowed_chars='abcdefghjkmnpqrstuvwxyz'
                           'ABCDEFGHJKLMNPQRSTUVWXYZ'
                           '123456789'
         )
-        user = User(
-            email=email,
-            password=password,
-            input_dirname=email.replace('@', '_')
-        )
-        user.save()
+        self.save()
 
 
 class UserSession(models.Model):
@@ -56,12 +60,12 @@ class UserSession(models.Model):
     def get_dirname(self):
         return (self.user or self).input_dirname
 
-    def add_quast_session(self, quast_session):
-        if self.user:
-            quast_session.user = self.user
-        else:
-            quast_session.user_session = self
-        quast_session.save()
+    # def add_quast_session(self, quast_session):
+    #     if self.user:
+    #         quast_session.user = self.user
+    #     else:
+    #         quast_session.user_session = self
+    #     quast_session.save()
 
     def get_quastsession_set(self):
         return (self.user or self).quastsession_set
@@ -72,8 +76,8 @@ class UserSession(models.Model):
         # os.rename(session_input_dirpath, user_input_dirpath)
 
         if self.user is None:
-            if not os.path.isdir(user.input_dirname):
-                session_results_dirpath = os.path.join(settings.RESULTS_ROOT_DIRPATH, self.input_dirname)
+            session_results_dirpath = os.path.join(settings.RESULTS_ROOT_DIRPATH, self.input_dirname)
+            if not session_results_dirpath:
                 user_results_dirpath = os.path.join(settings.RESULTS_ROOT_DIRPATH, user.input_dirname)
                 os.rename(session_results_dirpath, user_results_dirpath)
 
@@ -83,6 +87,7 @@ class UserSession(models.Model):
 
             for qs in self.quastsession_set.all():
                 qs.user = user
+                qs.user_session = None
                 qs.save()
 
         self.user = user
@@ -195,8 +200,12 @@ class QuastSession(models.Model):
         quast_session = QuastSession(date=date,
                                      report_id=report_id,
                                      submitted=False)
+        if user_session.user:
+            quast_session.user = user_session.user
+        else:
+            quast_session.user_session = user_session
+
         quast_session.save()
-        user_session.add_quast_session(quast_session)
 
         result_dirpath = quast_session.get_dirpath()
         if os.path.isdir(result_dirpath):

@@ -89,7 +89,8 @@ def index_view(user_session, response_dict, request):
             # return HttpResponseRedirect(reverse('True}))
 
             request.session['after_evaluation'] = True
-            return redirect('quast_app.views.index')
+#            return redirect('quast_app.views.index')
+            return redirect('quast_app.views.report', link=quast_session.link)
         else:
             logger.info('quast_app.views.index.POST: form invalid, errors are: = %s', str(data_set_form.errors.items()))
 

@@ -22,38 +22,40 @@ def get_reports_response_dict(user_session, after_evaluation=False, limit=None):
 
     show_more_link = False
 
-    if quast_sessions.exists():
-        # quast_sessions.sort(cmp=lambda qs1, qs2: 1 if qs1.date < qs2.date else -1)
+    if not quast_sessions.exists():
+        return {}
 
-        # if after_evaluation:
-        #     last = quast_sessions[0]
-        #     result = tasks.start_quast.AsyncResult(last.task_id)
-        #     if result and result.state == 'SUCCESS':
-        #         return redirect('/report/', report_id=last.report_id)
+    # quast_sessions.sort(cmp=lambda qs1, qs2: 1 if qs1.date < qs2.date else -1)
 
-        for i, qs in enumerate(quast_sessions):
-            if i == limit:
-                show_more_link = True
+    # if after_evaluation:
+    #     last = quast_sessions[0]
+    #     result = tasks.start_quast.AsyncResult(last.task_id)
+    #     if result and result.state == 'SUCCESS':
+    #         return redirect('/report/', report_id=last.report_id)
 
-            else:
-                result = start_quast.AsyncResult(qs.task_id)
-                state = result.state
-                state_repr = 'FAILURE'
-                if result and state in task_state_map:
-                    state_repr = task_state_map[state]
+    for i, qs in enumerate(quast_sessions):
+        if i == limit:
+            show_more_link = True
 
-                quast_session_info = {
-                    'date': qs.date, #. strftime('%d %b %Y %H:%M:%S'),
-                    'report_link': settings.REPORT_LINK_BASE + (qs.link or qs.report_id),
-                    'comment' : qs.comment,
-                    'caption' : qs.caption,
-                    'with_data_set': True if qs.data_set else False,
-                    'data_set_name': qs.data_set.name if qs.data_set and qs.data_set.remember else '',
-                    'state': state_repr,
-                    'report_id': qs.report_id,
-                    'contigs': [cf.fname for cf in qs.contigs_files.all()],
-                    }
-                quast_sessions_dict.append(quast_session_info)
+        else:
+            result = start_quast.AsyncResult(qs.task_id)
+            state = result.state
+            state_repr = 'FAILURE'
+            if result and state in task_state_map:
+                state_repr = task_state_map[state]
+
+            quast_session_info = {
+                'date': qs.date, #. strftime('%d %b %Y %H:%M:%S'),
+                'report_link': settings.REPORT_LINK_BASE + (qs.link or qs.report_id),
+                'comment' : qs.comment,
+                'caption' : qs.caption,
+                'with_data_set': True if qs.data_set else False,
+                'data_set_name': qs.data_set.name if qs.data_set and qs.data_set.remember else '',
+                'state': state_repr,
+                'report_id': qs.report_id,
+                'contigs': [cf.fname for cf in qs.contigs_files.all()],
+                }
+            quast_sessions_dict.append(quast_session_info)
 
     return {
         'quast_sessions': quast_sessions_dict,

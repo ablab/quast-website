@@ -7,6 +7,7 @@ from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
 
 from models import User, UserSession, DataSet, QuastSession
+from create_session import get_or_create_session
 
 
 import logging
@@ -36,15 +37,13 @@ def ask_password(request):
         user_session = UserSession.objects.get(session_key=session_key)
         if user_session.get_email() == email:
             mailer.info('user pressed login with the same login he already authorized with: %s' % email)
-            # return HttpResponse('Authorized')
-    # Unexpected
+    # Cookies turned off
     except UserSession.DoesNotExist:
-        msg = 'current user session with key=%s does not exist' % session_key
-        logger.exception(msg)
-        raise Exception(msg)
+        pass
+        # logger.warn('current user session with key=%s does not exist, creating new one', session_key)
+        # user_session = get_or_create_session(request, 'ask_password')
     except Exception:
         logger.exception()
-        raise
 
     # User object that we trying to login
     if User.objects.filter(email=email).exists():
@@ -84,20 +83,22 @@ def login(request):
     password = request.GET.get('password')
     mailer.info('Email = %s, Password = %s' % (email, password))
 
-    # User session
-    session_key = request.session.session_key
-    try:
-        user_session = UserSession.objects.get(session_key=session_key)
-    # Unexpected
-    except UserSession.DoesNotExist:
-        msg = 'current user session with key=%s does not exist' % session_key
-        logger.exception(msg)
-        raise Exception(msg)
-    except Exception:
-        logger.exception()
-        raise
+    user_session = get_or_create_session(request, 'login')
 
-    # New user session
+    # User session
+    # session_key = request.session.session_key
+    # try:
+    #     user_session = UserSession.objects.get(session_key=session_key)
+    # # Unexpected
+    # except UserSession.DoesNotExist:
+    #     msg = 'current user session with key=%s does not exist' % session_key
+    #     logger.exception(msg)
+    #     raise Exception(msg)
+    # except Exception:
+    #     logger.exception()
+    #     raise
+
+    # New user
     if not User.objects.filter(email=email).exists():
         return HttpResponseBadRequest('User with this email does not exist')
 
@@ -105,6 +106,7 @@ def login(request):
 
     if password == user.password or settings.PASSWORD and password == settings.PASSWORD:
         user_session.set_user(user)
+        user.generate_password()
         return redirect('quast_app.views.index')
     else:
         logger.warn('user tried to use a wrong password: %s instead of %s for %s',

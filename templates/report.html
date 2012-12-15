@@ -2,6 +2,8 @@
 
 {% block logo_class %}dark_bg_link{% endblock %}
 
+{% block title %}{{ header }}{% endblock %}
+
 {% block extra_head %}
     <script type="text/javascript" src="/static/jquery-1.8.2.min.js"></script>
     <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="../excanvas.min.js"></script><![endif]-->
@@ -24,6 +26,10 @@
     {% block before_report_extra_head %}{% endblock %}
 
     <script type="text/javascript">
+        {% if set_title %}
+            document.title = "{{ header }} | QUAST";
+        {% endif %}
+
         $(buildReport);
 
         $(function() {
@@ -64,7 +70,7 @@
                 </td>
 
                 {% if download %}
-                <td style="text-align: left; vertical-align: top;">
+                <td style="text-align: left; vertical-align: top; ">
                     <a class='btn' style="margin-top: 20px;" id="download_report" href="{{ downloadLink }}">
                         Download report
                     </a>

@@ -2,8 +2,23 @@
 
 {% block logo_class %}dark_bg_link{% endblock %}
 
+{% block title %}
+    {% if state == 'PENDING' %}
+        Evaluating... | QUAST
+    {% else %}
+        Error | QUAST
+    {% endif %}
+{% endblock %}
+
 {% block extra_head %}
 <link rel="stylesheet" href="/static/reports.css">
+<script>
+    $(function() {
+        setTimeout(function(){
+            window.location.reload(1);
+        }, 5000);
+    });
+</script>
 {% endblock %}
 
 {% block content %}
