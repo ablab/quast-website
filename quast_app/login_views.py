@@ -52,7 +52,7 @@ def ask_password(request):
         new_user = User.create(email)
 
     send_confirmation(new_user)
-    return HttpResponse('Confirmation email sent')
+    return HttpResponse('Confirmation message sent. Please, check you email.')
 
 
 def send_confirmation(user):
