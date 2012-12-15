@@ -69,7 +69,7 @@ def send_confirmation(user):
                       'If you didn\'t want this email, please, just ignore it: it was probably sent by mistake.'
                       '\n'
                       '\n-'
-                      'In case of any problems, feel free to reply to this message.'
+                      '\nIn case of any problems, feel free to reply to this message.'
                       % link,
               from_email=settings.SUPPORT_EMAIL,
               recipient_list=[user.email])
