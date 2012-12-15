@@ -60,7 +60,7 @@ def send_confirmation(user):
            % (settings.ADDRESS, user.email, user.password)
     logger.info('link = %s' % link)
 
-    send_mail(subject='QUAST. Confirmation of email address.',
+    send_mail(subject='Confirmation of email address | QUAST',
               message='Hello!\n'
                       '\n'
                       'To authorize, follow the next link:\n'
@@ -68,8 +68,9 @@ def send_confirmation(user):
                       '\n'
                       'If you didn\'t want this email, please, just ignore it: it was probably sent by mistake.'
                       '\n'
-                      '\n-'
-                      '\nIn case of any problems, feel free to reply to this message.'
+                      '\n---'
+                      '\nIn case of any problems, feel free to reply to this message'
+                      '\nQUAST team'
                       % link,
               from_email=settings.SUPPORT_EMAIL,
               recipient_list=[user.email])
