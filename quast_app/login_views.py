@@ -81,10 +81,16 @@ def login(request):
         raise Http404('Only GET allowed!')
 
     email = request.GET.get('email')
-    password = request.GET.get('password')
-    mailer.info('Email = %s, Password = %s' % (email, password))
+    if not email:
+        return HttpResponseBadRequest('Please, specify your email')
+    try:
+        validate_email(email)
+    except ValidationError:
+        return HttpResponseBadRequest('Incorrect email')
 
-    user_session = get_or_create_session(request, 'login')
+    password = request.GET.get('password')
+
+    mailer.info('Email = %s, Password = %s', email, password)
 
     # User session
     # session_key = request.session.session_key
@@ -106,9 +112,11 @@ def login(request):
     user = User.objects.get(email=email)
 
     if password == user.password or settings.PASSWORD and password == settings.PASSWORD:
+        user_session = get_or_create_session(request, 'login')
         user_session.set_user(user)
         user.generate_password()
         return redirect('quast_app.views.index')
+
     else:
         logger.warn('user tried to use a wrong password: %s instead of %s for %s',
                     password, user.password, email)

@@ -76,7 +76,6 @@ class DataSetForm(forms.Form):
     def set_default_data_set_name(self, data_set_name):
         self.fields['name_selected'].initial = data_set_name
 
-
     def clean(self):    # Validation
         cleaned_data = super(DataSetForm, self).clean()
 

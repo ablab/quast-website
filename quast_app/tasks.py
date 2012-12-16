@@ -106,10 +106,10 @@ def start_quast((args, quast_session, user_session)):
         send_result_mail(my_email, to_me=True, add_to_end=add_to_end)
         send_result_mail(user_email, to_me=False)
 
-        try:
-            shutil.rmtree(quast_session.get_evaluation_contigs_dirpath())
-        except Exception, e:
-            logger.error('Error removing evaluation_contig dir:' + e.message)
+#        try:
+#            shutil.rmtree(quast_session.get_evaluation_contigs_dirpath())
+#        except Exception, e:
+#            logger.error('Error removing evaluation_contig dir:' + e.message)
 
         reload(quast)
         return result

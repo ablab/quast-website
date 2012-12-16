@@ -1,3 +1,4 @@
+import shutil
 import os
 from django.core.urlresolvers import reverse
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseBadRequest, Http404, HttpResponseRedirect
@@ -116,21 +117,26 @@ def delete_session(request):
         logger.error('No quast session with report_id=%s' % report_id)
         return HttpResponseBadRequest('wrong reportId: no such quast-session')
 
-    if quast_session.submitted:
-        if quast_session.contigs_files:
-            fpaths = [os.path.join(quast_session.get_contigs_dirpath(), c_f.fname) for c_f in quast_session.contigs_files.all()]
-            for fpath in fpaths:
-                if os.path.exists(fpath):
-                    try:
-                        os.remove(fpath)
-                        logger.info('Deleted contigs_file %s' % fpath)
-                    except Exception, e:
-                        logger.warn('Error deleting contigs file %s: %s' % (fpath, e.message))
+    if not quast_session.submitted:
+#        if quast_session.contigs_files:
+#            fpaths = [os.path.join(quast_session.get_contigs_dirpath(), c_f.fname) for c_f in quast_session.contigs_files.all()]
+#            for fpath in fpaths:
+#                if os.path.exists(fpath):
+#                    try:
+#                        os.remove(fpath)
+#                        logger.info('Deleted contigs_file %s' % fpath)
+#                    except Exception, e:
+#                        logger.warn('Error deleting contigs file %s: %s' % (fpath, e.message))
 
-        logger.info('Deleting quast_session with id=%s' % report_id)
+        logger.info('Deleting quast_session with id=%s, dirpath=%s', report_id, quast_session.get_dirpath())
+
+        if os.path.isdir(quast_session.get_dirpath()):
+            shutil.rmtree(quast_session.get_dirpath())
+        else:
+            logger.error('directory does not exist')
         quast_session.delete()
-    else:
-        logger.info('Quast session with id=%s wasn\'t submitted, not deleting' % report_id)
+#    else:
+#        logger.info('Quast session with id=%s wasn\'t submitted, not deleting' % report_id)
     return HttpResponse()
 
 

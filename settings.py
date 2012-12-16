@@ -283,7 +283,9 @@ LOGGING = {
             'level': 'INFO',
         },
         'django.request': {
-            'propagate': True,
+            'handlers': ['mail_warning', 'file_warning'],
+            'level': 'WARNING',
+            'propagate': False,
         },
         'django.db.backends': {
             'propagate': True,

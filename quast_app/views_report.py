@@ -23,8 +23,9 @@ task_state_map = {
 
 
 def get_report_response_dict(results_dirpath, caption, comment, data_set_name, link, set_title=False):
-    if dir is None:
-        raise Exception('No results directory.')
+    if not os.path.isdir(results_dirpath):
+        logger.error('no results directory %s ', results_dirpath)
+        raise Exception('No results directory %s' % results_dirpath)
 
     def get(name, is_required=False, msg=None):
         contents = ''

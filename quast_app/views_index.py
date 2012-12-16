@@ -78,7 +78,7 @@ def index_view(user_session, response_dict, request):
 
             data_set = get_data_set(request, data_set_form, default_name=quast_session.report_id)
             if data_set:
-                request.session['default_data_set_name'] = data_set.name
+                user_session.set_default_data_set(data_set)
                 quast_session.data_set = data_set
                 logger.info('quast_app.views.index.POST: data set name = %s', data_set.name)
 
@@ -89,8 +89,9 @@ def index_view(user_session, response_dict, request):
             # return HttpResponseRedirect(reverse('True}))
 
             request.session['after_evaluation'] = True
-#            return redirect('quast_app.views.index')
-            return redirect('quast_app.views.report', link=quast_session.link)
+            return redirect('quast_app.views.index')
+
+#            return redirect('quast_app.views.report', link=quast_session.link)
         else:
             logger.info('quast_app.views.index.POST: form invalid, errors are: = %s', str(data_set_form.errors.items()))
 
@@ -111,8 +112,18 @@ def index_view(user_session, response_dict, request):
         data_set_form.set_min_contig(min_contig)
         # data_set_form.set_email(user_session.email)
 
-        # Default data set for this user (TODO: move to User model)
-        default_data_set_name = request.session.get('default_data_set_name') or ''
+        # Default data set for this user
+        if user_session.get_default_data_set():
+            default_data_set_name = user_session.get_default_data_set().name
+        else:
+            default_data_set_name = request.session.get('default_data_set_name') or ''
+            if default_data_set_name:
+                try:
+                    default_data_set = DataSet.objects.get(name=default_data_set_name)
+                    user_session.set_default_data_set(default_data_set)
+                except DataSet.DoesNotExist:
+                    pass
+
         data_set_form.set_default_data_set_name(default_data_set_name)
 
     else:
@@ -228,9 +239,8 @@ def start_quast_session(user_session, quast_session, min_contig):
 
     evaluation_dirpath = quast_session.get_evaluation_contigs_dirpath()
 
-    os.rename(quast_session.get_contigs_dirpath(), evaluation_dirpath)
+#    os.rename(quast_session.get_contigs_dirpath(), evaluation_dirpath)
 
-    # evaluation_dirpath = quast_session.get_evaluation_contigs_dirpath() # os.path.join(result_dirpath, settings.CONTIGS_DIRNAME)
     # os.makedirs(evaluation_dirpath)
 
     evaluation_contigs_fpaths = [os.path.join(evaluation_dirpath, c_f.fname) for c_f in contigs_files]

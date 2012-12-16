@@ -22,6 +22,7 @@ class User(models.Model):
     input_dirname = models.CharField(max_length=256, blank=True, null=True)
     email = models.EmailField(blank=True, null=True)
     password = models.CharField(max_length=256, blank=True, null=True)
+    default_data_set = models.ForeignKey('DataSet', blank=True, null=True)
 
     def get_dirname(self):
         return self.input_dirname
@@ -45,11 +46,22 @@ class User(models.Model):
         )
         self.save()
 
+    def __unicode__(self):
+        return self.email
+
 
 class UserSession(models.Model):
     session_key = models.CharField(max_length=256, unique=True)
     input_dirname = models.CharField(max_length=2048)
-    user = models.ForeignKey('User', null=True, blank=True)
+    user = models.ForeignKey(User, null=True, blank=True)
+    default_data_set = models.ForeignKey('DataSet', blank=True, null=True)
+
+    def set_default_data_set(self, data_set):
+        (self.user or self).default_data_set = data_set
+        self.save()
+
+    def get_default_data_set(self):
+        return (self.user or self).default_data_set
 
     def get_email(self):
         return self.user.email if self.user else None
@@ -68,27 +80,40 @@ class UserSession(models.Model):
     #     quast_session.save()
 
     def get_quastsession_set(self):
-        return (self.user or self).quastsession_set
+        if self.user:
+            set = QuastSession.objects.filter(user=self.user)
+        else:
+            set = QuastSession.objects.filter(user_session=self)
+
+        return set
 
     def set_user(self, user):
         # session_input_dirpath = os.path.join(settings.INPUT_ROOT_DIRPATH, self.input_dirname)
         # user_input_dirpath = os.path.join(settings.INPUT_ROOT_DIRPATH, user.input_dirname)
         # os.rename(session_input_dirpath, user_input_dirpath)
 
+        move_files = False
         if self.user is None:
             session_results_dirpath = os.path.join(settings.RESULTS_ROOT_DIRPATH, self.input_dirname)
-            if not session_results_dirpath:
-                user_results_dirpath = os.path.join(settings.RESULTS_ROOT_DIRPATH, user.input_dirname)
+            user_results_dirpath = os.path.join(settings.RESULTS_ROOT_DIRPATH, user.input_dirname)
+            if not os.path.exists(user_results_dirpath):
                 os.rename(session_results_dirpath, user_results_dirpath)
+            else:
+                move_files = True
 
-                if not os.path.isdir(user_results_dirpath):
-                    logger.error('Directory %s does no exist', user_results_dirpath)
-                    return
 
-            for qs in self.quastsession_set.all():
-                qs.user = user
-                qs.user_session = None
-                qs.save()
+        for qs in QuastSession.objects.filter(user_session=self):
+            old_dirpath = qs.get_dirpath()
+            qs.user = user
+            qs.user_session = None
+            new_dirpath = qs.get_dirpath()
+            if move_files:
+                shutil.move(old_dirpath, new_dirpath)
+            qs.save()
+
+        if self.default_data_set:
+            user.default_data_set = self.default_data_set
+            user.save()
 
         self.user = user
         self.save()
@@ -106,6 +131,7 @@ class UserSession(models.Model):
             session_key=session_key,
             input_dirname=session_key
         )
+        user_session.save()
 
         # input_dirpath = os.path.join(settings.INPUT_ROOT_DIRPATH, user_session.input_dirname)
         # if os.path.isdir(input_dirpath):
@@ -150,7 +176,7 @@ def delete_dataset_callback(sender, **kwargs):
 
 class ContigsFile(models.Model):
     fname = models.CharField(max_length=2048)
-    user_session = models.ForeignKey('UserSession', null=True, blank=True)
+    user_session = models.ForeignKey(UserSession, null=True, blank=True)
     file_index = models.CharField(max_length=256)
     # file_size = models.IntegerField(null=True, blank=True)
     # quast_session = models.ForeignKey('QuastSession', null=True)
@@ -222,12 +248,12 @@ class QuastSession(models.Model):
 
     @classmethod
     def get_report_id_format(cls):
-        return '%d_%b_%Y_%H_%M_%S_%f_UTC'
+        return '%d_%b_%Y_%H_%M_%S_%f'
 
     def generate_link(self):  # needs caption
         if self.caption is None:
             logger.warn('QuastSession.get_report_link before setting up caption')
-        time = self.date.strftime('%d_%b_%Y_%H:%M:%S_%f_UTC')
+        time = self.date.strftime('%d_%b_%Y_%H:%M:%S_%f')
         self.link = time + slugify('_' +  self.caption if self.caption else '')
 
     def get_download_name(self):
@@ -244,7 +270,7 @@ class QuastSession(models.Model):
         return os.path.join(self.get_dirpath(), 'contigs')
 
     def get_evaluation_contigs_dirpath(self):
-        return self.get_contigs_dirpath() + '_evaluation'
+        return self.get_contigs_dirpath()# + '_evaluation'
 
     def __unicode__(self):
         str = ''

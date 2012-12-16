@@ -141,23 +141,23 @@
             }
         });
 
-        $(function() {
-            var parameters = [{
-                action: '{% url contigs_ajax_upload %}',
-                removeLink: '{% url contigs_ajax_remove %}',
-                initializeUploadsLink: '{% url contigs_ajax_initialize_uploads %}',
-                elementId: '#contigs-uploader',
-                multiple: true,
-                buttonClass: 'btn',
-                buttonTabIndex: 1,
-                btnText: 'Add files',
-                areaText: 'drop files here',
-                areaClass: 'upload-drop-area',
-                uploaded: '{% for fname in contigs_fnames %}<li>{{ fname }} &nbsp;' +
-                    // '<a class="dotted-link" style="font-size: 0.8em;" href="#">Remove</a>' +
-                    '</li>{% endfor %}',
-            },];
+        var parameters = [{
+            action: '{% url contigs_ajax_upload %}',
+            removeLink: '{% url contigs_ajax_remove %}',
+            initializeUploadsLink: '{% url contigs_ajax_initialize_uploads %}',
+            elementId: '#contigs-uploader',
+            multiple: true,
+            buttonClass: 'btn',
+            buttonTabIndex: 1,
+            btnText: 'Add files',
+            areaText: 'drop files here',
+            areaClass: 'upload-drop-area',
+            uploaded: '{% for fname in contigs_fnames %}<li>{{ fname }} &nbsp;' +
+                // '<a class="dotted-link" style="font-size: 0.8em;" href="#">Remove</a>' +
+                '</li>{% endfor %}',
+        },];
 
+        function initUploaders () {
             var evaluateButton = $('#evaluate-button');
 
             for (var i = 0; i < parameters.length; i++) {
@@ -272,7 +272,9 @@
                     }
                 }));
             }
-        });
+        }
+
+        $(initUploaders);
 
         function submitDataSetForm(dataSetForm) {
             document.eval_form.elements['report_id'].value = '{{ report_id }}';
@@ -687,7 +689,7 @@
 
                             <label for="email_input" style="margin-left: -41px;">Email:</label>
                             <input type="text" name="email" id="email_input" style="width: 250px;">
-                            <input type="submit" value="Log in" id="authorize_submit">
+                            <input type="submit" value="Sign in" id="authorize_submit">
 
                             <div id="login_error" style="color: FireBrick; display: none; margin-left: -2px; margin-top: 2px;"></div>
                             <div id="login_msg" style="color: #259217; display: none; margin-left: -2px; margin-top: 2px;"></div>
