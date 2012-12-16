@@ -34,7 +34,7 @@ def ask_password(request):
     try:
         user_session = UserSession.objects.get(session_key=session_key)
         if user_session.get_email() == email:
-            mailer.info('user pressed login with the same login he already authorized with: %s' % email)
+            mailer.info('User pressed login with the same login he already authorized with: %s' % email)
     # Cookies turned off
     except UserSession.DoesNotExist:
         pass
@@ -83,15 +83,15 @@ def login(request):
 
     email = request.GET.get('email')
     if not email:
+        mailer.info('Login: no email')
         return HttpResponseBadRequest('Please, specify your email')
     try:
         validate_email(email)
     except ValidationError:
+        mailer.info('Login: incorrect email: %s', email)
         return HttpResponseBadRequest('Incorrect email')
 
     password = request.GET.get('password')
-
-    mailer.info('User signed in with email = %s and password = %s', email, password)
 
     # User session
     # session_key = request.session.session_key
@@ -108,6 +108,7 @@ def login(request):
 
     # New user
     if not User.objects.filter(email=email).exists():
+        mailer.info('User with this email does not exist: email = %s and password = %s', email, password)
         return HttpResponseBadRequest('User with this email does not exist')
 
     user = User.objects.get(email=email)
@@ -118,10 +119,12 @@ def login(request):
         user_session = get_or_create_session(request, 'login')
         user_session.set_user(user)
         # user.generate_password()
+
+        mailer.info('User signed in with email = %s and password = %s', email, password)
         return redirect('quast_app.views.index')
 
     else:
-        logger.warn('user tried to use a wrong password: %s instead of %s for %s',
+        mailer.info('User tried to log in with a wrong password: %s instead of %s for %s',
                     password, user.password, email)
         return redirect('quast_app.views.index')
 
