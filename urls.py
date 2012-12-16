@@ -15,6 +15,7 @@ logger = logging.getLogger('quast')
 
 urlpatterns = patterns('',
     url(r'^robots\.txt$', 'django.views.generic.simple.redirect_to', {'url': '/static/robots.txt'}),
+    url(r'^sitemap\.xml$', 'django.views.generic.simple.redirect_to', {'url': '/static/sitemap.xml'}),
     url(r'^favicon\.ico$', 'django.views.generic.simple.redirect_to',
         {'url': '/static/img/favicon_debug.ico'
         if settings.DEBUG else '/static/img/favicon.ico'}),
