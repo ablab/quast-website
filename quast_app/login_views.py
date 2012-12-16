@@ -50,7 +50,8 @@ def ask_password(request):
         new_user = User.create(email)
 
     send_confirmation(new_user)
-    return HttpResponse('Confirmation message sent. Please, check you email.')
+    return HttpResponse('Confirmation message sent. Please, check you email.<br>'
+                        'If you do not receive a message, please check your junk mail folder.')
 
 
 def send_confirmation(user):
