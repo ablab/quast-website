@@ -37,8 +37,6 @@ if os.environ.get('DEVELOPMENT', None):
 
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-    PASSWORD = '1234'
-
     db_engine = 'django.db.backends.sqlite3'
     db_name = quastdb_fpath
     # db_engine = 'django.db.backends.mysql'
@@ -75,6 +73,8 @@ ADMINS = (
     ('Vlad Saveliev', 'vladsaveliev@me.com'),
 )
 MANAGERS = ADMINS
+
+DEBUG_PASSWORD = '1234'
 
 DATABASES = {
     'default': {

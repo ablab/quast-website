@@ -28,8 +28,6 @@ def ask_password(request):
     except ValidationError:
         return HttpResponseBadRequest('Incorrect email')
 
-    mailer.info('Email = %s' % email)
-
 
     # Current user session
     session_key = request.session.session_key
@@ -60,20 +58,22 @@ def send_confirmation(user):
            % (settings.ADDRESS, user.email, user.password)
     logger.info('link = %s' % link)
 
-    send_mail(subject='Confirmation of email address | QUAST',
+    send_mail(subject='Confirmation of email address',
               message='Hello!\n'
                       '\n'
-                      'To authorize, follow the next link:\n'
+                      'To authorize, follow the link:\n'
                       '%s\n'
                       '\n'
                       'If you didn\'t want this email, please, just ignore it: it was probably sent by mistake.'
                       '\n'
                       '\n---'
-                      '\nIn case of any problems, feel free to reply to this message'
+                      '\nIn case of any problems, feel free to reply to this message,'
                       '\nQUAST team'
                       % link,
               from_email=settings.SUPPORT_EMAIL,
               recipient_list=[user.email])
+
+    mailer.info('Confirmation message was sent to %s with password %s', user.email, user.password)
 
 
 def login(request):
@@ -90,7 +90,7 @@ def login(request):
 
     password = request.GET.get('password')
 
-    mailer.info('Email = %s, Password = %s', email, password)
+    mailer.info('User signed in with email = %s and password = %s', email, password)
 
     # User session
     # session_key = request.session.session_key
@@ -111,10 +111,12 @@ def login(request):
 
     user = User.objects.get(email=email)
 
-    if password == user.password or settings.PASSWORD and password == settings.PASSWORD:
+    if password == user.password or \
+       settings.DEBUG and password == settings.DEBUG_PASSWORD:
+
         user_session = get_or_create_session(request, 'login')
         user_session.set_user(user)
-        user.generate_password()
+        # user.generate_password()
         return redirect('quast_app.views.index')
 
     else:
