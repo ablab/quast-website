@@ -118,7 +118,7 @@ def login(request):
 
         user_session = get_or_create_session(request, 'login')
         user_session.set_user(user)
-        # user.generate_password()
+        user.generate_password()
 
         mailer.info('User signed in with email = %s and password = %s', email, password)
         return redirect('quast_app.views.index')
