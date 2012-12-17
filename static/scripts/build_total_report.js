@@ -20,7 +20,7 @@ function buildTotalReport(assembliesNames, report, date, minContig, glossary, qu
 
 
     var table = '';
-    table += '<table cellspacing="0" class="report-table">';
+    table += '<table cellspacing="0" class="report-table draggable">';
 
     for (var group_n = 0; group_n < report.length; group_n++) {
         var group = report[group_n];
@@ -46,8 +46,11 @@ function buildTotalReport(assembliesNames, report, date, minContig, glossary, qu
         } else {
             table +=
                 '<tr class="subheader-tr row_hidden" id="group_' + group_n + '">' +
-                    '<td colspan="' + width + '">' + groupName + '</td>' +
-                    '</tr>';
+                    '<td>' + groupName + '</td>'; //colspan="' + width + '"
+            for (var i = 0; i < width - 1; i++) {
+                table += '<td></td>';
+            }
+            table += '</tr>';
         }
 
         for (var metric_n = 0; metric_n < metrics.length; metric_n++) {
@@ -142,8 +145,15 @@ function buildTotalReport(assembliesNames, report, date, minContig, glossary, qu
             });
         }
     }).mouseleave(function() {
-            $(this).parent().find('td[number]').css('color', 'black');
+        $(this).parent().find('td[number]').css('color', 'black');
+    });
+
+    $(function() {
+        jQuery.each($(".report-table tr"), function() {
+//            $(this).children(":eq(1)").after($(this).children(":eq(0)"));
         });
+    });
+
 //    });
 }
 //
