@@ -219,7 +219,7 @@ INSTALLED_APPS = (
 # more details on how to customize your logging configuration.
 LOGGING = {
     'version': 1,
-    'disable_existing_loggers': True,
+    'disable_existing_loggers': False,
     'formatters': {
         'verbose': {
             'format': '%(levelname)s %(asctime)s %(module)s.%(funcName)s line %(lineno)s: %(message)s'
@@ -281,22 +281,27 @@ LOGGING = {
         'django': {
             'handlers': ['file_django', 'mail_warning', 'file_warning'],
             'level': 'INFO',
+            'formatter': 'verbose',
         },
         'django.request': {
             'handlers': ['mail_warning', 'file_warning'],
             'level': 'WARNING',
             'propagate': False,
+            'formatter': 'verbose',
         },
         'django.db.backends': {
             'propagate': True,
+            'formatter': 'verbose',
         },
         'quast': {
             'handlers': ['mail_warning', 'file_debug', 'file_warning', 'console_debug'],
             'level': 'DEBUG',
+            'formatter': 'verbose',
         },
         'quast_mailer': {
             'handlers': ['mail_info', 'file_debug', 'file_warning', 'console_debug'],
             'level': 'DEBUG',
+            'formatter': 'verbose',
         },
     },
 }
