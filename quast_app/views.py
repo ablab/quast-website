@@ -48,16 +48,45 @@ def license(request):
 
 
 def example(request):
-    example_dirpath = os.path.join(settings.EXAMPLE_DIRPATH)
     report_response_dict = get_report_response_dict(
-        example_dirpath,
+        settings.EXAMPLE_DIRPATH,
         caption='Example',
-        comment='',
-        data_set_name='E.coli',
-        link='')
+        data_set_name='E. coli',
+        )
     response_dict = dict(report_response_dict.items() + template_args_by_default.items())
-    return render_to_response('example-report.html', response_dict)
+    return render_to_response('examples/example.html', response_dict)
 
+
+def e_coli(request):
+    report_response_dict = get_report_response_dict(
+        settings.E_COLI_DIRPATH,
+        caption='E. coli',
+        data_set_name='E. coli',
+        )
+    response_dict = dict(report_response_dict.items() + template_args_by_default.items())
+    return render_to_response('examples/e_coli.html', response_dict)
+
+
+def h_sapiens(request):
+    report_response_dict = get_report_response_dict(
+        settings.H_SAPIENS_DIRPATH,
+        caption='H. sapiens',
+        data_set_name='H. sapiens'
+        )
+    response_dict = dict(report_response_dict.items() + template_args_by_default.items())
+    return render_to_response('examples/h_sapiens.html', response_dict)
+
+
+def bumblebee(request):
+    report_response_dict = get_report_response_dict(
+        settings.BUMBLEBEE_DIRPATH,
+        caption='Bumblebee',
+        )
+    response_dict = dict(report_response_dict.items() + template_args_by_default.items())
+    return render_to_response('examples/bumblebee.html', response_dict)
+
+
+#"ABySS", "Allpaths-LG", "Bambus2", "CABOG", "MSR-CA", "SGA", "SOAPdenovo", "Velvet"
 
 def benchmarking(request):
     return render_to_response('benchmarking.html', template_args_by_default)
@@ -72,7 +101,7 @@ def ecoli(request):
         data_set_name='E.coli',
         link='')
     response_dict = dict(report_response_dict.items() + template_args_by_default.items())
-    return render_to_response('ecoli.html', response_dict)
+    return render_to_response('examples/ecoli.html', response_dict)
 
 
 
@@ -93,7 +122,6 @@ def download_report(request, link):
 def reports(request):
     user_session = get_or_create_session(request, 'reports')
     return reports_view(user_session, template_args_by_default, request)
-
 
 
 def delete_session(request):

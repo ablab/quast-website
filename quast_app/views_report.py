@@ -22,7 +22,7 @@ task_state_map = {
 }
 
 
-def get_report_response_dict(results_dirpath, caption, comment, data_set_name, link, set_title=False):
+def get_report_response_dict(results_dirpath, caption, comment='', data_set_name='', link='', set_title=False):
     if not os.path.isdir(results_dirpath):
         logger.error('no results directory %s ', results_dirpath)
         raise Exception('No results directory %s' % results_dirpath)
@@ -62,7 +62,6 @@ def get_report_response_dict(results_dirpath, caption, comment, data_set_name, l
 
     if caption:
         header = caption
-        data_set_name = data_set_name
     else:
         header = data_set_name
         data_set_name = ''

@@ -24,8 +24,12 @@ MANUAL_FPATH                = os.path.join(QUAST_DIRPATH, 'manual.html')
 LICENSE_FPATH               = os.path.join(QUAST_DIRPATH, 'LICENSE')
 
 APP_DIRPATH                 = os.path.join(SOURCE_DIRPATH, 'quast_app')
-EXAMPLE_DIRPATH             = os.path.join(APP_DIRPATH, 'files/example')
-ECOLI_DIRPATH               = os.path.join(APP_DIRPATH, 'files/ecoli')
+FILES_DIRPATH               = os.path.join(APP_DIRPATH, 'files')
+EXAMPLE_DIRPATH             = os.path.join(FILES_DIRPATH, 'example')
+ECOLI_DIRPATH               = os.path.join(FILES_DIRPATH, 'ecoli')
+BUMBLEBEE_DIRPATH           = os.path.join(FILES_DIRPATH, 'paper/bumblebee')
+E_COLI_DIRPATH              = os.path.join(FILES_DIRPATH, 'paper/e.coli')
+H_SAPIENS_DIRPATH           = os.path.join(FILES_DIRPATH, 'paper/h.sapiens')
 
 REPORT_LINK_BASE = '/reports/'
 

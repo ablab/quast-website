@@ -1,0 +1,17 @@
+{% extends "report.html" %}
+
+{% block title %}Bumblebee{% endblock %}
+
+{% block example-menu-li-class %}active{% endblock %}
+
+{% block logo_class %}dark_bg_link{% endblock %}
+
+{% block header %}Bumblebee{% endblock %}
+
+{% block extra_extra_head %}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            document.title = 'Bumblebee';
+        });
+    </script>
+{% endblock %}
