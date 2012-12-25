@@ -179,8 +179,8 @@ function buildTotalReport(assembliesNames, report, date, minContig, glossary, qu
             var lightness = 0;
             cells.each(function(i) {
                 var number = numbers[i];
-                hue = minHue + (number - min)*k;
-                lightness = (Math.pow(hue-75, 2))/350 + 35;
+                hue = Math.round(minHue + (number - min)*k);
+                lightness = Math.round((Math.pow(hue-75, 2))/350 + 35);
 //                $(this).css('color', 'hsl(' + hue + ', 80%, 35%)');
                 $(this).css('color', 'hsl(' + hue + ', 80%, ' + lightness + '%)');
             });
