@@ -121,30 +121,36 @@ function buildTotalReport(assembliesNames, report, date, minContig, glossary, qu
     $('#report').append(table);
 
     var RED_HUE = 0;
-    var GREEN_HUE = 124;
+    var GREEN_HUE = 120;
     var GREEN_HSL = 'hsl(' + GREEN_HUE + ', 80%, 40%)';
 
     var legend = '<span>';
-    var step = 4;
+    var step = 6;
     for (var hue = RED_HUE; hue < GREEN_HUE + step; hue += step) {
         var lightness = (Math.pow(hue-75, 2))/350 + 35;
         legend += '<span style="color: hsl(' + hue + ', 80%, ' + lightness + '%);">';
 
         switch (hue) {
             case RED_HUE:
-                legend += 'b'; break;
+                legend += 'w'; break;
             case RED_HUE + step:
-                legend += 'a'; break;
+                legend += 'o'; break;
             case RED_HUE + 2 * step:
-                legend += 'd'; break;
+                legend += 'r'; break;
+            case RED_HUE + 3 * step:
+                legend += 's'; break;
+            case RED_HUE + 4 * step:
+                legend += 't'; break;
+
             case GREEN_HUE - 3 * step:
-                legend += 'g'; break;
+                legend += 'b'; break;
             case GREEN_HUE - 2 * step:
-                legend += 'o'; break;
+                legend += 'e'; break;
             case GREEN_HUE - step:
-                legend += 'o'; break;
+                legend += 's'; break;
             case GREEN_HUE:
-                legend += 'd'; break;
+                legend += 't'; break;
+
             default:
                 legend += '.';
         }
