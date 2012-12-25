@@ -10,7 +10,7 @@ function buildTotalReport(assembliesNames, report, date, minContig, glossary, qu
 //    $('#extended_link').css('width', '183');
 
     $('#extended_link').append('' +
-        '<div style="float: left; width: 182px;"><a class="dotted-link" id="extended_report_link">Extended report</a>' +
+        '<div id="extended_report_link_div" style="float: left;"><a class="dotted-link" id="extended_report_link">Extended report</a>' +
         '</div>' +
         '<div style="float: left;"><span id="report_legend" style="display: none;"></span>' +
         '</div>' +
@@ -38,7 +38,7 @@ function buildTotalReport(assembliesNames, report, date, minContig, glossary, qu
         var width = assembliesNames.length + 1;
 
         if (group_n == 0) {
-            table += '<tr class="header-tr"><td>' + groupName + '</td>';
+            table += '<tr class="header-tr"><td id="first_td">' + groupName + '</td>';
 
             for (var assembly_n = 0; assembly_n < assembliesNames.length; assembly_n++) {
                 var assemblyName = assembliesNames[assembly_n];
@@ -151,6 +151,8 @@ function buildTotalReport(assembliesNames, report, date, minContig, glossary, qu
         legend += '</span>';
     }
     legend += '</span>';
+    $('#extended_report_link_div').width($('#first_td').outerWidth());
+
     $('#report_legend').append(legend);
 
     $(".report-table td[number]").mouseenter(function() {
