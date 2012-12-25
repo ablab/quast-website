@@ -184,7 +184,8 @@ function buildTotalReport(assembliesNames, report, date, minContig, glossary, qu
             });
         }
 
-        $('#report_legend').show();
+        if (numbers.length > 1)
+            $('#report_legend').show();
 
     }).mouseleave(function() {
         $(this).parent().find('td[number]').css('color', 'black');
