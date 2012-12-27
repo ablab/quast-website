@@ -32,23 +32,25 @@ function distinctColors(count) {
 
 /**************/
 /* FORMATTING */
-function isInt(num) {
+function isIntegral(num) {
     return num % 1 === 0;
 }
 
-function isFloat(num) {
-    return !isInt(num);
+function isFractional(num) {
+    return !isIntegral(num);
 }
 
 function toPrettyString(num, unit) {
     if (typeof num === 'number') {
         var str;
         if (num <= 9999) {
-            if (isFloat(num)) {
-                if (num <= 9) {
-                    str = num.toFixed(3);
-                } else {
+            if (isFractional(num)) {
+                if (isIntegral(num * 10)) {
+                    str = num.toFixed(1);
+                } else if (isIntegral(num * 100) || num >= 100) {
                     str = num.toFixed(2);
+                } else {
+                    str = num.toFixed(3);
                 }
             } else {
                 str = num.toFixed(0);
@@ -148,17 +150,18 @@ function getBpTickFormatter(maxY) {
 }
 
 function windowsTickFormatter(v, axis) {
-    var val = v.toFixed(0);
-    if (!gc.yAxisLabeled && val > gc.maxY) {
-        gc.yAxisLabeled = true;
-        var res = val + ' window';
-        if (val > 1) {
-            res += 's'
-        }
-        return res;
-    } else {
-        return val;
-    }
+    return toPrettyString(v);
+//    var val = v.toFixed(0);
+//    if (!gc.yAxisLabeled && val > gc.maxY) {
+//        gc.yAxisLabeled = true;
+//        var res = val + ' window';
+//        if (val > 1) {
+//            res += 's'
+//        }
+//        return res;
+//    } else {
+//        return val;
+//    }
 }
 
 function getBpLogTickFormatter(maxY) {

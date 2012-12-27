@@ -5,7 +5,7 @@ String.prototype.trunc =
 
 function buildTotalReport(assembliesNames, report, date, minContig, glossary, qualities, mainMetrics) {
     $('#subheader').html('<p>' + date + '</p>');
-    $('#mincontig').append('<p>Contigs shorter than ' + minContig + "<span class='rhs'>&nbsp;</span>" + 'bp were skipped</p>');
+    $('#mincontig').html('<p>Skipped contigs shorter than ' + minContig + "<span class='rhs'>&nbsp;</span>" + 'bp</p>');
 
 //    $('#extended_link').css('width', '183');
 
@@ -45,8 +45,8 @@ function buildTotalReport(assembliesNames, report, date, minContig, glossary, qu
                 if (assemblyName.length > 30) {
                     assemblyName =
                         '<span class="tooltip-link" rel="tooltip" title="' + assemblyName + '">' +
-                        assemblyName.trunc(30) +
-                        '</span>'
+                            assemblyName.trunc(30) +
+                            '</span>'
                 }
 
                 table += '<td>' + assemblyName + '</td>';
@@ -193,11 +193,11 @@ function buildTotalReport(assembliesNames, report, date, minContig, glossary, qu
         }
 
         if (numbers.length > 1)
-            $('#report_legend').show();
+            $('#report_legend').show('fast');
 
     }).mouseleave(function() {
-        $(this).parent().find('td[number]').css('color', 'black');
-    });
+            $(this).parent().find('td[number]').css('color', 'black');
+        });
 
     $(function() {
         jQuery.each($(".report-table tr"), function() {

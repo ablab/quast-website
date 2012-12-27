@@ -23,17 +23,69 @@ urlpatterns = patterns('',
 
     url(r'^/?$', 'quast_app.views.index'),
 
-    url(r'^example/?$', 'quast_app.views.example'),
     url(r'^manual/?$', 'quast_app.views.manual'),
     url(r'^manual.html$', 'quast_app.views.manual'),
     url(r'^manual_1\.3/?$', 'quast_app.views.manual'),
     url(r'^manual_1\.3\.html$', 'quast_app.views.manual'),
     url(r'^LICENSE$', 'quast_app.views.license'),
-    url(r'^ecoli/?$', 'quast_app.views.ecoli'),
-    url(r'^e.coli/?$', 'quast_app.views.e_coli'),
-    url(r'^bumblebee/?$', 'quast_app.views.bumblebee'),
-    url(r'^h.sapiens/?$', 'quast_app.views.h_sapiens'),
     url(r'^benchmarking/?$', 'quast_app.views.benchmarking'),
+    url(r'^example/?$', 'quast_app.views.example'),
+    url(r'^ecoli/?$', 'quast_app.views.idba'),
+
+
+    url(r'^paper/e.coli/?$', 'quast_app.paper_views.e_coli'),
+
+#    url(r'^paper/e.coli/reference/?$',
+#        'django.views.generic.simple.redirect_to',
+#        {'url': '/static/data_sets/e.coli/e_coli_reference.fa.gz'},
+#        name='e_coli_reference'),
+#
+#    url(r'^paper/e.coli/genes/?$',
+#        'django.views.generic.simple.redirect_to',
+#        {'url': '/static/data_sets/e.coli/e_coli_genes.gff'},
+#        name='e_coli_genes'),
+#
+#    url(r'^paper/e.coli/operons/?$',
+#        'django.views.generic.simple.redirect_to',
+#        {'url': '/static/data_sets/e.coli/e_coli_operons.gff'},
+#        name='e_coli_operons'),
+#
+#    url(r'^paper/e.coli/assembly/?$',
+#        'django.views.generic.simple.redirect_to',
+#        {'url': '/static/data_sets/e.coli/e_coli_spades_assembly.fasta'},
+#        name='e_coli_assembly'),
+#
+    url(r'^paper/e.coli/download/?$',
+        'django.views.generic.simple.redirect_to',
+        {'url': '/static/data_sets/e.coli/e_coli_quast_report.zip'},
+        name='e_coli_quast_report'),
+
+
+    url(r'^paper/b.impatiens/?$', 'quast_app.paper_views.b_impatiens'),
+
+    url(r'^paper/b.impatiens/download/?$',
+        'django.views.generic.simple.redirect_to',
+        {'url': '/static/data_sets/b.impatiens/b_impatiens_quast_report.zip'},
+        name='b_impatiens_quast_report'),
+
+
+    url(r'^paper/h.sapiens_chr14/?$', 'quast_app.paper_views.h_sapiens'),
+
+#    url(r'^/static/data_sets/h.sapiens_chr14/h_sapiens_chr14_reference.fasta$',
+#        'django.views.generic.simple.direct_to_template'
+#        name='h_sapiens_reference'),
+
+#    url(r'^paper/h.sapiens_chr14/genes/?$',
+#        'django.views.generic.simple.redirect_to',
+#        {'url': '/static/data_sets/h.sapiens_chr14/h_sapiens_chr14_genes.txt'},
+#        name='h_sapiens_genes'),
+#
+    url(r'^paper/h.sapiens_chr14/download/?$',
+        'django.views.generic.simple.redirect_to',
+        {'url': '/static/data_sets/h.sapiens_chr14/h_sapiens_chr14_quast_report.zip'},
+        name='h_sapiens_quast_report'),
+
+
     url(r'^contigs-ajax-upload$', views.contigs_uploader.upload, name='contigs_ajax_upload'),
     url(r'^contigs-ajax-remove$', views.contigs_uploader.remove, name='contigs_ajax_remove'),
     url(r'^contigs-ajax-initialize-uploads$', views.contigs_uploader.initialize_uploads, name='contigs_ajax_initialize_uploads'),

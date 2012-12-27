@@ -28,6 +28,8 @@
         $(".content").css('min-height', (h-210));
         $(".footer").css('display', 'block');
     }
+
+    resizeContent();
 </script>
 
 {% block extra_head %}{% endblock %}
@@ -153,8 +155,8 @@
     </div>
 </div>
 
-<script type="text/javascript" src="/static/bootstrap/js/bootstrap.js"></script>
-<script type="text/javascript" src="/static/bootstrap/js/bootstrap-tooltip-vlad.js"></script>
+<script type="text/javascript" src="/static/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/bootstrap/bootstrap-tooltip-vlad.js"></script>
 <script type="text/javascript">
 {#    $().load(function() {#}
         {#        alert('docu/ment ready');#}

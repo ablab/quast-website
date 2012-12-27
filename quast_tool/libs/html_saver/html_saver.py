@@ -39,8 +39,12 @@ aux_files = [
     'scripts/hsvToRgb.js',
     'scripts/draw_genes_plot.js',
     'scripts/build_report.js',
+    'dragtable.js',
     'ie_html5.js',
     'bootstrap/bootstrap-tooltip-5px-lower.min.js',
+    'bootstrap/bootstrap.min.css',
+    'bootstrap/bootstrap.min.js',
+    'bootstrap/bootstrap-tooltip-vlad.js',
     'report.css',
     'common.css',
 ]
@@ -156,13 +160,13 @@ def save_assembly_lengths(results_dirpath, filenames, assemblies_lengths):
         append(results_dirpath, json_fpath, 'assembliesLengths')
 
 
-def save_features_in_contigs(results_dirpath, filenames, feature_name, feature_in_contigs):
-    json_fpath = json_saver.save_features_in_contigs(results_dirpath, filenames, feature_name, feature_in_contigs)
+def save_features_in_contigs(results_dirpath, filenames, feature_name, feature_in_contigs, ref_feature_num):
+    json_fpath = json_saver.save_features_in_contigs(results_dirpath, filenames, feature_name, feature_in_contigs, ref_feature_num)
     if json_fpath:
         append(results_dirpath, json_fpath, feature_name + 'InContigs')
 
 
-def save_GC_info(results_dirpath, filenames, lists_of_GC_info):
-    json_fpath = json_saver.save_GC_info(results_dirpath, filenames, lists_of_GC_info)
+def save_GC_info(results_dirpath, filenames, list_of_GC_distributions):
+    json_fpath = json_saver.save_GC_info(results_dirpath, filenames, list_of_GC_distributions)
     if json_fpath:
         append(results_dirpath, json_fpath, 'gcInfos')

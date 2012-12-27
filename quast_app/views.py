@@ -2,7 +2,7 @@ import shutil
 import os
 from django.core.urlresolvers import reverse
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseBadRequest, Http404, HttpResponseRedirect
-from django.shortcuts import render_to_response, render, redirect
+from django.shortcuts import render_to_response
 from upload_backend import ContigsUploadBackend, ReferenceUploadBackend, GenesUploadBackend, OperonsUploadBackend
 from django.conf import settings
 
@@ -18,23 +18,11 @@ logger = logging.getLogger('quast')
 mailer = logging.getLogger('quast_mailer')
 
 
-glossary = '{}'
-with open(os.path.join(settings.GLOSSARY_PATH)) as f:
-    glossary = f.read()
-
-template_args_by_default = {
-    'glossary': glossary,
-    'google-analytics': settings.GOOGLE_ANALYTICS,
-    'debug': settings.DEBUG,
-    'support_email': settings.SUPPORT_EMAIL,
-}
-
-
 from ajaxuploader.views import AjaxFileUploader
 contigs_uploader = AjaxFileUploader(backend=ContigsUploadBackend)
-#reference_uploader = AjaxFileUploader(backend=ReferenceUploadBackend)
-#genes_uploader = AjaxFileUploader(backend=GenesUploadBackend)
-#operons_uploader = AjaxFileUploader(backend=OperonsUploadBackend)
+# reference_uploader = AjaxFileUploader(backend=ReferenceUploadBackend)
+# genes_uploader = AjaxFileUploader(backend=GenesUploadBackend)
+# operons_uploader = AjaxFileUploader(backend=OperonsUploadBackend)
 
 
 def manual(request):
@@ -52,47 +40,16 @@ def example(request):
         settings.EXAMPLE_DIRPATH,
         caption='Example',
         data_set_name='E. coli',
-        )
-    response_dict = dict(report_response_dict.items() + template_args_by_default.items())
-    return render_to_response('examples/example.html', response_dict)
+    )
+    response_dict = dict(report_response_dict.items() + settings.TEMPLATE_ARGS_BY_DEFAULT.items())
+    return render_to_response('example.html', response_dict)
 
-
-def e_coli(request):
-    report_response_dict = get_report_response_dict(
-        settings.E_COLI_DIRPATH,
-        caption='E. coli',
-        data_set_name='E. coli',
-        )
-    response_dict = dict(report_response_dict.items() + template_args_by_default.items())
-    return render_to_response('examples/e_coli.html', response_dict)
-
-
-def h_sapiens(request):
-    report_response_dict = get_report_response_dict(
-        settings.H_SAPIENS_DIRPATH,
-        caption='H. sapiens',
-        data_set_name='H. sapiens'
-        )
-    response_dict = dict(report_response_dict.items() + template_args_by_default.items())
-    return render_to_response('examples/h_sapiens.html', response_dict)
-
-
-def bumblebee(request):
-    report_response_dict = get_report_response_dict(
-        settings.BUMBLEBEE_DIRPATH,
-        caption='Bumblebee',
-        )
-    response_dict = dict(report_response_dict.items() + template_args_by_default.items())
-    return render_to_response('examples/bumblebee.html', response_dict)
-
-
-#"ABySS", "Allpaths-LG", "Bambus2", "CABOG", "MSR-CA", "SGA", "SOAPdenovo", "Velvet"
 
 def benchmarking(request):
-    return render_to_response('benchmarking.html', template_args_by_default)
+    return render_to_response('benchmarking.html', settings.TEMPLATE_ARGS_BY_DEFAULT)
 
 
-def ecoli(request):
+def idba(request):
     json_dirpath = os.path.join(settings.ECOLI_DIRPATH)
     report_response_dict = get_report_response_dict(
         json_dirpath,
@@ -100,19 +57,19 @@ def ecoli(request):
         comment='',
         data_set_name='E.coli',
         link='')
-    response_dict = dict(report_response_dict.items() + template_args_by_default.items())
-    return render_to_response('examples/ecoli.html', response_dict)
+    response_dict = dict(report_response_dict.items() + settings.TEMPLATE_ARGS_BY_DEFAULT.items())
+    return render_to_response('ecoli.html', response_dict)
 
 
 
 def index(request):
     user_session = get_or_create_session(request, 'index')
-    return index_view(user_session, template_args_by_default, request)
+    return index_view(user_session, settings.TEMPLATE_ARGS_BY_DEFAULT, request)
 
 
 def report(request, link):
     user_session = get_or_create_session(request, 'report')
-    return report_view(user_session, template_args_by_default, request, link)
+    return report_view(user_session, settings.TEMPLATE_ARGS_BY_DEFAULT, request, link)
 
 
 def download_report(request, link):
@@ -121,7 +78,7 @@ def download_report(request, link):
 
 def reports(request):
     user_session = get_or_create_session(request, 'reports')
-    return reports_view(user_session, template_args_by_default, request)
+    return reports_view(user_session, settings.TEMPLATE_ARGS_BY_DEFAULT, request)
 
 
 def delete_session(request):
@@ -208,7 +165,7 @@ def delete_session(request):
 #
 #    #        data_set_form.fields['name_selected'].choices = dataset_choices
 #
-#    response_dict = template_args_by_default
+#    response_dict = settings.TEMPLATE_ARGS_BY_DEFAULT
 #    response_dict = dict(response_dict.items() + {
 #        'csrf_token': get_token(request),
 #        'contigs_fnames': contigs_fnames,

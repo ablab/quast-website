@@ -30,21 +30,26 @@ reference = ''
 genes = ''
 operons = ''
 with_gage = False
-cyclic = True
+prokaryote = True # former cyclic
 only_best_alignments = False
 threads = None
 mincluster = 65
+estimated_reference_size = None
 
-long_options = "output-dir= save-json-to= genes= operons= reference= contig-thresholds= min-contig= "\
-               "genemark-thresholds= save-json gage not-circular no-plots no-html help debug "\
-               "only-best-alignments scaffolds threads= mincluster=".split()
-short_options = "o:G:O:R:t:M:e:J:jgnhdsbT:c:"
+long_options = "output-dir= save-json-to= genes= operons= reference= contig-thresholds= min-contig= " \
+               "genemark-thresholds= save-json gage eukaryote no-plots no-html help debug " \
+               "only-best-alignments scaffolds threads= mincluster= est-ref-size=".split()
+short_options = "o:G:O:R:t:M:k:J:jgehdsbT:c:r:"
+
 
 # other constants. Can't be changed by command-line options
 
 # genome analyzer
 min_gap_size = 50 # for calculating number or gaps in genome coverage
 min_gene_overlap = 100 # to partial genes/operons finding
+
+# basic_stats
+GC_bin_size = 1.0
 
 # plotter and maybe other modules in the future
 legend_names = None

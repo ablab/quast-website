@@ -1,26 +1,33 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 ############################################################################
 # Copyright (c) 2011-2012 Saint-Petersburg Academic University
 # All Rights Reserved
 # See file LICENSE for details.
 ############################################################################
+import gzip
 
 import sys
+import bz2
 import os
 import shutil
 import re
 import getopt
 import subprocess
 from site import addsitedir
+import zipfile
 from libs.qutils import uncompress
 
 __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
 
-addsitedir(os.path.join(__location__, 'env/site-packages'))
+addsitedir(os.path.join(__location__, 'libs/site_packages'))
+
+import simplejson as json
+
 
 #sys.path.append(os.path.join(os.path.abspath(sys.path[0]), 'libs'))
 #sys.path.append(os.path.join(os.path.abspath(sys.path[0]), '../spades_pipeline'))
+
 
 from libs import qconfig
 from libs import fastaparser
@@ -28,8 +35,32 @@ from libs.html_saver import json_saver
 
 RELEASE_MODE=False
 
+def print_version(stream=sys.stdout):
+    version_filename = os.path.join(__location__, 'VERSION')
+    version = "unknown"
+    build = "unknown"
+    if os.path.isfile(version_filename):
+        version_file = open(version_filename)
+        version = version_file.readline()
+        if version:
+            version = version.strip()
+        else:
+            version = "unknown"
+        build = version_file.readline()
+        if build:
+            build = build.split()[1].strip()
+        else:
+            build = "unknown"
+
+    print >> stream, "Version:", version,
+    print >> stream, "Build:", build
+
+
 def usage():
     print >> sys.stderr, 'QUAST: QUality ASsessment Tool for Genome Assemblies.'
+    print_version(sys.stderr)
+
+    print >> sys.stderr, ""
     print >> sys.stderr, 'Usage: python', sys.argv[0], '[options] contig files'
     print >> sys.stderr, ""
 
@@ -42,11 +73,12 @@ def usage():
         print >> sys.stderr, "--min-contig <int>           lower threshold for contig length [default: %s]" % qconfig.min_contig
         print >> sys.stderr, ""
         print >> sys.stderr, "Advanced options:"
-        print >> sys.stderr, "--scaffolds                         this flag informs QUAST that provided assemblies are scaffolds"
+        print >> sys.stderr, "--threads    <int>                  maximum number of threads [default: number of provided assemblies]"
         print >> sys.stderr, "--gage                              this flag starts QUAST in \"GAGE mode\""
         print >> sys.stderr, "--contig-thresholds   <int,int,..>  comma-separated list of contig length thresholds [default: %s]" % qconfig.contig_thresholds
         print >> sys.stderr, "--genemark-thresholds <int,int,..>  comma-separated list of threshold lengths of genes to search with GeneMark [default is %s]" % qconfig.genes_lengths
-        print >> sys.stderr, '--not-circular                      this flag should be set if the genome is not circular (e.g., it is an eukaryote)'
+        print >> sys.stderr, "--scaffolds                         this flag informs QUAST that provided assemblies are scaffolds"
+        print >> sys.stderr, '--eukaryote                         this flag should be set if the genome is an eukaryote'
         print >> sys.stderr, '--only-best-alignments              this flag forces QUAST to use only one alignment of contigs covering repeats'
         print >> sys.stderr, ""
         print >> sys.stderr, "-h/--help           print this usage message"
@@ -56,14 +88,17 @@ def usage():
         print >> sys.stderr, "-R           <filename>      reference genome file"
         print >> sys.stderr, "-G/--genes   <filename>      annotated genes file"
         print >> sys.stderr, "-O/--operons <filename>      annotated operons file"
-        print >> sys.stderr, "-M  --min-contig             lower threshold for contig length [default: %s]" % qconfig.min_contig
+        print >> sys.stderr, "-M  --min-contig <int>       lower threshold for contig length [default: %s]" % qconfig.min_contig
         print >> sys.stderr, "-t  --contig-thresholds      comma-separated list of contig length thresholds [default: %s]" % qconfig.contig_thresholds
-        print >> sys.stderr, "-e  --genemark-thresholds    comma-separated list of threshold lengths of genes to search with GeneMark [default: %s]" % qconfig.genes_lengths
+        print >> sys.stderr, "-k  --genemark-thresholds    comma-separated list of threshold lengths of genes to search with GeneMark [default: %s]" % qconfig.genes_lengths
+        print >> sys.stderr, "-T  --threads    <int>       maximum number of threads [default: number of provided assemblies]"
+        print >> sys.stderr, "-c  --mincluster <int>       Nucmer's parameter -- the minimum length of a cluster of matches [default: %s]" % qconfig.mincluster
+        print >> sys.stderr, "-r  --est-ref-size <int>     Estimated reference size (for calculating NG)"
         print >> sys.stderr, ""
         print >> sys.stderr, 'Options without arguments'
         print >> sys.stderr, "-s  --scaffolds              this flag informs QUAST that provided assemblies are scaffolds"
         print >> sys.stderr, '-g  --gage                   use Gage (results are in gage_report.txt)'
-        print >> sys.stderr, '-n  --not-circular           genome is not circular (e.g., it is an eukaryote)'
+        print >> sys.stderr, '-e  --eukaryote              genome is an eukaryote'
         print >> sys.stderr, '-b  --only-best-alignments   QUAST use only one alignment of contigs covering repeats (ambiguous)'
         print >> sys.stderr, "-j  --save-json              save the output also in the JSON format"
         print >> sys.stderr, "-J  --save-json-to <path>    save the JSON-output to a particular path"
@@ -85,7 +120,7 @@ def corrected_fname_for_nucmer(fpath):
     fname = os.path.basename(fpath)
 
     corr_fname = fname
-    corr_fname = re.sub(r'[^\w\._\-|]', '_', corr_fname).strip()
+    corr_fname = re.sub(r'[^\w\._\-+]', '_', corr_fname).strip()
 
     if corr_fname != fname:
         if os.path.isfile(os.path.join(dirpath, corr_fname)):
@@ -106,7 +141,7 @@ def correct_fasta(original_fpath, corrected_fpath, is_reference=False):
     modified_fasta_entries = []
     for name, seq in fastaparser.read_fasta(original_fpath): # in tuples: (name, seq)
         if (len(seq) >= qconfig.min_contig) or is_reference:
-            corr_name = re.sub(r'[^\w\._\-|]', '_', name)
+            corr_name = re.sub(r'[^\w\._\-+]', '_', name)
             # seq to uppercase, because we later looking only uppercase letters
             corr_seq = seq.upper()
             # removing \r (Nucmer fails on such sequences)
@@ -120,7 +155,7 @@ def correct_fasta(original_fpath, corrected_fpath, is_reference=False):
             if re.compile(r'[^ACGTN]').search(corr_seq):
                 return False
             modified_fasta_entries.append((corr_name, corr_seq))
-    fastaparser.write_fasta_to_file(corrected_fpath, modified_fasta_entries)
+    fastaparser.write_fasta(corrected_fpath, modified_fasta_entries)
     return True
 
 
@@ -190,7 +225,18 @@ def main(args, lib_dir=os.path.join(__location__, 'libs')): # os.path.join(os.pa
         elif opt in ('-M', "--min-contig"):
             qconfig.min_contig = int(arg)
 
-        elif opt in ('-e', "--genemark-thresholds"):
+        elif opt in ('-T', "--threads"):
+            qconfig.threads = int(arg)
+            if qconfig.threads < 1:
+                qconfig.threads = 1
+
+        elif opt in ('-c', "--mincluster"):
+            qconfig.mincluster = int(arg)
+
+        elif opt in ('-r', "--est-ref-size"):
+            qconfig.estimated_reference_size = int(arg)
+
+        elif opt in ('-k', "--genemark-thresholds"):
             qconfig.genes_lengths = arg
 
         elif opt in ('-j', '--save-json'):
@@ -207,8 +253,8 @@ def main(args, lib_dir=os.path.join(__location__, 'libs')): # os.path.join(os.pa
         elif opt in ('-g', "--gage"):
             qconfig.with_gage = True
 
-        elif opt in ('-n', "--not-circular"):
-            qconfig.cyclic = False
+        elif opt in ('-e', "--eukaryote"):
+            qconfig.prokaryote = False
 
         elif opt in ('-b', "--only-best-alignments"):
             qconfig.only_best_alignments = True
@@ -232,13 +278,13 @@ def main(args, lib_dir=os.path.join(__location__, 'libs')): # os.path.join(os.pa
     for c_fpath in contigs_fpaths:
         assert_file_exists(c_fpath, 'contigs')
 
-#    old_contigs_fpaths = contigs_fpaths[:]
-#    contigs_fpaths = []
-#    for old_c_fpath in old_contigs_fpaths:
-#        contigs_fpaths.append(rename_file_for_nucmer(old_c_fpath))
+    #    old_contigs_fpaths = contigs_fpaths[:]
+    #    contigs_fpaths = []
+    #    for old_c_fpath in old_contigs_fpaths:
+    #        contigs_fpaths.append(rename_file_for_nucmer(old_c_fpath))
 
-#    # For renaming back: contigs_fpaths are to be changed further.
-#    new_contigs_fpaths = contigs_fpaths[:]
+    #    # For renaming back: contigs_fpaths are to be changed further.
+    #    new_contigs_fpaths = contigs_fpaths[:]
 
 
     qconfig.contig_thresholds = map(int, qconfig.contig_thresholds.split(","))
@@ -303,7 +349,17 @@ def main(args, lib_dir=os.path.join(__location__, 'libs')): # os.path.join(os.pa
     if os.path.isfile(logfile):
         os.remove(logfile)
 
-    tee = support.Tee(logfile, 'w', console=True) # not pure, changes sys.stdout and sys.stderr
+    # saving info about command line and options into log file
+    lfile = open(logfile,'w')
+    print >> lfile, "QUAST started: ",
+    for v in sys.argv:
+        print >> lfile, v,
+    print >> lfile, ""
+    print_version(lfile)
+    print >> lfile, ""
+    lfile.close()
+
+    tee = support.Tee(logfile, 'a', console=True) # not pure, changes sys.stdout and sys.stderr
 
     ########################################################################
 
@@ -398,8 +454,8 @@ def main(args, lib_dir=os.path.join(__location__, 'libs')): # os.path.join(os.pa
                 splitted_fasta.append((name.split()[0] + "_" + str(cur_contig_number), seq[cur_contig_start:]))
                 contigs_counter += cur_contig_number
 
-            fastaparser.write_fasta_to_file(splitted_path, splitted_fasta)
-            print "  %d scaffolds (%s) were broken into %d contigs (%s)" \
+            fastaparser.write_fasta(splitted_path, splitted_fasta)
+            print "  %d scaffolds (%s) were broken into %d contigs (%s)"\
                   % (id + 1, os.path.basename(corr_fpath), contigs_counter, os.path.basename(splitted_path))
             if handle_fasta(splitted_path, splitted_path):
                 new_contigs_fpaths.append(os.path.join(__location__, splitted_path))
@@ -438,7 +494,7 @@ def main(args, lib_dir=os.path.join(__location__, 'libs')): # os.path.join(os.pa
     ########################################################################
     from libs import basic_stats
     basic_stats.do(qconfig.reference, contigs_fpaths, output_dirpath + '/basic_stats', all_pdf, qconfig.draw_plots,
-        json_outputpath, output_dirpath)
+                   json_outputpath, output_dirpath)
 
     aligned_fpaths = []
     if qconfig.reference:
@@ -446,11 +502,10 @@ def main(args, lib_dir=os.path.join(__location__, 'libs')): # os.path.join(os.pa
         ### former PLANTAKOLYA, PLANTAGORA
         ########################################################################
         from libs import contigs_analyzer
-        nucmer_statuses = contigs_analyzer.do(qconfig.reference, contigs_fpaths, qconfig.cyclic, output_dirpath + '/contigs_reports', lib_dir, qconfig.draw_plots)
+        nucmer_statuses = contigs_analyzer.do(qconfig.reference, contigs_fpaths, qconfig.prokaryote, output_dirpath + '/contigs_reports', lib_dir, qconfig.draw_plots)
         for contigs_fpath in contigs_fpaths:
             if nucmer_statuses[contigs_fpath] == contigs_analyzer.NucmerStatus.OK:
                 aligned_fpaths.append(contigs_fpath)
-        reload(contigs_analyzer)
 
     # Before continue evaluating, check if nucmer didn't skip all of the contigs files.
     if len(aligned_fpaths) != 0 and qconfig.reference:
@@ -460,14 +515,14 @@ def main(args, lib_dir=os.path.join(__location__, 'libs')): # os.path.join(os.pa
         ########################################################################
         from libs import aligned_stats
         aligned_stats.do(qconfig.reference, aligned_fpaths, output_dirpath + '/contigs_reports',
-            output_dirpath + '/aligned_stats', all_pdf, qconfig.draw_plots, json_outputpath, output_dirpath)
+                         output_dirpath + '/aligned_stats', all_pdf, qconfig.draw_plots, json_outputpath, output_dirpath)
 
         ########################################################################
         ### GENOME_ANALYZER
         ########################################################################
         from libs import genome_analyzer
         genome_analyzer.do(qconfig.reference, aligned_fpaths, output_dirpath + '/contigs_reports',
-            output_dirpath + '/genome_stats', qconfig.genes, qconfig.operons, all_pdf, qconfig.draw_plots, json_outputpath, output_dirpath)
+                           output_dirpath + '/genome_stats', qconfig.genes, qconfig.operons, all_pdf, qconfig.draw_plots, json_outputpath, output_dirpath)
 
     def add_empty_predicted_genes_fields():
         # TODO: make it nicer (not output predicted genes if annotations are provided
@@ -489,6 +544,13 @@ def main(args, lib_dir=os.path.join(__location__, 'libs')): # os.path.join(os.pa
     ########################################################################
     ### TOTAL REPORT
     ########################################################################
+
+    # changing names of assemblies to more human-readable versions if provided
+    if qconfig.legend_names and len(contigs_fpaths) == len(qconfig.legend_names):
+        for id, contigs_fpath in enumerate(contigs_fpaths):
+            report = reporting.get(contigs_fpath)
+            report.add_field(reporting.Fields.NAME, qconfig.legend_names[id])
+
     reporting.save_total(output_dirpath)
 
     if json_outputpath:

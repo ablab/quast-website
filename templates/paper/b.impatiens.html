@@ -1,0 +1,32 @@
+{% extends "report.html" %}
+
+{% block title %}B. impatiens{% endblock %}
+
+{% block example-menu-li-class %}active{% endblock %}
+
+{% block logo_class %}dark_bg_link{% endblock %}
+
+{% block header %}B. impatiens{% endblock %}
+
+{% block extra_extra_head %}
+{% endblock %}
+
+{% block extra_content %}
+    <script>
+        $(function() {
+            $('#subheader').hide();
+        })
+    </script>
+{% endblock %}
+
+{% block genome_info %}
+{#    <h3><a href="http://gage.cbcb.umd.edu/data/Bombus_impatiens/">Data set</a></h3>#}
+    <p>
+        <p>No reference is available at the moment.<br>
+        Estimated genome size is 250 Mb (used for NGx statistics).
+        </p>
+
+        <p><a href="http://gage.cbcb.umd.edu/data/Bombus_impatiens/">The data set and all of its assemblies</a> are taken from <a href="http://genome.cshlp.org/content/early/2012/01/12/gr.131383.111">Salzberg <i>et al.,</i> 2011<span class="leading_link_dot">.</span></a>
+        </p>
+    </p>
+{% endblock %}

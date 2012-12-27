@@ -22,7 +22,7 @@ var gns = {
         yAxisLabeled: false,
     },
 
-    draw: function (name, colors, filenames, data, referenceLength,
+    draw: function (name, colors, filenames, data, refGenesNumber,
                     placeholder, legendPlaceholder, glossary) {
 //    div.html(
 //        "<span class='plot-header'>" + kind[0].toUpperCase() + kind.slice(1) + "s covered</span>" +
@@ -42,6 +42,10 @@ var gns = {
 
             info.maxY = 0;
             info.maxX = 0;
+
+            if (refGenesNumber) {
+                info.maxY = refGenesNumber;
+            }
 
             for (var fi = 0; fi < plotsN; fi++) {
                 var filename = filenames[fi];
@@ -89,6 +93,22 @@ var gns = {
             //        }
             //    }
 
+            if (refGenesNumber) {
+                info.series.push({
+                    data: [[0, refGenesNumber], [info.maxX, refGenesNumber]],
+                    label: 'reference,&nbsp;' + toPrettyString(refGenesNumber, 'genes'),
+                    isReference: true,
+                    dashes: {
+                        show: true,
+                        lineWidth: 1,
+                    },
+                    yaxis: 1,
+                    number: info.series.length,
+                    color: '#000000',
+                });
+
+                colors.push('#000000');
+            }
 
             info.showWithData = function(series, colors) {
                 var plot = $.plot(placeholder, series, {
@@ -105,21 +125,22 @@ var gns = {
                     },
                     yaxis: {
                         min: 0,
+//                        max: info.maxY,
                         labelWidth: 120,
                         reserveSpace: true,
                         lineWidth: 0.5,
                         color: '#000',
                         tickFormatter: function (val, axis) {
-                            if (!info.yAxisLabeled && val > info.maxY) {
-                                info.yAxisLabeled = true;
-                                var res = val + ' ' + kind;
-                                if (val > 1) {
-                                    res += 's'
-                                }
-                                return res;
-                            } else {
+//                            if (!info.yAxisLabeled && val > info.maxY) {
+//                                info.yAxisLabeled = true;
+//                                var res = val + ' ' + kind;
+//                                if (val > 1) {
+//                                    res += 's'
+//                                }
+//                                return res;
+//                            } else {
                                 return val;
-                            }
+//                            }
                         },
                         minTickSize: 1,
                     },
@@ -132,6 +153,9 @@ var gns = {
                         minTickSize: 1,
                     },
                 });
+
+                var firstLabel = $('.yAxis .tickLabel').last();
+                firstLabel.append(' ' + name);
 
                 bindTip(placeholder, series, plot, ordinalNumberToPrettyString, 'contig', 'bottom right');
             };

@@ -1,4 +1,5 @@
 import sys
+from django.utils.html import escape
 import os
 from django.middleware.csrf import get_token
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseBadRequest, Http404, HttpResponseRedirect
@@ -14,6 +15,11 @@ logger = logging.getLogger('quast')
 mailer = logging.getLogger('quast_mailer')
 
 
+glossary = '{}'
+with open(os.path.join(settings.GLOSSARY_PATH)) as f:
+    GLOSSARY = f.read()
+
+
 task_state_map = {
     'PENDING': 'PENDING',
     'STARTED': 'PENDING',
@@ -22,7 +28,7 @@ task_state_map = {
 }
 
 
-def get_report_response_dict(results_dirpath, caption, comment='', data_set_name='', link='', set_title=False):
+def get_report_response_dict(results_dirpath, caption, comment='', data_set_name='', link='', set_title=False, safe=False):
     if not os.path.isdir(results_dirpath):
         logger.error('no results directory %s ', results_dirpath)
         raise Exception('No results directory %s' % results_dirpath)
@@ -64,7 +70,6 @@ def get_report_response_dict(results_dirpath, caption, comment='', data_set_name
         header = caption
     else:
         header = data_set_name
-        data_set_name = ''
 
     return {
         'totalReport': total_report,
@@ -78,15 +83,17 @@ def get_report_response_dict(results_dirpath, caption, comment='', data_set_name
         'download': False,
 
         'header': header,
-        'set_title': set_title,
+        'setTitle': set_title,
 
-        'data_set_name': data_set_name,
-        'comment': comment,
+        'dataSetName': data_set_name if safe else escape(data_set_name),
+        'comment': comment if safe else escape(comment),
         'link': settings.REPORT_LINK_BASE + link,
         'downloadLink': settings.REPORT_LINK_BASE + 'download/' + link,
 
-        # 'qualities': quality_dict,
-        # 'mainMetrics': main_metrics,
+        'glossary': glossary,
+
+      # 'qualities': quality_dict,
+      # 'mainMetrics': main_metrics,
 }
 
 def report_view(user_session, response_dict, request, link):

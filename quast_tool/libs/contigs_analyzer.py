@@ -14,6 +14,7 @@
 # Whole Genome Sequencing and Assembly of Plant Genomes. PLoS ONE 6(12):
 # e28436. doi:10.1371/journal.pone.0028436
 ############################################################################
+from __future__ import with_statement
 
 import os
 import platform
@@ -25,7 +26,7 @@ import shutil
 from libs import reporting, qconfig
 from qutils import id_to_str
 
-required_binaries = ['nucmer', 'delta-filter', 'show-coords', 'dnadiff']
+required_binaries = ['nucmer', 'delta-filter', 'show-coords', 'dnadiff', 'show-snps']
 
 class Misassembly:
     LOCAL=0
@@ -302,7 +303,7 @@ def clear_files(filename, nucmerfilename):
     if qconfig.debug:
         return
     # delete temporary files
-    for ext in ['.delta', '.1delta', '.mdelta', '.unqry', '.qdiff', '.rdiff', '.1coords', '.mcoords', '.mgaps', '.ntref', '.gp', '.coords.btab']:
+    for ext in ['.delta', '.1delta', '.mdelta', '.unqry', '.qdiff', '.rdiff', '.1coords', '.mcoords', '.mgaps', '.ntref', '.gp', '.coords.btab', '.coords_tmp', '.coords.headless', '.snps']:
         if os.path.isfile(nucmerfilename + ext):
             os.remove(nucmerfilename + ext)
     if os.path.isfile('nucmer.error'):
@@ -334,8 +335,9 @@ def plantakolya(cyclic, draw_plots, id, filename, nucmerfilename, myenv, output_
     coords_filtered_filename = nucmerfilename + '.coords.filtered'
     unaligned_filename = nucmerfilename + '.unaligned'
     snps_filename = nucmerfilename + '.snps'
+    show_snps_filename = nucmerfilename + '.show_snps'
     nucmer_report_filename = nucmerfilename + '.report'
-    plantafile = open(logfilename_out, 'a')
+    plantafile = open(logfilename_out, 'w')
 
     print >> plantafile, 'Aligning contigs to reference...'
 
@@ -345,7 +347,8 @@ def plantakolya(cyclic, draw_plots, id, filename, nucmerfilename, myenv, output_
     if (os.path.isfile(nucmer_successful_check_filename) and os.path.isfile(coords_filename)
         and os.path.isfile(nucmer_report_filename)):
 
-        if open(nucmer_successful_check_filename).read().split('\n')[1].strip() == str(qconfig.min_contig):
+        successful_check_content = open(nucmer_successful_check_filename).read().split('\n')
+        if len(successful_check_content) > 2 and successful_check_content[1].strip() == str(qconfig.min_contig):
             print >> plantafile, '\tUsing existing Nucmer alignments...'
             print '  ' + id_to_str(id) + 'Using existing Nucmer alignments... '
             using_existing_alignments = True
@@ -356,32 +359,22 @@ def plantakolya(cyclic, draw_plots, id, filename, nucmerfilename, myenv, output_
         # GAGE params of Nucmer
         #subprocess.call(['nucmer', '--maxmatch', '-p', nucmerfilename, '-l', '30', '-banded', reference, filename],
         #    stdout=open(logfilename_out, 'a'), stderr=logfile_err, env=myenv)
-        logfile_out = open(logfilename_out, 'a')
-        subprocess.call(['nucmer', '--maxmatch', '-p', nucmerfilename, reference, filename],
-             stdout=logfile_out, stderr=logfile_err, env=myenv)
-        logfile_out.close()
+        subprocess.call(['nucmer', '-c', str(qconfig.mincluster), '--maxmatch', '-p', nucmerfilename, reference, filename],
+             stdout=open(logfilename_out, 'a'), stderr=logfile_err, env=myenv)
 
         # Filtering by IDY% = 95 (as GAGE did)
-        filtered_delta_file=open(filtered_delta_filename, 'w')
         subprocess.call(['delta-filter', '-i', '95', delta_filename],
-            stdout=filtered_delta_file, stderr=logfile_err, env=myenv)
-        filtered_delta_file.close()
-
+            stdout=open(filtered_delta_filename, 'w'), stderr=logfile_err, env=myenv)
         shutil.move(filtered_delta_filename, delta_filename)
 
         # disabling sympalign: part1
         #subprocess.call(['show-coords', '-B', delta_filename],
         #    stdout=open(coords_btab_filename, 'w'), stderr=logfile_err, env=myenv)
         tmp_coords_filename = coords_filename + '_tmp'
-        tmp_coords_file = open(tmp_coords_filename, 'w')
         subprocess.call(['show-coords', delta_filename],
-            stdout=tmp_coords_file, stderr=logfile_err, env=myenv)
-        tmp_coords_file.close()
-
-        logfile = open(logfilename_out, 'a')
+            stdout=open(tmp_coords_filename, 'w'), stderr=logfile_err, env=myenv)
         subprocess.call(['dnadiff', '-d', delta_filename, '-p', nucmerfilename],
-            stdout=logfile, stderr=logfile_err, env=myenv)
-        logfile.close()
+            stdout=open(logfilename_out, 'a'), stderr=logfile_err, env=myenv)
 
         # removing waste lines from coords file
         coords_file = open(coords_filename, 'w')
@@ -391,7 +384,6 @@ def plantakolya(cyclic, draw_plots, id, filename, nucmerfilename, myenv, output_
             header.append(line)
             if line.startswith('====='):
                 break
-
         coords_file.write(header[-2])
         coords_file.write(header[-1])
         for line in tmp_coords_file:
@@ -414,6 +406,18 @@ def plantakolya(cyclic, draw_plots, id, filename, nucmerfilename, myenv, output_
             print >> logfile_err, id_to_str(id) + 'Nucmer: nothing aligned for', filename
             print '  ' + id_to_str(id) + 'Nucmer: nothing aligned for ' + '\'' + os.path.basename(filename) + '\'.'
             return NucmerStatus.NOT_ALIGNED, {}
+
+
+        with open(coords_filename) as coords_file:
+            headless_coords_filename = coords_filename + '.headless'
+            headless_coords_file = open(headless_coords_filename, 'w')
+            coords_file.readline()
+            coords_file.readline()
+            headless_coords_file.write(coords_file.read())
+            headless_coords_file.close()
+            headless_coords_file = open(headless_coords_filename)
+            subprocess.call(['show-snps', '-S', '-T', '-H', delta_filename], stdin=headless_coords_file, stdout=open(show_snps_filename, 'w'), stderr=logfile_err, env=myenv)
+
         nucmer_successful_check_file = open(nucmer_successful_check_filename, 'w')
         nucmer_successful_check_file.write("Min contig size:\n")
         nucmer_successful_check_file.write(str(qconfig.min_contig) + '\n')
@@ -430,6 +434,8 @@ def plantakolya(cyclic, draw_plots, id, filename, nucmerfilename, myenv, output_
     sum_idy = 0.0
     num_idy = 0
     for line in coords_file:
+        if line.strip() == '':
+            break
         assert line[0] != '='
         #Clear leading spaces from nucmer output
         #Store nucmer lines in an array
@@ -462,18 +468,20 @@ def plantakolya(cyclic, draw_plots, id, filename, nucmerfilename, myenv, output_
     print >> plantafile, 'Loading SNPs...'
     snps = {}
     snp_locs = {}
-    for line in open(snps_filename):
+    for line in open(show_snps_filename):
         #print "$line";
         line = line.split()
         if not line[0].isdigit():
             continue
         ref = line[10]
         ctg = line[11]
+        pos = int(line[0]) # Kolya: python don't convert int<->str types automatically
+        loc = int(line[3]) # Kolya: same as above
 
         # if (! exists $line[11]) { die "Malformed line in SNP file.  Please check that show-snps has completed succesfully.\n$line\n[$line[9]][$line[10]][$line[11]]\n"; }
 
-        snps.setdefault(ref, {}).setdefault(ctg, {})[line[0]] = 'I' if line[1] == '.' else ('D' if line[2] == '.' else 'S')
-        snp_locs.setdefault(ref, {}).setdefault(ctg, {})[line[0]] = line[3]
+        snps.setdefault(ref, {}).setdefault(ctg, {})[pos] = 'I' if line[1] == '.' else ('D' if line[2] == '.' else 'S')
+        snp_locs.setdefault(ref, {}).setdefault(ctg, {})[pos] = loc
 
     # Loading the regions (if any)
     regions = {}
@@ -494,8 +502,8 @@ def plantakolya(cyclic, draw_plots, id, filename, nucmerfilename, myenv, output_
     partially_unaligned = 0
     fully_unaligned_bases = 0
     partially_unaligned_bases = 0
-    ambiguous = 0
-    total_ambiguous = 0
+    repeats = 0
+    total_repeats_extra_bases = 0
     uncovered_regions = 0
     uncovered_region_bases = 0
     total_redundant = 0
@@ -529,7 +537,7 @@ def plantakolya(cyclic, draw_plots, id, filename, nucmerfilename, myenv, output_
             top_aligns = []
             print >> plantafile, 'Top Length: %s  Top ID: %s' % (top_len, top_id)
 
-            #Check that top hit captures most of the contig (currently >97.5% or within 100 bases, former 99% and 10)
+            #Check that top hit captures most of the contig
             if top_len > ctg_len * epsilon or ctg_len - top_len < maxun:
                 #Reset top aligns: aligns that share the same value of longest and higest identity
                 top_aligns.append(sorted_aligns[0])
@@ -544,7 +552,7 @@ def plantakolya(cyclic, draw_plots, id, filename, nucmerfilename, myenv, output_
                 #Mark other alignments as ambiguous
                 while sorted_aligns:
                     ambig = sorted_aligns.pop()
-                    print >> plantafile, '\t\tMarking as ambiguous: %s' % str(ambig)
+                    print >> plantafile, '\t\tMarking as insignificant: %s' % str(ambig) # former ambiguous
                     # Kolya: removed redundant code about $ref (for gff AFAIU)
 
                 if len(top_aligns) == 1:
@@ -568,7 +576,12 @@ def plantakolya(cyclic, draw_plots, id, filename, nucmerfilename, myenv, output_
                         for align in top_aligns:
                             print >> plantafile, '\t\tSkipping alignment ', align
                     else:
+                        #Increment count of contigs with repeats and bases
+                        repeats += 1
+                        # we count only extra bases, so we shouldn't include bases in the first alignment
+                        total_repeats_extra_bases -= top_aligns[0].len1
                         while len(top_aligns):
+                            total_repeats_extra_bases += top_aligns[0].len1
                             print >> plantafile, '\t\tAlignment: %s' % str(top_aligns[0])
                             ref_aligns.setdefault(top_aligns[0].ref, []).append(top_aligns[0])
                             print >> coords_filtered_file, str(top_aligns[0])
@@ -582,10 +595,9 @@ def plantakolya(cyclic, draw_plots, id, filename, nucmerfilename, myenv, output_
                     #                            if (ref not in ref_features) or (i not in ref_features[ref]):
                     #                                ref_features.setdefault(ref, {})[i] = 'A'
 
-                    # Alex: TODO what should we do with these counters?
                     #Increment count of ambiguous contigs and bases
-                    ambiguous += 1
-                    total_ambiguous += ctg_len
+                    #ambiguous += 1
+                    #total_ambiguous += ctg_len
             else:
                 #Sort all aligns by position on contig, then length
                 sorted_aligns = sorted(sorted_aligns, key=lambda x: (x.len2, x.idy), reverse=True)
@@ -601,7 +613,8 @@ def plantakolya(cyclic, draw_plots, id, filename, nucmerfilename, myenv, output_
                 for i in xrange(1, num_aligns):
                     cur_group = (last_end - last_real.len2 + 1, last_end)
                     #If this alignment extends past last alignment's endpoint, add to real, else skip
-                    if sorted_aligns[i].s2 > last_end or sorted_aligns[i].e2 > last_end:
+                    extension = max(sorted_aligns[i].s2, sorted_aligns[i].e2) - last_end # negative if no extension
+                    if (extension > maxun) and (extension / min(sorted_aligns[i].len2, last_real.len2) > 1 - epsilon):
                         real_aligns = real_aligns + [sorted_aligns[i]]
                         last_end = max(sorted_aligns[i].s2, sorted_aligns[i].e2)
                         last_real = sorted_aligns[i]
@@ -808,7 +821,7 @@ def plantakolya(cyclic, draw_plots, id, filename, nucmerfilename, myenv, output_
         #Walk through each region on this reference sequence
         for region in regions[ref]:
             end = 0
-            reg_length = region[1] - region[0]
+            reg_length = region[1] - region[0] + 1
             print >> plantafile, '\t\tRegion: %d to %d (%d bp)\n' % (region[0], region[1], reg_length)
 
             #Skipping alignments not in the next region
@@ -1070,8 +1083,8 @@ def plantakolya(cyclic, draw_plots, id, filename, nucmerfilename, myenv, output_
     print >> plantafile, 'Unaligned Contigs: %d + %d part' % (unaligned, partially_unaligned)
     print >> plantafile, 'Partially Unaligned Contigs with Misassemblies: %d' % partially_unaligned_with_misassembly
     print >> plantafile, 'Unaligned Contig Bases: %d' % (fully_unaligned_bases + partially_unaligned_bases)
-    print >> plantafile, 'Ambiguous Contigs: %d' % ambiguous
-    print >> plantafile, 'Ambiguous Contig Bases: %d' % total_ambiguous
+    print >> plantafile, 'Contigs with Repeats: %d' % repeats
+    print >> plantafile, 'Extra Bases in Contigs with Repeats: %d' % total_repeats_extra_bases
     print >> plantafile, 'Mismatches: %d' % SNPs
     print >> plantafile, 'Single Nucleotide Indels: %d' % indels
 
@@ -1122,7 +1135,7 @@ def plantakolya(cyclic, draw_plots, id, filename, nucmerfilename, myenv, output_
               'misassembled_contigs': misassembled_contigs, 'misassembled_bases': misassembled_bases,
               'unaligned': unaligned, 'partially_unaligned': partially_unaligned,
               'partially_unaligned_bases': partially_unaligned_bases, 'fully_unaligned_bases': fully_unaligned_bases,
-              'ambiguous': ambiguous, 'total_ambiguous': total_ambiguous, 'SNPs': SNPs, 'indels': indels,
+              'repeats': repeats, 'total_repeats_extra_bases': total_repeats_extra_bases, 'SNPs': SNPs, 'indels': indels,
               'total_aligned_bases': total_aligned_bases,
               'partially_unaligned_with_misassembly': partially_unaligned_with_misassembly,
               'partially_unaligned_with_significant_parts': partially_unaligned_with_significant_parts}
@@ -1130,7 +1143,7 @@ def plantakolya(cyclic, draw_plots, id, filename, nucmerfilename, myenv, output_
     ## outputting misassembled contigs to separate file
     fasta = [(name, seq) for name, seq in fastaparser.read_fasta(filename) if
                          name in extensive_misassembled_contigs]
-    fastaparser.write_fasta_to_file(output_dir + '/' + os.path.basename(filename) + '.mis_contigs', fasta)
+    fastaparser.write_fasta(output_dir + '/' + os.path.basename(filename) + '.mis_contigs', fasta)
 
     plantafile.close()
     logfile_err.close()
@@ -1209,16 +1222,14 @@ def do(reference, filenames, cyclic, output_dir, lib_dir, draw_plots):
     if not os.path.isdir(nucmer_output_dir):
         os.mkdir(nucmer_output_dir)
 
-#    from joblib import Parallel, delayed
-#    statuses_results_pairs = Parallel(n_jobs=len(filenames))(delayed(plantakolya_process)(
-#        cyclic, draw_plots, nucmer_output_dir, fname, id, myenv, output_dir, reference)
-#          for id, fname in enumerate(filenames))
-
-    statuses_results_pairs = []
-    for id, fname in enumerate(filenames):
-        status, result = plantakolya_process(cyclic, draw_plots, nucmer_output_dir, fname, id, myenv, output_dir, reference)
-        statuses_results_pairs.append((status, result))
-
+    from joblib import Parallel, delayed
+    if qconfig.threads is None:
+        n_jobs = len(filenames)
+    else:
+        n_jobs = min(len(filenames), qconfig.threads)
+    statuses_results_pairs = Parallel(n_jobs=n_jobs)(delayed(plantakolya_process)(
+        cyclic, draw_plots, nucmer_output_dir, fname, id, myenv, output_dir, reference)
+          for id, fname in enumerate(filenames))
     # unzipping
     statuses, results = [x[0] for x in statuses_results_pairs], [x[1] for x in statuses_results_pairs]
 
@@ -1233,8 +1244,8 @@ def do(reference, filenames, cyclic, output_dir, lib_dir, draw_plots):
         partially_unaligned = result['partially_unaligned']
         partially_unaligned_bases = result['partially_unaligned_bases']
         fully_unaligned_bases = result['fully_unaligned_bases']
-        ambiguous = result['ambiguous']
-        total_ambiguous = result['total_ambiguous']
+        repeats = result['repeats']
+        total_repeats_extra_bases = result['total_repeats_extra_bases']
         SNPs = result['SNPs']
         indels = result['indels']
         total_aligned_bases = result['total_aligned_bases']
@@ -1248,8 +1259,8 @@ def do(reference, filenames, cyclic, output_dir, lib_dir, draw_plots):
         report.add_field(reporting.Fields.MISCONTIGSBASES, misassembled_bases)
         report.add_field(reporting.Fields.UNALIGNED, '%d + %d part' % (unaligned, partially_unaligned))
         report.add_field(reporting.Fields.UNALIGNEDBASES, (fully_unaligned_bases + partially_unaligned_bases))
-        report.add_field(reporting.Fields.AMBIGUOUS, ambiguous)
-        report.add_field(reporting.Fields.AMBIGUOUSBASES, total_ambiguous)
+        report.add_field(reporting.Fields.REPEATS, repeats)
+        report.add_field(reporting.Fields.REPEATSEXTRABASES, total_repeats_extra_bases)
         report.add_field(reporting.Fields.MISMATCHES, SNPs)
         report.add_field(reporting.Fields.INDELS, indels)
         report.add_field(reporting.Fields.SUBSERROR, "%.2f" % (float(SNPs) * 100000.0 / float(total_aligned_bases)))

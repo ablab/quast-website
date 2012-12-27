@@ -35,6 +35,7 @@ class Fields:
     TOTALLEN = 'Total length'
     TOTALLENS = ('Total length (>= %d bp)', tuple(qconfig.contig_thresholds))
     REFLEN = 'Reference length'
+    ESTREFLEN = 'Estimated reference length'
     N50 = 'N50'
     NG50 = 'NG50'
     N75 = 'N75'
@@ -51,13 +52,13 @@ class Fields:
     MISCONTIGSBASES = 'Misassembled contigs length'
     UNALIGNED = '# unaligned contigs'
     UNALIGNEDBASES = 'Unaligned contigs length'
-    AMBIGUOUS = '# ambiguous contigs'
-    AMBIGUOUSBASES = 'Ambiguous contigs length'
+    REPEATS = '# contigs with repeats'
+    REPEATSEXTRABASES = 'Extra bases in contigs with repeats'
 
     UNCALLED = "# N's"
     UNCALLED_PERCENT = "# N's per 100 kbp"
 
-    # Unaligned
+    # Aligned
     LARGALIGN = 'Largest alignment'
     NA50 = 'NA50'
     NGA50 = 'NGA50'
@@ -84,12 +85,12 @@ class Fields:
     AVGIDY = 'Average %IDY'
 
     # order as printed in report:
-    order = [NAME, CONTIGS, TOTALLENS, NUMCONTIGS, LARGCONTIG, TOTALLEN, REFLEN, GC,
+    order = [NAME, CONTIGS, TOTALLENS, NUMCONTIGS, LARGCONTIG, TOTALLEN, REFLEN, ESTREFLEN, GC, REFGC,
              N50, NG50, N75, NG75,
-             MISASSEMBL, MISCONTIGS, MISCONTIGSBASES,
-             UNALIGNED, UNALIGNEDBASES, AMBIGUOUS, AMBIGUOUSBASES, MAPPEDGENOME, DUPLICATION_RATIO, REFGC,
+             MISASSEMBL, MISLOCAL,
+             UNALIGNED, UNALIGNEDBASES, MAPPEDGENOME, DUPLICATION_RATIO,
              UNCALLED_PERCENT, SUBSERROR, INDELSERROR, GENES, OPERONS, GENEMARKUNIQUE, GENEMARK,
-             NA50, NGA50, NA75, NGA75]
+             LARGALIGN, NA50, NGA50, NA75, NGA75]
 
     MIS_ALL_EXTENSIVE = '# misassemblies'
     MIS_RELOCATION = '    # relocations'
@@ -149,7 +150,7 @@ class Fields:
                   GAGE_CORN50]
 
     grouped_order = [
-        ('Basic statistics', [NUMCONTIGS, CONTIGS, LARGCONTIG, TOTALLEN, TOTALLENS, REFLEN,
+        ('Basic statistics', [NUMCONTIGS, CONTIGS, LARGCONTIG, TOTALLEN, TOTALLENS, REFLEN, ESTREFLEN,
                               N50, N75, NG50, NG75, L50, L75, LG50, LG75,]),
 
         ('Misassemblies', [MIS_ALL_EXTENSIVE,
@@ -161,7 +162,7 @@ class Fields:
                        UNALIGNED_PART_WITH_MISASSEMBLY, UNALIGNED_PART_SIGNIFICANT_PARTS,
                        UNALIGNED_PART_LENGTH,]),
 
-        ('Ambiguous', [AMBIGUOUS, AMBIGUOUSBASES,]),
+        #('Ambiguous', [AMBIGUOUS, AMBIGUOUSBASES,]),
 
         ('Genome statistics', [MAPPEDGENOME, DUPLICATION_RATIO, GENES, OPERONS,
                                GENEMARKUNIQUE, GENEMARK, GC, REFGC,
@@ -187,14 +188,15 @@ class Fields:
              MAPPEDGENOME, GENES, OPERONS, GENEMARKUNIQUE, GENEMARK,],
         Quality.LESS_IS_BETTER:
             [NUMCONTIGS, CONTIGS, L50, LG50, L75, LG75,
-             MISLOCAL, MISASSEMBL, MISCONTIGS, MISCONTIGSBASES, UNALIGNED, UNALIGNEDBASES, AMBIGUOUS, AMBIGUOUSBASES,
+             MISLOCAL, MISASSEMBL, MISCONTIGS, MISCONTIGSBASES, UNALIGNED, UNALIGNEDBASES, #AMBIGUOUS, AMBIGUOUSBASES,
              UNCALLED, UNCALLED_PERCENT,
              LA50, LGA50, LA75, LGA75, DUPLICATION_RATIO, INDELS, INDELSERROR, MISMATCHES, SUBSERROR,],
         Quality.EQUAL:
-            [REFLEN, GC, REFGC, AVGIDY],
+            [REFLEN, ESTREFLEN, GC, REFGC, AVGIDY],
         }
 
-    for name, metrics in filter(lambda (name, metrics): name in ['Misassemblies', 'Unaligned', 'Ambiguous'], grouped_order):
+    #for name, metrics in filter(lambda (name, metrics): name in ['Misassemblies', 'Unaligned', 'Ambiguous'], grouped_order):
+    for name, metrics in filter(lambda (name, metrics): name in ['Misassemblies', 'Unaligned'], grouped_order):
         quality_dict['Less is better'].extend(metrics)
 
 

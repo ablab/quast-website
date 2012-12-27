@@ -190,6 +190,8 @@ def do(reference, filenames, nucmer_dir, output_dir, genes_filename, operons_fil
             files_operons_in_contigs[filename].append(0)
 
         for line in coordfile:
+            if line.strip() == '':
+                break
             s1 = int(line.split('|')[0].split()[0])
             e1 = int(line.split('|')[0].split()[1])
             contig_name = line.split()[-1].strip()
@@ -217,6 +219,9 @@ def do(reference, filenames, nucmer_dir, output_dir, genes_filename, operons_fil
                     cur_gap_size = 0
                 else:
                     cur_gap_size += 1
+            if cur_gap_size >= qconfig.min_gap_size:
+                gaps_count += 1
+                print >>gaps_file, i - cur_gap_size, i - 1
 
         gaps_file.close()
 
@@ -224,8 +229,10 @@ def do(reference, filenames, nucmer_dir, output_dir, genes_filename, operons_fil
 
         genome_coverage = float(covered_bp) * 100 / float(genome_size)
         # calculating duplication ratio
-        duplication_ratio = (report.get_field(reporting.Fields.TOTALLEN) - report.get_field(reporting.Fields.UNALIGNEDBASES)) /\
-            ((genome_coverage / 100.0) * float(genome_size))
+        duplication_ratio = (report.get_field(reporting.Fields.TOTALLEN) + \
+                             report.get_field(reporting.Fields.REPEATSEXTRABASES) - \
+                             report.get_field(reporting.Fields.UNALIGNEDBASES)) /\
+                             ((genome_coverage / 100.0) * float(genome_size))
 
         res_file.write('  %-20s  | %-20s| %-18s| %-12s|'
             % (os.path.basename(filename), genome_coverage, duplication_ratio, str(gaps_count)))
@@ -286,19 +293,30 @@ def do(reference, filenames, nucmer_dir, output_dir, genes_filename, operons_fil
 
     res_file.close()
 
+
+    if genes_container.region_list:
+        ref_genes_num = len(genes_container.region_list)
+    else:
+        ref_genes_num = None
+
+    if operons_container.region_list:
+        ref_operons_num = len(operons_container.region_list)
+    else:
+        ref_operons_num = None
+
     # saving json
     if json_output_dir:
         if genes_container.region_list:
-            json_saver.save_features_in_contigs(json_output_dir, filenames, 'genes', files_genes_in_contigs)
+            json_saver.save_features_in_contigs(json_output_dir, filenames, 'genes', files_genes_in_contigs, ref_genes_num)
         if operons_container.region_list:
-            json_saver.save_features_in_contigs(json_output_dir, filenames, 'operons', files_operons_in_contigs)
+            json_saver.save_features_in_contigs(json_output_dir, filenames, 'operons', files_operons_in_contigs, ref_operons_num)
 
     if qconfig.html_report:
         from libs.html_saver import html_saver
         if genes_container.region_list:
-            html_saver.save_features_in_contigs(results_dir, filenames, 'genes', files_genes_in_contigs)
+            html_saver.save_features_in_contigs(results_dir, filenames, 'genes', files_genes_in_contigs, ref_genes_num)
         if operons_container.region_list:
-            html_saver.save_features_in_contigs(results_dir, filenames, 'operons', files_operons_in_contigs)
+            html_saver.save_features_in_contigs(results_dir, filenames, 'operons', files_operons_in_contigs, ref_operons_num)
 
     if draw_plots:
         # cumulative plots:

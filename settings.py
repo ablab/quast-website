@@ -27,16 +27,15 @@ APP_DIRPATH                 = os.path.join(SOURCE_DIRPATH, 'quast_app')
 FILES_DIRPATH               = os.path.join(APP_DIRPATH, 'files')
 EXAMPLE_DIRPATH             = os.path.join(FILES_DIRPATH, 'example')
 ECOLI_DIRPATH               = os.path.join(FILES_DIRPATH, 'ecoli')
-BUMBLEBEE_DIRPATH           = os.path.join(FILES_DIRPATH, 'paper/bumblebee')
+B_IMPATIENS_DIRPATH         = os.path.join(FILES_DIRPATH, 'paper/b.impatiens')
 E_COLI_DIRPATH              = os.path.join(FILES_DIRPATH, 'paper/e.coli')
-H_SAPIENS_DIRPATH           = os.path.join(FILES_DIRPATH, 'paper/h.sapiens')
+H_SAPIENS_DIRPATH           = os.path.join(FILES_DIRPATH, 'paper/h.sapiens_chr14')
 
-REPORT_LINK_BASE = '/reports/'
+REPORT_LINK_BASE            = '/reports/'
 
 
 if os.environ.get('DEVELOPMENT', None):
     DEBUG = True
-    GOOGLE_ANALYTICS = False
     ADDRESS = 'http://127.0.0.1:8000/'
 
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -48,7 +47,6 @@ if os.environ.get('DEVELOPMENT', None):
 
 else:
     DEBUG = False
-    GOOGLE_ANALYTICS = True
     ADDRESS = 'http://quast.bioinf.spbau.ru/'
 
     db_engine = 'django.db.backends.sqlite3'
@@ -56,6 +54,22 @@ else:
 
 TEMPLATE_DEBUG = DEBUG
 
+
+REPORTS_SHOW_LIMIT = 5
+
+DEBUG_PASSWORD = '1234'
+
+SUPPORT_EMAIL = 'quast.support@bioinf.spbau.ru'
+
+ADMINS = (
+    ('Vlad Saveliev', 'vladsaveliev@me.com'),
+)
+MANAGERS = ADMINS
+
+TEMPLATE_ARGS_BY_DEFAULT = {
+    'debug': DEBUG,
+    'support_email': SUPPORT_EMAIL,
+}
 
 
 # BROKER_URL = 'redis://localhost/0'
@@ -67,18 +81,6 @@ CELERY_RESULT_DBURI = 'sqlite:///' + celerydb_fpath
 CELERY_SEND_TASK_ERROR_EMAILS = True
 CELERY_SEND_EVENTS = True
 
-
-
-REPORTS_SHOW_LIMIT = 5
-
-SUPPORT_EMAIL = 'quast.support@bioinf.spbau.ru'
-
-ADMINS = (
-    ('Vlad Saveliev', 'vladsaveliev@me.com'),
-)
-MANAGERS = ADMINS
-
-DEBUG_PASSWORD = '1234'
 
 DATABASES = {
     'default': {
