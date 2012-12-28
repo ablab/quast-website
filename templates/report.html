@@ -25,6 +25,8 @@
 
     <link rel="stylesheet" href="/static/report.css"/>
 
+    <script type="text/javascript" src="/static/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/static/bootstrap/bootstrap-tooltip-vlad.js"></script>
     {% block before_report_extra_head %}{% endblock %}
 
     <script type="text/javascript">
@@ -34,10 +36,9 @@
 
         $(function() {
             buildReport();
-            $('#contigs_are_ordered').show();
-        });
 
-        $(function() {
+            $('#contigs_are_ordered').show();
+
             $("[rel=tooltip]").tooltip({
                 animation: false,
             });
@@ -197,6 +198,9 @@
             </div>
             <div id='gc-json'>
                 {{ gcInfo }}
+            </div>
+            <div id='glossary-json'>
+                {{ glossary }}
             </div>
         </div>
     </div>

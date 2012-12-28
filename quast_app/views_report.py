@@ -16,8 +16,8 @@ mailer = logging.getLogger('quast_mailer')
 
 
 glossary = '{}'
-with open(os.path.join(settings.GLOSSARY_PATH)) as f:
-    GLOSSARY = f.read()
+with open(settings.GLOSSARY_PATH) as f:
+    glossary = f.read()
 
 
 task_state_map = {
