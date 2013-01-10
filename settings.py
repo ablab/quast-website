@@ -27,9 +27,8 @@ APP_DIRPATH                 = os.path.join(SOURCE_DIRPATH, 'quast_app')
 FILES_DIRPATH               = os.path.join(APP_DIRPATH, 'files')
 EXAMPLE_DIRPATH             = os.path.join(FILES_DIRPATH, 'example')
 ECOLI_DIRPATH               = os.path.join(FILES_DIRPATH, 'ecoli')
-B_IMPATIENS_DIRPATH         = os.path.join(FILES_DIRPATH, 'paper/b.impatiens')
-E_COLI_DIRPATH              = os.path.join(FILES_DIRPATH, 'paper/e.coli')
-H_SAPIENS_DIRPATH           = os.path.join(FILES_DIRPATH, 'paper/h.sapiens_chr14')
+PAPER_DIRPATH               = os.path.join(FILES_DIRPATH, 'paper')
+PAPER_DOWNLOADS_DIRPATH     = os.path.join(PAPER_DIRPATH, 'downloads')
 
 REPORT_LINK_BASE            = '/reports/'
 

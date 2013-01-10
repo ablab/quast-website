@@ -32,8 +32,8 @@ urlpatterns = patterns('',
     url(r'^example/?$', 'quast_app.views.example'),
     url(r'^ecoli/?$', 'quast_app.views.idba'),
 
-
-    url(r'^paper/e.coli/?$', 'quast_app.paper_views.e_coli'),
+    url(r'^paper/$', 'quast_app.paper_views.index'),
+    url(r'^paper/e.coli/(?P<download_fname>.+)?/?$', 'quast_app.paper_views.e_coli'),
 
 #    url(r'^paper/e.coli/reference/?$',
 #        'django.views.generic.simple.redirect_to',
@@ -55,21 +55,21 @@ urlpatterns = patterns('',
 #        {'url': '/static/data_sets/e.coli/e_coli_spades_assembly.fasta'},
 #        name='e_coli_assembly'),
 #
-    url(r'^paper/e.coli/download/?$',
-        'django.views.generic.simple.redirect_to',
-        {'url': '/static/data_sets/e.coli/e_coli_quast_report.zip'},
-        name='e_coli_quast_report'),
+#    url(r'^paper/e.coli/download/?$',
+#        'django.views.generic.simple.redirect_to',
+#        {'url': '/static/data_sets/e.coli/e_coli_quast_report.zip'},
+#        name='e_coli_quast_report'),
 
 
-    url(r'^paper/b.impatiens/?$', 'quast_app.paper_views.b_impatiens'),
+    url(r'^paper/b.impatiens/(?P<download_fname>.+)?/?$', 'quast_app.paper_views.b_impatiens'),
 
-    url(r'^paper/b.impatiens/download/?$',
-        'django.views.generic.simple.redirect_to',
-        {'url': '/static/data_sets/b.impatiens/b_impatiens_quast_report.zip'},
-        name='b_impatiens_quast_report'),
+#    url(r'^paper/b.impatiens/download/?$',
+#        'django.views.generic.simple.redirect_to',
+#        {'url': '/static/data_sets/b.impatiens/b_impatiens_quast_report.zip'},
+#        name='b_impatiens_quast_report'),
 
 
-    url(r'^paper/h.sapiens_chr14/?$', 'quast_app.paper_views.h_sapiens'),
+    url(r'^paper/h.sapiens_chr14/(?P<download_fname>.+)?/?$', 'quast_app.paper_views.h_sapiens'),
 
 #    url(r'^/static/data_sets/h.sapiens_chr14/h_sapiens_chr14_reference.fasta$',
 #        'django.views.generic.simple.direct_to_template'
@@ -79,7 +79,7 @@ urlpatterns = patterns('',
 #        'django.views.generic.simple.redirect_to',
 #        {'url': '/static/data_sets/h.sapiens_chr14/h_sapiens_chr14_genes.txt'},
 #        name='h_sapiens_genes'),
-#
+
     url(r'^paper/h.sapiens_chr14/download/?$',
         'django.views.generic.simple.redirect_to',
         {'url': '/static/data_sets/h.sapiens_chr14/h_sapiens_chr14_quast_report.zip'},
