@@ -128,7 +128,7 @@ var nx = {
                             reserveSpace: true,
                             lineWidth: 0.5,
                             color: '#000',
-                            tickFormatter: getBpTickFormatter(info.maxY, title + '<span class="rhs">&nbsp;</span>=<span class="rhs">&nbsp;</span>'),
+                            tickFormatter: getBpTickFormatter(info.maxY),
                             minTickSize: 1,
                         },
                         xaxis: {
@@ -147,6 +147,10 @@ var nx = {
                         minTickSize: 1,
                     }
                 );
+
+                var firstLabel = $('.yAxis .tickLabel').last();
+                firstLabel.prepend(title + '<span class="rhs">&nbsp;</span>=<span class="rhs">&nbsp;</span>');
+
                 bindTip(placeholder, series, plot, toPrettyString, '%', 'top right');
 
             };
