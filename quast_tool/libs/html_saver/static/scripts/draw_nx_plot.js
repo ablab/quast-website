@@ -32,7 +32,7 @@ var nx = {
         showWithData: null,
     },
 
-    draw: function (name, colors, filenames, data, refPlotValue,
+    draw: function (name, title, colors, filenames, data, refPlotValue,
                     placeholder, legendPlaceholder, glossary) {
 //    var titleHtml = title;
 //    if (glossary.hasOwnProperty(title)) {
@@ -128,7 +128,7 @@ var nx = {
                             reserveSpace: true,
                             lineWidth: 0.5,
                             color: '#000',
-                            tickFormatter: getBpTickFormatter(info.maxY),
+                            tickFormatter: getBpTickFormatter(info.maxY, title + '<span class="rhs">&nbsp;</span>=<span class="rhs">&nbsp;</span>'),
                             minTickSize: 1,
                         },
                         xaxis: {
@@ -138,7 +138,7 @@ var nx = {
                             color: '#000',
                             tickFormatter: function (val, axis) {
                                 if (val == 100) {
-                                    return '&nbsp;100%'
+                                    return '&nbsp;x<span class="rhs">&nbsp;</span>=<span class="rhs">&nbsp;</span>100%'
                                 } else {
                                     return val;
                                 }
@@ -163,6 +163,7 @@ var nx = {
         showPlotWithInfo(info);
 
         $('#contigs_are_ordered').hide();
+        $('#gc_info').hide();
     }
 };
 

@@ -50,7 +50,7 @@ def common_view(caption, slug_name, download_fname):
             response = HttpResponse(wrapper, content_type=content_type)
             response['Content-Length'] = os.path.getsize(download_fpath)
             response['Content-Disposition'] = 'attachment; filename=' + smart_str(download_fname)
-            
+
             return response
 
         else:

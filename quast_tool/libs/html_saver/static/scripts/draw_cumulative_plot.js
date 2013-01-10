@@ -9,7 +9,7 @@ var cumulative = {
     showWithData: null,
     colors: [],
 
-    draw: function(name, colors, filenames, listsOfLengths, refLenght,
+    draw: function(name, title,  colors, filenames, listsOfLengths, refLenght,
                    placeholder, legendPlaceholder, glossary) {
 
         if (!this.isInitialized) {
@@ -179,6 +179,7 @@ var cumulative = {
         showPlotWithInfo(cumulative);
 
         $('#contigs_are_ordered').show();
+        $('#gc_info').hide();
 
     //    placeholder.resize(function () {
     //        alert("Placeholder is now "

@@ -5,7 +5,8 @@ String.prototype.trunc =
 
 function buildTotalReport(assembliesNames, report, date, minContig, glossary, qualities, mainMetrics) {
     $('#subheader').html('<p>' + date + '</p>');
-    $('#mincontig').html('<p>Skipped contigs shorter than ' + minContig + "<span class='rhs'>&nbsp;</span>" + 'bp</p>');
+    $('#mincontig').html('<p>All statistics are based on contigs shorter than ' + minContig +
+        '<span class="rhs">&nbsp;</span>bp, unless otherwise noted. E.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs.</p>');
 
 //    $('#extended_link').css('width', '183');
 

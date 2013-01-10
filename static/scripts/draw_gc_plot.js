@@ -34,7 +34,7 @@ var gc = {
     normal_scale_el: normal_scale_span,
     log_scale_el: log_scale_a,
 
-    draw: function(name, colors, filenames, gcInfos, reflen,
+    draw: function(name, title, colors, filenames, gcInfos, reflen,
         placeholder, legendPlaceholder, glossary, scalePlaceholder) {
         $(scalePlaceholder).html(
             "<div id='change-scale' style='margin-right: 3px; visibility: hidden;'>" +
@@ -175,6 +175,7 @@ var gc = {
         $('#change-scale').css('visibility', 'visible');
 
         $('#contigs_are_ordered').hide();
+        $('#gc_info').show();
     }
 };
 
@@ -214,7 +215,7 @@ function showInNormalScaleWithData(series, colors) {
                 color: '#000',
                 tickFormatter: function (val, axis) {
                     if (val == 100) {
-                        return '&nbsp;100%'
+                        return '&nbsp;100% GC'
                     } else {
                         return val;
                     }
@@ -226,7 +227,7 @@ function showInNormalScaleWithData(series, colors) {
 
     var firstLabel = $('.yAxis .tickLabel').last();
     firstLabel.append(' windows');
-    bindTip(gc.placeholder, series, gc.plot, toPrettyString, '%', 'top right');;
+    bindTip(gc.placeholder, series, gc.plot, toPrettyString, '%<span class="rhs">&nbsp;</span>GC', 'top right');
 }
 
 
@@ -275,7 +276,7 @@ function showInLogarithmicScaleWithData(series, colors) {
                 color: '#000',
                 tickFormatter: function (val, axis) {
                     if (val == 100) {
-                        return '&nbsp;100%'
+                        return '&nbsp;100%<span class="rhs">&nbsp;</span>GC'
                     } else {
                         return val;
                     }
@@ -287,7 +288,7 @@ function showInLogarithmicScaleWithData(series, colors) {
 
     var firstLabel = $('.yAxis .tickLabel').last();
     firstLabel.append(' windows');
-    bindTip(gc.placeholder, series, gc.plot, toPrettyString, '%', 'top right');
+    bindTip(gc.placeholder, series, gc.plot, toPrettyString, '% GC', 'top right');
 }
 
 

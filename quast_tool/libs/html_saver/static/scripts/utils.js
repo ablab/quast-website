@@ -113,7 +113,9 @@ function getMaxDecimalTick(maxY) {
     return maxYTick;
 }
 
-function getBpTickFormatter(maxY) {
+function getBpTickFormatter(maxY, additionalText) {
+    additionalText = additionalText || '';
+
     return function(val, axis) {
         var res;
 
@@ -124,7 +126,7 @@ function getBpTickFormatter(maxY) {
             res = val / 1000000;
 
             if (val > maxY + 1 || val + axis.tickSize >= 1000000000) {
-                res = toPrettyString(res, 'Mbp');
+                res = additionalText + toPrettyString(res, 'Mbp');
             } else {
                 res = toPrettyString(res);
             }
@@ -132,7 +134,7 @@ function getBpTickFormatter(maxY) {
             res = val / 1000;
 
             if (val > maxY + 1 || val + axis.tickSize >= 1000000) {
-                res = toPrettyString(res, 'kbp');
+                res = additionalText + toPrettyString(res, 'kbp');
             } else {
                 res = toPrettyString(res);
             }
@@ -140,12 +142,12 @@ function getBpTickFormatter(maxY) {
             res = val;
 
             if (val > maxY + 1 || val + axis.tickSize >= 1000) {
-                res = toPrettyString(res, 'bp');
+                res = additionalText + toPrettyString(res, 'bp');
             } else {
                 res = toPrettyString(res);
             }
         }
-        return '<span style="word-spacing: -1px;">' + res + '</span>';
+        return res;
     }
 }
 

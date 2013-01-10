@@ -22,7 +22,7 @@ var gns = {
         yAxisLabeled: false,
     },
 
-    draw: function (name, colors, filenames, data, refGenesNumber,
+    draw: function (name, title, colors, filenames, data, refGenesNumber,
                     placeholder, legendPlaceholder, glossary) {
 //    div.html(
 //        "<span class='plot-header'>" + kind[0].toUpperCase() + kind.slice(1) + "s covered</span>" +
@@ -172,6 +172,7 @@ var gns = {
         showPlotWithInfo(info);
 
         $('#contigs_are_ordered').show();
+        $('#gc_info').hide();
     }
 };
 
