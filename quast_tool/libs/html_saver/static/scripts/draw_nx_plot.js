@@ -99,14 +99,14 @@ var nx = {
                 }
             }
 
-            //    for (i = 0; i < plotsN; i++) {
-            //        plotsData[i].points = {
-            //            show: true,
-            //            radius: 1,
-            //            fill: 1,
-            //            fillColor: false,
-            //        }
-            //    }
+            // for (i = 0; i < plotsN; i++) {
+            //     plotsData[i].points = {
+            //         show: true,
+            //         radius: 1,
+            //         fill: 1,
+            //         fillColor: false,
+            //     }
+            // }
 
             info.showWithData = function(series, colors) {
                 var plot = $.plot(placeholder, series, {
