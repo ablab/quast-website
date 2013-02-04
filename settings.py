@@ -39,17 +39,19 @@ if os.environ.get('DEVELOPMENT', None):
 
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-    db_engine = 'django.db.backends.sqlite3'
-    db_name = quastdb_fpath
-    # db_engine = 'django.db.backends.mysql'
-    # db_name = 'quast'
+#    db_engine = 'django.db.backends.sqlite3'
+#    db_name = quastdb_fpath
+    db_engine = 'django.db.backends.mysql'
+    db_name = 'quast'
 
 else:
     DEBUG = False
     ADDRESS = 'http://quast.bioinf.spbau.ru/'
 
-    db_engine = 'django.db.backends.sqlite3'
-    db_name = quastdb_fpath
+    db_engine = 'django.db.backends.mysql'
+    db_name = 'quast'
+#    db_engine = 'django.db.backends.sqlite3'
+#    db_name = quastdb_fpath
 
 TEMPLATE_DEBUG = DEBUG
 

@@ -51,7 +51,7 @@ class User(models.Model):
 
 
 class UserSession(models.Model):
-    session_key = models.CharField(max_length=256, unique=True)
+    session_key = models.CharField(max_length=255, unique=True)
     input_dirname = models.CharField(max_length=2048)
     user = models.ForeignKey(User, null=True, blank=True)
     default_data_set = models.ForeignKey('DataSet', blank=True, null=True)
@@ -196,7 +196,7 @@ class QuastSession(models.Model):
     user_session = models.ForeignKey(UserSession, blank=True, null=True)
     user = models.ForeignKey(User, blank=True, null=True)
 
-    report_id = models.CharField(max_length=256, unique=True)
+    report_id = models.CharField(max_length=255, unique=True)
     link = models.CharField(max_length=2048, blank=True, null=True)
     # report_id = AutoSlugField(populate_from=(lambda instance: instance.date.strftime('%d_%b_%Y_%H_%M_%S_%f_UTC')),
     #                           unique=True,
@@ -210,7 +210,7 @@ class QuastSession(models.Model):
     min_contig = models.IntegerField(blank=True, null=True)
     task_id = models.CharField(max_length=1024, blank=True, null=True)
     submitted = models.BooleanField(default=True)
-    date = models.DateTimeField()
+    date = models.DateTimeField(blank=True, null=True)
     # timezone = models.CharField(max_length=128, default='')
 
     @classmethod
