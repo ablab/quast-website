@@ -39,19 +39,13 @@ if os.environ.get('DEVELOPMENT', None):
 
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-#    db_engine = 'django.db.backends.sqlite3'
-#    db_name = quastdb_fpath
-    db_engine = 'django.db.backends.mysql'
-    db_name = 'quast'
+    database = 'sqlite'
 
 else:
     DEBUG = False
     ADDRESS = 'http://quast.bioinf.spbau.ru/'
 
-    db_engine = 'django.db.backends.mysql'
-    db_name = 'quast'
-#    db_engine = 'django.db.backends.sqlite3'
-#    db_name = quastdb_fpath
+    database = 'mysql'
 
 TEMPLATE_DEBUG = DEBUG
 
@@ -81,6 +75,14 @@ BROKER_URL = 'sqla+sqlite:///' + celerydb_fpath
 CELERY_RESULT_DBURI = 'sqlite:///' + celerydb_fpath
 CELERY_SEND_TASK_ERROR_EMAILS = True
 CELERY_SEND_EVENTS = True
+
+
+if database == 'mysql':
+    db_engine = 'django.db.backends.mysql'
+    db_name = 'quast'
+else:
+    db_engine = 'django.db.backends.sqlite3'
+    db_name = quastdb_fpath
 
 
 DATABASES = {

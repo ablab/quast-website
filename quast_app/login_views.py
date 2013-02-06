@@ -50,8 +50,8 @@ def ask_password(request):
         new_user = User.create(email)
 
     send_confirmation(new_user)
-    return HttpResponse('Confirmation message sent. Please, check you email.<br>'
-                        'If you do not receive a message, please check your junk mail folder.')
+    return HttpResponse('Confirmation message have been sent. Please, check you email.<br>'
+                        'If you don\'t receive a message, please check your junk mail folder.')
 
 
 def send_confirmation(user):
@@ -59,17 +59,15 @@ def send_confirmation(user):
            % (settings.ADDRESS, user.email, user.password)
     logger.info('link = %s' % link)
 
-    send_mail(subject='Confirmation of email address',
-              message='Hello!\n'
+    send_mail(subject='Personal page at QUAST',
+              message='<a href="%s">Visit your page</a> with quality assessment reports\n'
                       '\n'
-                      'To authorize, follow the link:\n'
-                      '%s\n'
-                      '\n'
-                      'If you didn\'t want this email, please, just ignore it: it was probably sent by mistake.'
+                      '<span style="font-color: grey">If you didn\'t want this email, please, just ignore it.</span>'
                       '\n'
                       '\n---'
-                      '\nIn case of any problems, feel free to reply to this message,'
-                      '\nQUAST team'
+                      '\nIn case of any problems, feel free to reply to this message.'
+                      '\n'
+                      '\n<a href="quast.bioinf.spbau.ru">QUAST</a>: quality assessment tool for genome assemblies'
                       % link,
               from_email=settings.SUPPORT_EMAIL,
               recipient_list=[user.email])

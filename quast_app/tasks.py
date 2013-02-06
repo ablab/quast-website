@@ -48,27 +48,28 @@ def start_quast((args, quast_session, user_session)):
             return
 
         if fail:
-            subject = 'Quast failed'
+            subject = 'Sorry, the assessment failed'
         else:
-            subject = 'Quast report' + (' OK' if to_me else '')
+            subject = ('OK' if to_me else 'Quality assessment report')
 
         if quast_session.caption:
             subject += ' (%s)' % quast_session.caption
-        elif quast_session.data_set:
-            subject += ' (genome: %s)' % quast_session.data_set.name
+#        elif quast_session.data_set:
+#            subject += ' (genome: %s)' % quast_session.data_set.name
 
         send_mail(
-            subject = subject,
-            message =
+            subject=subject,
+            message=
                 (quast_session.caption + '\n\n' if quast_session.caption else '') +
                 'http://quast.bioinf.spbau.ru' + link +
                 ('\n\nGenome: ' + quast_session.data_set.name if quast_session.data_set else '') +
                 ('\n\nComment: ' + quast_session.comment if quast_session.comment else '') +
                 '\n\n\nIn case of any problems, feel free to reply to this message' +
+                '\n\n<a href="quast.bioinf.spbau.ru">QUAST</a>: quality assessment tool for genome assemblies' +
                 add_to_end,
-            from_email = settings.SUPPORT_EMAIL,
-            recipient_list = [email],
-            fail_silently = True
+            from_email=settings.SUPPORT_EMAIL,
+            recipient_list=[email],
+            fail_silently=True
         )
 
     my_email = 'vladsaveliev@me.com'

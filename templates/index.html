@@ -40,7 +40,7 @@
                 $('#login_block').toggle('fast');
             });
 
-            $('#authorize_submit').click(function() {
+            $('#email_submit').click(function() {
                 var login_error = $('#login_error'),
                     login_msg   = $('#login_msg'),
                     email_input = $('#email_input');
@@ -676,33 +676,31 @@
 {#                        <a class="dotted-link js" id="login_link">Log in</a>#}
 {#                    </div>#}
 
-                    <div id="login_block" style="display: block; margin-top: 25px; margin-bottom: 30px;">
+                    <div id="login_block">
                         <div id="is_authorized_div"
-                             style="display: {% if not is_authorized %}none{% else %}block{% endif %};
-                                     margin-left: -2px; margin-bottom: 5px;">
+                             style="display: {% if not is_authorized %}none{% else %}block{% endif %};">
                             <a class="dotted-link js" id="is_authorized_email">{{ email }}</a>
                         </div>
 
                         <form id="login_form"
-                              style="display: {% if is_authorized %}none{% else %}block{% endif %};
-                                     margin-bottom: 20px;">
+                              style="display: {% if is_authorized %}none{% else %}block{% endif %};">
 
-                            <label for="email_input" style="margin-left: -41px;">Email:</label>
-                            <input type="text" name="email" id="email_input" style="width: 250px;">
-                            <input type="submit" value="Sign in" id="authorize_submit">
+                            <label for="email_input" id="email_label">Email</label>
+                            <input type="text" name="email" id="email_input">
+                            <input type="submit" value="Get personal page" id="email_submit" class='btn'>
 
-                            <div id="login_error" style="color: FireBrick; display: none; margin-left: -2px; margin-top: 2px; margin-bottom: 10px;"></div>
-                            <div id="login_msg" style="color: #259217; display: none; margin-left: -2px; margin-top: 2px; margin-bottom: 10px;"></div>
+                            <div id="login_error"></div>
+                            <div id="login_msg"></div>
 
-                            <div class="comment_to_field"
-                                 style="display: {% if is_authorized %}none{% else %}block{% endif %};
-                                        margin-left: -2px; margin-top: 4px; width: 270px;">
-                                Confirmation email will be sent.<br>
-                                <div style="height: 5px;"></div>
-                                Your reports and genomes will be associated with this address.<br>
-                                <div style="height: 5px;"></div>
-                                We will also notify you when a report is ready and contact you if there is a problem in running the assessment.<br>
-                                <div style="height: 5px;"></div>
+                            <div class="comment_to_field" id="email_comment"
+                                 style="display: {% if is_authorized %}none{% else %}block{% endif %};">
+                                We will email you a&nbsp;link to&nbsp;your&nbsp;page.<br>
+                                <div class="space_7px"></div>
+                                You will find there your quality assessment reports.<br>
+                                <div class="space_7px"></div>
+                                We will also notify you when reports are&nbsp;finished,
+                                and&nbsp;contact you in case problems arisen during the&nbsp;assessment.<br>
+                                <div class="space_7px"></div>
                                 <br>
                             </div>
                         </form>
