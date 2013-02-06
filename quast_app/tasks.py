@@ -65,7 +65,7 @@ def start_quast((args, quast_session, user_session)):
                 ('\n\nGenome: ' + quast_session.data_set.name if quast_session.data_set else '') +
                 ('\n\nComment: ' + quast_session.comment if quast_session.comment else '') +
                 '\n\n\nIn case of any problems, feel free to reply to this message' +
-                '\n\n<a href="quast.bioinf.spbau.ru">QUAST</a>: quality assessment tool for genome assemblies' +
+                '\n\nQUAST: a quality assessment tool for genome assemblies, http://quast.bioinf.spbau.ru' +
                 add_to_end,
             from_email=settings.SUPPORT_EMAIL,
             recipient_list=[email],

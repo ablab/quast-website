@@ -59,15 +59,37 @@ def send_confirmation(user):
            % (settings.ADDRESS, user.email, user.password)
     logger.info('link = %s' % link)
 
+#    html_content = render_to_string('the_template.html', {'varname': 'value'}) # ...
+#    text_content = strip_tags(html_content) # this strips the html, so people will have the text as well.
+#    # create the email, and attach the HTML version as well.
+#    msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
+#    msg.attach_alternative(html_content, "text/html")
+#    msg.send()
+
+#    send_mail(subject='Personal page at QUAST',
+#              message='<a href="%s">Visit your page</a> with quality assessment reports\n'
+#                      '\n'
+#                      '<span style="font-color: grey">If you didn\'t want this email, please, just ignore it.</span>'
+#                      '\n'
+#                      '\n---'
+#                      '\nIn case of any problems, feel free to reply to this message.'
+#                      '\n'
+#                      '\n<a href="http://quast.bioinf.spbau.ru">QUAST</a>: a quality assessment tool for genome assemblies'
+#                      % link,
+#              from_email=settings.SUPPORT_EMAIL,
+#              recipient_list=[user.email])
+
+
     send_mail(subject='Personal page at QUAST',
-              message='<a href="%s">Visit your page</a> with quality assessment reports\n'
+              message='Visit your page with quality assessment reports:\n'
+                      '\n%s'
                       '\n'
-                      '<span style="font-color: grey">If you didn\'t want this email, please, just ignore it.</span>'
+                      'If you didn\'t want this email, please, just ignore it.'
                       '\n'
                       '\n---'
                       '\nIn case of any problems, feel free to reply to this message.'
                       '\n'
-                      '\n<a href="quast.bioinf.spbau.ru">QUAST</a>: quality assessment tool for genome assemblies'
+                      '\nQUAST: a quality assessment tool for genome assemblies, http://quast.bioinf.spbau.ru'
                       % link,
               from_email=settings.SUPPORT_EMAIL,
               recipient_list=[user.email])
