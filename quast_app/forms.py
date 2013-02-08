@@ -52,6 +52,7 @@ class DataSetForm(forms.Form):
     def set_report_id(self, report_id):
         self.fields['report_id'] = fields.CharField(
             required=True,
+            initial=report_id,
             widget=widgets.TextInput
         )
 
