@@ -135,16 +135,16 @@
 
         var initContigsFiles = false;
 
-        $(window).unload(function() {
-            if (!submitted) {
-                $.ajax({
-                    url: '{% url ajax_delete_session %}',
-                    type: 'GET',
-                    data: { reportId: '{{ report_id }}' },
-                    async: false,
-                });
-            }
-        });
+{#        $(window).unload(function() {#}
+{#            if (!submitted) {#}
+{#                $.ajax({#}
+{#                    url: '{% url ajax_delete_session %}',#}
+{#                    type: 'GET',#}
+{#                    data: { reportId: '{{ report_id }}' },#}
+{#                    async: false,#}
+{#                });#}
+{#            }#}
+{#        });#}
 
         var parameters = [{
             action: '{% url contigs_ajax_upload %}',

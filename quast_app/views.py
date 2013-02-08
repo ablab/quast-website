@@ -125,6 +125,18 @@ def delete_session(request):
     return HttpResponse()
 
 
+def delete_quast_sessions():
+    for QuastSession.objects.filter(submitted=False, date=):
+
+
+    try:
+        quast_session = QuastSession.objects.get(report_id=report_id)
+    except QuastSession.DoesNotExist:
+        logger.error('No quast session with report_id=%s' % report_id)
+        return HttpResponseBadRequest('wrong reportId: no such quast-session')
+
+    if not quast_session.submitted:
+
 
 #def get_evaluate_response_dict(request, user_session, url):
 #    contigs_fnames = [c_f.fname for c_f in user_session.contigsfile_set.all()]
