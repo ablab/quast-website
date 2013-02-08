@@ -1,8 +1,10 @@
 {% if caption %}{{ caption }}:{% endif %}
 http://quast.bioinf.spbau.ru{{ link }}
 
-{% if genome %}Genome: {{ genome }}{% endif %}
-{% if comment %}Comment: {{ genome }}{% endif %}
+{% if genome %}Genome: {{ genome }}
+{% endif %}
+{% if comment %}Comment: {{ genome }}
+{% endif %}
 
 -
 In case of any problems, feel free to reply to this message.

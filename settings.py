@@ -33,19 +33,19 @@ PAPER_DOWNLOADS_DIRPATH     = os.path.join(PAPER_DIRPATH, 'downloads')
 REPORT_LINK_BASE            = '/reports/'
 
 
+database = 'sqlite'
+
 if os.environ.get('DEVELOPMENT', None):
     DEBUG = True
     ADDRESS = 'http://127.0.0.1:8000/'
 
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-    database = 'sqlite'
-
 else:
     DEBUG = False
     ADDRESS = 'http://quast.bioinf.spbau.ru/'
 
-    database = 'mysql'
+#    database = 'mysql'
 
 TEMPLATE_DEBUG = DEBUG
 
@@ -75,7 +75,6 @@ BROKER_URL = 'sqla+sqlite:///' + celerydb_fpath
 CELERY_RESULT_DBURI = 'sqlite:///' + celerydb_fpath
 CELERY_SEND_TASK_ERROR_EMAILS = True
 CELERY_SEND_EVENTS = True
-
 
 if database == 'mysql':
     db_engine = 'django.db.backends.mysql'
