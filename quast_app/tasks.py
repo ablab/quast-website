@@ -1,10 +1,11 @@
 import shutil
 import sys
+from django.template.loader import render_to_string
 import os
 import traceback
 from celery.task import task
 from django.conf import settings
-from django.core.mail import send_mail
+from django.core.mail import send_mail, EmailMultiAlternatives
 
 import logging
 logger = logging.getLogger('quast')
@@ -43,8 +44,8 @@ def start_quast((args, quast_session, user_session)):
 
     link = os.path.join(settings.REPORT_LINK_BASE, quast_session.link or quast_session.report_id)
 
-    def send_result_mail(email, to_me, add_to_end='', fail=False):
-        if email is None or email == '':
+    def send_result_mail(address, to_me, add_to_end='', fail=False):
+        if address is None or address == '':
             return
 
         if fail:
@@ -57,20 +58,33 @@ def start_quast((args, quast_session, user_session)):
 #        elif quast_session.data_set:
 #            subject += ' (genome: %s)' % quast_session.data_set.name
 
-        send_mail(
-            subject=subject,
-            message=
-                (quast_session.caption + '\n\n' if quast_session.caption else '') +
-                'http://quast.bioinf.spbau.ru' + link +
-                ('\n\nGenome: ' + quast_session.data_set.name if quast_session.data_set else '') +
-                ('\n\nComment: ' + quast_session.comment if quast_session.comment else '') +
-                '\n\n\nIn case of any problems, feel free to reply to this message' +
-                '\n\nQUAST: a quality assessment tool for genome assemblies, http://quast.bioinf.spbau.ru' +
-                add_to_end,
-            from_email=settings.SUPPORT_EMAIL,
-            recipient_list=[email],
-            fail_silently=True
-        )
+        arguments = {
+            'caption': quast_session.caption,
+            'link': link,
+            'genome': quast_session.data_set.name if quast_session.data_set else '',
+            'comment': quast_session.comment if quast_session.comment else '',
+            'add_to_end': add_to_end,
+        }
+        html_content = render_to_string('emails/report_ready.html', arguments)
+        text_content = render_to_string('emails/report_ready.txt', arguments)
+        email = EmailMultiAlternatives(subject, text_content, settings.SUPPORT_EMAIL, [address])
+        email.attach_alternative(html_content, "text/html")
+        email.send()
+
+#        send_mail(
+#            subject=subject,
+#            message=
+#                (quast_session.caption + '\n\n' if quast_session.caption else '') +
+#                'http://quast.bioinf.spbau.ru' + link +
+#                ('\n\nGenome: ' + quast_session.data_set.name if quast_session.data_set else '') +
+#                ('\n\nComment: ' + quast_session.comment if quast_session.comment else '') +
+#                '\n\n\nIn case of any problems, feel free to reply to this message' +
+#                '\n\nQUAST: a quality assessment tool for genome assemblies, http://quast.bioinf.spbau.ru' +
+#                add_to_end,
+#            from_email=settings.SUPPORT_EMAIL,
+#            recipient_list=[address],
+#            fail_silently=True
+#        )
 
     my_email = 'vladsaveliev@me.com'
     if quast_session.user:

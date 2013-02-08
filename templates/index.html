@@ -46,11 +46,12 @@
                     email_input = $('#email_input');
 
                 login_error.hide();
-                login_msg.hide();
+                login_msg.html('Sending...');
 
                 var email = email_input.val();
                 if (email == '') {
                     login_error.show();
+                    login_msg.hide();
                     email_input.focus();
                 }
                 $.ajax({
@@ -59,10 +60,14 @@
                     dataType: 'text',
                     data: 'email=' + email,
 
-                }).done(function(msg) {
-                    login_msg.html(msg).show();
+                }).done(function() {
+                    login_msg.html(
+                       'The link to your page have been sent. Please, check you email.<br>' +
+                       'If you don\'t receive a message, please check your junk mail folder.').show();
 
                 }).fail(function(xhr) {
+                    login_msg.hide();
+
                     var msg = 'Error. Try reloading page.';
                     if (xhr.status && xhr.status == 400) {
                         msg = xhr.responseText;

@@ -1,10 +1,12 @@
-from django.core.mail import send_mail
+from django.core.mail import send_mail, EmailMultiAlternatives
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseBadRequest, Http404
 from django.conf import settings
 from django.shortcuts import redirect
 
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
 
 from models import User, UserSession, DataSet, QuastSession
 from create_session import get_or_create_session
@@ -50,21 +52,19 @@ def ask_password(request):
         new_user = User.create(email)
 
     send_confirmation(new_user)
-    return HttpResponse('Confirmation message have been sent. Please, check you email.<br>'
-                        'If you don\'t receive a message, please check your junk mail folder.')
+    return HttpResponse()
 
 
 def send_confirmation(user):
-    link = '%slogin?email=%s&password=%s'\
-           % (settings.ADDRESS, user.email, user.password)
+    link = '%slogin?email=%s&password=%s' % (settings.ADDRESS, user.email, user.password)
     logger.info('link = %s' % link)
 
-#    html_content = render_to_string('the_template.html', {'varname': 'value'}) # ...
-#    text_content = strip_tags(html_content) # this strips the html, so people will have the text as well.
-#    # create the email, and attach the HTML version as well.
-#    msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
-#    msg.attach_alternative(html_content, "text/html")
-#    msg.send()
+    arguments =  {'link': link }
+    html_content = render_to_string('emails/user_page_link_email.html', arguments)
+    text_content = render_to_string('emails/user_page_link_email.txt', arguments)
+    email = EmailMultiAlternatives('Personal page at QUAST', text_content, settings.SUPPORT_EMAIL, [user.email])
+    email.attach_alternative(html_content, "text/html")
+    email.send()
 
 #    send_mail(subject='Personal page at QUAST',
 #              message='<a href="%s">Visit your page</a> with quality assessment reports\n'
@@ -80,19 +80,19 @@ def send_confirmation(user):
 #              recipient_list=[user.email])
 
 
-    send_mail(subject='Personal page at QUAST',
-              message='Visit your page with quality assessment reports:\n'
-                      '\n%s'
-                      '\n'
-                      'If you didn\'t want this email, please, just ignore it.'
-                      '\n'
-                      '\n---'
-                      '\nIn case of any problems, feel free to reply to this message.'
-                      '\n'
-                      '\nQUAST: a quality assessment tool for genome assemblies, http://quast.bioinf.spbau.ru'
-                      % link,
-              from_email=settings.SUPPORT_EMAIL,
-              recipient_list=[user.email])
+#    send_mail(subject='Personal page at QUAST',
+#              message='Visit your page with quality assessment reports:'
+#                      '\n%s'
+#                      '\n'
+#                      '\nIf you didn\'t want this email, please, just ignore it.'
+#                      '\n'
+#                      '\n---'
+#                      '\nIn case of any problems, feel free to reply to this message.'
+#                      '\n'
+#                      '\nQUAST: a quality assessment tool for genome assemblies, http://quast.bioinf.spbau.ru'
+#                      % link,
+#              from_email=settings.SUPPORT_EMAIL,
+#              recipient_list=[user.email])
 
     mailer.info('Confirmation message was sent to %s with password %s', user.email, user.password)
 
