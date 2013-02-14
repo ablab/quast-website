@@ -1,6 +1,6 @@
 
 QUAST: a QUality ASsessment Tool
-Copyright (c) 2011-2012 Saint-Petersburg Academic University
+Copyright (c) 2011-2013 Saint-Petersburg Academic University
 
 QUAST is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License, Version 2,
@@ -22,6 +22,7 @@ Authors:
     Alexey Gurevich
     Nikolay Vyahhi
     Vladislav Saveliev
+    Ekaterina Sosa
     Glenn Tesler
 
 Contact:
@@ -33,7 +34,7 @@ Contact:
 
 Third-party tools incorporated into QUAST:
 
-1. GeneMarkS gene prediction software was kindly provided by Mark Borodovsky and
+1. GeneMark.hmm gene prediction software was kindly provided by Mark Borodovsky and
 Georgia Institute of Technology. Please, see License Agreement in the file
 libs/genemark_suite_linux_64/gmsuite/LICENSE or online at
 http://exon.gatech.edu/GeneMark/license_download.cgi. If you are not academic, not
@@ -42,9 +43,8 @@ appropriate licensing to use this module in QUAST.
 For more details about GeneMarkS please refer to 
 http://exon.gatech.edu/genemarks.cgi website and to the following paper:
 
-Besemer, J., Lomsadze, A., and Borodovsky, M. (2001). GeneMarkS: a self-training
-method for prediction of gene starts in microbial genomes. Implications for finding
-sequence motifs in regulatory regions. Nucleic Acids Res, 29(12), 2607–2618.
+Lukashin, A.V. and Borodovsky, M. (1998). GeneMark.hmm: New solutions for gene
+finding. Nucleic Acids Res, 26(4), 1107-1115.
 
 2. GAGE scripts was provided by GAGE team and also modified by QUAST team. 
 They can be distributed and used in QUAST pipeline with current remarks and 
@@ -66,6 +66,13 @@ http://www.plantagora.org website and to the following paper:
 Barthelson R, McFarlin AJ, Rounsley SD, Young S (2011) Plantagora: Modeling 
 Whole Genome Sequencing and Assembly of Plant Genomes. PLoS ONE 6(12): e28436. 
 doi:10.1371/journal.pone.0028436
+
+4. QUAST Gene Finding module uses GlimmerHMM for predicting genes in eukaryoutes.
+For more details about GlimmerHMM please refer to
+http://cbcb.umd.edu/software/glimmerhmm/ website and to the following paper:
+
+Majoros, W.H., Pertea, M., and Salzberg, S.L. TigrScan and GlimmerHMM:
+two open-source ab initio eukaryotic gene-finders. Bioinformatics. 20(16): 2878-9.
 
 -------------------------------------------------------------------------------
 
