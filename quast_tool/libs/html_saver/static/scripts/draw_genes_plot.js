@@ -139,7 +139,7 @@ var gns = {
 //                                }
 //                                return res;
 //                            } else {
-                            return val;
+                                return val;
 //                            }
                         },
                         minTickSize: 1,

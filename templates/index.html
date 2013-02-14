@@ -410,14 +410,13 @@
                             <tr>
                             <td style="vertical-align: top; width: 50%; padding-right: 30px;">
                                 <div class="" style="padding-right: 10px;">
-                                    <p style="margin-top: 11px; font-weight: bold;"><span class='smallcapitals'>QUAST</span> evaluates genome assemblies by computing various metrics</p>
+                                    <p style="margin-top: 11px; font-weight: bold;"><span class='smallcapitals'>QUAST</span> evaluates genome assemblies by computing various metrics, including</p>
                                     <ul class="list">
                                         <li><span class='define' key='N50'><span class='smallcapitals'>N</span>50</span>, length of the shortest contig from all that cover 50% of all assembly</li>
                                         <li><span class='define' key='NG50'><span class='smallcapitals'>NG</span>50</span>, where the reference genome is being covered</li>
                                         <li><span class='define' key='NA50'><span class='smallcapitals'>NA</span>50</span> and <span class='define' key='NGA50'><span class='smallcapitals'>NGA</span>50</span>, where aligned blocks instead of contigs are taken</li>
                                         <li>misassemblies, misassembled and unaligned contigs or contigs bases</li>
-                                        <li><span class='define' key='Genes covered'>genes</span> and <span class='define' key='Operons covered'>operons</span> covered</li>
-                                        <li>and other metrics</li>
+{#                                        <li><span class='define' key='Genes covered'>genes</span> and <span class='define' key='Operons covered'>operons</span> covered</li>#}
                                     </ul>
                                 </div>
                             </td>
@@ -467,6 +466,34 @@
             </tr>
         </table>
         </div>
+        <div class="yellow_block" >
+        <table class="layout-table">
+            <tr class="yellow_tr">
+                <td class="layout-table-td layout-table-fst-td" >
+                    <div style="max-width: 500px; margin-left: 148px;">
+                    <b style="font-size: 2em;">QUAST 2.1 released</b><br>
+                    <p>
+                        Improved indels computation: now counting consecutive single nucleotide
+                        indels as a single indel.
+                        <p>
+                        Reporting short (≤ 5<span class="rhs">&nbsp;</span>bp) and
+                        long (> 5<span class="rhs">&nbsp;</span>bp); total length of all indels is reported as well.
+                    </div>
+                </td>
+                <td class="layout-table-td layout-table-snd-td" >
+                    <div style="max-width: 500px; margin-left: 73px; margin-top: 1em;">
+                    <b>We fixed some important bugs:</b><br>
+                        <div class="space_10px"></div>
+                    — in the code for finding misassemblies,<br>
+                        <div class="space_10px"></div>
+                    — in the SNPs detection algorithm,<br>
+                        <div class="space_10px"></div>
+                    — in processing circular chromosomes procedure (affects genome fraction, # genes, # operons)
+                    </div>
+                </td>
+            </tr>
+        </table>
+        </div>
     </div>
 
     <div style="clear: both;"></div>
@@ -490,6 +517,7 @@
             <tr>
             <td class="layout-table-td layout-table-fst-td">
                 <h2 style='font-size: 1.8em; font-weight: normal;'>Quality Assessment</h2>
+
                 <div id='form-wrapper'>
                     <table class='form-layout-table'>
                         <tr>

@@ -280,9 +280,9 @@ function showTip(pageX, pageY, offset, plotWidth, plotHeight,
 
         $('<div id="tip_line' + i + '">' + toPrettyString(item.y)
             + ', <span style="color: ' + item.color + ';">' + item.label + '</span></div>').css({
-                height: LINE_HEIGHT,
-                "font-weight": item.isCurrent ? "bold" : "normal",
-            }).appendTo('#plot_tip');
+            height: LINE_HEIGHT,
+            "font-weight": item.isCurrent ? "bold" : "normal",
+        }).appendTo('#plot_tip');
     }
 }
 
