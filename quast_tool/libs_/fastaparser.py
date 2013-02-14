@@ -1,5 +1,5 @@
 ############################################################################
-# Copyright (c) 2011-2012 Saint-Petersburg Academic University
+# Copyright (c) 2011-2013 Saint-Petersburg Academic University
 # All Rights Reserved
 # See file LICENSE for details.
 ############################################################################
@@ -93,11 +93,8 @@ def print_fasta(fasta):
         for i in xrange(0,len(seq),60):
             print seq[i:i+60]
 
-def write_fasta(filename, fasta, header=None):
+def write_fasta(filename, fasta):
     outfile = open(filename, 'w')
-
-    if header:
-        outfile.write(header)
 
     for name, seq in fasta:
         outfile.write('>%s\n' % name)
@@ -106,7 +103,7 @@ def write_fasta(filename, fasta, header=None):
     outfile.close()
 
 def comp(letter):
-    return {'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C'}[letter.upper()]
+    return {'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C', 'N': 'N'}[letter.upper()]
 
 
 def rev_comp(seq):

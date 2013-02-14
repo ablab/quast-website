@@ -1,15 +1,16 @@
 ############################################################################
-# Copyright (c) 2011-2012 Saint-Petersburg Academic University
+# Copyright (c) 2011-2013 Saint-Petersburg Academic University
 # All Rights Reserved
 # See file LICENSE for details.
 ############################################################################
 
+import logging
 import os
 import itertools
 import fastaparser
 from libs.html_saver import json_saver
 from libs import qconfig
-from qutils import id_to_str
+from qutils import id_to_str, print_timestamp
 import reporting
 
 def GC_content(filename):  
@@ -70,6 +71,10 @@ def GC_content(filename):
 
 
 def do(reference, filenames, output_dir, all_pdf, draw_plots, json_output_dir, results_dir):
+    log = logging.getLogger('quast')
+
+    print_timestamp()
+    log.info("Running Basic statistics processor...")
     
     if not os.path.isdir(output_dir):
         os.mkdir(output_dir)
@@ -79,11 +84,11 @@ def do(reference, filenames, output_dir, all_pdf, draw_plots, json_output_dir, r
         reference_length = sum(fastaparser.get_lengths_from_fastafile(reference))
         reference_GC, reference_GC_distribution = GC_content(reference)
 
-        print 'Reference genome:'
-        print ' ', reference, ', Reference length =', int(reference_length), ', Reference GC % =', '%.2f' % reference_GC
+        log.info('  Reference genome:')
+        log.info('    ' + os.path.basename(reference) + ', Reference length = ' + str(reference_length) + ', Reference GC % = ' + '%.2f' % reference_GC)
     elif qconfig.estimated_reference_size:
         reference_length = qconfig.estimated_reference_size
-        print 'Estimated reference length = ', reference_length
+        log.info('  Estimated reference length = ' + str(reference_length))
 
     if reference_length:
         # Saving the reference in JSON
@@ -95,11 +100,11 @@ def do(reference, filenames, output_dir, all_pdf, draw_plots, json_output_dir, r
             from libs.html_saver import html_saver
             html_saver.save_reference_length(results_dir, reference_length)
 
-    print 'Contigs files: '
+    log.info('  Contigs files: ')
     lists_of_lengths = []
     numbers_of_Ns = []
     for id, filename in enumerate(filenames):
-        print ' ', id_to_str(id) + os.path.basename(filename)
+        log.info('    ' + id_to_str(id) + os.path.basename(filename))
         #lists_of_lengths.append(fastaparser.get_lengths_from_fastafile(filename))
         list_of_length = []
         number_of_Ns = 0
@@ -119,7 +124,7 @@ def do(reference, filenames, output_dir, all_pdf, draw_plots, json_output_dir, r
 
     ########################################################################
 
-    print 'Calculating N50 and L50...'
+    log.info('  Calculating N50 and L50...')
 
     list_of_GC_distributions = []
     import N50
@@ -136,12 +141,12 @@ def do(reference, filenames, output_dir, all_pdf, draw_plots, json_output_dir, r
         total_length = sum(lengths_list)
         total_GC, GC_distribution = GC_content(filename)
         list_of_GC_distributions.append(GC_distribution)
-        print ' ', id_to_str(id) + os.path.basename(filename) + \
+        log.info('    ' + id_to_str(id) + os.path.basename(filename) + \
             ', N50 = ' + str(n50) + \
             ', L50 = ' + str(l50) + \
             ', Total length = ' + str(total_length) + \
             ', GC % = ' + ('%.2f' % total_GC if total_GC is not None else 'undefined') + \
-            ', # N\'s per 100 kbp = ' + ' %.2f' % (float(number_of_Ns) * 100000.0 / float(total_length))\
+            ', # N\'s per 100 kbp = ' + ' %.2f' % (float(number_of_Ns) * 100000.0 / float(total_length)) )
 
         report.add_field(reporting.Fields.N50, n50)
         report.add_field(reporting.Fields.L50, l50)
@@ -190,3 +195,5 @@ def do(reference, filenames, output_dir, all_pdf, draw_plots, json_output_dir, r
         plotter.Nx_plot(filenames, lists_of_lengths, output_dir + '/Nx_plot', 'Nx', [], all_pdf)
         if reference_length:
             plotter.Nx_plot(filenames, lists_of_lengths, output_dir + '/NGx_plot', 'NGx', [reference_length for i in range(len(filenames))], all_pdf)
+
+    log.info('  Done.')

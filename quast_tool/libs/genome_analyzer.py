@@ -1,15 +1,23 @@
 ############################################################################
-# Copyright (c) 2011-2013 Saint-Petersburg Academic University
+# Copyright (c) 2011-2012 Saint-Petersburg Academic University
 # All Rights Reserved
 # See file LICENSE for details.
 ############################################################################
 
 import os
+import sys
 import fastaparser
 import genes_parser
 from libs import reporting, qconfig
 from libs.html_saver import json_saver
-from qutils import id_to_str, notice, warning, error, print_timestamp
+from qutils import id_to_str
+
+__location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
+
+
+s_Mapped_genome = 'Mapped genome (%)'
+s_Genes = 'Genes'
+s_Operons = 'Operons'
 
 
 def chromosomes_names_dict(features, chr_names):
@@ -30,16 +38,15 @@ def chromosomes_names_dict(features, chr_names):
             chr_name_dict[feature.seqname] = None
 
     if no_chr:
-        warning('Some of the chromosome names in genes or operons differ from the names in the reference.')
+        print '  Warning: Some of the chromosome names in genes or operons differ from the names in the reference.'
     return chr_name_dict
 
 
 def do(reference, filenames, nucmer_dir, output_dir, genes_filename, operons_filename, all_pdf, draw_plots, json_output_dir, results_dir):
 
     # some important constants
-    nucmer_prefix = os.path.join(nucmer_dir, 'nucmer_output')
+    nucmer_prefix = os.path.join(os.path.join(__location__, ".."), nucmer_dir, 'nucmer_output')
 
-    print_timestamp()
     print 'Running Genome analyzer...'
 
     if not os.path.isdir(output_dir):
@@ -89,11 +96,8 @@ def do(reference, filenames, nucmer_dir, output_dir, genes_filename, operons_fil
 
         feature_container.region_list = genes_parser.get_genes_from_file(feature_filename, feature_name)
         if len(feature_container.region_list) == 0:
-            if feature_filename:
-                warning('No ' + feature_name + 's were loaded.')
-                res_file.write(feature_name + 's loaded: ' + 'None' + '\n')
-            else:
-                notice('Annotated ' + feature_name + 's file was not provided! Use -' + feature_name[0].capitalize() + ' option to specify it!')
+            print '  Warning: no ' + feature_name + 's loaded.'
+            res_file.write(feature_name + 's loaded: ' + 'None' + '\n')
         else:
             print '  Loaded ' + str(len(feature_container.region_list)) + ' ' + feature_name + 's'
             res_file.write(feature_name + 's loaded: ' + str(len(feature_container.region_list)) + '\n')
@@ -118,17 +122,12 @@ def do(reference, filenames, nucmer_dir, output_dir, genes_filename, operons_fil
 
     # process all contig files  
     for id, filename in enumerate(filenames):
-        print ' ', id_to_str(id) + os.path.basename(filename)
+        print ' ', id_to_str(id) + os.path.basename(filename) + '...'
 
-        nucmer_base_filename = os.path.join(nucmer_prefix, os.path.basename(filename) + '.coords')
-        if qconfig.use_all_alignments:
-            nucmer_filename = nucmer_base_filename
-        else:
-            nucmer_filename = nucmer_base_filename + '.filtered'
-
+        nucmer_filename = os.path.join(nucmer_prefix, os.path.basename(filename) + '.coords')
         if not os.path.isfile(nucmer_filename):
-            error('Nucmer\'s coords file (' + nucmer_filename + ') not found! Try to restart QUAST.')
-            #continue
+            print '  Error: nucmer .coords file (' + nucmer_filename + ') not found, skipping...'
+            continue
 
         coordfile = open(nucmer_filename, 'r')
         for line in coordfile:
@@ -144,6 +143,36 @@ def do(reference, filenames, nucmer_dir, output_dir, genes_filename, operons_fil
         genome_mapping = {}
         for chr_name, chr_len in reference_chromosomes.iteritems():
             genome_mapping[chr_name] = [0] * (chr_len + 1)
+
+        # '''
+        # nodes_len_coeff = collections.defaultdict(lambda:0.0)
+        # for line in coordfile:
+        #     sections = line.split('|')
+        #     node_id = sections[len(sections) - 1]    
+
+        #     len1 = float(sections[2].split()[0])
+        #     len2 = float(sections[2].split()[1])
+        #     idy = float(sections[3].strip())
+        #     len_coef = (len1 + len2) / 2.0 * idy / 100.0
+        #     if len_coef > nodes_len_coeff[node_id]:
+        #         nodes_len_coeff[node_id] = len_coef
+
+        # coordfile.seek(0)        
+
+        # for line in coordfile: 
+        #     sections = line.split('|')          
+        #     node_id = sections[len(sections) - 1]    
+
+        #     len1 = float(sections[2].split()[0])
+        #     len2 = float(sections[2].split()[1])
+        #     idy = float(sections[3].strip())
+        #     len_coef = (len1 + len2) / 2.0 * idy / 100.0
+        #     if len_coef > nodes_len_coeff[node_id] * (100.0 - threshold) / 100.0:
+        #         s1 = int(sections[0].split()[0])
+        #         e1 = int(sections[0].split()[1])
+        #         for i in range(s1, e1 + 1):
+        #             genome[i] = 1
+        # '''
 
         # for gene finding
         aligned_blocks = {} # contig_name --> list of AlignedBlock
@@ -165,21 +194,11 @@ def do(reference, filenames, nucmer_dir, output_dir, genes_filename, operons_fil
                 break
             s1 = int(line.split('|')[0].split()[0])
             e1 = int(line.split('|')[0].split()[1])
-            contig_name = line.split()[12].strip()
+            contig_name = line.split()[-1].strip()
             chr_name = line.split()[11].strip()
-            if chr_name not in genome_mapping:
-                error("Something went wrong and chromosome names in your coords file (" + nucmer_base_filename + ") "
-                      "differ from the names in the reference. Try to remove the file and restart QUAST.")
-                continue
             aligned_blocks[contig_name].append(AlignedBlock(seqname=chr_name, start=s1, end=e1))
-            if s1 <= e1:
-                for i in range(s1, e1 + 1):
-                    genome_mapping[chr_name][i] = 1
-            else: # circular genome, contig starts on the end of a chromosome and ends in the beginning
-                for i in range(s1, len(genome_mapping[chr_name])):
-                    genome_mapping[chr_name][i] = 1
-                for i in range(1, e1 + 1):
-                    genome_mapping[chr_name][i] = 1
+            for i in range(s1, e1 + 1):
+                genome_mapping[chr_name][i] = 1
         coordfile.close()
 
         # counting genome coverage and gaps number
@@ -202,7 +221,7 @@ def do(reference, filenames, nucmer_dir, output_dir, genes_filename, operons_fil
                     cur_gap_size += 1
             if cur_gap_size >= qconfig.min_gap_size:
                 gaps_count += 1
-                print >>gaps_file, chr_len - cur_gap_size + 1, chr_len
+                print >>gaps_file, i - cur_gap_size, i - 1
 
         gaps_file.close()
 
@@ -211,8 +230,7 @@ def do(reference, filenames, nucmer_dir, output_dir, genes_filename, operons_fil
         genome_coverage = float(covered_bp) * 100 / float(genome_size)
         # calculating duplication ratio
         duplication_ratio = (report.get_field(reporting.Fields.TOTALLEN) + \
-                             report.get_field(reporting.Fields.MISINTERNALOVERLAP) + \
-                             report.get_field(reporting.Fields.AMBIGUOUSEXTRABASES) - \
+                             report.get_field(reporting.Fields.REPEATSEXTRABASES) - \
                              report.get_field(reporting.Fields.UNALIGNEDBASES)) /\
                              ((genome_coverage / 100.0) * float(genome_size))
 
@@ -241,38 +259,27 @@ def do(reference, filenames, nucmer_dir, output_dir, genes_filename, operons_fil
                 feature_container.found_list[i] = 0
                 for contig_id, name in enumerate(sorted_contigs_names):
                     cur_feature_is_found = False
-                    for cur_block in aligned_blocks[name]:
-                        if feature_container.chr_names_dict[region.seqname] != cur_block.seqname:
+                    for block in aligned_blocks[name]:
+                        if feature_container.chr_names_dict[region.seqname] != block.seqname:
                             continue
+                        if region.end <= block.start or block.end <= region.start:
+                            continue
+                        elif block.start <= region.start and region.end <= block.end:
+                            if feature_container.found_list[i] == 2: # already found as partial gene
+                                total_partial -= 1
+                            feature_container.found_list[i] = 1
+                            total_full += 1
+                            id = str(region.id)
+                            if id == 'None':
+                                id = '# ' + str(region.number + 1)
+                            print >>found_file, '%s\t\t%d\t%d' % (id, region.start, region.end)
+                            feature_in_contigs[contig_id] += 1  # inc number of found genes/operons in id-th contig
 
-                        # computing circular genomes
-                        if cur_block.start > cur_block.end:
-                            blocks = [AlignedBlock(seqname=cur_block.seqname, start=cur_block.start, end=region.end + 1),
-                                      AlignedBlock(seqname=cur_block.seqname, start=1, end=cur_block.end)]
-                        else:
-                            blocks = [cur_block]
-
-                        for block in blocks:
-                            if region.end <= block.start or block.end <= region.start:
-                                continue
-                            elif block.start <= region.start and region.end <= block.end:
-                                if feature_container.found_list[i] == 2: # already found as partial gene
-                                    total_partial -= 1
-                                feature_container.found_list[i] = 1
-                                total_full += 1
-                                id = str(region.id)
-                                if id == 'None':
-                                    id = '# ' + str(region.number + 1)
-                                print >>found_file, '%s\t\t%d\t%d' % (id, region.start, region.end)
-                                feature_in_contigs[contig_id] += 1  # inc number of found genes/operons in id-th contig
-
-                                cur_feature_is_found = True
-                                break
-                            elif feature_container.found_list[i] == 0 and min(region.end, block.end) - max(region.start, block.start) >= qconfig.min_gene_overlap:
-                                feature_container.found_list[i] = 2
-                                total_partial += 1
-                        if cur_feature_is_found:
+                            cur_feature_is_found = True
                             break
+                        elif feature_container.found_list[i] == 0 and min(region.end, block.end) - max(region.start, block.start) >= qconfig.min_gene_overlap:
+                            feature_container.found_list[i] = 2
+                            total_partial += 1
                     if cur_feature_is_found:
                         break
 
@@ -327,7 +334,7 @@ def do(reference, filenames, nucmer_dir, output_dir, genes_filename, operons_fil
         plotter.histogram(filenames, genome_mapped, output_dir + '/genome_fraction_histogram', 'Genome fraction, %',
             all_pdf, top_value=100)
 
-    print '  Done.'
+    print '  Done'
 
 class AlignedBlock():
     def __init__(self, seqname=None, start=None, end=None):

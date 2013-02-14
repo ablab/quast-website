@@ -1,31 +1,31 @@
+from __future__ import with_statement
+import shutil
+import re
+from libs.html_saver import json_saver
+
 ############################################################################
-# Copyright (c) 2011-2013 Saint-Petersburg Academic University
+# Copyright (c) 2011-2012 Saint-Petersburg Academic University
 # All Rights Reserved
 # See file LICENSE for details.
 ############################################################################
 
-from __future__ import with_statement
 import os
-import shutil
-import re
-from libs import qconfig
-from libs.html_saver import json_saver
 
+__location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
 
 def get_real_path(relpath_in_html_saver):
-    return os.path.join(qconfig.LIBS_LOCATION, 'html_saver', relpath_in_html_saver)
-
+    return os.path.join(__location__, relpath_in_html_saver)
 
 scripts_inserted = False
 
-report_fname = qconfig.report_prefix + ".html"
+report_fname = 'report.html'
 
 template_fpath = get_real_path('template.html')
 
 static_dirname = 'static'
 static_dirpath = get_real_path(static_dirname)
 
-aux_dirname = qconfig.html_aux_dir
+aux_dirname = 'report_html_aux'
 aux_files = [
     'jquery-1.8.2.min.js',
     'flot/jquery.flot.min.js',
@@ -133,7 +133,7 @@ def save_total_report(results_dirpath, min_contig):
     json_fpath = json_saver.save_total_report(results_dirpath, min_contig)
     if json_fpath:
         append(results_dirpath, json_fpath, 'totalReport')
-        print '  HTML version saved to', os.path.join(results_dirpath, report_fname)
+        print '  HTML version to', os.path.join(results_dirpath, report_fname) + '.'
 
 
 def save_contigs_lengths(results_dirpath, filenames, lists_of_lengths):
