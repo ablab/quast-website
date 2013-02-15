@@ -1,4 +1,3 @@
-import sys
 import os
 
 
@@ -15,24 +14,24 @@ HTML_REPORT_AUX_DIRNAME     = 'report_html_aux'
 DATA_SETS_ROOT_DIRPATH      = os.path.join(DATA_DIRPATH, 'data_sets')
 celerydb_fpath              = os.path.join(DATA_DIRPATH, 'celery.sqlite')
 quastdb_fpath               = os.path.join(DATA_DIRPATH, 'quast.sqlite')
-LOG_FILE                    = os.path.join(DATA_DIRPATH, 'log.txt')
 
 QUAST_DIRPATH               = os.path.join(SOURCE_DIRPATH, 'quast_tool')
 QUAST_PY_FPATH              = os.path.join(QUAST_DIRPATH, 'quast.py')
 GLOSSARY_PATH               = os.path.join(QUAST_DIRPATH, 'libs/html_saver/glossary.json')
 MANUAL_FPATH                = os.path.join(QUAST_DIRPATH, 'manual.html')
 LICENSE_FPATH               = os.path.join(QUAST_DIRPATH, 'LICENSE')
+BIB_PATH                    = os.path.join(QUAST_DIRPATH, 'quast_ref.bib')
 
 APP_DIRPATH                 = os.path.join(SOURCE_DIRPATH, 'quast_app')
 FILES_DIRPATH               = os.path.join(APP_DIRPATH, 'files')
 EXAMPLE_DIRPATH             = os.path.join(FILES_DIRPATH, 'example')
-ECOLI_DIRPATH               = os.path.join(FILES_DIRPATH, 'ecoli')
+ECOLI_DIRPATH               = os.path.join(FILES_DIRPATH, 'e.coli')
 PAPER_DIRPATH               = os.path.join(FILES_DIRPATH, 'paper')
 PAPER_DOWNLOADS_DIRPATH     = os.path.join(PAPER_DIRPATH, 'downloads')
 
 REPORT_LINK_BASE            = '/reports/'
 
-
+#
 database = 'sqlite'
 
 if os.environ.get('DEVELOPMENT', None):
@@ -340,7 +339,14 @@ LOGGING = {
 import djcelery
 djcelery.setup_loader()
 
-
+# from celery.schedules import crontab
+# CELERYBEAT_SCHEDULE = {
+#     # Executes every Monday morning at 7:30 A.M
+#     'every-monday-morning': {
+#         'task': 'tasks.delete_quast_sessions',
+#         'schedule': crontab(hour=7, minute=30, day_of_week=1),
+#         },
+#     }
 
 #Redis and celery
 
