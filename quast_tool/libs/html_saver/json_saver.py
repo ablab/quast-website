@@ -1,11 +1,12 @@
 ############################################################################
-# Copyright (c) 2011-2012 Saint-Petersburg Academic University
+# Copyright (c) 2011-2013 Saint-Petersburg Academic University
 # All Rights Reserved
 # See file LICENSE for details.
 ############################################################################
 
 import datetime
 import os
+from libs.qutils import warning
 
 simplejson_error = False
 try:
@@ -14,7 +15,7 @@ except:
     try:
         import simplejson as json
     except:
-        print 'Warning! Can\'t build html report - please install python-simplejson'
+        warning('Can\'t build html report - please install python-simplejson')
         simplejson_error = True
 
 total_report_fn       = '/report.json'
@@ -53,7 +54,7 @@ def save_total_report(output_dir, min_contig):
         'assembliesNames': assemblies_names,
         'report': report,
         'minContig': min_contig,
-        })
+    })
 
 #def save_old_total_report(output_dir, min_contig):
 #    from libs import reporting
