@@ -38,7 +38,7 @@ def license(request):
 
 
 def bib(request):
-    with open(settings.LICENSE_FPATH) as f:
+    with open(settings.BIB_FPATH) as f:
         return HttpResponse(f.read(), content_type='text/plain')
 
 

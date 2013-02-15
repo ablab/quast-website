@@ -21,7 +21,7 @@ QUAST_PY_FPATH              = os.path.join(QUAST_DIRPATH, 'quast.py')
 GLOSSARY_PATH               = os.path.join(QUAST_DIRPATH, 'libs/html_saver/glossary.json')
 MANUAL_FPATH                = os.path.join(QUAST_DIRPATH, 'manual.html')
 LICENSE_FPATH               = os.path.join(QUAST_DIRPATH, 'LICENSE')
-BIB_PATH                    = os.path.join(QUAST_DIRPATH, 'quast_ref.bib')
+BIB_FPATH                    = os.path.join(QUAST_DIRPATH, 'quast_ref.bib')
 
 APP_DIRPATH                 = os.path.join(SOURCE_DIRPATH, 'quast_app')
 FILES_DIRPATH               = os.path.join(APP_DIRPATH, 'files')
