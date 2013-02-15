@@ -1,4 +1,6 @@
+
 import shutil
+import datetime
 import os
 from django.core.urlresolvers import reverse
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseBadRequest, Http404, HttpResponseRedirect
@@ -31,6 +33,11 @@ def manual(request):
 
 
 def license(request):
+    with open(settings.LICENSE_FPATH) as f:
+        return HttpResponse(f.read(), content_type='text/plain')
+
+
+def bib(request):
     with open(settings.LICENSE_FPATH) as f:
         return HttpResponse(f.read(), content_type='text/plain')
 
@@ -125,10 +132,6 @@ def delete_session(request):
     return HttpResponse()
 
 
-#def delete_quast_sessions():
-#    for QuastSession.objects.filter(submitted=False, date=):
-#
-#
 #    try:
 #        quast_session = QuastSession.objects.get(report_id=report_id)
 #    except QuastSession.DoesNotExist:
@@ -136,7 +139,7 @@ def delete_session(request):
 #        return HttpResponseBadRequest('wrong reportId: no such quast-session')
 #
 #    if not quast_session.submitted:
-#
+
 
 #def get_evaluate_response_dict(request, user_session, url):
 #    contigs_fnames = [c_f.fname for c_f in user_session.contigsfile_set.all()]
@@ -200,5 +203,4 @@ def delete_session(request):
 #
 #    response_dict = get_evaluate_response_dict(request, user_session, '/evaluate/')
 #    return render_to_response('evaluate.html', response_dict, context_instance = RequestContext(request))
-
 
