@@ -58,7 +58,7 @@ class UserSession(models.Model):
 
     def set_default_data_set(self, data_set):
         (self.user or self).default_data_set = data_set
-        self.save()
+        (self.user or self).save()
 
     def get_default_data_set(self):
         return (self.user or self).default_data_set
