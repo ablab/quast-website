@@ -9,6 +9,7 @@ from django.core.mail import send_mail, EmailMultiAlternatives
 
 import logging
 logger = logging.getLogger('quast')
+mailer = logging.getLogger('quast_mailer')
 
 
 #@task()
@@ -32,8 +33,6 @@ logger = logging.getLogger('quast')
 #        except Exception as e:
 #            logger.error('uploader_backend.remove_all: Exception when removing "%s": %s' % (fname, e.message))
 
-
-
 @task()
 def start_quast((args, quast_session, user_session)):
     command = ' '.join(args)
@@ -48,15 +47,10 @@ def start_quast((args, quast_session, user_session)):
         if address is None or address == '':
             return
 
-        if fail:
-            subject = 'Sorry, the assessment failed'
-        else:
-            subject = ('OK' if to_me else 'Quality assessment report')
+        subject = 'Sorry, the assessment failed' if fail else ('OK' if to_me else 'Quality assessment report')
 
         if quast_session.caption:
             subject += ' (%s)' % quast_session.caption
-#        elif quast_session.data_set:
-#            subject += ' (genome: %s)' % quast_session.data_set.name
 
         arguments = {
             'caption': quast_session.caption,
@@ -65,26 +59,14 @@ def start_quast((args, quast_session, user_session)):
             'comment': quast_session.comment if quast_session.comment else '',
             'add_to_end': add_to_end,
         }
-        html_content = render_to_string('emails/report_ready.html', arguments)
         text_content = render_to_string('emails/report_ready.txt', arguments)
+
+        arguments['add_to_end'] = add_to_end.replace('\n', '<br>\n')
+        html_content = render_to_string('emails/report_ready.html', arguments)
+
         email = EmailMultiAlternatives(subject, text_content, settings.SUPPORT_EMAIL, [address])
         email.attach_alternative(html_content, "text/html")
         email.send()
-
-#        send_mail(
-#            subject=subject,
-#            message=
-#                (quast_session.caption + '\n\n' if quast_session.caption else '') +
-#                'http://quast.bioinf.spbau.ru' + link +
-#                ('\n\nGenome: ' + quast_session.data_set.name if quast_session.data_set else '') +
-#                ('\n\nComment: ' + quast_session.comment if quast_session.comment else '') +
-#                '\n\n\nIn case of any problems, feel free to reply to this message' +
-#                '\n\nQUAST: a quality assessment tool for genome assemblies, http://quast.bioinf.spbau.ru' +
-#                add_to_end,
-#            from_email=settings.SUPPORT_EMAIL,
-#            recipient_list=[address],
-#            fail_silently=True
-#        )
 
     my_email = 'vladsaveliev@me.com'
     if quast_session.user:
@@ -104,7 +86,7 @@ def start_quast((args, quast_session, user_session)):
         add_to_end = '\n'+ \
                      '\n\nUser email: ' + str(user_email) + \
                      '\n\nSession key: ' + user_session.session_key + \
-                     '\n\nArgs: ' + str(args) + \
+                     '\n\nArgs: ' + str(' '.join(args)) + \
                      '\n\nException: ' + str(e) + \
                      '\n\nTraceback: ' + str(trace_back)
 
@@ -116,15 +98,10 @@ def start_quast((args, quast_session, user_session)):
         add_to_end = '\n' + \
                      '\n\nUser email: ' + user_email +\
                      '\n\nSession key: ' + user_session.session_key +\
-                     '\n\nArgs: ' + str(args)
+                     '\n\nArgs: ' + str(' '.join(args))
 
         send_result_mail(my_email, to_me=True, add_to_end=add_to_end)
         send_result_mail(user_email, to_me=False)
-
-#        try:
-#            shutil.rmtree(quast_session.get_evaluation_contigs_dirpath())
-#        except Exception, e:
-#            logger.error('Error removing evaluation_contig dir:' + e.message)
 
         reload(quast)
         return result
@@ -144,3 +121,16 @@ def start_quast((args, quast_session, user_session)):
 #
 #   except Exception as e:
 #       raise Exception(out + err + '\n' + e.strerror)
+#
+#
+# from datetime import datetime, timedelta
+# from models import QuastSession
+#
+# logger = logging.getLogger('quast')
+#
+# @task()
+# def delete_quast_sessions():
+#     delete_before = datetime.now() - timedelta(days=5)
+#     QuastSession.objects.filter(submitted=False, date__lt=delete_before).delete()
+#     logger.info('deleted quast sessions before %s' % set(delete_before))
+#     mailer.info('deleted quast sessions before %s' % set(delete_before))
