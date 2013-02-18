@@ -342,7 +342,7 @@
 {% block after_report_extra_head %}
     <script type="text/javascript">
         $(function() {
-            $('.full-report').css('display', 'none');
+            $('.full-report').hide();
 
             {#        function scroll(event) {#}
             {#            $('.full-report').fadeToggle('fast');#}
@@ -410,11 +410,16 @@
                             <tr>
                             <td style="vertical-align: top; width: 50%; padding-right: 30px;">
                                 <div class="" style="padding-right: 10px;">
-                                    <p style="margin-top: 11px; font-weight: bold;"><span class='smallcapitals'>QUAST</span> evaluates genome assemblies by computing various metrics, including</p>
+                                    <p style="margin-top: 11px; font-weight: bold;"><span class='smallcapitals'>QUAST</span>
+                                        evaluates genome assemblies by computing various metrics, including</p>
                                     <ul class="list">
-                                        <li><span class='define' key='N50'><span class='smallcapitals'>N</span>50</span>, length of the shortest contig from all that cover 50% of all assembly</li>
-                                        <li><span class='define' key='NG50'><span class='smallcapitals'>NG</span>50</span>, where the reference genome is being covered</li>
-                                        <li><span class='define' key='NA50'><span class='smallcapitals'>NA</span>50</span> and <span class='define' key='NGA50'><span class='smallcapitals'>NGA</span>50</span>, where aligned blocks instead of contigs are taken</li>
+                                        <li><span class='define' key='N50'><span class='smallcapitals'>N</span>50</span>,
+                                            length of the shortest contig from all that cover 50% of all assembly</li>
+                                        <li><span class='define' key='NG50'><span class='smallcapitals'>NG</span>50</span>,
+                                            where the reference genome is being covered</li>
+                                        <li><span class='define' key='NA50'><span class='smallcapitals'>NA</span>50</span>
+                                            and <span class='define' key='NGA50'><span class='smallcapitals'>NGA</span>50</span>,
+                                            where aligned blocks instead of contigs are taken</li>
                                         <li>misassemblies, misassembled and unaligned contigs or contigs bases</li>
 {#                                        <li><span class='define' key='Genes covered'>genes</span> and <span class='define' key='Operons covered'>operons</span> covered</li>#}
                                     </ul>

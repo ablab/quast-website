@@ -33,12 +33,12 @@ class AjaxFileUploader(object):
         return self._ajax_initialize_uploads(request)
 
     def __extract_report_id(self, request):
-#        session_key = request.session.session_key
-#        try:
-#            user_session = UserSession.objects.get(session_key=session_key)
-#        except UserSession.DoesNotExist:
-#            logging.error('Cannot recognise session key: %s', str(session_key))
-#            return HttpResponseBadRequest('Cannot recognise session key')
+    #        session_key = request.session.session_key
+    #        try:
+    #            user_session = UserSession.objects.get(session_key=session_key)
+    #        except UserSession.DoesNotExist:
+    #            logging.error('Cannot recognise session key: %s', str(session_key))
+    #            return HttpResponseBadRequest('Cannot recognise session key')
 
         try:
             report_id = request.GET['reportId']
@@ -54,12 +54,11 @@ class AjaxFileUploader(object):
             logger.error('reportId = "undefined"')
             return None
 
-#        try:
-#            quast_session = QuastSession.objects.get(report_id=report_id)
-#        except QuastSession.DoesNotExist:
-#            logger.error('uploader_backend.update_filename: No quast session with report_id=%s' % report_id)
-#            return None
-
+        #        try:
+        #            quast_session = QuastSession.objects.get(report_id=report_id)
+        #        except QuastSession.DoesNotExist:
+        #            logger.error('uploader_backend.update_filename: No quast session with report_id=%s' % report_id)
+        #            return None
 
         return report_id
 
@@ -95,7 +94,7 @@ class AjaxFileUploader(object):
                     # (and only) value in the dict.
                     upload = request.FILES.values()[0]
                 else:
-                    logger.error('len(request.FILES) is not 1, but %d' % len(request.FILES))
+                    logger.error('len(request.FILES) is %d' % len(request.FILES))
                     raise Http404("Bad Upload")
                 filename = upload.name
 
@@ -123,7 +122,6 @@ class AjaxFileUploader(object):
             else:
                 logger.info('setup for %s: success' % filename)
 
-
             success = backend.upload(upload, filename, is_raw)
             # callback
             extra_context = backend.upload_complete(request, filename)
@@ -137,15 +135,15 @@ class AjaxFileUploader(object):
 
 
     def _ajax_remove(self, request):
-#        session_key = request.session.session_key
-#        try:
-#            user_session = UserSession.objects.get(session_key=session_key)
-#        except UserSession.DoesNotExist:
-#            logger.error('_ajax_remove: Can not recognise session key')
-#            return HttpResponse(json.dumps({
-#                   'success': False,
-#                   'message': 'Can not recognise session key'
-#                   }, cls=DjangoJSONEncoder))
+    #        session_key = request.session.session_key
+    #        try:
+    #            user_session = UserSession.objects.get(session_key=session_key)
+    #        except UserSession.DoesNotExist:
+    #            logger.error('_ajax_remove: Can not recognise session key')
+    #            return HttpResponse(json.dumps({
+    #                   'success': False,
+    #                   'message': 'Can not recognise session key'
+    #                   }, cls=DjangoJSONEncoder))
 
         backend = self.get_backend()
         report_id = self.__extract_report_id(request)
@@ -161,19 +159,19 @@ class AjaxFileUploader(object):
                 success, msg = backend.remove(request)
 
         return HttpResponse(json.dumps({
-                   'success': success,
-                   'message': msg
-               }, cls=DjangoJSONEncoder))
+                                           'success': success,
+                                           'message': msg
+                                       }, cls=DjangoJSONEncoder))
 
 
     def _ajax_remove_all(self, request):
         success = False
-#        session_key = request.session.session_key
-#        try:
-#            user_session = UserSession.objects.get(session_key=session_key)
-#        except UserSession.DoesNotExist:
-#            logger.error('_ajax_remove_all: Can not recognise session key')
-#        else:
+        #        session_key = request.session.session_key
+        #        try:
+        #            user_session = UserSession.objects.get(session_key=session_key)
+        #        except UserSession.DoesNotExist:
+        #            logger.error('_ajax_remove_all: Can not recognise session key')
+        #        else:
 
         backend = self.get_backend()
         report_id = self.__extract_report_id(request)
@@ -190,11 +188,11 @@ class AjaxFileUploader(object):
 
 
     def _ajax_initialize_uploads(self, request):
-#        session_key = request.session.session_key
-#        try:
-#            user_session = UserSession.objects.get(session_key=session_key)
-#        except UserSession.DoesNotExist:
-#            return HttpResponseBadRequest('Can not recognise session key')
+    #        session_key = request.session.session_key
+    #        try:
+    #            user_session = UserSession.objects.get(session_key=session_key)
+    #        except UserSession.DoesNotExist:
+    #            return HttpResponseBadRequest('Can not recognise session key')
 
         backend = self.get_backend()
         report_id = self.__extract_report_id(request)
