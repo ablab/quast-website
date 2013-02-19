@@ -172,7 +172,7 @@ class Fields:
         ]
 
     # for "short" version of HTML report
-    main_metrics = [NUMCONTIGS, LARGCONTIG, TOTALLEN, NG50, UNCALLED_PERCENT,
+    main_metrics = [NUMCONTIGS, LARGCONTIG, TOTALLEN, N50, NG50, UNCALLED_PERCENT,
                     MISASSEMBL, MISCONTIGSBASES,
                     MAPPEDGENOME, SUBSERROR, INDELSERROR,
                     GENES, OPERONS, PREDICTED_GENES_UNIQUE, PREDICTED_GENES,]

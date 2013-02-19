@@ -1,33 +1,31 @@
 Assembly	SPAdes2.1	SPAdes2.2	SPAdes_latest	IDBA-UD_contig
-# contigs (>= 500 bp)	288	289	284	222
+# contigs (>= 0 bp)	890	787	749	283
 # contigs (>= 1000 bp)	201	199	198	165
-Total length (>= 500 bp)	4861290	4883983	4878863	4713557
+Total length (>= 0 bp)	4976782	4982737	4976134	4734432
 Total length (>= 1000 bp)	4802828	4823527	4820788	4673851
-# contigs	550	524	532	283
+# contigs	288	289	284	222
 Largest contig	209589	268464	268514	224018
-Total length	4944758	4957332	4955040	4734432
+Total length	4861290	4883983	4878863	4713557
 Reference length	4639675	4639675	4639675	4639675
-GC (%)	49.71	49.69	49.70	49.92
-N50	83216	109545	97564	87102
-NG50	87221	109826	109876	90607
-N75	29988	40169	41336	40948
-NG75	38135	55674	56264	43468
-# misassemblies	8	3	3	3
-# misassembled contigs	8	3	3	3
-Misassembled contigs length	234469	169990	173193	43551
-# unaligned contigs	217 + 0 part	256 + 0 part	276 + 1 part	74 + 0 part
-Unaligned contigs length	450966	457844	459515	345968
-# ambiguous contigs	33	8	9	24
-Ambiguous contigs length	15973	4971	4650	14205
-Genome fraction (%)	97.038	97.053	97.050	95.896
-Duplication ratio	0.998	0.999	0.998	0.986
+GC (%)	49.76	49.76	49.78	49.92
 Reference GC (%)	50.79	50.79	50.79	50.79
+N50	84257	109545	104610	90607
+NG50	87221	109826	109876	90607
+N75	32399	41779	42006	41367
+NG75	38135	55674	56264	43468
+# misassemblies	7	2	2	9
+# local misassemblies	3	15	8	14
+# unaligned contigs	104 + 30 part	121 + 31 part	123 + 31 part	70 + 9 part
+Unaligned contigs length	417389	417963	415217	344580
+Genome fraction (%)	95.202	95.148	95.403	93.807
+Duplication ratio	1.003	1.007	1.005	1.001
 # N's per 100 kbp	0.00	0.00	0.00	0.00
-# mismatches per 100 kbp	12.34	11.94	14.45	1.34
-# indels per 100 kbp	0.94	0.80	1.05	0.11
-# genes	4290 + 150 part	4331 + 129 part	4314 + 128 part	4084 + 127 part
-# operons	857 + 68 part	868 + 59 part	867 + 59 part	802 + 62 part
-NA50	83216	109545	97564	87102
+# mismatches per 100 kbp	11.95	12.25	13.67	4.34
+# indels per 100 kbp	0.77	1.06	0.99	0.25
+# genes	4025 + 101 part	4041 + 87 part	4046 + 88 part	3982 + 70 part
+# operons	801 + 52 part	810 + 45 part	810 + 43 part	795 + 39 part
+Largest alignment	209589	268464	268514	224018
+NA50	83990	109545	104610	90607
 NGA50	87221	109826	109876	90607
-NA75	29988	40169	41336	40948
+NA75	32398	41779	42006	41367
 NGA75	38134	55674	56264	43468

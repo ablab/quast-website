@@ -342,16 +342,16 @@
 {% block after_report_extra_head %}
     <script type="text/javascript">
         $(function() {
-            $('.full-report').hide();
+            $('.report_outer_object').css('display', 'none');
 
             {#        function scroll(event) {#}
-            {#            $('.full-report').fadeToggle('fast');#}
+            {#            $('.report_outer_object').fadeToggle('fast');#}
             {#            event.preventDefault();#}
             {#            $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);#}
             {#        }#}
 
             $('#report_example_anchor').click(function(event){
-                var fullReport = $('.full-report');
+                var fullReport = $('.report_outer_object');
                 var wasHidden = (fullReport.css('display') == 'none');
                 if (wasHidden) {
                     fullReport.stop().fadeToggle('fast');
@@ -361,9 +361,10 @@
             });
 
             $("#report_example_toggle").click(function(event) {
-                var fullReport = $('.full-report');
+                var fullReport = $('.report_outer_object');
                 var wasHidden = (fullReport.css('display') == 'none');
                 fullReport.stop().fadeToggle('fast');
+                toggleReport();
                 if (wasHidden) {
                     event.preventDefault();
                     $('html,body').animate({scrollTop:$(this.hash).offset().top + 20}, 500);
@@ -878,8 +879,8 @@
          {# anchor #}
         <span id="reportexample"></span>
         <h2><a class='dotted-link js' id='report_example_toggle' href="#reportexample" tabindex="10">Report Example</a></h2>
-        <p class='full-report'>Comparison of 4 different E. coli assemblies with one data set.</p>
-        <div id="extended_link" class='full-report'></div>
+        <p class='report_outer_object'>Comparison of 4 different E. coli assemblies with one data set.</p>
+        <div id="extended_link" class='report_outer_object'></div>
     </div>
 
 {#    <p style="">You can check out a sample report:</p>#}

@@ -27,6 +27,7 @@
 
     <script type="text/javascript" src="/static/bootstrap/js/bootstrap.js"></script>
     <script type="text/javascript" src="/static/bootstrap/bootstrap-tooltip-vlad.js"></script>
+
     {% block before_report_extra_head %}{% endblock %}
 
     <script type="text/javascript">
@@ -37,9 +38,7 @@
         $(function() {
             buildReport();
 
-            $('#contigs_are_ordered').show();
-
-            $("[rel=tooltip]").tooltip({
+            $('[rel=tooltip]').tooltip({
                 animation: false,
             });
         });
@@ -52,7 +51,7 @@
 {% block content %}
 {% block extra_content %}{% endblock %}
 
-<div class='full-report'>
+<div class='report_outer_object'>
     <div id='header'>
         <br><br>
 
