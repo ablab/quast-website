@@ -133,6 +133,8 @@ class AjaxFileUploader(object):
 
             return HttpResponse(json.dumps(ret_json, cls=DjangoJSONEncoder))
 
+        raise Http404
+
 
     def _ajax_remove(self, request):
     #        session_key = request.session.session_key
