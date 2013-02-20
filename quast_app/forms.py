@@ -27,7 +27,9 @@ class DataSetForm(forms.Form):
         )
 
     def __get_choices(self):
-        return [('', '')] + [(d.name, d.name) for d in DataSet.objects.all() if d.remember]
+        return [('', '')] + [(d.name, d.name) for d in DataSet.objects.extra(
+                                 select={'lower_name': 'lower(name)'}
+                             ).order_by('lower_name').all() if d.remember]
 
     is_created = fields.BooleanField(initial=False, required=False)
     name_created = fields.CharField(required=False,
