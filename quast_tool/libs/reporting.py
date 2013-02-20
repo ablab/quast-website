@@ -171,7 +171,7 @@ class Fields:
         ('Aligned statistics', [LARGALIGN, NA50, NA75, NGA50, NGA75, LA50, LA75, LGA50, LGA75,]),
         ]
 
-    # for "short" version of HTML report
+    # for a "short" version of HTML report
     main_metrics = [NUMCONTIGS, LARGCONTIG, TOTALLEN, N50, NG50, UNCALLED_PERCENT,
                     MISASSEMBL, MISCONTIGSBASES,
                     MAPPEDGENOME, SUBSERROR, INDELSERROR,

@@ -149,6 +149,7 @@ class UserSession(models.Model):
 
 
 class DataSet(models.Model):
+    user_session = models.ForeignKey(UserSession, null=True, blank=True)
     name = models.CharField(max_length=1024)
     remember = models.BooleanField()
 
@@ -176,7 +177,7 @@ def delete_dataset_callback(sender, **kwargs):
 
 class ContigsFile(models.Model):
     fname = models.CharField(max_length=2048)
-    user_session = models.ForeignKey(UserSession, null=True, blank=True)
+    # user_session = models.ForeignKey(UserSession, null=True, blank=True)
     file_index = models.CharField(max_length=256)
     # file_size = models.IntegerField(null=True, blank=True)
     # quast_session = models.ForeignKey('QuastSession', null=True)

@@ -256,9 +256,9 @@ qq.FileUploaderBasic = function(o){
     this._options = {
         // set to true to see the server response
         debug: false,
-        action: '/server/upload',
-        removeLink: '/contigs-ajax-remove/',
-        initializeUploadsLink: '/contigs-ajax-initialize-uploads/',
+        action: '/contigs-ajax-upload', //overridden in user code
+        removeLink: '/contigs-ajax-remove/', //overridden in user code
+        initializeUploadsLink: '/contigs-ajax-initialize-uploads/', //overridden in user code
         reportId: null,
         params: {},
         button: null,
@@ -1356,8 +1356,7 @@ qq.extend(qq.UploadHandlerXhr.prototype, {
         params = params || {};
         var token = false ;
         var xname = false ;
-        if( params.csrf_token && params.csrf_xname )
-        {
+        if (params.csrf_token && params.csrf_xname) {
             token = params.csrf_token ;
             xname = params.csrf_xname ;
             delete params.csrf_token ;
@@ -1372,8 +1371,8 @@ qq.extend(qq.UploadHandlerXhr.prototype, {
         xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
         xhr.setRequestHeader("X-File-Name", encodeURIComponent(name));
         xhr.setRequestHeader("Content-Type", "application/octet-stream");
-        if( token )
-            xhr.setRequestHeader( xname, token ) ;
+        if (token)
+            xhr.setRequestHeader(xname, token);
         xhr.send(file);
     },
     _onComplete: function(id, xhr){

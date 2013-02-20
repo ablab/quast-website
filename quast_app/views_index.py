@@ -164,7 +164,7 @@ def index_view(user_session, response_dict, request):
     return render_to_response(
         'index.html',
         response_dict,
-        context_instance = RequestContext(request)
+        context_instance=RequestContext(request)
     )
 
 
@@ -239,7 +239,7 @@ def start_quast_session(user_session, quast_session, min_contig):
 
     evaluation_dirpath = quast_session.get_evaluation_contigs_dirpath()
 
-#    os.rename(quast_session.get_contigs_dirpath(), evaluation_dirpath)
+    #    os.rename(quast_session.get_contigs_dirpath(), evaluation_dirpath)
 
     # os.makedirs(evaluation_dirpath)
 
