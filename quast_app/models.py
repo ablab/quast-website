@@ -13,16 +13,16 @@ import logging
 logger = logging.getLogger('quast')
 
 
-def slugify(str):
-    str = str.lower()
-    return re.sub(r'\W+', '-', str)
+def slugify(string):
+    string = string.lower()
+    return re.sub(r'\W+', '-', string)
 
 
 class User(models.Model):
     input_dirname = models.CharField(max_length=256, blank=True, null=True)
     email = models.EmailField(blank=True, null=True)
     password = models.CharField(max_length=256, blank=True, null=True)
-    default_data_set = models.ForeignKey('DataSet', blank=True, null=True)
+    default_data_set = models.ForeignKey('DataSet', related_name='+', blank=True, null=True)
 
     def get_dirname(self):
         return self.input_dirname
@@ -54,7 +54,7 @@ class UserSession(models.Model):
     session_key = models.CharField(max_length=255, unique=True)
     input_dirname = models.CharField(max_length=2048)
     user = models.ForeignKey(User, null=True, blank=True)
-    default_data_set = models.ForeignKey('DataSet', blank=True, null=True)
+    default_data_set = models.ForeignKey('DataSet', related_name='+', blank=True, null=True)
 
     def set_default_data_set(self, data_set):
         (self.user or self).default_data_set = data_set
@@ -81,11 +81,15 @@ class UserSession(models.Model):
 
     def get_quastsession_set(self):
         if self.user:
-            set = QuastSession.objects.filter(user=self.user)
+            return QuastSession.objects.filter(user=self.user)
         else:
-            set = QuastSession.objects.filter(user_session=self)
+            return QuastSession.objects.filter(user_session=self)
 
-        return set
+    def get_dataset_set(self):
+        if self.user:
+            return DataSet.objects.filter(user=self.user)
+        else:
+            return DataSet.objects.filter(user_session=self)
 
     def set_user(self, user):
         # session_input_dirpath = os.path.join(settings.INPUT_ROOT_DIRPATH, self.input_dirname)
@@ -94,13 +98,12 @@ class UserSession(models.Model):
 
         move_files = False
         if self.user is None:
-            session_results_dirpath = os.path.join(settings.RESULTS_ROOT_DIRPATH, self.input_dirname)
+            usersession_results_dirpath = os.path.join(settings.RESULTS_ROOT_DIRPATH, self.input_dirname)
             user_results_dirpath = os.path.join(settings.RESULTS_ROOT_DIRPATH, user.input_dirname)
             if not os.path.exists(user_results_dirpath):
-                os.rename(session_results_dirpath, user_results_dirpath)
+                os.rename(usersession_results_dirpath, user_results_dirpath)
             else:
                 move_files = True
-
 
         for qs in QuastSession.objects.filter(user_session=self):
             old_dirpath = qs.get_dirpath()
@@ -111,13 +114,21 @@ class UserSession(models.Model):
                 shutil.move(old_dirpath, new_dirpath)
             qs.save()
 
+        for ds in DataSet.objects.filter(user_session=self):
+            old_dirpath = ds.get_dirpath()
+            ds.user = user
+            ds.user_session = None
+            new_dirpath = ds.get_dirpath()
+            if move_files:
+                shutil.move(old_dirpath, new_dirpath)
+            ds.save()
+
         if self.default_data_set:
             user.default_data_set = self.default_data_set
             user.save()
 
         self.user = user
         self.save()
-
 
     def __unicode__(self):
         return self.session_key
@@ -150,6 +161,8 @@ class UserSession(models.Model):
 
 class DataSet(models.Model):
     user_session = models.ForeignKey(UserSession, null=True, blank=True)
+    user = models.ForeignKey(User, blank=True, null=True)
+
     name = models.CharField(max_length=1024)
     remember = models.BooleanField()
 
@@ -157,10 +170,34 @@ class DataSet(models.Model):
     genes_fname = models.CharField(null=True, blank=True, max_length=2048)
     operons_fname = models.CharField(null=True, blank=True, max_length=2048)
 
-    dirname = AutoSlugField(populate_from='name', unique=True)
+    dirname = AutoSlugField(populate_from='name')
 
     def get_dirpath(self):
-        return os.path.join(settings.DATA_SETS_ROOT_DIRPATH, self.dirname)
+        if self.user_session or self.user:
+            return self.__get_or_create_dirpath(lambda dirname:
+                os.path.join(settings.RESULTS_ROOT_DIRPATH,
+                            (self.user or self.user_session).get_dirname(),
+                            'data_sets',
+                             dirname)
+            )
+        else:
+            return self.__get_or_create_dirpath(lambda dirname:
+                os.path.join(settings.DATA_SETS_ROOT_DIRPATH, dirname)
+            )
+
+    def __get_or_create_dirpath(self, get_path_from_name):
+        dirpath = get_path_from_name(self.dirname)
+
+        if not os.path.isdir(dirpath):
+            # what if it is a file?
+            base_dirname = self.dirname
+            i = 1
+            while os.path.exists(dirpath):
+                self.dirname = base_dirname + '-' + str(i)
+                dirpath = get_path_from_name(self.dirname)
+                i += 1
+
+        return dirpath
 
     def __unicode__(self):
         return self.name
@@ -242,8 +279,9 @@ class QuastSession(models.Model):
         os.makedirs(result_dirpath)
         logger.info('created result dirpath: %s' % result_dirpath)
 
-        os.makedirs(quast_session.get_contigs_dirpath())
-        logger.info('created contigs dirpath: %s' % result_dirpath)
+        contigs_dirpath = quast_session.get_contigs_dirpath()
+        os.makedirs(contigs_dirpath)
+        logger.info('created contigs dirpath: %s' % contigs_dirpath)
 
         return quast_session
 
@@ -274,11 +312,11 @@ class QuastSession(models.Model):
         return self.get_contigs_dirpath()# + '_evaluation'
 
     def __unicode__(self):
-        str = ''
+        string = ''
         if self.caption:
-            str = self.caption + ' '
-        str += self.date.strftime('%d %b %Y %H:%M:%S.%f %z')
-        return str
+            string = self.caption + ' '
+        string += self.date.strftime('%d %b %Y %H:%M:%S.%f %z')
+        return string
 
 
 class QuastSession_ContigsFile(models.Model):

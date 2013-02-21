@@ -62,7 +62,6 @@ class AjaxFileUploader(object):
 
         return report_id
 
-
     def _ajax_upload(self, request):
         if request.method == "POST":
             if request.is_ajax():
@@ -107,14 +106,13 @@ class AjaxFileUploader(object):
                 return HttpResponseBadRequest('No reportId')
             logger.info('report_id=%s' % report_id)
 
-            res = backend.set_report_id(report_id)
-            if not res:
+            ok = backend.set_report_id(report_id)
+            if not ok:
                 logger.error('no quast session')
                 return HttpResponseBadRequest('No quast session, please reload the page')
 
             # custom filename handler
-            filename = (backend.update_filename(request, filename)
-                        or filename)
+            filename = (backend.update_filename(request, filename) or filename)
             # save the file
             if not backend.setup(filename):
                 logger.error('setup for %s failed' % filename)
@@ -134,7 +132,6 @@ class AjaxFileUploader(object):
             return HttpResponse(json.dumps(ret_json, cls=DjangoJSONEncoder))
 
         raise Http404
-
 
     def _ajax_remove(self, request):
     #        session_key = request.session.session_key
@@ -161,10 +158,9 @@ class AjaxFileUploader(object):
                 success, msg = backend.remove(request)
 
         return HttpResponse(json.dumps({
-                                           'success': success,
-                                           'message': msg
-                                       }, cls=DjangoJSONEncoder))
-
+                               'success': success,
+                               'message': msg
+                            }, cls=DjangoJSONEncoder))
 
     def _ajax_remove_all(self, request):
         success = False
@@ -187,7 +183,6 @@ class AjaxFileUploader(object):
 
         #TODO response to nowhere
         return None # HttpResponse(json.dumps({'success': success}, cls=DjangoJSONEncoder))
-
 
     def _ajax_initialize_uploads(self, request):
     #        session_key = request.session.session_key

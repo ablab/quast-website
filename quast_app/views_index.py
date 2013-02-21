@@ -29,8 +29,7 @@ def index_view(user_session, response_dict, request):
                 log_msg += '\n\t%s:\t%s' % (str(k), str(v))
         mailer.info(log_msg)
 
-        data_set_form = DataSetForm(request.POST)
-        data_set_form.set_user_session(user_session)
+        data_set_form = DataSetForm(user_session, request.POST)
 
         report_id = data_set_form.data.get('report_id')
         if not report_id:
@@ -76,7 +75,7 @@ def index_view(user_session, response_dict, request):
             quast_session.generate_link()
             logger.info('quast_app.views.index.POST: link = %s', quast_session.link)
 
-            data_set = get_data_set(request, data_set_form, default_name=quast_session.report_id)
+            data_set = get_data_set(request, data_set_form, user_session, default_name=quast_session.report_id)
             if data_set:
                 user_session.set_default_data_set(data_set)
                 quast_session.data_set = data_set
@@ -102,7 +101,7 @@ def index_view(user_session, response_dict, request):
         response_dict['report_id'] = quast_session.report_id
 
         # Initializing data set form
-        data_set_form = DataSetForm()
+        data_set_form = DataSetForm(user_session)
         data_set_form.set_report_id(quast_session.report_id)
 
         if not settings.QUAST_DIRPATH in sys.path:
@@ -168,8 +167,8 @@ def index_view(user_session, response_dict, request):
     )
 
 
-def get_data_set(request, data_set_form, default_name):
-    if data_set_form.cleaned_data['is_created'] == True:
+def get_data_set(request, data_set_form, user_session, default_name):
+    if data_set_form.cleaned_data['is_created'] is True:
         name = data_set_form.data['name_created']
 
         def init_folders(data_set):
@@ -185,20 +184,22 @@ def get_data_set(request, data_set_form, default_name):
                     setattr(data_set, kind + '_fname', posted_file.name)
 
         if name == '':
-            data_set = DataSet(name=default_name, remember=False)
-            data_set.save()
-            init_folders(data_set)
-            data_set.save()
-
-        elif not DataSet.objects.filter(name=name).exists():
-            data_set = DataSet(name=name, remember=True)
+            data_set = DataSet(name=default_name, remember=False, user_session=user_session)
             data_set.save()
             init_folders(data_set)
             data_set.save()
 
         else:
-            data_set = DataSet.objects.get(name=name)
-            #TODO: invalidate
+            base_name = name
+            i = 1
+            while DataSet.objects.filter(name=name).exists():
+                name = base_name + ' (' + str(i) + ')'
+                i += 1
+
+            data_set = DataSet(name=name, remember=True, user_session=user_session)
+            data_set.save()
+            init_folders(data_set)
+            data_set.save()
 
     else:
         name = data_set_form.data['name_selected']
@@ -208,7 +209,7 @@ def get_data_set(request, data_set_form, default_name):
             try:
                 data_set = DataSet.objects.get(name=name)
             except DataSet.DoesNotExist:
-                logger.error('name_created: Data set with name %s does not exits' % name)
+                logger.error('Data set with name %s does not exits' % name)
                 return HttpResponseBadRequest('Data set does not exist')
 
     return data_set
@@ -264,13 +265,13 @@ def start_quast_session(user_session, quast_session, min_contig):
     operons_fpath = None
     if data_set:
         if data_set.reference_fname:
-            reference_fpath = os.path.join(settings.DATA_SETS_ROOT_DIRPATH, data_set.dirname, data_set.reference_fname)
+            reference_fpath = os.path.join(data_set.get_dirpath(), data_set.reference_fname)
 
         if data_set.genes_fname:
-            genes_fpath = os.path.join(settings.DATA_SETS_ROOT_DIRPATH, data_set.dirname, data_set.genes_fname)
+            genes_fpath = os.path.join(data_set.get_dirpath(), data_set.genes_fname)
 
         if data_set.operons_fname:
-            operons_fpath = os.path.join(settings.DATA_SETS_ROOT_DIRPATH, data_set.dirname, data_set.operons_fname)
+            operons_fpath = os.path.join(data_set.get_dirpath(), data_set.operons_fname)
 
     # Running Quast
     result = assess_with_quast(user_session, quast_session, evaluation_contigs_fpaths, min_contig, reference_fpath, genes_fpath, operons_fpath)

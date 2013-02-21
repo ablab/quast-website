@@ -14,22 +14,28 @@ from models import User, UserSession, DataSet, ContigsFile, QuastSession
 
 
 class DataSetForm(forms.Form):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, user_session, *args, **kwargs):
         super(DataSetForm, self).__init__(*args, **kwargs)
+
+        self.user_session = user_session
+
         self.fields['name_selected'] = fields.ChoiceField(
             required=False,
-            choices=self.__get_choices(),
+            choices=self.__get_choices(user_session),
             widget=widgets.Select(attrs={
                 'class': 'chzn-select-deselect',
                 'data-placeholder': 'unknown genome',
                 'tabindex': '3',
-            })
+                })
         )
 
-    def __get_choices(self):
-        return [('', '')] + [(d.name, d.name) for d in DataSet.objects.extra(
-                                 select={'lower_name': 'lower(name)'}
-                             ).order_by('lower_name').all() if d.remember]
+    def __get_choices(self, user_session):
+        return [('', '')] + [(d.name, d.name)
+                             for d
+                             in DataSet.objects.extra(select={'lower_name': 'lower(name)'}).order_by('lower_name').all()
+                             if d.remember and (d.user_session is None or
+                                                d.user_session == user_session or
+                                                d.user_session.user and user_session.user and d.user_session.user == user_session.user)]
 
     is_created = fields.BooleanField(initial=False, required=False)
     name_created = fields.CharField(required=False,
@@ -37,14 +43,14 @@ class DataSetForm(forms.Form):
 
     contigs = fields.CharField(widget=forms.Textarea, validators=[])
     report_id = fields.CharField(required=True, widget=widgets.TextInput)
-    min_contig = fields.IntegerField(min_value=0, required=False, initial=0, widget=widgets.TextInput(attrs={'tabindex':'2'}))
+    min_contig = fields.IntegerField(min_value=0, required=False, initial=0, widget=widgets.TextInput(attrs={'tabindex': '2'}))
 
-    reference = fields.FileField(required=False, widget=widgets.FileInput(attrs={'tabindex':'6'}))
-    genes = fields.FileField(required=False, widget=widgets.FileInput(attrs={'tabindex':'7'}))
-    operons = fields.FileField(required=False, widget=widgets.FileInput(attrs={'tabindex':'8'}))
+    reference = fields.FileField(required=False, widget=widgets.FileInput(attrs={'tabindex': '6'}))
+    genes = fields.FileField(required=False, widget=widgets.FileInput(attrs={'tabindex': '7'}))
+    operons = fields.FileField(required=False, widget=widgets.FileInput(attrs={'tabindex': '8'}))
 
-    caption = fields.CharField(required=False, widget=widgets.TextInput(attrs={'tabindex':'9', 'style': 'width: 302px;'}))
-    comment = fields.CharField(required=False, widget=widgets.Textarea(attrs={'tabindex':'10', 'rows': '2', 'style': 'width: 302px;'}))
+    caption = fields.CharField(required=False, widget=widgets.TextInput(attrs={'tabindex': '9', 'style': 'width: 302px;'}))
+    comment = fields.CharField(required=False, widget=widgets.Textarea(attrs={'tabindex': '10', 'rows': '2', 'style': 'width: 302px;'}))
     # email = fields.EmailField(required=False, widget=widgets.TextInput(attrs={'tabindex':'11', 'style': 'width: 302px;'}))
 
     initial = {
@@ -65,9 +71,6 @@ class DataSetForm(forms.Form):
             initial=min_contig,
             widget=widgets.TextInput(attrs={'tabindex':'2'})
         )
-
-    def set_user_session(self, user_session):
-        self.user_session = user_session
 
     def set_email(self, email):
         self.fields['email'] = fields.EmailField(

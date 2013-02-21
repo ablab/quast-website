@@ -1,3 +1,7 @@
+import logging
+logger = logging.getLogger('quast')
+mailer = logging.getLogger('quast_mailer')
+
 class AbstractUploadBackend(object):
     BUFFER_SIZE = 10485760  # 10MB
 
@@ -23,12 +27,16 @@ class AbstractUploadBackend(object):
     def upload(self, uploaded, filename, raw_data):
         try:
             if raw_data:
+                mailer.info('uploaded raw data via ajax and is being streamed')
+
                 # File was uploaded via ajax, and is streaming in.
                 chunk = uploaded.read(self.BUFFER_SIZE)
                 while len(chunk) > 0:
                     self.upload_chunk(chunk)
                     chunk = uploaded.read(self.BUFFER_SIZE)
             else:
+                mailer.info('uploaded via a POST and is here')
+
                 # File was uploaded via a POST, and is here.
                 for chunk in uploaded.chunks():
                     self.upload_chunk(chunk)
