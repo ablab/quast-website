@@ -31,7 +31,7 @@ class MyBaseUploadBackend(AbstractUploadBackend):
         logger.info('contigs dirpath is %s' % dirpath)
 
         if not os.path.exists(dirpath):
-            logger.error('contigs directory doesn\'t exist')
+            logger.error("contigs directory doesn't exist")
             return False
 
         fpath = os.path.join(dirpath, filename)
@@ -96,7 +96,6 @@ class MyBaseUploadBackend(AbstractUploadBackend):
 #            return False, 'This file does not belong to this session'
 
 
-
     def __remove(self, contigs_file):
         fname = contigs_file.fname
         contigs_fpath = os.path.join(self.quast_session.get_contigs_dirpath(), fname)
@@ -119,7 +118,6 @@ class MyBaseUploadBackend(AbstractUploadBackend):
 
         return True, ''
 
-
     def remove_all(self, request):
 #        if 'fileNames' not in request.GET:
 #            logger.error('remove_all: Request.GET must contain "fileNames"')
@@ -136,7 +134,6 @@ class MyBaseUploadBackend(AbstractUploadBackend):
 
         return True
 
-
     def get_uploads(self, request):
         contigs_files = self.quast_session.contigs_files.all()
 
@@ -144,9 +141,7 @@ class MyBaseUploadBackend(AbstractUploadBackend):
                  "fileIndex": c_f.file_index,
                  "file_index": c_f.file_index,
                # "fileSize": c_f.file_size if c_f.file_size else None,
-                 }
-                for c_f in contigs_files]
-
+                 } for c_f in contigs_files]
 
 
 class ContigsUploadBackend(MyBaseUploadBackend):

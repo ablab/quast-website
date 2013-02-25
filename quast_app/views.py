@@ -68,7 +68,6 @@ def idba(request):
     return render_to_response('ecoli.html', response_dict)
 
 
-
 def index(request):
     user_session = get_or_create_session(request, 'index')
     return index_view(user_session, settings.TEMPLATE_ARGS_BY_DEFAULT, request)

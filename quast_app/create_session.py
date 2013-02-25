@@ -35,7 +35,7 @@ def get_or_create_session(request, page):
             try:
                 request.session.create()
                 break
-            except DatabaseError as e:
+            except DatabaseError:
                 if i < tries - 1:
                     logger.warn('Database is locked, try #%d', i)
                     time.sleep(2)
@@ -43,10 +43,11 @@ def get_or_create_session(request, page):
                     logger.error('Database is locked (tried %d times)', tries)
                     raise
 
-    session_key = request.session.session_key
-    logger.info('session.create(): session_key = %s' % session_key)
-    if not session_key:
-        logger.error('session_key is None')
+        session_key = request.session.session_key
+        logger.info('session.create(): session_key = %s' % session_key)
+        if not session_key:
+            logger.error('session_key is None')
+            raise Exception('session_key is None')
 
     user_session = UserSession.get_or_create(session_key)
     return user_session

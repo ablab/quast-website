@@ -92,9 +92,10 @@ def get_report_response_dict(results_dirpath, caption, comment='', data_set_name
 
         'glossary': glossary,
 
-      # 'qualities': quality_dict,
-      # 'mainMetrics': main_metrics,
-}
+        # 'qualities': quality_dict,
+        # 'mainMetrics': main_metrics,
+    }
+
 
 def report_view(user_session, response_dict, request, link):
     found = QuastSession.objects.filter(link=link)
@@ -104,8 +105,11 @@ def report_view(user_session, response_dict, request, link):
     if found.exists():
         if request.method == 'GET':
             quast_session = found[0]
+            if quast_session.user_session is None:
+                quast_session.user_session = UserSession(user=quast_session.user)
+                quast_session.save()
 
-            if quast_session.task_id == '1045104510450145' or quast_session.task_id == 1045104510450145: # if the celery tasks have lost but we sure that this evaluated successfully
+            if quast_session.task_id == '1045104510450145' or quast_session.task_id == 1045104510450145:  # if the celery tasks have lost but we sure that this evaluated successfully
                 result = None
                 state = 'SUCCESS'
             else:
@@ -123,14 +127,13 @@ def report_view(user_session, response_dict, request, link):
                 else:
                     caption = quast_session.caption
 
-                response_dict = dict(response_dict.items() + get_report_response_dict(
+                response_dict.update(get_report_response_dict(
                     quast_session.get_dirpath(),
                     caption,
                     quast_session.comment,
                     data_set_name,
                     link,
-                    set_title=True,
-                ).items())
+                    set_title=True))
 
                 html_report_fpath = os.path.join(quast_session.get_dirpath(), settings.REGULAR_REPORT_DIRNAME, settings.HTML_REPORT_FNAME)
                 html_aux_report_dirpath = os.path.join(quast_session.get_dirpath(), settings.REGULAR_REPORT_DIRNAME, settings.HTML_REPORT_AUX_DIRNAME)
@@ -145,9 +148,9 @@ def report_view(user_session, response_dict, request, link):
                 if result and state in task_state_map:
                     state_repr = task_state_map[state]
 
-                response_dict = dict(response_dict.items() + {
+                response_dict.update({
                     'csrf_token': get_token(request),
-                    'session_key' : request.session.session_key,
+                    'session_key': request.session.session_key,
                     'state': state_repr,
                     'link': link,
                     'comment': quast_session.comment,
@@ -155,11 +158,11 @@ def report_view(user_session, response_dict, request, link):
                     'data_set_name': quast_session.data_set.name if quast_session.data_set else None,
                     'email': user_session.get_email() if user_session == quast_session.user_session else None,
                     'fnames': [c_f.fname for c_f in quast_session.contigs_files.all()],
-                }.items())
+                })
 
                 return render_to_response('waiting-report.html',
                                           response_dict,
-                                          context_instance = RequestContext(request))
+                                          context_instance=RequestContext(request))
 
         if request.method == 'POST':
             # check status of quast session, return result

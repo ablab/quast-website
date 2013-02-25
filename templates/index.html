@@ -472,7 +472,7 @@
             </tr>
         </table>
         </div>
-        <div class="yellow_block" >
+        <div class="yellow_block">
         <table class="layout-table">
             <tr class="yellow_tr">
                 <td class="layout-table-td layout-table-fst-td" >
@@ -538,20 +538,47 @@
                     </table>
                     <form enctype="multipart/form-data" name='eval_form' id="eval_form" action="/" method="POST">{% csrf_token %}
                         <div style="display: none;">
-                            {{ data_set_form.contigs }}
+                            {{ qs_form.contigs }}
                         </div>
 
                         <div style="display: none;">
-                            {{ data_set_form.report_id }}
+                            {{ qs_form.report_id }}
                         </div>
 
-                        <label for="id_min_contig" tabindex="2">{% comment %}@declare id="id_min_contig"{% endcomment %}
+                        <label for="id_min_contig"> {% comment %}@declare id="id_min_contig"{% endcomment %}
                             Skip contigs shorter than
-                            <span style='font-size: 8px;'>{{ data_set_form.min_contig }} </span>bp<br>
-                            {{ data_set_form.min_contig.errors }}
+                            <span style='font-size: 8px;'>{{ qs_form.min_contig }} </span>bp<br>
+                            {{ qs_form.min_contig.errors }}
                         </label>
 
                         <br>
+
+                        <label for="id_scaffolds"> {% comment %}@declare id="id_scaffolds"{% endcomment %}
+                            {{ qs_form.scaffolds }} {{ qs_form.scaffolds.label }}
+                            <div class="space_1px"></div>
+                            <div class="comment_to_field" style="margin-left: 18px; max-width: 500px;">{{ qs_form.scaffolds.help_text }}</div><br>
+                        </label>
+
+                        <label for="id_find_genes"> {% comment %}@declare id="id_find_genes"{% endcomment %}
+                            {{ qs_form.find_genes }} {{ qs_form.find_genes.label }}
+                         {# <div class="space_1px"></div> #}
+                         {# <div class="comment_to_field" style="margin-left: 20px;">{{ qs_form.find_genes.help_text }}</div><br>#}
+                        </label>
+
+                        <br>
+                        <br>
+
+                        {% for choice in qs_form.domain %}
+                            <label>
+                                {{ choice.tag|safe }}
+                                {{ choice.choice_label|safe }}<br>
+                            </label>
+                        {% endfor %}
+
+                        <div class="space_1px"></div>
+                        <div class="comment_to_field">{{ qs_form.domain.help_text|safe }}</div><br>
+
+                        <div class="space_10px"></div>
 
                         <table class='form-layout-table'>
                             <tr>
@@ -561,10 +588,10 @@
 
                                 <td class='form-layout-td'>{% comment %}@declare id="id_name_selected"{% endcomment %}
                                     <label for="id_name_selected">
-                                        {{ data_set_form.name_selected }}
+                                        {{ qs_form.name_selected }}
                                     </label>
                                     <div style="display: none">
-                                        {{ data_set_form.name_selected.errors }}
+                                        {{ qs_form.name_selected.errors }}
                                     </div>
 {#                                    <div id="unknown_data_set">#}
 {#                                        <label for="unknown_data_set_input">#}
@@ -582,8 +609,9 @@
                                     <div id="add-data-set-toggle-link" style="margin-left: -15px; padding-left: 15px;">
                                         <div style="margin-left: 0px;">
                                             <label for="id_is_created">
-                                                <input type="checkbox" tabindex="4" class='dotted-link' name="is_created" id="id_is_created"/>
-    {#                                                {{ data_set_form.created_or_selected }}#}
+                                                {{ qs_form.is_created }}
+{#                                                <input type="checkbox" tabindex="7" class='dotted-link' name="is_created" id="id_is_created"/>#}
+    {#                                                {{ qs_form.created_or_selected }}#}
                                                 <a class='dotted-link'>Another genome</a>
                                             </label>
                                         </div>
@@ -591,57 +619,36 @@
                                 </td>
                             </tr>
                         </table>
-    {#                                    <select name="name_selected" class="chzn-select" id="dataset-select" style="width:350px;" tabindex="2" onchange="datasetSelectOnchange()">#}
-    {#                                            {% for dataset in datasets %}#}
-    {#                                            <option value="{{ dataset.name }}">{{ dataset.name }}</option>#}
-    {#                                            {% endfor %}#}
-    {#                                            <option value="custom-dataset">Add dataset...</option>#}
-    {#                                        </select>#}
-    {#                                        <div style="clear: both"></div>#}
+
                         <div id="add-data_set" style="display: none;">
-    {#                                                {% comment %}@declare id="id_name_created "{% endcomment %}#}
-    {#                                                <label for='id_name_created'>Dataset name#}
-    {#                                                {{ data_set_form.name_created }}</label>#}
-    {#                                                {% comment %}@declare id="id_reference"{% endcomment %}#}
-    {#                                                <label for='id_reference'>Reference<br/>#}
-    {#                                                {{ data_set_form.reference }}</label>#}
-    {#                                                {% comment %}@declare id="id_genes"{% endcomment %}#}
-    {#                                                <label for='id_genes'>Genes<br/>#}
-    {#                                                {{ data_set_form.genes }}</label>#}
-    {#                                                {% comment %}@declare id="id_operons"{% endcomment %}#}
-    {#                                                <label for='id_operons'>Operons<br/>#}
-    {#                                                {{ data_set_form.operons }}</label>#}
                             <table class='form-layout-table'>
                                 <tr>{% comment %}@declare id="id_name_created"{% endcomment %}
                                     <td class='form-layout-td'><label for='id_name_created'>Name</label></td>
-                                    <td class='form-layout-td'>{{ data_set_form.name_created }}<span style='font-size: 8px;'>&nbsp;</span><br>
-                                        <div class="comment_to_field">If you fill&nbsp;in this field, we will remember the data set using this name.</div>
-                                        {{ data_set_form.name_created.errors }}
+                                    <td class='form-layout-td'>{{ qs_form.name_created }}<span style='font-size: 8px;'>&nbsp;</span><br>
+                                        <div class="comment_to_field">{{ qs_form.name_created.help_text|safe }}</div>
+                                        {{ qs_form.name_created.errors }}
                                         <br>
                                     </td>
                                 </tr>
                                 <tr>{% comment %}@declare id="id_reference"{% endcomment %}
                                     <td class='form-layout-td'><label for='id_reference'>Reference</label></td>
-                                    <td class='form-layout-td'>{{ data_set_form.reference }}
-                                        {{ data_set_form.reference.errors }}
-                                        <div class="comment_to_field">FASTA file with the reference genome sequence.
-                                        </div><br>
+                                    <td class='form-layout-td'>{{ qs_form.reference }}
+                                        {{ qs_form.reference.errors }}
+                                        <div class="comment_to_field"></div>{{ qs_form.reference.help_text|safe }}<br>
                                     </td>
                                 </tr>
                                 <tr>{% comment %}@declare id="id_genes"{% endcomment %}
                                     <td class='form-layout-td'><label for='id_genes'>Genes</label></td>
-                                    <td class='form-layout-td'>{{ data_set_form.genes }}
-                                        {{ data_set_form.genes.errors }}
-                                        <div class="comment_to_field">See <a href="http://quast.bioinf.spbau.ru/manual.html#sec2.2">manual</a> for file formats.
-                                        </div><br>
+                                    <td class='form-layout-td'>{{ qs_form.genes }}
+                                        {{ qs_form.genes.errors }}
+                                        <div class="comment_to_field">{{ qs_form.genes.help_text|safe }}</div><br>
                                     </td>
                                 </tr>
                                 <tr>{% comment %}@declare id="id_operons"{% endcomment %}
                                     <td class='form-layout-td'><label for='id_operons'>Operons</label></td>
-                                    <td class='form-layout-td'>{{ data_set_form.operons }}
-                                        {{ data_set_form.operons.errors }}
-                                        <div class="comment_to_field">See <a href="http://quast.bioinf.spbau.ru/manual.html#sec2.2">manual</a> for file formats.
-                                        </div><br>
+                                    <td class='form-layout-td'>{{ qs_form.operons }}
+                                        {{ qs_form.operons.errors }}
+                                        <div class="comment_to_field">{{ qs_form.operons.help_text|safe }}</div><br>
                                     </td>
                                 </tr>
                             </table>
@@ -651,45 +658,23 @@
                         <table class='form-layout-table'>
                             <tr>{% comment %}@declare id="id_caption"{% endcomment %}
                                 <td class='form-layout-td'><label for='id_caption'>Caption</label></td>
-                                <td class='form-layout-td'>{{ data_set_form.caption }}
+                                <td class='form-layout-td'>{{ qs_form.caption }}
                                     <div class="comment_to_field">Will appear in the report.
                                     </div><br>
                                 </td>
                             </tr>
-{#                            <tr>{% comment %}@declare id="id_comment"{% endcomment %}#}
-{#                                <td class='form-layout-td'><label for='id_comment'>Comment</label></td>#}
-{#                                <td class='form-layout-td'>{{ data_set_form.comment }}#}
-{#                                    <div class="comment_to_field">Will appear in the report.#}
-{#                                    </div><br>#}
-{#                                </td>#}
-{#                            </tr>#}
-{#                            <tr>{% comment %}@declare id="id_email"{% endcomment %}#}
-{#                                <td class='form-layout-td'><label for='id_email'>Email</label></td>#}
-{#                                <td class='form-layout-td'>{{ data_set_form.email }}#}
-{#                                    <br>#}
-{#                                    <div class="comment_to_field">#}
-{#                                        If you provide an email address, we will notify you when the report is ready.<br>#}
-{#                                        <div style="height: 5px;"></div>#}
-{#                                        We will also contact you if there is a problem in running the assessment.<br>#}
-{#                                        <div style="height: 5px;"></div>#}
-{#                                        If you do not receive a notification, please check your junk mail folder.<br>#}
-{#                                    </div>#}
-{#                                    <br>#}
-{#                                    <br>#}
-{#                                </td>#}
-{#                            </tr>#}
                         </table>
 
                         <div class="submit-wrapper">
                             <div id='errors-wrapper' style="display: block">
-                                {{ data_set_form.non_field_errors }}
+                                {{ qs_form.non_field_errors }}
                             </div>
 
                             <div id="evaluate-button-wrapper">
                                 <input id='evaluate-button'
                                        class="btn btn-large btn-inverse"
                                        name="submitButton"
-                                       tabindex="12"
+                                       tabindex="13"
                                        type="submit"
                                        value="Evaluate"
                                        onclick="submitDataSetForm('eval_form'); return false;">
@@ -709,6 +694,8 @@
                     </form>
                 </div>
             </td>
+
+
             <td class="layout-table-td layout-table-snd-td">
                 <div id="latest_reports" style="margin-left: 0px; margin-top: 10px;">
 {#                    <div style="margin-top: 25px; margin-left: -2px; margin-bottom: 5px;">#}
@@ -878,8 +865,8 @@
 
          {# anchor #}
         <span id="reportexample"></span>
-        <h2><a class='dotted-link js' id='report_example_toggle' href="#reportexample" tabindex="10">Report Example</a></h2>
-        <p class='report_outer_object'>Comparison of 4 different E. coli assemblies with one data set.</p>
+        <h2><a class='dotted-link js' id='report_example_toggle' href="#reportexample" tabindex="14">Report Example</a></h2>
+        <p class='report_outer_object'>4 different E. coli assemblies.</p>
         <div id="extended_link" class='report_outer_object'></div>
     </div>
 

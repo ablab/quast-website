@@ -18,15 +18,15 @@
 <body>
 <h1>QUAST 2.1 manual</h1>
 
-<p>QUAST stands for <u>QU</u>ality <u>AS</u>sesment <u>T</u>ool. 
-QUAST evaluates genome assemblies by computing various metrics.
+<p>QUAST stands for <u>QU</u>ality <u>AS</u>sesment <u>T</u>ool.
+    QUAST evaluates genome assemblies by computing various metrics.
     <br>
     This manual will help you to run the tool and understand its output.
     <br>
     You can find all project news and the latest versions of source code and manual
     at <a href="http://sourceforge.net/projects/quast/">http://sourceforge.net/projects/quast/</a>.
     <br>
-    QUAST uses <a href="http://exon.gatech.edu/genemarks.cgi">GeneMarkS</a>, 
+    QUAST uses <a href="http://exon.gatech.edu/genemarks.cgi">GeneMarkS</a>,
     <a href="http://cbcb.umd.edu/software/glimmerhmm/">GlimmerHMM</a>, <a href="http://mummer.sourceforge.net/">MUMmer</a>,
     and <a href="http://gage.cbcb.umd.edu/index.html">GAGE</a>. All their sources are embedded in QUAST and you needn't to install
     them separately.
@@ -37,29 +37,29 @@ QUAST evaluates genome assemblies by computing various metrics.
 
 <h2>Table of Contents</h2>
 <ol>
-  <li><a href="#sec1">Installation</a></li> 
-  <li><a href="#sec2">Running QUAST</a> 
-    <ol>
-      <li><a href="#sec2.1">For impatient people</a></li>
-      <li><a href="#sec2.2">Input data</a></li>
-      <li><a href="#sec2.3">GAGE mode</a></li>
-      <li><a href="#sec2.4">Command line options</a></li>
-    </ol>
-  </li>
-  <li><a href="#sec3">QUAST output</a> 
-    <ol>
-      <li><a href="#sec3.1">Metrics description</a>
+    <li><a href="#sec1">Installation</a></li>
+    <li><a href="#sec2">Running QUAST</a>
         <ol>
-          <li><a href="#sec3.1.1">Summary report</a></li>
-          <li><a href="#sec3.1.2">Misassemblies report</a></li>
-          <li><a href="#sec3.1.3">Unaligned report</a></li>
+            <li><a href="#sec2.1">For impatient people</a></li>
+            <li><a href="#sec2.2">Input data</a></li>
+            <li><a href="#sec2.3">GAGE mode</a></li>
+            <li><a href="#sec2.4">Command line options</a></li>
         </ol>
-      </li>
-      <li><a href="#sec3.2">Plots descriptions</a></li>      
-    </ol>
-  </li>
-  <li><a href="#sec4">Adjusting QUAST reports and plots</a></li> 
-  <li><a href="#sec5">Feedback and bug reports</a></li> 
+    </li>
+    <li><a href="#sec3">QUAST output</a>
+        <ol>
+            <li><a href="#sec3.1">Metrics description</a>
+                <ol>
+                    <li><a href="#sec3.1.1">Summary report</a></li>
+                    <li><a href="#sec3.1.2">Misassemblies report</a></li>
+                    <li><a href="#sec3.1.3">Unaligned report</a></li>
+                </ol>
+            </li>
+            <li><a href="#sec3.2">Plots descriptions</a></li>
+        </ol>
+    </li>
+    <li><a href="#sec4">Adjusting QUAST reports and plots</a></li>
+    <li><a href="#sec5">Feedback and bug reports</a></li>
 </ol>
 
 <a name="sec1"></a>
@@ -72,7 +72,7 @@ QUAST evaluates genome assemblies by computing various metrics.
 <ul>
     <li>Python v. 2 (2.5 or higher)</li>
     <li>Perl v. 5.6.0 or higher</li>
-    <li><a href="http://mummer.sourceforge.net/manual/#requirements">MUMmer system requirements</a></li>    
+    <li><a href="http://mummer.sourceforge.net/manual/#requirements">MUMmer system requirements</a></li>
 </ul>
 
 It is highly recommended to install <a href="http://matplotlib.sourceforge.net/">Matplotlib</a> Python library for drawing plots.
@@ -113,18 +113,18 @@ Or with <a href="http://peak.telecommunity.com/DevCenter/EasyInstall">Easy Insta
 <a name="sec2.1"></a>
 <h3>2.1 For impatient people</h3>
 <p>
-Running QUAST on test data from the installation tarball (reference genome, gene and operon annotations, and two assemblies of the first 10 kbp of <i>E.&nbsp;coli</i>):
+    Running QUAST on test data from the installation tarball (reference genome, gene and operon annotations, and two assemblies of the first 10 kbp of <i>E.&nbsp;coli</i>):
 <pre class="code">
 <code>
-    python quast.py -R test_data/reference_10K.fasta.gz -G test_data/genes_10K.txt -O test_data/operons_10K.txt test_data/assembly_10K_1.fasta test_data/assembly_10K_2.fasta    
+    python quast.py -R test_data/reference_10K.fasta.gz -G test_data/genes_10K.txt -O test_data/operons_10K.txt test_data/assembly_10K_1.fasta test_data/assembly_10K_2.fasta
 </code>
-</pre>    
+</pre>
 Browsing summary of evaluation results with <a href="http://www.greenwoodsoftware.com/less/">less</a> utility:
 <pre class="code">
 <code>
     less quast_results/latest/report.txt
 </code>
-</pre>    
+</pre>
 </p>
 
 <a name="sec2.2"></a>
@@ -149,7 +149,7 @@ These files correspond to the first 10 kbp of <i>E. coli</i>. Input reads and sa
 <b>Known limitations on input data</b>
 <br>
 QUAST uses Nucmer to align assemblies to a reference genome. Due to Nucmer's limitations on input data size,
-QUAST can work only with assemblies of length less than 4.29 Gbp and with reference genomes of length less than 536 Mbp per chromosome 
+QUAST can work only with assemblies of length less than 4.29 Gbp and with reference genomes of length less than 536 Mbp per chromosome
 (number of chromosomes is not limited).
 </p>
 
@@ -163,10 +163,10 @@ QUAST can work only with assemblies of length less than 4.29 Gbp and with refere
     <a href="http://genome.cshlp.org/content/early/2012/01/12/gr.131383.111">GAGE paper</a> for descriptions) in addition to a standard QUAST report.
     <br><br>
     <b>Note:</b>
-    <ul style="margin-top: -12px;">
-        <li>GAGE can work only with a reference genome, </li>
-        <li>Java and Java Compiler should be installed on your machine. Tested with OpenJDK 6.</li>
-    </ul>
+<ul style="margin-top: -12px;">
+    <li>GAGE can work only with a reference genome, </li>
+    <li>Java and Java Compiler should be installed on your machine. Tested with OpenJDK 6.</li>
+</ul>
 </p>
 
 <a name="sec2.4"></a>
@@ -186,7 +186,7 @@ QUAST can work only with assemblies of length less than 4.29 Gbp and with refere
 
 <p>
     <code>-o &lt;output_dir&gt; </code></p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;Specify an output directory. The default value is <code>quast_results/results_&lt;date_time&gt;</code>. 
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Specify an output directory. The default value is <code>quast_results/results_&lt;date_time&gt;</code>.
     <b>Note:</b> QUAST reuses already generated Nucmer alignments when it is started on an existing directory. Thus, you can add new assemblies
     to an existing comparison or change QUAST options and efficiently reuse already computed results for speed-up.
 </p>
@@ -246,28 +246,28 @@ QUAST can work only with assemblies of length less than 4.29 Gbp and with refere
 <p>
     <code>--eukaryote</code>
 </p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;This flag should be set if a genome is an eukaryote. QUAST uses this information in Gene Finding module (prokaryotes and eukaryotes
-    have different specifics of genes, we use GenemarkS for prokaryotes and GlimmerHMM for eukaryotes) and in Contigs Analyzer module 
-    (QUAST correctly process linear representations of prokaryote circular chromosomes).</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;This flag should be set if the genome is eukaryotic. QUAST uses this information in the Gene Finding module (prokaryotes and eukaryotes
+    have different specifics of genes, we use GenemarkS for prokaryotes and GlimmerHMM for eukaryotes) and in the Contigs Analyzer module
+    (QUAST correctly processes linear representations of prokaryotic circular chromosomes).</p>
 
 <p>
     <code>--est-ref-size &lt;int&gt;</code>
 </p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;Estimated reference size for computing <b><i>NGx</i></b> statistics. <b>Note:</b> this value will be used only if a reference genome file is 
+<p>&nbsp;&nbsp;&nbsp;&nbsp;Estimated reference size for computing <b><i>NGx</i></b> statistics. <b>Note:</b> this value will be used only if a reference genome file is
     not specified (see <code>--R</code> option). </p>
 
 <p>
     <code>--scaffolds</code>
 </p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;This flag informs QUAST that provided assemblies are scaffolds. QUAST will add splitted versions 
-    of provided assemblies to the comparison. Assemblies are splitted by continuous fragments of N's of length &ge; 10.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;This flag informs QUAST that provided assemblies are scaffolds. QUAST will add split versions
+    of provided assemblies to the comparison. Assemblies are split by continuous fragments of N's of length &ge; 10.</p>
 
 <p>
     <code>--use-all-alignments</code>
 </p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;This flag should be set for computing <b><i>Genome fraction, # genes, # operons</i></b> metrics in compatible with <i>QUAST v.1.*</i> mode.
     By default, QUAST v.2.1 filters Nucmer's alignments to keep only best ones. Roughly speaking, QUAST skips ambiguous and redundant alignments
-    to keep <i>one alignment</i> (or one set of non-overlapping or slightly-overlapping alignments) <i>per each contig</i>. QUAST v.1.* used <i>all</i> Nucmer's 
+    to keep <i>one alignment</i> (or one set of non-overlapping or slightly-overlapping alignments) <i>per each contig</i>. QUAST v.1.* used <i>all</i> Nucmer's
     alignments to compute these metrics.</p>
 
 <p>
@@ -363,13 +363,13 @@ QUAST can work only with assemblies of length less than 4.29 Gbp and with refere
 
 <p><b><i>Reference length</i></b>&nbsp;&nbsp;is the total number of bases in the reference.</p>
 
-<p><b><i>N50</i></b>&nbsp;&nbsp;is the contig length such that using longer or equal length contigs produces 
-    half (50%) of the bases of the assembly. Usually there is no value that produces exactly 50%, 
-    so the technical definition is the minimum length x such that using contigs of length at least 
+<p><b><i>N50</i></b>&nbsp;&nbsp;is the contig length such that using longer or equal length contigs produces
+    half (50%) of the bases of the assembly. Usually there is no value that produces exactly 50%,
+    so the technical definition is the minimum length x such that using contigs of length at least
     x accounts for at least 50% of the total assembly length.</p>
 
-<p><b><i>NG50</i></b>&nbsp;&nbsp;is the contig length such that using longer or equal length contigs 
-    produces half (50%) of the bases of the reference genome. This metric is computed only if 
+<p><b><i>NG50</i></b>&nbsp;&nbsp;is the contig length such that using longer or equal length contigs
+    produces half (50%) of the bases of the reference genome. This metric is computed only if
     a reference genome is provided.</p>
 
 <p><b><i>N75 and NG75</i></b>&nbsp;&nbsp;are defined similarly with 75% instead of 50%.</p>
@@ -377,8 +377,8 @@ QUAST can work only with assemblies of length less than 4.29 Gbp and with refere
 <p><b><i>L50, L75, LG50, LG75</i></b>&nbsp;&nbsp;are evaluated as the numbers of contigs of length at least corresponding N-metrics.<br>
     In other words, L50, for example, is the minimal number of contigs that produce half (50%) of the bases of the assembly.</p>
 
-<p><b><i># misassemblies</i></b>&nbsp;&nbsp;is the number of positions in the assembled contigs where the left flanking sequence aligns 
-    over 1 kbp away from the right flanking sequence on the reference or they overlap on more than 1 kbp or flanking sequences align 
+<p><b><i># misassemblies</i></b>&nbsp;&nbsp;is the number of positions in the assembled contigs where the left flanking sequence aligns
+    over 1 kbp away from the right flanking sequence on the reference or they overlap on more than 1 kbp or flanking sequences align
     on different strands or different chromosomes. This metric is computed only if a reference genome is provided.</p>
 
 <p><b><i># misassembled contigs</i></b>&nbsp;&nbsp;is the number of contigs that contain misassembly events.</p>
@@ -397,15 +397,15 @@ QUAST can work only with assemblies of length less than 4.29 Gbp and with refere
 
 <p><b><i>Ambiguous contigs length</i></b>&nbsp;&nbsp;is the number of total bases contained in all ambiguous contigs. </p-->
 
-<p><b><i>Genome fraction (%)</i></b>&nbsp;&nbsp;is the total number of aligned bases in the reference, 
-    divided by the genome size. A base in the reference genome is counted as aligned if there is at least one contig with 
-    at least one alignment to this base. Contigs from repeat regions may map to multiple places, and thus may be counted 
+<p><b><i>Genome fraction (%)</i></b>&nbsp;&nbsp;is the total number of aligned bases in the reference,
+    divided by the genome size. A base in the reference genome is counted as aligned if there is at least one contig with
+    at least one alignment to this base. Contigs from repeat regions may map to multiple places, and thus may be counted
     multiple times in this quantity.</p>
 
-<p><b><i>Duplication ratio</i></b>&nbsp;&nbsp;is the total number of aligned bases in the assembly 
-    (i.e. <i>Total length</i> - <i>Unaligned contigs length</i>), divided by the total number of aligned bases in the 
-    reference (see the <b>Genome fraction (%)</b> metric). If the assembly contains many contigs that cover the same 
-    regions of the reference, its <i>Duplication ratio</i> may be much larger than 1. This may occur due to overestimating 
+<p><b><i>Duplication ratio</i></b>&nbsp;&nbsp;is the total number of aligned bases in the assembly
+    (i.e. <i>Total length</i> - <i>Unaligned contigs length</i>), divided by the total number of aligned bases in the
+    reference (see the <b>Genome fraction (%)</b> metric). If the assembly contains many contigs that cover the same
+    regions of the reference, its <i>Duplication ratio</i> may be much larger than 1. This may occur due to overestimating
     repeat multiplicities and due to small overlaps between contigs, among other reasons.</p>
 
 <p><b><i>GC (%)</i></b>&nbsp;&nbsp;is the total number of G and C nucleotides in the assembly,
@@ -415,16 +415,16 @@ QUAST can work only with assemblies of length less than 4.29 Gbp and with refere
     divided by the total length of the reference.</p>
 
 <p><b><i># mismatches per 100 kbp</i></b>&nbsp;&nbsp;is the average number of mismatches per 100000 aligned bases. This does not
-distinguish between Single Nucleotide Polymorphisms (SNPs), which are true differences in the assembled genome vs. the reference genome,
-and Single Nucleotide Errors (SNEs), which are due to errors in reads or errors in the assembly algorithm.</p>
+    distinguish between Single Nucleotide Polymorphisms (SNPs), which are true differences in the assembled genome vs. the reference genome,
+    and Single Nucleotide Errors (SNEs), which are due to errors in reads or errors in the assembly algorithm.</p>
 
-<p><b><i># indels per 100 kbp</i></b>&nbsp;&nbsp;is the average number of indels per 100000 aligned bases. 
+<p><b><i># indels per 100 kbp</i></b>&nbsp;&nbsp;is the average number of indels per 100000 aligned bases.
     <b>Note:</b> several consecutive single nucleotide indels are counted as one indel.</p>
 
 <p><b><i># N's per 100 kbp</i></b>&nbsp;&nbsp;is the average number of uncalled bases (N's) per 100000 assembly bases.</p>
 
-<p><b><i># genes</i></b>&nbsp;&nbsp;is the number of genes in the assembly (complete and partial), based on a user-provided annotated 
-    list of gene positions in the reference genome. A gene counts as 'partially covered' if the assembly contains at least 100 bp 
+<p><b><i># genes</i></b>&nbsp;&nbsp;is the number of genes in the assembly (complete and partial), based on a user-provided annotated
+    list of gene positions in the reference genome. A gene counts as 'partially covered' if the assembly contains at least 100 bp
     of this gene but not the whole gene.
     This metric is computed only if a reference genome and an annotated list of gene positions are provided (see <a href="#sec2.4">section 2.4</a>)</p>
 
@@ -436,7 +436,7 @@ and Single Nucleotide Errors (SNEs), which are due to errors in reads or errors 
     This metric is computed if an annotated list of genes is not provided.</p>
 
 <p><b><i>Largest alignment</i></b>&nbsp;&nbsp;is the length of the largest continuous alignment in the assembly.
-    This metric is always equal to the <b>Largest contig</b> metric but it can be smaller if the largest contig 
+    This metric is always equal to the <b>Largest contig</b> metric but it can be smaller if the largest contig
     of the assembly contains a misassembly event.</p>
 
 <p><b><i>NA50, NGA50, NA75, NGA75, LA50, LA75, LGA50, LGA75 (A stands for "aligned")</i></b>&nbsp;&nbsp;like the same
@@ -449,27 +449,27 @@ and Single Nucleotide Errors (SNEs), which are due to errors in reads or errors 
 <h4>3.1.2 Misassemblies report</h4>
 
 <p><b><i># misassemblies</i></b>&nbsp;&nbsp;is the same as <i># misassemblies</i> from <a href="#sec3.1.1">section 3.1.1</a>.
-    However, this report contains also a classification of all misassemblies into three groups <i>relocations</i>, <i>translocations</i>, 
+    However, this report contains also a classification of all misassemblies into three groups <i>relocations</i>, <i>translocations</i>,
     and <i>inversions</i> (see below).</p>
 
 <p><b><i>Relocation</i></b>&nbsp;&nbsp;is a misassembly where the left flanking sequence aligns over 1 kbp away from the right flanking
-sequence on the reference, or they overlap by more than 1 kbp and both flanking sequences align on the same chromosome. </p>
+    sequence on the reference, or they overlap by more than 1 kbp and both flanking sequences align on the same chromosome. </p>
 
 <p><b><i>Translocation</i></b>&nbsp;&nbsp;is a misassembly where the flanking sequences align on different chromosomes. </p>
 
 <p><b><i>Inversion</i></b>&nbsp;&nbsp;is a misassembly where it is not a relocation and the flanking sequences align on
-opposite strands of the same chromosome. </p>
+    opposite strands of the same chromosome. </p>
 
-<p><b><i># misassembled contigs</i></b> and <b><i>Misassembled contigs length</i></b>&nbsp;&nbsp;are the same as the metrics from 
-    <a href="#sec3.1.1">section 3.1.1</a> and are counted among all contigs with any type of a misassembly 
+<p><b><i># misassembled contigs</i></b> and <b><i>Misassembled contigs length</i></b>&nbsp;&nbsp;are the same as the metrics from
+    <a href="#sec3.1.1">section 3.1.1</a> and are counted among all contigs with any type of a misassembly
     (relocation, translocation or inversion). </p>
 
-<p><b><i># local misassemblies</i></b>&nbsp;&nbsp;is the number of local misassemblies. We define a local misassembly breakpoint 
-    as a breakpoint that satisfies these conditions: 
+<p><b><i># local misassemblies</i></b>&nbsp;&nbsp;is the number of local misassemblies. We define a local misassembly breakpoint
+    as a breakpoint that satisfies these conditions:
 <ol>
-<li>Two or more distinct alignments cover the breakpoint.</li>
-<li>The gap between left and right flanking sequences is less than 1 kbp.</li>
-<li>The left and right flanking sequences both are on the same strand of the same chromosome of the reference genome.</li>
+    <li>Two or more distinct alignments cover the breakpoint.</li>
+    <li>The gap between left and right flanking sequences is less than 1 kbp.</li>
+    <li>The left and right flanking sequences both are on the same strand of the same chromosome of the reference genome.</li>
 </ol> </p>
 
 <p><b><i># mismatches</i></b>&nbsp;&nbsp;is the number of mismatches in all aligned bases.</p>
@@ -507,7 +507,7 @@ opposite strands of the same chromosome. </p>
 
 <p><b><i>Cumulative length</i></b></p>
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;This plot shows the growth of assembly contig lengths. On the x-axis, contigs are ordered from largest (contig #1) 
+<p>&nbsp;&nbsp;&nbsp;&nbsp;This plot shows the growth of assembly contig lengths. On the x-axis, contigs are ordered from largest (contig #1)
     to smallest. The y-axis gives the size of the x largest contigs in the assembly.</p>
 
 <p><b><i>Nx</i></b></p>
@@ -520,19 +520,19 @@ opposite strands of the same chromosome. </p>
 
 <p><b><i>GC content plot</i></b></p>
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;This plot shows the distribution of GC content in the contigs. 
+<p>&nbsp;&nbsp;&nbsp;&nbsp;This plot shows the distribution of GC content in the contigs.
     The x value shows the percent of GC (from 0 to 100). The y
     value shows the number of non-overlapping 100 bp windows whose GC
-    content is x. Typically, the distribution is approximately Gaussian. 
-    However, for some genomes it is not Gaussian. For assembly projects with contaminants, 
-    the GC distribution of the contaminants often differs from the reference genome and may give a 
+    content is x. Typically, the distribution is approximately Gaussian.
+    However, for some genomes it is not Gaussian. For assembly projects with contaminants,
+    the GC distribution of the contaminants often differs from the reference genome and may give a
     superposition of multiple curves with different peaks.
 </p>
 
 <p><b><i>Cumulative length (aligned contigs)</i></b></p>
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp;This plot is similar to <b><i>Cumulative length</i></b> plot but QUAST plots only aligned contigs instead of contigs itself.
-    If a contig has a misassembly with respect to the reference, QUAST breaks the contig into smaller pieces. 
+    If a contig has a misassembly with respect to the reference, QUAST breaks the contig into smaller pieces.
     This plot could be created only if a reference genome is provided. </p>
 
 <p><b><i>NAx and NGAx</i></b></p>
@@ -555,9 +555,9 @@ opposite strands of the same chromosome. </p>
 
 <p>
     You can easily change content, order of metrics, and metric names in all QUAST reports. For doing this,
-    please edit CONFIGURABLE PARAMETERS section in <code>libs/reporting.py</code>. It contains a lot of informative comments 
+    please edit CONFIGURABLE PARAMETERS section in <code>libs/reporting.py</code>. It contains a lot of informative comments
     which will help you to adjust QUAST reports easily even if you are new to Python.
-</p>    
+</p>
 
 <p>
     The same statement is true for QUAST plots as well. You can adjust plot colors, style and width of lines, legeng font, plots output format, etc.

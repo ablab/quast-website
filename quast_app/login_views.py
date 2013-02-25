@@ -30,7 +30,6 @@ def ask_password(request):
     except ValidationError:
         return HttpResponseBadRequest('Incorrect email')
 
-
     # Current user session
     session_key = request.session.session_key
     try:
@@ -65,34 +64,6 @@ def send_confirmation(user):
     email = EmailMultiAlternatives('Personal page at QUAST', text_content, settings.SUPPORT_EMAIL, [user.email])
     email.attach_alternative(html_content, "text/html")
     email.send()
-
-#    send_mail(subject='Personal page at QUAST',
-#              message='<a href="%s">Visit your page</a> with quality assessment reports\n'
-#                      '\n'
-#                      '<span style="font-color: grey">If you didn\'t want this email, please, just ignore it.</span>'
-#                      '\n'
-#                      '\n---'
-#                      '\nIn case of any problems, feel free to reply to this message.'
-#                      '\n'
-#                      '\n<a href="http://quast.bioinf.spbau.ru">QUAST</a>: a quality assessment tool for genome assemblies'
-#                      % link,
-#              from_email=settings.SUPPORT_EMAIL,
-#              recipient_list=[user.email])
-
-
-#    send_mail(subject='Personal page at QUAST',
-#              message='Visit your page with quality assessment reports:'
-#                      '\n%s'
-#                      '\n'
-#                      '\nIf you didn\'t want this email, please, just ignore it.'
-#                      '\n'
-#                      '\n---'
-#                      '\nIn case of any problems, feel free to reply to this message.'
-#                      '\n'
-#                      '\nQUAST: a quality assessment tool for genome assemblies, http://quast.bioinf.spbau.ru'
-#                      % link,
-#              from_email=settings.SUPPORT_EMAIL,
-#              recipient_list=[user.email])
 
     mailer.info('Confirmation message was sent to %s with password %s', user.email, user.password)
 
@@ -133,11 +104,10 @@ def login(request):
 
     user = User.objects.get(email=email)
 
-    if password == user.password or \
-       settings.DEBUG and password == settings.DEBUG_PASSWORD:
-
+    if password == user.password or settings.DEBUG and password == settings.DEBUG_PASSWORD:
         user_session = get_or_create_session(request, 'login')
         user_session.set_user(user)
+        user_session.save()
         # user.generate_password()
 
         mailer.info('User signed in with email = %s and password = %s', email, password)

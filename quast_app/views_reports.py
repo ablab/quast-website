@@ -12,13 +12,12 @@ logger = logging.getLogger('quast')
 mailer = logging.getLogger('quast_mailer')
 
 
-
 def get_reports_response_dict(user_session, after_evaluation=False, limit=None):
     quast_sessions_dict = []
 
     quast_sessions = user_session.get_quastsession_set().filter(submitted=True).order_by('-date')
     if limit:
-        quast_sessions = quast_sessions[:limit+1]
+        quast_sessions = quast_sessions[:limit + 1]
 
     show_more_link = False
 
@@ -47,14 +46,14 @@ def get_reports_response_dict(user_session, after_evaluation=False, limit=None):
             quast_session_info = {
                 'date': qs.date, #. strftime('%d %b %Y %H:%M:%S'),
                 'report_link': settings.REPORT_LINK_BASE + (qs.link or qs.report_id),
-                'comment' : qs.comment,
-                'caption' : qs.caption,
+                'comment': qs.comment,
+                'caption': qs.caption,
                 'with_data_set': True if qs.data_set else False,
                 'data_set_name': qs.data_set.name if qs.data_set and qs.data_set.remember else '',
                 'state': state_repr,
                 'report_id': qs.report_id,
                 'contigs': [cf.fname for cf in qs.contigs_files.all()],
-                }
+            }
             quast_sessions_dict.append(quast_session_info)
 
     return {
@@ -66,12 +65,7 @@ def get_reports_response_dict(user_session, after_evaluation=False, limit=None):
 
 
 def reports_view(user_session, response_dict, request, after_evaluation=False):
-    response_dict = dict(response_dict.items() +
-                         get_reports_response_dict(
-                             user_session,
-                             after_evaluation
-                         ).items())
-
+    response_dict.update(get_reports_response_dict(user_session, after_evaluation))
     return render_to_response('reports.html', response_dict)
 
 

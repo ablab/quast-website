@@ -14,75 +14,184 @@ from models import User, UserSession, DataSet, ContigsFile, QuastSession
 
 
 class DataSetForm(forms.Form):
-    def __init__(self, user_session, *args, **kwargs):
+    def __init__(self, us, *args, **kwargs):
         super(DataSetForm, self).__init__(*args, **kwargs)
 
-        self.user_session = user_session
+        self.fields['name_selected'].choices = [('', '')] + \
+            [(d.name, d.name) for d in us.get_all_allowed_dataset_set()
+                .filter(remember=True)
+                .extra(select={'lower_name': 'lower(name)'})
+                .order_by('lower_name')]
 
-        self.fields['name_selected'] = fields.ChoiceField(
-            required=False,
-            choices=self.__get_choices(user_session),
-            widget=widgets.Select(attrs={
-                'class': 'chzn-select-deselect',
-                'data-placeholder': 'unknown genome',
-                'tabindex': '3',
-                })
-        )
+        # if qs:
+        #     self.initial = {
+        #         'report_id': qs.report_id,
+        #         'name_selected': qs.data_set.name if qs.data_set else None,
+        #         'min_contig': qs.min_contig,
+        #         'scaffolds': qs.scaffolds,
+        #         'domain': qs.eukaryotic,
+        #         'estimated_ref_size': qs.estimated_ref_size,
+        #         'find_genes': qs.find_genes,
+        #     }
 
-    def __get_choices(self, user_session):
-        return [('', '')] + [(d.name, d.name)
-                             for d
-                             in DataSet.objects.extra(select={'lower_name': 'lower(name)'}).order_by('lower_name').all()
-                             if d.remember and (d.user_session is None or
-                                                d.user_session == user_session or
-                                                d.user_session.user and user_session.user and d.user_session.user == user_session.user)]
+    contigs = fields.CharField(validators=[], widget=forms.Textarea)
 
-    is_created = fields.BooleanField(initial=False, required=False)
-    name_created = fields.CharField(required=False,
-                                    widget=widgets.TextInput(attrs={'tabindex':'5'}))
-
-    contigs = fields.CharField(widget=forms.Textarea, validators=[])
     report_id = fields.CharField(required=True, widget=widgets.TextInput)
-    min_contig = fields.IntegerField(min_value=0, required=False, initial=0, widget=widgets.TextInput(attrs={'tabindex': '2'}))
 
-    reference = fields.FileField(required=False, widget=widgets.FileInput(attrs={'tabindex': '6'}))
-    genes = fields.FileField(required=False, widget=widgets.FileInput(attrs={'tabindex': '7'}))
-    operons = fields.FileField(required=False, widget=widgets.FileInput(attrs={'tabindex': '8'}))
+    min_contig = fields.IntegerField(
+        min_value=0,
+        required=False,
+        widget=widgets.TextInput(attrs={'tabindex': '2'}))
 
-    caption = fields.CharField(required=False, widget=widgets.TextInput(attrs={'tabindex': '9', 'style': 'width: 302px;'}))
-    comment = fields.CharField(required=False, widget=widgets.Textarea(attrs={'tabindex': '10', 'rows': '2', 'style': 'width: 302px;'}))
-    # email = fields.EmailField(required=False, widget=widgets.TextInput(attrs={'tabindex':'11', 'style': 'width: 302px;'}))
+    scaffolds = fields.BooleanField(
+        required=False,
+        widget=widgets.CheckboxInput(attrs={'tabindex': '3'}),
+        label='Scaffolds',
+        help_text='Adds split assemblies (continuous fragments of N\'s longer than 10 bp.)')
 
-    initial = {
-        'created_or_selected': 'selected'
-    }
+    find_genes = fields.BooleanField(
+        required=False,
+        widget=widgets.CheckboxInput(attrs={'tabindex': '4'}),
+        help_text='Takes time')
 
-    def set_report_id(self, report_id):
-        self.fields['report_id'] = fields.CharField(
-            required=True,
-            initial=report_id,
-            widget=widgets.TextInput
-        )
+    domain = fields.ChoiceField(
+        required=True,
+        choices=[(False, 'Prokaryotic <span style="color: #888;">(<span class="find_genes_notion">find genes with GenemarkS, </span>process circular chromosomes)</span>'),
+                 (True, 'Eukaryotic<span class="find_genes_notion"> <span style="color: #888;">(find genes with GlimmerHMM)</span></span>')],
+        widget=widgets.RadioSelect(attrs={'tabindex': '5'}))
 
-    def set_min_contig(self, min_contig):
-        self.fields['min_contig'] = fields.IntegerField(
-            min_value=0,
-            required=False,
-            initial=min_contig,
-            widget=widgets.TextInput(attrs={'tabindex':'2'})
-        )
+    estimated_ref_size = fields.IntegerField(
+        min_value=0,
+        required=False,
+        widget=widgets.TextInput(attrs={'tabindex': ''}))
 
-    def set_email(self, email):
-        self.fields['email'] = fields.EmailField(
-            required=False,
-            initial=email,
-            widget=widgets.TextInput(attrs={'tabindex':'10', 'style': 'width: 302px;'})
-        )
+    # min_contig = fields.IntegerField(min_value=0, required=False, initial=0,
+    #                                  widget=widgets.TextInput(attrs={'tabindex': '2'}))
+    #
+    # scaffolds = fields.BooleanField(required=False, initial=False,
+    #                                 widget=widgets.CheckboxInput(attrs={'tabindex': '3'}),
+    #                                 label='Scaffolds',
+    #                                 help_text='Adds split assemblies (continuous fragments of N\'s longer than 10 bp.)')
+    #
+    # domain = fields.ChoiceField(required=True,
+    #                             choices=((False, 'Prokaryotic <span class="comment_to_field">(find genes with GenemarkS, process circular chromosomes)</span>'),
+    #                                      (True, 'Eukaryotic <span class="comment_to_field">(find genes with GlimmerHMM)</span>')), initial=False,
+    #                             widget=widgets.RadioSelect(attrs={'tabindex': '4'}))
+    #                             # help_text='Useful for gene finding (the domains have different gene features, '
+    #                             #           'so we use GenemarkS for prokaryotes and GlimmerHMM for eukaryotes) '
+    #                             #           'and for contig analyzing (to&nbsp;deal with prokaryotic circular chromosomes).')
+    #                                       # <br><span style="margin-left: -3px;">(</span>
+    # estimated_ref_size = fields.IntegerField(min_value=0, required=False, initial=0,
+    #                                          widget=widgets.TextInput(attrs={'tabindex': ''}))
+    #
+    # find_genes = fields.BooleanField(required=False, initial=False,
+    #                                  widget=widgets.CheckboxInput(attrs={'tabindex': ''}),
+    #                                  help_text='Takes time')
 
-    def set_default_data_set_name(self, data_set_name):
-        self.fields['name_selected'].initial = data_set_name
+    name_selected = fields.ChoiceField(
+        required=False,
+        widget=widgets.Select(attrs={
+            'class': 'chzn-select-deselect',
+            'data-placeholder': 'unknown genome',
+            'tabindex': '6',
+        }))
 
-    def clean(self):    # Validation
+    is_created = fields.BooleanField(initial=False,
+                                     required=False,
+                                     widget=widgets.CheckboxInput(attrs={'tabindex': '7',
+                                                                         'class': 'dotted-link'}))
+
+    name_created = fields.CharField(required=False,
+                                    widget=widgets.TextInput(attrs={'tabindex': '8'}),
+                                    help_text='If you fill&nbsp;in this field, we will remember the data set using this name.')
+
+    reference = fields.FileField(required=False, widget=widgets.FileInput(attrs={'tabindex': '9'}),
+                                 help_text='FASTA file with the reference genome sequence.')
+
+    genes = fields.FileField(required=False, widget=widgets.FileInput(attrs={'tabindex': '10'}),
+                             help_text='See <a href="http://quast.bioinf.spbau.ru/manual.html#sec2.2">manual</a> for file formats.')
+
+    operons = fields.FileField(required=False, widget=widgets.FileInput(attrs={'tabindex': '11'}),
+                               help_text='See <a href="http://quast.bioinf.spbau.ru/manual.html#sec2.2">manual</a> for file formats.')
+
+    caption = fields.CharField(required=False, widget=widgets.TextInput(attrs={'tabindex': '12', 'style': 'width: 302px;'}))
+
+    # initial = {'created_or_selected': 'selected'}
+
+    # def set_report_id(self, report_id):
+    #     self.fields['report_id'] = fields.CharField(
+    #         required=True,
+    #         initial=report_id,
+    #         widget=widgets.TextInput)
+
+    # def set_email(self, email):
+    #     self.fields['email'] = fields.EmailField(
+    #         required=False,
+    #         initial=email,
+    #         widget=widgets.TextInput(attrs={'tabindex': '10', 'style': 'width: 302px;'})
+    #     )
+
+    # def set_default_data_set_name(self, data_set_name):
+    #     self.fields['name_selected'].initial = data_set_name
+
+    # @staticmethod
+    # def create_from_qs(qs):
+    #     form = DataSetForm(qs.us, initial={
+    #         'report_id': qs.report_id,
+    #         'name_selected': qs.data_set.name if qs.data_set else None,
+    #         'min_contig': qs.min_contig,
+    #         'scaffolds': qs.scaffolds,
+    #         'domain': qs.eukaryotic,
+    #         'estimated_ref_size': qs.estimated_ref_size,
+    #         'find_genes': qs.find_genes,
+    #     })
+
+        # form.fields['name_selected'] = fields.ChoiceField(
+        #     required=False,
+        #     initial=qs.data_set.name if qs.data_set else None,
+        #     choices=[('', '')] + [(d.name, d.name) for d in qs.user_session.get_all_allowed_dataset_set()
+        #         .filter(remember=True)
+        #         .extra(select={'lower_name': 'lower(name)'})
+        #         .order_by('lower_name')],
+        #     widget=widgets.Select(attrs={
+        #         'class': 'chzn-select-deselect',
+        #         'data-placeholder': 'unknown genome',
+        #         'tabindex': '3',
+        #     }))
+        #
+        # form.fields['min_contig'] = fields.IntegerField(
+        #     min_value=0, required=False, initial=qs.min_contig,
+        #     widget=widgets.TextInput(attrs={'tabindex': '2'}))
+        #
+        # form.fields['scaffolds'] = fields.BooleanField(
+        #     required=False,
+        #     initial=qs.scaffolds,
+        #     widget=widgets.CheckboxInput(attrs={'tabindex': '3'}),
+        #     label='Scaffolds',
+        #     help_text='Adds split assemblies (continuous fragments of N\'s longer than 10 bp.)')
+        #
+        # form.fields['domain'] = fields.ChoiceField(
+        #     required=True,
+        #     choices=[(False, 'Prokaryotic <span style="color: #888;">(<span class="find_genes_notion">find genes with GenemarkS, </span>process circular chromosomes)</span>'),
+        #              (True, 'Eukaryotic<span class="find_genes_notion"> <span style="color: #888;">(find genes with GlimmerHMM)</span></span>')],
+        #     initial=qs.eukaryotic,
+        #     widget=widgets.RadioSelect(attrs={'tabindex': '4'}))
+        #
+        # form.fields['estimated_ref_size'] = fields.IntegerField(
+        #     min_value=0,
+        #     required=False,
+        #     initial=qs.estimated_ref_size,
+        #     widget=widgets.TextInput(attrs={'tabindex': ''}))
+        #
+        # form.fields['find_genes'] = fields.BooleanField(
+        #     required=False,
+        #     initial=qs.find_genes,
+        #     widget=widgets.CheckboxInput(attrs={'tabindex': ''}),
+        #     help_text='Takes time')
+
+        # return form
+
+    def clean(self):  # Validation
         cleaned_data = super(DataSetForm, self).clean()
 
         # if self.user_session:
@@ -104,17 +213,22 @@ class AdminDataSetForm(forms.Form):
 
 from django.contrib import admin
 
+
 class UserAdmin(admin.ModelAdmin):
     pass
+
 
 class UserSessionAdmin(admin.ModelAdmin):
     pass
 
+
 class DataSetAdmin(admin.ModelAdmin):
     pass
 
+
 class ContigsFileAdmin(admin.ModelAdmin):
     pass
+
 
 class QuastSessionAdmin(admin.ModelAdmin):
     pass

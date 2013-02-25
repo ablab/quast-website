@@ -1,0 +1,89 @@
+QUAST started: /Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_tool/quast.py /Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_app/files/e.coli/data/SPAdes2.1.fasta /Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_app/files/e.coli/data/SPAdes2.2.fasta /Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_app/files/e.coli/data/SPAdes_latest.fasta /Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_app/files/e.coli/data/IDBA-UD_contig.fasta -G /Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_app/files/e.coli/data/genes.txt -O /Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_app/files/e.coli/data/operons.txt -R /Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_app/files/e.coli/data/reference.fa.gz -J /Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_app/files/e.coli -o /Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_app/files/e.coli/regular_report 
+Version: 2.1 Build: unknown
+
+System information:
+  OS: Darwin-12.2.1-x86_64-i386-64bit
+  Python version: 2.7.2
+  CPUs number: 4
+
+Started: 2013-02-25 13:59:54
+
+Logging to /Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_app/files/e.coli/regular_report/quast.log
+
+== NOTE: Output directory already exists! Existing Nucmer alignments can be used! ==
+== NOTE: Maximum number of threads was set to 4 (use --threads option to set it manually) ==
+Processing contig files and reference ...
+  /Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_app/files/e.coli/data/SPAdes2.1.fasta ==> SPAdes2.1
+  /Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_app/files/e.coli/data/SPAdes2.2.fasta ==> SPAdes2.2
+  /Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_app/files/e.coli/data/SPAdes_latest.fasta ==> SPAdes_latest
+  /Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_app/files/e.coli/data/IDBA-UD_contig.fasta ==> IDBA-UD_contig
+  extracting /Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_app/files/e.coli/data/reference.fa.gz ...
+      extracted!
+  Done.
+====== WARNING! Can't draw plots: please install python-matplotlib ======
+
+2013-02-25 13:59:57
+Running Basic statistics processor...
+  Reference genome:
+    reference.fa, Reference length = 4639675, Reference GC % = 50.79
+  Contigs files: 
+    1  SPAdes2.1
+    2  SPAdes2.2
+    3  SPAdes_latest
+    4  IDBA-UD_contig
+  Calculating N50 and L50...
+    1  SPAdes2.1, N50 = 84257, L50 = 20, Total length = 4861290, GC % = 49.76, # N's per 100 kbp =  0.00
+    2  SPAdes2.2, N50 = 109545, L50 = 16, Total length = 4883983, GC % = 49.76, # N's per 100 kbp =  0.00
+    3  SPAdes_latest, N50 = 104610, L50 = 16, Total length = 4878863, GC % = 49.78, # N's per 100 kbp =  0.00
+    4  IDBA-UD_contig, N50 = 90607, L50 = 17, Total length = 4713557, GC % = 49.92, # N's per 100 kbp =  0.00
+  Done.
+
+2013-02-25 14:00:00
+Running Contigs analyzer...
+  1  SPAdes2.1
+  2  SPAdes2.2
+  1  Logging to files /Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_app/files/e.coli/regular_report/contigs_reports/contigs_report_SPAdes2.1.stdout and contigs_report_SPAdes2.1.stderr...
+  2  Logging to files /Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_app/files/e.coli/regular_report/contigs_reports/contigs_report_SPAdes2.2.stdout and contigs_report_SPAdes2.2.stderr...
+  1  Using existing Nucmer alignments... 
+  2  Using existing Nucmer alignments... 
+  3  SPAdes_latest
+  3  Logging to files /Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_app/files/e.coli/regular_report/contigs_reports/contigs_report_SPAdes_latest.stdout and contigs_report_SPAdes_latest.stderr...
+  4  IDBA-UD_contig
+  4  Logging to files /Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_app/files/e.coli/regular_report/contigs_reports/contigs_report_IDBA-UD_contig.stdout and contigs_report_IDBA-UD_contig.stderr...
+  4  Running Nucmer... 
+  3  Using existing Nucmer alignments... 
+  2  Analysis is finished.
+  1  Analysis is finished.
+  3  Analysis is finished.
+  4  Analysis is finished.
+  Creating total report...
+      saved to /Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_app/files/e.coli/regular_report/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Creating total report...
+      saved to /Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_app/files/e.coli/regular_report/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Done.
+
+2013-02-25 14:00:19
+Running NA-NGA tool...
+  Calculating NA50 and NGA50...
+    1  SPAdes2.1, Largest alignment = 209589, NA50 = 83990, NGA50 = 87221, LA50 = 20, LGA50 = 19
+    2  SPAdes2.2, Largest alignment = 268464, NA50 = 109545, NGA50 = 109826, LA50 = 16, LGA50 = 15
+    3  SPAdes_latest, Largest alignment = 268514, NA50 = 104610, NGA50 = 109876, LA50 = 16, LGA50 = 15
+    4  IDBA-UD_contig, Largest alignment = 224018, NA50 = 90607, NGA50 = 90607, LA50 = 17, LGA50 = 17
+  Done.
+
+2013-02-25 14:00:19
+
+== NOTE: Gene Finding module was skipped. Use --gene-finding option to enable it. ==
+
+2013-02-25 14:00:33
+Summarizing...
+  Creating total report...
+      saved to /Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_app/files/e.coli/regular_report/report.txt, report.tsv, and report.tex
+  Transposed version of total report...
+      saved to /Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_app/files/e.coli/regular_report/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+Done.
+
+Log saved to /Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_app/files/e.coli/regular_report/quast.log
+
+Finished: 2013-02-25 14:00:33
+Elapsed time: 0:00:38.403148

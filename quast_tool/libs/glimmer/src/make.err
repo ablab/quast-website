@@ -1,0 +1,14 @@
+tree_util_prob.c: In function 'tree_node* read_tree(char*)':
+tree_util_prob.c:64:51: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+tree_util_prob.c:67:42: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+tree_util_prob.c:70:42: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+tree_util_prob.c: In function 'tree_node* read_hp(FILE*)':
+tree_util_prob.c:192:45: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+tree_util_prob.c:196:51: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+tree_util_prob.c:198:66: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+util.c: In function 'int* ivector(int, int)':
+util.c:84:60: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+util.c: In function 'float* vector(int, int)':
+util.c:101:59: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]
+util.c: In function 'double* dvector(int, int)':
+util.c:118:60: warning: deprecated conversion from string constant to 'char*' [-Wwrite-strings]

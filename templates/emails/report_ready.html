@@ -1,19 +1,18 @@
 <html>
-<head></head>
 <body>
     <a style="font-size: 1.2em;" href="http://quast.bioinf.spbau.ru{{ link }}">
         {% if caption %}
             {{ caption }}
         {% else %}
             http://quast.bioinf.spbau.ru{{ link }}
-        {% endif %}
-    </a><br>
+        {% endif %}</a><br>
+    <br>
     <br>
     {% if genome %}Genome: {{ genome }}<br>
         <br>{% endif %}
     {% if comment %}Comment: {{ comment }}<br>
         <br>{% endif %}
-    -<br>
+    <br>
     In case of any problems, feel free to reply to this message.<br>
     <br>
     QUAST: a quality assessment tool for genome assemblies, <a href="http://quast.bioinf.spbau.ru">http://quast.bioinf.spbau.ru</a>
