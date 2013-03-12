@@ -58,13 +58,17 @@ def benchmarking(request):
 
 def idba(request):
     json_dirpath = os.path.join(settings.ECOLI_DIRPATH)
-    report_response_dict = get_report_response_dict(
+
+    response_dict = settings.TEMPLATE_ARGS_BY_DEFAULT
+
+    report_dict = get_report_response_dict(
         json_dirpath,
         caption='SPAdes - IDBA collaboration',
         comment='',
         data_set_name='E.coli',
         link='')
-    response_dict = dict(report_response_dict.items() + settings.TEMPLATE_ARGS_BY_DEFAULT.items())
+
+    response_dict.update(report_dict)
     return render_to_response('ecoli.html', response_dict)
 
 

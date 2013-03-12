@@ -9,10 +9,9 @@ import mimetypes
 
 
 download_text = '' +\
-  'Text, TSV and Latex versions<br>' +\
-  'of the table, plots in PNG.<br>' +\
-  '<div class="small_line_indent"></div>'
-
+    'Text, TSV and Latex versions<br>' +\
+    'of the table, plots in PNG.<br>' +\
+    '<div class="small_line_indent"></div>'
 
 
 def e_coli(request, download_fname):
@@ -57,11 +56,13 @@ def common_view(caption, slug_name, download_fname):
             raise Http404('File %s does not exist' % download_fname)
 
     else:
-        report_response_dict = get_report_response_dict(
+        response_dict = settings.TEMPLATE_ARGS_BY_DEFAULT
+
+        report_dict = get_report_response_dict(
             os.path.join(settings.PAPER_DIRPATH, slug_name),
             caption=caption,
-            )
-        response_dict = dict(report_response_dict.items() + settings.TEMPLATE_ARGS_BY_DEFAULT.items())
+        )
+        response_dict.update(report_dict)
 
         response_dict['download'] = True
         response_dict['downloadLink'] = slug_name + '_quast_report.zip'
