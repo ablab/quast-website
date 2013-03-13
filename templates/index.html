@@ -634,7 +634,7 @@
                                     <td class='form-layout-td'><label for='id_reference'>Reference</label></td>
                                     <td class='form-layout-td'>{{ qs_form.reference }}
                                         {{ qs_form.reference.errors }}
-                                        <div class="comment_to_field"></div>{{ qs_form.reference.help_text|safe }}<br>
+                                        <div class="comment_to_field">{{ qs_form.reference.help_text|safe }}</div><br>
                                     </td>
                                 </tr>
                                 <tr>{% comment %}@declare id="id_genes"{% endcomment %}
