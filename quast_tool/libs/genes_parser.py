@@ -6,7 +6,8 @@
 
 import os
 import re
-import sys
+from libs import qutils
+from qutils import warning
 
 
 txt_pattern_gi = re.compile(r'gi\|(?P<id>\d+)\|\w+\|(?P<seqname>\S+)\|\s+(?P<number>\d+)\s+(?P<start>\d+)\s+(?P<end>\d+)', re.I)
@@ -43,13 +44,13 @@ def get_genes_from_file(filename, feature):
         try:
             genes = parse_ncbi(genes_file)
         except ParseException, e:
-            print '  ', e
-            print '    ' + filename + ' skipped'
+            warning('Parsing exception ' + e)
+            warning(filename + ' was skipped')
             genes = []
 
     else:
-        print '  Warning! Incorrect format of ' + feature + '\'s file! GFF, NCBI and the plain TXT format accepted. See manual.'
-        print '    ' + filename + ' skipped'
+        warning('Incorrect format of ' + feature + '\'s file! GFF, NCBI and the plain TXT format accepted. See manual.')
+        warning(filename + ' was skipped')
 
     genes_file.close()
     return genes
@@ -82,7 +83,7 @@ def parse_ncbi(file):
         while not m:
             m = ncbi_start_pattern.match(line.rstrip())
 
-        gene = Gene(number = int(m.group('number')), name = m.group('name'))
+        gene = Gene(number=int(m.group('number')), name=qutils.correct_name(m.group('name')))
 
         the_rest_lines = []
 
@@ -111,14 +112,14 @@ def parse_ncbi(file):
                         gene.seqname.lstrip(' ,')
 
                 else:
-                    print >> sys.stderr, 'Warning: wrong NCBI annotation for gene ' + str(gene.number) + '. ' + gene.name + '. Skipping this gene.'
+                    warning('Wrong NCBI annotation for gene ' + str(gene.number) + '. ' + gene.name + '. Skipping this gene.')
 
             if info_line.startswith('ID:'):
                 m = re.match(id_pattern, info_line)
                 if m:
                     gene.id = m.group('id')
                 else:
-                    print >> sys.stderr, 'Warning: can\'t parse gene\'s ID in NCBI format. Gene is ' + str(gene.number) + '. ' + gene.name + '. Skipping it.'
+                    warning('Can\'t parse gene\'s ID in NCBI format. Gene is ' + str(gene.number) + '. ' + gene.name + '. Skipping it.')
 
 
         if gene.start is not None and gene.end is not None:
@@ -140,7 +141,7 @@ def parse_txt(file):
         if not m:
             m = txt_pattern.match(line)
         if m:
-            gene = Gene(number = int(m.group('number')), seqname = m.group('seqname'))
+            gene = Gene(number=int(m.group('number')), seqname=qutils.correct_name(m.group('seqname')))
             s = int(m.group('start'))
             e = int(m.group('end'))
             gene.start = min(s, e)
@@ -166,7 +167,7 @@ def parse_gff(file, feature):
     for line in file:
         m = gff_pattern.match(line)
         if m and m.group('feature') == feature:
-            gene = Gene(seqname = m.group('seqname'), start = int(m.group('start')), end = int(m.group('end')))
+            gene = Gene(seqname=qutils.correct_name(m.group('seqname')), start=int(m.group('start')), end=int(m.group('end')))
 
             attributes = m.group('attributes').split(';')
             for attr in attributes:

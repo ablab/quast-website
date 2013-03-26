@@ -14,9 +14,11 @@
 <link rel="stylesheet" href="/static/reports.css">
 <script>
     $(function() {
-        setTimeout(function(){
-            window.location.reload(1);
-        }, 5000);
+        if ($('state_pending').length > 0) {
+            setTimeout(function(){
+                window.location.reload(1);
+            }, 5000);
+        }
     });
 </script>
 {% endblock %}
@@ -53,7 +55,11 @@
                 {% endif %}
 
             {% elif state == 'FAILURE' %}
-                <span class="state_failure">Task caused some error. Please, try to restart with another data.</span>
+                {% if error %}
+                    <span class="state_failure">Error: </span><br>{{ error }}<br><br>Please, try to restart with another data.
+                {% else %}
+                    <span class="state_failure">Task caused some error. Please, try to restart with another data.</span>
+                {% endif %}
             {% endif %}
         </div>
         <div style='float: left; max-width: 300px; '>

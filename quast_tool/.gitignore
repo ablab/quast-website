@@ -27,6 +27,9 @@ test_data/contigs.fasta
 test_data/reference_10K.fasta
 run_test_data/genemark_out/*
 
-quast_tool/libs/glimmer/glimmerhmm
-quast_tool/libs/glimmer/*.o
-quast_tool/libs/glimmer/src/*.o
+libs/glimmer/src/*.o
+libs/glimmer/src/make.log
+libs/glimmer/src/make.err
+libs/glimmer/glimmerhmm
+
+tc_tests/results/

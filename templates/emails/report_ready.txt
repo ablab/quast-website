@@ -2,6 +2,8 @@
 http://quast.bioinf.spbau.ru{{ link }}
 
 
+{% if error %}{{ error }}
+{% endif %}
 {% if genome %}Genome: {{ genome }}
 {% endif %}
 {% if comment %}Comment: {{ genome }}

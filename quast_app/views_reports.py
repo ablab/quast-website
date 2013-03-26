@@ -43,6 +43,16 @@ def get_reports_response_dict(user_session, after_evaluation=False, limit=None):
             if result and state in task_state_map:
                 state_repr = task_state_map[state]
 
+            if state == 'SUCCESS':
+                res = result.get()
+                if isinstance(res, tuple):
+                    exit_code, error = res
+                else:
+                    exit_code, error = res, None
+
+                if exit_code != 0:
+                    state_repr = 'FAILURE'
+
             quast_session_info = {
                 'date': qs.date, #. strftime('%d %b %Y %H:%M:%S'),
                 'report_link': settings.REPORT_LINK_BASE + (qs.link or qs.report_id),

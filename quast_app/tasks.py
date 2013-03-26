@@ -43,11 +43,14 @@ def start_quast((args, quast_session, user_session)):
 
     link = os.path.join(settings.REPORT_LINK_BASE, quast_session.link or quast_session.report_id)
 
-    def send_result_mail(address, to_me, add_to_end='', fail=False):
+    def send_result_mail(address, to_me, add_to_end='', fail=False, error=None):
         if address is None or address == '':
             return
 
-        subject = 'Sorry, the assessment failed' if fail else ('OK' if to_me else 'Quality assessment report')
+        if fail:
+            subject = 'Sorry, the assessment failed'
+        else:
+            subject = 'OK' if to_me else 'Quality assessment report'
 
         if quast_session.caption:
             subject += ' (%s)' % quast_session.caption
@@ -58,6 +61,7 @@ def start_quast((args, quast_session, user_session)):
             'genome': quast_session.data_set.name if quast_session.data_set else '',
             'comment': quast_session.comment if quast_session.comment else '',
             'add_to_end': add_to_end,
+            'error': error
         }
         text_content = render_to_string('emails/report_ready.txt', arguments)
 
@@ -75,15 +79,15 @@ def start_quast((args, quast_session, user_session)):
         user_email = ''
 
     try:
-        if not settings.QUAST_DIRPATH in sys.path:
-            sys.path.insert(1, settings.QUAST_DIRPATH)
-        import quast
+        # if not settings.QUAST_DIRPATH in sys.path:
+        #     sys.path.insert(1, settings.QUAST_DIRPATH)
+        # import quast
 
-        result = quast.main(args[1:])
+        exit_code = os.system(' '.join(args))
 
     except Exception as e:
         trace_back = traceback.format_exc()
-        add_to_end = '\n'+ \
+        add_to_end = '\n' + \
                      '\n\nUser email: ' + str(user_email) + \
                      '\n\nSession key: ' + user_session.session_key + \
                      '\n\nArgs: ' + str(' '.join(args)) + \
@@ -96,15 +100,25 @@ def start_quast((args, quast_session, user_session)):
 
     else:
         add_to_end = '\n' + \
-                     '\n\nUser email: ' + user_email +\
-                     '\n\nSession key: ' + user_session.session_key +\
+                     '\n\nUser email: ' + str(user_email) + \
+                     '\n\nSession key: ' + user_session.session_key + \
                      '\n\nArgs: ' + str(' '.join(args))
 
-        send_result_mail(my_email, to_me=True, add_to_end=add_to_end)
-        send_result_mail(user_email, to_me=False)
+        error = None
 
-        reload(quast)
-        return result
+        if exit_code != 0:  # Unsuccessful
+            if os.path.isfile(settings.ERROR_LOG_FPATH):
+                with open(settings.ERROR_LOG_FPATH) as error_f:
+                    error = error_f.read()
+                os.remove(settings.ERROR_LOG_FPATH)
+            send_result_mail(my_email, to_me=True, add_to_end=add_to_end, fail=True, error=error)
+            send_result_mail(user_email, to_me=False, fail=True, error=error)
+
+        else:  # OK
+            send_result_mail(my_email, to_me=True, add_to_end=add_to_end)
+            send_result_mail(user_email, to_me=False)
+
+        return exit_code, error
 
 
 #   out = ''

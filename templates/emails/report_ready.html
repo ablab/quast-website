@@ -8,6 +8,8 @@
         {% endif %}</a><br>
     <br>
     <br>
+    {% if error %}{{ error }}<br>
+        <br>{% endif %}
     {% if genome %}Genome: {{ genome }}<br>
         <br>{% endif %}
     {% if comment %}Comment: {{ comment }}<br>

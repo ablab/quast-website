@@ -8,33 +8,40 @@ from __future__ import with_statement
 import glob
 import gzip
 import logging
+log = logging.getLogger('quast')
 import shutil
 import zipfile
 import bz2
 import os
 import sys
+import re
 import qconfig
 import datetime
 
 
-def notice(message=''):
-    log = logging.getLogger('quast')
-    log.info("== NOTE: " + str(message) + " ==")
+def notice(message='', indent=''):
+    log.info(indent + "NOTICE: " + str(message))
 
 
-def warning(message=''):
-    log = logging.getLogger('quast')
-    log.info("====== WARNING! " + str(message) + " ======")
+def warning(message='', indent=''):
+    log.info(indent + "WARNING! " + str(message))
 
 
-def error(message='', errcode=1, console_output=False):
+def error(message='', exit_with_code=1, console_output=False, indent=''):
+    msg = indent + 'ERROR! ' + str(message)
+
+    with open(qconfig.error_log_fpath, 'w') as error_f:
+        error_f.write(message)
+
+    # decorated_msg = '=' * len(msg) + '\n' + msg + '\n' + '=' * len(msg)
+    decorated_msg = '\n' + msg + '\n'
+
     if console_output:
-        print >> sys.stderr, "\n====== ERROR! " + str(message) + " ======\n"
+        print >> sys.stderr, decorated_msg
     else:
-        log = logging.getLogger('quast')
-        log.info("\n====== ERROR! " + str(message) + " ======\n")
-    if errcode:
-        sys.exit(errcode)
+        log.info(decorated_msg)
+    if exit_with_code:
+        exit(exit_with_code)
 
 
 def assert_file_exists(fpath, message=''):
@@ -46,7 +53,6 @@ def assert_file_exists(fpath, message=''):
 def print_timestamp(message=''):
     now = datetime.datetime.now()
     current_time = now.strftime("%Y-%m-%d %H:%M:%S")
-    log = logging.getLogger('quast')
     log.info("\n" + message + current_time)
     return now
 
@@ -69,21 +75,18 @@ def print_version(to_stderr=False):
             build = "unknown"
 
     if to_stderr:
-        print >> sys.stderr, "Version:", version,
-        print >> sys.stderr, "Build:", build
+        print >> sys.stderr, "Version", str(version) + (", build " + str(build) if build != "unknown" else "")
     else:
-        log = logging.getLogger("quast")
-        log.info("Version: " + str(version) + " Build: " + str(build))
+        log.info("Version " + str(version) + (", build " + str(build) if build != "unknown" else ""))
 
 
 def print_system_info():
-    log = logging.getLogger("quast")
     log.info("System information:")
     try:
         import platform
         log.info("  OS: " + platform.platform())
         log.info("  Python version: " + str(sys.version_info[0]) + "." + str(sys.version_info[1]) + '.'\
-        + str(sys.version_info[2]))
+                  + str(sys.version_info[2]))
         import multiprocessing
         log.info("  CPUs number: " + str(multiprocessing.cpu_count()))
     except:
@@ -103,8 +106,7 @@ def uncompress(compressed_fname, uncompressed_fname):
     if ext not in ['.zip', '.bz2', '.gz']:
         return False
 
-    log = logging.getLogger('quast')
-    log.info('  extracting %s ...' % compressed_fname)
+    log.info('  extracting %s...' % compressed_fname)
     compressed_file = None
 
     if ext == '.zip':
@@ -133,7 +135,7 @@ def uncompress(compressed_fname, uncompressed_fname):
     with open(uncompressed_fname, 'w') as uncompressed_file:
         uncompressed_file.write(compressed_file.read())
 
-    log.info('      extracted!')
+    log.info('    extracted!')
     return True
 
 
@@ -149,3 +151,7 @@ def remove_reports(output_dirpath):
     html_report_aux_dir = os.path.join(output_dirpath, qconfig.html_aux_dir)
     if os.path.isdir(html_report_aux_dir):
         shutil.rmtree(html_report_aux_dir)
+
+
+def correct_name(name):
+    return re.sub(r'[^\w\._\-+|]', '_', name.strip())

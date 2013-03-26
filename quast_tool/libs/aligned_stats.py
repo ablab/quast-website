@@ -52,12 +52,12 @@ def do(reference, filenames, aligned_lengths_lists, nucmer_dir, output_dir, all_
         lga50 = N50.LG50(lens, reference_length)
         la75 = N50.LG50(lens, assembly_len, 75)
         lga75 = N50.LG50(lens, reference_length, 75)
-        log.info('    ' + id_to_str(id) + os.path.basename(filename) + \
-            ', Largest alignment = ' + str(max(lens)) + \
-            ', NA50 = ' + str(na50) + \
-            ', NGA50 = ' + str(nga50) + \
-            ', LA50 = ' + str(la50) +\
-            ', LGA50 = ' + str(lga50) )
+        log.info('    ' + id_to_str(id) + os.path.basename(filename) +
+                 ', Largest alignment = ' + str(max(lens)) +
+                 ', NA50 = ' + str(na50) +
+                 ', NGA50 = ' + str(nga50) +
+                 ', LA50 = ' + str(la50) +
+                 ', LGA50 = ' + str(lga50))
         report = reporting.get(filename)
         report.add_field(reporting.Fields.LARGALIGN, max(lens))
         report.add_field(reporting.Fields.NA50, na50)

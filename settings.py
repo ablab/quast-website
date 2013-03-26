@@ -18,6 +18,7 @@ quastdb_fpath               = os.path.join(DATA_DIRPATH, 'quast.sqlite')
 
 QUAST_DIRPATH               = os.path.join(SOURCE_DIRPATH, 'quast_tool')
 QUAST_PY_FPATH              = os.path.join(QUAST_DIRPATH, 'quast.py')
+ERROR_LOG_FPATH             = os.path.join(QUAST_DIRPATH, 'error.log')
 GLOSSARY_PATH               = os.path.join(QUAST_DIRPATH, 'libs/html_saver/glossary.json')
 MANUAL_FPATH                = os.path.join(QUAST_DIRPATH, 'manual.html')
 LICENSE_FPATH               = os.path.join(QUAST_DIRPATH, 'LICENSE')
