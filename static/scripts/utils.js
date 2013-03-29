@@ -180,12 +180,25 @@ function getContigNumberTickFormatter(maxX) {
     }
 }
 
+function trim(str) {
+    return str.replace(/^\s+/g, '');
+}
+
+function nbsp(str) {
+    if (str.length > 0 && str[0] == ' ') {
+        str = '&nbsp;&nbsp;&nbsp;' + trim(str);
+    }
+    return str;
+}
+
 /*********************/
 /* GLOSSARY TOOLTIPS */
 function addTooltipIfDefinitionExists(glossary, string, dictKey) {
     if (!dictKey) {
         dictKey = string;
     }
+    dictKey = trim(dictKey);
+
     if (glossary.hasOwnProperty(dictKey)) {
         return '<a class="tooltip-link" rel="tooltip" title="' +
             dictKey + ' ' + glossary[dictKey] + '">' + string + '</a>';

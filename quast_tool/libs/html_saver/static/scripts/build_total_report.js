@@ -119,9 +119,9 @@ function buildTotalReport(assembliesNames, report, date, minContig, glossary, qu
             table +=
                 '<tr class="' + trClass + '" quality="' + quality + '">' +
                     '<td><span class="metric-name">' +
-                    addTooltipIfDefinitionExists(glossary, metricName) +
+                        addTooltipIfDefinitionExists(glossary, nbsp(metricName), metricName) +
                     '</span>' +
-                    '</td>';
+                '</td>';
 
             for (var value_n = 0; value_n < values.length; value_n++) {
                 var value = values[value_n];
