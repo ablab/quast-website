@@ -119,7 +119,7 @@ function buildTotalReport(assembliesNames, report, date, minContig, glossary, qu
             table +=
                 '<tr class="' + trClass + '" quality="' + quality + '">' +
                     '<td><span class="metric-name">' +
-                        addTooltipIfDefinitionExists(glossary, nbsp(metricName), metricName) +
+                        nbsp(addTooltipIfDefinitionExists(glossary, metricName), metricName) +
                     '</span>' +
                 '</td>';
 
