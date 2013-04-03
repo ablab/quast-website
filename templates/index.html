@@ -25,16 +25,17 @@
             {% if highlight_last %}
                 $('.highlighted_tr').hide().fadeIn('slow');
             {% endif %}
+        });
 
-
+        $(function() {
 {#            $(".chzn-select").chosen();#}
             $(".chzn-select-deselect").chosen({
                 allow_single_deselect:true,
                 no_results_text: "No results matched",
             });
+        });
 
-
-
+        $(function() {
             $('#login_link').click(function() {
                 $('#login_block').toggle('fast');
             });
@@ -86,8 +87,9 @@
                     $('#email_input').focus();
                 }
             });
+        });
 
-
+        $(function() {
             $("#add-data-set-toggle-link").mouseenter(function() {
                 $(this).find('.dotted-link').css('color', '#b33');
                 $(this).find('.dotted-link').css('border-bottom', '1px dashed #ffcccc');
@@ -338,7 +340,7 @@
 {% endblock %}
 
 {% block after_report_extra_head %}
-    <script>
+    <script type="text/javascript">
         $(function() {
             $('.report_outer_object').css('display', 'none');
 
