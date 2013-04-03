@@ -364,7 +364,7 @@
                 var fullReport = $('.report_outer_object');
                 var wasHidden = (fullReport.css('display') == 'none');
                 fullReport.stop().fadeToggle('fast');
-                toggleReport();
+ //               toggleReport();
                 if (wasHidden) {
                     event.preventDefault();
                     $('html,body').animate({scrollTop:$(this.hash).offset().top + 20}, 500);
