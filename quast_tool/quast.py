@@ -129,13 +129,7 @@ def correct_fasta(original_fpath, corrected_fpath, is_reference=False):
     modified_fasta_entries = []
     for first_line, seq in fastaparser.read_fasta(original_fpath):
         if (len(seq) >= qconfig.min_contig) or is_reference:
-            if ' ' in first_line:
-                name, rest = first_line.split(' ', 1)
-            else:
-                name, rest = first_line, ''
-
-            corr_name = qutils.correct_name(name)
-            corr_first_line = corr_name + ' ' + rest
+            corr_name = qutils.correct_name(first_line)
 
             # seq to uppercase, because we later looking only uppercase letters
             corr_seq = seq.upper()
@@ -155,7 +149,7 @@ def correct_fasta(original_fpath, corrected_fpath, is_reference=False):
                         indent='    ')
                 return False
 
-            modified_fasta_entries.append((corr_first_line, corr_seq))
+            modified_fasta_entries.append((corr_name, corr_seq))
 
     fastaparser.write_fasta(corrected_fpath, modified_fasta_entries)
 

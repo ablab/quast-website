@@ -23,7 +23,7 @@ def do(reference, filenames, aligned_lengths_lists, nucmer_dir, output_dir, all_
     nucmer_prefix = os.path.join(nucmer_dir, 'nucmer_output')
 
     ########################################################################
-    report_dict = {'header' : []}
+    report_dict = {'header': []}
     for filename in filenames:
         report_dict[os.path.basename(filename)] = []
 
