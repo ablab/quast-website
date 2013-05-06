@@ -292,20 +292,23 @@ def assess_with_quast(us, qs, contigs_paths,
     # contigs_files = qs.contigs_files.all()
     # contigs_paths = [os.path.join(quast_session.get_contigs_dirpath(), c_f.fname) for c_f in contigs_files]
 
+    def quote(path):
+        return '"' + path + '"'
+
     if len(contigs_paths) > 0:
         if os.path.isfile(settings.QUAST_PY_FPATH):
-            args = [settings.QUAST_PY_FPATH] + contigs_paths
+            args = [settings.QUAST_PY_FPATH] + map(quote, contigs_paths)
             if reference_path:
                 args.append('-R')
-                args.append(reference_path)
+                args.append(quote(reference_path))
 
             if genes_path:
                 args.append('-G')
-                args.append(genes_path)
+                args.append(quote(genes_path))
 
             if operons_path:
                 args.append('-O')
-                args.append(operons_path)
+                args.append(quote(operons_path))
 
             if qs.min_contig:
                 args.append('--min-contig')
@@ -326,10 +329,10 @@ def assess_with_quast(us, qs, contigs_paths,
 
             res_dirpath = qs.get_dirpath()
             args.append('-J')
-            args.append(res_dirpath)
+            args.append(quote(res_dirpath))
 
             args.append('-o')
-            args.append(os.path.join(res_dirpath, settings.REGULAR_REPORT_DIRNAME))
+            args.append(quote(os.path.join(res_dirpath, settings.REGULAR_REPORT_DIRNAME)))
 
             from tasks import start_quast
             # tasks.start_quast((args, quast_session))
