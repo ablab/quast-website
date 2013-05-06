@@ -310,11 +310,11 @@ def assess_with_quast(us, qs, contigs_paths,
                 args.append('-O')
                 args.append(quote(operons_path))
 
-            if qs.min_contig:
+            if qs.min_contig is not None:
                 args.append('--min-contig')
                 args.append(str(qs.min_contig))
 
-            if qs.estimated_ref_size:
+            if qs.estimated_ref_size is not None:
                 args.append('--est-ref-size')
                 args.append(str(qs.estimated_ref_size))
 
