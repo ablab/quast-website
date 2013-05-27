@@ -27,7 +27,7 @@ def index_view(us, response_dict, request):
                     log_msg += '\n\t\t%s' % contig
             else:
                 log_msg += '\n\t%s:\t%s' % (str(k), str(v))
-        mailer.info(log_msg)
+        # mailer.info(log_msg)
 
         form = DataSetForm(us, request.POST)
 
