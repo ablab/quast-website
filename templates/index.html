@@ -835,11 +835,22 @@
 {#                                    <tr>#}
 {#                                        <td>&nbsp;</td>#}
 {#                                    </tr>#}
-
-                                    <div style="clear: both;"></div>
+                                    {% if quast_sessions %}
+                                    <tr style="height: 19px;"><td></td></tr>
+                                    <tr class='reports_line_tr'>
+                                        <td colspan="3" style="border-top: 1px solid #bbb;"></td>
+                                    </tr>
+                                    {% endif %}
                                 </table>
+
+                                <div style="clear: both;"></div>
                             </td>
                         </tr>
+                        {% if quast_sessions %}
+                        <tr><td>
+                        <span style='margin-left: -1px;'>The reports are visible only for you.</span>
+                        </td></tr>
+                        {% endif %}
                     </table>
 
                     <script>

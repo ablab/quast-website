@@ -21,8 +21,15 @@ def get_reports_response_dict(user_session, after_evaluation=False, limit=None):
 
     show_more_link = False
 
+    # for qs in quast_sessions.all():
+    #     pass
+    #     print str(qs)
+
     if not quast_sessions.exists():
-        return {}
+        return {
+            'quast_sessions': [],
+            'show_more_link': None,
+        }
 
     # quast_sessions.sort(cmp=lambda qs1, qs2: 1 if qs1.date < qs2.date else -1)
 
