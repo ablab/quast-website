@@ -57,7 +57,7 @@ def benchmarking(request):
 
 
 def idba(request):
-    json_dirpath = os.path.join(settings.ECOLI_DIRPATH)
+    json_dirpath = os.path.join(settings.IDBA_DIRPATH)
 
     response_dict = settings.TEMPLATE_ARGS_BY_DEFAULT
 
@@ -65,7 +65,7 @@ def idba(request):
         json_dirpath,
         caption='SPAdes - IDBA collaboration',
         comment='',
-        data_set_name='E.coli',
+        data_set_name='E. coli',
         link='')
 
     response_dict.update(report_dict)

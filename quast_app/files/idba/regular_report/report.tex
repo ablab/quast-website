@@ -1,0 +1,42 @@
+\documentclass[12pt,a4paper]{article}
+\begin{document}
+\begin{table}[ht]
+\begin{center}
+\caption{All statistics are based on contigs of size $\geq$ 500 bp, unless otherwise noted (e.g., "\# contigs ($\geq$ 0 bp)" and "Total length ($\geq$ 0 bp)" include all contigs).}
+\begin{tabular}{|l*{4}{|r}|}
+\hline
+Assembly & SPAdes2.1 & SPAdes2.2 & SPAdes\_latest & IDBA-UD\_contig \\ \hline
+\# contigs ($\geq$ 0 bp) & 890 & 787 & 749 & {\bf 283} \\ \hline
+\# contigs ($\geq$ 1000 bp) & 201 & 199 & 198 & {\bf 165} \\ \hline
+Total length ($\geq$ 0 bp) & 4976782 & {\bf 4982737} & 4976134 & 4734432 \\ \hline
+Total length ($\geq$ 1000 bp) & 4802828 & {\bf 4823527} & 4820788 & 4673851 \\ \hline
+\# contigs & 288 & 289 & 284 & {\bf 222} \\ \hline
+Largest contig & 209589 & 268464 & {\bf 268514} & 224018 \\ \hline
+Total length & 4861290 & {\bf 4883983} & 4878863 & 4713557 \\ \hline
+Reference length & 4639675 & 4639675 & 4639675 & 4639675 \\ \hline
+GC (\%) & 49.76 & 49.76 & 49.78 & 49.92 \\ \hline
+Reference GC (\%) & 50.79 & 50.79 & 50.79 & 50.79 \\ \hline
+N50 & 84257 & {\bf 109545} & 104610 & 90607 \\ \hline
+NG50 & 87221 & 109826 & {\bf 109876} & 90607 \\ \hline
+N75 & 32399 & 41779 & {\bf 42006} & 41367 \\ \hline
+NG75 & 38135 & 55674 & {\bf 56264} & 43468 \\ \hline
+\# misassemblies & 7 & {\bf 2} & {\bf 2} & 9 \\ \hline
+\# local misassemblies & {\bf 3} & 15 & 8 & 14 \\ \hline
+\# unaligned contigs & 104 + 30 part & 121 + 31 part & 123 + 31 part & {\bf 70 + 9 part} \\ \hline
+Unaligned contigs length & 417389 & 417963 & 415217 & {\bf 344580} \\ \hline
+Genome fraction (\%) & 95.202 & 95.148 & {\bf 95.403} & 93.807 \\ \hline
+Duplication ratio & 1.003 & 1.007 & 1.005 & {\bf 1.001} \\ \hline
+\# N's per 100 kbp & 0.00 & 0.00 & 0.00 & 0.00 \\ \hline
+\# mismatches per 100 kbp & 11.95 & 12.25 & 13.67 & {\bf 4.34} \\ \hline
+\# indels per 100 kbp & 0.77 & 1.06 & 0.99 & {\bf 0.25} \\ \hline
+\# genes & 4025 + 101 part & 4041 + 87 part & {\bf 4046 + 88 part} & 3982 + 70 part \\ \hline
+\# operons & 801 + 52 part & {\bf 810 + 45 part} & 810 + 43 part & 795 + 39 part \\ \hline
+Largest alignment & 209589 & 268464 & {\bf 268514} & 224018 \\ \hline
+NA50 & 83990 & {\bf 109545} & 104610 & 90607 \\ \hline
+NGA50 & 87221 & 109826 & {\bf 109876} & 90607 \\ \hline
+NA75 & 32398 & 41779 & {\bf 42006} & 41367 \\ \hline
+NGA75 & 38134 & 55674 & {\bf 56264} & 43468 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+\end{document}

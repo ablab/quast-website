@@ -415,14 +415,14 @@
                                         evaluates genome assemblies by computing various metrics, including</p>
                                     <ul class="list">
                                         <li><span class='define' key='N50'><span class='smallcapitals'>N</span>50</span>,
-                                            length of the shortest contig from all that cover 50% of all assembly</li>
+                                            length of the shortest contig from all that cover 50% of all assembly,</li>
                                         <li><span class='define' key='NG50'><span class='smallcapitals'>NG</span>50</span>,
-                                            where the reference genome is being covered</li>
+                                            where the reference genome is being covered,</li>
                                         <li><span class='define' key='NA50'><span class='smallcapitals'>NA</span>50</span>
                                             and <span class='define' key='NGA50'><span class='smallcapitals'>NGA</span>50</span>,
-                                            where aligned blocks instead of contigs are taken</li>
-                                        <li>misassemblies, misassembled and unaligned contigs or contigs bases</li>
-{#                                        <li><span class='define' key='Genes covered'>genes</span> and <span class='define' key='Operons covered'>operons</span> covered</li>#}
+                                            where aligned blocks instead of contigs are taken,</li>
+                                        <li>misassemblies, misassembled and unaligned contigs or contigs bases,</li></li>
+                                        <li><span class='define' key='Genes covered'>genes</span> and <span class='define' key='Operons covered'>operons</span> covered.</li>
                                     </ul>
                                 </div>
                             </td>
@@ -430,17 +430,19 @@
                                 <div class="" style="padding-right: 10px;">
                                     <p style="font-weight: bold;">Builds convenient plots for different metrics</p>
                                     <ul class="list">
-                                        <li>cumulative contigs length</li>
-                                        <li>all kinds of N-metrics</li>
-                                        <li>genes and operons covered</li>
-                                        <li><span class='smallcapitals'>GC</span> content</li>
+                                        <li>cumulative contigs length,</li>
+                                        <li>all kinds of N-metrics,</li>
+                                        <li>genes and operons covered,</li>
+                                        <li><span class='smallcapitals'>GC</span> content.</li>
                                     </ul>
                                     <a class="dotted-link js" id="report_example_anchor" href="#reportexample">Report example</a>
                                     <br>
                                     <br>
-                                    <div class="space_7px"></div>
+                                    <div class="space_2px"></div>
                                     <p>
-                                        <a href='http://dx.doi.org/10.1093/bioinformatics/btt086 '>QUAST paper</a>, and <a href='paper'>supplementary material</a>
+                                        More details are in <a href='http://bioinf.spbau.ru/en/quast'>the project page</a>
+                                        and in <a href='http://dx.doi.org/10.1093/bioinformatics/btt086 '>the paper</a>.
+                                        Supplementary material for the paper is available <a href='paper'>here</a>.
                                     </p>
                                 </div>
                             <div style="clear: both;"></div>
@@ -729,7 +731,9 @@
                                 <div class="space_7px"></div>
                                 We will also notify you when your report is&nbsp;finished,
                                 and&nbsp;contact you if any problems arise.<br>
-                                <div class="space_7px"></div>
+                                <div class="bottom-line" style="width: 100%; margin-bottom: 5px; margin-left: 0px;"></div>
+                                If you leave the email address blank, your reports are going to be visible
+                                for your browsing session.<br>
                                 <br>
                             </div>
                         </form>
@@ -893,5 +897,9 @@
 {#            <td><a href="e.coli.html"></td>#}
 {#        </tr>#}
 {#    </table>#}
+
+    <p>You can also see a <a href='e.coli-single-cell'>comparison of more single-cell assemblers</a> on this data set.</p>
+    <p>There an <a href='e.coli-isolate'>assessment of these assemblers</a> working with an isolate data set as well.</p>
+
 {% endblock %}
 

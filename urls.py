@@ -33,15 +33,19 @@ urlpatterns = patterns('',
     url(r'^example/?$', 'quast_app.views.example'),
     url(r'^ecoli/?$', 'quast_app.views.idba'),
 
-    url(r'^paper/$', 'quast_app.paper_views.index'),
-    url(r'^paper/e.coli/(?P<download_fname>.+)?/?$', 'quast_app.paper_views.e_coli'),
-    url(r'^paper/b.impatiens/(?P<download_fname>.+)?/?$', 'quast_app.paper_views.b_impatiens'),
-    url(r'^paper/h.sapiens_chr14/(?P<download_fname>.+)?/?$', 'quast_app.paper_views.h_sapiens'),
+    url(r'^e.coli-single-cell/(?P<download_fname>.+)?/?$', 'quast_app.example_reports_views.e_coli_sc'),
+    url(r'^e.coli-isolate/(?P<download_fname>.+)?/?$', 'quast_app.example_reports_views.e_coli_mc'),
+
+    url(r'^paper/$', 'quast_app.example_reports_views.paper'),
+    url(r'^paper/e.coli/(?P<download_fname>.+)?/?$', 'quast_app.example_reports_views.e_coli'),
+    url(r'^paper/b.impatiens/(?P<download_fname>.+)?/?$', 'quast_app.example_reports_views.b_impatiens'),
+    url(r'^paper/h.sapiens_chr14/(?P<download_fname>.+)?/?$', 'quast_app.example_reports_views.h_sapiens'),
 
     url(r'^paper/h.sapiens_chr14/download/?$',
         'django.views.generic.simple.redirect_to',
         {'url': '/static/data_sets/h.sapiens_chr14/h_sapiens_chr14_quast_report.zip'},
         name='h_sapiens_quast_report'),
+
 
     url(r'^contigs-ajax-upload$', views.contigs_uploader.upload, name='contigs_ajax_upload'),
     url(r'^contigs-ajax-remove$', views.contigs_uploader.remove, name='contigs_ajax_remove'),

@@ -26,10 +26,10 @@ BIB_FPATH                   = os.path.join(QUAST_DIRPATH, 'quast_ref.bib')
 
 APP_DIRPATH                 = os.path.join(SOURCE_DIRPATH, 'quast_app')
 FILES_DIRPATH               = os.path.join(APP_DIRPATH, 'files')
+FILES_DOWNLOADS_DIRPATH     = os.path.join(FILES_DIRPATH, 'downloads')
 EXAMPLE_DIRPATH             = os.path.join(FILES_DIRPATH, 'example')
-ECOLI_DIRPATH               = os.path.join(FILES_DIRPATH, 'e.coli')
+IDBA_DIRPATH               = os.path.join(FILES_DIRPATH, 'idba')
 PAPER_DIRPATH               = os.path.join(FILES_DIRPATH, 'paper')
-PAPER_DOWNLOADS_DIRPATH     = os.path.join(PAPER_DIRPATH, 'downloads')
 
 REPORT_LINK_BASE            = '/reports/'
 

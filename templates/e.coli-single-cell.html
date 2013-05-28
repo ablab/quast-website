@@ -1,0 +1,59 @@
+{% extends "report.html" %}
+
+{% block title %}E. coli, single-cell{% endblock %}
+
+{% block example-menu-li-class %}active{% endblock %}
+
+{% block logo_class %}dark_bg_link{% endblock %}
+
+{% block header %}E. coli, single-cell{% endblock %}
+
+{% block extra_extra_head %}
+{% endblock %}
+
+{% block extra_content %}
+    <script>
+        $(function() {
+            $('#subheader').hide();
+        })
+    </script>
+{% endblock %}
+
+{% block genome_info %}
+{#    <h3><a href="http://bix.ucsd.edu/projects/singlecell/nbt_data.html">Data set</a></h3>#}
+    <p>
+        <p>Genome size: 4.6<span class="rhs"> </span>Mbp. The genome is <a href="e.coli_reference.fa.gz">
+            <i>E. coli</i> str. K-12 substr. MG1655</a>
+            (taken from <a href="http://www.ncbi.nlm.nih.gov/nuccore/48994873?report=fasta ">NCBI<span class="leading_link_dot">.</span></a>)
+        </p>
+
+        <p>4324 genes.
+        <a href="e.coli_genes.gff">Annotations</a> are taken from
+            <a href="http://www.ecogene.org">ecogene.org<span class="leading_link_dot">.</span></a>
+        </p>
+
+        <p>884 operons.
+        <a href="e.coli_operons.gff">Annotations</a> are taken from the
+            <a href="http://csbl1.bmb.uga.edu/OperonDB/displayNC.php?id=215">
+            Database of prokaryotic operons<span class="leading_link_dot">.</span></a>
+        </p>
+
+        <p>The <a href="http://bix.ucsd.edu/projects/singlecell/nbt_data.html">data set</a>
+        and some of its assemblies are taken from
+        <a href="http://www.nature.com/nbt/journal/v29/n10/full/nbt.1966.html">Chitsaz <i>et al.,
+        </i> 2011<span class="leading_link_dot">.</span></a>
+
+        <p>
+        <a href="e.coli-single_cell_assemblies.zip">Download assemblies<span class="leading_link_dot">.</span></a>
+        </p>
+    </p>
+{% endblock %}
+
+{% block after_content %}
+    <br>
+    <br>
+    <div class="bottom-line"></div>
+    <p style="max-width: 400px;"><i>
+    Note that some of the assemblers in that study have new releases, and their actual results may differ.
+    </i></p>
+{% endblock %}

@@ -162,7 +162,7 @@ def index_view(us, response_dict, request):
         settings.EXAMPLE_DIRPATH,
         caption='Example',
         comment='',
-        data_set_name='E.coli',
+        data_set_name='E.coli, single-cell',
         link=''))
 
     return render_to_response(

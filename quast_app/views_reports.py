@@ -29,6 +29,8 @@ def get_reports_response_dict(user_session, after_evaluation=False, limit=None):
         return {
             'quast_sessions': [],
             'show_more_link': None,
+            'highlight_last': None,
+            'latest_report_link': None,
         }
 
     # quast_sessions.sort(cmp=lambda qs1, qs2: 1 if qs1.date < qs2.date else -1)
