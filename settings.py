@@ -68,6 +68,7 @@ SEND_BROKEN_LINK_EMAILS = False
 TEMPLATE_ARGS_BY_DEFAULT = {
     'debug': DEBUG,
     'support_email': SUPPORT_EMAIL,
+    'address_base': ADDRESS,
 }
 
 
