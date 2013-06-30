@@ -49,7 +49,7 @@ def __spades_2_5_on_gage_b_data_sets__common(download_fname, name, is_scaf=False
         slug += '-scf'
 
     return common_view(dir_name='spades.2.5-on-gage.b-data-sets/',
-                       header=__spades_2_5_on_gage_b__header_template % name.replace(' ', '&nbsp;') + ' (scaffolds)',
+                       header=__spades_2_5_on_gage_b__header_template % name.replace(' ', '&nbsp;') + (' (scaffolds)' if is_scaf else ''),
                        slug_name=slug, download_fname=download_fname,
                        html_template_name='common_report', data_set_name=name,
                        title=__spades_2_5_on_gage_b__title_template % name + (' (scaffolds)' if is_scaf else '')
