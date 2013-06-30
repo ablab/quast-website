@@ -38,7 +38,57 @@ def e_coli_mc(request, download_fname):
     return common_view('', 'E. coli, isolate', 'e.coli-isolate', download_fname)
 
 
-def common_view(dir_name, caption, slug_name, download_fname):
+__spades_2_5_on_gage_b__header_template = '%s MiSeq SPAdes&nbsp;2.5 assemblies'
+__spades_2_5_on_gage_b__title_template = __spades_2_5_on_gage_b__header_template
+
+
+def __spades_2_5_on_gage_b_data_sets__common(download_fname, name, is_scaf=False):
+    slug = name.replace(' ', '').lower()
+
+    if is_scaf:
+        slug += '-scf'
+
+    return common_view(dir_name='spades.2.5-on-gage.b-data-sets/',
+                       header=__spades_2_5_on_gage_b__header_template % name.replace(' ', '&nbsp;') + ' (scaffolds)',
+                       slug_name=slug, download_fname=download_fname,
+                       html_template_name='common_report', data_set_name=name,
+                       title=__spades_2_5_on_gage_b__title_template % name + ' (scaffolds)'
+                       )
+
+
+def spades_2_5_on_gage_b_data_sets(request):
+    return render_to_response('spades.2.5-on-gage.b-data-sets/index.html')
+
+
+def spades_2_5_on_gage_b_data_sets__b_cereus(request, download_fname, is_scaf=False):
+    return __spades_2_5_on_gage_b_data_sets__common(download_fname, 'B. cereus', is_scaf)
+
+
+def spades_2_5_on_gage_b_data_sets__m_abscessus(request, download_fname, is_scaf=False):
+    return __spades_2_5_on_gage_b_data_sets__common(download_fname, 'M. abscessus', is_scaf)
+
+
+def spades_2_5_on_gage_b_data_sets__r_sphaeroides(request, download_fname, is_scaf=False):
+    return __spades_2_5_on_gage_b_data_sets__common(download_fname, 'R. sphaeroides', is_scaf)
+
+
+def spades_2_5_on_gage_b_data_sets__v_cholerae(request, download_fname, is_scaf=False):
+    return __spades_2_5_on_gage_b_data_sets__common(download_fname, 'V. cholerae', is_scaf)
+
+
+# def spades_2_5_on_gage_b_data_sets__b_cereus_scf(request, download_fname):
+#     return common_view(dir_name='spades.2.5-on-gage.b-data-sets/',
+#                        header=spades_2_5_on_gage_b__header_template % 'B.&nbsp;cereus scaffolds',
+#                        slug_name='b.cereus', download_fname=download_fname,
+#                        html_template_name='common_report.html',
+#                        data_set_name='B. cereus',
+#                        title=spades_2_5_on_gage_b__title_template % 'B. cereus scaffolds')
+
+
+def common_view(dir_name, header, slug_name, download_fname, html_template_name=None, data_set_name=None, title=None):
+    if not html_template_name:
+        html_template_name = slug_name
+
     if download_fname:
         download_fpath = os.path.join(settings.FILES_DOWNLOADS_DIRPATH, download_fname)
 
@@ -72,7 +122,7 @@ def common_view(dir_name, caption, slug_name, download_fname):
 
         report_dict = get_report_response_dict(
             os.path.join(settings.FILES_DIRPATH, dir_name, slug_name),
-            caption=caption,
+            caption=header,
         )
         response_dict.update(report_dict)
 
@@ -80,5 +130,10 @@ def common_view(dir_name, caption, slug_name, download_fname):
         response_dict['downloadLink'] = slug_name + '_quast_report.zip'
         response_dict['downloadText'] = download_text
 
-        return render_to_response(dir_name + slug_name + '.html', response_dict)
+        if data_set_name:
+            response_dict['dataSetName'] = data_set_name
 
+        if title:
+            response_dict['title'] = title
+
+        return render_to_response(dir_name + html_template_name + '.html', response_dict)

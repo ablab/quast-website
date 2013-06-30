@@ -36,7 +36,7 @@ def e_coli_mc(request, download_fname):
 
 def common_view(dir_name, caption, slug_name, download_fname):
     if download_fname:
-        download_fpath = os.path.join(settings.PAPER_DOWNLOADS_DIRPATH, slug_name, download_fname)
+        download_fpath = os.path.join(settings.FILES_DOWNLOADS_DIRPATH, slug_name, download_fname)
 
         if os.path.exists(download_fpath):
 #            if download_fname[-4:] == '.zip':

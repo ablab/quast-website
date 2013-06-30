@@ -1,0 +1,20 @@
+{% extends "report.html" %}
+
+{% block title %}{{ title|safe }}{% endblock %}
+
+{% block example-menu-li-class %}active{% endblock %}
+
+{% block logo_class %}dark_bg_link{% endblock %}
+
+{% block header %}{{ header|safe }}{% endblock %}
+
+{% block extra_extra_head %}
+{% endblock %}
+
+{% block extra_content %}
+    <script>
+        $(function() {
+            $('#subheader').hide();
+        })
+    </script>
+{% endblock %}
