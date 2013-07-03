@@ -4,7 +4,11 @@
 # See file LICENSE for details.
 ############################################################################
 
-from libs import qconfig
+from libs import qconfig, qutils
+
+from libs.log import get_logger
+logger = get_logger(qconfig.LOGGER_DEFAULT_NAME)
+
 
 # Here you can modify content and order of metrics in QUAST reports and names of metrcis as well
 class Fields:
@@ -104,7 +108,7 @@ class Fields:
 
     ### content and order of metrics in MAIN REPORT (<quast_output_dir>/report.txt, .tex, .tsv):
     order = [NAME, CONTIGS, TOTALLENS, NUMCONTIGS, LARGCONTIG, TOTALLEN, REFLEN, ESTREFLEN, GC, REFGC,
-             N50, NG50, N75, NG75, MISASSEMBL, MISLOCAL, UNALIGNED, UNALIGNEDBASES, MAPPEDGENOME, DUPLICATION_RATIO,
+             N50, NG50, N75, NG75, MISASSEMBL, MISCONTIGSBASES, MISLOCAL, UNALIGNED, UNALIGNEDBASES, MAPPEDGENOME, DUPLICATION_RATIO,
              UNCALLED_PERCENT, SUBSERROR, INDELSERROR, GENES, OPERONS, PREDICTED_GENES_UNIQUE, PREDICTED_GENES,
              LARGALIGN, NA50, NGA50, NA75, NGA75]
 
@@ -217,8 +221,9 @@ class Fields:
 #################################################
 
 import os
-import logging
-from libs.qutils import print_timestamp, warning
+
+from libs.log import get_logger
+logger = get_logger(qconfig.LOGGER_DEFAULT_NAME)
 
 ####################################################################################
 # Reporting module (singleton) for QUAST
@@ -234,7 +239,7 @@ from libs.qutils import print_timestamp, warning
 ####################################################################################
 
 reports = {}  # basefilename -> Report
-assemblies_order = []  # for printing in appropriate order
+assembly_fpaths = []  # for printing in appropriate order
 
 #################################################
 
@@ -271,7 +276,7 @@ def get_quality(metric):
 class Report(object):
     def __init__(self, name):
         self.d = {}
-        self.add_field(Fields.NAME, name)
+        self.add_field(Fields.NAME, qutils.rm_extentions_for_fasta_file(name))
 
     def add_field(self, field, value):
         assert field in Fields.__dict__.itervalues(), 'Unknown field: %s' % field
@@ -286,19 +291,17 @@ class Report(object):
         return self.d.get(field, None)
 
 
-def get(filename):
-    filename = os.path.basename(filename)
-    if filename not in assemblies_order:
-        assemblies_order.append(filename)
-    return reports.setdefault(filename, Report(filename))
+def get(assembly_fpath):
+    if assembly_fpath not in assembly_fpaths:
+        assembly_fpaths.append(assembly_fpath)
+    return reports.setdefault(assembly_fpath, Report(assembly_fpath))
 
 
-def delete(filename):
-    filename = os.path.basename(filename)
-    if filename in assemblies_order:
-        assemblies_order.remove(filename)
-    if filename in reports.keys():
-        reports.pop(filename)
+def delete(assembly_fpath):
+    if assembly_fpath in assembly_fpaths:
+        assembly_fpaths.remove(assembly_fpath)
+    if assembly_fpath in reports.keys():
+        reports.pop(assembly_fpath)
 
 
 # ATTENTION! Contents numeric values, needed to be converted into strings
@@ -312,8 +315,8 @@ def table(order=Fields.order):
         quality = get_quality(field)
         values = []
 
-        for assembly_name in assemblies_order:
-            report = get(assembly_name)
+        for assembly_fpath in assembly_fpaths:
+            report = get(assembly_fpath)
             value = report.get_field(field)
 
             if feature is None or value is None:
@@ -371,7 +374,7 @@ def val_to_str(val):
         return str(val)
 
 
-def save_txt(filename, table, is_transposed=False):
+def save_txt(fpath, table, is_transposed=False):
     all_rows = get_all_rows_out_of_table(table)
 
     # determine width of columns for nice spaces
@@ -381,7 +384,7 @@ def save_txt(filename, table, is_transposed=False):
             colwidths[i] = max(colwidths[i], len(cell))
             # output it
 
-    txt_file = open(filename, 'w')
+    txt_file = open(fpath, 'w')
 
     if qconfig.min_contig:
         print >>txt_file, 'All statistics are based on contigs of size >= %d bp, unless otherwise noted ' % qconfig.min_contig + \
@@ -394,10 +397,10 @@ def save_txt(filename, table, is_transposed=False):
     txt_file.close()
 
 
-def save_tsv(filename, table, is_transposed=False):
+def save_tsv(fpath, table, is_transposed=False):
     all_rows = get_all_rows_out_of_table(table)
 
-    tsv_file = open(filename, 'w')
+    tsv_file = open(fpath, 'w')
 
     for row in all_rows:
         print >>tsv_file, '\t'.join([row['metricName']] + map(val_to_str, row['values']))
@@ -440,10 +443,10 @@ def get_num_from_table_value(val):
     return num
 
 
-def save_tex(filename, table, is_transposed=False):
+def save_tex(fpath, table, is_transposed=False):
     all_rows = get_all_rows_out_of_table(table)
 
-    tex_file = open(filename, 'w')
+    tex_file = open(fpath, 'w')
     # Header
     print >>tex_file, '\\documentclass[12pt,a4paper]{article}'
     print >>tex_file, '\\begin{document}'
@@ -513,23 +516,22 @@ def save(output_dirpath, report_name, transposed_report_name, order):
     # Where total report will be saved
     tab = table(order)
 
-    log = logging.getLogger('quast')
-    log.info('  Creating total report...')
-    report_txt_filename = os.path.join(output_dirpath, report_name) + '.txt'
-    report_tsv_filename = os.path.join(output_dirpath, report_name) + '.tsv'
-    report_tex_filename = os.path.join(output_dirpath, report_name) + '.tex'
-    save_txt(report_txt_filename, tab)
-    save_tsv(report_tsv_filename, tab)
-    save_tex(report_tex_filename, tab)
-    log.info('    saved to ' + report_txt_filename + ', ' + os.path.basename(report_tsv_filename) + \
-             ', and ' + os.path.basename(report_tex_filename))
+    logger.info('  Creating total report...')
+    report_txt_fpath = os.path.join(output_dirpath, report_name) + '.txt'
+    report_tsv_fpath = os.path.join(output_dirpath, report_name) + '.tsv'
+    report_tex_fpath = os.path.join(output_dirpath, report_name) + '.tex'
+    save_txt(report_txt_fpath, tab)
+    save_tsv(report_tsv_fpath, tab)
+    save_tex(report_tex_fpath, tab)
+    logger.info('    saved to ' + report_txt_fpath + ', ' + os.path.basename(report_tsv_fpath) + \
+             ', and ' + os.path.basename(report_tex_fpath))
 
     if transposed_report_name:
-        log.info('  Transposed version of total report...')
+        logger.info('  Transposed version of total report...')
 
         all_rows = get_all_rows_out_of_table(tab)
         if all_rows[0]['metricName'] != Fields.NAME:
-            warning('transposed version can\'t be created! First column have to be assemblies names')
+            logger.warning('transposed version can\'t be created! First column have to be assemblies names')
         else:
             # Transposing table
             transposed_table = [{'metricName': all_rows[0]['metricName'],
@@ -541,14 +543,14 @@ def save(output_dirpath, report_name, transposed_report_name, order):
                 transposed_table.append({'metricName': all_rows[0]['values'][i], # name of assembly, assuming the first line is assemblies names
                                          'values': values,})
 
-            report_txt_filename = os.path.join(output_dirpath, transposed_report_name) + '.txt'
-            report_tsv_filename = os.path.join(output_dirpath, transposed_report_name) + '.tsv'
-            report_tex_filename = os.path.join(output_dirpath, transposed_report_name) + '.tex'
-            save_txt(report_txt_filename, transposed_table, is_transposed=True)
-            save_tsv(report_tsv_filename, transposed_table, is_transposed=True)
-            save_tex(report_tex_filename, transposed_table, is_transposed=True)
-            log.info('    saved to ' + report_txt_filename + ', ' + os.path.basename(report_tsv_filename) + \
-                     ', and ' + os.path.basename(report_tex_filename))
+            report_txt_fpath = os.path.join(output_dirpath, transposed_report_name) + '.txt'
+            report_tsv_fpath = os.path.join(output_dirpath, transposed_report_name) + '.tsv'
+            report_tex_fpath = os.path.join(output_dirpath, transposed_report_name) + '.tex'
+            save_txt(report_txt_fpath, transposed_table, is_transposed=True)
+            save_tsv(report_tsv_fpath, transposed_table, is_transposed=True)
+            save_tex(report_tex_fpath, transposed_table, is_transposed=True)
+            logger.info('    saved to ' + report_txt_fpath + ', ' + os.path.basename(report_tsv_fpath) + \
+                     ', and ' + os.path.basename(report_tex_fpath))
 
 
 def save_gage(output_dirpath):
@@ -557,9 +559,8 @@ def save_gage(output_dirpath):
 
 
 def save_total(output_dirpath):
-    print_timestamp()
-    log = logging.getLogger('quast')
-    log.info('Summarizing...')
+    logger.print_timestamp()
+    logger.info('Summarizing...')
     save(output_dirpath, qconfig.report_prefix, qconfig.transposed_report_prefix, Fields.order)
 
 

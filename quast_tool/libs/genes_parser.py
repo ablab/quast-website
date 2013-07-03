@@ -6,8 +6,10 @@
 
 import os
 import re
-from libs import qutils
-from qutils import warning
+from libs import qutils, qconfig
+
+from libs.log import get_logger
+logger = get_logger(qconfig.LOGGER_DEFAULT_NAME)
 
 
 txt_pattern_gi = re.compile(r'gi\|(?P<id>\d+)\|\w+\|(?P<seqname>\S+)\|\s+(?P<number>\d+)\s+(?P<start>\d+)\s+(?P<end>\d+)', re.I)
@@ -19,13 +21,13 @@ gff_pattern = re.compile(r'(?P<seqname>\S+)\s+\S+\s+(?P<feature>\S+)\s+(?P<start
 ncbi_start_pattern = re.compile(r'(?P<number>\d+)\.\s*(?P<name>\S+)\s*$', re.I)
 
 
-def get_genes_from_file(filename, feature):
-    if not filename or not os.path.exists(filename):
+def get_genes_from_file(fpath, feature):
+    if not fpath or not os.path.exists(fpath):
         # it is already checked in quast,py, so we need no more notification
         #print '  Warning! ' + feature + '\'s file not specified or doesn\'t exist!'
         return []
 
-    genes_file = open(filename, 'r')
+    genes_file = open(fpath, 'r')
     genes = []
 
     line = genes_file.readline().rstrip()
@@ -44,13 +46,13 @@ def get_genes_from_file(filename, feature):
         try:
             genes = parse_ncbi(genes_file)
         except ParseException, e:
-            warning('Parsing exception ' + e)
-            warning(filename + ' was skipped')
+            logger.warning('Parsing exception ' + e)
+            logger.warning(fpath + ' was skipped')
             genes = []
 
     else:
-        warning('Incorrect format of ' + feature + '\'s file! GFF, NCBI and the plain TXT format accepted. See manual.')
-        warning(filename + ' was skipped')
+        logger.warning('Incorrect format of ' + feature + '\'s file! GFF, NCBI and the plain TXT format accepted. See manual.')
+        logger.warning(fpath + ' was skipped')
 
     genes_file.close()
     return genes
@@ -65,33 +67,33 @@ def get_genes_from_file(filename, feature):
 #   Genomic context: Chromosome
 #   Annotation: NC_013061.1 (1733715..1735595, complement)
 #   ID: 8252560
-def parse_ncbi(file):
+def parse_ncbi(ncbi_file):
     annotation_pattern = re.compile(r'Annotation: (?P<seqname>.+) \((?P<start>\d+)\.\.(?P<end>\d+)(, complement)?\)', re.I)
     chromosome_pattern = re.compile(r'Chromosome: (?P<chromosome>\S+);', re.I)
     id_pattern = re.compile(r'ID: (?P<id>\d+)', re.I)
 
     genes = []
 
-    line = file.readline()
+    line = ncbi_file.readline()
     while line != '':
         while line.rstrip() == '' or line.startswith('##'):
             if line == '':
                 break
-            line = file.readline()
+            line = ncbi_file.readline()
 
         m = ncbi_start_pattern.match(line.rstrip())
         while not m:
             m = ncbi_start_pattern.match(line.rstrip())
 
-        gene = Gene(number=int(m.group('number')), name=qutils.correct_name(m.group('name')))
+        gene = Gene(number=int(m.group('number')),
+                    name=qutils.correct_name(m.group('name')))
 
         the_rest_lines = []
 
-        line = file.readline()
+        line = ncbi_file.readline()
         while line != '' and not ncbi_start_pattern.match(line.rstrip()):
             the_rest_lines.append(line.rstrip())
-            line = file.readline()
-
+            line = ncbi_file.readline()
 
         for info_line in the_rest_lines:
             if info_line.startswith('Chromosome:'):
@@ -112,19 +114,18 @@ def parse_ncbi(file):
                         gene.seqname.lstrip(' ,')
 
                 else:
-                    warning('Wrong NCBI annotation for gene ' + str(gene.number) + '. ' + gene.name + '. Skipping this gene.')
+                    logger.warning('Wrong NCBI annotation for gene ' + str(gene.number) + '. ' + gene.name + '. Skipping this gene.')
 
             if info_line.startswith('ID:'):
                 m = re.match(id_pattern, info_line)
                 if m:
                     gene.id = m.group('id')
                 else:
-                    warning('Can\'t parse gene\'s ID in NCBI format. Gene is ' + str(gene.number) + '. ' + gene.name + '. Skipping it.')
-
+                    logger.warning('Can\'t parse gene\'s ID in NCBI format. Gene is ' + str(gene.number) + '. ' + gene.name + '. Skipping it.')
 
         if gene.start is not None and gene.end is not None:
             genes.append(gene)
-        #                raise ParseException('NCBI format parsing error: provide start and end for gene ' + gene.number + '. ' + gene.name + '.')
+        # raise ParseException('NCBI format parsing error: provide start and end for gene ' + gene.number + '. ' + gene.name + '.')
     return genes
 
 
@@ -141,7 +142,8 @@ def parse_txt(file):
         if not m:
             m = txt_pattern.match(line)
         if m:
-            gene = Gene(number=int(m.group('number')), seqname=qutils.correct_name(m.group('seqname')))
+            gene = Gene(number=int(m.group('number')),
+                        seqname=qutils.correct_name(m.group('seqname')))
             s = int(m.group('start'))
             e = int(m.group('end'))
             gene.start = min(s, e)
@@ -167,7 +169,9 @@ def parse_gff(file, feature):
     for line in file:
         m = gff_pattern.match(line)
         if m and m.group('feature') == feature:
-            gene = Gene(seqname=qutils.correct_name(m.group('seqname')), start=int(m.group('start')), end=int(m.group('end')))
+            gene = Gene(seqname=qutils.correct_name(m.group('seqname')),
+                        start=int(m.group('start')),
+                        end=int(m.group('end')))
 
             attributes = m.group('attributes').split(';')
             for attr in attributes:
@@ -186,7 +190,6 @@ def parse_gff(file, feature):
     return genes
 
 
-
 class ParseException(Exception):
     def __init__(self, value, *args, **kwargs):
         super(ParseException, self).__init__(*args, **kwargs)
@@ -194,8 +197,10 @@ class ParseException(Exception):
     def __str__(self):
         return repr(self.value)
 
+
 class Gene():
-    def __init__(self, id=None, seqname=None, start=None, end=None, number=None, name=None, chromosome=None):
+    def __init__(self, id=None, seqname=None, start=None, end=None,
+                 number=None, name=None, chromosome=None):
         self.id = id
         self.seqname = seqname
         self.start = start

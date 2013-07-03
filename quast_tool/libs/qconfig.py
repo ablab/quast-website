@@ -10,7 +10,8 @@ import platform
 
 LIBS_LOCATION = os.path.abspath(os.path.dirname(os.path.realpath(__file__)))
 
-error_log_fpath = os.path.join(LIBS_LOCATION, '..', 'error.log')
+LOGGER_DEFAULT_NAME = 'quast'
+# error_log_fpath = os.path.join(LIBS_LOCATION, '..', 'error.log')
 
 if platform.system() == 'Darwin':
     platform_name = 'macosx'
@@ -28,23 +29,23 @@ splitted_ref = []
 # available options
 long_options = "output-dir= save-json-to= genes= operons= reference= contig-thresholds= min-contig= "\
                "gene-thresholds= save-json gage eukaryote no-plots no-html help debug "\
-               "allow-ambiguity scaffolds threads= mincluster= est-ref-size= use-all-alignments gene-finding "\
-               "strict-NA meta".split()
-short_options = "o:G:O:R:t:M:S:J:jehdsaT:c:ufnm"
+               "ambiguity-usage= scaffolds threads= mincluster= est-ref-size= use-all-alignments gene-finding "\
+               "strict-NA meta labels=".split()
+short_options = "o:G:O:R:t:M:S:J:jehdsa:T:c:ufnml:"
 
 # default values for options
 contig_thresholds = "0,1000"
 min_contig = 500
 genes_lengths = "0,300,1500,3000"
-reference = ''
+ref_fpath = ''
 genes = ''
 operons = ''
 with_gage = False
 prokaryote = True  # former cyclic
 gene_finding = False
-allow_ambiguity = False
+ambiguity_usage = 'one'
 use_all_alignments = False
-max_threads = 1
+max_threads = None
 mincluster = 65
 estimated_reference_size = None
 strict_NA = False
@@ -63,9 +64,8 @@ make_latest_symlink = True
 default_json_dirname = "json"
 
 # names of reports, log, etc.
-logfile = "quast.log"
 corrected_dirname = "corrected_input"
-plots_filename = "plots.pdf"
+plots_fname = "plots.pdf"
 report_prefix = "report"
 transposed_report_prefix = "transposed_report"
 gage_report_prefix = "gage_"
@@ -88,7 +88,7 @@ min_gene_overlap = 100  # to partial genes/operons finding
 GC_bin_size = 1.0
 
 # plotter and maybe other modules in the future
-legend_names = None
+assembly_labels_by_fpath = {}
 
 # for scaffolds
 list_of_broken_scaffolds = []
