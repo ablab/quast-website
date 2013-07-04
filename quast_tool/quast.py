@@ -6,7 +6,7 @@
 # See file LICENSE for details.
 ############################################################################
 
-RELEASE_MODE = True
+RELEASE_MODE = False
 
 import sys
 import os
@@ -461,9 +461,9 @@ def main(args):
         elif opt in ('-h', "--help"):
             _usage()
             sys.exit(0)
-
         else:
-            raise ValueError
+            logger.error('Unknown option: %s. Use -h for help.' % (opt + (' ' + arg) if arg else ''), to_stderr=True)
+            sys.exit(2)
 
     for contigs_fpath in contigs_fpaths:
         assert_file_exists(contigs_fpath, 'contigs')
