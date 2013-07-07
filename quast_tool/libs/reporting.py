@@ -25,11 +25,11 @@ class Fields:
     NAME = 'Assembly'
 
     # Basic statistics
-    NUMCONTIGS = '# contigs'
-    CONTIGS = ('# contigs (>= %d bp)', tuple(qconfig.contig_thresholds))
+    CONTIGS = '# contigs'
+    CONTIGS__FOR_THRESHOLDS = ('# contigs (>= %d bp)', tuple(qconfig.contig_thresholds))
     LARGCONTIG = 'Largest contig'
     TOTALLEN = 'Total length'
-    TOTALLENS = ('Total length (>= %d bp)', tuple(qconfig.contig_thresholds))
+    TOTALLENS__FOR_THRESHOLDS = ('Total length (>= %d bp)', tuple(qconfig.contig_thresholds))
     N50 = 'N50'
     N75 = 'N75'
     L50 = 'L50'
@@ -107,11 +107,12 @@ class Fields:
     REF_OPERONS = 'Reference operons'
 
     ### content and order of metrics in MAIN REPORT (<quast_output_dir>/report.txt, .tex, .tsv):
-    order = [NAME, CONTIGS, TOTALLENS, NUMCONTIGS, LARGCONTIG, TOTALLEN, REFLEN, ESTREFLEN, GC, REFGC,
+    order = [NAME, CONTIGS__FOR_THRESHOLDS, TOTALLENS__FOR_THRESHOLDS, CONTIGS, TOTALLEN, LARGCONTIG, REFLEN, ESTREFLEN, GC, REFGC,
              N50, NG50, N75, NG75, MISASSEMBL, MISCONTIGSBASES, MISLOCAL, UNALIGNED, UNALIGNEDBASES, MAPPEDGENOME, DUPLICATION_RATIO,
              UNCALLED_PERCENT, SUBSERROR, INDELSERROR, GENES, OPERONS, PREDICTED_GENES_UNIQUE, PREDICTED_GENES,
              LARGALIGN, NA50, NGA50, NA75, NGA75]
 
+    andrey_order = [NAME, NG50, CONTIGS, LARGCONTIG, TOTALLEN, MISASSEMBL, MAPPEDGENOME]
 
     # content and order of metrics in DETAILED MISASSEMBLIES REPORT (<quast_output_dir>/contigs_reports/misassemblies_report.txt, .tex, .tsv)
     misassemblies_order = [NAME, MIS_ALL_EXTENSIVE, MIS_RELOCATION, MIS_TRANSLOCATION, MIS_INVERTION,
@@ -158,7 +159,7 @@ class Fields:
 
     ### Grouping of metrics and set of main metrics for HTML version of main report
     grouped_order = [
-        ('Statistics without reference', [NUMCONTIGS, CONTIGS, LARGCONTIG, TOTALLEN, TOTALLENS,
+        ('Statistics without reference', [CONTIGS, CONTIGS__FOR_THRESHOLDS, LARGCONTIG, TOTALLEN, TOTALLENS__FOR_THRESHOLDS,
                                           N50, N75, L50, L75, GC,]),
 
         ('Misassemblies', [MIS_ALL_EXTENSIVE,
@@ -182,7 +183,7 @@ class Fields:
     ]
 
     # for "short" version of HTML report
-    main_metrics = [NUMCONTIGS, LARGCONTIG, TOTALLEN, N50,
+    main_metrics = [CONTIGS, LARGCONTIG, TOTALLEN, N50,
                     MIS_ALL_EXTENSIVE, MIS_EXTENSIVE_BASES,
                     SUBSERROR, INDELSERROR, UNCALLED_PERCENT,
                     MAPPEDGENOME, DUPLICATION_RATIO, GENES, OPERONS, NGA50,
@@ -192,7 +193,6 @@ class Fields:
 ########################  END OF CONFIGURABLE PARAMETERS  ##########################
 ####################################################################################
 
-
     class Quality:
         MORE_IS_BETTER = 'More is better'
         LESS_IS_BETTER = 'Less is better'
@@ -200,10 +200,10 @@ class Fields:
 
     quality_dict = {
         Quality.MORE_IS_BETTER:
-            [LARGCONTIG, TOTALLEN, TOTALLENS, N50, NG50, N75, NG75, NA50, NGA50, NA75, NGA75, LARGALIGN,
+            [LARGCONTIG, TOTALLEN, TOTALLENS__FOR_THRESHOLDS, N50, NG50, N75, NG75, NA50, NGA50, NA75, NGA75, LARGALIGN,
              MAPPEDGENOME, GENES, OPERONS, PREDICTED_GENES_UNIQUE, PREDICTED_GENES, AVGIDY],
         Quality.LESS_IS_BETTER:
-            [NUMCONTIGS, CONTIGS, L50, LG50, L75, LG75,
+            [CONTIGS, CONTIGS__FOR_THRESHOLDS, L50, LG50, L75, LG75,
              MISLOCAL, MISASSEMBL, MISCONTIGS, MISCONTIGSBASES, MISINTERNALOVERLAP,
              UNALIGNED, UNALIGNEDBASES, AMBIGUOUS, AMBIGUOUSEXTRABASES,
              UNCALLED, UNCALLED_PERCENT,
@@ -276,7 +276,7 @@ def get_quality(metric):
 class Report(object):
     def __init__(self, name):
         self.d = {}
-        self.add_field(Fields.NAME, qutils.rm_extentions_for_fasta_file(name))
+        self.add_field(Fields.NAME, name)
 
     def add_field(self, field, value):
         assert field in Fields.__dict__.itervalues(), 'Unknown field: %s' % field
@@ -294,7 +294,7 @@ class Report(object):
 def get(assembly_fpath):
     if assembly_fpath not in assembly_fpaths:
         assembly_fpaths.append(assembly_fpath)
-    return reports.setdefault(assembly_fpath, Report(assembly_fpath))
+    return reports.setdefault(assembly_fpath, Report(qutils.label_from_fpath(assembly_fpath)))
 
 
 def delete(assembly_fpath):
@@ -311,7 +311,7 @@ def table(order=Fields.order):
 
     table = []
 
-    def append_line(rows, field, pattern=None, feature=None, i=None):
+    def append_line(rows, field, are_multiple_tresholds=False, pattern=None, feature=None, i=None):
         quality = get_quality(field)
         values = []
 
@@ -319,10 +319,10 @@ def table(order=Fields.order):
             report = get(assembly_fpath)
             value = report.get_field(field)
 
-            if feature is None or value is None:
-                values.append(value)
+            if are_multiple_tresholds:
+                values.append(value[i] if (value and i < len(value)) else None)
             else:
-                values.append(value[i] if i < len(value) else None)
+                values.append(value)
 
         if filter(lambda v: value is not None, values):
             metric_name = field if (feature is None) else pattern % feature
@@ -341,7 +341,7 @@ def table(order=Fields.order):
         for field in metrics:
             if isinstance(field, tuple):  # TODO: rewrite it nicer
                 for i, feature in enumerate(field[1]):
-                    append_line(rows, field, field[0], feature, i)
+                    append_line(rows, field, True, field[0], feature, i)
             else:
                 append_line(rows, field)
 
@@ -444,7 +444,7 @@ def get_num_from_table_value(val):
 
 
 def save_tex(fpath, table, is_transposed=False):
-    all_rows = get_all_rows_out_of_table(table)
+    all_rows = get_all_rows_out_of_table(table, is_transposed)
 
     tex_file = open(fpath, 'w')
     # Header
@@ -511,6 +511,9 @@ def save_tex(fpath, table, is_transposed=False):
     print >>tex_file, '\\end{document}'
     tex_file.close()
 
+    if os.path.basename(fpath) == 'report.tex':
+        pass
+
 
 def save(output_dirpath, report_name, transposed_report_name, order):
     # Where total report will be saved
@@ -523,13 +526,14 @@ def save(output_dirpath, report_name, transposed_report_name, order):
     save_txt(report_txt_fpath, tab)
     save_tsv(report_tsv_fpath, tab)
     save_tex(report_tex_fpath, tab)
-    logger.info('    saved to ' + report_txt_fpath + ', ' + os.path.basename(report_tsv_fpath) + \
-             ', and ' + os.path.basename(report_tex_fpath))
+    logger.info('    saved to ' + report_txt_fpath +
+                ', ' + os.path.basename(report_tsv_fpath) +
+                ', and ' + os.path.basename(report_tex_fpath))
 
     if transposed_report_name:
         logger.info('  Transposed version of total report...')
 
-        all_rows = get_all_rows_out_of_table(tab)
+        all_rows = get_all_rows_out_of_table(tab, is_transposed=True)
         if all_rows[0]['metricName'] != Fields.NAME:
             logger.warning('transposed version can\'t be created! First column have to be assemblies names')
         else:
