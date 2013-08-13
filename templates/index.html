@@ -175,7 +175,7 @@
                     maxConnections: 1,
                     buttonClass: parameters[i].buttonClass,
                     buttonTabIndex: parameters[i].buttonTabIndex,
-                    reportId: "{{ report_id }}",
+                    reportId: '{{ report_id }}',
                     debug: {% if debug %}true{% else %}false{% endif %},
                     onSubmit: function(id, fileName) {
                         evaluateButton.prop('disabled', false);

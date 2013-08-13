@@ -195,7 +195,7 @@ dragtable = {
       dragObj.origNode = window.event.srcElement;
     else
       dragObj.origNode = event.target;
-    var pos = dragtable.eventPosition(event);
+    var pos = dragtable.getEventPosition(event);
 
     // Drag the entire table cell, not just the element that was clicked.
     dragObj.origNode = dragtable.findUp(dragObj.origNode, /T[DH]/);
@@ -237,7 +237,7 @@ dragtable = {
       new_elt.appendChild(copySectionColumn(table.tFoot, dragObj.startCol));
     }
 
-    var obj_pos = dragtable.absolutePosition(dragObj.origNode, true);
+    var obj_pos = dragtable.getPositionOnThePage(dragObj.origNode, true);
     new_elt.style.position = "absolute";
     new_elt.style.left = obj_pos.x + "px";
     new_elt.style.top = obj_pos.y + "px";
@@ -282,7 +282,7 @@ dragtable = {
     var dragObj = dragtable.dragObj;
 
     // Get cursor position with respect to the page.
-    var pos = dragtable.eventPosition(event);
+    var pos = dragtable.getEventPosition(event);
 
     var dx = dragObj.cursorStartX - pos.x;
     var dy = dragObj.cursorStartY - pos.y;
@@ -323,8 +323,8 @@ dragtable = {
     dragObj.tableContainer.removeChild(dragObj.elNode);
 
     // Determine whether the drag ended over the table, and over which column.
-    var pos = dragtable.eventPosition(event);
-    var table_pos = dragtable.absolutePosition(dragObj.table);
+    var pos = dragtable.getEventPosition(event);
+    var table_pos = dragtable.getPositionOnThePage(dragObj.table);
     if (pos.y < table_pos.y ||
         pos.y > table_pos.y + dragObj.table.offsetHeight) {
       return;
@@ -344,7 +344,7 @@ dragtable = {
     var header = table.tHead.rows[0].cells;
     for (var i = 0; i < header.length; i++) {
       //var left = header[i].offsetLeft;
-      var pos = dragtable.absolutePosition(header[i]);
+      var pos = dragtable.getPositionOnThePage(header[i]);
       //if (left <= x && x <= left + header[i].offsetWidth) {
       if (pos.x <= x && x <= pos.x + header[i].offsetWidth) {
         return i;

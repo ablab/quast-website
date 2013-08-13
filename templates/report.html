@@ -5,13 +5,15 @@
 {% block title %}{{ header }}{% endblock %}
 
 {% block extra_head %}
+    <link rel="stylesheet" href="/static/report.css"/>
+
     <script type="text/javascript" src="/static/jquery-1.8.2.min.js"></script>
     <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="../excanvas.min.js"></script><![endif]-->
     <script type="text/javascript" src="/static/flot/jquery.flot.js"></script>
     <script type="text/javascript" src="/static/flot/jquery.flot.resize.js"></script>
     <script type="text/javascript" src="/static/flot/jquery.flot.dashes.js"></script>
-
-    <script type="text/javascript" src="/static/dragtable.js"></script>
+    <script type="text/javascript" src="/static/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/static/bootstrap/bootstrap-tooltip-vlad.js"></script>
 
     <script type="text/javascript" src="/static/scripts/lighter_darker.js"></script>
     <script type="text/javascript" src="/static/scripts/hsvToRgb.js"></script>
@@ -22,11 +24,7 @@
     <script type="text/javascript" src="/static/scripts/draw_gc_plot.js"></script>
     <script type="text/javascript" src="/static/scripts/draw_genes_plot.js"></script>
     <script type="text/javascript" src="/static/scripts/build_report.js"></script>
-
-    <link rel="stylesheet" href="/static/report.css"/>
-
-    <script type="text/javascript" src="/static/bootstrap/js/bootstrap.js"></script>
-    <script type="text/javascript" src="/static/bootstrap/bootstrap-tooltip-vlad.js"></script>
+    <script type="text/javascript" src="/static/dragtable.js"></script>
 
     {% block before_report_extra_head %}{% endblock %}
 
@@ -36,7 +34,11 @@
         {% endif %}
 
         $(function() {
+            document.reportId = '{{ report_id }}';
+
             buildReport();
+
+            dragTable.init();
 
             $('[rel=tooltip]').tooltip({
                 animation: false,

@@ -288,7 +288,7 @@ def delete_contigsfile_callback(sender, **kwargs):
 
 class QuastSession(models.Model):
     user_session = models.ForeignKey(UserSession, blank=True, null=True)
-    user = models.ForeignKey(User, blank=True, null=True)  #TODO: Remove, not used
+    user = models.ForeignKey(User, blank=True, null=True)  # TODO: Remove, not used
 
     report_id = models.CharField(max_length=255, unique=True)
     link = models.CharField(max_length=2048, blank=True, null=True)

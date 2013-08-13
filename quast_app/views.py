@@ -1,4 +1,4 @@
-
+import json
 import shutil
 import datetime
 import os
@@ -91,6 +91,38 @@ def reports(request):
     return reports_view(user_session, settings.TEMPLATE_ARGS_BY_DEFAULT, request)
 
 
+def reorder_report_columns_ajax(request):
+    try:
+        report_id = request.GET['reportId']
+    except KeyError:
+        return HttpResponseNotFound('reportId needed')
+
+    try:
+        new_assembly_names = request.GET['assemblyNames'].split()
+    except KeyError:
+        return HttpResponseNotFound('assembly names were not provided')
+
+    try:
+        qs = QuastSession.objects.get(report_id=report_id)
+    except QuastSession.DoesNotExist:
+        return HttpResponseNotFound('Report %s not found' % report_id)
+
+    with open(os.path.join(qs.get_dirpath(), 'report.json')) as report_f:
+        report = json.loads(report_f.read())
+
+        for group in report['report']:
+            for metric in group[1]:
+                values_by_asm_names = dict(zip(report['assembliesNames'], metric['values']))
+                metric['values'] = [values_by_asm_names[name] for name in new_assembly_names]  # new order
+
+        report['assembliesNames'] = new_assembly_names
+
+    with open(os.path.join(qs.get_dirpath(), 'report.json'), 'w') as report_f:
+        report_f.write(json.dumps(report))
+
+    return HttpResponse()
+
+
 def delete_session(request):
     try:
         report_id = request.GET['reportId']
@@ -114,7 +146,8 @@ def delete_session(request):
 
     if not quast_session.submitted:
 #        if quast_session.contigs_files:
-#            fpaths = [os.path.join(quast_session.get_contigs_dirpath(), c_f.fname) for c_f in quast_session.contigs_files.all()]
+#            fpaths = [os.path.join(quast_session.get_contigs_dirpath(), c_f.fname)
+#                      for c_f in quast_session.contigs_files.all()]
 #            for fpath in fpaths:
 #                if os.path.exists(fpath):
 #                    try:
@@ -206,4 +239,3 @@ def delete_session(request):
 #
 #    response_dict = get_evaluate_response_dict(request, user_session, '/evaluate/')
 #    return render_to_response('evaluate.html', response_dict, context_instance = RequestContext(request))
-

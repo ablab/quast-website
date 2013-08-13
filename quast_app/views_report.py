@@ -28,7 +28,8 @@ task_state_map = {
 }
 
 
-def get_report_response_dict(results_dirpath, caption, comment='', data_set_name='', link='', set_title=False, safe=False):
+def get_report_response_dict(results_dirpath, caption, comment='', data_set_name='',
+                             link='', set_title=False, safe=False):
     if not os.path.isdir(results_dirpath):
         logger.error('no results directory %s ', results_dirpath)
         raise Exception('No results directory %s' % results_dirpath)
@@ -45,11 +46,7 @@ def get_report_response_dict(results_dirpath, caption, comment='', data_set_name
                 raise Exception('%s is not found.' % fname)
         return contents
 
-    try:
-        total_report = get('report', is_required=True)
-    except Exception, e:
-        total_report = get('total_report', is_required=True)
-
+    total_report            = get('report', is_required=True)
     contigs_lengths         = get('contigs_lengths', is_required=True)
     reference_length        = get('ref_length')
     assemblies_lengths      = get('assemblies_lengths')
@@ -143,6 +140,8 @@ def report_view(user_session, response_dict, request, link):
                         link,
                         set_title=True))
 
+                    response_dict['report_id'] = quast_session.report_id
+
                     html_report_fpath = os.path.join(quast_session.get_dirpath(), settings.REGULAR_REPORT_DIRNAME, settings.HTML_REPORT_FNAME)
                     html_aux_report_dirpath = os.path.join(quast_session.get_dirpath(), settings.REGULAR_REPORT_DIRNAME, settings.HTML_REPORT_AUX_DIRNAME)
                     response_dict['download'] = os.path.exists(html_report_fpath) and os.path.exists(html_aux_report_dirpath)
@@ -163,12 +162,13 @@ def report_view(user_session, response_dict, request, link):
                 'session_key': request.session.session_key,
                 'state': state_repr,
                 'link': link,
+                'report_id': quast_session.report_id,
                 'comment': quast_session.comment,
                 'caption': quast_session.caption,
                 'data_set_name': quast_session.data_set.name if quast_session.data_set else None,
                 'email': user_session.get_email() if user_session == quast_session.user_session else None,
                 'fnames': [c_f.fname for c_f in quast_session.contigs_files.all()],
-                'error': error
+                'error': error,
             })
 
             return render_to_response('waiting-report.html',

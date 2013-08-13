@@ -63,6 +63,8 @@ urlpatterns = patterns('',
     url(r'^report/(?P<link>.+)/?$', 'quast_app.views.report'),
     url(r'^reports/(?P<link>.+)/?$', 'quast_app.views.report'),
 
+    url(r'^reorder-report-columns$', 'quast_app.views.reorder_report_columns_ajax'),
+
     url(r'^404', 'django.views.generic.simple.direct_to_template', {'template': '404.html'}),
     url(r'^500', 'django.views.generic.simple.direct_to_template', {'template': '500.html'}),
 
