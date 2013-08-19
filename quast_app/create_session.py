@@ -12,22 +12,23 @@ mailer = logging.getLogger('quast_mailer')
 
 
 def get_or_create_session(request, page):
-#    session_key = request.COOKIES.get(settings.SESSION_COOKIE_NAME, None)
-#    logger.info('request.COOKIES.get(settings.SESSION_COOKIE_NAME, None) = %s', session_key)
-#
-    session_key = request.session.session_key
-#    logger.info('Somebody opened %s with request.session.session_key = %s'
-#                % (page, request.session.session_key))
+  # session_key = request.COOKIES.get(settings.SESSION_COOKIE_NAME, None)
+  # logger.info('request.COOKIES.get(settings.SESSION_COOKIE_NAME, None) = %s', session_key)
 
-#    if not session_key:
-#        from django.utils.crypto import get_random_string
-#        session_key = get_random_string(
-#            length=20,
-#            allowed_chars='abcdefghjkmnpqrstuvwxyz'
-#                          'ABCDEFGHJKLMNPQRSTUVWXYZ'
-#                          '123456789'
-#        )
-#        logger.warn('session_key is None. Generating new one: %s', session_key)
+    session_key = request.session.session_key
+
+  # logger.info('Somebody opened %s with request.session.session_key = %s'
+  #             % (page, request.session.session_key))
+
+  # if not session_key:
+  #     from django.utils.crypto import get_random_string
+  #     session_key = get_random_string(
+  #         length=20,
+  #         allowed_chars='abcdefghjkmnpqrstuvwxyz'
+  #                       'ABCDEFGHJKLMNPQRSTUVWXYZ'
+  #                       '123456789'
+  #     )
+  #     logger.warn('session_key is None. Generating new one: %s', session_key)
 
     if not session_key or not request.session.exists(session_key):
         tries = 10
@@ -51,3 +52,14 @@ def get_or_create_session(request, page):
 
     user_session = UserSession.get_or_create(session_key)
     return user_session
+
+
+def get_session(request):
+    session_key = request.session.session_key
+    if session_key and request.session.exists(session_key):
+        try:
+            return UserSession.objects.get(session_key=session_key)
+        except UserSession.DoesNotExist:
+            pass
+
+    return None

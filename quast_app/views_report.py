@@ -166,7 +166,8 @@ def report_view(user_session, response_dict, request, link):
                 'comment': quast_session.comment,
                 'caption': quast_session.caption,
                 'data_set_name': quast_session.data_set.name if quast_session.data_set else None,
-                'email': user_session.get_email() if user_session == quast_session.user_session else None,
+                'email': user_session.get_email() if user_session and
+                         user_session == quast_session.user_session else None,
                 'fnames': [c_f.fname for c_f in quast_session.contigs_files.all()],
                 'error': error,
             })

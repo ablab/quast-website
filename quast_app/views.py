@@ -13,7 +13,7 @@ from views_reports import reports_view
 from views_index import index_view
 
 from models import UserSession, QuastSession
-from create_session import get_or_create_session
+from create_session import get_or_create_session, get_session
 
 import logging
 logger = logging.getLogger('quast')
@@ -78,7 +78,7 @@ def index(request):
 
 
 def report(request, link):
-    user_session = get_or_create_session(request, 'report')
+    user_session = get_session(request)
     return report_view(user_session, settings.TEMPLATE_ARGS_BY_DEFAULT, request, link)
 
 
@@ -92,15 +92,21 @@ def reports(request):
 
 
 def reorder_report_columns_ajax(request):
+    user_session = get_session(request)
+    if user_session is None:
+        return HttpResponseNotFound('No user session for this session_key')
+
     try:
         report_id = request.GET['reportId']
     except KeyError:
-        return HttpResponseNotFound('reportId needed')
+        return HttpResponseNotFound('Value of reportId needed')
 
     try:
-        new_assembly_names = request.GET['assemblyNames'].split()
+        order = map(int, request.GET['order'].split())  # 3 1 4 2
     except KeyError:
-        return HttpResponseNotFound('assembly names were not provided')
+        return HttpResponseNotFound('Order was not provided')
+    except ValueError:
+        return HttpResponseNotFound('Incorrect order: should be space-separated numbers, like "3 1 5 3""')
 
     try:
         qs = QuastSession.objects.get(report_id=report_id)
@@ -109,13 +115,14 @@ def reorder_report_columns_ajax(request):
 
     with open(os.path.join(qs.get_dirpath(), 'report.json')) as report_f:
         report = json.loads(report_f.read())
+        report['order'] = order
 
-        for group in report['report']:
-            for metric in group[1]:
-                values_by_asm_names = dict(zip(report['assembliesNames'], metric['values']))
-                metric['values'] = [values_by_asm_names[name] for name in new_assembly_names]  # new order
+        # for group in report['report']:
+        #     for metric in group[1]:
+        #         values_by_asm_names = dict(zip(report['assembliesNames'], metric['values']))
+        #         metric['values'] = [values_by_asm_names[name] for name in new_assembly_names]  # new order
 
-        report['assembliesNames'] = new_assembly_names
+        # report['assembliesNames'] = new_assembly_names
 
     with open(os.path.join(qs.get_dirpath(), 'report.json'), 'w') as report_f:
         report_f.write(json.dumps(report))
