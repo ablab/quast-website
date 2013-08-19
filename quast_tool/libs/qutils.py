@@ -8,6 +8,7 @@ from __future__ import with_statement
 import glob
 import gzip
 import shutil
+import subprocess
 import zipfile
 import bz2
 import os
@@ -133,3 +134,17 @@ def name_from_fpath(fpath):
 
 def label_from_fpath(fpath):
     return qconfig.assembly_labels_by_fpath[fpath]
+
+
+def call_subprocess(args, stdin=None, stdout=None, stderr=None, logger_indent='', env=None):
+    line = logger_indent + ' '.join(args)
+    if stdin:
+        line += ' < ' + stdin.name
+    if stdout:
+        line += ' > ' + stdout.name
+    if stderr:
+        line += ' 2> ' + stderr.name
+
+    logger.info(line)
+
+    subprocess.call(args, stdin=stdin, stdout=stdout, stderr=stderr, env=env)

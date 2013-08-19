@@ -69,7 +69,7 @@ class QLogger(object):
         self._logger.info('Logging to ' + self._log_fpath)
 
     def finish_up(self):
-        self._logger.info('Log saved to ' + self._log_fpath)
+        self._logger.info('  Log saved to ' + self._log_fpath)
 
         finish_time = self.print_timestamp('Finished: ')
         self._logger.info('Elapsed time: ' + str(finish_time - self._start_time))
@@ -135,6 +135,13 @@ class QLogger(object):
             print >> sys.stderr, str(e)
 
         exit(exit_code)
+
+    def print_command_line(self, program_name, args):
+        for i, arg in enumerate(args):
+            if ' ' in arg or '\t' in arg:
+                args[i] = "'" + arg + "'"
+
+        self.info(' '.join([program_name] + args))
 
     def print_timestamp(self, message=''):
         now = datetime.now()

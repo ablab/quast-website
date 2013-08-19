@@ -18,7 +18,6 @@
 from __future__ import with_statement
 import os
 import platform
-import subprocess
 import datetime
 import fastaparser
 import shutil
@@ -27,7 +26,17 @@ from libs import reporting, qconfig, qutils
 from libs.log import get_logger
 logger = get_logger(qconfig.LOGGER_DEFAULT_NAME)
 
+
 required_binaries = ['nucmer', 'delta-filter', 'show-coords', 'show-snps']
+
+if platform.system() == 'Darwin':
+    mummer_dirpath = os.path.join(qconfig.LIBS_LOCATION, 'MUMmer3.23-osx')
+else:
+    mummer_dirpath = os.path.join(qconfig.LIBS_LOCATION, 'MUMmer3.23-linux')
+
+
+def bin_fpath(fname):
+    return os.path.join(mummer_dirpath, fname)
 
 
 class Misassembly:
@@ -93,16 +102,22 @@ class NucmerStatus:
     NOT_ALIGNED = 2
 
 
-def run_nucmer(prefix, ref_fpath, contigs_fpath, log_out_fpath, log_err_fpath, myenv):
-    log = open(log_out_fpath, 'a')
-    err = open(log_err_fpath, 'a')
+def run_nucmer(prefix, ref_fpath, contigs_fpath, log_out_fpath, log_err_fpath):
     # additional GAGE params of Nucmer: '-l', '30', '-banded'
-    subprocess.call(['nucmer', '-c', str(qconfig.mincluster), '-l', str(qconfig.mincluster),
-                     '--maxmatch', '-p', prefix, ref_fpath, contigs_fpath],
-                     stdout=log, stderr=err, env=myenv)
+    qutils.call_subprocess(
+        [bin_fpath('nucmer'),
+         '-c', str(qconfig.mincluster),
+         '-l', str(qconfig.mincluster),
+         '--maxmatch',
+         '-p', prefix,
+         ref_fpath,
+         contigs_fpath],
+        stdout=open(log_out_fpath, 'a'),
+        stderr=open(log_err_fpath, 'a'),
+        logger_indent='  ')
 
 
-def plantakolya(cyclic, i, contigs_fpath, nucmer_fpath, myenv, output_dirpath, ref_fpath):
+def plantakolya(cyclic, i, contigs_fpath, nucmer_fpath, output_dirpath, ref_fpath):
     assembly_name = qutils.name_from_fpath(contigs_fpath)
     assembly_label = qutils.label_from_fpath(contigs_fpath)
 
@@ -134,9 +149,9 @@ def plantakolya(cyclic, i, contigs_fpath, nucmer_fpath, myenv, output_dirpath, r
     # Checking if there are existing previous nucmer alignments.
     # If they exist, using them to save time.
     using_existing_alignments = False
-    if os.path.isfile(nucmer_successful_check_fpath) and os.path.isfile(coords_fpath) \
-        and os.path.isfile(show_snps_fpath):
-
+    if os.path.isfile(nucmer_successful_check_fpath) and\
+       os.path.isfile(coords_fpath) and\
+       os.path.isfile(show_snps_fpath):
         successful_check_content = open(nucmer_successful_check_fpath).read().split('\n')
         if len(successful_check_content) > 2 and successful_check_content[1].strip() == str(qconfig.min_contig):
             print >> planta_out_f, '\tUsing existing Nucmer alignments...'
@@ -144,8 +159,8 @@ def plantakolya(cyclic, i, contigs_fpath, nucmer_fpath, myenv, output_dirpath, r
             using_existing_alignments = True
 
     if not using_existing_alignments:
-        print >> planta_out_f, '\tRunning Nucmer...'
-        logger.info('  ' + qutils.index_to_str(i) + 'Running Nucmer... ')
+        print >> planta_out_f, '\tRunning Nucmer:'
+        logger.info('  ' + qutils.index_to_str(i) + 'Running Nucmer: ')
 
         if qconfig.splitted_ref:
             prefixes_and_chr_files = [(nucmer_fpath + "_" + os.path.basename(chr_fname), chr_fname)
@@ -163,7 +178,7 @@ def plantakolya(cyclic, i, contigs_fpath, nucmer_fpath, myenv, output_dirpath, r
             # processing each chromosome separately (if we can)
             from joblib import Parallel, delayed
             Parallel(n_jobs=n_jobs)(delayed(run_nucmer)(
-                prefix, chr_file, contigs_fpath, log_out_fpath, log_err_fpath, myenv)
+                prefix, chr_file, contigs_fpath, log_out_fpath, log_err_fpath)
                 for (prefix, chr_file) in prefixes_and_chr_files)
 
             # filling common delta file
@@ -183,16 +198,24 @@ def plantakolya(cyclic, i, contigs_fpath, nucmer_fpath, myenv, output_dirpath, r
 
             delta_file.close()
         else:
-            run_nucmer(nucmer_fpath, ref_fpath, contigs_fpath, log_out_fpath, log_err_fpath, myenv)
+            run_nucmer(nucmer_fpath, ref_fpath, contigs_fpath, log_out_fpath, log_err_fpath)
 
         # Filtering by IDY% = 95 (as GAGE did)
-        subprocess.call(['delta-filter', '-i', '95', delta_fpath],
-            stdout=open(filtered_delta_fpath, 'w'), stderr=planta_err_f, env=myenv)
+        qutils.call_subprocess(
+            [bin_fpath('delta-filter'), '-i', '95', delta_fpath],
+            stdout=open(filtered_delta_fpath, 'w'),
+            stderr=planta_err_f,
+            logger_indent='  ')
+
         shutil.move(filtered_delta_fpath, delta_fpath)
 
         tmp_coords_fpath = coords_fpath + '_tmp'
-        subprocess.call(['show-coords', delta_fpath],
-            stdout=open(tmp_coords_fpath, 'w'), stderr=planta_err_f, env=myenv)
+
+        qutils.call_subprocess(
+            [bin_fpath('show-coords'), delta_fpath],
+            stdout=open(tmp_coords_fpath, 'w'),
+            stderr=planta_err_f,
+            logger_indent='  ')
 
         # removing waste lines from coords file
         coords_file = open(coords_fpath, 'w')
@@ -220,16 +243,17 @@ def plantakolya(cyclic, i, contigs_fpath, nucmer_fpath, myenv, output_dirpath, r
 
         with open(coords_fpath) as coords_file:
             headless_coords_fpath = coords_fpath + '.headless'
-            headless_coords_file = open(headless_coords_fpath, 'w')
+            headless_coords_f = open(headless_coords_fpath, 'w')
             coords_file.readline()
             coords_file.readline()
-            headless_coords_file.write(coords_file.read())
-            headless_coords_file.close()
-            headless_coords_file = open(headless_coords_fpath)
-            subprocess.call(['show-snps', '-S', '-T', '-H', delta_fpath],
-                            stdin=headless_coords_file,
-                            stdout=open(show_snps_fpath, 'w'),
-                            stderr=planta_err_f, env=myenv)
+            headless_coords_f.write(coords_file.read())
+            headless_coords_f.close()
+            headless_coords_f = open(headless_coords_fpath)
+            qutils.call_subprocess(
+                [bin_fpath('show-snps'), '-S', '-T', '-H', delta_fpath],
+                stdin=headless_coords_f,
+                stdout=open(show_snps_fpath, 'w'),
+                stderr=planta_err_f)
 
         nucmer_successful_check_file = open(nucmer_successful_check_fpath, 'w')
         nucmer_successful_check_file.write("Min contig size:\n")
@@ -642,24 +666,26 @@ def plantakolya(cyclic, i, contigs_fpath, nucmer_fpath, myenv, output_dirpath, r
                         end, begin = sorted_aligns[0].s2, sorted_aligns[0].e2
                     else:
                         end, begin = sorted_aligns[0].e2, sorted_aligns[0].s2
+
                     if (begin - 1) or (ctg_len - end):
                         #Increment tally of partially unaligned contigs
                         partially_unaligned += 1
+
                         #Increment tally of partially unaligned bases
                         unaligned_bases = (begin - 1) + (ctg_len - end)
                         partially_unaligned_bases += unaligned_bases
-                        print >> planta_out_f, '\t\tThis contig is partially unaligned. (%d out of %d)' % (
-                        top_len, ctg_len)
+                        print >> planta_out_f, '\t\tThis contig is partially unaligned. (%d out of %d)' % (top_len, ctg_len)
                         print >> planta_out_f, '\t\tAlignment: %s' % str(sorted_aligns[0])
-                        if (begin - 1):
+                        if begin - 1:
                             print >> planta_out_f, '\t\tUnaligned bases: 1 to %d (%d)' % (begin - 1, begin - 1)
-                        if (ctg_len - end):
+                        if ctg_len - end:
                             print >> planta_out_f, '\t\tUnaligned bases: %d to %d (%d)' % (end + 1, ctg_len, ctg_len - end)
                         # check if both parts (aligned and unaligned) have significant length
                         if (unaligned_bases >= qconfig.min_contig) and (ctg_len - unaligned_bases >= qconfig.min_contig):
                             partially_unaligned_with_significant_parts += 1
                             print >> planta_out_f, '\t\tThis contig has both significant aligned and unaligned parts ' \
-                                                 '(of length >= min-contig)!'
+                                                   '(of length >= min-contig)!'
+
                     ref_aligns.setdefault(sorted_aligns[0].ref, []).append(sorted_aligns[0])
                 else:
                     #There is more than one alignment of this contig to the reference
@@ -701,7 +727,7 @@ def plantakolya(cyclic, i, contigs_fpath, nucmer_fpath, myenv, output_dirpath, r
                         if (aligned_bases_in_contig >= qconfig.min_contig) and (ctg_len - aligned_bases_in_contig >= qconfig.min_contig):
                             partially_unaligned_with_significant_parts += 1
                             print >> planta_out_f, '\t\tThis contig has both significant aligned and unaligned parts '\
-                                                 '(of length >= min-contig)!'
+                                                   '(of length >= min-contig)!'
                         continue
 
                     sorted_num = len(sorted_aligns) - 1
@@ -1183,8 +1209,8 @@ def plantakolya(cyclic, i, contigs_fpath, nucmer_fpath, myenv, output_dirpath, r
               'partially_unaligned_with_significant_parts': partially_unaligned_with_significant_parts}
 
     ## outputting misassembled contigs to separate file
-    fasta = [(name, seq) for name, seq in fastaparser.read_fasta(contigs_fpath) if
-                         name in misassembled_contigs.keys()]
+    fasta = [(name, seq) for name, seq in fastaparser.read_fasta(contigs_fpath)
+             if name in misassembled_contigs.keys()]
     fastaparser.write_fasta(
         os.path.join(output_dirpath,
                      qutils.name_from_fpath(contigs_fpath) + '.mis_contigs.fa'),
@@ -1210,21 +1236,20 @@ def plantakolya(cyclic, i, contigs_fpath, nucmer_fpath, myenv, output_dirpath, r
         return NucmerStatus.OK, result, aligned_lengths
 
 
-def plantakolya_process(cyclic, nucmer_output_dirpath, contigs_fpath,
-                        i, myenv, output_dirpath, ref_fpath):
+def plantakolya_process(cyclic, nucmer_output_dirpath, contigs_fpath, i, output_dirpath, ref_fpath):
     assembly_name = qutils.name_from_fpath(contigs_fpath)
 
     nucmer_fname = os.path.join(nucmer_output_dirpath, assembly_name)
     nucmer_is_ok, result, aligned_lengths = plantakolya(
-        cyclic, i, contigs_fpath, nucmer_fname, myenv, output_dirpath, ref_fpath)
+        cyclic, i, contigs_fpath, nucmer_fname, output_dirpath, ref_fpath)
 
     clear_files(contigs_fpath, nucmer_fname)
     return nucmer_is_ok, result, aligned_lengths
 
 
-def all_required_binaries_exist(mummer_path):
+def all_required_binaries_exist(mummer_dirpath):
     for required_binary in required_binaries:
-        if not os.path.isfile(os.path.join(mummer_path, required_binary)):
+        if not os.path.isfile(os.path.join(mummer_dirpath, required_binary)):
             return False
     return True
 
@@ -1236,28 +1261,20 @@ def do(reference, contigs_fpaths, cyclic, output_dir):
     logger.print_timestamp()
     logger.info('Running Contig analyzer...')
 
-    ########################################################################
-    if platform.system() == 'Darwin':
-        mummer_path = os.path.join(qconfig.LIBS_LOCATION, 'MUMmer3.23-osx')
-    else:
-        mummer_path = os.path.join(qconfig.LIBS_LOCATION, 'MUMmer3.23-linux')
 
-    ########################################################################
-    # for running our MUMmer
-    myenv = os.environ.copy()
-    myenv['PATH'] = mummer_path + ':' + myenv['PATH']
-
-    if not all_required_binaries_exist(mummer_path):
+    if not all_required_binaries_exist(mummer_dirpath):
         # making
-        logger.info("Compiling MUMmer...")
+        logger.info('Compiling MUMmer:')
         try:
-            subprocess.call(
-                ['make', '-C', mummer_path],
-                stdout=open(os.path.join(mummer_path, 'make.log'), 'w'), stderr=open(os.path.join(mummer_path, 'make.err'), 'w'))
-            if not all_required_binaries_exist(mummer_path):
+            qutils.call_subprocess(
+                ['make', '-C', mummer_dirpath],
+                stdout=open(os.path.join(mummer_dirpath, 'make.log'), 'w'),
+                stderr=open(os.path.join(mummer_dirpath, 'make.err'), 'w'))
+
+            if not all_required_binaries_exist(mummer_dirpath):
                 raise
         except:
-            logger.error("Failed to compile MUMmer (" + mummer_path + ")! Try to compile it manually!")
+            logger.error("Failed to compile MUMmer (" + mummer_dirpath + ")! Try to compile it manually.")
 
     nucmer_output_dir = os.path.join(output_dir, 'nucmer_output')
     if not os.path.isdir(nucmer_output_dir):
@@ -1266,8 +1283,9 @@ def do(reference, contigs_fpaths, cyclic, output_dir):
     n_jobs = min(len(contigs_fpaths), qconfig.max_threads)
     from joblib import Parallel, delayed
     statuses_results_lengths_tuples = Parallel(n_jobs=n_jobs)(delayed(plantakolya_process)(
-        cyclic, nucmer_output_dir, fname, id, myenv, output_dir, reference)
-          for id, fname in enumerate(contigs_fpaths))
+        cyclic, nucmer_output_dir, fname, i, output_dir, reference)
+             for i, fname in enumerate(contigs_fpaths))
+
     # unzipping
     statuses, results, aligned_lengths = [x[0] for x in statuses_results_lengths_tuples], \
                                          [x[1] for x in statuses_results_lengths_tuples], \
