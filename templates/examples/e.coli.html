@@ -11,17 +11,11 @@
 {% block extra_extra_head %}
 {% endblock %}
 
-{% block extra_content %}
-    <script>
-        $(function() {
-            $('#subheader').hide();
-        })
-    </script>
-{% endblock %}
-
 {% block genome_info %}
 {#    <h3><a href="http://bix.ucsd.edu/projects/singlecell/nbt_data.html">Data set</a></h3>#}
     <p>
+        <p class='data_set_name'>E. coli</p>
+
         <p>Genome size: 4.6<span class="rhs"> </span>Mbp. The genome is <a href="e.coli_reference.fa.gz">
             <i>E. coli</i> str. K-12 substr. MG1655</a>
             (taken from <a href="http://www.ncbi.nlm.nih.gov/nuccore/48994873?report=fasta ">NCBI<span class="leading_link_dot">.</span></a>)

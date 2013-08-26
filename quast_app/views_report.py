@@ -28,8 +28,7 @@ task_state_map = {
 }
 
 
-def get_report_response_dict(results_dirpath, caption, comment='', data_set_name='',
-                             link='', set_title=False, safe=False):
+def get_report_response_dict(results_dirpath):
     if not os.path.isdir(results_dirpath):
         logger.error('no results directory %s ', results_dirpath)
         raise Exception('No results directory %s' % results_dirpath)
@@ -63,125 +62,137 @@ def get_report_response_dict(results_dirpath, caption, comment='', data_set_name
     #    quality_dict = json.dumps(reporting.Fields.quality_dict)
     #    main_metrics = json.dumps(reporting.get_main_metrics())
 
-    if caption:
-        header = caption
-    else:
-        header = data_set_name
-
     return {
         'totalReport': total_report,
-        'contigsLenghts': contigs_lengths,
+        'contigsLengths': contigs_lengths,
         'alignedContigsLengths': aligned_contigs_lengths,
         'assembliesLengths': assemblies_lengths,
         'referenceLength': reference_length,
         'genesInContigs': genes_in_contigs,
         'operonsInContigs': operons_in_contigs,
         'gcInfo': gc_info,
-        'download': False,
 
-        'header': header,
-        'setTitle': set_title,
-
-        'dataSetName': data_set_name if safe else escape(data_set_name),
-        'comment': comment if safe else escape(comment),
-        'link': settings.REPORT_LINK_BASE + link,
-        'downloadLink': settings.REPORT_LINK_BASE + 'download/' + link,
+      # 'qualities': quality_dict,
+      # 'mainMetrics': main_metrics,
 
         'glossary': glossary,
-
-        # 'qualities': quality_dict,
-        # 'mainMetrics': main_metrics,
     }
 
 
+def __set_data_set_info(qs, response_dict):
+    data_set_title = ''
+    if qs.data_set:
+        if qs.data_set.remember:
+            data_set_title = escape(qs.data_set.name)
+
+        response_dict['data_set'] = {
+            'title': data_set_title,
+            'id': qs.data_set.dirname,
+            'reference_ext': DataSet.split_seq_ext(qs.data_set.reference_fname)[1],
+            'genes_ext': DataSet.split_genes_ext(qs.data_set.genes_fname)[1],
+            'operons_ext': DataSet.split_genes_ext(qs.data_set.operons_fname)[1],
+        }
+
+
+def __set_title(qs, response_dict):
+    if qs.caption:
+        title = escape(qs.caption)
+    else:
+        if 'data_set' in response_dict and response_dict['data_set']['title']:
+            title = response_dict['data_set']['title']
+        else:
+            title = 'Quality assessment'
+
+    response_dict['title'] = title
+    response_dict['caption'] = title
+
+
+def __set_downloading(qs, response_dict):
+    response_dict['download_link'] = settings.REPORT_LINK_BASE + 'download/' + qs.link
+
+    html_report_fpath = os.path.join(qs.get_dirpath(),
+                                     settings.REGULAR_REPORT_DIRNAME,
+                                     settings.HTML_REPORT_FNAME)
+    html_aux_report_dirpath = os.path.join(qs.get_dirpath(),
+                                           settings.REGULAR_REPORT_DIRNAME,
+                                           settings.HTML_REPORT_AUX_DIRNAME)
+    response_dict['download'] = os.path.exists(html_report_fpath) and\
+                                os.path.exists(html_aux_report_dirpath)
+    if not response_dict['download']:
+        logger.warn('download_report: html_report_fpath and html_aux_report_dirpath'
+                    ' does not exist: \n%s\n%s' % (html_report_fpath, html_aux_report_dirpath))
+
+
 def report_view(user_session, response_dict, request, link):
-    found = QuastSession.objects.filter(link=link)
-    if not found.exists():
-        found = QuastSession.objects.filter(report_id=link)
+    found_qs = QuastSession.objects.filter(link=link)
+    if not found_qs.exists():
+        found_qs = QuastSession.objects.filter(report_id=link)
 
-    if found.exists():
-        if request.method == 'GET':
-            quast_session = found[0]
-            if quast_session.user_session is None:
-                quast_session.user_session = UserSession(user=quast_session.user)
-                quast_session.save()
+    if not found_qs.exists():
+        raise Http404()
 
-            # if quast_session.task_id == '1045104510450145' or quast_session.task_id == 1045104510450145:  # if the celery tasks have lost but we sure that this evaluated successfully
-            #     result = None
-            #     state = 'SUCCESS'
-            # else:
-            result = start_quast.AsyncResult(quast_session.task_id)
-            state = result.state
+    if request.method == 'POST':
+        # check status of quast session, return result
+        pass
 
-            exit_code, error = None, None
-            if state == 'SUCCESS':
-                res = result.get()
-                if isinstance(res, tuple):
-                    exit_code, error = res
-                else:
-                    exit_code, error = res, None
+    if request.method == 'GET':
+        qs = found_qs[0]
+        if qs.user_session is None:
+            qs.user_session = UserSession(user=qs.user)
+            qs.save()
 
-                if exit_code == 0:
-                    if quast_session.data_set and quast_session.data_set.remember:
-                        data_set_name = quast_session.data_set.name
-                    else:
-                        data_set_name = ''
+      # If the celery tasks have lost but we sure that this evaluated successfully:
+      # if quast_session.task_id == '1045104510450145' or quast_session.task_id == 1045104510450145:
+      #     result = None
+      #     state = 'SUCCESS'
+      # else:
+        future = start_quast.AsyncResult(qs.task_id)
+        state = future.state
 
-                    if data_set_name == '' and not quast_session.caption:
-                        caption = 'Quality assessment'
-                    else:
-                        caption = quast_session.caption
+        exit_code, error = None, None
+        if state == 'SUCCESS':
+            result = future.get()
+            if isinstance(result, tuple):
+                exit_code, error = result
+            else:
+                exit_code, error = result, None
 
-                    response_dict.update(get_report_response_dict(
-                        quast_session.get_dirpath(),
-                        caption,
-                        quast_session.comment,
-                        data_set_name,
-                        link,
-                        set_title=True))
-
-                    response_dict['report_id'] = quast_session.report_id
-
-                    html_report_fpath = os.path.join(quast_session.get_dirpath(), settings.REGULAR_REPORT_DIRNAME, settings.HTML_REPORT_FNAME)
-                    html_aux_report_dirpath = os.path.join(quast_session.get_dirpath(), settings.REGULAR_REPORT_DIRNAME, settings.HTML_REPORT_AUX_DIRNAME)
-                    response_dict['download'] = os.path.exists(html_report_fpath) and os.path.exists(html_aux_report_dirpath)
-                    if not response_dict['download']:
-                        logger.warn('download_report: html_report_fpath and html_aux_report_dirpath does not exist: \n%s\n%s' % (html_report_fpath, html_aux_report_dirpath))
-
-                    return render_to_response('assess-report.html', response_dict)
-
-            state_repr = 'FAILURE'
-            if result and state in task_state_map:
-                state_repr = task_state_map[state]
-
-            if state == 'SUCCESS' and exit_code != 0:
-                state_repr = 'FAILURE'
-
+        if state != 'SUCCESS' or exit_code != 0:
             response_dict.update({
                 'csrf_token': get_token(request),
                 'session_key': request.session.session_key,
-                'state': state_repr,
-                'link': link,
-                'report_id': quast_session.report_id,
-                'comment': quast_session.comment,
-                'caption': quast_session.caption,
-                'data_set_name': quast_session.data_set.name if quast_session.data_set else None,
+                'link': qs.link,
+                'report_id': qs.report_id,
+                'comment': qs.comment,
+                'caption': qs.caption,
+                'data_set_name': qs.data_set.name if qs.data_set else None,
                 'email': user_session.get_email() if user_session and
-                         user_session == quast_session.user_session else None,
-                'fnames': [c_f.fname for c_f in quast_session.contigs_files.all()],
+                         user_session == qs.user_session else None,
+                'fnames': [c_f.fname for c_f in qs.contigs_files.all()],
                 'error': error,
+                'state': {
+                    'PENDING': 'PENDING',
+                    'STARTED': 'PENDING',
+                    'FAILURE': 'FAILURE',
+                  }.get(state, 'FAILURE'),
             })
 
-            return render_to_response('waiting-report.html',
-                                      response_dict,
-                                      context_instance=RequestContext(request))
+            return render_to_response('waiting-report.html', response_dict,
+                context_instance=RequestContext(request))
 
-        if request.method == 'POST':
-            # check status of quast session, return result
-            raise Http404()
+        response_dict.update(get_report_response_dict(qs.get_dirpath()))
+        response_dict['comment'] = escape(qs.comment)
+        response_dict['report_id'] = qs.report_id
 
-    else:
-        raise Http404()
+        response_dict['hide_date'] = False
+
+        __set_data_set_info(qs, response_dict)
+
+        __set_title(qs, response_dict)
+
+        __set_downloading(qs, response_dict)
+
+        return render_to_response('assess-report.html', response_dict)
 
 
 def download_report_view(request, link):
@@ -189,75 +200,75 @@ def download_report_view(request, link):
     if not found.exists():
         found = QuastSession.objects.filter(report_id=link)
 
-    if found.exists():
-        quast_session = found[0]
+    if not found.exists():
+        raise Http404()
 
-        # if quast_session.task_id == '1045104510450145' or\
-        #    quast_session.task_id == 1045104510450145:
-        #     # If the celery tasks have lost but we sure that this evaluated successfully
-        #     # If the next time you need to restore tasks already evaluated but the database
-        #     # is lost, put this task id to the quastsession record.
-        #     result = None
-        #     state = 'SUCCESS'
-        # else:
-        result = start_quast.AsyncResult(quast_session.task_id)
-        state = result.state
+    quast_session = found[0]
 
-        if state == 'SUCCESS':
-            res = result.get()
-            if isinstance(res, tuple):
-                exit_code, error = res
-            else:
-                exit_code, error = res, None
+    # if quast_session.task_id == '1045104510450145' or\
+    #    quast_session.task_id == 1045104510450145:
+    #     # If the celery tasks have lost but we sure that this evaluated successfully
+    #     # If the next time you need to restore tasks already evaluated but the database
+    #     # is lost, put this task id to the quastsession record.
+    #     result = None
+    #     state = 'SUCCESS'
+    # else:
+    result = start_quast.AsyncResult(quast_session.task_id)
+    state = result.state
 
-            if exit_code == 0:
-                regular_report_path = os.path.join(quast_session.get_dirpath(),
-                                                   settings.REGULAR_REPORT_DIRNAME)
-                old_regular_report_path = os.path.join(quast_session.get_dirpath(),
-                                                       'regular_report')
+    if state == 'SUCCESS':
+        res = result.get()
+        if isinstance(res, tuple):
+            exit_code, error = res
+        else:
+            exit_code, error = res, None
 
-                if not os.path.exists(regular_report_path):
-                    if os.path.exists(old_regular_report_path):
-                        os.rename(old_regular_report_path, regular_report_path)
-                    else:
-                        logger.warning('quast_app_download_report:'
-                                       ' User tried to download report, '
-                                       'but neither %s nor %s exists' %
-                                       (settings.REGULAR_REPORT_DIRNAME, 'regular_report'))
-                        return Http404()
+        if exit_code == 0:
+            regular_report_path = os.path.join(quast_session.get_dirpath(),
+                                               settings.REGULAR_REPORT_DIRNAME)
+            old_regular_report_path = os.path.join(quast_session.get_dirpath(),
+                                                   'regular_report')
 
-                os.chdir(os.path.join(quast_session.get_dirpath(),
-                                      settings.REGULAR_REPORT_DIRNAME))
+            if not os.path.exists(regular_report_path):
+                if os.path.exists(old_regular_report_path):
+                    os.rename(old_regular_report_path, regular_report_path)
+                else:
+                    logger.warning('quast_app_download_report:'
+                                   ' User tried to download report, '
+                                   'but neither %s nor %s exists' %
+                                   (settings.REGULAR_REPORT_DIRNAME, 'regular_report'))
+                    return Http404()
 
-                report_fpath = settings.HTML_REPORT_FNAME
-                report_aux_dirpath = settings.HTML_REPORT_AUX_DIRNAME
-                zip_fname = quast_session.get_download_name() + '.zip'
+            os.chdir(os.path.join(quast_session.get_dirpath(),
+                                  settings.REGULAR_REPORT_DIRNAME))
 
-                import zipfile, tempfile
-                from django.core.servers.basehttp import FileWrapper
-                temp_file = tempfile.TemporaryFile()
-                zip_file = zipfile.ZipFile(temp_file, 'w', zipfile.ZIP_DEFLATED)
+            report_fpath = settings.HTML_REPORT_FNAME
+            report_aux_dirpath = settings.HTML_REPORT_AUX_DIRNAME
+            zip_fname = quast_session.get_download_name() + '.zip'
 
-                zip_file.write(report_fpath)
+            import zipfile, tempfile
+            from django.core.servers.basehttp import FileWrapper
+            temp_file = tempfile.TemporaryFile()
+            zip_file = zipfile.ZipFile(temp_file, 'w', zipfile.ZIP_DEFLATED)
 
-                def zip_dir(dirpath):
-                    for root, dirs, files in os.walk(dirpath):
-                        for file in files:
-                            zip_file.write(os.path.join(root, file))
-                        for dir in dirs:
-                            zip_dir(dir)
-                zip_dir(report_aux_dirpath)
+            zip_file.write(report_fpath)
 
-                os.chdir('..')
-                zip_dir(settings.REGULAR_REPORT_DIRNAME)
-                zip_file.close()
+            def zip_dir(dirpath):
+                for root, dirs, files in os.walk(dirpath):
+                    for file in files:
+                        zip_file.write(os.path.join(root, file))
+                    for dir in dirs:
+                        zip_dir(dir)
+            zip_dir(report_aux_dirpath)
 
-                wrapper = FileWrapper(temp_file)
-                response = HttpResponse(wrapper, content_type='application/zip')
-                response['Content-Disposition'] = 'attachment; filename=%s' % zip_fname
-                response['X-Sendfile'] = temp_file.tell()
-                temp_file.seek(0)
+            os.chdir('..')
+            zip_dir(settings.REGULAR_REPORT_DIRNAME)
+            zip_file.close()
 
-                return response
+            wrapper = FileWrapper(temp_file)
+            response = HttpResponse(wrapper, content_type='application/zip')
+            response['Content-Disposition'] = 'attachment; filename=%s' % zip_fname
+            response['X-Sendfile'] = temp_file.tell()
+            temp_file.seek(0)
 
-    raise Http404()
+            return response

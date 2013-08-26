@@ -8,6 +8,8 @@
 
 {% block brand-link-class %}disabled{% endblock %}
 
+{% block data_set_info %}<p class='data_set_title'>E.coli, single-cell</p>{% endblock %}
+
 {% block before_report_extra_head %}
     <script src="/static/ajaxuploader/fileuploader.js" xmlns="http://www.w3.org/1999/html"></script>
     <link href="/static/ajaxuploader/fileuploader.css" media="screen" rel="stylesheet" type="text/css"/>
@@ -884,22 +886,12 @@
          {# anchor #}
         <span id="reportexample"></span>
         <h2><a class='dotted-link js' id='report_example_toggle' href="#reportexample" tabindex="14">Report Example</a></h2>
-        <p class='report_outer_object'>E. coli single-cell assemblies.</p>
-        <div id="extended_link" class='report_outer_object'></div>
+        <p class='report_outer_object' style='font-weight: bold;'>E. coli single-cell assemblies</p>
     </div>
-
-{#    <p style="">You can check out a sample report:</p>#}
 {% endblock %}
 
 {% block after_content %}
-{#    <table>#}
-{#        <tr>#}
-{#            <td><a href="e.coli.html"></td>#}
-{#        </tr>#}
-{#    </table>#}
-
     <p>You can also see a <a href='e.coli-single-cell'>comparison of more single-cell assemblers</a> on this data set.</p>
     <p>There an <a href='e.coli-isolate'>assessment of these assemblers</a> working with an isolate data set as well.</p>
-
 {% endblock %}
 

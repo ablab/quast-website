@@ -1,3 +1,5 @@
+from django.http import HttpResponse
+from django.utils.encoding import smart_str
 import os
 import re
 import shutil
@@ -12,7 +14,8 @@ from django.db.models import Q
 import sys
 if not settings.QUAST_DIRPATH in sys.path:
     sys.path.insert(1, settings.QUAST_DIRPATH)
-from libs import qconfig
+from libs import qconfig, qutils
+from libs.qutils import splitext_for_fasta_file
 
 
 import logging
@@ -207,7 +210,8 @@ class UserSession(models.Model):
             return DataSet.objects.filter(Q(user_session=self) | Q(user_session__isnull=True, user__isnull=True))
 
     def get_dataset_set(self):
-        return self.get_all_allowed_dataset_set().exclude(user_session__isnull=True, user_session__user__isnull=True, user__isnull=True)
+        return self.get_all_allowed_dataset_set().exclude(user_session__isnull=True, user_session__user__isnull=True,
+                                                          user__isnull=True)
 
     def __unicode__(self):
         return self.user.__unicode__() if self.user else self.session_key
@@ -231,15 +235,28 @@ class DataSet(models.Model):
 
     dirname = AutoSlugField(populate_from='name')
 
+    @classmethod
+    def get_common_data_sets(cls):
+        return DataSet.objects.filter(user__isnull=True)
+
+    @classmethod
+    def split_seq_ext(cls, fname):
+        return qutils.splitext_for_fasta_file(fname, remove_archive_ext=False)
+
+    @classmethod
+    def split_genes_ext(cls, fname):
+        return os.path.splitext(fname)
+
     def get_dirpath(self, user_dirpath=None):
         if self.user_session:
             # Data set is created by user
-            return self.__get_or_create_dirpath(lambda dirname:
-                os.path.join(user_dirpath or self.user_session.get_dirpath(), 'data_sets', dirname))
+            return self.__get_or_create_dirpath(
+                lambda dirname: os.path.join(user_dirpath or self.user_session.get_dirpath(),
+                                             'data_sets', dirname))
         else:
             # A shared data set
-            return self.__get_or_create_dirpath(lambda dirname:
-                os.path.join(settings.DATA_SETS_ROOT_DIRPATH, dirname))
+            return self.__get_or_create_dirpath(
+                lambda dirname: os.path.join(settings.DATA_SETS_ROOT_DIRPATH, dirname))
 
     def __get_or_create_dirpath(self, get_path_from_name):
         dirpath = get_path_from_name(self.dirname)
@@ -257,6 +274,7 @@ class DataSet(models.Model):
 
     def __unicode__(self):
         return self.name
+
 
 @receiver(pre_delete, sender=DataSet)
 def delete_dataset_callback(sender, **kwargs):
@@ -358,7 +376,7 @@ class QuastSession(models.Model):
         if self.caption is None:
             logger.warn('QuastSession.get_report_link before setting up caption')
         time = self.date.strftime('%d_%b_%Y_%H:%M:%S_%f')
-        self.link = time + slugify('_' + self.caption if self.caption else '')
+        self.link = time + slugify(('_' + self.caption) if self.caption else '')
 
     def get_download_name(self):
         return 'quast_report_' + self.report_id + \

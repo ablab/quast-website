@@ -11,17 +11,11 @@
 {% block extra_extra_head %}
 {% endblock %}
 
-{% block extra_content %}
-    <script>
-        $(function() {
-            $('#subheader').hide();
-        })
-    </script>
-{% endblock %}
-
 {% block genome_info %}
 {#    <h3><a href="http://gage.cbcb.umd.edu/data/Bombus_impatiens/">Data set</a></h3>#}
     <p>
+        <p class='data_set_name'>{{ data_set_name }}</p>
+
         <p>No reference is available at the moment.<br>
         Estimated genome size is 250 Mb (used for NGx statistics).
         </p>

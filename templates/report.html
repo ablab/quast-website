@@ -2,7 +2,11 @@
 
 {% block logo_class %}dark_bg_link{% endblock %}
 
-{% block title %}{{ header }}{% endblock %}
+{% block title %}
+    {% if title|length <= 100 %}{{ title }}
+    {% else %}{{ title|truncatechars:97 }}...
+    {% endif %} | QUAST
+{% endblock %}
 
 {% block extra_head %}
     <link rel="stylesheet" href="/static/report.css"/>
@@ -29,8 +33,8 @@
     {% block before_report_extra_head %}{% endblock %}
 
     <script type="text/javascript">
-        {% if setTitle %}
-            document.title = "{{ header }} | QUAST";
+        {% if title %}
+            document.title ="{% if title|length <= 100 %}{{ title }}{% else %}{{ title|truncatechars:97 }}...{% endif %} | QUAST";
         {% endif %}
 
         $(function() {
@@ -51,41 +55,71 @@
 {% endblock %}
 
 {% block content %}
-{% block extra_content %}{% endblock %}
+
+{% block extra_content %}<br><br>{% endblock %}
 
 <div class='report_outer_object'>
     <div id='header'>
-        <br><br>
-
         <table style='margin: -4px;'>
             <tr>
                 <td style="width: 530px; text-align: left; padding-right: 100px; vertical-align: top;">
                     <h1 id="header_element"
-                        style="{% if header|length > 100 %}
+                        style="{% if caption|length > 100 %}
                                   font-size: 1em; padding-top: 12px;
-                               {% else %}{% if header|length > 50 %}
+                               {% elif caption|length > 50 %}
                                   font-size: 1.5em;
                                {% else %}
                                   font-size: 2em;
-                               {% endif %}{% endif %}">
-                        {% block header %}{% endblock %}
+                               {% endif %}">
+                        {{ caption }}
                     </h1>
-                    {% if dataSetName %}<p id="dataset_name_p">Genome: {{ dataSetName|safe }}</p>{% endif %}
-{#                    {% if comment %}<p id="comment_p">{{ comment|safe }}</p>{% endif %}#}
+
+                    {% if data_set %}
+                    <p id="data_set_p">
+                        <p style="display: none; margin-bottom: -10px;" id="reference_name">Genome:
+                            {% if data_set.reference_ext %}
+                                <a href='{% url download_data_set data_set.id data_set.reference_ext %}'>
+                            {% endif %}
+                                {{ data_set.title|safe }}
+                            {% if data_set.reference_ext %}
+                                </a>
+                            {% endif %}
+                        </p>
+
+                        {# Get filled in build_total_report.js. #}
+                        {# Don't change the formatting: adding line wrapping will add an unnecessary space #}
+                        <span style="display: none;" id="reference_length"><br>
+                            <span class='val'></span><span class='rhs'>&nbsp;</span>bp</span><span style='display: none;'>
+
+                 </span><span style="display: none;" id="reference_gc">,
+                            G+C content: <span class='val'></span><span class='rhs'>&nbsp;</span>%
+                        </span>
+
+                        <span style="display: none;" id="reference_genes"><br>
+                            {% if data_set.genes_ext %}<a href="{% url download_data_set data_set.id 'genes' data_set.genes_ext %}">{% endif %}
+                            <span class='val'></span> genes{% if data_set.genes_ext %}</a>{% endif %}</span><span style='display: none;'>
+
+                 </span><span style="display: none;" id="reference_operons">,
+                            {% if data_set.operons_ext %}<a href="{% url download_data_set data_set.id 'operons' data_set.operons_ext %}">{% endif %}
+                                <span class='val'></span> operons{% if data_set.operons_ext %}</a>{% endif %}
+                        </span>
+                        {################}
+                    </p>
+                    {% endif %}
 
                     {% block genome_info %}{% endblock %}
 
-                    <p id='subheader'></p>
+                    {% if not hide_date %}<p id='report_date'></p>{% endif %}
                 </td>
 
                 {% if download %}
                 <td style="text-align: left; vertical-align: top; white-space: nowrap;">
-                    <a class='btn' style="margin-top: 20px;" id="download_report" href="{{ downloadLink }}">
+                    <a class='btn' style="margin-top: 20px;" id="download_report" href="{{ download_link }}">
                         Download report
                     </a>
                     <p style="text-align: left;">
-                        {% if downloadText %}
-                            {{ downloadText|safe }}
+                        {% if download_text %}
+                            {{ download_text|safe }}
                         {% else %}
                             Text, TSV and Latex versions<br>
                             of the table, plots in PDF.<br>
@@ -99,9 +133,11 @@
             </tr>
         </table>
 
+        {% if download %}
         <br>
         <br>
         <br>
+        {% endif %}
         <br>
         <p id='mincontig'>Loading...</p>
         <div id="extended_link"></div>
@@ -109,7 +145,8 @@
 
     <noscript>
         <div><br><br>
-            Unfortunately, <span style="font-weight: bold">JavaScript</span> in your browser <span style="font-weight: bold">is disabled</span> or is not supported.</br>
+            Unfortunately, <span style="font-weight: bold">JavaScript</span> in your
+            browser <span style="font-weight: bold">is disabled</span> or is not supported.<br>
             We need JavaScript to build report and plots.
         </div>
     </noscript>
@@ -182,7 +219,7 @@
             </div>
 
             <div id="contigs-lengths-json">
-                {{ contigsLenghts }}
+                {{ contigsLengths }}
             </div>
             <div id='aligned-contigs-lengths-json'>
                 {{ alignedContigsLengths }}

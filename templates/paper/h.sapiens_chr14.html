@@ -11,19 +11,13 @@
 {% block extra_extra_head %}
 {% endblock %}
 
-{% block extra_content %}
-    <script>
-        $(function() {
-            $('#subheader').hide();
-        })
-    </script>
-{% endblock %}
-
 {% block genome_info %}
 {#    <h3><a class="header_link" href="http://gage.cbcb.umd.edu/data/Hg_chr14/">Data set</a></h3>#}
     {#        <li><a href="{% url h_sapiens_reference %}">Reference genome</a> downloaded from NCBI (H. sapiens chr. 14 genomic contig, GRCh37.p10)#}
 {#        <li><a href="{% url h_sapiens_genes %}">Genes</a>#}
     <p>
+        <p class='data_set_name'>{{ data_set_name }}</p>
+
         <p>Genome size: 88.3<span class="rhs"> </span>Mbp. The genome is <a href="h.sapiens_chr14_reference.fasta">
             <i>H. sapiens</i> chr. 14 genomic contig, GRCh37.p10</a>
             (taken from <a href="http://www.ncbi.nlm.nih.gov/nuccore/224514933?report=fasta">NCBI<span class="leading_link_dot">.</span></a>)

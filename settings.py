@@ -28,7 +28,7 @@ APP_DIRPATH                 = os.path.join(SOURCE_DIRPATH, 'quast_app')
 FILES_DIRPATH               = os.path.join(APP_DIRPATH, 'files')
 FILES_DOWNLOADS_DIRPATH     = os.path.join(FILES_DIRPATH, 'downloads')
 EXAMPLE_DIRPATH             = os.path.join(FILES_DIRPATH, 'example')
-IDBA_DIRPATH               = os.path.join(FILES_DIRPATH, 'idba')
+IDBA_DIRPATH                = os.path.join(FILES_DIRPATH, 'idba')
 PAPER_DIRPATH               = os.path.join(FILES_DIRPATH, 'paper')
 
 REPORT_LINK_BASE            = '/reports/'

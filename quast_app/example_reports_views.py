@@ -2,10 +2,10 @@ import os
 from django.conf import settings
 from django.http import HttpResponse, Http404
 from django.core.servers.basehttp import FileWrapper
+import mimetypes
 from views_report import get_report_response_dict
 from django.shortcuts import render_to_response
 from django.utils.encoding import smart_str
-import mimetypes
 
 
 download_text = '' +\
@@ -48,12 +48,16 @@ def __spades_2_5_on_gage_b_data_sets__common(download_fname, name, is_scaf=False
     if is_scaf:
         slug += '-scf'
 
-    return common_view(dir_name='spades.2.5-on-gage.b-data-sets/',
-                       header=__spades_2_5_on_gage_b__header_template % name.replace(' ', '&nbsp;') + (' (scaffolds)' if is_scaf else ''),
-                       slug_name=slug, download_fname=download_fname,
-                       html_template_name='common_report', data_set_name=name,
-                       title=__spades_2_5_on_gage_b__title_template % name + (' (scaffolds)' if is_scaf else '')
-                       )
+    return common_view(
+        dir_name='spades.2.5-on-gage.b-data-sets/',
+        header=__spades_2_5_on_gage_b__header_template %
+               name.replace(' ', '&nbsp;') + (' (scaffolds)' if is_scaf else ''),
+        slug_name=slug,
+        download_fname=download_fname,
+        html_template_name='common_report',
+        data_set_name=name,
+        title=__spades_2_5_on_gage_b__title_template %
+              name + (' (scaffolds)' if is_scaf else ''))
 
 
 def spades_2_5_on_gage_b_data_sets(request):
@@ -76,16 +80,8 @@ def spades_2_5_on_gage_b_data_sets__v_cholerae(request, download_fname, is_scaf=
     return __spades_2_5_on_gage_b_data_sets__common(download_fname, 'V. cholerae', is_scaf)
 
 
-# def spades_2_5_on_gage_b_data_sets__b_cereus_scf(request, download_fname):
-#     return common_view(dir_name='spades.2.5-on-gage.b-data-sets/',
-#                        header=spades_2_5_on_gage_b__header_template % 'B.&nbsp;cereus scaffolds',
-#                        slug_name='b.cereus', download_fname=download_fname,
-#                        html_template_name='common_report.html',
-#                        data_set_name='B. cereus',
-#                        title=spades_2_5_on_gage_b__title_template % 'B. cereus scaffolds')
-
-
-def common_view(dir_name, header, slug_name, download_fname, html_template_name=None, data_set_name=None, title=None):
+def common_view(dir_name, header, slug_name, download_fname,
+                html_template_name=None, data_set_name=None, title=None):
     if not html_template_name:
         html_template_name = slug_name
 
@@ -93,17 +89,17 @@ def common_view(dir_name, header, slug_name, download_fname, html_template_name=
         download_fpath = os.path.join(settings.FILES_DOWNLOADS_DIRPATH, download_fname)
 
         if os.path.exists(download_fpath):
-#            if download_fname[-4:] == '.zip':
-#                mimetype = 'application/zip'
-#            else:
-#            mimetype = 'application/force-download'
+          # if download_fname[-4:] == '.zip':
+          #     mimetype = 'application/zip'
+          # else:
+          # mimetype = 'application/force-download'
 
-#            f = FileWrapper(fpath)
-#            response = HttpResponse(mimetype=mimetype)
-#            response['Content-Disposition'] = 'attachment; filename=%s' % download_fname
-#            response['X-Sendfile'] = download_fpath
-#            response['Content-Length'] = 100
-#            return response
+          # f = FileWrapper(fpath)
+          # response = HttpResponse(mimetype=mimetype)
+          # response['Content-Disposition'] = 'attachment; filename=%s' % download_fname
+          # response['X-Sendfile'] = download_fpath
+          # response['Content-Length'] = 100
+          # return response
 
             wrapper = FileWrapper(open(download_fpath, 'r'))
             content_type = mimetypes.guess_type(download_fpath)[0]
@@ -121,19 +117,18 @@ def common_view(dir_name, header, slug_name, download_fname, html_template_name=
         response_dict = settings.TEMPLATE_ARGS_BY_DEFAULT
 
         report_dict = get_report_response_dict(
-            os.path.join(settings.FILES_DIRPATH, dir_name, slug_name),
-            caption=header,
-        )
+            os.path.join(settings.FILES_DIRPATH, dir_name, slug_name))
         response_dict.update(report_dict)
 
-        response_dict['download'] = True
-        response_dict['downloadLink'] = slug_name + '_quast_report.zip'
-        response_dict['downloadText'] = download_text
+        response_dict['header'] = header
+        response_dict['title'] = title
+        response_dict['hide_date'] = True
 
-        if data_set_name:
-            response_dict['dataSetName'] = data_set_name
+        response_dict['download_link'] = slug_name + '_quast_report.zip'
+        response_dict['download_text'] = download_text
 
-        if title:
-            response_dict['title'] = title
+        response_dict['data_set'] = {
+            'title': data_set_name,
+        }
 
         return render_to_response(dir_name + html_template_name + '.html', response_dict)

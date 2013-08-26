@@ -4,7 +4,7 @@ String.prototype.trunc =
     };
 
 function buildTotalReport(assembliesNames, report, order, date, minContig, glossary, qualities, mainMetrics) {
-    $('#subheader').html('<p>' + date + '</p>');
+    $('#report_date').html('<p>' + date + '</p>');
     $('#mincontig').html('<p>All statistics are based on contigs of size >= ' + minContig +
         '<span class="rhs">&nbsp;</span>bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs.)</p>');
 
@@ -51,14 +51,16 @@ function buildTotalReport(assembliesNames, report, order, date, minContig, gloss
             var refGenes = referenceValues['Reference genes'];
             var refOperons = referenceValues['Reference operons'];
 
+            $('#reference_name').show();
+
             if (refLen)
-                $('#dataset_name_p').append('<br>' + toPrettyString(refLen, 'bp'));
+                $('#reference_length').show().find('.val').html(toPrettyString(refLen));
             if (refGC)
-                $('#dataset_name_p').append('<br>' + toPrettyString(refGC) + ' % GC');
+                $('#reference_gc').show().find('.val').html(toPrettyString(refGC));
             if (refGenes)
-                $('#dataset_name_p').append('<br>' + toPrettyString(refGenes) + ' genes');
+                $('#reference_genes').show().find('.val').html(toPrettyString(refGenes));
             if (refOperons)
-                $('#dataset_name_p').append('<br>' + toPrettyString(refOperons) + ' operons');
+                $('#reference_operons').show().find('.val').html(toPrettyString(refOperons));
 
             continue;
         }

@@ -63,6 +63,11 @@ urlpatterns = patterns('',
     url(r'^report/(?P<link>.+)/?$', 'quast_app.views.report'),
     url(r'^reports/(?P<link>.+)/?$', 'quast_app.views.report'),
 
+    url(r'^data-sets/(?P<data_set_id>.+)_(?P<what>.+)(?P<file_ext>\..+)$',
+        views.download_data_set, name='download_data_set'),
+    url(r'^data-sets/(?P<data_set_id>.+)(?P<file_ext>\..+)$',
+        views.download_data_set, {'what': 'reference'}, name='download_data_set'),
+
     url(r'^reorder-report-columns$', 'quast_app.views.reorder_report_columns_ajax'),
 
     url(r'^404', 'django.views.generic.simple.direct_to_template', {'template': '404.html'}),

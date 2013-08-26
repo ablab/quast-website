@@ -158,12 +158,11 @@ def index_view(us, response_dict, request):
     request.session['after_evaluation'] = False
 
     # EXAMPLE
-    response_dict.update(get_report_response_dict(
-        settings.EXAMPLE_DIRPATH,
-        caption='Example',
-        comment='',
-        data_set_name='E.coli, single-cell',
-        link=''))
+    response_dict.update(get_report_response_dict(settings.EXAMPLE_DIRPATH))
+    response_dict['hide_date'] = True
+    response_dict['data_set'] = {
+        'title': 'E. coli, single-cell',
+    }
 
     return render_to_response(
         'index.html',
@@ -176,7 +175,7 @@ def get_data_set(request, data_set_form, user_session, default_name):
         name = data_set_form.data['name_created']
 
         def init_folders(data_set):
-            data_set_dirpath = data_set.get_dirpath() #, posted_file.name)
+            data_set_dirpath = data_set.get_dirpath()  #, posted_file.name)
             os.makedirs(data_set_dirpath)
 
             for kind in ['reference', 'genes', 'operons']:

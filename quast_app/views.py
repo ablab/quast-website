@@ -7,12 +7,14 @@ from django.http import HttpResponse, HttpResponseNotFound, HttpResponseBadReque
 from django.shortcuts import render_to_response
 from upload_backend import ContigsUploadBackend, ReferenceUploadBackend, GenesUploadBackend, OperonsUploadBackend
 from django.conf import settings
+from django.core.servers.basehttp import FileWrapper
+import mimetypes
 
 from views_report import get_report_response_dict, report_view, download_report_view
 from views_reports import reports_view
 from views_index import index_view
 
-from models import UserSession, QuastSession
+from models import UserSession, QuastSession, DataSet
 from create_session import get_or_create_session, get_session
 
 import logging
@@ -42,34 +44,30 @@ def bib(request):
         return HttpResponse(f.read(), content_type='text/plain')
 
 
-def example(request):
-    report_response_dict = get_report_response_dict(
-        settings.EXAMPLE_DIRPATH,
-        caption='Example',
-        data_set_name='E. coli',
-    )
-    response_dict = dict(report_response_dict.items() + settings.TEMPLATE_ARGS_BY_DEFAULT.items())
-    return render_to_response('example.html', response_dict)
-
-
 def benchmarking(request):
     return render_to_response('benchmarking.html', settings.TEMPLATE_ARGS_BY_DEFAULT)
 
 
-def idba(request):
-    json_dirpath = os.path.join(settings.IDBA_DIRPATH)
-
+def example(request):
     response_dict = settings.TEMPLATE_ARGS_BY_DEFAULT
+    response_dict.update(get_report_response_dict(settings.EXAMPLE_DIRPATH))
+    response_dict['title'] = response_dict['caption'] = 'Sample report'
+    response_dict['hide_date'] = True
+    response_dict['data_set'] = {
+        'title': 'E. coli, single-cell',
+    }
+    return render_to_response('report.html', response_dict)
 
-    report_dict = get_report_response_dict(
-        json_dirpath,
-        caption='SPAdes - IDBA collaboration',
-        comment='',
-        data_set_name='E. coli',
-        link='')
 
-    response_dict.update(report_dict)
-    return render_to_response('ecoli.html', response_dict)
+def idba(request):
+    response_dict = settings.TEMPLATE_ARGS_BY_DEFAULT
+    response_dict.update(get_report_response_dict(os.path.join(settings.IDBA_DIRPATH)))
+
+    response_dict['hide_date'] = True
+    response_dict['data_set'] = {
+        'title': 'E. coli, single-cell',
+    }
+    return render_to_response('idba.html', response_dict)
 
 
 def index(request):
@@ -84,6 +82,51 @@ def report(request, link):
 
 def download_report(request, link):
     return download_report_view(request, link)
+
+
+def download_data_set(request, data_set_id, what, file_ext):
+    us = get_session(request)
+    data_sets = DataSet.get_common_data_sets() if us is None else us.get_all_allowed_dataset_set()
+
+    if what == 'reference':
+        data_set_id, file_ext = DataSet.split_seq_ext(data_set_id + file_ext)
+
+    try:
+        ds = data_sets.get(dirname=data_set_id)
+    except DataSet.DoesNotExist:
+        return HttpResponseNotFound('Data set %s was not found' % data_set_id)
+
+    if what == 'reference':
+        fpath = os.path.join(ds.get_dirpath(), ds.reference_fname)
+        if DataSet.split_seq_ext(fpath)[1] != file_ext:
+            return HttpResponseNotFound()
+
+        return __download(fpath, data_set_id + file_ext)
+
+    else:
+        if what == 'genes':
+            fpath = os.path.join(ds.get_dirpath(), ds.genes_fname)
+        elif what == 'operons':
+            fpath = os.path.join(ds.get_dirpath(), ds.operons_fname)
+        else:
+            return HttpResponseNotFound()
+
+        if DataSet.split_genes_ext(fpath)[1] != file_ext:
+            return HttpResponseNotFound()
+
+        return __download(fpath, data_set_id + '_' + what + file_ext)
+
+
+def __download(src_fpath, dist_fname):
+    if not os.path.isfile(src_fpath):
+        return HttpResponseNotFound()
+
+    wrapper = FileWrapper(open(src_fpath, 'r'))
+    response = HttpResponse(wrapper, content_type='application/x-download')
+    response['Content-Length'] = os.path.getsize(src_fpath)
+    response['Content-Disposition'] = 'attachment; ' \
+                                      'filename=' + dist_fname or os.path.basename(src_fpath)
+    return response
 
 
 def reports(request):

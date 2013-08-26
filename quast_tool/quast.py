@@ -352,7 +352,7 @@ def get_label_from_par_dir(contigs_fpath):
 
 def get_label_from_par_dir_and_fname(contigs_fpath):
     abspath = os.path.abspath(contigs_fpath)
-    name = qutils.rm_extentions_for_fasta_file(os.path.basename(contigs_fpath))
+    name = qutils.rm_extensions_for_fasta_file(os.path.basename(contigs_fpath))
     label = os.path.basename(os.path.dirname(abspath)) + '_' + name
     return label
 
@@ -398,7 +398,7 @@ def process_labels(contigs_fpaths, labels, all_labels_from_dirs):
     # 3. otherwise, labels from fnames
     else:
         # labels from fname
-        labels = [qutils.rm_extentions_for_fasta_file(os.path.basename(fpath)) for fpath in contigs_fpaths]
+        labels = [qutils.rm_extensions_for_fasta_file(os.path.basename(fpath)) for fpath in contigs_fpaths]
 
         for duplicated_label in get_duplicated(labels):
             for i, (label, fpath) in enumerate(zip(labels, contigs_fpaths)):
