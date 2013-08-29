@@ -89,8 +89,8 @@ def __set_data_set_info(qs, response_dict):
             'title': data_set_title,
             'id': qs.data_set.dirname,
             'reference_ext': DataSet.split_seq_ext(qs.data_set.reference_fname)[1],
-            'genes_ext': DataSet.split_genes_ext(qs.data_set.genes_fname)[1],
-            'operons_ext': DataSet.split_genes_ext(qs.data_set.operons_fname)[1],
+            'genes_ext': DataSet.split_genes_ext(qs.data_set.genes_fname)[1] if qs.data_set.genes_fname else None,
+            'operons_ext': DataSet.split_genes_ext(qs.data_set.operons_fname)[1] if qs.data_set.operons_fname else None,
         }
 
 

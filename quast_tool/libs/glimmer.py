@@ -128,7 +128,7 @@ def do(contigs_fpaths, gene_lengths, out_dirpath):
 
     if not os.path.isfile(tool_exec_fpath):
         # making
-        logger.info("Compiling GlimmerHMM...")
+        logger.info('Compiling GlimmerHMM...')
         try:
             subprocess.call(
                 ['make', '-C', tool_src_dirpath],

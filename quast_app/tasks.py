@@ -85,7 +85,7 @@ def start_quast((args, quast_session, user_session)):
 
         exit_code = os.system(' '.join(args))
 
-    except Exception as e:
+    except Exception, e:
         trace_back = traceback.format_exc()
         add_to_end = '\n' + \
                      '\n\nUser email: ' + str(user_email) + \
