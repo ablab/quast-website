@@ -38,8 +38,8 @@ def e_coli_mc(request, download_fname):
     return common_view('', 'E. coli, isolate', 'e.coli-isolate', download_fname)
 
 
-__spades_2_5_on_gage_b__header_template = '%s MiSeq SPAdes&nbsp;2.5 assemblies'
-__spades_2_5_on_gage_b__title_template = __spades_2_5_on_gage_b__header_template
+__spades_2_5_on_gage_b__caption_template = '%s MiSeq SPAdes&nbsp;2.5 assemblies'
+__spades_2_5_on_gage_b__title_template = __spades_2_5_on_gage_b__caption_template
 
 
 def __spades_2_5_on_gage_b_data_sets__common(download_fname, name, is_scaf=False):
@@ -50,7 +50,7 @@ def __spades_2_5_on_gage_b_data_sets__common(download_fname, name, is_scaf=False
 
     return common_view(
         dir_name='spades.2.5-on-gage.b-data-sets/',
-        header=__spades_2_5_on_gage_b__header_template %
+        caption=__spades_2_5_on_gage_b__caption_template %
                name.replace(' ', '&nbsp;') + (' (scaffolds)' if is_scaf else ''),
         slug_name=slug,
         download_fname=download_fname,
@@ -80,7 +80,7 @@ def spades_2_5_on_gage_b_data_sets__v_cholerae(request, download_fname, is_scaf=
     return __spades_2_5_on_gage_b_data_sets__common(download_fname, 'V. cholerae', is_scaf)
 
 
-def common_view(dir_name, header, slug_name, download_fname,
+def common_view(dir_name, caption, slug_name, download_fname,
                 html_template_name=None, data_set_name=None, title=None):
     if not html_template_name:
         html_template_name = slug_name
@@ -114,13 +114,13 @@ def common_view(dir_name, header, slug_name, download_fname,
             raise Http404('File %s does not exist' % download_fname)
 
     else:
-        response_dict = settings.TEMPLATE_ARGS_BY_DEFAULT
+        response_dict = dict(settings.TEMPLATE_ARGS_BY_DEFAULT)
 
         report_dict = get_report_response_dict(
             os.path.join(settings.FILES_DIRPATH, dir_name, slug_name))
         response_dict.update(report_dict)
 
-        response_dict['header'] = header
+        response_dict['caption'] = caption
         response_dict['title'] = title
         response_dict['hide_date'] = True
 

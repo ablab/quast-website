@@ -71,7 +71,7 @@
                                {% else %}
                                   font-size: 2em;
                                {% endif %}">
-                        {{ caption }}
+                        {{ caption|safe }}
                     </h1>
 
                     {% if data_set %}

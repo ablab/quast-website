@@ -45,11 +45,11 @@ def bib(request):
 
 
 def benchmarking(request):
-    return render_to_response('benchmarking.html', settings.TEMPLATE_ARGS_BY_DEFAULT)
+    return render_to_response('benchmarking.html', dict(settings.TEMPLATE_ARGS_BY_DEFAULT))
 
 
 def example(request):
-    response_dict = settings.TEMPLATE_ARGS_BY_DEFAULT
+    response_dict = dict(settings.TEMPLATE_ARGS_BY_DEFAULT)
     response_dict.update(get_report_response_dict(settings.EXAMPLE_DIRPATH))
     response_dict['title'] = response_dict['caption'] = 'Sample report'
     response_dict['hide_date'] = True
@@ -60,7 +60,7 @@ def example(request):
 
 
 def idba(request):
-    response_dict = settings.TEMPLATE_ARGS_BY_DEFAULT
+    response_dict = dict(settings.TEMPLATE_ARGS_BY_DEFAULT)
     response_dict.update(get_report_response_dict(os.path.join(settings.IDBA_DIRPATH)))
 
     response_dict['hide_date'] = True
@@ -72,12 +72,12 @@ def idba(request):
 
 def index(request):
     user_session = get_or_create_session(request, 'index')
-    return index_view(user_session, settings.TEMPLATE_ARGS_BY_DEFAULT, request)
+    return index_view(user_session, dict(settings.TEMPLATE_ARGS_BY_DEFAULT), request)
 
 
 def report(request, link):
     user_session = get_session(request)
-    return report_view(user_session, settings.TEMPLATE_ARGS_BY_DEFAULT, request, link)
+    return report_view(user_session, dict(settings.TEMPLATE_ARGS_BY_DEFAULT), request, link)
 
 
 def download_report(request, link):
@@ -131,7 +131,7 @@ def __download(src_fpath, dist_fname):
 
 def reports(request):
     user_session = get_or_create_session(request, 'reports')
-    return reports_view(user_session, settings.TEMPLATE_ARGS_BY_DEFAULT, request)
+    return reports_view(user_session, dict(settings.TEMPLATE_ARGS_BY_DEFAULT), request)
 
 
 def reorder_report_columns_ajax(request):
