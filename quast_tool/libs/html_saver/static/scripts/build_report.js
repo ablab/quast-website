@@ -119,8 +119,10 @@ function buildReport() {
             );
         }
 
+        $(scalePlaceholder).html('');
+
         drawPlot(name, title, colors, assembliesNames, data, refPlotValue,
-            plotPlaceholder, legendPlaceholder, glossary, order);
+            plotPlaceholder, legendPlaceholder, glossary, order, scalePlaceholder);
     }
 
     var firstPlot = true;
