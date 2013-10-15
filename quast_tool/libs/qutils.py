@@ -113,7 +113,7 @@ def rm_extentions_for_fasta_file(fname):
     return splitext_for_fasta_file(fname)[0]
 
 
-def splitext_for_fasta_file(fname):
+def splitext_for_fasta_file(fname, remove_archive_ext=True):
     # "contigs.fasta", ".gz"
     basename_plus_innerext, outer_ext = os.path.splitext(fname)
 
@@ -125,7 +125,10 @@ def splitext_for_fasta_file(fname):
     if fasta_ext not in ['.fa', '.fasta', '.fas', '.seq', '.fna']:
         basename, fasta_ext = basename_plus_innerext, ''  # not a supported extention, or no extention
 
-    return basename, fasta_ext
+    if remove_archive_ext:
+        return basename, fasta_ext
+    else:
+        return basename, fasta_ext + outer_ext
 
 
 def name_from_fpath(fpath):

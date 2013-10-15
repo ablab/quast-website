@@ -496,3 +496,4 @@ def histogram(contigs_fpaths, values, plot_fpath, title='', all_pdf=None, yaxis_
 
     if plots_file_ext == '.pdf' and all_pdf:
         matplotlib.pyplot.savefig(all_pdf, format='pdf')
+

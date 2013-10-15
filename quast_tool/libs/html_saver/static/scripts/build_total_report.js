@@ -46,11 +46,15 @@ function buildTotalReport(assembliesNames, report, order, date, minContig, gloss
                 var value = metric.values[0];
                 referenceValues[metricName] = value;
             }
+            var refName = referenceValues['Reference name'];
             var refLen = referenceValues['Reference length'];
             var refGC = referenceValues['Reference GC (%)'];
             var refGenes = referenceValues['Reference genes'];
             var refOperons = referenceValues['Reference operons'];
 
+            if (refName) {
+                $('#reference_name').find('.val').html(refName);
+            }
             $('#reference_name').show();
 
             if (refLen)
