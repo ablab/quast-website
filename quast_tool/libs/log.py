@@ -28,23 +28,28 @@ class QLogger(object):
     _log_fpath = ''
     _start_time = None
     _indent_val = 0
+    _err_fpath = None
 
     def __init__(self, name):
         self._name = name
         self._logger = logging.getLogger(name)
         self._logger.setLevel(logging.DEBUG)
 
-    def set_up_console_handler(self, debug=True, indent_val=0):
+    def set_up_console_handler(self, indent_val=0, level=logging.INFO):
         self._indent_val = indent_val
 
         for handler in self._logger.handlers:
             if isinstance(handler, logging.StreamHandler):
                 self._logger.removeHandler(handler)
 
-        console_handler = logging.StreamHandler(sys.stdout, )
+        console_handler = logging.StreamHandler(sys.stdout)
         console_handler.setFormatter(logging.Formatter(indent_val * '  ' + '%(message)s'))
-        console_handler.setLevel(logging.DEBUG if debug else logging.INFO)
+        console_handler.setLevel(level)
         self._logger.addHandler(console_handler)
+
+    def set_up_debug_level(self):
+        for handler in self._logger.handlers:
+            handler.setLevel(logging.DEBUG)
 
     def set_up_file_handler(self, output_dirpath):
         for handler in self._logger.handlers:
@@ -66,10 +71,12 @@ class QLogger(object):
 
         self._start_time = self.print_timestamp('Started: ')
         self._logger.info('')
-        self._logger.info('Logging to ' + self._log_fpath)
+        from libs.qutils import relpath
+        self._logger.info('Logging to ' + relpath(self._log_fpath))
 
     def finish_up(self):
-        self._logger.info('  Log saved to ' + self._log_fpath)
+        from libs.qutils import relpath
+        self._logger.info('Log saved to ' + relpath(self._log_fpath))
 
         finish_time = self.print_timestamp('Finished: ')
         self._logger.info('Elapsed time: ' + str(finish_time - self._start_time))
@@ -105,11 +112,16 @@ class QLogger(object):
     def warning(self, message='', indent=''):
         self._logger.warning(indent + ('WARNING: ' + str(message) if message else ''))
 
-    def error(self, message='', exit_with_code=0, to_stderr=False, indent='', fake_if_nested_run=False):
+    def error(self, message='', exit_with_code=0, to_stderr=False,
+              indent='', fake_if_nested_run=False):
         if fake_if_nested_run and self._indent_val > 0:
             self.notice('')
             self.notice(message)
             return
+
+        if qconfig.save_error and self._err_fpath:
+            with open(self._err_fpath, 'a') as err_f:
+                err_f.write(str(message))
 
         if message:
             msg = indent + 'ERROR! ' + str(message)
@@ -126,6 +138,9 @@ class QLogger(object):
         if exit_with_code:
             exit(exit_with_code)
 
+    def set_err_fpath(self, fpath):
+        self._err_fpath = fpath
+
     def exception(self, e, exit_code=1):
         if self._logger.handlers:
             self._logger.error('')
@@ -136,12 +151,31 @@ class QLogger(object):
 
         exit(exit_code)
 
-    def print_command_line(self, program_name, args):
+    def print_command_line(self, args, indent='',
+                           wrap_after=80, only_if_debug=False):
+        text = ''
+        line = indent
+
         for i, arg in enumerate(args):
             if ' ' in arg or '\t' in arg:
                 args[i] = "'" + arg + "'"
 
-        self.info(' '.join([program_name] + args))
+            line += arg
+
+            if i == len(args) - 1:
+                text += line + '\n'
+
+            elif wrap_after is not None and len(line) > wrap_after:
+                text += line + ' \\\n'
+                line = ' ' * len(indent)
+
+            else:
+                line += ' '
+
+        if only_if_debug:
+            self.debug(text)
+        else:
+            self.info(text)
 
     def print_timestamp(self, message=''):
         now = datetime.now()
@@ -183,5 +217,3 @@ class QLogger(object):
             self._logger.info("  CPUs number: " + str(multiprocessing.cpu_count()))
         except:
             self._logger.info("  Problem occurred when getting system information")
-
-

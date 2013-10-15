@@ -11,7 +11,6 @@ import platform
 LIBS_LOCATION = os.path.abspath(os.path.dirname(os.path.realpath(__file__)))
 
 LOGGER_DEFAULT_NAME = 'quast'
-# error_log_fpath = os.path.join(LIBS_LOCATION, '..', 'error.log')
 
 if platform.system() == 'Darwin':
     platform_name = 'macosx'
@@ -27,7 +26,7 @@ MAX_REFERENCE_LENGTH = 536870908  # Nucmer's max length of a reference file
 splitted_ref = []
 
 # available options
-long_options = "output-dir= save-json-to= genes= operons= reference= contig-thresholds= min-contig= "\
+long_options = "output-dir= err-fpath= save-json-to= genes= operons= reference= contig-thresholds= min-contig= "\
                "gene-thresholds= save-json gage eukaryote no-plots no-html help debug "\
                "ambiguity-usage= scaffolds threads= mincluster= est-ref-size= use-all-alignments gene-finding "\
                "strict-NA meta labels= test".split()
@@ -37,9 +36,6 @@ short_options = "o:G:O:R:t:M:S:J:jehdsa:T:c:ufnml:L"
 contig_thresholds = "0,1000"
 min_contig = 500
 genes_lengths = "0,300,1500,3000"
-ref_fpath = ''
-genes = ''
-operons = ''
 with_gage = False
 prokaryote = True  # former cyclic
 gene_finding = False
@@ -56,6 +52,8 @@ save_json = False
 meta = False
 debug = False
 
+error_log_fname = 'error.log'
+save_error = False
 
 default_results_root_dirname = "quast_results"
 output_dirname = "results_" + datetime.datetime.now().strftime('%Y_%m_%d_%H_%M_%S')

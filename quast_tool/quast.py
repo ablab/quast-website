@@ -6,25 +6,29 @@
 # See file LICENSE for details.
 ############################################################################
 
-RELEASE_MODE = False
+try:
+    eval('1 if True else 2')
+except SyntaxError:
+    raise ImportError('To run QUAST, Python 2.5 or greater is required.')
 
 import sys
 import os
 import shutil
-import re
 import getopt
-from site import addsitedir
-from libs import qconfig, qutils
+import re
+from libs import qconfig, qutils, fastaparser
+from libs.qutils import assert_file_exists
+from libs.html_saver import json_saver
 
 from libs.log import get_logger
 logger = get_logger(qconfig.LOGGER_DEFAULT_NAME)
-logger.set_up_console_handler(debug=not RELEASE_MODE)
+logger.set_up_console_handler()
+import logging
 
-from libs.qutils import assert_file_exists
-from libs import fastaparser
-from libs.html_saver import json_saver
+quast_dirpath = os.path.abspath(os.path.dirname(os.path.realpath(__file__)))
 
-addsitedir(os.path.join(qconfig.LIBS_LOCATION, 'site_packages'))
+from site import addsitedir
+addsitedir(os.path.join(quast_dirpath, 'libs', 'site_packages'))
 
 
 def _usage():
@@ -35,7 +39,7 @@ def _usage():
     print >> sys.stderr, 'Usage: python', sys.argv[0], '[options] <files_with_contigs>'
     print >> sys.stderr, ""
 
-    if RELEASE_MODE:
+    if not qconfig.debug:
         print >> sys.stderr, "Options:"
         print >> sys.stderr, "-o  --output-dir  <dirname>   Directory to store all result files [default: quast_results/results_<datetime>]"
         print >> sys.stderr, "-R                <filename>  Reference genome file"
@@ -85,6 +89,7 @@ def _usage():
         print >> sys.stderr, "-c  --mincluster   <int>              Nucmer's parameter: the minimum length of a cluster of matches [default: %s]" % qconfig.mincluster
         print >> sys.stderr, "    --est-ref-size <int>              Estimated reference size (for computing NGx metrics without a reference)"
         print >> sys.stderr, "-J  --save-json-to <path>             Save the JSON output to a particular path"
+        print >> sys.stderr, "    --err-fpath <path>"
         print >> sys.stderr, ""
         print >> sys.stderr, "Flags"
         print >> sys.stderr, "-f  --gene-finding        Predict genes (with GeneMarkS from prokaryotes (default), GlimmerHMM"
@@ -102,7 +107,6 @@ def _usage():
         print >> sys.stderr, "-d  --debug               Run in a debug mode"
         print >> sys.stderr, "    --test                Run QUAST on the data from the test_data folder, output to test_output"
         print >> sys.stderr, "-h  --help                Print this message"
-
 
 
 def _set_up_output_dir(output_dirpath, json_outputpath,
@@ -352,7 +356,7 @@ def get_label_from_par_dir(contigs_fpath):
 
 def get_label_from_par_dir_and_fname(contigs_fpath):
     abspath = os.path.abspath(contigs_fpath)
-    name = qutils.rm_extensions_for_fasta_file(os.path.basename(contigs_fpath))
+    name = qutils.rm_extentions_for_fasta_file(os.path.basename(contigs_fpath))
     label = os.path.basename(os.path.dirname(abspath)) + '_' + name
     return label
 
@@ -398,7 +402,7 @@ def process_labels(contigs_fpaths, labels, all_labels_from_dirs):
     # 3. otherwise, labels from fnames
     else:
         # labels from fname
-        labels = [qutils.rm_extensions_for_fasta_file(os.path.basename(fpath)) for fpath in contigs_fpaths]
+        labels = [qutils.rm_extentions_for_fasta_file(os.path.basename(fpath)) for fpath in contigs_fpaths]
 
         for duplicated_label in get_duplicated(labels):
             for i, (label, fpath) in enumerate(zip(labels, contigs_fpaths)):
@@ -417,17 +421,13 @@ def process_labels(contigs_fpaths, labels, all_labels_from_dirs):
 
 
 def main(args):
-    quast_dirpath = os.path.dirname(qconfig.LIBS_LOCATION)
     if ' ' in quast_dirpath:
-        logger.error('QUAST does not support spaces in paths. \n' + \
-              'You are trying to run it from ' + str(quast_dirpath) + '\n' + \
-              'Please, put QUAST in a different directory, then try again.\n',
-              to_stderr=True,
-              exit_with_code=3)
+        logger.error('QUAST does not support spaces in paths. \n'
+                     'You are trying to run it from ' + str(quast_dirpath) + '\n'
+                     'Please, put QUAST in a different directory, then try again.\n',
+                     to_stderr=True,
+                     exit_with_code=3)
 
-    ######################
-    ### ARGS
-    ######################
     reload(qconfig)
 
     try:
@@ -438,14 +438,19 @@ def main(args):
         _usage()
         sys.exit(2)
 
-    for opt, arg in options:
+    for opt, arg in options[:]:
+        if opt in ('-d', '--debug'):
+            options.remove((opt, arg))
+            qconfig.debug = True
+            logger.set_up_console_handler(level=logging.DEBUG)
+
         if opt == '--test':
-            main([os.path.join(quast_dirpath, 'test_data/contigs_1.fasta'),
-                  os.path.join(quast_dirpath, 'test_data/contigs_2.fasta'),
-                  '-R', os.path.join(quast_dirpath, 'test_data/reference.fasta.gz'),
-                  '-O', os.path.join(quast_dirpath, 'test_data/operons.gff'),
-                  '-G', os.path.join(quast_dirpath, 'test_data/genes.gff')])
-            sys.exit(0)
+            options.remove((opt, arg))
+            options += [('-R', 'test_data/reference.fasta.gz'),
+                        ('-O', 'test_data/operons.gff'),
+                        ('-G', 'test_data/genes.gff')]
+            contigs_fpaths += ['test_data/contigs_1.fasta',
+                               'test_data/contigs_2.fasta']
 
     if not contigs_fpaths:
         _usage()
@@ -457,20 +462,28 @@ def main(args):
     labels = None
     all_labels_from_dirs = False
 
+    ref_fpath = ''
+    genes_fpaths = []
+    operons_fpaths = []
+
+    # Yes, this is a code duplicating. But OptionParser is deprecated since version 2.7.
     for opt, arg in options:
-        # Yes, this is a code duplicating. But OptionParser is deprecated since version 2.7.
         if opt in ('-o', "--output-dir"):
             output_dirpath = os.path.abspath(arg)
             qconfig.make_latest_symlink = False
 
+        elif opt == '--err-fpath':
+            qconfig.save_error = True
+            qconfig.error_log_fname = arg
+
         elif opt in ('-G', "--genes"):
-            qconfig.genes = assert_file_exists(arg, 'genes')
+            genes_fpaths.append(assert_file_exists(arg, 'genes'))
 
         elif opt in ('-O', "--operons"):
-            qconfig.operons = assert_file_exists(arg, 'operons')
+            operons_fpaths.append(assert_file_exists(arg, 'operons'))
 
         elif opt in ('-R', "--reference"):
-            qconfig.ref_fpath = assert_file_exists(arg, 'reference')
+            ref_fpath = assert_file_exists(arg, 'reference')
 
         elif opt in ('-t', "--contig-thresholds"):
             qconfig.contig_thresholds = arg
@@ -531,10 +544,6 @@ def main(args):
         elif opt in ('-m', '--meta'):
             qconfig.meta = True
 
-        elif opt in ('-d', '--debug'):
-            qconfig.debug = True
-            RELEASE_MODE = False
-
         elif opt in ('-l', '--labels'):
             labels = parse_labels(arg, contigs_fpaths)
 
@@ -556,10 +565,12 @@ def main(args):
     output_dirpath, json_output_dirpath, existing_alignments = \
         _set_up_output_dir(output_dirpath, json_output_dirpath, qconfig.make_latest_symlink, qconfig.min_contig)
 
+    logger.set_err_fpath(os.path.join(output_dirpath, qconfig.error_log_fname))
+
     corrected_dirpath = os.path.join(output_dirpath, qconfig.corrected_dirname)
 
     logger.set_up_file_handler(output_dirpath)
-    logger.info(' '.join([os.path.realpath(__file__)] + args))
+    logger.print_command_line([os.path.realpath(__file__)] + args, wrap_after=None)
     logger.start()
 
     if existing_alignments:
@@ -567,9 +578,14 @@ def main(args):
         logger.notice("Output directory already exists. Existing Nucmer alignments can be used.")
         qutils.remove_reports(output_dirpath)
 
-    qconfig.contig_thresholds = map(int, qconfig.contig_thresholds.split(","))
-
-    qconfig.genes_lengths = map(int, qconfig.genes_lengths.split(","))
+    if qconfig.contig_thresholds == "None":
+        qconfig.contig_thresholds = []
+    else:
+        qconfig.contig_thresholds = map(int, qconfig.contig_thresholds.split(","))
+    if qconfig.genes_lengths == "None":
+        qconfig.genes_lengths = []
+    else:
+        qconfig.genes_lengths = map(int, qconfig.genes_lengths.split(","))
 
     # Threading
     if qconfig.max_threads is None:
@@ -593,10 +609,10 @@ def main(args):
     os.mkdir(corrected_dirpath)
 
     # PROCESSING REFERENCE
-    if qconfig.ref_fpath:
+    if ref_fpath:
         logger.info()
         logger.info('Reference:')
-        ref_fpath = _correct_reference(qconfig.ref_fpath, corrected_dirpath)
+        ref_fpath = _correct_reference(ref_fpath, corrected_dirpath)
     else:
         ref_fpath = ''
 
@@ -675,7 +691,7 @@ def main(args):
         from libs import genome_analyzer
         genome_size = genome_analyzer.do(
             ref_fpath, aligned_contigs_fpaths, all_pdf_file, qconfig.draw_plots, output_dirpath, json_output_dirpath,
-            qconfig.genes, qconfig.operons, detailed_contigs_reports_dirpath, os.path.join(output_dirpath, 'genome_stats'))
+            genes_fpaths, operons_fpaths, detailed_contigs_reports_dirpath, os.path.join(output_dirpath, 'genome_stats'))
 
         if qconfig.draw_plots:
             ########################################################################
@@ -740,8 +756,8 @@ def main(args):
     if contig_alignment_plot_fpath:
         logger.info('  Contig alignment plot: %s' % contig_alignment_plot_fpath)
 
-    # if RELEASE_MODE:
-    _cleanup(corrected_dirpath)
+    if not qconfig.debug:
+        _cleanup(corrected_dirpath)
 
     logger.finish_up()
 

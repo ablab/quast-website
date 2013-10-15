@@ -333,6 +333,10 @@ def assess_with_quast(us, qs, contigs_paths,
             args.append('-o')
             args.append(quote(os.path.join(res_dirpath, settings.REGULAR_REPORT_DIRNAME)))
 
+            args.append('--err-fpath')
+            args.append(os.path.join(res_dirpath, settings.ERROR_LOG_FNAME))
+
+
             from tasks import start_quast
             # tasks.start_quast((args, quast_session))
             result = start_quast.delay((args, qs, us))

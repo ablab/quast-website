@@ -109,11 +109,11 @@ def unique_corrected_fpath(fpath):
     return os.path.join(dirpath, corr_fname)
 
 
-def rm_extensions_for_fasta_file(fname):
+def rm_extentions_for_fasta_file(fname):
     return splitext_for_fasta_file(fname)[0]
 
 
-def splitext_for_fasta_file(fname, remove_archive_ext=True):
+def splitext_for_fasta_file(fname):
     # "contigs.fasta", ".gz"
     basename_plus_innerext, outer_ext = os.path.splitext(fname)
 
@@ -123,12 +123,9 @@ def splitext_for_fasta_file(fname, remove_archive_ext=True):
     # "contigs", ".fasta"
     basename, fasta_ext = os.path.splitext(basename_plus_innerext)
     if fasta_ext not in ['.fa', '.fasta', '.fas', '.seq', '.fna']:
-        basename, fasta_ext = basename_plus_innerext, ''  # not a supported extension, or no extension
+        basename, fasta_ext = basename_plus_innerext, ''  # not a supported extention, or no extention
 
-    if remove_archive_ext:
-        return basename, fasta_ext
-    else:
-        return basename, fasta_ext + outer_ext
+    return basename, fasta_ext
 
 
 def name_from_fpath(fpath):
@@ -139,15 +136,51 @@ def label_from_fpath(fpath):
     return qconfig.assembly_labels_by_fpath[fpath]
 
 
-def call_subprocess(args, stdin=None, stdout=None, stderr=None, logger_indent='', env=None):
-    line = logger_indent + ' '.join(args)
+def call_subprocess(args, stdin=None, stdout=None, stderr=None,
+                    indent='',
+                    only_if_debug=True, env=None):
+    printed_args = args[:]
     if stdin:
-        line += ' < ' + stdin.name
+        printed_args += ['<', stdin.name]
     if stdout:
-        line += ' > ' + stdout.name
+        printed_args += ['>>' if stdout.mode == 'a' else '>', stdout.name]
     if stderr:
-        line += ' 2> ' + stderr.name
+        printed_args += ['2>>' if stderr.mode == 'a' else '2>', stderr.name]
 
-    logger.info(line)
+    for i, arg in enumerate(printed_args):
+        if arg.startswith(os.getcwd()):
+            printed_args[i] = relpath(arg)
 
-    subprocess.call(args, stdin=stdin, stdout=stdout, stderr=stderr, env=env)
+    logger.print_command_line(printed_args, indent, only_if_debug=only_if_debug)
+
+    return_code = subprocess.call(args, stdin=stdin, stdout=stdout, stderr=stderr, env=env)
+
+    if return_code != 0:
+        logger.debug(' ' * len(indent) + 'The tool returned non-zero.' +
+                     (' See ' + relpath(stderr.name) + ' for stderr.' if stderr else ''))
+        # raise SubprocessException(printed_args, return_code)
+
+    return return_code
+
+
+# class SubprocessException(Exception):
+#     def __init__(self, printed_args, return_code):
+#         self.printed_args = printed_args
+#         self.return_code = return_code
+
+
+from posixpath import curdir, sep, pardir, join, abspath, commonprefix
+
+
+def relpath(path, start=curdir):
+    """Return a relative version of a path"""
+    if not path:
+        raise ValueError("No path specified")
+    start_list = abspath(start).split(sep)
+    path_list = abspath(path).split(sep)
+    # Work out how much of the filepath is shared by start and path.
+    i = len(commonprefix([start_list, path_list]))
+    rel_list = [pardir] * (len(start_list) - i) + path_list[i:]
+    if not rel_list:
+        return curdir
+    return join(*rel_list)

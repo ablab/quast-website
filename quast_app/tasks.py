@@ -43,7 +43,7 @@ def start_quast((args, quast_session, user_session)):
 
     link = os.path.join(settings.REPORT_LINK_BASE, quast_session.link or quast_session.report_id)
 
-    def send_result_mail(address, to_me, add_to_end='', fail=False, error=None):
+    def send_result_mail(address, to_me, add_to_end='', fail=False, error_msg=None):
         if address is None or address == '':
             return
 
@@ -61,7 +61,7 @@ def start_quast((args, quast_session, user_session)):
             'genome': quast_session.data_set.name if quast_session.data_set else '',
             'comment': quast_session.comment if quast_session.comment else '',
             'add_to_end': add_to_end,
-            'error': error
+            'error': error_msg
         }
         text_content = render_to_string('emails/report_ready.txt', arguments)
 
@@ -96,7 +96,6 @@ def start_quast((args, quast_session, user_session)):
 
         send_result_mail(my_email, to_me=True, add_to_end=add_to_end, fail=True)
         send_result_mail(user_email, to_me=False, fail=True)
-        raise e
 
     else:
         add_to_end = '\n' + \
@@ -104,21 +103,23 @@ def start_quast((args, quast_session, user_session)):
                      '\n\nSession key: ' + user_session.session_key + \
                      '\n\nArgs: ' + str(' '.join(args))
 
-        error = None
+        error_msg = None
 
         if exit_code != 0:  # Unsuccessful
-            if os.path.isfile(settings.ERROR_LOG_FPATH):
-                with open(settings.ERROR_LOG_FPATH) as error_f:
-                    error = error_f.read()
-                os.remove(settings.ERROR_LOG_FPATH)
-            send_result_mail(my_email, to_me=True, add_to_end=add_to_end, fail=True, error=error)
-            send_result_mail(user_email, to_me=False, fail=True, error=error)
+            error_fpath = os.path.join(quast_session.get_dirpath(), settings.ERROR_LOG_FNAME)
+
+            if os.path.isfile(error_fpath):
+                with open(error_fpath) as error_f:
+                    error_msg = error_f.read()
+
+            send_result_mail(my_email, to_me=True, add_to_end=add_to_end, fail=True, error_msg=error_msg)
+            send_result_mail(user_email, to_me=False, fail=True, error_msg=error_msg)
 
         else:  # OK
             send_result_mail(my_email, to_me=True, add_to_end=add_to_end)
             send_result_mail(user_email, to_me=False)
 
-        return exit_code, error
+        return exit_code, error_msg
 
 
 #   out = ''
