@@ -46,8 +46,6 @@ urlpatterns = patterns('',
         {'url': '/static/data_sets/h.sapiens_chr14/h_sapiens_chr14_quast_report.zip'},
         name='h_sapiens_quast_report'),
 
-    url(r'^spades.2.5-on-gage.b-data-sets/$', 'quast_app.example_reports_views.spades_2_5_on_gage_b_data_sets'),
-
 
     url(r'^contigs-ajax-upload$', views.contigs_uploader.upload, name='contigs_ajax_upload'),
     url(r'^contigs-ajax-remove$', views.contigs_uploader.remove, name='contigs_ajax_remove'),
@@ -80,14 +78,23 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 )
 
-for d_set_slug in ['b.cereus', 'm.abscessus', 'r.sphaeroides', 'v.cholerae']:
+for ver in ('2.5', '3.0'):
     urlpatterns += (
-        url(r'^spades.2.5-on-gage.b-data-sets/' + d_set_slug + '/(?P<download_fname>.+)?/?$',
-            'quast_app.example_reports_views.spades_2_5_on_gage_b_data_sets__' + d_set_slug.replace('.', '_')),
-
-        url(r'^spades.2.5-on-gage.b-data-sets/' + d_set_slug + '-scaffolds/(?P<download_fname>.+)?/?$',
-            'quast_app.example_reports_views.spades_2_5_on_gage_b_data_sets__' + d_set_slug.replace('.', '_'), {'is_scaf': True}),
+        url(r'^spades.' + ver + '-on-gage.b-data-sets/$',
+            'quast_app.example_reports_views.spades_on_gage_b_data_sets',
+            {'spades_ver': ver}),
     )
+
+    for d_set_slug in ['b.cereus', 'm.abscessus', 'r.sphaeroides', 'v.cholerae']:
+        urlpatterns += (
+            url(r'^spades.' + ver + '-on-gage.b-data-sets/' + d_set_slug + '/(?P<download_fname>.+)?/?$',
+                'quast_app.example_reports_views.spades_on_gage_b_data_sets__' + d_set_slug.replace('.', '_'),
+                {'is_scaf': False, 'spades_ver': ver}),
+
+            url(r'^spades.' + ver + '-on-gage.b-data-sets/' + d_set_slug + '-scaffolds/(?P<download_fname>.+)?/?$',
+                'quast_app.example_reports_views.spades_on_gage_b_data_sets__' + d_set_slug.replace('.', '_'),
+                {'is_scaf': True, 'spades_ver': ver}),
+        )
 
 urlpatterns += staticfiles_urlpatterns()
 

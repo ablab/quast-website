@@ -38,52 +38,49 @@ def e_coli_mc(request, download_fname):
     return common_view('', 'E. coli, isolate', 'e.coli-isolate', download_fname)
 
 
-__spades_2_5_on_gage_b__caption_template = '%s MiSeq SPAdes&nbsp;2.5 assemblies'
-__spades_2_5_on_gage_b__title_template = __spades_2_5_on_gage_b__caption_template
+__spades_on_gage_b__caption_template = '%s MiSeq SPAdes&nbsp;%s assemblies'
+__spades_on_gage_b__title_template = __spades_on_gage_b__caption_template
 
 
-def __spades_2_5_on_gage_b_data_sets__common(download_fname, name, is_scaf=False):
+def __spades_on_gage_b_data_sets__common(download_fname, name, spades_ver, is_scaf=False):
     slug = name.replace(' ', '').lower()
 
     if is_scaf:
         slug += '-scf'
 
     return common_view(
-        dir_name='spades.2.5-on-gage.b-data-sets/',
-        caption=__spades_2_5_on_gage_b__caption_template %
-               name.replace(' ', '&nbsp;') + (' (scaffolds)' if is_scaf else ''),
+        dir_name='spades.' + spades_ver + '-on-gage.b-data-sets/',
+        caption=__spades_on_gage_b__caption_template %
+                (name.replace(' ', '&nbsp;') + (' (scaffolds)' if is_scaf else ''), spades_ver),
         slug_name=slug,
         download_fname=download_fname,
+        template_dir_name='spades-on-gage.b-data-sets/',
         html_template_name='common_report',
         data_set_name=name,
-        title=__spades_2_5_on_gage_b__title_template %
-              name + (' (scaffolds)' if is_scaf else ''))
+        title=__spades_on_gage_b__title_template %
+              (name + (' (scaffolds)' if is_scaf else ''), spades_ver))
 
 
-def spades_2_5_on_gage_b_data_sets(request):
-    return render_to_response('spades.2.5-on-gage.b-data-sets/index.html')
+def spades_on_gage_b_data_sets(request, spades_ver):
+    return render_to_response('spades-on-gage.b-data-sets/index.html', {'version': spades_ver})
+
+def spades_on_gage_b_data_sets__b_cereus(request, download_fname, spades_ver, is_scaf=False):
+    return __spades_on_gage_b_data_sets__common(download_fname, 'B. cereus', spades_ver, is_scaf)
+
+def spades_on_gage_b_data_sets__m_abscessus(request, download_fname, spades_ver, is_scaf=False):
+    return __spades_on_gage_b_data_sets__common(download_fname, 'M. abscessus', spades_ver, is_scaf)
+
+def spades_on_gage_b_data_sets__r_sphaeroides(request, download_fname, spades_ver, is_scaf=False):
+    return __spades_on_gage_b_data_sets__common(download_fname, 'R. sphaeroides', spades_ver, is_scaf)
+
+def spades_on_gage_b_data_sets__v_cholerae(request, download_fname, spades_ver, is_scaf=False):
+    return __spades_on_gage_b_data_sets__common(download_fname, 'V. cholerae', spades_ver, is_scaf)
 
 
-def spades_2_5_on_gage_b_data_sets__b_cereus(request, download_fname, is_scaf=False):
-    return __spades_2_5_on_gage_b_data_sets__common(download_fname, 'B. cereus', is_scaf)
-
-
-def spades_2_5_on_gage_b_data_sets__m_abscessus(request, download_fname, is_scaf=False):
-    return __spades_2_5_on_gage_b_data_sets__common(download_fname, 'M. abscessus', is_scaf)
-
-
-def spades_2_5_on_gage_b_data_sets__r_sphaeroides(request, download_fname, is_scaf=False):
-    return __spades_2_5_on_gage_b_data_sets__common(download_fname, 'R. sphaeroides', is_scaf)
-
-
-def spades_2_5_on_gage_b_data_sets__v_cholerae(request, download_fname, is_scaf=False):
-    return __spades_2_5_on_gage_b_data_sets__common(download_fname, 'V. cholerae', is_scaf)
-
-
-def common_view(dir_name, caption, slug_name, download_fname,
+def common_view(dir_name, caption, slug_name, download_fname, template_dir_name=None,
                 html_template_name=None, data_set_name=None, title=None):
-    if not html_template_name:
-        html_template_name = slug_name
+    template_dir_name = template_dir_name or dir_name
+    html_template_name = html_template_name or slug_name
 
     if download_fname:
         download_fpath = os.path.join(settings.FILES_DOWNLOADS_DIRPATH, download_fname)
@@ -131,4 +128,4 @@ def common_view(dir_name, caption, slug_name, download_fname,
             'title': data_set_name,
         }
 
-        return render_to_response(dir_name + html_template_name + '.html', response_dict)
+        return render_to_response(template_dir_name + html_template_name + '.html', response_dict)
