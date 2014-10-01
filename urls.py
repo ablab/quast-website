@@ -19,12 +19,10 @@ urlpatterns = patterns('',
     url(r'^sitemap\.xml$', RedirectView.as_view(url='/static/sitemap.xml')),
     url(r'^excanvas\.min\.js$', RedirectView.as_view(url='/static/float/excanvas.min.js')),
     url(r'^favicon\.ico$', RedirectView.as_view(url=('/static/img/favicon_debug.ico'
-                                             if settings.DEBUG
-                                             else '/static/img/favicon.ico')
-                                       )
-    ),
+         if settings.DEBUG else '/static/img/favicon.ico'))),
 
     url(r'^/?$', 'quast_app.views.index'),
+    url(r'', 'quast_app.views.index'),
 
     url(r'^manual/?$', 'quast_app.views.manual'),
     url(r'^manual.html$', 'quast_app.views.manual'),
