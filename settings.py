@@ -1,6 +1,7 @@
 import sys
 import os
 
+ALLOWED_HOSTS = [u'quast.bioinf.spbau.ru',]
 
 SOURCE_DIRPATH              = os.path.abspath(os.path.dirname(__file__))
 HOME_DIRPATH                = os.path.join(SOURCE_DIRPATH, '..')
