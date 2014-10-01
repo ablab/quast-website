@@ -45,9 +45,8 @@ urlpatterns = patterns('',
     url(r'^paper/h.sapiens_chr14/(?P<download_fname>.+)?/?$', 'quast_app.example_reports_views.h_sapiens'),
 
     url(r'^paper/h.sapiens_chr14/download/?$',
-        RedirectView.as_view(
-            url='/static/data_sets/h.sapiens_chr14/h_sapiens_chr14_quast_report.zip',
-            pattern_name='h_sapiens_quast_report')),
+        RedirectView.as_view(url='/static/data_sets/h.sapiens_chr14/h_sapiens_chr14_quast_report.zip'),
+        name='h_sapiens_quast_report'),
 
     url(r'^contigs-ajax-upload$', views.contigs_uploader.upload, name='contigs_ajax_upload'),
     url(r'^contigs-ajax-remove$', views.contigs_uploader.remove, name='contigs_ajax_remove'),
