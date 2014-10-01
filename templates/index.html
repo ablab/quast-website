@@ -58,7 +58,7 @@
                 }
                 $.ajax({
                     type: 'GET',
-                    url: '{% url ask_password_link %}',
+                    url: '',
                     dataType: 'text',
                     data: 'email=' + email,
 
@@ -149,9 +149,9 @@
 {#        });#}
 
         var parameters = [{
-            action: '{% url contigs_ajax_upload %}',
-            removeLink: '{% url contigs_ajax_remove %}',
-            initializeUploadsLink: '{% url contigs_ajax_initialize_uploads %}',
+            action: '',
+            removeLink: '',
+            initializeUploadsLink: '',
             elementId: '#contigs-uploader',
             multiple: true,
             buttonClass: 'btn',
