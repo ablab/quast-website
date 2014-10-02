@@ -1,4 +1,4 @@
-from django.utils import simplejson as json
+import simplejson as json
 from django.core.serializers.json import DjangoJSONEncoder
 
 from django.http import HttpResponse, HttpResponseBadRequest, Http404

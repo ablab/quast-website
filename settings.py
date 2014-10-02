@@ -34,7 +34,10 @@ PAPER_DIRPATH               = os.path.join(FILES_DIRPATH, 'paper')
 
 REPORT_LINK_BASE            = '/reports/'
 
-#
+ALLOWED_HOSTS = [
+	u'quast.bioinf.spbau.ru'
+]
+
 database = 'sqlite'
 
 if os.environ.get('DEVELOPMENT', None):
@@ -219,6 +222,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
     'djcelery',
+#    'django-celery',
     'quast_app',
     'ajaxuploader',
     'south',
