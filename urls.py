@@ -22,7 +22,6 @@ urlpatterns = patterns('',
         url=('/static/img/favicon_debug.ico' if settings.DEBUG else '/static/img/favicon.ico'))),
 
     url(r'^/?$', 'quast_app.views.index'),
-    url(r'', 'quast_app.views.index'),
 
     url(r'^manual/?$', 'quast_app.views.manual'),
     url(r'^manual.html$', 'quast_app.views.manual'),
