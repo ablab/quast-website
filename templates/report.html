@@ -76,15 +76,16 @@
 
                     {% if data_set %}
                     <p id="data_set_p">
-                        <p style="display: none; margin-bottom: -10px;" id="reference_name">Genome:
-                            {% if data_set.reference_ext %}
-                                <a href='{% url download_data_set data_set.id data_set.reference_ext %}'>
-                            {% endif %}
-                                {{ data_set.title|safe }}
-                            {% if data_set.reference_ext %}
-                                </a>
-                            {% endif %}
-                        </p>
+{#                        <p style="display: none; margin-bottom: -10px;" id="reference_name">Genome:#}
+{#                            {% if data_set.reference_ext %}#}
+{#                                <a href='data-sets/{{data_set.id}}_{{data_set.reference_ext}}'>#}
+{#                                <a href='{% url download_data_set data_set.id data_set.reference_ext %}'>#}
+{#                            {% endif %}#}
+{#                                {{ data_set.title|safe }}#}
+{#                            {% if data_set.reference_ext %}#}
+{#                                </a>#}
+{#                            {% endif %}#}
+{#                        </p>#}
 
                         {# Get filled in build_total_report.js. #}
                         {# Don't change the formatting: adding line wrapping will add an unnecessary space #}
@@ -95,14 +96,14 @@
                             G+C content: <span class='val'></span><span class='rhs'>&nbsp;</span>%
                         </span>
 
-                        <span style="display: none;" id="reference_genes"><br>
-                            {% if data_set.genes_ext %}<a href="{% url download_data_set data_set.id 'genes' data_set.genes_ext %}">{% endif %}
-                            <span class='val'></span> genes{% if data_set.genes_ext %}</a>{% endif %}</span><span style='display: none;'>
-
-                 </span><span style="display: none;" id="reference_operons">,
-                            {% if data_set.operons_ext %}<a href="{% url download_data_set data_set.id 'operons' data_set.operons_ext %}">{% endif %}
-                                <span class='val'></span> operons{% if data_set.operons_ext %}</a>{% endif %}
-                        </span>
+{#                        <span style="display: none;" id="reference_genes"><br>#}
+{#                            {% if data_set.genes_ext %}<a href="{% url download_data_set data_set.id 'genes' data_set.genes_ext %}">{% endif %}#}
+{#                            <span class='val'></span> genes{% if data_set.genes_ext %}</a>{% endif %}</span><span style='display: none;'>#}
+{##}
+{#                        </span><span style="display: none;" id="reference_operons">,#}
+{#                            {% if data_set.operons_ext %}<a href="{% url download_data_set data_set.id 'operons' data_set.operons_ext %}">{% endif %}#}
+{#                                <span class='val'></span> operons{% if data_set.operons_ext %}</a>{% endif %}#}
+{#                        </span>#}
                         {################}
                     </p>
                     {% endif %}
