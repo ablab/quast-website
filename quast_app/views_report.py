@@ -237,7 +237,7 @@ def download_report_view(request, link):
                                    ' User tried to download report, '
                                    'but neither %s nor %s exists' %
                                    (settings.REGULAR_REPORT_DIRNAME, 'regular_report'))
-                    return Http404()
+                    raise Http404()
 
             os.chdir(os.path.join(quast_session.get_dirpath(),
                                   settings.REGULAR_REPORT_DIRNAME))
