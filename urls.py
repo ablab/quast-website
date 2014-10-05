@@ -1,13 +1,14 @@
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
+import quast_app
 admin.autodiscover()
 
 from django.conf.urls import patterns, include, url
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 from django.conf import settings
-from quast_app import views
+from quast_app import views, login_views
 from django.views.generic import TemplateView, RedirectView
 
 import logging
@@ -69,7 +70,7 @@ urlpatterns = patterns('',
     url(r'^500', TemplateView.as_view(template_name='500.html')),
     url(r'^404', TemplateView.as_view(template_name='404.html')),
 
-    url(r'^ask_password', 'quast_app.login_views.ask_password', name='ask_password_link'),
+    url(r'^ask_password', quast_app.login_views.ask_password, name='ask_password_link'),
     url(r'^login', 'quast_app.login_views.login', name='login_link'),
 
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
