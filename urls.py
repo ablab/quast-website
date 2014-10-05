@@ -52,20 +52,20 @@ urlpatterns = patterns('',
     url(r'^contigs-ajax-remove-all$', views.contigs_uploader.remove_all, name='contigs_ajax_remove_all'),
     url(r'^ajax-delete-session$', views.delete_session, name='ajax_delete_session'),
 
-    url(r'^reports/?$', 'quast_app.views.reports'),
-    url(r'^report/?$', 'quast_app.views.reports'),
+    url(r'^reports/?$', quast_app.views.reports),
+    url(r'^report/?$', quast_app.views.reports),
 
-    url(r'^reports/download/(?P<link>.+)/?$', 'quast_app.views.download_report'),
-    url(r'^download-report/(?P<link>.+)$', 'quast_app.views.download_report'),
-    url(r'^report/(?P<link>.+)/?$', 'quast_app.views.report'),
-    url(r'^reports/(?P<link>.+)/?$', 'quast_app.views.report'),
+    url(r'^reports/download/(?P<link>.+)/?$', quast_app.views.download_report),
+    url(r'^download-report/(?P<link>.+)$', quast_app.views.download_report),
+    url(r'^report/(?P<link>.+)/?$', quast_app.views.report),
+    url(r'^reports/(?P<link>.+)/?$', quast_app.views.report),
 
     url(r'^data-sets/(?P<data_set_id>.+)_(?P<what>.+)(?P<file_ext>\..+)$',
         views.download_data_set, name='download_data_set'),
     url(r'^data-sets/(?P<data_set_id>.+)(?P<file_ext>\..+)$',
         views.download_data_set, {'what': 'reference'}, name='download_data_set'),
 
-    url(r'^reorder-report-columns$', 'quast_app.views.reorder_report_columns_ajax'),
+    url(r'^reorder-report-columns$', quast_app.views.reorder_report_columns_ajax),
 
     url(r'^500', TemplateView.as_view(template_name='500.html')),
     url(r'^404', TemplateView.as_view(template_name='404.html')),
