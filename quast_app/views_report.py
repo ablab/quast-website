@@ -245,7 +245,7 @@ def download_report_view(request, link):
             report_fpath = settings.HTML_REPORT_FNAME
             report_aux_dirpath = settings.HTML_REPORT_AUX_DIRNAME
             zip_fname = quast_session.get_download_name() + '.zip'
-
+            
             import zipfile, tempfile
             from django.core.servers.basehttp import FileWrapper
             temp_file = tempfile.TemporaryFile()
@@ -265,10 +265,12 @@ def download_report_view(request, link):
             zip_dir(settings.REGULAR_REPORT_DIRNAME)
             zip_file.close()
 
+            temp_file.flush()
+            content_len = temp_file.tell()
+            temp_file.seek(0)
             wrapper = FileWrapper(temp_file)
             response = HttpResponse(wrapper, content_type='application/zip')
             response['Content-Disposition'] = 'attachment; filename=%s' % zip_fname
-            response['X-Sendfile'] = temp_file.tell()
-            temp_file.seek(0)
+            response['Content-Length'] = content_len
 
             return response
