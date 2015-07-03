@@ -38,6 +38,16 @@ def license(request):
         return HttpResponse(f.read(), content_type='text/plain')
 
 
+def manual3(request):
+    with open(settings.QUAST3_MANUAL_FPATH) as f:
+        return HttpResponse(f.read())
+
+
+def changes3(request):
+    with open(settings.QUAST3_CHANGES_FPATH) as f:
+        return HttpResponse(f.read(), content_type='text/plain')
+
+
 def bib(request):
     with open(settings.BIB_FPATH) as f:
         return HttpResponse(f.read(), content_type='text/plain')
