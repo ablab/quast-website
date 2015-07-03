@@ -17,7 +17,7 @@ DATA_SETS_ROOT_DIRPATH      = os.path.join(DATA_DIRPATH, 'data_sets')
 celerydb_fpath              = os.path.join(DATA_DIRPATH, 'celery.sqlite')
 quastdb_fpath               = os.path.join(DATA_DIRPATH, 'quast.sqlite')
 
-QUAST_DIRPATH               = os.path.join(SOURCE_DIRPATH, 'quast_tool')
+QUAST_DIRPATH               = os.path.join(SOURCE_DIRPATH, 'quast')
 QUAST_PY_FPATH              = os.path.join(QUAST_DIRPATH, 'quast.py')
 ERROR_LOG_FNAME             = 'error.log'
 GLOSSARY_PATH               = os.path.join(QUAST_DIRPATH, 'libs/html_saver/glossary.json')
@@ -33,10 +33,6 @@ IDBA_DIRPATH                = os.path.join(FILES_DIRPATH, 'idba')
 PAPER_DIRPATH               = os.path.join(FILES_DIRPATH, 'paper')
 
 REPORT_LINK_BASE            = '/reports/'
-
-ALLOWED_HOSTS = [
-	u'quast.bioinf.spbau.ru'
-]
 
 database = 'sqlite'
 
@@ -91,7 +87,6 @@ if database == 'mysql':
 else:
     db_engine = 'django.db.backends.sqlite3'
     db_name = quastdb_fpath
-
 
 DATABASES = {
     'default': {
@@ -225,7 +220,7 @@ INSTALLED_APPS = (
 #    'django-celery',
     'quast_app',
     'ajaxuploader',
-    'south',
+    # 'south',
 #    'south_admin',
 #    'django_socketio',
     )

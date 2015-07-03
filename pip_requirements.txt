@@ -1,30 +1,7 @@
-# https://github.com/ablab/quast-website.git
-# cd quast
-# easy_install pip
-# pip install virtualenv
-# virtualenv virtualenv
-# source virtualenv/bin/activate
-# cd quast-website
-# virtualenv/bin/pip install -r quast-website/pip_requirements.txt
-#
-# sudo apt-get install sqlite3
-# sudo apt-get install python-dev
-# sudo apt-get install libevent-dev
-# OR
-# brew install libevent
-# export CFLAGS=-I/brew/include
-# brew install sqlite3
-#
 django
 SQLAlchemy
-mysql-python
-Fabric
+#mysql-python
 celery
 django-celery
 django-autoslug
-South
-
-
-
-
-
+#South

@@ -1,38 +1,112 @@
 ***************************************************
 FIRST INSTALLATION
 Ubuntu:
-    sudo apt-get install sqlite3
-    sudo apt-get install python-dev
-    sudo apt-get install libevent-dev
+    $ sudo apt-get install sqlite3
+    $ sudo apt-get install python-dev
+    $ sudo apt-get install libevent-dev
 
 Mac OS:
-    brew install sqlite3
-    brew install libevent
-    export CFLAGS=-I/brew/include
+    $ brew install sqlite3
+    $ brew install libevent
+    $ export CFLAGS=-I/brew/include
 
-Both:
-    git clone https://github.com/ablab/quast-website.git
-    cd quast
-    easy_install pip
-    pip install virtualenv
-    virtualenv virtualenv
-    source virtualenv/bin/activate
-    cd quast-website
-    pip install -r pip_requirements.txt
+$ mkdir quast
+$ cd quast
+
+Cloning command line quast application:
+$ git clone --recursive https://github.com/ablab/quast-website.git
+$ mv quast-website source
+
+Installing python virtual environment:
+$ easy_install pip
+$ pip install virtualenv
+$ virtualenv virtualenv
+$ source virtualenv/bin/activate
+$ pip install -r source/pip_requirements.txt  # Installs dependencies listed in the file. In my case, for sqlalchemy sudo was reqiured, so if something is not working, try 'sudo pip install sqlalchemy'
+
+Initializing database:
+$ source/manage.py migrate
+
+Starting celery that will process tasks
+$ source/manage.py celeryd
+
+(if running locally) starting Django test webserver:
+    $ source/manage.py runserver localhost:8000
+
+(if on a web server) configuring Apache:
+    Create an Apache configuration file in /etc/apache2/sites-available/quast containg the folling. Please replace ServerName and paths starting with '/var/www/quast' according to your environment)
+        <VirtualHost *:80>
+            ServerAdmin webmaster@localhost
+            ServerName quast.bioinf.spbau.ru
+            DocumentRoot /var/www/quast/source
+
+            <Directory /var/www/quast/source>
+                    Options FollowSymLinks MultiViews
+                   AllowOverride None
+                    Order allow,deny
+                    allow from all
+            </Directory>
+
+            ErrorLog ${APACHE_LOG_DIR}/quast-error.log
+
+            # Possible values include: debug, info, notice, warn, error, crit,
+            # alert, emerg.
+            LogLevel warn
+
+            CustomLog ${APACHE_LOG_DIR}/quast-access.log combined
+
+            Alias /static/ /var/www/quast/source/static/
+
+            <Directory /var/www/quast/source/static>
+                    Order deny,allow
+                    Allow from all
+            </Directory>
+
+            WSGIDaemonProcess quast user=saveliev group=www-data python-path=/var/www/quast/virtualenv/lib/python2.7/site-packages
+            WSGIProcessGroup quast
+            WSGIScriptAlias / /var/www/quast/source/wsgi.py
+
+            <Directory /var/www/quast/source>
+                    <Files wsgi.py>
+                            Order deny,allow
+                            Allow from all
+                    </Files>
+            </Directory>
+        </VirtualHost>
+
+    Start apache
+    $ sudo apachectl start
+
 
 ***************************************************
 DEPLOYING CHANGES
-cd quast/quast-website
+$ cd source
 
 Locally push everything to Github:
-    git all
-    git commit -m '[comment]'
-    git up
-    git push
+    $ git all
+    $ git commit -m '[comment]'
+    $ git up
+    $ git push
 
-On Morality, pull changes:
-    git pull
+On the server, pull changes:
+    $ git pull
+Collect static files:
+    # source/manage.py collectstatic
 Gracefully restart Apache:
-    sudo apachectl graceful
+    $ sudo apachectl graceful
 
-Data and virtualenv directories are kept different for development and deployment.
+If you want to pull latest changes for the command-line Quast,
+    $ cd quast
+    $ git pull
+    $ cd ..
+    $ cd git all
+    $ cd commit -m 'Updated command-line Quast'
+    $ cd push
+On the server:
+    $ git pull
+    $ source/manage.py collectstatic
+    Interrupt celery and start again:
+    $ source/manage.py celeryd
+    $ sudo apachectl graceful
+
+Note that data and virtualenv directories are kept different for development and deployment.
