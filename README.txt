@@ -1,5 +1,7 @@
 ***************************************************
 FIRST INSTALLATION
+***************************************************
+Pre-intallations
 Ubuntu:
     $ sudo apt-get install sqlite3
     $ sudo apt-get install python-dev
@@ -13,28 +15,29 @@ Mac OS:
 $ mkdir quast
 $ cd quast
 
-Cloning command line quast application:
-$ git clone --recursive https://github.com/ablab/quast-website.git
-$ mv quast-website source
+Clone command line quast application:
+    $ git clone --recursive https://github.com/ablab/quast-website.git
+    $ mv quast-website source
 
-Installing python virtual environment:
-$ easy_install pip
-$ pip install virtualenv
-$ virtualenv virtualenv
-$ source virtualenv/bin/activate
-$ pip install -r source/pip_requirements.txt  # Installs dependencies listed in the file. In my case, for sqlalchemy sudo was reqiured, so if something is not working, try 'sudo pip install sqlalchemy'
+Install python virtual environment:
+    $ easy_install pip
+    $ pip install virtualenv
+    $ virtualenv virtualenv
+    $ source virtualenv/bin/activate
+    $ pip install -r source/pip_requirements.txt  # Installs dependencies listed in the file. In my case, for sqlalchemy sudo was reqiured, so if something is not working, try 'sudo pip install sqlalchemy'
 
-Initializing database:
+Initialize database:
 $ source/manage.py migrate
 
-Starting celery that will process tasks
+Start celery that will process tasks
 $ source/manage.py celeryd
 
-(if running locally) starting Django test webserver:
+(if running locally) start Django test webserver:
     $ source/manage.py runserver localhost:8000
 
-(if on a web server) configuring Apache:
+(if on a web server) configure Apache:
     Create an Apache configuration file in /etc/apache2/sites-available/quast containg the folling. Please replace ServerName and paths starting with '/var/www/quast' according to your environment)
+
         <VirtualHost *:80>
             ServerAdmin webmaster@localhost
             ServerName quast.bioinf.spbau.ru
@@ -80,6 +83,7 @@ $ source/manage.py celeryd
 
 ***************************************************
 DEPLOYING CHANGES
+***************************************************
 $ cd source
 
 Locally push everything to Github:
