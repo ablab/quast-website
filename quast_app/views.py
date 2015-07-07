@@ -33,6 +33,11 @@ def manual(request):
         return HttpResponse(f.read())
 
 
+def changes(request):
+    with open(settings.CHANGES_FPATH) as f:
+        return HttpResponse(f.read())
+
+
 def license(request):
     with open(settings.LICENSE_FPATH) as f:
         return HttpResponse(f.read(), content_type='text/plain')

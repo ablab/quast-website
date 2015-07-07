@@ -26,6 +26,7 @@ urlpatterns = patterns('',
 
     url(r'^manual/?$', 'quast_app.views.manual'),
     url(r'^manual.html$', 'quast_app.views.manual'),
+    url(r'^changes|^CHANGES$', 'quast_app.views.changes'),
     url(r'^manual_1\.3/?$', 'quast_app.views.manual'),
     url(r'^manual_1\.3\.html$', 'quast_app.views.manual'),
     url(r'^LICENSE$', 'quast_app.views.license'),
