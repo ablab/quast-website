@@ -26,10 +26,6 @@ CHANGES_FPATH               = os.path.join(QUAST_DIRPATH, 'CHANGES')
 LICENSE_FPATH               = os.path.join(QUAST_DIRPATH, 'LICENSE')
 BIB_FPATH                   = os.path.join(QUAST_DIRPATH, 'quast_ref.bib')
 
-QUAST3_DIRPATH              = os.path.join(SOURCE_DIRPATH, 'quast3')
-QUAST3_DEMO_FPATH           = os.path.join(QUAST3_DIRPATH, 'quast3_demo')
-QUAST3_CHANGES_FPATH        = os.path.join(QUAST3_DIRPATH, 'CHANGES')
-QUAST3_MANUAL_FPATH         = os.path.join(QUAST3_DIRPATH, 'manual.html')
 
 APP_DIRPATH                 = os.path.join(SOURCE_DIRPATH, 'quast_app')
 FILES_DIRPATH               = os.path.join(APP_DIRPATH, 'files')
