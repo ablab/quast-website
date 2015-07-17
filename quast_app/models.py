@@ -241,7 +241,7 @@ class DataSet(models.Model):
 
     @classmethod
     def split_seq_ext(cls, fname):
-        return qutils.splitext_for_fasta_file(fname, remove_archive_ext=False)
+        return qutils.splitext_for_fasta_file(fname)
 
     @classmethod
     def split_genes_ext(cls, fname):
