@@ -336,7 +336,7 @@ def assess_with_quast(us, qs, contigs_paths,
             args.append('--err-fpath')
             args.append(os.path.join(res_dirpath, settings.ERROR_LOG_FNAME))
 
-            args.append('-t')
+            args.append('-T')
             args.append('2')
 
             from tasks import start_quast
