@@ -1,0 +1,44 @@
+/Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_tool/quast.py test_data/contigs_1.fasta -G test_data/genes.txt -O test_data/operons.txt -R test_data/reference.fasta.gz -j
+
+Version 2.2
+
+System information:
+  OS: Darwin-12.2.1-x86_64-i386-64bit
+  Python version: 2.7.2
+  CPUs number: 4
+
+Started: 2013-08-19 20:30:19
+
+Logging to /Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_tool/quast_results/results_2013_08_19_20_30_19/quast.log
+
+NOTICE: Maximum number of threads is set to 4 (use --threads option to set it manually)
+
+Reference:
+  test_data/reference.fasta.gz ==> reference
+
+Contigs:
+  test_data/contigs_1.fasta ==> contigs_1
+WARNING: Can't draw plots: please install python-matplotlib.
+
+2013-08-19 20:30:19
+Running Basic statistics processor...
+  Reference genome:
+    reference.fasta, Reference length = 10000, Reference GC % = 52.07
+  Contig files: 
+    contigs_1
+  Calculating N50 and L50...
+    contigs_1, N50 = 3980, L50 = 1, Total length = 6710, GC % = 51.28, # N's per 100 kbp =  0.00
+Done.
+
+2013-08-19 20:30:20
+Running Contig analyzer...
+  contigs_1
+  Logging to files /Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_tool/quast_results/results_2013_08_19_20_30_19/contigs_reports/contigs_report_contigs_1.stdout and contigs_report_contigs_1.stderr...
+  Running Nucmer... 
+/Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_tool/quast_results/results_2013_08_19_20_30_19/contigs_reports/alignments_contigs_1.tsv
+  Analysis is finished.
+  Creating total report...
+    saved to /Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_tool/quast_results/results_2013_08_19_20_30_19/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Creating total report...
+    saved to /Users/vladsaveliev/Dropbox/bio/quast/web_quast/source/quast_tool/quast_results/results_2013_08_19_20_30_19/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+Done.

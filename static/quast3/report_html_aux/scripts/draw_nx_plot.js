@@ -32,51 +32,39 @@ var nx = {
         showWithData: null,
     },
 
-    draw: function (name, title, colors, filenames, data, refPlotValue,
+    draw: function (name, title, colors, filenames, data, refPlotValue, tickX,
                     placeholder, legendPlaceholder, glossary, order, scalePlaceholder) {
 
         $(scalePlaceholder).empty();
 
-        var listsOfLengths = data.listsOfLengths;
-        var refLength = data.refLen;
+        var coordX = data.coord_x;
+        var coordY = data.coord_y;
 
+        var cur_filenames = data.filenames;
         var info = nx[name];
 
         if (!info.isInitialized) {
-            var plotsN = filenames.length;
+            var plotsN = cur_filenames.length;
             info.series = new Array(plotsN);
 
             for (var i = 0; i < plotsN; i++) {
-                var lengths = listsOfLengths[order[i]];
-
-                var size = lengths.length;
-
-                if (name == 'ngx' || name == 'ngax') {
-                    sumLen = refLength;
-                } else {
-                    var sumLen = 0;
-                    var list_lengths = lengths;
-                    if (name == 'nax') list_lengths = data.listsOfAllLengths[order[i]];
-                    for (var j = 0; j < list_lengths.length; j++) {
-                        sumLen += list_lengths[j];
-                    }
-                }
+                var index = $.inArray(cur_filenames[order[i]], filenames);
+                var plot_coordX = coordX[order[i]];
+                var plot_coordY = coordY[order[i]];
+                var size = plot_coordX.length;
 
                 info.series[i] = {
                     data: [],
-                    label: filenames[order[i]],
+                    label: filenames[index],
                     number: i,
-                    color: colors[order[i]],
+                    color: colors[index],
                 };
-                info.series[i].data.push([0.0, lengths[0]]);
+                info.series[i].data.push([0.0, plot_coordY[0]]);
                 var currentLen = 0;
                 var x = 0.0;
 
                 for (var k = 0; k < size; k++) {
-                    currentLen += lengths[k];
-                    info.series[i].data.push([x, lengths[k]]);
-                    x = currentLen * 100.0 / sumLen;
-                    info.series[i].data.push([x, lengths[k]]);
+                    info.series[i].data.push([plot_coordX[k], plot_coordY[k]]);
                 }
 
                 if (info.series[i].data[0][1] > info.maxY) {
@@ -139,14 +127,14 @@ var nx = {
                                 }
                             }
                         },
-                        minTickSize: 1,
+                        minTickSize: tickX,
                     }
                 );
 
                 var firstLabel = $('.yAxis .tickLabel').last();
                 firstLabel.prepend(title + '<span class="rhs">&nbsp;</span>=<span class="rhs">&nbsp;</span>');
 
-                bindTip(placeholder, series, plot, toPrettyString, '%', 'top right');
+                bindTip(placeholder, series, plot, toPrettyString, 1, '%', 'top right');
 
             };
 

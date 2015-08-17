@@ -1,5 +1,5 @@
 function fillOneRow(metric, mainMetrics, group_n, order, glossary, is_primary, rowName,
-                    report_n, assembliesNames, notAlignedContigs, notExtendedMetrics) {
+                    report_n, assembliesNames, notAlignedContigs, notExtendedMetrics, isEmptyRows) {
     (function(group_n) {
         var id_group = '#group_' + group_n;
         $(function() {
@@ -14,6 +14,8 @@ function fillOneRow(metric, mainMetrics, group_n, order, glossary, is_primary, r
 
     var trClass = 'content-row';
     if (metric.isMain || $.inArray(metricName, mainMetrics) > -1) {
+        var numPlot = $.inArray(metricName, mainMetrics);
+        var iconPlots = '<img id="' + numPlot + '" style="vertical-align: bottom" src="report_html_aux/img/icon_plot.png" onclick="setPlot($(this))"/>';
         (function(group_n) {
             var id_group = '#group_' + group_n;
             $(function() {
@@ -24,7 +26,7 @@ function fillOneRow(metric, mainMetrics, group_n, order, glossary, is_primary, r
         trClass = 'content-row row_hidden row_to_hide';
     }
     var tdClass = '';
-    if (!is_primary && $.inArray(metricName, notExtendedMetrics) == -1) {
+    if (!is_primary) {
         trClass += ' secondary_hidden';
         tdClass = 'secondary_td';
     }
@@ -33,7 +35,7 @@ function fillOneRow(metric, mainMetrics, group_n, order, glossary, is_primary, r
     }
 
     var not_extend = false;
-    if ($.inArray(metricName, notExtendedMetrics) > -1){
+    if ($.inArray(metricName, notExtendedMetrics) > -1 || isEmptyRows == true){
         not_extend = true;
         trClass += ' not_extend';
     }
@@ -43,18 +45,20 @@ function fillOneRow(metric, mainMetrics, group_n, order, glossary, is_primary, r
         '<td class="left_column_td ' + tdClass + '">' +
         '<span class="metric-name' +
           (is_primary ? ' primary' : ' secondary') + (not_extend || !is_primary ? '' : ' expandable collapsed') + '">' +
-           initial_spaces_to_nbsp(addTooltipIfDefinitionExists(glossary, rowName), metricName) +
+           initial_spaces_to_nbsp(addTooltipIfDefinitionExists(glossary, rowName.trunc(55)), metricName) +
+        (metric.isMain && is_primary ? ("&nbsp" + iconPlots) : '') +
         '</span></td>';
-          //(not_extend && metricName == '# possibly misassembled contigs' ? '&nbsp&nbsp&nbsp&nbsp' : not_extend ? '&nbsp&nbsp&nbsp&nbsp' : '')
 
     if (report_n > -1) {
         for (var not_aligned_n = 0; not_aligned_n < notAlignedContigs[report_n].length; not_aligned_n++) {
             values.splice(assembliesNames.indexOf(notAlignedContigs[report_n][not_aligned_n]), 0, '');
         }
     }
-
+    var icon_misassemblies = '';
     for (var val_n = 0; val_n < values.length; val_n++) {
         var value = values[order[val_n]];
+        var plotSrc = assembliesNames[order[val_n]] + "_misassemblies.jpg";
+        icon_misassemblies = '<img id="' + plotSrc + '" src="report_html_aux/img/icon_plot.png" onclick="setPlot($(this))"/>';
 
         if (value === null || value === '') {
             table += '<td><span>-</span></td>';
@@ -101,7 +105,7 @@ function buildGenomeTable(reports, group_n, numColumns) {
             '<tr class="' + trClass + '">' +
             '<td class="left_column_td">' +
                 '<span class="metric-name">' +
-                    '<a href="' + refName + '.html">' + refName + '</a>' +
+                    '<a href="../' + refName + '_quast_output/report.html">' + refName + '</a>' +
                 '</span>' +
             '</td>';
         var metrics = reports[report_n].report[group_n][1];
@@ -151,6 +155,24 @@ function buildTotalReport(assembliesNames, report, order, date, minContig, gloss
     $('#per_ref_msg').html('<p>Rows show values for the whole assembly (column name) vs. combined reference (concatenation of input references).<br>' +
         'Clicking on a row with <span style="color: #CCC">+</span> sign will expand values for contigs aligned to each of input references separately.<br>' +
         'Note that some metrics (e.g. # contigs) may not sum up, because one contig may be aligned to several references and thus, counted several times.</p>');
+    $('#quast_name').html('MetaQUAST');
+    $('#report_name').html('summary report');
+    if (kronaPaths = readJson('krona')) {
+        if (kronaPaths.paths != undefined) {
+            $('#krona').html('Krona charts: ');
+            for (var assembly_n = 0; assembly_n < assembliesNames.length; assembly_n++ ) {
+                var assemblyName = assembliesNames[assembly_n];
+                $('#krona').append(
+                    '&nbsp&nbsp<span class="metric-name">' +
+                    '<a href="' + kronaPaths.paths[assembly_n] + '">' + assemblyName + '</a>' +
+                    '</span>&nbsp&nbsp');
+            }
+            if (assembliesNames.length > 1)  $('#krona').append(
+                    '&nbsp&nbsp&nbsp&nbsp<span class="metric-name">' +
+                    '<a href="Krona/summary_taxonomy_chart.html">Summary</a>' +
+                    '</span>&nbsp');
+        }
+    }
 
     var table = '';
     table += '<table cellspacing="0" class="report_table draggable" id="main_report_table">';
@@ -178,7 +200,9 @@ function buildTotalReport(assembliesNames, report, order, date, minContig, gloss
         }
     }
     var notExtendedMetrics = ['    # interspecies translocations'];
-
+    if (minContig > 0)
+        notExtendedMetrics = ['    # interspecies translocations', '# contigs (&gt;= 0 bp)', 'Total length (&gt;= 0 bp)',
+            'Fully unaligned length', '# fully unaligned contigs'];
     for (var group_n = 0; group_n < report.length; group_n++) {
         var group = report[group_n];
         var groupName = group[0];
@@ -224,10 +248,7 @@ function buildTotalReport(assembliesNames, report, order, date, minContig, gloss
                 numColumns++;
             }
 
-            $('#main_ref_genome').html(buildGenomeTable(reports, group_n, numColumns));
-            //$('#data_set_p').click(function() {
-            //    $('#refgenome').toggle();
-            //});
+            $('#main_ref_genome').html(buildGenomeTable(reports, group_n, numColumns))
             continue;
         }
 
@@ -260,7 +281,17 @@ function buildTotalReport(assembliesNames, report, order, date, minContig, gloss
         }
         for (metric_n = 0; metric_n < metrics.length; metric_n++) {
             var metric = metrics[metric_n];
-            table += fillOneRow(metric, mainMetrics, group_n, order, glossary, true, metric.metricName, -1, assembliesNames, notAlignedContigs, notExtendedMetrics);
+            var isEmptyRows = true;
+            for(report_n = 0; report_n < reports.length; report_n++ ) {  //  add information for each reference
+                var metrics_ref = reports[report_n].report[group_n][1];
+                for (var metric_ext_n = 0; metric_ext_n < metrics_ref.length; metric_ext_n++){
+                    if (metrics_ref[metric_ext_n].metricName == metrics[metric_n].metricName) {
+                        isEmptyRows = false;
+                        break;
+                    }
+                }
+            }
+            table += fillOneRow(metric, mainMetrics, group_n, order, glossary, true, metric.metricName, -1, assembliesNames, notAlignedContigs, notExtendedMetrics, isEmptyRows);
             for(report_n = 0; report_n < reports.length; report_n++ ) {  //  add information for each reference
                 var metrics_ref = reports[report_n].report[group_n][1];
                 for (var metric_ext_n = 0; metric_ext_n < metrics_ref.length; metric_ext_n++){
@@ -276,27 +307,32 @@ function buildTotalReport(assembliesNames, report, order, date, minContig, gloss
     table += '</table>';
 
     //table += '<p id="extended_link"><a class="dotted-link" id="extended_report_link" onclick="extendedLinkClick($(this))">Extended report</a></p>';
-    table += biuldExtendedLinkClick();
+    table += buildExtendedLinkClick();
 
     setUpHeatMap(table);
 }
 
 
 function toggleSecondary(caller) {
+    var event = window.event;
+    if(event.target.nodeName == "IMG") return;
     if (!caller.hasClass('primary') || caller.hasClass('not_extend')) {
         return;
     }
     var nextRow = caller.next('.content-row');
     $(caller).find('.metric-name').toggleClass('collapsed').toggleClass('expanded');
 
-    //var sign = nextRow.css('display') == 'none' ? '&minus;' : '+';
-    //var sign_span = '<span class="expand_sign" style="color: gray; cursor: pointer">' + sign + '</span>';
-    //var leftColumn = caller.context.firstChild;
-    //var index = leftColumn.innerHTML.indexOf('>') + 1;
-    //leftColumn.innerHTML = leftColumn.innerHTML.substr(0, index) + sign_span + leftColumn.innerHTML.substr(index+1);
     while (!nextRow.hasClass('primary') && (nextRow.length > 0)) {
         nextRow.toggleClass('secondary_hidden');
-        nextRow.css('background-color', '#F5F5DC');
+        nextRow.find('.left_column_td').css('background-color', '#E8E8E8');
         nextRow = nextRow.next('.content-row');
     }
+}
+
+function setPlot(icon) {
+    num = icon.attr('id');
+    names = ['contigs', 'largest', 'totallen', 'n50', 'misassemblies', 'misassembled', 'mismatches', 'indels',
+            'ns', 'genome', 'duplication', 'nga50'];
+    switchSpan = names[num] + '-switch';
+    document.getElementById(switchSpan).click();
 }

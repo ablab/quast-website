@@ -1,0 +1,116 @@
+mkdir -p /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/aux_bin
+cd /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/src/kurtz; make mummer
+cd libbasedir; make libbase.a
+/usr/local/Cellar/gcc/4.7.2/bin/gcc -O3   -c -o cleanMUMcand.o cleanMUMcand.c
+/usr/local/Cellar/gcc/4.7.2/bin/gcc -O3   -c -o clock.o clock.c
+/usr/local/Cellar/gcc/4.7.2/bin/gcc -O3   -c -o mapfile.o mapfile.c
+/usr/local/Cellar/gcc/4.7.2/bin/gcc -O3   -c -o multiseq.o multiseq.c
+/usr/local/Cellar/gcc/4.7.2/bin/gcc -O3   -c -o procopt.o procopt.c
+/usr/local/Cellar/gcc/4.7.2/bin/gcc -O3   -c -o safescpy.o safescpy.c
+/usr/local/Cellar/gcc/4.7.2/bin/gcc -O3   -c -o seterror.o seterror.c
+/usr/local/Cellar/gcc/4.7.2/bin/gcc -O3   -c -o space.o space.c
+ar sruv libbase.a cleanMUMcand.o clock.o mapfile.o multiseq.o procopt.o safescpy.o seterror.o space.o
+a - cleanMUMcand.o
+a - clock.o
+a - mapfile.o
+a - multiseq.o
+a - procopt.o
+a - safescpy.o
+a - seterror.o
+a - space.o
+cd streesrc; make libstree.a
+/usr/local/Cellar/gcc/4.7.2/bin/gcc -O3 -I../libbasedir -DSTREEHUGE   -c -o construct.o construct.c
+/usr/local/Cellar/gcc/4.7.2/bin/gcc -O3 -I../libbasedir -DSTREEHUGE   -c -o access.o access.c
+/usr/local/Cellar/gcc/4.7.2/bin/gcc -O3 -I../libbasedir -DSTREEHUGE   -c -o scanpref.o scanpref.c
+/usr/local/Cellar/gcc/4.7.2/bin/gcc -O3 -I../libbasedir -DSTREEHUGE   -c -o linkloc.o linkloc.c
+/usr/local/Cellar/gcc/4.7.2/bin/gcc -O3 -I../libbasedir -DSTREEHUGE   -c -o depthtab.o depthtab.c
+/usr/local/Cellar/gcc/4.7.2/bin/gcc -O3 -I../libbasedir -DSTREEHUGE   -c -o ex2leav.o ex2leav.c
+/usr/local/Cellar/gcc/4.7.2/bin/gcc -O3 -I../libbasedir -DSTREEHUGE   -c -o dfs.o dfs.c
+/usr/local/Cellar/gcc/4.7.2/bin/gcc -O3 -I../libbasedir -DSTREEHUGE   -c -o overmax.o overmax.c
+/usr/local/Cellar/gcc/4.7.2/bin/gcc -O3 -I../libbasedir -DSTREEHUGE   -c -o oversucc.o oversucc.c
+/usr/local/Cellar/gcc/4.7.2/bin/gcc -O3 -I../libbasedir -DSTREEHUGE   -c -o addleafcount.o addleafcount.c
+/usr/local/Cellar/gcc/4.7.2/bin/gcc -O3 -I../libbasedir -DSTREEHUGE   -c -o iterator.o iterator.c
+ar sruv libstree.a construct.o access.o scanpref.o linkloc.o depthtab.o ex2leav.o dfs.o overmax.o oversucc.o addleafcount.o iterator.o
+a - construct.o
+a - access.o
+a - scanpref.o
+a - linkloc.o
+a - depthtab.o
+a - ex2leav.o
+a - dfs.o
+a - overmax.o
+a - oversucc.o
+a - addleafcount.o
+a - iterator.o
+cd mm3src; make mummer
+/usr/local/Cellar/gcc/4.7.2/bin/gcc -O3 -I../libbasedir -I../streesrc   -c -o maxmat3.o maxmat3.c
+/usr/local/Cellar/gcc/4.7.2/bin/gcc -O3 -I../libbasedir -I../streesrc   -c -o maxmatopt.o maxmatopt.c
+/usr/local/Cellar/gcc/4.7.2/bin/gcc -O3 -I../libbasedir -I../streesrc   -c -o maxmatinp.o maxmatinp.c
+/usr/local/Cellar/gcc/4.7.2/bin/gcc -O3 -I../libbasedir -I../streesrc   -c -o findmumcand.o findmumcand.c
+/usr/local/Cellar/gcc/4.7.2/bin/gcc -O3 -I../libbasedir -I../streesrc   -c -o findmaxmat.o findmaxmat.c
+/usr/local/Cellar/gcc/4.7.2/bin/gcc -O3 -I../libbasedir -I../streesrc   -c -o procmaxmat.o procmaxmat.c
+/usr/local/Cellar/gcc/4.7.2/bin/gcc  maxmat3.o maxmatopt.o maxmatinp.o findmumcand.o findmaxmat.o procmaxmat.o ../streesrc/libstree.a ../libbasedir/libbase.a \
+	-o /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/mummer; chmod 755 /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/mummer
+cd /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/src/tigr; make all
+/usr/local/Cellar/gcc/4.7.2/bin/g++ -O3 tigrinc.cc -c -o tigrinc.o
+/usr/local/Cellar/gcc/4.7.2/bin/g++ -O3 annotate.cc tigrinc.o -o /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/annotate; chmod 755 /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/annotate
+/usr/local/Cellar/gcc/4.7.2/bin/g++ -O3 combineMUMs.cc tigrinc.o -o /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/combineMUMs; chmod 755 /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/combineMUMs
+/usr/local/Cellar/gcc/4.7.2/bin/g++ -O3 delta.cc -c -o delta.o
+/usr/local/Cellar/gcc/4.7.2/bin/g++ -O3 delta-filter.cc tigrinc.o delta.o -o /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/delta-filter; chmod 755 /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/delta-filter
+/usr/local/Cellar/gcc/4.7.2/bin/g++ -O3 gaps.cc tigrinc.o -o /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/gaps; chmod 755 /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/gaps
+/usr/local/Cellar/gcc/4.7.2/bin/g++ -O3 mgaps.cc tigrinc.o -o /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/mgaps; chmod 755 /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/mgaps
+/usr/local/Cellar/gcc/4.7.2/bin/g++ -O3 sw_align.cc -c -o sw_align.o
+/usr/local/Cellar/gcc/4.7.2/bin/g++ -O3 postnuc.cc tigrinc.o sw_align.o -o /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/aux_bin/postnuc; chmod 755 /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/aux_bin/postnuc
+/usr/local/Cellar/gcc/4.7.2/bin/g++ -O3 translate.cc -c -o translate.o
+/usr/local/Cellar/gcc/4.7.2/bin/g++ -O3 postpro.cc tigrinc.o sw_align.o translate.o -o /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/aux_bin/postpro; chmod 755 /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/aux_bin/postpro
+/usr/local/Cellar/gcc/4.7.2/bin/g++ -O3 prenuc.cc tigrinc.o -o /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/aux_bin/prenuc; chmod 755 /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/aux_bin/prenuc
+/usr/local/Cellar/gcc/4.7.2/bin/g++ -O3 prepro.cc tigrinc.o translate.o -o /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/aux_bin/prepro; chmod 755 /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/aux_bin/prepro
+/usr/local/Cellar/gcc/4.7.2/bin/g++ -O3 repeat-match.cc tigrinc.o -o /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/repeat-match; chmod 755 /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/repeat-match
+/usr/local/Cellar/gcc/4.7.2/bin/g++ -O3 show-aligns.cc tigrinc.o translate.o delta.o -o /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/show-aligns; chmod 755 /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/show-aligns
+/usr/local/Cellar/gcc/4.7.2/bin/g++ -O3 show-coords.cc tigrinc.o delta.o -o /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/show-coords; chmod 755 /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/show-coords
+/usr/local/Cellar/gcc/4.7.2/bin/g++ -O3 show-tiling.cc tigrinc.o delta.o -o /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/show-tiling; chmod 755 /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/show-tiling
+/usr/local/Cellar/gcc/4.7.2/bin/g++ -O3 show-snps.cc tigrinc.o translate.o delta.o -o /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/show-snps; chmod 755 /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/show-snps
+/usr/local/Cellar/gcc/4.7.2/bin/g++ -O3 show-diff.cc tigrinc.o delta.o -o /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/show-diff; chmod 755 /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/show-diff
+cd /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/scripts; make all
+/usr/bin/sed  -e 's?__CSH_PATH?/bin/csh?g' \
+		-e 's?__BIN_DIR?/Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx?g' \
+		-e 's?__SCRIPT_DIR?/Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/scripts?g' \
+		exact-tandems.csh > /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/exact-tandems
+chmod 755 /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/exact-tandems
+/usr/bin/sed  -e 's?__PERL_PATH?/usr/bin/perl?g' \
+		-e 's?__SCRIPT_DIR?/Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/scripts?g' \
+                mapview.pl > /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/mapview
+chmod 755 /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/mapview
+/usr/bin/sed  -e 's?__PERL_PATH?/usr/bin/perl?g' \
+                -e 's?__SCRIPT_DIR?/Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/scripts?g' \
+                -e 's?__BIN_DIR?/Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx?g' \
+                mummerplot.pl > /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/mummerplot
+chmod 755 /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/mummerplot
+/usr/bin/sed  -e 's?__PERL_PATH?/usr/bin/perl?g' \
+                -e 's?__SCRIPT_DIR?/Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/scripts?g' \
+                -e 's?__AUX_BIN_DIR?/Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/aux_bin?g' \
+                -e 's?__BIN_DIR?/Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx?g' \
+                 nucmer.pl > /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/nucmer
+chmod 755 /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/nucmer
+/usr/bin/sed  -e 's?__PERL_PATH?/usr/bin/perl?g' \
+                -e 's?__SCRIPT_DIR?/Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/scripts?g' \
+                -e 's?__AUX_BIN_DIR?/Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/aux_bin?g' \
+                -e 's?__BIN_DIR?/Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx?g' \
+                promer.pl > /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/promer
+chmod 755 /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/promer
+/usr/bin/sed  -e 's?__CSH_PATH?/bin/csh?g' \
+		-e 's?__BIN_DIR?/Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx?g' \
+		run-mummer1.csh > /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/run-mummer1
+chmod 755 /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/run-mummer1
+/usr/bin/sed  -e 's?__CSH_PATH?/bin/csh?g' \
+		-e 's?__BIN_DIR?/Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx?g' \
+		run-mummer3.csh > /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/run-mummer3
+chmod 755 /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/run-mummer3
+/usr/bin/sed  -e 's?__PERL_PATH?/usr/bin/perl?g' \
+		nucmer2xfig.pl > /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/nucmer2xfig
+chmod 755 /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/nucmer2xfig
+/usr/bin/sed -e 's?__PERL_PATH?/usr/bin/perl?g' \
+               -e 's?__SCRIPT_DIR?/Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/scripts?g' \
+               -e 's?__BIN_DIR?/Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx?g' \
+                 dnadiff.pl > /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/dnadiff
+chmod 755 /Users/vladsaveliev/Dropbox/bio/quast/quast_master/libs/MUMmer3.23-osx/dnadiff
