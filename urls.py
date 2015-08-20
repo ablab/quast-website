@@ -35,8 +35,6 @@ urlpatterns = patterns('',
     url(r'^example/?$', 'quast_app.views.example'),
     url(r'^ecoli/?$', 'quast_app.views.idba'),
 
-    url(r'^manual3/?$', 'quast_app.views.manual3'),
-    url(r'^changes3/?$', 'quast_app.views.changes3'),
     url(r'^quast3/demo.html$', RedirectView.as_view(url='/static/quast3/demo.html')),
 
     url(r'^e.coli-single-cell/(?P<download_fname>.+)?/?$', 'quast_app.example_reports_views.e_coli_sc'),

@@ -35,21 +35,11 @@ def manual(request):
 
 def changes(request):
     with open(settings.CHANGES_FPATH) as f:
-        return HttpResponse(f.read())
+        return HttpResponse(f.read(), content_type='text/plain')
 
 
 def license(request):
     with open(settings.LICENSE_FPATH) as f:
-        return HttpResponse(f.read(), content_type='text/plain')
-
-
-def manual3(request):
-    with open(settings.QUAST3_MANUAL_FPATH) as f:
-        return HttpResponse(f.read())
-
-
-def changes3(request):
-    with open(settings.QUAST3_CHANGES_FPATH) as f:
         return HttpResponse(f.read(), content_type='text/plain')
 
 
