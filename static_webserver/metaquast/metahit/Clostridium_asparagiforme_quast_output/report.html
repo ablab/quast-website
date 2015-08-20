@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+    <style type="text/css">
+        body {
+            padding-bottom: 30px;
+        }
+        .content {
+            margin-left: 120px;
+            padding-top: 50px;
+            clear: both;
+        }
+        #header {
+            display: block;
+            width: 100%;
+            margin-bottom: 1em;
+        }
+        /*#report_date { *//* not used in Quast html report */
+            /*margin-top: -13px;*/
+            /*margin-bottom: 20px;*/
+        /*}*/
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="report_html_aux/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="report_html_aux/common.css" />
+    <link rel="stylesheet" type="text/css" href="report_html_aux/report.css" />
+
+    <script type="text/javascript" src="report_html_aux/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="report_html_aux/flot/jquery.flot.min.js"></script>
+    <script type="text/javascript" src="report_html_aux/flot/jquery.flot.dashes.js"></script>
+    <script type="text/javascript" src="report_html_aux/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="report_html_aux/bootstrap/bootstrap-tooltip-vlad.js"></script>
+
+    <script type="text/javascript" src="report_html_aux/scripts/hsvToRgb.js"></script>
+    <script type="text/javascript" src="report_html_aux/scripts/utils.js"></script>
+    <script type="text/javascript" src="report_html_aux/scripts/build_total_report_common.js"></script>
+    <script type="text/javascript" src="report_html_aux/scripts/build_total_report.js"></script>
+    <script type="text/javascript" src="report_html_aux/scripts/draw_cumulative_plot.js"></script>
+    <script type="text/javascript" src="report_html_aux/scripts/draw_nx_plot.js"></script>
+    <script type="text/javascript" src="report_html_aux/scripts/draw_gc_plot.js"></script>
+    <script type="text/javascript" src="report_html_aux/scripts/draw_genes_plot.js"></script>
+    <script type="text/javascript" src="report_html_aux/scripts/build_report_common.js"></script>
+    
+    <script type="text/javascript" src="report_html_aux/scripts/build_report.js"></script>
+    <script type="text/javascript" src="report_html_aux/dragtable.js"></script>
+
+    <script type="text/javascript">
+        $(function() {
+            buildReport();
+
+            dragTable.init();
+
+            $('#contigs_are_ordered').show();
+
+            $("[rel=tooltip]").tooltip({ animation: false, });
+        });
+    </script>
+</head>
+
+<body>
+<div class="content">
+    <div id='header'>
+        <h1 style='font-size: 1.5em;'><span class='smallcapitals' id='quast_name'>QUAST</span>
+            <span id='report_name'>report</span></h1>
+        <p id='report_date'></p>
+        <p id='mincontig'>Loading...</p>
+        <p id='per_ref_msg'></p>
+        <p id='krona'></p>
+
+        <p id="data_set_p">
+                <span style="display: none;" id="reference_length">
+                    Reference size:
+                    <span class='val'></span><span class='rhs'>&nbsp;</span>bp,
+                </span>
+
+                <span style="display: none;" id="reference_gc">G+C content:
+                    <span class='val'></span><span class='rhs'>&nbsp;</span>%
+                </span>
+                
+     </span><span style="display: none;" id="reference_chr">, chromosomes: <span class='val'></span>
+            </span>
+            
+            <span style="display: none;" id="reference_reads"><br>Total reads:
+                <span class='val'></span></span><span style='display: none;'>
+
+     </span><span style="display: none;" id="reference_mappedreads">, mapped:
+                <span class='val'></span></span><span style='display: none;'>
+
+     </span><span style="display: none;" id="reference_pairedreads">, properly paired: <span class='val'></span>
+            </span>
+
+            <span style="display: none;" id="reference_genes"><br>
+                <span class='val'></span> genes</span><span style='display: none;'>
+
+                <span style="display: none;" id="reference_operons">,
+                    <span class='val'></span> operons
+                </span>
+            </span>
+        </p>
+        <p>
+        <span id="main_ref_genome">
+        </p>
+    </div>
+
+    <noscript>
+        <div style="margin-left: 0;">
+            Unfortunately, <span style="font-weight: bold">JavaScript</span> in your
+            browser <span style="font-weight: bold">is disabled</span> or is not supported.</br>
+            We need JavaScript to build report and plots.
+        </div>
+    </noscript>
+
+    <div class='report-and-plots'>
+        <div class='report' id='main_report'>
+                <div id="heatmap_header" style='display: none;'>
+                <div style="padding-right: 10px; display: inline-block; vertical-align:top;">
+                    <canvas id="gradientHeatmap" width="150" height="6"></canvas>
+                    <div style="margin-left: 0; text-align: justify;">
+                        <span class="heatmap_legend">Worst</span>
+                        <span style="margin-left: -5px;" class="heatmap_legend">Median</span>
+                        <span class="heatmap_legend">Best</span>
+                        <span class="heatmap_legend" style='width: 100%; height: 0;'></span>
+                    </div>
+                </div>
+                <label for="heatmaps_chbox"><input type="checkbox" checked="checked" id="heatmaps_chbox">Show heatmap</label>
+            </div>
+        </div>
+        <div class='plots'>
+            <table style='margin: -3px;'>
+                <tr id='all-switches'>
+                    <td>
+                        <div id='plots-switches'></div>
+                    </td>
+                    <td style='text-align: right; padding-right: 22px;'>
+                        <span id='scale-placeholder'></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div id='plot-placeholder' style=''></div>
+                    </td>
+                    <td>
+                        <div id='legend-placeholder'></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p id="contigs_are_ordered">Contigs are ordered from largest (contig #1) to smallest.</p>
+                        <p id="gc_info">Contigs are broken into nonoverlapping 100 bp windows.
+                            Plot shows numbers of windows for each GC percentage.</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div style="clear: left"></div>
+        <div style="clear: right"></div>
+
+        <div class='json-code'>
+            <div id='total-report-json'>
+                {"minContig":500,"report":[["Statistics without reference",[{"values":[15,10,22,7],"quality":"Less is better","isMain":true,"metricName":"# contigs"},{"values":[15,10,22,7],"quality":"Less is better","isMain":false,"metricName":"# contigs (>= 0 bp)"},{"values":[11,7,8,7],"quality":"Less is better","isMain":false,"metricName":"# contigs (>= 1000 bp)"},{"values":[94894,5612,3110,32100],"quality":"More is better","isMain":true,"metricName":"Largest contig"},{"values":[258741,19728,22918,54275],"quality":"More is better","isMain":true,"metricName":"Total length"},{"values":[258741,19728,22918,54275],"quality":"More is better","isMain":false,"metricName":"Total length (>= 0 bp)"},{"values":[255551,17698,12443,54275],"quality":"More is better","isMain":false,"metricName":"Total length (>= 1000 bp)"},{"values":[69359,2895,1032,32100],"quality":"More is better","isMain":true,"metricName":"N50"},{"values":[36280,1501,751,9295],"quality":"More is better","isMain":false,"metricName":"N75"},{"values":[2,3,8,1],"quality":"Less is better","isMain":false,"metricName":"L50"},{"values":[3,5,14,2],"quality":"Less is better","isMain":false,"metricName":"L75"},{"values":["46.66","45.58","49.62","45.15"],"quality":"Equal","isMain":false,"metricName":"GC (%)"}]],["Misassemblies",[{"values":[0,0,0,0],"quality":"Less is better","isMain":true,"metricName":"# misassemblies"},{"values":[0,0,0,0],"quality":"Less is better","isMain":false,"metricName":"    # relocations"},{"values":[0,0,0,0],"quality":"Less is better","isMain":false,"metricName":"    # translocations"},{"values":[0,0,0,0],"quality":"Less is better","isMain":false,"metricName":"    # inversions"},{"values":[3,4,0,2],"quality":"Less is better","isMain":false,"metricName":"# possibly misassembled contigs"},{"values":[0,0,0,0],"quality":"Less is better","isMain":false,"metricName":"# misassembled contigs"},{"values":[0,0,0,0],"quality":"Less is better","isMain":true,"metricName":"Misassembled contigs length"},{"values":[0,1,9,0],"quality":"Less is better","isMain":false,"metricName":"# local misassemblies"}]],["Unaligned",[{"values":[0,0,0,0],"quality":"Less is better","isMain":false,"metricName":"# fully unaligned contigs"},{"values":[0,0,0,0],"quality":"Less is better","isMain":false,"metricName":"Fully unaligned length"},{"values":[13,6,5,7],"quality":"Less is better","isMain":false,"metricName":"# partially unaligned contigs"},{"values":[0,0,0,0],"quality":"Less is better","isMain":false,"metricName":"    # with misassembly"},{"values":[3,4,0,2],"quality":"Less is better","isMain":false,"metricName":"    # both parts are significant"},{"values":[231226,12123,2549,41781],"quality":"Less is better","isMain":false,"metricName":"Partially unaligned length"}]],["Mismatches",[{"values":[1035,124,477,344],"quality":"Less is better","isMain":false,"metricName":"# mismatches"},{"values":[21,2,5,8],"quality":"Less is better","isMain":false,"metricName":"# indels"},{"values":[40,2,5,15],"quality":"Less is better","isMain":false,"metricName":"Indels length"},{"values":["3784.69","1727.50","2468.18","2754.87"],"quality":"Less is better","isMain":true,"metricName":"# mismatches per 100 kbp"},{"values":["76.79","27.86","25.87","64.07"],"quality":"Less is better","isMain":true,"metricName":"# indels per 100 kbp"},{"values":[19,2,5,7],"quality":"Less is better","isMain":false,"metricName":"    # short indels"},{"values":[2,0,0,1],"quality":"Less is better","isMain":false,"metricName":"    # long indels"},{"values":[211,537,704,160],"quality":"Less is better","isMain":false,"metricName":"# N's"},{"values":["81.55","2722.02","3071.82","294.80"],"quality":"Less is better","isMain":true,"metricName":"# N's per 100 kbp"}]],["Genome statistics",[{"values":["0.426","0.112","0.301","0.195"],"quality":"More is better","isMain":true,"metricName":"Genome fraction (%)"},{"values":["1.006","1.059","1.054","1.001"],"quality":"Less is better","isMain":true,"metricName":"Duplication ratio"},{"values":[8256,1952,3090,4835],"quality":"More is better","isMain":false,"metricName":"Largest alignment"},{"values":[null,null,906,null],"quality":"More is better","isMain":false,"metricName":"NA50"},{"values":[null,null,545,null],"quality":"More is better","isMain":false,"metricName":"NA75"},{"values":[null,null,8,null],"quality":"Less is better","isMain":false,"metricName":"LA50"},{"values":[null,null,16,null],"quality":"Less is better","isMain":false,"metricName":"LA75"}]],["Predicted genes",[{"values":[242,32,45,61],"quality":"More is better","isMain":true,"metricName":"# predicted genes (unique)"},{"values":[242,32,45,61],"quality":"More is better","isMain":true,"metricName":"# predicted genes (>= 0 bp)"},{"values":[203,21,24,45],"quality":"More is better","isMain":true,"metricName":"# predicted genes (>= 300 bp)"},{"values":[43,1,1,7],"quality":"More is better","isMain":true,"metricName":"# predicted genes (>= 1500 bp)"},{"values":[3,0,0,0],"quality":"More is better","isMain":true,"metricName":"# predicted genes (>= 3000 bp)"}]],["Reference statistics",[{"values":[6417332,6417332,6417332,6417332],"quality":"Equal","isMain":false,"metricName":"Reference length"},{"values":["55.60","55.60","55.60","55.60"],"quality":"Equal","isMain":false,"metricName":"Reference GC (%)"}]]],"referenceName":"Clostridium_asparagiforme","date":"19 August 2015, Wednesday, 01:31:36","order":[0,1,2,3],"assembliesNames":["IDBA_UD","Ray","SOAPdenovo2","SPAdes"]}
+            </div>
+            <div id='qualities-json'>
+                {{ qualities }}
+            </div>
+            <div id='main-metrics-json'>
+                {{ mainMetrics }}
+            </div>
+
+            <div id="contigs-lengths-json">
+                {"lists_of_lengths":[[94894,69359,36280,14814,13484,8260,5398,4898,4243,2881,1040,955,946,746,543],[5612,3544,2895,1614,1501,1275,1257,815,616,599],[3110,1920,1526,1393,1330,1067,1065,1032,985,980,978,796,792,751,730,683,681,678,668,665,545,543],[32100,9295,5268,3495,1401,1398,1318]],"filenames":["IDBA_UD","Ray","SOAPdenovo2","SPAdes"]}
+            </div>
+            <div id='assemblies-lengths-json'>
+                {"assemblies_lengths":[258741,19728,22918,54275],"filenames":["IDBA_UD","Ray","SOAPdenovo2","SPAdes"]}
+            </div>
+            <div id='reference-length-json'>
+                {"reflen":6417332}
+            </div>
+            <div id='tick-x-json'>
+                {"tickX":1}
+            </div>
+            <div id='coord-nx-json'>
+                {"coord_y":[[94894,94894,94894,69359,69359,36280,36280,14814,14814,13484,13484,8260,8260,5398,5398,4898,4898,4243,4243,2881,2881,1040,1040,955,955,946,946,746,746,543,543,0.0],[5612,5612,5612,3544,3544,2895,2895,1614,1614,1501,1501,1275,1275,1257,1257,815,815,616,616,599,599,0.0],[3110,3110,3110,1920,1920,1526,1526,1393,1393,1330,1330,1067,1067,1065,1065,1032,1032,985,985,980,980,978,978,796,796,792,792,751,751,730,730,683,683,681,681,678,678,668,668,665,665,545,545,543,543,0.0],[32100,32100,32100,9295,9295,5268,5268,3495,3495,1401,1401,1398,1398,1318,1318,0.0]],"coord_x":[[0.0,1e-10,36.67528532393397,36.67528532403397,63.48162834649321,63.48162834659321,77.50337209796669,77.50337209806669,83.22878863419405,83.22878863429405,88.44017762936681,88.44017762946682,91.63255920012676,91.63255920022677,93.71881534043696,93.71881534053696,95.61182804426048,95.61182804436048,97.25169184628643,97.25169184638644,98.36516052732269,98.36516052742269,98.76710687521498,98.76710687531498,99.13620183890454,99.13620183900454,99.50181842073734,99.50181842083734,99.79013762797547,99.79013762807547,100.0,100.0000000001],[0.0,1e-10,28.446877534468776,28.446877534568774,46.41119221411192,46.41119221421192,61.08576642335766,61.08576642345766,69.26703163017032,69.26703163027032,76.87550689375507,76.87550689385507,83.33840227088402,83.33840227098402,89.71005677210057,89.71005677220057,93.8412408759124,93.8412408760124,96.96370640713707,96.96370640723707,100.0,100.0000000001],[0.0,1e-10,13.57011955668034,13.57011955678034,21.947813945370452,21.94781394547045,28.606335631381448,28.606335631481446,34.68452744567589,34.68452744577589,40.487826162841436,40.48782616294144,45.1435552840562,45.1435552841562,49.79055764028275,49.79055764038275,54.29356837420368,54.29356837430368,58.59150013090147,58.591500131001474,62.86761497512872,62.86761497522872,67.13500305436774,67.13500305446775,70.60825551967885,70.60825551977885,74.06405445501353,74.06405445511353,77.34095470808971,77.34095470818971,80.52622392878959,80.52622392888959,83.50641417226635,83.50641417236635,86.47787765075486,86.47787765085486,89.43625098176106,89.43625098186106,92.35099048782617,92.35099048792617,95.25263984640894,95.25263984650894,97.63068330569858,97.63068330579858,100.0,100.0000000001],[0.0,1e-10,59.143251957623214,59.143251957723216,76.26900046061722,76.26900046071722,85.97512666973745,85.97512666983745,92.41455550437587,92.41455550447587,94.99585444495624,94.99585444505624,97.57162597881161,97.57162597891161,100.0,100.0000000001]],"filenames":["IDBA_UD","Ray","SOAPdenovo2","SPAdes"]}
+            </div>
+            <div id='coord-ngx-json'>
+                {"coord_y":[[94894,94894,94894,69359,69359,36280,36280,14814,14814,13484,13484,8260,8260,5398,5398,4898,4898,4243,4243,2881,2881,1040,1040,955,955,946,946,746,746,543,543,0.0],[5612,5612,5612,3544,3544,2895,2895,1614,1614,1501,1501,1275,1275,1257,1257,815,815,616,616,599,599,0.0],[3110,3110,3110,1920,1920,1526,1526,1393,1393,1330,1330,1067,1067,1065,1065,1032,1032,985,985,980,980,978,978,796,796,792,792,751,751,730,730,683,683,681,681,678,678,668,668,665,665,545,545,543,543,0.0],[32100,32100,32100,9295,9295,5268,5268,3495,3495,1401,1401,1398,1398,1318,1318,0.0]],"coord_x":[[0.0,1e-10,1.47871420708793,1.47871420718793,2.5595216205114526,2.5595216206114526,3.1248655983514646,3.1248655984514646,3.3557091950361926,3.3557091951361926,3.5658276679467416,3.5658276680467416,3.6945415945442748,3.694541594644275,3.7786575480277476,3.7786575481277476,3.854982101596115,3.854982101696115,3.921099921275695,3.921099921375695,3.9659939675865297,3.9659939676865297,3.982200079409948,3.982200079509948,3.997081653247798,3.997081653347798,4.0118229818871765,4.0118229819871765,4.023447750560513,4.023447750660513,4.031909210868317,4.031909210968317],[0.0,1e-10,0.08745067264713748,0.08745067274713747,0.14267611524540105,0.14267611534540106,0.18778832075385846,0.18778832085385846,0.2129389596798171,0.2129389597798171,0.23632874222496203,0.23632874232496204,0.25619681200847955,0.25619681210847955,0.2757843913950533,0.2757843914950533,0.28848437325667425,0.28848437335667426,0.2980833779520835,0.2980833780520835,0.3074174750503792,0.3074174751503792],[0.0,1e-10,0.04846250747195252,0.04846250757195252,0.07838148314595536,0.07838148324595536,0.10216083568685554,0.10216083578685553,0.12386767585033781,0.1238676759503378,0.14459279962451685,0.14459279972451686,0.16121964704335073,0.16121964714335074,0.17781532886252419,0.1778153289625242,0.1938967782873007,0.1938967783873007,0.20924583612005737,0.20924583622005738,0.224516979953663,0.224516980053663,0.23975695818760817,0.23975695828760818,0.2521608668524552,0.2521608669524552,0.26450244431798137,0.2645024444179814,0.27620512699046895,0.27620512709046896,0.2875805708665221,0.2875805709665221,0.2982236231505554,0.2982236232505554,0.3088355098349283,0.3088355099349283,0.31940064811981056,0.31940064821981057,0.3298099584063907,0.3298099585063907,0.3401725202934802,0.3401725203934802,0.3486651462009446,0.3486651463009446,0.3571266065087485,0.3571266066087485],[0.0,1e-10,0.500207874549735,0.500207874649735,0.6450499989715353,0.6450499990715353,0.7271401884770805,0.7271401885770805,0.7816020738836638,0.7816020739836638,0.8034335764457877,0.8034335765457877,0.8252183306084211,0.8252183307084211,0.8457564607846376,0.8457564608846376]],"filenames":["IDBA_UD","Ray","SOAPdenovo2","SPAdes"]}
+            </div>
+            <div id='coord-nax-json'>
+                {"coord_y":[[8256,8256,8256,7377,7377,3861,3861,3573,3573,2257,2257,683,683,543,543,206,206,146,146,138,138,121,121,114,114,88,88,74,74,0.0],[1952,1952,1952,1054,1054,812,812,775,775,738,738,624,624,616,616,596,596,121,121,108,108,0.0],[3090,3090,3090,1918,1918,1526,1526,1257,1257,1209,1209,1067,1067,1065,1065,906,906,792,792,751,751,678,678,668,668,652,652,625,625,610,610,545,545,543,543,525,525,399,399,263,263,166,166,121,121,0.0],[4835,4835,4835,3573,3573,2460,2460,1231,1231,185,185,121,121,89,89,0.0]],"coord_x":[[0.0,1e-10,3.1908356232680557,3.1908356233680557,6.041949285192528,6.041949285292528,7.53417510174267,7.53417510184267,8.915092698876483,8.915092698976483,9.787393571177354,9.787393571277354,10.051364105418159,10.051364105518159,10.261226477442694,10.261226477542694,10.340842773275206,10.340842773375206,10.397269856729316,10.397269856829316,10.450605045199639,10.450605045299639,10.497369956829417,10.497369956929417,10.541429460348379,10.541429460448379,10.575440305170035,10.575440305270035,10.604040333770063,10.604040333870064],[0.0,1e-10,9.894566098945662,9.894566099045662,15.237226277372264,15.237226277472264,19.353203568532034,19.353203568632033,23.2816301703163,23.2816301704163,27.022506082725062,27.02250608282506,30.18552311435523,30.18552311445523,33.30798864557989,33.30798864567989,36.329075425790755,36.32907542589076,36.94241686942417,36.94241686952417,37.48986212489862,37.48986212499862],[0.0,1e-10,13.48285190679815,13.48285190689815,21.851819530500045,21.851819530600043,28.51034121651104,28.51034121661104,33.9951130116066,33.9951130117066,39.2704424469849,39.2704424470849,43.92617156819967,43.92617156829967,48.573173924426214,48.573173924526216,52.52639846408936,52.52639846418936,55.98219739942403,55.98219739952403,59.259097652500216,59.25909765260022,62.217470983506416,62.21747098360642,65.13221048957152,65.13221048967152,67.97713587573087,67.97713587583087,70.70424993454927,70.70424993464927,73.36591325595602,73.36591325605602,75.74395671524566,75.74395671534566,78.11327340954708,78.11327340964708,80.40404921895454,80.40404921905454,82.1450388341042,82.1450388342042,83.29260843005498,83.29260843015498,84.01692992407715,84.01692992417715,84.54489920586438,84.54489920596438],[0.0,1e-10,8.908337171810226,8.908337171910226,15.49147858129894,15.49147858139894,20.023952095808383,20.02395209590838,22.292031321971443,22.29203132207144,22.63288807001382,22.632888070113818,22.855826807922615,22.855826808022613,23.019806540764623,23.01980654086462]],"filenames":["IDBA_UD","Ray","SOAPdenovo2","SPAdes"]}
+            </div>
+            <div id='coord-ngax-json'>
+                {"coord_y":[[8256,8256,8256,7377,7377,3861,3861,3573,3573,2257,2257,683,683,543,543,206,206,146,146,138,138,121,121,114,114,88,88,74,74,0.0],[1952,1952,1952,1054,1054,812,812,775,775,738,738,624,624,616,616,596,596,121,121,108,108,0.0],[3090,3090,3090,1918,1918,1526,1526,1257,1257,1209,1209,1067,1067,1065,1065,906,906,792,792,751,751,678,678,668,668,652,652,625,625,610,610,545,545,543,543,525,525,399,399,263,263,166,166,121,121,0.0],[4835,4835,4835,3573,3573,2460,2460,1231,1231,185,185,121,121,89,89,0.0]],"coord_x":[[0.0,1e-10,0.12865159539821222,0.12865159549821223,0.24360590974567,0.24360590984567002,0.3037710998901101,0.3037710999901101,0.35944844368344975,0.35944844378344976,0.3946188229002333,0.3946188230002333,0.4052618751842666,0.4052618752842666,0.4137233354920705,0.41372333559207053,0.41693339225709375,0.41693339235709376,0.4192084810323044,0.4192084811323044,0.42135890740887333,0.42135890750887334,0.42324442618832875,0.42324442628832876,0.42502086536897266,0.42502086546897266,0.4263921517540311,0.4263921518540311,0.42754527894146666,0.42754527904146666],[0.0,1e-10,0.030417625268569556,0.030417625368569557,0.0468418962896107,0.0468418963896107,0.059495129751741066,0.05949512985174107,0.07157179962015367,0.07157179972015366,0.08307190589484852,0.08307190599484851,0.09279557298889944,0.09279557308889944,0.10239457768430868,0.10239457778430867,0.11168192638311374,0.11168192648311373,0.11356744516256911,0.11356744526256911,0.11525038754423178,0.11525038764423177],[0.0,1e-10,0.048150851475348325,0.048150851575348326,0.07803866154969075,0.07803866164969074,0.10181801409059092,0.10181801419059092,0.12140559347716465,0.12140559357716464,0.14024519847188832,0.14024519857188833,0.15687204589072218,0.1568720459907222,0.17346772770989563,0.17346772780989564,0.18758574435606573,0.18758574445606574,0.1999273218215919,0.1999273219215919,0.21163000449407948,0.2116300045940795,0.2221951427789617,0.22219514287896172,0.23260445306554187,0.23260445316554187,0.24276443855483867,0.24276443865483868,0.2525036884487198,0.2525036885487198,0.2620091963451478,0.2620091964451478,0.27050182225261216,0.27050182235261216,0.2789632825604161,0.2789632826604161,0.28714425247127623,0.28714425257127624,0.29336178960352993,0.29336178970352994,0.29746006595887514,0.29746006605887515,0.30004681073068995,0.30004681083068996,0.3019323295101453,0.3019323296101453],[0.0,1e-10,0.07534283717906444,0.07534283727906443,0.13102018097240412,0.13102018107240412,0.16935386855472026,0.16935386865472027,0.18853629514570852,0.18853629524570853,0.19141911311429735,0.19141911321429736,0.19330463189375274,0.19330463199375275,0.19469150107864142,0.19469150117864142]],"filenames":["IDBA_UD","Ray","SOAPdenovo2","SPAdes"]}
+            </div>
+            <div id='genes-in-contigs-json'>
+                {{ genesInContigs }}
+            </div>
+            <div id='operons-in-contigs-json'>
+                {{ operonsInContigs }}
+            </div>
+            <div id='summary-json'>
+                [{{ num_contigs }},
+                {{ Largest_contig }},
+                {{ Total_length }},
+                {{ N50 }},
+                {{ num_misassemblies }},
+                {{ Misassembled_contigs_length }},
+                {{ num_mismatches_per_100_kbp }},
+                {{ num_indels_per_100_kbp }},
+                {{ num_N's_per_100_kbp }},
+                {{ Genome_fraction }},
+                {{ Duplication_ratio }},
+                {{ NGA50 }}]
+            </div>
+            <div id='misassemblies-json'>
+                {{ allMisassemblies }}
+            </div>
+            <div id='krona-json'>
+                {{ krona }}
+            </div>
+            <div id='gc-json'>
+                {"list_of_GC_distributions":[[[0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0,25.0,26.0,27.0,28.0,29.0,30.0,31.0,32.0,33.0,34.0,35.0,36.0,37.0,38.0,39.0,40.0,41.0,42.0,43.0,44.0,45.0,46.0,47.0,48.0,49.0,50.0,51.0,52.0,53.0,54.0,55.0,56.0,57.0,58.0,59.0,60.0,61.0,62.0,63.0,64.0,65.0,66.0,67.0,68.0,69.0,70.0,71.0,72.0,73.0,74.0,75.0,76.0,77.0,78.0,79.0,80.0,81.0,82.0,83.0,84.0,85.0,86.0,87.0,88.0,89.0,90.0,91.0,92.0,93.0,94.0,95.0,96.0,97.0,98.0,99.0,100.0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,3,2,6,4,9,11,9,19,23,27,45,34,40,43,53,59,64,74,80,99,115,98,148,130,140,133,132,127,127,126,103,130,76,73,50,52,33,32,22,9,10,6,3,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]],[[0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0,25.0,26.0,27.0,28.0,29.0,30.0,31.0,32.0,33.0,34.0,35.0,36.0,37.0,38.0,39.0,40.0,41.0,42.0,43.0,44.0,45.0,46.0,47.0,48.0,49.0,50.0,51.0,52.0,53.0,54.0,55.0,56.0,57.0,58.0,59.0,60.0,61.0,62.0,63.0,64.0,65.0,66.0,67.0,68.0,69.0,70.0,71.0,72.0,73.0,74.0,75.0,76.0,77.0,78.0,79.0,80.0,81.0,82.0,83.0,84.0,85.0,86.0,87.0,88.0,89.0,90.0,91.0,92.0,93.0,94.0,95.0,96.0,97.0,98.0,99.0,100.0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,2,2,5,2,3,3,3,3,5,5,8,9,4,6,7,10,9,7,11,9,8,10,10,8,8,11,3,4,4,4,1,2,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]],[[0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0,25.0,26.0,27.0,28.0,29.0,30.0,31.0,32.0,33.0,34.0,35.0,36.0,37.0,38.0,39.0,40.0,41.0,42.0,43.0,44.0,45.0,46.0,47.0,48.0,49.0,50.0,51.0,52.0,53.0,54.0,55.0,56.0,57.0,58.0,59.0,60.0,61.0,62.0,63.0,64.0,65.0,66.0,67.0,68.0,69.0,70.0,71.0,72.0,73.0,74.0,75.0,76.0,77.0,78.0,79.0,80.0,81.0,82.0,83.0,84.0,85.0,86.0,87.0,88.0,89.0,90.0,91.0,92.0,93.0,94.0,95.0,96.0,97.0,98.0,99.0,100.0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,2,1,4,1,4,4,6,10,13,9,19,9,9,17,18,12,13,6,10,9,7,11,9,7,5,1,1,2,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]],[[0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0,25.0,26.0,27.0,28.0,29.0,30.0,31.0,32.0,33.0,34.0,35.0,36.0,37.0,38.0,39.0,40.0,41.0,42.0,43.0,44.0,45.0,46.0,47.0,48.0,49.0,50.0,51.0,52.0,53.0,54.0,55.0,56.0,57.0,58.0,59.0,60.0,61.0,62.0,63.0,64.0,65.0,66.0,67.0,68.0,69.0,70.0,71.0,72.0,73.0,74.0,75.0,76.0,77.0,78.0,79.0,80.0,81.0,82.0,83.0,84.0,85.0,86.0,87.0,88.0,89.0,90.0,91.0,92.0,93.0,94.0,95.0,96.0,97.0,98.0,99.0,100.0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,1,0,0,0,5,2,5,6,6,4,6,8,10,5,12,13,13,25,19,17,22,32,27,29,24,36,29,32,22,11,27,14,16,11,10,7,7,9,8,2,2,1,3,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]],"lists_of_gc_info":null,"filenames":["IDBA_UD","Ray","SOAPdenovo2","SPAdes"]}
+            </div>
+        </div>
+    </div>
+
+    <div class='json-code'>
+        <div id='glossary-json'>
+            {
+    "# contigs"                     : "<span>is the total number of contigs in the assembly.</span>",
+    "Largest contig"                : "<span>is the length of the longest contig in the assembly.</span>",
+    "Total length"                  : "<span>is the total number of bases in the assembly.</span>",
+    "Reference length"              : "<span>is the total number of bases in the reference.</span>",
+
+    "N50"                           : "<span>is the contig length such that using longer or equal length contigs produces half (50%) of the bases of the assembly. Usually there is no value that produces exactly 50%, so the technical definition is the maximum length x such that using contigs of length at least x accounts for at least 50% of the total assembly length.</span>",
+    "NG50"                          : "<span>is the contig length such that using longer or equal length contigs produces half (50%) of the bases of the reference genome. This metric is computed only if a reference genome is provided.</span>",
+    "N75"                           : "<span>is the contig length such that using longer or equal length contigs produces 75% of the bases of the assembly. Usually there is no value that produces exactly 75%, so the technical definition is the maximum length x such that using contigs of length at least x accounts for at least 75% of the total assembly length.</span>",
+    "NG75"                          : "<span>is the contig length such that using longer or equal length contigs produces 75% of the bases of the reference genome. This metric is computed only if a reference genome is provided.</span>",
+
+    "L50"                           : "<span>is the minimum number of contigs that produce half (50%) of the bases of the assembly. In other words, it's the number of contigs of length at least N50.</span>",
+    "LG50"                          : "<span>is the minimum number of contigs that produce half (50%) of the bases of the reference genome. In other words, it's the number of contigs of length at least NG50. This metric is computed only if a reference genome is provided.</span>",
+    "L75"                           : "<span>is the minimum number of contigs that produce 75% of the bases of the assembly. In other words, it's the number of contigs of length at least N75.</span>",
+    "LG75"                          : "<span>is the minimum number of contigs that produce 75% of the bases of the reference genome. In other words, it's the number of contigs of length at least NG75. This metric is computed only if a reference genome is provided.</span>",
+
+    "NA50"                          : "<span>is N50 where the lengths of aligned blocks are counted instead of contig lengths. I.e., if a contig has a misassembly with respect to the reference, the contig is broken into smaller pieces. This metric is computed only if a reference genome is provided.</span>",
+    "NGA50"                         : "<span>is NG50 where the lengths of aligned blocks are counted instead of contig lengths. I.e., if a contig has a misassembly with respect to the reference, the contig is broken into smaller pieces. This metric is computed only if a reference genome is provided.</span>",
+    "NA75"                          : "<span>is N75 where the lengths of aligned blocks are counted instead of contig lengths. I.e., if a contig has a misassembly with respect to the reference, the contig is broken into smaller pieces. This metric is computed only if a reference genome is provided.</span>",
+    "NGA75"                         : "<span>is NG75 where the lengths of aligned blocks are counted instead of contig lengths. I.e., if a contig has a misassembly with respect to the reference, the contig is broken into smaller pieces. This metric is computed only if a reference genome is provided.</span>",
+
+    "LA50"                          : "<span>is L50 where aligned blocks are counted instead of contigs. I.e., if a contig has a misassembly with respect to the reference, the contig is broken into smaller pieces.</span>",
+    "LGA50"                         : "<span>is LG50 where aligned blocks are counted instead of contigs. I.e., if a contig has a misassembly with respect to the reference, the contig is broken into smaller pieces.</span>",
+    "LA75"                          : "<span>is L75 where aligned blocks are counted instead of contigs. I.e., if a contig has a misassembly with respect to the reference, the contig is broken into smaller pieces.</span>",
+    "LGA75"                         : "<span>is LG75 where aligned blocks are counted instead of contigs. I.e., if a contig has a misassembly with respect to the reference, the contig is broken into smaller pieces.</span>",
+
+    "Average %IDY"                  : "<span>is the average of alignment identity percent (Nucmer measure of alignment accuracy) among all contigs.</span>",
+    "# misassemblies"               : "<span>is the number of positions in the assembled contigs where the left flanking sequence aligns over 1 kbp away from the right flanking sequence on the reference (<i>relocation</i>) or they overlap on more than 1 kbp (<i>relocation</i>) or flanking sequences align on different strands (<i>inversion</i>) or different chromosomes (<i>translocation</i>).</span>",
+    "# misassembled contigs"        : "<span>is the number of contigs that contain misassembly events.</span>",
+    "Misassembled contigs length"   : "<span>is the number of total bases contained in all contigs that have one or more misassemblies.</span>",
+
+    "# relocations"                 : "<span>is the number of relocation events among all misassembly events. Relocation is a misassembly where the left flanking sequence aligns over 1 kbp away from the right flanking sequence on the reference, or they overlap by more than 1 kbp and both flanking sequences align on the same chromosome.</span>",
+    "# translocations"              : "<span>is the number of translocation events among all misassembly events. Translocation is a misassembly where the flanking sequences align on different chromosomes.</span>",
+    "# interspecies translocations" : "<span>is the number of interspecies translocation events among all misassembly events. Interspecies translocation is a misassembly where the flanking sequences align on different references (--meta only).</span>",
+    "# inversions"                  : "<span>is the number of inversion events among all misassembly events. Inversion is a misassembly where it is not a <i>relocation</i> and the flanking sequences align on opposite strands of the same chromosome.</span>",
+    "# local misassemblies"         : "<span>is the number of local misassemblies. We define a local misassembly breakpoint as a breakpoint that satisfies these conditions: <ol> <li>Two or more distinct alignments cover the breakpoint.</li> <li>The gap between left and right flanking sequences is less than 1 kbp.</li> <li>The left and right flanking sequences both are on the same strand of the same chromosome of the reference genome.</li> </ol> </span>",
+    "# possibly misassembled contigs": "<span>is the number of contigs that contain large unaligned fragment and thus could possibly contain interspecies translocation with unknown reference.</span>",
+
+    "# fully unaligned contigs"     : "<span>is the number of contigs that have no alignment to the reference sequence.</span>",
+    "Fully unaligned length"        : "<span>is the total number of bases contained in all fully unaligned contigs.</span>",
+    "# partially unaligned contigs" : "<span>is the number of contigs that are not fully unaligned ones but have fragments with no alignment to the reference.</span>",
+    "# with misassembly"            : "<span>is the number of partially unaligned contigs that contain misassembly events in their aligned fragment. Note that such misassemblies are not counted in <i># misassemblies</i> and other <i>misassemblies</i> statistics.</span>",
+    "# both parts are significant"  : "<span>is the number of partially unaligned contigs that contain both aligned and unaligned fragments of length &ge; <i>min-contig threshold</i>.</span>",
+    "Partially unaligned length"    : "<span>is the total number of unaligned bases in all partially unaligned contigs.</span>",
+
+    "# ambiguous contigs"           : "<span>is the number of contigs that have reference alignments of equal quality in multiple locations on the reference.</span>",
+    "Ambiguous contigs length"      : "<span>is the total number of bases contained in all ambiguous contigs.</span>",
+
+    "Genome fraction (%)"           : "<span>is the total number of aligned bases in the reference, divided by the genome size. A base in the reference genome is counted as aligned if there is at least one contig with at least one alignment to this base. Contigs from repeat regions may map to multiple places, and thus may be counted multiple times in this quantity.</span>",
+    "GC (%)"                        : "<span>is the total number of G and C nucleotides in the assembly, divided by the total length of the assembly.</span>",
+    "Reference GC (%)"              : "<span>is the total number of G and C nucleotides in the reference, divided by the total length of the reference.</span>",
+
+    "# mismatches per 100 kbp"      : "<span>is the average number of mismatches per 100000 aligned bases.</span>",
+    "# mismatches"                  : "<span>is the number of mismatches in all aligned bases.</span>",
+    "# indels per 100 kbp"          : "<span>is the average number of indels per 100000 aligned bases.</span>",
+    "# indels"                      : "<span>is the number of indels in all aligned bases</span>",
+    "# short indels"                : "<span>is the number of indels of length less or equal to 5 bp</span>",
+    "# long indels"                 : "<span>is the number of indels of length greater than 5 bp</span>",
+    "Indels length"                 : "<span>is the number of total bases contained in all indels</span>",
+
+    "# genes"                       : "<span>is the number of genes in the assembly (complete and partial), based on a user-provided annotated list of gene positions in the reference genome. A gene counts as 'partially covered' if the assembly contains at least 100 bp of this gene but not the whole gene.</span>",
+    "# operons"                     : "<span>is the number of operons in the assembly (complete and partial), based on a user-provided annotated list of operon positions in the reference genome. An operon counts as 'partially covered' if the assembly contains at least 100 bp of this operon but not the whole operon.</span>",
+
+    "Cumulative length"             : "<span>plot shows the growth of assembly contig lengths. On the x-axis, contigs are ordered from largest (contig #1) to smallest. The y-axis gives the size of the x largest contigs in the assembly.</span>",
+    "Nx"                            : "<span>plot shows the Nx metric value as x varies from 0 to 100.</span>  <span>Nx is the minimum contig length <b>y</b> such that using contigs of length at least <b>y</b> accounts for at least x% of the total assembly length.</span>",
+    "NGx"                           : "<span>plot shows the NGx metric value as x varies from 0 to 100.</span> <span>NGx is the minimum contig length <b>y</b> such that using contigs of length at least <b>y</b> accounts for at least x% of the bases of the reference genome. This metric is computed only if a reference genome is provided.</span>",
+    "NAx"                           : "<span>plot shows the NAx metric value as x varies from 0 to 100.</span> <span>NAx is computed similarly to Nx, but based on lengths of aligned blocks instead of contig lengths. Contigs are broken into aligned blocks at misassembly breakpoints. NAx is the minimum block length <b>y</b> such that using blocks of length at least <b>y</b> accounts for at least x% of the bases of the assembly. This metric is computed only if a reference genome is provided.</span>",
+    "NGAx"                          : "<span>plot shows the NGAx metric value as x varies from 0 to 100.</span><span>NGAx is computed similarly to NGx, but based on lengths of aligned blocks instead of contig lengths. Contigs are broken at misassembly breakpoints. NGAx is the minimum block length <b>y</b> such that using blocks of length at least <b>y</b> accounts for at least x% of the bases of the reference genome. This metric is computed only if a reference genome is provided.</span>",
+    "GC content"                    : "<span>plot shows the distribution of GC percentage among the contigs, i.e., the total number of bases in contigs with such GC content. Typically, the distribution is approximately Gaussian. However, for some genomes it is not Gaussian. For assembly projects with contaminants, the GC distribution of the contaminants often differs from the reference genome and may give a superposition of multiple curves with different peaks.</span>",
+
+    "Duplication ratio"             : "<span>is the total number of aligned bases in the assembly (i.e. <i>Total length</i> - <i>Fully unaligned length</i> - <i>Partially unaligned length</i>), divided by the total number of aligned bases in the reference (see the <b>Genome fraction (%)</b> metric). If the assembly contains many contigs that cover the same regions of the reference, its <i>Duplication ratio</i> may be much larger than 1. This may occur due to overestimating repeat multiplicities and due to small overlaps between contigs, among other reasons.</span>",
+    "Largest alignment"             : "<span>is the length of the largest continuous alignment in the assembly. This metric is always equal to the <i>Largest contig</i> metric but it can be smaller if the largest contig of the assembly contains a misassembly event.</span>",
+
+    "# N's"                         : "<span>is the total number of uncalled bases (N's) in the assembly.</span>",
+    "# N's per 100 kbp"             : "<span>is the average number of uncalled bases (N's) per 100000 assembly bases.</span>"
+}
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

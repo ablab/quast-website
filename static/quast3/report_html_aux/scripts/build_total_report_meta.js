@@ -105,7 +105,7 @@ function buildGenomeTable(reports, group_n, numColumns) {
             '<tr class="' + trClass + '">' +
             '<td class="left_column_td">' +
                 '<span class="metric-name">' +
-                    '<a href="../' + refName + '_quast_output/report.html">' + refName + '</a>' +
+                    '<a href="' + refName + '.html">' + refName + '</a>' +
                 '</span>' +
             '</td>';
         var metrics = reports[report_n].report[group_n][1];
@@ -188,7 +188,6 @@ function buildTotalReport(assembliesNames, report, order, date, minContig, gloss
         asmNames: this[report_n].assembliesNames
         };
     }, reports);
-    reports.sort( function( a, b ) { return a.name > b.name; });
     notAlignedContigs = {};
     for(report_n = 0; report_n < reports.length; report_n++ ) {
         notAlignedContigs[report_n] = [];

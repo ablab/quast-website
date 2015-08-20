@@ -251,8 +251,7 @@ class DataSet(models.Model):
         if self.user_session:
             # Data set is created by user
             return self.__get_or_create_dirpath(
-                lambda dirname: os.path.join(user_dirpath or self.user_session.get_dirpath(),
-                                             'data_sets', dirname))
+                lambda dirname: os.path.join(user_dirpath or self.user_session.get_dirpath(), 'data_sets', dirname))
         else:
             # A shared data set
             return self.__get_or_create_dirpath(
