@@ -1,4 +1,5 @@
 import sys
+from os.path import isdir
 import os
 
 ALLOWED_HOSTS = [u'quast.bioinf.spbau.ru',]
@@ -162,7 +163,7 @@ STATICFILES_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
     os.path.join(SOURCE_DIRPATH, 'static_webserver'),
     os.path.join(QUAST_DIRPATH, 'libs/html_saver/static'),
-    )
+) + (os.path.join(DATA_DIRPATH, 'static') if isdir(os.path.join(DATA_DIRPATH, 'static')) else ())
 
 # List of finder classes that know how to find files files in
 # various locations.
