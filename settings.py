@@ -157,13 +157,16 @@ STATIC_URL = '/static/'
 # Without it static/admin/ would become admin/static/admin
 
 # Additional locations of files files
-STATICFILES_DIRS = (
+STATICFILES_DIRS = [
     # Put strings here, like "/home/html/files" or "C:/www/django/files".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     os.path.join(SOURCE_DIRPATH, 'static_webserver'),
     os.path.join(QUAST_DIRPATH, 'libs/html_saver/static'),
-) + (os.path.join(DATA_DIRPATH, 'static') if isdir(os.path.join(DATA_DIRPATH, 'static')) else ())
+]
+ds_static = os.path.join(DATA_DIRPATH, 'static')
+if isdir(ds_static):
+    STATICFILES_DIRS.append(ds_static)
 
 # List of finder classes that know how to find files files in
 # various locations.
