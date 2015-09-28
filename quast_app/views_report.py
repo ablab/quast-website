@@ -53,6 +53,11 @@ def get_report_response_dict(results_dirpath):
     genes_in_contigs        = get('genes_in_contigs')
     operons_in_contigs      = get('operons_in_contigs')
     gc_info                 = get('gc')
+    tick_x                 = get('tick_x')
+    coord_nx                 = get('coordNx')
+    coord_ngx                 = get('coordNGx')
+    coord_nax                 = get('coordNAx')
+    coord_ngax                 = get('coordNGAx')
 
     if not settings.QUAST_DIRPATH in sys.path:
         sys.path.insert(1, settings.QUAST_DIRPATH)
@@ -71,6 +76,11 @@ def get_report_response_dict(results_dirpath):
         'genesInContigs': genes_in_contigs,
         'operonsInContigs': operons_in_contigs,
         'gcInfo': gc_info,
+        'tickX': tick_x,
+        'coordNx': coord_nx,
+        'coordNGx': coord_ngx,
+        'coordNAx': coord_nax,
+        'coordNGAx': coord_ngax,
 
       # 'qualities': quality_dict,
       # 'mainMetrics': main_metrics,
