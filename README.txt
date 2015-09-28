@@ -33,6 +33,7 @@ Start celery that will process tasks
 $ source/manage.py celeryd
 
 (if running locally) start Django test webserver:
+    export DEVELOPMENT=1
     $ source/manage.py runserver localhost:8000
 
 (if on a web server) configure Apache:
