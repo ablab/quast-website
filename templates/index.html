@@ -536,7 +536,7 @@
                     <table class='form-layout-table'>
                         <tr>
                             <td class='form-layout-td' style="padding-top: 3px;">
-                                <div style="padding-top: 13px;">Contigs</div>
+                                <div style="padding-top: 13px;">Assemblies</div>
                             </td>
 
                             <td class='form-layout-td'>
@@ -564,7 +564,7 @@
                         <label for="id_scaffolds"> {% comment %}@declare id="id_scaffolds"{% endcomment %}
                             {{ qs_form.scaffolds }} {{ qs_form.scaffolds.label }}
                             <div class="space_1px"></div>
-                            <div class="comment_to_field" style="margin-left: 18px; max-width: 500px;">{{ qs_form.scaffolds.help_text }}</div><br>
+                            <div class="comment_to_field" style="margin-left: 18px; max-width: 500px;">{{ qs_form.scaffolds.help_text|safe }}</div><br>
                         </label>
 
                         <label for="id_find_genes"> {% comment %}@declare id="id_find_genes"{% endcomment %}
@@ -758,7 +758,7 @@
                                             <span style="font-size: 1.2em;"><a href="/reports/">Reports</a></span>
                                         </td>
                                         <td>
-                                            Contigs
+                                            Assemblies
                                         </td>
                                         <td>
                                             Genome
@@ -891,7 +891,7 @@
 {% endblock %}
 
 {% block after_content %}
-    <p>You can also see a <a href='e.coli-single-cell'>comparison of more single-cell assemblers</a> on this data set.</p>
-    <p>There an <a href='e.coli-isolate'>assessment of these assemblers</a> working with an isolate data set as well.</p>
+    <p class="p_after_content">You can also see a <a href='e.coli-single-cell'>comparison of more assemblers</a> on this data set (MDA single-cell <i>E. coli</i>).</p>
+    <p class="p_after_content">There is an <a href='e.coli-isolate'>assessment of the same assemblers</a> working with isolate <i>E. coli</i> data set as well.</p>
 {% endblock %}
 

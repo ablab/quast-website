@@ -47,7 +47,7 @@ class DataSetForm(forms.Form):
         required=False,
         widget=widgets.CheckboxInput(attrs={'tabindex': '3'}),
         label='Scaffolds',
-        help_text='Adds split assemblies (continuous fragments of N\'s longer than 10 bp.)')
+        help_text='<span style="color: #888;">Adds assemblies split by continuous fragments of N\'s longer than 10 bp.</span>')
 
     find_genes = fields.BooleanField(
         required=False,
@@ -56,8 +56,8 @@ class DataSetForm(forms.Form):
 
     domain = fields.ChoiceField(
         required=True,
-        choices=[(False, 'Prokaryotic <span style="color: #888;">(<span class="find_genes_notion">find genes with GenemarkS, </span>process circular chromosomes)</span>'),
-                 (True, 'Eukaryotic<span class="find_genes_notion"> <span style="color: #888;">(find genes with GlimmerHMM)</span></span>')],
+        choices=[(False, 'Prokaryotic <span style="color: #888;">(<span class="find_genes_notion">find genes with GeneMarkS, </span>process circular chromosomes)</span>'),
+                 (True, 'Eukaryotic<span class="find_genes_notion"> <span style="color: #888;">(find genes with GeneMark-ES)</span></span>')],
         widget=widgets.RadioSelect(attrs={'tabindex': '5'}))
 
     estimated_ref_size = fields.IntegerField(
