@@ -562,7 +562,7 @@
                         <br>
 
                         <label for="id_scaffolds"> {% comment %}@declare id="id_scaffolds"{% endcomment %}
-                            {{ qs_form.scaffolds }} {{ qs_form.scaffolds.label }}
+                            {{ qs_form.scaffolds }} {{ qs_form.scaffolds.label|safe }}
                             <div class="space_1px"></div>
                             <div class="comment_to_field" style="margin-left: 18px; max-width: 500px;">{{ qs_form.scaffolds.help_text|safe }}</div><br>
                         </label>

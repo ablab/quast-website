@@ -46,8 +46,7 @@ class DataSetForm(forms.Form):
     scaffolds = fields.BooleanField(
         required=False,
         widget=widgets.CheckboxInput(attrs={'tabindex': '3'}),
-        label='Scaffolds',
-        help_text='<span style="color: #888;">Adds assemblies split by continuous fragments of N\'s longer than 10 bp.</span>')
+        label='Scaffolds <span style="color: #888;">(adds assemblies splitted by fragments of N\'s &ge; 10 bp)</span>')
 
     find_genes = fields.BooleanField(
         required=False,
