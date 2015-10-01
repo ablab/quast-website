@@ -5,6 +5,7 @@ from django.shortcuts import render_to_response, redirect
 from django.template import RequestContext
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseBadRequest, Http404, HttpResponseRedirect
 from django.conf import settings
+from os.path import isdir
 
 from views_report import get_report_response_dict
 from views_reports import get_reports_response_dict
@@ -176,7 +177,8 @@ def get_data_set(request, data_set_form, user_session, default_name):
 
         def init_folders(data_set):
             data_set_dirpath = data_set.get_dirpath()  #, posted_file.name)
-            os.makedirs(data_set_dirpath)
+            if not isdir(data_set_dirpath):
+                os.makedirs(data_set_dirpath)
 
             for kind in ['reference', 'genes', 'operons']:
                 posted_file = request.FILES.get(kind)
