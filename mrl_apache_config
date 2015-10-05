@@ -1,0 +1,38 @@
+<VirtualHost *:80>
+	ServerAdmin webmaster@localhost
+	ServerName quast.bioinf.spbau.ru
+	DocumentRoot /var/www/quast/source
+
+	<Directory /var/www/quast/source>
+                Options FollowSymLinks MultiViews
+               AllowOverride None
+                Order allow,deny
+                allow from all
+        </Directory>    
+
+	ErrorLog ${APACHE_LOG_DIR}/quast-error.log
+
+	# Possible values include: debug, info, notice, warn, error, crit,
+	# alert, emerg.
+	LogLevel warn
+
+	CustomLog ${APACHE_LOG_DIR}/quast-access.log combined
+
+	Alias /static/ /var/www/quast/source/static/
+
+	<Directory /var/www/quast/source/static>
+		Order deny,allow
+		Allow from all
+	</Directory>
+
+	WSGIDaemonProcess quast user=saveliev group=www-data python-path=/var/www/quast/virtualenv/lib/python2.7/site-packages
+	WSGIProcessGroup quast
+	WSGIScriptAlias / /var/www/quast/source/wsgi.py
+
+	<Directory /var/www/quast/source>
+		<Files wsgi.py>
+			Order deny,allow
+			Allow from all
+		</Files>
+	</Directory>
+</VirtualHost>

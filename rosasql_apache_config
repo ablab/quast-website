@@ -1,0 +1,10 @@
+<VirtualHost *:80>
+    ServerName quast.bioinf.spbau.ru
+
+    ErrorLog ${APACHE_LOG_DIR}/quast.bioinf.error.log
+    LogLevel emerg
+
+    ProxyPreserveHost On
+    ProxyPass / http://192.168.222.250:8080/
+    ProxyPassReverse / http://192.168.222.250:8080/
+</VirtualHost>

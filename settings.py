@@ -2,7 +2,7 @@ import sys
 from os.path import isdir
 import os
 
-ALLOWED_HOSTS = [u'quast.bioinf.spbau.ru',]
+ALLOWED_HOSTS = [u'quast.bioinf.spbau.ru', u'new-quast.bioinf.spbau.ru']
 
 SOURCE_DIRPATH              = os.path.abspath(os.path.dirname(__file__))
 HOME_DIRPATH                = os.path.join(SOURCE_DIRPATH, '..')
@@ -49,9 +49,13 @@ else:
     DEBUG = False
     ADDRESS = 'http://quast.bioinf.spbau.ru/'
 
-#    database = 'mysql'
-
-TEMPLATE_DEBUG = DEBUG
+    database = 'mysql'
+#EMAIL_HOST = 'localhost'
+#EMAIL_HOST = '127.0.0.1'
+#EMAIL_HOST_USER = ''
+#EMAIL_HOST_PASSWORD = ''
+#EMAIL_PORT = 1025
+#TEMPLATE_DEBUG = DEBUG
 
 
 REPORTS_SHOW_LIMIT = 8

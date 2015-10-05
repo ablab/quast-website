@@ -18,12 +18,18 @@ class MyBaseUploadBackend(AbstractUploadBackend):
 
     def set_report_id(self, report_id):
         self.report_id = report_id
-        try:
-            self.quast_session = QuastSession.objects.get(report_id=self.report_id)
-            return True
-        except QuastSession.DoesNotExist:
-            logger.error('No quast session with report_id=%s' % self.report_id)
-            return False
+        try_number = 1
+        while True:
+            try:
+                self.quast_session = QuastSession.objects.get(report_id=self.report_id)
+                return True
+            except QuastSession.DoesNotExist:
+                logger.error('No quast session with report_id=%s' % self.report_id)
+                return False
+            except OperationalError:
+                logger.error(traceback.format_exc())
+                try_number += 1
+                logger.error('Retrying. Try number ' + str(try_number))
 
     def setup(self, filename):
         dirpath = self.quast_session.get_contigs_dirpath()
