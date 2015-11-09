@@ -1,0 +1,17 @@
+reference chromosomes:
+	Bacteroides_sp__4_3_47FAA_gi_345651609_ref_NZ_ (total length: 5442925 bp, maximal covered length: 2778272 bp)
+
+total genome size: 5442925
+
+gap min size: 50
+partial gene/operon min size: 100
+
+
+
+assembly                 | genome    | duplication | gaps      | genes     | partial   | operons   | partial   |
+                         | fraction  | ratio       | number    |           | genes     |           | operons   |
+================================================================================================================
+IDBA_UD_to_Bacteroides_s | 37.45459% | 1.04356     | 211       | -         | -         | -         | -         |
+Ray_to_Bacteroides_sp__4 | 19.55136% | 1.06076     | 242       | -         | -         | -         | -         |
+SOAPdenovo2_to_Bacteroid | 51.04373% | 1.00654     | 1374      | -         | -         | -         | -         |
+SPAdes_to_Bacteroides_sp | 34.81597% | 1.09790     | 176       | -         | -         | -         | -         |

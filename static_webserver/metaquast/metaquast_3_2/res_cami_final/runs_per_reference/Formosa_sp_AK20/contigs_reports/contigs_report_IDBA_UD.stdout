@@ -1,0 +1,807 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Formosa_sp_AK20_gi_471945607_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471945608_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471945687_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471945744_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471946561_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471946678_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471946679_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471946824_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471946889_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471947045_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471947210_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471947220_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471947227_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471947397_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471947509_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471947712_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471947840_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471947899_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471947936_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471948054_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471948157_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471948228_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471948260_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471948265_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471948352_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471948356_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471948368_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471948373_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471948375_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471948428_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471948431_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471948434_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471948441_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471948457_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471948460_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471948463_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471948465_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471948472_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471948473_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471948475_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471948482_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471948484_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471948485_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471948490_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471948492_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471948493_ref_NZ_]
+	Loaded [Formosa_sp_AK20_gi_471948494_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 47
+	Total Region Length: 3055484
+Analyzing contigs...
+CONTIG: scaffold_148 (62153bp)
+Top Length: 57559  Top ID: 100.0
+		Skipping redundant alignment 13462 13540 | 14 92 | 79 79 | 98.73 | Formosa_sp_AK20_gi_471947227_ref_NZ_ scaffold_148
+		Skipping redundant alignment 130865 130939 | 17846 17772 | 75 75 | 100.0 | Formosa_sp_AK20_gi_471946561_ref_NZ_ scaffold_148
+		Skipping redundant alignment 4535 4613 | 18134 18056 | 79 79 | 98.73 | Formosa_sp_AK20_gi_471948434_ref_NZ_ scaffold_148
+		This contig is misassembled. 5 total aligns.
+			Excluding internal overlap of size 32 between Alignment 1 and 2:  1 4626 | 4626 1 | 4626 4626 --> 33 4626 | 4594 1 | 4594 4594
+			Real Alignment 1: 33 4626 | 4594 1 | 4594 4594 | 100.0 | Formosa_sp_AK20_gi_471948434_ref_NZ_ scaffold_148
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 1 57559 | 4595 62153 | 57559 57559 | 100.0 | Formosa_sp_AK20_gi_471947227_ref_NZ_ scaffold_148
+
+CONTIG: scaffold_37 (164828bp)
+Top Length: 164828  Top ID: 100.0
+		Marking as insignificant: 167680 167757 | 120813 120736 | 78 78 | 100.0 | Formosa_sp_AK20_gi_471947509_ref_NZ_ scaffold_37
+		One align captures most of this contig: 11 164838 | 1 164828 | 164828 164828 | 100.0 | Formosa_sp_AK20_gi_471947045_ref_NZ_ scaffold_37
+
+CONTIG: scaffold_106 (75273bp)
+Top Length: 75273  Top ID: 99.99
+		Marking as insignificant: 36621 36741 | 75273 75153 | 121 121 | 95.87 | Formosa_sp_AK20_gi_471947936_ref_NZ_ scaffold_106
+		One align captures most of this contig: 5099 80371 | 75273 1 | 75273 75273 | 99.99 | Formosa_sp_AK20_gi_471948265_ref_NZ_ scaffold_106
+
+CONTIG: scaffold_2091 (5031bp)
+Top Length: 5031  Top ID: 100.0
+		Marking as insignificant: 36398 36560 | 163 1 | 163 163 | 96.32 | Formosa_sp_AK20_gi_471947936_ref_NZ_ scaffold_2091
+		One align captures most of this contig: 8 5038 | 5031 1 | 5031 5031 | 100.0 | Formosa_sp_AK20_gi_471948265_ref_NZ_ scaffold_2091
+
+CONTIG: scaffold_1510 (7091bp)
+Top Length: 6807  Top ID: 99.91
+		Skipping redundant alignment 5507 6061 | 840 284 | 555 557 | 95.54 | Formosa_sp_AK20_gi_471947899_ref_NZ_ scaffold_1510
+		Skipping redundant alignment 47 303 | 7091 6835 | 257 257 | 97.67 | Formosa_sp_AK20_gi_471948457_ref_NZ_ scaffold_1510
+		This contig is misassembled. 4 total aligns.
+			Excluding internal overlap of size 378 between Alignment 1 and 2:  6983 7642 | 662 1 | 660 662 --> 7361 7642 | 284 1 | 282 284
+			Real Alignment 1: 7361 7642 | 284 1 | 282 284 | 98.19 | Formosa_sp_AK20_gi_471948457_ref_NZ_ scaffold_1510
+			  Gap between these two alignments (local misassembly). Inconsistency = 264 
+			Real Alignment 2: 287 7096 | 7091 285 | 6810 6807 | 99.91 | Formosa_sp_AK20_gi_471948457_ref_NZ_ scaffold_1510
+
+CONTIG: scaffold_1310 (8459bp)
+Top Length: 7299  Top ID: 99.99
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 44 between Alignment 1 and 2:  20 1223 | 1 1204 | 1204 1204 --> 20 1179 | 1 1160 | 1160 1160
+			Real Alignment 1: 20 1179 | 1 1160 | 1160 1160 | 99.92 | Formosa_sp_AK20_gi_471948473_ref_NZ_ scaffold_1310
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 1 7299 | 1161 8459 | 7299 7299 | 99.99 | Formosa_sp_AK20_gi_471947220_ref_NZ_ scaffold_1310
+
+CONTIG: scaffold_15 (255590bp)
+Top Length: 131088  Top ID: 99.99
+		Skipping redundant alignment 13178 13252 | 130935 130861 | 75 75 | 100.0 | Formosa_sp_AK20_gi_471947227_ref_NZ_ scaffold_15
+		Skipping redundant alignment 131038 131168 | 130918 131048 | 131 131 | 99.24 | Formosa_sp_AK20_gi_471946561_ref_NZ_ scaffold_15
+		Skipping redundant alignment 124678 124757 | 131084 131005 | 80 80 | 100.0 | Formosa_sp_AK20_gi_471947712_ref_NZ_ scaffold_15
+		This contig is misassembled. 5 total aligns.
+			Excluding internal overlap of size 171 between Alignment 1 and 2:  55 124728 | 255590 130918 | 124674 124673 --> 55 124557 | 255590 131089 | 124503 124502
+			Real Alignment 1: 5 131092 | 1 131088 | 131088 131088 | 99.99 | Formosa_sp_AK20_gi_471946561_ref_NZ_ scaffold_15
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 55 124557 | 255590 131089 | 124503 124502 | 99.99 | Formosa_sp_AK20_gi_471947712_ref_NZ_ scaffold_15
+
+CONTIG: scaffold_132 (66089bp)
+Top Length: 66089  Top ID: 99.99
+		One align captures most of this contig: 57582 123670 | 1 66089 | 66089 66089 | 99.99 | Formosa_sp_AK20_gi_471947227_ref_NZ_ scaffold_132
+
+CONTIG: scaffold_158 (59473bp)
+Top Length: 59473  Top ID: 99.99
+		One align captures most of this contig: 123648 183120 | 59473 1 | 59473 59473 | 99.99 | Formosa_sp_AK20_gi_471947227_ref_NZ_ scaffold_158
+
+CONTIG: scaffold_7982 (1284bp)
+Top Length: 1283  Top ID: 99.92
+		One align captures most of this contig: 1 1283 | 1283 1 | 1283 1283 | 99.92 | Formosa_sp_AK20_gi_471948373_ref_NZ_ scaffold_7982
+
+CONTIG: scaffold_21 (230647bp)
+Top Length: 125833  Top ID: 100.0
+		Skipping redundant alignment 4876 5219 | 36391 36734 | 344 344 | 97.38 | Formosa_sp_AK20_gi_471948265_ref_NZ_ scaffold_21
+		This contig is misassembled. 4 total aligns.
+			Excluding internal overlap of size 43 between Alignment 1 and 2:  1 1229 | 127019 125791 | 1229 1229 --> 1 1186 | 127019 125834 | 1186 1186
+			Real Alignment 1: 8 125840 | 1 125833 | 125833 125833 | 100.0 | Formosa_sp_AK20_gi_471947936_ref_NZ_ scaffold_21
+			  Extensive misassembly ( translocation ) between these two alignments
+			Excluding internal overlap of size 42 between Alignment 2 and 3:  1 1186 | 127019 125834 | 1186 1186 --> 43 1186 | 126977 125834 | 1144 1144
+			Real Alignment 2: 43 1186 | 126977 125834 | 1144 1144 | 100.0 | Formosa_sp_AK20_gi_471948431_ref_NZ_ scaffold_21
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 3: 2 103671 | 230647 126978 | 103670 103670 | 100.0 | Formosa_sp_AK20_gi_471948054_ref_NZ_ scaffold_21
+
+CONTIG: scaffold_16145 (552bp)
+Top Length: 552  Top ID: 100.0
+		One align captures most of this contig: 32 583 | 1 552 | 552 552 | 100.0 | Formosa_sp_AK20_gi_471948492_ref_NZ_ scaffold_16145
+
+CONTIG: scaffold_944 (12252bp)
+Top Length: 12252  Top ID: 100.0
+		One align captures most of this contig: 18 12269 | 1 12252 | 12252 12252 | 100.0 | Formosa_sp_AK20_gi_471948356_ref_NZ_ scaffold_944
+
+CONTIG: scaffold_13642 (672bp)
+Top Length: 417  Top ID: 100.0
+		Skipping redundant alignment 113 258 | 4 149 | 146 146 | 97.26 | Formosa_sp_AK20_gi_471946889_ref_NZ_ scaffold_13642
+		This contig is misassembled. 3 total aligns.
+			Excluding internal overlap of size 44 between Alignment 1 and 2:  1315 1613 | 1 299 | 299 299 --> 1315 1569 | 1 255 | 255 255
+			Real Alignment 1: 1315 1569 | 1 255 | 255 255 | 99.33 | Formosa_sp_AK20_gi_471946678_ref_NZ_ scaffold_13642
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 2 418 | 672 256 | 417 417 | 100.0 | Formosa_sp_AK20_gi_471948484_ref_NZ_ scaffold_13642
+
+CONTIG: scaffold_48 (143107bp)
+Top Length: 75859  Top ID: 100.0
+		Skipping redundant alignment 12703 12801 | 1 99 | 99 99 | 100.0 | Formosa_sp_AK20_gi_471946889_ref_NZ_ scaffold_48
+		Skipping redundant alignment 165553 165661 | 142419 142527 | 109 109 | 99.08 | Formosa_sp_AK20_gi_471946889_ref_NZ_ scaffold_48
+		This contig is misassembled. 4 total aligns.
+			Excluding internal overlap of size 195 between Alignment 1 and 2:  22368 89810 | 1 67443 | 67443 67443 --> 22368 89615 | 1 67248 | 67248 67248
+			Real Alignment 1: 22368 89615 | 1 67248 | 67248 67248 | 100.0 | Formosa_sp_AK20_gi_471946889_ref_NZ_ scaffold_48
+			  Gap between these two alignments (local misassembly). Inconsistency = 180 
+			Real Alignment 2: 89796 165654 | 67249 143107 | 75859 75859 | 100.0 | Formosa_sp_AK20_gi_471946889_ref_NZ_ scaffold_48
+
+CONTIG: scaffold_1168 (9617bp)
+Top Length: 9617  Top ID: 100.0
+		Marking as insignificant: 22368 22466 | 1 99 | 99 99 | 100.0 | Formosa_sp_AK20_gi_471946889_ref_NZ_ scaffold_1168
+		Marking as insignificant: 12556 12654 | 9519 9617 | 99 99 | 100.0 | Formosa_sp_AK20_gi_471946889_ref_NZ_ scaffold_1168
+		One align captures most of this contig: 12703 22319 | 1 9617 | 9617 9617 | 100.0 | Formosa_sp_AK20_gi_471946889_ref_NZ_ scaffold_1168
+
+CONTIG: scaffold_1664 (6407bp)
+Top Length: 6407  Top ID: 100.0
+		Marking as insignificant: 22221 22319 | 6309 6407 | 99 99 | 100.0 | Formosa_sp_AK20_gi_471946889_ref_NZ_ scaffold_1664
+		Marking as insignificant: 1305 1464 | 290 450 | 160 161 | 95.03 | Formosa_sp_AK20_gi_471946678_ref_NZ_ scaffold_1664
+		Marking as insignificant: 1 289 | 192 479 | 289 288 | 96.55 | Formosa_sp_AK20_gi_471946889_ref_NZ_ scaffold_1664
+		One align captures most of this contig: 6248 12654 | 1 6407 | 6407 6407 | 100.0 | Formosa_sp_AK20_gi_471946889_ref_NZ_ scaffold_1664
+
+CONTIG: scaffold_1741 (6138bp)
+Top Length: 6135  Top ID: 100.0
+		Marking as insignificant: 49984 50089 | 1 106 | 106 106 | 98.11 | Formosa_sp_AK20_gi_471947899_ref_NZ_ scaffold_1741
+		Marking as insignificant: 49555 49703 | 5990 6138 | 149 149 | 96.67 | Formosa_sp_AK20_gi_471947899_ref_NZ_ scaffold_1741
+		Marking as insignificant: 1315 1463 | 6138 5990 | 149 149 | 98.66 | Formosa_sp_AK20_gi_471946678_ref_NZ_ scaffold_1741
+		Marking as insignificant: 6548 6726 | 6137 5959 | 179 179 | 96.11 | Formosa_sp_AK20_gi_471946889_ref_NZ_ scaffold_1741
+		One align captures most of this contig: 113 6247 | 6135 1 | 6135 6135 | 100.0 | Formosa_sp_AK20_gi_471946889_ref_NZ_ scaffold_1741
+
+CONTIG: scaffold_9600 (1032bp)
+Top Length: 1032  Top ID: 99.9
+		One align captures most of this contig: 7 1038 | 1032 1 | 1032 1032 | 99.9 | Formosa_sp_AK20_gi_471948482_ref_NZ_ scaffold_9600
+
+CONTIG: scaffold_18 (240075bp)
+Top Length: 199242  Top ID: 100.0
+		Skipping redundant alignment 120746 120823 | 208590 208513 | 78 78 | 100.0 | Formosa_sp_AK20_gi_471947045_ref_NZ_ scaffold_18
+		This contig is misassembled. 4 total aligns.
+			Excluding internal overlap of size 44 between Alignment 1 and 2:  1 5423 | 35455 40877 | 5423 5423 --> 45 5423 | 35499 40877 | 5379 5379
+			Real Alignment 1: 8 35505 | 1 35498 | 35498 35498 | 100.0 | Formosa_sp_AK20_gi_471948228_ref_NZ_ scaffold_18
+			  Extensive misassembly ( translocation ) between these two alignments
+			Excluding internal overlap of size 44 between Alignment 2 and 3:  45 5423 | 35499 40877 | 5379 5379 --> 45 5379 | 35499 40833 | 5335 5335
+			Real Alignment 2: 45 5379 | 35499 40833 | 5335 5335 | 100.0 | Formosa_sp_AK20_gi_471945607_ref_NZ_ scaffold_18
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 3: 1 199242 | 40834 240075 | 199242 199242 | 100.0 | Formosa_sp_AK20_gi_471947509_ref_NZ_ scaffold_18
+
+CONTIG: scaffold_88 (83927bp)
+Top Length: 78363  Top ID: 99.99
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 62 between Alignment 1 and 2:  3064 8689 | 1 5626 | 5626 5626 --> 3064 8627 | 1 5564 | 5564 5564
+			Real Alignment 1: 3064 8627 | 1 5564 | 5564 5564 | 99.98 | Formosa_sp_AK20_gi_471948260_ref_NZ_ scaffold_88
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 39 78401 | 83927 5565 | 78363 78363 | 99.99 | Formosa_sp_AK20_gi_471945608_ref_NZ_ scaffold_88
+
+CONTIG: scaffold_6012 (1749bp)
+Top Length: 1749  Top ID: 99.94
+		One align captures most of this contig: 927 2675 | 1749 1 | 1749 1749 | 99.94 | Formosa_sp_AK20_gi_471948260_ref_NZ_ scaffold_6012
+
+CONTIG: scaffold_11682 (813bp)
+Top Length: 813  Top ID: 100.0
+		One align captures most of this contig: 12 824 | 1 813 | 813 813 | 100.0 | Formosa_sp_AK20_gi_471948260_ref_NZ_ scaffold_11682
+
+CONTIG: scaffold_107 (74811bp)
+Top Length: 67619  Top ID: 100.0
+		Skipping redundant alignment 156659 156830 | 1 172 | 172 172 | 97.67 | Formosa_sp_AK20_gi_471946679_ref_NZ_ scaffold_107
+		Skipping redundant alignment 67455 67538 | 74728 74811 | 84 84 | 98.81 | Formosa_sp_AK20_gi_471946824_ref_NZ_ scaffold_107
+		This contig is misassembled. 4 total aligns.
+			Excluding internal overlap of size 52 between Alignment 1 and 2:  1 7196 | 7196 1 | 7196 7196 --> 53 7196 | 7144 1 | 7144 7144
+			Real Alignment 1: 53 7196 | 7144 1 | 7144 7144 | 99.99 | Formosa_sp_AK20_gi_471948475_ref_NZ_ scaffold_107
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 50 67668 | 7145 74763 | 67619 67619 | 100.0 | Formosa_sp_AK20_gi_471946824_ref_NZ_ scaffold_107
+
+CONTIG: scaffold_119 (69524bp)
+Top Length: 69524  Top ID: 100.0
+		Marking as insignificant: 49557 49716 | 69365 69524 | 160 160 | 98.12 | Formosa_sp_AK20_gi_471947899_ref_NZ_ scaffold_119
+		Marking as insignificant: 1305 1469 | 69521 69357 | 165 165 | 95.18 | Formosa_sp_AK20_gi_471946678_ref_NZ_ scaffold_119
+		One align captures most of this contig: 103 69626 | 69524 1 | 69524 69524 | 100.0 | Formosa_sp_AK20_gi_471948157_ref_NZ_ scaffold_119
+
+CONTIG: scaffold_67 (115150bp)
+Top Length: 115150  Top ID: 100.0
+		Marking as insignificant: 115103 115250 | 244 97 | 148 148 | 95.27 | Formosa_sp_AK20_gi_471947397_ref_NZ_ scaffold_67
+		Marking as insignificant: 11 10091 | 115150 105091 | 10081 10060 | 99.78 | Formosa_sp_AK20_gi_471947397_ref_NZ_ scaffold_67
+		One align captures most of this contig: 32 115181 | 115150 1 | 115150 115150 | 100.0 | Formosa_sp_AK20_gi_471947397_ref_NZ_ scaffold_67
+
+CONTIG: scaffold_273 (37498bp)
+Top Length: 37491  Top ID: 100.0
+		Marking as insignificant: 43377 43543 | 167 1 | 167 167 | 97.6 | Formosa_sp_AK20_gi_471947899_ref_NZ_ scaffold_273
+		Marking as insignificant: 6758 6963 | 37492 37289 | 206 204 | 97.09 | Formosa_sp_AK20_gi_471948457_ref_NZ_ scaffold_273
+		Marking as insignificant: 7026 7228 | 37491 37289 | 203 203 | 98.03 | Formosa_sp_AK20_gi_471948457_ref_NZ_ scaffold_273
+		Marking as insignificant: 5718 5927 | 37498 37289 | 210 210 | 98.1 | Formosa_sp_AK20_gi_471947899_ref_NZ_ scaffold_273
+		One align captures most of this contig: 5990 43480 | 37491 1 | 37491 37491 | 100.0 | Formosa_sp_AK20_gi_471947899_ref_NZ_ scaffold_273
+
+CONTIG: scaffold_505 (22357bp)
+Top Length: 17109  Top ID: 99.71
+		Skipping redundant alignment 7349 8770 | 14611 16032 | 1422 1422 | 96.98 | Formosa_sp_AK20_gi_471948457_ref_NZ_ scaffold_505
+		This contig is misassembled. 4 total aligns.
+			Excluding internal overlap of size 189 between Alignment 1 and 2:  69352 69606 | 1 255 | 255 255 --> 69352 69417 | 1 66 | 66 66
+			Real Alignment 1: 69352 69417 | 1 66 | 66 66 | 96.86 | Formosa_sp_AK20_gi_471945687_ref_NZ_ scaffold_505
+			  Extensive misassembly ( translocation ) between these two alignments
+			Excluding internal overlap of size 260 between Alignment 2 and 3:  237 5678 | 16916 22357 | 5442 5442 --> 497 5678 | 17176 22357 | 5182 5182
+			Real Alignment 2: 433 17541 | 17175 67 | 17109 17109 | 99.71 | Formosa_sp_AK20_gi_471948441_ref_NZ_ scaffold_505
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 3: 497 5678 | 17176 22357 | 5182 5182 | 99.93 | Formosa_sp_AK20_gi_471947899_ref_NZ_ scaffold_505
+
+CONTIG: scaffold_1641 (6473bp)
+Top Length: 6473  Top ID: 100.0
+		Marking as insignificant: 43406 43550 | 6473 6329 | 145 145 | 95.86 | Formosa_sp_AK20_gi_471947899_ref_NZ_ scaffold_1641
+		Marking as insignificant: 1305 1465 | 271 431 | 161 161 | 96.91 | Formosa_sp_AK20_gi_471946678_ref_NZ_ scaffold_1641
+		Marking as insignificant: 4 262 | 169 427 | 259 259 | 97.68 | Formosa_sp_AK20_gi_471948157_ref_NZ_ scaffold_1641
+		One align captures most of this contig: 43511 49983 | 6473 1 | 6473 6473 | 100.0 | Formosa_sp_AK20_gi_471947899_ref_NZ_ scaffold_1641
+
+CONTIG: scaffold_11686 (813bp)
+Top Length: 813  Top ID: 100.0
+		Marking as insignificant: 6142 6247 | 708 813 | 106 106 | 98.11 | Formosa_sp_AK20_gi_471946889_ref_NZ_ scaffold_11686
+		One align captures most of this contig: 49984 50796 | 813 1 | 813 813 | 100.0 | Formosa_sp_AK20_gi_471947899_ref_NZ_ scaffold_11686
+
+CONTIG: scaffold_120 (69445bp)
+Top Length: 69445  Top ID: 99.99
+		One align captures most of this contig: 6 69450 | 1 69445 | 69445 69445 | 99.99 | Formosa_sp_AK20_gi_471945687_ref_NZ_ scaffold_120
+
+CONTIG: scaffold_11517 (827bp)
+Top Length: 447  Top ID: 100.0
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 44 between Alignment 1 and 2:  1 424 | 404 827 | 424 424 --> 45 424 | 448 827 | 380 380
+			Real Alignment 1: 1 447 | 447 1 | 447 447 | 100.0 | Formosa_sp_AK20_gi_471948493_ref_NZ_ scaffold_11517
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 45 424 | 448 827 | 380 380 | 99.76 | Formosa_sp_AK20_gi_471948472_ref_NZ_ scaffold_11517
+
+CONTIG: scaffold_5515 (1918bp)
+Top Length: 1918  Top ID: 100.0
+		One align captures most of this contig: 17 1934 | 1918 1 | 1918 1918 | 100.0 | Formosa_sp_AK20_gi_471948485_ref_NZ_ scaffold_5515
+
+CONTIG: scaffold_154 (60217bp)
+Top Length: 60217  Top ID: 100.0
+		One align captures most of this contig: 3 60219 | 1 60217 | 60217 60217 | 100.0 | Formosa_sp_AK20_gi_471947840_ref_NZ_ scaffold_154
+
+CONTIG: scaffold_1434 (7583bp)
+Top Length: 7583  Top ID: 100.0
+		One align captures most of this contig: 60291 67873 | 1 7583 | 7583 7583 | 100.0 | Formosa_sp_AK20_gi_471947840_ref_NZ_ scaffold_1434
+
+CONTIG: scaffold_3572 (2974bp)
+Top Length: 2974  Top ID: 100.0
+		Marking as insignificant: 5518 5682 | 833 997 | 165 165 | 96.36 | Formosa_sp_AK20_gi_471948375_ref_NZ_ scaffold_3572
+		One align captures most of this contig: 11 2984 | 2974 1 | 2974 2974 | 100.0 | Formosa_sp_AK20_gi_471948352_ref_NZ_ scaffold_3572
+
+CONTIG: scaffold_1552 (6857bp)
+Top Length: 6857  Top ID: 100.0
+		Marking as insignificant: 6549 6673 | 2803 2678 | 125 126 | 96.03 | Formosa_sp_AK20_gi_471948375_ref_NZ_ scaffold_1552
+		One align captures most of this contig: 19 6875 | 6857 1 | 6857 6857 | 100.0 | Formosa_sp_AK20_gi_471947210_ref_NZ_ scaffold_1552
+
+CONTIG: scaffold_13487 (683bp)
+Top Length: 683  Top ID: 99.71
+		One align captures most of this contig: 7 689 | 1 683 | 683 683 | 99.71 | Formosa_sp_AK20_gi_471948463_ref_NZ_ scaffold_13487
+
+CONTIG: scaffold_2731 (3826bp)
+Top Length: 3826  Top ID: 99.97
+		One align captures most of this contig: 1 3826 | 3826 1 | 3826 3826 | 99.97 | Formosa_sp_AK20_gi_471948465_ref_NZ_ scaffold_2731
+
+CONTIG: scaffold_2 (552496bp)
+Top Length: 311684  Top ID: 99.99
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 89 between Alignment 1 and 2:  660173 901073 | 311596 552496 | 240901 240901 --> 660262 901073 | 311685 552496 | 240812 240812
+			Real Alignment 1: 348465 660148 | 1 311684 | 311684 311684 | 99.99 | Formosa_sp_AK20_gi_471945744_ref_NZ_ scaffold_2
+			  Gap between these two alignments (local misassembly). Inconsistency = 113 
+			Real Alignment 2: 660262 901073 | 311685 552496 | 240812 240812 | 100.0 | Formosa_sp_AK20_gi_471945744_ref_NZ_ scaffold_2
+
+CONTIG: scaffold_23 (229620bp)
+Top Length: 229620  Top ID: 100.0
+		One align captures most of this contig: 118644 348263 | 1 229620 | 229620 229620 | 100.0 | Formosa_sp_AK20_gi_471945744_ref_NZ_ scaffold_23
+
+CONTIG: scaffold_64 (118635bp)
+Top Length: 118635  Top ID: 99.99
+		One align captures most of this contig: 7 118641 | 1 118635 | 118635 118635 | 99.99 | Formosa_sp_AK20_gi_471945744_ref_NZ_ scaffold_64
+
+CONTIG: scaffold_2341 (4499bp)
+Top Length: 4499  Top ID: 99.98
+		One align captures most of this contig: 30 4528 | 1 4499 | 4499 4499 | 99.98 | Formosa_sp_AK20_gi_471948368_ref_NZ_ scaffold_2341
+
+CONTIG: scaffold_10382 (939bp)
+Top Length: 939  Top ID: 100.0
+		One align captures most of this contig: 9 947 | 1 939 | 939 939 | 100.0 | Formosa_sp_AK20_gi_471948490_ref_NZ_ scaffold_10382
+
+CONTIG: scaffold_61 (120059bp)
+Top Length: 120058  Top ID: 99.99
+		Marking as insignificant: 120373 120507 | 119888 120022 | 135 135 | 97.78 | Formosa_sp_AK20_gi_471946679_ref_NZ_ scaffold_61
+		One align captures most of this contig: 8 120065 | 2 120059 | 120058 120058 | 99.99 | Formosa_sp_AK20_gi_471946679_ref_NZ_ scaffold_61
+
+CONTIG: scaffold_297 (34590bp)
+Top Length: 34590  Top ID: 100.0
+		Marking as insignificant: 122528 122626 | 34590 34492 | 99 99 | 100.0 | Formosa_sp_AK20_gi_471946679_ref_NZ_ scaffold_297
+		Marking as insignificant: 157667 157797 | 266 136 | 131 131 | 95.45 | Formosa_sp_AK20_gi_471946679_ref_NZ_ scaffold_297
+		One align captures most of this contig: 123017 157606 | 34590 1 | 34590 34590 | 100.0 | Formosa_sp_AK20_gi_471946679_ref_NZ_ scaffold_297
+
+CONTIG: scaffold_4505 (2367bp)
+Top Length: 2367  Top ID: 99.79
+		Marking as insignificant: 122929 123049 | 121 1 | 121 121 | 95.04 | Formosa_sp_AK20_gi_471946679_ref_NZ_ scaffold_4505
+		One align captures most of this contig: 120194 122560 | 2367 1 | 2367 2367 | 99.79 | Formosa_sp_AK20_gi_471946679_ref_NZ_ scaffold_4505
+
+CONTIG: scaffold_17010 (522bp)
+Top Length: 522  Top ID: 100.0
+		Marking as insignificant: 123017 123115 | 1 99 | 99 99 | 100.0 | Formosa_sp_AK20_gi_471946679_ref_NZ_ scaffold_17010
+		Marking as insignificant: 122440 122560 | 402 522 | 121 121 | 95.04 | Formosa_sp_AK20_gi_471946679_ref_NZ_ scaffold_17010
+		One align captures most of this contig: 122528 123049 | 1 522 | 522 522 | 100.0 | Formosa_sp_AK20_gi_471946679_ref_NZ_ scaffold_17010
+
+CONTIG: scaffold_7413 (1393bp)
+Top Length: 1393  Top ID: 100.0
+		Marking as insignificant: 100 208 | 109 1 | 109 109 | 97.25 | Formosa_sp_AK20_gi_471946889_ref_NZ_ scaffold_7413
+		One align captures most of this contig: 21 1413 | 1393 1 | 1393 1393 | 100.0 | Formosa_sp_AK20_gi_471946678_ref_NZ_ scaffold_7413
+
+CONTIG: scaffold_3129 (3391bp)
+Top Length: 3391  Top ID: 100.0
+		One align captures most of this contig: 2959 6349 | 1 3391 | 3391 3391 | 100.0 | Formosa_sp_AK20_gi_471948428_ref_NZ_ scaffold_3129
+
+CONTIG: scaffold_6010 (1749bp)
+Top Length: 1749  Top ID: 100.0
+		One align captures most of this contig: 927 2675 | 1749 1 | 1749 1749 | 100.0 | Formosa_sp_AK20_gi_471948428_ref_NZ_ scaffold_6010
+
+CONTIG: scaffold_9940 (988bp)
+Top Length: 988  Top ID: 99.29
+		One align captures most of this contig: 38 1025 | 1 988 | 988 988 | 99.29 | Formosa_sp_AK20_gi_471948428_ref_NZ_ scaffold_9940
+
+CONTIG: scaffold_293 (35179bp)
+Top Length: 35179  Top ID: 99.99
+		One align captures most of this contig: 16852 52030 | 1 35179 | 35179 35179 | 99.99 | Formosa_sp_AK20_gi_471948375_ref_NZ_ scaffold_293
+
+CONTIG: scaffold_712 (16595bp)
+Top Length: 16595  Top ID: 100.0
+		Marking as insignificant: 16836 16938 | 103 1 | 103 103 | 99.03 | Formosa_sp_AK20_gi_471948375_ref_NZ_ scaffold_712
+		Marking as insignificant: 4073 4198 | 10086 9962 | 126 125 | 96.03 | Formosa_sp_AK20_gi_471947210_ref_NZ_ scaffold_712
+		Marking as insignificant: 1988 2152 | 10953 11117 | 165 165 | 96.36 | Formosa_sp_AK20_gi_471948352_ref_NZ_ scaffold_712
+		One align captures most of this contig: 40 16634 | 16595 1 | 16595 16595 | 100.0 | Formosa_sp_AK20_gi_471948375_ref_NZ_ scaffold_712
+
+CONTIG: scaffold_8178 (1247bp)
+Top Length: 1247  Top ID: 100.0
+		One align captures most of this contig: 19 1265 | 1247 1 | 1247 1247 | 100.0 | Formosa_sp_AK20_gi_471948460_ref_NZ_ scaffold_8178
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Formosa_sp_AK20/contigs_reports/nucmer_output/IDBA_UD.used_snps
+	Reference Formosa_sp_AK20_gi_471947712_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 124757 (124757 bp)
+			START in gap: 1 to 55 (54 bp)
+			Align 1: 55 124557 scaffold_15 255590 131089
+			END in gap: 124557 to 124757 (200 bp)
+
+	Reference Formosa_sp_AK20_gi_471948375_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 52058 (52058 bp)
+			START in gap: 1 to 40 (39 bp)
+			Align 1: 40 16634 scaffold_712 16595 1
+				Gap between this and next alignment: 16634 to 16852 (217 bp)
+				Next Alignment: 16852 52030 scaffold_293 1 35179
+
+			Align 2: 16852 52030 scaffold_293 1 35179
+			END in gap: 52030 to 52058 (28 bp)
+
+	Reference Formosa_sp_AK20_gi_471948368_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 4530 (4530 bp)
+			START in gap: 1 to 30 (29 bp)
+			Align 1: 30 4528 scaffold_2341 1 4499
+			END in gap: 4528 to 4530 (2 bp)
+
+	Reference Formosa_sp_AK20_gi_471948265_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 80422 (80422 bp)
+			START in gap: 1 to 8 (7 bp)
+			Align 1: 8 5038 scaffold_2091 5031 1
+				Gap between this and next alignment: 5038 to 5099 (60 bp)
+				Next Alignment: 5099 80371 scaffold_106 75273 1
+
+			Align 2: 5099 80371 scaffold_106 75273 1
+			END in gap: 80371 to 80422 (51 bp)
+
+	Reference Formosa_sp_AK20_gi_471948460_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 1271 (1271 bp)
+			START in gap: 1 to 19 (18 bp)
+			Align 1: 19 1265 scaffold_8178 1247 1
+			END in gap: 1265 to 1271 (6 bp)
+
+	Reference Formosa_sp_AK20_gi_471948493_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 450 (450 bp)
+			Align 1: 1 447 scaffold_11517 447 1
+			END in gap: 447 to 450 (3 bp)
+
+	Reference Formosa_sp_AK20_gi_471948157_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 69841 (69841 bp)
+			START in gap: 1 to 103 (102 bp)
+			Align 1: 103 69626 scaffold_119 69524 1
+			END in gap: 69626 to 69841 (215 bp)
+
+	Reference Formosa_sp_AK20_gi_471948260_ref_NZ_: 3 total alignments. 1 total regions.
+		Region: 1 to 8689 (8689 bp)
+			START in gap: 1 to 12 (11 bp)
+			Align 1: 12 824 scaffold_11682 1 813
+				Gap between this and next alignment: 824 to 927 (102 bp)
+				Next Alignment: 927 2675 scaffold_6012 1749 1
+
+			Align 2: 927 2675 scaffold_6012 1749 1
+				Gap between this and next alignment: 2675 to 3064 (388 bp)
+				Next Alignment: 3064 8627 scaffold_88 1 5564
+
+			Align 3: 3064 8627 scaffold_88 1 5564
+			END in gap: 8627 to 8689 (62 bp)
+
+	Reference Formosa_sp_AK20_gi_471946889_ref_NZ_: 5 total alignments. 1 total regions.
+		Region: 1 to 165661 (165661 bp)
+			START in gap: 1 to 113 (112 bp)
+			Align 1: 113 6247 scaffold_1741 6135 1
+				Next Alignment: 6248 12654 scaffold_1664 1 6407
+
+			Align 2: 6248 12654 scaffold_1664 1 6407
+				Gap between this and next alignment: 12654 to 12703 (48 bp)
+				Next Alignment: 12703 22319 scaffold_1168 1 9617
+
+			Align 3: 12703 22319 scaffold_1168 1 9617
+				Gap between this and next alignment: 22319 to 22368 (48 bp)
+				Next Alignment: 22368 89615 scaffold_48 1 67248
+
+			Align 4: 22368 89615 scaffold_48 1 67248
+				Gap between this and next alignment: 89615 to 89796 (180 bp)
+				Next Alignment: 89796 165654 scaffold_48 67249 143107
+
+			Align 5: 89796 165654 scaffold_48 67249 143107
+			END in gap: 165654 to 165661 (7 bp)
+
+	Reference Formosa_sp_AK20_gi_471946678_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 1613 (1613 bp)
+			START in gap: 1 to 21 (20 bp)
+			Align 1: 21 1413 scaffold_7413 1393 1
+				Negative gap (overlap) between this and next alignment: 1413 to 1315 (-98 bp)
+				Next Alignment: 1315 1569 scaffold_13642 1 255
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 100.
+			Align 2: 1414 1569 scaffold_13642 100 255
+			END in gap: 1569 to 1613 (44 bp)
+
+	Reference Formosa_sp_AK20_gi_471947840_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 67882 (67882 bp)
+			START in gap: 1 to 3 (2 bp)
+			Align 1: 3 60219 scaffold_154 1 60217
+				Gap between this and next alignment: 60219 to 60291 (71 bp)
+				Next Alignment: 60291 67873 scaffold_1434 1 7583
+
+			Align 2: 60291 67873 scaffold_1434 1 7583
+			END in gap: 67873 to 67882 (9 bp)
+
+	Reference Formosa_sp_AK20_gi_471948490_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 949 (949 bp)
+			START in gap: 1 to 9 (8 bp)
+			Align 1: 9 947 scaffold_10382 1 939
+			END in gap: 947 to 949 (2 bp)
+
+	Reference Formosa_sp_AK20_gi_471948473_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 1223 (1223 bp)
+			START in gap: 1 to 20 (19 bp)
+			Align 1: 20 1179 scaffold_1310 1 1160
+			END in gap: 1179 to 1223 (44 bp)
+
+	Reference Formosa_sp_AK20_gi_471948441_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 17858 (17858 bp)
+			START in gap: 1 to 433 (432 bp)
+			Align 1: 433 17541 scaffold_505 17175 67
+			END in gap: 17541 to 17858 (317 bp)
+
+	Reference Formosa_sp_AK20_gi_471948428_ref_NZ_: 3 total alignments. 1 total regions.
+		Region: 1 to 6363 (6363 bp)
+			START in gap: 1 to 38 (37 bp)
+			Align 1: 38 1025 scaffold_9940 1 988
+				Negative gap (overlap) between this and next alignment: 1025 to 927 (-98 bp)
+				Next Alignment: 927 2675 scaffold_6010 1749 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1749 to 1650.
+			Align 2: 1026 2675 scaffold_6010 1650 1
+				Gap between this and next alignment: 2675 to 2959 (283 bp)
+				Next Alignment: 2959 6349 scaffold_3129 1 3391
+
+			Align 3: 2959 6349 scaffold_3129 1 3391
+			END in gap: 6349 to 6363 (14 bp)
+
+ERROR: Reference Formosa_sp_AK20_gi_471948494_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Formosa_sp_AK20_gi_471947712_ref_NZ_', 'Formosa_sp_AK20_gi_471948375_ref_NZ_', 'Formosa_sp_AK20_gi_471948368_ref_NZ_', 'Formosa_sp_AK20_gi_471948265_ref_NZ_', 'Formosa_sp_AK20_gi_471948460_ref_NZ_', 'Formosa_sp_AK20_gi_471948493_ref_NZ_', 'Formosa_sp_AK20_gi_471947220_ref_NZ_', 'Formosa_sp_AK20_gi_471948260_ref_NZ_', 'Formosa_sp_AK20_gi_471946889_ref_NZ_', 'Formosa_sp_AK20_gi_471946678_ref_NZ_', 'Formosa_sp_AK20_gi_471947840_ref_NZ_', 'Formosa_sp_AK20_gi_471948484_ref_NZ_', 'Formosa_sp_AK20_gi_471948490_ref_NZ_', 'Formosa_sp_AK20_gi_471948473_ref_NZ_', 'Formosa_sp_AK20_gi_471948441_ref_NZ_', 'Formosa_sp_AK20_gi_471948428_ref_NZ_', 'Formosa_sp_AK20_gi_471948352_ref_NZ_', 'Formosa_sp_AK20_gi_471948457_ref_NZ_', 'Formosa_sp_AK20_gi_471947899_ref_NZ_', 'Formosa_sp_AK20_gi_471947509_ref_NZ_', 'Formosa_sp_AK20_gi_471945608_ref_NZ_', 'Formosa_sp_AK20_gi_471948228_ref_NZ_', 'Formosa_sp_AK20_gi_471947936_ref_NZ_', 'Formosa_sp_AK20_gi_471948472_ref_NZ_', 'Formosa_sp_AK20_gi_471948482_ref_NZ_', 'Formosa_sp_AK20_gi_471946824_ref_NZ_', 'Formosa_sp_AK20_gi_471946561_ref_NZ_', 'Formosa_sp_AK20_gi_471948373_ref_NZ_', 'Formosa_sp_AK20_gi_471947210_ref_NZ_', 'Formosa_sp_AK20_gi_471946679_ref_NZ_', 'Formosa_sp_AK20_gi_471948475_ref_NZ_', 'Formosa_sp_AK20_gi_471948054_ref_NZ_', 'Formosa_sp_AK20_gi_471947397_ref_NZ_', 'Formosa_sp_AK20_gi_471948463_ref_NZ_', 'Formosa_sp_AK20_gi_471948356_ref_NZ_', 'Formosa_sp_AK20_gi_471948434_ref_NZ_', 'Formosa_sp_AK20_gi_471948431_ref_NZ_', 'Formosa_sp_AK20_gi_471945687_ref_NZ_', 'Formosa_sp_AK20_gi_471948492_ref_NZ_', 'Formosa_sp_AK20_gi_471948157_ref_NZ_', 'Formosa_sp_AK20_gi_471945607_ref_NZ_', 'Formosa_sp_AK20_gi_471948465_ref_NZ_', 'Formosa_sp_AK20_gi_471947045_ref_NZ_', 'Formosa_sp_AK20_gi_471947227_ref_NZ_', 'Formosa_sp_AK20_gi_471948485_ref_NZ_', 'Formosa_sp_AK20_gi_471945744_ref_NZ_']
+	Reference Formosa_sp_AK20_gi_471948352_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 2993 (2993 bp)
+			START in gap: 1 to 11 (10 bp)
+			Align 1: 11 2984 scaffold_3572 2974 1
+			END in gap: 2984 to 2993 (9 bp)
+
+	Reference Formosa_sp_AK20_gi_471948457_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 8770 (8770 bp)
+			START in gap: 1 to 287 (286 bp)
+			Align 1: 287 7096 scaffold_1510 7091 285
+				Gap between this and next alignment: 7096 to 7361 (264 bp)
+				Next Alignment: 7361 7642 scaffold_1510 284 1
+
+			Align 2: 7361 7642 scaffold_1510 284 1
+			END in gap: 7642 to 8770 (1128 bp)
+
+	Reference Formosa_sp_AK20_gi_471947899_ref_NZ_: 4 total alignments. 1 total regions.
+		Region: 1 to 50827 (50827 bp)
+			START in gap: 1 to 497 (496 bp)
+			Align 1: 497 5678 scaffold_505 17176 22357
+				Gap between this and next alignment: 5678 to 5990 (311 bp)
+				Next Alignment: 5990 43480 scaffold_273 37491 1
+
+			Align 2: 5990 43480 scaffold_273 37491 1
+				Gap between this and next alignment: 43480 to 43511 (30 bp)
+				Next Alignment: 43511 49983 scaffold_1641 6473 1
+
+			Align 3: 43511 49983 scaffold_1641 6473 1
+				Next Alignment: 49984 50796 scaffold_11686 813 1
+
+			Align 4: 49984 50796 scaffold_11686 813 1
+			END in gap: 50796 to 50827 (31 bp)
+
+	Reference Formosa_sp_AK20_gi_471947509_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 199253 (199253 bp)
+			Align 1: 1 199242 scaffold_18 40834 240075
+			END in gap: 199242 to 199253 (11 bp)
+
+	Reference Formosa_sp_AK20_gi_471945608_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 78407 (78407 bp)
+			START in gap: 1 to 39 (38 bp)
+			Align 1: 39 78401 scaffold_88 83927 5565
+			END in gap: 78401 to 78407 (6 bp)
+
+	Reference Formosa_sp_AK20_gi_471948228_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 35505 (35505 bp)
+			START in gap: 1 to 8 (7 bp)
+			Align 1: 8 35505 scaffold_18 1 35498
+			END in current alignment.  Modifying 35505 to 35505.
+
+	Reference Formosa_sp_AK20_gi_471947936_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 125840 (125840 bp)
+			START in gap: 1 to 8 (7 bp)
+			Align 1: 8 125840 scaffold_21 1 125833
+			END in current alignment.  Modifying 125840 to 125840.
+
+	Reference Formosa_sp_AK20_gi_471948482_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 1044 (1044 bp)
+			START in gap: 1 to 7 (6 bp)
+			Align 1: 7 1038 scaffold_9600 1032 1
+			END in gap: 1038 to 1044 (6 bp)
+
+	Reference Formosa_sp_AK20_gi_471948472_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 434 (434 bp)
+			START in gap: 1 to 45 (44 bp)
+			Align 1: 45 424 scaffold_11517 448 827
+			END in gap: 424 to 434 (10 bp)
+
+	Reference Formosa_sp_AK20_gi_471945607_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 5423 (5423 bp)
+			START in gap: 1 to 45 (44 bp)
+			Align 1: 45 5379 scaffold_18 35499 40833
+			END in gap: 5379 to 5423 (44 bp)
+
+	Reference Formosa_sp_AK20_gi_471946824_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 67668 (67668 bp)
+			START in gap: 1 to 50 (49 bp)
+			Align 1: 50 67668 scaffold_107 7145 74763
+			END in current alignment.  Modifying 67668 to 67668.
+
+	Reference Formosa_sp_AK20_gi_471946679_ref_NZ_: 4 total alignments. 1 total regions.
+		Region: 1 to 157797 (157797 bp)
+			START in gap: 1 to 8 (7 bp)
+			Align 1: 8 120065 scaffold_61 2 120059
+				Gap between this and next alignment: 120065 to 120194 (128 bp)
+				Next Alignment: 120194 122560 scaffold_4505 2367 1
+
+			Align 2: 120194 122560 scaffold_4505 2367 1
+				Negative gap (overlap) between this and next alignment: 122560 to 122528 (-32 bp)
+				Next Alignment: 122528 123049 scaffold_17010 1 522
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 34.
+			Align 3: 122561 123049 scaffold_17010 34 522
+				Negative gap (overlap) between this and next alignment: 123049 to 123017 (-32 bp)
+				Next Alignment: 123017 157606 scaffold_297 34590 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 34590 to 34557.
+			Align 4: 123050 157606 scaffold_297 34557 1
+			END in gap: 157606 to 157797 (191 bp)
+
+	Reference Formosa_sp_AK20_gi_471948373_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 1287 (1287 bp)
+			Align 1: 1 1283 scaffold_7982 1283 1
+			END in gap: 1283 to 1287 (4 bp)
+
+	Reference Formosa_sp_AK20_gi_471947210_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 6890 (6890 bp)
+			START in gap: 1 to 19 (18 bp)
+			Align 1: 19 6875 scaffold_1552 6857 1
+			END in gap: 6875 to 6890 (15 bp)
+
+	Reference Formosa_sp_AK20_gi_471948475_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 7448 (7448 bp)
+			START in gap: 1 to 53 (52 bp)
+			Align 1: 53 7196 scaffold_107 7144 1
+			END in gap: 7196 to 7448 (252 bp)
+
+	Reference Formosa_sp_AK20_gi_471948054_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 103671 (103671 bp)
+			START in gap: 1 to 2 (1 bp)
+			Align 1: 2 103671 scaffold_21 230647 126978
+			END in current alignment.  Modifying 103671 to 103671.
+
+	Reference Formosa_sp_AK20_gi_471947397_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 115250 (115250 bp)
+			START in gap: 1 to 32 (31 bp)
+			Align 1: 32 115181 scaffold_67 115150 1
+			END in gap: 115181 to 115250 (69 bp)
+
+	Reference Formosa_sp_AK20_gi_471948463_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 692 (692 bp)
+			START in gap: 1 to 7 (6 bp)
+			Align 1: 7 689 scaffold_13487 1 683
+			END in gap: 689 to 692 (3 bp)
+
+	Reference Formosa_sp_AK20_gi_471947227_ref_NZ_: 3 total alignments. 1 total regions.
+		Region: 1 to 183133 (183133 bp)
+			Align 1: 1 57559 scaffold_148 4595 62153
+				Gap between this and next alignment: 57559 to 57582 (22 bp)
+				Next Alignment: 57582 123670 scaffold_132 1 66089
+
+			Align 2: 57582 123670 scaffold_132 1 66089
+				Negative gap (overlap) between this and next alignment: 123670 to 123648 (-22 bp)
+				Next Alignment: 123648 183120 scaffold_158 59473 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 59473 to 59450.
+			Align 3: 123671 183120 scaffold_158 59450 1
+			END in gap: 183120 to 183133 (13 bp)
+
+	Reference Formosa_sp_AK20_gi_471948434_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 4636 (4636 bp)
+			START in gap: 1 to 33 (32 bp)
+			Align 1: 33 4626 scaffold_148 4594 1
+			END in gap: 4626 to 4636 (10 bp)
+
+	Reference Formosa_sp_AK20_gi_471946561_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 131168 (131168 bp)
+			START in gap: 1 to 5 (4 bp)
+			Align 1: 5 131092 scaffold_15 1 131088
+			END in gap: 131092 to 131168 (76 bp)
+
+	Reference Formosa_sp_AK20_gi_471948431_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 1229 (1229 bp)
+			START in gap: 1 to 43 (42 bp)
+			Align 1: 43 1186 scaffold_21 126977 125834
+			END in gap: 1186 to 1229 (43 bp)
+
+	Reference Formosa_sp_AK20_gi_471945687_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 69606 (69606 bp)
+			START in gap: 1 to 6 (5 bp)
+			Align 1: 6 69450 scaffold_120 1 69445
+				The next alignment (69352 69417 scaffold_505 1 66) is redundant. Skipping.
+
+	Reference Formosa_sp_AK20_gi_471948492_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 594 (594 bp)
+			START in gap: 1 to 32 (31 bp)
+			Align 1: 32 583 scaffold_16145 1 552
+			END in gap: 583 to 594 (11 bp)
+
+	Reference Formosa_sp_AK20_gi_471947220_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 7304 (7304 bp)
+			Align 1: 1 7299 scaffold_1310 1161 8459
+			END in gap: 7299 to 7304 (5 bp)
+
+	Reference Formosa_sp_AK20_gi_471948484_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 418 (418 bp)
+			START in gap: 1 to 2 (1 bp)
+			Align 1: 2 418 scaffold_13642 672 256
+			END in current alignment.  Modifying 418 to 418.
+
+	Reference Formosa_sp_AK20_gi_471948465_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 3832 (3832 bp)
+			Align 1: 1 3826 scaffold_2731 3826 1
+			END in gap: 3826 to 3832 (6 bp)
+
+	Reference Formosa_sp_AK20_gi_471947045_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 164860 (164860 bp)
+			START in gap: 1 to 11 (10 bp)
+			Align 1: 11 164838 scaffold_37 1 164828
+			END in gap: 164838 to 164860 (22 bp)
+
+	Reference Formosa_sp_AK20_gi_471948356_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 12527 (12527 bp)
+			START in gap: 1 to 18 (17 bp)
+			Align 1: 18 12269 scaffold_944 1 12252
+			END in gap: 12269 to 12527 (258 bp)
+
+	Reference Formosa_sp_AK20_gi_471948485_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 1950 (1950 bp)
+			START in gap: 1 to 17 (16 bp)
+			Align 1: 17 1934 scaffold_5515 1918 1
+			END in gap: 1934 to 1950 (16 bp)
+
+	Reference Formosa_sp_AK20_gi_471945744_ref_NZ_: 4 total alignments. 1 total regions.
+		Region: 1 to 901090 (901090 bp)
+			START in gap: 1 to 7 (6 bp)
+			Align 1: 7 118641 scaffold_64 1 118635
+				Gap between this and next alignment: 118641 to 118644 (2 bp)
+				Next Alignment: 118644 348263 scaffold_23 1 229620
+
+			Align 2: 118644 348263 scaffold_23 1 229620
+				Gap between this and next alignment: 348263 to 348465 (201 bp)
+				Next Alignment: 348465 660148 scaffold_2 1 311684
+
+			Align 3: 348465 660148 scaffold_2 1 311684
+				Gap between this and next alignment: 660148 to 660262 (113 bp)
+				Next Alignment: 660262 901073 scaffold_2 311685 552496
+
+			Align 4: 660262 901073 scaffold_2 311685 552496
+			END in gap: 901073 to 901090 (17 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Formosa_sp_AK20/contigs_reports/nucmer_output/IDBA_UD.used_snps
+
+Results:
+	Local Misassemblies: 3
+	Misassemblies: 13
+		Relocations: 0
+		Translocations: 13
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 10
+	Misassembled Contig Bases: 979518
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 0 part
+Partially Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 0
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 3047073
+
+	SNPs: 102
+	Insertions: 0
+	Deletions: 5
+
+	Positive Gaps: 97
+		Internal Gaps:  3
+		External Gaps:  94
+		External Gap Total:  7327
+		External Gap Average: 78
+	Negative Gaps: 5
+		Internal Overlaps:  0
+		External Overlaps:  5
+		External Overlaps Total: -282
+		External Overlaps Average: -56
+	Contigs with Redundant Alignments: 1 (66)

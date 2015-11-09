@@ -1,0 +1,17 @@
+reference chromosomes:
+	Bacteroides_fragilis_NCTC_9343_gi_60679597_ref_NC_0 (total length: 5205140 bp, maximal covered length: 260371 bp)
+
+total genome size: 5205140
+
+gap min size: 50
+partial gene/operon min size: 100
+
+
+
+assembly                 | genome    | duplication | gaps      | genes     | partial   | operons   | partial   |
+                         | fraction  | ratio       | number    |           | genes     |           | operons   |
+================================================================================================================
+IDBA_UD_to_Bacteroides_f | 2.66127%  | 1.00249     | 233       | -         | -         | -         | -         |
+Ray_to_Bacteroides_fragi | 0.04396%  | 2.49607     | 7         | -         | -         | -         | -         |
+SOAPdenovo2_to_Bacteroid | 0.18203%  | 1.15968     | 50        | -         | -         | -         | -         |
+SPAdes_to_Bacteroides_fr | 5.00219%  | 1.06060     | 523       | -         | -         | -         | -         |

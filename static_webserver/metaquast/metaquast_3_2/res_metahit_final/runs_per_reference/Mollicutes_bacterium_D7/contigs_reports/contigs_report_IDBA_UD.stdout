@@ -1,0 +1,150 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Mollicutes_bacterium_D7_gi_224580900_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 1
+	Total Region Length: 3561737
+Analyzing contigs...
+CONTIG: scaffold_8 (135115bp)
+Top Length: 4063  Top ID: 95.47
+		This contig is partially unaligned. (Aligned 4063 out of 135115 bases)
+		Alignment: 2569297 2573360 | 4138 8200 | 4064 4063 | 95.47 | Mollicutes_bacterium_D7_gi_224580900_ref_NZ_ scaffold_8
+		Unaligned bases: 1 to 4137 (4137)
+		Unaligned bases: 8201 to 135115 (126915)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_3367 (2839bp)
+Top Length: 1200  Top ID: 97.17
+		This contig is partially unaligned. (Aligned 1200 out of 2839 bases)
+		Alignment: 2622828 2624026 | 2047 848 | 1199 1200 | 97.17 | Mollicutes_bacterium_D7_gi_224580900_ref_NZ_ scaffold_3367
+		Unaligned bases: 1 to 847 (847)
+		Unaligned bases: 2048 to 2839 (792)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_6332 (1813bp)
+Top Length: 1813  Top ID: 96.86
+		One align captures most of this contig: 2626404 2628216 | 1813 1 | 1813 1813 | 96.86 | Mollicutes_bacterium_D7_gi_224580900_ref_NZ_ scaffold_6332
+
+CONTIG: scaffold_9636 (1339bp)
+Top Length: 1170  Top ID: 97.01
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 11 between Alignment 1 and 2:  2633928 2634107 | 1 180 | 180 180 --> 2633928 2634096 | 1 169 | 169 169
+			Real Alignment 1: 2633928 2634096 | 1 169 | 169 169 | 97.78 | Mollicutes_bacterium_D7_gi_224580900_ref_NZ_ scaffold_9636
+			  Gap between these two alignments (local misassembly). Inconsistency = 520 
+			Real Alignment 2: 2634617 2635784 | 170 1339 | 1168 1170 | 97.01 | Mollicutes_bacterium_D7_gi_224580900_ref_NZ_ scaffold_9636
+
+CONTIG: scaffold_10084 (1291bp)
+Top Length: 1291  Top ID: 95.66
+		One align captures most of this contig: 2628881 2630171 | 1 1291 | 1291 1291 | 95.66 | Mollicutes_bacterium_D7_gi_224580900_ref_NZ_ scaffold_10084
+
+CONTIG: scaffold_12241 (2143bp)
+Top Length: 2137  Top ID: 95.42
+		One align captures most of this contig: 2631591 2633724 | 2137 1 | 2134 2137 | 95.42 | Mollicutes_bacterium_D7_gi_224580900_ref_NZ_ scaffold_12241
+
+CONTIG: scaffold_26186 (610bp)
+Top Length: 603  Top ID: 96.02
+		One align captures most of this contig: 2636361 2636963 | 8 610 | 603 603 | 96.02 | Mollicutes_bacterium_D7_gi_224580900_ref_NZ_ scaffold_26186
+
+CONTIG: scaffold_29196 (530bp)
+Top Length: 169  Top ID: 97.04
+		Skipping redundant alignment 1901808 1901885 | 452 529 | 78 78 | 100.0 | Mollicutes_bacterium_D7_gi_224580900_ref_NZ_ scaffold_29196
+		Skipping redundant alignment 1897332 1897408 | 453 529 | 77 77 | 100.0 | Mollicutes_bacterium_D7_gi_224580900_ref_NZ_ scaffold_29196
+		Skipping redundant alignment 1368532 1368606 | 529 455 | 75 75 | 100.0 | Mollicutes_bacterium_D7_gi_224580900_ref_NZ_ scaffold_29196
+		This contig is partially unaligned. (Aligned 169 out of 530 bases)
+		Alignment: 1894290 1894457 | 361 529 | 168 169 | 97.04 | Mollicutes_bacterium_D7_gi_224580900_ref_NZ_ scaffold_29196
+		Unaligned bases: 1 to 360 (360)
+		Unaligned bases: 530 to 530 (1)
+
+CONTIG: scaffold_29581 (521bp)
+Top Length: 521  Top ID: 96.55
+		One align captures most of this contig: 2631185 2631705 | 521 1 | 521 521 | 96.55 | Mollicutes_bacterium_D7_gi_224580900_ref_NZ_ scaffold_29581
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Mollicutes_bacterium_D7/contigs_reports/nucmer_output/IDBA_UD.used_snps
+	Reference Mollicutes_bacterium_D7_gi_224580900_ref_NZ_: 10 total alignments. 1 total regions.
+		Region: 1 to 3561737 (3561737 bp)
+			START in gap: 1 to 1894290 (1894289 bp)
+			Align 1: 1894290 1894457 scaffold_29196 361 529
+				Gap between this and next alignment: 1894457 to 2569297 (674839 bp)
+				Next Alignment: 2569297 2573360 scaffold_8 4138 8200
+
+			Align 2: 2569297 2573360 scaffold_8 4138 8200
+				Gap between this and next alignment: 2573360 to 2622828 (49467 bp)
+				Next Alignment: 2622828 2624026 scaffold_3367 2047 848
+
+			Align 3: 2622828 2624026 scaffold_3367 2047 848
+				Gap between this and next alignment: 2624026 to 2626404 (2377 bp)
+				Next Alignment: 2626404 2628216 scaffold_6332 1813 1
+
+			Align 4: 2626404 2628216 scaffold_6332 1813 1
+				Gap between this and next alignment: 2628216 to 2628881 (664 bp)
+				Next Alignment: 2628881 2630171 scaffold_10084 1 1291
+
+			Align 5: 2628881 2630171 scaffold_10084 1 1291
+				Gap between this and next alignment: 2630171 to 2631185 (1013 bp)
+				Next Alignment: 2631185 2631705 scaffold_29581 521 1
+
+			Align 6: 2631185 2631705 scaffold_29581 521 1
+				Negative gap (overlap) between this and next alignment: 2631705 to 2631591 (-114 bp)
+				Next Alignment: 2631591 2633724 scaffold_12241 2137 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 2137 to 2022.
+			Align 7: 2631706 2633724 scaffold_12241 2022 1
+				Gap between this and next alignment: 2633724 to 2633928 (203 bp)
+				Next Alignment: 2633928 2634096 scaffold_9636 1 169
+
+			Align 8: 2633928 2634096 scaffold_9636 1 169
+				Gap between this and next alignment: 2634096 to 2634617 (520 bp)
+				Next Alignment: 2634617 2635784 scaffold_9636 170 1339
+
+			Align 9: 2634617 2635784 scaffold_9636 170 1339
+				Gap between this and next alignment: 2635784 to 2636361 (576 bp)
+				Next Alignment: 2636361 2636963 scaffold_26186 8 610
+
+			Align 10: 2636361 2636963 scaffold_26186 8 610
+			END in gap: 2636963 to 3561737 (924774 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Mollicutes_bacterium_D7/contigs_reports/nucmer_output/IDBA_UD.used_snps
+
+Results:
+	Local Misassemblies: 1
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 3 part
+Partially Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 133052
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 13015
+
+	SNPs: 480
+	Insertions: 9
+	Deletions: 3
+
+	Positive Gaps: 10
+		Internal Gaps:  1
+		External Gaps:  9
+		External Gap Total:  3548202
+		External Gap Average: 394245
+	Negative Gaps: 1
+		Internal Overlaps:  0
+		External Overlaps:  1
+		External Overlaps Total: -114
+		External Overlaps Average: -114
+	Contigs with Redundant Alignments: 0 (0)

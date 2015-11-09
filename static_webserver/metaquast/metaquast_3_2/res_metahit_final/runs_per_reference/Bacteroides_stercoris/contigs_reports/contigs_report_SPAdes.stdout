@@ -1,0 +1,1157 @@
+Aligning contigs to reference...
+	Running Nucmer
+Parsing coords...
+Loading reference...
+	Loaded [Bacteroides_stercoris_gi_514973000_ref_NZ_]
+	Loaded [Bacteroides_stercoris_gi_514973003_ref_NZ_]
+	Loaded [Bacteroides_stercoris_gi_514973476_ref_NZ_]
+	Loaded [Bacteroides_stercoris_gi_514973850_ref_NZ_]
+	Loaded [Bacteroides_stercoris_gi_514974163_ref_NZ_]
+	Loaded [Bacteroides_stercoris_gi_514974381_ref_NZ_]
+	Loaded [Bacteroides_stercoris_gi_514974549_ref_NZ_]
+	Loaded [Bacteroides_stercoris_gi_514974604_ref_NZ_]
+	Loaded [Bacteroides_stercoris_gi_514974672_ref_NZ_]
+	Loaded [Bacteroides_stercoris_gi_514974745_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 10
+	Total Region Length: 4102660
+Analyzing contigs...
+CONTIG: NODE_3826_length_4101_cov_2.31537_ID_7651 (4101bp)
+Top Length: 153  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 153 out of 4101 bases)
+		Alignment: 257787 257939 | 1 153 | 153 153 | 100.0 | Bacteroides_stercoris_gi_514974549_ref_NZ_ NODE_3826_length_4101_cov_2.31537_ID_7651
+		Unaligned bases: 154 to 4101 (3948)
+
+CONTIG: NODE_10812_length_1720_cov_2.50991_ID_21623 (1720bp)
+Top Length: 122  Top ID: 99.19
+		This contig is partially unaligned. (Aligned 122 out of 1720 bases)
+		Alignment: 35379 35501 | 1599 1720 | 123 122 | 99.19 | Bacteroides_stercoris_gi_514974549_ref_NZ_ NODE_10812_length_1720_cov_2.50991_ID_21623
+		Unaligned bases: 1 to 1598 (1598)
+
+CONTIG: NODE_20439_length_940_cov_0.620339_ID_40877 (940bp)
+Top Length: 223  Top ID: 99.55
+		This contig is partially unaligned. (Aligned 223 out of 940 bases)
+		Alignment: 89691 89913 | 718 940 | 223 223 | 99.55 | Bacteroides_stercoris_gi_514974549_ref_NZ_ NODE_20439_length_940_cov_0.620339_ID_40877
+		Unaligned bases: 1 to 717 (717)
+
+CONTIG: NODE_20812_length_926_cov_0.655568_ID_41623 (926bp)
+Top Length: 265  Top ID: 98.87
+		This contig is partially unaligned. (Aligned 265 out of 926 bases)
+		Alignment: 184408 184672 | 926 662 | 265 265 | 98.87 | Bacteroides_stercoris_gi_514974549_ref_NZ_ NODE_20812_length_926_cov_0.655568_ID_41623
+		Unaligned bases: 1 to 661 (661)
+
+CONTIG: NODE_27916_length_694_cov_0.735524_ID_55831 (694bp)
+Top Length: 108  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 108 out of 694 bases)
+		Alignment: 159699 159806 | 163 270 | 108 108 | 100.0 | Bacteroides_stercoris_gi_514974549_ref_NZ_ NODE_27916_length_694_cov_0.735524_ID_55831
+		Unaligned bases: 1 to 162 (162)
+		Unaligned bases: 271 to 694 (424)
+
+CONTIG: NODE_30380_length_641_cov_0.704778_ID_60759 (641bp)
+Top Length: 641  Top ID: 98.6
+		One align captures most of this contig: 82180 82820 | 1 641 | 641 641 | 98.6 | Bacteroides_stercoris_gi_514974549_ref_NZ_ NODE_30380_length_641_cov_0.704778_ID_60759
+
+CONTIG: NODE_33679_length_585_cov_0.575472_ID_67357 (585bp)
+Top Length: 576  Top ID: 98.79
+		One align captures most of this contig: 26527 27102 | 1 576 | 576 576 | 98.79 | Bacteroides_stercoris_gi_514974549_ref_NZ_ NODE_33679_length_585_cov_0.575472_ID_67357
+
+CONTIG: NODE_34331_length_576_cov_0.796545_ID_68661 (576bp)
+Top Length: 575  Top ID: 97.74
+		One align captures most of this contig: 139975 140549 | 2 576 | 575 575 | 97.74 | Bacteroides_stercoris_gi_514974549_ref_NZ_ NODE_34331_length_576_cov_0.796545_ID_68661
+
+CONTIG: NODE_40324_length_502_cov_0.749441_ID_80647 (502bp)
+Top Length: 502  Top ID: 97.62
+		One align captures most of this contig: 252109 252612 | 502 1 | 504 502 | 97.62 | Bacteroides_stercoris_gi_514974549_ref_NZ_ NODE_40324_length_502_cov_0.749441_ID_80647
+
+CONTIG: NODE_241_length_35679_cov_13.0222_ID_481 (35679bp)
+Top Length: 8684  Top ID: 95.0
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 35679 and total length of all aligns is 10797
+		Alignment: 146468 148580 | 9966 12078 | 2113 2113 | 96.88 | Bacteroides_stercoris_gi_514973850_ref_NZ_ NODE_241_length_35679_cov_13.0222_ID_481
+		Alignment: 283733 292416 | 26996 35679 | 8684 8684 | 95.0 | Bacteroides_stercoris_gi_514973476_ref_NZ_ NODE_241_length_35679_cov_13.0222_ID_481
+		Unaligned bases: 24882
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: NODE_1256_length_9996_cov_1.37682_ID_2511 (9996bp)
+Top Length: 781  Top ID: 98.46
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 9996 and total length of all aligns is 1017
+		Alignment: 472982 473762 | 9635 8855 | 781 781 | 98.46 | Bacteroides_stercoris_gi_514973850_ref_NZ_ NODE_1256_length_9996_cov_1.37682_ID_2511
+		Alignment: 472631 472866 | 9996 9761 | 236 236 | 97.03 | Bacteroides_stercoris_gi_514973850_ref_NZ_ NODE_1256_length_9996_cov_1.37682_ID_2511
+		Unaligned bases: 8979
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: NODE_8241_length_2182_cov_1.18806_ID_16481 (2182bp)
+Top Length: 116  Top ID: 97.41
+		This contig is partially unaligned. (Aligned 116 out of 2182 bases)
+		Alignment: 339120 339235 | 2182 2067 | 116 116 | 97.41 | Bacteroides_stercoris_gi_514973850_ref_NZ_ NODE_8241_length_2182_cov_1.18806_ID_16481
+		Unaligned bases: 1 to 2066 (2066)
+
+CONTIG: NODE_12345_length_1517_cov_1.45554_ID_24689 (1517bp)
+Top Length: 169  Top ID: 98.22
+		This contig is partially unaligned. (Aligned 169 out of 1517 bases)
+		Alignment: 340620 340788 | 1349 1517 | 169 169 | 98.22 | Bacteroides_stercoris_gi_514973850_ref_NZ_ NODE_12345_length_1517_cov_1.45554_ID_24689
+		Unaligned bases: 1 to 1348 (1348)
+
+CONTIG: NODE_12751_length_1473_cov_0.964034_ID_25501 (1473bp)
+Top Length: 1473  Top ID: 96.61
+		One align captures most of this contig: 613160 614632 | 1473 1 | 1473 1473 | 96.61 | Bacteroides_stercoris_gi_514973850_ref_NZ_ NODE_12751_length_1473_cov_0.964034_ID_25501
+
+CONTIG: NODE_15381_length_1236_cov_1.27519_ID_30761 (1236bp)
+Top Length: 394  Top ID: 97.72
+		This contig is partially unaligned. (Aligned 394 out of 1236 bases)
+		Alignment: 440036 440429 | 843 1236 | 394 394 | 97.72 | Bacteroides_stercoris_gi_514973850_ref_NZ_ NODE_15381_length_1236_cov_1.27519_ID_30761
+		Unaligned bases: 1 to 842 (842)
+
+CONTIG: NODE_15680_length_1212_cov_0.741573_ID_31359 (1212bp)
+Top Length: 181  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 181 out of 1212 bases)
+		Alignment: 26903 27083 | 2 182 | 181 181 | 100.0 | Bacteroides_stercoris_gi_514973850_ref_NZ_ NODE_15680_length_1212_cov_0.741573_ID_31359
+		Unaligned bases: 1 to 1 (1)
+		Unaligned bases: 183 to 1212 (1030)
+
+CONTIG: NODE_20119_length_955_cov_0.59_ID_40237 (955bp)
+Top Length: 528  Top ID: 98.49
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 196963 197491 | 1 528 | 529 528 | 98.49 | Bacteroides_stercoris_gi_514973850_ref_NZ_ NODE_20119_length_955_cov_0.59_ID_40237
+			  Fake misassembly between these two alignments: inconsistency = 4 , gap in the contig is small or absent or filled mostly with Ns (short indel: deletion of length 4; 0 mismatches)
+			Real Alignment 2: 197641 197922 | 674 955 | 282 282 | 96.81 | Bacteroides_stercoris_gi_514973850_ref_NZ_ NODE_20119_length_955_cov_0.59_ID_40237
+
+CONTIG: NODE_21566_length_897_cov_0.578385_ID_43131 (897bp)
+Top Length: 208  Top ID: 98.08
+		This contig is partially unaligned. (Aligned 208 out of 897 bases)
+		Alignment: 16683 16890 | 897 690 | 208 208 | 98.08 | Bacteroides_stercoris_gi_514973850_ref_NZ_ NODE_21566_length_897_cov_0.578385_ID_43131
+		Unaligned bases: 1 to 689 (689)
+
+CONTIG: NODE_22095_length_878_cov_0.565006_ID_44189 (878bp)
+Top Length: 262  Top ID: 99.62
+		This contig is partially unaligned. (Aligned 262 out of 878 bases)
+		Alignment: 543156 543417 | 878 617 | 262 262 | 99.62 | Bacteroides_stercoris_gi_514973850_ref_NZ_ NODE_22095_length_878_cov_0.565006_ID_44189
+		Unaligned bases: 1 to 616 (616)
+
+CONTIG: NODE_22173_length_875_cov_0.930488_ID_44345 (875bp)
+Top Length: 105  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 105 out of 875 bases)
+		Alignment: 256167 256271 | 105 1 | 105 105 | 100.0 | Bacteroides_stercoris_gi_514973850_ref_NZ_ NODE_22173_length_875_cov_0.930488_ID_44345
+		Unaligned bases: 106 to 875 (770)
+
+CONTIG: NODE_24549_length_789_cov_0.697548_ID_49097 (789bp)
+Top Length: 94  Top ID: 95.74
+		This contig is partially unaligned. (Aligned 94 out of 789 bases)
+		Alignment: 325836 325929 | 784 691 | 94 94 | 95.74 | Bacteroides_stercoris_gi_514973850_ref_NZ_ NODE_24549_length_789_cov_0.697548_ID_49097
+		Unaligned bases: 1 to 690 (690)
+		Unaligned bases: 785 to 789 (5)
+
+CONTIG: NODE_26176_length_739_cov_0.72076_ID_52351 (739bp)
+Top Length: 327  Top ID: 95.41
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 477106 477432 | 327 1 | 327 327 | 95.41 | Bacteroides_stercoris_gi_514973850_ref_NZ_ NODE_26176_length_739_cov_0.72076_ID_52351
+			  Fake misassembly between these two alignments: inconsistency = -5 , gap in the contig is small or absent or filled mostly with Ns (short indel: insertion of length 5; 0 mismatches)
+			Real Alignment 2: 476699 477001 | 739 437 | 303 303 | 99.67 | Bacteroides_stercoris_gi_514973850_ref_NZ_ NODE_26176_length_739_cov_0.72076_ID_52351
+
+CONTIG: NODE_28026_length_691_cov_0.886792_ID_56051 (691bp)
+Top Length: 691  Top ID: 99.42
+		One align captures most of this contig: 521617 522307 | 691 1 | 691 691 | 99.42 | Bacteroides_stercoris_gi_514973850_ref_NZ_ NODE_28026_length_691_cov_0.886792_ID_56051
+
+CONTIG: NODE_36176_length_551_cov_0.840726_ID_72351 (551bp)
+Top Length: 496  Top ID: 97.78
+		This contig is partially unaligned. (Aligned 496 out of 551 bases)
+		Alignment: 310514 311009 | 53 548 | 496 496 | 97.78 | Bacteroides_stercoris_gi_514973850_ref_NZ_ NODE_36176_length_551_cov_0.840726_ID_72351
+		Unaligned bases: 1 to 52 (52)
+		Unaligned bases: 549 to 551 (3)
+
+CONTIG: NODE_36974_length_541_cov_0.849794_ID_73947 (541bp)
+Top Length: 541  Top ID: 99.08
+		One align captures most of this contig: 535497 536037 | 541 1 | 541 541 | 99.08 | Bacteroides_stercoris_gi_514973850_ref_NZ_ NODE_36974_length_541_cov_0.849794_ID_73947
+
+CONTIG: NODE_38178_length_526_cov_0.617834_ID_76355 (526bp)
+Top Length: 221  Top ID: 99.1
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 11106 11312 | 1 207 | 207 207 | 100.0 | Bacteroides_stercoris_gi_514973850_ref_NZ_ NODE_38178_length_526_cov_0.617834_ID_76355
+			  Fake misassembly between these two alignments: inconsistency = -7 , gap in the contig is small or absent or filled mostly with Ns (long indel: insertion of length 7; 0 mismatches)
+			Real Alignment 2: 11404 11624 | 306 526 | 221 221 | 99.1 | Bacteroides_stercoris_gi_514973850_ref_NZ_ NODE_38178_length_526_cov_0.617834_ID_76355
+
+CONTIG: NODE_38669_length_521_cov_0.774678_ID_77337 (521bp)
+Top Length: 309  Top ID: 98.38
+		This contig is partially unaligned. (Aligned 309 out of 521 bases)
+		Alignment: 530317 530624 | 213 521 | 308 309 | 98.38 | Bacteroides_stercoris_gi_514973850_ref_NZ_ NODE_38669_length_521_cov_0.774678_ID_77337
+		Unaligned bases: 1 to 212 (212)
+
+CONTIG: NODE_40232_length_503_cov_0.564732_ID_80463 (503bp)
+Top Length: 503  Top ID: 98.01
+		One align captures most of this contig: 357134 357633 | 1 503 | 500 503 | 98.01 | Bacteroides_stercoris_gi_514973850_ref_NZ_ NODE_40232_length_503_cov_0.564732_ID_80463
+
+CONTIG: NODE_40306_length_502_cov_0.447427_ID_80611 (502bp)
+Top Length: 214  Top ID: 99.53
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 107195 107401 | 2 208 | 207 207 | 98.07 | Bacteroides_stercoris_gi_514973850_ref_NZ_ NODE_40306_length_502_cov_0.447427_ID_80611
+			  Fake misassembly between these two alignments: inconsistency = 8 , gap in the contig is small or absent or filled mostly with Ns (long indel: deletion of length 8; 0 mismatches)
+			Real Alignment 2: 107490 107703 | 289 502 | 214 214 | 99.53 | Bacteroides_stercoris_gi_514973850_ref_NZ_ NODE_40306_length_502_cov_0.447427_ID_80611
+
+CONTIG: NODE_4876_length_3387_cov_0.943277_ID_9751 (3387bp)
+Top Length: 152  Top ID: 99.34
+		This contig is partially unaligned. (Aligned 152 out of 3387 bases)
+		Alignment: 264413 264564 | 1 152 | 152 152 | 99.34 | Bacteroides_stercoris_gi_514974381_ref_NZ_ NODE_4876_length_3387_cov_0.943277_ID_9751
+		Unaligned bases: 153 to 3387 (3235)
+
+CONTIG: NODE_15305_length_1242_cov_1.38079_ID_30609 (1242bp)
+Top Length: 1235  Top ID: 99.92
+		One align captures most of this contig: 97797 99031 | 8 1242 | 1235 1235 | 99.92 | Bacteroides_stercoris_gi_514974381_ref_NZ_ NODE_15305_length_1242_cov_1.38079_ID_30609
+
+CONTIG: NODE_17404_length_1101_cov_1.03633_ID_34807 (1101bp)
+Top Length: 1101  Top ID: 98.55
+		One align captures most of this contig: 191128 192228 | 1101 1 | 1101 1101 | 98.55 | Bacteroides_stercoris_gi_514974381_ref_NZ_ NODE_17404_length_1101_cov_1.03633_ID_34807
+
+CONTIG: NODE_17636_length_1086_cov_0.754607_ID_35271 (1086bp)
+Top Length: 361  Top ID: 97.23
+		This contig is partially unaligned. (Aligned 361 out of 1086 bases)
+		Alignment: 187524 187884 | 726 1086 | 361 361 | 97.23 | Bacteroides_stercoris_gi_514974381_ref_NZ_ NODE_17636_length_1086_cov_0.754607_ID_35271
+		Unaligned bases: 1 to 725 (725)
+
+CONTIG: NODE_18322_length_1047_cov_4.32258_ID_36643 (1047bp)
+Top Length: 1047  Top ID: 99.33
+		One align captures most of this contig: 69807 70853 | 1047 1 | 1047 1047 | 99.33 | Bacteroides_stercoris_gi_514974381_ref_NZ_ NODE_18322_length_1047_cov_4.32258_ID_36643
+
+CONTIG: NODE_18851_length_1018_cov_0.733126_ID_37701 (1018bp)
+Top Length: 1018  Top ID: 96.76
+		One align captures most of this contig: 47263 48280 | 1018 1 | 1018 1018 | 96.76 | Bacteroides_stercoris_gi_514974381_ref_NZ_ NODE_18851_length_1018_cov_0.733126_ID_37701
+
+CONTIG: NODE_23030_length_843_cov_0.895939_ID_46059 (843bp)
+Top Length: 393  Top ID: 98.24
+		This contig is partially unaligned. (Aligned 393 out of 843 bases)
+		Alignment: 180317 180714 | 1 393 | 398 393 | 98.24 | Bacteroides_stercoris_gi_514974381_ref_NZ_ NODE_23030_length_843_cov_0.895939_ID_46059
+		Unaligned bases: 394 to 843 (450)
+
+CONTIG: NODE_26455_length_731_cov_0.494083_ID_52909 (731bp)
+Top Length: 441  Top ID: 95.24
+		This contig is partially unaligned. (Aligned 441 out of 731 bases)
+		Alignment: 185257 185697 | 731 291 | 441 441 | 95.24 | Bacteroides_stercoris_gi_514974381_ref_NZ_ NODE_26455_length_731_cov_0.494083_ID_52909
+		Unaligned bases: 1 to 290 (290)
+
+CONTIG: NODE_26894_length_720_cov_0.652632_ID_53787 (720bp)
+Top Length: 184  Top ID: 98.37
+		This contig is partially unaligned. (Aligned 184 out of 720 bases)
+		Alignment: 255852 256035 | 720 537 | 184 184 | 98.37 | Bacteroides_stercoris_gi_514974381_ref_NZ_ NODE_26894_length_720_cov_0.652632_ID_53787
+		Unaligned bases: 1 to 536 (536)
+
+CONTIG: NODE_33143_length_593_cov_1.34387_ID_66285 (593bp)
+Top Length: 593  Top ID: 99.33
+		One align captures most of this contig: 103760 104352 | 1 593 | 593 593 | 99.33 | Bacteroides_stercoris_gi_514974381_ref_NZ_ NODE_33143_length_593_cov_1.34387_ID_66285
+
+CONTIG: NODE_35804_length_555_cov_0.68_ID_71607 (555bp)
+Top Length: 532  Top ID: 97.56
+		This contig is partially unaligned. (Aligned 532 out of 555 bases)
+		Alignment: 59158 59688 | 555 24 | 531 532 | 97.56 | Bacteroides_stercoris_gi_514974381_ref_NZ_ NODE_35804_length_555_cov_0.68_ID_71607
+		Unaligned bases: 1 to 23 (23)
+
+CONTIG: NODE_27003_length_717_cov_0.496979_ID_54005 (717bp)
+Top Length: 295  Top ID: 98.64
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 116642 116916 | 1 275 | 275 275 | 97.09 | Bacteroides_stercoris_gi_514974745_ref_NZ_ NODE_27003_length_717_cov_0.496979_ID_54005
+			  Fake misassembly between these two alignments: inconsistency = -2 , gap in the contig is small or absent or filled mostly with Ns (short indel: insertion of length 2; 0 mismatches)
+			Real Alignment 2: 117062 117356 | 423 717 | 295 295 | 98.64 | Bacteroides_stercoris_gi_514974745_ref_NZ_ NODE_27003_length_717_cov_0.496979_ID_54005
+
+CONTIG: NODE_6099_length_2824_cov_1.03828_ID_12197 (2824bp)
+Top Length: 113  Top ID: 98.23
+		This contig is partially unaligned. (Aligned 113 out of 2824 bases)
+		Alignment: 402119 402231 | 1 113 | 113 113 | 98.23 | Bacteroides_stercoris_gi_514974163_ref_NZ_ NODE_6099_length_2824_cov_1.03828_ID_12197
+		Unaligned bases: 114 to 2824 (2711)
+
+CONTIG: NODE_19875_length_969_cov_0.778993_ID_39749 (969bp)
+Top Length: 969  Top ID: 95.37
+		One align captures most of this contig: 300571 301540 | 969 1 | 970 969 | 95.37 | Bacteroides_stercoris_gi_514974163_ref_NZ_ NODE_19875_length_969_cov_0.778993_ID_39749
+
+CONTIG: NODE_20733_length_929_cov_0.694508_ID_41465 (929bp)
+Top Length: 376  Top ID: 99.2
+		This contig is partially unaligned. (Aligned 376 out of 929 bases)
+		Alignment: 159679 160054 | 376 1 | 376 376 | 99.2 | Bacteroides_stercoris_gi_514974163_ref_NZ_ NODE_20733_length_929_cov_0.694508_ID_41465
+		Unaligned bases: 377 to 929 (553)
+
+CONTIG: NODE_26105_length_741_cov_0.411079_ID_52209 (741bp)
+Top Length: 77  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 77 out of 741 bases)
+		Alignment: 375402 375478 | 330 406 | 77 77 | 100.0 | Bacteroides_stercoris_gi_514974163_ref_NZ_ NODE_26105_length_741_cov_0.411079_ID_52209
+		Unaligned bases: 1 to 329 (329)
+		Unaligned bases: 407 to 741 (335)
+
+CONTIG: NODE_27468_length_706_cov_0.645161_ID_54935 (706bp)
+Top Length: 706  Top ID: 95.33
+		One align captures most of this contig: 461834 462538 | 1 706 | 705 706 | 95.33 | Bacteroides_stercoris_gi_514974163_ref_NZ_ NODE_27468_length_706_cov_0.645161_ID_54935
+
+CONTIG: NODE_33010_length_595_cov_0.418519_ID_66019 (595bp)
+Top Length: 271  Top ID: 96.68
+		This contig is partially unaligned. (Aligned 271 out of 595 bases)
+		Alignment: 174689 174959 | 325 595 | 271 271 | 96.68 | Bacteroides_stercoris_gi_514974163_ref_NZ_ NODE_33010_length_595_cov_0.418519_ID_66019
+		Unaligned bases: 1 to 324 (324)
+
+CONTIG: NODE_5836_length_2942_cov_64.9321_ID_11671 (2942bp)
+Top Length: 249  Top ID: 99.2
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 2942 and total length of all aligns is 326
+		Alignment: 1 249 | 249 1 | 249 249 | 99.2 | Bacteroides_stercoris_gi_514974672_ref_NZ_ NODE_5836_length_2942_cov_64.9321_ID_11671
+		Alignment: 74243 74319 | 2684 2760 | 77 77 | 100.0 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_5836_length_2942_cov_64.9321_ID_11671
+		Unaligned bases: 2616
+CONTIG: NODE_8142_length_2206_cov_1.49047_ID_16283 (2206bp)
+Top Length: 131  Top ID: 99.24
+		This contig is partially unaligned. (Aligned 131 out of 2206 bases)
+		Alignment: 487810 487940 | 131 1 | 131 131 | 99.24 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_8142_length_2206_cov_1.49047_ID_16283
+		Unaligned bases: 132 to 2206 (2075)
+
+CONTIG: NODE_10362_length_1787_cov_0.985566_ID_20723 (1787bp)
+Top Length: 155  Top ID: 98.71
+		This contig is partially unaligned. (Aligned 155 out of 1787 bases)
+		Alignment: 214117 214271 | 155 1 | 155 155 | 98.71 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_10362_length_1787_cov_0.985566_ID_20723
+		Unaligned bases: 156 to 1787 (1632)
+
+CONTIG: NODE_17777_length_1078_cov_0.751711_ID_35553 (1078bp)
+Top Length: 91  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 91 out of 1078 bases)
+		Alignment: 765506 765596 | 1 91 | 91 91 | 100.0 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_17777_length_1078_cov_0.751711_ID_35553
+		Unaligned bases: 92 to 1078 (987)
+
+CONTIG: NODE_18886_length_1016_cov_0.71488_ID_37771 (1016bp)
+Top Length: 76  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 76 out of 1016 bases)
+		Alignment: 186889 186964 | 466 391 | 76 76 | 100.0 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_18886_length_1016_cov_0.71488_ID_37771
+		Unaligned bases: 1 to 390 (390)
+		Unaligned bases: 467 to 1016 (550)
+
+CONTIG: NODE_20171_length_952_cov_0.501672_ID_40341 (952bp)
+Top Length: 564  Top ID: 97.52
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 335226 335479 | 1 254 | 254 254 | 96.06 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_20171_length_952_cov_0.501672_ID_40341
+			  Fake misassembly between these two alignments: inconsistency = -17 , gap in the contig is small or absent or filled mostly with Ns (long indel: insertion of length 17; 0 mismatches)
+			Real Alignment 2: 335597 336160 | 389 952 | 564 564 | 97.52 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_20171_length_952_cov_0.501672_ID_40341
+
+CONTIG: NODE_21372_length_904_cov_1.07538_ID_42743 (904bp)
+Top Length: 218  Top ID: 99.54
+		This contig is partially unaligned. (Aligned 218 out of 904 bases)
+		Alignment: 311700 311917 | 687 904 | 218 218 | 99.54 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_21372_length_904_cov_1.07538_ID_42743
+		Unaligned bases: 1 to 686 (686)
+
+CONTIG: NODE_22897_length_848_cov_0.552333_ID_45793 (848bp)
+Top Length: 848  Top ID: 98.11
+		One align captures most of this contig: 500681 501528 | 848 1 | 848 848 | 98.11 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_22897_length_848_cov_0.552333_ID_45793
+
+CONTIG: NODE_23032_length_843_cov_0.722081_ID_46063 (843bp)
+Top Length: 843  Top ID: 99.29
+		One align captures most of this contig: 226116 226958 | 843 1 | 843 843 | 99.29 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_23032_length_843_cov_0.722081_ID_46063
+
+CONTIG: NODE_24096_length_804_cov_0.715621_ID_48191 (804bp)
+Top Length: 97  Top ID: 97.94
+		This contig is partially unaligned. (Aligned 97 out of 804 bases)
+		Alignment: 379967 380063 | 507 603 | 97 97 | 97.94 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_24096_length_804_cov_0.715621_ID_48191
+		Unaligned bases: 1 to 506 (506)
+		Unaligned bases: 604 to 804 (201)
+
+CONTIG: NODE_24688_length_784_cov_0.444444_ID_49375 (784bp)
+Top Length: 396  Top ID: 96.46
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 905140 905535 | 7 402 | 396 396 | 96.46 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_24688_length_784_cov_0.444444_ID_49375
+			  Fake misassembly between these two alignments: inconsistency = 0 , gap in the contig is small or absent or filled mostly with Ns (no indel; 1 mismatches)
+			Real Alignment 2: 905681 905917 | 548 784 | 237 237 | 96.62 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_24688_length_784_cov_0.444444_ID_49375
+
+CONTIG: NODE_25517_length_758_cov_0.598862_ID_51033 (758bp)
+Top Length: 755  Top ID: 98.54
+		One align captures most of this contig: 822940 823694 | 755 1 | 755 755 | 98.54 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_25517_length_758_cov_0.598862_ID_51033
+
+CONTIG: NODE_26095_length_741_cov_0.600583_ID_52189 (741bp)
+Top Length: 741  Top ID: 96.02
+		One align captures most of this contig: 788715 789468 | 1 741 | 754 741 | 96.02 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_26095_length_741_cov_0.600583_ID_52189
+
+CONTIG: NODE_26862_length_721_cov_0.987988_ID_53723 (721bp)
+Top Length: 721  Top ID: 95.44
+		One align captures most of this contig: 901716 902460 | 721 1 | 745 721 | 95.44 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_26862_length_721_cov_0.987988_ID_53723
+
+CONTIG: NODE_26941_length_719_cov_0.590361_ID_53881 (719bp)
+Top Length: 297  Top ID: 97.98
+		This contig is partially unaligned. (Aligned 297 out of 719 bases)
+		Alignment: 336560 336856 | 304 8 | 297 297 | 97.98 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_26941_length_719_cov_0.590361_ID_53881
+		Unaligned bases: 1 to 7 (7)
+		Unaligned bases: 305 to 719 (415)
+
+CONTIG: NODE_28603_length_678_cov_0.634029_ID_57205 (678bp)
+Top Length: 678  Top ID: 98.67
+		One align captures most of this contig: 814921 815598 | 678 1 | 678 678 | 98.67 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_28603_length_678_cov_0.634029_ID_57205
+
+CONTIG: NODE_33204_length_592_cov_0.795158_ID_66407 (592bp)
+Top Length: 592  Top ID: 99.49
+		One align captures most of this contig: 708133 708724 | 592 1 | 592 592 | 99.49 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_33204_length_592_cov_0.795158_ID_66407
+
+CONTIG: NODE_33956_length_581_cov_0.454373_ID_67911 (581bp)
+Top Length: 581  Top ID: 98.8
+		One align captures most of this contig: 892700 893280 | 1 581 | 581 581 | 98.8 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_33956_length_581_cov_0.454373_ID_67911
+
+CONTIG: NODE_34542_length_573_cov_0.501931_ID_69083 (573bp)
+Top Length: 573  Top ID: 96.43
+		One align captures most of this contig: 789932 790520 | 573 1 | 589 573 | 96.43 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_34542_length_573_cov_0.501931_ID_69083
+
+CONTIG: NODE_35111_length_565_cov_0.770588_ID_70221 (565bp)
+Top Length: 565  Top ID: 99.65
+		One align captures most of this contig: 580886 581450 | 565 1 | 565 565 | 99.65 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_35111_length_565_cov_0.770588_ID_70221
+
+CONTIG: NODE_35214_length_563_cov_0.673228_ID_70427 (563bp)
+Top Length: 563  Top ID: 97.87
+		One align captures most of this contig: 654252 654814 | 563 1 | 563 563 | 97.87 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_35214_length_563_cov_0.673228_ID_70427
+
+CONTIG: NODE_36556_length_546_cov_0.743381_ID_73111 (546bp)
+Top Length: 546  Top ID: 98.35
+		One align captures most of this contig: 198799 199344 | 546 1 | 546 546 | 98.35 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_36556_length_546_cov_0.743381_ID_73111
+
+CONTIG: NODE_36788_length_543_cov_0.52459_ID_73575 (543bp)
+Top Length: 227  Top ID: 98.68
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 706718 706944 | 227 1 | 227 227 | 98.68 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_36788_length_543_cov_0.52459_ID_73575
+			  Fake misassembly between these two alignments: inconsistency = -3 , gap in the contig is small or absent or filled mostly with Ns (short indel: insertion of length 3; 0 mismatches)
+			Real Alignment 2: 706405 706625 | 543 323 | 221 221 | 96.38 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_36788_length_543_cov_0.52459_ID_73575
+
+CONTIG: NODE_37669_length_532_cov_0.91195_ID_75337 (532bp)
+Top Length: 532  Top ID: 100.0
+		One align captures most of this contig: 617822 618353 | 1 532 | 532 532 | 100.0 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_37669_length_532_cov_0.91195_ID_75337
+
+CONTIG: NODE_38301_length_525_cov_0.517021_ID_76601 (525bp)
+Top Length: 509  Top ID: 95.11
+		This contig is partially unaligned. (Aligned 509 out of 525 bases)
+		Alignment: 68539 69049 | 1 509 | 511 509 | 95.11 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_38301_length_525_cov_0.517021_ID_76601
+		Unaligned bases: 510 to 525 (16)
+
+CONTIG: NODE_39074_length_517_cov_0.928571_ID_78147 (517bp)
+Top Length: 517  Top ID: 99.81
+		One align captures most of this contig: 813961 814477 | 517 1 | 517 517 | 99.81 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_39074_length_517_cov_0.928571_ID_78147
+
+CONTIG: NODE_39733_length_509_cov_0.689427_ID_79465 (509bp)
+Top Length: 501  Top ID: 98.01
+		One align captures most of this contig: 223847 224348 | 501 1 | 502 501 | 98.01 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_39733_length_509_cov_0.689427_ID_79465
+
+CONTIG: NODE_39787_length_508_cov_0.657837_ID_79573 (508bp)
+Top Length: 467  Top ID: 97.64
+		This contig is partially unaligned. (Aligned 467 out of 508 bases)
+		Alignment: 806380 806846 | 42 508 | 467 467 | 97.64 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_39787_length_508_cov_0.657837_ID_79573
+		Unaligned bases: 1 to 41 (41)
+
+CONTIG: NODE_40228_length_503_cov_0.765625_ID_80455 (503bp)
+Top Length: 503  Top ID: 98.61
+		One align captures most of this contig: 896 1398 | 1 503 | 503 503 | 98.61 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_40228_length_503_cov_0.765625_ID_80455
+
+CONTIG: NODE_40396_length_501_cov_0.665919_ID_80791 (501bp)
+Top Length: 501  Top ID: 97.8
+		One align captures most of this contig: 439598 440098 | 1 501 | 501 501 | 97.8 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_40396_length_501_cov_0.665919_ID_80791
+
+CONTIG: NODE_40502_length_500_cov_0.757303_ID_81003 (500bp)
+Top Length: 500  Top ID: 99.0
+		One align captures most of this contig: 786215 786714 | 500 1 | 500 500 | 99.0 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_40502_length_500_cov_0.757303_ID_81003
+
+CONTIG: NODE_1926_length_6902_cov_5.46093_ID_3851 (6902bp)
+Top Length: 551  Top ID: 95.3
+		Skipping redundant alignment 70940 71394 | 6439 6902 | 455 464 | 95.26 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_1926_length_6902_cov_5.46093_ID_3851
+		Skipping redundant alignment 888909 889008 | 6439 6541 | 100 103 | 95.15 | Bacteroides_stercoris_gi_514973476_ref_NZ_ NODE_1926_length_6902_cov_5.46093_ID_3851
+		This contig is partially unaligned. (Aligned 551 out of 6902 bases)
+		Alignment: 354 897 | 6902 6352 | 544 551 | 95.3 | Bacteroides_stercoris_gi_514974672_ref_NZ_ NODE_1926_length_6902_cov_5.46093_ID_3851
+		Unaligned bases: 1 to 6351 (6351)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_2771_length_5249_cov_7.53331_ID_5541 (5249bp)
+Top Length: 551  Top ID: 95.3
+		Skipping redundant alignment 70940 71394 | 4786 5249 | 455 464 | 95.26 | Bacteroides_stercoris_gi_514973000_ref_NZ_ NODE_2771_length_5249_cov_7.53331_ID_5541
+		Skipping redundant alignment 888909 889008 | 4786 4888 | 100 103 | 95.15 | Bacteroides_stercoris_gi_514973476_ref_NZ_ NODE_2771_length_5249_cov_7.53331_ID_5541
+		This contig is partially unaligned. (Aligned 551 out of 5249 bases)
+		Alignment: 354 897 | 5249 4699 | 544 551 | 95.3 | Bacteroides_stercoris_gi_514974672_ref_NZ_ NODE_2771_length_5249_cov_7.53331_ID_5541
+		Unaligned bases: 1 to 4698 (4698)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_20891_length_923_cov_1.59217_ID_41781 (923bp)
+Top Length: 236  Top ID: 97.03
+		This contig is partially unaligned. (Aligned 236 out of 923 bases)
+		Alignment: 97853 98088 | 688 923 | 236 236 | 97.03 | Bacteroides_stercoris_gi_514974672_ref_NZ_ NODE_20891_length_923_cov_1.59217_ID_41781
+		Unaligned bases: 1 to 687 (687)
+
+CONTIG: NODE_36358_length_548_cov_0.756592_ID_72715 (548bp)
+Top Length: 548  Top ID: 98.54
+		One align captures most of this contig: 65090 65633 | 1 548 | 544 548 | 98.54 | Bacteroides_stercoris_gi_514974672_ref_NZ_ NODE_36358_length_548_cov_0.756592_ID_72715
+
+CONTIG: NODE_38005_length_528_cov_0.82241_ID_76009 (528bp)
+Top Length: 234  Top ID: 98.72
+		This contig is partially unaligned. (Aligned 234 out of 528 bases)
+		Alignment: 101185 101418 | 528 295 | 234 234 | 98.72 | Bacteroides_stercoris_gi_514974672_ref_NZ_ NODE_38005_length_528_cov_0.82241_ID_76009
+		Unaligned bases: 1 to 294 (294)
+
+CONTIG: NODE_39550_length_511_cov_0.817982_ID_79099 (511bp)
+Top Length: 508  Top ID: 98.43
+		One align captures most of this contig: 127310 127817 | 4 511 | 508 508 | 98.43 | Bacteroides_stercoris_gi_514974672_ref_NZ_ NODE_39550_length_511_cov_0.817982_ID_79099
+
+CONTIG: NODE_845_length_13967_cov_5.65576_ID_1689 (13967bp)
+Top Length: 86  Top ID: 96.51
+		This contig is partially unaligned. (Aligned 86 out of 13967 bases)
+		Alignment: 271020 271105 | 152 67 | 86 86 | 96.51 | Bacteroides_stercoris_gi_514973476_ref_NZ_ NODE_845_length_13967_cov_5.65576_ID_1689
+		Unaligned bases: 1 to 66 (66)
+		Unaligned bases: 153 to 13967 (13815)
+
+CONTIG: NODE_1688_length_7730_cov_1.25967_ID_3375 (7730bp)
+Top Length: 151  Top ID: 97.35
+		This contig is partially unaligned. (Aligned 151 out of 7730 bases)
+		Alignment: 502943 503093 | 151 1 | 151 151 | 97.35 | Bacteroides_stercoris_gi_514973476_ref_NZ_ NODE_1688_length_7730_cov_1.25967_ID_3375
+		Unaligned bases: 152 to 7730 (7579)
+
+CONTIG: NODE_4976_length_3334_cov_1.10552_ID_9951 (3334bp)
+Top Length: 489  Top ID: 99.59
+		This contig is partially unaligned. (Aligned 489 out of 3334 bases)
+		Alignment: 451694 452182 | 3334 2846 | 489 489 | 99.59 | Bacteroides_stercoris_gi_514973476_ref_NZ_ NODE_4976_length_3334_cov_1.10552_ID_9951
+		Unaligned bases: 1 to 2845 (2845)
+
+CONTIG: NODE_19193_length_1001_cov_0.539112_ID_38385 (1001bp)
+Top Length: 312  Top ID: 99.04
+		This contig is partially unaligned. (Aligned 312 out of 1001 bases)
+		Alignment: 568170 568481 | 312 1 | 312 312 | 99.04 | Bacteroides_stercoris_gi_514973476_ref_NZ_ NODE_19193_length_1001_cov_0.539112_ID_38385
+		Unaligned bases: 313 to 1001 (689)
+
+CONTIG: NODE_19498_length_987_cov_0.73176_ID_38995 (987bp)
+Top Length: 541  Top ID: 99.63
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 183853 184393 | 606 66 | 541 541 | 99.63 | Bacteroides_stercoris_gi_514973476_ref_NZ_ NODE_19498_length_987_cov_0.73176_ID_38995
+			  Fake misassembly between these two alignments: inconsistency = 4 , gap in the contig is small or absent or filled mostly with Ns (short indel: deletion of length 4; 0 mismatches)
+			Real Alignment 2: 183468 183707 | 987 748 | 240 240 | 100.0 | Bacteroides_stercoris_gi_514973476_ref_NZ_ NODE_19498_length_987_cov_0.73176_ID_38995
+
+CONTIG: NODE_19727_length_976_cov_0.813246_ID_39453 (976bp)
+Top Length: 282  Top ID: 98.58
+		This contig is partially unaligned. (Aligned 282 out of 976 bases)
+		Alignment: 107379 107660 | 695 976 | 282 282 | 98.58 | Bacteroides_stercoris_gi_514973476_ref_NZ_ NODE_19727_length_976_cov_0.813246_ID_39453
+		Unaligned bases: 1 to 694 (694)
+
+CONTIG: NODE_21727_length_891_cov_0.547847_ID_43453 (891bp)
+Top Length: 272  Top ID: 99.63
+		This contig is partially unaligned. (Aligned 272 out of 891 bases)
+		Alignment: 850329 850600 | 891 620 | 272 272 | 99.63 | Bacteroides_stercoris_gi_514973476_ref_NZ_ NODE_21727_length_891_cov_0.547847_ID_43453
+		Unaligned bases: 1 to 619 (619)
+
+CONTIG: NODE_25891_length_747_cov_0.790462_ID_51781 (747bp)
+Top Length: 98  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 98 out of 747 bases)
+		Alignment: 194983 195080 | 1 98 | 98 98 | 100.0 | Bacteroides_stercoris_gi_514973476_ref_NZ_ NODE_25891_length_747_cov_0.790462_ID_51781
+		Unaligned bases: 99 to 747 (649)
+
+CONTIG: NODE_30341_length_641_cov_0.837884_ID_60681 (641bp)
+Top Length: 641  Top ID: 99.22
+		One align captures most of this contig: 482895 483535 | 641 1 | 641 641 | 99.22 | Bacteroides_stercoris_gi_514973476_ref_NZ_ NODE_30341_length_641_cov_0.837884_ID_60681
+
+CONTIG: NODE_30539_length_637_cov_0.561856_ID_61077 (637bp)
+Top Length: 637  Top ID: 95.6
+		One align captures most of this contig: 621302 621935 | 1 637 | 634 637 | 95.6 | Bacteroides_stercoris_gi_514973476_ref_NZ_ NODE_30539_length_637_cov_0.561856_ID_61077
+
+CONTIG: NODE_30718_length_634_cov_0.799655_ID_61435 (634bp)
+Top Length: 634  Top ID: 98.58
+		One align captures most of this contig: 331008 331641 | 1 634 | 634 634 | 98.58 | Bacteroides_stercoris_gi_514973476_ref_NZ_ NODE_30718_length_634_cov_0.799655_ID_61435
+
+CONTIG: NODE_31574_length_619_cov_0.542553_ID_63147 (619bp)
+Top Length: 236  Top ID: 98.73
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 152865 153100 | 1 236 | 236 236 | 98.73 | Bacteroides_stercoris_gi_514973476_ref_NZ_ NODE_31574_length_619_cov_0.542553_ID_63147
+			  Fake misassembly between these two alignments: inconsistency = 1 , gap in the contig is small or absent or filled mostly with Ns (short indel: deletion of length 1; 0 mismatches)
+			Real Alignment 2: 153262 153484 | 397 619 | 223 223 | 96.86 | Bacteroides_stercoris_gi_514973476_ref_NZ_ NODE_31574_length_619_cov_0.542553_ID_63147
+
+CONTIG: NODE_32260_length_607_cov_0.827899_ID_64519 (607bp)
+Top Length: 136  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 136 out of 607 bases)
+		Alignment: 280629 280764 | 472 607 | 136 136 | 100.0 | Bacteroides_stercoris_gi_514973476_ref_NZ_ NODE_32260_length_607_cov_0.827899_ID_64519
+		Unaligned bases: 1 to 471 (471)
+
+CONTIG: NODE_33005_length_595_cov_0.564815_ID_66009 (595bp)
+Top Length: 118  Top ID: 98.31
+		This contig is partially unaligned. (Aligned 118 out of 595 bases)
+		Alignment: 145862 145979 | 478 595 | 118 118 | 98.31 | Bacteroides_stercoris_gi_514973476_ref_NZ_ NODE_33005_length_595_cov_0.564815_ID_66009
+		Unaligned bases: 1 to 477 (477)
+
+CONTIG: NODE_33047_length_594_cov_0.599258_ID_66093 (594bp)
+Top Length: 190  Top ID: 99.47
+		This contig is partially unaligned. (Aligned 190 out of 594 bases)
+		Alignment: 138665 138854 | 193 4 | 190 190 | 99.47 | Bacteroides_stercoris_gi_514973476_ref_NZ_ NODE_33047_length_594_cov_0.599258_ID_66093
+		Unaligned bases: 1 to 3 (3)
+		Unaligned bases: 194 to 594 (401)
+
+CONTIG: NODE_33717_length_584_cov_0.47259_ID_67433 (584bp)
+Top Length: 293  Top ID: 96.93
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 751421 751629 | 210 1 | 209 210 | 95.71 | Bacteroides_stercoris_gi_514973476_ref_NZ_ NODE_33717_length_584_cov_0.47259_ID_67433
+			  Fake misassembly between these two alignments: inconsistency = 12 , gap in the contig is small or absent or filled mostly with Ns (long indel: deletion of length 12; 0 mismatches)
+			Real Alignment 2: 751037 751328 | 583 291 | 292 293 | 96.93 | Bacteroides_stercoris_gi_514973476_ref_NZ_ NODE_33717_length_584_cov_0.47259_ID_67433
+
+CONTIG: NODE_35071_length_565_cov_0.805882_ID_70141 (565bp)
+Top Length: 239  Top ID: 98.33
+		This contig is partially unaligned. (Aligned 239 out of 565 bases)
+		Alignment: 103246 103484 | 549 311 | 239 239 | 98.33 | Bacteroides_stercoris_gi_514973476_ref_NZ_ NODE_35071_length_565_cov_0.805882_ID_70141
+		Unaligned bases: 1 to 310 (310)
+		Unaligned bases: 550 to 565 (16)
+
+CONTIG: NODE_35589_length_558_cov_0.477137_ID_71177 (558bp)
+Top Length: 252  Top ID: 97.22
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 729703 729922 | 220 1 | 220 220 | 98.18 | Bacteroides_stercoris_gi_514973476_ref_NZ_ NODE_35589_length_558_cov_0.477137_ID_71177
+			  Fake misassembly between these two alignments: inconsistency = -16 , gap in the contig is small or absent or filled mostly with Ns (long indel: insertion of length 16; 0 mismatches)
+			Real Alignment 2: 729381 729632 | 558 307 | 252 252 | 97.22 | Bacteroides_stercoris_gi_514973476_ref_NZ_ NODE_35589_length_558_cov_0.477137_ID_71177
+
+CONTIG: NODE_37475_length_535_cov_0.825_ID_74949 (535bp)
+Top Length: 535  Top ID: 99.07
+		One align captures most of this contig: 771270 771804 | 535 1 | 535 535 | 99.07 | Bacteroides_stercoris_gi_514973476_ref_NZ_ NODE_37475_length_535_cov_0.825_ID_74949
+
+CONTIG: NODE_26448_length_731_cov_0.630178_ID_52895 (731bp)
+Top Length: 367  Top ID: 100.0
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 29121 29487 | 367 1 | 367 367 | 100.0 | Bacteroides_stercoris_gi_514974604_ref_NZ_ NODE_26448_length_731_cov_0.630178_ID_52895
+			  Fake misassembly between these two alignments: inconsistency = -5 , gap in the contig is small or absent or filled mostly with Ns (short indel: insertion of length 5; 0 mismatches)
+			Real Alignment 2: 28762 29004 | 731 489 | 243 243 | 96.3 | Bacteroides_stercoris_gi_514974604_ref_NZ_ NODE_26448_length_731_cov_0.630178_ID_52895
+
+CONTIG: NODE_26807_length_722_cov_0.608696_ID_53613 (722bp)
+Top Length: 101  Top ID: 99.01
+		This contig is partially unaligned. (Aligned 101 out of 722 bases)
+		Alignment: 98725 98825 | 339 239 | 101 101 | 99.01 | Bacteroides_stercoris_gi_514974604_ref_NZ_ NODE_26807_length_722_cov_0.608696_ID_53613
+		Unaligned bases: 1 to 238 (238)
+		Unaligned bases: 340 to 722 (383)
+
+CONTIG: NODE_38118_length_527_cov_0.716102_ID_76235 (527bp)
+Top Length: 526  Top ID: 98.1
+		One align captures most of this contig: 16426 16950 | 1 526 | 525 526 | 98.1 | Bacteroides_stercoris_gi_514974604_ref_NZ_ NODE_38118_length_527_cov_0.716102_ID_76235
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_stercoris/contigs_reports/nucmer_output/SPAdes.used_snps
+ERROR: Reference Bacteroides_stercoris_gi_514973003_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_stercoris_gi_514973850_ref_NZ_', 'Bacteroides_stercoris_gi_514974549_ref_NZ_', 'Bacteroides_stercoris_gi_514973476_ref_NZ_', 'Bacteroides_stercoris_gi_514974672_ref_NZ_', 'Bacteroides_stercoris_gi_514974381_ref_NZ_', 'Bacteroides_stercoris_gi_514974163_ref_NZ_', 'Bacteroides_stercoris_gi_514973000_ref_NZ_', 'Bacteroides_stercoris_gi_514974745_ref_NZ_', 'Bacteroides_stercoris_gi_514974604_ref_NZ_']
+	Reference Bacteroides_stercoris_gi_514973850_ref_NZ_: 25 total alignments. 1 total regions.
+		Region: 1 to 676612 (676612 bp)
+			START in gap: 1 to 11106 (11105 bp)
+			Align 1: 11106 11312 NODE_38178_length_526_cov_0.617834_ID_76355 1 207
+				Gap between this and next alignment: 11312 to 11404 (91 bp)
+				Next Alignment: 11404 11624 NODE_38178_length_526_cov_0.617834_ID_76355 306 526
+
+			Align 2: 11404 11624 NODE_38178_length_526_cov_0.617834_ID_76355 306 526
+				Gap between this and next alignment: 11624 to 16683 (5058 bp)
+				Next Alignment: 16683 16890 NODE_21566_length_897_cov_0.578385_ID_43131 897 690
+
+			Align 3: 16683 16890 NODE_21566_length_897_cov_0.578385_ID_43131 897 690
+				Gap between this and next alignment: 16890 to 26903 (10012 bp)
+				Next Alignment: 26903 27083 NODE_15680_length_1212_cov_0.741573_ID_31359 2 182
+
+			Align 4: 26903 27083 NODE_15680_length_1212_cov_0.741573_ID_31359 2 182
+				Gap between this and next alignment: 27083 to 107195 (80111 bp)
+				Next Alignment: 107195 107401 NODE_40306_length_502_cov_0.447427_ID_80611 2 208
+
+			Align 5: 107195 107401 NODE_40306_length_502_cov_0.447427_ID_80611 2 208
+				Gap between this and next alignment: 107401 to 107490 (88 bp)
+				Next Alignment: 107490 107703 NODE_40306_length_502_cov_0.447427_ID_80611 289 502
+
+			Align 6: 107490 107703 NODE_40306_length_502_cov_0.447427_ID_80611 289 502
+				Gap between this and next alignment: 107703 to 146468 (38764 bp)
+				Next Alignment: 146468 148580 NODE_241_length_35679_cov_13.0222_ID_481 9966 12078
+
+			Align 7: 146468 148580 NODE_241_length_35679_cov_13.0222_ID_481 9966 12078
+				Gap between this and next alignment: 148580 to 196963 (48382 bp)
+				Next Alignment: 196963 197491 NODE_20119_length_955_cov_0.59_ID_40237 1 528
+
+			Align 8: 196963 197491 NODE_20119_length_955_cov_0.59_ID_40237 1 528
+				Gap between this and next alignment: 197491 to 197641 (149 bp)
+				Next Alignment: 197641 197922 NODE_20119_length_955_cov_0.59_ID_40237 674 955
+
+			Align 9: 197641 197922 NODE_20119_length_955_cov_0.59_ID_40237 674 955
+				Gap between this and next alignment: 197922 to 256167 (58244 bp)
+				Next Alignment: 256167 256271 NODE_22173_length_875_cov_0.930488_ID_44345 105 1
+
+			Align 10: 256167 256271 NODE_22173_length_875_cov_0.930488_ID_44345 105 1
+				Gap between this and next alignment: 256271 to 310514 (54242 bp)
+				Next Alignment: 310514 311009 NODE_36176_length_551_cov_0.840726_ID_72351 53 548
+
+			Align 11: 310514 311009 NODE_36176_length_551_cov_0.840726_ID_72351 53 548
+				Gap between this and next alignment: 311009 to 325836 (14826 bp)
+				Next Alignment: 325836 325929 NODE_24549_length_789_cov_0.697548_ID_49097 784 691
+
+			Align 12: 325836 325929 NODE_24549_length_789_cov_0.697548_ID_49097 784 691
+				Gap between this and next alignment: 325929 to 339120 (13190 bp)
+				Next Alignment: 339120 339235 NODE_8241_length_2182_cov_1.18806_ID_16481 2182 2067
+
+			Align 13: 339120 339235 NODE_8241_length_2182_cov_1.18806_ID_16481 2182 2067
+				Gap between this and next alignment: 339235 to 340620 (1384 bp)
+				Next Alignment: 340620 340788 NODE_12345_length_1517_cov_1.45554_ID_24689 1349 1517
+
+			Align 14: 340620 340788 NODE_12345_length_1517_cov_1.45554_ID_24689 1349 1517
+				Gap between this and next alignment: 340788 to 357134 (16345 bp)
+				Next Alignment: 357134 357633 NODE_40232_length_503_cov_0.564732_ID_80463 1 503
+
+			Align 15: 357134 357633 NODE_40232_length_503_cov_0.564732_ID_80463 1 503
+				Gap between this and next alignment: 357633 to 440036 (82402 bp)
+				Next Alignment: 440036 440429 NODE_15381_length_1236_cov_1.27519_ID_30761 843 1236
+
+			Align 16: 440036 440429 NODE_15381_length_1236_cov_1.27519_ID_30761 843 1236
+				Gap between this and next alignment: 440429 to 472631 (32201 bp)
+				Next Alignment: 472631 472866 NODE_1256_length_9996_cov_1.37682_ID_2511 9996 9761
+
+			Align 17: 472631 472866 NODE_1256_length_9996_cov_1.37682_ID_2511 9996 9761
+				Gap between this and next alignment: 472866 to 472982 (115 bp)
+				Next Alignment: 472982 473762 NODE_1256_length_9996_cov_1.37682_ID_2511 9635 8855
+
+			Align 18: 472982 473762 NODE_1256_length_9996_cov_1.37682_ID_2511 9635 8855
+				Gap between this and next alignment: 473762 to 476699 (2936 bp)
+				Next Alignment: 476699 477001 NODE_26176_length_739_cov_0.72076_ID_52351 739 437
+
+			Align 19: 476699 477001 NODE_26176_length_739_cov_0.72076_ID_52351 739 437
+				Gap between this and next alignment: 477001 to 477106 (104 bp)
+				Next Alignment: 477106 477432 NODE_26176_length_739_cov_0.72076_ID_52351 327 1
+
+			Align 20: 477106 477432 NODE_26176_length_739_cov_0.72076_ID_52351 327 1
+				Gap between this and next alignment: 477432 to 521617 (44184 bp)
+				Next Alignment: 521617 522307 NODE_28026_length_691_cov_0.886792_ID_56051 691 1
+
+			Align 21: 521617 522307 NODE_28026_length_691_cov_0.886792_ID_56051 691 1
+				Gap between this and next alignment: 522307 to 530317 (8009 bp)
+				Next Alignment: 530317 530624 NODE_38669_length_521_cov_0.774678_ID_77337 213 521
+
+			Align 22: 530317 530624 NODE_38669_length_521_cov_0.774678_ID_77337 213 521
+				Gap between this and next alignment: 530624 to 535497 (4872 bp)
+				Next Alignment: 535497 536037 NODE_36974_length_541_cov_0.849794_ID_73947 541 1
+
+			Align 23: 535497 536037 NODE_36974_length_541_cov_0.849794_ID_73947 541 1
+				Gap between this and next alignment: 536037 to 543156 (7118 bp)
+				Next Alignment: 543156 543417 NODE_22095_length_878_cov_0.565006_ID_44189 878 617
+
+			Align 24: 543156 543417 NODE_22095_length_878_cov_0.565006_ID_44189 878 617
+				Gap between this and next alignment: 543417 to 613160 (69742 bp)
+				Next Alignment: 613160 614632 NODE_12751_length_1473_cov_0.964034_ID_25501 1473 1
+
+			Align 25: 613160 614632 NODE_12751_length_1473_cov_0.964034_ID_25501 1473 1
+			END in gap: 614632 to 676612 (61980 bp)
+
+	Reference Bacteroides_stercoris_gi_514974549_ref_NZ_: 9 total alignments. 1 total regions.
+		Region: 1 to 266362 (266362 bp)
+			START in gap: 1 to 26527 (26526 bp)
+			Align 1: 26527 27102 NODE_33679_length_585_cov_0.575472_ID_67357 1 576
+				Gap between this and next alignment: 27102 to 35379 (8276 bp)
+				Next Alignment: 35379 35501 NODE_10812_length_1720_cov_2.50991_ID_21623 1599 1720
+
+			Align 2: 35379 35501 NODE_10812_length_1720_cov_2.50991_ID_21623 1599 1720
+				Gap between this and next alignment: 35501 to 82180 (46678 bp)
+				Next Alignment: 82180 82820 NODE_30380_length_641_cov_0.704778_ID_60759 1 641
+
+			Align 3: 82180 82820 NODE_30380_length_641_cov_0.704778_ID_60759 1 641
+				Gap between this and next alignment: 82820 to 89691 (6870 bp)
+				Next Alignment: 89691 89913 NODE_20439_length_940_cov_0.620339_ID_40877 718 940
+
+			Align 4: 89691 89913 NODE_20439_length_940_cov_0.620339_ID_40877 718 940
+				Gap between this and next alignment: 89913 to 139975 (50061 bp)
+				Next Alignment: 139975 140549 NODE_34331_length_576_cov_0.796545_ID_68661 2 576
+
+			Align 5: 139975 140549 NODE_34331_length_576_cov_0.796545_ID_68661 2 576
+				Gap between this and next alignment: 140549 to 159699 (19149 bp)
+				Next Alignment: 159699 159806 NODE_27916_length_694_cov_0.735524_ID_55831 163 270
+
+			Align 6: 159699 159806 NODE_27916_length_694_cov_0.735524_ID_55831 163 270
+				Gap between this and next alignment: 159806 to 184408 (24601 bp)
+				Next Alignment: 184408 184672 NODE_20812_length_926_cov_0.655568_ID_41623 926 662
+
+			Align 7: 184408 184672 NODE_20812_length_926_cov_0.655568_ID_41623 926 662
+				Gap between this and next alignment: 184672 to 252109 (67436 bp)
+				Next Alignment: 252109 252612 NODE_40324_length_502_cov_0.749441_ID_80647 502 1
+
+			Align 8: 252109 252612 NODE_40324_length_502_cov_0.749441_ID_80647 502 1
+				Gap between this and next alignment: 252612 to 257787 (5174 bp)
+				Next Alignment: 257787 257939 NODE_3826_length_4101_cov_2.31537_ID_7651 1 153
+
+			Align 9: 257787 257939 NODE_3826_length_4101_cov_2.31537_ID_7651 1 153
+			END in gap: 257939 to 266362 (8423 bp)
+
+	Reference Bacteroides_stercoris_gi_514973476_ref_NZ_: 24 total alignments. 1 total regions.
+		Region: 1 to 889028 (889028 bp)
+			START in gap: 1 to 103246 (103245 bp)
+			Align 1: 103246 103484 NODE_35071_length_565_cov_0.805882_ID_70141 549 311
+				Gap between this and next alignment: 103484 to 107379 (3894 bp)
+				Next Alignment: 107379 107660 NODE_19727_length_976_cov_0.813246_ID_39453 695 976
+
+			Align 2: 107379 107660 NODE_19727_length_976_cov_0.813246_ID_39453 695 976
+				Gap between this and next alignment: 107660 to 138665 (31004 bp)
+				Next Alignment: 138665 138854 NODE_33047_length_594_cov_0.599258_ID_66093 193 4
+
+			Align 3: 138665 138854 NODE_33047_length_594_cov_0.599258_ID_66093 193 4
+				Gap between this and next alignment: 138854 to 145862 (7007 bp)
+				Next Alignment: 145862 145979 NODE_33005_length_595_cov_0.564815_ID_66009 478 595
+
+			Align 4: 145862 145979 NODE_33005_length_595_cov_0.564815_ID_66009 478 595
+				Gap between this and next alignment: 145979 to 152865 (6885 bp)
+				Next Alignment: 152865 153100 NODE_31574_length_619_cov_0.542553_ID_63147 1 236
+
+			Align 5: 152865 153100 NODE_31574_length_619_cov_0.542553_ID_63147 1 236
+				Gap between this and next alignment: 153100 to 153262 (161 bp)
+				Next Alignment: 153262 153484 NODE_31574_length_619_cov_0.542553_ID_63147 397 619
+
+			Align 6: 153262 153484 NODE_31574_length_619_cov_0.542553_ID_63147 397 619
+				Gap between this and next alignment: 153484 to 183468 (29983 bp)
+				Next Alignment: 183468 183707 NODE_19498_length_987_cov_0.73176_ID_38995 987 748
+
+			Align 7: 183468 183707 NODE_19498_length_987_cov_0.73176_ID_38995 987 748
+				Gap between this and next alignment: 183707 to 183853 (145 bp)
+				Next Alignment: 183853 184393 NODE_19498_length_987_cov_0.73176_ID_38995 606 66
+
+			Align 8: 183853 184393 NODE_19498_length_987_cov_0.73176_ID_38995 606 66
+				Gap between this and next alignment: 184393 to 194983 (10589 bp)
+				Next Alignment: 194983 195080 NODE_25891_length_747_cov_0.790462_ID_51781 1 98
+
+			Align 9: 194983 195080 NODE_25891_length_747_cov_0.790462_ID_51781 1 98
+				Gap between this and next alignment: 195080 to 271020 (75939 bp)
+				Next Alignment: 271020 271105 NODE_845_length_13967_cov_5.65576_ID_1689 152 67
+
+			Align 10: 271020 271105 NODE_845_length_13967_cov_5.65576_ID_1689 152 67
+				Gap between this and next alignment: 271105 to 280629 (9523 bp)
+				Next Alignment: 280629 280764 NODE_32260_length_607_cov_0.827899_ID_64519 472 607
+
+			Align 11: 280629 280764 NODE_32260_length_607_cov_0.827899_ID_64519 472 607
+				Gap between this and next alignment: 280764 to 283733 (2968 bp)
+				Next Alignment: 283733 292416 NODE_241_length_35679_cov_13.0222_ID_481 26996 35679
+
+			Align 12: 283733 292416 NODE_241_length_35679_cov_13.0222_ID_481 26996 35679
+				Gap between this and next alignment: 292416 to 331008 (38591 bp)
+				Next Alignment: 331008 331641 NODE_30718_length_634_cov_0.799655_ID_61435 1 634
+
+			Align 13: 331008 331641 NODE_30718_length_634_cov_0.799655_ID_61435 1 634
+				Gap between this and next alignment: 331641 to 451694 (120052 bp)
+				Next Alignment: 451694 452182 NODE_4976_length_3334_cov_1.10552_ID_9951 3334 2846
+
+			Align 14: 451694 452182 NODE_4976_length_3334_cov_1.10552_ID_9951 3334 2846
+				Gap between this and next alignment: 452182 to 482895 (30712 bp)
+				Next Alignment: 482895 483535 NODE_30341_length_641_cov_0.837884_ID_60681 641 1
+
+			Align 15: 482895 483535 NODE_30341_length_641_cov_0.837884_ID_60681 641 1
+				Gap between this and next alignment: 483535 to 502943 (19407 bp)
+				Next Alignment: 502943 503093 NODE_1688_length_7730_cov_1.25967_ID_3375 151 1
+
+			Align 16: 502943 503093 NODE_1688_length_7730_cov_1.25967_ID_3375 151 1
+				Gap between this and next alignment: 503093 to 568170 (65076 bp)
+				Next Alignment: 568170 568481 NODE_19193_length_1001_cov_0.539112_ID_38385 312 1
+
+			Align 17: 568170 568481 NODE_19193_length_1001_cov_0.539112_ID_38385 312 1
+				Gap between this and next alignment: 568481 to 621302 (52820 bp)
+				Next Alignment: 621302 621935 NODE_30539_length_637_cov_0.561856_ID_61077 1 637
+
+			Align 18: 621302 621935 NODE_30539_length_637_cov_0.561856_ID_61077 1 637
+				Gap between this and next alignment: 621935 to 729381 (107445 bp)
+				Next Alignment: 729381 729632 NODE_35589_length_558_cov_0.477137_ID_71177 558 307
+
+			Align 19: 729381 729632 NODE_35589_length_558_cov_0.477137_ID_71177 558 307
+				Gap between this and next alignment: 729632 to 729703 (70 bp)
+				Next Alignment: 729703 729922 NODE_35589_length_558_cov_0.477137_ID_71177 220 1
+
+			Align 20: 729703 729922 NODE_35589_length_558_cov_0.477137_ID_71177 220 1
+				Gap between this and next alignment: 729922 to 751037 (21114 bp)
+				Next Alignment: 751037 751328 NODE_33717_length_584_cov_0.47259_ID_67433 583 291
+
+			Align 21: 751037 751328 NODE_33717_length_584_cov_0.47259_ID_67433 583 291
+				Gap between this and next alignment: 751328 to 751421 (92 bp)
+				Next Alignment: 751421 751629 NODE_33717_length_584_cov_0.47259_ID_67433 210 1
+
+			Align 22: 751421 751629 NODE_33717_length_584_cov_0.47259_ID_67433 210 1
+				Gap between this and next alignment: 751629 to 771270 (19640 bp)
+				Next Alignment: 771270 771804 NODE_37475_length_535_cov_0.825_ID_74949 535 1
+
+			Align 23: 771270 771804 NODE_37475_length_535_cov_0.825_ID_74949 535 1
+				Gap between this and next alignment: 771804 to 850329 (78524 bp)
+				Next Alignment: 850329 850600 NODE_21727_length_891_cov_0.547847_ID_43453 891 620
+
+			Align 24: 850329 850600 NODE_21727_length_891_cov_0.547847_ID_43453 891 620
+			END in gap: 850600 to 889028 (38428 bp)
+
+	Reference Bacteroides_stercoris_gi_514974672_ref_NZ_: 7 total alignments. 1 total regions.
+		Region: 1 to 132540 (132540 bp)
+			Align 1: 1 249 NODE_5836_length_2942_cov_64.9321_ID_11671 249 1
+				Gap between this and next alignment: 249 to 354 (104 bp)
+				Next Alignment: 354 897 NODE_1926_length_6902_cov_5.46093_ID_3851 6902 6352
+
+			Align 2: 354 897 NODE_1926_length_6902_cov_5.46093_ID_3851 6902 6352
+				The next alignment (354 897 NODE_2771_length_5249_cov_7.53331_ID_5541 5249 4699) is redundant. Skipping.
+				Gap between this and next alignment: 897 to 65090 (64192 bp)
+				Next Alignment: 65090 65633 NODE_36358_length_548_cov_0.756592_ID_72715 1 548
+
+			Align 4: 65090 65633 NODE_36358_length_548_cov_0.756592_ID_72715 1 548
+				Gap between this and next alignment: 65633 to 97853 (32219 bp)
+				Next Alignment: 97853 98088 NODE_20891_length_923_cov_1.59217_ID_41781 688 923
+
+			Align 5: 97853 98088 NODE_20891_length_923_cov_1.59217_ID_41781 688 923
+				Gap between this and next alignment: 98088 to 101185 (3096 bp)
+				Next Alignment: 101185 101418 NODE_38005_length_528_cov_0.82241_ID_76009 528 295
+
+			Align 6: 101185 101418 NODE_38005_length_528_cov_0.82241_ID_76009 528 295
+				Gap between this and next alignment: 101418 to 127310 (25891 bp)
+				Next Alignment: 127310 127817 NODE_39550_length_511_cov_0.817982_ID_79099 4 511
+
+			Align 7: 127310 127817 NODE_39550_length_511_cov_0.817982_ID_79099 4 511
+			END in gap: 127817 to 132540 (4723 bp)
+
+	Reference Bacteroides_stercoris_gi_514974381_ref_NZ_: 11 total alignments. 1 total regions.
+		Region: 1 to 359277 (359277 bp)
+			START in gap: 1 to 47263 (47262 bp)
+			Align 1: 47263 48280 NODE_18851_length_1018_cov_0.733126_ID_37701 1018 1
+				Gap between this and next alignment: 48280 to 59158 (10877 bp)
+				Next Alignment: 59158 59688 NODE_35804_length_555_cov_0.68_ID_71607 555 24
+
+			Align 2: 59158 59688 NODE_35804_length_555_cov_0.68_ID_71607 555 24
+				Gap between this and next alignment: 59688 to 69807 (10118 bp)
+				Next Alignment: 69807 70853 NODE_18322_length_1047_cov_4.32258_ID_36643 1047 1
+
+			Align 3: 69807 70853 NODE_18322_length_1047_cov_4.32258_ID_36643 1047 1
+				Gap between this and next alignment: 70853 to 97797 (26943 bp)
+				Next Alignment: 97797 99031 NODE_15305_length_1242_cov_1.38079_ID_30609 8 1242
+
+			Align 4: 97797 99031 NODE_15305_length_1242_cov_1.38079_ID_30609 8 1242
+				Gap between this and next alignment: 99031 to 103760 (4728 bp)
+				Next Alignment: 103760 104352 NODE_33143_length_593_cov_1.34387_ID_66285 1 593
+
+			Align 5: 103760 104352 NODE_33143_length_593_cov_1.34387_ID_66285 1 593
+				Gap between this and next alignment: 104352 to 180317 (75964 bp)
+				Next Alignment: 180317 180714 NODE_23030_length_843_cov_0.895939_ID_46059 1 393
+
+			Align 6: 180317 180714 NODE_23030_length_843_cov_0.895939_ID_46059 1 393
+				Gap between this and next alignment: 180714 to 185257 (4542 bp)
+				Next Alignment: 185257 185697 NODE_26455_length_731_cov_0.494083_ID_52909 731 291
+
+			Align 7: 185257 185697 NODE_26455_length_731_cov_0.494083_ID_52909 731 291
+				Gap between this and next alignment: 185697 to 187524 (1826 bp)
+				Next Alignment: 187524 187884 NODE_17636_length_1086_cov_0.754607_ID_35271 726 1086
+
+			Align 8: 187524 187884 NODE_17636_length_1086_cov_0.754607_ID_35271 726 1086
+				Gap between this and next alignment: 187884 to 191128 (3243 bp)
+				Next Alignment: 191128 192228 NODE_17404_length_1101_cov_1.03633_ID_34807 1101 1
+
+			Align 9: 191128 192228 NODE_17404_length_1101_cov_1.03633_ID_34807 1101 1
+				Gap between this and next alignment: 192228 to 255852 (63623 bp)
+				Next Alignment: 255852 256035 NODE_26894_length_720_cov_0.652632_ID_53787 720 537
+
+			Align 10: 255852 256035 NODE_26894_length_720_cov_0.652632_ID_53787 720 537
+				Gap between this and next alignment: 256035 to 264413 (8377 bp)
+				Next Alignment: 264413 264564 NODE_4876_length_3387_cov_0.943277_ID_9751 1 152
+
+			Align 11: 264413 264564 NODE_4876_length_3387_cov_0.943277_ID_9751 1 152
+			END in gap: 264564 to 359277 (94713 bp)
+
+	Reference Bacteroides_stercoris_gi_514974163_ref_NZ_: 6 total alignments. 1 total regions.
+		Region: 1 to 532255 (532255 bp)
+			START in gap: 1 to 159679 (159678 bp)
+			Align 1: 159679 160054 NODE_20733_length_929_cov_0.694508_ID_41465 376 1
+				Gap between this and next alignment: 160054 to 174689 (14634 bp)
+				Next Alignment: 174689 174959 NODE_33010_length_595_cov_0.418519_ID_66019 325 595
+
+			Align 2: 174689 174959 NODE_33010_length_595_cov_0.418519_ID_66019 325 595
+				Gap between this and next alignment: 174959 to 300571 (125611 bp)
+				Next Alignment: 300571 301540 NODE_19875_length_969_cov_0.778993_ID_39749 969 1
+
+			Align 3: 300571 301540 NODE_19875_length_969_cov_0.778993_ID_39749 969 1
+				Gap between this and next alignment: 301540 to 375402 (73861 bp)
+				Next Alignment: 375402 375478 NODE_26105_length_741_cov_0.411079_ID_52209 330 406
+
+			Align 4: 375402 375478 NODE_26105_length_741_cov_0.411079_ID_52209 330 406
+				Gap between this and next alignment: 375478 to 402119 (26640 bp)
+				Next Alignment: 402119 402231 NODE_6099_length_2824_cov_1.03828_ID_12197 1 113
+
+			Align 5: 402119 402231 NODE_6099_length_2824_cov_1.03828_ID_12197 1 113
+				Gap between this and next alignment: 402231 to 461834 (59602 bp)
+				Next Alignment: 461834 462538 NODE_27468_length_706_cov_0.645161_ID_54935 1 706
+
+			Align 6: 461834 462538 NODE_27468_length_706_cov_0.645161_ID_54935 1 706
+			END in gap: 462538 to 532255 (69717 bp)
+
+	Reference Bacteroides_stercoris_gi_514973000_ref_NZ_: 34 total alignments. 1 total regions.
+		Region: 1 to 967553 (967553 bp)
+			START in gap: 1 to 896 (895 bp)
+			Align 1: 896 1398 NODE_40228_length_503_cov_0.765625_ID_80455 1 503
+				Gap between this and next alignment: 1398 to 68539 (67140 bp)
+				Next Alignment: 68539 69049 NODE_38301_length_525_cov_0.517021_ID_76601 1 509
+
+			Align 2: 68539 69049 NODE_38301_length_525_cov_0.517021_ID_76601 1 509
+				Gap between this and next alignment: 69049 to 74243 (5193 bp)
+				Next Alignment: 74243 74319 NODE_5836_length_2942_cov_64.9321_ID_11671 2684 2760
+
+			Align 3: 74243 74319 NODE_5836_length_2942_cov_64.9321_ID_11671 2684 2760
+				Gap between this and next alignment: 74319 to 186889 (112569 bp)
+				Next Alignment: 186889 186964 NODE_18886_length_1016_cov_0.71488_ID_37771 466 391
+
+			Align 4: 186889 186964 NODE_18886_length_1016_cov_0.71488_ID_37771 466 391
+				Gap between this and next alignment: 186964 to 198799 (11834 bp)
+				Next Alignment: 198799 199344 NODE_36556_length_546_cov_0.743381_ID_73111 546 1
+
+			Align 5: 198799 199344 NODE_36556_length_546_cov_0.743381_ID_73111 546 1
+				Gap between this and next alignment: 199344 to 214117 (14772 bp)
+				Next Alignment: 214117 214271 NODE_10362_length_1787_cov_0.985566_ID_20723 155 1
+
+			Align 6: 214117 214271 NODE_10362_length_1787_cov_0.985566_ID_20723 155 1
+				Gap between this and next alignment: 214271 to 223847 (9575 bp)
+				Next Alignment: 223847 224348 NODE_39733_length_509_cov_0.689427_ID_79465 501 1
+
+			Align 7: 223847 224348 NODE_39733_length_509_cov_0.689427_ID_79465 501 1
+				Gap between this and next alignment: 224348 to 226116 (1767 bp)
+				Next Alignment: 226116 226958 NODE_23032_length_843_cov_0.722081_ID_46063 843 1
+
+			Align 8: 226116 226958 NODE_23032_length_843_cov_0.722081_ID_46063 843 1
+				Gap between this and next alignment: 226958 to 311700 (84741 bp)
+				Next Alignment: 311700 311917 NODE_21372_length_904_cov_1.07538_ID_42743 687 904
+
+			Align 9: 311700 311917 NODE_21372_length_904_cov_1.07538_ID_42743 687 904
+				Gap between this and next alignment: 311917 to 335226 (23308 bp)
+				Next Alignment: 335226 335479 NODE_20171_length_952_cov_0.501672_ID_40341 1 254
+
+			Align 10: 335226 335479 NODE_20171_length_952_cov_0.501672_ID_40341 1 254
+				Gap between this and next alignment: 335479 to 335597 (117 bp)
+				Next Alignment: 335597 336160 NODE_20171_length_952_cov_0.501672_ID_40341 389 952
+
+			Align 11: 335597 336160 NODE_20171_length_952_cov_0.501672_ID_40341 389 952
+				Gap between this and next alignment: 336160 to 336560 (399 bp)
+				Next Alignment: 336560 336856 NODE_26941_length_719_cov_0.590361_ID_53881 304 8
+
+			Align 12: 336560 336856 NODE_26941_length_719_cov_0.590361_ID_53881 304 8
+				Gap between this and next alignment: 336856 to 379967 (43110 bp)
+				Next Alignment: 379967 380063 NODE_24096_length_804_cov_0.715621_ID_48191 507 603
+
+			Align 13: 379967 380063 NODE_24096_length_804_cov_0.715621_ID_48191 507 603
+				Gap between this and next alignment: 380063 to 439598 (59534 bp)
+				Next Alignment: 439598 440098 NODE_40396_length_501_cov_0.665919_ID_80791 1 501
+
+			Align 14: 439598 440098 NODE_40396_length_501_cov_0.665919_ID_80791 1 501
+				Gap between this and next alignment: 440098 to 487810 (47711 bp)
+				Next Alignment: 487810 487940 NODE_8142_length_2206_cov_1.49047_ID_16283 131 1
+
+			Align 15: 487810 487940 NODE_8142_length_2206_cov_1.49047_ID_16283 131 1
+				Gap between this and next alignment: 487940 to 500681 (12740 bp)
+				Next Alignment: 500681 501528 NODE_22897_length_848_cov_0.552333_ID_45793 848 1
+
+			Align 16: 500681 501528 NODE_22897_length_848_cov_0.552333_ID_45793 848 1
+				Gap between this and next alignment: 501528 to 580886 (79357 bp)
+				Next Alignment: 580886 581450 NODE_35111_length_565_cov_0.770588_ID_70221 565 1
+
+			Align 17: 580886 581450 NODE_35111_length_565_cov_0.770588_ID_70221 565 1
+				Gap between this and next alignment: 581450 to 617822 (36371 bp)
+				Next Alignment: 617822 618353 NODE_37669_length_532_cov_0.91195_ID_75337 1 532
+
+			Align 18: 617822 618353 NODE_37669_length_532_cov_0.91195_ID_75337 1 532
+				Gap between this and next alignment: 618353 to 654252 (35898 bp)
+				Next Alignment: 654252 654814 NODE_35214_length_563_cov_0.673228_ID_70427 563 1
+
+			Align 19: 654252 654814 NODE_35214_length_563_cov_0.673228_ID_70427 563 1
+				Gap between this and next alignment: 654814 to 706405 (51590 bp)
+				Next Alignment: 706405 706625 NODE_36788_length_543_cov_0.52459_ID_73575 543 323
+
+			Align 20: 706405 706625 NODE_36788_length_543_cov_0.52459_ID_73575 543 323
+				Gap between this and next alignment: 706625 to 706718 (92 bp)
+				Next Alignment: 706718 706944 NODE_36788_length_543_cov_0.52459_ID_73575 227 1
+
+			Align 21: 706718 706944 NODE_36788_length_543_cov_0.52459_ID_73575 227 1
+				Gap between this and next alignment: 706944 to 708133 (1188 bp)
+				Next Alignment: 708133 708724 NODE_33204_length_592_cov_0.795158_ID_66407 592 1
+
+			Align 22: 708133 708724 NODE_33204_length_592_cov_0.795158_ID_66407 592 1
+				Gap between this and next alignment: 708724 to 765506 (56781 bp)
+				Next Alignment: 765506 765596 NODE_17777_length_1078_cov_0.751711_ID_35553 1 91
+
+			Align 23: 765506 765596 NODE_17777_length_1078_cov_0.751711_ID_35553 1 91
+				Gap between this and next alignment: 765596 to 786215 (20618 bp)
+				Next Alignment: 786215 786714 NODE_40502_length_500_cov_0.757303_ID_81003 500 1
+
+			Align 24: 786215 786714 NODE_40502_length_500_cov_0.757303_ID_81003 500 1
+				Gap between this and next alignment: 786714 to 788715 (2000 bp)
+				Next Alignment: 788715 789468 NODE_26095_length_741_cov_0.600583_ID_52189 1 741
+
+			Align 25: 788715 789468 NODE_26095_length_741_cov_0.600583_ID_52189 1 741
+				Gap between this and next alignment: 789468 to 789932 (463 bp)
+				Next Alignment: 789932 790520 NODE_34542_length_573_cov_0.501931_ID_69083 573 1
+
+			Align 26: 789932 790520 NODE_34542_length_573_cov_0.501931_ID_69083 573 1
+				Gap between this and next alignment: 790520 to 806380 (15859 bp)
+				Next Alignment: 806380 806846 NODE_39787_length_508_cov_0.657837_ID_79573 42 508
+
+			Align 27: 806380 806846 NODE_39787_length_508_cov_0.657837_ID_79573 42 508
+				Gap between this and next alignment: 806846 to 813961 (7114 bp)
+				Next Alignment: 813961 814477 NODE_39074_length_517_cov_0.928571_ID_78147 517 1
+
+			Align 28: 813961 814477 NODE_39074_length_517_cov_0.928571_ID_78147 517 1
+				Gap between this and next alignment: 814477 to 814921 (443 bp)
+				Next Alignment: 814921 815598 NODE_28603_length_678_cov_0.634029_ID_57205 678 1
+
+			Align 29: 814921 815598 NODE_28603_length_678_cov_0.634029_ID_57205 678 1
+				Gap between this and next alignment: 815598 to 822940 (7341 bp)
+				Next Alignment: 822940 823694 NODE_25517_length_758_cov_0.598862_ID_51033 755 1
+
+			Align 30: 822940 823694 NODE_25517_length_758_cov_0.598862_ID_51033 755 1
+				Gap between this and next alignment: 823694 to 892700 (69005 bp)
+				Next Alignment: 892700 893280 NODE_33956_length_581_cov_0.454373_ID_67911 1 581
+
+			Align 31: 892700 893280 NODE_33956_length_581_cov_0.454373_ID_67911 1 581
+				Gap between this and next alignment: 893280 to 901716 (8435 bp)
+				Next Alignment: 901716 902460 NODE_26862_length_721_cov_0.987988_ID_53723 721 1
+
+			Align 32: 901716 902460 NODE_26862_length_721_cov_0.987988_ID_53723 721 1
+				Gap between this and next alignment: 902460 to 905140 (2679 bp)
+				Next Alignment: 905140 905535 NODE_24688_length_784_cov_0.444444_ID_49375 7 402
+
+			Align 33: 905140 905535 NODE_24688_length_784_cov_0.444444_ID_49375 7 402
+				Gap between this and next alignment: 905535 to 905681 (145 bp)
+				Next Alignment: 905681 905917 NODE_24688_length_784_cov_0.444444_ID_49375 548 784
+
+			Align 34: 905681 905917 NODE_24688_length_784_cov_0.444444_ID_49375 548 784
+			END in gap: 905917 to 967553 (61636 bp)
+
+	Reference Bacteroides_stercoris_gi_514974745_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 133996 (133996 bp)
+			START in gap: 1 to 116642 (116641 bp)
+			Align 1: 116642 116916 NODE_27003_length_717_cov_0.496979_ID_54005 1 275
+				Gap between this and next alignment: 116916 to 117062 (145 bp)
+				Next Alignment: 117062 117356 NODE_27003_length_717_cov_0.496979_ID_54005 423 717
+
+			Align 2: 117062 117356 NODE_27003_length_717_cov_0.496979_ID_54005 423 717
+			END in gap: 117356 to 133996 (16640 bp)
+
+	Reference Bacteroides_stercoris_gi_514974604_ref_NZ_: 4 total alignments. 1 total regions.
+		Region: 1 to 139641 (139641 bp)
+			START in gap: 1 to 16426 (16425 bp)
+			Align 1: 16426 16950 NODE_38118_length_527_cov_0.716102_ID_76235 1 526
+				Gap between this and next alignment: 16950 to 28762 (11811 bp)
+				Next Alignment: 28762 29004 NODE_26448_length_731_cov_0.630178_ID_52895 731 489
+
+			Align 2: 28762 29004 NODE_26448_length_731_cov_0.630178_ID_52895 731 489
+				Gap between this and next alignment: 29004 to 29121 (116 bp)
+				Next Alignment: 29121 29487 NODE_26448_length_731_cov_0.630178_ID_52895 367 1
+
+			Align 3: 29121 29487 NODE_26448_length_731_cov_0.630178_ID_52895 367 1
+				Gap between this and next alignment: 29487 to 98725 (69237 bp)
+				Next Alignment: 98725 98825 NODE_26807_length_722_cov_0.608696_ID_53613 339 239
+
+			Align 4: 98725 98825 NODE_26807_length_722_cov_0.608696_ID_53613 339 239
+			END in gap: 98825 to 139641 (40816 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_stercoris/contigs_reports/nucmer_output/SPAdes.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 53 part
+Partially Unaligned Contigs with Misassemblies: 3
+Unaligned Contig Bases: 110613
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 58667
+
+	SNPs: 1289
+	Insertions: 83
+	Deletions: 100
+
+	Positive Gaps: 129
+		Internal Gaps:  14
+		External Gaps:  115
+		External Gap Total:  4036967
+		External Gap Average: 35104
+	Negative Gaps: 0
+		Internal Overlaps:  0
+		External Overlaps:  0
+		External Overlaps Total:  0
+		External Overlaps Average: 0
+	Contigs with Redundant Alignments: 1 (544)

@@ -1,0 +1,2637 @@
+Aligning contigs to reference...
+	Running Nucmer
+Parsing coords...
+Loading reference...
+	Loaded [Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 1
+	Total Region Length: 2264603
+Analyzing contigs...
+CONTIG: scaffold-0 (128801bp)
+Top Length: 19613  Top ID: 97.97
+		This contig is misassembled. 5 total aligns.
+			Real Alignment 1: 1945478 1960839 | 244 15605 | 15362 15362 | 96.35 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-0
+			  Overlap between these two alignments (local misassembly). Inconsistency = -21 
+			Real Alignment 2: 1960940 1966082 | 15727 20869 | 5143 5143 | 97.55 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-0
+			  Extensive misassembly ( relocation, inconsistency = -1121 ) between these two alignments
+			Real Alignment 3: 2000829 2014779 | 56737 70713 | 13951 13977 | 96.56 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-0
+			  Overlap between these two alignments (local misassembly). Inconsistency = -288 
+			Real Alignment 4: 2038470 2052854 | 94692 109068 | 14385 14377 | 95.21 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-0
+			  Gap between these two alignments (local misassembly). Inconsistency = 36 
+			Real Alignment 5: 2053011 2072573 | 109189 128801 | 19563 19613 | 97.97 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-0
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-1 (144408bp)
+Top Length: 27240  Top ID: 95.37
+		This contig is misassembled. 5 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 144408 and total length of all aligns is 56956
+		Alignment: 941654 946682 | 52826 47802 | 5029 5025 | 95.47 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-1
+		Alignment: 932879 936379 | 61632 58131 | 3501 3502 | 98.94 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-1
+		Alignment: 915797 932951 | 79104 61744 | 17155 17361 | 95.13 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-1
+		Alignment: 911480 915303 | 83533 79706 | 3824 3828 | 97.65 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-1
+		Alignment: 854385 881508 | 140920 113681 | 27124 27240 | 95.37 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-1
+		Unaligned bases: 87452
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold-3 (198752bp)
+Top Length: 38190  Top ID: 96.35
+		This contig is misassembled. 11 total aligns.
+			Real Alignment 1: 1388528 1388725 | 1 198 | 198 198 | 98.48 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-3
+			  Gap between these two alignments (local misassembly). Inconsistency = 144 
+			Real Alignment 2: 1392506 1404989 | 3835 16353 | 12484 12519 | 97.04 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-3
+			  Gap between these two alignments (local misassembly). Inconsistency = 12 
+			Real Alignment 3: 1405264 1406743 | 16616 18094 | 1480 1479 | 95.41 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-3
+			  Overlap between these two alignments (local misassembly). Inconsistency = -17 
+			Real Alignment 4: 1406845 1410304 | 18213 21673 | 3460 3461 | 96.01 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-3
+			  Gap between these two alignments (local misassembly). Inconsistency = 915 
+			Real Alignment 5: 1411364 1434015 | 21818 44511 | 22652 22694 | 95.53 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-3
+			  Extensive misassembly ( relocation, inconsistency = -1060 ) between these two alignments
+			Real Alignment 6: 1444540 1482586 | 56096 94285 | 38047 38190 | 96.35 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-3
+			  Extensive misassembly ( relocation, inconsistency = -663640 ) between these two alignments
+			Real Alignment 7: 824054 824129 | 99468 99393 | 76 76 | 100.0 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-3
+			  Extensive misassembly ( relocation, inconsistency = 663340 ) between these two alignments
+			Real Alignment 8: 1493194 1497682 | 105193 109659 | 4489 4467 | 95.52 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-3
+			  Overlap between these two alignments (local misassembly). Inconsistency = -24 
+			Real Alignment 9: 1498802 1504118 | 110803 116137 | 5317 5335 | 95.97 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-3
+			  Gap between these two alignments (local misassembly). Inconsistency = 218 
+			Real Alignment 10: 1516065 1529732 | 127866 141487 | 13668 13622 | 95.72 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-3
+			  Gap between these two alignments (local misassembly). Inconsistency = 115 
+			Real Alignment 11: 1541309 1547339 | 152949 158985 | 6031 6037 | 96.42 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-3
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-14 (69202bp)
+Top Length: 15236  Top ID: 95.77
+		This contig is misassembled. 3 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 69202 and total length of all aligns is 24626
+		Alignment: 1140133 1155395 | 39529 24294 | 15263 15236 | 95.77 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-14
+		Alignment: 1116957 1125391 | 62332 53852 | 8435 8481 | 96.4 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-14
+		Alignment: 1116001 1116919 | 63241 62328 | 919 914 | 95.46 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-14
+		Unaligned bases: 44576
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold-67 (27421bp)
+Top Length: 6890  Top ID: 95.79
+		Skipping redundant alignment 1487445 1487520 | 340 265 | 76 76 | 100.0 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-67
+		This contig is misassembled. 4 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 27421 and total length of all aligns is 11254
+		Alignment: 823789 824172 | 1 383 | 384 383 | 96.35 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-67
+		Alignment: 828842 832832 | 4736 8716 | 3991 3981 | 95.18 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-67
+		Alignment: 832806 839667 | 8963 15852 | 6862 6890 | 95.79 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-67
+		Unaligned bases: 16167
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold-79 (431523bp)
+Top Length: 46411  Top ID: 96.99
+		This contig is misassembled. 22 total aligns.
+			Real Alignment 1: 368210 373114 | 211 5147 | 4905 4937 | 95.33 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-79
+			  Extensive misassembly ( relocation, inconsistency = -3793 ) between these two alignments
+			Real Alignment 2: 375912 381808 | 11738 17556 | 5897 5819 | 95.33 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-79
+			  Gap between these two alignments (local misassembly). Inconsistency = 3 
+			Real Alignment 3: 382258 383643 | 18003 19403 | 1386 1401 | 96.5 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-79
+			  Overlap between these two alignments (local misassembly). Inconsistency = -96 
+			Real Alignment 4: 424328 433137 | 60184 69016 | 8810 8833 | 96.43 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-79
+			  Overlap between these two alignments (local misassembly). Inconsistency = -2 
+			Real Alignment 5: 433279 453046 | 69160 88901 | 19768 19742 | 96.08 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-79
+			  Overlap between these two alignments (local misassembly). Inconsistency = -26 
+			Real Alignment 6: 453158 499563 | 89039 135449 | 46406 46411 | 96.99 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-79
+			  Gap between these two alignments (local misassembly). Inconsistency = 137 
+			Real Alignment 7: 500052 509403 | 135801 145153 | 9352 9353 | 96.69 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-79
+			  Gap between these two alignments (local misassembly). Inconsistency = 17 
+			Real Alignment 8: 509657 512710 | 145390 148443 | 3054 3054 | 96.95 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-79
+			  Overlap between these two alignments (local misassembly). Inconsistency = -257 
+			Real Alignment 9: 512682 550602 | 148672 186606 | 37921 37935 | 96.96 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-79
+			  Overlap between these two alignments (local misassembly). Inconsistency = -13 
+			Real Alignment 10: 551353 559422 | 187370 195436 | 8070 8067 | 97.1 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-79
+			  Extensive misassembly ( relocation, inconsistency = 713043 ) between these two alignments
+			Real Alignment 11: 1301532 1301603 | 224574 224503 | 72 72 | 98.61 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-79
+			  Extensive misassembly ( relocation, inconsistency = -711455 ) between these two alignments
+			Real Alignment 12: 590224 594287 | 224650 228728 | 4064 4079 | 95.4 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-79
+			  Overlap between these two alignments (local misassembly). Inconsistency = -79 
+			Real Alignment 13: 594295 595573 | 228815 230096 | 1279 1282 | 97.74 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-79
+			  Extensive misassembly ( relocation, inconsistency = -2506 ) between these two alignments
+			Real Alignment 14: 595371 595680 | 232400 232708 | 310 309 | 96.78 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-79
+			  Extensive misassembly ( relocation, inconsistency = 1352 ) between these two alignments
+			Real Alignment 15: 617156 620939 | 252832 256617 | 3784 3786 | 95.5 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-79
+			  Extensive misassembly ( relocation, inconsistency = 3365 ) between these two alignments
+			Real Alignment 16: 646259 647539 | 278572 279852 | 1281 1281 | 97.27 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-79
+			  Extensive misassembly ( relocation, inconsistency = 1251 ) between these two alignments
+			Real Alignment 17: 673717 682818 | 304779 313949 | 9102 9171 | 95.62 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-79
+			  Extensive misassembly ( relocation, inconsistency = -14479 ) between these two alignments
+			Real Alignment 18: 684175 686302 | 329785 331912 | 2128 2128 | 98.64 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-79
+			  Extensive misassembly ( relocation, inconsistency = 1984 ) between these two alignments
+			Real Alignment 19: 730154 744322 | 373780 387921 | 14169 14142 | 97.48 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-79
+			  Extensive misassembly ( relocation, inconsistency = -4393 ) between these two alignments
+			Real Alignment 20: 746061 765701 | 394053 413623 | 19641 19571 | 96.26 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-79
+			  Gap between these two alignments (local misassembly). Inconsistency = 53 
+			Real Alignment 21: 765948 776152 | 413817 423998 | 10205 10182 | 97.54 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-79
+			  Overlap between these two alignments (local misassembly). Inconsistency = -24 
+			Real Alignment 22: 776323 783231 | 424193 431130 | 6909 6938 | 95.91 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-79
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-117 (112466bp)
+Top Length: 22358  Top ID: 95.71
+		Skipping redundant alignment 1937103 1937320 | 112251 112466 | 218 216 | 98.17 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-117
+		Skipping redundant alignment 1939584 1939801 | 112251 112466 | 218 216 | 98.17 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-117
+		This contig is misassembled. 14 total aligns.
+			Real Alignment 1: 2122236 2127721 | 249 5743 | 5486 5495 | 97.82 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-117
+			  Overlap between these two alignments (local misassembly). Inconsistency = -182 
+			Real Alignment 2: 2127754 2128415 | 5958 6619 | 662 662 | 95.77 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-117
+			  Gap between these two alignments (local misassembly). Inconsistency = 539 
+			Real Alignment 3: 2137638 2142249 | 15303 19914 | 4612 4612 | 98.22 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-117
+			  Gap between these two alignments (local misassembly). Inconsistency = 177 
+			Real Alignment 4: 2145168 2154365 | 22656 31853 | 9198 9198 | 95.91 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-117
+			  Gap between these two alignments (local misassembly). Inconsistency = 619 
+			Real Alignment 5: 2156173 2158361 | 33042 35230 | 2189 2189 | 96.39 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-117
+			  Extensive misassembly ( relocation, inconsistency = 2752 ) between these two alignments
+			Real Alignment 6: 2163917 2177674 | 38034 51790 | 13758 13757 | 96.95 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-117
+			  Overlap between these two alignments (local misassembly). Inconsistency = -249 
+			Real Alignment 7: 2185895 2188673 | 60260 63029 | 2779 2770 | 96.13 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-117
+			  Gap between these two alignments (local misassembly). Inconsistency = 21 
+			Real Alignment 8: 2188784 2195786 | 63119 70108 | 7003 6990 | 96.03 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-117
+			  Gap between these two alignments (local misassembly). Inconsistency = 9 
+			Real Alignment 9: 2195988 2199623 | 70301 73940 | 3636 3640 | 95.81 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-117
+			  Extensive misassembly ( relocation, inconsistency = 1644 ) between these two alignments
+			Real Alignment 10: 2212825 2235222 | 85498 107855 | 22398 22358 | 95.71 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-117
+			  Overlap between these two alignments (local misassembly). Inconsistency = -268 
+			Excluding internal overlap of size 12 between Alignment 11 and 12:  1588713 1588937 | 112245 112466 | 225 222 --> 1588725 1588937 | 112257 112466 | 213 210
+			Real Alignment 11: 2235198 2239350 | 108099 112256 | 4153 4158 | 97.12 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-117
+			  Extensive misassembly ( relocation, inconsistency = -650626 ) between these two alignments
+			Real Alignment 12: 1588725 1588937 | 112257 112466 | 213 210 | 96.89 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-117
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-181 (11728bp)
+Top Length: 199  Top ID: 97.49
+		This contig is partially unaligned. (Aligned 199 out of 11728 bases)
+		Alignment: 685078 685276 | 11725 11527 | 199 199 | 97.49 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-181
+		Unaligned bases: 1 to 11526 (11526)
+		Unaligned bases: 11726 to 11728 (3)
+
+CONTIG: scaffold-183 (76658bp)
+Top Length: 14913  Top ID: 96.12
+		This contig is misassembled. 5 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 76658 and total length of all aligns is 27970
+		Alignment: 1289011 1291791 | 3121 366 | 2781 2756 | 96.22 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-183
+		Alignment: 1273019 1279402 | 22734 16384 | 6384 6351 | 96.31 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-183
+		Alignment: 1239758 1254588 | 56827 41915 | 14831 14913 | 96.12 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-183
+		Alignment: 1227028 1230303 | 67206 63906 | 3276 3301 | 95.52 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-183
+		Alignment: 1215838 1216485 | 76658 76010 | 648 649 | 96.46 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-183
+		Unaligned bases: 48688
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold-426 (2470bp)
+Top Length: 1545  Top ID: 97.48
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 1779928 1781472 | 1545 1 | 1545 1545 | 97.48 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-426
+			  Overlap between these two alignments (local misassembly). Inconsistency = -331 
+			Real Alignment 2: 1779334 1780160 | 2470 1644 | 827 827 | 95.16 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-426
+
+CONTIG: scaffold-495 (1983bp)
+Top Length: 132  Top ID: 95.45
+		This contig is partially unaligned. (Aligned 132 out of 1983 bases)
+		Alignment: 1052631 1052762 | 1352 1483 | 132 132 | 95.45 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-495
+		Unaligned bases: 1 to 1351 (1351)
+		Unaligned bases: 1484 to 1983 (500)
+
+CONTIG: scaffold-682 (141171bp)
+Top Length: 24565  Top ID: 97.89
+		Skipping redundant alignment 1939584 1945125 | 1 5543 | 5542 5543 | 98.92 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-682
+		Skipping redundant alignment 1937103 1939583 | 1 2479 | 2481 2479 | 99.64 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-682
+		This contig is misassembled. 13 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 141171 and total length of all aligns is 70233
+		Alignment: 1588719 1594369 | 1 5651 | 5651 5651 | 98.71 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-682
+		Alignment: 2239345 2263878 | 1253 25817 | 24534 24565 | 97.89 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-682
+		Alignment: 2263878 2264603 | 26059 26784 | 726 726 | 97.93 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-682
+		Alignment: 1 3642 | 26785 30429 | 3642 3645 | 97.45 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-682
+		Alignment: 3724 18386 | 30603 45291 | 14663 14689 | 95.95 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-682
+		Alignment: 51435 53753 | 77595 79911 | 2319 2317 | 96.16 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-682
+		Alignment: 53800 61449 | 83114 90763 | 7650 7650 | 95.87 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-682
+		Alignment: 61541 70544 | 90947 99956 | 9004 9010 | 95.31 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-682
+		Alignment: 81142 81975 | 114621 115454 | 834 834 | 95.08 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-682
+		Alignment: 85918 90838 | 120314 125274 | 4921 4961 | 95.07 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-682
+		Alignment: 107195 107778 | 140588 141171 | 584 584 | 95.38 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-682
+		Unaligned bases: 70938
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold-808 (4674bp)
+Top Length: 187  Top ID: 95.72
+		This contig is partially unaligned. (Aligned 187 out of 4674 bases)
+		Alignment: 685090 685276 | 1 187 | 187 187 | 95.72 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-808
+		Unaligned bases: 188 to 4674 (4487)
+
+CONTIG: scaffold-930 (1971bp)
+Top Length: 926  Top ID: 99.68
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 574662 575468 | 1 807 | 807 807 | 99.75 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-930
+			  Overlap between these two alignments (local misassembly). Inconsistency = -364 
+			Real Alignment 2: 575343 576268 | 1046 1971 | 926 926 | 99.68 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-930
+
+CONTIG: scaffold-1202 (2200bp)
+Top Length: 570  Top ID: 97.72
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 2200 and total length of all aligns is 1047
+		Alignment: 357133 357702 | 1 570 | 570 570 | 97.72 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-1202
+		Alignment: 357733 358209 | 866 1342 | 477 477 | 98.74 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-1202
+		Unaligned bases: 1153
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold-1229 (2206bp)
+Top Length: 148  Top ID: 97.97
+		This contig is partially unaligned. (Aligned 148 out of 2206 bases)
+		Alignment: 816452 816599 | 2206 2059 | 148 148 | 97.97 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-1229
+		Unaligned bases: 1 to 2058 (2058)
+
+CONTIG: scaffold-1561 (1358bp)
+Top Length: 495  Top ID: 98.39
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 306041 306536 | 1 495 | 496 495 | 98.39 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-1561
+			  Overlap between these two alignments (local misassembly). Inconsistency = -342 
+			Real Alignment 2: 306323 306536 | 624 836 | 214 213 | 99.53 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-1561
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-1563 (2323bp)
+Top Length: 190  Top ID: 96.32
+		This contig is partially unaligned. (Aligned 190 out of 2323 bases)
+		Alignment: 1355697 1355886 | 1 190 | 190 190 | 96.32 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-1563
+		Unaligned bases: 191 to 2323 (2133)
+
+CONTIG: scaffold-1674 (2384bp)
+Top Length: 1181  Top ID: 99.15
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 2019681 2020861 | 1181 1 | 1181 1181 | 99.15 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-1674
+			  Overlap between these two alignments (local misassembly). Inconsistency = -111 
+			Real Alignment 2: 2018607 2019559 | 2382 1414 | 953 969 | 96.29 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-1674
+
+CONTIG: scaffold-1752 (8869bp)
+Top Length: 172  Top ID: 95.35
+		This contig is partially unaligned. (Aligned 172 out of 8869 bases)
+		Alignment: 685105 685276 | 8869 8698 | 172 172 | 95.35 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-1752
+		Unaligned bases: 1 to 8697 (8697)
+
+CONTIG: scaffold-2012 (3016bp)
+Top Length: 1085  Top ID: 96.14
+		This contig is partially unaligned. (Aligned 1085 out of 3016 bases)
+		Alignment: 1177701 1178788 | 1085 1 | 1088 1085 | 96.14 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2012
+		Unaligned bases: 1086 to 3016 (1931)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-2107 (1683bp)
+Top Length: 486  Top ID: 96.91
+		This contig is partially unaligned. (Aligned 486 out of 1683 bases)
+		Alignment: 308934 309419 | 1198 1683 | 486 486 | 96.91 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2107
+		Unaligned bases: 1 to 1197 (1197)
+
+CONTIG: scaffold-2186 (2641bp)
+Top Length: 803  Top ID: 96.26
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 502634 503436 | 916 1718 | 803 803 | 96.26 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2186
+			  Overlap between these two alignments (local misassembly). Inconsistency = -240 
+			Real Alignment 2: 503483 504119 | 2005 2641 | 637 637 | 98.27 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2186
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-2222 (223320bp)
+Top Length: 40427  Top ID: 96.94
+		This contig is misassembled. 17 total aligns.
+			Real Alignment 1: 1880796 1882311 | 14687 13172 | 1516 1516 | 95.06 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2222
+			  Gap between these two alignments (local misassembly). Inconsistency = 118 
+			Real Alignment 2: 1864320 1866825 | 31057 28540 | 2506 2518 | 96.15 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2222
+			  Overlap between these two alignments (local misassembly). Inconsistency = -24 
+			Real Alignment 3: 1858657 1864134 | 36754 31267 | 5478 5488 | 96.43 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2222
+			  Overlap between these two alignments (local misassembly). Inconsistency = -245 
+			Real Alignment 4: 1843644 1858685 | 52005 36971 | 15042 15035 | 96.38 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2222
+			  Extensive misassembly ( relocation, inconsistency = 1503 ) between these two alignments
+			Real Alignment 5: 1829846 1836355 | 64302 57791 | 6510 6512 | 95.72 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2222
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 6: 1827244 1829493 | 66603 64356 | 2250 2248 | 98.71 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2222
+			  Gap between these two alignments (local misassembly). Inconsistency = 234 
+			Real Alignment 7: 1814958 1817897 | 78655 75716 | 2940 2940 | 97.99 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2222
+			  Overlap between these two alignments (local misassembly). Inconsistency = -114 
+			Real Alignment 8: 1814245 1814958 | 79482 78769 | 714 714 | 97.34 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2222
+			  Overlap between these two alignments (local misassembly). Inconsistency = -84 
+			Real Alignment 9: 1802192 1814114 | 91558 79697 | 11923 11862 | 97.39 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2222
+			  Extensive misassembly ( relocation, inconsistency = 2580 ) between these two alignments
+			Real Alignment 10: 1779130 1780181 | 112040 110989 | 1052 1052 | 95.15 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2222
+			  Overlap between these two alignments (local misassembly). Inconsistency = -106 
+			Real Alignment 11: 1736324 1776751 | 154951 114525 | 40428 40427 | 96.94 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2222
+			  Overlap between these two alignments (local misassembly). Inconsistency = -10 
+			Real Alignment 12: 1728680 1731223 | 162605 160062 | 2544 2544 | 98.9 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2222
+			  Gap between these two alignments (local misassembly). Inconsistency = 38 
+			Real Alignment 13: 1707682 1722874 | 183564 168373 | 15193 15192 | 95.64 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2222
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 14: 1279508 1279614 | 196423 196529 | 107 107 | 96.26 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2222
+			  Extensive misassembly ( relocation, inconsistency = 397518 ) between these two alignments
+			Real Alignment 15: 1684398 1687711 | 207094 203795 | 3314 3300 | 95.03 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2222
+			  Gap between these two alignments (local misassembly). Inconsistency = 123 
+			Real Alignment 16: 1681382 1684205 | 209987 207164 | 2824 2824 | 96.42 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2222
+			  Gap between these two alignments (local misassembly). Inconsistency = 81 
+			Real Alignment 17: 1673084 1681135 | 218247 210153 | 8052 8095 | 95.93 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2222
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-2236 (85212bp)
+Top Length: 55045  Top ID: 95.06
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 1616434 1671437 | 23856 78900 | 55004 55045 | 95.06 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2236
+			  Extensive misassembly ( relocation, inconsistency = -3509 ) between these two alignments
+			Real Alignment 2: 1673084 1674240 | 84056 85212 | 1157 1157 | 95.68 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2236
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-2278 (22029bp)
+Top Length: 5629  Top ID: 95.77
+		Skipping redundant alignment 285104 285264 | 9037 9199 | 161 163 | 96.32 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2278
+		This contig is partially unaligned. (Aligned 5629 out of 22029 bases)
+		Alignment: 278067 283682 | 3512 9140 | 5616 5629 | 95.77 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2278
+		Unaligned bases: 1 to 3511 (3511)
+		Unaligned bases: 9141 to 22029 (12889)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-2329 (80268bp)
+Top Length: 9485  Top ID: 98.14
+		This contig is misassembled. 7 total aligns.
+			Real Alignment 1: 1294092 1294727 | 1 636 | 636 636 | 97.17 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2329
+			  Gap between these two alignments (local misassembly). Inconsistency = 106 
+			Real Alignment 2: 1294882 1301680 | 685 7530 | 6799 6846 | 95.7 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2329
+			  Overlap between these two alignments (local misassembly). Inconsistency = -220 
+			Real Alignment 3: 1313773 1323423 | 19843 29340 | 9651 9498 | 95.34 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2329
+			  Overlap between these two alignments (local misassembly). Inconsistency = -97 
+			Real Alignment 4: 1323423 1331408 | 29437 37462 | 7986 8026 | 96.45 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2329
+			  Extensive misassembly ( relocation, inconsistency = 2166 ) between these two alignments
+			Real Alignment 5: 1343181 1349132 | 47069 53013 | 5952 5945 | 97.38 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2329
+			  Overlap between these two alignments (local misassembly). Inconsistency = -2 
+			Real Alignment 6: 1349243 1358727 | 53126 62610 | 9485 9485 | 98.14 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2329
+			  Overlap between these two alignments (local misassembly). Inconsistency = -145 
+			Real Alignment 7: 1362413 1365393 | 66441 69427 | 2981 2987 | 95.05 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2329
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-2382 (15024bp)
+Top Length: 506  Top ID: 96.06
+		Skipping redundant alignment 1487445 1487520 | 15024 14949 | 76 76 | 100.0 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2382
+		This contig is partially unaligned. (Aligned 506 out of 15024 bases)
+		Alignment: 823623 824129 | 14519 15024 | 507 506 | 96.06 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2382
+		Unaligned bases: 1 to 14518 (14518)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-2388 (16694bp)
+Top Length: 7514  Top ID: 96.17
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 16694 and total length of all aligns is 7730
+		Alignment: 1927990 1935504 | 7436 14949 | 7515 7514 | 96.17 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2388
+		Alignment: 1939584 1939801 | 16479 16694 | 218 216 | 98.17 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2388
+		Unaligned bases: 8964
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold-2545 (35653bp)
+Top Length: 8316  Top ID: 97.01
+		This contig is misassembled. 5 total aligns.
+			Real Alignment 1: 2185267 2185750 | 484 1 | 484 484 | 96.49 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2545
+			  Extensive misassembly ( relocation, inconsistency = 1367124 ) between these two alignments
+			Real Alignment 2: 807134 808779 | 11494 9848 | 1646 1647 | 98.66 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2545
+			  Overlap between these two alignments (local misassembly). Inconsistency = -44 
+			Real Alignment 3: 801427 806685 | 17249 11987 | 5259 5263 | 95.44 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2545
+			  Overlap between these two alignments (local misassembly). Inconsistency = -42 
+			Real Alignment 4: 794481 799263 | 24249 19455 | 4783 4795 | 95.73 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2545
+			  Overlap between these two alignments (local misassembly). Inconsistency = -29 
+			Real Alignment 5: 784918 793231 | 33843 25528 | 8314 8316 | 97.01 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2545
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-2622 (22991bp)
+Top Length: 12885  Top ID: 96.21
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 1088427 1101231 | 1 12885 | 12805 12885 | 96.21 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2622
+			  Overlap between these two alignments (local misassembly). Inconsistency = -66 
+			Real Alignment 2: 1101453 1106862 | 13173 18604 | 5410 5432 | 95.22 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2622
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 3: 1107650 1110927 | 19233 22512 | 3278 3280 | 96.59 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2622
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-2658 (4294bp)
+Top Length: 74  Top ID: 98.65
+		This contig is partially unaligned. (Aligned 74 out of 4294 bases)
+		Alignment: 685204 685276 | 69 142 | 73 74 | 98.65 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2658
+		Unaligned bases: 1 to 68 (68)
+		Unaligned bases: 143 to 4294 (4152)
+
+CONTIG: scaffold-2724 (4335bp)
+Top Length: 720  Top ID: 97.37
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 4335 and total length of all aligns is 1129
+		Alignment: 1185231 1185639 | 409 1 | 409 409 | 97.31 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2724
+		Alignment: 1183759 1184480 | 4335 3616 | 722 720 | 97.37 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2724
+		Unaligned bases: 3206
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold-2784 (4140bp)
+Top Length: 298  Top ID: 99.33
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 1939584 1939883 | 298 1 | 300 298 | 99.33 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2784
+		This contig is misassembled. 3 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 4140 and total length of all aligns is 421
+		Alignment: 1937103 1937402 | 298 1 | 300 298 | 99.33 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2784
+		Alignment: 11916 12038 | 311 433 | 123 123 | 95.93 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2784
+		Unaligned bases: 3719
+CONTIG: scaffold-2904 (63842bp)
+Top Length: 33909  Top ID: 95.69
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 212786 240097 | 865 28120 | 27312 27256 | 96.0 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2904
+			  Extensive misassembly ( relocation, inconsistency = -1115 ) between these two alignments
+			Real Alignment 2: 240097 274016 | 29235 63143 | 33920 33909 | 95.69 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2904
+			  Gap between these two alignments (local misassembly). Inconsistency = 27 
+			Real Alignment 3: 274241 274741 | 63341 63842 | 501 502 | 97.01 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-2904
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-3002 (4770bp)
+Top Length: 109  Top ID: 97.25
+		This contig is partially unaligned. (Aligned 109 out of 4770 bases)
+		Alignment: 1381419 1381527 | 255 147 | 109 109 | 97.25 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-3002
+		Unaligned bases: 1 to 146 (146)
+		Unaligned bases: 256 to 4770 (4515)
+
+CONTIG: scaffold-3071 (64462bp)
+Top Length: 9162  Top ID: 95.42
+		This contig is misassembled. 3 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 64462 and total length of all aligns is 16766
+		Alignment: 318270 327433 | 14305 23466 | 9164 9162 | 95.42 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-3071
+		Alignment: 327761 333328 | 23795 29364 | 5568 5570 | 97.29 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-3071
+		Alignment: 366175 368208 | 62180 64213 | 2034 2034 | 96.41 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-3071
+		Unaligned bases: 47696
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold-3089 (5959bp)
+Top Length: 1596  Top ID: 98.68
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 5959 and total length of all aligns is 2635
+		Alignment: 1382362 1383957 | 216 1811 | 1596 1596 | 98.68 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-3089
+		Alignment: 1387530 1388569 | 4921 5959 | 1040 1039 | 97.98 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-3089
+		Unaligned bases: 3324
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold-3101 (3596bp)
+Top Length: 453  Top ID: 98.01
+		This contig is partially unaligned. (Aligned 453 out of 3596 bases)
+		Alignment: 2185467 2185919 | 1 453 | 453 453 | 98.01 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-3101
+		Unaligned bases: 454 to 3596 (3143)
+
+CONTIG: scaffold-3160 (1157bp)
+Top Length: 1157  Top ID: 99.22
+		One align captures most of this contig: 1057097 1058253 | 1 1157 | 1157 1157 | 99.22 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-3160
+
+CONTIG: scaffold-3174 (3925bp)
+Top Length: 257  Top ID: 96.89
+		This contig is partially unaligned. (Aligned 257 out of 3925 bases)
+		Alignment: 1022011 1022267 | 3296 3552 | 257 257 | 96.89 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-3174
+		Unaligned bases: 1 to 3295 (3295)
+		Unaligned bases: 3553 to 3925 (373)
+
+CONTIG: scaffold-3205 (22540bp)
+Top Length: 13262  Top ID: 95.27
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 534 between Alignment 1 and 2:  1197179 1201084 | 1 3913 | 3906 3913 --> 1197179 1200550 | 1 3379 | 3372 3379
+			Real Alignment 1: 1197179 1200550 | 1 3379 | 3372 3379 | 96.58 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-3205
+			  Gap between these two alignments (local misassembly). Inconsistency = 495 
+			Real Alignment 2: 1201046 1214320 | 3380 16641 | 13275 13262 | 95.27 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-3205
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-3677 (1945bp)
+Top Length: 401  Top ID: 95.3
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 1945 and total length of all aligns is 701
+		Alignment: 2177293 2177696 | 1 401 | 404 401 | 95.3 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-3677
+		Alignment: 2179091 2179390 | 1646 1945 | 300 300 | 98.67 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-3677
+		Unaligned bases: 1244
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold-4056 (7220bp)
+Top Length: 97  Top ID: 95.88
+		This contig is partially unaligned. (Aligned 97 out of 7220 bases)
+		Alignment: 1900464 1900560 | 6154 6058 | 97 97 | 95.88 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-4056
+		Unaligned bases: 1 to 6057 (6057)
+		Unaligned bases: 6155 to 7220 (1066)
+
+CONTIG: scaffold-4295 (27714bp)
+Top Length: 18626  Top ID: 95.3
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 1165871 1184413 | 1 18626 | 18543 18626 | 95.3 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-4295
+			  Extensive misassembly ( relocation, inconsistency = -2306 ) between these two alignments
+			Real Alignment 2: 1185231 1191187 | 21750 27714 | 5957 5965 | 97.29 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-4295
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-4318 (1111bp)
+Top Length: 272  Top ID: 97.79
+		This contig is partially unaligned. (Aligned 272 out of 1111 bases)
+		Alignment: 130374 130644 | 272 1 | 271 272 | 97.79 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-4318
+		Unaligned bases: 273 to 1111 (839)
+
+CONTIG: scaffold-4396 (2369bp)
+Top Length: 340  Top ID: 98.53
+		This contig is partially unaligned. (Aligned 340 out of 2369 bases)
+		Alignment: 413213 413552 | 1 340 | 340 340 | 98.53 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-4396
+		Unaligned bases: 341 to 2369 (2029)
+
+CONTIG: scaffold-4419 (1000bp)
+Top Length: 1000  Top ID: 95.4
+		One align captures most of this contig: 105473 106469 | 1000 1 | 997 1000 | 95.4 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-4419
+
+CONTIG: scaffold-4577 (866bp)
+Top Length: 866  Top ID: 98.62
+		One align captures most of this contig: 1529563 1530429 | 866 1 | 867 866 | 98.62 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-4577
+
+CONTIG: scaffold-4595 (3912bp)
+Top Length: 320  Top ID: 97.81
+		This contig is partially unaligned. (Aligned 320 out of 3912 bases)
+		Alignment: 1020764 1021083 | 1 320 | 320 320 | 97.81 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-4595
+		Unaligned bases: 321 to 3912 (3592)
+
+CONTIG: scaffold-4678 (1115bp)
+Top Length: 77  Top ID: 98.7
+		This contig is partially unaligned. (Aligned 77 out of 1115 bases)
+		Alignment: 683234 683310 | 345 269 | 77 77 | 98.7 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-4678
+		Unaligned bases: 1 to 268 (268)
+		Unaligned bases: 346 to 1115 (770)
+
+CONTIG: scaffold-4748 (1854bp)
+Top Length: 279  Top ID: 98.57
+		This contig is partially unaligned. (Aligned 279 out of 1854 bases)
+		Alignment: 1837900 1838178 | 1576 1854 | 279 279 | 98.57 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-4748
+		Unaligned bases: 1 to 1575 (1575)
+
+CONTIG: scaffold-4916 (3074bp)
+Top Length: 3074  Top ID: 98.18
+		One align captures most of this contig: 1776334 1779407 | 1 3074 | 3074 3074 | 98.18 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-4916
+
+CONTIG: scaffold-5011 (1970bp)
+Top Length: 1970  Top ID: 99.9
+		One align captures most of this contig: 1841861 1843830 | 1970 1 | 1970 1970 | 99.9 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-5011
+
+CONTIG: scaffold-6383 (803bp)
+Top Length: 803  Top ID: 98.63
+		One align captures most of this contig: 137103 137904 | 803 1 | 802 803 | 98.63 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-6383
+
+CONTIG: scaffold-6461 (47606bp)
+Top Length: 11024  Top ID: 96.47
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 47606 and total length of all aligns is 12531
+		Alignment: 2120656 2122163 | 2050 544 | 1508 1507 | 98.08 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-6461
+		Alignment: 2105176 2116203 | 18396 7373 | 11028 11024 | 96.47 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-6461
+		Unaligned bases: 35075
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold-7120 (4718bp)
+Top Length: 84  Top ID: 96.43
+		This contig is partially unaligned. (Aligned 84 out of 4718 bases)
+		Alignment: 683227 683310 | 3937 3854 | 84 84 | 96.43 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-7120
+		Unaligned bases: 1 to 3853 (3853)
+		Unaligned bases: 3938 to 4718 (781)
+
+CONTIG: scaffold-7244 (961bp)
+Top Length: 143  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 143 out of 961 bases)
+		Alignment: 1810209 1810351 | 143 1 | 143 143 | 100.0 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-7244
+		Unaligned bases: 144 to 961 (818)
+
+CONTIG: scaffold-7427 (1678bp)
+Top Length: 1634  Top ID: 96.15
+		This contig is partially unaligned. (Aligned 1634 out of 1678 bases)
+		Alignment: 149490 151122 | 1 1634 | 1633 1634 | 96.15 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-7427
+		Unaligned bases: 1635 to 1678 (44)
+
+CONTIG: scaffold-8366 (740bp)
+Top Length: 740  Top ID: 99.86
+		One align captures most of this contig: 108110 108849 | 740 1 | 740 740 | 99.86 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-8366
+
+CONTIG: scaffold-9072 (754bp)
+Top Length: 212  Top ID: 95.31
+		This contig is partially unaligned. (Aligned 212 out of 754 bases)
+		Alignment: 1184908 1185118 | 543 754 | 211 212 | 95.31 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-9072
+		Unaligned bases: 1 to 542 (542)
+
+CONTIG: scaffold-9109 (675bp)
+Top Length: 675  Top ID: 97.33
+		One align captures most of this contig: 137955 138629 | 675 1 | 675 675 | 97.33 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-9109
+
+CONTIG: scaffold-9233 (1280bp)
+Top Length: 191  Top ID: 96.35
+		This contig is partially unaligned. (Aligned 191 out of 1280 bases)
+		Alignment: 1129055 1129246 | 191 1 | 192 191 | 96.35 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-9233
+		Unaligned bases: 192 to 1280 (1089)
+
+CONTIG: scaffold-9296 (1419bp)
+Top Length: 1419  Top ID: 98.87
+		One align captures most of this contig: 1818677 1820094 | 1419 1 | 1418 1419 | 98.87 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-9296
+
+CONTIG: scaffold-9445 (693bp)
+Top Length: 664  Top ID: 95.95
+		This contig is partially unaligned. (Aligned 664 out of 693 bases)
+		Alignment: 1386832 1387495 | 664 1 | 664 664 | 95.95 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-9445
+		Unaligned bases: 665 to 693 (29)
+
+CONTIG: scaffold-10554 (1009bp)
+Top Length: 330  Top ID: 96.97
+		This contig is partially unaligned. (Aligned 330 out of 1009 bases)
+		Alignment: 2255736 2256065 | 1 330 | 330 330 | 96.97 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-10554
+		Unaligned bases: 331 to 1009 (679)
+
+CONTIG: scaffold-10720 (746bp)
+Top Length: 171  Top ID: 97.66
+		This contig is partially unaligned. (Aligned 171 out of 746 bases)
+		Alignment: 43979 44149 | 746 576 | 171 171 | 97.66 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-10720
+		Unaligned bases: 1 to 575 (575)
+
+CONTIG: scaffold-10801 (703bp)
+Top Length: 696  Top ID: 99.71
+		One align captures most of this contig: 1272332 1273027 | 703 8 | 696 696 | 99.71 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-10801
+
+CONTIG: scaffold-11589 (1403bp)
+Top Length: 232  Top ID: 99.14
+		This contig is partially unaligned. (Aligned 232 out of 1403 bases)
+		Alignment: 225253 225484 | 1403 1172 | 232 232 | 99.14 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-11589
+		Unaligned bases: 1 to 1171 (1171)
+
+CONTIG: scaffold-11767 (644bp)
+Top Length: 644  Top ID: 99.07
+		One align captures most of this contig: 1818029 1818672 | 1 644 | 644 644 | 99.07 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-11767
+
+CONTIG: scaffold-12364 (939bp)
+Top Length: 939  Top ID: 95.45
+		One align captures most of this contig: 1505639 1506604 | 939 1 | 966 939 | 95.45 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-12364
+
+CONTIG: scaffold-12758 (1445bp)
+Top Length: 626  Top ID: 98.24
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 2053142 2053767 | 1 626 | 626 626 | 98.24 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-12758
+			  Overlap between these two alignments (local misassembly). Inconsistency = -69 
+			Real Alignment 2: 2054077 2054517 | 1005 1445 | 441 441 | 96.83 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-12758
+
+CONTIG: scaffold-13890 (702bp)
+Top Length: 253  Top ID: 96.85
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 440680 440933 | 253 1 | 254 253 | 96.85 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-13890
+			  Overlap between these two alignments (local misassembly). Inconsistency = -79 
+			Real Alignment 2: 440311 440529 | 702 483 | 219 220 | 99.09 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-13890
+
+CONTIG: scaffold-15664 (978bp)
+Top Length: 162  Top ID: 95.68
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 978 and total length of all aligns is 254
+		Alignment: 874721 874812 | 1 92 | 92 92 | 96.74 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-15664
+		Alignment: 875058 875219 | 817 978 | 162 162 | 95.68 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-15664
+		Unaligned bases: 724
+CONTIG: scaffold-16249 (1071bp)
+Top Length: 100  Top ID: 98.0
+		This contig is partially unaligned. (Aligned 100 out of 1071 bases)
+		Alignment: 105449 105548 | 1 100 | 100 100 | 98.0 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-16249
+		Unaligned bases: 101 to 1071 (971)
+
+CONTIG: scaffold-16562 (937bp)
+Top Length: 421  Top ID: 99.53
+		This contig is partially unaligned. (Aligned 421 out of 937 bases)
+		Alignment: 528703 529124 | 421 1 | 422 421 | 99.53 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-16562
+		Unaligned bases: 422 to 937 (516)
+
+CONTIG: scaffold-17232 (573bp)
+Top Length: 573  Top ID: 95.47
+		One align captures most of this contig: 393376 393948 | 573 1 | 573 573 | 95.47 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-17232
+
+CONTIG: scaffold-17445 (792bp)
+Top Length: 76  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 76 out of 792 bases)
+		Alignment: 1487445 1487520 | 137 62 | 76 76 | 100.0 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-17445
+		Unaligned bases: 1 to 61 (61)
+		Unaligned bases: 138 to 792 (655)
+
+CONTIG: scaffold-17923 (792bp)
+Top Length: 792  Top ID: 99.75
+		One align captures most of this contig: 729734 730525 | 792 1 | 792 792 | 99.75 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-17923
+
+CONTIG: scaffold-19057 (650bp)
+Top Length: 348  Top ID: 95.69
+		This contig is partially unaligned. (Aligned 348 out of 650 bases)
+		Alignment: 2137164 2137511 | 650 303 | 348 348 | 95.69 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-19057
+		Unaligned bases: 1 to 302 (302)
+
+CONTIG: scaffold-19435 (589bp)
+Top Length: 303  Top ID: 98.35
+		This contig is partially unaligned. (Aligned 303 out of 589 bases)
+		Alignment: 2248254 2248556 | 1 303 | 303 303 | 98.35 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-19435
+		Unaligned bases: 304 to 589 (286)
+
+CONTIG: scaffold-20537 (1403bp)
+Top Length: 1403  Top ID: 99.79
+		One align captures most of this contig: 1380083 1381484 | 1403 1 | 1402 1403 | 99.79 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-20537
+
+CONTIG: scaffold-22664 (732bp)
+Top Length: 291  Top ID: 96.23
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 685105 685276 | 1 172 | 172 172 | 95.93 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-22664
+			  Extensive misassembly ( relocation, inconsistency = 307618 ) between these two alignments
+			Real Alignment 2: 993164 993454 | 442 732 | 291 291 | 96.23 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-22664
+
+CONTIG: scaffold-22712 (560bp)
+Top Length: 560  Top ID: 96.43
+		One align captures most of this contig: 2095426 2095986 | 1 560 | 561 560 | 96.43 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-22712
+
+CONTIG: scaffold-23896 (527bp)
+Top Length: 527  Top ID: 99.62
+		One align captures most of this contig: 682505 683031 | 1 527 | 527 527 | 99.62 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-23896
+
+CONTIG: scaffold-24102 (2484bp)
+Top Length: 2484  Top ID: 96.78
+		One align captures most of this contig: 2154216 2156699 | 2484 1 | 2484 2484 | 96.78 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-24102
+
+CONTIG: scaffold-27743 (640bp)
+Top Length: 640  Top ID: 97.34
+		One align captures most of this contig: 572110 572749 | 640 1 | 640 640 | 97.34 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-27743
+
+CONTIG: scaffold-28366 (653bp)
+Top Length: 648  Top ID: 97.7
+		One align captures most of this contig: 946360 947010 | 4 651 | 651 648 | 97.7 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-28366
+
+CONTIG: scaffold-29406 (1186bp)
+Top Length: 871  Top ID: 96.33
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 2151816 2152006 | 190 1 | 191 190 | 97.38 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-29406
+			  Overlap between these two alignments (local misassembly). Inconsistency = -14 
+			Real Alignment 2: 2150834 2151704 | 1186 316 | 871 871 | 96.33 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-29406
+
+CONTIG: scaffold-31648 (620bp)
+Top Length: 620  Top ID: 96.31
+		One align captures most of this contig: 132190 132812 | 620 1 | 623 620 | 96.31 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-31648
+
+CONTIG: scaffold-32811 (553bp)
+Top Length: 553  Top ID: 96.2
+		One align captures most of this contig: 1026289 1026841 | 553 1 | 553 553 | 96.2 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-32811
+
+CONTIG: scaffold-33452 (976bp)
+Top Length: 474  Top ID: 95.57
+		This contig is partially unaligned. (Aligned 474 out of 976 bases)
+		Alignment: 1811125 1811598 | 474 1 | 474 474 | 95.57 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-33452
+		Unaligned bases: 475 to 976 (502)
+
+CONTIG: scaffold-33624 (880bp)
+Top Length: 880  Top ID: 100.0
+		One align captures most of this contig: 1379195 1380074 | 1 880 | 880 880 | 100.0 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-33624
+
+CONTIG: scaffold-35226 (935bp)
+Top Length: 927  Top ID: 96.33
+		One align captures most of this contig: 1773397 1774323 | 1 927 | 927 927 | 96.33 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-35226
+
+CONTIG: scaffold-36268 (562bp)
+Top Length: 562  Top ID: 99.11
+		One align captures most of this contig: 74692 75253 | 562 1 | 562 562 | 99.11 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-36268
+
+CONTIG: scaffold-36385 (507bp)
+Top Length: 507  Top ID: 97.05
+		One align captures most of this contig: 618585 619092 | 507 1 | 508 507 | 97.05 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-36385
+
+CONTIG: scaffold-36700 (595bp)
+Top Length: 595  Top ID: 96.36
+		One align captures most of this contig: 823100 823703 | 1 595 | 604 595 | 96.36 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-36700
+
+CONTIG: scaffold-37026 (2332bp)
+Top Length: 1769  Top ID: 97.17
+		This contig is partially unaligned. (Aligned 1769 out of 2332 bases)
+		Alignment: 2132250 2134018 | 2332 564 | 1769 1769 | 97.17 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-37026
+		Unaligned bases: 1 to 563 (563)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-37241 (3272bp)
+Top Length: 215  Top ID: 96.28
+		This contig is partially unaligned. (Aligned 215 out of 3272 bases)
+		Alignment: 685062 685276 | 1 215 | 215 215 | 96.28 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-37241
+		Unaligned bases: 216 to 3272 (3057)
+
+CONTIG: scaffold-37995 (649bp)
+Top Length: 649  Top ID: 99.38
+		One align captures most of this contig: 113617 114265 | 649 1 | 649 649 | 99.38 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-37995
+
+CONTIG: scaffold-38268 (674bp)
+Top Length: 674  Top ID: 97.09
+		One align captures most of this contig: 273779 274465 | 674 1 | 687 674 | 97.09 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-38268
+
+CONTIG: scaffold-38511 (702bp)
+Top Length: 702  Top ID: 99.86
+		One align captures most of this contig: 20830 21531 | 1 702 | 702 702 | 99.86 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-38511
+
+CONTIG: scaffold-40251 (710bp)
+Top Length: 206  Top ID: 96.12
+		This contig is partially unaligned. (Aligned 206 out of 710 bases)
+		Alignment: 1934490 1934695 | 206 1 | 206 206 | 96.12 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-40251
+		Unaligned bases: 207 to 710 (504)
+
+CONTIG: scaffold-40981 (533bp)
+Top Length: 533  Top ID: 96.44
+		One align captures most of this contig: 1399424 1399956 | 533 1 | 533 533 | 96.44 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-40981
+
+CONTIG: scaffold-41592 (547bp)
+Top Length: 467  Top ID: 98.93
+		This contig is partially unaligned. (Aligned 467 out of 547 bases)
+		Alignment: 721486 721952 | 547 81 | 467 467 | 98.93 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-41592
+		Unaligned bases: 1 to 80 (80)
+
+CONTIG: scaffold-45551 (817bp)
+Top Length: 817  Top ID: 99.63
+		One align captures most of this contig: 1497408 1498224 | 1 817 | 817 817 | 99.63 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-45551
+
+CONTIG: scaffold-45948 (847bp)
+Top Length: 847  Top ID: 95.28
+		One align captures most of this contig: 305052 305898 | 1 847 | 847 847 | 95.28 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-45948
+
+CONTIG: scaffold-46070 (745bp)
+Top Length: 745  Top ID: 99.6
+		One align captures most of this contig: 1027029 1027773 | 745 1 | 745 745 | 99.6 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-46070
+
+CONTIG: scaffold-46166 (627bp)
+Top Length: 627  Top ID: 95.53
+		One align captures most of this contig: 2082483 2083109 | 1 627 | 627 627 | 95.53 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-46166
+
+CONTIG: scaffold-47097 (844bp)
+Top Length: 844  Top ID: 95.62
+		One align captures most of this contig: 1561674 1562514 | 1 844 | 841 844 | 95.62 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-47097
+
+CONTIG: scaffold-48219 (683bp)
+Top Length: 683  Top ID: 97.83
+		One align captures most of this contig: 275757 276448 | 1 683 | 692 683 | 97.83 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-48219
+
+CONTIG: scaffold-48906 (899bp)
+Top Length: 142  Top ID: 96.48
+		This contig is partially unaligned. (Aligned 142 out of 899 bases)
+		Alignment: 1107650 1107791 | 224 365 | 142 142 | 96.48 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-48906
+		Unaligned bases: 1 to 223 (223)
+		Unaligned bases: 366 to 899 (534)
+
+CONTIG: scaffold-49032 (605bp)
+Top Length: 605  Top ID: 99.01
+		One align captures most of this contig: 1975190 1975794 | 1 605 | 605 605 | 99.01 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-49032
+
+CONTIG: scaffold-49964 (1182bp)
+Top Length: 1176  Top ID: 96.34
+		Marking as insignificant: 11841 12031 | 191 1 | 191 191 | 98.95 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-49964
+		One align captures most of this contig: 15170 16345 | 1176 1 | 1176 1176 | 96.34 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-49964
+
+CONTIG: scaffold-50043 (764bp)
+Top Length: 764  Top ID: 95.17
+		One align captures most of this contig: 1554363 1555127 | 764 1 | 765 764 | 95.17 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-50043
+
+CONTIG: scaffold-50211 (553bp)
+Top Length: 552  Top ID: 97.64
+		One align captures most of this contig: 466798 467347 | 553 2 | 550 552 | 97.64 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-50211
+
+CONTIG: scaffold-50804 (835bp)
+Top Length: 835  Top ID: 96.41
+		One align captures most of this contig: 909206 910035 | 835 1 | 830 835 | 96.41 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-50804
+
+CONTIG: scaffold-50936 (602bp)
+Top Length: 602  Top ID: 95.85
+		One align captures most of this contig: 311698 312299 | 602 1 | 602 602 | 95.85 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-50936
+
+CONTIG: scaffold-51090 (555bp)
+Top Length: 555  Top ID: 96.04
+		One align captures most of this contig: 1845075 1845629 | 555 1 | 555 555 | 96.04 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-51090
+
+CONTIG: scaffold-51187 (893bp)
+Top Length: 893  Top ID: 96.3
+		One align captures most of this contig: 2022710 2023602 | 893 1 | 893 893 | 96.3 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-51187
+
+CONTIG: scaffold-51680 (1747bp)
+Top Length: 223  Top ID: 99.55
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 1747 and total length of all aligns is 428
+		Alignment: 2148781 2148985 | 1 205 | 205 205 | 98.05 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-51680
+		Alignment: 2148516 2148738 | 1525 1747 | 223 223 | 99.55 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-51680
+		Unaligned bases: 1319
+CONTIG: scaffold-51992 (725bp)
+Top Length: 722  Top ID: 96.12
+		One align captures most of this contig: 974048 974769 | 722 1 | 722 722 | 96.12 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-51992
+
+CONTIG: scaffold-52592 (944bp)
+Top Length: 944  Top ID: 96.19
+		One align captures most of this contig: 2083467 2084410 | 944 1 | 944 944 | 96.19 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-52592
+
+CONTIG: scaffold-52693 (5595bp)
+Top Length: 209  Top ID: 96.17
+		This contig is partially unaligned. (Aligned 209 out of 5595 bases)
+		Alignment: 685068 685276 | 1 209 | 209 209 | 96.17 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-52693
+		Unaligned bases: 210 to 5595 (5386)
+
+CONTIG: scaffold-53995 (700bp)
+Top Length: 277  Top ID: 98.92
+		This contig is partially unaligned. (Aligned 277 out of 700 bases)
+		Alignment: 301350 301626 | 700 424 | 277 277 | 98.92 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-53995
+		Unaligned bases: 1 to 423 (423)
+
+CONTIG: scaffold-54883 (719bp)
+Top Length: 719  Top ID: 98.89
+		One align captures most of this contig: 903605 904323 | 719 1 | 719 719 | 98.89 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-54883
+
+CONTIG: scaffold-56058 (1910bp)
+Top Length: 1910  Top ID: 98.95
+		One align captures most of this contig: 85236 87144 | 1 1910 | 1909 1910 | 98.95 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-56058
+
+CONTIG: scaffold-56312 (590bp)
+Top Length: 147  Top ID: 95.92
+		This contig is partially unaligned. (Aligned 147 out of 590 bases)
+		Alignment: 1406850 1406996 | 444 590 | 147 147 | 95.92 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-56312
+		Unaligned bases: 1 to 443 (443)
+
+CONTIG: scaffold-56557 (1089bp)
+Top Length: 1089  Top ID: 96.83
+		One align captures most of this contig: 1438509 1439612 | 1 1089 | 1104 1089 | 96.83 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-56557
+
+CONTIG: scaffold-57098 (569bp)
+Top Length: 403  Top ID: 95.78
+		This contig is partially unaligned. (Aligned 403 out of 569 bases)
+		Alignment: 104019 104421 | 569 167 | 403 403 | 95.78 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-57098
+		Unaligned bases: 1 to 166 (166)
+
+CONTIG: scaffold-59162 (775bp)
+Top Length: 307  Top ID: 95.78
+		This contig is partially unaligned. (Aligned 307 out of 775 bases)
+		Alignment: 1376731 1377037 | 307 1 | 307 307 | 95.78 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-59162
+		Unaligned bases: 308 to 775 (468)
+
+CONTIG: scaffold-59656 (854bp)
+Top Length: 854  Top ID: 99.06
+		One align captures most of this contig: 2221824 2222677 | 1 854 | 854 854 | 99.06 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-59656
+
+CONTIG: scaffold-59898 (1132bp)
+Top Length: 1132  Top ID: 98.23
+		One align captures most of this contig: 2260727 2261858 | 1 1132 | 1132 1132 | 98.23 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-59898
+
+CONTIG: scaffold-60199 (18284bp)
+Top Length: 3967  Top ID: 95.24
+		This contig is partially unaligned. (Aligned 3967 out of 18284 bases)
+		Alignment: 1916138 1920108 | 4464 498 | 3971 3967 | 95.24 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-60199
+		Unaligned bases: 1 to 497 (497)
+		Unaligned bases: 4465 to 18284 (13820)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-61783 (576bp)
+Top Length: 576  Top ID: 99.31
+		One align captures most of this contig: 576834 577409 | 576 1 | 576 576 | 99.31 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-61783
+
+CONTIG: scaffold-61880 (708bp)
+Top Length: 708  Top ID: 100.0
+		One align captures most of this contig: 1629965 1630672 | 1 708 | 708 708 | 100.0 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-61880
+
+CONTIG: scaffold-62182 (4785bp)
+Top Length: 515  Top ID: 97.09
+		This contig is partially unaligned. (Aligned 515 out of 4785 bases)
+		Alignment: 595058 595572 | 1 515 | 515 515 | 97.09 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-62182
+		Unaligned bases: 516 to 4785 (4270)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-66182 (1355bp)
+Top Length: 1355  Top ID: 99.19
+		One align captures most of this contig: 407815 409169 | 1355 1 | 1355 1355 | 99.19 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-66182
+
+CONTIG: scaffold-66519 (845bp)
+Top Length: 845  Top ID: 97.28
+		One align captures most of this contig: 1512701 1513545 | 1 845 | 845 845 | 97.28 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-66519
+
+CONTIG: scaffold-66733 (1106bp)
+Top Length: 1106  Top ID: 98.55
+		One align captures most of this contig: 2020863 2021968 | 1106 1 | 1106 1106 | 98.55 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-66733
+
+CONTIG: scaffold-67538 (643bp)
+Top Length: 642  Top ID: 95.02
+		One align captures most of this contig: 811371 812012 | 642 1 | 642 642 | 95.02 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-67538
+
+CONTIG: scaffold-68607 (593bp)
+Top Length: 583  Top ID: 95.37
+		This contig is partially unaligned. (Aligned 583 out of 593 bases)
+		Alignment: 183972 184554 | 593 11 | 583 583 | 95.37 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-68607
+		Unaligned bases: 1 to 10 (10)
+
+CONTIG: scaffold-68827 (652bp)
+Top Length: 402  Top ID: 97.76
+		This contig is partially unaligned. (Aligned 402 out of 652 bases)
+		Alignment: 756217 756618 | 652 251 | 402 402 | 97.76 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-68827
+		Unaligned bases: 1 to 250 (250)
+
+CONTIG: scaffold-69489 (518bp)
+Top Length: 518  Top ID: 97.1
+		One align captures most of this contig: 1635258 1635775 | 1 518 | 518 518 | 97.1 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-69489
+
+CONTIG: scaffold-70454 (578bp)
+Top Length: 578  Top ID: 99.31
+		One align captures most of this contig: 107711 108288 | 578 1 | 578 578 | 99.31 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-70454
+
+CONTIG: scaffold-71229 (537bp)
+Top Length: 537  Top ID: 97.21
+		One align captures most of this contig: 1995296 1995832 | 537 1 | 537 537 | 97.21 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-71229
+
+CONTIG: scaffold-72018 (1854bp)
+Top Length: 81  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 81 out of 1854 bases)
+		Alignment: 1291711 1291791 | 1854 1774 | 81 81 | 100.0 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-72018
+		Unaligned bases: 1 to 1773 (1773)
+
+CONTIG: scaffold-72026 (735bp)
+Top Length: 652  Top ID: 96.47
+		This contig is partially unaligned. (Aligned 652 out of 735 bases)
+		Alignment: 2263952 2264603 | 1 652 | 652 652 | 96.47 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-72026
+		Unaligned bases: 653 to 735 (83)
+
+CONTIG: scaffold-73229 (526bp)
+Top Length: 526  Top ID: 97.53
+		One align captures most of this contig: 242498 243023 | 1 526 | 526 526 | 97.53 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-73229
+
+CONTIG: scaffold-73439 (740bp)
+Top Length: 740  Top ID: 95.91
+		One align captures most of this contig: 419837 420594 | 740 1 | 758 740 | 95.91 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-73439
+
+CONTIG: scaffold-73466 (501bp)
+Top Length: 501  Top ID: 97.01
+		One align captures most of this contig: 1522943 1523443 | 1 501 | 501 501 | 97.01 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-73466
+
+CONTIG: scaffold-74316 (654bp)
+Top Length: 654  Top ID: 98.93
+		One align captures most of this contig: 1497787 1498440 | 654 1 | 654 654 | 98.93 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-74316
+
+CONTIG: scaffold-74581 (927bp)
+Top Length: 676  Top ID: 95.71
+		This contig is partially unaligned. (Aligned 676 out of 927 bases)
+		Alignment: 1980688 1981363 | 1 676 | 676 676 | 95.71 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-74581
+		Unaligned bases: 677 to 927 (251)
+
+CONTIG: scaffold-76496 (746bp)
+Top Length: 746  Top ID: 96.92
+		One align captures most of this contig: 714542 715287 | 746 1 | 746 746 | 96.92 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-76496
+
+CONTIG: scaffold-76570 (813bp)
+Top Length: 808  Top ID: 95.42
+		One align captures most of this contig: 267107 267906 | 808 1 | 800 808 | 95.42 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-76570
+
+CONTIG: scaffold-76638 (508bp)
+Top Length: 506  Top ID: 98.22
+		One align captures most of this contig: 59455 59960 | 508 3 | 506 506 | 98.22 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-76638
+
+CONTIG: scaffold-76890 (502bp)
+Top Length: 502  Top ID: 98.81
+		One align captures most of this contig: 1288336 1288840 | 1 502 | 505 502 | 98.81 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-76890
+
+CONTIG: scaffold-77066 (700bp)
+Top Length: 700  Top ID: 98.0
+		One align captures most of this contig: 302558 303257 | 1 700 | 700 700 | 98.0 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-77066
+
+CONTIG: scaffold-77183 (918bp)
+Top Length: 201  Top ID: 99.5
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 1939584 1939785 | 201 1 | 202 201 | 99.5 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-77183
+		This contig is misassembled. 3 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 918 and total length of all aligns is 320
+		Alignment: 1588719 1588921 | 201 1 | 203 201 | 97.06 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-77183
+		Alignment: 11916 12035 | 275 393 | 120 119 | 95.83 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-77183
+		Unaligned bases: 598
+CONTIG: scaffold-77466 (543bp)
+Top Length: 119  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 119 out of 543 bases)
+		Alignment: 639377 639495 | 1 119 | 119 119 | 100.0 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-77466
+		Unaligned bases: 120 to 543 (424)
+
+CONTIG: scaffold-78855 (558bp)
+Top Length: 558  Top ID: 95.88
+		One align captures most of this contig: 1397560 1398117 | 1 558 | 558 558 | 95.88 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-78855
+
+CONTIG: scaffold-79050 (549bp)
+Top Length: 401  Top ID: 96.01
+		This contig is partially unaligned. (Aligned 401 out of 549 bases)
+		Alignment: 1335826 1336226 | 549 149 | 401 401 | 96.01 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-79050
+		Unaligned bases: 1 to 148 (148)
+
+CONTIG: scaffold-79653 (950bp)
+Top Length: 950  Top ID: 95.16
+		One align captures most of this contig: 1771497 1772446 | 950 1 | 950 950 | 95.16 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-79653
+
+CONTIG: scaffold-79858 (578bp)
+Top Length: 575  Top ID: 98.78
+		One align captures most of this contig: 112760 113334 | 578 4 | 575 575 | 98.78 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-79858
+
+CONTIG: scaffold-81025 (771bp)
+Top Length: 771  Top ID: 97.15
+		One align captures most of this contig: 2205726 2206496 | 1 771 | 771 771 | 97.15 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-81025
+
+CONTIG: scaffold-81592 (540bp)
+Top Length: 508  Top ID: 95.67
+		This contig is partially unaligned. (Aligned 508 out of 540 bases)
+		Alignment: 605389 605896 | 508 1 | 508 508 | 95.67 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-81592
+		Unaligned bases: 509 to 540 (32)
+
+CONTIG: scaffold-82447 (567bp)
+Top Length: 525  Top ID: 95.62
+		Skipping redundant alignment 203287 203385 | 567 469 | 99 99 | 98.99 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-82447
+		This contig is partially unaligned. (Aligned 525 out of 567 bases)
+		Alignment: 203359 203883 | 525 1 | 525 525 | 95.62 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-82447
+		Unaligned bases: 526 to 567 (42)
+
+CONTIG: scaffold-83448 (568bp)
+Top Length: 566  Top ID: 97.88
+		One align captures most of this contig: 593708 594273 | 1 566 | 566 566 | 97.88 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-83448
+
+CONTIG: scaffold-83902 (529bp)
+Top Length: 529  Top ID: 96.03
+		One align captures most of this contig: 1744626 1745154 | 529 1 | 529 529 | 96.03 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-83902
+
+CONTIG: scaffold-85407 (857bp)
+Top Length: 857  Top ID: 95.11
+		One align captures most of this contig: 2092676 2093534 | 857 1 | 859 857 | 95.11 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-85407
+
+CONTIG: scaffold-85479 (559bp)
+Top Length: 559  Top ID: 96.06
+		One align captures most of this contig: 2203658 2204216 | 559 1 | 559 559 | 96.06 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-85479
+
+CONTIG: scaffold-88144 (564bp)
+Top Length: 564  Top ID: 99.47
+		One align captures most of this contig: 926815 927378 | 564 1 | 564 564 | 99.47 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-88144
+
+CONTIG: scaffold-92458 (925bp)
+Top Length: 925  Top ID: 99.89
+		One align captures most of this contig: 73601 74525 | 925 1 | 925 925 | 99.89 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-92458
+
+CONTIG: scaffold-93348 (669bp)
+Top Length: 669  Top ID: 97.01
+		One align captures most of this contig: 89953 90621 | 669 1 | 669 669 | 97.01 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-93348
+
+CONTIG: scaffold-93692 (2175bp)
+Top Length: 1351  Top ID: 95.63
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 1291420 1291791 | 1 372 | 372 372 | 98.12 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-93692
+			  Gap between these two alignments (local misassembly). Inconsistency = 1 
+			Real Alignment 2: 1292245 1293595 | 825 2175 | 1351 1351 | 95.63 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-93692
+
+CONTIG: scaffold-94354 (596bp)
+Top Length: 596  Top ID: 95.64
+		One align captures most of this contig: 767348 767942 | 1 596 | 595 596 | 95.64 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-94354
+
+CONTIG: scaffold-96846 (541bp)
+Top Length: 541  Top ID: 97.23
+		One align captures most of this contig: 1182022 1182561 | 1 541 | 540 541 | 97.23 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-96846
+
+CONTIG: scaffold-96989 (558bp)
+Top Length: 558  Top ID: 96.06
+		One align captures most of this contig: 1729160 1729717 | 558 1 | 558 558 | 96.06 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-96989
+
+CONTIG: scaffold-97372 (952bp)
+Top Length: 253  Top ID: 97.23
+		This contig is partially unaligned. (Aligned 253 out of 952 bases)
+		Alignment: 848278 848530 | 253 1 | 253 253 | 97.23 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-97372
+		Unaligned bases: 254 to 952 (699)
+
+CONTIG: scaffold-97377 (646bp)
+Top Length: 644  Top ID: 96.28
+		One align captures most of this contig: 1005456 1006099 | 644 1 | 644 644 | 96.28 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-97377
+
+CONTIG: scaffold-101210 (874bp)
+Top Length: 874  Top ID: 97.03
+		One align captures most of this contig: 1361375 1362242 | 1 874 | 868 874 | 97.03 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-101210
+
+CONTIG: scaffold-101495 (937bp)
+Top Length: 937  Top ID: 98.72
+		One align captures most of this contig: 1170748 1171684 | 937 1 | 937 937 | 98.72 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-101495
+
+CONTIG: scaffold-102646 (1126bp)
+Top Length: 1126  Top ID: 97.51
+		One align captures most of this contig: 2227345 2228470 | 1126 1 | 1126 1126 | 97.51 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-102646
+
+CONTIG: scaffold-104043 (698bp)
+Top Length: 698  Top ID: 95.13
+		One align captures most of this contig: 450103 450800 | 1 698 | 698 698 | 95.13 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-104043
+
+CONTIG: scaffold-104798 (543bp)
+Top Length: 543  Top ID: 96.87
+		One align captures most of this contig: 1262351 1262893 | 543 1 | 543 543 | 96.87 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-104798
+
+CONTIG: scaffold-104821 (544bp)
+Top Length: 544  Top ID: 96.14
+		One align captures most of this contig: 24841 25384 | 544 1 | 544 544 | 96.14 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-104821
+
+CONTIG: scaffold-106134 (632bp)
+Top Length: 352  Top ID: 95.45
+		This contig is partially unaligned. (Aligned 352 out of 632 bases)
+		Alignment: 1901644 1901995 | 632 281 | 352 352 | 95.45 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-106134
+		Unaligned bases: 1 to 280 (280)
+
+CONTIG: scaffold-106703 (649bp)
+Top Length: 649  Top ID: 95.38
+		One align captures most of this contig: 2074654 2075302 | 649 1 | 649 649 | 95.38 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-106703
+
+CONTIG: scaffold-106880 (634bp)
+Top Length: 430  Top ID: 96.51
+		This contig is partially unaligned. (Aligned 430 out of 634 bases)
+		Alignment: 142942 143371 | 634 205 | 430 430 | 96.51 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-106880
+		Unaligned bases: 1 to 204 (204)
+
+CONTIG: scaffold-108153 (801bp)
+Top Length: 801  Top ID: 99.38
+		One align captures most of this contig: 2100958 2101758 | 1 801 | 801 801 | 99.38 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-108153
+
+CONTIG: scaffold-108158 (583bp)
+Top Length: 581  Top ID: 95.36
+		One align captures most of this contig: 1229629 1230210 | 583 3 | 582 581 | 95.36 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-108158
+
+CONTIG: scaffold-108342 (1123bp)
+Top Length: 1123  Top ID: 97.06
+		One align captures most of this contig: 523435 524557 | 1123 1 | 1123 1123 | 97.06 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-108342
+
+CONTIG: scaffold-109761 (828bp)
+Top Length: 828  Top ID: 95.62
+		One align captures most of this contig: 1765870 1766712 | 1 828 | 843 828 | 95.62 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-109761
+
+CONTIG: scaffold-110788 (581bp)
+Top Length: 581  Top ID: 96.91
+		One align captures most of this contig: 1426747 1427327 | 1 581 | 581 581 | 96.91 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-110788
+
+CONTIG: scaffold-111640 (977bp)
+Top Length: 977  Top ID: 96.83
+		One align captures most of this contig: 1726824 1727800 | 1 977 | 977 977 | 96.83 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-111640
+
+CONTIG: scaffold-113023 (1279bp)
+Top Length: 1279  Top ID: 98.12
+		One align captures most of this contig: 248396 249674 | 1279 1 | 1279 1279 | 98.12 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-113023
+
+CONTIG: scaffold-114099 (601bp)
+Top Length: 252  Top ID: 96.43
+		This contig is partially unaligned. (Aligned 252 out of 601 bases)
+		Alignment: 805217 805468 | 252 1 | 252 252 | 96.43 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-114099
+		Unaligned bases: 253 to 601 (349)
+
+CONTIG: scaffold-114107 (554bp)
+Top Length: 554  Top ID: 98.19
+		One align captures most of this contig: 1070139 1070692 | 554 1 | 554 554 | 98.19 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-114107
+
+CONTIG: scaffold-114243 (671bp)
+Top Length: 671  Top ID: 96.57
+		One align captures most of this contig: 599758 600428 | 1 671 | 671 671 | 96.57 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-114243
+
+CONTIG: scaffold-115402 (766bp)
+Top Length: 168  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 168 out of 766 bases)
+		Alignment: 1935313 1935480 | 1 168 | 168 168 | 100.0 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-115402
+		Unaligned bases: 169 to 766 (598)
+
+CONTIG: scaffold-116100 (1032bp)
+Top Length: 1032  Top ID: 96.64
+		One align captures most of this contig: 689763 690794 | 1 1032 | 1032 1032 | 96.64 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-116100
+
+CONTIG: scaffold-116840 (567bp)
+Top Length: 567  Top ID: 96.13
+		One align captures most of this contig: 209949 210516 | 1 567 | 568 567 | 96.13 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-116840
+
+CONTIG: scaffold-117058 (516bp)
+Top Length: 286  Top ID: 97.55
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 55 between Alignment 1 and 2:  537795 538080 | 232 516 | 286 285 --> 537850 538080 | 287 516 | 231 230
+			Real Alignment 1: 537795 538080 | 286 1 | 286 286 | 97.55 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-117058
+			  Extensive misassembly ( inversion ) between these two alignments
+			Real Alignment 2: 537850 538080 | 287 516 | 231 230 | 95.47 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-117058
+
+CONTIG: scaffold-118482 (3602bp)
+Top Length: 3602  Top ID: 95.81
+		One align captures most of this contig: 704147 707744 | 3602 1 | 3598 3602 | 95.81 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-118482
+
+CONTIG: scaffold-118682 (1173bp)
+Top Length: 1173  Top ID: 97.1
+		One align captures most of this contig: 50390 51562 | 1173 1 | 1173 1173 | 97.1 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-118682
+
+CONTIG: scaffold-119577 (780bp)
+Top Length: 780  Top ID: 99.23
+		One align captures most of this contig: 1772484 1773263 | 780 1 | 780 780 | 99.23 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-119577
+
+CONTIG: scaffold-123505 (573bp)
+Top Length: 573  Top ID: 97.73
+		One align captures most of this contig: 12504 13076 | 1 573 | 573 573 | 97.73 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-123505
+
+CONTIG: scaffold-128617 (859bp)
+Top Length: 859  Top ID: 98.02
+		One align captures most of this contig: 1636252 1637110 | 1 859 | 859 859 | 98.02 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-128617
+
+CONTIG: scaffold-129098 (500bp)
+Top Length: 500  Top ID: 100.0
+		One align captures most of this contig: 1383940 1384439 | 500 1 | 500 500 | 100.0 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-129098
+
+CONTIG: scaffold-129558 (641bp)
+Top Length: 638  Top ID: 97.81
+		One align captures most of this contig: 602963 603600 | 4 641 | 638 638 | 97.81 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-129558
+
+CONTIG: scaffold-129736 (764bp)
+Top Length: 764  Top ID: 96.6
+		One align captures most of this contig: 726287 727050 | 764 1 | 764 764 | 96.6 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-129736
+
+CONTIG: scaffold-130727 (859bp)
+Top Length: 859  Top ID: 97.56
+		One align captures most of this contig: 2099624 2100482 | 1 859 | 859 859 | 97.56 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-130727
+
+CONTIG: scaffold-134789 (1104bp)
+Top Length: 1104  Top ID: 97.74
+		One align captures most of this contig: 2002569 2003672 | 1 1104 | 1104 1104 | 97.74 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-134789
+
+CONTIG: scaffold-135338 (869bp)
+Top Length: 869  Top ID: 98.5
+		One align captures most of this contig: 571204 572072 | 1 869 | 869 869 | 98.5 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-135338
+
+CONTIG: scaffold-136062 (8358bp)
+Top Length: 793  Top ID: 96.1
+		This contig is partially unaligned. (Aligned 793 out of 8358 bases)
+		Alignment: 1196754 1197546 | 7566 8358 | 793 793 | 96.1 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-136062
+		Unaligned bases: 1 to 7565 (7565)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-137801 (94748bp)
+Top Length: 27394  Top ID: 95.16
+		This contig is misassembled. 7 total aligns.
+			Real Alignment 1: 202734 212217 | 9725 251 | 9484 9475 | 95.58 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-137801
+			  Extensive misassembly ( relocation, inconsistency = 1052 ) between these two alignments
+			Real Alignment 2: 195010 197385 | 16397 14022 | 2376 2376 | 97.65 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-137801
+			  Overlap between these two alignments (local misassembly). Inconsistency = -81 
+			Real Alignment 3: 157077 184554 | 54327 26934 | 27478 27394 | 95.16 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-137801
+			  Overlap between these two alignments (local misassembly). Inconsistency = -373 
+			Real Alignment 4: 146561 149639 | 65216 62138 | 3079 3079 | 97.21 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-137801
+			  Extensive misassembly ( relocation, inconsistency = 2391 ) between these two alignments
+			Real Alignment 5: 133804 136834 | 75588 72552 | 3031 3037 | 96.32 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-137801
+			  Gap between these two alignments (local misassembly). Inconsistency = 44 
+			Real Alignment 6: 127208 133583 | 82044 75765 | 6376 6280 | 95.08 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-137801
+			  Extensive misassembly ( relocation, inconsistency = 6045 ) between these two alignments
+			Real Alignment 7: 118305 119455 | 84902 83752 | 1151 1151 | 95.66 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-137801
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-137836 (109160bp)
+Top Length: 19204  Top ID: 95.73
+		Skipping redundant alignment 1052172 1052258 | 55331 55244 | 87 88 | 95.51 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-137836
+		This contig is misassembled. 10 total aligns.
+			Real Alignment 1: 1084559 1099334 | 14856 1 | 14776 14856 | 96.32 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-137836
+			  Gap between these two alignments (local misassembly). Inconsistency = 113 
+			Real Alignment 2: 1079240 1082366 | 20056 16936 | 3127 3121 | 98.27 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-137836
+			  Overlap between these two alignments (local misassembly). Inconsistency = -135 
+			Real Alignment 3: 1059323 1078644 | 39990 20787 | 19322 19204 | 95.73 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-137836
+			  Extensive misassembly ( relocation, inconsistency = -1310 ) between these two alignments
+			Real Alignment 4: 1052177 1057248 | 48461 43375 | 5072 5087 | 95.47 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-137836
+			  Overlap between these two alignments (local misassembly). Inconsistency = -296 
+			Real Alignment 5: 1048007 1048148 | 52927 52786 | 142 142 | 95.77 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-137836
+			  Gap between these two alignments (local misassembly). Inconsistency = 39 
+			Real Alignment 6: 1039302 1046071 | 61612 54824 | 6770 6789 | 96.7 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-137836
+			  Gap between these two alignments (local misassembly). Inconsistency = 41 
+			Real Alignment 7: 1023207 1031428 | 77685 69445 | 8222 8241 | 95.74 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-137836
+			  Extensive misassembly ( relocation, inconsistency = -2585 ) between these two alignments
+			Real Alignment 8: 1011472 1013018 | 92005 90459 | 1547 1547 | 95.6 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-137836
+			  Overlap between these two alignments (local misassembly). Inconsistency = -72 
+			Real Alignment 9: 994425 1011350 | 109160 92199 | 16926 16962 | 95.54 | Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_ scaffold-137836
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Rothia_mucilaginosa_DY-18/contigs_reports/nucmer_output/Ray.used_snps
+	Reference Rothia_mucilaginosa_DY-18_gi_283457089_ref_NC_: 355 total alignments. 1 total regions.
+		Region: 1 to 2264603 (2264603 bp)
+			Align 1: 1 3642 scaffold-682 26785 30429
+				Gap between this and next alignment: 3642 to 3724 (81 bp)
+				Next Alignment: 3724 18386 scaffold-682 30603 45291
+
+			Align 2: 3724 18386 scaffold-682 30603 45291
+				The next alignment (11916 12038 scaffold-2784 311 433) is redundant. Skipping.
+				The next alignment (11916 12035 scaffold-77183 275 393) is redundant. Skipping.
+				The next alignment (12504 13076 scaffold-123505 1 573) is redundant. Skipping.
+				The next alignment (15170 16345 scaffold-49964 1176 1) is redundant. Skipping.
+				Gap between this and next alignment: 18386 to 20830 (2443 bp)
+				Next Alignment: 20830 21531 scaffold-38511 1 702
+
+			Align 7: 20830 21531 scaffold-38511 1 702
+				Gap between this and next alignment: 21531 to 24841 (3309 bp)
+				Next Alignment: 24841 25384 scaffold-104821 544 1
+
+			Align 8: 24841 25384 scaffold-104821 544 1
+				Gap between this and next alignment: 25384 to 43979 (18594 bp)
+				Next Alignment: 43979 44149 scaffold-10720 746 576
+
+			Align 9: 43979 44149 scaffold-10720 746 576
+				Gap between this and next alignment: 44149 to 50390 (6240 bp)
+				Next Alignment: 50390 51562 scaffold-118682 1173 1
+
+			Align 10: 50390 51562 scaffold-118682 1173 1
+				Negative gap (overlap) between this and next alignment: 51562 to 51435 (-127 bp)
+				Next Alignment: 51435 53753 scaffold-682 77595 79911
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 77595 to 77722.
+			Align 11: 51563 53753 scaffold-682 77722 79911
+				Gap between this and next alignment: 53753 to 53800 (46 bp)
+				Next Alignment: 53800 61449 scaffold-682 83114 90763
+
+			Align 12: 53800 61449 scaffold-682 83114 90763
+				The next alignment (59455 59960 scaffold-76638 508 3) is redundant. Skipping.
+				Gap between this and next alignment: 61449 to 61541 (91 bp)
+				Next Alignment: 61541 70544 scaffold-682 90947 99956
+
+			Align 14: 61541 70544 scaffold-682 90947 99956
+				Gap between this and next alignment: 70544 to 73601 (3056 bp)
+				Next Alignment: 73601 74525 scaffold-92458 925 1
+
+			Align 15: 73601 74525 scaffold-92458 925 1
+				Gap between this and next alignment: 74525 to 74692 (166 bp)
+				Next Alignment: 74692 75253 scaffold-36268 562 1
+
+			Align 16: 74692 75253 scaffold-36268 562 1
+				Gap between this and next alignment: 75253 to 81142 (5888 bp)
+				Next Alignment: 81142 81975 scaffold-682 114621 115454
+
+			Align 17: 81142 81975 scaffold-682 114621 115454
+				Gap between this and next alignment: 81975 to 85236 (3260 bp)
+				Next Alignment: 85236 87144 scaffold-56058 1 1910
+
+			Align 18: 85236 87144 scaffold-56058 1 1910
+				Negative gap (overlap) between this and next alignment: 87144 to 85918 (-1226 bp)
+				Next Alignment: 85918 90838 scaffold-682 120314 125274
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 120314 to 121538.
+			Align 19: 87145 90838 scaffold-682 121538 125274
+				The next alignment (89953 90621 scaffold-93348 669 1) is redundant. Skipping.
+				Gap between this and next alignment: 90838 to 104019 (13180 bp)
+				Next Alignment: 104019 104421 scaffold-57098 569 167
+
+			Align 21: 104019 104421 scaffold-57098 569 167
+				Gap between this and next alignment: 104421 to 105449 (1027 bp)
+				Next Alignment: 105449 105548 scaffold-16249 1 100
+
+			Align 22: 105449 105548 scaffold-16249 1 100
+				Negative gap (overlap) between this and next alignment: 105548 to 105473 (-75 bp)
+				Next Alignment: 105473 106469 scaffold-4419 1000 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1000 to 924.
+			Align 23: 105549 106469 scaffold-4419 924 1
+				Gap between this and next alignment: 106469 to 107195 (725 bp)
+				Next Alignment: 107195 107778 scaffold-682 140588 141171
+
+			Align 24: 107195 107778 scaffold-682 140588 141171
+				Negative gap (overlap) between this and next alignment: 107778 to 107711 (-67 bp)
+				Next Alignment: 107711 108288 scaffold-70454 578 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 578 to 510.
+			Align 25: 107779 108288 scaffold-70454 510 1
+				Negative gap (overlap) between this and next alignment: 108288 to 108110 (-178 bp)
+				Next Alignment: 108110 108849 scaffold-8366 740 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 740 to 561.
+			Align 26: 108289 108849 scaffold-8366 561 1
+				Gap between this and next alignment: 108849 to 112760 (3910 bp)
+				Next Alignment: 112760 113334 scaffold-79858 578 4
+
+			Align 27: 112760 113334 scaffold-79858 578 4
+				Gap between this and next alignment: 113334 to 113617 (282 bp)
+				Next Alignment: 113617 114265 scaffold-37995 649 1
+
+			Align 28: 113617 114265 scaffold-37995 649 1
+				Gap between this and next alignment: 114265 to 118305 (4039 bp)
+				Next Alignment: 118305 119455 scaffold-137801 84902 83752
+
+			Align 29: 118305 119455 scaffold-137801 84902 83752
+				Gap between this and next alignment: 119455 to 127208 (7752 bp)
+				Next Alignment: 127208 133583 scaffold-137801 82044 75765
+
+			Align 30: 127208 133583 scaffold-137801 82044 75765
+				The next alignment (130374 130644 scaffold-4318 272 1) is redundant. Skipping.
+				The next alignment (132190 132812 scaffold-31648 620 1) is redundant. Skipping.
+				Gap between this and next alignment: 133583 to 133804 (220 bp)
+				Next Alignment: 133804 136834 scaffold-137801 75588 72552
+
+			Align 33: 133804 136834 scaffold-137801 75588 72552
+				Gap between this and next alignment: 136834 to 137103 (268 bp)
+				Next Alignment: 137103 137904 scaffold-6383 803 1
+
+			Align 34: 137103 137904 scaffold-6383 803 1
+				Gap between this and next alignment: 137904 to 137955 (50 bp)
+				Next Alignment: 137955 138629 scaffold-9109 675 1
+
+			Align 35: 137955 138629 scaffold-9109 675 1
+				Gap between this and next alignment: 138629 to 142942 (4312 bp)
+				Next Alignment: 142942 143371 scaffold-106880 634 205
+
+			Align 36: 142942 143371 scaffold-106880 634 205
+				Gap between this and next alignment: 143371 to 146561 (3189 bp)
+				Next Alignment: 146561 149639 scaffold-137801 65216 62138
+
+			Align 37: 146561 149639 scaffold-137801 65216 62138
+				Negative gap (overlap) between this and next alignment: 149639 to 149490 (-149 bp)
+				Next Alignment: 149490 151122 scaffold-7427 1 1634
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 151.
+			Align 38: 149640 151122 scaffold-7427 151 1634
+				Gap between this and next alignment: 151122 to 157077 (5954 bp)
+				Next Alignment: 157077 184554 scaffold-137801 54327 26934
+
+			Align 39: 157077 184554 scaffold-137801 54327 26934
+				The next alignment (183972 184554 scaffold-68607 593 11) is redundant. Skipping.
+				Gap between this and next alignment: 184554 to 195010 (10455 bp)
+				Next Alignment: 195010 197385 scaffold-137801 16397 14022
+
+			Align 41: 195010 197385 scaffold-137801 16397 14022
+				Gap between this and next alignment: 197385 to 202734 (5348 bp)
+				Next Alignment: 202734 212217 scaffold-137801 9725 251
+
+			Align 42: 202734 212217 scaffold-137801 9725 251
+				The next alignment (203359 203883 scaffold-82447 525 1) is redundant. Skipping.
+				The next alignment (209949 210516 scaffold-116840 1 567) is redundant. Skipping.
+				Gap between this and next alignment: 212217 to 212786 (568 bp)
+				Next Alignment: 212786 240097 scaffold-2904 865 28120
+
+			Align 45: 212786 240097 scaffold-2904 865 28120
+				The next alignment (225253 225484 scaffold-11589 1403 1172) is redundant. Skipping.
+				Negative gap (overlap) between this and next alignment: 240097 to 240097 (0 bp)
+				Next Alignment: 240097 274016 scaffold-2904 29235 63143
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 29235 to 29236.
+			Align 47: 240098 274016 scaffold-2904 29236 63143
+				The next alignment (242498 243023 scaffold-73229 1 526) is redundant. Skipping.
+				The next alignment (248396 249674 scaffold-113023 1279 1) is redundant. Skipping.
+				The next alignment (267107 267906 scaffold-76570 808 1) is redundant. Skipping.
+				Negative gap (overlap) between this and next alignment: 274016 to 273779 (-237 bp)
+				Next Alignment: 273779 274465 scaffold-38268 674 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 674 to 436.
+			Align 51: 274017 274465 scaffold-38268 436 1
+				Negative gap (overlap) between this and next alignment: 274465 to 274241 (-224 bp)
+				Next Alignment: 274241 274741 scaffold-2904 63341 63842
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 63341 to 63567.
+			Align 52: 274466 274741 scaffold-2904 63567 63842
+				Gap between this and next alignment: 274741 to 275757 (1015 bp)
+				Next Alignment: 275757 276448 scaffold-48219 1 683
+
+			Align 53: 275757 276448 scaffold-48219 1 683
+				Gap between this and next alignment: 276448 to 278067 (1618 bp)
+				Next Alignment: 278067 283682 scaffold-2278 3512 9140
+
+			Align 54: 278067 283682 scaffold-2278 3512 9140
+				Gap between this and next alignment: 283682 to 301350 (17667 bp)
+				Next Alignment: 301350 301626 scaffold-53995 700 424
+
+			Align 55: 301350 301626 scaffold-53995 700 424
+				Gap between this and next alignment: 301626 to 302558 (931 bp)
+				Next Alignment: 302558 303257 scaffold-77066 1 700
+
+			Align 56: 302558 303257 scaffold-77066 1 700
+				Gap between this and next alignment: 303257 to 305052 (1794 bp)
+				Next Alignment: 305052 305898 scaffold-45948 1 847
+
+			Align 57: 305052 305898 scaffold-45948 1 847
+				Gap between this and next alignment: 305898 to 306041 (142 bp)
+				Next Alignment: 306041 306536 scaffold-1561 1 495
+
+			Align 58: 306041 306536 scaffold-1561 1 495
+				The next alignment (306323 306536 scaffold-1561 624 836) is redundant. Skipping.
+				Gap between this and next alignment: 306536 to 308934 (2397 bp)
+				Next Alignment: 308934 309419 scaffold-2107 1198 1683
+
+			Align 60: 308934 309419 scaffold-2107 1198 1683
+				Gap between this and next alignment: 309419 to 311698 (2278 bp)
+				Next Alignment: 311698 312299 scaffold-50936 602 1
+
+			Align 61: 311698 312299 scaffold-50936 602 1
+				Gap between this and next alignment: 312299 to 318270 (5970 bp)
+				Next Alignment: 318270 327433 scaffold-3071 14305 23466
+
+			Align 62: 318270 327433 scaffold-3071 14305 23466
+				Gap between this and next alignment: 327433 to 327761 (327 bp)
+				Next Alignment: 327761 333328 scaffold-3071 23795 29364
+
+			Align 63: 327761 333328 scaffold-3071 23795 29364
+				Gap between this and next alignment: 333328 to 357133 (23804 bp)
+				Next Alignment: 357133 357702 scaffold-1202 1 570
+
+			Align 64: 357133 357702 scaffold-1202 1 570
+				Gap between this and next alignment: 357702 to 357733 (30 bp)
+				Next Alignment: 357733 358209 scaffold-1202 866 1342
+
+			Align 65: 357733 358209 scaffold-1202 866 1342
+				Gap between this and next alignment: 358209 to 366175 (7965 bp)
+				Next Alignment: 366175 368208 scaffold-3071 62180 64213
+
+			Align 66: 366175 368208 scaffold-3071 62180 64213
+				Gap between this and next alignment: 368208 to 368210 (1 bp)
+				Next Alignment: 368210 373114 scaffold-79 211 5147
+
+			Align 67: 368210 373114 scaffold-79 211 5147
+				Gap between this and next alignment: 373114 to 375912 (2797 bp)
+				Next Alignment: 375912 381808 scaffold-79 11738 17556
+
+			Align 68: 375912 381808 scaffold-79 11738 17556
+				Gap between this and next alignment: 381808 to 382258 (449 bp)
+				Next Alignment: 382258 383643 scaffold-79 18003 19403
+
+			Align 69: 382258 383643 scaffold-79 18003 19403
+				Gap between this and next alignment: 383643 to 393376 (9732 bp)
+				Next Alignment: 393376 393948 scaffold-17232 573 1
+
+			Align 70: 393376 393948 scaffold-17232 573 1
+				Gap between this and next alignment: 393948 to 407815 (13866 bp)
+				Next Alignment: 407815 409169 scaffold-66182 1355 1
+
+			Align 71: 407815 409169 scaffold-66182 1355 1
+				Gap between this and next alignment: 409169 to 413213 (4043 bp)
+				Next Alignment: 413213 413552 scaffold-4396 1 340
+
+			Align 72: 413213 413552 scaffold-4396 1 340
+				Gap between this and next alignment: 413552 to 419837 (6284 bp)
+				Next Alignment: 419837 420594 scaffold-73439 740 1
+
+			Align 73: 419837 420594 scaffold-73439 740 1
+				Gap between this and next alignment: 420594 to 424328 (3733 bp)
+				Next Alignment: 424328 433137 scaffold-79 60184 69016
+
+			Align 74: 424328 433137 scaffold-79 60184 69016
+				Gap between this and next alignment: 433137 to 433279 (141 bp)
+				Next Alignment: 433279 453046 scaffold-79 69160 88901
+
+			Align 75: 433279 453046 scaffold-79 69160 88901
+				The next alignment (440311 440529 scaffold-13890 702 483) is redundant. Skipping.
+				The next alignment (440680 440933 scaffold-13890 253 1) is redundant. Skipping.
+				The next alignment (450103 450800 scaffold-104043 1 698) is redundant. Skipping.
+				Gap between this and next alignment: 453046 to 453158 (111 bp)
+				Next Alignment: 453158 499563 scaffold-79 89039 135449
+
+			Align 79: 453158 499563 scaffold-79 89039 135449
+				The next alignment (466798 467347 scaffold-50211 553 2) is redundant. Skipping.
+				Gap between this and next alignment: 499563 to 500052 (488 bp)
+				Next Alignment: 500052 509403 scaffold-79 135801 145153
+
+			Align 81: 500052 509403 scaffold-79 135801 145153
+				The next alignment (502634 503436 scaffold-2186 916 1718) is redundant. Skipping.
+				The next alignment (503483 504119 scaffold-2186 2005 2641) is redundant. Skipping.
+				Gap between this and next alignment: 509403 to 509657 (253 bp)
+				Next Alignment: 509657 512710 scaffold-79 145390 148443
+
+			Align 84: 509657 512710 scaffold-79 145390 148443
+				Negative gap (overlap) between this and next alignment: 512710 to 512682 (-28 bp)
+				Next Alignment: 512682 550602 scaffold-79 148672 186606
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 148672 to 148701.
+			Align 85: 512711 550602 scaffold-79 148701 186606
+				The next alignment (523435 524557 scaffold-108342 1123 1) is redundant. Skipping.
+				The next alignment (528703 529124 scaffold-16562 421 1) is redundant. Skipping.
+				The next alignment (537795 538080 scaffold-117058 286 1) is redundant. Skipping.
+				The next alignment (537850 538080 scaffold-117058 287 516) is redundant. Skipping.
+				Gap between this and next alignment: 550602 to 551353 (750 bp)
+				Next Alignment: 551353 559422 scaffold-79 187370 195436
+
+			Align 90: 551353 559422 scaffold-79 187370 195436
+				Gap between this and next alignment: 559422 to 571204 (11781 bp)
+				Next Alignment: 571204 572072 scaffold-135338 1 869
+
+			Align 91: 571204 572072 scaffold-135338 1 869
+				Gap between this and next alignment: 572072 to 572110 (37 bp)
+				Next Alignment: 572110 572749 scaffold-27743 640 1
+
+			Align 92: 572110 572749 scaffold-27743 640 1
+				Gap between this and next alignment: 572749 to 574662 (1912 bp)
+				Next Alignment: 574662 575468 scaffold-930 1 807
+
+			Align 93: 574662 575468 scaffold-930 1 807
+				Negative gap (overlap) between this and next alignment: 575468 to 575343 (-125 bp)
+				Next Alignment: 575343 576268 scaffold-930 1046 1971
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1046 to 1172.
+			Align 94: 575469 576268 scaffold-930 1172 1971
+				Gap between this and next alignment: 576268 to 576834 (565 bp)
+				Next Alignment: 576834 577409 scaffold-61783 576 1
+
+			Align 95: 576834 577409 scaffold-61783 576 1
+				Gap between this and next alignment: 577409 to 590224 (12814 bp)
+				Next Alignment: 590224 594287 scaffold-79 224650 228728
+
+			Align 96: 590224 594287 scaffold-79 224650 228728
+				The next alignment (593708 594273 scaffold-83448 1 566) is redundant. Skipping.
+				Gap between this and next alignment: 594287 to 594295 (7 bp)
+				Next Alignment: 594295 595573 scaffold-79 228815 230096
+
+			Align 98: 594295 595573 scaffold-79 228815 230096
+				The next alignment (595058 595572 scaffold-62182 1 515) is redundant. Skipping.
+				Negative gap (overlap) between this and next alignment: 595573 to 595371 (-202 bp)
+				Next Alignment: 595371 595680 scaffold-79 232400 232708
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 232400 to 232602.
+			Align 100: 595574 595680 scaffold-79 232602 232708
+				Gap between this and next alignment: 595680 to 599758 (4077 bp)
+				Next Alignment: 599758 600428 scaffold-114243 1 671
+
+			Align 101: 599758 600428 scaffold-114243 1 671
+				Gap between this and next alignment: 600428 to 602963 (2534 bp)
+				Next Alignment: 602963 603600 scaffold-129558 4 641
+
+			Align 102: 602963 603600 scaffold-129558 4 641
+				Gap between this and next alignment: 603600 to 605389 (1788 bp)
+				Next Alignment: 605389 605896 scaffold-81592 508 1
+
+			Align 103: 605389 605896 scaffold-81592 508 1
+				Gap between this and next alignment: 605896 to 617156 (11259 bp)
+				Next Alignment: 617156 620939 scaffold-79 252832 256617
+
+			Align 104: 617156 620939 scaffold-79 252832 256617
+				The next alignment (618585 619092 scaffold-36385 507 1) is redundant. Skipping.
+				Gap between this and next alignment: 620939 to 639377 (18437 bp)
+				Next Alignment: 639377 639495 scaffold-77466 1 119
+
+			Align 106: 639377 639495 scaffold-77466 1 119
+				Gap between this and next alignment: 639495 to 646259 (6763 bp)
+				Next Alignment: 646259 647539 scaffold-79 278572 279852
+
+			Align 107: 646259 647539 scaffold-79 278572 279852
+				Gap between this and next alignment: 647539 to 673717 (26177 bp)
+				Next Alignment: 673717 682818 scaffold-79 304779 313949
+
+			Align 108: 673717 682818 scaffold-79 304779 313949
+				Negative gap (overlap) between this and next alignment: 682818 to 682505 (-313 bp)
+				Next Alignment: 682505 683031 scaffold-23896 1 527
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 315.
+			Align 109: 682819 683031 scaffold-23896 315 527
+				Gap between this and next alignment: 683031 to 683227 (195 bp)
+				Next Alignment: 683227 683310 scaffold-7120 3937 3854
+
+			Align 110: 683227 683310 scaffold-7120 3937 3854
+				The next alignment (683234 683310 scaffold-4678 345 269) is redundant. Skipping.
+				Gap between this and next alignment: 683310 to 684175 (864 bp)
+				Next Alignment: 684175 686302 scaffold-79 329785 331912
+
+			Align 112: 684175 686302 scaffold-79 329785 331912
+				The next alignment (685062 685276 scaffold-37241 1 215) is redundant. Skipping.
+				The next alignment (685068 685276 scaffold-52693 1 209) is redundant. Skipping.
+				The next alignment (685078 685276 scaffold-181 11725 11527) is redundant. Skipping.
+				The next alignment (685090 685276 scaffold-808 1 187) is redundant. Skipping.
+				The next alignment (685105 685276 scaffold-1752 8869 8698) is redundant. Skipping.
+				The next alignment (685105 685276 scaffold-22664 1 172) is redundant. Skipping.
+				The next alignment (685204 685276 scaffold-2658 69 142) is redundant. Skipping.
+				Gap between this and next alignment: 686302 to 689763 (3460 bp)
+				Next Alignment: 689763 690794 scaffold-116100 1 1032
+
+			Align 120: 689763 690794 scaffold-116100 1 1032
+				Gap between this and next alignment: 690794 to 704147 (13352 bp)
+				Next Alignment: 704147 707744 scaffold-118482 3602 1
+
+			Align 121: 704147 707744 scaffold-118482 3602 1
+				Gap between this and next alignment: 707744 to 714542 (6797 bp)
+				Next Alignment: 714542 715287 scaffold-76496 746 1
+
+			Align 122: 714542 715287 scaffold-76496 746 1
+				Gap between this and next alignment: 715287 to 721486 (6198 bp)
+				Next Alignment: 721486 721952 scaffold-41592 547 81
+
+			Align 123: 721486 721952 scaffold-41592 547 81
+				Gap between this and next alignment: 721952 to 726287 (4334 bp)
+				Next Alignment: 726287 727050 scaffold-129736 764 1
+
+			Align 124: 726287 727050 scaffold-129736 764 1
+				Gap between this and next alignment: 727050 to 729734 (2683 bp)
+				Next Alignment: 729734 730525 scaffold-17923 792 1
+
+			Align 125: 729734 730525 scaffold-17923 792 1
+				Negative gap (overlap) between this and next alignment: 730525 to 730154 (-371 bp)
+				Next Alignment: 730154 744322 scaffold-79 373780 387921
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 373780 to 374152.
+			Align 126: 730526 744322 scaffold-79 374152 387921
+				Gap between this and next alignment: 744322 to 746061 (1738 bp)
+				Next Alignment: 746061 765701 scaffold-79 394053 413623
+
+			Align 127: 746061 765701 scaffold-79 394053 413623
+				The next alignment (756217 756618 scaffold-68827 652 251) is redundant. Skipping.
+				Gap between this and next alignment: 765701 to 765948 (246 bp)
+				Next Alignment: 765948 776152 scaffold-79 413817 423998
+
+			Align 129: 765948 776152 scaffold-79 413817 423998
+				The next alignment (767348 767942 scaffold-94354 1 596) is redundant. Skipping.
+				Gap between this and next alignment: 776152 to 776323 (170 bp)
+				Next Alignment: 776323 783231 scaffold-79 424193 431130
+
+			Align 131: 776323 783231 scaffold-79 424193 431130
+				Gap between this and next alignment: 783231 to 784918 (1686 bp)
+				Next Alignment: 784918 793231 scaffold-2545 33843 25528
+
+			Align 132: 784918 793231 scaffold-2545 33843 25528
+				Gap between this and next alignment: 793231 to 794481 (1249 bp)
+				Next Alignment: 794481 799263 scaffold-2545 24249 19455
+
+			Align 133: 794481 799263 scaffold-2545 24249 19455
+				Gap between this and next alignment: 799263 to 801427 (2163 bp)
+				Next Alignment: 801427 806685 scaffold-2545 17249 11987
+
+			Align 134: 801427 806685 scaffold-2545 17249 11987
+				The next alignment (805217 805468 scaffold-114099 252 1) is redundant. Skipping.
+				Gap between this and next alignment: 806685 to 807134 (448 bp)
+				Next Alignment: 807134 808779 scaffold-2545 11494 9848
+
+			Align 136: 807134 808779 scaffold-2545 11494 9848
+				Gap between this and next alignment: 808779 to 811371 (2591 bp)
+				Next Alignment: 811371 812012 scaffold-67538 642 1
+
+			Align 137: 811371 812012 scaffold-67538 642 1
+				Gap between this and next alignment: 812012 to 816452 (4439 bp)
+				Next Alignment: 816452 816599 scaffold-1229 2206 2059
+
+			Align 138: 816452 816599 scaffold-1229 2206 2059
+				Gap between this and next alignment: 816599 to 823100 (6500 bp)
+				Next Alignment: 823100 823703 scaffold-36700 1 595
+
+			Align 139: 823100 823703 scaffold-36700 1 595
+				Negative gap (overlap) between this and next alignment: 823703 to 823623 (-80 bp)
+				Next Alignment: 823623 824129 scaffold-2382 14519 15024
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 14519 to 14600.
+			Align 140: 823704 824129 scaffold-2382 14600 15024
+				Negative gap (overlap) between this and next alignment: 824129 to 823789 (-340 bp)
+				Next Alignment: 823789 824172 scaffold-67 1 383
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 341.
+			Align 141: 824130 824172 scaffold-67 341 383
+				The next alignment (824054 824129 scaffold-3 99468 99393) is redundant. Skipping.
+				Gap between this and next alignment: 824172 to 828842 (4669 bp)
+				Next Alignment: 828842 832832 scaffold-67 4736 8716
+
+			Align 143: 828842 832832 scaffold-67 4736 8716
+				Negative gap (overlap) between this and next alignment: 832832 to 832806 (-26 bp)
+				Next Alignment: 832806 839667 scaffold-67 8963 15852
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 8963 to 8990.
+			Align 144: 832833 839667 scaffold-67 8990 15852
+				Gap between this and next alignment: 839667 to 848278 (8610 bp)
+				Next Alignment: 848278 848530 scaffold-97372 253 1
+
+			Align 145: 848278 848530 scaffold-97372 253 1
+				Gap between this and next alignment: 848530 to 854385 (5854 bp)
+				Next Alignment: 854385 881508 scaffold-1 140920 113681
+
+			Align 146: 854385 881508 scaffold-1 140920 113681
+				The next alignment (874721 874812 scaffold-15664 1 92) is redundant. Skipping.
+				The next alignment (875058 875219 scaffold-15664 817 978) is redundant. Skipping.
+				Gap between this and next alignment: 881508 to 903605 (22096 bp)
+				Next Alignment: 903605 904323 scaffold-54883 719 1
+
+			Align 149: 903605 904323 scaffold-54883 719 1
+				Gap between this and next alignment: 904323 to 909206 (4882 bp)
+				Next Alignment: 909206 910035 scaffold-50804 835 1
+
+			Align 150: 909206 910035 scaffold-50804 835 1
+				Gap between this and next alignment: 910035 to 911480 (1444 bp)
+				Next Alignment: 911480 915303 scaffold-1 83533 79706
+
+			Align 151: 911480 915303 scaffold-1 83533 79706
+				Gap between this and next alignment: 915303 to 915797 (493 bp)
+				Next Alignment: 915797 932951 scaffold-1 79104 61744
+
+			Align 152: 915797 932951 scaffold-1 79104 61744
+				The next alignment (926815 927378 scaffold-88144 564 1) is redundant. Skipping.
+				Negative gap (overlap) between this and next alignment: 932951 to 932879 (-72 bp)
+				Next Alignment: 932879 936379 scaffold-1 61632 58131
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 61632 to 61559.
+			Align 154: 932952 936379 scaffold-1 61559 58131
+				Gap between this and next alignment: 936379 to 941654 (5274 bp)
+				Next Alignment: 941654 946682 scaffold-1 52826 47802
+
+			Align 155: 941654 946682 scaffold-1 52826 47802
+				Negative gap (overlap) between this and next alignment: 946682 to 946360 (-322 bp)
+				Next Alignment: 946360 947010 scaffold-28366 4 651
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 4 to 327.
+			Align 156: 946683 947010 scaffold-28366 327 651
+				Gap between this and next alignment: 947010 to 974048 (27037 bp)
+				Next Alignment: 974048 974769 scaffold-51992 722 1
+
+			Align 157: 974048 974769 scaffold-51992 722 1
+				Gap between this and next alignment: 974769 to 993164 (18394 bp)
+				Next Alignment: 993164 993454 scaffold-22664 442 732
+
+			Align 158: 993164 993454 scaffold-22664 442 732
+				Gap between this and next alignment: 993454 to 994425 (970 bp)
+				Next Alignment: 994425 1011350 scaffold-137836 109160 92199
+
+			Align 159: 994425 1011350 scaffold-137836 109160 92199
+				The next alignment (1005456 1006099 scaffold-97377 644 1) is redundant. Skipping.
+				Gap between this and next alignment: 1011350 to 1011472 (121 bp)
+				Next Alignment: 1011472 1013018 scaffold-137836 92005 90459
+
+			Align 161: 1011472 1013018 scaffold-137836 92005 90459
+				Gap between this and next alignment: 1013018 to 1020764 (7745 bp)
+				Next Alignment: 1020764 1021083 scaffold-4595 1 320
+
+			Align 162: 1020764 1021083 scaffold-4595 1 320
+				Gap between this and next alignment: 1021083 to 1022011 (927 bp)
+				Next Alignment: 1022011 1022267 scaffold-3174 3296 3552
+
+			Align 163: 1022011 1022267 scaffold-3174 3296 3552
+				Gap between this and next alignment: 1022267 to 1023207 (939 bp)
+				Next Alignment: 1023207 1031428 scaffold-137836 77685 69445
+
+			Align 164: 1023207 1031428 scaffold-137836 77685 69445
+				The next alignment (1026289 1026841 scaffold-32811 553 1) is redundant. Skipping.
+				The next alignment (1027029 1027773 scaffold-46070 745 1) is redundant. Skipping.
+				Gap between this and next alignment: 1031428 to 1039302 (7873 bp)
+				Next Alignment: 1039302 1046071 scaffold-137836 61612 54824
+
+			Align 167: 1039302 1046071 scaffold-137836 61612 54824
+				Gap between this and next alignment: 1046071 to 1048007 (1935 bp)
+				Next Alignment: 1048007 1048148 scaffold-137836 52927 52786
+
+			Align 168: 1048007 1048148 scaffold-137836 52927 52786
+				Gap between this and next alignment: 1048148 to 1052177 (4028 bp)
+				Next Alignment: 1052177 1057248 scaffold-137836 48461 43375
+
+			Align 169: 1052177 1057248 scaffold-137836 48461 43375
+				The next alignment (1052631 1052762 scaffold-495 1352 1483) is redundant. Skipping.
+				Negative gap (overlap) between this and next alignment: 1057248 to 1057097 (-151 bp)
+				Next Alignment: 1057097 1058253 scaffold-3160 1 1157
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 153.
+			Align 171: 1057249 1058253 scaffold-3160 153 1157
+				Gap between this and next alignment: 1058253 to 1059323 (1069 bp)
+				Next Alignment: 1059323 1078644 scaffold-137836 39990 20787
+
+			Align 172: 1059323 1078644 scaffold-137836 39990 20787
+				The next alignment (1070139 1070692 scaffold-114107 554 1) is redundant. Skipping.
+				Gap between this and next alignment: 1078644 to 1079240 (595 bp)
+				Next Alignment: 1079240 1082366 scaffold-137836 20056 16936
+
+			Align 174: 1079240 1082366 scaffold-137836 20056 16936
+				Gap between this and next alignment: 1082366 to 1084559 (2192 bp)
+				Next Alignment: 1084559 1099334 scaffold-137836 14856 1
+
+			Align 175: 1084559 1099334 scaffold-137836 14856 1
+				Negative gap (overlap) between this and next alignment: 1099334 to 1088427 (-10907 bp)
+				Next Alignment: 1088427 1101231 scaffold-2622 1 12885
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 10989.
+			Align 176: 1099335 1101231 scaffold-2622 10989 12885
+				Gap between this and next alignment: 1101231 to 1101453 (221 bp)
+				Next Alignment: 1101453 1106862 scaffold-2622 13173 18604
+
+			Align 177: 1101453 1106862 scaffold-2622 13173 18604
+				Gap between this and next alignment: 1106862 to 1107650 (787 bp)
+				Next Alignment: 1107650 1110927 scaffold-2622 19233 22512
+
+			Align 178: 1107650 1110927 scaffold-2622 19233 22512
+				The next alignment (1107650 1107791 scaffold-48906 224 365) is redundant. Skipping.
+				Gap between this and next alignment: 1110927 to 1116001 (5073 bp)
+				Next Alignment: 1116001 1116919 scaffold-14 63241 62328
+
+			Align 180: 1116001 1116919 scaffold-14 63241 62328
+				Gap between this and next alignment: 1116919 to 1116957 (37 bp)
+				Next Alignment: 1116957 1125391 scaffold-14 62332 53852
+
+			Align 181: 1116957 1125391 scaffold-14 62332 53852
+				Gap between this and next alignment: 1125391 to 1129055 (3663 bp)
+				Next Alignment: 1129055 1129246 scaffold-9233 191 1
+
+			Align 182: 1129055 1129246 scaffold-9233 191 1
+				Gap between this and next alignment: 1129246 to 1140133 (10886 bp)
+				Next Alignment: 1140133 1155395 scaffold-14 39529 24294
+
+			Align 183: 1140133 1155395 scaffold-14 39529 24294
+				Gap between this and next alignment: 1155395 to 1165871 (10475 bp)
+				Next Alignment: 1165871 1184413 scaffold-4295 1 18626
+
+			Align 184: 1165871 1184413 scaffold-4295 1 18626
+				The next alignment (1170748 1171684 scaffold-101495 937 1) is redundant. Skipping.
+				The next alignment (1177701 1178788 scaffold-2012 1085 1) is redundant. Skipping.
+				The next alignment (1182022 1182561 scaffold-96846 1 541) is redundant. Skipping.
+				Negative gap (overlap) between this and next alignment: 1184413 to 1183759 (-654 bp)
+				Next Alignment: 1183759 1184480 scaffold-2724 4335 3616
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 4335 to 3682.
+			Align 188: 1184414 1184480 scaffold-2724 3682 3616
+				Gap between this and next alignment: 1184480 to 1184908 (427 bp)
+				Next Alignment: 1184908 1185118 scaffold-9072 543 754
+
+			Align 189: 1184908 1185118 scaffold-9072 543 754
+				Gap between this and next alignment: 1185118 to 1185231 (112 bp)
+				Next Alignment: 1185231 1185639 scaffold-2724 409 1
+
+			Align 190: 1185231 1185639 scaffold-2724 409 1
+				Negative gap (overlap) between this and next alignment: 1185639 to 1185231 (-408 bp)
+				Next Alignment: 1185231 1191187 scaffold-4295 21750 27714
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 21750 to 22158.
+			Align 191: 1185640 1191187 scaffold-4295 22158 27714
+				Gap between this and next alignment: 1191187 to 1196754 (5566 bp)
+				Next Alignment: 1196754 1197546 scaffold-136062 7566 8358
+
+			Align 192: 1196754 1197546 scaffold-136062 7566 8358
+				Negative gap (overlap) between this and next alignment: 1197546 to 1197179 (-367 bp)
+				Next Alignment: 1197179 1200550 scaffold-3205 1 3379
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 369.
+			Align 193: 1197547 1200550 scaffold-3205 369 3379
+				Gap between this and next alignment: 1200550 to 1201046 (495 bp)
+				Next Alignment: 1201046 1214320 scaffold-3205 3380 16641
+
+			Align 194: 1201046 1214320 scaffold-3205 3380 16641
+				Gap between this and next alignment: 1214320 to 1215838 (1517 bp)
+				Next Alignment: 1215838 1216485 scaffold-183 76658 76010
+
+			Align 195: 1215838 1216485 scaffold-183 76658 76010
+				Gap between this and next alignment: 1216485 to 1227028 (10542 bp)
+				Next Alignment: 1227028 1230303 scaffold-183 67206 63906
+
+			Align 196: 1227028 1230303 scaffold-183 67206 63906
+				The next alignment (1229629 1230210 scaffold-108158 583 3) is redundant. Skipping.
+				Gap between this and next alignment: 1230303 to 1239758 (9454 bp)
+				Next Alignment: 1239758 1254588 scaffold-183 56827 41915
+
+			Align 198: 1239758 1254588 scaffold-183 56827 41915
+				Gap between this and next alignment: 1254588 to 1262351 (7762 bp)
+				Next Alignment: 1262351 1262893 scaffold-104798 543 1
+
+			Align 199: 1262351 1262893 scaffold-104798 543 1
+				Gap between this and next alignment: 1262893 to 1272332 (9438 bp)
+				Next Alignment: 1272332 1273027 scaffold-10801 703 8
+
+			Align 200: 1272332 1273027 scaffold-10801 703 8
+				Negative gap (overlap) between this and next alignment: 1273027 to 1273019 (-8 bp)
+				Next Alignment: 1273019 1279402 scaffold-183 22734 16384
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 22734 to 22725.
+			Align 201: 1273028 1279402 scaffold-183 22725 16384
+				Gap between this and next alignment: 1279402 to 1279508 (105 bp)
+				Next Alignment: 1279508 1279614 scaffold-2222 196423 196529
+
+			Align 202: 1279508 1279614 scaffold-2222 196423 196529
+				Gap between this and next alignment: 1279614 to 1288336 (8721 bp)
+				Next Alignment: 1288336 1288840 scaffold-76890 1 502
+
+			Align 203: 1288336 1288840 scaffold-76890 1 502
+				Gap between this and next alignment: 1288840 to 1289011 (170 bp)
+				Next Alignment: 1289011 1291791 scaffold-183 3121 366
+
+			Align 204: 1289011 1291791 scaffold-183 3121 366
+				The next alignment (1291420 1291791 scaffold-93692 1 372) is redundant. Skipping.
+				The next alignment (1291711 1291791 scaffold-72018 1854 1774) is redundant. Skipping.
+				Gap between this and next alignment: 1291791 to 1292245 (453 bp)
+				Next Alignment: 1292245 1293595 scaffold-93692 825 2175
+
+			Align 207: 1292245 1293595 scaffold-93692 825 2175
+				Gap between this and next alignment: 1293595 to 1294092 (496 bp)
+				Next Alignment: 1294092 1294727 scaffold-2329 1 636
+
+			Align 208: 1294092 1294727 scaffold-2329 1 636
+				Gap between this and next alignment: 1294727 to 1294882 (154 bp)
+				Next Alignment: 1294882 1301680 scaffold-2329 685 7530
+
+			Align 209: 1294882 1301680 scaffold-2329 685 7530
+				The next alignment (1301532 1301603 scaffold-79 224574 224503) is redundant. Skipping.
+				Gap between this and next alignment: 1301680 to 1313773 (12092 bp)
+				Next Alignment: 1313773 1323423 scaffold-2329 19843 29340
+
+			Align 211: 1313773 1323423 scaffold-2329 19843 29340
+				Negative gap (overlap) between this and next alignment: 1323423 to 1323423 (0 bp)
+				Next Alignment: 1323423 1331408 scaffold-2329 29437 37462
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 29437 to 29438.
+			Align 212: 1323424 1331408 scaffold-2329 29438 37462
+				Gap between this and next alignment: 1331408 to 1335826 (4417 bp)
+				Next Alignment: 1335826 1336226 scaffold-79050 549 149
+
+			Align 213: 1335826 1336226 scaffold-79050 549 149
+				Gap between this and next alignment: 1336226 to 1343181 (6954 bp)
+				Next Alignment: 1343181 1349132 scaffold-2329 47069 53013
+
+			Align 214: 1343181 1349132 scaffold-2329 47069 53013
+				Gap between this and next alignment: 1349132 to 1349243 (110 bp)
+				Next Alignment: 1349243 1358727 scaffold-2329 53126 62610
+
+			Align 215: 1349243 1358727 scaffold-2329 53126 62610
+				The next alignment (1355697 1355886 scaffold-1563 1 190) is redundant. Skipping.
+				Gap between this and next alignment: 1358727 to 1361375 (2647 bp)
+				Next Alignment: 1361375 1362242 scaffold-101210 1 874
+
+			Align 217: 1361375 1362242 scaffold-101210 1 874
+				Gap between this and next alignment: 1362242 to 1362413 (170 bp)
+				Next Alignment: 1362413 1365393 scaffold-2329 66441 69427
+
+			Align 218: 1362413 1365393 scaffold-2329 66441 69427
+				Gap between this and next alignment: 1365393 to 1376731 (11337 bp)
+				Next Alignment: 1376731 1377037 scaffold-59162 307 1
+
+			Align 219: 1376731 1377037 scaffold-59162 307 1
+				Gap between this and next alignment: 1377037 to 1379195 (2157 bp)
+				Next Alignment: 1379195 1380074 scaffold-33624 1 880
+
+			Align 220: 1379195 1380074 scaffold-33624 1 880
+				Gap between this and next alignment: 1380074 to 1380083 (8 bp)
+				Next Alignment: 1380083 1381484 scaffold-20537 1403 1
+
+			Align 221: 1380083 1381484 scaffold-20537 1403 1
+				Negative gap (overlap) between this and next alignment: 1381484 to 1381419 (-65 bp)
+				Next Alignment: 1381419 1381527 scaffold-3002 255 147
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 255 to 189.
+			Align 222: 1381485 1381527 scaffold-3002 189 147
+				Gap between this and next alignment: 1381527 to 1382362 (834 bp)
+				Next Alignment: 1382362 1383957 scaffold-3089 216 1811
+
+			Align 223: 1382362 1383957 scaffold-3089 216 1811
+				Negative gap (overlap) between this and next alignment: 1383957 to 1383940 (-17 bp)
+				Next Alignment: 1383940 1384439 scaffold-129098 500 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 500 to 482.
+			Align 224: 1383958 1384439 scaffold-129098 482 1
+				Gap between this and next alignment: 1384439 to 1386832 (2392 bp)
+				Next Alignment: 1386832 1387495 scaffold-9445 664 1
+
+			Align 225: 1386832 1387495 scaffold-9445 664 1
+				Gap between this and next alignment: 1387495 to 1387530 (34 bp)
+				Next Alignment: 1387530 1388569 scaffold-3089 4921 5959
+
+			Align 226: 1387530 1388569 scaffold-3089 4921 5959
+				Negative gap (overlap) between this and next alignment: 1388569 to 1388528 (-41 bp)
+				Next Alignment: 1388528 1388725 scaffold-3 1 198
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 43.
+			Align 227: 1388570 1388725 scaffold-3 43 198
+				Gap between this and next alignment: 1388725 to 1392506 (3780 bp)
+				Next Alignment: 1392506 1404989 scaffold-3 3835 16353
+
+			Align 228: 1392506 1404989 scaffold-3 3835 16353
+				The next alignment (1397560 1398117 scaffold-78855 1 558) is redundant. Skipping.
+				The next alignment (1399424 1399956 scaffold-40981 533 1) is redundant. Skipping.
+				Gap between this and next alignment: 1404989 to 1405264 (274 bp)
+				Next Alignment: 1405264 1406743 scaffold-3 16616 18094
+
+			Align 231: 1405264 1406743 scaffold-3 16616 18094
+				Gap between this and next alignment: 1406743 to 1406845 (101 bp)
+				Next Alignment: 1406845 1410304 scaffold-3 18213 21673
+
+			Align 232: 1406845 1410304 scaffold-3 18213 21673
+				The next alignment (1406850 1406996 scaffold-56312 444 590) is redundant. Skipping.
+				Gap between this and next alignment: 1410304 to 1411364 (1059 bp)
+				Next Alignment: 1411364 1434015 scaffold-3 21818 44511
+
+			Align 234: 1411364 1434015 scaffold-3 21818 44511
+				The next alignment (1426747 1427327 scaffold-110788 1 581) is redundant. Skipping.
+				Gap between this and next alignment: 1434015 to 1438509 (4493 bp)
+				Next Alignment: 1438509 1439612 scaffold-56557 1 1089
+
+			Align 236: 1438509 1439612 scaffold-56557 1 1089
+				Gap between this and next alignment: 1439612 to 1444540 (4927 bp)
+				Next Alignment: 1444540 1482586 scaffold-3 56096 94285
+
+			Align 237: 1444540 1482586 scaffold-3 56096 94285
+				Gap between this and next alignment: 1482586 to 1487445 (4858 bp)
+				Next Alignment: 1487445 1487520 scaffold-17445 137 62
+
+			Align 238: 1487445 1487520 scaffold-17445 137 62
+				Gap between this and next alignment: 1487520 to 1493194 (5673 bp)
+				Next Alignment: 1493194 1497682 scaffold-3 105193 109659
+
+			Align 239: 1493194 1497682 scaffold-3 105193 109659
+				Negative gap (overlap) between this and next alignment: 1497682 to 1497408 (-274 bp)
+				Next Alignment: 1497408 1498224 scaffold-45551 1 817
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 276.
+			Align 240: 1497683 1498224 scaffold-45551 276 817
+				Negative gap (overlap) between this and next alignment: 1498224 to 1497787 (-437 bp)
+				Next Alignment: 1497787 1498440 scaffold-74316 654 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 654 to 216.
+			Align 241: 1498225 1498440 scaffold-74316 216 1
+				Gap between this and next alignment: 1498440 to 1498802 (361 bp)
+				Next Alignment: 1498802 1504118 scaffold-3 110803 116137
+
+			Align 242: 1498802 1504118 scaffold-3 110803 116137
+				Gap between this and next alignment: 1504118 to 1505639 (1520 bp)
+				Next Alignment: 1505639 1506604 scaffold-12364 939 1
+
+			Align 243: 1505639 1506604 scaffold-12364 939 1
+				Gap between this and next alignment: 1506604 to 1512701 (6096 bp)
+				Next Alignment: 1512701 1513545 scaffold-66519 1 845
+
+			Align 244: 1512701 1513545 scaffold-66519 1 845
+				Gap between this and next alignment: 1513545 to 1516065 (2519 bp)
+				Next Alignment: 1516065 1529732 scaffold-3 127866 141487
+
+			Align 245: 1516065 1529732 scaffold-3 127866 141487
+				The next alignment (1522943 1523443 scaffold-73466 1 501) is redundant. Skipping.
+				Negative gap (overlap) between this and next alignment: 1529732 to 1529563 (-169 bp)
+				Next Alignment: 1529563 1530429 scaffold-4577 866 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 866 to 696.
+			Align 247: 1529733 1530429 scaffold-4577 696 1
+				Gap between this and next alignment: 1530429 to 1541309 (10879 bp)
+				Next Alignment: 1541309 1547339 scaffold-3 152949 158985
+
+			Align 248: 1541309 1547339 scaffold-3 152949 158985
+				Gap between this and next alignment: 1547339 to 1554363 (7023 bp)
+				Next Alignment: 1554363 1555127 scaffold-50043 764 1
+
+			Align 249: 1554363 1555127 scaffold-50043 764 1
+				Gap between this and next alignment: 1555127 to 1561674 (6546 bp)
+				Next Alignment: 1561674 1562514 scaffold-47097 1 844
+
+			Align 250: 1561674 1562514 scaffold-47097 1 844
+				Gap between this and next alignment: 1562514 to 1588719 (26204 bp)
+				Next Alignment: 1588719 1594369 scaffold-682 1 5651
+
+			Align 251: 1588719 1594369 scaffold-682 1 5651
+				The next alignment (1588719 1588921 scaffold-77183 201 1) is redundant. Skipping.
+				The next alignment (1588725 1588937 scaffold-117 112257 112466) is redundant. Skipping.
+				Gap between this and next alignment: 1594369 to 1616434 (22064 bp)
+				Next Alignment: 1616434 1671437 scaffold-2236 23856 78900
+
+			Align 254: 1616434 1671437 scaffold-2236 23856 78900
+				The next alignment (1629965 1630672 scaffold-61880 1 708) is redundant. Skipping.
+				The next alignment (1635258 1635775 scaffold-69489 1 518) is redundant. Skipping.
+				The next alignment (1636252 1637110 scaffold-128617 1 859) is redundant. Skipping.
+				Gap between this and next alignment: 1671437 to 1673084 (1646 bp)
+				Next Alignment: 1673084 1681135 scaffold-2222 218247 210153
+
+			Align 258: 1673084 1681135 scaffold-2222 218247 210153
+				The next alignment (1673084 1674240 scaffold-2236 84056 85212) is redundant. Skipping.
+				Gap between this and next alignment: 1681135 to 1681382 (246 bp)
+				Next Alignment: 1681382 1684205 scaffold-2222 209987 207164
+
+			Align 260: 1681382 1684205 scaffold-2222 209987 207164
+				Gap between this and next alignment: 1684205 to 1684398 (192 bp)
+				Next Alignment: 1684398 1687711 scaffold-2222 207094 203795
+
+			Align 261: 1684398 1687711 scaffold-2222 207094 203795
+				Gap between this and next alignment: 1687711 to 1707682 (19970 bp)
+				Next Alignment: 1707682 1722874 scaffold-2222 183564 168373
+
+			Align 262: 1707682 1722874 scaffold-2222 183564 168373
+				Gap between this and next alignment: 1722874 to 1726824 (3949 bp)
+				Next Alignment: 1726824 1727800 scaffold-111640 1 977
+
+			Align 263: 1726824 1727800 scaffold-111640 1 977
+				Gap between this and next alignment: 1727800 to 1728680 (879 bp)
+				Next Alignment: 1728680 1731223 scaffold-2222 162605 160062
+
+			Align 264: 1728680 1731223 scaffold-2222 162605 160062
+				The next alignment (1729160 1729717 scaffold-96989 558 1) is redundant. Skipping.
+				Gap between this and next alignment: 1731223 to 1736324 (5100 bp)
+				Next Alignment: 1736324 1776751 scaffold-2222 154951 114525
+
+			Align 266: 1736324 1776751 scaffold-2222 154951 114525
+				The next alignment (1744626 1745154 scaffold-83902 529 1) is redundant. Skipping.
+				The next alignment (1765870 1766712 scaffold-109761 1 828) is redundant. Skipping.
+				The next alignment (1771497 1772446 scaffold-79653 950 1) is redundant. Skipping.
+				The next alignment (1772484 1773263 scaffold-119577 780 1) is redundant. Skipping.
+				The next alignment (1773397 1774323 scaffold-35226 1 927) is redundant. Skipping.
+				Negative gap (overlap) between this and next alignment: 1776751 to 1776334 (-417 bp)
+				Next Alignment: 1776334 1779407 scaffold-4916 1 3074
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 419.
+			Align 272: 1776752 1779407 scaffold-4916 419 3074
+				Negative gap (overlap) between this and next alignment: 1779407 to 1779130 (-277 bp)
+				Next Alignment: 1779130 1780181 scaffold-2222 112040 110989
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 112040 to 111762.
+			Align 273: 1779408 1780181 scaffold-2222 111762 110989
+				The next alignment (1779334 1780160 scaffold-426 2470 1644) is redundant. Skipping.
+				Negative gap (overlap) between this and next alignment: 1780181 to 1779928 (-253 bp)
+				Next Alignment: 1779928 1781472 scaffold-426 1545 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1545 to 1291.
+			Align 275: 1780182 1781472 scaffold-426 1291 1
+				Gap between this and next alignment: 1781472 to 1802192 (20719 bp)
+				Next Alignment: 1802192 1814114 scaffold-2222 91558 79697
+
+			Align 276: 1802192 1814114 scaffold-2222 91558 79697
+				The next alignment (1810209 1810351 scaffold-7244 143 1) is redundant. Skipping.
+				The next alignment (1811125 1811598 scaffold-33452 474 1) is redundant. Skipping.
+				Gap between this and next alignment: 1814114 to 1814245 (130 bp)
+				Next Alignment: 1814245 1814958 scaffold-2222 79482 78769
+
+			Align 279: 1814245 1814958 scaffold-2222 79482 78769
+				Negative gap (overlap) between this and next alignment: 1814958 to 1814958 (0 bp)
+				Next Alignment: 1814958 1817897 scaffold-2222 78655 75716
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 78655 to 78654.
+			Align 280: 1814959 1817897 scaffold-2222 78654 75716
+				Gap between this and next alignment: 1817897 to 1818029 (131 bp)
+				Next Alignment: 1818029 1818672 scaffold-11767 1 644
+
+			Align 281: 1818029 1818672 scaffold-11767 1 644
+				Gap between this and next alignment: 1818672 to 1818677 (4 bp)
+				Next Alignment: 1818677 1820094 scaffold-9296 1419 1
+
+			Align 282: 1818677 1820094 scaffold-9296 1419 1
+				Gap between this and next alignment: 1820094 to 1827244 (7149 bp)
+				Next Alignment: 1827244 1829493 scaffold-2222 66603 64356
+
+			Align 283: 1827244 1829493 scaffold-2222 66603 64356
+				Gap between this and next alignment: 1829493 to 1829846 (352 bp)
+				Next Alignment: 1829846 1836355 scaffold-2222 64302 57791
+
+			Align 284: 1829846 1836355 scaffold-2222 64302 57791
+				Gap between this and next alignment: 1836355 to 1837900 (1544 bp)
+				Next Alignment: 1837900 1838178 scaffold-4748 1576 1854
+
+			Align 285: 1837900 1838178 scaffold-4748 1576 1854
+				Gap between this and next alignment: 1838178 to 1841861 (3682 bp)
+				Next Alignment: 1841861 1843830 scaffold-5011 1970 1
+
+			Align 286: 1841861 1843830 scaffold-5011 1970 1
+				Negative gap (overlap) between this and next alignment: 1843830 to 1843644 (-186 bp)
+				Next Alignment: 1843644 1858685 scaffold-2222 52005 36971
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 52005 to 51818.
+			Align 287: 1843831 1858685 scaffold-2222 51818 36971
+				The next alignment (1845075 1845629 scaffold-51090 555 1) is redundant. Skipping.
+				Negative gap (overlap) between this and next alignment: 1858685 to 1858657 (-28 bp)
+				Next Alignment: 1858657 1864134 scaffold-2222 36754 31267
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 36754 to 36725.
+			Align 289: 1858686 1864134 scaffold-2222 36725 31267
+				Gap between this and next alignment: 1864134 to 1864320 (185 bp)
+				Next Alignment: 1864320 1866825 scaffold-2222 31057 28540
+
+			Align 290: 1864320 1866825 scaffold-2222 31057 28540
+				Gap between this and next alignment: 1866825 to 1880796 (13970 bp)
+				Next Alignment: 1880796 1882311 scaffold-2222 14687 13172
+
+			Align 291: 1880796 1882311 scaffold-2222 14687 13172
+				Gap between this and next alignment: 1882311 to 1900464 (18152 bp)
+				Next Alignment: 1900464 1900560 scaffold-4056 6154 6058
+
+			Align 292: 1900464 1900560 scaffold-4056 6154 6058
+				Gap between this and next alignment: 1900560 to 1901644 (1083 bp)
+				Next Alignment: 1901644 1901995 scaffold-106134 632 281
+
+			Align 293: 1901644 1901995 scaffold-106134 632 281
+				Gap between this and next alignment: 1901995 to 1916138 (14142 bp)
+				Next Alignment: 1916138 1920108 scaffold-60199 4464 498
+
+			Align 294: 1916138 1920108 scaffold-60199 4464 498
+				Gap between this and next alignment: 1920108 to 1927990 (7881 bp)
+				Next Alignment: 1927990 1935504 scaffold-2388 7436 14949
+
+			Align 295: 1927990 1935504 scaffold-2388 7436 14949
+				The next alignment (1934490 1934695 scaffold-40251 206 1) is redundant. Skipping.
+				The next alignment (1935313 1935480 scaffold-115402 1 168) is redundant. Skipping.
+				Gap between this and next alignment: 1935504 to 1937103 (1598 bp)
+				Next Alignment: 1937103 1937402 scaffold-2784 298 1
+
+			Align 298: 1937103 1937402 scaffold-2784 298 1
+				Gap between this and next alignment: 1937402 to 1939584 (2181 bp)
+				Next Alignment: 1939584 1939801 scaffold-2388 16479 16694
+
+			Align 299: 1939584 1939801 scaffold-2388 16479 16694
+				Gap between this and next alignment: 1939801 to 1945478 (5676 bp)
+				Next Alignment: 1945478 1960839 scaffold-0 244 15605
+
+			Align 300: 1945478 1960839 scaffold-0 244 15605
+				Gap between this and next alignment: 1960839 to 1960940 (100 bp)
+				Next Alignment: 1960940 1966082 scaffold-0 15727 20869
+
+			Align 301: 1960940 1966082 scaffold-0 15727 20869
+				Gap between this and next alignment: 1966082 to 1975190 (9107 bp)
+				Next Alignment: 1975190 1975794 scaffold-49032 1 605
+
+			Align 302: 1975190 1975794 scaffold-49032 1 605
+				Gap between this and next alignment: 1975794 to 1980688 (4893 bp)
+				Next Alignment: 1980688 1981363 scaffold-74581 1 676
+
+			Align 303: 1980688 1981363 scaffold-74581 1 676
+				Gap between this and next alignment: 1981363 to 1995296 (13932 bp)
+				Next Alignment: 1995296 1995832 scaffold-71229 537 1
+
+			Align 304: 1995296 1995832 scaffold-71229 537 1
+				Gap between this and next alignment: 1995832 to 2000829 (4996 bp)
+				Next Alignment: 2000829 2014779 scaffold-0 56737 70713
+
+			Align 305: 2000829 2014779 scaffold-0 56737 70713
+				The next alignment (2002569 2003672 scaffold-134789 1 1104) is redundant. Skipping.
+				Gap between this and next alignment: 2014779 to 2018607 (3827 bp)
+				Next Alignment: 2018607 2019559 scaffold-1674 2382 1414
+
+			Align 307: 2018607 2019559 scaffold-1674 2382 1414
+				Gap between this and next alignment: 2019559 to 2019681 (121 bp)
+				Next Alignment: 2019681 2020861 scaffold-1674 1181 1
+
+			Align 308: 2019681 2020861 scaffold-1674 1181 1
+				Gap between this and next alignment: 2020861 to 2020863 (1 bp)
+				Next Alignment: 2020863 2021968 scaffold-66733 1106 1
+
+			Align 309: 2020863 2021968 scaffold-66733 1106 1
+				Gap between this and next alignment: 2021968 to 2022710 (741 bp)
+				Next Alignment: 2022710 2023602 scaffold-51187 893 1
+
+			Align 310: 2022710 2023602 scaffold-51187 893 1
+				Gap between this and next alignment: 2023602 to 2038470 (14867 bp)
+				Next Alignment: 2038470 2052854 scaffold-0 94692 109068
+
+			Align 311: 2038470 2052854 scaffold-0 94692 109068
+				Gap between this and next alignment: 2052854 to 2053011 (156 bp)
+				Next Alignment: 2053011 2072573 scaffold-0 109189 128801
+
+			Align 312: 2053011 2072573 scaffold-0 109189 128801
+				The next alignment (2053142 2053767 scaffold-12758 1 626) is redundant. Skipping.
+				The next alignment (2054077 2054517 scaffold-12758 1005 1445) is redundant. Skipping.
+				Gap between this and next alignment: 2072573 to 2074654 (2080 bp)
+				Next Alignment: 2074654 2075302 scaffold-106703 649 1
+
+			Align 315: 2074654 2075302 scaffold-106703 649 1
+				Gap between this and next alignment: 2075302 to 2082483 (7180 bp)
+				Next Alignment: 2082483 2083109 scaffold-46166 1 627
+
+			Align 316: 2082483 2083109 scaffold-46166 1 627
+				Gap between this and next alignment: 2083109 to 2083467 (357 bp)
+				Next Alignment: 2083467 2084410 scaffold-52592 944 1
+
+			Align 317: 2083467 2084410 scaffold-52592 944 1
+				Gap between this and next alignment: 2084410 to 2092676 (8265 bp)
+				Next Alignment: 2092676 2093534 scaffold-85407 857 1
+
+			Align 318: 2092676 2093534 scaffold-85407 857 1
+				Gap between this and next alignment: 2093534 to 2095426 (1891 bp)
+				Next Alignment: 2095426 2095986 scaffold-22712 1 560
+
+			Align 319: 2095426 2095986 scaffold-22712 1 560
+				Gap between this and next alignment: 2095986 to 2099624 (3637 bp)
+				Next Alignment: 2099624 2100482 scaffold-130727 1 859
+
+			Align 320: 2099624 2100482 scaffold-130727 1 859
+				Gap between this and next alignment: 2100482 to 2100958 (475 bp)
+				Next Alignment: 2100958 2101758 scaffold-108153 1 801
+
+			Align 321: 2100958 2101758 scaffold-108153 1 801
+				Gap between this and next alignment: 2101758 to 2105176 (3417 bp)
+				Next Alignment: 2105176 2116203 scaffold-6461 18396 7373
+
+			Align 322: 2105176 2116203 scaffold-6461 18396 7373
+				Gap between this and next alignment: 2116203 to 2120656 (4452 bp)
+				Next Alignment: 2120656 2122163 scaffold-6461 2050 544
+
+			Align 323: 2120656 2122163 scaffold-6461 2050 544
+				Gap between this and next alignment: 2122163 to 2122236 (72 bp)
+				Next Alignment: 2122236 2127721 scaffold-117 249 5743
+
+			Align 324: 2122236 2127721 scaffold-117 249 5743
+				Gap between this and next alignment: 2127721 to 2127754 (32 bp)
+				Next Alignment: 2127754 2128415 scaffold-117 5958 6619
+
+			Align 325: 2127754 2128415 scaffold-117 5958 6619
+				Gap between this and next alignment: 2128415 to 2132250 (3834 bp)
+				Next Alignment: 2132250 2134018 scaffold-37026 2332 564
+
+			Align 326: 2132250 2134018 scaffold-37026 2332 564
+				Gap between this and next alignment: 2134018 to 2137164 (3145 bp)
+				Next Alignment: 2137164 2137511 scaffold-19057 650 303
+
+			Align 327: 2137164 2137511 scaffold-19057 650 303
+				Gap between this and next alignment: 2137511 to 2137638 (126 bp)
+				Next Alignment: 2137638 2142249 scaffold-117 15303 19914
+
+			Align 328: 2137638 2142249 scaffold-117 15303 19914
+				Gap between this and next alignment: 2142249 to 2145168 (2918 bp)
+				Next Alignment: 2145168 2154365 scaffold-117 22656 31853
+
+			Align 329: 2145168 2154365 scaffold-117 22656 31853
+				The next alignment (2148516 2148738 scaffold-51680 1525 1747) is redundant. Skipping.
+				The next alignment (2148781 2148985 scaffold-51680 1 205) is redundant. Skipping.
+				The next alignment (2150834 2151704 scaffold-29406 1186 316) is redundant. Skipping.
+				The next alignment (2151816 2152006 scaffold-29406 190 1) is redundant. Skipping.
+				Negative gap (overlap) between this and next alignment: 2154365 to 2154216 (-149 bp)
+				Next Alignment: 2154216 2156699 scaffold-24102 2484 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 2484 to 2334.
+			Align 334: 2154366 2156699 scaffold-24102 2334 1
+				Negative gap (overlap) between this and next alignment: 2156699 to 2156173 (-526 bp)
+				Next Alignment: 2156173 2158361 scaffold-117 33042 35230
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 33042 to 33569.
+			Align 335: 2156700 2158361 scaffold-117 33569 35230
+				Gap between this and next alignment: 2158361 to 2163917 (5555 bp)
+				Next Alignment: 2163917 2177674 scaffold-117 38034 51790
+
+			Align 336: 2163917 2177674 scaffold-117 38034 51790
+				Negative gap (overlap) between this and next alignment: 2177674 to 2177293 (-381 bp)
+				Next Alignment: 2177293 2177696 scaffold-3677 1 401
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 381.
+			Align 337: 2177675 2177696 scaffold-3677 381 401
+				Gap between this and next alignment: 2177696 to 2179091 (1394 bp)
+				Next Alignment: 2179091 2179390 scaffold-3677 1646 1945
+
+			Align 338: 2179091 2179390 scaffold-3677 1646 1945
+				Gap between this and next alignment: 2179390 to 2185267 (5876 bp)
+				Next Alignment: 2185267 2185750 scaffold-2545 484 1
+
+			Align 339: 2185267 2185750 scaffold-2545 484 1
+				Negative gap (overlap) between this and next alignment: 2185750 to 2185467 (-283 bp)
+				Next Alignment: 2185467 2185919 scaffold-3101 1 453
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 285.
+			Align 340: 2185751 2185919 scaffold-3101 285 453
+				Negative gap (overlap) between this and next alignment: 2185919 to 2185895 (-24 bp)
+				Next Alignment: 2185895 2188673 scaffold-117 60260 63029
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 60260 to 60285.
+			Align 341: 2185920 2188673 scaffold-117 60285 63029
+				Gap between this and next alignment: 2188673 to 2188784 (110 bp)
+				Next Alignment: 2188784 2195786 scaffold-117 63119 70108
+
+			Align 342: 2188784 2195786 scaffold-117 63119 70108
+				Gap between this and next alignment: 2195786 to 2195988 (201 bp)
+				Next Alignment: 2195988 2199623 scaffold-117 70301 73940
+
+			Align 343: 2195988 2199623 scaffold-117 70301 73940
+				Gap between this and next alignment: 2199623 to 2203658 (4034 bp)
+				Next Alignment: 2203658 2204216 scaffold-85479 559 1
+
+			Align 344: 2203658 2204216 scaffold-85479 559 1
+				Gap between this and next alignment: 2204216 to 2205726 (1509 bp)
+				Next Alignment: 2205726 2206496 scaffold-81025 1 771
+
+			Align 345: 2205726 2206496 scaffold-81025 1 771
+				Gap between this and next alignment: 2206496 to 2212825 (6328 bp)
+				Next Alignment: 2212825 2235222 scaffold-117 85498 107855
+
+			Align 346: 2212825 2235222 scaffold-117 85498 107855
+				The next alignment (2221824 2222677 scaffold-59656 1 854) is redundant. Skipping.
+				The next alignment (2227345 2228470 scaffold-102646 1126 1) is redundant. Skipping.
+				Negative gap (overlap) between this and next alignment: 2235222 to 2235198 (-24 bp)
+				Next Alignment: 2235198 2239350 scaffold-117 108099 112256
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 108099 to 108124.
+			Align 349: 2235223 2239350 scaffold-117 108124 112256
+				Negative gap (overlap) between this and next alignment: 2239350 to 2239345 (-5 bp)
+				Next Alignment: 2239345 2263878 scaffold-682 1253 25817
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1253 to 1259.
+			Align 350: 2239351 2263878 scaffold-682 1259 25817
+				The next alignment (2248254 2248556 scaffold-19435 1 303) is redundant. Skipping.
+				The next alignment (2255736 2256065 scaffold-10554 1 330) is redundant. Skipping.
+				The next alignment (2260727 2261858 scaffold-59898 1 1132) is redundant. Skipping.
+				Negative gap (overlap) between this and next alignment: 2263878 to 2263878 (0 bp)
+				Next Alignment: 2263878 2264603 scaffold-682 26059 26784
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 26059 to 26060.
+			Align 354: 2263879 2264603 scaffold-682 26060 26784
+			END in current alignment.  Modifying 2264603 to 2264603.
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Rothia_mucilaginosa_DY-18/contigs_reports/nucmer_output/Ray.used_snps
+
+Results:
+	Local Misassemblies: 69
+	Misassemblies: 32
+		Relocations: 31
+		Translocations: 0
+		Inversions: 1
+	Fake misassemblies matched with structural variations: 3
+	Misassembled Contigs: 14
+	Misassembled Contig Bases: 1592707
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 78 part
+Partially Unaligned Contigs with Misassemblies: 16
+Unaligned Contig Bases: 527548
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 1278880
+
+	SNPs: 39360
+	Insertions: 4176
+	Deletions: 3666
+
+	Positive Gaps: 214
+		Internal Gaps:  64
+		External Gaps:  150
+		External Gap Total:  802716
+		External Gap Average: 5351
+	Negative Gaps: 46
+		Internal Overlaps:  11
+		External Overlaps:  35
+		External Overlaps Total: -19708
+		External Overlaps Average: -563
+	Contigs with Redundant Alignments: 20 (46023)

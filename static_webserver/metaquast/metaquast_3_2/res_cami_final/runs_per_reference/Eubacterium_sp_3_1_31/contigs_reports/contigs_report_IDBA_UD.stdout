@@ -1,0 +1,1368 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_]
+	Loaded [Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_]
+	Loaded [Eubacterium_sp_3_1_31_gi_482850063_ref_NZ_]
+	Loaded [Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_]
+	Loaded [Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_]
+	Loaded [Eubacterium_sp_3_1_31_gi_482850069_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 6
+	Total Region Length: 3571452
+Analyzing contigs...
+CONTIG: scaffold_99 (77864bp)
+Top Length: 45376  Top ID: 98.84
+		Skipping redundant alignment 322694 344358 | 33419 11694 | 21665 21726 | 98.68 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_99
+		Skipping redundant alignment 317845 322719 | 33394 38256 | 4875 4863 | 97.44 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_99
+		Skipping redundant alignment 1 4849 | 38243 33407 | 4849 4837 | 97.51 | Eubacterium_sp_3_1_31_gi_482850069_ref_NZ_ scaffold_99
+		Skipping redundant alignment 299030 317870 | 57069 38231 | 18841 18839 | 99.35 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_99
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 350963 351823 | 6633 5773 | 861 861 | 95.93 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_99
+		Skipping redundant alignment 353246 356215 | 4353 1383 | 2970 2971 | 95.02 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_99
+		Skipping redundant alignment 356411 357257 | 1191 345 | 847 847 | 95.16 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_99
+		Skipping redundant alignment 166539 187330 | 57076 77864 | 20792 20789 | 98.42 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_99
+		This contig is misassembled. 13 total aligns.
+			Real Alignment 1: 105928 106774 | 345 1191 | 847 847 | 95.16 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_99
+			  Gap between these two alignments (local misassembly). Inconsistency = 4 
+			Real Alignment 2: 106970 109939 | 1383 4353 | 2970 2971 | 95.02 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_99
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 3: 111362 112222 | 5773 6633 | 861 861 | 95.93 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_99
+			  Extensive misassembly ( relocation, inconsistency = 1544 ) between these two alignments
+			Real Alignment 4: 118827 164155 | 11694 57069 | 45329 45376 | 98.84 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_99
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 5: 275855 296646 | 77864 57076 | 20792 20789 | 98.42 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_99
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_5549 (1903bp)
+Top Length: 1903  Top ID: 95.75
+		This contig has 2 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 330537 332439 | 1 1903 | 1903 1903 | 95.75 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_5549
+		Skipping alignment  130746 132648 | 1903 1 | 1903 1903 | 95.75 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_5549
+
+CONTIG: scaffold_12686 (738bp)
+Top Length: 738  Top ID: 97.83
+		This contig has 2 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 130740 131477 | 1 738 | 738 738 | 97.83 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_12686
+		Skipping alignment  331708 332445 | 738 1 | 738 738 | 97.83 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_12686
+
+CONTIG: scaffold_13926 (656bp)
+Top Length: 656  Top ID: 96.04
+		This contig has 2 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 132357 133012 | 1 656 | 656 656 | 96.04 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_13926
+		Skipping alignment  330173 330828 | 656 1 | 656 656 | 96.04 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_13926
+
+CONTIG: scaffold_29 (186454bp)
+Top Length: 51202  Top ID: 99.01
+		Skipping redundant alignment 361724 361839 | 15724 15839 | 116 116 | 96.55 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_29
+		Skipping redundant alignment 586689 586804 | 15724 15839 | 116 116 | 96.55 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_29
+		Skipping redundant alignment 409402 409511 | 15833 15724 | 110 110 | 96.36 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_29
+		Skipping redundant alignment 508657 508766 | 15833 15724 | 110 110 | 96.36 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_29
+		Skipping redundant alignment 454748 454857 | 15833 15724 | 110 110 | 96.36 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_29
+		Skipping redundant alignment 407625 407777 | 15986 15833 | 153 154 | 96.75 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_29
+		Skipping redundant alignment 452971 453123 | 15986 15833 | 153 154 | 96.75 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_29
+		Skipping redundant alignment 363464 363610 | 15839 15986 | 147 148 | 96.62 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_29
+		Skipping redundant alignment 401881 402027 | 15839 15986 | 147 148 | 96.62 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_29
+		Skipping redundant alignment 499042 499188 | 15839 15986 | 147 148 | 96.62 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_29
+		Skipping redundant alignment 588429 588575 | 15839 15986 | 147 148 | 96.62 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_29
+		Skipping redundant alignment 716273 716419 | 15839 15986 | 147 148 | 96.62 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_29
+		Skipping redundant alignment 1211545 1211691 | 15839 15986 | 147 148 | 96.62 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_29
+		Skipping redundant alignment 545772 545918 | 15839 15986 | 147 148 | 95.95 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_29
+		Skipping redundant alignment 252936 253082 | 15839 15986 | 147 148 | 95.27 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_29
+		Skipping redundant alignment 435345 435463 | 34880 34762 | 119 119 | 96.64 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_29
+		Skipping redundant alignment 301191 301266 | 117900 117975 | 76 76 | 100.0 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_29
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 251189 251311 | 15717 15839 | 123 123 | 95.12 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_29
+		Skipping redundant alignment 400134 400256 | 15717 15839 | 123 123 | 95.12 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_29
+		Skipping redundant alignment 497294 497417 | 15717 15839 | 124 123 | 95.16 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_29
+		Skipping redundant alignment 544027 544147 | 15718 15839 | 121 122 | 95.9 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_29
+		Skipping redundant alignment 714525 714648 | 15717 15839 | 124 123 | 95.16 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_29
+		Skipping redundant alignment 1209799 1209920 | 15718 15839 | 122 122 | 95.08 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_29
+		This contig is misassembled. 32 total aligns.
+			Excluding internal overlap of size 7 between Alignment 1 and 2:  754114 754235 | 15839 15718 | 122 122 --> 754121 754235 | 15832 15718 | 115 115
+			Real Alignment 1: 754121 754235 | 15832 15718 | 115 115 | 96.72 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_29
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 506877 507032 | 15989 15833 | 156 157 | 96.82 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_29
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 3: 633 17744 | 33205 16098 | 17112 17108 | 99.07 | Eubacterium_sp_3_1_31_gi_482850063_ref_NZ_ scaffold_29
+			  Extensive misassembly ( translocation ) between these two alignments
+			Excluding internal overlap of size 871 between Alignment 4 and 5:  879027 882079 | 87506 84454 | 3053 3053 --> 879027 881208 | 87506 85325 | 2182 2182
+			Real Alignment 4: 881500 932697 | 85324 34123 | 51198 51202 | 99.01 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_29
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Excluding internal overlap of size 12 between Alignment 5 and 6:  879027 881208 | 87506 85325 | 2182 2182 --> 879039 881208 | 87494 85325 | 2170 2170
+			Real Alignment 5: 879039 881208 | 87494 85325 | 2170 2170 | 97.74 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_29
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Excluding internal overlap of size 2 between Alignment 6 and 7:  862274 874605 | 99811 87495 | 12332 12317 --> 862276 874605 | 99809 87495 | 12330 12315
+			Real Alignment 6: 862276 874605 | 99809 87495 | 12330 12315 | 98.69 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_29
+			  Fake misassembly between these two alignments: inconsistency = -84 , gap in the contig is small or absent or filled mostly with Ns (long indel: insertion of length 84; 0 mismatches)
+			Excluding internal overlap of size 10 between Alignment 7 and 8:  812611 834102 | 144756 123135 | 21492 21622 --> 812611 834092 | 144756 123145 | 21482 21612
+			Real Alignment 7: 839041 862359 | 123144 99810 | 23319 23335 | 98.83 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_29
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 8: 812611 834092 | 144756 123145 | 21482 21612 | 98.15 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_29
+			  Overlap between these two alignments (local misassembly). Inconsistency = -112 
+			Real Alignment 9: 771693 812611 | 185780 144868 | 40919 40913 | 99.06 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_29
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_35 (174114bp)
+Top Length: 34996  Top ID: 97.76
+		Skipping redundant alignment 44845 44959 | 146664 146778 | 115 115 | 96.52 | Eubacterium_sp_3_1_31_gi_482850063_ref_NZ_ scaffold_35
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 3797 13630 | 60436 50603 | 9834 9834 | 99.25 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_35
+		Skipping redundant alignment 15410 30560 | 50882 35738 | 15151 15145 | 98.95 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_35
+		Skipping redundant alignment 33785 68796 | 35416 421 | 35012 34996 | 97.76 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_35
+		This contig is misassembled. 15 total aligns.
+			Real Alignment 1: 394389 429400 | 421 35416 | 35012 34996 | 97.76 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_35
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Excluding internal overlap of size 280 between Alignment 2 and 3:  449555 459388 | 50603 60436 | 9834 9834 --> 449835 459388 | 50883 60436 | 9554 9554
+			Real Alignment 2: 432625 447775 | 35738 50882 | 15151 15145 | 98.95 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_35
+			  Extensive misassembly ( relocation, inconsistency = 2059 ) between these two alignments
+			Excluding internal overlap of size 17 between Alignment 3 and 4:  449835 459388 | 50883 60436 | 9554 9554 --> 449835 459371 | 50883 60419 | 9537 9537
+			Real Alignment 3: 449835 459371 | 50883 60419 | 9537 9537 | 99.25 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_35
+			  Extensive misassembly ( translocation ) between these two alignments
+			Excluding internal overlap of size 24 between Alignment 4 and 5:  126287 139798 | 73937 60420 | 13512 13518 --> 126311 139798 | 73913 60420 | 13488 13494
+			Real Alignment 4: 126311 139798 | 73913 60420 | 13488 13494 | 98.69 | Eubacterium_sp_3_1_31_gi_482850063_ref_NZ_ scaffold_35
+			  Overlap between these two alignments (local misassembly). Inconsistency = -238 
+			Excluding internal overlap of size 5 between Alignment 5 and 6:  104278 106288 | 93980 91968 | 2011 2013 --> 104278 106283 | 93980 91973 | 2006 2008
+			Real Alignment 5: 108464 126548 | 91972 73914 | 18085 18059 | 98.83 | Eubacterium_sp_3_1_31_gi_482850063_ref_NZ_ scaffold_35
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Excluding internal overlap of size 1 between Alignment 6 and 7:  104278 106283 | 93980 91973 | 2006 2008 --> 104279 106283 | 93979 91973 | 2005 2007
+			Real Alignment 6: 104279 106283 | 93979 91973 | 2005 2007 | 98.86 | Eubacterium_sp_3_1_31_gi_482850063_ref_NZ_ scaffold_35
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 7: 96752 100644 | 97872 93980 | 3893 3893 | 99.02 | Eubacterium_sp_3_1_31_gi_482850063_ref_NZ_ scaffold_35
+			  Fake misassembly between these two alignments: inconsistency = -62 , gap in the contig is small or absent or filled mostly with Ns (long indel: insertion of length 62; 0 mismatches)
+			Excluding internal overlap of size 6 between Alignment 8 and 9:  62575 73713 | 131386 120250 | 11139 11137 --> 62575 73707 | 131386 120256 | 11133 11131
+			Real Alignment 8: 74419 96813 | 120255 97873 | 22395 22383 | 98.88 | Eubacterium_sp_3_1_31_gi_482850063_ref_NZ_ scaffold_35
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Excluding internal overlap of size 440 between Alignment 9 and 10:  62575 73707 | 131386 120256 | 11133 11131 --> 63015 73707 | 130946 120256 | 10693 10691
+			Real Alignment 9: 63015 73707 | 130946 120256 | 10693 10691 | 99.02 | Eubacterium_sp_3_1_31_gi_482850063_ref_NZ_ scaffold_35
+			  Extensive misassembly ( relocation, inconsistency = 2348 ) between these two alignments
+			Real Alignment 10: 26824 60666 | 164798 130947 | 33843 33852 | 99.11 | Eubacterium_sp_3_1_31_gi_482850063_ref_NZ_ scaffold_35
+			  Overlap between these two alignments (local misassembly). Inconsistency = -97 
+			Real Alignment 11: 17914 24854 | 173803 166865 | 6941 6939 | 98.29 | Eubacterium_sp_3_1_31_gi_482850063_ref_NZ_ scaffold_35
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_3 (489962bp)
+Top Length: 154399  Top ID: 99.17
+		Skipping redundant alignment 844214 844289 | 367329 367254 | 76 76 | 100.0 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_3
+		This contig is misassembled. 10 total aligns.
+			Real Alignment 1: 1349646 1352609 | 6063 9026 | 2964 2964 | 99.39 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_3
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 1354420 1382567 | 9052 37213 | 28148 28162 | 99.25 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_3
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 3: 1384377 1454740 | 37232 107597 | 70364 70366 | 98.6 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_3
+			  Extensive misassembly ( relocation, inconsistency = -7779 ) between these two alignments
+			Real Alignment 4: 1455659 1504620 | 116295 165285 | 48962 48991 | 98.28 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_3
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 5: 1 154419 | 165519 319917 | 154419 154399 | 99.17 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_3
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Excluding internal overlap of size 1 between Alignment 6 and 7:  156011 156323 | 320036 320348 | 313 313 --> 156011 156322 | 320036 320347 | 312 312
+			Real Alignment 6: 156011 156322 | 320036 320347 | 312 312 | 96.49 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_3
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Excluding internal overlap of size 2 between Alignment 7 and 8:  158167 171638 | 320348 333775 | 13472 13428 --> 158167 171636 | 320348 333773 | 13470 13426
+			Real Alignment 7: 158167 171636 | 320348 333773 | 13470 13426 | 98.76 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_3
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Excluding internal overlap of size 1 between Alignment 8 and 9:  262735 283679 | 333774 354692 | 20945 20919 --> 262735 283678 | 333774 354691 | 20944 20918
+			Real Alignment 8: 262735 283678 | 333774 354691 | 20944 20918 | 99.3 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_3
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 9: 288628 423776 | 354692 489833 | 135149 135142 | 99.27 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_3
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_38 (164129bp)
+Top Length: 133931  Top ID: 99.04
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 424038 426223 | 613 2798 | 2186 2186 | 95.29 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_38
+			  Extensive misassembly ( relocation, inconsistency = -1327 ) between these two alignments
+			Real Alignment 2: 429074 451925 | 6976 29801 | 22852 22826 | 97.84 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_38
+			  Extensive misassembly ( relocation, inconsistency = 12426 ) between these two alignments
+			Real Alignment 3: 464730 598686 | 30180 164110 | 133957 133931 | 99.04 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_38
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_42 (158324bp)
+Top Length: 48817  Top ID: 98.24
+		Skipping redundant alignment 393313 393411 | 99 1 | 99 99 | 100.0 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_42
+		Skipping redundant alignment 1329448 1329544 | 97 1 | 97 97 | 98.97 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_42
+		Skipping redundant alignment 444279 444365 | 82218 82305 | 87 88 | 97.73 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_42
+		Skipping redundant alignment 588119 588581 | 139586 139124 | 463 463 | 96.33 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_42
+		Skipping redundant alignment 498732 499191 | 139586 139127 | 460 460 | 96.96 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_42
+		Skipping redundant alignment 363154 363612 | 139586 139128 | 459 459 | 96.3 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_42
+		Skipping redundant alignment 407624 408081 | 139129 139586 | 458 458 | 96.51 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_42
+		Skipping redundant alignment 605299 605755 | 139586 139130 | 457 457 | 97.16 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_42
+		Skipping redundant alignment 715963 716419 | 139586 139130 | 457 457 | 96.94 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_42
+		Skipping redundant alignment 545462 545918 | 139586 139130 | 457 457 | 96.5 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_42
+		Skipping redundant alignment 401571 402027 | 139586 139130 | 457 457 | 96.28 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_42
+		Skipping redundant alignment 506880 507336 | 139130 139586 | 457 457 | 96.28 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_42
+		Skipping redundant alignment 603859 604135 | 139862 139586 | 277 277 | 96.75 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_42
+		This contig is misassembled. 22 total aligns.
+			Excluding internal overlap of size 650 between Alignment 1 and 2:  627825 643592 | 23481 39247 | 15768 15767 --> 628475 643592 | 24131 39247 | 15118 15117
+			Real Alignment 1: 603696 627826 | 1 24130 | 24131 24130 | 99.0 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_42
+			  Gap between these two alignments (local misassembly). Inconsistency = 648 
+			Real Alignment 2: 628475 643592 | 24131 39247 | 15118 15117 | 98.66 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_42
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 3: 646586 695463 | 40250 89066 | 48878 48817 | 98.24 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_42
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 4: 696366 704528 | 90240 98399 | 8163 8160 | 96.55 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_42
+			  Overlap between these two alignments (local misassembly). Inconsistency = -420 
+			Real Alignment 5: 704647 708515 | 98938 102805 | 3869 3868 | 96.1 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_42
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Excluding internal overlap of size 5 between Alignment 6 and 7:  709255 715640 | 103468 109841 | 6386 6374 --> 709255 715635 | 103468 109836 | 6381 6369
+			Real Alignment 6: 709255 715635 | 103468 109836 | 6381 6369 | 96.6 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_42
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 7: 717145 734751 | 109837 127411 | 17607 17575 | 98.65 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_42
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 8: 741777 771514 | 127424 157138 | 29738 29715 | 98.92 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_42
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 9: 962539 963097 | 158324 157762 | 559 563 | 96.8 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_42
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_45 (151227bp)
+Top Length: 96638  Top ID: 98.69
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 1159838 1163127 | 1 3301 | 3290 3301 | 98.15 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_45
+			  Extensive misassembly ( relocation, inconsistency = -4526 ) between these two alignments
+			Excluding internal overlap of size 4 between Alignment 2 and 3:  1163465 1209796 | 8165 54494 | 46332 46330 --> 1163465 1209792 | 8165 54490 | 46328 46326
+			Real Alignment 2: 1163465 1209792 | 8165 54490 | 46328 46326 | 99.13 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_45
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Excluding internal overlap of size 3 between Alignment 3 and 4:  878932 879033 | 151227 151126 | 102 102 --> 878932 879030 | 151227 151129 | 99 99
+			Real Alignment 3: 1211690 1308343 | 54491 151128 | 96654 96638 | 98.69 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_45
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 4: 878932 879030 | 151227 151129 | 99 99 | 100.0 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_45
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_117 (70342bp)
+Top Length: 53002  Top ID: 97.57
+		This contig is misassembled. 5 total aligns.
+			Excluding internal overlap of size 1 between Alignment 1 and 2:  874605 874704 | 100 1 | 100 100 --> 874606 874704 | 99 1 | 99 99
+			Real Alignment 1: 874606 874704 | 99 1 | 99 99 | 100.0 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_117
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 1064470 1070209 | 5836 100 | 5740 5737 | 97.46 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_117
+			  Extensive misassembly ( relocation, inconsistency = 12977 ) between these two alignments
+			Excluding internal overlap of size 1 between Alignment 3 and 4:  1040085 1048600 | 17241 8729 | 8516 8513 --> 1040086 1048600 | 17240 8729 | 8515 8512
+			Real Alignment 3: 1040086 1048600 | 17240 8729 | 8515 8512 | 96.38 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_117
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 4: 985812 1038798 | 70242 17241 | 52987 53002 | 97.57 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_117
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 5: 878934 879030 | 70342 70246 | 97 97 | 100.0 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_117
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_208 (56752bp)
+Top Length: 23147  Top ID: 98.37
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 878932 879030 | 1 99 | 99 99 | 100.0 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_208
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 1070202 1093285 | 100 23246 | 23084 23147 | 98.37 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_208
+			  Overlap between these two alignments (local misassembly). Inconsistency = -157 
+			Real Alignment 3: 1093295 1112452 | 23413 42578 | 19158 19166 | 98.41 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_208
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_217 (45063bp)
+Top Length: 21744  Top ID: 97.14
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 83339 84158 | 10404 11229 | 820 826 | 95.04 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_217
+		Skipping redundant alignment 84161 105894 | 22808 44551 | 21734 21744 | 97.14 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_217
+		This contig is misassembled. 5 total aligns.
+			Real Alignment 1: 878934 879030 | 1 97 | 97 97 | 100.0 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_217
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 379027 379846 | 11229 10404 | 820 826 | 95.04 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_217
+			  Extensive misassembly ( relocation, inconsistency = -11576 ) between these two alignments
+			Real Alignment 3: 357291 379024 | 44551 22808 | 21734 21744 | 97.14 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_217
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_232 (43462bp)
+Top Length: 5323  Top ID: 96.96
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 70925 76247 | 7585 12907 | 5323 5323 | 96.96 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_232
+		This contig is misassembled. 3 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 43462 and total length of all aligns is 5422
+		Alignment: 386938 392260 | 12907 7585 | 5323 5323 | 96.96 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_232
+		Alignment: 874606 874704 | 43364 43462 | 99 99 | 100.0 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_232
+		Unaligned bases: 38040
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold_385 (27920bp)
+Top Length: 22088  Top ID: 96.82
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 874606 874699 | 94 1 | 94 94 | 100.0 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_385
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 963742 985803 | 22197 110 | 22062 22088 | 96.82 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_385
+			  Extensive misassembly ( relocation, inconsistency = -5278 ) between these two alignments
+			Real Alignment 3: 963298 963743 | 27920 27474 | 446 447 | 97.32 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_385
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_6271 (1667bp)
+Top Length: 1377  Top ID: 95.36
+			Skipping redundant alignments which significantly overlap with adjacent alignments
+		Skipping redundant alignment 848280 849648 | 1592 216 | 1369 1377 | 95.36 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_6271
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 878237 879030 | 794 1 | 794 794 | 100.0 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_6271
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 874606 875478 | 1667 795 | 873 873 | 99.31 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_6271
+
+CONTIG: scaffold_16748 (531bp)
+Top Length: 531  Top ID: 99.81
+		This contig has 2 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 287410 287940 | 1 531 | 531 531 | 99.81 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_16748
+		Skipping alignment  837825 838355 | 1 531 | 531 531 | 99.81 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_16748
+
+CONTIG: scaffold_11 (273921bp)
+Top Length: 38948  Top ID: 99.21
+		Skipping redundant alignment 1334392 1334539 | 273921 273774 | 148 148 | 97.97 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_11
+		Skipping redundant alignment 598702 598849 | 273774 273921 | 148 148 | 97.3 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_11
+		Skipping redundant alignment 398260 398407 | 273921 273774 | 148 148 | 97.3 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_11
+		Skipping redundant alignment 326646 326780 | 273921 273787 | 135 135 | 97.04 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_11
+		This contig is misassembled. 18 total aligns.
+			Real Alignment 1: 956393 956498 | 106 1 | 106 106 | 98.11 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_11
+			  Extensive misassembly ( relocation, inconsistency = 190541 ) between these two alignments
+			Real Alignment 2: 737038 765330 | 28917 628 | 28293 28290 | 98.98 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_11
+			  Overlap between these two alignments (local misassembly). Inconsistency = -881 
+			Real Alignment 3: 736892 737037 | 29944 29799 | 146 146 | 99.32 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_11
+			  Extensive misassembly ( relocation, inconsistency = -54510 ) between these two alignments
+			Real Alignment 4: 716417 736906 | 104927 84440 | 20490 20488 | 99.15 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_11
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 5: 697213 714531 | 122245 104928 | 17319 17318 | 98.65 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_11
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 6: 613154 652074 | 164636 125689 | 38921 38948 | 99.21 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_11
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 7: 610644 612350 | 166424 164720 | 1707 1705 | 95.85 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_11
+			  Gap between these two alignments (local misassembly). Inconsistency = 8 
+			Excluding internal overlap of size 1 between Alignment 8 and 9:  605754 607805 | 171306 169255 | 2052 2052 --> 605755 607805 | 171305 169255 | 2051 2051
+			Real Alignment 8: 605755 607805 | 171305 169255 | 2051 2051 | 96.79 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_11
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 9: 588573 603868 | 186600 171306 | 15296 15295 | 99.18 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_11
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 10: 583721 586686 | 189569 186601 | 2966 2969 | 98.62 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_11
+			  Extensive misassembly ( relocation, inconsistency = -7885 ) between these two alignments
+			Real Alignment 11: 567659 583782 | 213508 197393 | 16124 16116 | 99.0 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_11
+			  Extensive misassembly ( relocation, inconsistency = -16774 ) between these two alignments
+			Excluding internal overlap of size 1 between Alignment 12 and 13:  536397 544032 | 259661 252025 | 7636 7637 --> 536397 544031 | 259661 252026 | 7635 7636
+			Real Alignment 12: 545917 567401 | 252025 230540 | 21485 21486 | 99.14 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_11
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Excluding internal overlap of size 2 between Alignment 13 and 14:  536397 544031 | 259661 252026 | 7635 7636 --> 536399 544031 | 259659 252026 | 7633 7634
+			Real Alignment 13: 536399 544031 | 259659 252026 | 7633 7634 | 98.8 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_11
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 14: 520606 534856 | 273921 259660 | 14251 14262 | 98.59 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_11
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_16 (250214bp)
+Top Length: 39704  Top ID: 99.15
+		Skipping redundant alignment 271826 271976 | 250063 250214 | 151 152 | 95.39 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_16
+		This contig is misassembled. 17 total aligns.
+			Excluding internal overlap of size 1 between Alignment 1 and 2:  54255 58568 | 28630 32946 | 4314 4317 --> 54256 58568 | 28631 32946 | 4313 4316
+			Real Alignment 1: 34278 43797 | 19109 28630 | 9520 9522 | 97.99 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_16
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 54256 58568 | 28631 32946 | 4313 4316 | 98.45 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_16
+			  Extensive misassembly ( relocation, inconsistency = -5424 ) between these two alignments
+			Real Alignment 3: 58621 81144 | 38423 60950 | 22524 22528 | 98.49 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_16
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 4: 82888 122602 | 61476 101179 | 39715 39704 | 99.15 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_16
+			  Extensive misassembly ( relocation, inconsistency = -3532 ) between these two alignments
+			Real Alignment 5: 122577 129518 | 104686 111640 | 6942 6955 | 98.55 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_16
+			  Gap between these two alignments (local misassembly). Inconsistency = 101 
+			Real Alignment 6: 129996 156301 | 112017 138343 | 26306 26327 | 97.89 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_16
+			  Extensive misassembly ( relocation, inconsistency = 3791 ) between these two alignments
+			Real Alignment 7: 162869 164537 | 141120 142789 | 1669 1670 | 95.39 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_16
+			  Extensive misassembly ( relocation, inconsistency = -1923 ) between these two alignments
+			Real Alignment 8: 164574 168878 | 144749 149055 | 4305 4307 | 96.63 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_16
+			  Gap between these two alignments (local misassembly). Inconsistency = 581 
+			Real Alignment 9: 169492 183504 | 149088 163098 | 14013 14011 | 97.56 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_16
+			  Extensive misassembly ( relocation, inconsistency = -5286 ) between these two alignments
+			Real Alignment 10: 183657 197322 | 168537 182187 | 13666 13651 | 97.62 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_16
+			  Gap between these two alignments (local misassembly). Inconsistency = 118 
+			Real Alignment 11: 197442 197711 | 182189 182460 | 270 272 | 96.32 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_16
+			  Overlap between these two alignments (local misassembly). Inconsistency = -675 
+			Excluding internal overlap of size 835 between Alignment 12 and 13:  208599 210510 | 191293 193204 | 1912 1912 --> 209434 210510 | 192128 193204 | 1077 1077
+			Real Alignment 12: 197696 206690 | 183120 192127 | 8995 9008 | 97.95 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_16
+			  Extensive misassembly ( relocation, inconsistency = 2743 ) between these two alignments
+			Excluding internal overlap of size 6 between Alignment 13 and 14:  209434 210510 | 192128 193204 | 1077 1077 --> 209434 210504 | 192128 193198 | 1071 1071
+			Real Alignment 13: 209434 210504 | 192128 193198 | 1071 1071 | 99.22 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_16
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 14: 212047 220857 | 193199 201997 | 8811 8799 | 97.52 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_16
+			  Overlap between these two alignments (local misassembly). Inconsistency = -107 
+			Real Alignment 15: 221458 251196 | 202705 232507 | 29739 29803 | 98.45 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_16
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 16: 253081 270791 | 232508 250214 | 17711 17707 | 99.12 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_16
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_39 (162333bp)
+Top Length: 46925  Top ID: 99.05
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 198792 207277 | 4500 12932 | 8486 8433 | 96.06 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_39
+		Skipping redundant alignment 207282 227160 | 16004 35834 | 19879 19831 | 96.15 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_39
+		Skipping redundant alignment 227341 249759 | 41203 63658 | 22419 22456 | 96.59 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_39
+		Skipping redundant alignment 249746 249876 | 63775 63645 | 131 131 | 98.47 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_39
+		Skipping redundant alignment 249863 251371 | 63762 65270 | 1509 1509 | 97.75 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_39
+		Skipping redundant alignment 251479 251927 | 65268 65716 | 449 449 | 98.0 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_39
+		Skipping redundant alignment 252008 298918 | 66283 113207 | 46911 46925 | 99.05 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_39
+		Skipping redundant alignment 300140 305103 | 127008 131971 | 4964 4964 | 98.03 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_39
+		Skipping redundant alignment 306486 308405 | 131963 133882 | 1920 1920 | 98.85 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_39
+		Skipping redundant alignment 308402 319822 | 149841 161271 | 11421 11431 | 98.18 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_39
+		This contig is misassembled. 21 total aligns.
+			Real Alignment 1: 255908 264393 | 12932 4500 | 8486 8433 | 96.06 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_39
+			  Extensive misassembly ( relocation, inconsistency = -3067 ) between these two alignments
+			Real Alignment 2: 236025 255903 | 35834 16004 | 19879 19831 | 96.16 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_39
+			  Extensive misassembly ( relocation, inconsistency = -5188 ) between these two alignments
+			Excluding internal overlap of size 14 between Alignment 3 and 4:  213309 213439 | 63645 63775 | 131 131 --> 213323 213439 | 63659 63775 | 117 117
+			Real Alignment 3: 213426 235844 | 63658 41203 | 22419 22456 | 96.59 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_39
+			  Extensive misassembly ( relocation, inconsistency = -22522 ) between these two alignments
+			Excluding internal overlap of size 14 between Alignment 4 and 5:  213323 213439 | 63659 63775 | 117 117 --> 213323 213425 | 63659 63761 | 103 103
+			Real Alignment 4: 213323 213425 | 63659 63761 | 103 103 | 98.47 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_39
+			  Extensive misassembly ( relocation, inconsistency = -1612 ) between these two alignments
+			Excluding internal overlap of size 3 between Alignment 5 and 6:  211258 211706 | 65716 65268 | 449 449 --> 211258 211703 | 65716 65271 | 446 446
+			Real Alignment 5: 211814 213322 | 65270 63762 | 1509 1509 | 97.75 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_39
+			  Gap between these two alignments (local misassembly). Inconsistency = 110 
+			Real Alignment 6: 211258 211703 | 65716 65271 | 446 446 | 98.0 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_39
+			  Overlap between these two alignments (local misassembly). Inconsistency = -486 
+			Real Alignment 7: 164267 211177 | 113207 66283 | 46911 46925 | 99.05 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_39
+			  Extensive misassembly ( relocation, inconsistency = -12579 ) between these two alignments
+			Excluding internal overlap of size 9 between Alignment 8 and 9:  154780 156699 | 133882 131963 | 1920 1920 --> 154780 156690 | 133882 131972 | 1911 1911
+			Real Alignment 8: 158082 163045 | 131971 127008 | 4964 4964 | 98.03 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_39
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 9: 154780 156690 | 133882 131972 | 1911 1911 | 98.85 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_39
+			  Extensive misassembly ( relocation, inconsistency = -15962 ) between these two alignments
+			Real Alignment 10: 143363 154783 | 161271 149841 | 11421 11431 | 98.18 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_39
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 11: 962163 962539 | 162333 161957 | 377 377 | 97.08 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_39
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_63 (119232bp)
+Top Length: 34332  Top ID: 97.98
+		This contig is misassembled. 6 total aligns.
+			Real Alignment 1: 962956 963573 | 1 613 | 618 613 | 96.28 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_63
+			  Extensive misassembly ( relocation, inconsistency = -198120 ) between these two alignments
+			Excluding internal overlap of size 4 between Alignment 2 and 3:  765490 768747 | 650 3912 | 3258 3263 --> 765490 768743 | 650 3908 | 3254 3259
+			Real Alignment 2: 765490 768743 | 650 3908 | 3254 3259 | 97.52 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_63
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 3: 791667 811332 | 3909 23579 | 19666 19671 | 97.45 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_63
+			  Gap between these two alignments (local misassembly). Inconsistency = 924 
+			Real Alignment 4: 813042 829283 | 24365 40651 | 16242 16287 | 97.04 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_63
+			  Extensive misassembly ( relocation, inconsistency = -4479 ) between these two alignments
+			Real Alignment 5: 854960 889292 | 70807 105138 | 34333 34332 | 97.98 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_63
+			  Extensive misassembly ( relocation, inconsistency = -5171 ) between these two alignments
+			Real Alignment 6: 889291 893685 | 110308 114695 | 4395 4388 | 96.82 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_63
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_66 (116137bp)
+Top Length: 65085  Top ID: 98.97
+		Skipping redundant alignment 321804 326744 | 4943 1 | 4941 4943 | 99.74 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_66
+		Skipping redundant alignment 598751 603690 | 1 4943 | 4940 4943 | 99.7 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_66
+		Skipping redundant alignment 393417 398358 | 4943 1 | 4942 4943 | 99.68 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_66
+		Skipping redundant alignment 1329550 1334490 | 4943 1 | 4941 4943 | 99.68 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_66
+		Skipping redundant alignment 688549 688636 | 73901 73815 | 88 87 | 97.73 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_66
+		Skipping redundant alignment 931940 932058 | 82840 82722 | 119 119 | 96.64 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_66
+		Skipping redundant alignment 598681 598825 | 115993 116137 | 145 145 | 97.93 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_66
+		Skipping redundant alignment 1334416 1334543 | 116137 116010 | 128 128 | 99.22 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_66
+		Skipping redundant alignment 520630 520753 | 116137 116014 | 124 124 | 96.77 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_66
+		Skipping redundant alignment 326670 326774 | 116137 116033 | 105 105 | 98.1 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_66
+		This contig is misassembled. 17 total aligns.
+			Real Alignment 1: 509167 520704 | 11524 1 | 11538 11524 | 99.2 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_66
+			  Extensive misassembly ( relocation, inconsistency = -1023 ) between these two alignments
+			Excluding internal overlap of size 2 between Alignment 2 and 3:  508766 509165 | 12949 12549 | 400 401 --> 508768 509165 | 12947 12549 | 398 399
+			Real Alignment 2: 508768 509165 | 12947 12549 | 398 399 | 97.76 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_66
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 3: 499186 506882 | 20685 12948 | 7697 7738 | 98.28 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_66
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Excluding internal overlap of size 356 between Alignment 4 and 5:  474039 497300 | 43950 20687 | 23262 23264 --> 474395 497300 | 43594 20687 | 22906 22908
+			Real Alignment 4: 474395 497300 | 43594 20687 | 22906 22908 | 98.65 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_66
+			  Overlap between these two alignments (local misassembly). Inconsistency = -222 
+			Excluding internal overlap of size 1 between Alignment 5 and 6:  402026 407627 | 114278 108679 | 5602 5600 --> 402026 407626 | 114278 108680 | 5601 5599
+			Real Alignment 5: 409512 474616 | 108679 43595 | 65105 65085 | 98.97 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_66
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Excluding internal overlap of size 1 between Alignment 6 and 7:  398284 400141 | 116137 114278 | 1858 1860 --> 398284 400140 | 116137 114279 | 1857 1859
+			Real Alignment 6: 402026 407626 | 114278 108680 | 5601 5599 | 99.2 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_66
+			  Extensive misassembly ( relocation, inconsistency = 1885 ) between these two alignments
+			Real Alignment 7: 398284 400140 | 116137 114279 | 1857 1859 | 97.33 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_66
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_131 (66123bp)
+Top Length: 43766  Top ID: 99.02
+		This contig is partially unaligned. (Aligned 43766 out of 66123 bases)
+		Alignment: 1112427 1156166 | 22352 66117 | 43740 43766 | 99.02 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_131
+		Unaligned bases: 1 to 22351 (22351)
+		Unaligned bases: 66118 to 66123 (6)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_137 (64191bp)
+Top Length: 17329  Top ID: 95.85
+		This contig is misassembled. 5 total aligns.
+			Real Alignment 1: 908407 913790 | 11731 17108 | 5384 5378 | 97.53 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_137
+			  Fake misassembly between these two alignments: inconsistency = -54 , gap in the contig is small or absent or filled mostly with Ns (long indel: insertion of length 54; 0 mismatches)
+			Real Alignment 2: 913789 926385 | 17161 29755 | 12597 12595 | 97.82 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_137
+			  Extensive misassembly ( relocation, inconsistency = -2337 ) between these two alignments
+			Real Alignment 3: 933431 950775 | 39138 56466 | 17345 17329 | 95.85 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_137
+			  Overlap between these two alignments (local misassembly). Inconsistency = -225 
+			Real Alignment 4: 950775 955140 | 56691 61057 | 4366 4367 | 95.76 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_137
+			  Extensive misassembly ( relocation, inconsistency = -1773 ) between these two alignments
+			Real Alignment 5: 955357 956498 | 63047 64191 | 1142 1145 | 96.77 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_137
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_166 (58224bp)
+Top Length: 35046  Top ID: 98.99
+		Skipping redundant alignment 603696 603794 | 1 99 | 99 99 | 97.98 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_166
+		Skipping redundant alignment 1329448 1329544 | 97 1 | 97 97 | 98.97 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_166
+		Skipping redundant alignment 520639 520737 | 58224 58126 | 99 99 | 100.0 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_166
+		Skipping redundant alignment 598721 598816 | 58129 58224 | 96 96 | 98.96 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_166
+		Skipping redundant alignment 398293 398388 | 58224 58129 | 96 96 | 98.96 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_166
+		Skipping redundant alignment 1334425 1334520 | 58224 58129 | 96 96 | 98.96 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_166
+		This contig is misassembled. 12 total aligns.
+			Excluding internal overlap of size 11 between Alignment 1 and 2:  381407 381960 | 3831 3278 | 554 554 --> 381407 381949 | 3831 3289 | 543 543
+			Real Alignment 1: 390127 393411 | 3288 1 | 3285 3288 | 98.94 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_166
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 381407 381949 | 3831 3289 | 543 543 | 98.38 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_166
+			  Extensive misassembly ( relocation, inconsistency = -5311 ) between these two alignments
+			Real Alignment 3: 377089 380662 | 13478 9887 | 3574 3592 | 96.33 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_166
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 4: 372145 372729 | 14306 13722 | 585 585 | 98.8 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_166
+			  Overlap between these two alignments (local misassembly). Inconsistency = -179 
+			Real Alignment 5: 363608 372147 | 23025 14483 | 8540 8543 | 99.15 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_166
+			  Extensive misassembly ( relocation, inconsistency = 1798 ) between these two alignments
+			Real Alignment 6: 326679 361656 | 58224 23179 | 34978 35046 | 98.99 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_166
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_193 (49891bp)
+Top Length: 25658  Top ID: 98.25
+		Skipping redundant alignment 271191 271387 | 1 197 | 197 197 | 95.45 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_193
+		This contig is misassembled. 4 total aligns.
+			Excluding internal overlap of size 127 between Alignment 1 and 2:  272390 272694 | 1 305 | 305 305 --> 272390 272567 | 1 178 | 178 178
+			Real Alignment 1: 272390 272567 | 1 178 | 178 178 | 97.7 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_193
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 274476 300135 | 179 25836 | 25660 25658 | 98.25 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_193
+			  Extensive misassembly ( relocation, inconsistency = -2286 ) between these two alignments
+			Real Alignment 3: 300136 321859 | 28123 49891 | 21724 21769 | 99.05 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_193
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_465 (24044bp)
+Top Length: 15240  Top ID: 99.35
+		Skipping redundant alignment 598698 598816 | 23926 24044 | 119 119 | 98.32 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_465
+		Skipping redundant alignment 398293 398411 | 24044 23926 | 119 119 | 98.32 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_465
+		Skipping redundant alignment 520639 520753 | 24044 23930 | 115 115 | 100.0 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_465
+		Skipping redundant alignment 326679 326780 | 24044 23943 | 102 102 | 99.02 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_465
+		This contig is partially unaligned. (Aligned 15240 out of 24044 bases)
+		Alignment: 1334425 1349662 | 24044 8805 | 15238 15240 | 99.35 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_465
+		Unaligned bases: 1 to 8804 (8804)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_537 (21266bp)
+Top Length: 21172  Top ID: 98.8
+		Marking as insignificant: 874606 874699 | 94 1 | 94 94 | 100.0 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_537
+		Marking as insignificant: 603694 603792 | 21266 21168 | 99 99 | 97.98 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ scaffold_537
+		Marking as insignificant: 393315 393413 | 21168 21266 | 99 99 | 100.0 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_537
+		One align captures most of this contig: 1308336 1329546 | 95 21266 | 21211 21172 | 98.8 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_537
+
+CONTIG: scaffold_3874 (2737bp)
+Top Length: 2737  Top ID: 95.69
+		Marking as insignificant: 1159838 1159944 | 1 107 | 107 107 | 98.13 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_3874
+		One align captures most of this contig: 1156637 1159373 | 1 2737 | 2737 2737 | 95.69 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_3874
+
+CONTIG: scaffold_5804 (1948bp)
+Top Length: 1646  Top ID: 97.02
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 956400 958045 | 1 1646 | 1646 1646 | 97.02 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_5804
+			  Gap between these two alignments (local misassembly). Inconsistency = 759 
+			Real Alignment 2: 958834 959110 | 1676 1948 | 277 273 | 95.67 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_5804
+
+CONTIG: scaffold_8664 (1166bp)
+Top Length: 1166  Top ID: 96.83
+		Marking as insignificant: 327341 328502 | 1166 3 | 1162 1164 | 95.96 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_8664
+		Marking as insignificant: 134683 135844 | 3 1166 | 1162 1164 | 95.96 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_8664
+		One align captures most of this contig: 961098 962261 | 1 1166 | 1164 1166 | 96.83 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_8664
+
+CONTIG: scaffold_10025 (979bp)
+Top Length: 979  Top ID: 98.37
+		One align captures most of this contig: 957989 958967 | 1 979 | 979 979 | 98.37 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_10025
+
+CONTIG: scaffold_14482 (625bp)
+Top Length: 625  Top ID: 96.96
+		One align captures most of this contig: 1156074 1156698 | 1 625 | 625 625 | 96.96 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_14482
+
+CONTIG: scaffold_16396 (543bp)
+Top Length: 543  Top ID: 96.32
+		One align captures most of this contig: 962163 962705 | 1 543 | 543 543 | 96.32 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ scaffold_16396
+
+CONTIG: scaffold_22 (241774bp)
+Top Length: 56072  Top ID: 98.83
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 332396 339717 | 241774 234443 | 7322 7332 | 98.15 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_22
+		Skipping redundant alignment 340423 360551 | 234448 214323 | 20129 20126 | 99.16 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_22
+		Skipping redundant alignment 360550 373563 | 126496 113455 | 13014 13042 | 98.85 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_22
+		Skipping redundant alignment 373546 374217 | 109974 109303 | 672 672 | 98.36 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_22
+		Skipping redundant alignment 376224 376900 | 109520 108845 | 677 676 | 98.38 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_22
+		Skipping redundant alignment 376881 384778 | 108785 100886 | 7898 7900 | 97.94 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_22
+		Skipping redundant alignment 387320 443354 | 98880 42809 | 56035 56072 | 98.83 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_22
+		Skipping redundant alignment 443345 460690 | 31831 14485 | 17346 17347 | 98.65 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_22
+		This contig is misassembled. 16 total aligns.
+			Real Alignment 1: 2495 19840 | 14485 31831 | 17346 17347 | 98.65 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_22
+			  Extensive misassembly ( relocation, inconsistency = -10987 ) between these two alignments
+			Real Alignment 2: 19831 75865 | 42809 98880 | 56035 56072 | 98.83 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_22
+			  Gap between these two alignments (local misassembly). Inconsistency = 536 
+			Real Alignment 3: 78407 86304 | 100886 108785 | 7898 7900 | 97.94 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_22
+			  Fake misassembly between these two alignments: inconsistency = -79 , gap in the contig is small or absent or filled mostly with Ns (long indel: insertion of length 79; 0 mismatches)
+			Excluding internal overlap of size 218 between Alignment 4 and 5:  88968 89639 | 109303 109974 | 672 672 --> 89186 89639 | 109521 109974 | 454 454
+			Real Alignment 4: 86285 86961 | 108845 109520 | 677 676 | 98.38 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_22
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 5: 89186 89639 | 109521 109974 | 454 454 | 98.36 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_22
+			  Extensive misassembly ( relocation, inconsistency = -3498 ) between these two alignments
+			Real Alignment 6: 89622 102635 | 113455 126496 | 13014 13042 | 98.85 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_22
+			  Extensive misassembly ( relocation, inconsistency = -87828 ) between these two alignments
+			Excluding internal overlap of size 1 between Alignment 7 and 8:  123473 130789 | 234448 241774 | 7317 7327 --> 123474 130789 | 234449 241774 | 7316 7326
+			Real Alignment 7: 102634 122762 | 214323 234448 | 20129 20126 | 99.16 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_22
+			  Gap between these two alignments (local misassembly). Inconsistency = 711 
+			Real Alignment 8: 123474 130789 | 234449 241774 | 7316 7326 | 98.16 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_22
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_5519 (1916bp)
+Top Length: 78  Top ID: 98.72
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 328551 328628 | 3 80 | 78 78 | 98.72 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_5519
+		This contig is partially unaligned. (Aligned 78 out of 1916 bases)
+		Alignment: 134557 134634 | 80 3 | 78 78 | 98.72 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_5519
+		Unaligned bases: 1 to 2 (2)
+		Unaligned bases: 81 to 1916 (1836)
+
+CONTIG: scaffold_7273 (1421bp)
+Top Length: 78  Top ID: 98.72
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 328551 328628 | 3 80 | 78 78 | 98.72 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ scaffold_7273
+		This contig is partially unaligned. (Aligned 78 out of 1421 bases)
+		Alignment: 134557 134634 | 80 3 | 78 78 | 98.72 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ scaffold_7273
+		Unaligned bases: 1 to 2 (2)
+		Unaligned bases: 81 to 1421 (1341)
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Eubacterium_sp_3_1_31/contigs_reports/nucmer_output/IDBA_UD.used_snps
+	Reference Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_: 33 total alignments. 1 total regions.
+		Region: 1 to 958858 (958858 bp)
+			Align 1: 1 154419 scaffold_3 165519 319917
+				Gap between this and next alignment: 154419 to 156011 (1591 bp)
+				Next Alignment: 156011 156322 scaffold_3 320036 320347
+
+			Align 2: 156011 156322 scaffold_3 320036 320347
+				Gap between this and next alignment: 156322 to 158167 (1844 bp)
+				Next Alignment: 158167 171636 scaffold_3 320348 333773
+
+			Align 3: 158167 171636 scaffold_3 320348 333773
+				Gap between this and next alignment: 171636 to 262735 (91098 bp)
+				Next Alignment: 262735 283678 scaffold_3 333774 354691
+
+			Align 4: 262735 283678 scaffold_3 333774 354691
+				Gap between this and next alignment: 283678 to 287410 (3731 bp)
+				Next Alignment: 287410 287940 scaffold_16748 1 531
+
+			Align 5: 287410 287940 scaffold_16748 1 531
+				Gap between this and next alignment: 287940 to 288628 (687 bp)
+				Next Alignment: 288628 423776 scaffold_3 354692 489833
+
+			Align 6: 288628 423776 scaffold_3 354692 489833
+				Gap between this and next alignment: 423776 to 424038 (261 bp)
+				Next Alignment: 424038 426223 scaffold_38 613 2798
+
+			Align 7: 424038 426223 scaffold_38 613 2798
+				Gap between this and next alignment: 426223 to 429074 (2850 bp)
+				Next Alignment: 429074 451925 scaffold_38 6976 29801
+
+			Align 8: 429074 451925 scaffold_38 6976 29801
+				Gap between this and next alignment: 451925 to 464730 (12804 bp)
+				Next Alignment: 464730 598686 scaffold_38 30180 164110
+
+			Align 9: 464730 598686 scaffold_38 30180 164110
+				Gap between this and next alignment: 598686 to 603696 (5009 bp)
+				Next Alignment: 603696 627826 scaffold_42 1 24130
+
+			Align 10: 603696 627826 scaffold_42 1 24130
+				Gap between this and next alignment: 627826 to 628475 (648 bp)
+				Next Alignment: 628475 643592 scaffold_42 24131 39247
+
+			Align 11: 628475 643592 scaffold_42 24131 39247
+				Gap between this and next alignment: 643592 to 646586 (2993 bp)
+				Next Alignment: 646586 695463 scaffold_42 40250 89066
+
+			Align 12: 646586 695463 scaffold_42 40250 89066
+				Gap between this and next alignment: 695463 to 696366 (902 bp)
+				Next Alignment: 696366 704528 scaffold_42 90240 98399
+
+			Align 13: 696366 704528 scaffold_42 90240 98399
+				Gap between this and next alignment: 704528 to 704647 (118 bp)
+				Next Alignment: 704647 708515 scaffold_42 98938 102805
+
+			Align 14: 704647 708515 scaffold_42 98938 102805
+				Gap between this and next alignment: 708515 to 709255 (739 bp)
+				Next Alignment: 709255 715635 scaffold_42 103468 109836
+
+			Align 15: 709255 715635 scaffold_42 103468 109836
+				Gap between this and next alignment: 715635 to 717145 (1509 bp)
+				Next Alignment: 717145 734751 scaffold_42 109837 127411
+
+			Align 16: 717145 734751 scaffold_42 109837 127411
+				Gap between this and next alignment: 734751 to 741777 (7025 bp)
+				Next Alignment: 741777 771514 scaffold_42 127424 157138
+
+			Align 17: 741777 771514 scaffold_42 127424 157138
+				The next alignment (754121 754235 scaffold_29 15832 15718) is redundant. Skipping.
+				Gap between this and next alignment: 771514 to 771693 (178 bp)
+				Next Alignment: 771693 812611 scaffold_29 185780 144868
+
+			Align 19: 771693 812611 scaffold_29 185780 144868
+				Negative gap (overlap) between this and next alignment: 812611 to 812611 (0 bp)
+				Next Alignment: 812611 834092 scaffold_29 144756 123145
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 144756 to 144755.
+			Align 20: 812612 834092 scaffold_29 144755 123145
+				Gap between this and next alignment: 834092 to 839041 (4948 bp)
+				Next Alignment: 839041 862359 scaffold_29 123144 99810
+
+			Align 21: 839041 862359 scaffold_29 123144 99810
+				Negative gap (overlap) between this and next alignment: 862359 to 862276 (-83 bp)
+				Next Alignment: 862276 874605 scaffold_29 99809 87495
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 99809 to 99725.
+			Align 22: 862360 874605 scaffold_29 99725 87495
+				Next Alignment: 874606 874704 scaffold_117 99 1
+
+			Align 23: 874606 874704 scaffold_117 99 1
+				The next alignment (874606 874704 scaffold_232 43364 43462) is redundant. Skipping.
+				The next alignment (874606 874699 scaffold_385 94 1) is redundant. Skipping.
+				Negative gap (overlap) between this and next alignment: 874704 to 874606 (-98 bp)
+				Next Alignment: 874606 875478 scaffold_6271 1667 795
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1667 to 1568.
+			Align 26: 874705 875478 scaffold_6271 1568 795
+				Gap between this and next alignment: 875478 to 878237 (2758 bp)
+				Next Alignment: 878237 879030 scaffold_6271 794 1
+
+			Align 27: 878237 879030 scaffold_6271 794 1
+				The next alignment (878932 879030 scaffold_45 151227 151129) is redundant. Skipping.
+				The next alignment (878932 879030 scaffold_208 1 99) is redundant. Skipping.
+				The next alignment (878934 879030 scaffold_117 70342 70246) is redundant. Skipping.
+				The next alignment (878934 879030 scaffold_217 1 97) is redundant. Skipping.
+				Gap between this and next alignment: 879030 to 879039 (8 bp)
+				Next Alignment: 879039 881208 scaffold_29 87494 85325
+
+			Align 32: 879039 881208 scaffold_29 87494 85325
+				Gap between this and next alignment: 881208 to 881500 (291 bp)
+				Next Alignment: 881500 932697 scaffold_29 85324 34123
+
+			Align 33: 881500 932697 scaffold_29 85324 34123
+			END in gap: 932697 to 958858 (26161 bp)
+
+	Reference Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_: 5 total alignments. 1 total regions.
+		Region: 1 to 463184 (463184 bp)
+			START in gap: 1 to 105928 (105927 bp)
+			Align 1: 105928 106774 scaffold_99 345 1191
+				Gap between this and next alignment: 106774 to 106970 (195 bp)
+				Next Alignment: 106970 109939 scaffold_99 1383 4353
+
+			Align 2: 106970 109939 scaffold_99 1383 4353
+				Gap between this and next alignment: 109939 to 111362 (1422 bp)
+				Next Alignment: 111362 112222 scaffold_99 5773 6633
+
+			Align 3: 111362 112222 scaffold_99 5773 6633
+				Gap between this and next alignment: 112222 to 118827 (6604 bp)
+				Next Alignment: 118827 164155 scaffold_99 11694 57069
+
+			Align 4: 118827 164155 scaffold_99 11694 57069
+				Gap between this and next alignment: 164155 to 330537 (166381 bp)
+				Next Alignment: 330537 332439 scaffold_5549 1 1903
+
+			Align 5: 330537 332439 scaffold_5549 1 1903
+			END in gap: 332439 to 463184 (130745 bp)
+
+	Reference Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_: 84 total alignments. 1 total regions.
+		Region: 1 to 1504620 (1504620 bp)
+			START in gap: 1 to 34278 (34277 bp)
+			Align 1: 34278 43797 scaffold_16 19109 28630
+				Gap between this and next alignment: 43797 to 54256 (10458 bp)
+				Next Alignment: 54256 58568 scaffold_16 28631 32946
+
+			Align 2: 54256 58568 scaffold_16 28631 32946
+				Gap between this and next alignment: 58568 to 58621 (52 bp)
+				Next Alignment: 58621 81144 scaffold_16 38423 60950
+
+			Align 3: 58621 81144 scaffold_16 38423 60950
+				Gap between this and next alignment: 81144 to 82888 (1743 bp)
+				Next Alignment: 82888 122602 scaffold_16 61476 101179
+
+			Align 4: 82888 122602 scaffold_16 61476 101179
+				Negative gap (overlap) between this and next alignment: 122602 to 122577 (-25 bp)
+				Next Alignment: 122577 129518 scaffold_16 104686 111640
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 104686 to 104712.
+			Align 5: 122603 129518 scaffold_16 104712 111640
+				Gap between this and next alignment: 129518 to 129996 (477 bp)
+				Next Alignment: 129996 156301 scaffold_16 112017 138343
+
+			Align 6: 129996 156301 scaffold_16 112017 138343
+				Gap between this and next alignment: 156301 to 162869 (6567 bp)
+				Next Alignment: 162869 164537 scaffold_16 141120 142789
+
+			Align 7: 162869 164537 scaffold_16 141120 142789
+				Gap between this and next alignment: 164537 to 164574 (36 bp)
+				Next Alignment: 164574 168878 scaffold_16 144749 149055
+
+			Align 8: 164574 168878 scaffold_16 144749 149055
+				Gap between this and next alignment: 168878 to 169492 (613 bp)
+				Next Alignment: 169492 183504 scaffold_16 149088 163098
+
+			Align 9: 169492 183504 scaffold_16 149088 163098
+				Gap between this and next alignment: 183504 to 183657 (152 bp)
+				Next Alignment: 183657 197322 scaffold_16 168537 182187
+
+			Align 10: 183657 197322 scaffold_16 168537 182187
+				Gap between this and next alignment: 197322 to 197442 (119 bp)
+				Next Alignment: 197442 197711 scaffold_16 182189 182460
+
+			Align 11: 197442 197711 scaffold_16 182189 182460
+				Negative gap (overlap) between this and next alignment: 197711 to 197696 (-15 bp)
+				Next Alignment: 197696 206690 scaffold_16 183120 192127
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 183120 to 183137.
+			Align 12: 197712 206690 scaffold_16 183137 192127
+				Gap between this and next alignment: 206690 to 209434 (2743 bp)
+				Next Alignment: 209434 210504 scaffold_16 192128 193198
+
+			Align 13: 209434 210504 scaffold_16 192128 193198
+				Gap between this and next alignment: 210504 to 212047 (1542 bp)
+				Next Alignment: 212047 220857 scaffold_16 193199 201997
+
+			Align 14: 212047 220857 scaffold_16 193199 201997
+				Gap between this and next alignment: 220857 to 221458 (600 bp)
+				Next Alignment: 221458 251196 scaffold_16 202705 232507
+
+			Align 15: 221458 251196 scaffold_16 202705 232507
+				Gap between this and next alignment: 251196 to 253081 (1884 bp)
+				Next Alignment: 253081 270791 scaffold_16 232508 250214
+
+			Align 16: 253081 270791 scaffold_16 232508 250214
+				Gap between this and next alignment: 270791 to 272390 (1598 bp)
+				Next Alignment: 272390 272567 scaffold_193 1 178
+
+			Align 17: 272390 272567 scaffold_193 1 178
+				Gap between this and next alignment: 272567 to 274476 (1908 bp)
+				Next Alignment: 274476 300135 scaffold_193 179 25836
+
+			Align 18: 274476 300135 scaffold_193 179 25836
+				Next Alignment: 300136 321859 scaffold_193 28123 49891
+
+			Align 19: 300136 321859 scaffold_193 28123 49891
+				Gap between this and next alignment: 321859 to 326679 (4819 bp)
+				Next Alignment: 326679 361656 scaffold_166 58224 23179
+
+			Align 20: 326679 361656 scaffold_166 58224 23179
+				Gap between this and next alignment: 361656 to 363608 (1951 bp)
+				Next Alignment: 363608 372147 scaffold_166 23025 14483
+
+			Align 21: 363608 372147 scaffold_166 23025 14483
+				Negative gap (overlap) between this and next alignment: 372147 to 372145 (-2 bp)
+				Next Alignment: 372145 372729 scaffold_166 14306 13722
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 14306 to 14303.
+			Align 22: 372148 372729 scaffold_166 14303 13722
+				Gap between this and next alignment: 372729 to 377089 (4359 bp)
+				Next Alignment: 377089 380662 scaffold_166 13478 9887
+
+			Align 23: 377089 380662 scaffold_166 13478 9887
+				Gap between this and next alignment: 380662 to 381407 (744 bp)
+				Next Alignment: 381407 381949 scaffold_166 3831 3289
+
+			Align 24: 381407 381949 scaffold_166 3831 3289
+				Gap between this and next alignment: 381949 to 390127 (8177 bp)
+				Next Alignment: 390127 393411 scaffold_166 3288 1
+
+			Align 25: 390127 393411 scaffold_166 3288 1
+				Gap between this and next alignment: 393411 to 398284 (4872 bp)
+				Next Alignment: 398284 400140 scaffold_66 116137 114279
+
+			Align 26: 398284 400140 scaffold_66 116137 114279
+				Gap between this and next alignment: 400140 to 402026 (1885 bp)
+				Next Alignment: 402026 407626 scaffold_66 114278 108680
+
+			Align 27: 402026 407626 scaffold_66 114278 108680
+				Gap between this and next alignment: 407626 to 409512 (1885 bp)
+				Next Alignment: 409512 474616 scaffold_66 108679 43595
+
+			Align 28: 409512 474616 scaffold_66 108679 43595
+				Negative gap (overlap) between this and next alignment: 474616 to 474395 (-221 bp)
+				Next Alignment: 474395 497300 scaffold_66 43594 20687
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 43594 to 43372.
+			Align 29: 474617 497300 scaffold_66 43372 20687
+				Gap between this and next alignment: 497300 to 499186 (1885 bp)
+				Next Alignment: 499186 506882 scaffold_66 20685 12948
+
+			Align 30: 499186 506882 scaffold_66 20685 12948
+				Negative gap (overlap) between this and next alignment: 506882 to 506877 (-5 bp)
+				Next Alignment: 506877 507032 scaffold_29 15989 15833
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 15989 to 15983.
+			Align 31: 506883 507032 scaffold_29 15983 15833
+				Gap between this and next alignment: 507032 to 508768 (1735 bp)
+				Next Alignment: 508768 509165 scaffold_66 12947 12549
+
+			Align 32: 508768 509165 scaffold_66 12947 12549
+				Gap between this and next alignment: 509165 to 509167 (1 bp)
+				Next Alignment: 509167 520704 scaffold_66 11524 1
+
+			Align 33: 509167 520704 scaffold_66 11524 1
+				Negative gap (overlap) between this and next alignment: 520704 to 520606 (-98 bp)
+				Next Alignment: 520606 534856 scaffold_11 273921 259660
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 273921 to 273822.
+			Align 34: 520705 534856 scaffold_11 273822 259660
+				Gap between this and next alignment: 534856 to 536399 (1542 bp)
+				Next Alignment: 536399 544031 scaffold_11 259659 252026
+
+			Align 35: 536399 544031 scaffold_11 259659 252026
+				Gap between this and next alignment: 544031 to 545917 (1885 bp)
+				Next Alignment: 545917 567401 scaffold_11 252025 230540
+
+			Align 36: 545917 567401 scaffold_11 252025 230540
+				Gap between this and next alignment: 567401 to 567659 (257 bp)
+				Next Alignment: 567659 583782 scaffold_11 213508 197393
+
+			Align 37: 567659 583782 scaffold_11 213508 197393
+				Negative gap (overlap) between this and next alignment: 583782 to 583721 (-61 bp)
+				Next Alignment: 583721 586686 scaffold_11 189569 186601
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 189569 to 189511.
+			Align 38: 583783 586686 scaffold_11 189511 186601
+				Gap between this and next alignment: 586686 to 588573 (1886 bp)
+				Next Alignment: 588573 603868 scaffold_11 186600 171306
+
+			Align 39: 588573 603868 scaffold_11 186600 171306
+				Gap between this and next alignment: 603868 to 605755 (1886 bp)
+				Next Alignment: 605755 607805 scaffold_11 171305 169255
+
+			Align 40: 605755 607805 scaffold_11 171305 169255
+				Gap between this and next alignment: 607805 to 610644 (2838 bp)
+				Next Alignment: 610644 612350 scaffold_11 166424 164720
+
+			Align 41: 610644 612350 scaffold_11 166424 164720
+				Gap between this and next alignment: 612350 to 613154 (803 bp)
+				Next Alignment: 613154 652074 scaffold_11 164636 125689
+
+			Align 42: 613154 652074 scaffold_11 164636 125689
+				Gap between this and next alignment: 652074 to 697213 (45138 bp)
+				Next Alignment: 697213 714531 scaffold_11 122245 104928
+
+			Align 43: 697213 714531 scaffold_11 122245 104928
+				Gap between this and next alignment: 714531 to 716417 (1885 bp)
+				Next Alignment: 716417 736906 scaffold_11 104927 84440
+
+			Align 44: 716417 736906 scaffold_11 104927 84440
+				Negative gap (overlap) between this and next alignment: 736906 to 736892 (-14 bp)
+				Next Alignment: 736892 737037 scaffold_11 29944 29799
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 29944 to 29929.
+			Align 45: 736907 737037 scaffold_11 29929 29799
+				Next Alignment: 737038 765330 scaffold_11 28917 628
+
+			Align 46: 737038 765330 scaffold_11 28917 628
+				Gap between this and next alignment: 765330 to 765490 (159 bp)
+				Next Alignment: 765490 768743 scaffold_63 650 3908
+
+			Align 47: 765490 768743 scaffold_63 650 3908
+				Gap between this and next alignment: 768743 to 791667 (22923 bp)
+				Next Alignment: 791667 811332 scaffold_63 3909 23579
+
+			Align 48: 791667 811332 scaffold_63 3909 23579
+				Gap between this and next alignment: 811332 to 813042 (1709 bp)
+				Next Alignment: 813042 829283 scaffold_63 24365 40651
+
+			Align 49: 813042 829283 scaffold_63 24365 40651
+				Gap between this and next alignment: 829283 to 854960 (25676 bp)
+				Next Alignment: 854960 889292 scaffold_63 70807 105138
+
+			Align 50: 854960 889292 scaffold_63 70807 105138
+				Negative gap (overlap) between this and next alignment: 889292 to 889291 (-1 bp)
+				Next Alignment: 889291 893685 scaffold_63 110308 114695
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 110308 to 110310.
+			Align 51: 889293 893685 scaffold_63 110310 114695
+				Gap between this and next alignment: 893685 to 908407 (14721 bp)
+				Next Alignment: 908407 913790 scaffold_137 11731 17108
+
+			Align 52: 908407 913790 scaffold_137 11731 17108
+				Negative gap (overlap) between this and next alignment: 913790 to 913789 (-1 bp)
+				Next Alignment: 913789 926385 scaffold_137 17161 29755
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 17161 to 17163.
+			Align 53: 913791 926385 scaffold_137 17163 29755
+				Gap between this and next alignment: 926385 to 933431 (7045 bp)
+				Next Alignment: 933431 950775 scaffold_137 39138 56466
+
+			Align 54: 933431 950775 scaffold_137 39138 56466
+				Negative gap (overlap) between this and next alignment: 950775 to 950775 (0 bp)
+				Next Alignment: 950775 955140 scaffold_137 56691 61057
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 56691 to 56692.
+			Align 55: 950776 955140 scaffold_137 56692 61057
+				Gap between this and next alignment: 955140 to 955357 (216 bp)
+				Next Alignment: 955357 956498 scaffold_137 63047 64191
+
+			Align 56: 955357 956498 scaffold_137 63047 64191
+				The next alignment (956393 956498 scaffold_11 106 1) is redundant. Skipping.
+				Negative gap (overlap) between this and next alignment: 956498 to 956400 (-98 bp)
+				Next Alignment: 956400 958045 scaffold_5804 1 1646
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 100.
+			Align 58: 956499 958045 scaffold_5804 100 1646
+				Negative gap (overlap) between this and next alignment: 958045 to 957989 (-56 bp)
+				Next Alignment: 957989 958967 scaffold_10025 1 979
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 58.
+			Align 59: 958046 958967 scaffold_10025 58 979
+				Negative gap (overlap) between this and next alignment: 958967 to 958834 (-133 bp)
+				Next Alignment: 958834 959110 scaffold_5804 1676 1948
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1676 to 1809.
+			Align 60: 958968 959110 scaffold_5804 1809 1948
+				Gap between this and next alignment: 959110 to 961098 (1987 bp)
+				Next Alignment: 961098 962261 scaffold_8664 1 1166
+
+			Align 61: 961098 962261 scaffold_8664 1 1166
+				Negative gap (overlap) between this and next alignment: 962261 to 962163 (-98 bp)
+				Next Alignment: 962163 962539 scaffold_39 162333 161957
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 162333 to 162234.
+			Align 62: 962262 962539 scaffold_39 162234 161957
+				Negative gap (overlap) between this and next alignment: 962539 to 962163 (-376 bp)
+				Next Alignment: 962163 962705 scaffold_16396 1 543
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 378.
+			Align 63: 962540 962705 scaffold_16396 378 543
+				Negative gap (overlap) between this and next alignment: 962705 to 962539 (-166 bp)
+				Next Alignment: 962539 963097 scaffold_42 158324 157762
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 158324 to 158157.
+			Align 64: 962706 963097 scaffold_42 158157 157762
+				Negative gap (overlap) between this and next alignment: 963097 to 962956 (-141 bp)
+				Next Alignment: 962956 963573 scaffold_63 1 613
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 143.
+			Align 65: 963098 963573 scaffold_63 143 613
+				Negative gap (overlap) between this and next alignment: 963573 to 963298 (-275 bp)
+				Next Alignment: 963298 963743 scaffold_385 27920 27474
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 27920 to 27644.
+			Align 66: 963574 963743 scaffold_385 27644 27474
+				Negative gap (overlap) between this and next alignment: 963743 to 963742 (-1 bp)
+				Next Alignment: 963742 985803 scaffold_385 22197 110
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 22197 to 22195.
+			Align 67: 963744 985803 scaffold_385 22195 110
+				Gap between this and next alignment: 985803 to 985812 (8 bp)
+				Next Alignment: 985812 1038798 scaffold_117 70242 17241
+
+			Align 68: 985812 1038798 scaffold_117 70242 17241
+				Gap between this and next alignment: 1038798 to 1040086 (1287 bp)
+				Next Alignment: 1040086 1048600 scaffold_117 17240 8729
+
+			Align 69: 1040086 1048600 scaffold_117 17240 8729
+				Gap between this and next alignment: 1048600 to 1064470 (15869 bp)
+				Next Alignment: 1064470 1070209 scaffold_117 5836 100
+
+			Align 70: 1064470 1070209 scaffold_117 5836 100
+				Negative gap (overlap) between this and next alignment: 1070209 to 1070202 (-7 bp)
+				Next Alignment: 1070202 1093285 scaffold_208 100 23246
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 100 to 108.
+			Align 71: 1070210 1093285 scaffold_208 108 23246
+				Gap between this and next alignment: 1093285 to 1093295 (9 bp)
+				Next Alignment: 1093295 1112452 scaffold_208 23413 42578
+
+			Align 72: 1093295 1112452 scaffold_208 23413 42578
+				Negative gap (overlap) between this and next alignment: 1112452 to 1112427 (-25 bp)
+				Next Alignment: 1112427 1156166 scaffold_131 22352 66117
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 22352 to 22378.
+			Align 73: 1112453 1156166 scaffold_131 22378 66117
+				Negative gap (overlap) between this and next alignment: 1156166 to 1156074 (-92 bp)
+				Next Alignment: 1156074 1156698 scaffold_14482 1 625
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 94.
+			Align 74: 1156167 1156698 scaffold_14482 94 625
+				Negative gap (overlap) between this and next alignment: 1156698 to 1156637 (-61 bp)
+				Next Alignment: 1156637 1159373 scaffold_3874 1 2737
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 63.
+			Align 75: 1156699 1159373 scaffold_3874 63 2737
+				Gap between this and next alignment: 1159373 to 1159838 (464 bp)
+				Next Alignment: 1159838 1163127 scaffold_45 1 3301
+
+			Align 76: 1159838 1163127 scaffold_45 1 3301
+				Gap between this and next alignment: 1163127 to 1163465 (337 bp)
+				Next Alignment: 1163465 1209792 scaffold_45 8165 54490
+
+			Align 77: 1163465 1209792 scaffold_45 8165 54490
+				Gap between this and next alignment: 1209792 to 1211690 (1897 bp)
+				Next Alignment: 1211690 1308343 scaffold_45 54491 151128
+
+			Align 78: 1211690 1308343 scaffold_45 54491 151128
+				Negative gap (overlap) between this and next alignment: 1308343 to 1308336 (-7 bp)
+				Next Alignment: 1308336 1329546 scaffold_537 95 21266
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 95 to 103.
+			Align 79: 1308344 1329546 scaffold_537 103 21266
+				Gap between this and next alignment: 1329546 to 1334425 (4878 bp)
+				Next Alignment: 1334425 1349662 scaffold_465 24044 8805
+
+			Align 80: 1334425 1349662 scaffold_465 24044 8805
+				Negative gap (overlap) between this and next alignment: 1349662 to 1349646 (-16 bp)
+				Next Alignment: 1349646 1352609 scaffold_3 6063 9026
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 6063 to 6080.
+			Align 81: 1349663 1352609 scaffold_3 6080 9026
+				Gap between this and next alignment: 1352609 to 1354420 (1810 bp)
+				Next Alignment: 1354420 1382567 scaffold_3 9052 37213
+
+			Align 82: 1354420 1382567 scaffold_3 9052 37213
+				Gap between this and next alignment: 1382567 to 1384377 (1809 bp)
+				Next Alignment: 1384377 1454740 scaffold_3 37232 107597
+
+			Align 83: 1384377 1454740 scaffold_3 37232 107597
+				Gap between this and next alignment: 1454740 to 1455659 (918 bp)
+				Next Alignment: 1455659 1504620 scaffold_3 116295 165285
+
+			Align 84: 1455659 1504620 scaffold_3 116295 165285
+			END in current alignment.  Modifying 1504620 to 1504620.
+
+ERROR: Reference Eubacterium_sp_3_1_31_gi_482850069_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_', 'Eubacterium_sp_3_1_31_gi_482850063_ref_NZ_', 'Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_', 'Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_', 'Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_']
+	Reference Eubacterium_sp_3_1_31_gi_482850063_ref_NZ_: 9 total alignments. 1 total regions.
+		Region: 1 to 176757 (176757 bp)
+			START in gap: 1 to 633 (632 bp)
+			Align 1: 633 17744 scaffold_29 33205 16098
+				Gap between this and next alignment: 17744 to 17914 (169 bp)
+				Next Alignment: 17914 24854 scaffold_35 173803 166865
+
+			Align 2: 17914 24854 scaffold_35 173803 166865
+				Gap between this and next alignment: 24854 to 26824 (1969 bp)
+				Next Alignment: 26824 60666 scaffold_35 164798 130947
+
+			Align 3: 26824 60666 scaffold_35 164798 130947
+				Gap between this and next alignment: 60666 to 63015 (2348 bp)
+				Next Alignment: 63015 73707 scaffold_35 130946 120256
+
+			Align 4: 63015 73707 scaffold_35 130946 120256
+				Gap between this and next alignment: 73707 to 74419 (711 bp)
+				Next Alignment: 74419 96813 scaffold_35 120255 97873
+
+			Align 5: 74419 96813 scaffold_35 120255 97873
+				Negative gap (overlap) between this and next alignment: 96813 to 96752 (-61 bp)
+				Next Alignment: 96752 100644 scaffold_35 97872 93980
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 97872 to 97810.
+			Align 6: 96814 100644 scaffold_35 97810 93980
+				Gap between this and next alignment: 100644 to 104279 (3634 bp)
+				Next Alignment: 104279 106283 scaffold_35 93979 91973
+
+			Align 7: 104279 106283 scaffold_35 93979 91973
+				Gap between this and next alignment: 106283 to 108464 (2180 bp)
+				Next Alignment: 108464 126548 scaffold_35 91972 73914
+
+			Align 8: 108464 126548 scaffold_35 91972 73914
+				Negative gap (overlap) between this and next alignment: 126548 to 126311 (-237 bp)
+				Next Alignment: 126311 139798 scaffold_35 73913 60420
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 73913 to 73671.
+			Align 9: 126549 139798 scaffold_35 73671 60420
+			END in gap: 139798 to 176757 (36959 bp)
+
+	Reference Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_: 29 total alignments. 1 total regions.
+		Region: 1 to 463184 (463184 bp)
+			START in gap: 1 to 2495 (2494 bp)
+			Align 1: 2495 19840 scaffold_22 14485 31831
+				Negative gap (overlap) between this and next alignment: 19840 to 19831 (-9 bp)
+				Next Alignment: 19831 75865 scaffold_22 42809 98880
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 42809 to 42819.
+			Align 2: 19841 75865 scaffold_22 42819 98880
+				Gap between this and next alignment: 75865 to 78407 (2541 bp)
+				Next Alignment: 78407 86304 scaffold_22 100886 108785
+
+			Align 3: 78407 86304 scaffold_22 100886 108785
+				Negative gap (overlap) between this and next alignment: 86304 to 86285 (-19 bp)
+				Next Alignment: 86285 86961 scaffold_22 108845 109520
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 108845 to 108864.
+			Align 4: 86305 86961 scaffold_22 108864 109520
+				Gap between this and next alignment: 86961 to 89186 (2224 bp)
+				Next Alignment: 89186 89639 scaffold_22 109521 109974
+
+			Align 5: 89186 89639 scaffold_22 109521 109974
+				Negative gap (overlap) between this and next alignment: 89639 to 89622 (-17 bp)
+				Next Alignment: 89622 102635 scaffold_22 113455 126496
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 113455 to 113472.
+			Align 6: 89640 102635 scaffold_22 113472 126496
+				Negative gap (overlap) between this and next alignment: 102635 to 102634 (-1 bp)
+				Next Alignment: 102634 122762 scaffold_22 214323 234448
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 214323 to 214325.
+			Align 7: 102636 122762 scaffold_22 214325 234448
+				Gap between this and next alignment: 122762 to 123474 (711 bp)
+				Next Alignment: 123474 130789 scaffold_22 234449 241774
+
+			Align 8: 123474 130789 scaffold_22 234449 241774
+				Negative gap (overlap) between this and next alignment: 130789 to 130740 (-49 bp)
+				Next Alignment: 130740 131477 scaffold_12686 1 738
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 51.
+			Align 9: 130790 131477 scaffold_12686 51 738
+				Gap between this and next alignment: 131477 to 132357 (879 bp)
+				Next Alignment: 132357 133012 scaffold_13926 1 656
+
+			Align 10: 132357 133012 scaffold_13926 1 656
+				Gap between this and next alignment: 133012 to 134557 (1544 bp)
+				Next Alignment: 134557 134634 scaffold_5519 80 3
+
+			Align 11: 134557 134634 scaffold_5519 80 3
+				The next alignment (134557 134634 scaffold_7273 80 3) is redundant. Skipping.
+				Gap between this and next alignment: 134634 to 143363 (8728 bp)
+				Next Alignment: 143363 154783 scaffold_39 161271 149841
+
+			Align 13: 143363 154783 scaffold_39 161271 149841
+				Negative gap (overlap) between this and next alignment: 154783 to 154780 (-3 bp)
+				Next Alignment: 154780 156690 scaffold_39 133882 131972
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 133882 to 133878.
+			Align 14: 154784 156690 scaffold_39 133878 131972
+				Gap between this and next alignment: 156690 to 158082 (1391 bp)
+				Next Alignment: 158082 163045 scaffold_39 131971 127008
+
+			Align 15: 158082 163045 scaffold_39 131971 127008
+				Gap between this and next alignment: 163045 to 164267 (1221 bp)
+				Next Alignment: 164267 211177 scaffold_39 113207 66283
+
+			Align 16: 164267 211177 scaffold_39 113207 66283
+				Gap between this and next alignment: 211177 to 211258 (80 bp)
+				Next Alignment: 211258 211703 scaffold_39 65716 65271
+
+			Align 17: 211258 211703 scaffold_39 65716 65271
+				Gap between this and next alignment: 211703 to 211814 (110 bp)
+				Next Alignment: 211814 213322 scaffold_39 65270 63762
+
+			Align 18: 211814 213322 scaffold_39 65270 63762
+				Next Alignment: 213323 213425 scaffold_39 63659 63761
+
+			Align 19: 213323 213425 scaffold_39 63659 63761
+				Next Alignment: 213426 235844 scaffold_39 63658 41203
+
+			Align 20: 213426 235844 scaffold_39 63658 41203
+				Gap between this and next alignment: 235844 to 236025 (180 bp)
+				Next Alignment: 236025 255903 scaffold_39 35834 16004
+
+			Align 21: 236025 255903 scaffold_39 35834 16004
+				Gap between this and next alignment: 255903 to 255908 (4 bp)
+				Next Alignment: 255908 264393 scaffold_39 12932 4500
+
+			Align 22: 255908 264393 scaffold_39 12932 4500
+				Gap between this and next alignment: 264393 to 275855 (11461 bp)
+				Next Alignment: 275855 296646 scaffold_99 77864 57076
+
+			Align 23: 275855 296646 scaffold_99 77864 57076
+				Gap between this and next alignment: 296646 to 357291 (60644 bp)
+				Next Alignment: 357291 379024 scaffold_217 44551 22808
+
+			Align 24: 357291 379024 scaffold_217 44551 22808
+				Gap between this and next alignment: 379024 to 379027 (2 bp)
+				Next Alignment: 379027 379846 scaffold_217 11229 10404
+
+			Align 25: 379027 379846 scaffold_217 11229 10404
+				Gap between this and next alignment: 379846 to 386938 (7091 bp)
+				Next Alignment: 386938 392260 scaffold_232 12907 7585
+
+			Align 26: 386938 392260 scaffold_232 12907 7585
+				Gap between this and next alignment: 392260 to 394389 (2128 bp)
+				Next Alignment: 394389 429400 scaffold_35 421 35416
+
+			Align 27: 394389 429400 scaffold_35 421 35416
+				Gap between this and next alignment: 429400 to 432625 (3224 bp)
+				Next Alignment: 432625 447775 scaffold_35 35738 50882
+
+			Align 28: 432625 447775 scaffold_35 35738 50882
+				Gap between this and next alignment: 447775 to 449835 (2059 bp)
+				Next Alignment: 449835 459371 scaffold_35 50883 60419
+
+			Align 29: 449835 459371 scaffold_35 50883 60419
+			END in gap: 459371 to 463184 (3813 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Eubacterium_sp_3_1_31/contigs_reports/nucmer_output/IDBA_UD.used_snps
+
+Results:
+	Local Misassemblies: 23
+	Misassemblies: 50
+		Relocations: 39
+		Translocations: 11
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 45
+	Misassembled Contigs: 19
+	Misassembled Contig Bases: 2881316
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 5 part
+Partially Unaligned Contigs with Misassemblies: 1
+Unaligned Contig Bases: 72382
+
+Ambiguously Mapped Contigs: 4
+Total Bases in Ambiguously Mapped Contigs: 3828
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 2567121
+
+	SNPs: 33284
+	Insertions: 2050
+	Deletions: 1473
+
+	Positive Gaps: 112
+		Internal Gaps:  79
+		External Gaps:  33
+		External Gap Total:  645148
+		External Gap Average: 19550
+	Negative Gaps: 37
+		Internal Overlaps:  19
+		External Overlaps:  18
+		External Overlaps Total: -1801
+		External Overlaps Average: -100
+	Contigs with Redundant Alignments: 5 (884)

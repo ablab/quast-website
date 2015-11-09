@@ -1,0 +1,104 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Eubacterium_siraeum_gi_485091756_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 1
+	Total Region Length: 2664035
+Analyzing contigs...
+CONTIG: scaffold-6238 (3687bp)
+Top Length: 3687  Top ID: 99.81
+		One align captures most of this contig: 439519 443205 | 1 3687 | 3687 3687 | 99.81 | Eubacterium_siraeum_gi_485091756_ref_NZ_ scaffold-6238
+
+CONTIG: scaffold-7174 (948bp)
+Top Length: 948  Top ID: 96.84
+		One align captures most of this contig: 1847433 1848378 | 1 948 | 946 948 | 96.84 | Eubacterium_siraeum_gi_485091756_ref_NZ_ scaffold-7174
+
+CONTIG: scaffold-11436 (2427bp)
+Top Length: 2427  Top ID: 99.42
+		One align captures most of this contig: 437046 439472 | 1 2427 | 2427 2427 | 99.42 | Eubacterium_siraeum_gi_485091756_ref_NZ_ scaffold-11436
+
+CONTIG: scaffold-15963 (1265bp)
+Top Length: 1265  Top ID: 99.84
+		One align captures most of this contig: 443414 444678 | 1 1265 | 1265 1265 | 99.84 | Eubacterium_siraeum_gi_485091756_ref_NZ_ scaffold-15963
+
+CONTIG: scaffold-46219 (895bp)
+Top Length: 393  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 393 out of 895 bases)
+		Alignment: 446092 446484 | 503 895 | 393 393 | 100.0 | Eubacterium_siraeum_gi_485091756_ref_NZ_ scaffold-46219
+		Unaligned bases: 1 to 502 (502)
+
+CONTIG: scaffold-123019 (593bp)
+Top Length: 593  Top ID: 95.28
+		One align captures most of this contig: 370783 371375 | 593 1 | 593 593 | 95.28 | Eubacterium_siraeum_gi_485091756_ref_NZ_ scaffold-123019
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Eubacterium_siraeum/contigs_reports/nucmer_output/Ray.used_snps
+	Reference Eubacterium_siraeum_gi_485091756_ref_NZ_: 6 total alignments. 1 total regions.
+		Region: 1 to 2664035 (2664035 bp)
+			START in gap: 1 to 370783 (370782 bp)
+			Align 1: 370783 371375 scaffold-123019 593 1
+				Gap between this and next alignment: 371375 to 437046 (65670 bp)
+				Next Alignment: 437046 439472 scaffold-11436 1 2427
+
+			Align 2: 437046 439472 scaffold-11436 1 2427
+				Gap between this and next alignment: 439472 to 439519 (46 bp)
+				Next Alignment: 439519 443205 scaffold-6238 1 3687
+
+			Align 3: 439519 443205 scaffold-6238 1 3687
+				Gap between this and next alignment: 443205 to 443414 (208 bp)
+				Next Alignment: 443414 444678 scaffold-15963 1 1265
+
+			Align 4: 443414 444678 scaffold-15963 1 1265
+				Gap between this and next alignment: 444678 to 446092 (1413 bp)
+				Next Alignment: 446092 446484 scaffold-46219 503 895
+
+			Align 5: 446092 446484 scaffold-46219 503 895
+				Gap between this and next alignment: 446484 to 1847433 (1400948 bp)
+				Next Alignment: 1847433 1848378 scaffold-7174 1 948
+
+			Align 6: 1847433 1848378 scaffold-7174 1 948
+			END in gap: 1848378 to 2664035 (815657 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Eubacterium_siraeum/contigs_reports/nucmer_output/Ray.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 1 part
+Partially Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 502
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 9311
+
+	SNPs: 79
+	Insertions: 2
+	Deletions: 0
+
+	Positive Gaps: 7
+		Internal Gaps:  0
+		External Gaps:  7
+		External Gap Total:  2654724
+		External Gap Average: 379246
+	Negative Gaps: 0
+		Internal Overlaps:  0
+		External Overlaps:  0
+		External Overlaps Total:  0
+		External Overlaps Average: 0
+	Contigs with Redundant Alignments: 0 (0)

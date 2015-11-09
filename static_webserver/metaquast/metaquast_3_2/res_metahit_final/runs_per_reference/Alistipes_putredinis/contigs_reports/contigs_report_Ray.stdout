@@ -1,0 +1,105 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Alistipes_putredinis_gi_224021120_ref_NZ_]
+	Loaded [Alistipes_putredinis_gi_224021121_ref_NZ_]
+	Loaded [Alistipes_putredinis_gi_224021122_ref_NZ_]
+	Loaded [Alistipes_putredinis_gi_224021123_ref_NZ_]
+	Loaded [Alistipes_putredinis_gi_224021124_ref_NZ_]
+	Loaded [Alistipes_putredinis_gi_224021125_ref_NZ_]
+	Loaded [Alistipes_putredinis_gi_224021126_ref_NZ_]
+	Loaded [Alistipes_putredinis_gi_224021127_ref_NZ_]
+	Loaded [Alistipes_putredinis_gi_224021128_ref_NZ_]
+	Loaded [Alistipes_putredinis_gi_224021129_ref_NZ_]
+	Loaded [Alistipes_putredinis_gi_224021130_ref_NZ_]
+	Loaded [Alistipes_putredinis_gi_224021131_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 12
+	Total Region Length: 2550678
+Analyzing contigs...
+CONTIG: scaffold-9705 (1468bp)
+Top Length: 997  Top ID: 99.7
+		This contig is partially unaligned. (Aligned 997 out of 1468 bases)
+		Alignment: 901207 902203 | 1 997 | 997 997 | 99.7 | Alistipes_putredinis_gi_224021127_ref_NZ_ scaffold-9705
+		Unaligned bases: 998 to 1468 (471)
+
+CONTIG: scaffold-2589 (14202bp)
+Top Length: 14187  Top ID: 99.49
+		One align captures most of this contig: 56792 70979 | 14187 1 | 14188 14187 | 99.49 | Alistipes_putredinis_gi_224021130_ref_NZ_ scaffold-2589
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Alistipes_putredinis/contigs_reports/nucmer_output/Ray.used_snps
+ERROR: Reference Alistipes_putredinis_gi_224021125_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Alistipes_putredinis_gi_224021130_ref_NZ_', 'Alistipes_putredinis_gi_224021127_ref_NZ_']
+ERROR: Reference Alistipes_putredinis_gi_224021124_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Alistipes_putredinis_gi_224021130_ref_NZ_', 'Alistipes_putredinis_gi_224021127_ref_NZ_']
+ERROR: Reference Alistipes_putredinis_gi_224021122_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Alistipes_putredinis_gi_224021130_ref_NZ_', 'Alistipes_putredinis_gi_224021127_ref_NZ_']
+ERROR: Reference Alistipes_putredinis_gi_224021128_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Alistipes_putredinis_gi_224021130_ref_NZ_', 'Alistipes_putredinis_gi_224021127_ref_NZ_']
+ERROR: Reference Alistipes_putredinis_gi_224021121_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Alistipes_putredinis_gi_224021130_ref_NZ_', 'Alistipes_putredinis_gi_224021127_ref_NZ_']
+ERROR: Reference Alistipes_putredinis_gi_224021123_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Alistipes_putredinis_gi_224021130_ref_NZ_', 'Alistipes_putredinis_gi_224021127_ref_NZ_']
+	Reference Alistipes_putredinis_gi_224021130_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 479642 (479642 bp)
+			START in gap: 1 to 56792 (56791 bp)
+			Align 1: 56792 70979 scaffold-2589 14187 1
+			END in gap: 70979 to 479642 (408663 bp)
+
+ERROR: Reference Alistipes_putredinis_gi_224021131_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Alistipes_putredinis_gi_224021130_ref_NZ_', 'Alistipes_putredinis_gi_224021127_ref_NZ_']
+ERROR: Reference Alistipes_putredinis_gi_224021129_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Alistipes_putredinis_gi_224021130_ref_NZ_', 'Alistipes_putredinis_gi_224021127_ref_NZ_']
+	Reference Alistipes_putredinis_gi_224021127_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 1197641 (1197641 bp)
+			START in gap: 1 to 901207 (901206 bp)
+			Align 1: 901207 902203 scaffold-9705 1 997
+			END in gap: 902203 to 1197641 (295438 bp)
+
+ERROR: Reference Alistipes_putredinis_gi_224021126_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Alistipes_putredinis_gi_224021130_ref_NZ_', 'Alistipes_putredinis_gi_224021127_ref_NZ_']
+ERROR: Reference Alistipes_putredinis_gi_224021120_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Alistipes_putredinis_gi_224021130_ref_NZ_', 'Alistipes_putredinis_gi_224021127_ref_NZ_']
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Alistipes_putredinis/contigs_reports/nucmer_output/Ray.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 1 part
+Partially Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 471
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 15185
+
+	SNPs: 75
+	Insertions: 0
+	Deletions: 1
+
+	Positive Gaps: 4
+		Internal Gaps:  0
+		External Gaps:  4
+		External Gap Total:  1662098
+		External Gap Average: 415524
+	Negative Gaps: 0
+		Internal Overlaps:  0
+		External Overlaps:  0
+		External Overlaps Total:  0
+		External Overlaps Average: 0
+	Contigs with Redundant Alignments: 0 (0)

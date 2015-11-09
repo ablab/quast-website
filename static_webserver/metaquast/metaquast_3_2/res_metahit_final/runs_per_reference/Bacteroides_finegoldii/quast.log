@@ -1,0 +1,122 @@
+/home/gurevich/rep/quast/quast.pyc -t 16 -j  --meta  --bed-file /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/combined_reference/structural_variations/combined_reference.bed --no-check-meta  --contig-thresholds 1000,5000,10000,25000,50000 -R /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Bacteroides_finegoldii.fasta -o /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_finegoldii --labels "IDBA_UD, Ray, SOAPdenovo2, SPAdes" /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/IDBA_UD_to_Bacteroides_finegoldii.fasta /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Ray_to_Bacteroides_finegoldii.fasta /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SOAPdenovo2_to_Bacteroides_finegoldii.fasta /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SPAdes_to_Bacteroides_finegoldii.fasta
+
+Started: 2015-11-09 20:08:39
+
+Logging to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_finegoldii/quast.log
+
+NOTICE: Output directory already exists. Existing Nucmer alignments can be used.
+
+Reference:
+  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Bacteroides_finegoldii.fasta ==> Bacteroides_finegoldii
+
+Contigs:
+  1  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/IDBA_UD_to_Bacteroides_finegoldii.fasta ==> IDBA_UD
+  2  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Ray_to_Bacteroides_finegoldii.fasta ==> Ray
+  3  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SOAPdenovo2_to_Bacteroides_finegoldii.fasta ==> SOAPdenovo2
+  4  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SPAdes_to_Bacteroides_finegoldii.fasta ==> SPAdes
+
+2015-11-09 20:08:40
+Running Basic statistics processor...
+  Reference genome:
+    Bacteroides_finegoldii.fasta, Reference length = 5124109, Reference GC % = 42.50
+  Contig files: 
+    1  IDBA_UD
+    2  Ray
+    3  SOAPdenovo2
+    4  SPAdes
+  Calculating N50 and L50...
+    1  IDBA_UD, N50 = 5498, L50 = 8, Total length = 259646, GC % = 42.83, # N's per 100 kbp =  469.49
+    2  Ray, N50 = 19388, L50 = 2, Total length = 116902, GC % = 45.08, # N's per 100 kbp =  218.13
+    3  SOAPdenovo2, N50 = 918, L50 = 28, Total length = 80015, GC % = 43.48, # N's per 100 kbp =  6903.71
+    4  SPAdes, N50 = 7087, L50 = 10, Total length = 333237, GC % = 43.05, # N's per 100 kbp =  1308.68
+  Drawing Nx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_finegoldii/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_finegoldii/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_finegoldii/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_finegoldii/basic_stats/GC_content_plot.pdf
+Done.
+
+2015-11-09 20:08:42
+Running Contig analyzer...
+  1  IDBA_UD
+  2  Ray
+  3  SOAPdenovo2
+  4  SPAdes
+  2  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_finegoldii/contigs_reports/contigs_report_Ray.stdout and contigs_report_Ray.stderr...
+  3  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_finegoldii/contigs_reports/contigs_report_SOAPdenovo2.stdout and contigs_report_SOAPdenovo2.stderr...
+  4  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_finegoldii/contigs_reports/contigs_report_SPAdes.stdout and contigs_report_SPAdes.stderr...
+  3  Using existing Nucmer alignments... 
+  1  Using existing Nucmer alignments... 
+  2  Using existing Nucmer alignments... 
+  4  Using existing Nucmer alignments... 
+  2  Alignments: runs_per_reference/Bacteroides_finegoldii/contigs_reports/alignments_Ray.tsv
+  2  Analysis is finished.
+
+  4  Alignments: runs_per_reference/Bacteroides_finegoldii/contigs_reports/alignments_SPAdes.tsv
+  4  Analysis is finished.
+
+  1  Alignments: runs_per_reference/Bacteroides_finegoldii/contigs_reports/alignments_IDBA_UD.tsv
+  1  Analysis is finished.
+
+  3  Alignments: runs_per_reference/Bacteroides_finegoldii/contigs_reports/alignments_SOAPdenovo2.tsv
+  3  Analysis is finished.
+
+  Creating total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_finegoldii/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_finegoldii/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_finegoldii/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_finegoldii/contigs_reports/misassemblies_plot.pdf
+Done.
+
+2015-11-09 20:08:45
+Running NA-NGA calculation...
+  1  IDBA_UD, Largest alignment = 19869, NA50 = 529, LA50 = 74
+  2  Ray, Largest alignment = 29006, NA50 = 3137, LA50 = 4
+  3  SOAPdenovo2, Largest alignment = 3539, NA50 = 583, LA50 = 40
+  4  SPAdes, Largest alignment = 19690, NA50 = None, LA50 = None
+  Drawing cumulative plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_finegoldii/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_finegoldii/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_finegoldii/aligned_stats/NGAx_plot.pdf
+Done.
+
+2015-11-09 20:08:46
+Running Genome analyzer...
+  NOTICE: No file with genes provided. Use the -G option if you want to specify it.
+  NOTICE: No file with operons provided. Use the -O option if you want to specify it.
+  1  IDBA_UD
+  2  Ray
+  3  SOAPdenovo2
+  4  SPAdes
+  2  Analysis is finished.
+  3  Analysis is finished.
+  4  Analysis is finished.
+  1  Analysis is finished.
+  Drawing Genome fraction, % histogram...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_finegoldii/genome_stats/genome_fraction_histogram.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding option to enable it.
+
+2015-11-09 20:08:48
+Drawing large plots...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating contig alignment plot...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2015-11-09 20:08:54
+RESULTS:
+  Text versions of total report are saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_finegoldii/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_finegoldii/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_finegoldii/report.html
+  PDF version (tables and plots) saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_finegoldii/report.pdf
+  Contig alignment plot: /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_finegoldii/alignment.svg

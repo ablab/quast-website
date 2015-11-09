@@ -1,0 +1,134 @@
+/home/gurevich/rep/quast/quast.pyc -t 16 -j  --meta  --bed-file /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/structural_variations/combined_reference.bed --no-check-meta  --contig-thresholds 1000,5000,10000,25000,50000 -R /Molly/gurevich/MetaQUAST/res_final/res_cami_final/quast_corrected_input/Formosa_sp_AK20.fasta -o /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Formosa_sp_AK20 --labels "Gold_Assembly, IDBA_UD, Ray, SOAPdenovo2, SPAdes" /Molly/gurevich/MetaQUAST/res_final/res_cami_final/quast_corrected_input/Gold_Assembly_to_Formosa_sp_AK20.fasta /Molly/gurevich/MetaQUAST/res_final/res_cami_final/quast_corrected_input/IDBA_UD_to_Formosa_sp_AK20.fasta /Molly/gurevich/MetaQUAST/res_final/res_cami_final/quast_corrected_input/Ray_to_Formosa_sp_AK20.fasta /Molly/gurevich/MetaQUAST/res_final/res_cami_final/quast_corrected_input/SOAPdenovo2_to_Formosa_sp_AK20.fasta /Molly/gurevich/MetaQUAST/res_final/res_cami_final/quast_corrected_input/SPAdes_to_Formosa_sp_AK20.fasta
+
+Started: 2015-11-09 19:48:41
+
+Logging to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Formosa_sp_AK20/quast.log
+
+NOTICE: Output directory already exists. Existing Nucmer alignments can be used.
+
+Reference:
+  /Molly/gurevich/MetaQUAST/res_final/res_cami_final/quast_corrected_input/Formosa_sp_AK20.fasta ==> Formosa_sp_AK20
+
+Contigs:
+  1  /Molly/gurevich/MetaQUAST/res_final/res_cami_final/quast_corrected_input/Gold_Assembly_to_Formosa_sp_AK20.fasta ==> Gold_Assembly
+  2  /Molly/gurevich/MetaQUAST/res_final/res_cami_final/quast_corrected_input/IDBA_UD_to_Formosa_sp_AK20.fasta ==> IDBA_UD
+  3  /Molly/gurevich/MetaQUAST/res_final/res_cami_final/quast_corrected_input/Ray_to_Formosa_sp_AK20.fasta ==> Ray
+  4  /Molly/gurevich/MetaQUAST/res_final/res_cami_final/quast_corrected_input/SOAPdenovo2_to_Formosa_sp_AK20.fasta ==> SOAPdenovo2
+  5  /Molly/gurevich/MetaQUAST/res_final/res_cami_final/quast_corrected_input/SPAdes_to_Formosa_sp_AK20.fasta ==> SPAdes
+
+2015-11-09 19:48:42
+Running Basic statistics processor...
+  Reference genome:
+    Formosa_sp_AK20.fasta, Reference length = 3055484, Reference GC % = 35.37
+  Contig files: 
+    1  Gold_Assembly
+    2  IDBA_UD
+    3  Ray
+    4  SOAPdenovo2
+    5  SPAdes
+  Calculating N50 and L50...
+    1  Gold_Assembly, N50 = 164828, L50 = 5, Total length = 3053013, GC % = 35.37, # N's per 100 kbp =  0.00
+    2  IDBA_UD, N50 = 164828, L50 = 6, Total length = 3047484, GC % = 35.36, # N's per 100 kbp =  0.00
+    3  Ray, N50 = 4677, L50 = 202, Total length = 2861002, GC % = 35.34, # N's per 100 kbp =  31.14
+    4  SOAPdenovo2, N50 = 13588, L50 = 70, Total length = 3032419, GC % = 35.35, # N's per 100 kbp =  12.17
+    5  SPAdes, N50 = 146375, L50 = 7, Total length = 3043661, GC % = 35.35, # N's per 100 kbp =  12.75
+  Drawing Nx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Formosa_sp_AK20/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Formosa_sp_AK20/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Formosa_sp_AK20/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Formosa_sp_AK20/basic_stats/GC_content_plot.pdf
+Done.
+
+2015-11-09 19:48:46
+Running Contig analyzer...
+  1  Gold_Assembly
+  2  IDBA_UD
+  3  Ray
+  4  SOAPdenovo2
+  5  SPAdes
+  1  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Formosa_sp_AK20/contigs_reports/contigs_report_Gold_Assembly.stdout and contigs_report_Gold_Assembly.stderr...
+  2  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Formosa_sp_AK20/contigs_reports/contigs_report_IDBA_UD.stdout and contigs_report_IDBA_UD.stderr...
+  4  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Formosa_sp_AK20/contigs_reports/contigs_report_SOAPdenovo2.stdout and contigs_report_SOAPdenovo2.stderr...
+  5  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Formosa_sp_AK20/contigs_reports/contigs_report_SPAdes.stdout and contigs_report_SPAdes.stderr...
+  1  Using existing Nucmer alignments... 
+  5  Using existing Nucmer alignments... 
+  3  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Formosa_sp_AK20/contigs_reports/contigs_report_Ray.stdout and contigs_report_Ray.stderr...
+  4  Using existing Nucmer alignments... 
+  3  Using existing Nucmer alignments... 
+  3  Alignments: runs_per_reference/Formosa_sp_AK20/contigs_reports/alignments_Ray.tsv
+  3  Analysis is finished.
+
+  1  Alignments: runs_per_reference/Formosa_sp_AK20/contigs_reports/alignments_Gold_Assembly.tsv
+  1  Analysis is finished.
+
+  2  Alignments: runs_per_reference/Formosa_sp_AK20/contigs_reports/alignments_IDBA_UD.tsv
+  2  Analysis is finished.
+
+  4  Alignments: runs_per_reference/Formosa_sp_AK20/contigs_reports/alignments_SOAPdenovo2.tsv
+  4  Analysis is finished.
+
+  5  Alignments: runs_per_reference/Formosa_sp_AK20/contigs_reports/alignments_SPAdes.tsv
+  5  Analysis is finished.
+
+  Creating total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Formosa_sp_AK20/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Formosa_sp_AK20/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Formosa_sp_AK20/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Formosa_sp_AK20/contigs_reports/misassemblies_plot.pdf
+Done.
+
+2015-11-09 19:48:50
+Running NA-NGA calculation...
+  1  Gold_Assembly, Largest alignment = 901072, NA50 = 164828, NGA50 = 164828, LA50 = 5, LGA50 = 5
+  2  IDBA_UD, Largest alignment = 552496, NA50 = 125833, NGA50 = 125833, LA50 = 7, LGA50 = 7
+  3  Ray, Largest alignment = 22803, NA50 = 4674, NGA50 = 4298, LA50 = 202, LGA50 = 224
+  4  SOAPdenovo2, Largest alignment = 61821, NA50 = 13588, NGA50 = 13359, LA50 = 70, LGA50 = 71
+  5  SPAdes, Largest alignment = 505955, NA50 = 129815, NGA50 = 129815, LA50 = 8, LGA50 = 8
+  Drawing cumulative plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Formosa_sp_AK20/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Formosa_sp_AK20/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Formosa_sp_AK20/aligned_stats/NGAx_plot.pdf
+Done.
+
+2015-11-09 19:48:52
+Running Genome analyzer...
+  NOTICE: No file with genes provided. Use the -G option if you want to specify it.
+  NOTICE: No file with operons provided. Use the -O option if you want to specify it.
+  1  Gold_Assembly
+  2  IDBA_UD
+  3  Ray
+  4  SOAPdenovo2
+  5  SPAdes
+  2  Analysis is finished.
+  5  Analysis is finished.
+  1  Analysis is finished.
+  4  Analysis is finished.
+  3  Analysis is finished.
+  Drawing Genome fraction, % histogram...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Formosa_sp_AK20/genome_stats/genome_fraction_histogram.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding option to enable it.
+
+2015-11-09 19:48:54
+Drawing large plots...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating contig alignment plot...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2015-11-09 19:49:04
+RESULTS:
+  Text versions of total report are saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Formosa_sp_AK20/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Formosa_sp_AK20/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Formosa_sp_AK20/report.html
+  PDF version (tables and plots) saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Formosa_sp_AK20/report.pdf
+  Contig alignment plot: /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Formosa_sp_AK20/alignment.svg

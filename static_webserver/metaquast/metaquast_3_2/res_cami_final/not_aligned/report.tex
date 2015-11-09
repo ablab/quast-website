@@ -1,0 +1,31 @@
+\documentclass[12pt,a4paper]{article}
+\begin{document}
+\begin{table}[ht]
+\begin{center}
+\caption{All statistics are based on contigs of size $\geq$ 500 bp, unless otherwise noted (e.g., "\# contigs ($\geq$ 0 bp)" and "Total length ($\geq$ 0 bp)" include all contigs).}
+\begin{tabular}{|l*{5}{|r}|}
+\hline
+Assembly & Gold\_Assembly & IDBA\_UD & Ray & SOAPdenovo2 & SPAdes \\ \hline
+\# contigs ($\geq$ 1000 bp) & 3245 & 2075 & 1980 & 3132 & {\bf 1957} \\ \hline
+\# contigs ($\geq$ 5000 bp) & 503 & 531 & 399 & {\bf 377} & 562 \\ \hline
+\# contigs ($\geq$ 10000 bp) & 260 & 251 & 189 & {\bf 136} & 252 \\ \hline
+\# contigs ($\geq$ 25000 bp) & 63 & 58 & 55 & {\bf 25} & 64 \\ \hline
+\# contigs ($\geq$ 50000 bp) & 21 & 19 & 23 & {\bf 4} & 14 \\ \hline
+Total length ($\geq$ 1000 bp) & {\bf 14210192} & 11849172 & 10323715 & 9508497 & 11734531 \\ \hline
+Total length ($\geq$ 5000 bp) & {\bf 8966281} & 8447581 & 7127068 & 4152301 & 8610887 \\ \hline
+Total length ($\geq$ 10000 bp) & {\bf 7268632} & 6499940 & 5672113 & 2521846 & 6409942 \\ \hline
+Total length ($\geq$ 25000 bp) & {\bf 4132804} & 3552276 & 3645129 & 923900 & 3565693 \\ \hline
+Total length ($\geq$ 50000 bp) & {\bf 2695602} & 2185932 & 2519902 & 246698 & 1900337 \\ \hline
+\# contigs & 8478 & 4169 & {\bf 3493} & 6016 & 4481 \\ \hline
+Largest contig & {\bf 567728} & 310067 & 310180 & 73874 & 309980 \\ \hline
+Total length & {\bf 17773626} & 13243040 & 11380695 & 11534814 & 13383083 \\ \hline
+GC (\%) & 51.04 & 49.26 & 49.27 & 49.10 & 49.49 \\ \hline
+N50 & 5203 & 9679 & {\bf 9920} & 2860 & 9182 \\ \hline
+N75 & 1240 & 2864 & 2490 & 1273 & {\bf 2896} \\ \hline
+L50 & 488 & 264 & {\bf 191} & 817 & 282 \\ \hline
+L75 & 2450 & 928 & {\bf 804} & 2371 & 939 \\ \hline
+\# N's per 100 kbp & {\bf 0.00} & {\bf 0.00} & 11.79 & 42.78 & 7.44 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+\end{document}

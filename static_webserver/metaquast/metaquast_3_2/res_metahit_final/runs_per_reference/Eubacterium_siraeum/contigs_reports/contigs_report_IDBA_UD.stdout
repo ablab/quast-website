@@ -1,0 +1,147 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Eubacterium_siraeum_gi_485091756_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 1
+	Total Region Length: 2664035
+Analyzing contigs...
+CONTIG: scaffold_1013 (8007bp)
+Top Length: 8007  Top ID: 100.0
+		One align captures most of this contig: 439604 447610 | 1 8007 | 8007 8007 | 100.0 | Eubacterium_siraeum_gi_485091756_ref_NZ_ scaffold_1013
+
+CONTIG: scaffold_4835 (3216bp)
+Top Length: 1389  Top ID: 97.2
+		This contig is partially unaligned. (Aligned 1389 out of 3216 bases)
+		Alignment: 1968244 1969633 | 1825 3213 | 1390 1389 | 97.2 | Eubacterium_siraeum_gi_485091756_ref_NZ_ scaffold_4835
+		Unaligned bases: 1 to 1824 (1824)
+		Unaligned bases: 3214 to 3216 (3)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_7305 (1772bp)
+Top Length: 1772  Top ID: 99.15
+		One align captures most of this contig: 437046 438816 | 1772 1 | 1771 1772 | 99.15 | Eubacterium_siraeum_gi_485091756_ref_NZ_ scaffold_7305
+
+CONTIG: scaffold_7973 (4081bp)
+Top Length: 1848  Top ID: 98.7
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 1394599 1396442 | 1848 1 | 1844 1848 | 98.7 | Eubacterium_siraeum_gi_485091756_ref_NZ_ scaffold_7973
+			  Fake misassembly between these two alignments: inconsistency = 6 , gap in the contig is small or absent or filled mostly with Ns (long indel: deletion of length 6; 0 mismatches)
+			Real Alignment 2: 1394084 1394498 | 2357 1943 | 415 415 | 98.31 | Eubacterium_siraeum_gi_485091756_ref_NZ_ scaffold_7973
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_10028 (1297bp)
+Top Length: 166  Top ID: 98.2
+		This contig is partially unaligned. (Aligned 166 out of 1297 bases)
+		Alignment: 533813 533978 | 1 166 | 166 166 | 98.2 | Eubacterium_siraeum_gi_485091756_ref_NZ_ scaffold_10028
+		Unaligned bases: 167 to 1297 (1131)
+
+CONTIG: scaffold_16541 (871bp)
+Top Length: 760  Top ID: 99.21
+		This contig is partially unaligned. (Aligned 760 out of 871 bases)
+		Alignment: 1396869 1397628 | 871 112 | 760 760 | 99.21 | Eubacterium_siraeum_gi_485091756_ref_NZ_ scaffold_16541
+		Unaligned bases: 1 to 111 (111)
+
+CONTIG: scaffold_23920 (655bp)
+Top Length: 86  Top ID: 97.7
+		Skipping redundant alignment 697595 697674 | 208 287 | 80 80 | 100.0 | Eubacterium_siraeum_gi_485091756_ref_NZ_ scaffold_23920
+		This contig is partially unaligned. (Aligned 86 out of 655 bases)
+		Alignment: 482685 482771 | 287 202 | 87 86 | 97.7 | Eubacterium_siraeum_gi_485091756_ref_NZ_ scaffold_23920
+		Unaligned bases: 1 to 201 (201)
+		Unaligned bases: 288 to 655 (368)
+
+CONTIG: scaffold_28109 (562bp)
+Top Length: 216  Top ID: 97.22
+		This contig is partially unaligned. (Aligned 216 out of 562 bases)
+		Alignment: 533334 533546 | 216 1 | 213 216 | 97.22 | Eubacterium_siraeum_gi_485091756_ref_NZ_ scaffold_28109
+		Unaligned bases: 217 to 562 (346)
+
+CONTIG: scaffold_29442 (524bp)
+Top Length: 143  Top ID: 98.6
+		This contig is partially unaligned. (Aligned 143 out of 524 bases)
+		Alignment: 533817 533959 | 1 143 | 143 143 | 98.6 | Eubacterium_siraeum_gi_485091756_ref_NZ_ scaffold_29442
+		Unaligned bases: 144 to 524 (381)
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Eubacterium_siraeum/contigs_reports/nucmer_output/IDBA_UD.used_snps
+	Reference Eubacterium_siraeum_gi_485091756_ref_NZ_: 10 total alignments. 1 total regions.
+		Region: 1 to 2664035 (2664035 bp)
+			START in gap: 1 to 437046 (437045 bp)
+			Align 1: 437046 438816 scaffold_7305 1772 1
+				Gap between this and next alignment: 438816 to 439604 (787 bp)
+				Next Alignment: 439604 447610 scaffold_1013 1 8007
+
+			Align 2: 439604 447610 scaffold_1013 1 8007
+				Gap between this and next alignment: 447610 to 482685 (35074 bp)
+				Next Alignment: 482685 482771 scaffold_23920 287 202
+
+			Align 3: 482685 482771 scaffold_23920 287 202
+				Gap between this and next alignment: 482771 to 533334 (50562 bp)
+				Next Alignment: 533334 533546 scaffold_28109 216 1
+
+			Align 4: 533334 533546 scaffold_28109 216 1
+				Gap between this and next alignment: 533546 to 533813 (266 bp)
+				Next Alignment: 533813 533978 scaffold_10028 1 166
+
+			Align 5: 533813 533978 scaffold_10028 1 166
+				The next alignment (533817 533959 scaffold_29442 1 143) is redundant. Skipping.
+				Gap between this and next alignment: 533978 to 1394084 (860105 bp)
+				Next Alignment: 1394084 1394498 scaffold_7973 2357 1943
+
+			Align 7: 1394084 1394498 scaffold_7973 2357 1943
+				Gap between this and next alignment: 1394498 to 1394599 (100 bp)
+				Next Alignment: 1394599 1396442 scaffold_7973 1848 1
+
+			Align 8: 1394599 1396442 scaffold_7973 1848 1
+				Gap between this and next alignment: 1396442 to 1396869 (426 bp)
+				Next Alignment: 1396869 1397628 scaffold_16541 871 112
+
+			Align 9: 1396869 1397628 scaffold_16541 871 112
+				Gap between this and next alignment: 1397628 to 1968244 (570615 bp)
+				Next Alignment: 1968244 1969633 scaffold_4835 1825 3213
+
+			Align 10: 1968244 1969633 scaffold_4835 1825 3213
+			END in gap: 1969633 to 2664035 (694402 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Eubacterium_siraeum/contigs_reports/nucmer_output/IDBA_UD.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 6 part
+Partially Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 4365
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 14653
+
+	SNPs: 86
+	Insertions: 10
+	Deletions: 10
+
+	Positive Gaps: 10
+		Internal Gaps:  1
+		External Gaps:  9
+		External Gap Total:  2649282
+		External Gap Average: 294365
+	Negative Gaps: 0
+		Internal Overlaps:  0
+		External Overlaps:  0
+		External Overlaps Total:  0
+		External Overlaps Average: 0
+	Contigs with Redundant Alignments: 1 (143)

@@ -1,0 +1,223 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Bacteroides_pectinophilus_gi_223956447_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 1
+	Total Region Length: 29332
+Analyzing contigs...
+CONTIG: NODE_272_length_33624_cov_7.16241_ID_543 (33624bp)
+Top Length: 988  Top ID: 98.99
+		Skipping redundant alignment 12913 13139 | 396 622 | 227 227 | 99.12 | Bacteroides_pectinophilus_gi_223956447_ref_NZ_ NODE_272_length_33624_cov_7.16241_ID_543
+		This contig is partially unaligned. (Aligned 988 out of 33624 bases)
+		Alignment: 17483 18470 | 396 1383 | 988 988 | 98.99 | Bacteroides_pectinophilus_gi_223956447_ref_NZ_ NODE_272_length_33624_cov_7.16241_ID_543
+		Unaligned bases: 1 to 395 (395)
+		Unaligned bases: 1384 to 33624 (32241)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_1376_length_9186_cov_9.48768_ID_2751 (9186bp)
+Top Length: 355  Top ID: 95.77
+		This contig is partially unaligned. (Aligned 355 out of 9186 bases)
+		Alignment: 13191 13545 | 4577 4223 | 355 355 | 95.77 | Bacteroides_pectinophilus_gi_223956447_ref_NZ_ NODE_1376_length_9186_cov_9.48768_ID_2751
+		Unaligned bases: 1 to 4222 (4222)
+		Unaligned bases: 4578 to 9186 (4609)
+
+CONTIG: NODE_2018_length_6653_cov_4.50424_ID_4035 (6653bp)
+Top Length: 1336  Top ID: 95.21
+		This contig is partially unaligned. (Aligned 1336 out of 6653 bases)
+		Alignment: 6775 8110 | 5318 6653 | 1336 1336 | 95.21 | Bacteroides_pectinophilus_gi_223956447_ref_NZ_ NODE_2018_length_6653_cov_4.50424_ID_4035
+		Unaligned bases: 1 to 5317 (5317)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_2552_length_5578_cov_11.7927_ID_5103 (5578bp)
+Top Length: 1586  Top ID: 98.49
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 5578 and total length of all aligns is 2547
+		Alignment: 15929 17285 | 1631 275 | 1357 1357 | 98.08 | Bacteroides_pectinophilus_gi_223956447_ref_NZ_ NODE_2552_length_5578_cov_11.7927_ID_5103
+		Alignment: 13150 14735 | 2821 1236 | 1586 1586 | 98.49 | Bacteroides_pectinophilus_gi_223956447_ref_NZ_ NODE_2552_length_5578_cov_11.7927_ID_5103
+		Unaligned bases: 3031
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: NODE_3894_length_4042_cov_4.11838_ID_7787 (4042bp)
+Top Length: 2624  Top ID: 99.73
+		This contig is partially unaligned. (Aligned 2624 out of 4042 bases)
+		Alignment: 3700 6320 | 4042 1419 | 2621 2624 | 99.73 | Bacteroides_pectinophilus_gi_223956447_ref_NZ_ NODE_3894_length_4042_cov_4.11838_ID_7787
+		Unaligned bases: 1 to 1418 (1418)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_9012_length_2029_cov_1.01621_ID_18023 (2029bp)
+Top Length: 1365  Top ID: 99.63
+		This contig is partially unaligned. (Aligned 1365 out of 2029 bases)
+		Alignment: 21647 23009 | 665 2029 | 1363 1365 | 99.63 | Bacteroides_pectinophilus_gi_223956447_ref_NZ_ NODE_9012_length_2029_cov_1.01621_ID_18023
+		Unaligned bases: 1 to 664 (664)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_9673_length_1904_cov_14.8675_ID_19345 (1904bp)
+Top Length: 117  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 117 out of 1904 bases)
+		Alignment: 27879 27995 | 117 1 | 117 117 | 100.0 | Bacteroides_pectinophilus_gi_223956447_ref_NZ_ NODE_9673_length_1904_cov_14.8675_ID_19345
+		Unaligned bases: 118 to 1904 (1787)
+
+CONTIG: NODE_10531_length_1762_cov_1.13298_ID_21061 (1762bp)
+Top Length: 1471  Top ID: 99.53
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 20043 21518 | 1471 1 | 1476 1471 | 99.53 | Bacteroides_pectinophilus_gi_223956447_ref_NZ_ NODE_10531_length_1762_cov_1.13298_ID_21061
+			  Fake misassembly between these two alignments: inconsistency = 4 , gap in the contig is small or absent or filled mostly with Ns (short indel: deletion of length 4; 0 mismatches)
+			Real Alignment 2: 19748 19956 | 1762 1554 | 209 209 | 97.61 | Bacteroides_pectinophilus_gi_223956447_ref_NZ_ NODE_10531_length_1762_cov_1.13298_ID_21061
+
+CONTIG: NODE_10678_length_1740_cov_19.6825_ID_21355 (1740bp)
+Top Length: 539  Top ID: 97.96
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 1740 and total length of all aligns is 790
+		Alignment: 2249 2580 | 1256 923 | 332 334 | 96.41 | Bacteroides_pectinophilus_gi_223956447_ref_NZ_ NODE_10678_length_1740_cov_19.6825_ID_21355
+		Alignment: 28796 29332 | 1712 1174 | 537 539 | 97.96 | Bacteroides_pectinophilus_gi_223956447_ref_NZ_ NODE_10678_length_1740_cov_19.6825_ID_21355
+		Unaligned bases: 950
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: NODE_17182_length_1115_cov_5.41887_ID_34363 (1115bp)
+Top Length: 1115  Top ID: 98.83
+		Marking as insignificant: 2871 3108 | 1112 875 | 238 238 | 98.74 | Bacteroides_pectinophilus_gi_223956447_ref_NZ_ NODE_17182_length_1115_cov_5.41887_ID_34363
+		One align captures most of this contig: 25594 26708 | 1115 1 | 1115 1115 | 98.83 | Bacteroides_pectinophilus_gi_223956447_ref_NZ_ NODE_17182_length_1115_cov_5.41887_ID_34363
+
+CONTIG: NODE_21744_length_891_cov_12.5383_ID_43487 (891bp)
+Top Length: 891  Top ID: 99.44
+		One align captures most of this contig: 11235 12125 | 891 1 | 891 891 | 99.44 | Bacteroides_pectinophilus_gi_223956447_ref_NZ_ NODE_21744_length_891_cov_12.5383_ID_43487
+
+CONTIG: NODE_24400_length_794_cov_6.21786_ID_48799 (794bp)
+Top Length: 794  Top ID: 99.37
+		One align captures most of this contig: 14681 15474 | 794 1 | 794 794 | 99.37 | Bacteroides_pectinophilus_gi_223956447_ref_NZ_ NODE_24400_length_794_cov_6.21786_ID_48799
+
+CONTIG: NODE_24915_length_778_cov_19.0069_ID_49829 (778bp)
+Top Length: 778  Top ID: 99.36
+		One align captures most of this contig: 8056 8834 | 1 778 | 779 778 | 99.36 | Bacteroides_pectinophilus_gi_223956447_ref_NZ_ NODE_24915_length_778_cov_19.0069_ID_49829
+
+CONTIG: NODE_29132_length_667_cov_6.60458_ID_58263 (667bp)
+Top Length: 667  Top ID: 100.0
+		One align captures most of this contig: 12071 12737 | 667 1 | 667 667 | 100.0 | Bacteroides_pectinophilus_gi_223956447_ref_NZ_ NODE_29132_length_667_cov_6.60458_ID_58263
+
+CONTIG: NODE_39231_length_515_cov_6.63043_ID_78461 (515bp)
+Top Length: 515  Top ID: 100.0
+		Marking as insignificant: 630 761 | 1 132 | 132 132 | 100.0 | Bacteroides_pectinophilus_gi_223956447_ref_NZ_ NODE_39231_length_515_cov_6.63043_ID_78461
+		One align captures most of this contig: 10775 11289 | 1 515 | 515 515 | 100.0 | Bacteroides_pectinophilus_gi_223956447_ref_NZ_ NODE_39231_length_515_cov_6.63043_ID_78461
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_pectinophilus/contigs_reports/nucmer_output/SPAdes.used_snps
+	Reference Bacteroides_pectinophilus_gi_223956447_ref_NZ_: 18 total alignments. 1 total regions.
+		Region: 1 to 29332 (29332 bp)
+			START in gap: 1 to 2249 (2248 bp)
+			Align 1: 2249 2580 NODE_10678_length_1740_cov_19.6825_ID_21355 1256 923
+				Gap between this and next alignment: 2580 to 3700 (1119 bp)
+				Next Alignment: 3700 6320 NODE_3894_length_4042_cov_4.11838_ID_7787 4042 1419
+
+			Align 2: 3700 6320 NODE_3894_length_4042_cov_4.11838_ID_7787 4042 1419
+				Gap between this and next alignment: 6320 to 6775 (454 bp)
+				Next Alignment: 6775 8110 NODE_2018_length_6653_cov_4.50424_ID_4035 5318 6653
+
+			Align 3: 6775 8110 NODE_2018_length_6653_cov_4.50424_ID_4035 5318 6653
+				Negative gap (overlap) between this and next alignment: 8110 to 8056 (-54 bp)
+				Next Alignment: 8056 8834 NODE_24915_length_778_cov_19.0069_ID_49829 1 778
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 56.
+			Align 4: 8111 8834 NODE_24915_length_778_cov_19.0069_ID_49829 56 778
+				Gap between this and next alignment: 8834 to 10775 (1940 bp)
+				Next Alignment: 10775 11289 NODE_39231_length_515_cov_6.63043_ID_78461 1 515
+
+			Align 5: 10775 11289 NODE_39231_length_515_cov_6.63043_ID_78461 1 515
+				Negative gap (overlap) between this and next alignment: 11289 to 11235 (-54 bp)
+				Next Alignment: 11235 12125 NODE_21744_length_891_cov_12.5383_ID_43487 891 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 891 to 836.
+			Align 6: 11290 12125 NODE_21744_length_891_cov_12.5383_ID_43487 836 1
+				Negative gap (overlap) between this and next alignment: 12125 to 12071 (-54 bp)
+				Next Alignment: 12071 12737 NODE_29132_length_667_cov_6.60458_ID_58263 667 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 667 to 612.
+			Align 7: 12126 12737 NODE_29132_length_667_cov_6.60458_ID_58263 612 1
+				Gap between this and next alignment: 12737 to 13150 (412 bp)
+				Next Alignment: 13150 14735 NODE_2552_length_5578_cov_11.7927_ID_5103 2821 1236
+
+			Align 8: 13150 14735 NODE_2552_length_5578_cov_11.7927_ID_5103 2821 1236
+				The next alignment (13191 13545 NODE_1376_length_9186_cov_9.48768_ID_2751 4577 4223) is redundant. Skipping.
+				Negative gap (overlap) between this and next alignment: 14735 to 14681 (-54 bp)
+				Next Alignment: 14681 15474 NODE_24400_length_794_cov_6.21786_ID_48799 794 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 794 to 739.
+			Align 10: 14736 15474 NODE_24400_length_794_cov_6.21786_ID_48799 739 1
+				Gap between this and next alignment: 15474 to 15929 (454 bp)
+				Next Alignment: 15929 17285 NODE_2552_length_5578_cov_11.7927_ID_5103 1631 275
+
+			Align 11: 15929 17285 NODE_2552_length_5578_cov_11.7927_ID_5103 1631 275
+				Gap between this and next alignment: 17285 to 17483 (197 bp)
+				Next Alignment: 17483 18470 NODE_272_length_33624_cov_7.16241_ID_543 396 1383
+
+			Align 12: 17483 18470 NODE_272_length_33624_cov_7.16241_ID_543 396 1383
+				Gap between this and next alignment: 18470 to 19748 (1277 bp)
+				Next Alignment: 19748 19956 NODE_10531_length_1762_cov_1.13298_ID_21061 1762 1554
+
+			Align 13: 19748 19956 NODE_10531_length_1762_cov_1.13298_ID_21061 1762 1554
+				Gap between this and next alignment: 19956 to 20043 (86 bp)
+				Next Alignment: 20043 21518 NODE_10531_length_1762_cov_1.13298_ID_21061 1471 1
+
+			Align 14: 20043 21518 NODE_10531_length_1762_cov_1.13298_ID_21061 1471 1
+				Gap between this and next alignment: 21518 to 21647 (128 bp)
+				Next Alignment: 21647 23009 NODE_9012_length_2029_cov_1.01621_ID_18023 665 2029
+
+			Align 15: 21647 23009 NODE_9012_length_2029_cov_1.01621_ID_18023 665 2029
+				Gap between this and next alignment: 23009 to 25594 (2584 bp)
+				Next Alignment: 25594 26708 NODE_17182_length_1115_cov_5.41887_ID_34363 1115 1
+
+			Align 16: 25594 26708 NODE_17182_length_1115_cov_5.41887_ID_34363 1115 1
+				Gap between this and next alignment: 26708 to 27879 (1170 bp)
+				Next Alignment: 27879 27995 NODE_9673_length_1904_cov_14.8675_ID_19345 117 1
+
+			Align 17: 27879 27995 NODE_9673_length_1904_cov_14.8675_ID_19345 117 1
+				Gap between this and next alignment: 27995 to 28796 (800 bp)
+				Next Alignment: 28796 29332 NODE_10678_length_1740_cov_19.6825_ID_21355 1712 1174
+
+			Align 18: 28796 29332 NODE_10678_length_1740_cov_19.6825_ID_21355 1712 1174
+			END in current alignment.  Modifying 29332 to 29332.
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_pectinophilus/contigs_reports/nucmer_output/SPAdes.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 8 part
+Partially Unaligned Contigs with Misassemblies: 2
+Unaligned Contig Bases: 54634
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 16463
+
+	SNPs: 180
+	Insertions: 10
+	Deletions: 11
+
+	Positive Gaps: 13
+		Internal Gaps:  1
+		External Gaps:  12
+		External Gap Total:  12783
+		External Gap Average: 1065
+	Negative Gaps: 4
+		Internal Overlaps:  0
+		External Overlaps:  4
+		External Overlaps Total: -216
+		External Overlaps Average: -54
+	Contigs with Redundant Alignments: 1 (355)

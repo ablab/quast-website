@@ -1,0 +1,1043 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551307592_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551308003_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551308389_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551308645_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551308898_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551309139_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551309379_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551309565_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551309729_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551309874_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310007_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310131_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310245_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310329_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310421_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310498_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310561_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310604_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310645_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310687_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310726_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310761_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310794_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310812_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310823_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310830_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310834_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310836_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310837_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310838_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310840_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310842_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 32
+	Total Region Length: 4470560
+Analyzing contigs...
+CONTIG: NODE_126_length_65551_cov_18.0022_ID_251 (65551bp)
+Top Length: 65541  Top ID: 99.99
+		One align captures most of this contig: 134 65674 | 1 65541 | 65541 65541 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551310421_ref_NZ_ NODE_126_length_65551_cov_18.0022_ID_251
+
+CONTIG: NODE_513_length_22417_cov_17.8857_ID_1025 (22417bp)
+Top Length: 22415  Top ID: 99.66
+		Marking as insignificant: 41839 42110 | 272 1 | 272 272 | 98.9 | Patulibacter_americanus_DSM_16676_gi_551310645_ref_NZ_ NODE_513_length_22417_cov_17.8857_ID_1025
+		One align captures most of this contig: 65843 88202 | 22415 1 | 22360 22415 | 99.66 | Patulibacter_americanus_DSM_16676_gi_551310421_ref_NZ_ NODE_513_length_22417_cov_17.8857_ID_1025
+
+CONTIG: NODE_125_length_66165_cov_18.0065_ID_249 (66165bp)
+Top Length: 52274  Top ID: 99.99
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 73 between Alignment 1 and 2:  27800 41763 | 1 13964 | 13964 13964 --> 27800 41690 | 1 13891 | 13891 13891
+			Real Alignment 1: 27800 41690 | 1 13891 | 13891 13891 | 99.95 | Patulibacter_americanus_DSM_16676_gi_551310687_ref_NZ_ NODE_125_length_66165_cov_18.0065_ID_249
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 22990 75263 | 66165 13892 | 52274 52274 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551310561_ref_NZ_ NODE_125_length_66165_cov_18.0065_ID_249
+
+CONTIG: NODE_501_length_22862_cov_18.7821_ID_1001 (22862bp)
+Top Length: 22862  Top ID: 99.94
+		One align captures most of this contig: 8 22869 | 1 22862 | 22862 22862 | 99.94 | Patulibacter_americanus_DSM_16676_gi_551310561_ref_NZ_ NODE_501_length_22862_cov_18.7821_ID_1001
+
+CONTIG: NODE_72_length_104676_cov_18.0652_ID_143 (104676bp)
+Top Length: 92197  Top ID: 99.98
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 226 between Alignment 1 and 2:  1 12705 | 91972 104676 | 12705 12705 --> 227 12705 | 92198 104676 | 12479 12479
+			Real Alignment 1: 175734 267930 | 1 92197 | 92197 92197 | 99.98 | Patulibacter_americanus_DSM_16676_gi_551309379_ref_NZ_ NODE_72_length_104676_cov_18.0652_ID_143
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 227 12705 | 92198 104676 | 12479 12479 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310687_ref_NZ_ NODE_72_length_104676_cov_18.0652_ID_143
+
+CONTIG: NODE_159_length_53716_cov_17.9318_ID_317 (53716bp)
+Top Length: 53716  Top ID: 99.99
+		One align captures most of this contig: 121752 175467 | 1 53716 | 53716 53716 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551309379_ref_NZ_ NODE_159_length_53716_cov_17.9318_ID_317
+
+CONTIG: NODE_173_length_49277_cov_17.7877_ID_345 (49277bp)
+Top Length: 49274  Top ID: 99.98
+		One align captures most of this contig: 79 49352 | 49277 4 | 49274 49274 | 99.98 | Patulibacter_americanus_DSM_16676_gi_551309379_ref_NZ_ NODE_173_length_49277_cov_17.7877_ID_345
+
+CONTIG: NODE_297_length_33747_cov_18.3666_ID_593 (33747bp)
+Top Length: 33747  Top ID: 99.99
+		One align captures most of this contig: 66040 99786 | 1 33747 | 33747 33747 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551309379_ref_NZ_ NODE_297_length_33747_cov_18.3666_ID_593
+
+CONTIG: NODE_709_length_16719_cov_17.5758_ID_1417 (16719bp)
+Top Length: 15746  Top ID: 99.98
+		This contig is partially unaligned. (Aligned 15746 out of 16719 bases)
+		Alignment: 99886 115631 | 1 15746 | 15746 15746 | 99.98 | Patulibacter_americanus_DSM_16676_gi_551309379_ref_NZ_ NODE_709_length_16719_cov_17.5758_ID_1417
+		Unaligned bases: 15747 to 16719 (973)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_731_length_16312_cov_18.6004_ID_1461 (16312bp)
+Top Length: 16303  Top ID: 99.97
+		One align captures most of this contig: 49638 65940 | 16312 10 | 16303 16303 | 99.97 | Patulibacter_americanus_DSM_16676_gi_551309379_ref_NZ_ NODE_731_length_16312_cov_18.6004_ID_1461
+
+CONTIG: NODE_1768_length_6342_cov_15.7695_ID_3535 (6342bp)
+Top Length: 6041  Top ID: 99.98
+		This contig is partially unaligned. (Aligned 6041 out of 6342 bases)
+		Alignment: 115634 121674 | 302 6342 | 6041 6041 | 99.98 | Patulibacter_americanus_DSM_16676_gi_551309379_ref_NZ_ NODE_1768_length_6342_cov_15.7695_ID_3535
+		Unaligned bases: 1 to 301 (301)
+
+CONTIG: NODE_6_length_311540_cov_17.9869_ID_11 (311540bp)
+Top Length: 311540  Top ID: 99.99
+		One align captures most of this contig: 471597 783136 | 311540 1 | 311540 311540 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551307592_ref_NZ_ NODE_6_length_311540_cov_17.9869_ID_11
+
+CONTIG: NODE_34_length_170850_cov_18.306_ID_67 (170850bp)
+Top Length: 170850  Top ID: 99.98
+		One align captures most of this contig: 3 170852 | 170850 1 | 170850 170850 | 99.98 | Patulibacter_americanus_DSM_16676_gi_551307592_ref_NZ_ NODE_34_length_170850_cov_18.306_ID_67
+
+CONTIG: NODE_36_length_168643_cov_18.0913_ID_71 (168643bp)
+Top Length: 168643  Top ID: 99.99
+		One align captures most of this contig: 302846 471488 | 1 168643 | 168643 168643 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551307592_ref_NZ_ NODE_36_length_168643_cov_18.0913_ID_71
+
+CONTIG: NODE_87_length_87784_cov_18.13_ID_173 (87784bp)
+Top Length: 87784  Top ID: 99.98
+		One align captures most of this contig: 800488 888271 | 1 87784 | 87784 87784 | 99.98 | Patulibacter_americanus_DSM_16676_gi_551307592_ref_NZ_ NODE_87_length_87784_cov_18.13_ID_173
+
+CONTIG: NODE_149_length_55011_cov_17.8869_ID_297 (55011bp)
+Top Length: 54783  Top ID: 99.99
+		One align captures most of this contig: 170937 225719 | 55011 229 | 54783 54783 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551307592_ref_NZ_ NODE_149_length_55011_cov_17.8869_ID_297
+
+CONTIG: NODE_194_length_46019_cov_18.3061_ID_387 (46019bp)
+Top Length: 46019  Top ID: 99.99
+		One align captures most of this contig: 256518 302536 | 46019 1 | 46019 46019 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551307592_ref_NZ_ NODE_194_length_46019_cov_18.3061_ID_387
+
+CONTIG: NODE_299_length_33604_cov_17.6997_ID_597 (33604bp)
+Top Length: 30463  Top ID: 99.98
+		This contig is partially unaligned. (Aligned 30463 out of 33604 bases)
+		Alignment: 225721 256183 | 3142 33604 | 30463 30463 | 99.98 | Patulibacter_americanus_DSM_16676_gi_551307592_ref_NZ_ NODE_299_length_33604_cov_17.6997_ID_597
+		Unaligned bases: 1 to 3141 (3141)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_697_length_16912_cov_18.4888_ID_1393 (16912bp)
+Top Length: 16912  Top ID: 99.97
+		One align captures most of this contig: 783332 800243 | 16912 1 | 16912 16912 | 99.97 | Patulibacter_americanus_DSM_16676_gi_551307592_ref_NZ_ NODE_697_length_16912_cov_18.4888_ID_1393
+
+CONTIG: NODE_256_length_38771_cov_18.2099_ID_511 (38771bp)
+Top Length: 38771  Top ID: 99.99
+		One align captures most of this contig: 308 39078 | 1 38771 | 38771 38771 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551310726_ref_NZ_ NODE_256_length_38771_cov_18.2099_ID_511
+
+CONTIG: NODE_107_length_74176_cov_18.1808_ID_213 (74176bp)
+Top Length: 74176  Top ID: 99.99
+		One align captures most of this contig: 290 74465 | 74176 1 | 74176 74176 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551310245_ref_NZ_ NODE_107_length_74176_cov_18.1808_ID_213
+
+CONTIG: NODE_157_length_53904_cov_18.5139_ID_313 (53904bp)
+Top Length: 53900  Top ID: 99.98
+		One align captures most of this contig: 74708 128607 | 5 53904 | 53900 53900 | 99.98 | Patulibacter_americanus_DSM_16676_gi_551310245_ref_NZ_ NODE_157_length_53904_cov_18.5139_ID_313
+
+CONTIG: NODE_13191_length_764_cov_46.3597_ID_26381 (764bp)
+Top Length: 717  Top ID: 98.47
+		Skipping redundant alignment 37221 37522 | 1 302 | 302 302 | 99.34 | Patulibacter_americanus_DSM_16676_gi_551310761_ref_NZ_ NODE_13191_length_764_cov_46.3597_ID_26381
+		Skipping redundant alignment 145720 146137 | 1 418 | 418 418 | 99.76 | Patulibacter_americanus_DSM_16676_gi_551310007_ref_NZ_ NODE_13191_length_764_cov_46.3597_ID_26381
+		Skipping redundant alignment 1 617 | 148 764 | 617 617 | 99.03 | Patulibacter_americanus_DSM_16676_gi_551310498_ref_NZ_ NODE_13191_length_764_cov_46.3597_ID_26381
+		This contig is partially unaligned. (Aligned 717 out of 764 bases)
+		Alignment: 128553 129269 | 764 48 | 717 717 | 98.47 | Patulibacter_americanus_DSM_16676_gi_551310245_ref_NZ_ NODE_13191_length_764_cov_46.3597_ID_26381
+		Unaligned bases: 1 to 47 (47)
+
+CONTIG: NODE_13401_length_750_cov_40.4086_ID_26801 (750bp)
+Top Length: 661  Top ID: 99.55
+		Skipping redundant alignment 1 288 | 463 750 | 288 288 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310823_ref_NZ_ NODE_13401_length_750_cov_40.4086_ID_26801
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 888217 888876 | 1 661 | 660 661 | 98.49 | Patulibacter_americanus_DSM_16676_gi_551307592_ref_NZ_ NODE_13401_length_750_cov_40.4086_ID_26801
+		This contig is misassembled. 4 total aligns.
+			Excluding internal overlap of size 255 between Alignment 1 and 2:  1 344 | 407 750 | 344 344 --> 256 344 | 662 750 | 89 89
+			Real Alignment 1: 1 661 | 661 1 | 661 661 | 99.55 | Patulibacter_americanus_DSM_16676_gi_551308389_ref_NZ_ NODE_13401_length_750_cov_40.4086_ID_26801
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 256 344 | 662 750 | 89 89 | 98.84 | Patulibacter_americanus_DSM_16676_gi_551310245_ref_NZ_ NODE_13401_length_750_cov_40.4086_ID_26801
+
+CONTIG: NODE_238_length_40135_cov_18.0576_ID_475 (40135bp)
+Top Length: 40135  Top ID: 99.99
+		Marking as insignificant: 87931 88202 | 39864 40135 | 272 272 | 99.26 | Patulibacter_americanus_DSM_16676_gi_551310421_ref_NZ_ NODE_238_length_40135_cov_18.0576_ID_475
+		One align captures most of this contig: 1976 42110 | 1 40135 | 40135 40135 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551310645_ref_NZ_ NODE_238_length_40135_cov_18.0576_ID_475
+
+CONTIG: NODE_6137_length_1761_cov_59.1166_ID_12273 (1761bp)
+Top Length: 1761  Top ID: 100.0
+		This contig has 2 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 208 1968 | 1761 1 | 1761 1761 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551309874_ref_NZ_ NODE_6137_length_1761_cov_59.1166_ID_12273
+		Skipping alignment  208 1968 | 1761 1 | 1761 1761 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310645_ref_NZ_ NODE_6137_length_1761_cov_59.1166_ID_12273
+
+CONTIG: NODE_162_length_52794_cov_18.1365_ID_323 (52794bp)
+Top Length: 52794  Top ID: 99.98
+		Marking as insignificant: 13777 14037 | 261 1 | 261 261 | 98.85 | Patulibacter_americanus_DSM_16676_gi_551310823_ref_NZ_ NODE_162_length_52794_cov_18.1365_ID_323
+		One align captures most of this contig: 75 52868 | 52794 1 | 52794 52794 | 99.98 | Patulibacter_americanus_DSM_16676_gi_551310604_ref_NZ_ NODE_162_length_52794_cov_18.1365_ID_323
+
+CONTIG: NODE_66_length_109647_cov_18.0866_ID_131 (109647bp)
+Top Length: 85165  Top ID: 99.98
+		Skipping redundant alignment 1 102 | 85341 85240 | 102 102 | 98.04 | Patulibacter_americanus_DSM_16676_gi_551310834_ref_NZ_ NODE_66_length_109647_cov_18.0866_ID_131
+		This contig is misassembled. 3 total aligns.
+			Excluding internal overlap of size 283 between Alignment 1 and 2:  1 24580 | 85068 109647 | 24580 24580 --> 284 24580 | 85351 109647 | 24297 24297
+			Real Alignment 1: 56017 141181 | 186 85350 | 85165 85165 | 99.98 | Patulibacter_americanus_DSM_16676_gi_551310131_ref_NZ_ NODE_66_length_109647_cov_18.0866_ID_131
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 284 24580 | 85351 109647 | 24297 24297 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551310794_ref_NZ_ NODE_66_length_109647_cov_18.0866_ID_131
+
+CONTIG: NODE_1056_length_11211_cov_17.4944_ID_2111 (11211bp)
+Top Length: 11211  Top ID: 99.96
+		One align captures most of this contig: 24773 35983 | 1 11211 | 11211 11211 | 99.96 | Patulibacter_americanus_DSM_16676_gi_551310794_ref_NZ_ NODE_1056_length_11211_cov_17.4944_ID_2111
+
+CONTIG: NODE_29_length_181906_cov_18.0997_ID_57 (181906bp)
+Top Length: 181906  Top ID: 99.98
+		One align captures most of this contig: 112 182017 | 181906 1 | 181906 181906 | 99.98 | Patulibacter_americanus_DSM_16676_gi_551308898_ref_NZ_ NODE_29_length_181906_cov_18.0997_ID_57
+
+CONTIG: NODE_63_length_112862_cov_18.1649_ID_125 (112862bp)
+Top Length: 61342  Top ID: 99.99
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 276 between Alignment 1 and 2:  228119 279502 | 112862 61479 | 51384 51384 --> 228119 279226 | 112862 61755 | 51108 51108
+			Real Alignment 1: 1 61342 | 61754 413 | 61342 61342 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551309565_ref_NZ_ NODE_63_length_112862_cov_18.1649_ID_125
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 228119 279226 | 112862 61755 | 51108 51108 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551308898_ref_NZ_ NODE_63_length_112862_cov_18.1649_ID_125
+
+CONTIG: NODE_302_length_33418_cov_17.9211_ID_603 (33418bp)
+Top Length: 33416  Top ID: 99.99
+		One align captures most of this contig: 194485 227900 | 1 33416 | 33416 33416 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551308898_ref_NZ_ NODE_302_length_33418_cov_17.9211_ID_603
+
+CONTIG: NODE_1308_length_8770_cov_18.3146_ID_2615 (8770bp)
+Top Length: 8770  Top ID: 99.98
+		One align captures most of this contig: 185640 194409 | 8770 1 | 8770 8770 | 99.98 | Patulibacter_americanus_DSM_16676_gi_551308898_ref_NZ_ NODE_1308_length_8770_cov_18.3146_ID_2615
+
+CONTIG: NODE_4001_length_2743_cov_18.3579_ID_8001 (2743bp)
+Top Length: 2743  Top ID: 99.89
+		One align captures most of this contig: 182594 185336 | 1 2743 | 2743 2743 | 99.89 | Patulibacter_americanus_DSM_16676_gi_551308898_ref_NZ_ NODE_4001_length_2743_cov_18.3579_ID_8001
+
+CONTIG: NODE_14532_length_686_cov_32.3043_ID_29063 (686bp)
+Top Length: 686  Top ID: 98.98
+		One align captures most of this contig: 181963 182648 | 1 686 | 686 686 | 98.98 | Patulibacter_americanus_DSM_16676_gi_551308898_ref_NZ_ NODE_14532_length_686_cov_32.3043_ID_29063
+
+CONTIG: NODE_53_length_138037_cov_18.1738_ID_105 (138037bp)
+Top Length: 138037  Top ID: 99.98
+		One align captures most of this contig: 137607 275643 | 138037 1 | 138037 138037 | 99.98 | Patulibacter_americanus_DSM_16676_gi_551309139_ref_NZ_ NODE_53_length_138037_cov_18.1738_ID_105
+
+CONTIG: NODE_93_length_83639_cov_18.4993_ID_185 (83639bp)
+Top Length: 83639  Top ID: 99.96
+		One align captures most of this contig: 75 83713 | 1 83639 | 83639 83639 | 99.96 | Patulibacter_americanus_DSM_16676_gi_551309139_ref_NZ_ NODE_93_length_83639_cov_18.4993_ID_185
+
+CONTIG: NODE_158_length_53846_cov_17.9282_ID_315 (53846bp)
+Top Length: 53846  Top ID: 99.97
+		One align captures most of this contig: 83659 137504 | 1 53846 | 53846 53846 | 99.97 | Patulibacter_americanus_DSM_16676_gi_551309139_ref_NZ_ NODE_158_length_53846_cov_17.9282_ID_315
+
+CONTIG: NODE_79_length_95622_cov_18.2719_ID_157 (95622bp)
+Top Length: 95022  Top ID: 99.97
+		One align captures most of this contig: 61317 156338 | 601 95622 | 95022 95022 | 99.97 | Patulibacter_americanus_DSM_16676_gi_551309565_ref_NZ_ NODE_79_length_95622_cov_18.2719_ID_157
+
+CONTIG: NODE_290_length_34490_cov_17.9494_ID_579 (34490bp)
+Top Length: 34490  Top ID: 99.97
+		One align captures most of this contig: 156583 191072 | 34490 1 | 34490 34490 | 99.97 | Patulibacter_americanus_DSM_16676_gi_551309565_ref_NZ_ NODE_290_length_34490_cov_17.9494_ID_579
+
+CONTIG: NODE_12_length_304241_cov_18.0219_ID_23 (304241bp)
+Top Length: 304241  Top ID: 99.98
+		One align captures most of this contig: 607 304827 | 1 304241 | 304221 304241 | 99.98 | Patulibacter_americanus_DSM_16676_gi_551308389_ref_NZ_ NODE_12_length_304241_cov_18.0219_ID_23
+
+CONTIG: NODE_124_length_66343_cov_18.2796_ID_247 (66343bp)
+Top Length: 47991  Top ID: 99.99
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 505 between Alignment 1 and 2:  1 18857 | 47487 66343 | 18857 18857 --> 506 18857 | 47992 66343 | 18352 18352
+			Real Alignment 1: 353003 400993 | 1 47991 | 47991 47991 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551308389_ref_NZ_ NODE_124_length_66343_cov_18.2796_ID_247
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 506 18857 | 47992 66343 | 18352 18352 | 99.97 | Patulibacter_americanus_DSM_16676_gi_551308003_ref_NZ_ NODE_124_length_66343_cov_18.2796_ID_247
+
+CONTIG: NODE_851_length_13965_cov_18.4713_ID_1701 (13965bp)
+Top Length: 13965  Top ID: 99.99
+		One align captures most of this contig: 338915 352879 | 13965 1 | 13965 13965 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551308389_ref_NZ_ NODE_851_length_13965_cov_18.4713_ID_1701
+
+CONTIG: NODE_1340_length_8482_cov_19.6546_ID_2679 (8482bp)
+Top Length: 8482  Top ID: 99.87
+		One align captures most of this contig: 329668 338149 | 8482 1 | 8482 8482 | 99.87 | Patulibacter_americanus_DSM_16676_gi_551308389_ref_NZ_ NODE_1340_length_8482_cov_19.6546_ID_2679
+
+CONTIG: NODE_2531_length_4385_cov_18.763_ID_5061 (4385bp)
+Top Length: 4385  Top ID: 99.68
+		One align captures most of this contig: 323537 327921 | 1 4385 | 4385 4385 | 99.68 | Patulibacter_americanus_DSM_16676_gi_551308389_ref_NZ_ NODE_2531_length_4385_cov_18.763_ID_5061
+
+CONTIG: NODE_2554_length_4356_cov_16.9926_ID_5107 (4356bp)
+Top Length: 4173  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 4173 out of 4356 bases)
+		Alignment: 316293 320465 | 4173 1 | 4173 4173 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551308389_ref_NZ_ NODE_2554_length_4356_cov_16.9926_ID_5107
+		Unaligned bases: 4174 to 4356 (183)
+
+CONTIG: NODE_3640_length_3038_cov_21.3084_ID_7279 (3038bp)
+Top Length: 3038  Top ID: 99.93
+		One align captures most of this contig: 310722 313759 | 3038 1 | 3038 3038 | 99.93 | Patulibacter_americanus_DSM_16676_gi_551308389_ref_NZ_ NODE_3640_length_3038_cov_21.3084_ID_7279
+
+CONTIG: NODE_4111_length_2666_cov_18.0655_ID_8221 (2666bp)
+Top Length: 2666  Top ID: 100.0
+		One align captures most of this contig: 320631 323296 | 2666 1 | 2666 2666 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551308389_ref_NZ_ NODE_4111_length_2666_cov_18.0655_ID_8221
+
+CONTIG: NODE_4311_length_2547_cov_19.9522_ID_8621 (2547bp)
+Top Length: 2346  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 2346 out of 2547 bases)
+		Alignment: 313953 316298 | 1 2346 | 2346 2346 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551308389_ref_NZ_ NODE_4311_length_2547_cov_19.9522_ID_8621
+		Unaligned bases: 2347 to 2547 (201)
+
+CONTIG: NODE_5215_length_2103_cov_19.104_ID_10429 (2103bp)
+Top Length: 2103  Top ID: 99.86
+		One align captures most of this contig: 305069 307171 | 1 2103 | 2103 2103 | 99.86 | Patulibacter_americanus_DSM_16676_gi_551308389_ref_NZ_ NODE_5215_length_2103_cov_19.104_ID_10429
+
+CONTIG: NODE_6743_length_1602_cov_18.8643_ID_13485 (1602bp)
+Top Length: 1602  Top ID: 100.0
+		One align captures most of this contig: 328003 329604 | 1 1602 | 1602 1602 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551308389_ref_NZ_ NODE_6743_length_1602_cov_18.8643_ID_13485
+
+CONTIG: NODE_7000_length_1543_cov_19.7513_ID_13999 (1543bp)
+Top Length: 1543  Top ID: 99.87
+		One align captures most of this contig: 307268 308810 | 1543 1 | 1543 1543 | 99.87 | Patulibacter_americanus_DSM_16676_gi_551308389_ref_NZ_ NODE_7000_length_1543_cov_19.7513_ID_13999
+
+CONTIG: NODE_10079_length_1034_cov_31.1277_ID_20157 (1034bp)
+Top Length: 1034  Top ID: 98.16
+		One align captures most of this contig: 308756 309789 | 1 1034 | 1034 1034 | 98.16 | Patulibacter_americanus_DSM_16676_gi_551308389_ref_NZ_ NODE_10079_length_1034_cov_31.1277_ID_20157
+
+CONTIG: NODE_11629_length_875_cov_30.7988_ID_23257 (875bp)
+Top Length: 875  Top ID: 99.89
+		One align captures most of this contig: 338095 338969 | 875 1 | 875 875 | 99.89 | Patulibacter_americanus_DSM_16676_gi_551308389_ref_NZ_ NODE_11629_length_875_cov_30.7988_ID_23257
+
+CONTIG: NODE_12455_length_816_cov_19.8791_ID_24909 (816bp)
+Top Length: 791  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 791 out of 816 bases)
+		Alignment: 309735 310525 | 816 26 | 791 791 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551308389_ref_NZ_ NODE_12455_length_816_cov_19.8791_ID_24909
+		Unaligned bases: 1 to 25 (25)
+
+CONTIG: NODE_26_length_202579_cov_18.0938_ID_51 (202579bp)
+Top Length: 165894  Top ID: 99.99
+		Skipping redundant alignment 1914 2038 | 202579 202455 | 125 125 | 98.4 | Patulibacter_americanus_DSM_16676_gi_551310645_ref_NZ_ NODE_26_length_202579_cov_18.0938_ID_51
+		This contig is misassembled. 3 total aligns.
+			Excluding internal overlap of size 590 between Alignment 1 and 2:  1 37275 | 37275 1 | 37275 37275 --> 591 37275 | 36685 1 | 36685 36685
+			Real Alignment 1: 591 37275 | 36685 1 | 36685 36685 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551310761_ref_NZ_ NODE_26_length_202579_cov_18.0938_ID_51
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 1914 167807 | 202579 36686 | 165894 165894 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551309874_ref_NZ_ NODE_26_length_202579_cov_18.0938_ID_51
+
+CONTIG: NODE_2247_length_4877_cov_17.7476_ID_4493 (4877bp)
+Top Length: 4877  Top ID: 100.0
+		One align captures most of this contig: 65 4941 | 4877 1 | 4877 4877 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310830_ref_NZ_ NODE_2247_length_4877_cov_17.7476_ID_4493
+
+CONTIG: NODE_140_length_58707_cov_18.477_ID_279 (58707bp)
+Top Length: 58693  Top ID: 99.98
+		Marking as insignificant: 191018 191303 | 58422 58707 | 286 286 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551309565_ref_NZ_ NODE_140_length_58707_cov_18.477_ID_279
+		One align captures most of this contig: 2 58694 | 58707 15 | 58693 58693 | 99.98 | Patulibacter_americanus_DSM_16676_gi_551310329_ref_NZ_ NODE_140_length_58707_cov_18.477_ID_279
+
+CONTIG: NODE_274_length_35881_cov_17.5265_ID_547 (35881bp)
+Top Length: 35881  Top ID: 99.97
+		One align captures most of this contig: 59347 95227 | 1 35881 | 35881 35881 | 99.97 | Patulibacter_americanus_DSM_16676_gi_551310329_ref_NZ_ NODE_274_length_35881_cov_17.5265_ID_547
+
+CONTIG: NODE_13442_length_748_cov_25.8817_ID_26883 (748bp)
+Top Length: 748  Top ID: 99.06
+		Marking as insignificant: 1 119 | 119 1 | 119 119 | 98.32 | Patulibacter_americanus_DSM_16676_gi_551310830_ref_NZ_ NODE_13442_length_748_cov_25.8817_ID_26883
+		Marking as insignificant: 13983 14109 | 748 622 | 127 127 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310823_ref_NZ_ NODE_13442_length_748_cov_25.8817_ID_26883
+		Marking as insignificant: 52814 52940 | 748 622 | 127 127 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310604_ref_NZ_ NODE_13442_length_748_cov_25.8817_ID_26883
+		One align captures most of this contig: 58654 59401 | 1 748 | 748 748 | 99.06 | Patulibacter_americanus_DSM_16676_gi_551310329_ref_NZ_ NODE_13442_length_748_cov_25.8817_ID_26883
+
+CONTIG: NODE_45_length_155575_cov_18.028_ID_89 (155575bp)
+Top Length: 155567  Top ID: 99.97
+		One align captures most of this contig: 23278 178844 | 155567 1 | 155567 155567 | 99.97 | Patulibacter_americanus_DSM_16676_gi_551309729_ref_NZ_ NODE_45_length_155575_cov_18.028_ID_89
+
+CONTIG: NODE_71_length_104980_cov_18.4374_ID_141 (104980bp)
+Top Length: 82057  Top ID: 99.99
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 41 between Alignment 1 and 2:  55 23018 | 22964 1 | 22964 22964 --> 96 23018 | 22923 1 | 22923 22923
+			Real Alignment 1: 96 23018 | 22923 1 | 22923 22923 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551309729_ref_NZ_ NODE_71_length_104980_cov_18.4374_ID_141
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 563 82619 | 104980 22924 | 82057 82057 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551310498_ref_NZ_ NODE_71_length_104980_cov_18.4374_ID_141
+
+CONTIG: NODE_1622_length_6926_cov_18.0307_ID_3243 (6926bp)
+Top Length: 6926  Top ID: 99.96
+		One align captures most of this contig: 179079 186004 | 6926 1 | 6926 6926 | 99.96 | Patulibacter_americanus_DSM_16676_gi_551309729_ref_NZ_ NODE_1622_length_6926_cov_18.0307_ID_3243
+
+CONTIG: NODE_2767_length_3998_cov_18.6163_ID_5533 (3998bp)
+Top Length: 3998  Top ID: 100.0
+		One align captures most of this contig: 41 4038 | 3998 1 | 3998 3998 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310834_ref_NZ_ NODE_2767_length_3998_cov_18.6163_ID_5533
+
+CONTIG: NODE_13759_length_728_cov_35.2363_ID_27517 (728bp)
+Top Length: 728  Top ID: 100.0
+		One align captures most of this contig: 289 1016 | 728 1 | 728 728 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310838_ref_NZ_ NODE_13759_length_728_cov_35.2363_ID_27517
+
+CONTIG: NODE_16609_length_596_cov_19.9168_ID_33217 (596bp)
+Top Length: 596  Top ID: 99.83
+		One align captures most of this contig: 962 1557 | 596 1 | 596 596 | 99.83 | Patulibacter_americanus_DSM_16676_gi_551310838_ref_NZ_ NODE_16609_length_596_cov_19.9168_ID_33217
+
+CONTIG: NODE_111_length_70761_cov_18.1197_ID_221 (70761bp)
+Top Length: 56030  Top ID: 99.99
+		Skipping redundant alignment 1 68 | 70694 70761 | 68 68 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551309379_ref_NZ_ NODE_111_length_70761_cov_18.1197_ID_221
+		This contig is misassembled. 3 total aligns.
+			Excluding internal overlap of size 331 between Alignment 1 and 2:  66 14925 | 70761 55902 | 14860 14860 --> 66 14594 | 70761 56233 | 14529 14529
+			Real Alignment 1: 1 56030 | 56232 203 | 56030 56030 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551310131_ref_NZ_ NODE_111_length_70761_cov_18.1197_ID_221
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 66 14594 | 70761 56233 | 14529 14529 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551310812_ref_NZ_ NODE_111_length_70761_cov_18.1197_ID_221
+
+CONTIG: NODE_10_length_308429_cov_18.1207_ID_19 (308429bp)
+Top Length: 252584  Top ID: 99.98
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 483 between Alignment 1 and 2:  1 56328 | 252102 308429 | 56328 56328 --> 484 56328 | 252585 308429 | 55845 55845
+			Real Alignment 1: 212391 464974 | 1 252584 | 252584 252584 | 99.98 | Patulibacter_americanus_DSM_16676_gi_551308003_ref_NZ_ NODE_10_length_308429_cov_18.1207_ID_19
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 484 56328 | 252585 308429 | 55845 55845 | 99.97 | Patulibacter_americanus_DSM_16676_gi_551308645_ref_NZ_ NODE_10_length_308429_cov_18.1207_ID_19
+
+CONTIG: NODE_120_length_68145_cov_18.2653_ID_239 (68145bp)
+Top Length: 68145  Top ID: 99.98
+		One align captures most of this contig: 143997 212141 | 1 68145 | 68145 68145 | 99.98 | Patulibacter_americanus_DSM_16676_gi_551308003_ref_NZ_ NODE_120_length_68145_cov_18.2653_ID_239
+
+CONTIG: NODE_181_length_48198_cov_17.9725_ID_361 (48198bp)
+Top Length: 48198  Top ID: 99.96
+		One align captures most of this contig: 95859 144056 | 1 48198 | 48198 48198 | 99.96 | Patulibacter_americanus_DSM_16676_gi_551308003_ref_NZ_ NODE_181_length_48198_cov_17.9725_ID_361
+
+CONTIG: NODE_183_length_48040_cov_17.8538_ID_365 (48040bp)
+Top Length: 48040  Top ID: 99.99
+		One align captures most of this contig: 19947 67986 | 1 48040 | 48040 48040 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551308003_ref_NZ_ NODE_183_length_48040_cov_17.8538_ID_365
+
+CONTIG: NODE_852_length_13963_cov_18.4613_ID_1703 (13963bp)
+Top Length: 13963  Top ID: 99.96
+		One align captures most of this contig: 81548 95510 | 1 13963 | 13963 13963 | 99.96 | Patulibacter_americanus_DSM_16676_gi_551308003_ref_NZ_ NODE_852_length_13963_cov_18.4613_ID_1703
+
+CONTIG: NODE_928_length_12964_cov_17.8801_ID_1855 (12964bp)
+Top Length: 12964  Top ID: 99.98
+		One align captures most of this contig: 68368 81331 | 1 12964 | 12964 12964 | 99.98 | Patulibacter_americanus_DSM_16676_gi_551308003_ref_NZ_ NODE_928_length_12964_cov_17.8801_ID_1855
+
+CONTIG: NODE_13103_length_770_cov_21.7133_ID_26205 (770bp)
+Top Length: 770  Top ID: 100.0
+		One align captures most of this contig: 19041 19810 | 770 1 | 770 770 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551308003_ref_NZ_ NODE_13103_length_770_cov_21.7133_ID_26205
+
+CONTIG: NODE_883_length_13625_cov_18.2962_ID_1765 (13625bp)
+Top Length: 13625  Top ID: 99.96
+		One align captures most of this contig: 234 13858 | 13625 1 | 13625 13625 | 99.96 | Patulibacter_americanus_DSM_16676_gi_551310823_ref_NZ_ NODE_883_length_13625_cov_18.2962_ID_1765
+
+CONTIG: NODE_5216_length_2101_cov_19.0332_ID_10431 (2101bp)
+Top Length: 2101  Top ID: 100.0
+		Marking as insignificant: 1 68 | 2034 2101 | 68 68 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551309379_ref_NZ_ NODE_5216_length_2101_cov_19.0332_ID_10431
+		One align captures most of this contig: 4 2104 | 1 2101 | 2101 2101 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310836_ref_NZ_ NODE_5216_length_2101_cov_19.0332_ID_10431
+
+CONTIG: NODE_795_length_15023_cov_18.5466_ID_1589 (15023bp)
+Top Length: 15023  Top ID: 99.99
+		One align captures most of this contig: 12728 27750 | 1 15023 | 15023 15023 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551310687_ref_NZ_ NODE_795_length_15023_cov_18.5466_ID_1589
+
+CONTIG: NODE_99_length_79955_cov_18.3009_ID_197 (79955bp)
+Top Length: 79953  Top ID: 99.98
+		One align captures most of this contig: 83741 163693 | 3 79955 | 79953 79953 | 99.98 | Patulibacter_americanus_DSM_16676_gi_551308645_ref_NZ_ NODE_99_length_79955_cov_18.3009_ID_197
+
+CONTIG: NODE_116_length_69474_cov_18.1213_ID_231 (69474bp)
+Top Length: 69474  Top ID: 99.97
+		Marking as insignificant: 3 136 | 69474 69342 | 134 133 | 96.27 | Patulibacter_americanus_DSM_16676_gi_551307592_ref_NZ_ NODE_116_length_69474_cov_18.1213_ID_231
+		One align captures most of this contig: 224660 294133 | 1 69474 | 69474 69474 | 99.97 | Patulibacter_americanus_DSM_16676_gi_551308645_ref_NZ_ NODE_116_length_69474_cov_18.1213_ID_231
+
+CONTIG: NODE_391_length_27191_cov_17.7259_ID_781 (27191bp)
+Top Length: 27189  Top ID: 99.97
+		One align captures most of this contig: 56404 83592 | 1 27189 | 27189 27189 | 99.97 | Patulibacter_americanus_DSM_16676_gi_551308645_ref_NZ_ NODE_391_length_27191_cov_17.7259_ID_781
+
+CONTIG: NODE_527_length_21942_cov_17.9328_ID_1053 (21942bp)
+Top Length: 21938  Top ID: 99.97
+		One align captures most of this contig: 179257 201194 | 21942 5 | 21938 21938 | 99.97 | Patulibacter_americanus_DSM_16676_gi_551308645_ref_NZ_ NODE_527_length_21942_cov_17.9328_ID_1053
+
+CONTIG: NODE_685_length_17230_cov_18.3853_ID_1369 (17230bp)
+Top Length: 17229  Top ID: 99.96
+		One align captures most of this contig: 207308 224536 | 17230 2 | 17229 17229 | 99.96 | Patulibacter_americanus_DSM_16676_gi_551308645_ref_NZ_ NODE_685_length_17230_cov_18.3853_ID_1369
+
+CONTIG: NODE_781_length_15305_cov_17.4859_ID_1561 (15305bp)
+Top Length: 15305  Top ID: 99.99
+		One align captures most of this contig: 163865 179169 | 1 15305 | 15305 15305 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551308645_ref_NZ_ NODE_781_length_15305_cov_17.4859_ID_1561
+
+CONTIG: NODE_1882_length_5926_cov_19.1875_ID_3763 (5926bp)
+Top Length: 5926  Top ID: 99.88
+		One align captures most of this contig: 201325 207250 | 1 5926 | 5926 5926 | 99.88 | Patulibacter_americanus_DSM_16676_gi_551308645_ref_NZ_ NODE_1882_length_5926_cov_19.1875_ID_3763
+
+CONTIG: NODE_249_length_39316_cov_17.9242_ID_497 (39316bp)
+Top Length: 39027  Top ID: 99.98
+		One align captures most of this contig: 6903 45929 | 1 39027 | 39027 39027 | 99.98 | Patulibacter_americanus_DSM_16676_gi_551310007_ref_NZ_ NODE_249_length_39316_cov_17.9242_ID_497
+
+CONTIG: NODE_306_length_32958_cov_18.2824_ID_611 (32958bp)
+Top Length: 32954  Top ID: 99.97
+		One align captures most of this contig: 90037 122990 | 5 32958 | 32954 32954 | 99.97 | Patulibacter_americanus_DSM_16676_gi_551310007_ref_NZ_ NODE_306_length_32958_cov_18.2824_ID_611
+
+CONTIG: NODE_353_length_29696_cov_18.2703_ID_705 (29696bp)
+Top Length: 29696  Top ID: 99.99
+		One align captures most of this contig: 60186 89881 | 29696 1 | 29696 29696 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551310007_ref_NZ_ NODE_353_length_29696_cov_18.2703_ID_705
+
+CONTIG: NODE_784_length_15272_cov_17.0331_ID_1567 (15272bp)
+Top Length: 14171  Top ID: 99.96
+		This contig is partially unaligned. (Aligned 14171 out of 15272 bases)
+		Alignment: 45923 60093 | 14173 3 | 14171 14171 | 99.96 | Patulibacter_americanus_DSM_16676_gi_551310007_ref_NZ_ NODE_784_length_15272_cov_17.0331_ID_1567
+		Unaligned bases: 1 to 2 (2)
+		Unaligned bases: 14174 to 15272 (1099)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_906_length_13248_cov_18.484_ID_1811 (13248bp)
+Top Length: 13248  Top ID: 99.99
+		One align captures most of this contig: 123154 136401 | 13248 1 | 13248 13248 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551310007_ref_NZ_ NODE_906_length_13248_cov_18.484_ID_1811
+
+CONTIG: NODE_1318_length_8673_cov_18.1231_ID_2635 (8673bp)
+Top Length: 8673  Top ID: 99.97
+		One align captures most of this contig: 137102 145774 | 8673 1 | 8673 8673 | 99.97 | Patulibacter_americanus_DSM_16676_gi_551310007_ref_NZ_ NODE_1318_length_8673_cov_18.1231_ID_2635
+
+CONTIG: NODE_1891_length_5896_cov_18.3909_ID_3781 (5896bp)
+Top Length: 5896  Top ID: 99.98
+		One align captures most of this contig: 134 6029 | 1 5896 | 5896 5896 | 99.98 | Patulibacter_americanus_DSM_16676_gi_551310007_ref_NZ_ NODE_1891_length_5896_cov_18.3909_ID_3781
+
+CONTIG: NODE_10538_length_983_cov_30.7403_ID_21075 (983bp)
+Top Length: 983  Top ID: 98.68
+		One align captures most of this contig: 5975 6957 | 983 1 | 983 983 | 98.68 | Patulibacter_americanus_DSM_16676_gi_551310007_ref_NZ_ NODE_10538_length_983_cov_30.7403_ID_21075
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Patulibacter_americanus_DSM_16676/contigs_reports/nucmer_output/SPAdes.used_snps
+	Reference Patulibacter_americanus_DSM_16676_gi_551309379_ref_NZ_: 7 total alignments. 1 total regions.
+		Region: 1 to 267930 (267930 bp)
+			START in gap: 1 to 79 (78 bp)
+			Align 1: 79 49352 NODE_173_length_49277_cov_17.7877_ID_345 49277 4
+				Gap between this and next alignment: 49352 to 49638 (285 bp)
+				Next Alignment: 49638 65940 NODE_731_length_16312_cov_18.6004_ID_1461 16312 10
+
+			Align 2: 49638 65940 NODE_731_length_16312_cov_18.6004_ID_1461 16312 10
+				Gap between this and next alignment: 65940 to 66040 (99 bp)
+				Next Alignment: 66040 99786 NODE_297_length_33747_cov_18.3666_ID_593 1 33747
+
+			Align 3: 66040 99786 NODE_297_length_33747_cov_18.3666_ID_593 1 33747
+				Gap between this and next alignment: 99786 to 99886 (99 bp)
+				Next Alignment: 99886 115631 NODE_709_length_16719_cov_17.5758_ID_1417 1 15746
+
+			Align 4: 99886 115631 NODE_709_length_16719_cov_17.5758_ID_1417 1 15746
+				Gap between this and next alignment: 115631 to 115634 (2 bp)
+				Next Alignment: 115634 121674 NODE_1768_length_6342_cov_15.7695_ID_3535 302 6342
+
+			Align 5: 115634 121674 NODE_1768_length_6342_cov_15.7695_ID_3535 302 6342
+				Gap between this and next alignment: 121674 to 121752 (77 bp)
+				Next Alignment: 121752 175467 NODE_159_length_53716_cov_17.9318_ID_317 1 53716
+
+			Align 6: 121752 175467 NODE_159_length_53716_cov_17.9318_ID_317 1 53716
+				Gap between this and next alignment: 175467 to 175734 (266 bp)
+				Next Alignment: 175734 267930 NODE_72_length_104676_cov_18.0652_ID_143 1 92197
+
+			Align 7: 175734 267930 NODE_72_length_104676_cov_18.0652_ID_143 1 92197
+			END in current alignment.  Modifying 267930 to 267930.
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551307592_ref_NZ_: 8 total alignments. 1 total regions.
+		Region: 1 to 888876 (888876 bp)
+			START in gap: 1 to 3 (2 bp)
+			Align 1: 3 170852 NODE_34_length_170850_cov_18.306_ID_67 170850 1
+				Gap between this and next alignment: 170852 to 170937 (84 bp)
+				Next Alignment: 170937 225719 NODE_149_length_55011_cov_17.8869_ID_297 55011 229
+
+			Align 2: 170937 225719 NODE_149_length_55011_cov_17.8869_ID_297 55011 229
+				Gap between this and next alignment: 225719 to 225721 (1 bp)
+				Next Alignment: 225721 256183 NODE_299_length_33604_cov_17.6997_ID_597 3142 33604
+
+			Align 3: 225721 256183 NODE_299_length_33604_cov_17.6997_ID_597 3142 33604
+				Gap between this and next alignment: 256183 to 256518 (334 bp)
+				Next Alignment: 256518 302536 NODE_194_length_46019_cov_18.3061_ID_387 46019 1
+
+			Align 4: 256518 302536 NODE_194_length_46019_cov_18.3061_ID_387 46019 1
+				Gap between this and next alignment: 302536 to 302846 (309 bp)
+				Next Alignment: 302846 471488 NODE_36_length_168643_cov_18.0913_ID_71 1 168643
+
+			Align 5: 302846 471488 NODE_36_length_168643_cov_18.0913_ID_71 1 168643
+				Gap between this and next alignment: 471488 to 471597 (108 bp)
+				Next Alignment: 471597 783136 NODE_6_length_311540_cov_17.9869_ID_11 311540 1
+
+			Align 6: 471597 783136 NODE_6_length_311540_cov_17.9869_ID_11 311540 1
+				Gap between this and next alignment: 783136 to 783332 (195 bp)
+				Next Alignment: 783332 800243 NODE_697_length_16912_cov_18.4888_ID_1393 16912 1
+
+			Align 7: 783332 800243 NODE_697_length_16912_cov_18.4888_ID_1393 16912 1
+				Gap between this and next alignment: 800243 to 800488 (244 bp)
+				Next Alignment: 800488 888271 NODE_87_length_87784_cov_18.13_ID_173 1 87784
+
+			Align 8: 800488 888271 NODE_87_length_87784_cov_18.13_ID_173 1 87784
+			END in gap: 888271 to 888876 (605 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310812_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 14925 (14925 bp)
+			START in gap: 1 to 66 (65 bp)
+			Align 1: 66 14594 NODE_111_length_70761_cov_18.1197_ID_221 70761 56233
+			END in gap: 14594 to 14925 (331 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310604_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 52940 (52940 bp)
+			START in gap: 1 to 75 (74 bp)
+			Align 1: 75 52868 NODE_162_length_52794_cov_18.1365_ID_323 52794 1
+			END in gap: 52868 to 52940 (72 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310761_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 37522 (37522 bp)
+			START in gap: 1 to 591 (590 bp)
+			Align 1: 591 37275 NODE_26_length_202579_cov_18.0938_ID_51 36685 1
+			END in gap: 37275 to 37522 (247 bp)
+
+ERROR: Reference Patulibacter_americanus_DSM_16676_gi_551310842_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Patulibacter_americanus_DSM_16676_gi_551309379_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551307592_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310812_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310604_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310761_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310794_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310823_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310726_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310498_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551308645_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551308898_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310131_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310421_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310329_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551309729_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310645_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310830_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551308003_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310245_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310007_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551309565_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310838_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551309139_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551308389_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310561_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551309874_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310834_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310836_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310687_ref_NZ_']
+	Reference Patulibacter_americanus_DSM_16676_gi_551310794_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 35985 (35985 bp)
+			START in gap: 1 to 284 (283 bp)
+			Align 1: 284 24580 NODE_66_length_109647_cov_18.0866_ID_131 85351 109647
+				Gap between this and next alignment: 24580 to 24773 (192 bp)
+				Next Alignment: 24773 35983 NODE_1056_length_11211_cov_17.4944_ID_2111 1 11211
+
+			Align 2: 24773 35983 NODE_1056_length_11211_cov_17.4944_ID_2111 1 11211
+			END in gap: 35983 to 35985 (2 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310823_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 14109 (14109 bp)
+			START in gap: 1 to 234 (233 bp)
+			Align 1: 234 13858 NODE_883_length_13625_cov_18.2962_ID_1765 13625 1
+			END in gap: 13858 to 14109 (251 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310726_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 39125 (39125 bp)
+			START in gap: 1 to 308 (307 bp)
+			Align 1: 308 39078 NODE_256_length_38771_cov_18.2099_ID_511 1 38771
+			END in gap: 39078 to 39125 (47 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310498_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 82673 (82673 bp)
+			START in gap: 1 to 563 (562 bp)
+			Align 1: 563 82619 NODE_71_length_104980_cov_18.4374_ID_141 104980 22924
+			END in gap: 82619 to 82673 (54 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551308645_ref_NZ_: 8 total alignments. 1 total regions.
+		Region: 1 to 294135 (294135 bp)
+			START in gap: 1 to 484 (483 bp)
+			Align 1: 484 56328 NODE_10_length_308429_cov_18.1207_ID_19 252585 308429
+				Gap between this and next alignment: 56328 to 56404 (75 bp)
+				Next Alignment: 56404 83592 NODE_391_length_27191_cov_17.7259_ID_781 1 27189
+
+			Align 2: 56404 83592 NODE_391_length_27191_cov_17.7259_ID_781 1 27189
+				Gap between this and next alignment: 83592 to 83741 (148 bp)
+				Next Alignment: 83741 163693 NODE_99_length_79955_cov_18.3009_ID_197 3 79955
+
+			Align 3: 83741 163693 NODE_99_length_79955_cov_18.3009_ID_197 3 79955
+				Gap between this and next alignment: 163693 to 163865 (171 bp)
+				Next Alignment: 163865 179169 NODE_781_length_15305_cov_17.4859_ID_1561 1 15305
+
+			Align 4: 163865 179169 NODE_781_length_15305_cov_17.4859_ID_1561 1 15305
+				Gap between this and next alignment: 179169 to 179257 (87 bp)
+				Next Alignment: 179257 201194 NODE_527_length_21942_cov_17.9328_ID_1053 21942 5
+
+			Align 5: 179257 201194 NODE_527_length_21942_cov_17.9328_ID_1053 21942 5
+				Gap between this and next alignment: 201194 to 201325 (130 bp)
+				Next Alignment: 201325 207250 NODE_1882_length_5926_cov_19.1875_ID_3763 1 5926
+
+			Align 6: 201325 207250 NODE_1882_length_5926_cov_19.1875_ID_3763 1 5926
+				Gap between this and next alignment: 207250 to 207308 (57 bp)
+				Next Alignment: 207308 224536 NODE_685_length_17230_cov_18.3853_ID_1369 17230 2
+
+			Align 7: 207308 224536 NODE_685_length_17230_cov_18.3853_ID_1369 17230 2
+				Gap between this and next alignment: 224536 to 224660 (123 bp)
+				Next Alignment: 224660 294133 NODE_116_length_69474_cov_18.1213_ID_231 1 69474
+
+			Align 8: 224660 294133 NODE_116_length_69474_cov_18.1213_ID_231 1 69474
+			END in gap: 294133 to 294135 (2 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551308898_ref_NZ_: 6 total alignments. 1 total regions.
+		Region: 1 to 279502 (279502 bp)
+			START in gap: 1 to 112 (111 bp)
+			Align 1: 112 182017 NODE_29_length_181906_cov_18.0997_ID_57 181906 1
+				Negative gap (overlap) between this and next alignment: 182017 to 181963 (-54 bp)
+				Next Alignment: 181963 182648 NODE_14532_length_686_cov_32.3043_ID_29063 1 686
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 56.
+			Align 2: 182018 182648 NODE_14532_length_686_cov_32.3043_ID_29063 56 686
+				Negative gap (overlap) between this and next alignment: 182648 to 182594 (-54 bp)
+				Next Alignment: 182594 185336 NODE_4001_length_2743_cov_18.3579_ID_8001 1 2743
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 56.
+			Align 3: 182649 185336 NODE_4001_length_2743_cov_18.3579_ID_8001 56 2743
+				Gap between this and next alignment: 185336 to 185640 (303 bp)
+				Next Alignment: 185640 194409 NODE_1308_length_8770_cov_18.3146_ID_2615 8770 1
+
+			Align 4: 185640 194409 NODE_1308_length_8770_cov_18.3146_ID_2615 8770 1
+				Gap between this and next alignment: 194409 to 194485 (75 bp)
+				Next Alignment: 194485 227900 NODE_302_length_33418_cov_17.9211_ID_603 1 33416
+
+			Align 5: 194485 227900 NODE_302_length_33418_cov_17.9211_ID_603 1 33416
+				Gap between this and next alignment: 227900 to 228119 (218 bp)
+				Next Alignment: 228119 279226 NODE_63_length_112862_cov_18.1649_ID_125 112862 61755
+
+			Align 6: 228119 279226 NODE_63_length_112862_cov_18.1649_ID_125 112862 61755
+			END in gap: 279226 to 279502 (276 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310131_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 141181 (141181 bp)
+			Align 1: 1 56030 NODE_111_length_70761_cov_18.1197_ID_221 56232 203
+				Negative gap (overlap) between this and next alignment: 56030 to 56017 (-13 bp)
+				Next Alignment: 56017 141181 NODE_66_length_109647_cov_18.0866_ID_131 186 85350
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 186 to 200.
+			Align 2: 56031 141181 NODE_66_length_109647_cov_18.0866_ID_131 200 85350
+			END in current alignment.  Modifying 141181 to 141181.
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310421_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 88209 (88209 bp)
+			START in gap: 1 to 134 (133 bp)
+			Align 1: 134 65674 NODE_126_length_65551_cov_18.0022_ID_251 1 65541
+				Gap between this and next alignment: 65674 to 65843 (168 bp)
+				Next Alignment: 65843 88202 NODE_513_length_22417_cov_17.8857_ID_1025 22415 1
+
+			Align 2: 65843 88202 NODE_513_length_22417_cov_17.8857_ID_1025 22415 1
+			END in gap: 88202 to 88209 (7 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310329_ref_NZ_: 3 total alignments. 1 total regions.
+		Region: 1 to 95236 (95236 bp)
+			START in gap: 1 to 2 (1 bp)
+			Align 1: 2 58694 NODE_140_length_58707_cov_18.477_ID_279 58707 15
+				Negative gap (overlap) between this and next alignment: 58694 to 58654 (-40 bp)
+				Next Alignment: 58654 59401 NODE_13442_length_748_cov_25.8817_ID_26883 1 748
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 42.
+			Align 2: 58695 59401 NODE_13442_length_748_cov_25.8817_ID_26883 42 748
+				Negative gap (overlap) between this and next alignment: 59401 to 59347 (-54 bp)
+				Next Alignment: 59347 95227 NODE_274_length_35881_cov_17.5265_ID_547 1 35881
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 56.
+			Align 3: 59402 95227 NODE_274_length_35881_cov_17.5265_ID_547 56 35881
+			END in gap: 95227 to 95236 (9 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551309729_ref_NZ_: 3 total alignments. 1 total regions.
+		Region: 1 to 186014 (186014 bp)
+			START in gap: 1 to 96 (95 bp)
+			Align 1: 96 23018 NODE_71_length_104980_cov_18.4374_ID_141 22923 1
+				Gap between this and next alignment: 23018 to 23278 (259 bp)
+				Next Alignment: 23278 178844 NODE_45_length_155575_cov_18.028_ID_89 155567 1
+
+			Align 2: 23278 178844 NODE_45_length_155575_cov_18.028_ID_89 155567 1
+				Gap between this and next alignment: 178844 to 179079 (234 bp)
+				Next Alignment: 179079 186004 NODE_1622_length_6926_cov_18.0307_ID_3243 6926 1
+
+			Align 3: 179079 186004 NODE_1622_length_6926_cov_18.0307_ID_3243 6926 1
+			END in gap: 186004 to 186014 (10 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310645_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 42117 (42117 bp)
+			START in gap: 1 to 1976 (1975 bp)
+			Align 1: 1976 42110 NODE_238_length_40135_cov_18.0576_ID_475 1 40135
+			END in gap: 42110 to 42117 (7 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310830_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 4944 (4944 bp)
+			START in gap: 1 to 65 (64 bp)
+			Align 1: 65 4941 NODE_2247_length_4877_cov_17.7476_ID_4493 4877 1
+			END in gap: 4941 to 4944 (3 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551308003_ref_NZ_: 8 total alignments. 1 total regions.
+		Region: 1 to 464974 (464974 bp)
+			START in gap: 1 to 506 (505 bp)
+			Align 1: 506 18857 NODE_124_length_66343_cov_18.2796_ID_247 47992 66343
+				Gap between this and next alignment: 18857 to 19041 (183 bp)
+				Next Alignment: 19041 19810 NODE_13103_length_770_cov_21.7133_ID_26205 770 1
+
+			Align 2: 19041 19810 NODE_13103_length_770_cov_21.7133_ID_26205 770 1
+				Gap between this and next alignment: 19810 to 19947 (136 bp)
+				Next Alignment: 19947 67986 NODE_183_length_48040_cov_17.8538_ID_365 1 48040
+
+			Align 3: 19947 67986 NODE_183_length_48040_cov_17.8538_ID_365 1 48040
+				Gap between this and next alignment: 67986 to 68368 (381 bp)
+				Next Alignment: 68368 81331 NODE_928_length_12964_cov_17.8801_ID_1855 1 12964
+
+			Align 4: 68368 81331 NODE_928_length_12964_cov_17.8801_ID_1855 1 12964
+				Gap between this and next alignment: 81331 to 81548 (216 bp)
+				Next Alignment: 81548 95510 NODE_852_length_13963_cov_18.4613_ID_1703 1 13963
+
+			Align 5: 81548 95510 NODE_852_length_13963_cov_18.4613_ID_1703 1 13963
+				Gap between this and next alignment: 95510 to 95859 (348 bp)
+				Next Alignment: 95859 144056 NODE_181_length_48198_cov_17.9725_ID_361 1 48198
+
+			Align 6: 95859 144056 NODE_181_length_48198_cov_17.9725_ID_361 1 48198
+				Negative gap (overlap) between this and next alignment: 144056 to 143997 (-59 bp)
+				Next Alignment: 143997 212141 NODE_120_length_68145_cov_18.2653_ID_239 1 68145
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 61.
+			Align 7: 144057 212141 NODE_120_length_68145_cov_18.2653_ID_239 61 68145
+				Gap between this and next alignment: 212141 to 212391 (249 bp)
+				Next Alignment: 212391 464974 NODE_10_length_308429_cov_18.1207_ID_19 1 252584
+
+			Align 8: 212391 464974 NODE_10_length_308429_cov_18.1207_ID_19 1 252584
+			END in current alignment.  Modifying 464974 to 464974.
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310245_ref_NZ_: 4 total alignments. 1 total regions.
+		Region: 1 to 129269 (129269 bp)
+			START in gap: 1 to 256 (255 bp)
+			Align 1: 256 344 NODE_13401_length_750_cov_40.4086_ID_26801 662 750
+				Negative gap (overlap) between this and next alignment: 344 to 290 (-54 bp)
+				Next Alignment: 290 74465 NODE_107_length_74176_cov_18.1808_ID_213 74176 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 74176 to 74121.
+			Align 2: 345 74465 NODE_107_length_74176_cov_18.1808_ID_213 74121 1
+				Gap between this and next alignment: 74465 to 74708 (242 bp)
+				Next Alignment: 74708 128607 NODE_157_length_53904_cov_18.5139_ID_313 5 53904
+
+			Align 3: 74708 128607 NODE_157_length_53904_cov_18.5139_ID_313 5 53904
+				Negative gap (overlap) between this and next alignment: 128607 to 128553 (-54 bp)
+				Next Alignment: 128553 129269 NODE_13191_length_764_cov_46.3597_ID_26381 764 48
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 764 to 709.
+			Align 4: 128608 129269 NODE_13191_length_764_cov_46.3597_ID_26381 709 48
+			END in current alignment.  Modifying 129269 to 129269.
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310007_ref_NZ_: 8 total alignments. 1 total regions.
+		Region: 1 to 146137 (146137 bp)
+			START in gap: 1 to 134 (133 bp)
+			Align 1: 134 6029 NODE_1891_length_5896_cov_18.3909_ID_3781 1 5896
+				Negative gap (overlap) between this and next alignment: 6029 to 5975 (-54 bp)
+				Next Alignment: 5975 6957 NODE_10538_length_983_cov_30.7403_ID_21075 983 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 983 to 928.
+			Align 2: 6030 6957 NODE_10538_length_983_cov_30.7403_ID_21075 928 1
+				Negative gap (overlap) between this and next alignment: 6957 to 6903 (-54 bp)
+				Next Alignment: 6903 45929 NODE_249_length_39316_cov_17.9242_ID_497 1 39027
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 56.
+			Align 3: 6958 45929 NODE_249_length_39316_cov_17.9242_ID_497 56 39027
+				Negative gap (overlap) between this and next alignment: 45929 to 45923 (-6 bp)
+				Next Alignment: 45923 60093 NODE_784_length_15272_cov_17.0331_ID_1567 14173 3
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 14173 to 14166.
+			Align 4: 45930 60093 NODE_784_length_15272_cov_17.0331_ID_1567 14166 3
+				Gap between this and next alignment: 60093 to 60186 (92 bp)
+				Next Alignment: 60186 89881 NODE_353_length_29696_cov_18.2703_ID_705 29696 1
+
+			Align 5: 60186 89881 NODE_353_length_29696_cov_18.2703_ID_705 29696 1
+				Gap between this and next alignment: 89881 to 90037 (155 bp)
+				Next Alignment: 90037 122990 NODE_306_length_32958_cov_18.2824_ID_611 5 32958
+
+			Align 6: 90037 122990 NODE_306_length_32958_cov_18.2824_ID_611 5 32958
+				Gap between this and next alignment: 122990 to 123154 (163 bp)
+				Next Alignment: 123154 136401 NODE_906_length_13248_cov_18.484_ID_1811 13248 1
+
+			Align 7: 123154 136401 NODE_906_length_13248_cov_18.484_ID_1811 13248 1
+				Gap between this and next alignment: 136401 to 137102 (700 bp)
+				Next Alignment: 137102 145774 NODE_1318_length_8673_cov_18.1231_ID_2635 8673 1
+
+			Align 8: 137102 145774 NODE_1318_length_8673_cov_18.1231_ID_2635 8673 1
+			END in gap: 145774 to 146137 (363 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551309565_ref_NZ_: 3 total alignments. 1 total regions.
+		Region: 1 to 191304 (191304 bp)
+			Align 1: 1 61342 NODE_63_length_112862_cov_18.1649_ID_125 61754 413
+				Negative gap (overlap) between this and next alignment: 61342 to 61317 (-25 bp)
+				Next Alignment: 61317 156338 NODE_79_length_95622_cov_18.2719_ID_157 601 95622
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 601 to 627.
+			Align 2: 61343 156338 NODE_79_length_95622_cov_18.2719_ID_157 627 95622
+				Gap between this and next alignment: 156338 to 156583 (244 bp)
+				Next Alignment: 156583 191072 NODE_290_length_34490_cov_17.9494_ID_579 34490 1
+
+			Align 3: 156583 191072 NODE_290_length_34490_cov_17.9494_ID_579 34490 1
+			END in gap: 191072 to 191304 (232 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310838_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 1559 (1559 bp)
+			START in gap: 1 to 289 (288 bp)
+			Align 1: 289 1016 NODE_13759_length_728_cov_35.2363_ID_27517 728 1
+				Negative gap (overlap) between this and next alignment: 1016 to 962 (-54 bp)
+				Next Alignment: 962 1557 NODE_16609_length_596_cov_19.9168_ID_33217 596 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 596 to 541.
+			Align 2: 1017 1557 NODE_16609_length_596_cov_19.9168_ID_33217 541 1
+			END in gap: 1557 to 1559 (2 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551309139_ref_NZ_: 3 total alignments. 1 total regions.
+		Region: 1 to 275652 (275652 bp)
+			START in gap: 1 to 75 (74 bp)
+			Align 1: 75 83713 NODE_93_length_83639_cov_18.4993_ID_185 1 83639
+				Negative gap (overlap) between this and next alignment: 83713 to 83659 (-54 bp)
+				Next Alignment: 83659 137504 NODE_158_length_53846_cov_17.9282_ID_315 1 53846
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 56.
+			Align 2: 83714 137504 NODE_158_length_53846_cov_17.9282_ID_315 56 53846
+				Gap between this and next alignment: 137504 to 137607 (102 bp)
+				Next Alignment: 137607 275643 NODE_53_length_138037_cov_18.1738_ID_105 138037 1
+
+			Align 3: 137607 275643 NODE_53_length_138037_cov_18.1738_ID_105 138037 1
+			END in gap: 275643 to 275652 (9 bp)
+
+ERROR: Reference Patulibacter_americanus_DSM_16676_gi_551310837_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Patulibacter_americanus_DSM_16676_gi_551309379_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551307592_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310812_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310604_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310761_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310794_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310823_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310726_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310498_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551308645_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551308898_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310131_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310421_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310329_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551309729_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310645_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310830_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551308003_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310245_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310007_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551309565_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310838_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551309139_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551308389_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310561_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551309874_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310834_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310836_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310687_ref_NZ_']
+	Reference Patulibacter_americanus_DSM_16676_gi_551308389_ref_NZ_: 16 total alignments. 1 total regions.
+		Region: 1 to 400993 (400993 bp)
+			Align 1: 1 661 NODE_13401_length_750_cov_40.4086_ID_26801 661 1
+				Negative gap (overlap) between this and next alignment: 661 to 607 (-54 bp)
+				Next Alignment: 607 304827 NODE_12_length_304241_cov_18.0219_ID_23 1 304241
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 56.
+			Align 2: 662 304827 NODE_12_length_304241_cov_18.0219_ID_23 56 304241
+				Gap between this and next alignment: 304827 to 305069 (241 bp)
+				Next Alignment: 305069 307171 NODE_5215_length_2103_cov_19.104_ID_10429 1 2103
+
+			Align 3: 305069 307171 NODE_5215_length_2103_cov_19.104_ID_10429 1 2103
+				Gap between this and next alignment: 307171 to 307268 (96 bp)
+				Next Alignment: 307268 308810 NODE_7000_length_1543_cov_19.7513_ID_13999 1543 1
+
+			Align 4: 307268 308810 NODE_7000_length_1543_cov_19.7513_ID_13999 1543 1
+				Negative gap (overlap) between this and next alignment: 308810 to 308756 (-54 bp)
+				Next Alignment: 308756 309789 NODE_10079_length_1034_cov_31.1277_ID_20157 1 1034
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 56.
+			Align 5: 308811 309789 NODE_10079_length_1034_cov_31.1277_ID_20157 56 1034
+				Negative gap (overlap) between this and next alignment: 309789 to 309735 (-54 bp)
+				Next Alignment: 309735 310525 NODE_12455_length_816_cov_19.8791_ID_24909 816 26
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 816 to 761.
+			Align 6: 309790 310525 NODE_12455_length_816_cov_19.8791_ID_24909 761 26
+				Gap between this and next alignment: 310525 to 310722 (196 bp)
+				Next Alignment: 310722 313759 NODE_3640_length_3038_cov_21.3084_ID_7279 3038 1
+
+			Align 7: 310722 313759 NODE_3640_length_3038_cov_21.3084_ID_7279 3038 1
+				Gap between this and next alignment: 313759 to 313953 (193 bp)
+				Next Alignment: 313953 316298 NODE_4311_length_2547_cov_19.9522_ID_8621 1 2346
+
+			Align 8: 313953 316298 NODE_4311_length_2547_cov_19.9522_ID_8621 1 2346
+				Negative gap (overlap) between this and next alignment: 316298 to 316293 (-5 bp)
+				Next Alignment: 316293 320465 NODE_2554_length_4356_cov_16.9926_ID_5107 4173 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 4173 to 4167.
+			Align 9: 316299 320465 NODE_2554_length_4356_cov_16.9926_ID_5107 4167 1
+				Gap between this and next alignment: 320465 to 320631 (165 bp)
+				Next Alignment: 320631 323296 NODE_4111_length_2666_cov_18.0655_ID_8221 2666 1
+
+			Align 10: 320631 323296 NODE_4111_length_2666_cov_18.0655_ID_8221 2666 1
+				Gap between this and next alignment: 323296 to 323537 (240 bp)
+				Next Alignment: 323537 327921 NODE_2531_length_4385_cov_18.763_ID_5061 1 4385
+
+			Align 11: 323537 327921 NODE_2531_length_4385_cov_18.763_ID_5061 1 4385
+				Gap between this and next alignment: 327921 to 328003 (81 bp)
+				Next Alignment: 328003 329604 NODE_6743_length_1602_cov_18.8643_ID_13485 1 1602
+
+			Align 12: 328003 329604 NODE_6743_length_1602_cov_18.8643_ID_13485 1 1602
+				Gap between this and next alignment: 329604 to 329668 (63 bp)
+				Next Alignment: 329668 338149 NODE_1340_length_8482_cov_19.6546_ID_2679 8482 1
+
+			Align 13: 329668 338149 NODE_1340_length_8482_cov_19.6546_ID_2679 8482 1
+				Negative gap (overlap) between this and next alignment: 338149 to 338095 (-54 bp)
+				Next Alignment: 338095 338969 NODE_11629_length_875_cov_30.7988_ID_23257 875 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 875 to 820.
+			Align 14: 338150 338969 NODE_11629_length_875_cov_30.7988_ID_23257 820 1
+				Negative gap (overlap) between this and next alignment: 338969 to 338915 (-54 bp)
+				Next Alignment: 338915 352879 NODE_851_length_13965_cov_18.4713_ID_1701 13965 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 13965 to 13910.
+			Align 15: 338970 352879 NODE_851_length_13965_cov_18.4713_ID_1701 13910 1
+				Gap between this and next alignment: 352879 to 353003 (123 bp)
+				Next Alignment: 353003 400993 NODE_124_length_66343_cov_18.2796_ID_247 1 47991
+
+			Align 16: 353003 400993 NODE_124_length_66343_cov_18.2796_ID_247 1 47991
+			END in current alignment.  Modifying 400993 to 400993.
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310561_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 75285 (75285 bp)
+			START in gap: 1 to 8 (7 bp)
+			Align 1: 8 22869 NODE_501_length_22862_cov_18.7821_ID_1001 1 22862
+				Gap between this and next alignment: 22869 to 22990 (120 bp)
+				Next Alignment: 22990 75263 NODE_125_length_66165_cov_18.0065_ID_249 66165 13892
+
+			Align 2: 22990 75263 NODE_125_length_66165_cov_18.0065_ID_249 66165 13892
+			END in gap: 75263 to 75285 (22 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551309874_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 167807 (167807 bp)
+			START in gap: 1 to 208 (207 bp)
+			Align 1: 208 1968 NODE_6137_length_1761_cov_59.1166_ID_12273 1761 1
+				Negative gap (overlap) between this and next alignment: 1968 to 1914 (-54 bp)
+				Next Alignment: 1914 167807 NODE_26_length_202579_cov_18.0938_ID_51 202579 36686
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 202579 to 202524.
+			Align 2: 1969 167807 NODE_26_length_202579_cov_18.0938_ID_51 202524 36686
+			END in current alignment.  Modifying 167807 to 167807.
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310834_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 4068 (4068 bp)
+			START in gap: 1 to 41 (40 bp)
+			Align 1: 41 4038 NODE_2767_length_3998_cov_18.6163_ID_5533 3998 1
+			END in gap: 4038 to 4068 (30 bp)
+
+ERROR: Reference Patulibacter_americanus_DSM_16676_gi_551310840_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Patulibacter_americanus_DSM_16676_gi_551309379_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551307592_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310812_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310604_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310761_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310794_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310823_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310726_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310498_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551308645_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551308898_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310131_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310421_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310329_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551309729_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310645_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310830_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551308003_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310245_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310007_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551309565_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310838_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551309139_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551308389_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310561_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551309874_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310834_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310836_ref_NZ_', 'Patulibacter_americanus_DSM_16676_gi_551310687_ref_NZ_']
+	Reference Patulibacter_americanus_DSM_16676_gi_551310836_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 2131 (2131 bp)
+			START in gap: 1 to 4 (3 bp)
+			Align 1: 4 2104 NODE_5216_length_2101_cov_19.0332_ID_10431 1 2101
+			END in gap: 2104 to 2131 (27 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310687_ref_NZ_: 3 total alignments. 1 total regions.
+		Region: 1 to 41805 (41805 bp)
+			START in gap: 1 to 227 (226 bp)
+			Align 1: 227 12705 NODE_72_length_104676_cov_18.0652_ID_143 92198 104676
+				Gap between this and next alignment: 12705 to 12728 (22 bp)
+				Next Alignment: 12728 27750 NODE_795_length_15023_cov_18.5466_ID_1589 1 15023
+
+			Align 2: 12728 27750 NODE_795_length_15023_cov_18.5466_ID_1589 1 15023
+				Gap between this and next alignment: 27750 to 27800 (49 bp)
+				Next Alignment: 27800 41690 NODE_125_length_66165_cov_18.0065_ID_249 1 13891
+
+			Align 3: 27800 41690 NODE_125_length_66165_cov_18.0065_ID_249 1 13891
+			END in gap: 41690 to 41805 (115 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Patulibacter_americanus_DSM_16676/contigs_reports/nucmer_output/SPAdes.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 10
+		Relocations: 0
+		Translocations: 10
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 10
+	Misassembled Contig Bases: 1147192
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 8 part
+Partially Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 5972
+
+Ambiguously Mapped Contigs: 1
+Total Bases in Ambiguously Mapped Contigs: 1761
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 4447747
+
+	SNPs: 913
+	Insertions: 83
+	Deletions: 8
+
+	Positive Gaps: 101
+		Internal Gaps:  0
+		External Gaps:  101
+		External Gap Total:  18660
+		External Gap Average: 185
+	Negative Gaps: 21
+		Internal Overlaps:  0
+		External Overlaps:  21
+		External Overlaps Total: -958
+		External Overlaps Average: -46
+	Contigs with Redundant Alignments: 0 (0)

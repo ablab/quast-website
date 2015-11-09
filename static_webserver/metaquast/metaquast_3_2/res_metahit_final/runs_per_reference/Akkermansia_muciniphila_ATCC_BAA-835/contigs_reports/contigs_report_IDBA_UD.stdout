@@ -1,0 +1,68 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Akkermansia_muciniphila_ATCC_BAA-835_gi_187734516_ref_NC_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 1
+	Total Region Length: 2664102
+Analyzing contigs...
+CONTIG: scaffold_2788 (3247bp)
+Top Length: 83  Top ID: 95.18
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 993810 993892 | 1261 1179 | 83 83 | 95.18 | Akkermansia_muciniphila_ATCC_BAA-835_gi_187734516_ref_NC_ scaffold_2788
+		Skipping redundant alignment 1463655 1463737 | 1261 1179 | 83 83 | 95.18 | Akkermansia_muciniphila_ATCC_BAA-835_gi_187734516_ref_NC_ scaffold_2788
+		This contig is partially unaligned. (Aligned 83 out of 3247 bases)
+		Alignment: 318001 318083 | 1179 1261 | 83 83 | 95.18 | Akkermansia_muciniphila_ATCC_BAA-835_gi_187734516_ref_NC_ scaffold_2788
+		Unaligned bases: 1 to 1178 (1178)
+		Unaligned bases: 1262 to 3247 (1986)
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Akkermansia_muciniphila_ATCC_BAA-835/contigs_reports/nucmer_output/IDBA_UD.used_snps
+	Reference Akkermansia_muciniphila_ATCC_BAA-835_gi_187734516_ref_NC_: 1 total alignments. 1 total regions.
+		Region: 1 to 2664102 (2664102 bp)
+			START in gap: 1 to 318001 (318000 bp)
+			Align 1: 318001 318083 scaffold_2788 1179 1261
+			END in gap: 318083 to 2664102 (2346019 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Akkermansia_muciniphila_ATCC_BAA-835/contigs_reports/nucmer_output/IDBA_UD.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 1 part
+Partially Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 3164
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 83
+
+	SNPs: 4
+	Insertions: 0
+	Deletions: 0
+
+	Positive Gaps: 2
+		Internal Gaps:  0
+		External Gaps:  2
+		External Gap Total:  2664019
+		External Gap Average: 1332010
+	Negative Gaps: 0
+		Internal Overlaps:  0
+		External Overlaps:  0
+		External Overlaps Total:  0
+		External Overlaps Average: 0
+	Contigs with Redundant Alignments: 0 (0)

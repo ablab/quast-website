@@ -1,0 +1,127 @@
+/home/gurevich/rep/quast/quast.pyc -t 16 -j  --meta  --bed-file /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/structural_variations/combined_reference.bed --combined-ref  --ambiguity-usage all -R /Molly/gurevich/MetaQUAST/res_final/res_cami_final/quast_corrected_input/combined_reference.fasta -o /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference --labels "Gold_Assembly, IDBA_UD, Ray, SOAPdenovo2, SPAdes" /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/../quast_corrected_input/Gold_Assembly.fasta /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/../quast_corrected_input/IDBA_UD.fasta /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/../quast_corrected_input/Ray.fasta /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/../quast_corrected_input/SOAPdenovo2.fasta /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/../quast_corrected_input/SPAdes.fasta
+
+Started: 2015-11-09 19:29:38
+
+Logging to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/quast.log
+
+NOTICE: Output directory already exists. Existing Nucmer alignments can be used.
+
+Reference:
+  /Molly/gurevich/MetaQUAST/res_final/res_cami_final/quast_corrected_input/combined_reference.fasta ==> combined_reference
+
+Contigs:
+  1  /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/../quast_corrected_input/Gold_Assembly.fasta ==> Gold_Assembly
+  2  /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/../quast_corrected_input/IDBA_UD.fasta ==> IDBA_UD
+  3  /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/../quast_corrected_input/Ray.fasta ==> Ray
+  4  /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/../quast_corrected_input/SOAPdenovo2.fasta ==> SOAPdenovo2
+  5  /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/../quast_corrected_input/SPAdes.fasta ==> SPAdes
+
+2015-11-09 19:30:11
+Running Basic statistics processor...
+  Reference genome:
+    combined_reference.fasta__2, Reference length = 95264179, Reference GC % = 59.19
+  Contig files: 
+    1  Gold_Assembly
+    2  IDBA_UD
+    3  Ray
+    4  SOAPdenovo2
+    5  SPAdes
+  Calculating N50 and L50...
+    1  Gold_Assembly, N50 = 24752, L50 = 498, Total length = 88077239, GC % = 54.62, # N's per 100 kbp =  0.14
+    2  IDBA_UD, N50 = 19377, L50 = 594, Total length = 71707572, GC % = 54.91, # N's per 100 kbp =  0.00
+    3  Ray, N50 = 23276, L50 = 348, Total length = 52656365, GC % = 53.92, # N's per 100 kbp =  11.53
+    4  SOAPdenovo2, N50 = 3140, L50 = 3259, Total length = 53726740, GC % = 55.76, # N's per 100 kbp =  44.16
+    5  SPAdes, N50 = 16577, L50 = 719, Total length = 72643866, GC % = 55.07, # N's per 100 kbp =  9.43
+  Drawing Nx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/basic_stats/Nx_plot.pdf
+  Drawing cumulative plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/basic_stats/cumulative_plot.pdf
+Done.
+
+2015-11-09 19:30:45
+Running Contig analyzer...
+  1  Gold_Assembly
+  1  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/contigs_reports/contigs_report_Gold_Assembly.stdout and contigs_report_Gold_Assembly.stderr...
+  1  Using existing Nucmer alignments... 
+  1  Alignments: combined_reference/contigs_reports/alignments_Gold_Assembly.tsv
+  1  Analysis is finished.
+
+  2  IDBA_UD
+  2  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/contigs_reports/contigs_report_IDBA_UD.stdout and contigs_report_IDBA_UD.stderr...
+  2  Using existing Nucmer alignments... 
+  2  Alignments: combined_reference/contigs_reports/alignments_IDBA_UD.tsv
+  2  Analysis is finished.
+
+  3  Ray
+  3  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/contigs_reports/contigs_report_Ray.stdout and contigs_report_Ray.stderr...
+  3  Using existing Nucmer alignments... 
+  3  Alignments: combined_reference/contigs_reports/alignments_Ray.tsv
+  3  Analysis is finished.
+
+  4  SOAPdenovo2
+  4  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/contigs_reports/contigs_report_SOAPdenovo2.stdout and contigs_report_SOAPdenovo2.stderr...
+  4  Using existing Nucmer alignments... 
+  4  Alignments: combined_reference/contigs_reports/alignments_SOAPdenovo2.tsv
+  4  Analysis is finished.
+
+  5  SPAdes
+  5  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/contigs_reports/contigs_report_SPAdes.stdout and contigs_report_SPAdes.stderr...
+  5  Using existing Nucmer alignments... 
+  5  Alignments: combined_reference/contigs_reports/alignments_SPAdes.tsv
+  5  Analysis is finished.
+
+  Information about interspecies translocations by references is saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/contigs_reports/interspecies_translocations_by_refs.info
+  Creating total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/contigs_reports/misassemblies_plot.pdf
+Done.
+
+2015-11-09 19:34:58
+Running NA-NGA calculation...
+  1  Gold_Assembly, Largest alignment = 2780101, NA50 = 11158, LA50 = 989
+  2  IDBA_UD, Largest alignment = 800397, NA50 = 6120, LA50 = 1311
+  3  Ray, Largest alignment = 560953, NA50 = 2333, LA50 = 1588
+  4  SOAPdenovo2, Largest alignment = 202541, NA50 = 1770, LA50 = 4941
+  5  SPAdes, Largest alignment = 505955, NA50 = 4993, LA50 = 1638
+  Drawing cumulative plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/aligned_stats/NAx_plot.pdf
+Done.
+
+2015-11-09 19:35:08
+Running Genome analyzer...
+  NOTICE: No file with genes provided. Use the -G option if you want to specify it.
+  NOTICE: No file with operons provided. Use the -O option if you want to specify it.
+  1  Gold_Assembly
+  2  IDBA_UD
+  3  Ray
+  4  SOAPdenovo2
+  5  SPAdes
+  3  Analysis is finished.
+  4  Analysis is finished.
+  2  Analysis is finished.
+  5  Analysis is finished.
+  1  Analysis is finished.
+  Drawing Genome fraction, % histogram...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/genome_stats/genome_fraction_histogram.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding option to enable it.
+
+2015-11-09 19:35:47
+Drawing large plots...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating contig alignment plot...
+..step skipped!
+
+2015-11-09 19:42:01
+RESULTS:
+  Text versions of total report are saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/report.html

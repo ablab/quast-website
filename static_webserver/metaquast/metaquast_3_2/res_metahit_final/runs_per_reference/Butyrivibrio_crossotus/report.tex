@@ -1,0 +1,48 @@
+\documentclass[12pt,a4paper]{article}
+\begin{document}
+\begin{table}[ht]
+\begin{center}
+\caption{All statistics are based on contigs of size $\geq$ 500 bp, unless otherwise noted (e.g., "\# contigs ($\geq$ 0 bp)" and "Total length ($\geq$ 0 bp)" include all contigs).}
+\begin{tabular}{|l*{4}{|r}|}
+\hline
+Assembly & IDBA\_UD & Ray & SOAPdenovo2 & SPAdes \\ \hline
+\# contigs ($\geq$ 1000 bp) & 67 & {\bf 32} & 37 & 60 \\ \hline
+\# contigs ($\geq$ 5000 bp) & 26 & 6 & {\bf 2} & 26 \\ \hline
+\# contigs ($\geq$ 10000 bp) & 14 & 3 & {\bf 0} & 16 \\ \hline
+\# contigs ($\geq$ 25000 bp) & 10 & {\bf 0} & {\bf 0} & 7 \\ \hline
+\# contigs ($\geq$ 50000 bp) & 4 & {\bf 0} & {\bf 0} & 5 \\ \hline
+Total length ($\geq$ 1000 bp) & {\bf 872901} & 114746 & 79247 & 808908 \\ \hline
+Total length ($\geq$ 5000 bp) & {\bf 780615} & 57193 & 14858 & 731474 \\ \hline
+Total length ($\geq$ 10000 bp) & {\bf 689506} & 37891 & 0 & 654408 \\ \hline
+Total length ($\geq$ 25000 bp) & {\bf 639378} & 0 & 0 & 481642 \\ \hline
+Total length ($\geq$ 50000 bp) & {\bf 455274} & 0 & 0 & 411523 \\ \hline
+\# contigs & 86 & {\bf 43} & 74 & 75 \\ \hline
+Largest contig & {\bf 180109} & 15783 & 8490 & 131559 \\ \hline
+Total length & {\bf 886224} & 123028 & 104536 & 819235 \\ \hline
+Reference length & 2496039 & 2496039 & 2496039 & 2496039 \\ \hline
+GC (\%) & 40.56 & 41.48 & 40.67 & 39.59 \\ \hline
+Reference GC (\%) & 37.75 & 37.75 & 37.75 & 37.75 \\ \hline
+N50 & {\bf 80507} & 4601 & 1749 & 58346 \\ \hline
+N75 & 12880 & 2299 & 1020 & {\bf 18130} \\ \hline
+L50 & {\bf 4} & 7 & 17 & 5 \\ \hline
+L75 & {\bf 12} & 17 & 37 & 14 \\ \hline
+\# misassemblies & 5 & 1 & {\bf 0} & 3 \\ \hline
+\# misassembled contigs & 4 & 1 & {\bf 0} & 3 \\ \hline
+Misassembled contigs length & 28837 & 15783 & {\bf 0} & 20689 \\ \hline
+\# local misassemblies & 4 & 7 & 39 & {\bf 2} \\ \hline
+\# structural variations & 0 & 0 & 2 & 0 \\ \hline
+\# unaligned contigs & 0 + 55 part & {\bf 0 + 19 part} & 0 + 25 part & 0 + 44 part \\ \hline
+Unaligned length & 751404 & 45931 & {\bf 22394} & 693271 \\ \hline
+Genome fraction (\%) & {\bf 4.825} & 2.673 & 3.133 & 4.531 \\ \hline
+Duplication ratio & 1.119 & 1.156 & {\bf 1.051} & 1.114 \\ \hline
+\# N's per 100 kbp & {\bf 56.53} & 1361.48 & 2159.06 & 206.53 \\ \hline
+\# mismatches per 100 kbp & {\bf 1603.31} & 1695.12 & 1726.54 & 1824.05 \\ \hline
+\# indels per 100 kbp & 55.63 & {\bf 22.48} & 23.02 & 56.59 \\ \hline
+Largest alignment & 7714 & 7714 & 7714 & 7714 \\ \hline
+NA50 & - & 807 & 1049 & - \\ \hline
+NGA50 & - & - & - & - \\ \hline
+LA50 & - & 27 & 28 & - \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+\end{document}

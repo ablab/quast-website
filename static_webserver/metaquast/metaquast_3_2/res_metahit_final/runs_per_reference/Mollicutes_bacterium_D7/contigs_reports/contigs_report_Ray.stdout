@@ -1,0 +1,65 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Mollicutes_bacterium_D7_gi_224580900_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 1
+	Total Region Length: 3561737
+Analyzing contigs...
+CONTIG: scaffold-967 (3996bp)
+Top Length: 2758  Top ID: 95.83
+		This contig is partially unaligned. (Aligned 2758 out of 3996 bases)
+		Alignment: 2569297 2572055 | 2758 1 | 2759 2758 | 95.83 | Mollicutes_bacterium_D7_gi_224580900_ref_NZ_ scaffold-967
+		Unaligned bases: 2759 to 3996 (1238)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Mollicutes_bacterium_D7/contigs_reports/nucmer_output/Ray.used_snps
+	Reference Mollicutes_bacterium_D7_gi_224580900_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 3561737 (3561737 bp)
+			START in gap: 1 to 2569297 (2569296 bp)
+			Align 1: 2569297 2572055 scaffold-967 2758 1
+			END in gap: 2572055 to 3561737 (989682 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Mollicutes_bacterium_D7/contigs_reports/nucmer_output/Ray.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 1 part
+Partially Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 1238
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 2759
+
+	SNPs: 114
+	Insertions: 0
+	Deletions: 1
+
+	Positive Gaps: 2
+		Internal Gaps:  0
+		External Gaps:  2
+		External Gap Total:  3558978
+		External Gap Average: 1779489
+	Negative Gaps: 0
+		Internal Overlaps:  0
+		External Overlaps:  0
+		External Overlaps Total:  0
+		External Overlaps Average: 0
+	Contigs with Redundant Alignments: 0 (0)

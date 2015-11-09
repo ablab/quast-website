@@ -1,0 +1,16 @@
+\documentclass[12pt,a4paper]{article}
+\begin{document}
+\begin{table}[ht]
+\begin{center}
+\caption{All statistics are based on contigs of size $\geq$ 500 bp, unless otherwise noted (e.g., "\# contigs ($\geq$ 0 bp)" and "Total length ($\geq$ 0 bp)" include all contigs).}
+\begin{tabular}{|l*{38}{|r}|}
+\hline
+Assembly & \# contigs ($\geq$ 1000 bp) & \# contigs ($\geq$ 5000 bp) & \# contigs ($\geq$ 10000 bp) & \# contigs ($\geq$ 25000 bp) & \# contigs ($\geq$ 50000 bp) & Total length ($\geq$ 1000 bp) & Total length ($\geq$ 5000 bp) & Total length ($\geq$ 10000 bp) & Total length ($\geq$ 25000 bp) & Total length ($\geq$ 50000 bp) & \# contigs & Largest contig & Total length & Reference length & GC (\%) & Reference GC (\%) & N50 & N75 & L50 & L75 & \# misassemblies & \# misassembled contigs & Misassembled contigs length & \# local misassemblies & \# structural variations & \# unaligned contigs & Unaligned length & Genome fraction (\%) & Duplication ratio & \# N's per 100 kbp & \# mismatches per 100 kbp & \# indels per 100 kbp & Largest alignment & NA50 & NGA50 & NA75 & LA50 & LA75 \\ \hline
+IDBA\_UD & 59 & 17 & 11 & 6 & 2 & 519060 & 427503 & 375250 & 294583 & 164253 & 83 & 94894 & 536473 & 3842594 & 45.70 & 50.11 & 32853 & 9172 & 5 & 14 & 1 & 1 & 36911 & 1 & 0 & 0 + 40 part & 384708 & 3.443 & 1.147 & 101.59 & 1801.14 & 58.95 & 21306 & - & - & - & - & - \\ \hline
+Ray & 42 & 17 & 8 & 1 & 0 & 262244 & 200591 & 132970 & 35631 & 0 & 60 & 35631 & 274761 & 3842594 & 45.59 & 50.11 & 9721 & 4559 & 9 & 19 & 0 & 0 & 0 & 12 & 0 & 0 + 15 part & 112342 & 3.644 & 1.160 & 1071.11 & 1759.87 & 33.57 & 9719 & 625 & - & - & 47 & - \\ \hline
+SOAPdenovo2 & 33 & 2 & 0 & 0 & 0 & 68288 & 12527 & 0 & 0 & 0 & 70 & 7126 & 94044 & 3842594 & 45.59 & 50.11 & 1546 & 894 & 16 & 36 & 1 & 1 & 2108 & 10 & 0 & 0 + 13 part & 8099 & 2.193 & 1.020 & 1688.57 & 1298.38 & 14.24 & 7126 & 1384 & - & 708 & 18 & 42 \\ \hline
+SPAdes & 39 & 14 & 10 & 3 & 1 & 331549 & 269785 & 242154 & 124555 & 55339 & 57 & 55339 & 344558 & 3842594 & 46.46 & 50.11 & 16575 & 5771 & 6 & 13 & 3 & 2 & 51060 & 2 & 0 & 0 + 32 part & 169512 & 4.148 & 1.098 & 209.25 & 2004.28 & 65.24 & 21306 & - & - & - & - & - \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+\end{document}

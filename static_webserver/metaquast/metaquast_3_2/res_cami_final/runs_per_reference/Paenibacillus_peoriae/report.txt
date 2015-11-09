@@ -1,0 +1,45 @@
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                     Gold_Assembly  IDBA_UD      Ray          SOAPdenovo2   SPAdes     
+# contigs (>= 1000 bp)       176            181          179          1012          178        
+# contigs (>= 5000 bp)       150            156          156          2             154        
+# contigs (>= 10000 bp)      128            133          134          0             134        
+# contigs (>= 25000 bp)      72             75           74           0             73         
+# contigs (>= 50000 bp)      27             27           28           0             27         
+Total length (>= 1000 bp)    4958761        4986408      5009957      1638928       4977064    
+Total length (>= 5000 bp)    4888840        4915851      4946022      10799         4907055    
+Total length (>= 10000 bp)   4717362        4732619      4772379      0             4753038    
+Total length (>= 25000 bp)   3766402        3746297      3742840      0             3714108    
+Total length (>= 50000 bp)   2206633        2073586      2131540      0             2112013    
+# contigs                    182            187          187          2137          184        
+Largest contig               205290         146300       146299       5594          146301     
+Total length                 4962448        4990311      5015092      2446056       4981427    
+Reference length             5771987        5771987      5771987      5771987       5771987    
+GC (%)                       46.33          46.37        46.34        47.01         46.49      
+Reference GC (%)             46.44          46.44        46.44        46.44         46.44      
+N50                          43347          42148        43017        1284          43018      
+NG50                         39105          38690        39099        -             38690      
+N75                          25913          25795        24600        879           24603      
+NG75                         17624          17635        18467        -             17089      
+L50                          34             37           37           644           36         
+LG50                         43             46           46           -             45         
+L75                          71             75           75           1221          74         
+LG75                         99             103          102          -             103        
+# misassemblies              33             34           32           3             36         
+# misassembled contigs       23             25           24           3             26         
+Misassembled contigs length  1110222        1105783      1086886      7183          1158240    
+# local misassemblies        47             44           50           31            44         
+# structural variations      7              7            7            5             7          
+# unaligned contigs          0 + 92 part    0 + 94 part  0 + 94 part  0 + 323 part  0 + 96 part
+Unaligned length             2019926        2031453      2042270      159065        2031276    
+Genome fraction (%)          45.040         44.928       44.902       39.412        44.882     
+Duplication ratio            1.132          1.141        1.147        1.005         1.139      
+# N's per 100 kbp            0.00           0.00         5.88         0.00          1.45       
+# mismatches per 100 kbp     3667.80        3669.19      3666.72      3323.46       3667.86    
+# indels per 100 kbp         121.05         121.47       120.89       70.69         121.52     
+Largest alignment            134457         134457       134456       5588          134457     
+NA50                         2200           1839         2247         1151          1851       
+NGA50                        -              -            -            -             -          
+NA75                         -              -            -            748           -          
+LA50                         191            201          192          713           199        
+LA75                         -              -            -            1373          -          

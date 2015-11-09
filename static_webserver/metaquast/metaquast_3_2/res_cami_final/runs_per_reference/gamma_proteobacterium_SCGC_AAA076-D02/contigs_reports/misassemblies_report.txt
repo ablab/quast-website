@@ -1,0 +1,17 @@
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                         Gold_Assembly  IDBA_UD  Ray     SOAPdenovo2  SPAdes
+# misassemblies                  40             37       32      14           25    
+    # relocations                13             12       11      2            7     
+    # translocations             25             25       20      12           18    
+    # inversions                 2              0        1       0            0     
+# possibly misassembled contigs  25             24       25      18           26    
+# misassembled contigs           16             14       14      13           12    
+Misassembled contigs length      981069         941173   976169  43008        856190
+# local misassemblies            5              5        9       0            5     
+# structural variations          7              7        8       1            7     
+# mismatches                     30817          30849    31743   21832        30907 
+# indels                         442            443      446     223          447   
+    # short indels               423            427      431     219          428   
+    # long indels                19             16       15      4            19    
+Indels length                    732            691      754     316          738   

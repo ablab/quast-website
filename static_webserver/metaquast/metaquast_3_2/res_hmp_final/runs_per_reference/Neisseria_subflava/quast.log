@@ -1,0 +1,186 @@
+/home/gurevich/rep/quast/quast.pyc -t 16 -j  --meta  --bed-file /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/combined_reference/structural_variations/combined_reference.bed --no-check-meta  --contig-thresholds 1000,5000,10000,25000,50000 -R /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/quast_corrected_input/Neisseria_subflava.fasta -o /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava --labels "IDBA_UD, Ray, SOAPdenovo2, SPAdes" /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/quast_corrected_input/IDBA_UD_to_Neisseria_subflava.fasta /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/quast_corrected_input/Ray_to_Neisseria_subflava.fasta /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/quast_corrected_input/SOAPdenovo2_to_Neisseria_subflava.fasta /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/quast_corrected_input/SPAdes_to_Neisseria_subflava.fasta
+
+Started: 2015-11-09 20:29:27
+
+Logging to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/quast.log
+
+NOTICE: Output directory already exists. Existing Nucmer alignments can be used.
+
+Reference:
+  /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/quast_corrected_input/Neisseria_subflava.fasta ==> Neisseria_subflava
+
+Contigs:
+  1  /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/quast_corrected_input/IDBA_UD_to_Neisseria_subflava.fasta ==> IDBA_UD
+  2  /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/quast_corrected_input/Ray_to_Neisseria_subflava.fasta ==> Ray
+  3  /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/quast_corrected_input/SOAPdenovo2_to_Neisseria_subflava.fasta ==> SOAPdenovo2
+  4  /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/quast_corrected_input/SPAdes_to_Neisseria_subflava.fasta ==> SPAdes
+
+2015-11-09 20:29:28
+Running Basic statistics processor...
+  Reference genome:
+    Neisseria_subflava.fasta, Reference length = 2292986, Reference GC % = 49.01
+  Contig files: 
+    1  IDBA_UD
+    2  Ray
+    3  SOAPdenovo2
+    4  SPAdes
+  Calculating N50 and L50...
+    1  IDBA_UD, N50 = 169548, L50 = 4, Total length = 2271018, GC % = 48.92, # N's per 100 kbp =  0.00
+    2  Ray, N50 = 151751, L50 = 5, Total length = 2465497, GC % = 48.98, # N's per 100 kbp =  128.09
+    3  SOAPdenovo2, N50 = 113192, L50 = 6, Total length = 2209979, GC % = 49.12, # N's per 100 kbp =  136.20
+    4  SPAdes, N50 = 142442, L50 = 6, Total length = 2253226, GC % = 49.14, # N's per 100 kbp =  42.52
+  Drawing Nx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/basic_stats/GC_content_plot.pdf
+Done.
+
+2015-11-09 20:29:32
+Running Contig analyzer...
+  1  IDBA_UD
+  2  Ray
+  3  SOAPdenovo2
+  4  SPAdes
+  1  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/contigs_report_IDBA_UD.stdout and contigs_report_IDBA_UD.stderr...
+  2  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/contigs_report_Ray.stdout and contigs_report_Ray.stderr...
+  4  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/contigs_report_SPAdes.stdout and contigs_report_SPAdes.stderr...
+  3  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/contigs_report_SOAPdenovo2.stdout and contigs_report_SOAPdenovo2.stderr...
+  2  Running Nucmer
+  1  Running Nucmer
+  1  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/nucmer -c 65 -l 65 --maxmatch \
+     -p /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/IDBA_UD \
+     /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/quast_corrected_input/Neisseria_subflava.fasta \
+     /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/quast_corrected_input/IDBA_UD_to_Neisseria_subflava.fasta \
+     >> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/contigs_report_IDBA_UD.stdout \
+     2>> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/contigs_report_IDBA_UD.stderr
+  3  Running Nucmer
+  2  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/nucmer -c 65 -l 65 --maxmatch \
+     -p /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/Ray \
+     /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/quast_corrected_input/Neisseria_subflava.fasta \
+     /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/quast_corrected_input/Ray_to_Neisseria_subflava.fasta \
+     >> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/contigs_report_Ray.stdout \
+     2>> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/contigs_report_Ray.stderr
+  3  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/nucmer -c 65 -l 65 --maxmatch \
+     -p /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/SOAPdenovo2 \
+     /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/quast_corrected_input/Neisseria_subflava.fasta \
+     /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/quast_corrected_input/SOAPdenovo2_to_Neisseria_subflava.fasta \
+     >> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/contigs_report_SOAPdenovo2.stdout \
+     2>> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/contigs_report_SOAPdenovo2.stderr
+  4  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/nucmer -c 65 -l 65 --maxmatch \
+     -p /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/SPAdes \
+     /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/quast_corrected_input/Neisseria_subflava.fasta \
+     /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/quast_corrected_input/SPAdes_to_Neisseria_subflava.fasta \
+     >> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/contigs_report_SPAdes.stdout \
+     2>> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/contigs_report_SPAdes.stderr
+  3  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/delta-filter -i 95 -l 0 /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/SOAPdenovo2.delta \
+     > /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/SOAPdenovo2.fdelta \
+     2> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/contigs_report_SOAPdenovo2.stderr
+  3  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-coords /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/SOAPdenovo2.delta \
+     > /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/SOAPdenovo2.coords_tmp \
+     2> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/contigs_report_SOAPdenovo2.stderr
+  3  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-snps -S -T -H /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/SOAPdenovo2.delta \
+     < /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/SOAPdenovo2.coords.headless \
+     > /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/SOAPdenovo2.all_snps \
+     2> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/contigs_report_SOAPdenovo2.stderr
+  1  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/delta-filter -i 95 -l 0 /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/IDBA_UD.delta \
+     > /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/IDBA_UD.fdelta \
+     2> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/contigs_report_IDBA_UD.stderr
+  1  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-coords /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/IDBA_UD.delta \
+     > /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/IDBA_UD.coords_tmp \
+     2> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/contigs_report_IDBA_UD.stderr
+  4  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/delta-filter -i 95 -l 0 /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/SPAdes.delta \
+     > /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/SPAdes.fdelta \
+     2> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/contigs_report_SPAdes.stderr
+  1  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-snps -S -T -H /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/IDBA_UD.delta \
+     < /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/IDBA_UD.coords.headless \
+     > /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/IDBA_UD.all_snps \
+     2> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/contigs_report_IDBA_UD.stderr
+  4  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-coords /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/SPAdes.delta \
+     > /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/SPAdes.coords_tmp \
+     2> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/contigs_report_SPAdes.stderr
+  4  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-snps -S -T -H /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/SPAdes.delta \
+     < /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/SPAdes.coords.headless \
+     > /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/SPAdes.all_snps \
+     2> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/contigs_report_SPAdes.stderr
+  2  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/delta-filter -i 95 -l 0 /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/Ray.delta \
+     > /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/Ray.fdelta \
+     2> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/contigs_report_Ray.stderr
+  2  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-coords /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/Ray.delta \
+     > /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/Ray.coords_tmp \
+     2> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/contigs_report_Ray.stderr
+  2  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-snps -S -T -H /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/Ray.delta \
+     < /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/Ray.coords.headless \
+     > /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/Ray.all_snps \
+     2> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/contigs_report_Ray.stderr
+  3  Alignments: ../runs_per_reference/Neisseria_subflava/contigs_reports/alignments_SOAPdenovo2.tsv
+  3  Analysis is finished.
+
+  1  Alignments: ../runs_per_reference/Neisseria_subflava/contigs_reports/alignments_IDBA_UD.tsv
+  1  Analysis is finished.
+
+  4  Alignments: ../runs_per_reference/Neisseria_subflava/contigs_reports/alignments_SPAdes.tsv
+  4  Analysis is finished.
+
+  2  Alignments: ../runs_per_reference/Neisseria_subflava/contigs_reports/alignments_Ray.tsv
+  2  Analysis is finished.
+
+  Creating total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/misassemblies_plot.pdf
+Done.
+
+2015-11-09 20:29:49
+Running NA-NGA calculation...
+  1  IDBA_UD, Largest alignment = 281176, NA50 = 82588, NGA50 = 82588, LA50 = 8, LGA50 = 8
+  2  Ray, Largest alignment = 281272, NA50 = 72264, NGA50 = 79282, LA50 = 10, LGA50 = 8
+  3  SOAPdenovo2, Largest alignment = 248978, NA50 = 60608, NGA50 = 58291, LA50 = 11, LGA50 = 12
+  4  SPAdes, Largest alignment = 281176, NA50 = 71056, NGA50 = 67401, LA50 = 10, LGA50 = 11
+  Drawing cumulative plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/aligned_stats/NGAx_plot.pdf
+Done.
+
+2015-11-09 20:29:51
+Running Genome analyzer...
+  NOTICE: No file with genes provided. Use the -G option if you want to specify it.
+  NOTICE: No file with operons provided. Use the -O option if you want to specify it.
+  1  IDBA_UD
+  2  Ray
+  3  SOAPdenovo2
+  4  SPAdes
+  2  Analysis is finished.
+  4  Analysis is finished.
+  1  Analysis is finished.
+  3  Analysis is finished.
+  Drawing Genome fraction, % histogram...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/genome_stats/genome_fraction_histogram.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding option to enable it.
+
+2015-11-09 20:29:53
+Drawing large plots...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating contig alignment plot...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2015-11-09 20:30:00
+RESULTS:
+  Text versions of total report are saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/report.html
+  PDF version (tables and plots) saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/report.pdf
+  Contig alignment plot: /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/alignment.svg

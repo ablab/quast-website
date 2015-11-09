@@ -1,0 +1,3048 @@
+Aligning contigs to reference...
+	Running Nucmer
+Parsing coords...
+Loading reference...
+	Loaded [Bacteroides_sp_D4_gi_345651599_ref_NZ_]
+	Loaded [Bacteroides_sp_D4_gi_345651600_ref_NZ_]
+	Loaded [Bacteroides_sp_D4_gi_345651601_ref_NZ_]
+	Loaded [Bacteroides_sp_D4_gi_345651602_ref_NZ_]
+	Loaded [Bacteroides_sp_D4_gi_345651603_ref_NZ_]
+	Loaded [Bacteroides_sp_D4_gi_345651604_ref_NZ_]
+	Loaded [Bacteroides_sp_D4_gi_345651605_ref_NZ_]
+	Loaded [Bacteroides_sp_D4_gi_345651606_ref_NZ_]
+	Loaded [Bacteroides_sp_D4_gi_345651607_ref_NZ_]
+	Loaded [Bacteroides_sp_D4_gi_345651608_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 10
+	Total Region Length: 5538248
+Analyzing contigs...
+CONTIG: NODE_162_length_45848_cov_5.64986_ID_323 (45848bp)
+Top Length: 26359  Top ID: 98.38
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 26726 43726 | 17034 56 | 17001 16979 | 97.82 | Bacteroides_sp_D4_gi_345651607_ref_NZ_ NODE_162_length_45848_cov_5.64986_ID_323
+			  Gap between these two alignments (local misassembly). Inconsistency = 98 
+			Excluding internal overlap of size 25 between Alignment 2 and 3:  1725563 1728040 | 43371 45848 | 2478 2478 --> 1725588 1728040 | 43396 45848 | 2453 2453
+			Real Alignment 2: 267 26625 | 43395 17037 | 26359 26359 | 98.38 | Bacteroides_sp_D4_gi_345651607_ref_NZ_ NODE_162_length_45848_cov_5.64986_ID_323
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 3: 1725588 1728040 | 43396 45848 | 2453 2453 | 98.06 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_162_length_45848_cov_5.64986_ID_323
+
+CONTIG: NODE_909_length_13121_cov_1.39247_ID_1817 (13121bp)
+Top Length: 13118  Top ID: 98.7
+		One align captures most of this contig: 69304 82399 | 1 13118 | 13096 13118 | 98.7 | Bacteroides_sp_D4_gi_345651607_ref_NZ_ NODE_909_length_13121_cov_1.39247_ID_1817
+
+CONTIG: NODE_1516_length_8471_cov_4.87619_ID_3031 (8471bp)
+Top Length: 202  Top ID: 98.02
+		This contig is partially unaligned. (Aligned 202 out of 8471 bases)
+		Alignment: 51125 51326 | 8469 8268 | 202 202 | 98.02 | Bacteroides_sp_D4_gi_345651607_ref_NZ_ NODE_1516_length_8471_cov_4.87619_ID_3031
+		Unaligned bases: 1 to 8267 (8267)
+		Unaligned bases: 8470 to 8471 (2)
+
+CONTIG: NODE_1737_length_7513_cov_1.535_ID_3473 (7513bp)
+Top Length: 7513  Top ID: 99.61
+		One align captures most of this contig: 97467 104985 | 1 7513 | 7519 7513 | 99.61 | Bacteroides_sp_D4_gi_345651607_ref_NZ_ NODE_1737_length_7513_cov_1.535_ID_3473
+
+CONTIG: NODE_5910_length_2911_cov_1.19153_ID_11819 (2911bp)
+Top Length: 2911  Top ID: 97.36
+		One align captures most of this contig: 92127 95026 | 2911 1 | 2900 2911 | 97.36 | Bacteroides_sp_D4_gi_345651607_ref_NZ_ NODE_5910_length_2911_cov_1.19153_ID_11819
+
+CONTIG: NODE_10980_length_1694_cov_1.22636_ID_21959 (1694bp)
+Top Length: 1694  Top ID: 99.82
+		One align captures most of this contig: 95351 97044 | 1 1694 | 1694 1694 | 99.82 | Bacteroides_sp_D4_gi_345651607_ref_NZ_ NODE_10980_length_1694_cov_1.22636_ID_21959
+
+CONTIG: NODE_11844_length_1576_cov_1.714_ID_23687 (1576bp)
+Top Length: 1576  Top ID: 100.0
+		One align captures most of this contig: 54885 56460 | 1 1576 | 1576 1576 | 100.0 | Bacteroides_sp_D4_gi_345651607_ref_NZ_ NODE_11844_length_1576_cov_1.714_ID_23687
+
+CONTIG: NODE_12895_length_1457_cov_1.30456_ID_25789 (1457bp)
+Top Length: 1457  Top ID: 96.5
+		One align captures most of this contig: 65082 66528 | 1457 1 | 1447 1457 | 96.5 | Bacteroides_sp_D4_gi_345651607_ref_NZ_ NODE_12895_length_1457_cov_1.30456_ID_25789
+
+CONTIG: NODE_15544_length_1223_cov_1.30308_ID_31087 (1223bp)
+Top Length: 1223  Top ID: 99.35
+		One align captures most of this contig: 105481 106703 | 1223 1 | 1223 1223 | 99.35 | Bacteroides_sp_D4_gi_345651607_ref_NZ_ NODE_15544_length_1223_cov_1.30308_ID_31087
+
+CONTIG: NODE_15563_length_1222_cov_1.9503_ID_31125 (1222bp)
+Top Length: 1222  Top ID: 99.67
+		One align captures most of this contig: 61364 62585 | 1 1222 | 1222 1222 | 99.67 | Bacteroides_sp_D4_gi_345651607_ref_NZ_ NODE_15563_length_1222_cov_1.9503_ID_31125
+
+CONTIG: NODE_25812_length_750_cov_1.69928_ID_51623 (750bp)
+Top Length: 750  Top ID: 99.87
+		One align captures most of this contig: 63893 64642 | 750 1 | 750 750 | 99.87 | Bacteroides_sp_D4_gi_345651607_ref_NZ_ NODE_25812_length_750_cov_1.69928_ID_51623
+
+CONTIG: NODE_27584_length_703_cov_1.63272_ID_55167 (703bp)
+Top Length: 703  Top ID: 99.86
+		One align captures most of this contig: 52270 52972 | 703 1 | 703 703 | 99.86 | Bacteroides_sp_D4_gi_345651607_ref_NZ_ NODE_27584_length_703_cov_1.63272_ID_55167
+
+CONTIG: NODE_28354_length_684_cov_1.33545_ID_56707 (684bp)
+Top Length: 684  Top ID: 99.85
+		One align captures most of this contig: 68431 69114 | 684 1 | 684 684 | 99.85 | Bacteroides_sp_D4_gi_345651607_ref_NZ_ NODE_28354_length_684_cov_1.33545_ID_56707
+
+CONTIG: NODE_36396_length_548_cov_1.30629_ID_72791 (548bp)
+Top Length: 548  Top ID: 99.64
+		One align captures most of this contig: 60326 60873 | 548 1 | 548 548 | 99.64 | Bacteroides_sp_D4_gi_345651607_ref_NZ_ NODE_36396_length_548_cov_1.30629_ID_72791
+
+CONTIG: NODE_39652_length_510_cov_1.19341_ID_79303 (510bp)
+Top Length: 507  Top ID: 99.8
+		One align captures most of this contig: 53877 54383 | 507 1 | 507 507 | 99.8 | Bacteroides_sp_D4_gi_345651607_ref_NZ_ NODE_39652_length_510_cov_1.19341_ID_79303
+
+CONTIG: NODE_40295_length_503_cov_1.59821_ID_80589 (503bp)
+Top Length: 503  Top ID: 100.0
+		One align captures most of this contig: 84814 85316 | 1 503 | 503 503 | 100.0 | Bacteroides_sp_D4_gi_345651607_ref_NZ_ NODE_40295_length_503_cov_1.59821_ID_80589
+
+CONTIG: NODE_26083_length_742_cov_1.77293_ID_52165 (742bp)
+Top Length: 742  Top ID: 99.87
+		One align captures most of this contig: 42028 42769 | 1 742 | 742 742 | 99.87 | Bacteroides_sp_D4_gi_345651606_ref_NZ_ NODE_26083_length_742_cov_1.77293_ID_52165
+
+CONTIG: NODE_8557_length_2115_cov_1.30049_ID_17113 (2115bp)
+Top Length: 2115  Top ID: 99.53
+		One align captures most of this contig: 184407 186521 | 2115 1 | 2115 2115 | 99.53 | Bacteroides_sp_D4_gi_345651605_ref_NZ_ NODE_8557_length_2115_cov_1.30049_ID_17113
+
+CONTIG: NODE_8990_length_2032_cov_1.47092_ID_17979 (2032bp)
+Top Length: 2032  Top ID: 99.66
+		One align captures most of this contig: 224482 226512 | 2032 1 | 2031 2032 | 99.66 | Bacteroides_sp_D4_gi_345651605_ref_NZ_ NODE_8990_length_2032_cov_1.47092_ID_17979
+
+CONTIG: NODE_10304_length_1795_cov_1.27816_ID_20607 (1795bp)
+Top Length: 1786  Top ID: 98.77
+		One align captures most of this contig: 210634 212419 | 10 1795 | 1786 1786 | 98.77 | Bacteroides_sp_D4_gi_345651605_ref_NZ_ NODE_10304_length_1795_cov_1.27816_ID_20607
+
+CONTIG: NODE_10546_length_1759_cov_1.0669_ID_21091 (1759bp)
+Top Length: 1759  Top ID: 98.12
+		One align captures most of this contig: 207888 209637 | 1759 1 | 1750 1759 | 98.12 | Bacteroides_sp_D4_gi_345651605_ref_NZ_ NODE_10546_length_1759_cov_1.0669_ID_21091
+
+CONTIG: NODE_11560_length_1612_cov_1.36288_ID_23119 (1612bp)
+Top Length: 1612  Top ID: 99.63
+		One align captures most of this contig: 186620 188231 | 1612 1 | 1612 1612 | 99.63 | Bacteroides_sp_D4_gi_345651605_ref_NZ_ NODE_11560_length_1612_cov_1.36288_ID_23119
+
+CONTIG: NODE_18550_length_1035_cov_1.4051_ID_37099 (1035bp)
+Top Length: 1035  Top ID: 99.71
+		One align captures most of this contig: 212699 213733 | 1035 1 | 1035 1035 | 99.71 | Bacteroides_sp_D4_gi_345651605_ref_NZ_ NODE_18550_length_1035_cov_1.4051_ID_37099
+
+CONTIG: NODE_22923_length_847_cov_1.2298_ID_45845 (847bp)
+Top Length: 847  Top ID: 99.29
+		One align captures most of this contig: 73817 74663 | 847 1 | 847 847 | 99.29 | Bacteroides_sp_D4_gi_345651605_ref_NZ_ NODE_22923_length_847_cov_1.2298_ID_45845
+
+CONTIG: NODE_29217_length_665_cov_1.37213_ID_58433 (665bp)
+Top Length: 665  Top ID: 99.4
+		One align captures most of this contig: 199781 200445 | 1 665 | 665 665 | 99.4 | Bacteroides_sp_D4_gi_345651605_ref_NZ_ NODE_29217_length_665_cov_1.37213_ID_58433
+
+CONTIG: NODE_32066_length_611_cov_1.6205_ID_64131 (611bp)
+Top Length: 608  Top ID: 100.0
+		One align captures most of this contig: 178336 178943 | 1 608 | 608 608 | 100.0 | Bacteroides_sp_D4_gi_345651605_ref_NZ_ NODE_32066_length_611_cov_1.6205_ID_64131
+
+CONTIG: NODE_33572_length_586_cov_1.22787_ID_67143 (586bp)
+Top Length: 586  Top ID: 99.15
+		One align captures most of this contig: 188227 188812 | 1 586 | 586 586 | 99.15 | Bacteroides_sp_D4_gi_345651605_ref_NZ_ NODE_33572_length_586_cov_1.22787_ID_67143
+
+CONTIG: NODE_34375_length_575_cov_1.13462_ID_68749 (575bp)
+Top Length: 575  Top ID: 98.96
+		One align captures most of this contig: 209942 210516 | 1 575 | 575 575 | 98.96 | Bacteroides_sp_D4_gi_345651605_ref_NZ_ NODE_34375_length_575_cov_1.13462_ID_68749
+
+CONTIG: NODE_40378_length_502_cov_1.26174_ID_80755 (502bp)
+Top Length: 502  Top ID: 99.0
+		One align captures most of this contig: 181834 182335 | 502 1 | 502 502 | 99.0 | Bacteroides_sp_D4_gi_345651605_ref_NZ_ NODE_40378_length_502_cov_1.26174_ID_80755
+
+CONTIG: NODE_4_length_162985_cov_8.33532_ID_7 (162985bp)
+Top Length: 37628  Top ID: 95.34
+		Skipping redundant alignment 819299 819374 | 18805 18880 | 76 76 | 97.37 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_4_length_162985_cov_8.33532_ID_7
+		This contig is misassembled. 8 total aligns.
+			Excluding internal overlap of size 3 between Alignment 1 and 2:  828951 837087 | 11338 3200 | 8137 8139 --> 828954 837087 | 11335 3200 | 8134 8136
+			Real Alignment 1: 828954 837087 | 11335 3200 | 8134 8136 | 98.96 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_4_length_162985_cov_8.33532_ID_7
+			  Extensive misassembly ( relocation, inconsistency = 2091 ) between these two alignments
+			Real Alignment 2: 816898 826862 | 21293 11336 | 9965 9958 | 96.83 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_4_length_162985_cov_8.33532_ID_7
+			  Overlap between these two alignments (local misassembly). Inconsistency = -136 
+			Real Alignment 3: 811854 816810 | 26475 21517 | 4957 4959 | 96.76 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_4_length_162985_cov_8.33532_ID_7
+			  Gap between these two alignments (local misassembly). Inconsistency = 87 
+			Real Alignment 4: 795921 811512 | 42273 26730 | 15592 15544 | 98.54 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_4_length_162985_cov_8.33532_ID_7
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 5: 780268 793218 | 59635 46685 | 12951 12951 | 99.09 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_4_length_162985_cov_8.33532_ID_7
+			  Extensive misassembly ( relocation, inconsistency = 7053 ) between these two alignments
+			Real Alignment 6: 757628 773050 | 75222 59800 | 15423 15423 | 96.89 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_4_length_162985_cov_8.33532_ID_7
+			  Extensive misassembly ( relocation, inconsistency = 1132 ) between these two alignments
+			Real Alignment 7: 668819 706406 | 162939 125312 | 37588 37628 | 95.34 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_4_length_162985_cov_8.33532_ID_7
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_66_length_70367_cov_6.6567_ID_131 (70367bp)
+Top Length: 22082  Top ID: 98.46
+		Skipping redundant alignment 899777 899856 | 16118 16197 | 80 80 | 100.0 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_66_length_70367_cov_6.6567_ID_131
+		This contig is misassembled. 6 total aligns.
+			Excluding internal overlap of size 77 between Alignment 1 and 2:  900156 900351 | 10629 10434 | 196 196 --> 900233 900351 | 10552 10434 | 119 119
+			Real Alignment 1: 900233 900351 | 10552 10434 | 119 119 | 99.49 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_66_length_70367_cov_6.6567_ID_131
+			  Gap between these two alignments (local misassembly). Inconsistency = 379 
+			Real Alignment 2: 894049 899853 | 16335 10553 | 5805 5783 | 96.66 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_66_length_70367_cov_6.6567_ID_131
+			  Extensive misassembly ( relocation, inconsistency = -2291 ) between these two alignments
+			Real Alignment 3: 865731 887813 | 46943 24862 | 22083 22082 | 98.46 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_66_length_70367_cov_6.6567_ID_131
+			  Extensive misassembly ( relocation, inconsistency = -1818 ) between these two alignments
+			Real Alignment 4: 856454 865498 | 58038 48994 | 9045 9045 | 96.2 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_66_length_70367_cov_6.6567_ID_131
+			  Extensive misassembly ( relocation, inconsistency = 8485 ) between these two alignments
+			Real Alignment 5: 840653 847911 | 65354 58096 | 7259 7259 | 99.17 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_66_length_70367_cov_6.6567_ID_131
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_75_length_66231_cov_5.96763_ID_149 (66231bp)
+Top Length: 23393  Top ID: 97.85
+		Skipping redundant alignment 1345497 1345578 | 41101 41183 | 82 83 | 98.8 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_75_length_66231_cov_5.96763_ID_149
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 1935665 1948584 | 7150 20025 | 12920 12876 | 97.87 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_75_length_66231_cov_5.96763_ID_149
+			  Gap between these two alignments (local misassembly). Inconsistency = 305 
+			Real Alignment 2: 1948966 1972357 | 20102 43494 | 23392 23393 | 97.85 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_75_length_66231_cov_5.96763_ID_149
+			  Extensive misassembly ( relocation, inconsistency = -2845 ) between these two alignments
+			Real Alignment 3: 1972417 1992205 | 46399 66185 | 19789 19787 | 98.46 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_75_length_66231_cov_5.96763_ID_149
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_106_length_58935_cov_6.90452_ID_211 (58935bp)
+Top Length: 22876  Top ID: 97.48
+		This contig is misassembled. 6 total aligns.
+			Real Alignment 1: 1603460 1612067 | 80 8622 | 8608 8543 | 96.27 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_106_length_58935_cov_6.90452_ID_211
+			  Gap between these two alignments (local misassembly). Inconsistency = 20 
+			Excluding internal overlap of size 1 between Alignment 2 and 3:  334720 335347 | 13921 14548 | 628 628 --> 334721 335347 | 13922 14548 | 627 627
+			Real Alignment 2: 1612448 1617387 | 8983 13921 | 4940 4939 | 97.09 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_106_length_58935_cov_6.90452_ID_211
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 3: 334721 335347 | 13922 14548 | 627 627 | 99.68 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_106_length_58935_cov_6.90452_ID_211
+			  Fake misassembly between these two alignments: inconsistency = -1 , gap in the contig is small or absent or filled mostly with Ns (short indel: insertion of length 1; 0 mismatches)
+			Excluding internal overlap of size 6 between Alignment 4 and 5:  335475 336153 | 14677 15356 | 679 680 --> 335475 336147 | 14677 15350 | 673 674
+			Real Alignment 4: 335475 336147 | 14677 15350 | 673 674 | 99.56 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_106_length_58935_cov_6.90452_ID_211
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 5: 1617379 1640221 | 15351 38226 | 22843 22876 | 97.48 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_106_length_58935_cov_6.90452_ID_211
+			  Extensive misassembly ( relocation, inconsistency = -1486 ) between these two alignments
+			Real Alignment 6: 1640518 1649827 | 40009 49326 | 9310 9318 | 97.1 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_106_length_58935_cov_6.90452_ID_211
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_322_length_30470_cov_9.01072_ID_643 (30470bp)
+Top Length: 18759  Top ID: 95.14
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 1188970 1189133 | 11311 11474 | 164 164 | 98.17 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_322_length_30470_cov_9.01072_ID_643
+			  Extensive misassembly ( relocation, inconsistency = 41628 ) between these two alignments
+			Real Alignment 2: 1230999 1249761 | 11712 30470 | 18763 18759 | 95.14 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_322_length_30470_cov_9.01072_ID_643
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_669_length_17170_cov_1.9816_ID_1337 (17170bp)
+Top Length: 17169  Top ID: 98.53
+		One align captures most of this contig: 570476 587611 | 2 17170 | 17136 17169 | 98.53 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_669_length_17170_cov_1.9816_ID_1337
+
+CONTIG: NODE_845_length_13967_cov_5.65576_ID_1689 (13967bp)
+Top Length: 3916  Top ID: 96.15
+		This contig is partially unaligned. (Aligned 3916 out of 13967 bases)
+		Alignment: 1190430 1194343 | 5012 1097 | 3914 3916 | 96.15 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_845_length_13967_cov_5.65576_ID_1689
+		Unaligned bases: 1 to 1096 (1096)
+		Unaligned bases: 5013 to 13967 (8955)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_1130_length_10958_cov_3.95579_ID_2259 (10958bp)
+Top Length: 1877  Top ID: 97.93
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 10958 and total length of all aligns is 2362
+		Alignment: 1768646 1770528 | 10392 8516 | 1883 1877 | 97.93 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_1130_length_10958_cov_3.95579_ID_2259
+		Alignment: 277511 277995 | 10393 10877 | 485 485 | 99.38 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_1130_length_10958_cov_3.95579_ID_2259
+		Unaligned bases: 8596
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: NODE_1258_length_9973_cov_1.47268_ID_2515 (9973bp)
+Top Length: 9926  Top ID: 98.95
+		One align captures most of this contig: 70478 80394 | 9926 1 | 9917 9926 | 98.95 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_1258_length_9973_cov_1.47268_ID_2515
+
+CONTIG: NODE_1351_length_9326_cov_4.68784_ID_2701 (9326bp)
+Top Length: 310  Top ID: 98.39
+		This contig is partially unaligned. (Aligned 310 out of 9326 bases)
+		Alignment: 1756779 1757088 | 1 310 | 310 310 | 98.39 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_1351_length_9326_cov_4.68784_ID_2701
+		Unaligned bases: 311 to 9326 (9016)
+
+CONTIG: NODE_1572_length_8249_cov_1.5836_ID_3143 (8249bp)
+Top Length: 8249  Top ID: 99.1
+		One align captures most of this contig: 161139 169393 | 8249 1 | 8255 8249 | 99.1 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_1572_length_8249_cov_1.5836_ID_3143
+
+CONTIG: NODE_1631_length_7998_cov_1.54652_ID_3261 (7998bp)
+Top Length: 7998  Top ID: 99.26
+		One align captures most of this contig: 1892401 1900417 | 1 7998 | 8017 7998 | 99.26 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_1631_length_7998_cov_1.54652_ID_3261
+
+CONTIG: NODE_1678_length_7789_cov_2.33165_ID_3355 (7789bp)
+Top Length: 7780  Top ID: 99.31
+		One align captures most of this contig: 1313900 1321681 | 7780 1 | 7782 7780 | 99.31 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_1678_length_7789_cov_2.33165_ID_3355
+
+CONTIG: NODE_1902_length_6971_cov_1.96154_ID_3803 (6971bp)
+Top Length: 6971  Top ID: 98.95
+		One align captures most of this contig: 170090 177061 | 6971 1 | 6972 6971 | 98.95 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_1902_length_6971_cov_1.96154_ID_3803
+
+CONTIG: NODE_2052_length_6583_cov_1.32123_ID_4103 (6583bp)
+Top Length: 6583  Top ID: 98.82
+		One align captures most of this contig: 1434682 1441267 | 1 6583 | 6586 6583 | 98.82 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_2052_length_6583_cov_1.32123_ID_4103
+
+CONTIG: NODE_2066_length_6549_cov_2.25962_ID_4131 (6549bp)
+Top Length: 5811  Top ID: 99.43
+		This contig is partially unaligned. (Aligned 5811 out of 6549 bases)
+		Alignment: 1929912 1935715 | 5811 1 | 5804 5811 | 99.43 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_2066_length_6549_cov_2.25962_ID_4131
+		Unaligned bases: 5812 to 6549 (738)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_2168_length_6348_cov_4.94963_ID_4335 (6348bp)
+Top Length: 3111  Top ID: 95.06
+		This contig is partially unaligned. (Aligned 3111 out of 6348 bases)
+		Alignment: 1718834 1721946 | 6348 3238 | 3113 3111 | 95.06 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_2168_length_6348_cov_4.94963_ID_4335
+		Unaligned bases: 1 to 3237 (3237)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_2643_length_5448_cov_7.77397_ID_5285 (5448bp)
+Top Length: 1627  Top ID: 95.68
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 5448 and total length of all aligns is 2577
+		Alignment: 1399547 1401187 | 52 1678 | 1641 1627 | 95.68 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_2643_length_5448_cov_7.77397_ID_5285
+		Alignment: 1401585 1402841 | 1386 2628 | 1257 1243 | 95.63 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_2643_length_5448_cov_7.77397_ID_5285
+		Unaligned bases: 2871
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: NODE_2707_length_5337_cov_1.7465_ID_5413 (5337bp)
+Top Length: 5336  Top ID: 99.74
+		One align captures most of this contig: 546211 551546 | 1 5336 | 5336 5336 | 99.74 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_2707_length_5337_cov_1.7465_ID_5413
+
+CONTIG: NODE_2728_length_5315_cov_1.4789_ID_5455 (5315bp)
+Top Length: 5315  Top ID: 99.62
+		One align captures most of this contig: 518889 524206 | 1 5315 | 5318 5315 | 99.62 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_2728_length_5315_cov_1.4789_ID_5455
+
+CONTIG: NODE_2842_length_5148_cov_1.35657_ID_5683 (5148bp)
+Top Length: 5148  Top ID: 98.97
+		One align captures most of this contig: 65334 70476 | 1 5148 | 5143 5148 | 98.97 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_2842_length_5148_cov_1.35657_ID_5683
+
+CONTIG: NODE_2945_length_5005_cov_1.75515_ID_5889 (5005bp)
+Top Length: 5005  Top ID: 99.52
+		One align captures most of this contig: 1086966 1091970 | 1 5005 | 5005 5005 | 99.52 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_2945_length_5005_cov_1.75515_ID_5889
+
+CONTIG: NODE_3039_length_4875_cov_1.70519_ID_6077 (4875bp)
+Top Length: 4875  Top ID: 99.57
+		One align captures most of this contig: 1167123 1172001 | 1 4875 | 4879 4875 | 99.57 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_3039_length_4875_cov_1.70519_ID_6077
+
+CONTIG: NODE_3102_length_4808_cov_1.48033_ID_6203 (4808bp)
+Top Length: 4808  Top ID: 98.28
+		One align captures most of this contig: 647670 652478 | 4808 1 | 4809 4808 | 98.28 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_3102_length_4808_cov_1.48033_ID_6203
+
+CONTIG: NODE_3160_length_4744_cov_1.54063_ID_6319 (4744bp)
+Top Length: 4744  Top ID: 99.35
+		One align captures most of this contig: 772821 777564 | 4744 1 | 4744 4744 | 99.35 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_3160_length_4744_cov_1.54063_ID_6319
+
+CONTIG: NODE_3741_length_4168_cov_1.49818_ID_7481 (4168bp)
+Top Length: 4168  Top ID: 99.06
+		One align captures most of this contig: 2134575 2138733 | 1 4168 | 4159 4168 | 99.06 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_3741_length_4168_cov_1.49818_ID_7481
+
+CONTIG: NODE_3830_length_4097_cov_1.66378_ID_7659 (4097bp)
+Top Length: 4097  Top ID: 99.39
+		One align captures most of this contig: 1563237 1567333 | 1 4097 | 4097 4097 | 99.39 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_3830_length_4097_cov_1.66378_ID_7659
+
+CONTIG: NODE_3904_length_4036_cov_2.27506_ID_7807 (4036bp)
+Top Length: 4036  Top ID: 99.53
+		Marking as insignificant: 1 295 | 3741 4036 | 295 296 | 98.31 | Bacteroides_sp_D4_gi_345651607_ref_NZ_ NODE_3904_length_4036_cov_2.27506_ID_7807
+		One align captures most of this contig: 1714344 1718389 | 4036 1 | 4046 4036 | 99.53 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_3904_length_4036_cov_2.27506_ID_7807
+
+CONTIG: NODE_3991_length_3972_cov_1.47179_ID_7981 (3972bp)
+Top Length: 3972  Top ID: 99.75
+		One align captures most of this contig: 643421 647395 | 3972 1 | 3975 3972 | 99.75 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_3991_length_3972_cov_1.47179_ID_7981
+
+CONTIG: NODE_4498_length_3620_cov_1.69705_ID_8995 (3620bp)
+Top Length: 3620  Top ID: 96.89
+		One align captures most of this contig: 1909615 1913250 | 1 3620 | 3636 3620 | 96.89 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_4498_length_3620_cov_1.69705_ID_8995
+
+CONTIG: NODE_4525_length_3595_cov_1.7548_ID_9049 (3595bp)
+Top Length: 3595  Top ID: 99.28
+		One align captures most of this contig: 847620 851214 | 3595 1 | 3595 3595 | 99.28 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_4525_length_3595_cov_1.7548_ID_9049
+
+CONTIG: NODE_4597_length_3548_cov_1.4655_ID_9193 (3548bp)
+Top Length: 3548  Top ID: 99.49
+		One align captures most of this contig: 1163225 1166772 | 1 3548 | 3548 3548 | 99.49 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_4597_length_3548_cov_1.4655_ID_9193
+
+CONTIG: NODE_4608_length_3542_cov_1.62919_ID_9215 (3542bp)
+Top Length: 3540  Top ID: 99.21
+		One align captures most of this contig: 1054812 1058351 | 3542 3 | 3540 3540 | 99.21 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_4608_length_3542_cov_1.62919_ID_9215
+
+CONTIG: NODE_4925_length_3358_cov_1.35604_ID_9849 (3358bp)
+Top Length: 3358  Top ID: 99.85
+		One align captures most of this contig: 2105826 2109183 | 3358 1 | 3358 3358 | 99.85 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_4925_length_3358_cov_1.35604_ID_9849
+
+CONTIG: NODE_5239_length_3196_cov_1.97517_ID_10477 (3196bp)
+Top Length: 3196  Top ID: 99.81
+		One align captures most of this contig: 751084 754279 | 1 3196 | 3196 3196 | 99.81 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_5239_length_3196_cov_1.97517_ID_10477
+
+CONTIG: NODE_5720_length_2989_cov_1.52215_ID_11439 (2989bp)
+Top Length: 2989  Top ID: 98.09
+		One align captures most of this contig: 1857062 1860049 | 1 2989 | 2988 2989 | 98.09 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_5720_length_2989_cov_1.52215_ID_11439
+
+CONTIG: NODE_6283_length_2752_cov_1.78754_ID_12565 (2752bp)
+Top Length: 2752  Top ID: 99.82
+		One align captures most of this contig: 1105915 1108666 | 2752 1 | 2752 2752 | 99.82 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_6283_length_2752_cov_1.78754_ID_12565
+
+CONTIG: NODE_6512_length_2677_cov_1.39779_ID_13023 (2677bp)
+Top Length: 2655  Top ID: 98.42
+		One align captures most of this contig: 340225 342880 | 23 2677 | 2656 2655 | 98.42 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_6512_length_2677_cov_1.39779_ID_13023
+
+CONTIG: NODE_6744_length_2597_cov_1.76987_ID_13487 (2597bp)
+Top Length: 2597  Top ID: 99.85
+		One align captures most of this contig: 1145700 1148296 | 2597 1 | 2597 2597 | 99.85 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_6744_length_2597_cov_1.76987_ID_13487
+
+CONTIG: NODE_6779_length_2584_cov_1.62001_ID_13557 (2584bp)
+Top Length: 2582  Top ID: 99.5
+		One align captures most of this contig: 632377 634958 | 3 2584 | 2582 2582 | 99.5 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_6779_length_2584_cov_1.62001_ID_13557
+
+CONTIG: NODE_7626_length_2336_cov_1.86453_ID_15251 (2336bp)
+Top Length: 2336  Top ID: 99.02
+		One align captures most of this contig: 1128947 1131281 | 1 2336 | 2335 2336 | 99.02 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_7626_length_2336_cov_1.86453_ID_15251
+
+CONTIG: NODE_7832_length_2279_cov_1.58678_ID_15663 (2279bp)
+Top Length: 2279  Top ID: 99.3
+		One align captures most of this contig: 826899 829170 | 1 2279 | 2272 2279 | 99.3 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_7832_length_2279_cov_1.58678_ID_15663
+
+CONTIG: NODE_7850_length_2273_cov_1.36564_ID_15699 (2273bp)
+Top Length: 2273  Top ID: 99.96
+		One align captures most of this contig: 624481 626753 | 1 2273 | 2273 2273 | 99.96 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_7850_length_2273_cov_1.36564_ID_15699
+
+CONTIG: NODE_8036_length_2227_cov_1.54926_ID_16071 (2227bp)
+Top Length: 2227  Top ID: 99.78
+		One align captures most of this contig: 2130125 2132351 | 2227 1 | 2227 2227 | 99.78 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_8036_length_2227_cov_1.54926_ID_16071
+
+CONTIG: NODE_8039_length_2227_cov_2.32689_ID_16077 (2227bp)
+Top Length: 2227  Top ID: 99.78
+		One align captures most of this contig: 1465173 1467399 | 1 2227 | 2227 2227 | 99.78 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_8039_length_2227_cov_2.32689_ID_16077
+
+CONTIG: NODE_8109_length_2213_cov_1.29796_ID_16217 (2213bp)
+Top Length: 2213  Top ID: 99.59
+		One align captures most of this contig: 158677 160892 | 1 2213 | 2216 2213 | 99.59 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_8109_length_2213_cov_1.29796_ID_16217
+
+CONTIG: NODE_8460_length_2132_cov_1.41165_ID_16919 (2132bp)
+Top Length: 2132  Top ID: 99.44
+		One align captures most of this contig: 597245 599370 | 2132 1 | 2126 2132 | 99.44 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_8460_length_2132_cov_1.41165_ID_16919
+
+CONTIG: NODE_9311_length_1974_cov_1.62585_ID_18621 (1974bp)
+Top Length: 1974  Top ID: 99.59
+		One align captures most of this contig: 997089 999061 | 1 1974 | 1973 1974 | 99.59 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_9311_length_1974_cov_1.62585_ID_18621
+
+CONTIG: NODE_9694_length_1899_cov_1.55423_ID_19387 (1899bp)
+Top Length: 1899  Top ID: 99.0
+		One align captures most of this contig: 926727 928619 | 1 1899 | 1893 1899 | 99.0 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_9694_length_1899_cov_1.55423_ID_19387
+
+CONTIG: NODE_9959_length_1852_cov_1.76405_ID_19917 (1852bp)
+Top Length: 1852  Top ID: 99.62
+		One align captures most of this contig: 1654641 1656492 | 1 1852 | 1852 1852 | 99.62 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_9959_length_1852_cov_1.76405_ID_19917
+
+CONTIG: NODE_10174_length_1814_cov_1.63843_ID_20347 (1814bp)
+Top Length: 1814  Top ID: 98.41
+		One align captures most of this contig: 1074523 1076346 | 1814 1 | 1824 1814 | 98.41 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_10174_length_1814_cov_1.63843_ID_20347
+
+CONTIG: NODE_10777_length_1724_cov_1.37088_ID_21553 (1724bp)
+Top Length: 1724  Top ID: 97.97
+		One align captures most of this contig: 1227617 1229338 | 1 1724 | 1722 1724 | 97.97 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_10777_length_1724_cov_1.37088_ID_21553
+
+CONTIG: NODE_10781_length_1724_cov_1.04913_ID_21561 (1724bp)
+Top Length: 1724  Top ID: 99.48
+		One align captures most of this contig: 516729 518452 | 1 1724 | 1724 1724 | 99.48 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_10781_length_1724_cov_1.04913_ID_21561
+
+CONTIG: NODE_10945_length_1699_cov_1.58698_ID_21889 (1699bp)
+Top Length: 1699  Top ID: 99.59
+		One align captures most of this contig: 1006119 1007815 | 1 1699 | 1697 1699 | 99.59 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_10945_length_1699_cov_1.58698_ID_21889
+
+CONTIG: NODE_11026_length_1688_cov_1.41274_ID_22051 (1688bp)
+Top Length: 1688  Top ID: 99.23
+		One align captures most of this contig: 388440 390121 | 1688 1 | 1682 1688 | 99.23 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_11026_length_1688_cov_1.41274_ID_22051
+
+CONTIG: NODE_11070_length_1682_cov_2.44069_ID_22139 (1682bp)
+Top Length: 1682  Top ID: 99.46
+		One align captures most of this contig: 1307506 1309187 | 1 1682 | 1682 1682 | 99.46 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_11070_length_1682_cov_2.44069_ID_22139
+
+CONTIG: NODE_11219_length_1660_cov_1.66417_ID_22437 (1660bp)
+Top Length: 1660  Top ID: 99.82
+		One align captures most of this contig: 1008262 1009921 | 1660 1 | 1660 1660 | 99.82 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_11219_length_1660_cov_1.66417_ID_22437
+
+CONTIG: NODE_11297_length_1649_cov_1.67754_ID_22593 (1649bp)
+Top Length: 1649  Top ID: 99.03
+		One align captures most of this contig: 36551 38191 | 1649 1 | 1641 1649 | 99.03 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_11297_length_1649_cov_1.67754_ID_22593
+
+CONTIG: NODE_11377_length_1637_cov_1.55752_ID_22753 (1637bp)
+Top Length: 1637  Top ID: 99.76
+		One align captures most of this contig: 1058314 1059950 | 1 1637 | 1637 1637 | 99.76 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_11377_length_1637_cov_1.55752_ID_22753
+
+CONTIG: NODE_11584_length_1609_cov_1.34749_ID_23167 (1609bp)
+Top Length: 1609  Top ID: 98.32
+		One align captures most of this contig: 1907602 1909210 | 1609 1 | 1609 1609 | 98.32 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_11584_length_1609_cov_1.34749_ID_23167
+
+CONTIG: NODE_12030_length_1553_cov_1.35113_ID_24059 (1553bp)
+Top Length: 1553  Top ID: 98.39
+		One align captures most of this contig: 2110130 2111682 | 1 1553 | 1553 1553 | 98.39 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_12030_length_1553_cov_1.35113_ID_24059
+
+CONTIG: NODE_12524_length_1498_cov_1.33957_ID_25047 (1498bp)
+Top Length: 1498  Top ID: 97.46
+		One align captures most of this contig: 1380332 1381819 | 1 1498 | 1488 1498 | 97.46 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_12524_length_1498_cov_1.33957_ID_25047
+
+CONTIG: NODE_12746_length_1473_cov_2.1354_ID_25491 (1473bp)
+Top Length: 1473  Top ID: 99.8
+		One align captures most of this contig: 1371415 1372887 | 1 1473 | 1473 1473 | 99.8 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_12746_length_1473_cov_2.1354_ID_25491
+
+CONTIG: NODE_12785_length_1468_cov_1.60934_ID_25569 (1468bp)
+Top Length: 1468  Top ID: 96.8
+		One align captures most of this contig: 1389056 1390489 | 1468 1 | 1434 1468 | 96.8 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_12785_length_1468_cov_1.60934_ID_25569
+
+CONTIG: NODE_13060_length_1441_cov_1.67677_ID_26119 (1441bp)
+Top Length: 1441  Top ID: 99.58
+		One align captures most of this contig: 1816071 1817512 | 1 1441 | 1442 1441 | 99.58 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_13060_length_1441_cov_1.67677_ID_26119
+
+CONTIG: NODE_13362_length_1410_cov_1.65461_ID_26723 (1410bp)
+Top Length: 1410  Top ID: 99.01
+		One align captures most of this contig: 1441562 1442979 | 1 1410 | 1418 1410 | 99.01 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_13362_length_1410_cov_1.65461_ID_26723
+
+CONTIG: NODE_13864_length_1365_cov_2.32214_ID_27727 (1365bp)
+Top Length: 1365  Top ID: 98.61
+		One align captures most of this contig: 1305629 1306993 | 1 1365 | 1365 1365 | 98.61 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_13864_length_1365_cov_2.32214_ID_27727
+
+CONTIG: NODE_13917_length_1361_cov_1.90429_ID_27833 (1361bp)
+Top Length: 1361  Top ID: 99.49
+		One align captures most of this contig: 2139029 2140389 | 1361 1 | 1361 1361 | 99.49 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_13917_length_1361_cov_1.90429_ID_27833
+
+CONTIG: NODE_14243_length_1331_cov_1.41928_ID_28485 (1331bp)
+Top Length: 1331  Top ID: 99.4
+		One align captures most of this contig: 1860170 1861500 | 1 1331 | 1331 1331 | 99.4 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_14243_length_1331_cov_1.41928_ID_28485
+
+CONTIG: NODE_14370_length_1320_cov_1.65059_ID_28739 (1320bp)
+Top Length: 1320  Top ID: 99.92
+		One align captures most of this contig: 1161468 1162787 | 1 1320 | 1320 1320 | 99.92 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_14370_length_1320_cov_1.65059_ID_28739
+
+CONTIG: NODE_14392_length_1318_cov_1.59145_ID_28783 (1318bp)
+Top Length: 1314  Top ID: 99.7
+		One align captures most of this contig: 1650458 1651770 | 1 1314 | 1313 1314 | 99.7 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_14392_length_1318_cov_1.59145_ID_28783
+
+CONTIG: NODE_14549_length_1304_cov_1.69736_ID_29097 (1304bp)
+Top Length: 1302  Top ID: 99.31
+		One align captures most of this contig: 712360 713661 | 1302 1 | 1302 1302 | 99.31 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_14549_length_1304_cov_1.69736_ID_29097
+
+CONTIG: NODE_14689_length_1292_cov_1.4228_ID_29377 (1292bp)
+Top Length: 1292  Top ID: 99.92
+		One align captures most of this contig: 390437 391728 | 1292 1 | 1292 1292 | 99.92 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_14689_length_1292_cov_1.4228_ID_29377
+
+CONTIG: NODE_16126_length_1181_cov_1.94227_ID_32251 (1181bp)
+Top Length: 1181  Top ID: 99.66
+		One align captures most of this contig: 1516844 1518024 | 1 1181 | 1181 1181 | 99.66 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_16126_length_1181_cov_1.94227_ID_32251
+
+CONTIG: NODE_16754_length_1140_cov_1.5447_ID_33507 (1140bp)
+Top Length: 1140  Top ID: 99.82
+		One align captures most of this contig: 2132685 2133824 | 1140 1 | 1140 1140 | 99.82 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_16754_length_1140_cov_1.5447_ID_33507
+
+CONTIG: NODE_16864_length_1133_cov_5.06865_ID_33727 (1133bp)
+Top Length: 1078  Top ID: 98.61
+		This contig is partially unaligned. (Aligned 1078 out of 1133 bases)
+		Alignment: 1755766 1756844 | 56 1133 | 1079 1078 | 98.61 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_16864_length_1133_cov_5.06865_ID_33727
+		Unaligned bases: 1 to 55 (55)
+
+CONTIG: NODE_17721_length_1082_cov_2.82473_ID_35441 (1082bp)
+Top Length: 1082  Top ID: 98.43
+		One align captures most of this contig: 1721555 1722636 | 1082 1 | 1082 1082 | 98.43 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_17721_length_1082_cov_2.82473_ID_35441
+
+CONTIG: NODE_18320_length_1047_cov_1.94859_ID_36639 (1047bp)
+Top Length: 1047  Top ID: 100.0
+		One align captures most of this contig: 2041816 2042862 | 1047 1 | 1047 1047 | 100.0 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_18320_length_1047_cov_1.94859_ID_36639
+
+CONTIG: NODE_18401_length_1042_cov_1.54306_ID_36801 (1042bp)
+Top Length: 1042  Top ID: 99.33
+		One align captures most of this contig: 23357 24398 | 1 1042 | 1042 1042 | 99.33 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_18401_length_1042_cov_1.54306_ID_36801
+
+CONTIG: NODE_18493_length_1038_cov_1.78739_ID_36985 (1038bp)
+Top Length: 1038  Top ID: 99.71
+		One align captures most of this contig: 1657710 1658747 | 1038 1 | 1038 1038 | 99.71 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_18493_length_1038_cov_1.78739_ID_36985
+
+CONTIG: NODE_18514_length_1037_cov_1.5723_ID_37027 (1037bp)
+Top Length: 1037  Top ID: 99.81
+		One align captures most of this contig: 948387 949423 | 1 1037 | 1037 1037 | 99.81 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_18514_length_1037_cov_1.5723_ID_37027
+
+CONTIG: NODE_18956_length_1013_cov_1.84029_ID_37911 (1013bp)
+Top Length: 1013  Top ID: 99.51
+		One align captures most of this contig: 999969 1000982 | 1013 1 | 1014 1013 | 99.51 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_18956_length_1013_cov_1.84029_ID_37911
+
+CONTIG: NODE_19039_length_1009_cov_1.58071_ID_38077 (1009bp)
+Top Length: 1009  Top ID: 98.12
+		One align captures most of this contig: 994197 995207 | 1009 1 | 1011 1009 | 98.12 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_19039_length_1009_cov_1.58071_ID_38077
+
+CONTIG: NODE_19350_length_994_cov_1.87859_ID_38699 (994bp)
+Top Length: 994  Top ID: 99.5
+		One align captures most of this contig: 2123506 2124499 | 1 994 | 994 994 | 99.5 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_19350_length_994_cov_1.87859_ID_38699
+
+CONTIG: NODE_19368_length_993_cov_1.65139_ID_38735 (993bp)
+Top Length: 993  Top ID: 98.79
+		One align captures most of this contig: 692191 693183 | 1 993 | 993 993 | 98.79 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_19368_length_993_cov_1.65139_ID_38735
+
+CONTIG: NODE_19992_length_962_cov_1.31753_ID_39983 (962bp)
+Top Length: 962  Top ID: 99.79
+		One align captures most of this contig: 2128833 2129794 | 1 962 | 962 962 | 99.79 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_19992_length_962_cov_1.31753_ID_39983
+
+CONTIG: NODE_20578_length_935_cov_1.52386_ID_41155 (935bp)
+Top Length: 935  Top ID: 99.57
+		One align captures most of this contig: 714010 714944 | 935 1 | 935 935 | 99.57 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_20578_length_935_cov_1.52386_ID_41155
+
+CONTIG: NODE_20739_length_929_cov_1.6762_ID_41477 (929bp)
+Top Length: 927  Top ID: 99.57
+		One align captures most of this contig: 1131228 1132154 | 927 1 | 927 927 | 99.57 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_20739_length_929_cov_1.6762_ID_41477
+
+CONTIG: NODE_20741_length_929_cov_1.69908_ID_41481 (929bp)
+Top Length: 929  Top ID: 100.0
+		One align captures most of this contig: 2012041 2012969 | 929 1 | 929 929 | 100.0 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_20741_length_929_cov_1.69908_ID_41481
+
+CONTIG: NODE_20758_length_928_cov_1.63688_ID_41515 (928bp)
+Top Length: 928  Top ID: 99.68
+		One align captures most of this contig: 949367 950294 | 928 1 | 928 928 | 99.68 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_20758_length_928_cov_1.63688_ID_41515
+
+CONTIG: NODE_21336_length_906_cov_1.50176_ID_42671 (906bp)
+Top Length: 906  Top ID: 98.46
+		One align captures most of this contig: 1872053 1872962 | 1 906 | 910 906 | 98.46 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_21336_length_906_cov_1.50176_ID_42671
+
+CONTIG: NODE_21379_length_904_cov_1.97173_ID_42757 (904bp)
+Top Length: 904  Top ID: 99.78
+		One align captures most of this contig: 1512916 1513819 | 904 1 | 904 904 | 99.78 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_21379_length_904_cov_1.97173_ID_42757
+
+CONTIG: NODE_21581_length_897_cov_1.52494_ID_43161 (897bp)
+Top Length: 897  Top ID: 99.55
+		One align captures most of this contig: 1004952 1005848 | 1 897 | 897 897 | 99.55 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_21581_length_897_cov_1.52494_ID_43161
+
+CONTIG: NODE_21868_length_887_cov_1.73798_ID_43735 (887bp)
+Top Length: 887  Top ID: 100.0
+		One align captures most of this contig: 1737139 1738025 | 887 1 | 887 887 | 100.0 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_21868_length_887_cov_1.73798_ID_43735
+
+CONTIG: NODE_21942_length_884_cov_2.67913_ID_43883 (884bp)
+Top Length: 884  Top ID: 99.66
+		One align captures most of this contig: 1018335 1019216 | 884 1 | 882 884 | 99.66 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_21942_length_884_cov_2.67913_ID_43883
+
+CONTIG: NODE_22099_length_878_cov_1.31713_ID_44197 (878bp)
+Top Length: 878  Top ID: 99.54
+		One align captures most of this contig: 15169 16046 | 1 878 | 878 878 | 99.54 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_22099_length_878_cov_1.31713_ID_44197
+
+CONTIG: NODE_22531_length_861_cov_1.9206_ID_45061 (861bp)
+Top Length: 855  Top ID: 99.18
+		One align captures most of this contig: 1048984 1049838 | 1 855 | 855 855 | 99.18 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_22531_length_861_cov_1.9206_ID_45061
+
+CONTIG: NODE_23409_length_830_cov_1.98194_ID_46817 (830bp)
+Top Length: 830  Top ID: 99.64
+		One align captures most of this contig: 425081 425910 | 830 1 | 830 830 | 99.64 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_23409_length_830_cov_1.98194_ID_46817
+
+CONTIG: NODE_23718_length_818_cov_2.2713_ID_47435 (818bp)
+Top Length: 818  Top ID: 99.88
+		One align captures most of this contig: 2075683 2076500 | 818 1 | 818 818 | 99.88 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_23718_length_818_cov_2.2713_ID_47435
+
+CONTIG: NODE_23723_length_818_cov_2.03408_ID_47445 (818bp)
+Top Length: 818  Top ID: 100.0
+		One align captures most of this contig: 743387 744204 | 1 818 | 818 818 | 100.0 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_23723_length_818_cov_2.03408_ID_47445
+
+CONTIG: NODE_24642_length_786_cov_2.00137_ID_49283 (786bp)
+Top Length: 786  Top ID: 99.87
+		One align captures most of this contig: 1519357 1520142 | 1 786 | 786 786 | 99.87 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_24642_length_786_cov_2.00137_ID_49283
+
+CONTIG: NODE_24659_length_785_cov_1.45068_ID_49317 (785bp)
+Top Length: 785  Top ID: 99.62
+		One align captures most of this contig: 1250121 1250905 | 1 785 | 785 785 | 99.62 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_24659_length_785_cov_1.45068_ID_49317
+
+CONTIG: NODE_24794_length_781_cov_1.99174_ID_49587 (781bp)
+Top Length: 781  Top ID: 98.98
+		One align captures most of this contig: 1568861 1569642 | 1 781 | 782 781 | 98.98 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_24794_length_781_cov_1.99174_ID_49587
+
+CONTIG: NODE_25317_length_765_cov_1.63239_ID_50633 (765bp)
+Top Length: 765  Top ID: 100.0
+		One align captures most of this contig: 410692 411456 | 1 765 | 765 765 | 100.0 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_25317_length_765_cov_1.63239_ID_50633
+
+CONTIG: NODE_25559_length_757_cov_2.31624_ID_51117 (757bp)
+Top Length: 757  Top ID: 99.6
+		One align captures most of this contig: 1515965 1516721 | 757 1 | 757 757 | 99.6 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_25559_length_757_cov_2.31624_ID_51117
+
+CONTIG: NODE_26373_length_733_cov_1.18437_ID_52745 (733bp)
+Top Length: 733  Top ID: 96.32
+		One align captures most of this contig: 1373437 1374162 | 1 733 | 726 733 | 96.32 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_26373_length_733_cov_1.18437_ID_52745
+
+CONTIG: NODE_26393_length_733_cov_1.68732_ID_52785 (733bp)
+Top Length: 731  Top ID: 99.86
+		One align captures most of this contig: 489575 490305 | 3 733 | 731 731 | 99.86 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_26393_length_733_cov_1.68732_ID_52785
+
+CONTIG: NODE_27212_length_712_cov_1.46271_ID_54423 (712bp)
+Top Length: 712  Top ID: 99.3
+		One align captures most of this contig: 710941 711652 | 712 1 | 712 712 | 99.3 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_27212_length_712_cov_1.46271_ID_54423
+
+CONTIG: NODE_27788_length_697_cov_1.61215_ID_55575 (697bp)
+Top Length: 697  Top ID: 99.28
+		One align captures most of this contig: 315919 316614 | 697 1 | 696 697 | 99.28 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_27788_length_697_cov_1.61215_ID_55575
+
+CONTIG: NODE_28164_length_688_cov_1.50395_ID_56327 (688bp)
+Top Length: 688  Top ID: 98.11
+		One align captures most of this contig: 734917 735604 | 1 688 | 688 688 | 98.11 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_28164_length_688_cov_1.50395_ID_56327
+
+CONTIG: NODE_28201_length_687_cov_1.75475_ID_56401 (687bp)
+Top Length: 687  Top ID: 99.85
+		One align captures most of this contig: 922019 922705 | 687 1 | 687 687 | 99.85 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_28201_length_687_cov_1.75475_ID_56401
+
+CONTIG: NODE_28406_length_683_cov_1.82643_ID_56811 (683bp)
+Top Length: 683  Top ID: 99.12
+		One align captures most of this contig: 1078200 1078882 | 683 1 | 683 683 | 99.12 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_28406_length_683_cov_1.82643_ID_56811
+
+CONTIG: NODE_28510_length_680_cov_1.2704_ID_57019 (680bp)
+Top Length: 680  Top ID: 99.71
+		One align captures most of this contig: 2126883 2127562 | 1 680 | 680 680 | 99.71 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_28510_length_680_cov_1.2704_ID_57019
+
+CONTIG: NODE_28868_length_673_cov_1.41748_ID_57735 (673bp)
+Top Length: 364  Top ID: 96.98
+		This contig is partially unaligned. (Aligned 364 out of 673 bases)
+		Alignment: 25710 26073 | 4 367 | 364 364 | 96.98 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_28868_length_673_cov_1.41748_ID_57735
+		Unaligned bases: 1 to 3 (3)
+		Unaligned bases: 368 to 673 (306)
+
+CONTIG: NODE_29194_length_665_cov_1.94754_ID_58387 (665bp)
+Top Length: 665  Top ID: 99.85
+		One align captures most of this contig: 652754 653418 | 1 665 | 665 665 | 99.85 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_29194_length_665_cov_1.94754_ID_58387
+
+CONTIG: NODE_29800_length_653_cov_1.17224_ID_59599 (653bp)
+Top Length: 650  Top ID: 99.38
+		One align captures most of this contig: 1891333 1891982 | 650 1 | 650 650 | 99.38 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_29800_length_653_cov_1.17224_ID_59599
+
+CONTIG: NODE_29873_length_651_cov_1.67953_ID_59745 (651bp)
+Top Length: 651  Top ID: 99.69
+		One align captures most of this contig: 422317 422967 | 1 651 | 651 651 | 99.69 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_29873_length_651_cov_1.67953_ID_59745
+
+CONTIG: NODE_30851_length_632_cov_1.31542_ID_61701 (632bp)
+Top Length: 632  Top ID: 99.84
+		One align captures most of this contig: 1890156 1890787 | 632 1 | 632 632 | 99.84 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_30851_length_632_cov_1.31542_ID_61701
+
+CONTIG: NODE_31122_length_627_cov_1.59266_ID_62243 (627bp)
+Top Length: 627  Top ID: 99.84
+		One align captures most of this contig: 2116458 2117084 | 627 1 | 627 627 | 99.84 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_31122_length_627_cov_1.59266_ID_62243
+
+CONTIG: NODE_31385_length_623_cov_1.95599_ID_62769 (623bp)
+Top Length: 620  Top ID: 99.03
+		One align captures most of this contig: 1066911 1067530 | 620 1 | 620 620 | 99.03 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_31385_length_623_cov_1.95599_ID_62769
+
+CONTIG: NODE_31709_length_617_cov_1.25979_ID_63417 (617bp)
+Top Length: 615  Top ID: 99.19
+		One align captures most of this contig: 2016117 2016731 | 1 615 | 615 615 | 99.19 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_31709_length_617_cov_1.25979_ID_63417
+
+CONTIG: NODE_32001_length_612_cov_1.17953_ID_64001 (612bp)
+Top Length: 612  Top ID: 99.67
+		One align captures most of this contig: 2059820 2060431 | 1 612 | 612 612 | 99.67 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_32001_length_612_cov_1.17953_ID_64001
+
+CONTIG: NODE_32233_length_608_cov_1.77396_ID_64465 (608bp)
+Top Length: 605  Top ID: 99.5
+		One align captures most of this contig: 22511 23115 | 605 1 | 605 605 | 99.5 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_32233_length_608_cov_1.77396_ID_64465
+
+CONTIG: NODE_32724_length_600_cov_1.95229_ID_65447 (600bp)
+Top Length: 600  Top ID: 99.83
+		One align captures most of this contig: 1076517 1077116 | 1 600 | 600 600 | 99.83 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_32724_length_600_cov_1.95229_ID_65447
+
+CONTIG: NODE_32725_length_600_cov_0.950459_ID_65449 (600bp)
+Top Length: 600  Top ID: 99.83
+		One align captures most of this contig: 1804636 1805235 | 1 600 | 600 600 | 99.83 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_32725_length_600_cov_0.950459_ID_65449
+
+CONTIG: NODE_33003_length_595_cov_2.03889_ID_66005 (595bp)
+Top Length: 595  Top ID: 95.21
+		One align captures most of this contig: 397324 397928 | 1 595 | 605 595 | 95.21 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_33003_length_595_cov_2.03889_ID_66005
+
+CONTIG: NODE_33215_length_592_cov_1.5419_ID_66429 (592bp)
+Top Length: 592  Top ID: 99.83
+		One align captures most of this contig: 1082749 1083340 | 1 592 | 592 592 | 99.83 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_33215_length_592_cov_1.5419_ID_66429
+
+CONTIG: NODE_33340_length_590_cov_2.74953_ID_66679 (590bp)
+Top Length: 590  Top ID: 99.66
+		Marking as insignificant: 157085 157656 | 590 20 | 572 571 | 99.13 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_33340_length_590_cov_2.74953_ID_66679
+		One align captures most of this contig: 177673 178262 | 590 1 | 590 590 | 99.66 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_33340_length_590_cov_2.74953_ID_66679
+
+CONTIG: NODE_33638_length_586_cov_1.0565_ID_67275 (586bp)
+Top Length: 586  Top ID: 99.49
+		One align captures most of this contig: 39391 39976 | 586 1 | 586 586 | 99.49 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_33638_length_586_cov_1.0565_ID_67275
+
+CONTIG: NODE_33837_length_583_cov_1.44508_ID_67673 (583bp)
+Top Length: 583  Top ID: 100.0
+		One align captures most of this contig: 613521 614103 | 1 583 | 583 583 | 100.0 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_33837_length_583_cov_1.44508_ID_67673
+
+CONTIG: NODE_34842_length_568_cov_4.61209_ID_69683 (568bp)
+Top Length: 568  Top ID: 100.0
+		Marking as insignificant: 1054211 1054310 | 99 1 | 100 99 | 97.0 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_34842_length_568_cov_4.61209_ID_69683
+		One align captures most of this contig: 1464066 1464633 | 568 1 | 568 568 | 100.0 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_34842_length_568_cov_4.61209_ID_69683
+
+CONTIG: NODE_35248_length_563_cov_1.94685_ID_70495 (563bp)
+Top Length: 563  Top ID: 100.0
+		One align captures most of this contig: 1453631 1454193 | 1 563 | 563 563 | 100.0 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_35248_length_563_cov_1.94685_ID_70495
+
+CONTIG: NODE_35320_length_562_cov_1.14596_ID_70639 (562bp)
+Top Length: 562  Top ID: 100.0
+		One align captures most of this contig: 925257 925818 | 562 1 | 562 562 | 100.0 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_35320_length_562_cov_1.14596_ID_70639
+
+CONTIG: NODE_35338_length_562_cov_1.42604_ID_70675 (562bp)
+Top Length: 561  Top ID: 99.82
+		One align captures most of this contig: 938463 939023 | 561 1 | 561 561 | 99.82 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_35338_length_562_cov_1.42604_ID_70675
+
+CONTIG: NODE_36315_length_549_cov_1.92105_ID_72629 (549bp)
+Top Length: 549  Top ID: 100.0
+		One align captures most of this contig: 1599514 1600062 | 1 549 | 549 549 | 100.0 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_36315_length_549_cov_1.92105_ID_72629
+
+CONTIG: NODE_36667_length_545_cov_1.26531_ID_73333 (545bp)
+Top Length: 545  Top ID: 99.63
+		One align captures most of this contig: 1079126 1079670 | 1 545 | 545 545 | 99.63 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_36667_length_545_cov_1.26531_ID_73333
+
+CONTIG: NODE_37016_length_541_cov_1.2572_ID_74031 (541bp)
+Top Length: 539  Top ID: 100.0
+		One align captures most of this contig: 1649720 1650258 | 541 3 | 539 539 | 100.0 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_37016_length_541_cov_1.2572_ID_74031
+
+CONTIG: NODE_37072_length_540_cov_1.78557_ID_74143 (540bp)
+Top Length: 540  Top ID: 100.0
+		One align captures most of this contig: 1376732 1377271 | 1 540 | 540 540 | 100.0 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_37072_length_540_cov_1.78557_ID_74143
+
+CONTIG: NODE_37326_length_537_cov_2.361_ID_74651 (537bp)
+Top Length: 537  Top ID: 99.44
+		One align captures most of this contig: 969504 970040 | 537 1 | 537 537 | 99.44 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_37326_length_537_cov_2.361_ID_74651
+
+CONTIG: NODE_38069_length_528_cov_1.32135_ID_76137 (528bp)
+Top Length: 525  Top ID: 98.86
+		One align captures most of this contig: 2035077 2035601 | 4 528 | 525 525 | 98.86 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_38069_length_528_cov_1.32135_ID_76137
+
+CONTIG: NODE_38145_length_527_cov_1.81992_ID_76289 (527bp)
+Top Length: 527  Top ID: 98.29
+		One align captures most of this contig: 2156375 2156901 | 1 527 | 527 527 | 98.29 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_38145_length_527_cov_1.81992_ID_76289
+
+CONTIG: NODE_38642_length_521_cov_2.24464_ID_77283 (521bp)
+Top Length: 521  Top ID: 99.23
+		One align captures most of this contig: 424241 424762 | 521 1 | 522 521 | 99.23 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_38642_length_521_cov_2.24464_ID_77283
+
+CONTIG: NODE_39129_length_516_cov_1.65727_ID_78257 (516bp)
+Top Length: 514  Top ID: 99.42
+		One align captures most of this contig: 1033486 1033999 | 516 3 | 514 514 | 99.42 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_39129_length_516_cov_1.65727_ID_78257
+
+CONTIG: NODE_39147_length_516_cov_1.38395_ID_78293 (516bp)
+Top Length: 516  Top ID: 100.0
+		One align captures most of this contig: 733680 734195 | 1 516 | 516 516 | 100.0 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_39147_length_516_cov_1.38395_ID_78293
+
+CONTIG: NODE_39561_length_511_cov_2.0943_ID_79121 (511bp)
+Top Length: 511  Top ID: 99.8
+		One align captures most of this contig: 1730206 1730716 | 1 511 | 511 511 | 99.8 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_39561_length_511_cov_2.0943_ID_79121
+
+CONTIG: NODE_39810_length_508_cov_1.77483_ID_79619 (508bp)
+Top Length: 505  Top ID: 99.6
+		One align captures most of this contig: 1300084 1300588 | 508 4 | 505 505 | 99.6 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_39810_length_508_cov_1.77483_ID_79619
+
+CONTIG: NODE_159_length_46176_cov_4.68257_ID_317 (46176bp)
+Top Length: 13929  Top ID: 95.04
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 46176 and total length of all aligns is 21024
+		Alignment: 13703 27649 | 20363 34291 | 13947 13929 | 95.04 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_159_length_46176_cov_4.68257_ID_317
+		Alignment: 34219 41312 | 39082 46176 | 7094 7095 | 98.25 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_159_length_46176_cov_4.68257_ID_317
+		Unaligned bases: 25152
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: NODE_343_length_29598_cov_5.40013_ID_685 (29598bp)
+Top Length: 29314  Top ID: 97.71
+		Marking as insignificant: 1449811 1450368 | 29598 29041 | 558 558 | 100.0 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_343_length_29598_cov_5.40013_ID_685
+		One align captures most of this contig: 591266 620579 | 1 29314 | 29314 29314 | 97.71 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_343_length_29598_cov_5.40013_ID_685
+
+CONTIG: NODE_594_length_19070_cov_6.26768_ID_1187 (19070bp)
+Top Length: 18939  Top ID: 97.4
+		One align captures most of this contig: 171318 190285 | 132 19070 | 18968 18939 | 97.4 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_594_length_19070_cov_6.26768_ID_1187
+
+CONTIG: NODE_877_length_13488_cov_5.64654_ID_1753 (13488bp)
+Top Length: 13319  Top ID: 97.61
+		This contig is partially unaligned. (Aligned 13319 out of 13488 bases)
+		Alignment: 383110 396431 | 16 13334 | 13322 13319 | 97.61 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_877_length_13488_cov_5.64654_ID_1753
+		Unaligned bases: 1 to 15 (15)
+		Unaligned bases: 13335 to 13488 (154)
+
+CONTIG: NODE_3526_length_4362_cov_1.58068_ID_7051 (4362bp)
+Top Length: 4362  Top ID: 98.92
+		One align captures most of this contig: 250304 254665 | 4362 1 | 4362 4362 | 98.92 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_3526_length_4362_cov_1.58068_ID_7051
+
+CONTIG: NODE_6867_length_2560_cov_1.02036_ID_13733 (2560bp)
+Top Length: 2556  Top ID: 95.85
+		One align captures most of this contig: 131878 134434 | 2 2557 | 2557 2556 | 95.85 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_6867_length_2560_cov_1.02036_ID_13733
+
+CONTIG: NODE_9882_length_1864_cov_1.25097_ID_19763 (1864bp)
+Top Length: 841  Top ID: 98.1
+		This contig is partially unaligned. (Aligned 841 out of 1864 bases)
+		Alignment: 294591 295431 | 1864 1024 | 841 841 | 98.1 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_9882_length_1864_cov_1.25097_ID_19763
+		Unaligned bases: 1 to 1023 (1023)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_10098_length_1827_cov_1.25564_ID_20195 (1827bp)
+Top Length: 1827  Top ID: 96.94
+		One align captures most of this contig: 234789 236616 | 1827 1 | 1828 1827 | 96.94 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_10098_length_1827_cov_1.25564_ID_20195
+
+CONTIG: NODE_10656_length_1744_cov_1.55062_ID_21311 (1744bp)
+Top Length: 1744  Top ID: 98.8
+		One align captures most of this contig: 351255 353002 | 1744 1 | 1748 1744 | 98.8 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_10656_length_1744_cov_1.55062_ID_21311
+
+CONTIG: NODE_11438_length_1628_cov_1.38779_ID_22875 (1628bp)
+Top Length: 1628  Top ID: 99.82
+		One align captures most of this contig: 518607 520234 | 1628 1 | 1628 1628 | 99.82 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_11438_length_1628_cov_1.38779_ID_22875
+
+CONTIG: NODE_11627_length_1603_cov_1.01292_ID_23253 (1603bp)
+Top Length: 1603  Top ID: 99.5
+		One align captures most of this contig: 242297 243899 | 1 1603 | 1603 1603 | 99.5 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_11627_length_1603_cov_1.01292_ID_23253
+
+CONTIG: NODE_11810_length_1580_cov_1.46492_ID_23619 (1580bp)
+Top Length: 1580  Top ID: 99.75
+		One align captures most of this contig: 221066 222645 | 1 1580 | 1580 1580 | 99.75 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_11810_length_1580_cov_1.46492_ID_23619
+
+CONTIG: NODE_14463_length_1312_cov_1.34845_ID_28925 (1312bp)
+Top Length: 1312  Top ID: 99.7
+		One align captures most of this contig: 190673 191984 | 1312 1 | 1312 1312 | 99.7 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_14463_length_1312_cov_1.34845_ID_28925
+
+CONTIG: NODE_16424_length_1160_cov_1.38643_ID_32847 (1160bp)
+Top Length: 1160  Top ID: 97.54
+		One align captures most of this contig: 330141 331319 | 1 1160 | 1179 1160 | 97.54 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_16424_length_1160_cov_1.38643_ID_32847
+
+CONTIG: NODE_18307_length_1048_cov_1.22457_ID_36613 (1048bp)
+Top Length: 1048  Top ID: 99.9
+		One align captures most of this contig: 337843 338890 | 1 1048 | 1048 1048 | 99.9 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_18307_length_1048_cov_1.22457_ID_36613
+
+CONTIG: NODE_18388_length_1043_cov_1.79352_ID_36775 (1043bp)
+Top Length: 1038  Top ID: 98.65
+		One align captures most of this contig: 18344 19381 | 3 1040 | 1038 1038 | 98.65 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_18388_length_1043_cov_1.79352_ID_36775
+
+CONTIG: NODE_19197_length_1001_cov_1.05603_ID_38393 (1001bp)
+Top Length: 1001  Top ID: 99.8
+		One align captures most of this contig: 169647 170647 | 1 1001 | 1001 1001 | 99.8 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_19197_length_1001_cov_1.05603_ID_38393
+
+CONTIG: NODE_22124_length_877_cov_0.847932_ID_44247 (877bp)
+Top Length: 874  Top ID: 97.37
+		One align captures most of this contig: 248972 249845 | 877 4 | 874 874 | 97.37 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_22124_length_877_cov_0.847932_ID_44247
+
+CONTIG: NODE_22315_length_869_cov_1.18182_ID_44629 (869bp)
+Top Length: 869  Top ID: 100.0
+		One align captures most of this contig: 354162 355030 | 869 1 | 869 869 | 100.0 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_22315_length_869_cov_1.18182_ID_44629
+
+CONTIG: NODE_23576_length_824_cov_1.45644_ID_47151 (824bp)
+Top Length: 824  Top ID: 98.07
+		One align captures most of this contig: 309079 309906 | 824 1 | 828 824 | 98.07 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_23576_length_824_cov_1.45644_ID_47151
+
+CONTIG: NODE_24256_length_798_cov_0.679677_ID_48511 (798bp)
+Top Length: 798  Top ID: 97.55
+		One align captures most of this contig: 108937 109753 | 798 1 | 817 798 | 97.55 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_24256_length_798_cov_0.679677_ID_48511
+
+CONTIG: NODE_27032_length_717_cov_1.14653_ID_54063 (717bp)
+Top Length: 717  Top ID: 98.21
+		One align captures most of this contig: 297342 298068 | 1 717 | 727 717 | 98.21 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_27032_length_717_cov_1.14653_ID_54063
+
+CONTIG: NODE_27083_length_716_cov_1.53404_ID_54165 (716bp)
+Top Length: 716  Top ID: 99.58
+		One align captures most of this contig: 322910 323625 | 716 1 | 716 716 | 99.58 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_27083_length_716_cov_1.53404_ID_54165
+
+CONTIG: NODE_27981_length_692_cov_1.11774_ID_55961 (692bp)
+Top Length: 692  Top ID: 95.69
+		One align captures most of this contig: 543845 544563 | 692 1 | 719 692 | 95.69 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_27981_length_692_cov_1.11774_ID_55961
+
+CONTIG: NODE_30045_length_648_cov_1.70995_ID_60089 (648bp)
+Top Length: 648  Top ID: 99.85
+		One align captures most of this contig: 57809 58456 | 1 648 | 648 648 | 99.85 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_30045_length_648_cov_1.70995_ID_60089
+
+CONTIG: NODE_33024_length_595_cov_1.35_ID_66047 (595bp)
+Top Length: 595  Top ID: 98.82
+		One align captures most of this contig: 302568 303162 | 595 1 | 595 595 | 98.82 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_33024_length_595_cov_1.35_ID_66047
+
+CONTIG: NODE_33243_length_591_cov_0.820896_ID_66485 (591bp)
+Top Length: 587  Top ID: 95.53
+		One align captures most of this contig: 246677 247279 | 591 5 | 603 587 | 95.53 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_33243_length_591_cov_0.820896_ID_66485
+
+CONTIG: NODE_33470_length_588_cov_1.01126_ID_66939 (588bp)
+Top Length: 588  Top ID: 99.49
+		One align captures most of this contig: 521539 522126 | 1 588 | 588 588 | 99.49 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_33470_length_588_cov_1.01126_ID_66939
+
+CONTIG: NODE_36111_length_552_cov_1.13883_ID_72221 (552bp)
+Top Length: 552  Top ID: 99.82
+		One align captures most of this contig: 397962 398513 | 1 552 | 552 552 | 99.82 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_36111_length_552_cov_1.13883_ID_72221
+
+CONTIG: NODE_36400_length_548_cov_2.24544_ID_72799 (548bp)
+Top Length: 546  Top ID: 97.8
+		One align captures most of this contig: 217671 218216 | 548 3 | 546 546 | 97.8 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_36400_length_548_cov_2.24544_ID_72799
+
+CONTIG: NODE_36587_length_546_cov_0.608961_ID_73173 (546bp)
+Top Length: 546  Top ID: 100.0
+		One align captures most of this contig: 102380 102925 | 1 546 | 546 546 | 100.0 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_36587_length_546_cov_0.608961_ID_73173
+
+CONTIG: NODE_3013_length_4910_cov_2.76849_ID_6025 (4910bp)
+Top Length: 4910  Top ID: 99.12
+		One align captures most of this contig: 361363 366271 | 4910 1 | 4909 4910 | 99.12 | Bacteroides_sp_D4_gi_345651602_ref_NZ_ NODE_3013_length_4910_cov_2.76849_ID_6025
+
+CONTIG: NODE_4244_length_3788_cov_1.12858_ID_8487 (3788bp)
+Top Length: 3788  Top ID: 95.99
+		One align captures most of this contig: 8535 12323 | 3788 1 | 3789 3788 | 95.99 | Bacteroides_sp_D4_gi_345651602_ref_NZ_ NODE_4244_length_3788_cov_1.12858_ID_8487
+
+CONTIG: NODE_7786_length_2294_cov_0.932113_ID_15571 (2294bp)
+Top Length: 132  Top ID: 98.48
+		This contig is partially unaligned. (Aligned 132 out of 2294 bases)
+		Alignment: 298081 298212 | 1637 1506 | 132 132 | 98.48 | Bacteroides_sp_D4_gi_345651602_ref_NZ_ NODE_7786_length_2294_cov_0.932113_ID_15571
+		Unaligned bases: 1 to 1505 (1505)
+		Unaligned bases: 1638 to 2294 (657)
+
+CONTIG: NODE_8335_length_2161_cov_0.925926_ID_16669 (2161bp)
+Top Length: 2161  Top ID: 97.37
+		One align captures most of this contig: 292478 294645 | 1 2161 | 2168 2161 | 97.37 | Bacteroides_sp_D4_gi_345651602_ref_NZ_ NODE_8335_length_2161_cov_0.925926_ID_16669
+
+CONTIG: NODE_9111_length_2013_cov_1.23289_ID_18221 (2013bp)
+Top Length: 2007  Top ID: 96.81
+		One align captures most of this contig: 231118 233122 | 2013 7 | 2005 2007 | 96.81 | Bacteroides_sp_D4_gi_345651602_ref_NZ_ NODE_9111_length_2013_cov_1.23289_ID_18221
+
+CONTIG: NODE_9185_length_1997_cov_1.21164_ID_18369 (1997bp)
+Top Length: 1997  Top ID: 98.35
+		One align captures most of this contig: 139201 141202 | 1 1997 | 2002 1997 | 98.35 | Bacteroides_sp_D4_gi_345651602_ref_NZ_ NODE_9185_length_1997_cov_1.21164_ID_18369
+
+CONTIG: NODE_12957_length_1451_cov_1.20487_ID_25913 (1451bp)
+Top Length: 1451  Top ID: 99.17
+		One align captures most of this contig: 229486 230927 | 1451 1 | 1442 1451 | 99.17 | Bacteroides_sp_D4_gi_345651602_ref_NZ_ NODE_12957_length_1451_cov_1.20487_ID_25913
+
+CONTIG: NODE_13738_length_1375_cov_1.21591_ID_27475 (1375bp)
+Top Length: 1374  Top ID: 99.64
+		One align captures most of this contig: 12457 13830 | 2 1375 | 1374 1374 | 99.64 | Bacteroides_sp_D4_gi_345651602_ref_NZ_ NODE_13738_length_1375_cov_1.21591_ID_27475
+
+CONTIG: NODE_17214_length_1113_cov_0.836484_ID_34427 (1113bp)
+Top Length: 1113  Top ID: 99.19
+		One align captures most of this contig: 280286 281398 | 1113 1 | 1113 1113 | 99.19 | Bacteroides_sp_D4_gi_345651602_ref_NZ_ NODE_17214_length_1113_cov_0.836484_ID_34427
+
+CONTIG: NODE_17493_length_1095_cov_0.627885_ID_34985 (1095bp)
+Top Length: 246  Top ID: 97.56
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 1095 and total length of all aligns is 452
+		Alignment: 272005 272250 | 246 1 | 246 246 | 97.56 | Bacteroides_sp_D4_gi_345651602_ref_NZ_ NODE_17493_length_1095_cov_0.627885_ID_34985
+		Alignment: 271663 271868 | 574 369 | 206 206 | 95.15 | Bacteroides_sp_D4_gi_345651602_ref_NZ_ NODE_17493_length_1095_cov_0.627885_ID_34985
+		Unaligned bases: 643
+CONTIG: NODE_21432_length_902_cov_0.49941_ID_42863 (902bp)
+Top Length: 230  Top ID: 97.83
+		This contig is partially unaligned. (Aligned 230 out of 902 bases)
+		Alignment: 334164 334393 | 902 673 | 230 230 | 97.83 | Bacteroides_sp_D4_gi_345651602_ref_NZ_ NODE_21432_length_902_cov_0.49941_ID_42863
+		Unaligned bases: 1 to 672 (672)
+
+CONTIG: NODE_22659_length_856_cov_0.88015_ID_45317 (856bp)
+Top Length: 856  Top ID: 99.77
+		One align captures most of this contig: 287675 288531 | 1 856 | 857 856 | 99.77 | Bacteroides_sp_D4_gi_345651602_ref_NZ_ NODE_22659_length_856_cov_0.88015_ID_45317
+
+CONTIG: NODE_24264_length_798_cov_1.21803_ID_48527 (798bp)
+Top Length: 798  Top ID: 100.0
+		One align captures most of this contig: 30374 31171 | 798 1 | 798 798 | 100.0 | Bacteroides_sp_D4_gi_345651602_ref_NZ_ NODE_24264_length_798_cov_1.21803_ID_48527
+
+CONTIG: NODE_25570_length_756_cov_0.691869_ID_51139 (756bp)
+Top Length: 756  Top ID: 97.77
+		One align captures most of this contig: 289207 289956 | 1 756 | 750 756 | 97.77 | Bacteroides_sp_D4_gi_345651602_ref_NZ_ NODE_25570_length_756_cov_0.691869_ID_51139
+
+CONTIG: NODE_28530_length_680_cov_2.616_ID_57059 (680bp)
+Top Length: 680  Top ID: 99.56
+		One align captures most of this contig: 72083 72761 | 1 680 | 679 680 | 99.56 | Bacteroides_sp_D4_gi_345651602_ref_NZ_ NODE_28530_length_680_cov_2.616_ID_57059
+
+CONTIG: NODE_31929_length_613_cov_1.53943_ID_63857 (613bp)
+Top Length: 613  Top ID: 99.84
+		One align captures most of this contig: 58914 59526 | 613 1 | 613 613 | 99.84 | Bacteroides_sp_D4_gi_345651602_ref_NZ_ NODE_31929_length_613_cov_1.53943_ID_63857
+
+CONTIG: NODE_32021_length_611_cov_0.559353_ID_64041 (611bp)
+Top Length: 293  Top ID: 96.93
+		This contig is partially unaligned. (Aligned 293 out of 611 bases)
+		Alignment: 331833 332125 | 4 296 | 293 293 | 96.93 | Bacteroides_sp_D4_gi_345651602_ref_NZ_ NODE_32021_length_611_cov_0.559353_ID_64041
+		Unaligned bases: 1 to 3 (3)
+		Unaligned bases: 297 to 611 (315)
+
+CONTIG: NODE_33703_length_585_cov_1.73208_ID_67405 (585bp)
+Top Length: 585  Top ID: 100.0
+		One align captures most of this contig: 118600 119184 | 585 1 | 585 585 | 100.0 | Bacteroides_sp_D4_gi_345651602_ref_NZ_ NODE_33703_length_585_cov_1.73208_ID_67405
+
+CONTIG: NODE_34549_length_573_cov_0.990347_ID_69097 (573bp)
+Top Length: 568  Top ID: 99.3
+		One align captures most of this contig: 143522 144089 | 1 568 | 568 568 | 99.3 | Bacteroides_sp_D4_gi_345651602_ref_NZ_ NODE_34549_length_573_cov_0.990347_ID_69097
+
+CONTIG: NODE_35240_length_563_cov_0.391732_ID_70479 (563bp)
+Top Length: 276  Top ID: 97.83
+		This contig is partially unaligned. (Aligned 276 out of 563 bases)
+		Alignment: 279475 279750 | 288 563 | 276 276 | 97.83 | Bacteroides_sp_D4_gi_345651602_ref_NZ_ NODE_35240_length_563_cov_0.391732_ID_70479
+		Unaligned bases: 1 to 287 (287)
+
+CONTIG: NODE_35445_length_560_cov_0.564356_ID_70889 (560bp)
+Top Length: 231  Top ID: 97.4
+		This contig is partially unaligned. (Aligned 231 out of 560 bases)
+		Alignment: 315830 316060 | 1 231 | 231 231 | 97.4 | Bacteroides_sp_D4_gi_345651602_ref_NZ_ NODE_35445_length_560_cov_0.564356_ID_70889
+		Unaligned bases: 232 to 560 (329)
+
+CONTIG: NODE_38696_length_520_cov_0.847312_ID_77391 (520bp)
+Top Length: 520  Top ID: 96.74
+		One align captures most of this contig: 273315 273834 | 1 520 | 520 520 | 96.74 | Bacteroides_sp_D4_gi_345651602_ref_NZ_ NODE_38696_length_520_cov_0.847312_ID_77391
+
+CONTIG: NODE_40483_length_500_cov_0.552809_ID_80965 (500bp)
+Top Length: 227  Top ID: 96.04
+		This contig is partially unaligned. (Aligned 227 out of 500 bases)
+		Alignment: 263873 264098 | 274 500 | 226 227 | 96.04 | Bacteroides_sp_D4_gi_345651602_ref_NZ_ NODE_40483_length_500_cov_0.552809_ID_80965
+		Unaligned bases: 1 to 273 (273)
+
+CONTIG: NODE_29_length_97497_cov_5.93237_ID_57 (97497bp)
+Top Length: 23287  Top ID: 95.9
+		Skipping redundant alignment 1428656 1430446 | 999 2792 | 1791 1794 | 95.32 | Bacteroides_sp_D4_gi_345651601_ref_NZ_ NODE_29_length_97497_cov_5.93237_ID_57
+		This contig is misassembled. 11 total aligns.
+			Real Alignment 1: 211764 217962 | 285 6494 | 6199 6210 | 95.39 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_29_length_97497_cov_5.93237_ID_57
+			  Extensive misassembly ( relocation, inconsistency = 27278 ) between these two alignments
+			Real Alignment 2: 247110 260135 | 8364 21381 | 13026 13018 | 95.34 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_29_length_97497_cov_5.93237_ID_57
+			  Extensive misassembly ( relocation, inconsistency = -4364 ) between these two alignments
+			Real Alignment 3: 267100 267419 | 32710 33029 | 320 320 | 96.88 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_29_length_97497_cov_5.93237_ID_57
+			  Overlap between these two alignments (local misassembly). Inconsistency = -282 
+			Real Alignment 4: 267680 276568 | 33572 42479 | 8889 8908 | 95.56 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_29_length_97497_cov_5.93237_ID_57
+			  Gap between these two alignments (local misassembly). Inconsistency = 16 
+			Real Alignment 5: 276759 277509 | 42654 43404 | 751 751 | 95.07 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_29_length_97497_cov_5.93237_ID_57
+			  Extensive misassembly ( relocation, inconsistency = 70382 ) between these two alignments
+			Real Alignment 6: 352957 353895 | 48470 49405 | 939 936 | 96.27 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_29_length_97497_cov_5.93237_ID_57
+			  Overlap between these two alignments (local misassembly). Inconsistency = -144 
+			Real Alignment 7: 353895 357917 | 49549 53569 | 4023 4021 | 96.5 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_29_length_97497_cov_5.93237_ID_57
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 8: 191557 194096 | 56783 54244 | 2540 2540 | 98.19 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_29_length_97497_cov_5.93237_ID_57
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 9: 109454 110974 | 59897 61417 | 1521 1521 | 97.44 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_29_length_97497_cov_5.93237_ID_57
+			  Extensive misassembly ( relocation, inconsistency = 6610 ) between these two alignments
+			Real Alignment 10: 123407 146699 | 67240 90526 | 23293 23287 | 95.9 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_29_length_97497_cov_5.93237_ID_57
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_212_length_38832_cov_3.20396_ID_423 (38832bp)
+Top Length: 38744  Top ID: 98.44
+		One align captures most of this contig: 800358 839100 | 38832 89 | 38743 38744 | 98.44 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_212_length_38832_cov_3.20396_ID_423
+
+CONTIG: NODE_955_length_12706_cov_1.68848_ID_1909 (12706bp)
+Top Length: 5911  Top ID: 98.92
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 742875 745136 | 7 2224 | 2262 2218 | 96.37 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_955_length_12706_cov_1.68848_ID_1909
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 749390 753422 | 2240 6278 | 4033 4039 | 98.17 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_955_length_12706_cov_1.68848_ID_1909
+			  Fake misassembly between these two alignments: inconsistency = -16 , gap in the contig is small or absent or filled mostly with Ns (long indel: insertion of length 16; 0 mismatches)
+			Real Alignment 3: 753581 759485 | 6453 12363 | 5905 5911 | 98.92 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_955_length_12706_cov_1.68848_ID_1909
+			  Fake misassembly between these two alignments: inconsistency = -5 , gap in the contig is small or absent or filled mostly with Ns (short indel: insertion of length 5; 37 mismatches)
+			Real Alignment 4: 759602 759823 | 12485 12706 | 222 222 | 100.0 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_955_length_12706_cov_1.68848_ID_1909
+
+CONTIG: NODE_2670_length_5400_cov_1.5884_ID_5339 (5400bp)
+Top Length: 5400  Top ID: 99.8
+		One align captures most of this contig: 384218 389617 | 1 5400 | 5400 5400 | 99.8 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_2670_length_5400_cov_1.5884_ID_5339
+
+CONTIG: NODE_4008_length_3957_cov_1.50051_ID_8015 (3957bp)
+Top Length: 3957  Top ID: 96.77
+		One align captures most of this contig: 160940 164894 | 1 3957 | 3955 3957 | 96.77 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_4008_length_3957_cov_1.50051_ID_8015
+
+CONTIG: NODE_4529_length_3593_cov_1.38157_ID_9057 (3593bp)
+Top Length: 3584  Top ID: 99.67
+		One align captures most of this contig: 985385 988967 | 1 3584 | 3583 3584 | 99.67 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_4529_length_3593_cov_1.38157_ID_9057
+
+CONTIG: NODE_4622_length_3537_cov_1.23636_ID_9243 (3537bp)
+Top Length: 3225  Top ID: 97.58
+		This contig is partially unaligned. (Aligned 3225 out of 3537 bases)
+		Alignment: 302481 305707 | 3276 52 | 3227 3225 | 97.58 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_4622_length_3537_cov_1.23636_ID_9243
+		Unaligned bases: 1 to 51 (51)
+		Unaligned bases: 3277 to 3537 (261)
+
+CONTIG: NODE_7838_length_2277_cov_1.44734_ID_15675 (2277bp)
+Top Length: 2277  Top ID: 99.52
+		One align captures most of this contig: 89346 91623 | 1 2277 | 2278 2277 | 99.52 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_7838_length_2277_cov_1.44734_ID_15675
+
+CONTIG: NODE_8740_length_2081_cov_1.28578_ID_17479 (2081bp)
+Top Length: 2081  Top ID: 97.16
+		One align captures most of this contig: 587091 589167 | 2081 1 | 2077 2081 | 97.16 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_8740_length_2081_cov_1.28578_ID_17479
+
+CONTIG: NODE_9272_length_1980_cov_1.19636_ID_18543 (1980bp)
+Top Length: 1980  Top ID: 95.56
+		One align captures most of this contig: 997906 999876 | 1980 1 | 1971 1980 | 95.56 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_9272_length_1980_cov_1.19636_ID_18543
+
+CONTIG: NODE_9745_length_1890_cov_1.28719_ID_19489 (1890bp)
+Top Length: 1890  Top ID: 98.31
+		One align captures most of this contig: 86937 88813 | 1890 1 | 1877 1890 | 98.31 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_9745_length_1890_cov_1.28719_ID_19489
+
+CONTIG: NODE_9846_length_1870_cov_1.49642_ID_19691 (1870bp)
+Top Length: 1870  Top ID: 99.89
+		One align captures most of this contig: 152010 153879 | 1 1870 | 1870 1870 | 99.89 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_9846_length_1870_cov_1.49642_ID_19691
+
+CONTIG: NODE_10147_length_1820_cov_1.24589_ID_20293 (1820bp)
+Top Length: 609  Top ID: 96.88
+		This contig is partially unaligned. (Aligned 609 out of 1820 bases)
+		Alignment: 301222 301822 | 551 1159 | 601 609 | 96.88 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_10147_length_1820_cov_1.24589_ID_20293
+		Unaligned bases: 1 to 550 (550)
+		Unaligned bases: 1160 to 1820 (661)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_10247_length_1803_cov_1.04176_ID_20493 (1803bp)
+Top Length: 457  Top ID: 97.59
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 298572 299027 | 1 457 | 456 457 | 97.59 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_10247_length_1803_cov_1.04176_ID_20493
+			  Overlap between these two alignments (local misassembly). Inconsistency = -661 
+			Real Alignment 2: 299158 299603 | 1249 1694 | 446 446 | 99.55 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_10247_length_1803_cov_1.04176_ID_20493
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_10331_length_1792_cov_1.44444_ID_20661 (1792bp)
+Top Length: 1792  Top ID: 96.6
+		One align captures most of this contig: 191492 193276 | 1 1792 | 1785 1792 | 96.6 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_10331_length_1792_cov_1.44444_ID_20661
+
+CONTIG: NODE_10943_length_1699_cov_1.4781_ID_21885 (1699bp)
+Top Length: 1697  Top ID: 99.65
+		One align captures most of this contig: 1000668 1002364 | 3 1699 | 1697 1697 | 99.65 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_10943_length_1699_cov_1.4781_ID_21885
+
+CONTIG: NODE_11432_length_1629_cov_1.02033_ID_22863 (1629bp)
+Top Length: 1629  Top ID: 100.0
+		One align captures most of this contig: 721955 723583 | 1 1629 | 1629 1629 | 100.0 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_11432_length_1629_cov_1.02033_ID_22863
+
+CONTIG: NODE_11614_length_1605_cov_0.992258_ID_23227 (1605bp)
+Top Length: 1605  Top ID: 95.71
+		One align captures most of this contig: 299593 301202 | 1605 1 | 1610 1605 | 95.71 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_11614_length_1605_cov_0.992258_ID_23227
+
+CONTIG: NODE_12625_length_1486_cov_1.81901_ID_25249 (1486bp)
+Top Length: 1486  Top ID: 98.46
+		One align captures most of this contig: 615677 617160 | 1 1486 | 1484 1486 | 98.46 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_12625_length_1486_cov_1.81901_ID_25249
+
+CONTIG: NODE_13151_length_1433_cov_1.27649_ID_26301 (1433bp)
+Top Length: 1433  Top ID: 98.95
+		One align captures most of this contig: 165780 167204 | 1 1433 | 1425 1433 | 98.95 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_13151_length_1433_cov_1.27649_ID_26301
+
+CONTIG: NODE_13480_length_1400_cov_1.16952_ID_26959 (1400bp)
+Top Length: 1400  Top ID: 95.01
+		Marking as insignificant: 244077 245253 | 225 1400 | 1177 1176 | 95.42 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_13480_length_1400_cov_1.16952_ID_26959
+		One align captures most of this contig: 888271 889663 | 1 1400 | 1393 1400 | 95.01 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_13480_length_1400_cov_1.16952_ID_26959
+
+CONTIG: NODE_14078_length_1345_cov_1.37984_ID_28155 (1345bp)
+Top Length: 1345  Top ID: 99.85
+		One align captures most of this contig: 572609 573953 | 1 1345 | 1345 1345 | 99.85 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_14078_length_1345_cov_1.37984_ID_28155
+
+CONTIG: NODE_14908_length_1273_cov_1.25123_ID_29815 (1273bp)
+Top Length: 1273  Top ID: 97.33
+		One align captures most of this contig: 785269 786542 | 1 1273 | 1274 1273 | 97.33 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_14908_length_1273_cov_1.25123_ID_29815
+
+CONTIG: NODE_15237_length_1247_cov_1.51762_ID_30473 (1247bp)
+Top Length: 1247  Top ID: 99.84
+		One align captures most of this contig: 742 1988 | 1 1247 | 1247 1247 | 99.84 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_15237_length_1247_cov_1.51762_ID_30473
+
+CONTIG: NODE_15556_length_1222_cov_1.22365_ID_31111 (1222bp)
+Top Length: 1219  Top ID: 98.21
+		One align captures most of this contig: 967198 968425 | 1220 2 | 1228 1219 | 98.21 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_15556_length_1222_cov_1.22365_ID_31111
+
+CONTIG: NODE_15693_length_1211_cov_1.39879_ID_31385 (1211bp)
+Top Length: 1211  Top ID: 98.93
+		One align captures most of this contig: 972699 973909 | 1211 1 | 1211 1211 | 98.93 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_15693_length_1211_cov_1.39879_ID_31385
+
+CONTIG: NODE_17120_length_1119_cov_1.70959_ID_34239 (1119bp)
+Top Length: 1119  Top ID: 100.0
+		One align captures most of this contig: 91749 92867 | 1 1119 | 1119 1119 | 100.0 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_17120_length_1119_cov_1.70959_ID_34239
+
+CONTIG: NODE_18121_length_1059_cov_1.65637_ID_36241 (1059bp)
+Top Length: 1059  Top ID: 100.0
+		One align captures most of this contig: 490250 491308 | 1 1059 | 1059 1059 | 100.0 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_18121_length_1059_cov_1.65637_ID_36241
+
+CONTIG: NODE_18169_length_1057_cov_0.902196_ID_36337 (1057bp)
+Top Length: 1055  Top ID: 97.16
+		One align captures most of this contig: 306122 307174 | 1055 1 | 1053 1055 | 97.16 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_18169_length_1057_cov_0.902196_ID_36337
+
+CONTIG: NODE_18862_length_1018_cov_1.66667_ID_37723 (1018bp)
+Top Length: 1018  Top ID: 99.8
+		One align captures most of this contig: 25896 26913 | 1 1018 | 1018 1018 | 99.8 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_18862_length_1018_cov_1.66667_ID_37723
+
+CONTIG: NODE_19665_length_979_cov_1.74242_ID_39329 (979bp)
+Top Length: 979  Top ID: 99.28
+		One align captures most of this contig: 579867 580845 | 979 1 | 979 979 | 99.28 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_19665_length_979_cov_1.74242_ID_39329
+
+CONTIG: NODE_19798_length_972_cov_0.892039_ID_39595 (972bp)
+Top Length: 972  Top ID: 98.58
+		One align captures most of this contig: 288153 289135 | 1 972 | 983 972 | 98.58 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_19798_length_972_cov_0.892039_ID_39595
+
+CONTIG: NODE_20022_length_960_cov_1.04972_ID_40043 (960bp)
+Top Length: 960  Top ID: 99.38
+		One align captures most of this contig: 537992 538947 | 1 960 | 956 960 | 99.38 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_20022_length_960_cov_1.04972_ID_40043
+
+CONTIG: NODE_21506_length_900_cov_0.981065_ID_43011 (900bp)
+Top Length: 900  Top ID: 99.78
+		One align captures most of this contig: 990588 991487 | 1 900 | 900 900 | 99.78 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_21506_length_900_cov_0.981065_ID_43011
+
+CONTIG: NODE_22766_length_852_cov_0.804266_ID_45531 (852bp)
+Top Length: 851  Top ID: 96.47
+		One align captures most of this contig: 289945 290791 | 851 1 | 847 851 | 96.47 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_22766_length_852_cov_0.804266_ID_45531
+
+CONTIG: NODE_23491_length_827_cov_0.979275_ID_46981 (827bp)
+Top Length: 827  Top ID: 99.88
+		One align captures most of this contig: 991978 992805 | 827 1 | 828 827 | 99.88 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_23491_length_827_cov_0.979275_ID_46981
+
+CONTIG: NODE_26353_length_734_cov_0.802651_ID_52705 (734bp)
+Top Length: 732  Top ID: 99.32
+		One align captures most of this contig: 284269 285000 | 734 3 | 732 732 | 99.32 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_26353_length_734_cov_0.802651_ID_52705
+
+CONTIG: NODE_26780_length_723_cov_0.976048_ID_53559 (723bp)
+Top Length: 723  Top ID: 96.83
+		One align captures most of this contig: 897671 898382 | 723 1 | 712 723 | 96.83 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_26780_length_723_cov_0.976048_ID_53559
+
+CONTIG: NODE_27159_length_714_cov_0.984825_ID_54317 (714bp)
+Top Length: 714  Top ID: 97.48
+		One align captures most of this contig: 794762 795475 | 1 714 | 714 714 | 97.48 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_27159_length_714_cov_0.984825_ID_54317
+
+CONTIG: NODE_27458_length_706_cov_1.48541_ID_54915 (706bp)
+Top Length: 706  Top ID: 99.01
+		One align captures most of this contig: 921094 921799 | 706 1 | 706 706 | 99.01 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_27458_length_706_cov_1.48541_ID_54915
+
+CONTIG: NODE_27856_length_696_cov_1.38066_ID_55711 (696bp)
+Top Length: 696  Top ID: 100.0
+		One align captures most of this contig: 732126 732821 | 1 696 | 696 696 | 100.0 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_27856_length_696_cov_1.38066_ID_55711
+
+CONTIG: NODE_30920_length_631_cov_1.78646_ID_61839 (631bp)
+Top Length: 631  Top ID: 99.68
+		Marking as insignificant: 71889 72153 | 265 1 | 265 265 | 98.11 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_30920_length_631_cov_1.78646_ID_61839
+		One align captures most of this contig: 85967 86597 | 1 631 | 631 631 | 99.68 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_30920_length_631_cov_1.78646_ID_61839
+
+CONTIG: NODE_35162_length_564_cov_1.69745_ID_70323 (564bp)
+Top Length: 564  Top ID: 99.65
+		One align captures most of this contig: 691935 692498 | 1 564 | 564 564 | 99.65 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_35162_length_564_cov_1.69745_ID_70323
+
+CONTIG: NODE_36064_length_552_cov_1.61771_ID_72127 (552bp)
+Top Length: 552  Top ID: 99.64
+		One align captures most of this contig: 495986 496537 | 552 1 | 552 552 | 99.64 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_36064_length_552_cov_1.61771_ID_72127
+
+CONTIG: NODE_38035_length_528_cov_1.70402_ID_76069 (528bp)
+Top Length: 528  Top ID: 99.81
+		One align captures most of this contig: 168636 169163 | 528 1 | 528 528 | 99.81 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_38035_length_528_cov_1.70402_ID_76069
+
+CONTIG: NODE_38036_length_528_cov_1.99154_ID_76071 (528bp)
+Top Length: 527  Top ID: 99.05
+		One align captures most of this contig: 358382 358908 | 2 528 | 527 527 | 99.05 | Bacteroides_sp_D4_gi_345651599_ref_NZ_ NODE_38036_length_528_cov_1.99154_ID_76071
+
+CONTIG: NODE_486_length_22352_cov_7.2003_ID_971 (22352bp)
+Top Length: 6761  Top ID: 96.19
+		This contig is partially unaligned. (Aligned 6761 out of 22352 bases)
+		Alignment: 2509 9271 | 22352 15592 | 6763 6761 | 96.19 | Bacteroides_sp_D4_gi_345651600_ref_NZ_ NODE_486_length_22352_cov_7.2003_ID_971
+		Unaligned bases: 1 to 15591 (15591)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_766_length_15153_cov_6.37647_ID_1531 (15153bp)
+Top Length: 15099  Top ID: 95.23
+		One align captures most of this contig: 376568 391678 | 55 15153 | 15111 15099 | 95.23 | Bacteroides_sp_D4_gi_345651600_ref_NZ_ NODE_766_length_15153_cov_6.37647_ID_1531
+
+CONTIG: NODE_2345_length_5979_cov_8.43028_ID_4689 (5979bp)
+Top Length: 5922  Top ID: 98.9
+		One align captures most of this contig: 246000 251923 | 54 5975 | 5924 5922 | 98.9 | Bacteroides_sp_D4_gi_345651600_ref_NZ_ NODE_2345_length_5979_cov_8.43028_ID_4689
+
+CONTIG: NODE_2854_length_5131_cov_1.65938_ID_5707 (5131bp)
+Top Length: 5131  Top ID: 99.61
+		One align captures most of this contig: 174304 179433 | 5131 1 | 5130 5131 | 99.61 | Bacteroides_sp_D4_gi_345651600_ref_NZ_ NODE_2854_length_5131_cov_1.65938_ID_5707
+
+CONTIG: NODE_4318_length_3745_cov_1.63279_ID_8635 (3745bp)
+Top Length: 3742  Top ID: 98.88
+		One align captures most of this contig: 240959 244688 | 3745 4 | 3730 3742 | 98.88 | Bacteroides_sp_D4_gi_345651600_ref_NZ_ NODE_4318_length_3745_cov_1.63279_ID_8635
+
+CONTIG: NODE_4606_length_3542_cov_1.37052_ID_9211 (3542bp)
+Top Length: 3542  Top ID: 99.49
+		One align captures most of this contig: 120086 123627 | 1 3542 | 3542 3542 | 99.49 | Bacteroides_sp_D4_gi_345651600_ref_NZ_ NODE_4606_length_3542_cov_1.37052_ID_9211
+
+CONTIG: NODE_8602_length_2107_cov_1.11306_ID_17203 (2107bp)
+Top Length: 2107  Top ID: 99.05
+		One align captures most of this contig: 319432 321542 | 2107 1 | 2111 2107 | 99.05 | Bacteroides_sp_D4_gi_345651600_ref_NZ_ NODE_8602_length_2107_cov_1.11306_ID_17203
+
+CONTIG: NODE_9277_length_1979_cov_1.80561_ID_18553 (1979bp)
+Top Length: 1979  Top ID: 99.75
+		One align captures most of this contig: 109345 111323 | 1979 1 | 1979 1979 | 99.75 | Bacteroides_sp_D4_gi_345651600_ref_NZ_ NODE_9277_length_1979_cov_1.80561_ID_18553
+
+CONTIG: NODE_9519_length_1932_cov_1.24827_ID_19037 (1932bp)
+Top Length: 1932  Top ID: 99.69
+		One align captures most of this contig: 72446 74377 | 1 1932 | 1932 1932 | 99.69 | Bacteroides_sp_D4_gi_345651600_ref_NZ_ NODE_9519_length_1932_cov_1.24827_ID_19037
+
+CONTIG: NODE_9854_length_1869_cov_1.42889_ID_19707 (1869bp)
+Top Length: 93  Top ID: 97.87
+		Skipping redundant alignment 60318 60399 | 1 82 | 82 82 | 98.78 | Bacteroides_sp_D4_gi_345651604_ref_NZ_ NODE_9854_length_1869_cov_1.42889_ID_19707
+		This contig is partially unaligned. (Aligned 93 out of 1869 bases)
+		Alignment: 236018 236111 | 93 1 | 94 93 | 97.87 | Bacteroides_sp_D4_gi_345651600_ref_NZ_ NODE_9854_length_1869_cov_1.42889_ID_19707
+		Unaligned bases: 94 to 1869 (1776)
+
+CONTIG: NODE_11338_length_1642_cov_1.2949_ID_22675 (1642bp)
+Top Length: 1642  Top ID: 99.88
+		One align captures most of this contig: 129440 131081 | 1 1642 | 1642 1642 | 99.88 | Bacteroides_sp_D4_gi_345651600_ref_NZ_ NODE_11338_length_1642_cov_1.2949_ID_22675
+
+CONTIG: NODE_11814_length_1579_cov_2.03215_ID_23627 (1579bp)
+Top Length: 1579  Top ID: 98.73
+		One align captures most of this contig: 236474 238040 | 1579 1 | 1567 1579 | 98.73 | Bacteroides_sp_D4_gi_345651600_ref_NZ_ NODE_11814_length_1579_cov_2.03215_ID_23627
+
+CONTIG: NODE_13689_length_1380_cov_2.59094_ID_27377 (1380bp)
+Top Length: 1380  Top ID: 97.39
+		One align captures most of this contig: 374118 375492 | 1380 1 | 1375 1380 | 97.39 | Bacteroides_sp_D4_gi_345651600_ref_NZ_ NODE_13689_length_1380_cov_2.59094_ID_27377
+
+CONTIG: NODE_17330_length_1106_cov_1.31304_ID_34659 (1106bp)
+Top Length: 1106  Top ID: 99.01
+		One align captures most of this contig: 64197 65293 | 1 1106 | 1097 1106 | 99.01 | Bacteroides_sp_D4_gi_345651600_ref_NZ_ NODE_17330_length_1106_cov_1.31304_ID_34659
+
+CONTIG: NODE_18231_length_1052_cov_1.75527_ID_36461 (1052bp)
+Top Length: 1052  Top ID: 98.0
+		One align captures most of this contig: 372697 373737 | 1 1052 | 1041 1052 | 98.0 | Bacteroides_sp_D4_gi_345651600_ref_NZ_ NODE_18231_length_1052_cov_1.75527_ID_36461
+
+CONTIG: NODE_21278_length_908_cov_1.14302_ID_42555 (908bp)
+Top Length: 908  Top ID: 99.78
+		One align captures most of this contig: 190104 191011 | 908 1 | 908 908 | 99.78 | Bacteroides_sp_D4_gi_345651600_ref_NZ_ NODE_21278_length_908_cov_1.14302_ID_42555
+
+CONTIG: NODE_25357_length_763_cov_0.769774_ID_50713 (763bp)
+Top Length: 763  Top ID: 98.3
+		One align captures most of this contig: 358571 359333 | 1 763 | 763 763 | 98.3 | Bacteroides_sp_D4_gi_345651600_ref_NZ_ NODE_25357_length_763_cov_0.769774_ID_50713
+
+CONTIG: NODE_28404_length_683_cov_1.41879_ID_56807 (683bp)
+Top Length: 679  Top ID: 98.97
+		One align captures most of this contig: 36465 37143 | 1 679 | 679 679 | 98.97 | Bacteroides_sp_D4_gi_345651600_ref_NZ_ NODE_28404_length_683_cov_1.41879_ID_56807
+
+CONTIG: NODE_31017_length_629_cov_1.65331_ID_62033 (629bp)
+Top Length: 629  Top ID: 99.84
+		One align captures most of this contig: 345868 346496 | 629 1 | 629 629 | 99.84 | Bacteroides_sp_D4_gi_345651600_ref_NZ_ NODE_31017_length_629_cov_1.65331_ID_62033
+
+CONTIG: NODE_31745_length_616_cov_1.55437_ID_63489 (616bp)
+Top Length: 616  Top ID: 100.0
+		One align captures most of this contig: 189416 190031 | 616 1 | 616 616 | 100.0 | Bacteroides_sp_D4_gi_345651600_ref_NZ_ NODE_31745_length_616_cov_1.55437_ID_63489
+
+CONTIG: NODE_36840_length_543_cov_1.90164_ID_73679 (543bp)
+Top Length: 537  Top ID: 97.39
+		One align captures most of this contig: 332256 332791 | 543 7 | 536 537 | 97.39 | Bacteroides_sp_D4_gi_345651600_ref_NZ_ NODE_36840_length_543_cov_1.90164_ID_73679
+
+CONTIG: NODE_37516_length_534_cov_1.64927_ID_75031 (534bp)
+Top Length: 534  Top ID: 99.63
+		One align captures most of this contig: 50894 51427 | 1 534 | 534 534 | 99.63 | Bacteroides_sp_D4_gi_345651600_ref_NZ_ NODE_37516_length_534_cov_1.64927_ID_75031
+
+CONTIG: NODE_38417_length_524_cov_2.16631_ID_76833 (524bp)
+Top Length: 524  Top ID: 99.62
+		One align captures most of this contig: 362848 363371 | 1 524 | 524 524 | 99.62 | Bacteroides_sp_D4_gi_345651600_ref_NZ_ NODE_38417_length_524_cov_2.16631_ID_76833
+
+CONTIG: NODE_39548_length_511_cov_1.96491_ID_79095 (511bp)
+Top Length: 511  Top ID: 100.0
+		One align captures most of this contig: 380257 380767 | 1 511 | 511 511 | 100.0 | Bacteroides_sp_D4_gi_345651600_ref_NZ_ NODE_39548_length_511_cov_1.96491_ID_79095
+
+CONTIG: NODE_1311_length_9657_cov_5.19194_ID_2621 (9657bp)
+Top Length: 4586  Top ID: 97.23
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 153683 157771 | 1 4163 | 4089 4163 | 95.03 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_1311_length_9657_cov_5.19194_ID_2621
+			  Overlap between these two alignments (local misassembly). Inconsistency = -436 
+			Real Alignment 2: 157785 162370 | 4613 9198 | 4586 4586 | 97.23 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_1311_length_9657_cov_5.19194_ID_2621
+			  Gap between these two alignments (local misassembly). Inconsistency = 342 
+			Real Alignment 3: 162959 163116 | 9445 9602 | 158 158 | 98.1 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_1311_length_9657_cov_5.19194_ID_2621
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_1484_length_8615_cov_1.47932_ID_2967 (8615bp)
+Top Length: 8441  Top ID: 98.59
+		This contig is partially unaligned. (Aligned 8441 out of 8615 bases)
+		Alignment: 145152 153583 | 8615 175 | 8432 8441 | 98.59 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_1484_length_8615_cov_1.47932_ID_2967
+		Unaligned bases: 1 to 174 (174)
+
+CONTIG: NODE_2647_length_5440_cov_1.37827_ID_5293 (5440bp)
+Top Length: 5440  Top ID: 98.63
+		One align captures most of this contig: 78130 83589 | 1 5440 | 5460 5440 | 98.63 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_2647_length_5440_cov_1.37827_ID_5293
+
+CONTIG: NODE_6451_length_2697_cov_1.64648_ID_12901 (2697bp)
+Top Length: 2411  Top ID: 99.83
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 1 between Alignment 1 and 2:  68530 68701 | 2430 2601 | 172 172 --> 68531 68701 | 2431 2601 | 171 171
+			Real Alignment 1: 65825 68235 | 20 2430 | 2411 2411 | 99.83 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_6451_length_2697_cov_1.64648_ID_12901
+			  Gap between these two alignments (local misassembly). Inconsistency = 295 
+			Real Alignment 2: 68531 68701 | 2431 2601 | 171 171 | 98.26 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_6451_length_2697_cov_1.64648_ID_12901
+
+CONTIG: NODE_8326_length_2164_cov_0.669037_ID_16651 (2164bp)
+Top Length: 67  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 67 out of 2164 bases)
+		Alignment: 305345 305411 | 2098 2164 | 67 67 | 100.0 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_8326_length_2164_cov_0.669037_ID_16651
+		Unaligned bases: 1 to 2097 (2097)
+
+CONTIG: NODE_8403_length_2145_cov_1.1866_ID_16805 (2145bp)
+Top Length: 2145  Top ID: 97.58
+		One align captures most of this contig: 74684 76813 | 1 2145 | 2130 2145 | 97.58 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_8403_length_2145_cov_1.1866_ID_16805
+
+CONTIG: NODE_11902_length_1569_cov_1.00066_ID_23803 (1569bp)
+Top Length: 1568  Top ID: 98.35
+		One align captures most of this contig: 238035 239608 | 2 1569 | 1574 1568 | 98.35 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_11902_length_1569_cov_1.00066_ID_23803
+
+CONTIG: NODE_15105_length_1258_cov_1.41812_ID_30209 (1258bp)
+Top Length: 931  Top ID: 99.68
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 17 between Alignment 1 and 2:  261918 262018 | 1015 915 | 101 101 --> 261918 262001 | 1015 932 | 84 84
+			Real Alignment 1: 260831 261761 | 1 931 | 931 931 | 99.68 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_15105_length_1258_cov_1.41812_ID_30209
+			  Extensive misassembly ( inversion ) between these two alignments
+			Real Alignment 2: 261918 262001 | 1015 932 | 84 84 | 99.01 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_15105_length_1258_cov_1.41812_ID_30209
+
+CONTIG: NODE_16182_length_1177_cov_1.68449_ID_32363 (1177bp)
+Top Length: 1177  Top ID: 99.24
+		One align captures most of this contig: 295975 297151 | 1 1177 | 1177 1177 | 99.24 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_16182_length_1177_cov_1.68449_ID_32363
+
+CONTIG: NODE_16434_length_1159_cov_1.41395_ID_32867 (1159bp)
+Top Length: 1159  Top ID: 96.81
+		One align captures most of this contig: 25141 26301 | 1159 1 | 1161 1159 | 96.81 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_16434_length_1159_cov_1.41395_ID_32867
+
+CONTIG: NODE_17308_length_1107_cov_1.5789_ID_34615 (1107bp)
+Top Length: 1107  Top ID: 99.1
+		One align captures most of this contig: 231643 232749 | 1 1107 | 1107 1107 | 99.1 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_17308_length_1107_cov_1.5789_ID_34615
+
+CONTIG: NODE_19080_length_1007_cov_2.08508_ID_38159 (1007bp)
+Top Length: 1007  Top ID: 99.6
+		One align captures most of this contig: 193963 194969 | 1 1007 | 1007 1007 | 99.6 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_19080_length_1007_cov_2.08508_ID_38159
+
+CONTIG: NODE_21919_length_885_cov_1.22169_ID_43837 (885bp)
+Top Length: 885  Top ID: 99.32
+		One align captures most of this contig: 165924 166808 | 885 1 | 885 885 | 99.32 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_21919_length_885_cov_1.22169_ID_43837
+
+CONTIG: NODE_21941_length_884_cov_1.52593_ID_43881 (884bp)
+Top Length: 884  Top ID: 97.06
+		One align captures most of this contig: 206395 207278 | 1 884 | 884 884 | 97.06 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_21941_length_884_cov_1.52593_ID_43881
+
+CONTIG: NODE_23464_length_828_cov_1.39069_ID_46927 (828bp)
+Top Length: 828  Top ID: 95.89
+		One align captures most of this contig: 142333 143157 | 1 828 | 825 828 | 95.89 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_23464_length_828_cov_1.39069_ID_46927
+
+CONTIG: NODE_23613_length_823_cov_1.73177_ID_47225 (823bp)
+Top Length: 823  Top ID: 99.88
+		One align captures most of this contig: 24138 24960 | 823 1 | 823 823 | 99.88 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_23613_length_823_cov_1.73177_ID_47225
+
+CONTIG: NODE_24065_length_805_cov_1.208_ID_48129 (805bp)
+Top Length: 802  Top ID: 99.38
+		One align captures most of this contig: 239871 240672 | 1 802 | 802 802 | 99.38 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_24065_length_805_cov_1.208_ID_48129
+
+CONTIG: NODE_24631_length_786_cov_1.83584_ID_49261 (786bp)
+Top Length: 786  Top ID: 99.49
+		One align captures most of this contig: 204131 204916 | 786 1 | 786 786 | 99.49 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_24631_length_786_cov_1.83584_ID_49261
+
+CONTIG: NODE_25975_length_745_cov_1.25072_ID_51949 (745bp)
+Top Length: 745  Top ID: 99.6
+		One align captures most of this contig: 236904 237648 | 745 1 | 745 745 | 99.6 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_25975_length_745_cov_1.25072_ID_51949
+
+CONTIG: NODE_27731_length_699_cov_1.43634_ID_55461 (699bp)
+Top Length: 699  Top ID: 98.28
+		One align captures most of this contig: 268216 268911 | 1 699 | 696 699 | 98.28 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_27731_length_699_cov_1.43634_ID_55461
+
+CONTIG: NODE_35257_length_563_cov_2.10039_ID_70513 (563bp)
+Top Length: 563  Top ID: 100.0
+		One align captures most of this contig: 307650 308212 | 1 563 | 563 563 | 100.0 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_35257_length_563_cov_2.10039_ID_70513
+
+CONTIG: NODE_35339_length_562_cov_1.37673_ID_70677 (562bp)
+Top Length: 562  Top ID: 99.82
+		One align captures most of this contig: 83876 84436 | 562 1 | 561 562 | 99.82 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_35339_length_562_cov_1.37673_ID_70677
+
+CONTIG: NODE_36488_length_547_cov_1.63008_ID_72975 (547bp)
+Top Length: 547  Top ID: 99.63
+		One align captures most of this contig: 264475 265021 | 1 547 | 547 547 | 99.63 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_36488_length_547_cov_1.63008_ID_72975
+
+CONTIG: NODE_37238_length_538_cov_1.07867_ID_74475 (538bp)
+Top Length: 538  Top ID: 99.63
+		One align captures most of this contig: 77240 77777 | 1 538 | 538 538 | 99.63 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_37238_length_538_cov_1.07867_ID_74475
+
+CONTIG: NODE_38121_length_527_cov_1.65678_ID_76241 (527bp)
+Top Length: 527  Top ID: 99.62
+		One align captures most of this contig: 295049 295575 | 1 527 | 527 527 | 99.62 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_38121_length_527_cov_1.65678_ID_76241
+
+CONTIG: NODE_38681_length_521_cov_1.64807_ID_77361 (521bp)
+Top Length: 521  Top ID: 99.42
+		One align captures most of this contig: 267272 267792 | 1 521 | 521 521 | 99.42 | Bacteroides_sp_D4_gi_345651603_ref_NZ_ NODE_38681_length_521_cov_1.64807_ID_77361
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_sp_D4/contigs_reports/nucmer_output/SPAdes.used_snps
+	Reference Bacteroides_sp_D4_gi_345651607_ref_NZ_: 17 total alignments. 1 total regions.
+		Region: 1 to 113364 (113364 bp)
+			START in gap: 1 to 267 (266 bp)
+			Align 1: 267 26625 NODE_162_length_45848_cov_5.64986_ID_323 43395 17037
+				Gap between this and next alignment: 26625 to 26726 (100 bp)
+				Next Alignment: 26726 43726 NODE_162_length_45848_cov_5.64986_ID_323 17034 56
+
+			Align 2: 26726 43726 NODE_162_length_45848_cov_5.64986_ID_323 17034 56
+				Gap between this and next alignment: 43726 to 51125 (7398 bp)
+				Next Alignment: 51125 51326 NODE_1516_length_8471_cov_4.87619_ID_3031 8469 8268
+
+			Align 3: 51125 51326 NODE_1516_length_8471_cov_4.87619_ID_3031 8469 8268
+				Gap between this and next alignment: 51326 to 52270 (943 bp)
+				Next Alignment: 52270 52972 NODE_27584_length_703_cov_1.63272_ID_55167 703 1
+
+			Align 4: 52270 52972 NODE_27584_length_703_cov_1.63272_ID_55167 703 1
+				Gap between this and next alignment: 52972 to 53877 (904 bp)
+				Next Alignment: 53877 54383 NODE_39652_length_510_cov_1.19341_ID_79303 507 1
+
+			Align 5: 53877 54383 NODE_39652_length_510_cov_1.19341_ID_79303 507 1
+				Gap between this and next alignment: 54383 to 54885 (501 bp)
+				Next Alignment: 54885 56460 NODE_11844_length_1576_cov_1.714_ID_23687 1 1576
+
+			Align 6: 54885 56460 NODE_11844_length_1576_cov_1.714_ID_23687 1 1576
+				Gap between this and next alignment: 56460 to 60326 (3865 bp)
+				Next Alignment: 60326 60873 NODE_36396_length_548_cov_1.30629_ID_72791 548 1
+
+			Align 7: 60326 60873 NODE_36396_length_548_cov_1.30629_ID_72791 548 1
+				Gap between this and next alignment: 60873 to 61364 (490 bp)
+				Next Alignment: 61364 62585 NODE_15563_length_1222_cov_1.9503_ID_31125 1 1222
+
+			Align 8: 61364 62585 NODE_15563_length_1222_cov_1.9503_ID_31125 1 1222
+				Gap between this and next alignment: 62585 to 63893 (1307 bp)
+				Next Alignment: 63893 64642 NODE_25812_length_750_cov_1.69928_ID_51623 750 1
+
+			Align 9: 63893 64642 NODE_25812_length_750_cov_1.69928_ID_51623 750 1
+				Gap between this and next alignment: 64642 to 65082 (439 bp)
+				Next Alignment: 65082 66528 NODE_12895_length_1457_cov_1.30456_ID_25789 1457 1
+
+			Align 10: 65082 66528 NODE_12895_length_1457_cov_1.30456_ID_25789 1457 1
+				Gap between this and next alignment: 66528 to 68431 (1902 bp)
+				Next Alignment: 68431 69114 NODE_28354_length_684_cov_1.33545_ID_56707 684 1
+
+			Align 11: 68431 69114 NODE_28354_length_684_cov_1.33545_ID_56707 684 1
+				Gap between this and next alignment: 69114 to 69304 (189 bp)
+				Next Alignment: 69304 82399 NODE_909_length_13121_cov_1.39247_ID_1817 1 13118
+
+			Align 12: 69304 82399 NODE_909_length_13121_cov_1.39247_ID_1817 1 13118
+				Gap between this and next alignment: 82399 to 84814 (2414 bp)
+				Next Alignment: 84814 85316 NODE_40295_length_503_cov_1.59821_ID_80589 1 503
+
+			Align 13: 84814 85316 NODE_40295_length_503_cov_1.59821_ID_80589 1 503
+				Gap between this and next alignment: 85316 to 92127 (6810 bp)
+				Next Alignment: 92127 95026 NODE_5910_length_2911_cov_1.19153_ID_11819 2911 1
+
+			Align 14: 92127 95026 NODE_5910_length_2911_cov_1.19153_ID_11819 2911 1
+				Gap between this and next alignment: 95026 to 95351 (324 bp)
+				Next Alignment: 95351 97044 NODE_10980_length_1694_cov_1.22636_ID_21959 1 1694
+
+			Align 15: 95351 97044 NODE_10980_length_1694_cov_1.22636_ID_21959 1 1694
+				Gap between this and next alignment: 97044 to 97467 (422 bp)
+				Next Alignment: 97467 104985 NODE_1737_length_7513_cov_1.535_ID_3473 1 7513
+
+			Align 16: 97467 104985 NODE_1737_length_7513_cov_1.535_ID_3473 1 7513
+				Gap between this and next alignment: 104985 to 105481 (495 bp)
+				Next Alignment: 105481 106703 NODE_15544_length_1223_cov_1.30308_ID_31087 1223 1
+
+			Align 17: 105481 106703 NODE_15544_length_1223_cov_1.30308_ID_31087 1223 1
+			END in gap: 106703 to 113364 (6661 bp)
+
+	Reference Bacteroides_sp_D4_gi_345651604_ref_NZ_: 34 total alignments. 1 total regions.
+		Region: 1 to 634066 (634066 bp)
+			START in gap: 1 to 13703 (13702 bp)
+			Align 1: 13703 27649 NODE_159_length_46176_cov_4.68257_ID_317 20363 34291
+				The next alignment (18344 19381 NODE_18388_length_1043_cov_1.79352_ID_36775 3 1040) is redundant. Skipping.
+				Gap between this and next alignment: 27649 to 34219 (6569 bp)
+				Next Alignment: 34219 41312 NODE_159_length_46176_cov_4.68257_ID_317 39082 46176
+
+			Align 3: 34219 41312 NODE_159_length_46176_cov_4.68257_ID_317 39082 46176
+				Gap between this and next alignment: 41312 to 57809 (16496 bp)
+				Next Alignment: 57809 58456 NODE_30045_length_648_cov_1.70995_ID_60089 1 648
+
+			Align 4: 57809 58456 NODE_30045_length_648_cov_1.70995_ID_60089 1 648
+				Gap between this and next alignment: 58456 to 102380 (43923 bp)
+				Next Alignment: 102380 102925 NODE_36587_length_546_cov_0.608961_ID_73173 1 546
+
+			Align 5: 102380 102925 NODE_36587_length_546_cov_0.608961_ID_73173 1 546
+				Gap between this and next alignment: 102925 to 108937 (6011 bp)
+				Next Alignment: 108937 109753 NODE_24256_length_798_cov_0.679677_ID_48511 798 1
+
+			Align 6: 108937 109753 NODE_24256_length_798_cov_0.679677_ID_48511 798 1
+				Gap between this and next alignment: 109753 to 131878 (22124 bp)
+				Next Alignment: 131878 134434 NODE_6867_length_2560_cov_1.02036_ID_13733 2 2557
+
+			Align 7: 131878 134434 NODE_6867_length_2560_cov_1.02036_ID_13733 2 2557
+				Gap between this and next alignment: 134434 to 169647 (35212 bp)
+				Next Alignment: 169647 170647 NODE_19197_length_1001_cov_1.05603_ID_38393 1 1001
+
+			Align 8: 169647 170647 NODE_19197_length_1001_cov_1.05603_ID_38393 1 1001
+				Gap between this and next alignment: 170647 to 171318 (670 bp)
+				Next Alignment: 171318 190285 NODE_594_length_19070_cov_6.26768_ID_1187 132 19070
+
+			Align 9: 171318 190285 NODE_594_length_19070_cov_6.26768_ID_1187 132 19070
+				Gap between this and next alignment: 190285 to 190673 (387 bp)
+				Next Alignment: 190673 191984 NODE_14463_length_1312_cov_1.34845_ID_28925 1312 1
+
+			Align 10: 190673 191984 NODE_14463_length_1312_cov_1.34845_ID_28925 1312 1
+				Gap between this and next alignment: 191984 to 217671 (25686 bp)
+				Next Alignment: 217671 218216 NODE_36400_length_548_cov_2.24544_ID_72799 548 3
+
+			Align 11: 217671 218216 NODE_36400_length_548_cov_2.24544_ID_72799 548 3
+				Gap between this and next alignment: 218216 to 221066 (2849 bp)
+				Next Alignment: 221066 222645 NODE_11810_length_1580_cov_1.46492_ID_23619 1 1580
+
+			Align 12: 221066 222645 NODE_11810_length_1580_cov_1.46492_ID_23619 1 1580
+				Gap between this and next alignment: 222645 to 234789 (12143 bp)
+				Next Alignment: 234789 236616 NODE_10098_length_1827_cov_1.25564_ID_20195 1827 1
+
+			Align 13: 234789 236616 NODE_10098_length_1827_cov_1.25564_ID_20195 1827 1
+				Gap between this and next alignment: 236616 to 242297 (5680 bp)
+				Next Alignment: 242297 243899 NODE_11627_length_1603_cov_1.01292_ID_23253 1 1603
+
+			Align 14: 242297 243899 NODE_11627_length_1603_cov_1.01292_ID_23253 1 1603
+				Gap between this and next alignment: 243899 to 246677 (2777 bp)
+				Next Alignment: 246677 247279 NODE_33243_length_591_cov_0.820896_ID_66485 591 5
+
+			Align 15: 246677 247279 NODE_33243_length_591_cov_0.820896_ID_66485 591 5
+				Gap between this and next alignment: 247279 to 248972 (1692 bp)
+				Next Alignment: 248972 249845 NODE_22124_length_877_cov_0.847932_ID_44247 877 4
+
+			Align 16: 248972 249845 NODE_22124_length_877_cov_0.847932_ID_44247 877 4
+				Gap between this and next alignment: 249845 to 250304 (458 bp)
+				Next Alignment: 250304 254665 NODE_3526_length_4362_cov_1.58068_ID_7051 4362 1
+
+			Align 17: 250304 254665 NODE_3526_length_4362_cov_1.58068_ID_7051 4362 1
+				Gap between this and next alignment: 254665 to 294591 (39925 bp)
+				Next Alignment: 294591 295431 NODE_9882_length_1864_cov_1.25097_ID_19763 1864 1024
+
+			Align 18: 294591 295431 NODE_9882_length_1864_cov_1.25097_ID_19763 1864 1024
+				Gap between this and next alignment: 295431 to 297342 (1910 bp)
+				Next Alignment: 297342 298068 NODE_27032_length_717_cov_1.14653_ID_54063 1 717
+
+			Align 19: 297342 298068 NODE_27032_length_717_cov_1.14653_ID_54063 1 717
+				Gap between this and next alignment: 298068 to 302568 (4499 bp)
+				Next Alignment: 302568 303162 NODE_33024_length_595_cov_1.35_ID_66047 595 1
+
+			Align 20: 302568 303162 NODE_33024_length_595_cov_1.35_ID_66047 595 1
+				Gap between this and next alignment: 303162 to 309079 (5916 bp)
+				Next Alignment: 309079 309906 NODE_23576_length_824_cov_1.45644_ID_47151 824 1
+
+			Align 21: 309079 309906 NODE_23576_length_824_cov_1.45644_ID_47151 824 1
+				Gap between this and next alignment: 309906 to 322910 (13003 bp)
+				Next Alignment: 322910 323625 NODE_27083_length_716_cov_1.53404_ID_54165 716 1
+
+			Align 22: 322910 323625 NODE_27083_length_716_cov_1.53404_ID_54165 716 1
+				Gap between this and next alignment: 323625 to 330141 (6515 bp)
+				Next Alignment: 330141 331319 NODE_16424_length_1160_cov_1.38643_ID_32847 1 1160
+
+			Align 23: 330141 331319 NODE_16424_length_1160_cov_1.38643_ID_32847 1 1160
+				Gap between this and next alignment: 331319 to 334721 (3401 bp)
+				Next Alignment: 334721 335347 NODE_106_length_58935_cov_6.90452_ID_211 13922 14548
+
+			Align 24: 334721 335347 NODE_106_length_58935_cov_6.90452_ID_211 13922 14548
+				Gap between this and next alignment: 335347 to 335475 (127 bp)
+				Next Alignment: 335475 336147 NODE_106_length_58935_cov_6.90452_ID_211 14677 15350
+
+			Align 25: 335475 336147 NODE_106_length_58935_cov_6.90452_ID_211 14677 15350
+				Gap between this and next alignment: 336147 to 337843 (1695 bp)
+				Next Alignment: 337843 338890 NODE_18307_length_1048_cov_1.22457_ID_36613 1 1048
+
+			Align 26: 337843 338890 NODE_18307_length_1048_cov_1.22457_ID_36613 1 1048
+				Gap between this and next alignment: 338890 to 351255 (12364 bp)
+				Next Alignment: 351255 353002 NODE_10656_length_1744_cov_1.55062_ID_21311 1744 1
+
+			Align 27: 351255 353002 NODE_10656_length_1744_cov_1.55062_ID_21311 1744 1
+				Gap between this and next alignment: 353002 to 354162 (1159 bp)
+				Next Alignment: 354162 355030 NODE_22315_length_869_cov_1.18182_ID_44629 869 1
+
+			Align 28: 354162 355030 NODE_22315_length_869_cov_1.18182_ID_44629 869 1
+				Gap between this and next alignment: 355030 to 383110 (28079 bp)
+				Next Alignment: 383110 396431 NODE_877_length_13488_cov_5.64654_ID_1753 16 13334
+
+			Align 29: 383110 396431 NODE_877_length_13488_cov_5.64654_ID_1753 16 13334
+				Gap between this and next alignment: 396431 to 397962 (1530 bp)
+				Next Alignment: 397962 398513 NODE_36111_length_552_cov_1.13883_ID_72221 1 552
+
+			Align 30: 397962 398513 NODE_36111_length_552_cov_1.13883_ID_72221 1 552
+				Gap between this and next alignment: 398513 to 518607 (120093 bp)
+				Next Alignment: 518607 520234 NODE_11438_length_1628_cov_1.38779_ID_22875 1628 1
+
+			Align 31: 518607 520234 NODE_11438_length_1628_cov_1.38779_ID_22875 1628 1
+				Gap between this and next alignment: 520234 to 521539 (1304 bp)
+				Next Alignment: 521539 522126 NODE_33470_length_588_cov_1.01126_ID_66939 1 588
+
+			Align 32: 521539 522126 NODE_33470_length_588_cov_1.01126_ID_66939 1 588
+				Gap between this and next alignment: 522126 to 543845 (21718 bp)
+				Next Alignment: 543845 544563 NODE_27981_length_692_cov_1.11774_ID_55961 692 1
+
+			Align 33: 543845 544563 NODE_27981_length_692_cov_1.11774_ID_55961 692 1
+				Gap between this and next alignment: 544563 to 591266 (46702 bp)
+				Next Alignment: 591266 620579 NODE_343_length_29598_cov_5.40013_ID_685 1 29314
+
+			Align 34: 591266 620579 NODE_343_length_29598_cov_5.40013_ID_685 1 29314
+			END in gap: 620579 to 634066 (13487 bp)
+
+	Reference Bacteroides_sp_D4_gi_345651602_ref_NZ_: 24 total alignments. 1 total regions.
+		Region: 1 to 467813 (467813 bp)
+			START in gap: 1 to 8535 (8534 bp)
+			Align 1: 8535 12323 NODE_4244_length_3788_cov_1.12858_ID_8487 3788 1
+				Gap between this and next alignment: 12323 to 12457 (133 bp)
+				Next Alignment: 12457 13830 NODE_13738_length_1375_cov_1.21591_ID_27475 2 1375
+
+			Align 2: 12457 13830 NODE_13738_length_1375_cov_1.21591_ID_27475 2 1375
+				Gap between this and next alignment: 13830 to 30374 (16543 bp)
+				Next Alignment: 30374 31171 NODE_24264_length_798_cov_1.21803_ID_48527 798 1
+
+			Align 3: 30374 31171 NODE_24264_length_798_cov_1.21803_ID_48527 798 1
+				Gap between this and next alignment: 31171 to 58914 (27742 bp)
+				Next Alignment: 58914 59526 NODE_31929_length_613_cov_1.53943_ID_63857 613 1
+
+			Align 4: 58914 59526 NODE_31929_length_613_cov_1.53943_ID_63857 613 1
+				Gap between this and next alignment: 59526 to 72083 (12556 bp)
+				Next Alignment: 72083 72761 NODE_28530_length_680_cov_2.616_ID_57059 1 680
+
+			Align 5: 72083 72761 NODE_28530_length_680_cov_2.616_ID_57059 1 680
+				Gap between this and next alignment: 72761 to 118600 (45838 bp)
+				Next Alignment: 118600 119184 NODE_33703_length_585_cov_1.73208_ID_67405 585 1
+
+			Align 6: 118600 119184 NODE_33703_length_585_cov_1.73208_ID_67405 585 1
+				Gap between this and next alignment: 119184 to 139201 (20016 bp)
+				Next Alignment: 139201 141202 NODE_9185_length_1997_cov_1.21164_ID_18369 1 1997
+
+			Align 7: 139201 141202 NODE_9185_length_1997_cov_1.21164_ID_18369 1 1997
+				Gap between this and next alignment: 141202 to 143522 (2319 bp)
+				Next Alignment: 143522 144089 NODE_34549_length_573_cov_0.990347_ID_69097 1 568
+
+			Align 8: 143522 144089 NODE_34549_length_573_cov_0.990347_ID_69097 1 568
+				Gap between this and next alignment: 144089 to 229486 (85396 bp)
+				Next Alignment: 229486 230927 NODE_12957_length_1451_cov_1.20487_ID_25913 1451 1
+
+			Align 9: 229486 230927 NODE_12957_length_1451_cov_1.20487_ID_25913 1451 1
+				Gap between this and next alignment: 230927 to 231118 (190 bp)
+				Next Alignment: 231118 233122 NODE_9111_length_2013_cov_1.23289_ID_18221 2013 7
+
+			Align 10: 231118 233122 NODE_9111_length_2013_cov_1.23289_ID_18221 2013 7
+				Gap between this and next alignment: 233122 to 263873 (30750 bp)
+				Next Alignment: 263873 264098 NODE_40483_length_500_cov_0.552809_ID_80965 274 500
+
+			Align 11: 263873 264098 NODE_40483_length_500_cov_0.552809_ID_80965 274 500
+				Gap between this and next alignment: 264098 to 271663 (7564 bp)
+				Next Alignment: 271663 271868 NODE_17493_length_1095_cov_0.627885_ID_34985 574 369
+
+			Align 12: 271663 271868 NODE_17493_length_1095_cov_0.627885_ID_34985 574 369
+				Gap between this and next alignment: 271868 to 272005 (136 bp)
+				Next Alignment: 272005 272250 NODE_17493_length_1095_cov_0.627885_ID_34985 246 1
+
+			Align 13: 272005 272250 NODE_17493_length_1095_cov_0.627885_ID_34985 246 1
+				Gap between this and next alignment: 272250 to 273315 (1064 bp)
+				Next Alignment: 273315 273834 NODE_38696_length_520_cov_0.847312_ID_77391 1 520
+
+			Align 14: 273315 273834 NODE_38696_length_520_cov_0.847312_ID_77391 1 520
+				Gap between this and next alignment: 273834 to 279475 (5640 bp)
+				Next Alignment: 279475 279750 NODE_35240_length_563_cov_0.391732_ID_70479 288 563
+
+			Align 15: 279475 279750 NODE_35240_length_563_cov_0.391732_ID_70479 288 563
+				Gap between this and next alignment: 279750 to 280286 (535 bp)
+				Next Alignment: 280286 281398 NODE_17214_length_1113_cov_0.836484_ID_34427 1113 1
+
+			Align 16: 280286 281398 NODE_17214_length_1113_cov_0.836484_ID_34427 1113 1
+				Gap between this and next alignment: 281398 to 287675 (6276 bp)
+				Next Alignment: 287675 288531 NODE_22659_length_856_cov_0.88015_ID_45317 1 856
+
+			Align 17: 287675 288531 NODE_22659_length_856_cov_0.88015_ID_45317 1 856
+				Gap between this and next alignment: 288531 to 289207 (675 bp)
+				Next Alignment: 289207 289956 NODE_25570_length_756_cov_0.691869_ID_51139 1 756
+
+			Align 18: 289207 289956 NODE_25570_length_756_cov_0.691869_ID_51139 1 756
+				Gap between this and next alignment: 289956 to 292478 (2521 bp)
+				Next Alignment: 292478 294645 NODE_8335_length_2161_cov_0.925926_ID_16669 1 2161
+
+			Align 19: 292478 294645 NODE_8335_length_2161_cov_0.925926_ID_16669 1 2161
+				Gap between this and next alignment: 294645 to 298081 (3435 bp)
+				Next Alignment: 298081 298212 NODE_7786_length_2294_cov_0.932113_ID_15571 1637 1506
+
+			Align 20: 298081 298212 NODE_7786_length_2294_cov_0.932113_ID_15571 1637 1506
+				Gap between this and next alignment: 298212 to 315830 (17617 bp)
+				Next Alignment: 315830 316060 NODE_35445_length_560_cov_0.564356_ID_70889 1 231
+
+			Align 21: 315830 316060 NODE_35445_length_560_cov_0.564356_ID_70889 1 231
+				Gap between this and next alignment: 316060 to 331833 (15772 bp)
+				Next Alignment: 331833 332125 NODE_32021_length_611_cov_0.559353_ID_64041 4 296
+
+			Align 22: 331833 332125 NODE_32021_length_611_cov_0.559353_ID_64041 4 296
+				Gap between this and next alignment: 332125 to 334164 (2038 bp)
+				Next Alignment: 334164 334393 NODE_21432_length_902_cov_0.49941_ID_42863 902 673
+
+			Align 23: 334164 334393 NODE_21432_length_902_cov_0.49941_ID_42863 902 673
+				Gap between this and next alignment: 334393 to 361363 (26969 bp)
+				Next Alignment: 361363 366271 NODE_3013_length_4910_cov_2.76849_ID_6025 4910 1
+
+			Align 24: 361363 366271 NODE_3013_length_4910_cov_2.76849_ID_6025 4910 1
+			END in gap: 366271 to 467813 (101542 bp)
+
+	Reference Bacteroides_sp_D4_gi_345651603_ref_NZ_: 31 total alignments. 1 total regions.
+		Region: 1 to 312903 (312903 bp)
+			START in gap: 1 to 24138 (24137 bp)
+			Align 1: 24138 24960 NODE_23613_length_823_cov_1.73177_ID_47225 823 1
+				Gap between this and next alignment: 24960 to 25141 (180 bp)
+				Next Alignment: 25141 26301 NODE_16434_length_1159_cov_1.41395_ID_32867 1159 1
+
+			Align 2: 25141 26301 NODE_16434_length_1159_cov_1.41395_ID_32867 1159 1
+				Gap between this and next alignment: 26301 to 65825 (39523 bp)
+				Next Alignment: 65825 68235 NODE_6451_length_2697_cov_1.64648_ID_12901 20 2430
+
+			Align 3: 65825 68235 NODE_6451_length_2697_cov_1.64648_ID_12901 20 2430
+				Gap between this and next alignment: 68235 to 68531 (295 bp)
+				Next Alignment: 68531 68701 NODE_6451_length_2697_cov_1.64648_ID_12901 2431 2601
+
+			Align 4: 68531 68701 NODE_6451_length_2697_cov_1.64648_ID_12901 2431 2601
+				Gap between this and next alignment: 68701 to 74684 (5982 bp)
+				Next Alignment: 74684 76813 NODE_8403_length_2145_cov_1.1866_ID_16805 1 2145
+
+			Align 5: 74684 76813 NODE_8403_length_2145_cov_1.1866_ID_16805 1 2145
+				Gap between this and next alignment: 76813 to 77240 (426 bp)
+				Next Alignment: 77240 77777 NODE_37238_length_538_cov_1.07867_ID_74475 1 538
+
+			Align 6: 77240 77777 NODE_37238_length_538_cov_1.07867_ID_74475 1 538
+				Gap between this and next alignment: 77777 to 78130 (352 bp)
+				Next Alignment: 78130 83589 NODE_2647_length_5440_cov_1.37827_ID_5293 1 5440
+
+			Align 7: 78130 83589 NODE_2647_length_5440_cov_1.37827_ID_5293 1 5440
+				Gap between this and next alignment: 83589 to 83876 (286 bp)
+				Next Alignment: 83876 84436 NODE_35339_length_562_cov_1.37673_ID_70677 562 1
+
+			Align 8: 83876 84436 NODE_35339_length_562_cov_1.37673_ID_70677 562 1
+				Gap between this and next alignment: 84436 to 142333 (57896 bp)
+				Next Alignment: 142333 143157 NODE_23464_length_828_cov_1.39069_ID_46927 1 828
+
+			Align 9: 142333 143157 NODE_23464_length_828_cov_1.39069_ID_46927 1 828
+				Gap between this and next alignment: 143157 to 145152 (1994 bp)
+				Next Alignment: 145152 153583 NODE_1484_length_8615_cov_1.47932_ID_2967 8615 175
+
+			Align 10: 145152 153583 NODE_1484_length_8615_cov_1.47932_ID_2967 8615 175
+				Gap between this and next alignment: 153583 to 153683 (99 bp)
+				Next Alignment: 153683 157771 NODE_1311_length_9657_cov_5.19194_ID_2621 1 4163
+
+			Align 11: 153683 157771 NODE_1311_length_9657_cov_5.19194_ID_2621 1 4163
+				Gap between this and next alignment: 157771 to 157785 (13 bp)
+				Next Alignment: 157785 162370 NODE_1311_length_9657_cov_5.19194_ID_2621 4613 9198
+
+			Align 12: 157785 162370 NODE_1311_length_9657_cov_5.19194_ID_2621 4613 9198
+				Gap between this and next alignment: 162370 to 162959 (588 bp)
+				Next Alignment: 162959 163116 NODE_1311_length_9657_cov_5.19194_ID_2621 9445 9602
+
+			Align 13: 162959 163116 NODE_1311_length_9657_cov_5.19194_ID_2621 9445 9602
+				Gap between this and next alignment: 163116 to 165924 (2807 bp)
+				Next Alignment: 165924 166808 NODE_21919_length_885_cov_1.22169_ID_43837 885 1
+
+			Align 14: 165924 166808 NODE_21919_length_885_cov_1.22169_ID_43837 885 1
+				Gap between this and next alignment: 166808 to 191557 (24748 bp)
+				Next Alignment: 191557 194096 NODE_29_length_97497_cov_5.93237_ID_57 56783 54244
+
+			Align 15: 191557 194096 NODE_29_length_97497_cov_5.93237_ID_57 56783 54244
+				Negative gap (overlap) between this and next alignment: 194096 to 193963 (-133 bp)
+				Next Alignment: 193963 194969 NODE_19080_length_1007_cov_2.08508_ID_38159 1 1007
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 135.
+			Align 16: 194097 194969 NODE_19080_length_1007_cov_2.08508_ID_38159 135 1007
+				Gap between this and next alignment: 194969 to 204131 (9161 bp)
+				Next Alignment: 204131 204916 NODE_24631_length_786_cov_1.83584_ID_49261 786 1
+
+			Align 17: 204131 204916 NODE_24631_length_786_cov_1.83584_ID_49261 786 1
+				Gap between this and next alignment: 204916 to 206395 (1478 bp)
+				Next Alignment: 206395 207278 NODE_21941_length_884_cov_1.52593_ID_43881 1 884
+
+			Align 18: 206395 207278 NODE_21941_length_884_cov_1.52593_ID_43881 1 884
+				Gap between this and next alignment: 207278 to 231643 (24364 bp)
+				Next Alignment: 231643 232749 NODE_17308_length_1107_cov_1.5789_ID_34615 1 1107
+
+			Align 19: 231643 232749 NODE_17308_length_1107_cov_1.5789_ID_34615 1 1107
+				Gap between this and next alignment: 232749 to 236904 (4154 bp)
+				Next Alignment: 236904 237648 NODE_25975_length_745_cov_1.25072_ID_51949 745 1
+
+			Align 20: 236904 237648 NODE_25975_length_745_cov_1.25072_ID_51949 745 1
+				Gap between this and next alignment: 237648 to 238035 (386 bp)
+				Next Alignment: 238035 239608 NODE_11902_length_1569_cov_1.00066_ID_23803 2 1569
+
+			Align 21: 238035 239608 NODE_11902_length_1569_cov_1.00066_ID_23803 2 1569
+				Gap between this and next alignment: 239608 to 239871 (262 bp)
+				Next Alignment: 239871 240672 NODE_24065_length_805_cov_1.208_ID_48129 1 802
+
+			Align 22: 239871 240672 NODE_24065_length_805_cov_1.208_ID_48129 1 802
+				Gap between this and next alignment: 240672 to 260831 (20158 bp)
+				Next Alignment: 260831 261761 NODE_15105_length_1258_cov_1.41812_ID_30209 1 931
+
+			Align 23: 260831 261761 NODE_15105_length_1258_cov_1.41812_ID_30209 1 931
+				Gap between this and next alignment: 261761 to 261918 (156 bp)
+				Next Alignment: 261918 262001 NODE_15105_length_1258_cov_1.41812_ID_30209 1015 932
+
+			Align 24: 261918 262001 NODE_15105_length_1258_cov_1.41812_ID_30209 1015 932
+				Gap between this and next alignment: 262001 to 264475 (2473 bp)
+				Next Alignment: 264475 265021 NODE_36488_length_547_cov_1.63008_ID_72975 1 547
+
+			Align 25: 264475 265021 NODE_36488_length_547_cov_1.63008_ID_72975 1 547
+				Gap between this and next alignment: 265021 to 267272 (2250 bp)
+				Next Alignment: 267272 267792 NODE_38681_length_521_cov_1.64807_ID_77361 1 521
+
+			Align 26: 267272 267792 NODE_38681_length_521_cov_1.64807_ID_77361 1 521
+				Gap between this and next alignment: 267792 to 268216 (423 bp)
+				Next Alignment: 268216 268911 NODE_27731_length_699_cov_1.43634_ID_55461 1 699
+
+			Align 27: 268216 268911 NODE_27731_length_699_cov_1.43634_ID_55461 1 699
+				Gap between this and next alignment: 268911 to 295049 (26137 bp)
+				Next Alignment: 295049 295575 NODE_38121_length_527_cov_1.65678_ID_76241 1 527
+
+			Align 28: 295049 295575 NODE_38121_length_527_cov_1.65678_ID_76241 1 527
+				Gap between this and next alignment: 295575 to 295975 (399 bp)
+				Next Alignment: 295975 297151 NODE_16182_length_1177_cov_1.68449_ID_32363 1 1177
+
+			Align 29: 295975 297151 NODE_16182_length_1177_cov_1.68449_ID_32363 1 1177
+				Gap between this and next alignment: 297151 to 305345 (8193 bp)
+				Next Alignment: 305345 305411 NODE_8326_length_2164_cov_0.669037_ID_16651 2098 2164
+
+			Align 30: 305345 305411 NODE_8326_length_2164_cov_0.669037_ID_16651 2098 2164
+				Gap between this and next alignment: 305411 to 307650 (2238 bp)
+				Next Alignment: 307650 308212 NODE_35257_length_563_cov_2.10039_ID_70513 1 563
+
+			Align 31: 307650 308212 NODE_35257_length_563_cov_2.10039_ID_70513 1 563
+			END in gap: 308212 to 312903 (4691 bp)
+
+ERROR: Reference Bacteroides_sp_D4_gi_345651608_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_D4_gi_345651607_ref_NZ_', 'Bacteroides_sp_D4_gi_345651604_ref_NZ_', 'Bacteroides_sp_D4_gi_345651602_ref_NZ_', 'Bacteroides_sp_D4_gi_345651603_ref_NZ_', 'Bacteroides_sp_D4_gi_345651606_ref_NZ_', 'Bacteroides_sp_D4_gi_345651599_ref_NZ_', 'Bacteroides_sp_D4_gi_345651600_ref_NZ_', 'Bacteroides_sp_D4_gi_345651601_ref_NZ_', 'Bacteroides_sp_D4_gi_345651605_ref_NZ_']
+	Reference Bacteroides_sp_D4_gi_345651606_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 103520 (103520 bp)
+			START in gap: 1 to 42028 (42027 bp)
+			Align 1: 42028 42769 NODE_26083_length_742_cov_1.77293_ID_52165 1 742
+			END in gap: 42769 to 103520 (60751 bp)
+
+	Reference Bacteroides_sp_D4_gi_345651599_ref_NZ_: 59 total alignments. 1 total regions.
+		Region: 1 to 1003414 (1003414 bp)
+			START in gap: 1 to 742 (741 bp)
+			Align 1: 742 1988 NODE_15237_length_1247_cov_1.51762_ID_30473 1 1247
+				Gap between this and next alignment: 1988 to 25896 (23907 bp)
+				Next Alignment: 25896 26913 NODE_18862_length_1018_cov_1.66667_ID_37723 1 1018
+
+			Align 2: 25896 26913 NODE_18862_length_1018_cov_1.66667_ID_37723 1 1018
+				Gap between this and next alignment: 26913 to 85967 (59053 bp)
+				Next Alignment: 85967 86597 NODE_30920_length_631_cov_1.78646_ID_61839 1 631
+
+			Align 3: 85967 86597 NODE_30920_length_631_cov_1.78646_ID_61839 1 631
+				Gap between this and next alignment: 86597 to 86937 (339 bp)
+				Next Alignment: 86937 88813 NODE_9745_length_1890_cov_1.28719_ID_19489 1890 1
+
+			Align 4: 86937 88813 NODE_9745_length_1890_cov_1.28719_ID_19489 1890 1
+				Gap between this and next alignment: 88813 to 89346 (532 bp)
+				Next Alignment: 89346 91623 NODE_7838_length_2277_cov_1.44734_ID_15675 1 2277
+
+			Align 5: 89346 91623 NODE_7838_length_2277_cov_1.44734_ID_15675 1 2277
+				Gap between this and next alignment: 91623 to 91749 (125 bp)
+				Next Alignment: 91749 92867 NODE_17120_length_1119_cov_1.70959_ID_34239 1 1119
+
+			Align 6: 91749 92867 NODE_17120_length_1119_cov_1.70959_ID_34239 1 1119
+				Gap between this and next alignment: 92867 to 109454 (16586 bp)
+				Next Alignment: 109454 110974 NODE_29_length_97497_cov_5.93237_ID_57 59897 61417
+
+			Align 7: 109454 110974 NODE_29_length_97497_cov_5.93237_ID_57 59897 61417
+				Gap between this and next alignment: 110974 to 123407 (12432 bp)
+				Next Alignment: 123407 146699 NODE_29_length_97497_cov_5.93237_ID_57 67240 90526
+
+			Align 8: 123407 146699 NODE_29_length_97497_cov_5.93237_ID_57 67240 90526
+				Gap between this and next alignment: 146699 to 152010 (5310 bp)
+				Next Alignment: 152010 153879 NODE_9846_length_1870_cov_1.49642_ID_19691 1 1870
+
+			Align 9: 152010 153879 NODE_9846_length_1870_cov_1.49642_ID_19691 1 1870
+				Gap between this and next alignment: 153879 to 160940 (7060 bp)
+				Next Alignment: 160940 164894 NODE_4008_length_3957_cov_1.50051_ID_8015 1 3957
+
+			Align 10: 160940 164894 NODE_4008_length_3957_cov_1.50051_ID_8015 1 3957
+				Gap between this and next alignment: 164894 to 165780 (885 bp)
+				Next Alignment: 165780 167204 NODE_13151_length_1433_cov_1.27649_ID_26301 1 1433
+
+			Align 11: 165780 167204 NODE_13151_length_1433_cov_1.27649_ID_26301 1 1433
+				Gap between this and next alignment: 167204 to 168636 (1431 bp)
+				Next Alignment: 168636 169163 NODE_38035_length_528_cov_1.70402_ID_76069 528 1
+
+			Align 12: 168636 169163 NODE_38035_length_528_cov_1.70402_ID_76069 528 1
+				Gap between this and next alignment: 169163 to 191492 (22328 bp)
+				Next Alignment: 191492 193276 NODE_10331_length_1792_cov_1.44444_ID_20661 1 1792
+
+			Align 13: 191492 193276 NODE_10331_length_1792_cov_1.44444_ID_20661 1 1792
+				Gap between this and next alignment: 193276 to 211764 (18487 bp)
+				Next Alignment: 211764 217962 NODE_29_length_97497_cov_5.93237_ID_57 285 6494
+
+			Align 14: 211764 217962 NODE_29_length_97497_cov_5.93237_ID_57 285 6494
+				Gap between this and next alignment: 217962 to 247110 (29147 bp)
+				Next Alignment: 247110 260135 NODE_29_length_97497_cov_5.93237_ID_57 8364 21381
+
+			Align 15: 247110 260135 NODE_29_length_97497_cov_5.93237_ID_57 8364 21381
+				Gap between this and next alignment: 260135 to 267100 (6964 bp)
+				Next Alignment: 267100 267419 NODE_29_length_97497_cov_5.93237_ID_57 32710 33029
+
+			Align 16: 267100 267419 NODE_29_length_97497_cov_5.93237_ID_57 32710 33029
+				Gap between this and next alignment: 267419 to 267680 (260 bp)
+				Next Alignment: 267680 276568 NODE_29_length_97497_cov_5.93237_ID_57 33572 42479
+
+			Align 17: 267680 276568 NODE_29_length_97497_cov_5.93237_ID_57 33572 42479
+				Gap between this and next alignment: 276568 to 276759 (190 bp)
+				Next Alignment: 276759 277509 NODE_29_length_97497_cov_5.93237_ID_57 42654 43404
+
+			Align 18: 276759 277509 NODE_29_length_97497_cov_5.93237_ID_57 42654 43404
+				Gap between this and next alignment: 277509 to 277511 (1 bp)
+				Next Alignment: 277511 277995 NODE_1130_length_10958_cov_3.95579_ID_2259 10393 10877
+
+			Align 19: 277511 277995 NODE_1130_length_10958_cov_3.95579_ID_2259 10393 10877
+				Gap between this and next alignment: 277995 to 284269 (6273 bp)
+				Next Alignment: 284269 285000 NODE_26353_length_734_cov_0.802651_ID_52705 734 3
+
+			Align 20: 284269 285000 NODE_26353_length_734_cov_0.802651_ID_52705 734 3
+				Gap between this and next alignment: 285000 to 288153 (3152 bp)
+				Next Alignment: 288153 289135 NODE_19798_length_972_cov_0.892039_ID_39595 1 972
+
+			Align 21: 288153 289135 NODE_19798_length_972_cov_0.892039_ID_39595 1 972
+				Gap between this and next alignment: 289135 to 289945 (809 bp)
+				Next Alignment: 289945 290791 NODE_22766_length_852_cov_0.804266_ID_45531 851 1
+
+			Align 22: 289945 290791 NODE_22766_length_852_cov_0.804266_ID_45531 851 1
+				Gap between this and next alignment: 290791 to 298572 (7780 bp)
+				Next Alignment: 298572 299027 NODE_10247_length_1803_cov_1.04176_ID_20493 1 457
+
+			Align 23: 298572 299027 NODE_10247_length_1803_cov_1.04176_ID_20493 1 457
+				Gap between this and next alignment: 299027 to 299158 (130 bp)
+				Next Alignment: 299158 299603 NODE_10247_length_1803_cov_1.04176_ID_20493 1249 1694
+
+			Align 24: 299158 299603 NODE_10247_length_1803_cov_1.04176_ID_20493 1249 1694
+				Negative gap (overlap) between this and next alignment: 299603 to 299593 (-10 bp)
+				Next Alignment: 299593 301202 NODE_11614_length_1605_cov_0.992258_ID_23227 1605 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1605 to 1594.
+			Align 25: 299604 301202 NODE_11614_length_1605_cov_0.992258_ID_23227 1594 1
+				Gap between this and next alignment: 301202 to 301222 (19 bp)
+				Next Alignment: 301222 301822 NODE_10147_length_1820_cov_1.24589_ID_20293 551 1159
+
+			Align 26: 301222 301822 NODE_10147_length_1820_cov_1.24589_ID_20293 551 1159
+				Gap between this and next alignment: 301822 to 302481 (658 bp)
+				Next Alignment: 302481 305707 NODE_4622_length_3537_cov_1.23636_ID_9243 3276 52
+
+			Align 27: 302481 305707 NODE_4622_length_3537_cov_1.23636_ID_9243 3276 52
+				Gap between this and next alignment: 305707 to 306122 (414 bp)
+				Next Alignment: 306122 307174 NODE_18169_length_1057_cov_0.902196_ID_36337 1055 1
+
+			Align 28: 306122 307174 NODE_18169_length_1057_cov_0.902196_ID_36337 1055 1
+				Gap between this and next alignment: 307174 to 352957 (45782 bp)
+				Next Alignment: 352957 353895 NODE_29_length_97497_cov_5.93237_ID_57 48470 49405
+
+			Align 29: 352957 353895 NODE_29_length_97497_cov_5.93237_ID_57 48470 49405
+				Negative gap (overlap) between this and next alignment: 353895 to 353895 (0 bp)
+				Next Alignment: 353895 357917 NODE_29_length_97497_cov_5.93237_ID_57 49549 53569
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 49549 to 49550.
+			Align 30: 353896 357917 NODE_29_length_97497_cov_5.93237_ID_57 49550 53569
+				Gap between this and next alignment: 357917 to 358382 (464 bp)
+				Next Alignment: 358382 358908 NODE_38036_length_528_cov_1.99154_ID_76071 2 528
+
+			Align 31: 358382 358908 NODE_38036_length_528_cov_1.99154_ID_76071 2 528
+				Gap between this and next alignment: 358908 to 384218 (25309 bp)
+				Next Alignment: 384218 389617 NODE_2670_length_5400_cov_1.5884_ID_5339 1 5400
+
+			Align 32: 384218 389617 NODE_2670_length_5400_cov_1.5884_ID_5339 1 5400
+				Gap between this and next alignment: 389617 to 490250 (100632 bp)
+				Next Alignment: 490250 491308 NODE_18121_length_1059_cov_1.65637_ID_36241 1 1059
+
+			Align 33: 490250 491308 NODE_18121_length_1059_cov_1.65637_ID_36241 1 1059
+				Gap between this and next alignment: 491308 to 495986 (4677 bp)
+				Next Alignment: 495986 496537 NODE_36064_length_552_cov_1.61771_ID_72127 552 1
+
+			Align 34: 495986 496537 NODE_36064_length_552_cov_1.61771_ID_72127 552 1
+				Gap between this and next alignment: 496537 to 537992 (41454 bp)
+				Next Alignment: 537992 538947 NODE_20022_length_960_cov_1.04972_ID_40043 1 960
+
+			Align 35: 537992 538947 NODE_20022_length_960_cov_1.04972_ID_40043 1 960
+				Gap between this and next alignment: 538947 to 572609 (33661 bp)
+				Next Alignment: 572609 573953 NODE_14078_length_1345_cov_1.37984_ID_28155 1 1345
+
+			Align 36: 572609 573953 NODE_14078_length_1345_cov_1.37984_ID_28155 1 1345
+				Gap between this and next alignment: 573953 to 579867 (5913 bp)
+				Next Alignment: 579867 580845 NODE_19665_length_979_cov_1.74242_ID_39329 979 1
+
+			Align 37: 579867 580845 NODE_19665_length_979_cov_1.74242_ID_39329 979 1
+				Gap between this and next alignment: 580845 to 587091 (6245 bp)
+				Next Alignment: 587091 589167 NODE_8740_length_2081_cov_1.28578_ID_17479 2081 1
+
+			Align 38: 587091 589167 NODE_8740_length_2081_cov_1.28578_ID_17479 2081 1
+				Gap between this and next alignment: 589167 to 615677 (26509 bp)
+				Next Alignment: 615677 617160 NODE_12625_length_1486_cov_1.81901_ID_25249 1 1486
+
+			Align 39: 615677 617160 NODE_12625_length_1486_cov_1.81901_ID_25249 1 1486
+				Gap between this and next alignment: 617160 to 691935 (74774 bp)
+				Next Alignment: 691935 692498 NODE_35162_length_564_cov_1.69745_ID_70323 1 564
+
+			Align 40: 691935 692498 NODE_35162_length_564_cov_1.69745_ID_70323 1 564
+				Gap between this and next alignment: 692498 to 721955 (29456 bp)
+				Next Alignment: 721955 723583 NODE_11432_length_1629_cov_1.02033_ID_22863 1 1629
+
+			Align 41: 721955 723583 NODE_11432_length_1629_cov_1.02033_ID_22863 1 1629
+				Gap between this and next alignment: 723583 to 732126 (8542 bp)
+				Next Alignment: 732126 732821 NODE_27856_length_696_cov_1.38066_ID_55711 1 696
+
+			Align 42: 732126 732821 NODE_27856_length_696_cov_1.38066_ID_55711 1 696
+				Gap between this and next alignment: 732821 to 742875 (10053 bp)
+				Next Alignment: 742875 745136 NODE_955_length_12706_cov_1.68848_ID_1909 7 2224
+
+			Align 43: 742875 745136 NODE_955_length_12706_cov_1.68848_ID_1909 7 2224
+				Gap between this and next alignment: 745136 to 749390 (4253 bp)
+				Next Alignment: 749390 753422 NODE_955_length_12706_cov_1.68848_ID_1909 2240 6278
+
+			Align 44: 749390 753422 NODE_955_length_12706_cov_1.68848_ID_1909 2240 6278
+				Gap between this and next alignment: 753422 to 753581 (158 bp)
+				Next Alignment: 753581 759485 NODE_955_length_12706_cov_1.68848_ID_1909 6453 12363
+
+			Align 45: 753581 759485 NODE_955_length_12706_cov_1.68848_ID_1909 6453 12363
+				Gap between this and next alignment: 759485 to 759602 (116 bp)
+				Next Alignment: 759602 759823 NODE_955_length_12706_cov_1.68848_ID_1909 12485 12706
+
+			Align 46: 759602 759823 NODE_955_length_12706_cov_1.68848_ID_1909 12485 12706
+				Gap between this and next alignment: 759823 to 785269 (25445 bp)
+				Next Alignment: 785269 786542 NODE_14908_length_1273_cov_1.25123_ID_29815 1 1273
+
+			Align 47: 785269 786542 NODE_14908_length_1273_cov_1.25123_ID_29815 1 1273
+				Gap between this and next alignment: 786542 to 794762 (8219 bp)
+				Next Alignment: 794762 795475 NODE_27159_length_714_cov_0.984825_ID_54317 1 714
+
+			Align 48: 794762 795475 NODE_27159_length_714_cov_0.984825_ID_54317 1 714
+				Gap between this and next alignment: 795475 to 800358 (4882 bp)
+				Next Alignment: 800358 839100 NODE_212_length_38832_cov_3.20396_ID_423 38832 89
+
+			Align 49: 800358 839100 NODE_212_length_38832_cov_3.20396_ID_423 38832 89
+				Gap between this and next alignment: 839100 to 888271 (49170 bp)
+				Next Alignment: 888271 889663 NODE_13480_length_1400_cov_1.16952_ID_26959 1 1400
+
+			Align 50: 888271 889663 NODE_13480_length_1400_cov_1.16952_ID_26959 1 1400
+				Gap between this and next alignment: 889663 to 897671 (8007 bp)
+				Next Alignment: 897671 898382 NODE_26780_length_723_cov_0.976048_ID_53559 723 1
+
+			Align 51: 897671 898382 NODE_26780_length_723_cov_0.976048_ID_53559 723 1
+				Gap between this and next alignment: 898382 to 921094 (22711 bp)
+				Next Alignment: 921094 921799 NODE_27458_length_706_cov_1.48541_ID_54915 706 1
+
+			Align 52: 921094 921799 NODE_27458_length_706_cov_1.48541_ID_54915 706 1
+				Gap between this and next alignment: 921799 to 967198 (45398 bp)
+				Next Alignment: 967198 968425 NODE_15556_length_1222_cov_1.22365_ID_31111 1220 2
+
+			Align 53: 967198 968425 NODE_15556_length_1222_cov_1.22365_ID_31111 1220 2
+				Gap between this and next alignment: 968425 to 972699 (4273 bp)
+				Next Alignment: 972699 973909 NODE_15693_length_1211_cov_1.39879_ID_31385 1211 1
+
+			Align 54: 972699 973909 NODE_15693_length_1211_cov_1.39879_ID_31385 1211 1
+				Gap between this and next alignment: 973909 to 985385 (11475 bp)
+				Next Alignment: 985385 988967 NODE_4529_length_3593_cov_1.38157_ID_9057 1 3584
+
+			Align 55: 985385 988967 NODE_4529_length_3593_cov_1.38157_ID_9057 1 3584
+				Gap between this and next alignment: 988967 to 990588 (1620 bp)
+				Next Alignment: 990588 991487 NODE_21506_length_900_cov_0.981065_ID_43011 1 900
+
+			Align 56: 990588 991487 NODE_21506_length_900_cov_0.981065_ID_43011 1 900
+				Gap between this and next alignment: 991487 to 991978 (490 bp)
+				Next Alignment: 991978 992805 NODE_23491_length_827_cov_0.979275_ID_46981 827 1
+
+			Align 57: 991978 992805 NODE_23491_length_827_cov_0.979275_ID_46981 827 1
+				Gap between this and next alignment: 992805 to 997906 (5100 bp)
+				Next Alignment: 997906 999876 NODE_9272_length_1980_cov_1.19636_ID_18543 1980 1
+
+			Align 58: 997906 999876 NODE_9272_length_1980_cov_1.19636_ID_18543 1980 1
+				Gap between this and next alignment: 999876 to 1000668 (791 bp)
+				Next Alignment: 1000668 1002364 NODE_10943_length_1699_cov_1.4781_ID_21885 3 1699
+
+			Align 59: 1000668 1002364 NODE_10943_length_1699_cov_1.4781_ID_21885 3 1699
+			END in gap: 1002364 to 1003414 (1050 bp)
+
+	Reference Bacteroides_sp_D4_gi_345651600_ref_NZ_: 24 total alignments. 1 total regions.
+		Region: 1 to 442931 (442931 bp)
+			START in gap: 1 to 2509 (2508 bp)
+			Align 1: 2509 9271 NODE_486_length_22352_cov_7.2003_ID_971 22352 15592
+				Gap between this and next alignment: 9271 to 36465 (27193 bp)
+				Next Alignment: 36465 37143 NODE_28404_length_683_cov_1.41879_ID_56807 1 679
+
+			Align 2: 36465 37143 NODE_28404_length_683_cov_1.41879_ID_56807 1 679
+				Gap between this and next alignment: 37143 to 50894 (13750 bp)
+				Next Alignment: 50894 51427 NODE_37516_length_534_cov_1.64927_ID_75031 1 534
+
+			Align 3: 50894 51427 NODE_37516_length_534_cov_1.64927_ID_75031 1 534
+				Gap between this and next alignment: 51427 to 64197 (12769 bp)
+				Next Alignment: 64197 65293 NODE_17330_length_1106_cov_1.31304_ID_34659 1 1106
+
+			Align 4: 64197 65293 NODE_17330_length_1106_cov_1.31304_ID_34659 1 1106
+				Gap between this and next alignment: 65293 to 72446 (7152 bp)
+				Next Alignment: 72446 74377 NODE_9519_length_1932_cov_1.24827_ID_19037 1 1932
+
+			Align 5: 72446 74377 NODE_9519_length_1932_cov_1.24827_ID_19037 1 1932
+				Gap between this and next alignment: 74377 to 109345 (34967 bp)
+				Next Alignment: 109345 111323 NODE_9277_length_1979_cov_1.80561_ID_18553 1979 1
+
+			Align 6: 109345 111323 NODE_9277_length_1979_cov_1.80561_ID_18553 1979 1
+				Gap between this and next alignment: 111323 to 120086 (8762 bp)
+				Next Alignment: 120086 123627 NODE_4606_length_3542_cov_1.37052_ID_9211 1 3542
+
+			Align 7: 120086 123627 NODE_4606_length_3542_cov_1.37052_ID_9211 1 3542
+				Gap between this and next alignment: 123627 to 129440 (5812 bp)
+				Next Alignment: 129440 131081 NODE_11338_length_1642_cov_1.2949_ID_22675 1 1642
+
+			Align 8: 129440 131081 NODE_11338_length_1642_cov_1.2949_ID_22675 1 1642
+				Gap between this and next alignment: 131081 to 174304 (43222 bp)
+				Next Alignment: 174304 179433 NODE_2854_length_5131_cov_1.65938_ID_5707 5131 1
+
+			Align 9: 174304 179433 NODE_2854_length_5131_cov_1.65938_ID_5707 5131 1
+				Gap between this and next alignment: 179433 to 189416 (9982 bp)
+				Next Alignment: 189416 190031 NODE_31745_length_616_cov_1.55437_ID_63489 616 1
+
+			Align 10: 189416 190031 NODE_31745_length_616_cov_1.55437_ID_63489 616 1
+				Gap between this and next alignment: 190031 to 190104 (72 bp)
+				Next Alignment: 190104 191011 NODE_21278_length_908_cov_1.14302_ID_42555 908 1
+
+			Align 11: 190104 191011 NODE_21278_length_908_cov_1.14302_ID_42555 908 1
+				Gap between this and next alignment: 191011 to 236018 (45006 bp)
+				Next Alignment: 236018 236111 NODE_9854_length_1869_cov_1.42889_ID_19707 93 1
+
+			Align 12: 236018 236111 NODE_9854_length_1869_cov_1.42889_ID_19707 93 1
+				Gap between this and next alignment: 236111 to 236474 (362 bp)
+				Next Alignment: 236474 238040 NODE_11814_length_1579_cov_2.03215_ID_23627 1579 1
+
+			Align 13: 236474 238040 NODE_11814_length_1579_cov_2.03215_ID_23627 1579 1
+				Gap between this and next alignment: 238040 to 240959 (2918 bp)
+				Next Alignment: 240959 244688 NODE_4318_length_3745_cov_1.63279_ID_8635 3745 4
+
+			Align 14: 240959 244688 NODE_4318_length_3745_cov_1.63279_ID_8635 3745 4
+				Gap between this and next alignment: 244688 to 246000 (1311 bp)
+				Next Alignment: 246000 251923 NODE_2345_length_5979_cov_8.43028_ID_4689 54 5975
+
+			Align 15: 246000 251923 NODE_2345_length_5979_cov_8.43028_ID_4689 54 5975
+				Gap between this and next alignment: 251923 to 319432 (67508 bp)
+				Next Alignment: 319432 321542 NODE_8602_length_2107_cov_1.11306_ID_17203 2107 1
+
+			Align 16: 319432 321542 NODE_8602_length_2107_cov_1.11306_ID_17203 2107 1
+				Gap between this and next alignment: 321542 to 332256 (10713 bp)
+				Next Alignment: 332256 332791 NODE_36840_length_543_cov_1.90164_ID_73679 543 7
+
+			Align 17: 332256 332791 NODE_36840_length_543_cov_1.90164_ID_73679 543 7
+				Gap between this and next alignment: 332791 to 345868 (13076 bp)
+				Next Alignment: 345868 346496 NODE_31017_length_629_cov_1.65331_ID_62033 629 1
+
+			Align 18: 345868 346496 NODE_31017_length_629_cov_1.65331_ID_62033 629 1
+				Gap between this and next alignment: 346496 to 358571 (12074 bp)
+				Next Alignment: 358571 359333 NODE_25357_length_763_cov_0.769774_ID_50713 1 763
+
+			Align 19: 358571 359333 NODE_25357_length_763_cov_0.769774_ID_50713 1 763
+				Gap between this and next alignment: 359333 to 362848 (3514 bp)
+				Next Alignment: 362848 363371 NODE_38417_length_524_cov_2.16631_ID_76833 1 524
+
+			Align 20: 362848 363371 NODE_38417_length_524_cov_2.16631_ID_76833 1 524
+				Gap between this and next alignment: 363371 to 372697 (9325 bp)
+				Next Alignment: 372697 373737 NODE_18231_length_1052_cov_1.75527_ID_36461 1 1052
+
+			Align 21: 372697 373737 NODE_18231_length_1052_cov_1.75527_ID_36461 1 1052
+				Gap between this and next alignment: 373737 to 374118 (380 bp)
+				Next Alignment: 374118 375492 NODE_13689_length_1380_cov_2.59094_ID_27377 1380 1
+
+			Align 22: 374118 375492 NODE_13689_length_1380_cov_2.59094_ID_27377 1380 1
+				Gap between this and next alignment: 375492 to 376568 (1075 bp)
+				Next Alignment: 376568 391678 NODE_766_length_15153_cov_6.37647_ID_1531 55 15153
+
+			Align 23: 376568 391678 NODE_766_length_15153_cov_6.37647_ID_1531 55 15153
+				The next alignment (380257 380767 NODE_39548_length_511_cov_1.96491_ID_79095 1 511) is redundant. Skipping.
+
+	Reference Bacteroides_sp_D4_gi_345651601_ref_NZ_: 164 total alignments. 1 total regions.
+		Region: 1 to 2200539 (2200539 bp)
+			START in gap: 1 to 15169 (15168 bp)
+			Align 1: 15169 16046 NODE_22099_length_878_cov_1.31713_ID_44197 1 878
+				Gap between this and next alignment: 16046 to 22511 (6464 bp)
+				Next Alignment: 22511 23115 NODE_32233_length_608_cov_1.77396_ID_64465 605 1
+
+			Align 2: 22511 23115 NODE_32233_length_608_cov_1.77396_ID_64465 605 1
+				Gap between this and next alignment: 23115 to 23357 (241 bp)
+				Next Alignment: 23357 24398 NODE_18401_length_1042_cov_1.54306_ID_36801 1 1042
+
+			Align 3: 23357 24398 NODE_18401_length_1042_cov_1.54306_ID_36801 1 1042
+				Gap between this and next alignment: 24398 to 25710 (1311 bp)
+				Next Alignment: 25710 26073 NODE_28868_length_673_cov_1.41748_ID_57735 4 367
+
+			Align 4: 25710 26073 NODE_28868_length_673_cov_1.41748_ID_57735 4 367
+				Gap between this and next alignment: 26073 to 36551 (10477 bp)
+				Next Alignment: 36551 38191 NODE_11297_length_1649_cov_1.67754_ID_22593 1649 1
+
+			Align 5: 36551 38191 NODE_11297_length_1649_cov_1.67754_ID_22593 1649 1
+				Gap between this and next alignment: 38191 to 39391 (1199 bp)
+				Next Alignment: 39391 39976 NODE_33638_length_586_cov_1.0565_ID_67275 586 1
+
+			Align 6: 39391 39976 NODE_33638_length_586_cov_1.0565_ID_67275 586 1
+				Gap between this and next alignment: 39976 to 65334 (25357 bp)
+				Next Alignment: 65334 70476 NODE_2842_length_5148_cov_1.35657_ID_5683 1 5148
+
+			Align 7: 65334 70476 NODE_2842_length_5148_cov_1.35657_ID_5683 1 5148
+				Gap between this and next alignment: 70476 to 70478 (1 bp)
+				Next Alignment: 70478 80394 NODE_1258_length_9973_cov_1.47268_ID_2515 9926 1
+
+			Align 8: 70478 80394 NODE_1258_length_9973_cov_1.47268_ID_2515 9926 1
+				Gap between this and next alignment: 80394 to 158677 (78282 bp)
+				Next Alignment: 158677 160892 NODE_8109_length_2213_cov_1.29796_ID_16217 1 2213
+
+			Align 9: 158677 160892 NODE_8109_length_2213_cov_1.29796_ID_16217 1 2213
+				Gap between this and next alignment: 160892 to 161139 (246 bp)
+				Next Alignment: 161139 169393 NODE_1572_length_8249_cov_1.5836_ID_3143 8249 1
+
+			Align 10: 161139 169393 NODE_1572_length_8249_cov_1.5836_ID_3143 8249 1
+				Gap between this and next alignment: 169393 to 170090 (696 bp)
+				Next Alignment: 170090 177061 NODE_1902_length_6971_cov_1.96154_ID_3803 6971 1
+
+			Align 11: 170090 177061 NODE_1902_length_6971_cov_1.96154_ID_3803 6971 1
+				Gap between this and next alignment: 177061 to 177673 (611 bp)
+				Next Alignment: 177673 178262 NODE_33340_length_590_cov_2.74953_ID_66679 590 1
+
+			Align 12: 177673 178262 NODE_33340_length_590_cov_2.74953_ID_66679 590 1
+				Gap between this and next alignment: 178262 to 315919 (137656 bp)
+				Next Alignment: 315919 316614 NODE_27788_length_697_cov_1.61215_ID_55575 697 1
+
+			Align 13: 315919 316614 NODE_27788_length_697_cov_1.61215_ID_55575 697 1
+				Gap between this and next alignment: 316614 to 340225 (23610 bp)
+				Next Alignment: 340225 342880 NODE_6512_length_2677_cov_1.39779_ID_13023 23 2677
+
+			Align 14: 340225 342880 NODE_6512_length_2677_cov_1.39779_ID_13023 23 2677
+				Gap between this and next alignment: 342880 to 388440 (45559 bp)
+				Next Alignment: 388440 390121 NODE_11026_length_1688_cov_1.41274_ID_22051 1688 1
+
+			Align 15: 388440 390121 NODE_11026_length_1688_cov_1.41274_ID_22051 1688 1
+				Gap between this and next alignment: 390121 to 390437 (315 bp)
+				Next Alignment: 390437 391728 NODE_14689_length_1292_cov_1.4228_ID_29377 1292 1
+
+			Align 16: 390437 391728 NODE_14689_length_1292_cov_1.4228_ID_29377 1292 1
+				Gap between this and next alignment: 391728 to 397324 (5595 bp)
+				Next Alignment: 397324 397928 NODE_33003_length_595_cov_2.03889_ID_66005 1 595
+
+			Align 17: 397324 397928 NODE_33003_length_595_cov_2.03889_ID_66005 1 595
+				Gap between this and next alignment: 397928 to 410692 (12763 bp)
+				Next Alignment: 410692 411456 NODE_25317_length_765_cov_1.63239_ID_50633 1 765
+
+			Align 18: 410692 411456 NODE_25317_length_765_cov_1.63239_ID_50633 1 765
+				Gap between this and next alignment: 411456 to 422317 (10860 bp)
+				Next Alignment: 422317 422967 NODE_29873_length_651_cov_1.67953_ID_59745 1 651
+
+			Align 19: 422317 422967 NODE_29873_length_651_cov_1.67953_ID_59745 1 651
+				Gap between this and next alignment: 422967 to 424241 (1273 bp)
+				Next Alignment: 424241 424762 NODE_38642_length_521_cov_2.24464_ID_77283 521 1
+
+			Align 20: 424241 424762 NODE_38642_length_521_cov_2.24464_ID_77283 521 1
+				Gap between this and next alignment: 424762 to 425081 (318 bp)
+				Next Alignment: 425081 425910 NODE_23409_length_830_cov_1.98194_ID_46817 830 1
+
+			Align 21: 425081 425910 NODE_23409_length_830_cov_1.98194_ID_46817 830 1
+				Gap between this and next alignment: 425910 to 489575 (63664 bp)
+				Next Alignment: 489575 490305 NODE_26393_length_733_cov_1.68732_ID_52785 3 733
+
+			Align 22: 489575 490305 NODE_26393_length_733_cov_1.68732_ID_52785 3 733
+				Gap between this and next alignment: 490305 to 516729 (26423 bp)
+				Next Alignment: 516729 518452 NODE_10781_length_1724_cov_1.04913_ID_21561 1 1724
+
+			Align 23: 516729 518452 NODE_10781_length_1724_cov_1.04913_ID_21561 1 1724
+				Gap between this and next alignment: 518452 to 518889 (436 bp)
+				Next Alignment: 518889 524206 NODE_2728_length_5315_cov_1.4789_ID_5455 1 5315
+
+			Align 24: 518889 524206 NODE_2728_length_5315_cov_1.4789_ID_5455 1 5315
+				Gap between this and next alignment: 524206 to 546211 (22004 bp)
+				Next Alignment: 546211 551546 NODE_2707_length_5337_cov_1.7465_ID_5413 1 5336
+
+			Align 25: 546211 551546 NODE_2707_length_5337_cov_1.7465_ID_5413 1 5336
+				Gap between this and next alignment: 551546 to 570476 (18929 bp)
+				Next Alignment: 570476 587611 NODE_669_length_17170_cov_1.9816_ID_1337 2 17170
+
+			Align 26: 570476 587611 NODE_669_length_17170_cov_1.9816_ID_1337 2 17170
+				Gap between this and next alignment: 587611 to 597245 (9633 bp)
+				Next Alignment: 597245 599370 NODE_8460_length_2132_cov_1.41165_ID_16919 2132 1
+
+			Align 27: 597245 599370 NODE_8460_length_2132_cov_1.41165_ID_16919 2132 1
+				Gap between this and next alignment: 599370 to 613521 (14150 bp)
+				Next Alignment: 613521 614103 NODE_33837_length_583_cov_1.44508_ID_67673 1 583
+
+			Align 28: 613521 614103 NODE_33837_length_583_cov_1.44508_ID_67673 1 583
+				Gap between this and next alignment: 614103 to 624481 (10377 bp)
+				Next Alignment: 624481 626753 NODE_7850_length_2273_cov_1.36564_ID_15699 1 2273
+
+			Align 29: 624481 626753 NODE_7850_length_2273_cov_1.36564_ID_15699 1 2273
+				Gap between this and next alignment: 626753 to 632377 (5623 bp)
+				Next Alignment: 632377 634958 NODE_6779_length_2584_cov_1.62001_ID_13557 3 2584
+
+			Align 30: 632377 634958 NODE_6779_length_2584_cov_1.62001_ID_13557 3 2584
+				Gap between this and next alignment: 634958 to 643421 (8462 bp)
+				Next Alignment: 643421 647395 NODE_3991_length_3972_cov_1.47179_ID_7981 3972 1
+
+			Align 31: 643421 647395 NODE_3991_length_3972_cov_1.47179_ID_7981 3972 1
+				Gap between this and next alignment: 647395 to 647670 (274 bp)
+				Next Alignment: 647670 652478 NODE_3102_length_4808_cov_1.48033_ID_6203 4808 1
+
+			Align 32: 647670 652478 NODE_3102_length_4808_cov_1.48033_ID_6203 4808 1
+				Gap between this and next alignment: 652478 to 652754 (275 bp)
+				Next Alignment: 652754 653418 NODE_29194_length_665_cov_1.94754_ID_58387 1 665
+
+			Align 33: 652754 653418 NODE_29194_length_665_cov_1.94754_ID_58387 1 665
+				Gap between this and next alignment: 653418 to 668819 (15400 bp)
+				Next Alignment: 668819 706406 NODE_4_length_162985_cov_8.33532_ID_7 162939 125312
+
+			Align 34: 668819 706406 NODE_4_length_162985_cov_8.33532_ID_7 162939 125312
+				The next alignment (692191 693183 NODE_19368_length_993_cov_1.65139_ID_38735 1 993) is redundant. Skipping.
+				Gap between this and next alignment: 706406 to 710941 (4534 bp)
+				Next Alignment: 710941 711652 NODE_27212_length_712_cov_1.46271_ID_54423 712 1
+
+			Align 36: 710941 711652 NODE_27212_length_712_cov_1.46271_ID_54423 712 1
+				Gap between this and next alignment: 711652 to 712360 (707 bp)
+				Next Alignment: 712360 713661 NODE_14549_length_1304_cov_1.69736_ID_29097 1302 1
+
+			Align 37: 712360 713661 NODE_14549_length_1304_cov_1.69736_ID_29097 1302 1
+				Gap between this and next alignment: 713661 to 714010 (348 bp)
+				Next Alignment: 714010 714944 NODE_20578_length_935_cov_1.52386_ID_41155 935 1
+
+			Align 38: 714010 714944 NODE_20578_length_935_cov_1.52386_ID_41155 935 1
+				Gap between this and next alignment: 714944 to 733680 (18735 bp)
+				Next Alignment: 733680 734195 NODE_39147_length_516_cov_1.38395_ID_78293 1 516
+
+			Align 39: 733680 734195 NODE_39147_length_516_cov_1.38395_ID_78293 1 516
+				Gap between this and next alignment: 734195 to 734917 (721 bp)
+				Next Alignment: 734917 735604 NODE_28164_length_688_cov_1.50395_ID_56327 1 688
+
+			Align 40: 734917 735604 NODE_28164_length_688_cov_1.50395_ID_56327 1 688
+				Gap between this and next alignment: 735604 to 743387 (7782 bp)
+				Next Alignment: 743387 744204 NODE_23723_length_818_cov_2.03408_ID_47445 1 818
+
+			Align 41: 743387 744204 NODE_23723_length_818_cov_2.03408_ID_47445 1 818
+				Gap between this and next alignment: 744204 to 751084 (6879 bp)
+				Next Alignment: 751084 754279 NODE_5239_length_3196_cov_1.97517_ID_10477 1 3196
+
+			Align 42: 751084 754279 NODE_5239_length_3196_cov_1.97517_ID_10477 1 3196
+				Gap between this and next alignment: 754279 to 757628 (3348 bp)
+				Next Alignment: 757628 773050 NODE_4_length_162985_cov_8.33532_ID_7 75222 59800
+
+			Align 43: 757628 773050 NODE_4_length_162985_cov_8.33532_ID_7 75222 59800
+				Negative gap (overlap) between this and next alignment: 773050 to 772821 (-229 bp)
+				Next Alignment: 772821 777564 NODE_3160_length_4744_cov_1.54063_ID_6319 4744 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 4744 to 4514.
+			Align 44: 773051 777564 NODE_3160_length_4744_cov_1.54063_ID_6319 4514 1
+				Gap between this and next alignment: 777564 to 780268 (2703 bp)
+				Next Alignment: 780268 793218 NODE_4_length_162985_cov_8.33532_ID_7 59635 46685
+
+			Align 45: 780268 793218 NODE_4_length_162985_cov_8.33532_ID_7 59635 46685
+				Gap between this and next alignment: 793218 to 795921 (2702 bp)
+				Next Alignment: 795921 811512 NODE_4_length_162985_cov_8.33532_ID_7 42273 26730
+
+			Align 46: 795921 811512 NODE_4_length_162985_cov_8.33532_ID_7 42273 26730
+				Gap between this and next alignment: 811512 to 811854 (341 bp)
+				Next Alignment: 811854 816810 NODE_4_length_162985_cov_8.33532_ID_7 26475 21517
+
+			Align 47: 811854 816810 NODE_4_length_162985_cov_8.33532_ID_7 26475 21517
+				Gap between this and next alignment: 816810 to 816898 (87 bp)
+				Next Alignment: 816898 826862 NODE_4_length_162985_cov_8.33532_ID_7 21293 11336
+
+			Align 48: 816898 826862 NODE_4_length_162985_cov_8.33532_ID_7 21293 11336
+				Gap between this and next alignment: 826862 to 826899 (36 bp)
+				Next Alignment: 826899 829170 NODE_7832_length_2279_cov_1.58678_ID_15663 1 2279
+
+			Align 49: 826899 829170 NODE_7832_length_2279_cov_1.58678_ID_15663 1 2279
+				Negative gap (overlap) between this and next alignment: 829170 to 828954 (-216 bp)
+				Next Alignment: 828954 837087 NODE_4_length_162985_cov_8.33532_ID_7 11335 3200
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 11335 to 11117.
+			Align 50: 829171 837087 NODE_4_length_162985_cov_8.33532_ID_7 11117 3200
+				Gap between this and next alignment: 837087 to 840653 (3565 bp)
+				Next Alignment: 840653 847911 NODE_66_length_70367_cov_6.6567_ID_131 65354 58096
+
+			Align 51: 840653 847911 NODE_66_length_70367_cov_6.6567_ID_131 65354 58096
+				Negative gap (overlap) between this and next alignment: 847911 to 847620 (-291 bp)
+				Next Alignment: 847620 851214 NODE_4525_length_3595_cov_1.7548_ID_9049 3595 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 3595 to 3303.
+			Align 52: 847912 851214 NODE_4525_length_3595_cov_1.7548_ID_9049 3303 1
+				Gap between this and next alignment: 851214 to 856454 (5239 bp)
+				Next Alignment: 856454 865498 NODE_66_length_70367_cov_6.6567_ID_131 58038 48994
+
+			Align 53: 856454 865498 NODE_66_length_70367_cov_6.6567_ID_131 58038 48994
+				Gap between this and next alignment: 865498 to 865731 (232 bp)
+				Next Alignment: 865731 887813 NODE_66_length_70367_cov_6.6567_ID_131 46943 24862
+
+			Align 54: 865731 887813 NODE_66_length_70367_cov_6.6567_ID_131 46943 24862
+				Gap between this and next alignment: 887813 to 894049 (6235 bp)
+				Next Alignment: 894049 899853 NODE_66_length_70367_cov_6.6567_ID_131 16335 10553
+
+			Align 55: 894049 899853 NODE_66_length_70367_cov_6.6567_ID_131 16335 10553
+				Gap between this and next alignment: 899853 to 900233 (379 bp)
+				Next Alignment: 900233 900351 NODE_66_length_70367_cov_6.6567_ID_131 10552 10434
+
+			Align 56: 900233 900351 NODE_66_length_70367_cov_6.6567_ID_131 10552 10434
+				Gap between this and next alignment: 900351 to 922019 (21667 bp)
+				Next Alignment: 922019 922705 NODE_28201_length_687_cov_1.75475_ID_56401 687 1
+
+			Align 57: 922019 922705 NODE_28201_length_687_cov_1.75475_ID_56401 687 1
+				Gap between this and next alignment: 922705 to 925257 (2551 bp)
+				Next Alignment: 925257 925818 NODE_35320_length_562_cov_1.14596_ID_70639 562 1
+
+			Align 58: 925257 925818 NODE_35320_length_562_cov_1.14596_ID_70639 562 1
+				Gap between this and next alignment: 925818 to 926727 (908 bp)
+				Next Alignment: 926727 928619 NODE_9694_length_1899_cov_1.55423_ID_19387 1 1899
+
+			Align 59: 926727 928619 NODE_9694_length_1899_cov_1.55423_ID_19387 1 1899
+				Gap between this and next alignment: 928619 to 938463 (9843 bp)
+				Next Alignment: 938463 939023 NODE_35338_length_562_cov_1.42604_ID_70675 561 1
+
+			Align 60: 938463 939023 NODE_35338_length_562_cov_1.42604_ID_70675 561 1
+				Gap between this and next alignment: 939023 to 948387 (9363 bp)
+				Next Alignment: 948387 949423 NODE_18514_length_1037_cov_1.5723_ID_37027 1 1037
+
+			Align 61: 948387 949423 NODE_18514_length_1037_cov_1.5723_ID_37027 1 1037
+				Negative gap (overlap) between this and next alignment: 949423 to 949367 (-56 bp)
+				Next Alignment: 949367 950294 NODE_20758_length_928_cov_1.63688_ID_41515 928 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 928 to 871.
+			Align 62: 949424 950294 NODE_20758_length_928_cov_1.63688_ID_41515 871 1
+				Gap between this and next alignment: 950294 to 969504 (19209 bp)
+				Next Alignment: 969504 970040 NODE_37326_length_537_cov_2.361_ID_74651 537 1
+
+			Align 63: 969504 970040 NODE_37326_length_537_cov_2.361_ID_74651 537 1
+				Gap between this and next alignment: 970040 to 994197 (24156 bp)
+				Next Alignment: 994197 995207 NODE_19039_length_1009_cov_1.58071_ID_38077 1009 1
+
+			Align 64: 994197 995207 NODE_19039_length_1009_cov_1.58071_ID_38077 1009 1
+				Gap between this and next alignment: 995207 to 997089 (1881 bp)
+				Next Alignment: 997089 999061 NODE_9311_length_1974_cov_1.62585_ID_18621 1 1974
+
+			Align 65: 997089 999061 NODE_9311_length_1974_cov_1.62585_ID_18621 1 1974
+				Gap between this and next alignment: 999061 to 999969 (907 bp)
+				Next Alignment: 999969 1000982 NODE_18956_length_1013_cov_1.84029_ID_37911 1013 1
+
+			Align 66: 999969 1000982 NODE_18956_length_1013_cov_1.84029_ID_37911 1013 1
+				Gap between this and next alignment: 1000982 to 1004952 (3969 bp)
+				Next Alignment: 1004952 1005848 NODE_21581_length_897_cov_1.52494_ID_43161 1 897
+
+			Align 67: 1004952 1005848 NODE_21581_length_897_cov_1.52494_ID_43161 1 897
+				Gap between this and next alignment: 1005848 to 1006119 (270 bp)
+				Next Alignment: 1006119 1007815 NODE_10945_length_1699_cov_1.58698_ID_21889 1 1699
+
+			Align 68: 1006119 1007815 NODE_10945_length_1699_cov_1.58698_ID_21889 1 1699
+				Gap between this and next alignment: 1007815 to 1008262 (446 bp)
+				Next Alignment: 1008262 1009921 NODE_11219_length_1660_cov_1.66417_ID_22437 1660 1
+
+			Align 69: 1008262 1009921 NODE_11219_length_1660_cov_1.66417_ID_22437 1660 1
+				Gap between this and next alignment: 1009921 to 1018335 (8413 bp)
+				Next Alignment: 1018335 1019216 NODE_21942_length_884_cov_2.67913_ID_43883 884 1
+
+			Align 70: 1018335 1019216 NODE_21942_length_884_cov_2.67913_ID_43883 884 1
+				Gap between this and next alignment: 1019216 to 1033486 (14269 bp)
+				Next Alignment: 1033486 1033999 NODE_39129_length_516_cov_1.65727_ID_78257 516 3
+
+			Align 71: 1033486 1033999 NODE_39129_length_516_cov_1.65727_ID_78257 516 3
+				Gap between this and next alignment: 1033999 to 1048984 (14984 bp)
+				Next Alignment: 1048984 1049838 NODE_22531_length_861_cov_1.9206_ID_45061 1 855
+
+			Align 72: 1048984 1049838 NODE_22531_length_861_cov_1.9206_ID_45061 1 855
+				Gap between this and next alignment: 1049838 to 1054812 (4973 bp)
+				Next Alignment: 1054812 1058351 NODE_4608_length_3542_cov_1.62919_ID_9215 3542 3
+
+			Align 73: 1054812 1058351 NODE_4608_length_3542_cov_1.62919_ID_9215 3542 3
+				Negative gap (overlap) between this and next alignment: 1058351 to 1058314 (-37 bp)
+				Next Alignment: 1058314 1059950 NODE_11377_length_1637_cov_1.55752_ID_22753 1 1637
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 39.
+			Align 74: 1058352 1059950 NODE_11377_length_1637_cov_1.55752_ID_22753 39 1637
+				Gap between this and next alignment: 1059950 to 1066911 (6960 bp)
+				Next Alignment: 1066911 1067530 NODE_31385_length_623_cov_1.95599_ID_62769 620 1
+
+			Align 75: 1066911 1067530 NODE_31385_length_623_cov_1.95599_ID_62769 620 1
+				Gap between this and next alignment: 1067530 to 1074523 (6992 bp)
+				Next Alignment: 1074523 1076346 NODE_10174_length_1814_cov_1.63843_ID_20347 1814 1
+
+			Align 76: 1074523 1076346 NODE_10174_length_1814_cov_1.63843_ID_20347 1814 1
+				Gap between this and next alignment: 1076346 to 1076517 (170 bp)
+				Next Alignment: 1076517 1077116 NODE_32724_length_600_cov_1.95229_ID_65447 1 600
+
+			Align 77: 1076517 1077116 NODE_32724_length_600_cov_1.95229_ID_65447 1 600
+				Gap between this and next alignment: 1077116 to 1078200 (1083 bp)
+				Next Alignment: 1078200 1078882 NODE_28406_length_683_cov_1.82643_ID_56811 683 1
+
+			Align 78: 1078200 1078882 NODE_28406_length_683_cov_1.82643_ID_56811 683 1
+				Gap between this and next alignment: 1078882 to 1079126 (243 bp)
+				Next Alignment: 1079126 1079670 NODE_36667_length_545_cov_1.26531_ID_73333 1 545
+
+			Align 79: 1079126 1079670 NODE_36667_length_545_cov_1.26531_ID_73333 1 545
+				Gap between this and next alignment: 1079670 to 1082749 (3078 bp)
+				Next Alignment: 1082749 1083340 NODE_33215_length_592_cov_1.5419_ID_66429 1 592
+
+			Align 80: 1082749 1083340 NODE_33215_length_592_cov_1.5419_ID_66429 1 592
+				Gap between this and next alignment: 1083340 to 1086966 (3625 bp)
+				Next Alignment: 1086966 1091970 NODE_2945_length_5005_cov_1.75515_ID_5889 1 5005
+
+			Align 81: 1086966 1091970 NODE_2945_length_5005_cov_1.75515_ID_5889 1 5005
+				Gap between this and next alignment: 1091970 to 1105915 (13944 bp)
+				Next Alignment: 1105915 1108666 NODE_6283_length_2752_cov_1.78754_ID_12565 2752 1
+
+			Align 82: 1105915 1108666 NODE_6283_length_2752_cov_1.78754_ID_12565 2752 1
+				Gap between this and next alignment: 1108666 to 1128947 (20280 bp)
+				Next Alignment: 1128947 1131281 NODE_7626_length_2336_cov_1.86453_ID_15251 1 2336
+
+			Align 83: 1128947 1131281 NODE_7626_length_2336_cov_1.86453_ID_15251 1 2336
+				Negative gap (overlap) between this and next alignment: 1131281 to 1131228 (-53 bp)
+				Next Alignment: 1131228 1132154 NODE_20739_length_929_cov_1.6762_ID_41477 927 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 927 to 873.
+			Align 84: 1131282 1132154 NODE_20739_length_929_cov_1.6762_ID_41477 873 1
+				Gap between this and next alignment: 1132154 to 1145700 (13545 bp)
+				Next Alignment: 1145700 1148296 NODE_6744_length_2597_cov_1.76987_ID_13487 2597 1
+
+			Align 85: 1145700 1148296 NODE_6744_length_2597_cov_1.76987_ID_13487 2597 1
+				Gap between this and next alignment: 1148296 to 1161468 (13171 bp)
+				Next Alignment: 1161468 1162787 NODE_14370_length_1320_cov_1.65059_ID_28739 1 1320
+
+			Align 86: 1161468 1162787 NODE_14370_length_1320_cov_1.65059_ID_28739 1 1320
+				Gap between this and next alignment: 1162787 to 1163225 (437 bp)
+				Next Alignment: 1163225 1166772 NODE_4597_length_3548_cov_1.4655_ID_9193 1 3548
+
+			Align 87: 1163225 1166772 NODE_4597_length_3548_cov_1.4655_ID_9193 1 3548
+				Gap between this and next alignment: 1166772 to 1167123 (350 bp)
+				Next Alignment: 1167123 1172001 NODE_3039_length_4875_cov_1.70519_ID_6077 1 4875
+
+			Align 88: 1167123 1172001 NODE_3039_length_4875_cov_1.70519_ID_6077 1 4875
+				Gap between this and next alignment: 1172001 to 1188970 (16968 bp)
+				Next Alignment: 1188970 1189133 NODE_322_length_30470_cov_9.01072_ID_643 11311 11474
+
+			Align 89: 1188970 1189133 NODE_322_length_30470_cov_9.01072_ID_643 11311 11474
+				Gap between this and next alignment: 1189133 to 1190430 (1296 bp)
+				Next Alignment: 1190430 1194343 NODE_845_length_13967_cov_5.65576_ID_1689 5012 1097
+
+			Align 90: 1190430 1194343 NODE_845_length_13967_cov_5.65576_ID_1689 5012 1097
+				Gap between this and next alignment: 1194343 to 1227617 (33273 bp)
+				Next Alignment: 1227617 1229338 NODE_10777_length_1724_cov_1.37088_ID_21553 1 1724
+
+			Align 91: 1227617 1229338 NODE_10777_length_1724_cov_1.37088_ID_21553 1 1724
+				Gap between this and next alignment: 1229338 to 1230999 (1660 bp)
+				Next Alignment: 1230999 1249761 NODE_322_length_30470_cov_9.01072_ID_643 11712 30470
+
+			Align 92: 1230999 1249761 NODE_322_length_30470_cov_9.01072_ID_643 11712 30470
+				Gap between this and next alignment: 1249761 to 1250121 (359 bp)
+				Next Alignment: 1250121 1250905 NODE_24659_length_785_cov_1.45068_ID_49317 1 785
+
+			Align 93: 1250121 1250905 NODE_24659_length_785_cov_1.45068_ID_49317 1 785
+				Gap between this and next alignment: 1250905 to 1300084 (49178 bp)
+				Next Alignment: 1300084 1300588 NODE_39810_length_508_cov_1.77483_ID_79619 508 4
+
+			Align 94: 1300084 1300588 NODE_39810_length_508_cov_1.77483_ID_79619 508 4
+				Gap between this and next alignment: 1300588 to 1305629 (5040 bp)
+				Next Alignment: 1305629 1306993 NODE_13864_length_1365_cov_2.32214_ID_27727 1 1365
+
+			Align 95: 1305629 1306993 NODE_13864_length_1365_cov_2.32214_ID_27727 1 1365
+				Gap between this and next alignment: 1306993 to 1307506 (512 bp)
+				Next Alignment: 1307506 1309187 NODE_11070_length_1682_cov_2.44069_ID_22139 1 1682
+
+			Align 96: 1307506 1309187 NODE_11070_length_1682_cov_2.44069_ID_22139 1 1682
+				Gap between this and next alignment: 1309187 to 1313900 (4712 bp)
+				Next Alignment: 1313900 1321681 NODE_1678_length_7789_cov_2.33165_ID_3355 7780 1
+
+			Align 97: 1313900 1321681 NODE_1678_length_7789_cov_2.33165_ID_3355 7780 1
+				Gap between this and next alignment: 1321681 to 1371415 (49733 bp)
+				Next Alignment: 1371415 1372887 NODE_12746_length_1473_cov_2.1354_ID_25491 1 1473
+
+			Align 98: 1371415 1372887 NODE_12746_length_1473_cov_2.1354_ID_25491 1 1473
+				Gap between this and next alignment: 1372887 to 1373437 (549 bp)
+				Next Alignment: 1373437 1374162 NODE_26373_length_733_cov_1.18437_ID_52745 1 733
+
+			Align 99: 1373437 1374162 NODE_26373_length_733_cov_1.18437_ID_52745 1 733
+				Gap between this and next alignment: 1374162 to 1376732 (2569 bp)
+				Next Alignment: 1376732 1377271 NODE_37072_length_540_cov_1.78557_ID_74143 1 540
+
+			Align 100: 1376732 1377271 NODE_37072_length_540_cov_1.78557_ID_74143 1 540
+				Gap between this and next alignment: 1377271 to 1380332 (3060 bp)
+				Next Alignment: 1380332 1381819 NODE_12524_length_1498_cov_1.33957_ID_25047 1 1498
+
+			Align 101: 1380332 1381819 NODE_12524_length_1498_cov_1.33957_ID_25047 1 1498
+				Gap between this and next alignment: 1381819 to 1389056 (7236 bp)
+				Next Alignment: 1389056 1390489 NODE_12785_length_1468_cov_1.60934_ID_25569 1468 1
+
+			Align 102: 1389056 1390489 NODE_12785_length_1468_cov_1.60934_ID_25569 1468 1
+				Gap between this and next alignment: 1390489 to 1399547 (9057 bp)
+				Next Alignment: 1399547 1401187 NODE_2643_length_5448_cov_7.77397_ID_5285 52 1678
+
+			Align 103: 1399547 1401187 NODE_2643_length_5448_cov_7.77397_ID_5285 52 1678
+				Gap between this and next alignment: 1401187 to 1401585 (397 bp)
+				Next Alignment: 1401585 1402841 NODE_2643_length_5448_cov_7.77397_ID_5285 1386 2628
+
+			Align 104: 1401585 1402841 NODE_2643_length_5448_cov_7.77397_ID_5285 1386 2628
+				Gap between this and next alignment: 1402841 to 1434682 (31840 bp)
+				Next Alignment: 1434682 1441267 NODE_2052_length_6583_cov_1.32123_ID_4103 1 6583
+
+			Align 105: 1434682 1441267 NODE_2052_length_6583_cov_1.32123_ID_4103 1 6583
+				Gap between this and next alignment: 1441267 to 1441562 (294 bp)
+				Next Alignment: 1441562 1442979 NODE_13362_length_1410_cov_1.65461_ID_26723 1 1410
+
+			Align 106: 1441562 1442979 NODE_13362_length_1410_cov_1.65461_ID_26723 1 1410
+				Gap between this and next alignment: 1442979 to 1453631 (10651 bp)
+				Next Alignment: 1453631 1454193 NODE_35248_length_563_cov_1.94685_ID_70495 1 563
+
+			Align 107: 1453631 1454193 NODE_35248_length_563_cov_1.94685_ID_70495 1 563
+				Gap between this and next alignment: 1454193 to 1464066 (9872 bp)
+				Next Alignment: 1464066 1464633 NODE_34842_length_568_cov_4.61209_ID_69683 568 1
+
+			Align 108: 1464066 1464633 NODE_34842_length_568_cov_4.61209_ID_69683 568 1
+				Gap between this and next alignment: 1464633 to 1465173 (539 bp)
+				Next Alignment: 1465173 1467399 NODE_8039_length_2227_cov_2.32689_ID_16077 1 2227
+
+			Align 109: 1465173 1467399 NODE_8039_length_2227_cov_2.32689_ID_16077 1 2227
+				Gap between this and next alignment: 1467399 to 1512916 (45516 bp)
+				Next Alignment: 1512916 1513819 NODE_21379_length_904_cov_1.97173_ID_42757 904 1
+
+			Align 110: 1512916 1513819 NODE_21379_length_904_cov_1.97173_ID_42757 904 1
+				Gap between this and next alignment: 1513819 to 1515965 (2145 bp)
+				Next Alignment: 1515965 1516721 NODE_25559_length_757_cov_2.31624_ID_51117 757 1
+
+			Align 111: 1515965 1516721 NODE_25559_length_757_cov_2.31624_ID_51117 757 1
+				Gap between this and next alignment: 1516721 to 1516844 (122 bp)
+				Next Alignment: 1516844 1518024 NODE_16126_length_1181_cov_1.94227_ID_32251 1 1181
+
+			Align 112: 1516844 1518024 NODE_16126_length_1181_cov_1.94227_ID_32251 1 1181
+				Gap between this and next alignment: 1518024 to 1519357 (1332 bp)
+				Next Alignment: 1519357 1520142 NODE_24642_length_786_cov_2.00137_ID_49283 1 786
+
+			Align 113: 1519357 1520142 NODE_24642_length_786_cov_2.00137_ID_49283 1 786
+				Gap between this and next alignment: 1520142 to 1563237 (43094 bp)
+				Next Alignment: 1563237 1567333 NODE_3830_length_4097_cov_1.66378_ID_7659 1 4097
+
+			Align 114: 1563237 1567333 NODE_3830_length_4097_cov_1.66378_ID_7659 1 4097
+				Gap between this and next alignment: 1567333 to 1568861 (1527 bp)
+				Next Alignment: 1568861 1569642 NODE_24794_length_781_cov_1.99174_ID_49587 1 781
+
+			Align 115: 1568861 1569642 NODE_24794_length_781_cov_1.99174_ID_49587 1 781
+				Gap between this and next alignment: 1569642 to 1599514 (29871 bp)
+				Next Alignment: 1599514 1600062 NODE_36315_length_549_cov_1.92105_ID_72629 1 549
+
+			Align 116: 1599514 1600062 NODE_36315_length_549_cov_1.92105_ID_72629 1 549
+				Gap between this and next alignment: 1600062 to 1603460 (3397 bp)
+				Next Alignment: 1603460 1612067 NODE_106_length_58935_cov_6.90452_ID_211 80 8622
+
+			Align 117: 1603460 1612067 NODE_106_length_58935_cov_6.90452_ID_211 80 8622
+				Gap between this and next alignment: 1612067 to 1612448 (380 bp)
+				Next Alignment: 1612448 1617387 NODE_106_length_58935_cov_6.90452_ID_211 8983 13921
+
+			Align 118: 1612448 1617387 NODE_106_length_58935_cov_6.90452_ID_211 8983 13921
+				Negative gap (overlap) between this and next alignment: 1617387 to 1617379 (-8 bp)
+				Next Alignment: 1617379 1640221 NODE_106_length_58935_cov_6.90452_ID_211 15351 38226
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 15351 to 15360.
+			Align 119: 1617388 1640221 NODE_106_length_58935_cov_6.90452_ID_211 15360 38226
+				Gap between this and next alignment: 1640221 to 1640518 (296 bp)
+				Next Alignment: 1640518 1649827 NODE_106_length_58935_cov_6.90452_ID_211 40009 49326
+
+			Align 120: 1640518 1649827 NODE_106_length_58935_cov_6.90452_ID_211 40009 49326
+				Negative gap (overlap) between this and next alignment: 1649827 to 1649720 (-107 bp)
+				Next Alignment: 1649720 1650258 NODE_37016_length_541_cov_1.2572_ID_74031 541 3
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 541 to 433.
+			Align 121: 1649828 1650258 NODE_37016_length_541_cov_1.2572_ID_74031 433 3
+				Gap between this and next alignment: 1650258 to 1650458 (199 bp)
+				Next Alignment: 1650458 1651770 NODE_14392_length_1318_cov_1.59145_ID_28783 1 1314
+
+			Align 122: 1650458 1651770 NODE_14392_length_1318_cov_1.59145_ID_28783 1 1314
+				Gap between this and next alignment: 1651770 to 1654641 (2870 bp)
+				Next Alignment: 1654641 1656492 NODE_9959_length_1852_cov_1.76405_ID_19917 1 1852
+
+			Align 123: 1654641 1656492 NODE_9959_length_1852_cov_1.76405_ID_19917 1 1852
+				Gap between this and next alignment: 1656492 to 1657710 (1217 bp)
+				Next Alignment: 1657710 1658747 NODE_18493_length_1038_cov_1.78739_ID_36985 1038 1
+
+			Align 124: 1657710 1658747 NODE_18493_length_1038_cov_1.78739_ID_36985 1038 1
+				Gap between this and next alignment: 1658747 to 1714344 (55596 bp)
+				Next Alignment: 1714344 1718389 NODE_3904_length_4036_cov_2.27506_ID_7807 4036 1
+
+			Align 125: 1714344 1718389 NODE_3904_length_4036_cov_2.27506_ID_7807 4036 1
+				Gap between this and next alignment: 1718389 to 1718834 (444 bp)
+				Next Alignment: 1718834 1721946 NODE_2168_length_6348_cov_4.94963_ID_4335 6348 3238
+
+			Align 126: 1718834 1721946 NODE_2168_length_6348_cov_4.94963_ID_4335 6348 3238
+				Negative gap (overlap) between this and next alignment: 1721946 to 1721555 (-391 bp)
+				Next Alignment: 1721555 1722636 NODE_17721_length_1082_cov_2.82473_ID_35441 1082 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1082 to 690.
+			Align 127: 1721947 1722636 NODE_17721_length_1082_cov_2.82473_ID_35441 690 1
+				Gap between this and next alignment: 1722636 to 1725588 (2951 bp)
+				Next Alignment: 1725588 1728040 NODE_162_length_45848_cov_5.64986_ID_323 43396 45848
+
+			Align 128: 1725588 1728040 NODE_162_length_45848_cov_5.64986_ID_323 43396 45848
+				Gap between this and next alignment: 1728040 to 1730206 (2165 bp)
+				Next Alignment: 1730206 1730716 NODE_39561_length_511_cov_2.0943_ID_79121 1 511
+
+			Align 129: 1730206 1730716 NODE_39561_length_511_cov_2.0943_ID_79121 1 511
+				Gap between this and next alignment: 1730716 to 1737139 (6422 bp)
+				Next Alignment: 1737139 1738025 NODE_21868_length_887_cov_1.73798_ID_43735 887 1
+
+			Align 130: 1737139 1738025 NODE_21868_length_887_cov_1.73798_ID_43735 887 1
+				Gap between this and next alignment: 1738025 to 1755766 (17740 bp)
+				Next Alignment: 1755766 1756844 NODE_16864_length_1133_cov_5.06865_ID_33727 56 1133
+
+			Align 131: 1755766 1756844 NODE_16864_length_1133_cov_5.06865_ID_33727 56 1133
+				Negative gap (overlap) between this and next alignment: 1756844 to 1756779 (-65 bp)
+				Next Alignment: 1756779 1757088 NODE_1351_length_9326_cov_4.68784_ID_2701 1 310
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 67.
+			Align 132: 1756845 1757088 NODE_1351_length_9326_cov_4.68784_ID_2701 67 310
+				Gap between this and next alignment: 1757088 to 1768646 (11557 bp)
+				Next Alignment: 1768646 1770528 NODE_1130_length_10958_cov_3.95579_ID_2259 10392 8516
+
+			Align 133: 1768646 1770528 NODE_1130_length_10958_cov_3.95579_ID_2259 10392 8516
+				Gap between this and next alignment: 1770528 to 1804636 (34107 bp)
+				Next Alignment: 1804636 1805235 NODE_32725_length_600_cov_0.950459_ID_65449 1 600
+
+			Align 134: 1804636 1805235 NODE_32725_length_600_cov_0.950459_ID_65449 1 600
+				Gap between this and next alignment: 1805235 to 1816071 (10835 bp)
+				Next Alignment: 1816071 1817512 NODE_13060_length_1441_cov_1.67677_ID_26119 1 1441
+
+			Align 135: 1816071 1817512 NODE_13060_length_1441_cov_1.67677_ID_26119 1 1441
+				Gap between this and next alignment: 1817512 to 1857062 (39549 bp)
+				Next Alignment: 1857062 1860049 NODE_5720_length_2989_cov_1.52215_ID_11439 1 2989
+
+			Align 136: 1857062 1860049 NODE_5720_length_2989_cov_1.52215_ID_11439 1 2989
+				Gap between this and next alignment: 1860049 to 1860170 (120 bp)
+				Next Alignment: 1860170 1861500 NODE_14243_length_1331_cov_1.41928_ID_28485 1 1331
+
+			Align 137: 1860170 1861500 NODE_14243_length_1331_cov_1.41928_ID_28485 1 1331
+				Gap between this and next alignment: 1861500 to 1872053 (10552 bp)
+				Next Alignment: 1872053 1872962 NODE_21336_length_906_cov_1.50176_ID_42671 1 906
+
+			Align 138: 1872053 1872962 NODE_21336_length_906_cov_1.50176_ID_42671 1 906
+				Gap between this and next alignment: 1872962 to 1890156 (17193 bp)
+				Next Alignment: 1890156 1890787 NODE_30851_length_632_cov_1.31542_ID_61701 632 1
+
+			Align 139: 1890156 1890787 NODE_30851_length_632_cov_1.31542_ID_61701 632 1
+				Gap between this and next alignment: 1890787 to 1891333 (545 bp)
+				Next Alignment: 1891333 1891982 NODE_29800_length_653_cov_1.17224_ID_59599 650 1
+
+			Align 140: 1891333 1891982 NODE_29800_length_653_cov_1.17224_ID_59599 650 1
+				Gap between this and next alignment: 1891982 to 1892401 (418 bp)
+				Next Alignment: 1892401 1900417 NODE_1631_length_7998_cov_1.54652_ID_3261 1 7998
+
+			Align 141: 1892401 1900417 NODE_1631_length_7998_cov_1.54652_ID_3261 1 7998
+				Gap between this and next alignment: 1900417 to 1907602 (7184 bp)
+				Next Alignment: 1907602 1909210 NODE_11584_length_1609_cov_1.34749_ID_23167 1609 1
+
+			Align 142: 1907602 1909210 NODE_11584_length_1609_cov_1.34749_ID_23167 1609 1
+				Gap between this and next alignment: 1909210 to 1909615 (404 bp)
+				Next Alignment: 1909615 1913250 NODE_4498_length_3620_cov_1.69705_ID_8995 1 3620
+
+			Align 143: 1909615 1913250 NODE_4498_length_3620_cov_1.69705_ID_8995 1 3620
+				Gap between this and next alignment: 1913250 to 1929912 (16661 bp)
+				Next Alignment: 1929912 1935715 NODE_2066_length_6549_cov_2.25962_ID_4131 5811 1
+
+			Align 144: 1929912 1935715 NODE_2066_length_6549_cov_2.25962_ID_4131 5811 1
+				Negative gap (overlap) between this and next alignment: 1935715 to 1935665 (-50 bp)
+				Next Alignment: 1935665 1948584 NODE_75_length_66231_cov_5.96763_ID_149 7150 20025
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 7150 to 7201.
+			Align 145: 1935716 1948584 NODE_75_length_66231_cov_5.96763_ID_149 7201 20025
+				Gap between this and next alignment: 1948584 to 1948966 (381 bp)
+				Next Alignment: 1948966 1972357 NODE_75_length_66231_cov_5.96763_ID_149 20102 43494
+
+			Align 146: 1948966 1972357 NODE_75_length_66231_cov_5.96763_ID_149 20102 43494
+				Gap between this and next alignment: 1972357 to 1972417 (59 bp)
+				Next Alignment: 1972417 1992205 NODE_75_length_66231_cov_5.96763_ID_149 46399 66185
+
+			Align 147: 1972417 1992205 NODE_75_length_66231_cov_5.96763_ID_149 46399 66185
+				Gap between this and next alignment: 1992205 to 2012041 (19835 bp)
+				Next Alignment: 2012041 2012969 NODE_20741_length_929_cov_1.69908_ID_41481 929 1
+
+			Align 148: 2012041 2012969 NODE_20741_length_929_cov_1.69908_ID_41481 929 1
+				Gap between this and next alignment: 2012969 to 2016117 (3147 bp)
+				Next Alignment: 2016117 2016731 NODE_31709_length_617_cov_1.25979_ID_63417 1 615
+
+			Align 149: 2016117 2016731 NODE_31709_length_617_cov_1.25979_ID_63417 1 615
+				Gap between this and next alignment: 2016731 to 2035077 (18345 bp)
+				Next Alignment: 2035077 2035601 NODE_38069_length_528_cov_1.32135_ID_76137 4 528
+
+			Align 150: 2035077 2035601 NODE_38069_length_528_cov_1.32135_ID_76137 4 528
+				Gap between this and next alignment: 2035601 to 2041816 (6214 bp)
+				Next Alignment: 2041816 2042862 NODE_18320_length_1047_cov_1.94859_ID_36639 1047 1
+
+			Align 151: 2041816 2042862 NODE_18320_length_1047_cov_1.94859_ID_36639 1047 1
+				Gap between this and next alignment: 2042862 to 2059820 (16957 bp)
+				Next Alignment: 2059820 2060431 NODE_32001_length_612_cov_1.17953_ID_64001 1 612
+
+			Align 152: 2059820 2060431 NODE_32001_length_612_cov_1.17953_ID_64001 1 612
+				Gap between this and next alignment: 2060431 to 2075683 (15251 bp)
+				Next Alignment: 2075683 2076500 NODE_23718_length_818_cov_2.2713_ID_47435 818 1
+
+			Align 153: 2075683 2076500 NODE_23718_length_818_cov_2.2713_ID_47435 818 1
+				Gap between this and next alignment: 2076500 to 2105826 (29325 bp)
+				Next Alignment: 2105826 2109183 NODE_4925_length_3358_cov_1.35604_ID_9849 3358 1
+
+			Align 154: 2105826 2109183 NODE_4925_length_3358_cov_1.35604_ID_9849 3358 1
+				Gap between this and next alignment: 2109183 to 2110130 (946 bp)
+				Next Alignment: 2110130 2111682 NODE_12030_length_1553_cov_1.35113_ID_24059 1 1553
+
+			Align 155: 2110130 2111682 NODE_12030_length_1553_cov_1.35113_ID_24059 1 1553
+				Gap between this and next alignment: 2111682 to 2116458 (4775 bp)
+				Next Alignment: 2116458 2117084 NODE_31122_length_627_cov_1.59266_ID_62243 627 1
+
+			Align 156: 2116458 2117084 NODE_31122_length_627_cov_1.59266_ID_62243 627 1
+				Gap between this and next alignment: 2117084 to 2123506 (6421 bp)
+				Next Alignment: 2123506 2124499 NODE_19350_length_994_cov_1.87859_ID_38699 1 994
+
+			Align 157: 2123506 2124499 NODE_19350_length_994_cov_1.87859_ID_38699 1 994
+				Gap between this and next alignment: 2124499 to 2126883 (2383 bp)
+				Next Alignment: 2126883 2127562 NODE_28510_length_680_cov_1.2704_ID_57019 1 680
+
+			Align 158: 2126883 2127562 NODE_28510_length_680_cov_1.2704_ID_57019 1 680
+				Gap between this and next alignment: 2127562 to 2128833 (1270 bp)
+				Next Alignment: 2128833 2129794 NODE_19992_length_962_cov_1.31753_ID_39983 1 962
+
+			Align 159: 2128833 2129794 NODE_19992_length_962_cov_1.31753_ID_39983 1 962
+				Gap between this and next alignment: 2129794 to 2130125 (330 bp)
+				Next Alignment: 2130125 2132351 NODE_8036_length_2227_cov_1.54926_ID_16071 2227 1
+
+			Align 160: 2130125 2132351 NODE_8036_length_2227_cov_1.54926_ID_16071 2227 1
+				Gap between this and next alignment: 2132351 to 2132685 (333 bp)
+				Next Alignment: 2132685 2133824 NODE_16754_length_1140_cov_1.5447_ID_33507 1140 1
+
+			Align 161: 2132685 2133824 NODE_16754_length_1140_cov_1.5447_ID_33507 1140 1
+				Gap between this and next alignment: 2133824 to 2134575 (750 bp)
+				Next Alignment: 2134575 2138733 NODE_3741_length_4168_cov_1.49818_ID_7481 1 4168
+
+			Align 162: 2134575 2138733 NODE_3741_length_4168_cov_1.49818_ID_7481 1 4168
+				Gap between this and next alignment: 2138733 to 2139029 (295 bp)
+				Next Alignment: 2139029 2140389 NODE_13917_length_1361_cov_1.90429_ID_27833 1361 1
+
+			Align 163: 2139029 2140389 NODE_13917_length_1361_cov_1.90429_ID_27833 1361 1
+				Gap between this and next alignment: 2140389 to 2156375 (15985 bp)
+				Next Alignment: 2156375 2156901 NODE_38145_length_527_cov_1.81992_ID_76289 1 527
+
+			Align 164: 2156375 2156901 NODE_38145_length_527_cov_1.81992_ID_76289 1 527
+			END in gap: 2156901 to 2200539 (43638 bp)
+
+	Reference Bacteroides_sp_D4_gi_345651605_ref_NZ_: 12 total alignments. 1 total regions.
+		Region: 1 to 255994 (255994 bp)
+			START in gap: 1 to 73817 (73816 bp)
+			Align 1: 73817 74663 NODE_22923_length_847_cov_1.2298_ID_45845 847 1
+				Gap between this and next alignment: 74663 to 178336 (103672 bp)
+				Next Alignment: 178336 178943 NODE_32066_length_611_cov_1.6205_ID_64131 1 608
+
+			Align 2: 178336 178943 NODE_32066_length_611_cov_1.6205_ID_64131 1 608
+				Gap between this and next alignment: 178943 to 181834 (2890 bp)
+				Next Alignment: 181834 182335 NODE_40378_length_502_cov_1.26174_ID_80755 502 1
+
+			Align 3: 181834 182335 NODE_40378_length_502_cov_1.26174_ID_80755 502 1
+				Gap between this and next alignment: 182335 to 184407 (2071 bp)
+				Next Alignment: 184407 186521 NODE_8557_length_2115_cov_1.30049_ID_17113 2115 1
+
+			Align 4: 184407 186521 NODE_8557_length_2115_cov_1.30049_ID_17113 2115 1
+				Gap between this and next alignment: 186521 to 186620 (98 bp)
+				Next Alignment: 186620 188231 NODE_11560_length_1612_cov_1.36288_ID_23119 1612 1
+
+			Align 5: 186620 188231 NODE_11560_length_1612_cov_1.36288_ID_23119 1612 1
+				Negative gap (overlap) between this and next alignment: 188231 to 188227 (-4 bp)
+				Next Alignment: 188227 188812 NODE_33572_length_586_cov_1.22787_ID_67143 1 586
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 6.
+			Align 6: 188232 188812 NODE_33572_length_586_cov_1.22787_ID_67143 6 586
+				Gap between this and next alignment: 188812 to 199781 (10968 bp)
+				Next Alignment: 199781 200445 NODE_29217_length_665_cov_1.37213_ID_58433 1 665
+
+			Align 7: 199781 200445 NODE_29217_length_665_cov_1.37213_ID_58433 1 665
+				Gap between this and next alignment: 200445 to 207888 (7442 bp)
+				Next Alignment: 207888 209637 NODE_10546_length_1759_cov_1.0669_ID_21091 1759 1
+
+			Align 8: 207888 209637 NODE_10546_length_1759_cov_1.0669_ID_21091 1759 1
+				Gap between this and next alignment: 209637 to 209942 (304 bp)
+				Next Alignment: 209942 210516 NODE_34375_length_575_cov_1.13462_ID_68749 1 575
+
+			Align 9: 209942 210516 NODE_34375_length_575_cov_1.13462_ID_68749 1 575
+				Gap between this and next alignment: 210516 to 210634 (117 bp)
+				Next Alignment: 210634 212419 NODE_10304_length_1795_cov_1.27816_ID_20607 10 1795
+
+			Align 10: 210634 212419 NODE_10304_length_1795_cov_1.27816_ID_20607 10 1795
+				Gap between this and next alignment: 212419 to 212699 (279 bp)
+				Next Alignment: 212699 213733 NODE_18550_length_1035_cov_1.4051_ID_37099 1035 1
+
+			Align 11: 212699 213733 NODE_18550_length_1035_cov_1.4051_ID_37099 1035 1
+				Gap between this and next alignment: 213733 to 224482 (10748 bp)
+				Next Alignment: 224482 226512 NODE_8990_length_2032_cov_1.47092_ID_17979 2032 1
+
+			Align 12: 224482 226512 NODE_8990_length_2032_cov_1.47092_ID_17979 2032 1
+			END in gap: 226512 to 255994 (29482 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_sp_D4/contigs_reports/nucmer_output/SPAdes.used_snps
+
+Results:
+	Local Misassemblies: 13
+	Misassemblies: 19
+		Relocations: 13
+		Translocations: 5
+		Inversions: 1
+	Fake misassemblies matched with structural variations: 2
+	Misassembled Contigs: 8
+	Misassembled Contig Bases: 533591
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 25 part
+Partially Unaligned Contigs with Misassemblies: 4
+Unaligned Contig Bases: 95331
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 1058491
+
+	SNPs: 17233
+	Insertions: 942
+	Deletions: 995
+
+	Positive Gaps: 356
+		Internal Gaps:  28
+		External Gaps:  328
+		External Gap Total:  4351677
+		External Gap Average: 13267
+	Negative Gaps: 15
+		Internal Overlaps:  2
+		External Overlaps:  13
+		External Overlaps Total: -1642
+		External Overlaps Average: -126
+	Contigs with Redundant Alignments: 3 (2542)

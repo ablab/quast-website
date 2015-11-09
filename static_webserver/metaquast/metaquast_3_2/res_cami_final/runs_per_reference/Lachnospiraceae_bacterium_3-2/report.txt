@@ -1,0 +1,48 @@
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                     Gold_Assembly  IDBA_UD      Ray         SOAPdenovo2  SPAdes     
+# contigs (>= 1000 bp)       670            1488         48          811          1526       
+# contigs (>= 5000 bp)       322            76           0           1            49         
+# contigs (>= 10000 bp)      127            6            0           0            3          
+# contigs (>= 25000 bp)      10             1            0           0            0          
+# contigs (>= 50000 bp)      0              0            0           0            0          
+Total length (>= 1000 bp)    4267498        3519317      65534       1142152      3355784    
+Total length (>= 5000 bp)    3307973        533197       0           6470         317182     
+Total length (>= 10000 bp)   1937091        108372       0           0            43445      
+Total length (>= 25000 bp)   283334         33144        0           0            0          
+Total length (>= 50000 bp)   0              0            0           0            0          
+# contigs                    754            2182         774         2740         2379       
+Largest contig               33667          33144        3526        6470         22474      
+Total length                 4331011        4025473      514391      2476254      3977895    
+Reference length             4375813        4375813      4375813     4375813      4375813    
+GC (%)                       44.96          44.98        45.17       45.14        45.06      
+Reference GC (%)             44.96          44.96        44.96       44.96        44.96      
+N50                          8816           2360         638         943          2122       
+NG50                         8743           2178         -           583          1917       
+N75                          5208           1449         553         692          1289       
+NG75                         5116           1221         -           -            1058       
+L50                          152            530          310         910          594        
+LG50                         154            607          -           2206         693        
+L75                          311            1079         529         1684         1199       
+LG75                         317            1276         -           -            1455       
+# misassemblies              0              30           0           4            31         
+# misassembled contigs       0              27           0           4            30         
+Misassembled contigs length  0              93543        0           14697        85856      
+# local misassemblies        0              3            2           0            1          
+# structural variations      0              0            0           0            0          
+# unaligned contigs          0 + 0 part     0 + 76 part  0 + 2 part  0 + 5 part   0 + 73 part
+Unaligned length             0              127810       56          841          62462      
+Genome fraction (%)          98.858         88.466       11.737      56.528       88.741     
+Duplication ratio            1.001          1.007        1.001       1.001        1.008      
+# N's per 100 kbp            0.00           0.00         8.36        104.31       10.38      
+# mismatches per 100 kbp     0.00           161.76       2.14        224.98       433.18     
+# indels per 100 kbp         0.02           1.24         0.00        35.13        2.32       
+Largest alignment            33667          10962        3526        6065         10663      
+NA50                         8816           2189         638         942          2025       
+NGA50                        8743           2028         -           583          1846       
+NA75                         5208           1327         553         691          1222       
+NGA75                        5116           1095         -           -            995        
+LA50                         152            582          310         912          626        
+LGA50                        154            664          -           2209         728        
+LA75                         311            1174         529         1686         1257       
+LGA75                        317            1392         -           -            1528       

@@ -1,0 +1,1322 @@
+Aligning contigs to reference...
+	Running Nucmer
+Parsing coords...
+Loading reference...
+	Loaded [Neisseria_subflava_gi_260590250_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590251_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590252_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590253_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590254_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590255_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590256_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590257_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590258_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590259_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590260_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590261_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590262_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590263_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590264_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590265_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590266_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590267_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590268_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590269_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590270_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590271_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590272_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590273_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590274_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590275_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590276_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590277_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590278_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590279_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590282_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590285_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590286_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590289_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590290_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590291_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590298_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590305_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590306_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590309_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590312_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590315_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590316_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590323_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590324_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590325_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590326_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590327_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590328_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590329_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590330_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590331_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590332_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590333_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590334_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590335_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590336_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590337_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590338_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590339_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590340_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590341_ref_NZ_]
+	Loaded [Neisseria_subflava_gi_260590342_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 63
+	Total Region Length: 2292986
+Analyzing contigs...
+CONTIG: scaffold1155_38.4 (509581bp)
+Top Length: 70122  Top ID: 98.68
+		This contig is misassembled. 16 total aligns.
+			Excluding internal overlap of size 3 between Alignment 1 and 2:  387 19951 | 23978 43544 | 19565 19567 --> 390 19951 | 23981 43544 | 19562 19564
+			Real Alignment 1: 7335 30814 | 23980 493 | 23480 23488 | 99.94 | Neisseria_subflava_gi_260590257_ref_NZ_ scaffold1155_38.4
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 390 19951 | 23981 43544 | 19562 19564 | 99.42 | Neisseria_subflava_gi_260590254_ref_NZ_ scaffold1155_38.4
+			  Overlap between these two alignments (local misassembly). Inconsistency = -42 
+			Real Alignment 3: 20154 68883 | 43789 92527 | 48730 48739 | 97.91 | Neisseria_subflava_gi_260590254_ref_NZ_ scaffold1155_38.4
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 4: 70236 106636 | 94861 131206 | 36401 36346 | 98.28 | Neisseria_subflava_gi_260590254_ref_NZ_ scaffold1155_38.4
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 5: 107657 142141 | 132004 166492 | 34485 34489 | 98.82 | Neisseria_subflava_gi_260590254_ref_NZ_ scaffold1155_38.4
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 6: 221 5838 | 168188 173776 | 5618 5589 | 97.1 | Neisseria_subflava_gi_260590261_ref_NZ_ scaffold1155_38.4
+			  Overlap between these two alignments (local misassembly). Inconsistency = -440 
+			Real Alignment 7: 8964 35835 | 177342 204199 | 26872 26858 | 98.54 | Neisseria_subflava_gi_260590261_ref_NZ_ scaffold1155_38.4
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 8: 36713 60596 | 204248 228125 | 23884 23878 | 96.51 | Neisseria_subflava_gi_260590261_ref_NZ_ scaffold1155_38.4
+			  Overlap between these two alignments (local misassembly). Inconsistency = -400 
+			Excluding internal overlap of size 28 between Alignment 9 and 10:  60626 92235 | 228555 260164 | 31610 31610 --> 60626 92207 | 228555 260136 | 31582 31582
+			Real Alignment 9: 60626 92207 | 228555 260136 | 31582 31582 | 99.42 | Neisseria_subflava_gi_260590261_ref_NZ_ scaffold1155_38.4
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 10: 225265 284842 | 319732 260137 | 59578 59596 | 98.97 | Neisseria_subflava_gi_260590251_ref_NZ_ scaffold1155_38.4
+			  Gap between these two alignments (local misassembly). Inconsistency = 500 
+			Real Alignment 11: 154629 224745 | 389873 319752 | 70117 70122 | 98.68 | Neisseria_subflava_gi_260590251_ref_NZ_ scaffold1155_38.4
+			  Gap between these two alignments (local misassembly). Inconsistency = 752 
+			Excluding internal overlap of size 54 between Alignment 12 and 13:  126424 130453 | 415448 411418 | 4030 4031 --> 126424 130399 | 415448 411472 | 3976 3977
+			Real Alignment 12: 132271 153769 | 411471 389981 | 21499 21491 | 97.28 | Neisseria_subflava_gi_260590251_ref_NZ_ scaffold1155_38.4
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 13: 126424 130399 | 415448 411472 | 3976 3977 | 97.03 | Neisseria_subflava_gi_260590251_ref_NZ_ scaffold1155_38.4
+			  Overlap between these two alignments (local misassembly). Inconsistency = -1 
+			Real Alignment 14: 81678 126281 | 460217 415592 | 44604 44626 | 99.02 | Neisseria_subflava_gi_260590251_ref_NZ_ scaffold1155_38.4
+			  Gap between these two alignments (local misassembly). Inconsistency = 195 
+			Real Alignment 15: 52272 81388 | 489463 460312 | 29117 29152 | 98.68 | Neisseria_subflava_gi_260590251_ref_NZ_ scaffold1155_38.4
+			  Overlap between these two alignments (local misassembly). Inconsistency = -105 
+			Real Alignment 16: 32257 52272 | 509581 489568 | 20016 20014 | 99.71 | Neisseria_subflava_gi_260590251_ref_NZ_ scaffold1155_38.4
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold13085_33.9 (69745bp)
+Top Length: 60608  Top ID: 98.52
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 8 393 | 1272 1656 | 386 385 | 97.93 | Neisseria_subflava_gi_260590254_ref_NZ_ scaffold13085_33.9
+		This contig is misassembled. 5 total aligns.
+			Real Alignment 1: 1542 1817 | 276 1 | 276 276 | 97.46 | Neisseria_subflava_gi_260590257_ref_NZ_ scaffold13085_33.9
+			  Overlap between these two alignments (local misassembly). Inconsistency = -64 
+			Excluding internal overlap of size 3 between Alignment 2 and 3:  228 611 | 1652 1271 | 384 382 --> 231 611 | 1649 1271 | 381 379
+			Real Alignment 2: 231 611 | 1649 1271 | 381 379 | 97.66 | Neisseria_subflava_gi_260590257_ref_NZ_ scaffold13085_33.9
+			  Extensive misassembly ( relocation, inconsistency = 30200 ) between these two alignments
+			Real Alignment 3: 30812 36431 | 1650 7271 | 5620 5622 | 98.63 | Neisseria_subflava_gi_260590257_ref_NZ_ scaffold13085_33.9
+			  Extensive misassembly ( relocation, inconsistency = 1109 ) between these two alignments
+			Real Alignment 4: 39357 100030 | 9088 69695 | 60674 60608 | 98.52 | Neisseria_subflava_gi_260590257_ref_NZ_ scaffold13085_33.9
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold26768_39.3 (1500bp)
+Top Length: 1206  Top ID: 100.0
+		Skipping redundant alignment 2632 2783 | 1 152 | 152 152 | 100.0 | Neisseria_subflava_gi_260590275_ref_NZ_ scaffold26768_39.3
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 108020 108260 | 241 1 | 241 241 | 96.27 | Neisseria_subflava_gi_260590257_ref_NZ_ scaffold26768_39.3
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 11 1216 | 295 1500 | 1206 1206 | 100.0 | Neisseria_subflava_gi_260590277_ref_NZ_ scaffold26768_39.3
+
+CONTIG: scaffold27865_33.5 (7097bp)
+Top Length: 6436  Top ID: 99.25
+		Skipping redundant alignment 197 445 | 6436 6188 | 249 249 | 97.99 | Neisseria_subflava_gi_260590271_ref_NZ_ scaffold27865_33.5
+		This contig is partially unaligned. (Aligned 6436 out of 7097 bases)
+		Alignment: 100302 106736 | 1 6436 | 6435 6436 | 99.25 | Neisseria_subflava_gi_260590257_ref_NZ_ scaffold27865_33.5
+		Unaligned bases: 6437 to 7097 (661)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: C833858_37.0 (583bp)
+Top Length: 583  Top ID: 99.83
+		Marking as insignificant: 1 178 | 178 1 | 178 178 | 100.0 | Neisseria_subflava_gi_260590271_ref_NZ_ C833858_37.0
+		One align captures most of this contig: 106755 107337 | 1 583 | 583 583 | 99.83 | Neisseria_subflava_gi_260590257_ref_NZ_ C833858_37.0
+
+CONTIG: C835618_44.0 (594bp)
+Top Length: 594  Top ID: 96.8
+		One align captures most of this contig: 5309 5902 | 1 594 | 594 594 | 96.8 | Neisseria_subflava_gi_260590257_ref_NZ_ C835618_44.0
+
+CONTIG: C854206_50.0 (790bp)
+Top Length: 790  Top ID: 95.83
+		One align captures most of this contig: 5887 6676 | 1 790 | 790 790 | 95.83 | Neisseria_subflava_gi_260590257_ref_NZ_ C854206_50.0
+
+CONTIG: C839178_46.0 (620bp)
+Top Length: 619  Top ID: 100.0
+		One align captures most of this contig: 31682 32300 | 620 2 | 619 619 | 100.0 | Neisseria_subflava_gi_260590251_ref_NZ_ C839178_46.0
+
+CONTIG: C858798_58.0 (872bp)
+Top Length: 872  Top ID: 99.89
+		One align captures most of this contig: 30820 31691 | 872 1 | 872 872 | 99.89 | Neisseria_subflava_gi_260590251_ref_NZ_ C858798_58.0
+
+CONTIG: C884674_45.0 (39684bp)
+Top Length: 30825  Top ID: 99.34
+		Skipping redundant alignment 84159 84246 | 19480 19566 | 88 87 | 97.73 | Neisseria_subflava_gi_260590252_ref_NZ_ C884674_45.0
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 1 30829 | 30825 1 | 30829 30825 | 99.34 | Neisseria_subflava_gi_260590251_ref_NZ_ C884674_45.0
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 13513 22348 | 39684 30849 | 8836 8836 | 100.0 | Neisseria_subflava_gi_260590266_ref_NZ_ C884674_45.0
+
+CONTIG: scaffold32454_42.3 (68399bp)
+Top Length: 24881  Top ID: 96.44
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 108712 123695 | 14984 1 | 14984 14984 | 99.55 | Neisseria_subflava_gi_260590256_ref_NZ_ scaffold32454_42.3
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 82222 107048 | 41464 16584 | 24827 24881 | 96.44 | Neisseria_subflava_gi_260590256_ref_NZ_ scaffold32454_42.3
+			  Gap between these two alignments (local misassembly). Inconsistency = 645 
+			Real Alignment 3: 54643 69477 | 68399 53564 | 14835 14836 | 98.95 | Neisseria_subflava_gi_260590256_ref_NZ_ scaffold32454_42.3
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: C821710_63.0 (516bp)
+Top Length: 516  Top ID: 99.81
+		One align captures most of this contig: 2981 3496 | 516 1 | 516 516 | 99.81 | Neisseria_subflava_gi_260590256_ref_NZ_ C821710_63.0
+
+CONTIG: C842918_72.0 (652bp)
+Top Length: 652  Top ID: 100.0
+		One align captures most of this contig: 1527 2178 | 652 1 | 652 652 | 100.0 | Neisseria_subflava_gi_260590256_ref_NZ_ C842918_72.0
+
+CONTIG: C853820_63.0 (784bp)
+Top Length: 784  Top ID: 100.0
+		One align captures most of this contig: 2139 2922 | 1 784 | 784 784 | 100.0 | Neisseria_subflava_gi_260590256_ref_NZ_ C853820_63.0
+
+CONTIG: C858138_62.0 (860bp)
+Top Length: 860  Top ID: 99.88
+		Marking as insignificant: 23924 24482 | 1 560 | 559 560 | 99.64 | Neisseria_subflava_gi_260590265_ref_NZ_ C858138_62.0
+		One align captures most of this contig: 294 1152 | 1 860 | 859 860 | 99.88 | Neisseria_subflava_gi_260590256_ref_NZ_ C858138_62.0
+
+CONTIG: C868156_63.0 (1179bp)
+Top Length: 1179  Top ID: 100.0
+		Marking as insignificant: 16131 16625 | 1 495 | 495 495 | 100.0 | Neisseria_subflava_gi_260590268_ref_NZ_ C868156_63.0
+		Marking as insignificant: 1 512 | 668 1179 | 512 512 | 100.0 | Neisseria_subflava_gi_260590268_ref_NZ_ C868156_63.0
+		One align captures most of this contig: 29557 30735 | 1 1179 | 1179 1179 | 100.0 | Neisseria_subflava_gi_260590256_ref_NZ_ C868156_63.0
+
+CONTIG: C872772_61.0 (1491bp)
+Top Length: 1491  Top ID: 100.0
+		Marking as insignificant: 1 263 | 263 1 | 263 263 | 100.0 | Neisseria_subflava_gi_260590260_ref_NZ_ C872772_61.0
+		One align captures most of this contig: 3585 5075 | 1491 1 | 1491 1491 | 100.0 | Neisseria_subflava_gi_260590256_ref_NZ_ C872772_61.0
+
+CONTIG: C884504_52.0 (23947bp)
+Top Length: 23947  Top ID: 99.97
+		One align captures most of this contig: 30685 54629 | 1 23947 | 23945 23947 | 99.97 | Neisseria_subflava_gi_260590256_ref_NZ_ C884504_52.0
+
+CONTIG: C884514_46.0 (24193bp)
+Top Length: 24193  Top ID: 99.07
+		One align captures most of this contig: 5410 29607 | 1 24193 | 24198 24193 | 99.07 | Neisseria_subflava_gi_260590256_ref_NZ_ C884514_46.0
+
+CONTIG: scaffold24015_41.4 (513bp)
+Top Length: 131  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 131 out of 513 bases)
+		Alignment: 6880 7010 | 513 383 | 131 131 | 100.0 | Neisseria_subflava_gi_260590271_ref_NZ_ scaffold24015_41.4
+		Unaligned bases: 1 to 382 (382)
+
+CONTIG: C882808_45.0 (6496bp)
+Top Length: 6496  Top ID: 99.83
+		Marking as insignificant: 15933 16169 | 1 237 | 237 237 | 96.2 | Neisseria_subflava_gi_260590264_ref_NZ_ C882808_45.0
+		One align captures most of this contig: 197 6692 | 6496 1 | 6496 6496 | 99.83 | Neisseria_subflava_gi_260590271_ref_NZ_ C882808_45.0
+
+CONTIG: scaffold32407_41.5 (33699bp)
+Top Length: 22627  Top ID: 98.97
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 28440 51099 | 39 22665 | 22660 22627 | 98.97 | Neisseria_subflava_gi_260590263_ref_NZ_ scaffold32407_41.5
+			  Overlap between these two alignments (local misassembly). Inconsistency = -7 
+			Excluding internal overlap of size 6 between Alignment 2 and 3:  70277 73285 | 33699 30691 | 3009 3009 --> 70277 73279 | 33699 30697 | 3003 3003
+			Real Alignment 2: 51212 59103 | 22785 30696 | 7892 7912 | 97.45 | Neisseria_subflava_gi_260590263_ref_NZ_ scaffold32407_41.5
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 3: 70277 73279 | 33699 30697 | 3003 3003 | 97.34 | Neisseria_subflava_gi_260590262_ref_NZ_ scaffold32407_41.5
+
+CONTIG: C884164_46.0 (14998bp)
+Top Length: 8827  Top ID: 95.38
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 54879 63694 | 1 8827 | 8816 8827 | 95.38 | Neisseria_subflava_gi_260590262_ref_NZ_ C884164_46.0
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 64739 70299 | 9438 14998 | 5561 5561 | 99.19 | Neisseria_subflava_gi_260590262_ref_NZ_ C884164_46.0
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: C884720_45.0 (57158bp)
+Top Length: 54918  Top ID: 98.09
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 554 between Alignment 1 and 2:  1 2794 | 2794 1 | 2794 2794 --> 555 2794 | 2240 1 | 2240 2240
+			Real Alignment 1: 555 2794 | 2240 1 | 2240 2240 | 98.89 | Neisseria_subflava_gi_260590274_ref_NZ_ C884720_45.0
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 1 54929 | 2241 57158 | 54929 54918 | 98.09 | Neisseria_subflava_gi_260590262_ref_NZ_ C884720_45.0
+
+CONTIG: scaffold32451_40.6 (145417bp)
+Top Length: 52665  Top ID: 99.76
+		Skipping redundant alignment 30167 30309 | 143 1 | 143 143 | 98.6 | Neisseria_subflava_gi_260590252_ref_NZ_ scaffold32451_40.6
+		Skipping redundant alignment 100151 100529 | 91080 90702 | 379 379 | 100.0 | Neisseria_subflava_gi_260590260_ref_NZ_ scaffold32451_40.6
+		This contig is misassembled. 9 total aligns.
+			Real Alignment 1: 1 12071 | 12061 1 | 12071 12061 | 98.53 | Neisseria_subflava_gi_260590269_ref_NZ_ scaffold32451_40.6
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 102684 107320 | 16756 12121 | 4637 4636 | 97.67 | Neisseria_subflava_gi_260590258_ref_NZ_ scaffold32451_40.6
+			  Overlap between these two alignments (local misassembly). Inconsistency = -658 
+			Real Alignment 3: 59623 102721 | 60474 17377 | 43099 43098 | 97.63 | Neisseria_subflava_gi_260590258_ref_NZ_ scaffold32451_40.6
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 4: 56678 57671 | 62795 61802 | 994 994 | 98.79 | Neisseria_subflava_gi_260590258_ref_NZ_ scaffold32451_40.6
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 5: 28014 55619 | 91080 63464 | 27606 27617 | 99.82 | Neisseria_subflava_gi_260590258_ref_NZ_ scaffold32451_40.6
+			  Extensive misassembly ( translocation ) between these two alignments
+			Excluding internal overlap of size 14 between Alignment 6 and 7:  98383 100005 | 92766 91144 | 1623 1623 --> 98397 100005 | 92752 91144 | 1609 1609
+			Real Alignment 6: 98397 100005 | 92752 91144 | 1609 1609 | 100.0 | Neisseria_subflava_gi_260590260_ref_NZ_ scaffold32451_40.6
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 7: 213 52880 | 145417 92753 | 52668 52665 | 99.76 | Neisseria_subflava_gi_260590260_ref_NZ_ scaffold32451_40.6
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: C858862_45.0 (873bp)
+Top Length: 873  Top ID: 98.74
+		Marking as insignificant: 1 462 | 415 873 | 462 459 | 99.35 | Neisseria_subflava_gi_260590275_ref_NZ_ C858862_45.0
+		Marking as insignificant: 140 1003 | 1 873 | 864 873 | 96.58 | Neisseria_subflava_gi_260590285_ref_NZ_ C858862_45.0
+		This contig has 2 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 2578 3446 | 873 1 | 869 873 | 98.74 | Neisseria_subflava_gi_260590264_ref_NZ_ C858862_45.0
+		Skipping alignment  13347 14217 | 1 873 | 871 873 | 98.51 | Neisseria_subflava_gi_260590269_ref_NZ_ C858862_45.0
+
+CONTIG: C882150_43.0 (5168bp)
+Top Length: 4257  Top ID: 99.86
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 1 875 | 875 1 | 875 875 | 100.0 | Neisseria_subflava_gi_260590270_ref_NZ_ C882150_43.0
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 1 4263 | 912 5168 | 4263 4257 | 99.86 | Neisseria_subflava_gi_260590265_ref_NZ_ C882150_43.0
+
+CONTIG: C882884_48.0 (6711bp)
+Top Length: 6711  Top ID: 99.99
+		One align captures most of this contig: 1287 7997 | 6711 1 | 6711 6711 | 99.99 | Neisseria_subflava_gi_260590270_ref_NZ_ C882884_48.0
+
+CONTIG: scaffold5017_42.0 (58398bp)
+Top Length: 30309  Top ID: 99.29
+		Skipping redundant alignment 11929 12071 | 58256 58398 | 143 143 | 98.6 | Neisseria_subflava_gi_260590269_ref_NZ_ scaffold5017_42.0
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 2 27867 | 28060 195 | 27866 27866 | 99.59 | Neisseria_subflava_gi_260590258_ref_NZ_ scaffold5017_42.0
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 1 30309 | 28090 58398 | 30309 30309 | 99.29 | Neisseria_subflava_gi_260590252_ref_NZ_ scaffold5017_42.0
+
+CONTIG: C884604_47.0 (30502bp)
+Top Length: 29056  Top ID: 96.91
+		This contig is partially unaligned. (Aligned 29056 out of 30502 bases)
+		Alignment: 110556 139588 | 1447 30502 | 29033 29056 | 96.91 | Neisseria_subflava_gi_260590252_ref_NZ_ C884604_47.0
+		Unaligned bases: 1 to 1446 (1446)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: C884664_43.0 (38353bp)
+Top Length: 38353  Top ID: 99.73
+		One align captures most of this contig: 139556 177902 | 1 38353 | 38347 38353 | 99.73 | Neisseria_subflava_gi_260590252_ref_NZ_ C884664_43.0
+
+CONTIG: C884742_45.0 (80278bp)
+Top Length: 56840  Top ID: 99.01
+		Skipping redundant alignment 11259 11346 | 26351 26438 | 88 88 | 97.73 | Neisseria_subflava_gi_260590251_ref_NZ_ C884742_45.0
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 53717 110558 | 56878 39 | 56842 56840 | 99.01 | Neisseria_subflava_gi_260590252_ref_NZ_ C884742_45.0
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 30286 52769 | 80278 57798 | 22484 22481 | 97.83 | Neisseria_subflava_gi_260590252_ref_NZ_ C884742_45.0
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: C884236_57.0 (15721bp)
+Top Length: 15721  Top ID: 99.97
+		One align captures most of this contig: 462 16181 | 1 15721 | 15720 15721 | 99.97 | Neisseria_subflava_gi_260590268_ref_NZ_ C884236_57.0
+
+CONTIG: scaffold10061_42.9 (18709bp)
+Top Length: 9780  Top ID: 99.0
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 14883 22265 | 7383 1 | 7383 7383 | 99.51 | Neisseria_subflava_gi_260590265_ref_NZ_ scaffold10061_42.9
+			  Extensive misassembly ( relocation, inconsistency = -1015 ) between these two alignments
+			Real Alignment 2: 5080 14867 | 18193 8414 | 9788 9780 | 99.0 | Neisseria_subflava_gi_260590265_ref_NZ_ scaffold10061_42.9
+			  Fake misassembly between these two alignments: inconsistency = 52 , gap in the contig is small or absent or filled mostly with Ns (long indel: deletion of length 52; 0 mismatches)
+			Real Alignment 3: 4825 4928 | 18396 18293 | 104 104 | 100.0 | Neisseria_subflava_gi_260590265_ref_NZ_ scaffold10061_42.9
+			  Fake misassembly between these two alignments: inconsistency = 40 , gap in the contig is small or absent or filled mostly with Ns (long indel: deletion of length 40; 0 mismatches)
+			Real Alignment 4: 4472 4724 | 18709 18457 | 253 253 | 100.0 | Neisseria_subflava_gi_260590265_ref_NZ_ scaffold10061_42.9
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: C839314_63.0 (621bp)
+Top Length: 621  Top ID: 99.84
+		Marking as insignificant: 177873 178102 | 1 232 | 230 232 | 99.14 | Neisseria_subflava_gi_260590252_ref_NZ_ C839314_63.0
+		Marking as insignificant: 123645 124055 | 1 411 | 411 411 | 98.05 | Neisseria_subflava_gi_260590256_ref_NZ_ C839314_63.0
+		Marking as insignificant: 452927 453481 | 1 557 | 555 557 | 98.38 | Neisseria_subflava_gi_260590250_ref_NZ_ C839314_63.0
+		One align captures most of this contig: 22296 22915 | 1 621 | 620 621 | 99.84 | Neisseria_subflava_gi_260590265_ref_NZ_ C839314_63.0
+
+CONTIG: scaffold10511_37.8 (113192bp)
+Top Length: 63491  Top ID: 98.31
+		This contig is misassembled. 6 total aligns.
+			Real Alignment 1: 1810 20840 | 19080 39 | 19031 19042 | 98.49 | Neisseria_subflava_gi_260590253_ref_NZ_ scaffold10511_37.8
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 34961 98350 | 85250 21760 | 63390 63491 | 98.31 | Neisseria_subflava_gi_260590259_ref_NZ_ scaffold10511_37.8
+			  Overlap between these two alignments (local misassembly). Inconsistency = -185 
+			Real Alignment 3: 27269 33373 | 93126 87023 | 6105 6104 | 98.76 | Neisseria_subflava_gi_260590259_ref_NZ_ scaffold10511_37.8
+			  Fake misassembly between these two alignments: inconsistency = 41 , gap in the contig is small or absent or filled mostly with Ns (long indel: deletion of length 41; 0 mismatches)
+			Real Alignment 4: 23591 27176 | 96763 93178 | 3586 3586 | 99.97 | Neisseria_subflava_gi_260590259_ref_NZ_ scaffold10511_37.8
+			  Gap between these two alignments (local misassembly). Inconsistency = 144 
+			Real Alignment 5: 11353 23394 | 108861 96816 | 12042 12046 | 98.27 | Neisseria_subflava_gi_260590259_ref_NZ_ scaffold10511_37.8
+			  Gap between these two alignments (local misassembly). Inconsistency = 107 
+			Real Alignment 6: 6974 11177 | 113192 108930 | 4204 4263 | 96.68 | Neisseria_subflava_gi_260590259_ref_NZ_ scaffold10511_37.8
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold28434_41.6 (1275bp)
+Top Length: 1275  Top ID: 97.02
+		One align captures most of this contig: 261 1502 | 1 1275 | 1242 1275 | 97.02 | Neisseria_subflava_gi_260590259_ref_NZ_ scaffold28434_41.6
+
+CONTIG: C829156_53.0 (553bp)
+Top Length: 553  Top ID: 100.0
+		One align captures most of this contig: 6430 6982 | 1 553 | 553 553 | 100.0 | Neisseria_subflava_gi_260590259_ref_NZ_ C829156_53.0
+
+CONTIG: C845452_47.0 (677bp)
+Top Length: 677  Top ID: 100.0
+		One align captures most of this contig: 5353 6029 | 1 677 | 677 677 | 100.0 | Neisseria_subflava_gi_260590259_ref_NZ_ C845452_47.0
+
+CONTIG: C832558_46.0 (575bp)
+Top Length: 575  Top ID: 100.0
+		One align captures most of this contig: 1053 1627 | 575 1 | 575 575 | 100.0 | Neisseria_subflava_gi_260590275_ref_NZ_ C832558_46.0
+
+CONTIG: scaffold30050_36.6 (1422bp)
+Top Length: 1003  Top ID: 99.0
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 15419 15745 | 1 327 | 327 327 | 96.64 | Neisseria_subflava_gi_260590264_ref_NZ_ scaffold30050_36.6
+			  Gap between these two alignments (local misassembly). Inconsistency = 150 
+			Real Alignment 2: 15988 16990 | 420 1422 | 1003 1003 | 99.0 | Neisseria_subflava_gi_260590264_ref_NZ_ scaffold30050_36.6
+
+CONTIG: scaffold31108_37.2 (7766bp)
+Top Length: 7766  Top ID: 99.43
+		One align captures most of this contig: 5127 12858 | 1 7766 | 7732 7766 | 99.43 | Neisseria_subflava_gi_260590264_ref_NZ_ scaffold31108_37.2
+
+CONTIG: C851258_46.0 (746bp)
+Top Length: 746  Top ID: 99.87
+		One align captures most of this contig: 4430 5175 | 746 1 | 746 746 | 99.87 | Neisseria_subflava_gi_260590264_ref_NZ_ C851258_46.0
+
+CONTIG: C854168_52.0 (789bp)
+Top Length: 789  Top ID: 99.75
+		One align captures most of this contig: 3632 4420 | 1 789 | 789 789 | 99.75 | Neisseria_subflava_gi_260590264_ref_NZ_ C854168_52.0
+
+CONTIG: C875058_52.0 (1745bp)
+Top Length: 1745  Top ID: 100.0
+		One align captures most of this contig: 12833 14577 | 1 1745 | 1745 1745 | 100.0 | Neisseria_subflava_gi_260590264_ref_NZ_ C875058_52.0
+
+CONTIG: C883076_46.0 (7377bp)
+Top Length: 7377  Top ID: 99.95
+		One align captures most of this contig: 17034 24414 | 1 7377 | 7381 7377 | 99.95 | Neisseria_subflava_gi_260590264_ref_NZ_ C883076_46.0
+
+CONTIG: scaffold32120_41.6 (39771bp)
+Top Length: 34969  Top ID: 98.05
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 138834 173796 | 1 34969 | 34963 34969 | 98.05 | Neisseria_subflava_gi_260590250_ref_NZ_ scaffold32120_41.6
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 174616 179374 | 35037 39771 | 4759 4735 | 95.48 | Neisseria_subflava_gi_260590250_ref_NZ_ scaffold32120_41.6
+
+CONTIG: scaffold32439_41.2 (21395bp)
+Top Length: 21395  Top ID: 99.91
+		One align captures most of this contig: 179635 201017 | 1 21395 | 21383 21395 | 99.91 | Neisseria_subflava_gi_260590250_ref_NZ_ scaffold32439_41.2
+
+CONTIG: scaffold32440_41.0 (10754bp)
+Top Length: 7148  Top ID: 95.83
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 2191 9395 | 1897 9044 | 7205 7148 | 95.83 | Neisseria_subflava_gi_260590250_ref_NZ_ scaffold32440_41.0
+			  Gap between these two alignments (local misassembly). Inconsistency = 397 
+			Real Alignment 2: 9862 11500 | 9114 10752 | 1639 1639 | 95.91 | Neisseria_subflava_gi_260590250_ref_NZ_ scaffold32440_41.0
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: C877662_44.0 (2253bp)
+Top Length: 2253  Top ID: 99.87
+		One align captures most of this contig: 227532 229783 | 2253 1 | 2252 2253 | 99.87 | Neisseria_subflava_gi_260590250_ref_NZ_ C877662_44.0
+
+CONTIG: C884280_40.0 (16708bp)
+Top Length: 16708  Top ID: 96.85
+		One align captures most of this contig: 299628 316340 | 1 16708 | 16713 16708 | 96.85 | Neisseria_subflava_gi_260590250_ref_NZ_ C884280_40.0
+
+CONTIG: C884554_47.0 (26564bp)
+Top Length: 26564  Top ID: 99.98
+		One align captures most of this contig: 200977 227539 | 1 26564 | 26563 26564 | 99.98 | Neisseria_subflava_gi_260590250_ref_NZ_ C884554_47.0
+
+CONTIG: C884628_42.0 (32800bp)
+Top Length: 24985  Top ID: 97.62
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 420075 445073 | 56 25040 | 24999 24985 | 97.62 | Neisseria_subflava_gi_260590250_ref_NZ_ C884628_42.0
+			  Gap between these two alignments (local misassembly). Inconsistency = 64 
+			Real Alignment 2: 445347 452896 | 25250 32800 | 7550 7551 | 96.6 | Neisseria_subflava_gi_260590250_ref_NZ_ C884628_42.0
+
+CONTIG: C884716_47.0 (55295bp)
+Top Length: 40462  Top ID: 97.14
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 379663 420079 | 40501 40 | 40417 40462 | 97.14 | Neisseria_subflava_gi_260590250_ref_NZ_ C884716_47.0
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 375759 377453 | 42233 40539 | 1695 1695 | 96.87 | Neisseria_subflava_gi_260590250_ref_NZ_ C884716_47.0
+			  Overlap between these two alignments (local misassembly). Inconsistency = -359 
+			Real Alignment 3: 363056 375725 | 55295 42626 | 12670 12670 | 99.98 | Neisseria_subflava_gi_260590250_ref_NZ_ C884716_47.0
+
+CONTIG: C884732_47.0 (68119bp)
+Top Length: 41174  Top ID: 99.07
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 258486 299657 | 41174 1 | 41172 41174 | 99.07 | Neisseria_subflava_gi_260590250_ref_NZ_ C884732_47.0
+			  Gap between these two alignments (local misassembly). Inconsistency = 660 
+			Real Alignment 2: 239636 257814 | 59358 41186 | 18179 18173 | 98.59 | Neisseria_subflava_gi_260590250_ref_NZ_ C884732_47.0
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 3: 230044 238676 | 68119 59487 | 8633 8633 | 98.48 | Neisseria_subflava_gi_260590250_ref_NZ_ C884732_47.0
+
+CONTIG: C884734_47.0 (69781bp)
+Top Length: 30677  Top ID: 98.15
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 347106 363070 | 15965 1 | 15965 15965 | 98.2 | Neisseria_subflava_gi_260590250_ref_NZ_ C884734_47.0
+			  Overlap between these two alignments (local misassembly). Inconsistency = -565 
+			Real Alignment 2: 316420 347093 | 47219 16543 | 30674 30677 | 98.15 | Neisseria_subflava_gi_260590250_ref_NZ_ C884734_47.0
+			  Extensive misassembly ( relocation, inconsistency = -22462 ) between these two alignments
+			Real Alignment 3: 316320 316449 | 69781 69652 | 130 130 | 100.0 | Neisseria_subflava_gi_260590250_ref_NZ_ C884734_47.0
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: C884752_47.0 (130783bp)
+Top Length: 58291  Top ID: 98.15
+		This contig is misassembled. 6 total aligns.
+			Real Alignment 1: 135418 138865 | 3448 1 | 3448 3448 | 97.94 | Neisseria_subflava_gi_260590250_ref_NZ_ C884752_47.0
+			  Overlap between these two alignments (local misassembly). Inconsistency = -180 
+			Real Alignment 2: 114625 135289 | 24421 3757 | 20665 20665 | 96.96 | Neisseria_subflava_gi_260590250_ref_NZ_ C884752_47.0
+			  Overlap between these two alignments (local misassembly). Inconsistency = -298 
+			Real Alignment 3: 86072 113801 | 53273 25543 | 27730 27731 | 99.23 | Neisseria_subflava_gi_260590250_ref_NZ_ C884752_47.0
+			  Overlap between these two alignments (local misassembly). Inconsistency = -487 
+			Real Alignment 4: 83279 85126 | 56556 54706 | 1848 1851 | 95.89 | Neisseria_subflava_gi_260590250_ref_NZ_ C884752_47.0
+			  Overlap between these two alignments (local misassembly). Inconsistency = -87 
+			Real Alignment 5: 69788 82611 | 70147 57311 | 12824 12837 | 97.15 | Neisseria_subflava_gi_260590250_ref_NZ_ C884752_47.0
+			  Extensive misassembly ( relocation, inconsistency = -2335 ) between these two alignments
+			Real Alignment 6: 11506 69787 | 130773 72483 | 58282 58291 | 98.15 | Neisseria_subflava_gi_260590250_ref_NZ_ C884752_47.0
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold6520_37.9 (142073bp)
+Top Length: 71014  Top ID: 98.28
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 28847 56482 | 1 27654 | 27636 27654 | 97.97 | Neisseria_subflava_gi_260590255_ref_NZ_ scaffold6520_37.9
+			  Extensive misassembly ( relocation, inconsistency = -3775 ) between these two alignments
+			Real Alignment 2: 57101 128128 | 32048 103061 | 71028 71014 | 98.28 | Neisseria_subflava_gi_260590255_ref_NZ_ scaffold6520_37.9
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 3: 112 21261 | 103224 124381 | 21150 21158 | 99.11 | Neisseria_subflava_gi_260590267_ref_NZ_ scaffold6520_37.9
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 4: 139525 156842 | 141951 124643 | 17318 17309 | 98.89 | Neisseria_subflava_gi_260590253_ref_NZ_ scaffold6520_37.9
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: C856818_49.0 (834bp)
+Top Length: 834  Top ID: 99.88
+		Marking as insignificant: 855 1054 | 834 635 | 200 200 | 96.0 | Neisseria_subflava_gi_260590272_ref_NZ_ C856818_49.0
+		Marking as insignificant: 27969 28802 | 1 834 | 834 834 | 96.88 | Neisseria_subflava_gi_260590255_ref_NZ_ C856818_49.0
+		One align captures most of this contig: 24143 24976 | 1 834 | 834 834 | 99.88 | Neisseria_subflava_gi_260590255_ref_NZ_ C856818_49.0
+
+CONTIG: C884502_51.0 (23889bp)
+Top Length: 23889  Top ID: 99.97
+		Marking as insignificant: 107614 107780 | 167 1 | 167 167 | 100.0 | Neisseria_subflava_gi_260590257_ref_NZ_ C884502_51.0
+		One align captures most of this contig: 306 24193 | 1 23889 | 23888 23889 | 99.97 | Neisseria_subflava_gi_260590255_ref_NZ_ C884502_51.0
+
+CONTIG: scaffold28327_37.2 (118874bp)
+Top Length: 36271  Top ID: 98.59
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 109564 139524 | 30232 265 | 29961 29968 | 97.66 | Neisseria_subflava_gi_260590253_ref_NZ_ scaffold28327_37.2
+			  Overlap between these two alignments (local misassembly). Inconsistency = -479 
+			Real Alignment 2: 89215 109555 | 51056 30720 | 20341 20337 | 99.01 | Neisseria_subflava_gi_260590253_ref_NZ_ scaffold28327_37.2
+			  Fake misassembly between these two alignments: inconsistency = 63 , gap in the contig is small or absent or filled mostly with Ns (long indel: deletion of length 63; 0 mismatches)
+			Real Alignment 3: 58863 89110 | 81343 51098 | 30248 30246 | 99.79 | Neisseria_subflava_gi_260590253_ref_NZ_ scaffold28327_37.2
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 4: 20838 57082 | 118830 82560 | 36245 36271 | 98.59 | Neisseria_subflava_gi_260590253_ref_NZ_ scaffold28327_37.2
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold31641_33.9 (1114bp)
+Top Length: 496  Top ID: 96.17
+		Skipping redundant alignment 108750 109141 | 1 393 | 392 393 | 95.93 | Neisseria_subflava_gi_260590257_ref_NZ_ scaffold31641_33.9
+		This contig is partially unaligned. (Aligned 496 out of 1114 bases)
+		Alignment: 572 1067 | 1 496 | 496 496 | 96.17 | Neisseria_subflava_gi_260590276_ref_NZ_ scaffold31641_33.9
+		Unaligned bases: 497 to 1114 (618)
+
+CONTIG: scaffold3063_24.2 (1067bp)
+Top Length: 369  Top ID: 96.75
+		This contig is partially unaligned. (Aligned 369 out of 1067 bases)
+		Alignment: 1 369 | 525 157 | 369 369 | 96.75 | Neisseria_subflava_gi_260590272_ref_NZ_ scaffold3063_24.2
+		Unaligned bases: 1 to 156 (156)
+		Unaligned bases: 526 to 1067 (542)
+
+CONTIG: C828246_36.0 (548bp)
+Top Length: 548  Top ID: 99.09
+		One align captures most of this contig: 3874 4421 | 548 1 | 548 548 | 99.09 | Neisseria_subflava_gi_260590272_ref_NZ_ C828246_36.0
+
+CONTIG: C837900_45.0 (610bp)
+Top Length: 610  Top ID: 99.84
+		Marking as insignificant: 24777 24976 | 411 610 | 200 200 | 96.5 | Neisseria_subflava_gi_260590255_ref_NZ_ C837900_45.0
+		Marking as insignificant: 28603 28802 | 411 610 | 200 200 | 97.0 | Neisseria_subflava_gi_260590255_ref_NZ_ C837900_45.0
+		One align captures most of this contig: 855 1464 | 610 1 | 610 610 | 99.84 | Neisseria_subflava_gi_260590272_ref_NZ_ C837900_45.0
+
+CONTIG: C846158_56.0 (685bp)
+Top Length: 685  Top ID: 99.85
+		One align captures most of this contig: 1470 2154 | 685 1 | 685 685 | 99.85 | Neisseria_subflava_gi_260590272_ref_NZ_ C846158_56.0
+
+CONTIG: C858346_46.0 (864bp)
+Top Length: 864  Top ID: 100.0
+		Marking as insignificant: 26354 26697 | 864 521 | 344 344 | 99.13 | Neisseria_subflava_gi_260590255_ref_NZ_ C858346_46.0
+		One align captures most of this contig: 2667 3530 | 1 864 | 864 864 | 100.0 | Neisseria_subflava_gi_260590272_ref_NZ_ C858346_46.0
+
+CONTIG: C871076_48.0 (1348bp)
+Top Length: 1235  Top ID: 99.84
+		This contig is partially unaligned. (Aligned 1235 out of 1348 bases)
+		Alignment: 4452 5686 | 1 1235 | 1235 1235 | 99.84 | Neisseria_subflava_gi_260590272_ref_NZ_ C871076_48.0
+		Unaligned bases: 1236 to 1348 (113)
+
+CONTIG: scaffold32362_39.9 (28114bp)
+Top Length: 28070  Top ID: 98.15
+		One align captures most of this contig: 360 28442 | 1 28070 | 28083 28070 | 98.15 | Neisseria_subflava_gi_260590263_ref_NZ_ scaffold32362_39.9
+
+CONTIG: C884000_43.0 (12917bp)
+Top Length: 12917  Top ID: 99.95
+		One align captures most of this contig: 374 13291 | 1 12917 | 12918 12917 | 99.95 | Neisseria_subflava_gi_260590266_ref_NZ_ C884000_43.0
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/SOAPdenovo2.used_snps
+	Reference Neisseria_subflava_gi_260590274_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 2956 (2956 bp)
+			START in gap: 1 to 555 (554 bp)
+			Align 1: 555 2794 C884720_45.0 2240 1
+			END in gap: 2794 to 2956 (162 bp)
+
+ERROR: Reference Neisseria_subflava_gi_260590316_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+	Reference Neisseria_subflava_gi_260590254_ref_NZ_: 4 total alignments. 1 total regions.
+		Region: 1 to 142220 (142220 bp)
+			START in gap: 1 to 390 (389 bp)
+			Align 1: 390 19951 scaffold1155_38.4 23981 43544
+				Gap between this and next alignment: 19951 to 20154 (202 bp)
+				Next Alignment: 20154 68883 scaffold1155_38.4 43789 92527
+
+			Align 2: 20154 68883 scaffold1155_38.4 43789 92527
+				Gap between this and next alignment: 68883 to 70236 (1352 bp)
+				Next Alignment: 70236 106636 scaffold1155_38.4 94861 131206
+
+			Align 3: 70236 106636 scaffold1155_38.4 94861 131206
+				Gap between this and next alignment: 106636 to 107657 (1020 bp)
+				Next Alignment: 107657 142141 scaffold1155_38.4 132004 166492
+
+			Align 4: 107657 142141 scaffold1155_38.4 132004 166492
+			END in gap: 142141 to 142220 (79 bp)
+
+ERROR: Reference Neisseria_subflava_gi_260590278_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+ERROR: Reference Neisseria_subflava_gi_260590325_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+	Reference Neisseria_subflava_gi_260590256_ref_NZ_: 11 total alignments. 1 total regions.
+		Region: 1 to 124055 (124055 bp)
+			START in gap: 1 to 294 (293 bp)
+			Align 1: 294 1152 C858138_62.0 1 860
+				Gap between this and next alignment: 1152 to 1527 (374 bp)
+				Next Alignment: 1527 2178 C842918_72.0 652 1
+
+			Align 2: 1527 2178 C842918_72.0 652 1
+				Negative gap (overlap) between this and next alignment: 2178 to 2139 (-39 bp)
+				Next Alignment: 2139 2922 C853820_63.0 1 784
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 41.
+			Align 3: 2179 2922 C853820_63.0 41 784
+				Gap between this and next alignment: 2922 to 2981 (58 bp)
+				Next Alignment: 2981 3496 C821710_63.0 516 1
+
+			Align 4: 2981 3496 C821710_63.0 516 1
+				Gap between this and next alignment: 3496 to 3585 (88 bp)
+				Next Alignment: 3585 5075 C872772_61.0 1491 1
+
+			Align 5: 3585 5075 C872772_61.0 1491 1
+				Gap between this and next alignment: 5075 to 5410 (334 bp)
+				Next Alignment: 5410 29607 C884514_46.0 1 24193
+
+			Align 6: 5410 29607 C884514_46.0 1 24193
+				Negative gap (overlap) between this and next alignment: 29607 to 29557 (-50 bp)
+				Next Alignment: 29557 30735 C868156_63.0 1 1179
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 52.
+			Align 7: 29608 30735 C868156_63.0 52 1179
+				Negative gap (overlap) between this and next alignment: 30735 to 30685 (-50 bp)
+				Next Alignment: 30685 54629 C884504_52.0 1 23947
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 52.
+			Align 8: 30736 54629 C884504_52.0 52 23947
+				Gap between this and next alignment: 54629 to 54643 (13 bp)
+				Next Alignment: 54643 69477 scaffold32454_42.3 68399 53564
+
+			Align 9: 54643 69477 scaffold32454_42.3 68399 53564
+				Gap between this and next alignment: 69477 to 82222 (12744 bp)
+				Next Alignment: 82222 107048 scaffold32454_42.3 41464 16584
+
+			Align 10: 82222 107048 scaffold32454_42.3 41464 16584
+				Gap between this and next alignment: 107048 to 108712 (1663 bp)
+				Next Alignment: 108712 123695 scaffold32454_42.3 14984 1
+
+			Align 11: 108712 123695 scaffold32454_42.3 14984 1
+			END in gap: 123695 to 124055 (360 bp)
+
+ERROR: Reference Neisseria_subflava_gi_260590315_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+	Reference Neisseria_subflava_gi_260590263_ref_NZ_: 3 total alignments. 1 total regions.
+		Region: 1 to 59103 (59103 bp)
+			START in gap: 1 to 360 (359 bp)
+			Align 1: 360 28442 scaffold32362_39.9 1 28070
+				Negative gap (overlap) between this and next alignment: 28442 to 28440 (-2 bp)
+				Next Alignment: 28440 51099 scaffold32407_41.5 39 22665
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 39 to 42.
+			Align 2: 28443 51099 scaffold32407_41.5 42 22665
+				Gap between this and next alignment: 51099 to 51212 (112 bp)
+				Next Alignment: 51212 59103 scaffold32407_41.5 22785 30696
+
+			Align 3: 51212 59103 scaffold32407_41.5 22785 30696
+			END in current alignment.  Modifying 59103 to 59103.
+
+	Reference Neisseria_subflava_gi_260590271_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 7010 (7010 bp)
+			START in gap: 1 to 197 (196 bp)
+			Align 1: 197 6692 C882808_45.0 6496 1
+				Gap between this and next alignment: 6692 to 6880 (187 bp)
+				Next Alignment: 6880 7010 scaffold24015_41.4 513 383
+
+			Align 2: 6880 7010 scaffold24015_41.4 513 383
+			END in current alignment.  Modifying 7010 to 7010.
+
+	Reference Neisseria_subflava_gi_260590262_ref_NZ_: 4 total alignments. 1 total regions.
+		Region: 1 to 73285 (73285 bp)
+			Align 1: 1 54929 C884720_45.0 2241 57158
+				Negative gap (overlap) between this and next alignment: 54929 to 54879 (-50 bp)
+				Next Alignment: 54879 63694 C884164_46.0 1 8827
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 52.
+			Align 2: 54930 63694 C884164_46.0 52 8827
+				Gap between this and next alignment: 63694 to 64739 (1044 bp)
+				Next Alignment: 64739 70299 C884164_46.0 9438 14998
+
+			Align 3: 64739 70299 C884164_46.0 9438 14998
+				Negative gap (overlap) between this and next alignment: 70299 to 70277 (-22 bp)
+				Next Alignment: 70277 73279 scaffold32407_41.5 33699 30697
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 33699 to 33676.
+			Align 4: 70300 73279 scaffold32407_41.5 33676 30697
+			END in gap: 73279 to 73285 (6 bp)
+
+	Reference Neisseria_subflava_gi_260590269_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 14695 (14695 bp)
+			Align 1: 1 12071 scaffold32451_40.6 12061 1
+			END in gap: 12071 to 14695 (2624 bp)
+
+ERROR: Reference Neisseria_subflava_gi_260590329_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+ERROR: Reference Neisseria_subflava_gi_260590273_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+ERROR: Reference Neisseria_subflava_gi_260590338_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+	Reference Neisseria_subflava_gi_260590276_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 2176 (2176 bp)
+			START in gap: 1 to 572 (571 bp)
+			Align 1: 572 1067 scaffold31641_33.9 1 496
+			END in gap: 1067 to 2176 (1109 bp)
+
+ERROR: Reference Neisseria_subflava_gi_260590332_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+ERROR: Reference Neisseria_subflava_gi_260590326_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+ERROR: Reference Neisseria_subflava_gi_260590306_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+	Reference Neisseria_subflava_gi_260590257_ref_NZ_: 10 total alignments. 1 total regions.
+		Region: 1 to 109141 (109141 bp)
+			START in gap: 1 to 231 (230 bp)
+			Align 1: 231 611 scaffold13085_33.9 1649 1271
+				Gap between this and next alignment: 611 to 1542 (930 bp)
+				Next Alignment: 1542 1817 scaffold13085_33.9 276 1
+
+			Align 2: 1542 1817 scaffold13085_33.9 276 1
+				Gap between this and next alignment: 1817 to 5309 (3491 bp)
+				Next Alignment: 5309 5902 C835618_44.0 1 594
+
+			Align 3: 5309 5902 C835618_44.0 1 594
+				Negative gap (overlap) between this and next alignment: 5902 to 5887 (-15 bp)
+				Next Alignment: 5887 6676 C854206_50.0 1 790
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 17.
+			Align 4: 5903 6676 C854206_50.0 17 790
+				Gap between this and next alignment: 6676 to 7335 (658 bp)
+				Next Alignment: 7335 30814 scaffold1155_38.4 23980 493
+
+			Align 5: 7335 30814 scaffold1155_38.4 23980 493
+				Negative gap (overlap) between this and next alignment: 30814 to 30812 (-2 bp)
+				Next Alignment: 30812 36431 scaffold13085_33.9 1650 7271
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1650 to 1653.
+			Align 6: 30815 36431 scaffold13085_33.9 1653 7271
+				Gap between this and next alignment: 36431 to 39357 (2925 bp)
+				Next Alignment: 39357 100030 scaffold13085_33.9 9088 69695
+
+			Align 7: 39357 100030 scaffold13085_33.9 9088 69695
+				Gap between this and next alignment: 100030 to 100302 (271 bp)
+				Next Alignment: 100302 106736 scaffold27865_33.5 1 6436
+
+			Align 8: 100302 106736 scaffold27865_33.5 1 6436
+				Gap between this and next alignment: 106736 to 106755 (18 bp)
+				Next Alignment: 106755 107337 C833858_37.0 1 583
+
+			Align 9: 106755 107337 C833858_37.0 1 583
+				Gap between this and next alignment: 107337 to 108020 (682 bp)
+				Next Alignment: 108020 108260 scaffold26768_39.3 241 1
+
+			Align 10: 108020 108260 scaffold26768_39.3 241 1
+			END in gap: 108260 to 109141 (881 bp)
+
+ERROR: Reference Neisseria_subflava_gi_260590291_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+ERROR: Reference Neisseria_subflava_gi_260590324_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+ERROR: Reference Neisseria_subflava_gi_260590298_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+	Reference Neisseria_subflava_gi_260590277_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 2079 (2079 bp)
+			START in gap: 1 to 11 (10 bp)
+			Align 1: 11 1216 scaffold26768_39.3 295 1500
+			END in gap: 1216 to 2079 (863 bp)
+
+	Reference Neisseria_subflava_gi_260590270_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 8192 (8192 bp)
+			Align 1: 1 875 C882150_43.0 875 1
+				Gap between this and next alignment: 875 to 1287 (411 bp)
+				Next Alignment: 1287 7997 C882884_48.0 6711 1
+
+			Align 2: 1287 7997 C882884_48.0 6711 1
+			END in gap: 7997 to 8192 (195 bp)
+
+	Reference Neisseria_subflava_gi_260590267_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 21261 (21261 bp)
+			START in gap: 1 to 112 (111 bp)
+			Align 1: 112 21261 scaffold6520_37.9 103224 124381
+			END in current alignment.  Modifying 21261 to 21261.
+
+ERROR: Reference Neisseria_subflava_gi_260590285_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+ERROR: Reference Neisseria_subflava_gi_260590286_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+	Reference Neisseria_subflava_gi_260590259_ref_NZ_: 8 total alignments. 1 total regions.
+		Region: 1 to 101897 (101897 bp)
+			START in gap: 1 to 261 (260 bp)
+			Align 1: 261 1502 scaffold28434_41.6 1 1275
+				Gap between this and next alignment: 1502 to 5353 (3850 bp)
+				Next Alignment: 5353 6029 C845452_47.0 1 677
+
+			Align 2: 5353 6029 C845452_47.0 1 677
+				Gap between this and next alignment: 6029 to 6430 (400 bp)
+				Next Alignment: 6430 6982 C829156_53.0 1 553
+
+			Align 3: 6430 6982 C829156_53.0 1 553
+				Negative gap (overlap) between this and next alignment: 6982 to 6974 (-8 bp)
+				Next Alignment: 6974 11177 scaffold10511_37.8 113192 108930
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 113192 to 113183.
+			Align 4: 6983 11177 scaffold10511_37.8 113183 108930
+				Gap between this and next alignment: 11177 to 11353 (175 bp)
+				Next Alignment: 11353 23394 scaffold10511_37.8 108861 96816
+
+			Align 5: 11353 23394 scaffold10511_37.8 108861 96816
+				Gap between this and next alignment: 23394 to 23591 (196 bp)
+				Next Alignment: 23591 27176 scaffold10511_37.8 96763 93178
+
+			Align 6: 23591 27176 scaffold10511_37.8 96763 93178
+				Gap between this and next alignment: 27176 to 27269 (92 bp)
+				Next Alignment: 27269 33373 scaffold10511_37.8 93126 87023
+
+			Align 7: 27269 33373 scaffold10511_37.8 93126 87023
+				Gap between this and next alignment: 33373 to 34961 (1587 bp)
+				Next Alignment: 34961 98350 scaffold10511_37.8 85250 21760
+
+			Align 8: 34961 98350 scaffold10511_37.8 85250 21760
+			END in gap: 98350 to 101897 (3547 bp)
+
+	Reference Neisseria_subflava_gi_260590252_ref_NZ_: 5 total alignments. 1 total regions.
+		Region: 1 to 178102 (178102 bp)
+			Align 1: 1 30309 scaffold5017_42.0 28090 58398
+				Negative gap (overlap) between this and next alignment: 30309 to 30286 (-23 bp)
+				Next Alignment: 30286 52769 C884742_45.0 80278 57798
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 80278 to 80254.
+			Align 2: 30310 52769 C884742_45.0 80254 57798
+				Gap between this and next alignment: 52769 to 53717 (947 bp)
+				Next Alignment: 53717 110558 C884742_45.0 56878 39
+
+			Align 3: 53717 110558 C884742_45.0 56878 39
+				Negative gap (overlap) between this and next alignment: 110558 to 110556 (-2 bp)
+				Next Alignment: 110556 139588 C884604_47.0 1447 30502
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1447 to 1450.
+			Align 4: 110559 139588 C884604_47.0 1450 30502
+				Negative gap (overlap) between this and next alignment: 139588 to 139556 (-32 bp)
+				Next Alignment: 139556 177902 C884664_43.0 1 38353
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 34.
+			Align 5: 139589 177902 C884664_43.0 34 38353
+			END in gap: 177902 to 178102 (200 bp)
+
+ERROR: Reference Neisseria_subflava_gi_260590305_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+	Reference Neisseria_subflava_gi_260590272_ref_NZ_: 6 total alignments. 1 total regions.
+		Region: 1 to 6553 (6553 bp)
+			Align 1: 1 369 scaffold3063_24.2 525 157
+				Gap between this and next alignment: 369 to 855 (485 bp)
+				Next Alignment: 855 1464 C837900_45.0 610 1
+
+			Align 2: 855 1464 C837900_45.0 610 1
+				Gap between this and next alignment: 1464 to 1470 (5 bp)
+				Next Alignment: 1470 2154 C846158_56.0 685 1
+
+			Align 3: 1470 2154 C846158_56.0 685 1
+				Gap between this and next alignment: 2154 to 2667 (512 bp)
+				Next Alignment: 2667 3530 C858346_46.0 1 864
+
+			Align 4: 2667 3530 C858346_46.0 1 864
+				Gap between this and next alignment: 3530 to 3874 (343 bp)
+				Next Alignment: 3874 4421 C828246_36.0 548 1
+
+			Align 5: 3874 4421 C828246_36.0 548 1
+				Gap between this and next alignment: 4421 to 4452 (30 bp)
+				Next Alignment: 4452 5686 C871076_48.0 1 1235
+
+			Align 6: 4452 5686 C871076_48.0 1 1235
+			END in gap: 5686 to 6553 (867 bp)
+
+ERROR: Reference Neisseria_subflava_gi_260590339_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+ERROR: Reference Neisseria_subflava_gi_260590327_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+ERROR: Reference Neisseria_subflava_gi_260590289_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+ERROR: Reference Neisseria_subflava_gi_260590309_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+ERROR: Reference Neisseria_subflava_gi_260590328_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+ERROR: Reference Neisseria_subflava_gi_260590330_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+ERROR: Reference Neisseria_subflava_gi_260590279_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+ERROR: Reference Neisseria_subflava_gi_260590336_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+	Reference Neisseria_subflava_gi_260590266_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 22349 (22349 bp)
+			START in gap: 1 to 374 (373 bp)
+			Align 1: 374 13291 C884000_43.0 1 12917
+				Gap between this and next alignment: 13291 to 13513 (221 bp)
+				Next Alignment: 13513 22348 C884674_45.0 39684 30849
+
+			Align 2: 13513 22348 C884674_45.0 39684 30849
+			END in gap: 22348 to 22349 (1 bp)
+
+	Reference Neisseria_subflava_gi_260590265_ref_NZ_: 6 total alignments. 1 total regions.
+		Region: 1 to 24482 (24482 bp)
+			Align 1: 1 4263 C882150_43.0 912 5168
+				Gap between this and next alignment: 4263 to 4472 (208 bp)
+				Next Alignment: 4472 4724 scaffold10061_42.9 18709 18457
+
+			Align 2: 4472 4724 scaffold10061_42.9 18709 18457
+				Gap between this and next alignment: 4724 to 4825 (100 bp)
+				Next Alignment: 4825 4928 scaffold10061_42.9 18396 18293
+
+			Align 3: 4825 4928 scaffold10061_42.9 18396 18293
+				Gap between this and next alignment: 4928 to 5080 (151 bp)
+				Next Alignment: 5080 14867 scaffold10061_42.9 18193 8414
+
+			Align 4: 5080 14867 scaffold10061_42.9 18193 8414
+				Gap between this and next alignment: 14867 to 14883 (15 bp)
+				Next Alignment: 14883 22265 scaffold10061_42.9 7383 1
+
+			Align 5: 14883 22265 scaffold10061_42.9 7383 1
+				Gap between this and next alignment: 22265 to 22296 (30 bp)
+				Next Alignment: 22296 22915 C839314_63.0 1 621
+
+			Align 6: 22296 22915 C839314_63.0 1 621
+			END in gap: 22915 to 24482 (1567 bp)
+
+	Reference Neisseria_subflava_gi_260590275_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 2783 (2783 bp)
+			START in gap: 1 to 1053 (1052 bp)
+			Align 1: 1053 1627 C832558_46.0 575 1
+			END in gap: 1627 to 2783 (1156 bp)
+
+ERROR: Reference Neisseria_subflava_gi_260590290_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+	Reference Neisseria_subflava_gi_260590255_ref_NZ_: 4 total alignments. 1 total regions.
+		Region: 1 to 128160 (128160 bp)
+			START in gap: 1 to 306 (305 bp)
+			Align 1: 306 24193 C884502_51.0 1 23889
+				Negative gap (overlap) between this and next alignment: 24193 to 24143 (-50 bp)
+				Next Alignment: 24143 24976 C856818_49.0 1 834
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 52.
+			Align 2: 24194 24976 C856818_49.0 52 834
+				Gap between this and next alignment: 24976 to 28847 (3870 bp)
+				Next Alignment: 28847 56482 scaffold6520_37.9 1 27654
+
+			Align 3: 28847 56482 scaffold6520_37.9 1 27654
+				Gap between this and next alignment: 56482 to 57101 (618 bp)
+				Next Alignment: 57101 128128 scaffold6520_37.9 32048 103061
+
+			Align 4: 57101 128128 scaffold6520_37.9 32048 103061
+			END in gap: 128128 to 128160 (32 bp)
+
+ERROR: Reference Neisseria_subflava_gi_260590323_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+	Reference Neisseria_subflava_gi_260590264_ref_NZ_: 8 total alignments. 1 total regions.
+		Region: 1 to 24897 (24897 bp)
+			START in gap: 1 to 2578 (2577 bp)
+			Align 1: 2578 3446 C858862_45.0 873 1
+				Gap between this and next alignment: 3446 to 3632 (185 bp)
+				Next Alignment: 3632 4420 C854168_52.0 1 789
+
+			Align 2: 3632 4420 C854168_52.0 1 789
+				Gap between this and next alignment: 4420 to 4430 (9 bp)
+				Next Alignment: 4430 5175 C851258_46.0 746 1
+
+			Align 3: 4430 5175 C851258_46.0 746 1
+				Negative gap (overlap) between this and next alignment: 5175 to 5127 (-48 bp)
+				Next Alignment: 5127 12858 scaffold31108_37.2 1 7766
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 50.
+			Align 4: 5176 12858 scaffold31108_37.2 50 7766
+				Negative gap (overlap) between this and next alignment: 12858 to 12833 (-25 bp)
+				Next Alignment: 12833 14577 C875058_52.0 1 1745
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 27.
+			Align 5: 12859 14577 C875058_52.0 27 1745
+				Gap between this and next alignment: 14577 to 15419 (841 bp)
+				Next Alignment: 15419 15745 scaffold30050_36.6 1 327
+
+			Align 6: 15419 15745 scaffold30050_36.6 1 327
+				Gap between this and next alignment: 15745 to 15988 (242 bp)
+				Next Alignment: 15988 16990 scaffold30050_36.6 420 1422
+
+			Align 7: 15988 16990 scaffold30050_36.6 420 1422
+				Gap between this and next alignment: 16990 to 17034 (43 bp)
+				Next Alignment: 17034 24414 C883076_46.0 1 7377
+
+			Align 8: 17034 24414 C883076_46.0 1 7377
+			END in gap: 24414 to 24897 (483 bp)
+
+ERROR: Reference Neisseria_subflava_gi_260590341_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+	Reference Neisseria_subflava_gi_260590261_ref_NZ_: 4 total alignments. 1 total regions.
+		Region: 1 to 92235 (92235 bp)
+			START in gap: 1 to 221 (220 bp)
+			Align 1: 221 5838 scaffold1155_38.4 168188 173776
+				Gap between this and next alignment: 5838 to 8964 (3125 bp)
+				Next Alignment: 8964 35835 scaffold1155_38.4 177342 204199
+
+			Align 2: 8964 35835 scaffold1155_38.4 177342 204199
+				Gap between this and next alignment: 35835 to 36713 (877 bp)
+				Next Alignment: 36713 60596 scaffold1155_38.4 204248 228125
+
+			Align 3: 36713 60596 scaffold1155_38.4 204248 228125
+				Gap between this and next alignment: 60596 to 60626 (29 bp)
+				Next Alignment: 60626 92207 scaffold1155_38.4 228555 260136
+
+			Align 4: 60626 92207 scaffold1155_38.4 228555 260136
+			END in gap: 92207 to 92235 (28 bp)
+
+ERROR: Reference Neisseria_subflava_gi_260590335_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+	Reference Neisseria_subflava_gi_260590268_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 16625 (16625 bp)
+			START in gap: 1 to 462 (461 bp)
+			Align 1: 462 16181 C884236_57.0 1 15721
+			END in gap: 16181 to 16625 (444 bp)
+
+	Reference Neisseria_subflava_gi_260590250_ref_NZ_: 25 total alignments. 1 total regions.
+		Region: 1 to 453481 (453481 bp)
+			START in gap: 1 to 2191 (2190 bp)
+			Align 1: 2191 9395 scaffold32440_41.0 1897 9044
+				Gap between this and next alignment: 9395 to 9862 (466 bp)
+				Next Alignment: 9862 11500 scaffold32440_41.0 9114 10752
+
+			Align 2: 9862 11500 scaffold32440_41.0 9114 10752
+				Gap between this and next alignment: 11500 to 11506 (5 bp)
+				Next Alignment: 11506 69787 C884752_47.0 130773 72483
+
+			Align 3: 11506 69787 C884752_47.0 130773 72483
+				Next Alignment: 69788 82611 C884752_47.0 70147 57311
+
+			Align 4: 69788 82611 C884752_47.0 70147 57311
+				Gap between this and next alignment: 82611 to 83279 (667 bp)
+				Next Alignment: 83279 85126 C884752_47.0 56556 54706
+
+			Align 5: 83279 85126 C884752_47.0 56556 54706
+				Gap between this and next alignment: 85126 to 86072 (945 bp)
+				Next Alignment: 86072 113801 C884752_47.0 53273 25543
+
+			Align 6: 86072 113801 C884752_47.0 53273 25543
+				Gap between this and next alignment: 113801 to 114625 (823 bp)
+				Next Alignment: 114625 135289 C884752_47.0 24421 3757
+
+			Align 7: 114625 135289 C884752_47.0 24421 3757
+				Gap between this and next alignment: 135289 to 135418 (128 bp)
+				Next Alignment: 135418 138865 C884752_47.0 3448 1
+
+			Align 8: 135418 138865 C884752_47.0 3448 1
+				Negative gap (overlap) between this and next alignment: 138865 to 138834 (-31 bp)
+				Next Alignment: 138834 173796 scaffold32120_41.6 1 34969
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 33.
+			Align 9: 138866 173796 scaffold32120_41.6 33 34969
+				Gap between this and next alignment: 173796 to 174616 (819 bp)
+				Next Alignment: 174616 179374 scaffold32120_41.6 35037 39771
+
+			Align 10: 174616 179374 scaffold32120_41.6 35037 39771
+				Gap between this and next alignment: 179374 to 179635 (260 bp)
+				Next Alignment: 179635 201017 scaffold32439_41.2 1 21395
+
+			Align 11: 179635 201017 scaffold32439_41.2 1 21395
+				Negative gap (overlap) between this and next alignment: 201017 to 200977 (-40 bp)
+				Next Alignment: 200977 227539 C884554_47.0 1 26564
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 42.
+			Align 12: 201018 227539 C884554_47.0 42 26564
+				Negative gap (overlap) between this and next alignment: 227539 to 227532 (-7 bp)
+				Next Alignment: 227532 229783 C877662_44.0 2253 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 2253 to 2245.
+			Align 13: 227540 229783 C877662_44.0 2245 1
+				Gap between this and next alignment: 229783 to 230044 (260 bp)
+				Next Alignment: 230044 238676 C884732_47.0 68119 59487
+
+			Align 14: 230044 238676 C884732_47.0 68119 59487
+				Gap between this and next alignment: 238676 to 239636 (959 bp)
+				Next Alignment: 239636 257814 C884732_47.0 59358 41186
+
+			Align 15: 239636 257814 C884732_47.0 59358 41186
+				Gap between this and next alignment: 257814 to 258486 (671 bp)
+				Next Alignment: 258486 299657 C884732_47.0 41174 1
+
+			Align 16: 258486 299657 C884732_47.0 41174 1
+				Negative gap (overlap) between this and next alignment: 299657 to 299628 (-29 bp)
+				Next Alignment: 299628 316340 C884280_40.0 1 16708
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 31.
+			Align 17: 299658 316340 C884280_40.0 31 16708
+				Negative gap (overlap) between this and next alignment: 316340 to 316320 (-20 bp)
+				Next Alignment: 316320 316449 C884734_47.0 69781 69652
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 69781 to 69760.
+			Align 18: 316341 316449 C884734_47.0 69760 69652
+				Negative gap (overlap) between this and next alignment: 316449 to 316420 (-29 bp)
+				Next Alignment: 316420 347093 C884734_47.0 47219 16543
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 47219 to 47188.
+			Align 19: 316450 347093 C884734_47.0 47188 16543
+				Gap between this and next alignment: 347093 to 347106 (12 bp)
+				Next Alignment: 347106 363070 C884734_47.0 15965 1
+
+			Align 20: 347106 363070 C884734_47.0 15965 1
+				Negative gap (overlap) between this and next alignment: 363070 to 363056 (-14 bp)
+				Next Alignment: 363056 375725 C884716_47.0 55295 42626
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 55295 to 55280.
+			Align 21: 363071 375725 C884716_47.0 55280 42626
+				Gap between this and next alignment: 375725 to 375759 (33 bp)
+				Next Alignment: 375759 377453 C884716_47.0 42233 40539
+
+			Align 22: 375759 377453 C884716_47.0 42233 40539
+				Gap between this and next alignment: 377453 to 379663 (2209 bp)
+				Next Alignment: 379663 420079 C884716_47.0 40501 40
+
+			Align 23: 379663 420079 C884716_47.0 40501 40
+				Negative gap (overlap) between this and next alignment: 420079 to 420075 (-4 bp)
+				Next Alignment: 420075 445073 C884628_42.0 56 25040
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 56 to 61.
+			Align 24: 420080 445073 C884628_42.0 61 25040
+				Gap between this and next alignment: 445073 to 445347 (273 bp)
+				Next Alignment: 445347 452896 C884628_42.0 25250 32800
+
+			Align 25: 445347 452896 C884628_42.0 25250 32800
+			END in gap: 452896 to 453481 (585 bp)
+
+	Reference Neisseria_subflava_gi_260590251_ref_NZ_: 10 total alignments. 1 total regions.
+		Region: 1 to 284852 (284852 bp)
+			Align 1: 1 30829 C884674_45.0 30825 1
+				Negative gap (overlap) between this and next alignment: 30829 to 30820 (-9 bp)
+				Next Alignment: 30820 31691 C858798_58.0 872 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 872 to 862.
+			Align 2: 30830 31691 C858798_58.0 862 1
+				Negative gap (overlap) between this and next alignment: 31691 to 31682 (-9 bp)
+				Next Alignment: 31682 32300 C839178_46.0 620 2
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 620 to 610.
+			Align 3: 31692 32300 C839178_46.0 610 2
+				Negative gap (overlap) between this and next alignment: 32300 to 32257 (-43 bp)
+				Next Alignment: 32257 52272 scaffold1155_38.4 509581 489568
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 509581 to 509537.
+			Align 4: 32301 52272 scaffold1155_38.4 509537 489568
+				Negative gap (overlap) between this and next alignment: 52272 to 52272 (0 bp)
+				Next Alignment: 52272 81388 scaffold1155_38.4 489463 460312
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 489463 to 489462.
+			Align 5: 52273 81388 scaffold1155_38.4 489462 460312
+				Gap between this and next alignment: 81388 to 81678 (289 bp)
+				Next Alignment: 81678 126281 scaffold1155_38.4 460217 415592
+
+			Align 6: 81678 126281 scaffold1155_38.4 460217 415592
+				Gap between this and next alignment: 126281 to 126424 (142 bp)
+				Next Alignment: 126424 130399 scaffold1155_38.4 415448 411472
+
+			Align 7: 126424 130399 scaffold1155_38.4 415448 411472
+				Gap between this and next alignment: 130399 to 132271 (1871 bp)
+				Next Alignment: 132271 153769 scaffold1155_38.4 411471 389981
+
+			Align 8: 132271 153769 scaffold1155_38.4 411471 389981
+				Gap between this and next alignment: 153769 to 154629 (859 bp)
+				Next Alignment: 154629 224745 scaffold1155_38.4 389873 319752
+
+			Align 9: 154629 224745 scaffold1155_38.4 389873 319752
+				Gap between this and next alignment: 224745 to 225265 (519 bp)
+				Next Alignment: 225265 284842 scaffold1155_38.4 319732 260137
+
+			Align 10: 225265 284842 scaffold1155_38.4 319732 260137
+			END in gap: 284842 to 284852 (10 bp)
+
+ERROR: Reference Neisseria_subflava_gi_260590282_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+ERROR: Reference Neisseria_subflava_gi_260590333_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+	Reference Neisseria_subflava_gi_260590258_ref_NZ_: 5 total alignments. 1 total regions.
+		Region: 1 to 107349 (107349 bp)
+			START in gap: 1 to 2 (1 bp)
+			Align 1: 2 27867 scaffold5017_42.0 28060 195
+				Gap between this and next alignment: 27867 to 28014 (146 bp)
+				Next Alignment: 28014 55619 scaffold32451_40.6 91080 63464
+
+			Align 2: 28014 55619 scaffold32451_40.6 91080 63464
+				Gap between this and next alignment: 55619 to 56678 (1058 bp)
+				Next Alignment: 56678 57671 scaffold32451_40.6 62795 61802
+
+			Align 3: 56678 57671 scaffold32451_40.6 62795 61802
+				Gap between this and next alignment: 57671 to 59623 (1951 bp)
+				Next Alignment: 59623 102721 scaffold32451_40.6 60474 17377
+
+			Align 4: 59623 102721 scaffold32451_40.6 60474 17377
+				Negative gap (overlap) between this and next alignment: 102721 to 102684 (-37 bp)
+				Next Alignment: 102684 107320 scaffold32451_40.6 16756 12121
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 16756 to 16719.
+			Align 5: 102722 107320 scaffold32451_40.6 16719 12121
+			END in gap: 107320 to 107349 (29 bp)
+
+	Reference Neisseria_subflava_gi_260590260_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 100529 (100529 bp)
+			START in gap: 1 to 213 (212 bp)
+			Align 1: 213 52880 scaffold32451_40.6 145417 92753
+				Gap between this and next alignment: 52880 to 98397 (45516 bp)
+				Next Alignment: 98397 100005 scaffold32451_40.6 92752 91144
+
+			Align 2: 98397 100005 scaffold32451_40.6 92752 91144
+			END in gap: 100005 to 100529 (524 bp)
+
+ERROR: Reference Neisseria_subflava_gi_260590340_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+ERROR: Reference Neisseria_subflava_gi_260590337_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+ERROR: Reference Neisseria_subflava_gi_260590331_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+	Reference Neisseria_subflava_gi_260590253_ref_NZ_: 6 total alignments. 1 total regions.
+		Region: 1 to 156842 (156842 bp)
+			START in gap: 1 to 1810 (1809 bp)
+			Align 1: 1810 20840 scaffold10511_37.8 19080 39
+				Negative gap (overlap) between this and next alignment: 20840 to 20838 (-2 bp)
+				Next Alignment: 20838 57082 scaffold28327_37.2 118830 82560
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 118830 to 118827.
+			Align 2: 20841 57082 scaffold28327_37.2 118827 82560
+				Gap between this and next alignment: 57082 to 58863 (1780 bp)
+				Next Alignment: 58863 89110 scaffold28327_37.2 81343 51098
+
+			Align 3: 58863 89110 scaffold28327_37.2 81343 51098
+				Gap between this and next alignment: 89110 to 89215 (104 bp)
+				Next Alignment: 89215 109555 scaffold28327_37.2 51056 30720
+
+			Align 4: 89215 109555 scaffold28327_37.2 51056 30720
+				Gap between this and next alignment: 109555 to 109564 (8 bp)
+				Next Alignment: 109564 139524 scaffold28327_37.2 30232 265
+
+			Align 5: 109564 139524 scaffold28327_37.2 30232 265
+				Next Alignment: 139525 156842 scaffold6520_37.9 141951 124643
+
+			Align 6: 139525 156842 scaffold6520_37.9 141951 124643
+			END in current alignment.  Modifying 156842 to 156842.
+
+ERROR: Reference Neisseria_subflava_gi_260590342_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+ERROR: Reference Neisseria_subflava_gi_260590312_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+ERROR: Reference Neisseria_subflava_gi_260590334_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Neisseria_subflava_gi_260590274_ref_NZ_', 'Neisseria_subflava_gi_260590254_ref_NZ_', 'Neisseria_subflava_gi_260590256_ref_NZ_', 'Neisseria_subflava_gi_260590271_ref_NZ_', 'Neisseria_subflava_gi_260590262_ref_NZ_', 'Neisseria_subflava_gi_260590269_ref_NZ_', 'Neisseria_subflava_gi_260590257_ref_NZ_', 'Neisseria_subflava_gi_260590276_ref_NZ_', 'Neisseria_subflava_gi_260590277_ref_NZ_', 'Neisseria_subflava_gi_260590270_ref_NZ_', 'Neisseria_subflava_gi_260590252_ref_NZ_', 'Neisseria_subflava_gi_260590272_ref_NZ_', 'Neisseria_subflava_gi_260590263_ref_NZ_', 'Neisseria_subflava_gi_260590259_ref_NZ_', 'Neisseria_subflava_gi_260590266_ref_NZ_', 'Neisseria_subflava_gi_260590275_ref_NZ_', 'Neisseria_subflava_gi_260590255_ref_NZ_', 'Neisseria_subflava_gi_260590264_ref_NZ_', 'Neisseria_subflava_gi_260590261_ref_NZ_', 'Neisseria_subflava_gi_260590250_ref_NZ_', 'Neisseria_subflava_gi_260590251_ref_NZ_', 'Neisseria_subflava_gi_260590268_ref_NZ_', 'Neisseria_subflava_gi_260590258_ref_NZ_', 'Neisseria_subflava_gi_260590260_ref_NZ_', 'Neisseria_subflava_gi_260590267_ref_NZ_', 'Neisseria_subflava_gi_260590253_ref_NZ_', 'Neisseria_subflava_gi_260590265_ref_NZ_']
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Neisseria_subflava/contigs_reports/nucmer_output/SOAPdenovo2.used_snps
+
+Results:
+	Local Misassemblies: 26
+	Misassemblies: 19
+		Relocations: 6
+		Translocations: 13
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 15
+	Misassembled Contigs: 14
+	Misassembled Contig Bases: 1394888
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 6 part
+Partially Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 3918
+
+Ambiguously Mapped Contigs: 1
+Total Bases in Ambiguously Mapped Contigs: 873
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 2128848
+
+	SNPs: 26714
+	Insertions: 1074
+	Deletions: 1052
+
+	Positive Gaps: 119
+		Internal Gaps:  45
+		External Gaps:  74
+		External Gap Total:  46213
+		External Gap Average: 624
+	Negative Gaps: 29
+		Internal Overlaps:  3
+		External Overlaps:  26
+		External Overlaps Total: -626
+		External Overlaps Average: -24
+	Contigs with Redundant Alignments: 0 (0)

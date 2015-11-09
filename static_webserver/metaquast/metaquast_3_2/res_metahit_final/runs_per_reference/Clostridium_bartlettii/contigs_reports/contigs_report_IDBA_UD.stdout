@@ -1,0 +1,150 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Clostridium_bartlettii_gi_224104202_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 1
+	Total Region Length: 2972256
+Analyzing contigs...
+CONTIG: scaffold_812 (10239bp)
+Top Length: 88  Top ID: 98.86
+		This contig is partially unaligned. (Aligned 88 out of 10239 bases)
+		Alignment: 1141198 1141285 | 10239 10152 | 88 88 | 98.86 | Clostridium_bartlettii_gi_224104202_ref_NZ_ scaffold_812
+		Unaligned bases: 1 to 10151 (10151)
+
+CONTIG: scaffold_2395 (6283bp)
+Top Length: 6238  Top ID: 95.45
+		One align captures most of this contig: 1116799 1123051 | 46 6283 | 6253 6238 | 95.45 | Clostridium_bartlettii_gi_224104202_ref_NZ_ scaffold_2395
+
+CONTIG: scaffold_3488 (3650bp)
+Top Length: 2798  Top ID: 95.36
+		This contig is partially unaligned. (Aligned 2798 out of 3650 bases)
+		Alignment: 1132909 1135701 | 2798 1 | 2793 2798 | 95.36 | Clostridium_bartlettii_gi_224104202_ref_NZ_ scaffold_3488
+		Unaligned bases: 2799 to 3650 (852)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_5286 (2053bp)
+Top Length: 1887  Top ID: 96.93
+		This contig is partially unaligned. (Aligned 1887 out of 2053 bases)
+		Alignment: 1115170 1117056 | 167 2053 | 1887 1887 | 96.93 | Clostridium_bartlettii_gi_224104202_ref_NZ_ scaffold_5286
+		Unaligned bases: 1 to 166 (166)
+
+CONTIG: scaffold_7025 (2168bp)
+Top Length: 1229  Top ID: 98.06
+		Skipping redundant alignment 9874 11001 | 1127 1 | 1128 1127 | 96.81 | Clostridium_bartlettii_gi_224104202_ref_NZ_ scaffold_7025
+		Skipping redundant alignment 774702 775767 | 2168 1103 | 1066 1066 | 96.75 | Clostridium_bartlettii_gi_224104202_ref_NZ_ scaffold_7025
+		Skipping redundant alignment 1503383 1504385 | 2168 1173 | 1003 996 | 97.22 | Clostridium_bartlettii_gi_224104202_ref_NZ_ scaffold_7025
+		Skipping redundant alignment 2585359 2585833 | 1694 2168 | 475 475 | 98.53 | Clostridium_bartlettii_gi_224104202_ref_NZ_ scaffold_7025
+		Skipping redundant alignment 2383367 2383518 | 2014 2168 | 152 155 | 96.77 | Clostridium_bartlettii_gi_224104202_ref_NZ_ scaffold_7025
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 548627 549858 | 2168 937 | 1232 1232 | 96.54 | Clostridium_bartlettii_gi_224104202_ref_NZ_ scaffold_7025
+		This contig is misassembled. 8 total aligns.
+			Excluding internal overlap of size 266 between Alignment 1 and 2:  4114 5338 | 1 1205 | 1225 1205 --> 4114 5072 | 1 939 | 959 939
+			Real Alignment 1: 4114 5072 | 1 939 | 959 939 | 95.69 | Clostridium_bartlettii_gi_224104202_ref_NZ_ scaffold_7025
+			  Extensive misassembly ( relocation, inconsistency = 228229 ) between these two alignments
+			Real Alignment 2: 233302 234537 | 940 2168 | 1236 1229 | 98.06 | Clostridium_bartlettii_gi_224104202_ref_NZ_ scaffold_7025
+
+CONTIG: scaffold_7710 (1581bp)
+Top Length: 1581  Top ID: 96.96
+		One align captures most of this contig: 1137496 1139076 | 1 1581 | 1581 1581 | 96.96 | Clostridium_bartlettii_gi_224104202_ref_NZ_ scaffold_7710
+
+CONTIG: scaffold_11364 (1180bp)
+Top Length: 1169  Top ID: 96.92
+		One align captures most of this contig: 1140117 1141285 | 1 1169 | 1169 1169 | 96.92 | Clostridium_bartlettii_gi_224104202_ref_NZ_ scaffold_11364
+
+CONTIG: scaffold_14351 (1922bp)
+Top Length: 530  Top ID: 96.23
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 1922 and total length of all aligns is 956
+		Alignment: 1137162 1137587 | 426 1 | 426 426 | 95.32 | Clostridium_bartlettii_gi_224104202_ref_NZ_ scaffold_14351
+		Alignment: 1135603 1136131 | 1922 1393 | 529 530 | 96.23 | Clostridium_bartlettii_gi_224104202_ref_NZ_ scaffold_14351
+		Unaligned bases: 966
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Clostridium_bartlettii/contigs_reports/nucmer_output/IDBA_UD.used_snps
+	Reference Clostridium_bartlettii_gi_224104202_ref_NZ_: 10 total alignments. 1 total regions.
+		Region: 1 to 2972256 (2972256 bp)
+			START in gap: 1 to 4114 (4113 bp)
+			Align 1: 4114 5072 scaffold_7025 1 939
+				Gap between this and next alignment: 5072 to 233302 (228229 bp)
+				Next Alignment: 233302 234537 scaffold_7025 940 2168
+
+			Align 2: 233302 234537 scaffold_7025 940 2168
+				Gap between this and next alignment: 234537 to 1115170 (880632 bp)
+				Next Alignment: 1115170 1117056 scaffold_5286 167 2053
+
+			Align 3: 1115170 1117056 scaffold_5286 167 2053
+				Negative gap (overlap) between this and next alignment: 1117056 to 1116799 (-257 bp)
+				Next Alignment: 1116799 1123051 scaffold_2395 46 6283
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 46 to 309.
+			Align 4: 1117057 1123051 scaffold_2395 309 6283
+				Gap between this and next alignment: 1123051 to 1132909 (9857 bp)
+				Next Alignment: 1132909 1135701 scaffold_3488 2798 1
+
+			Align 5: 1132909 1135701 scaffold_3488 2798 1
+				Negative gap (overlap) between this and next alignment: 1135701 to 1135603 (-98 bp)
+				Next Alignment: 1135603 1136131 scaffold_14351 1922 1393
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1922 to 1823.
+			Align 6: 1135702 1136131 scaffold_14351 1823 1393
+				Gap between this and next alignment: 1136131 to 1137162 (1030 bp)
+				Next Alignment: 1137162 1137587 scaffold_14351 426 1
+
+			Align 7: 1137162 1137587 scaffold_14351 426 1
+				Negative gap (overlap) between this and next alignment: 1137587 to 1137496 (-91 bp)
+				Next Alignment: 1137496 1139076 scaffold_7710 1 1581
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 93.
+			Align 8: 1137588 1139076 scaffold_7710 93 1581
+				Gap between this and next alignment: 1139076 to 1140117 (1040 bp)
+				Next Alignment: 1140117 1141285 scaffold_11364 1 1169
+
+			Align 9: 1140117 1141285 scaffold_11364 1 1169
+				The next alignment (1141198 1141285 scaffold_812 10239 10152) is redundant. Skipping.
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Clostridium_bartlettii/contigs_reports/nucmer_output/IDBA_UD.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 1
+		Relocations: 1
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 1
+	Misassembled Contig Bases: 2168
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 4 part
+Partially Unaligned Contigs with Misassemblies: 1
+Unaligned Contig Bases: 12135
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 16384
+
+	SNPs: 569
+	Insertions: 15
+	Deletions: 35
+
+	Positive Gaps: 6
+		Internal Gaps:  2
+		External Gaps:  4
+		External Gap Total:  895642
+		External Gap Average: 223910
+	Negative Gaps: 3
+		Internal Overlaps:  0
+		External Overlaps:  3
+		External Overlaps Total: -446
+		External Overlaps Average: -149
+	Contigs with Redundant Alignments: 1 (88)

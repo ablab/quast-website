@@ -1,0 +1,588 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [marine_gamma_proteobacterium_HTCC2080_gi_119502701_ref_NZ_]
+	Loaded [marine_gamma_proteobacterium_HTCC2080_gi_119503117_ref_NZ_]
+	Loaded [marine_gamma_proteobacterium_HTCC2080_gi_119503401_ref_NZ_]
+	Loaded [marine_gamma_proteobacterium_HTCC2080_gi_119503701_ref_NZ_]
+	Loaded [marine_gamma_proteobacterium_HTCC2080_gi_119503955_ref_NZ_]
+	Loaded [marine_gamma_proteobacterium_HTCC2080_gi_119504206_ref_NZ_]
+	Loaded [marine_gamma_proteobacterium_HTCC2080_gi_119504450_ref_NZ_]
+	Loaded [marine_gamma_proteobacterium_HTCC2080_gi_119504692_ref_NZ_]
+	Loaded [marine_gamma_proteobacterium_HTCC2080_gi_119504867_ref_NZ_]
+	Loaded [marine_gamma_proteobacterium_HTCC2080_gi_119505011_ref_NZ_]
+	Loaded [marine_gamma_proteobacterium_HTCC2080_gi_119505171_ref_NZ_]
+	Loaded [marine_gamma_proteobacterium_HTCC2080_gi_119505302_ref_NZ_]
+	Loaded [marine_gamma_proteobacterium_HTCC2080_gi_119505407_ref_NZ_]
+	Loaded [marine_gamma_proteobacterium_HTCC2080_gi_119505479_ref_NZ_]
+	Loaded [marine_gamma_proteobacterium_HTCC2080_gi_119505576_ref_NZ_]
+	Loaded [marine_gamma_proteobacterium_HTCC2080_gi_119505645_ref_NZ_]
+	Loaded [marine_gamma_proteobacterium_HTCC2080_gi_119505707_ref_NZ_]
+	Loaded [marine_gamma_proteobacterium_HTCC2080_gi_119505747_ref_NZ_]
+	Loaded [marine_gamma_proteobacterium_HTCC2080_gi_119505783_ref_NZ_]
+	Loaded [marine_gamma_proteobacterium_HTCC2080_gi_119505814_ref_NZ_]
+	Loaded [marine_gamma_proteobacterium_HTCC2080_gi_119505852_ref_NZ_]
+	Loaded [marine_gamma_proteobacterium_HTCC2080_gi_119505884_ref_NZ_]
+	Loaded [marine_gamma_proteobacterium_HTCC2080_gi_119505899_ref_NZ_]
+	Loaded [marine_gamma_proteobacterium_HTCC2080_gi_119505906_ref_NZ_]
+	Loaded [marine_gamma_proteobacterium_HTCC2080_gi_119505909_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 25
+	Total Region Length: 3576081
+Analyzing contigs...
+CONTIG: scaffold-1 (268377bp)
+Top Length: 159321  Top ID: 100.0
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 3 159323 | 1 159321 | 159321 159321 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119503401_ref_NZ_ scaffold-1
+			  Overlap between these two alignments (local misassembly). Inconsistency = -97 
+			Real Alignment 2: 159299 268282 | 159394 268377 | 108984 108984 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119503401_ref_NZ_ scaffold-1
+
+CONTIG: scaffold-216 (40591bp)
+Top Length: 40591  Top ID: 100.0
+		One align captures most of this contig: 268319 308909 | 1 40591 | 40591 40591 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119503401_ref_NZ_ scaffold-216
+
+CONTIG: scaffold-232 (308827bp)
+Top Length: 238029  Top ID: 99.99
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 20037 between Alignment 1 and 2:  217996 308851 | 90835 1 | 90856 90835 --> 238033 308851 | 70798 1 | 70819 70798
+			Real Alignment 1: 238033 308851 | 70798 1 | 70819 70798 | 99.98 | marine_gamma_proteobacterium_HTCC2080_gi_119503701_ref_NZ_ scaffold-232
+			  Fake misassembly between these two alignments: inconsistency = -21 , gap in the contig is small or absent or filled mostly with Ns (long indel: insertion of length 21; 0 mismatches)
+			Real Alignment 2: 4 238053 | 308827 70799 | 238050 238029 | 99.99 | marine_gamma_proteobacterium_HTCC2080_gi_119503701_ref_NZ_ scaffold-232
+
+CONTIG: scaffold-128 (262398bp)
+Top Length: 262398  Top ID: 100.0
+		One align captures most of this contig: 1 262398 | 1 262398 | 262398 262398 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119504450_ref_NZ_ scaffold-128
+
+CONTIG: scaffold-242 (42356bp)
+Top Length: 42356  Top ID: 100.0
+		One align captures most of this contig: 2 42357 | 42356 1 | 42356 42356 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119505707_ref_NZ_ scaffold-242
+
+CONTIG: scaffold-2047 (38554bp)
+Top Length: 38554  Top ID: 100.0
+		One align captures most of this contig: 2 38555 | 1 38554 | 38554 38554 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119505783_ref_NZ_ scaffold-2047
+
+CONTIG: scaffold-135 (131674bp)
+Top Length: 131674  Top ID: 100.0
+		One align captures most of this contig: 4 131677 | 1 131674 | 131674 131674 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119505302_ref_NZ_ scaffold-135
+
+CONTIG: scaffold-133 (79352bp)
+Top Length: 79352  Top ID: 100.0
+		One align captures most of this contig: 2 79353 | 1 79352 | 79352 79352 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119505576_ref_NZ_ scaffold-133
+
+CONTIG: scaffold-44101 (74243bp)
+Top Length: 38459  Top ID: 100.0
+		Skipping redundant alignment 234597 234796 | 74243 74044 | 200 200 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119504206_ref_NZ_ scaffold-44101
+		This contig is misassembled. 3 total aligns.
+			Excluding internal overlap of size 58 between Alignment 1 and 2:  2 35841 | 1 35842 | 35840 35842 --> 2 35783 | 1 35784 | 35782 35784
+			Real Alignment 1: 2 35783 | 1 35784 | 35782 35784 | 99.99 | marine_gamma_proteobacterium_HTCC2080_gi_119505814_ref_NZ_ scaffold-44101
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 235773 274231 | 74243 35785 | 38459 38459 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119504206_ref_NZ_ scaffold-44101
+
+CONTIG: scaffold-125 (230859bp)
+Top Length: 181533  Top ID: 99.99
+		Skipping redundant alignment 230959 231193 | 230625 230859 | 235 235 | 98.3 | marine_gamma_proteobacterium_HTCC2080_gi_119504206_ref_NZ_ scaffold-125
+		This contig is misassembled. 3 total aligns.
+			Excluding internal overlap of size 20030 between Alignment 1 and 2:  2 69369 | 1 69356 | 69368 69356 --> 2 49339 | 1 49326 | 49338 49326
+			Real Alignment 1: 2 49339 | 1 49326 | 49338 49326 | 99.98 | marine_gamma_proteobacterium_HTCC2080_gi_119504206_ref_NZ_ scaffold-125
+			  Fake misassembly between these two alignments: inconsistency = -12 , gap in the contig is small or absent or filled mostly with Ns (long indel: insertion of length 12; 0 mismatches)
+			Real Alignment 2: 49328 230872 | 49327 230859 | 181545 181533 | 99.99 | marine_gamma_proteobacterium_HTCC2080_gi_119504206_ref_NZ_ scaffold-125
+
+CONTIG: scaffold-1656 (3122bp)
+Top Length: 3122  Top ID: 100.0
+		Marking as insignificant: 235141 235332 | 192 1 | 192 192 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119504206_ref_NZ_ scaffold-1656
+		Marking as insignificant: 230714 231214 | 3122 2622 | 501 501 | 95.01 | marine_gamma_proteobacterium_HTCC2080_gi_119504206_ref_NZ_ scaffold-1656
+		One align captures most of this contig: 231035 234156 | 3122 1 | 3122 3122 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119504206_ref_NZ_ scaffold-1656
+
+CONTIG: scaffold-6711 (832bp)
+Top Length: 832  Top ID: 100.0
+		This contig has 2 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 233965 234796 | 832 1 | 832 832 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119504206_ref_NZ_ scaffold-6711
+		Skipping alignment  235141 235972 | 832 1 | 832 832 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119504206_ref_NZ_ scaffold-6711
+
+CONTIG: scaffold-32553 (744bp)
+Top Length: 744  Top ID: 100.0
+		Marking as insignificant: 233965 234163 | 199 1 | 199 199 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119504206_ref_NZ_ scaffold-32553
+		Marking as insignificant: 235772 235972 | 744 544 | 201 201 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119504206_ref_NZ_ scaffold-32553
+		One align captures most of this contig: 234596 235339 | 744 1 | 744 744 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119504206_ref_NZ_ scaffold-32553
+
+CONTIG: scaffold-146 (198137bp)
+Top Length: 198137  Top ID: 100.0
+		Marking as insignificant: 90121 90418 | 1 298 | 298 298 | 97.99 | marine_gamma_proteobacterium_HTCC2080_gi_119505407_ref_NZ_ scaffold-146
+		One align captures most of this contig: 142 198278 | 1 198137 | 198137 198137 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119504692_ref_NZ_ scaffold-146
+
+CONTIG: scaffold-520 (12468bp)
+Top Length: 12468  Top ID: 100.0
+		One align captures most of this contig: 193056 205523 | 12468 1 | 12468 12468 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119504692_ref_NZ_ scaffold-520
+
+CONTIG: scaffold-4209 (1136bp)
+Top Length: 1136  Top ID: 100.0
+		One align captures most of this contig: 3 1138 | 1136 1 | 1136 1136 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119505909_ref_NZ_ scaffold-4209
+
+CONTIG: scaffold-813 (4216bp)
+Top Length: 4216  Top ID: 100.0
+		One align captures most of this contig: 2 4217 | 4216 1 | 4216 4216 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119505899_ref_NZ_ scaffold-813
+
+CONTIG: scaffold-281 (15416bp)
+Top Length: 15416  Top ID: 100.0
+		One align captures most of this contig: 3 15418 | 15416 1 | 15416 15416 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119505884_ref_NZ_ scaffold-281
+
+CONTIG: scaffold-1320 (3037bp)
+Top Length: 3037  Top ID: 100.0
+		One align captures most of this contig: 4 3040 | 3037 1 | 3037 3037 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119505906_ref_NZ_ scaffold-1320
+
+CONTIG: scaffold-0 (278747bp)
+Top Length: 233909  Top ID: 100.0
+		Skipping redundant alignment 44480 44658 | 233885 233707 | 179 179 | 96.09 | marine_gamma_proteobacterium_HTCC2080_gi_119503955_ref_NZ_ scaffold-0
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 44588 278496 | 233909 1 | 233909 233909 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119503955_ref_NZ_ scaffold-0
+			  Overlap between these two alignments (local misassembly). Inconsistency = -255 
+			Real Alignment 2: 5 44745 | 278747 234007 | 44741 44741 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119503955_ref_NZ_ scaffold-0
+
+CONTIG: scaffold-122 (159550bp)
+Top Length: 159550  Top ID: 100.0
+		One align captures most of this contig: 1 159550 | 159550 1 | 159550 159550 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119505011_ref_NZ_ scaffold-122
+
+CONTIG: scaffold-145 (39218bp)
+Top Length: 39218  Top ID: 99.99
+		One align captures most of this contig: 426549 465766 | 39218 1 | 39218 39218 | 99.99 | marine_gamma_proteobacterium_HTCC2080_gi_119502701_ref_NZ_ scaffold-145
+
+CONTIG: scaffold-149 (220459bp)
+Top Length: 148028  Top ID: 99.99
+		Skipping redundant alignment 221528 221758 | 231 1 | 231 231 | 96.97 | marine_gamma_proteobacterium_HTCC2080_gi_119502701_ref_NZ_ scaffold-149
+		This contig is misassembled. 3 total aligns.
+			Excluding internal overlap of size 20086 between Alignment 1 and 2:  129051 221560 | 92517 1 | 92510 92517 --> 149137 221560 | 72431 1 | 72424 72431
+			Real Alignment 1: 149137 221560 | 72431 1 | 72424 72431 | 99.99 | marine_gamma_proteobacterium_HTCC2080_gi_119502701_ref_NZ_ scaffold-149
+			  Fake misassembly between these two alignments: inconsistency = 7 , gap in the contig is small or absent or filled mostly with Ns (long indel: deletion of length 7; 0 mismatches)
+			Real Alignment 2: 1109 149129 | 220459 72432 | 148021 148028 | 99.99 | marine_gamma_proteobacterium_HTCC2080_gi_119502701_ref_NZ_ scaffold-149
+
+CONTIG: scaffold-157 (178221bp)
+Top Length: 178221  Top ID: 100.0
+		Marking as insignificant: 231955 232176 | 1 222 | 222 222 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119502701_ref_NZ_ scaffold-157
+		One align captures most of this contig: 248585 426805 | 1 178221 | 178221 178221 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119502701_ref_NZ_ scaffold-157
+
+CONTIG: scaffold-417 (9597bp)
+Top Length: 9597  Top ID: 100.0
+		Marking as insignificant: 247584 247784 | 9397 9597 | 201 201 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119502701_ref_NZ_ scaffold-417
+		Marking as insignificant: 221360 221582 | 1 223 | 223 223 | 99.1 | marine_gamma_proteobacterium_HTCC2080_gi_119502701_ref_NZ_ scaffold-417
+		One align captures most of this contig: 221558 231154 | 1 9597 | 9597 9597 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119502701_ref_NZ_ scaffold-417
+
+CONTIG: scaffold-580 (15808bp)
+Top Length: 15808  Top ID: 100.0
+		Marking as insignificant: 248607 248806 | 15808 15609 | 200 200 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119502701_ref_NZ_ scaffold-580
+		Marking as insignificant: 230954 231154 | 201 1 | 201 201 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119502701_ref_NZ_ scaffold-580
+		One align captures most of this contig: 231977 247784 | 15808 1 | 15808 15808 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119502701_ref_NZ_ scaffold-580
+
+CONTIG: scaffold-901 (124398bp)
+Top Length: 120602  Top ID: 99.99
+		This contig is partially unaligned. (Aligned 120602 out of 124398 bases)
+		Alignment: 1106 121707 | 124398 3797 | 120602 120602 | 99.99 | marine_gamma_proteobacterium_HTCC2080_gi_119502701_ref_NZ_ scaffold-901
+		Unaligned bases: 1 to 3796 (3796)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-4263 (1136bp)
+Top Length: 1136  Top ID: 100.0
+		Marking as insignificant: 2 1151 | 1136 1 | 1150 1136 | 98.78 | marine_gamma_proteobacterium_HTCC2080_gi_119502701_ref_NZ_ scaffold-4263
+		This contig has 2 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 2 1137 | 1136 1 | 1136 1136 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119502701_ref_NZ_ scaffold-4263
+		Skipping alignment  2 1144 | 1136 1 | 1143 1136 | 99.39 | marine_gamma_proteobacterium_HTCC2080_gi_119502701_ref_NZ_ scaffold-4263
+
+CONTIG: scaffold-20935 (122244bp)
+Top Length: 120573  Top ID: 99.99
+		This contig is partially unaligned. (Aligned 120573 out of 122244 bases)
+		Alignment: 1106 121678 | 1 120573 | 120573 120573 | 99.99 | marine_gamma_proteobacterium_HTCC2080_gi_119502701_ref_NZ_ scaffold-20935
+		Unaligned bases: 120574 to 122244 (1671)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-132 (97477bp)
+Top Length: 97477  Top ID: 100.0
+		One align captures most of this contig: 2 97478 | 97477 1 | 97477 97477 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119505479_ref_NZ_ scaffold-132
+
+CONTIG: scaffold-90879 (173223bp)
+Top Length: 102113  Top ID: 99.99
+		Skipping redundant alignment 87916 88012 | 110819 110915 | 97 97 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119505407_ref_NZ_ scaffold-90879
+		This contig is misassembled. 4 total aligns.
+			Excluding internal overlap of size 20070 between Alignment 1 and 2:  82047 147272 | 82044 147267 | 65226 65224 --> 102117 147272 | 102114 147267 | 45156 45154
+			Real Alignment 1: 4 102108 | 1 102113 | 102105 102113 | 99.99 | marine_gamma_proteobacterium_HTCC2080_gi_119504867_ref_NZ_ scaffold-90879
+			  Fake misassembly between these two alignments: inconsistency = 8 , gap in the contig is small or absent or filled mostly with Ns (long indel: deletion of length 8; 0 mismatches)
+			Excluding internal overlap of size 20013 between Alignment 2 and 3:  102117 147272 | 102114 147267 | 45156 45154 --> 102117 127259 | 102114 127254 | 25143 25141
+			Real Alignment 2: 102117 127259 | 102114 127254 | 25143 25141 | 99.97 | marine_gamma_proteobacterium_HTCC2080_gi_119504867_ref_NZ_ scaffold-90879
+			  Fake misassembly between these two alignments: inconsistency = -10 , gap in the contig is small or absent or filled mostly with Ns (long indel: insertion of length 10; 0 mismatches)
+			Real Alignment 3: 127250 173242 | 127255 173223 | 45993 45969 | 99.95 | marine_gamma_proteobacterium_HTCC2080_gi_119504867_ref_NZ_ scaffold-90879
+
+CONTIG: scaffold-381 (33953bp)
+Top Length: 33953  Top ID: 100.0
+		One align captures most of this contig: 1 33953 | 1 33953 | 33953 33953 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119505852_ref_NZ_ scaffold-381
+
+CONTIG: scaffold-665 (88089bp)
+Top Length: 88089  Top ID: 100.0
+		Marking as insignificant: 110814 110953 | 175 36 | 140 140 | 98.57 | marine_gamma_proteobacterium_HTCC2080_gi_119504867_ref_NZ_ scaffold-665
+		Marking as insignificant: 88266 88412 | 182 36 | 147 147 | 99.32 | marine_gamma_proteobacterium_HTCC2080_gi_119505407_ref_NZ_ scaffold-665
+		Marking as insignificant: 88147 88328 | 182 1 | 182 182 | 99.45 | marine_gamma_proteobacterium_HTCC2080_gi_119505407_ref_NZ_ scaffold-665
+		Marking as insignificant: 88028 88209 | 182 1 | 182 182 | 99.45 | marine_gamma_proteobacterium_HTCC2080_gi_119505407_ref_NZ_ scaffold-665
+		One align captures most of this contig: 2 88090 | 88089 1 | 88089 88089 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119505407_ref_NZ_ scaffold-665
+
+CONTIG: scaffold-682 (9712bp)
+Top Length: 9712  Top ID: 100.0
+		Marking as insignificant: 88154 88293 | 1 140 | 140 140 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119505407_ref_NZ_ scaffold-682
+		Marking as insignificant: 88035 88174 | 1 140 | 140 140 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119505407_ref_NZ_ scaffold-682
+		Marking as insignificant: 87916 88055 | 1 140 | 140 140 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119505407_ref_NZ_ scaffold-682
+		Marking as insignificant: 110814 110982 | 1 169 | 169 169 | 98.82 | marine_gamma_proteobacterium_HTCC2080_gi_119504867_ref_NZ_ scaffold-682
+		Marking as insignificant: 1 439 | 1708 2146 | 439 439 | 97.72 | marine_gamma_proteobacterium_HTCC2080_gi_119504692_ref_NZ_ scaffold-682
+		One align captures most of this contig: 88273 97984 | 1 9712 | 9712 9712 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119505407_ref_NZ_ scaffold-682
+
+CONTIG: scaffold-199 (41644bp)
+Top Length: 41644  Top ID: 100.0
+		One align captures most of this contig: 3 41646 | 41644 1 | 41644 41644 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119505747_ref_NZ_ scaffold-199
+
+CONTIG: scaffold-179 (64160bp)
+Top Length: 64160  Top ID: 100.0
+		One align captures most of this contig: 2 64161 | 64160 1 | 64160 64160 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119505171_ref_NZ_ scaffold-179
+
+CONTIG: scaffold-566 (17911bp)
+Top Length: 17911  Top ID: 100.0
+		Marking as insignificant: 96592 96835 | 17911 17668 | 244 244 | 96.72 | marine_gamma_proteobacterium_HTCC2080_gi_119505171_ref_NZ_ scaffold-566
+		Marking as insignificant: 96805 97048 | 17911 17668 | 244 244 | 97.54 | marine_gamma_proteobacterium_HTCC2080_gi_119505171_ref_NZ_ scaffold-566
+		One align captures most of this contig: 97018 114928 | 17911 1 | 17911 17911 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119505171_ref_NZ_ scaffold-566
+
+CONTIG: scaffold-582 (23840bp)
+Top Length: 23840  Top ID: 100.0
+		One align captures most of this contig: 116314 140153 | 1 23840 | 23840 23840 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119505171_ref_NZ_ scaffold-582
+
+CONTIG: scaffold-5015 (32043bp)
+Top Length: 32043  Top ID: 100.0
+		Marking as insignificant: 63856 64145 | 3 292 | 290 290 | 97.93 | marine_gamma_proteobacterium_HTCC2080_gi_119505171_ref_NZ_ scaffold-5015
+		Marking as insignificant: 96214 96577 | 31680 32043 | 364 364 | 96.98 | marine_gamma_proteobacterium_HTCC2080_gi_119505171_ref_NZ_ scaffold-5015
+		One align captures most of this contig: 64322 96364 | 1 32043 | 32043 32043 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119505171_ref_NZ_ scaffold-5015
+
+CONTIG: scaffold-52420 (1582bp)
+Top Length: 1582  Top ID: 100.0
+		Marking as insignificant: 114836 115226 | 1 391 | 391 391 | 98.72 | marine_gamma_proteobacterium_HTCC2080_gi_119505171_ref_NZ_ scaffold-52420
+		Marking as insignificant: 116020 116417 | 1185 1582 | 398 398 | 98.74 | marine_gamma_proteobacterium_HTCC2080_gi_119505171_ref_NZ_ scaffold-52420
+		One align captures most of this contig: 114829 116410 | 1582 1 | 1582 1582 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119505171_ref_NZ_ scaffold-52420
+
+CONTIG: scaffold-184 (61022bp)
+Top Length: 61022  Top ID: 100.0
+		One align captures most of this contig: 2 61023 | 61022 1 | 61022 61022 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119505645_ref_NZ_ scaffold-184
+
+CONTIG: scaffold-322 (315243bp)
+Top Length: 315243  Top ID: 100.0
+		One align captures most of this contig: 2 315244 | 315243 1 | 315243 315243 | 100.0 | marine_gamma_proteobacterium_HTCC2080_gi_119503117_ref_NZ_ scaffold-322
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/marine_gamma_proteobacterium_HTCC2080/contigs_reports/nucmer_output/Ray.used_snps
+	Reference marine_gamma_proteobacterium_HTCC2080_gi_119503701_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 308854 (308854 bp)
+			START in gap: 1 to 4 (3 bp)
+			Align 1: 4 238053 scaffold-232 308827 70799
+				Negative gap (overlap) between this and next alignment: 238053 to 238033 (-20 bp)
+				Next Alignment: 238033 308851 scaffold-232 70798 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 70798 to 70777.
+			Align 2: 238054 308851 scaffold-232 70777 1
+			END in gap: 308851 to 308854 (3 bp)
+
+	Reference marine_gamma_proteobacterium_HTCC2080_gi_119505171_ref_NZ_: 5 total alignments. 1 total regions.
+		Region: 1 to 140154 (140154 bp)
+			START in gap: 1 to 2 (1 bp)
+			Align 1: 2 64161 scaffold-179 64160 1
+				Gap between this and next alignment: 64161 to 64322 (160 bp)
+				Next Alignment: 64322 96364 scaffold-5015 1 32043
+
+			Align 2: 64322 96364 scaffold-5015 1 32043
+				Gap between this and next alignment: 96364 to 97018 (653 bp)
+				Next Alignment: 97018 114928 scaffold-566 17911 1
+
+			Align 3: 97018 114928 scaffold-566 17911 1
+				Negative gap (overlap) between this and next alignment: 114928 to 114829 (-99 bp)
+				Next Alignment: 114829 116410 scaffold-52420 1582 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1582 to 1482.
+			Align 4: 114929 116410 scaffold-52420 1482 1
+				Negative gap (overlap) between this and next alignment: 116410 to 116314 (-96 bp)
+				Next Alignment: 116314 140153 scaffold-582 1 23840
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 98.
+			Align 5: 116411 140153 scaffold-582 98 23840
+			END in gap: 140153 to 140154 (1 bp)
+
+	Reference marine_gamma_proteobacterium_HTCC2080_gi_119504206_ref_NZ_: 6 total alignments. 1 total regions.
+		Region: 1 to 274231 (274231 bp)
+			START in gap: 1 to 2 (1 bp)
+			Align 1: 2 49339 scaffold-125 1 49326
+				Negative gap (overlap) between this and next alignment: 49339 to 49328 (-11 bp)
+				Next Alignment: 49328 230872 scaffold-125 49327 230859
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 49327 to 49339.
+			Align 2: 49340 230872 scaffold-125 49339 230859
+				Gap between this and next alignment: 230872 to 231035 (162 bp)
+				Next Alignment: 231035 234156 scaffold-1656 3122 1
+
+			Align 3: 231035 234156 scaffold-1656 3122 1
+				Negative gap (overlap) between this and next alignment: 234156 to 233965 (-191 bp)
+				Next Alignment: 233965 234796 scaffold-6711 832 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 832 to 640.
+			Align 4: 234157 234796 scaffold-6711 640 1
+				Negative gap (overlap) between this and next alignment: 234796 to 234596 (-200 bp)
+				Next Alignment: 234596 235339 scaffold-32553 744 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 744 to 543.
+			Align 5: 234797 235339 scaffold-32553 543 1
+				Gap between this and next alignment: 235339 to 235773 (433 bp)
+				Next Alignment: 235773 274231 scaffold-44101 74243 35785
+
+			Align 6: 235773 274231 scaffold-44101 74243 35785
+			END in current alignment.  Modifying 274231 to 274231.
+
+	Reference marine_gamma_proteobacterium_HTCC2080_gi_119505479_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 97480 (97480 bp)
+			START in gap: 1 to 2 (1 bp)
+			Align 1: 2 97478 scaffold-132 97477 1
+			END in gap: 97478 to 97480 (2 bp)
+
+	Reference marine_gamma_proteobacterium_HTCC2080_gi_119505899_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 4220 (4220 bp)
+			START in gap: 1 to 2 (1 bp)
+			Align 1: 2 4217 scaffold-813 4216 1
+			END in gap: 4217 to 4220 (3 bp)
+
+	Reference marine_gamma_proteobacterium_HTCC2080_gi_119505707_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 42359 (42359 bp)
+			START in gap: 1 to 2 (1 bp)
+			Align 1: 2 42357 scaffold-242 42356 1
+			END in gap: 42357 to 42359 (2 bp)
+
+	Reference marine_gamma_proteobacterium_HTCC2080_gi_119504692_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 205524 (205524 bp)
+			START in gap: 1 to 142 (141 bp)
+			Align 1: 142 198278 scaffold-146 1 198137
+				Negative gap (overlap) between this and next alignment: 198278 to 193056 (-5222 bp)
+				Next Alignment: 193056 205523 scaffold-520 12468 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 12468 to 7245.
+			Align 2: 198279 205523 scaffold-520 7245 1
+			END in gap: 205523 to 205524 (1 bp)
+
+	Reference marine_gamma_proteobacterium_HTCC2080_gi_119504867_ref_NZ_: 3 total alignments. 1 total regions.
+		Region: 1 to 173243 (173243 bp)
+			START in gap: 1 to 4 (3 bp)
+			Align 1: 4 102108 scaffold-90879 1 102113
+				Gap between this and next alignment: 102108 to 102117 (8 bp)
+				Next Alignment: 102117 127259 scaffold-90879 102114 127254
+
+			Align 2: 102117 127259 scaffold-90879 102114 127254
+				Negative gap (overlap) between this and next alignment: 127259 to 127250 (-9 bp)
+				Next Alignment: 127250 173242 scaffold-90879 127255 173223
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 127255 to 127265.
+			Align 3: 127260 173242 scaffold-90879 127265 173223
+			END in gap: 173242 to 173243 (1 bp)
+
+	Reference marine_gamma_proteobacterium_HTCC2080_gi_119505906_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 3041 (3041 bp)
+			START in gap: 1 to 4 (3 bp)
+			Align 1: 4 3040 scaffold-1320 3037 1
+			END in gap: 3040 to 3041 (1 bp)
+
+	Reference marine_gamma_proteobacterium_HTCC2080_gi_119505302_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 131677 (131677 bp)
+			START in gap: 1 to 4 (3 bp)
+			Align 1: 4 131677 scaffold-135 1 131674
+			END in current alignment.  Modifying 131677 to 131677.
+
+	Reference marine_gamma_proteobacterium_HTCC2080_gi_119505645_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 61025 (61025 bp)
+			START in gap: 1 to 2 (1 bp)
+			Align 1: 2 61023 scaffold-184 61022 1
+			END in gap: 61023 to 61025 (2 bp)
+
+	Reference marine_gamma_proteobacterium_HTCC2080_gi_119505407_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 97988 (97988 bp)
+			START in gap: 1 to 2 (1 bp)
+			Align 1: 2 88090 scaffold-665 88089 1
+				Gap between this and next alignment: 88090 to 88273 (182 bp)
+				Next Alignment: 88273 97984 scaffold-682 1 9712
+
+			Align 2: 88273 97984 scaffold-682 1 9712
+			END in gap: 97984 to 97988 (4 bp)
+
+	Reference marine_gamma_proteobacterium_HTCC2080_gi_119505909_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 1139 (1139 bp)
+			START in gap: 1 to 3 (2 bp)
+			Align 1: 3 1138 scaffold-4209 1136 1
+			END in gap: 1138 to 1139 (1 bp)
+
+	Reference marine_gamma_proteobacterium_HTCC2080_gi_119503955_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 278497 (278497 bp)
+			START in gap: 1 to 5 (4 bp)
+			Align 1: 5 44745 scaffold-0 278747 234007
+				Negative gap (overlap) between this and next alignment: 44745 to 44588 (-157 bp)
+				Next Alignment: 44588 278496 scaffold-0 233909 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 233909 to 233751.
+			Align 2: 44746 278496 scaffold-0 233751 1
+			END in gap: 278496 to 278497 (1 bp)
+
+	Reference marine_gamma_proteobacterium_HTCC2080_gi_119505011_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 159550 (159550 bp)
+			Align 1: 1 159550 scaffold-122 159550 1
+			END in current alignment.  Modifying 159550 to 159550.
+
+	Reference marine_gamma_proteobacterium_HTCC2080_gi_119505783_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 38556 (38556 bp)
+			START in gap: 1 to 2 (1 bp)
+			Align 1: 2 38555 scaffold-2047 1 38554
+			END in gap: 38555 to 38556 (1 bp)
+
+	Reference marine_gamma_proteobacterium_HTCC2080_gi_119503401_ref_NZ_: 3 total alignments. 1 total regions.
+		Region: 1 to 308910 (308910 bp)
+			START in gap: 1 to 3 (2 bp)
+			Align 1: 3 159323 scaffold-1 1 159321
+				Negative gap (overlap) between this and next alignment: 159323 to 159299 (-24 bp)
+				Next Alignment: 159299 268282 scaffold-1 159394 268377
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 159394 to 159419.
+			Align 2: 159324 268282 scaffold-1 159419 268377
+				Gap between this and next alignment: 268282 to 268319 (36 bp)
+				Next Alignment: 268319 308909 scaffold-216 1 40591
+
+			Align 3: 268319 308909 scaffold-216 1 40591
+			END in gap: 308909 to 308910 (1 bp)
+
+	Reference marine_gamma_proteobacterium_HTCC2080_gi_119503117_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 315245 (315245 bp)
+			START in gap: 1 to 2 (1 bp)
+			Align 1: 2 315244 scaffold-322 315243 1
+			END in gap: 315244 to 315245 (1 bp)
+
+	Reference marine_gamma_proteobacterium_HTCC2080_gi_119505747_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 41648 (41648 bp)
+			START in gap: 1 to 3 (2 bp)
+			Align 1: 3 41646 scaffold-199 41644 1
+			END in gap: 41646 to 41648 (2 bp)
+
+	Reference marine_gamma_proteobacterium_HTCC2080_gi_119505576_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 79359 (79359 bp)
+			START in gap: 1 to 2 (1 bp)
+			Align 1: 2 79353 scaffold-133 1 79352
+			END in gap: 79353 to 79359 (6 bp)
+
+	Reference marine_gamma_proteobacterium_HTCC2080_gi_119504450_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 262399 (262399 bp)
+			Align 1: 1 262398 scaffold-128 1 262398
+			END in gap: 262398 to 262399 (1 bp)
+
+	Reference marine_gamma_proteobacterium_HTCC2080_gi_119505852_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 33954 (33954 bp)
+			Align 1: 1 33953 scaffold-381 1 33953
+			END in gap: 33953 to 33954 (1 bp)
+
+	Reference marine_gamma_proteobacterium_HTCC2080_gi_119502701_ref_NZ_: 9 total alignments. 1 total regions.
+		Region: 1 to 465767 (465767 bp)
+			START in gap: 1 to 2 (1 bp)
+			Align 1: 2 1137 scaffold-4263 1136 1
+				Negative gap (overlap) between this and next alignment: 1137 to 1106 (-31 bp)
+				Next Alignment: 1106 121707 scaffold-901 124398 3797
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 124398 to 124366.
+			Align 2: 1138 121707 scaffold-901 124366 3797
+				The next alignment (1106 121678 scaffold-20935 1 120573) is redundant. Skipping.
+				Negative gap (overlap) between this and next alignment: 121707 to 1109 (-120598 bp)
+				Next Alignment: 1109 149129 scaffold-149 220459 72432
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 220459 to 99860.
+			Align 4: 121708 149129 scaffold-149 99860 72432
+				Gap between this and next alignment: 149129 to 149137 (7 bp)
+				Next Alignment: 149137 221560 scaffold-149 72431 1
+
+			Align 5: 149137 221560 scaffold-149 72431 1
+				Negative gap (overlap) between this and next alignment: 221560 to 221558 (-2 bp)
+				Next Alignment: 221558 231154 scaffold-417 1 9597
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 4.
+			Align 6: 221561 231154 scaffold-417 4 9597
+				Gap between this and next alignment: 231154 to 231977 (822 bp)
+				Next Alignment: 231977 247784 scaffold-580 15808 1
+
+			Align 7: 231977 247784 scaffold-580 15808 1
+				Gap between this and next alignment: 247784 to 248585 (800 bp)
+				Next Alignment: 248585 426805 scaffold-157 1 178221
+
+			Align 8: 248585 426805 scaffold-157 1 178221
+				Negative gap (overlap) between this and next alignment: 426805 to 426549 (-256 bp)
+				Next Alignment: 426549 465766 scaffold-145 39218 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 39218 to 38961.
+			Align 9: 426806 465766 scaffold-145 38961 1
+			END in gap: 465766 to 465767 (1 bp)
+
+	Reference marine_gamma_proteobacterium_HTCC2080_gi_119505884_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 15420 (15420 bp)
+			START in gap: 1 to 3 (2 bp)
+			Align 1: 3 15418 scaffold-281 15416 1
+			END in gap: 15418 to 15420 (2 bp)
+
+	Reference marine_gamma_proteobacterium_HTCC2080_gi_119505814_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 35841 (35841 bp)
+			START in gap: 1 to 2 (1 bp)
+			Align 1: 2 35783 scaffold-44101 1 35784
+			END in gap: 35783 to 35841 (58 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/marine_gamma_proteobacterium_HTCC2080/contigs_reports/nucmer_output/Ray.used_snps
+
+Results:
+	Local Misassemblies: 2
+	Misassemblies: 1
+		Relocations: 0
+		Translocations: 1
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 1
+	Misassembled Contig Bases: 74243
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 2 part
+Partially Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 5467
+
+Ambiguously Mapped Contigs: 2
+Total Bases in Ambiguously Mapped Contigs: 1968
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 3572545
+
+	SNPs: 1
+	Insertions: 64
+	Deletions: 94
+
+	Positive Gaps: 54
+		Internal Gaps:  2
+		External Gaps:  52
+		External Gap Total:  3521
+		External Gap Average: 68
+	Negative Gaps: 14
+		Internal Overlaps:  5
+		External Overlaps:  9
+		External Overlaps Total: -126695
+		External Overlaps Average: -14077
+	Contigs with Redundant Alignments: 1 (120573)

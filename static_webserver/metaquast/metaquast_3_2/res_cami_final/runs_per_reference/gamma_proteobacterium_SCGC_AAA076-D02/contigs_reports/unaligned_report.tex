@@ -1,0 +1,19 @@
+\documentclass[12pt,a4paper]{article}
+\begin{document}
+\begin{table}[ht]
+\begin{center}
+\caption{All statistics are based on contigs of size $\geq$ 500 bp, unless otherwise noted (e.g., "\# contigs ($\geq$ 0 bp)" and "Total length ($\geq$ 0 bp)" include all contigs).}
+\begin{tabular}{|l*{5}{|r}|}
+\hline
+Assembly & Gold\_Assembly & IDBA\_UD & Ray & SOAPdenovo2 & SPAdes \\ \hline
+\# fully unaligned contigs & 0 & 0 & 0 & 0 & 0 \\ \hline
+Fully unaligned length & 0 & 0 & 0 & 0 & 0 \\ \hline
+\# partially unaligned contigs & {\bf 12} & {\bf 12} & {\bf 12} & 38 & 19 \\ \hline
+\hspace{5mm}\# with misassembly & 3 & 3 & 4 & {\bf 0} & 4 \\ \hline
+\hspace{5mm}\# both parts are significant & {\bf 10} & 11 & 11 & 14 & 13 \\ \hline
+Partially unaligned length & 310542 & 317084 & 510069 & {\bf 35205} & 396523 \\ \hline
+\# N's & {\bf 0} & {\bf 0} & 19 & {\bf 0} & 459 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+\end{document}

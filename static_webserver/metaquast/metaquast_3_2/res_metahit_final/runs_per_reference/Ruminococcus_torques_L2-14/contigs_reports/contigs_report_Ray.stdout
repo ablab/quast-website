@@ -1,0 +1,567 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Ruminococcus_torques_L2-14_gi_479155735_ref_NC_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 1
+	Total Region Length: 3341681
+Analyzing contigs...
+CONTIG: scaffold-44 (17109bp)
+Top Length: 652  Top ID: 96.63
+		This contig is partially unaligned. (Aligned 652 out of 17109 bases)
+		Alignment: 867855 868506 | 652 1 | 652 652 | 96.63 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-44
+		Unaligned bases: 653 to 17109 (16457)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-105 (23096bp)
+Top Length: 379  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 379 out of 23096 bases)
+		Alignment: 1326757 1327135 | 1 379 | 379 379 | 100.0 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-105
+		Unaligned bases: 380 to 23096 (22717)
+
+CONTIG: scaffold-1189 (10210bp)
+Top Length: 1159  Top ID: 98.27
+		This contig is partially unaligned. (Aligned 1159 out of 10210 bases)
+		Alignment: 2929661 2930819 | 10210 9052 | 1159 1159 | 98.27 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-1189
+		Unaligned bases: 1 to 9051 (9051)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-1223 (6505bp)
+Top Length: 1606  Top ID: 97.88
+		This contig is partially unaligned. (Aligned 1606 out of 6505 bases)
+		Alignment: 868231 869836 | 6505 4900 | 1606 1606 | 97.88 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-1223
+		Unaligned bases: 1 to 4899 (4899)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-1373 (27266bp)
+Top Length: 2051  Top ID: 95.37
+		This contig is misassembled. 3 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 27266 and total length of all aligns is 3420
+		Alignment: 1377998 1379003 | 24458 23453 | 1006 1006 | 96.22 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-1373
+		Alignment: 1377623 1377986 | 25023 24661 | 364 363 | 95.88 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-1373
+		Alignment: 1374831 1376881 | 27266 25216 | 2051 2051 | 95.37 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-1373
+		Unaligned bases: 23846
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold-1653 (3812bp)
+Top Length: 1579  Top ID: 95.25
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 3812 and total length of all aligns is 1776
+		Alignment: 3179093 3179289 | 2232 2036 | 197 197 | 96.95 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-1653
+		Alignment: 3176952 3178530 | 3812 2234 | 1579 1579 | 95.25 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-1653
+		Unaligned bases: 2036
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold-2218 (2839bp)
+Top Length: 666  Top ID: 96.7
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 3335686 3336254 | 968 400 | 569 569 | 95.96 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-2218
+			  Overlap between these two alignments (local misassembly). Inconsistency = -136 
+			Real Alignment 2: 3335170 3335683 | 1620 1107 | 514 514 | 96.69 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-2218
+			  Overlap between these two alignments (local misassembly). Inconsistency = -166 
+			Real Alignment 3: 3334646 3335311 | 2310 1645 | 666 666 | 96.7 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-2218
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-2303 (3715bp)
+Top Length: 1346  Top ID: 99.93
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 2947160 2948505 | 1346 1 | 1346 1346 | 99.93 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-2303
+			  Overlap between these two alignments (local misassembly). Inconsistency = -154 
+			Real Alignment 2: 2946290 2947125 | 2370 1535 | 836 836 | 99.76 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-2303
+			  Overlap between these two alignments (local misassembly). Inconsistency = -160 
+			Real Alignment 3: 2945105 2946245 | 3715 2575 | 1141 1141 | 99.82 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-2303
+
+CONTIG: scaffold-2313 (1452bp)
+Top Length: 864  Top ID: 97.11
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 520715 521220 | 506 1 | 506 506 | 96.84 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-2313
+			  Overlap between these two alignments (local misassembly). Inconsistency = -109 
+			Real Alignment 2: 519878 520741 | 1452 589 | 864 864 | 97.11 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-2313
+
+CONTIG: scaffold-2487 (4536bp)
+Top Length: 1819  Top ID: 96.87
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 68158 69404 | 1936 690 | 1247 1247 | 97.59 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-2487
+			  Overlap between these two alignments (local misassembly). Inconsistency = -196 
+			Real Alignment 2: 66338 68156 | 3952 2134 | 1819 1819 | 96.87 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-2487
+			  Overlap between these two alignments (local misassembly). Inconsistency = -109 
+			Real Alignment 3: 65863 66437 | 4536 3962 | 575 575 | 96.18 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-2487
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-2510 (1319bp)
+Top Length: 807  Top ID: 99.75
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 2184684 2185490 | 807 1 | 807 807 | 99.75 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-2510
+			  Overlap between these two alignments (local misassembly). Inconsistency = -635 
+			Real Alignment 2: 2184921 2185310 | 1205 816 | 390 390 | 96.92 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-2510
+
+CONTIG: scaffold-3153 (1561bp)
+Top Length: 1561  Top ID: 99.74
+		One align captures most of this contig: 501190 502750 | 1 1561 | 1561 1561 | 99.74 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-3153
+
+CONTIG: scaffold-4420 (2881bp)
+Top Length: 1091  Top ID: 99.91
+		This contig is partially unaligned. (Aligned 1091 out of 2881 bases)
+		Alignment: 2943862 2944952 | 2881 1791 | 1091 1091 | 99.91 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-4420
+		Unaligned bases: 1 to 1790 (1790)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-4525 (2072bp)
+Top Length: 2010  Top ID: 97.21
+		This contig is partially unaligned. (Aligned 2010 out of 2072 bases)
+		Alignment: 2159061 2161069 | 12 2021 | 2009 2010 | 97.21 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-4525
+		Unaligned bases: 1 to 11 (11)
+		Unaligned bases: 2022 to 2072 (51)
+
+CONTIG: scaffold-4731 (787bp)
+Top Length: 290  Top ID: 96.9
+		This contig is partially unaligned. (Aligned 290 out of 787 bases)
+		Alignment: 3249777 3250066 | 393 682 | 290 290 | 96.9 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-4731
+		Unaligned bases: 1 to 392 (392)
+		Unaligned bases: 683 to 787 (105)
+
+CONTIG: scaffold-6622 (506bp)
+Top Length: 506  Top ID: 100.0
+		One align captures most of this contig: 3204736 3205241 | 1 506 | 506 506 | 100.0 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-6622
+
+CONTIG: scaffold-8286 (742bp)
+Top Length: 742  Top ID: 99.19
+		One align captures most of this contig: 1210841 1211582 | 1 742 | 742 742 | 99.19 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-8286
+
+CONTIG: scaffold-9032 (1926bp)
+Top Length: 510  Top ID: 97.06
+		This contig is partially unaligned. (Aligned 510 out of 1926 bases)
+		Alignment: 1375139 1375647 | 1 510 | 509 510 | 97.06 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-9032
+		Unaligned bases: 511 to 1926 (1416)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-10565 (1053bp)
+Top Length: 1053  Top ID: 99.53
+		One align captures most of this contig: 2171578 2172630 | 1053 1 | 1053 1053 | 99.53 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-10565
+
+CONTIG: scaffold-11197 (631bp)
+Top Length: 631  Top ID: 98.42
+		One align captures most of this contig: 3157704 3158334 | 631 1 | 631 631 | 98.42 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-11197
+
+CONTIG: scaffold-13973 (4328bp)
+Top Length: 2632  Top ID: 97.91
+		This contig is partially unaligned. (Aligned 2632 out of 4328 bases)
+		Alignment: 1324504 1327135 | 1257 3888 | 2632 2632 | 97.91 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-13973
+		Unaligned bases: 1 to 1256 (1256)
+		Unaligned bases: 3889 to 4328 (440)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-14114 (1109bp)
+Top Length: 665  Top ID: 99.55
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 6 between Alignment 1 and 2:  3247999 3248086 | 931 1018 | 88 88 --> 3248005 3248086 | 937 1018 | 82 82
+			Real Alignment 1: 3246991 3247655 | 272 936 | 665 665 | 99.55 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-14114
+			  Gap between these two alignments (local misassembly). Inconsistency = 349 
+			Real Alignment 2: 3248005 3248086 | 937 1018 | 82 82 | 100.0 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-14114
+
+CONTIG: scaffold-16980 (1015bp)
+Top Length: 1015  Top ID: 99.31
+		One align captures most of this contig: 290936 291950 | 1 1015 | 1015 1015 | 99.31 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-16980
+
+CONTIG: scaffold-23084 (1480bp)
+Top Length: 259  Top ID: 98.07
+		This contig is partially unaligned. (Aligned 259 out of 1480 bases)
+		Alignment: 852749 853007 | 1222 1480 | 259 259 | 98.07 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-23084
+		Unaligned bases: 1 to 1221 (1221)
+
+CONTIG: scaffold-24697 (676bp)
+Top Length: 676  Top ID: 96.45
+		One align captures most of this contig: 2167854 2168530 | 1 676 | 677 676 | 96.45 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-24697
+
+CONTIG: scaffold-32902 (791bp)
+Top Length: 791  Top ID: 99.75
+		One align captures most of this contig: 2180604 2181394 | 1 791 | 791 791 | 99.75 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-32902
+
+CONTIG: scaffold-38834 (536bp)
+Top Length: 536  Top ID: 99.07
+		Marking as insignificant: 3245889 3246027 | 139 1 | 139 139 | 100.0 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-38834
+		One align captures most of this contig: 3214093 3214628 | 536 1 | 536 536 | 99.07 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-38834
+
+CONTIG: scaffold-39534 (579bp)
+Top Length: 579  Top ID: 98.96
+		One align captures most of this contig: 272179 272757 | 1 579 | 579 579 | 98.96 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-39534
+
+CONTIG: scaffold-40920 (995bp)
+Top Length: 991  Top ID: 98.89
+		One align captures most of this contig: 1346968 1347958 | 991 1 | 991 991 | 98.89 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-40920
+
+CONTIG: scaffold-51294 (1420bp)
+Top Length: 1418  Top ID: 99.37
+		One align captures most of this contig: 3244349 3245766 | 3 1420 | 1418 1418 | 99.37 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-51294
+
+CONTIG: scaffold-51891 (560bp)
+Top Length: 560  Top ID: 98.93
+		One align captures most of this contig: 3155684 3156243 | 1 560 | 560 560 | 98.93 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-51891
+
+CONTIG: scaffold-56561 (989bp)
+Top Length: 989  Top ID: 98.28
+		One align captures most of this contig: 2933233 2934221 | 1 989 | 989 989 | 98.28 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-56561
+
+CONTIG: scaffold-61465 (534bp)
+Top Length: 534  Top ID: 97.75
+		One align captures most of this contig: 3180160 3180693 | 1 534 | 534 534 | 97.75 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-61465
+
+CONTIG: scaffold-67638 (1710bp)
+Top Length: 1710  Top ID: 96.43
+		One align captures most of this contig: 2169327 2171036 | 1710 1 | 1710 1710 | 96.43 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-67638
+
+CONTIG: scaffold-68045 (1446bp)
+Top Length: 1441  Top ID: 99.17
+		One align captures most of this contig: 2172697 2174137 | 1 1441 | 1441 1441 | 99.17 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-68045
+
+CONTIG: scaffold-74193 (2538bp)
+Top Length: 390  Top ID: 95.13
+		This contig is partially unaligned. (Aligned 390 out of 2538 bases)
+		Alignment: 52995 53384 | 2538 2149 | 390 390 | 95.13 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-74193
+		Unaligned bases: 1 to 2148 (2148)
+
+CONTIG: scaffold-78909 (516bp)
+Top Length: 516  Top ID: 98.84
+		One align captures most of this contig: 496843 497358 | 1 516 | 516 516 | 98.84 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-78909
+
+CONTIG: scaffold-84735 (2678bp)
+Top Length: 2678  Top ID: 99.96
+		One align captures most of this contig: 509989 512666 | 1 2678 | 2678 2678 | 99.96 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-84735
+
+CONTIG: scaffold-87365 (1636bp)
+Top Length: 1636  Top ID: 97.43
+		One align captures most of this contig: 1215387 1217022 | 1636 1 | 1636 1636 | 97.43 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-87365
+
+CONTIG: scaffold-91375 (1262bp)
+Top Length: 1262  Top ID: 96.83
+		One align captures most of this contig: 513511 514772 | 1262 1 | 1262 1262 | 96.83 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-91375
+
+CONTIG: scaffold-95851 (1676bp)
+Top Length: 1676  Top ID: 98.87
+		One align captures most of this contig: 59816 61491 | 1 1676 | 1676 1676 | 98.87 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-95851
+
+CONTIG: scaffold-97457 (1793bp)
+Top Length: 1793  Top ID: 97.88
+		One align captures most of this contig: 1373383 1375175 | 1 1793 | 1793 1793 | 97.88 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-97457
+
+CONTIG: scaffold-98497 (1185bp)
+Top Length: 1185  Top ID: 99.66
+		One align captures most of this contig: 3242861 3244045 | 1185 1 | 1185 1185 | 99.66 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-98497
+
+CONTIG: scaffold-100198 (1567bp)
+Top Length: 1567  Top ID: 97.96
+		One align captures most of this contig: 498515 500081 | 1 1567 | 1567 1567 | 97.96 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-100198
+
+CONTIG: scaffold-119991 (759bp)
+Top Length: 256  Top ID: 95.7
+		This contig is partially unaligned. (Aligned 256 out of 759 bases)
+		Alignment: 3238616 3238871 | 1 256 | 256 256 | 95.7 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-119991
+		Unaligned bases: 257 to 759 (503)
+
+CONTIG: scaffold-120609 (500bp)
+Top Length: 500  Top ID: 98.8
+		One align captures most of this contig: 2965142 2965641 | 1 500 | 500 500 | 98.8 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-120609
+
+CONTIG: scaffold-147521 (669bp)
+Top Length: 669  Top ID: 99.1
+		One align captures most of this contig: 2178585 2179253 | 669 1 | 669 669 | 99.1 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-147521
+
+CONTIG: scaffold-195328 (5309bp)
+Top Length: 4204  Top ID: 95.91
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 850636 851040 | 405 1 | 405 405 | 99.26 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-195328
+			  Extensive misassembly ( relocation, inconsistency = 2074354 ) between these two alignments
+			Real Alignment 2: 2926095 2930248 | 1106 5309 | 4154 4204 | 95.91 | Ruminococcus_torques_L2-14_gi_479155735_ref_NC_ scaffold-195328
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Ruminococcus_torques_L2-14/contigs_reports/nucmer_output/Ray.used_snps
+	Reference Ruminococcus_torques_L2-14_gi_479155735_ref_NC_: 61 total alignments. 1 total regions.
+		Region: 1 to 3341681 (3341681 bp)
+			START in gap: 1 to 52995 (52994 bp)
+			Align 1: 52995 53384 scaffold-74193 2538 2149
+				Gap between this and next alignment: 53384 to 59816 (6431 bp)
+				Next Alignment: 59816 61491 scaffold-95851 1 1676
+
+			Align 2: 59816 61491 scaffold-95851 1 1676
+				Gap between this and next alignment: 61491 to 65863 (4371 bp)
+				Next Alignment: 65863 66437 scaffold-2487 4536 3962
+
+			Align 3: 65863 66437 scaffold-2487 4536 3962
+				Negative gap (overlap) between this and next alignment: 66437 to 66338 (-99 bp)
+				Next Alignment: 66338 68156 scaffold-2487 3952 2134
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 3952 to 3852.
+			Align 4: 66438 68156 scaffold-2487 3852 2134
+				Gap between this and next alignment: 68156 to 68158 (1 bp)
+				Next Alignment: 68158 69404 scaffold-2487 1936 690
+
+			Align 5: 68158 69404 scaffold-2487 1936 690
+				Gap between this and next alignment: 69404 to 272179 (202774 bp)
+				Next Alignment: 272179 272757 scaffold-39534 1 579
+
+			Align 6: 272179 272757 scaffold-39534 1 579
+				Gap between this and next alignment: 272757 to 290936 (18178 bp)
+				Next Alignment: 290936 291950 scaffold-16980 1 1015
+
+			Align 7: 290936 291950 scaffold-16980 1 1015
+				Gap between this and next alignment: 291950 to 496843 (204892 bp)
+				Next Alignment: 496843 497358 scaffold-78909 1 516
+
+			Align 8: 496843 497358 scaffold-78909 1 516
+				Gap between this and next alignment: 497358 to 498515 (1156 bp)
+				Next Alignment: 498515 500081 scaffold-100198 1 1567
+
+			Align 9: 498515 500081 scaffold-100198 1 1567
+				Gap between this and next alignment: 500081 to 501190 (1108 bp)
+				Next Alignment: 501190 502750 scaffold-3153 1 1561
+
+			Align 10: 501190 502750 scaffold-3153 1 1561
+				Gap between this and next alignment: 502750 to 509989 (7238 bp)
+				Next Alignment: 509989 512666 scaffold-84735 1 2678
+
+			Align 11: 509989 512666 scaffold-84735 1 2678
+				Gap between this and next alignment: 512666 to 513511 (844 bp)
+				Next Alignment: 513511 514772 scaffold-91375 1262 1
+
+			Align 12: 513511 514772 scaffold-91375 1262 1
+				Gap between this and next alignment: 514772 to 519878 (5105 bp)
+				Next Alignment: 519878 520741 scaffold-2313 1452 589
+
+			Align 13: 519878 520741 scaffold-2313 1452 589
+				Negative gap (overlap) between this and next alignment: 520741 to 520715 (-26 bp)
+				Next Alignment: 520715 521220 scaffold-2313 506 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 506 to 479.
+			Align 14: 520742 521220 scaffold-2313 479 1
+				Gap between this and next alignment: 521220 to 850636 (329415 bp)
+				Next Alignment: 850636 851040 scaffold-195328 405 1
+
+			Align 15: 850636 851040 scaffold-195328 405 1
+				Gap between this and next alignment: 851040 to 852749 (1708 bp)
+				Next Alignment: 852749 853007 scaffold-23084 1222 1480
+
+			Align 16: 852749 853007 scaffold-23084 1222 1480
+				Gap between this and next alignment: 853007 to 867855 (14847 bp)
+				Next Alignment: 867855 868506 scaffold-44 652 1
+
+			Align 17: 867855 868506 scaffold-44 652 1
+				Negative gap (overlap) between this and next alignment: 868506 to 868231 (-275 bp)
+				Next Alignment: 868231 869836 scaffold-1223 6505 4900
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 6505 to 6229.
+			Align 18: 868507 869836 scaffold-1223 6229 4900
+				Gap between this and next alignment: 869836 to 1210841 (341004 bp)
+				Next Alignment: 1210841 1211582 scaffold-8286 1 742
+
+			Align 19: 1210841 1211582 scaffold-8286 1 742
+				Gap between this and next alignment: 1211582 to 1215387 (3804 bp)
+				Next Alignment: 1215387 1217022 scaffold-87365 1636 1
+
+			Align 20: 1215387 1217022 scaffold-87365 1636 1
+				Gap between this and next alignment: 1217022 to 1324504 (107481 bp)
+				Next Alignment: 1324504 1327135 scaffold-13973 1257 3888
+
+			Align 21: 1324504 1327135 scaffold-13973 1257 3888
+				The next alignment (1326757 1327135 scaffold-105 1 379) is redundant. Skipping.
+				Gap between this and next alignment: 1327135 to 1346968 (19832 bp)
+				Next Alignment: 1346968 1347958 scaffold-40920 991 1
+
+			Align 23: 1346968 1347958 scaffold-40920 991 1
+				Gap between this and next alignment: 1347958 to 1373383 (25424 bp)
+				Next Alignment: 1373383 1375175 scaffold-97457 1 1793
+
+			Align 24: 1373383 1375175 scaffold-97457 1 1793
+				Negative gap (overlap) between this and next alignment: 1375175 to 1374831 (-344 bp)
+				Next Alignment: 1374831 1376881 scaffold-1373 27266 25216
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 27266 to 26921.
+			Align 25: 1375176 1376881 scaffold-1373 26921 25216
+				The next alignment (1375139 1375647 scaffold-9032 1 510) is redundant. Skipping.
+				Gap between this and next alignment: 1376881 to 1377623 (741 bp)
+				Next Alignment: 1377623 1377986 scaffold-1373 25023 24661
+
+			Align 27: 1377623 1377986 scaffold-1373 25023 24661
+				Gap between this and next alignment: 1377986 to 1377998 (11 bp)
+				Next Alignment: 1377998 1379003 scaffold-1373 24458 23453
+
+			Align 28: 1377998 1379003 scaffold-1373 24458 23453
+				Gap between this and next alignment: 1379003 to 2159061 (780057 bp)
+				Next Alignment: 2159061 2161069 scaffold-4525 12 2021
+
+			Align 29: 2159061 2161069 scaffold-4525 12 2021
+				Gap between this and next alignment: 2161069 to 2167854 (6784 bp)
+				Next Alignment: 2167854 2168530 scaffold-24697 1 676
+
+			Align 30: 2167854 2168530 scaffold-24697 1 676
+				Gap between this and next alignment: 2168530 to 2169327 (796 bp)
+				Next Alignment: 2169327 2171036 scaffold-67638 1710 1
+
+			Align 31: 2169327 2171036 scaffold-67638 1710 1
+				Gap between this and next alignment: 2171036 to 2171578 (541 bp)
+				Next Alignment: 2171578 2172630 scaffold-10565 1053 1
+
+			Align 32: 2171578 2172630 scaffold-10565 1053 1
+				Gap between this and next alignment: 2172630 to 2172697 (66 bp)
+				Next Alignment: 2172697 2174137 scaffold-68045 1 1441
+
+			Align 33: 2172697 2174137 scaffold-68045 1 1441
+				Gap between this and next alignment: 2174137 to 2178585 (4447 bp)
+				Next Alignment: 2178585 2179253 scaffold-147521 669 1
+
+			Align 34: 2178585 2179253 scaffold-147521 669 1
+				Gap between this and next alignment: 2179253 to 2180604 (1350 bp)
+				Next Alignment: 2180604 2181394 scaffold-32902 1 791
+
+			Align 35: 2180604 2181394 scaffold-32902 1 791
+				Gap between this and next alignment: 2181394 to 2184684 (3289 bp)
+				Next Alignment: 2184684 2185490 scaffold-2510 807 1
+
+			Align 36: 2184684 2185490 scaffold-2510 807 1
+				The next alignment (2184921 2185310 scaffold-2510 1205 816) is redundant. Skipping.
+				Gap between this and next alignment: 2185490 to 2926095 (740604 bp)
+				Next Alignment: 2926095 2930248 scaffold-195328 1106 5309
+
+			Align 38: 2926095 2930248 scaffold-195328 1106 5309
+				Negative gap (overlap) between this and next alignment: 2930248 to 2929661 (-587 bp)
+				Next Alignment: 2929661 2930819 scaffold-1189 10210 9052
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 10210 to 9622.
+			Align 39: 2930249 2930819 scaffold-1189 9622 9052
+				Gap between this and next alignment: 2930819 to 2933233 (2413 bp)
+				Next Alignment: 2933233 2934221 scaffold-56561 1 989
+
+			Align 40: 2933233 2934221 scaffold-56561 1 989
+				Gap between this and next alignment: 2934221 to 2943862 (9640 bp)
+				Next Alignment: 2943862 2944952 scaffold-4420 2881 1791
+
+			Align 41: 2943862 2944952 scaffold-4420 2881 1791
+				Gap between this and next alignment: 2944952 to 2945105 (152 bp)
+				Next Alignment: 2945105 2946245 scaffold-2303 3715 2575
+
+			Align 42: 2945105 2946245 scaffold-2303 3715 2575
+				Gap between this and next alignment: 2946245 to 2946290 (44 bp)
+				Next Alignment: 2946290 2947125 scaffold-2303 2370 1535
+
+			Align 43: 2946290 2947125 scaffold-2303 2370 1535
+				Gap between this and next alignment: 2947125 to 2947160 (34 bp)
+				Next Alignment: 2947160 2948505 scaffold-2303 1346 1
+
+			Align 44: 2947160 2948505 scaffold-2303 1346 1
+				Gap between this and next alignment: 2948505 to 2965142 (16636 bp)
+				Next Alignment: 2965142 2965641 scaffold-120609 1 500
+
+			Align 45: 2965142 2965641 scaffold-120609 1 500
+				Gap between this and next alignment: 2965641 to 3155684 (190042 bp)
+				Next Alignment: 3155684 3156243 scaffold-51891 1 560
+
+			Align 46: 3155684 3156243 scaffold-51891 1 560
+				Gap between this and next alignment: 3156243 to 3157704 (1460 bp)
+				Next Alignment: 3157704 3158334 scaffold-11197 631 1
+
+			Align 47: 3157704 3158334 scaffold-11197 631 1
+				Gap between this and next alignment: 3158334 to 3176952 (18617 bp)
+				Next Alignment: 3176952 3178530 scaffold-1653 3812 2234
+
+			Align 48: 3176952 3178530 scaffold-1653 3812 2234
+				Gap between this and next alignment: 3178530 to 3179093 (562 bp)
+				Next Alignment: 3179093 3179289 scaffold-1653 2232 2036
+
+			Align 49: 3179093 3179289 scaffold-1653 2232 2036
+				Gap between this and next alignment: 3179289 to 3180160 (870 bp)
+				Next Alignment: 3180160 3180693 scaffold-61465 1 534
+
+			Align 50: 3180160 3180693 scaffold-61465 1 534
+				Gap between this and next alignment: 3180693 to 3204736 (24042 bp)
+				Next Alignment: 3204736 3205241 scaffold-6622 1 506
+
+			Align 51: 3204736 3205241 scaffold-6622 1 506
+				Gap between this and next alignment: 3205241 to 3214093 (8851 bp)
+				Next Alignment: 3214093 3214628 scaffold-38834 536 1
+
+			Align 52: 3214093 3214628 scaffold-38834 536 1
+				Gap between this and next alignment: 3214628 to 3238616 (23987 bp)
+				Next Alignment: 3238616 3238871 scaffold-119991 1 256
+
+			Align 53: 3238616 3238871 scaffold-119991 1 256
+				Gap between this and next alignment: 3238871 to 3242861 (3989 bp)
+				Next Alignment: 3242861 3244045 scaffold-98497 1185 1
+
+			Align 54: 3242861 3244045 scaffold-98497 1185 1
+				Gap between this and next alignment: 3244045 to 3244349 (303 bp)
+				Next Alignment: 3244349 3245766 scaffold-51294 3 1420
+
+			Align 55: 3244349 3245766 scaffold-51294 3 1420
+				Gap between this and next alignment: 3245766 to 3246991 (1224 bp)
+				Next Alignment: 3246991 3247655 scaffold-14114 272 936
+
+			Align 56: 3246991 3247655 scaffold-14114 272 936
+				Gap between this and next alignment: 3247655 to 3248005 (349 bp)
+				Next Alignment: 3248005 3248086 scaffold-14114 937 1018
+
+			Align 57: 3248005 3248086 scaffold-14114 937 1018
+				Gap between this and next alignment: 3248086 to 3249777 (1690 bp)
+				Next Alignment: 3249777 3250066 scaffold-4731 393 682
+
+			Align 58: 3249777 3250066 scaffold-4731 393 682
+				Gap between this and next alignment: 3250066 to 3334646 (84579 bp)
+				Next Alignment: 3334646 3335311 scaffold-2218 2310 1645
+
+			Align 59: 3334646 3335311 scaffold-2218 2310 1645
+				Negative gap (overlap) between this and next alignment: 3335311 to 3335170 (-141 bp)
+				Next Alignment: 3335170 3335683 scaffold-2218 1620 1107
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1620 to 1478.
+			Align 60: 3335312 3335683 scaffold-2218 1478 1107
+				Gap between this and next alignment: 3335683 to 3335686 (2 bp)
+				Next Alignment: 3335686 3336254 scaffold-2218 968 400
+
+			Align 61: 3335686 3336254 scaffold-2218 968 400
+			END in gap: 3336254 to 3341681 (5427 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Ruminococcus_torques_L2-14/contigs_reports/nucmer_output/Ray.used_snps
+
+Results:
+	Local Misassemblies: 9
+	Misassemblies: 1
+		Relocations: 1
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 1
+	Misassembled Contig Bases: 5309
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 14 part
+Partially Unaligned Contigs with Misassemblies: 2
+Unaligned Contig Bases: 88339
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 59475
+
+	SNPs: 1107
+	Insertions: 55
+	Deletions: 6
+
+	Positive Gaps: 53
+		Internal Gaps:  8
+		External Gaps:  45
+		External Gap Total:  3280462
+		External Gap Average: 72899
+	Negative Gaps: 6
+		Internal Overlaps:  3
+		External Overlaps:  3
+		External Overlaps Total: -1206
+		External Overlaps Average: -402
+	Contigs with Redundant Alignments: 3 (1278)

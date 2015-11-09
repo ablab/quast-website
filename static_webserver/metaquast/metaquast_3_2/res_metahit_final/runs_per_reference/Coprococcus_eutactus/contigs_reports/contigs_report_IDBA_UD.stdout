@@ -1,0 +1,652 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Coprococcus_eutactus_gi_224514845_ref_NZ_]
+	Loaded [Coprococcus_eutactus_gi_224514846_ref_NZ_]
+	Loaded [Coprococcus_eutactus_gi_224514847_ref_NZ_]
+	Loaded [Coprococcus_eutactus_gi_224514849_ref_NZ_]
+	Loaded [Coprococcus_eutactus_gi_224514850_ref_NZ_]
+	Loaded [Coprococcus_eutactus_gi_224514851_ref_NZ_]
+	Loaded [Coprococcus_eutactus_gi_224514852_ref_NZ_]
+	Loaded [Coprococcus_eutactus_gi_224514853_ref_NZ_]
+	Loaded [Coprococcus_eutactus_gi_224514854_ref_NZ_]
+	Loaded [Coprococcus_eutactus_gi_224514856_ref_NZ_]
+	Loaded [Coprococcus_eutactus_gi_224514857_ref_NZ_]
+	Loaded [Coprococcus_eutactus_gi_224514858_ref_NZ_]
+	Loaded [Coprococcus_eutactus_gi_224514860_ref_NZ_]
+	Loaded [Coprococcus_eutactus_gi_224514861_ref_NZ_]
+	Loaded [Coprococcus_eutactus_gi_224514862_ref_NZ_]
+	Loaded [Coprococcus_eutactus_gi_224514863_ref_NZ_]
+	Loaded [Coprococcus_eutactus_gi_224514864_ref_NZ_]
+	Loaded [Coprococcus_eutactus_gi_224514865_ref_NZ_]
+	Loaded [Coprococcus_eutactus_gi_224514866_ref_NZ_]
+	Loaded [Coprococcus_eutactus_gi_224514868_ref_NZ_]
+	Loaded [Coprococcus_eutactus_gi_224514871_ref_NZ_]
+	Loaded [Coprococcus_eutactus_gi_224514873_ref_NZ_]
+	Loaded [Coprococcus_eutactus_gi_224514875_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 23
+	Total Region Length: 3102987
+Analyzing contigs...
+CONTIG: scaffold_207 (53501bp)
+Top Length: 130  Top ID: 98.46
+		Skipping redundant alignment 105985 106111 | 53499 53373 | 127 127 | 98.43 | Coprococcus_eutactus_gi_224514875_ref_NZ_ scaffold_207
+		Skipping redundant alignment 115904 116029 | 53374 53499 | 126 126 | 98.41 | Coprococcus_eutactus_gi_224514851_ref_NZ_ scaffold_207
+		Skipping redundant alignment 63218 63343 | 53374 53499 | 126 126 | 98.41 | Coprococcus_eutactus_gi_224514852_ref_NZ_ scaffold_207
+		Skipping redundant alignment 104252 104377 | 53374 53499 | 126 126 | 98.41 | Coprococcus_eutactus_gi_224514864_ref_NZ_ scaffold_207
+		Skipping redundant alignment 171542 171667 | 53499 53374 | 126 126 | 98.41 | Coprococcus_eutactus_gi_224514860_ref_NZ_ scaffold_207
+		This contig is partially unaligned. (Aligned 130 out of 53501 bases)
+		Alignment: 151244 151373 | 53499 53370 | 130 130 | 98.46 | Coprococcus_eutactus_gi_224514875_ref_NZ_ scaffold_207
+		Unaligned bases: 1 to 53369 (53369)
+		Unaligned bases: 53500 to 53501 (2)
+
+CONTIG: scaffold_10776 (1227bp)
+Top Length: 205  Top ID: 96.1
+		This contig is partially unaligned. (Aligned 205 out of 1227 bases)
+		Alignment: 137525 137728 | 325 121 | 204 205 | 96.1 | Coprococcus_eutactus_gi_224514875_ref_NZ_ scaffold_10776
+		Unaligned bases: 1 to 120 (120)
+		Unaligned bases: 326 to 1227 (902)
+
+CONTIG: scaffold_20194 (750bp)
+Top Length: 750  Top ID: 98.13
+		Marking as insignificant: 326721 326803 | 750 668 | 83 83 | 98.8 | Coprococcus_eutactus_gi_224514852_ref_NZ_ scaffold_20194
+		This contig has 6 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 150445 151194 | 1 750 | 750 750 | 98.13 | Coprococcus_eutactus_gi_224514875_ref_NZ_ scaffold_20194
+		Skipping alignment  170743 171492 | 1 750 | 750 750 | 98.13 | Coprococcus_eutactus_gi_224514860_ref_NZ_ scaffold_20194
+		Skipping alignment  116079 116828 | 750 1 | 750 750 | 98.13 | Coprococcus_eutactus_gi_224514851_ref_NZ_ scaffold_20194
+		Skipping alignment  104427 105176 | 750 1 | 750 750 | 98.13 | Coprococcus_eutactus_gi_224514864_ref_NZ_ scaffold_20194
+		Skipping alignment  105186 105935 | 1 750 | 750 750 | 97.87 | Coprococcus_eutactus_gi_224514875_ref_NZ_ scaffold_20194
+		Skipping alignment  63393 64136 | 750 1 | 744 750 | 97.33 | Coprococcus_eutactus_gi_224514852_ref_NZ_ scaffold_20194
+
+CONTIG: scaffold_26189 (610bp)
+Top Length: 610  Top ID: 95.74
+		Marking as insignificant: 406724 406823 | 511 610 | 100 100 | 96.0 | Coprococcus_eutactus_gi_224514860_ref_NZ_ scaffold_26189
+		This contig has 5 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 170702 171311 | 1 610 | 610 610 | 95.74 | Coprococcus_eutactus_gi_224514860_ref_NZ_ scaffold_26189
+		Skipping alignment  150404 151013 | 1 610 | 610 610 | 95.74 | Coprococcus_eutactus_gi_224514875_ref_NZ_ scaffold_26189
+		Skipping alignment  116260 116869 | 610 1 | 610 610 | 95.74 | Coprococcus_eutactus_gi_224514851_ref_NZ_ scaffold_26189
+		Skipping alignment  104608 105217 | 610 1 | 610 610 | 95.74 | Coprococcus_eutactus_gi_224514864_ref_NZ_ scaffold_26189
+		Skipping alignment  105145 105754 | 1 610 | 610 610 | 95.58 | Coprococcus_eutactus_gi_224514875_ref_NZ_ scaffold_26189
+
+CONTIG: scaffold_777 (28763bp)
+Top Length: 1740  Top ID: 99.02
+		This contig is partially unaligned. (Aligned 1740 out of 28763 bases)
+		Alignment: 129119 130858 | 3064 1325 | 1740 1740 | 99.02 | Coprococcus_eutactus_gi_224514860_ref_NZ_ scaffold_777
+		Unaligned bases: 1 to 1324 (1324)
+		Unaligned bases: 3065 to 28763 (25699)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_1144 (7061bp)
+Top Length: 1015  Top ID: 95.17
+		This contig is partially unaligned. (Aligned 1015 out of 7061 bases)
+		Alignment: 350589 351596 | 5465 6479 | 1008 1015 | 95.17 | Coprococcus_eutactus_gi_224514860_ref_NZ_ scaffold_1144
+		Unaligned bases: 1 to 5464 (5464)
+		Unaligned bases: 6480 to 7061 (582)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_1279 (6392bp)
+Top Length: 331  Top ID: 99.09
+		This contig is partially unaligned. (Aligned 331 out of 6392 bases)
+		Alignment: 131209 131536 | 6296 5966 | 328 331 | 99.09 | Coprococcus_eutactus_gi_224514860_ref_NZ_ scaffold_1279
+		Unaligned bases: 1 to 5965 (5965)
+		Unaligned bases: 6297 to 6392 (96)
+
+CONTIG: scaffold_10220 (1845bp)
+Top Length: 1845  Top ID: 99.02
+		One align captures most of this contig: 124432 126273 | 1 1845 | 1842 1845 | 99.02 | Coprococcus_eutactus_gi_224514860_ref_NZ_ scaffold_10220
+
+CONTIG: scaffold_12254 (1111bp)
+Top Length: 854  Top ID: 95.62
+		This contig is partially unaligned. (Aligned 854 out of 1111 bases)
+		Alignment: 326795 327662 | 884 31 | 868 854 | 95.62 | Coprococcus_eutactus_gi_224514852_ref_NZ_ scaffold_12254
+		Unaligned bases: 1 to 30 (30)
+		Unaligned bases: 885 to 1111 (227)
+
+CONTIG: scaffold_18680 (796bp)
+Top Length: 796  Top ID: 99.5
+		One align captures most of this contig: 330638 331433 | 1 796 | 796 796 | 99.5 | Coprococcus_eutactus_gi_224514852_ref_NZ_ scaffold_18680
+
+CONTIG: scaffold_22420 (689bp)
+Top Length: 336  Top ID: 98.81
+		This contig is partially unaligned. (Aligned 336 out of 689 bases)
+		Alignment: 329737 330071 | 212 547 | 335 336 | 98.81 | Coprococcus_eutactus_gi_224514852_ref_NZ_ scaffold_22420
+		Unaligned bases: 1 to 211 (211)
+		Unaligned bases: 548 to 689 (142)
+
+CONTIG: scaffold_28551 (547bp)
+Top Length: 261  Top ID: 99.62
+		This contig is partially unaligned. (Aligned 261 out of 547 bases)
+		Alignment: 333813 334073 | 1 261 | 261 261 | 99.62 | Coprococcus_eutactus_gi_224514852_ref_NZ_ scaffold_28551
+		Unaligned bases: 262 to 547 (286)
+
+CONTIG: scaffold_46 (73503bp)
+Top Length: 84  Top ID: 97.62
+		This contig is partially unaligned. (Aligned 84 out of 73503 bases)
+		Alignment: 165154 165236 | 53138 53221 | 83 84 | 97.62 | Coprococcus_eutactus_gi_224514849_ref_NZ_ scaffold_46
+		Unaligned bases: 1 to 53137 (53137)
+		Unaligned bases: 53222 to 73503 (20282)
+
+CONTIG: scaffold_80 (53681bp)
+Top Length: 79  Top ID: 97.47
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 249718 249796 | 25520 25598 | 79 79 | 97.47 | Coprococcus_eutactus_gi_224514849_ref_NZ_ scaffold_80
+		This contig is partially unaligned. (Aligned 79 out of 53681 bases)
+		Alignment: 249425 249502 | 25518 25595 | 78 78 | 97.44 | Coprococcus_eutactus_gi_224514849_ref_NZ_ scaffold_80
+		Unaligned bases: 1 to 25517 (25517)
+		Unaligned bases: 25596 to 53681 (28086)
+
+CONTIG: scaffold_361 (76323bp)
+Top Length: 85  Top ID: 97.65
+		This contig is partially unaligned. (Aligned 85 out of 76323 bases)
+		Alignment: 165153 165236 | 5254 5338 | 84 85 | 97.65 | Coprococcus_eutactus_gi_224514849_ref_NZ_ scaffold_361
+		Unaligned bases: 1 to 5253 (5253)
+		Unaligned bases: 5339 to 76323 (70985)
+
+CONTIG: scaffold_17641 (831bp)
+Top Length: 149  Top ID: 95.3
+		This contig is partially unaligned. (Aligned 149 out of 831 bases)
+		Alignment: 254132 254280 | 831 683 | 149 149 | 95.3 | Coprococcus_eutactus_gi_224514849_ref_NZ_ scaffold_17641
+		Unaligned bases: 1 to 682 (682)
+
+CONTIG: scaffold_18555 (800bp)
+Top Length: 242  Top ID: 95.45
+		This contig is partially unaligned. (Aligned 242 out of 800 bases)
+		Alignment: 254039 254280 | 1 242 | 242 242 | 95.45 | Coprococcus_eutactus_gi_224514849_ref_NZ_ scaffold_18555
+		Unaligned bases: 243 to 800 (558)
+
+CONTIG: scaffold_29356 (883bp)
+Top Length: 177  Top ID: 96.61
+		This contig is partially unaligned. (Aligned 177 out of 883 bases)
+		Alignment: 254104 254280 | 1 177 | 177 177 | 96.61 | Coprococcus_eutactus_gi_224514849_ref_NZ_ scaffold_29356
+		Unaligned bases: 178 to 883 (706)
+
+CONTIG: scaffold_6083 (1863bp)
+Top Length: 1863  Top ID: 99.79
+		One align captures most of this contig: 21540 23402 | 1 1863 | 1863 1863 | 99.79 | Coprococcus_eutactus_gi_224514853_ref_NZ_ scaffold_6083
+
+CONTIG: scaffold_8300 (1499bp)
+Top Length: 1454  Top ID: 98.9
+		This contig is partially unaligned. (Aligned 1454 out of 1499 bases)
+		Alignment: 18428 19881 | 1499 46 | 1454 1454 | 98.9 | Coprococcus_eutactus_gi_224514853_ref_NZ_ scaffold_8300
+		Unaligned bases: 1 to 45 (45)
+
+CONTIG: scaffold_12765 (1077bp)
+Top Length: 1077  Top ID: 99.63
+		One align captures most of this contig: 16590 17666 | 1 1077 | 1077 1077 | 99.63 | Coprococcus_eutactus_gi_224514853_ref_NZ_ scaffold_12765
+
+CONTIG: scaffold_21493 (1011bp)
+Top Length: 292  Top ID: 98.29
+		This contig is partially unaligned. (Aligned 292 out of 1011 bases)
+		Alignment: 9066 9357 | 541 832 | 292 292 | 98.29 | Coprococcus_eutactus_gi_224514853_ref_NZ_ scaffold_21493
+		Unaligned bases: 1 to 540 (540)
+		Unaligned bases: 833 to 1011 (179)
+
+CONTIG: scaffold_23505 (664bp)
+Top Length: 558  Top ID: 99.46
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 10 between Alignment 1 and 2:  176204 176319 | 1 116 | 116 116 --> 176204 176309 | 1 106 | 106 106
+			Real Alignment 1: 176204 176309 | 1 106 | 106 106 | 98.28 | Coprococcus_eutactus_gi_224514851_ref_NZ_ scaffold_23505
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 16060 16617 | 664 107 | 558 558 | 99.46 | Coprococcus_eutactus_gi_224514853_ref_NZ_ scaffold_23505
+
+CONTIG: scaffold_24930 (634bp)
+Top Length: 634  Top ID: 95.74
+		One align captures most of this contig: 11741 12374 | 1 634 | 634 634 | 95.74 | Coprococcus_eutactus_gi_224514853_ref_NZ_ scaffold_24930
+
+CONTIG: scaffold_25605 (621bp)
+Top Length: 621  Top ID: 95.97
+		One align captures most of this contig: 9873 10493 | 1 621 | 621 621 | 95.97 | Coprococcus_eutactus_gi_224514853_ref_NZ_ scaffold_25605
+
+CONTIG: scaffold_83 (50587bp)
+Top Length: 366  Top ID: 99.73
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 50587 and total length of all aligns is 517
+		Alignment: 143823 144188 | 366 1 | 366 366 | 99.73 | Coprococcus_eutactus_gi_224514862_ref_NZ_ scaffold_83
+		Alignment: 123276 123426 | 36879 37029 | 151 151 | 96.69 | Coprococcus_eutactus_gi_224514860_ref_NZ_ scaffold_83
+		Unaligned bases: 50070
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold_7305 (1772bp)
+Top Length: 1772  Top ID: 99.66
+		One align captures most of this contig: 144115 145885 | 1772 1 | 1771 1772 | 99.66 | Coprococcus_eutactus_gi_224514862_ref_NZ_ scaffold_7305
+
+CONTIG: scaffold_3935 (4145bp)
+Top Length: 4008  Top ID: 97.46
+		This contig is partially unaligned. (Aligned 4008 out of 4145 bases)
+		Alignment: 71905 75913 | 4067 60 | 4009 4008 | 97.46 | Coprococcus_eutactus_gi_224514871_ref_NZ_ scaffold_3935
+		Unaligned bases: 1 to 59 (59)
+		Unaligned bases: 4068 to 4145 (78)
+
+CONTIG: scaffold_191 (57095bp)
+Top Length: 887  Top ID: 95.15
+		This contig is partially unaligned. (Aligned 887 out of 57095 bases)
+		Alignment: 71034 71920 | 44296 43410 | 887 887 | 95.15 | Coprococcus_eutactus_gi_224514866_ref_NZ_ scaffold_191
+		Unaligned bases: 1 to 43409 (43409)
+		Unaligned bases: 44297 to 57095 (12799)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_8799 (2268bp)
+Top Length: 998  Top ID: 98.5
+		This contig is partially unaligned. (Aligned 998 out of 2268 bases)
+		Alignment: 80358 81354 | 998 1 | 997 998 | 98.5 | Coprococcus_eutactus_gi_224514866_ref_NZ_ scaffold_8799
+		Unaligned bases: 999 to 2268 (1270)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_10444 (1257bp)
+Top Length: 1257  Top ID: 99.2
+		One align captures most of this contig: 50264 51520 | 1257 1 | 1257 1257 | 99.2 | Coprococcus_eutactus_gi_224514866_ref_NZ_ scaffold_10444
+
+CONTIG: scaffold_17923 (822bp)
+Top Length: 822  Top ID: 99.15
+		One align captures most of this contig: 53803 54624 | 1 822 | 822 822 | 99.15 | Coprococcus_eutactus_gi_224514866_ref_NZ_ scaffold_17923
+
+CONTIG: scaffold_18439 (1147bp)
+Top Length: 1135  Top ID: 98.68
+		This contig is partially unaligned. (Aligned 1135 out of 1147 bases)
+		Alignment: 51501 52638 | 13 1147 | 1138 1135 | 98.68 | Coprococcus_eutactus_gi_224514866_ref_NZ_ scaffold_18439
+		Unaligned bases: 1 to 12 (12)
+
+CONTIG: scaffold_28837 (539bp)
+Top Length: 539  Top ID: 99.81
+		One align captures most of this contig: 56482 57020 | 1 539 | 539 539 | 99.81 | Coprococcus_eutactus_gi_224514866_ref_NZ_ scaffold_28837
+
+CONTIG: scaffold_24704 (755bp)
+Top Length: 755  Top ID: 95.25
+		Marking as insignificant: 1 233 | 521 755 | 233 235 | 96.2 | Coprococcus_eutactus_gi_224514875_ref_NZ_ scaffold_24704
+		Marking as insignificant: 1059 1346 | 467 755 | 288 289 | 98.27 | Coprococcus_eutactus_gi_224514851_ref_NZ_ scaffold_24704
+		This contig has 5 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 2001 2757 | 1 755 | 757 755 | 95.25 | Coprococcus_eutactus_gi_224514846_ref_NZ_ scaffold_24704
+		Skipping alignment  1961 2717 | 1 755 | 757 755 | 95.25 | Coprococcus_eutactus_gi_224514847_ref_NZ_ scaffold_24704
+		Skipping alignment  4298 5054 | 1 755 | 757 755 | 95.25 | Coprococcus_eutactus_gi_224514868_ref_NZ_ scaffold_24704
+		Skipping alignment  252087 252843 | 1 755 | 757 755 | 95.12 | Coprococcus_eutactus_gi_224514852_ref_NZ_ scaffold_24704
+		Skipping alignment  178 928 | 6 755 | 751 750 | 95.09 | Coprococcus_eutactus_gi_224514873_ref_NZ_ scaffold_24704
+
+CONTIG: scaffold_10873 (1220bp)
+Top Length: 634  Top ID: 96.69
+		Skipping redundant alignment 104722 105261 | 681 1220 | 540 540 | 96.11 | Coprococcus_eutactus_gi_224514875_ref_NZ_ scaffold_10873
+		Skipping redundant alignment 105101 105596 | 1220 725 | 496 496 | 95.77 | Coprococcus_eutactus_gi_224514864_ref_NZ_ scaffold_10873
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 64061 64692 | 1220 589 | 632 632 | 96.68 | Coprococcus_eutactus_gi_224514852_ref_NZ_ scaffold_10873
+		Skipping redundant alignment 170187 170818 | 589 1220 | 632 632 | 96.68 | Coprococcus_eutactus_gi_224514860_ref_NZ_ scaffold_10873
+		Skipping redundant alignment 149889 150520 | 589 1220 | 632 632 | 96.68 | Coprococcus_eutactus_gi_224514875_ref_NZ_ scaffold_10873
+		This contig is partially unaligned. (Aligned 634 out of 1220 bases)
+		Alignment: 116753 117386 | 1220 587 | 634 634 | 96.69 | Coprococcus_eutactus_gi_224514851_ref_NZ_ scaffold_10873
+		Unaligned bases: 1 to 586 (586)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_1045 (7736bp)
+Top Length: 380  Top ID: 96.58
+		This contig is partially unaligned. (Aligned 380 out of 7736 bases)
+		Alignment: 98827 99204 | 1 380 | 378 380 | 96.58 | Coprococcus_eutactus_gi_224514865_ref_NZ_ scaffold_1045
+		Unaligned bases: 381 to 7736 (7356)
+
+CONTIG: scaffold_5297 (2048bp)
+Top Length: 99  Top ID: 98.99
+		This contig is partially unaligned. (Aligned 99 out of 2048 bases)
+		Alignment: 97776 97874 | 1950 2048 | 99 99 | 98.99 | Coprococcus_eutactus_gi_224514865_ref_NZ_ scaffold_5297
+		Unaligned bases: 1 to 1949 (1949)
+
+CONTIG: scaffold_20401 (946bp)
+Top Length: 946  Top ID: 97.89
+		One align captures most of this contig: 97984 98925 | 1 946 | 942 946 | 97.89 | Coprococcus_eutactus_gi_224514865_ref_NZ_ scaffold_20401
+
+CONTIG: scaffold_20862 (731bp)
+Top Length: 160  Top ID: 95.62
+		This contig is partially unaligned. (Aligned 160 out of 731 bases)
+		Alignment: 2760 2919 | 1 160 | 160 160 | 95.62 | Coprococcus_eutactus_gi_224514846_ref_NZ_ scaffold_20862
+		Unaligned bases: 161 to 731 (571)
+
+CONTIG: scaffold_82 (54427bp)
+Top Length: 101  Top ID: 99.01
+		Skipping redundant alignment 13912 14007 | 32020 31925 | 96 96 | 98.96 | Coprococcus_eutactus_gi_224514864_ref_NZ_ scaffold_82
+		This contig is partially unaligned. (Aligned 101 out of 54427 bases)
+		Alignment: 98947 99047 | 31924 32024 | 101 101 | 99.01 | Coprococcus_eutactus_gi_224514861_ref_NZ_ scaffold_82
+		Unaligned bases: 1 to 31923 (31923)
+		Unaligned bases: 32025 to 54427 (22403)
+
+CONTIG: scaffold_24713 (638bp)
+Top Length: 100  Top ID: 96.0
+		This contig is partially unaligned. (Aligned 100 out of 638 bases)
+		Alignment: 98948 99047 | 314 215 | 100 100 | 96.0 | Coprococcus_eutactus_gi_224514861_ref_NZ_ scaffold_24713
+		Unaligned bases: 1 to 214 (214)
+		Unaligned bases: 315 to 638 (324)
+
+CONTIG: scaffold_29156 (1029bp)
+Top Length: 101  Top ID: 97.03
+		Skipping redundant alignment 13912 14007 | 149 54 | 96 96 | 96.88 | Coprococcus_eutactus_gi_224514864_ref_NZ_ scaffold_29156
+		This contig is partially unaligned. (Aligned 101 out of 1029 bases)
+		Alignment: 98947 99047 | 53 153 | 101 101 | 97.03 | Coprococcus_eutactus_gi_224514861_ref_NZ_ scaffold_29156
+		Unaligned bases: 1 to 52 (52)
+		Unaligned bases: 154 to 1029 (876)
+
+CONTIG: scaffold_74 (72102bp)
+Top Length: 103  Top ID: 99.03
+		This contig is partially unaligned. (Aligned 103 out of 72102 bases)
+		Alignment: 26683 26785 | 1 103 | 103 103 | 99.03 | Coprococcus_eutactus_gi_224514868_ref_NZ_ scaffold_74
+		Unaligned bases: 104 to 72102 (71999)
+
+CONTIG: scaffold_2297 (3759bp)
+Top Length: 3759  Top ID: 98.14
+		One align captures most of this contig: 39957 43715 | 1 3759 | 3759 3759 | 98.14 | Coprococcus_eutactus_gi_224514868_ref_NZ_ scaffold_2297
+
+CONTIG: scaffold_10067 (1293bp)
+Top Length: 1293  Top ID: 100.0
+		One align captures most of this contig: 24966 26258 | 1 1293 | 1293 1293 | 100.0 | Coprococcus_eutactus_gi_224514868_ref_NZ_ scaffold_10067
+
+CONTIG: scaffold_23380 (1234bp)
+Top Length: 1229  Top ID: 96.42
+		One align captures most of this contig: 43783 45008 | 1229 1 | 1226 1229 | 96.42 | Coprococcus_eutactus_gi_224514868_ref_NZ_ scaffold_23380
+
+CONTIG: scaffold_25059 (631bp)
+Top Length: 458  Top ID: 98.03
+		This contig is partially unaligned. (Aligned 458 out of 631 bases)
+		Alignment: 57817 58274 | 174 631 | 458 458 | 98.03 | Coprococcus_eutactus_gi_224514868_ref_NZ_ scaffold_25059
+		Unaligned bases: 1 to 173 (173)
+
+CONTIG: scaffold_25580 (622bp)
+Top Length: 622  Top ID: 100.0
+		One align captures most of this contig: 26160 26781 | 622 1 | 622 622 | 100.0 | Coprococcus_eutactus_gi_224514868_ref_NZ_ scaffold_25580
+
+CONTIG: scaffold_27991 (565bp)
+Top Length: 565  Top ID: 98.94
+		One align captures most of this contig: 30756 31320 | 565 1 | 565 565 | 98.94 | Coprococcus_eutactus_gi_224514868_ref_NZ_ scaffold_27991
+
+CONTIG: scaffold_39861 (657bp)
+Top Length: 657  Top ID: 97.72
+		One align captures most of this contig: 43791 44444 | 1 657 | 654 657 | 97.72 | Coprococcus_eutactus_gi_224514868_ref_NZ_ scaffold_39861
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Coprococcus_eutactus/contigs_reports/nucmer_output/IDBA_UD.used_snps
+	Reference Coprococcus_eutactus_gi_224514852_ref_NZ_: 4 total alignments. 1 total regions.
+		Region: 1 to 371583 (371583 bp)
+			START in gap: 1 to 326795 (326794 bp)
+			Align 1: 326795 327662 scaffold_12254 884 31
+				Gap between this and next alignment: 327662 to 329737 (2074 bp)
+				Next Alignment: 329737 330071 scaffold_22420 212 547
+
+			Align 2: 329737 330071 scaffold_22420 212 547
+				Gap between this and next alignment: 330071 to 330638 (566 bp)
+				Next Alignment: 330638 331433 scaffold_18680 1 796
+
+			Align 3: 330638 331433 scaffold_18680 1 796
+				Gap between this and next alignment: 331433 to 333813 (2379 bp)
+				Next Alignment: 333813 334073 scaffold_28551 1 261
+
+			Align 4: 333813 334073 scaffold_28551 1 261
+			END in gap: 334073 to 371583 (37510 bp)
+
+	Reference Coprococcus_eutactus_gi_224514866_ref_NZ_: 6 total alignments. 1 total regions.
+		Region: 1 to 92796 (92796 bp)
+			START in gap: 1 to 50264 (50263 bp)
+			Align 1: 50264 51520 scaffold_10444 1257 1
+				Negative gap (overlap) between this and next alignment: 51520 to 51501 (-19 bp)
+				Next Alignment: 51501 52638 scaffold_18439 13 1147
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 13 to 33.
+			Align 2: 51521 52638 scaffold_18439 33 1147
+				Gap between this and next alignment: 52638 to 53803 (1164 bp)
+				Next Alignment: 53803 54624 scaffold_17923 1 822
+
+			Align 3: 53803 54624 scaffold_17923 1 822
+				Gap between this and next alignment: 54624 to 56482 (1857 bp)
+				Next Alignment: 56482 57020 scaffold_28837 1 539
+
+			Align 4: 56482 57020 scaffold_28837 1 539
+				Gap between this and next alignment: 57020 to 71034 (14013 bp)
+				Next Alignment: 71034 71920 scaffold_191 44296 43410
+
+			Align 5: 71034 71920 scaffold_191 44296 43410
+				Gap between this and next alignment: 71920 to 80358 (8437 bp)
+				Next Alignment: 80358 81354 scaffold_8799 998 1
+
+			Align 6: 80358 81354 scaffold_8799 998 1
+			END in gap: 81354 to 92796 (11442 bp)
+
+ERROR: Reference Coprococcus_eutactus_gi_224514845_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Coprococcus_eutactus_gi_224514871_ref_NZ_', 'Coprococcus_eutactus_gi_224514860_ref_NZ_', 'Coprococcus_eutactus_gi_224514866_ref_NZ_', 'Coprococcus_eutactus_gi_224514868_ref_NZ_', 'Coprococcus_eutactus_gi_224514851_ref_NZ_', 'Coprococcus_eutactus_gi_224514849_ref_NZ_', 'Coprococcus_eutactus_gi_224514861_ref_NZ_', 'Coprococcus_eutactus_gi_224514865_ref_NZ_', 'Coprococcus_eutactus_gi_224514852_ref_NZ_', 'Coprococcus_eutactus_gi_224514853_ref_NZ_', 'Coprococcus_eutactus_gi_224514846_ref_NZ_', 'Coprococcus_eutactus_gi_224514875_ref_NZ_', 'Coprococcus_eutactus_gi_224514862_ref_NZ_']
+ERROR: Reference Coprococcus_eutactus_gi_224514847_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Coprococcus_eutactus_gi_224514871_ref_NZ_', 'Coprococcus_eutactus_gi_224514860_ref_NZ_', 'Coprococcus_eutactus_gi_224514866_ref_NZ_', 'Coprococcus_eutactus_gi_224514868_ref_NZ_', 'Coprococcus_eutactus_gi_224514851_ref_NZ_', 'Coprococcus_eutactus_gi_224514849_ref_NZ_', 'Coprococcus_eutactus_gi_224514861_ref_NZ_', 'Coprococcus_eutactus_gi_224514865_ref_NZ_', 'Coprococcus_eutactus_gi_224514852_ref_NZ_', 'Coprococcus_eutactus_gi_224514853_ref_NZ_', 'Coprococcus_eutactus_gi_224514846_ref_NZ_', 'Coprococcus_eutactus_gi_224514875_ref_NZ_', 'Coprococcus_eutactus_gi_224514862_ref_NZ_']
+ERROR: Reference Coprococcus_eutactus_gi_224514863_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Coprococcus_eutactus_gi_224514871_ref_NZ_', 'Coprococcus_eutactus_gi_224514860_ref_NZ_', 'Coprococcus_eutactus_gi_224514866_ref_NZ_', 'Coprococcus_eutactus_gi_224514868_ref_NZ_', 'Coprococcus_eutactus_gi_224514851_ref_NZ_', 'Coprococcus_eutactus_gi_224514849_ref_NZ_', 'Coprococcus_eutactus_gi_224514861_ref_NZ_', 'Coprococcus_eutactus_gi_224514865_ref_NZ_', 'Coprococcus_eutactus_gi_224514852_ref_NZ_', 'Coprococcus_eutactus_gi_224514853_ref_NZ_', 'Coprococcus_eutactus_gi_224514846_ref_NZ_', 'Coprococcus_eutactus_gi_224514875_ref_NZ_', 'Coprococcus_eutactus_gi_224514862_ref_NZ_']
+	Reference Coprococcus_eutactus_gi_224514861_ref_NZ_: 3 total alignments. 1 total regions.
+		Region: 1 to 118189 (118189 bp)
+			START in gap: 1 to 98947 (98946 bp)
+			Align 1: 98947 99047 scaffold_82 31924 32024
+				The next alignment (98947 99047 scaffold_29156 53 153) is redundant. Skipping.
+				The next alignment (98948 99047 scaffold_24713 314 215) is redundant. Skipping.
+
+ERROR: Reference Coprococcus_eutactus_gi_224514864_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Coprococcus_eutactus_gi_224514871_ref_NZ_', 'Coprococcus_eutactus_gi_224514860_ref_NZ_', 'Coprococcus_eutactus_gi_224514866_ref_NZ_', 'Coprococcus_eutactus_gi_224514868_ref_NZ_', 'Coprococcus_eutactus_gi_224514851_ref_NZ_', 'Coprococcus_eutactus_gi_224514849_ref_NZ_', 'Coprococcus_eutactus_gi_224514861_ref_NZ_', 'Coprococcus_eutactus_gi_224514865_ref_NZ_', 'Coprococcus_eutactus_gi_224514852_ref_NZ_', 'Coprococcus_eutactus_gi_224514853_ref_NZ_', 'Coprococcus_eutactus_gi_224514846_ref_NZ_', 'Coprococcus_eutactus_gi_224514875_ref_NZ_', 'Coprococcus_eutactus_gi_224514862_ref_NZ_']
+	Reference Coprococcus_eutactus_gi_224514875_ref_NZ_: 3 total alignments. 1 total regions.
+		Region: 1 to 195117 (195117 bp)
+			START in gap: 1 to 137525 (137524 bp)
+			Align 1: 137525 137728 scaffold_10776 325 121
+				Gap between this and next alignment: 137728 to 150445 (12716 bp)
+				Next Alignment: 150445 151194 scaffold_20194 1 750
+
+			Align 2: 150445 151194 scaffold_20194 1 750
+				Gap between this and next alignment: 151194 to 151244 (49 bp)
+				Next Alignment: 151244 151373 scaffold_207 53499 53370
+
+			Align 3: 151244 151373 scaffold_207 53499 53370
+			END in gap: 151373 to 195117 (43744 bp)
+
+	Reference Coprococcus_eutactus_gi_224514860_ref_NZ_: 6 total alignments. 1 total regions.
+		Region: 1 to 624153 (624153 bp)
+			START in gap: 1 to 123276 (123275 bp)
+			Align 1: 123276 123426 scaffold_83 36879 37029
+				Gap between this and next alignment: 123426 to 124432 (1005 bp)
+				Next Alignment: 124432 126273 scaffold_10220 1 1845
+
+			Align 2: 124432 126273 scaffold_10220 1 1845
+				Gap between this and next alignment: 126273 to 129119 (2845 bp)
+				Next Alignment: 129119 130858 scaffold_777 3064 1325
+
+			Align 3: 129119 130858 scaffold_777 3064 1325
+				Gap between this and next alignment: 130858 to 131209 (350 bp)
+				Next Alignment: 131209 131536 scaffold_1279 6296 5966
+
+			Align 4: 131209 131536 scaffold_1279 6296 5966
+				Gap between this and next alignment: 131536 to 170702 (39165 bp)
+				Next Alignment: 170702 171311 scaffold_26189 1 610
+
+			Align 5: 170702 171311 scaffold_26189 1 610
+				Gap between this and next alignment: 171311 to 350589 (179277 bp)
+				Next Alignment: 350589 351596 scaffold_1144 5465 6479
+
+			Align 6: 350589 351596 scaffold_1144 5465 6479
+			END in gap: 351596 to 624153 (272557 bp)
+
+ERROR: Reference Coprococcus_eutactus_gi_224514858_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Coprococcus_eutactus_gi_224514871_ref_NZ_', 'Coprococcus_eutactus_gi_224514860_ref_NZ_', 'Coprococcus_eutactus_gi_224514866_ref_NZ_', 'Coprococcus_eutactus_gi_224514868_ref_NZ_', 'Coprococcus_eutactus_gi_224514851_ref_NZ_', 'Coprococcus_eutactus_gi_224514849_ref_NZ_', 'Coprococcus_eutactus_gi_224514861_ref_NZ_', 'Coprococcus_eutactus_gi_224514865_ref_NZ_', 'Coprococcus_eutactus_gi_224514852_ref_NZ_', 'Coprococcus_eutactus_gi_224514853_ref_NZ_', 'Coprococcus_eutactus_gi_224514846_ref_NZ_', 'Coprococcus_eutactus_gi_224514875_ref_NZ_', 'Coprococcus_eutactus_gi_224514862_ref_NZ_']
+	Reference Coprococcus_eutactus_gi_224514868_ref_NZ_: 8 total alignments. 1 total regions.
+		Region: 1 to 77672 (77672 bp)
+			START in gap: 1 to 24966 (24965 bp)
+			Align 1: 24966 26258 scaffold_10067 1 1293
+				Negative gap (overlap) between this and next alignment: 26258 to 26160 (-98 bp)
+				Next Alignment: 26160 26781 scaffold_25580 622 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 622 to 523.
+			Align 2: 26259 26781 scaffold_25580 523 1
+				Negative gap (overlap) between this and next alignment: 26781 to 26683 (-98 bp)
+				Next Alignment: 26683 26785 scaffold_74 1 103
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 100.
+			Align 3: 26782 26785 scaffold_74 100 103
+				Gap between this and next alignment: 26785 to 30756 (3970 bp)
+				Next Alignment: 30756 31320 scaffold_27991 565 1
+
+			Align 4: 30756 31320 scaffold_27991 565 1
+				Gap between this and next alignment: 31320 to 39957 (8636 bp)
+				Next Alignment: 39957 43715 scaffold_2297 1 3759
+
+			Align 5: 39957 43715 scaffold_2297 1 3759
+				Gap between this and next alignment: 43715 to 43783 (67 bp)
+				Next Alignment: 43783 45008 scaffold_23380 1229 1
+
+			Align 6: 43783 45008 scaffold_23380 1229 1
+				The next alignment (43791 44444 scaffold_39861 1 657) is redundant. Skipping.
+				Gap between this and next alignment: 45008 to 57817 (12808 bp)
+				Next Alignment: 57817 58274 scaffold_25059 174 631
+
+			Align 8: 57817 58274 scaffold_25059 174 631
+			END in gap: 58274 to 77672 (19398 bp)
+
+ERROR: Reference Coprococcus_eutactus_gi_224514850_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Coprococcus_eutactus_gi_224514871_ref_NZ_', 'Coprococcus_eutactus_gi_224514860_ref_NZ_', 'Coprococcus_eutactus_gi_224514866_ref_NZ_', 'Coprococcus_eutactus_gi_224514868_ref_NZ_', 'Coprococcus_eutactus_gi_224514851_ref_NZ_', 'Coprococcus_eutactus_gi_224514849_ref_NZ_', 'Coprococcus_eutactus_gi_224514861_ref_NZ_', 'Coprococcus_eutactus_gi_224514865_ref_NZ_', 'Coprococcus_eutactus_gi_224514852_ref_NZ_', 'Coprococcus_eutactus_gi_224514853_ref_NZ_', 'Coprococcus_eutactus_gi_224514846_ref_NZ_', 'Coprococcus_eutactus_gi_224514875_ref_NZ_', 'Coprococcus_eutactus_gi_224514862_ref_NZ_']
+	Reference Coprococcus_eutactus_gi_224514851_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 180987 (180987 bp)
+			START in gap: 1 to 116753 (116752 bp)
+			Align 1: 116753 117386 scaffold_10873 1220 587
+				Gap between this and next alignment: 117386 to 176204 (58817 bp)
+				Next Alignment: 176204 176309 scaffold_23505 1 106
+
+			Align 2: 176204 176309 scaffold_23505 1 106
+			END in gap: 176309 to 180987 (4678 bp)
+
+	Reference Coprococcus_eutactus_gi_224514865_ref_NZ_: 3 total alignments. 1 total regions.
+		Region: 1 to 110911 (110911 bp)
+			START in gap: 1 to 97776 (97775 bp)
+			Align 1: 97776 97874 scaffold_5297 1950 2048
+				Gap between this and next alignment: 97874 to 97984 (109 bp)
+				Next Alignment: 97984 98925 scaffold_20401 1 946
+
+			Align 2: 97984 98925 scaffold_20401 1 946
+				Negative gap (overlap) between this and next alignment: 98925 to 98827 (-98 bp)
+				Next Alignment: 98827 99204 scaffold_1045 1 380
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 100.
+			Align 3: 98926 99204 scaffold_1045 100 380
+			END in gap: 99204 to 110911 (11707 bp)
+
+	Reference Coprococcus_eutactus_gi_224514853_ref_NZ_: 7 total alignments. 1 total regions.
+		Region: 1 to 128678 (128678 bp)
+			START in gap: 1 to 9066 (9065 bp)
+			Align 1: 9066 9357 scaffold_21493 541 832
+				Gap between this and next alignment: 9357 to 9873 (515 bp)
+				Next Alignment: 9873 10493 scaffold_25605 1 621
+
+			Align 2: 9873 10493 scaffold_25605 1 621
+				Gap between this and next alignment: 10493 to 11741 (1247 bp)
+				Next Alignment: 11741 12374 scaffold_24930 1 634
+
+			Align 3: 11741 12374 scaffold_24930 1 634
+				Gap between this and next alignment: 12374 to 16060 (3685 bp)
+				Next Alignment: 16060 16617 scaffold_23505 664 107
+
+			Align 4: 16060 16617 scaffold_23505 664 107
+				Negative gap (overlap) between this and next alignment: 16617 to 16590 (-27 bp)
+				Next Alignment: 16590 17666 scaffold_12765 1 1077
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 29.
+			Align 5: 16618 17666 scaffold_12765 29 1077
+				Gap between this and next alignment: 17666 to 18428 (761 bp)
+				Next Alignment: 18428 19881 scaffold_8300 1499 46
+
+			Align 6: 18428 19881 scaffold_8300 1499 46
+				Gap between this and next alignment: 19881 to 21540 (1658 bp)
+				Next Alignment: 21540 23402 scaffold_6083 1 1863
+
+			Align 7: 21540 23402 scaffold_6083 1 1863
+			END in gap: 23402 to 128678 (105276 bp)
+
+	Reference Coprococcus_eutactus_gi_224514871_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 92864 (92864 bp)
+			START in gap: 1 to 71905 (71904 bp)
+			Align 1: 71905 75913 scaffold_3935 4067 60
+			END in gap: 75913 to 92864 (16951 bp)
+
+ERROR: Reference Coprococcus_eutactus_gi_224514856_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Coprococcus_eutactus_gi_224514871_ref_NZ_', 'Coprococcus_eutactus_gi_224514860_ref_NZ_', 'Coprococcus_eutactus_gi_224514866_ref_NZ_', 'Coprococcus_eutactus_gi_224514868_ref_NZ_', 'Coprococcus_eutactus_gi_224514851_ref_NZ_', 'Coprococcus_eutactus_gi_224514849_ref_NZ_', 'Coprococcus_eutactus_gi_224514861_ref_NZ_', 'Coprococcus_eutactus_gi_224514865_ref_NZ_', 'Coprococcus_eutactus_gi_224514852_ref_NZ_', 'Coprococcus_eutactus_gi_224514853_ref_NZ_', 'Coprococcus_eutactus_gi_224514846_ref_NZ_', 'Coprococcus_eutactus_gi_224514875_ref_NZ_', 'Coprococcus_eutactus_gi_224514862_ref_NZ_']
+ERROR: Reference Coprococcus_eutactus_gi_224514854_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Coprococcus_eutactus_gi_224514871_ref_NZ_', 'Coprococcus_eutactus_gi_224514860_ref_NZ_', 'Coprococcus_eutactus_gi_224514866_ref_NZ_', 'Coprococcus_eutactus_gi_224514868_ref_NZ_', 'Coprococcus_eutactus_gi_224514851_ref_NZ_', 'Coprococcus_eutactus_gi_224514849_ref_NZ_', 'Coprococcus_eutactus_gi_224514861_ref_NZ_', 'Coprococcus_eutactus_gi_224514865_ref_NZ_', 'Coprococcus_eutactus_gi_224514852_ref_NZ_', 'Coprococcus_eutactus_gi_224514853_ref_NZ_', 'Coprococcus_eutactus_gi_224514846_ref_NZ_', 'Coprococcus_eutactus_gi_224514875_ref_NZ_', 'Coprococcus_eutactus_gi_224514862_ref_NZ_']
+	Reference Coprococcus_eutactus_gi_224514849_ref_NZ_: 6 total alignments. 1 total regions.
+		Region: 1 to 254280 (254280 bp)
+			START in gap: 1 to 165153 (165152 bp)
+			Align 1: 165153 165236 scaffold_361 5254 5338
+				The next alignment (165154 165236 scaffold_46 53138 53221) is redundant. Skipping.
+				Gap between this and next alignment: 165236 to 249425 (84188 bp)
+				Next Alignment: 249425 249502 scaffold_80 25518 25595
+
+			Align 3: 249425 249502 scaffold_80 25518 25595
+				Gap between this and next alignment: 249502 to 254039 (4536 bp)
+				Next Alignment: 254039 254280 scaffold_18555 1 242
+
+			Align 4: 254039 254280 scaffold_18555 1 242
+			END in current alignment.  Modifying 254280 to 254280.
+
+ERROR: Reference Coprococcus_eutactus_gi_224514857_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Coprococcus_eutactus_gi_224514871_ref_NZ_', 'Coprococcus_eutactus_gi_224514860_ref_NZ_', 'Coprococcus_eutactus_gi_224514866_ref_NZ_', 'Coprococcus_eutactus_gi_224514868_ref_NZ_', 'Coprococcus_eutactus_gi_224514851_ref_NZ_', 'Coprococcus_eutactus_gi_224514849_ref_NZ_', 'Coprococcus_eutactus_gi_224514861_ref_NZ_', 'Coprococcus_eutactus_gi_224514865_ref_NZ_', 'Coprococcus_eutactus_gi_224514852_ref_NZ_', 'Coprococcus_eutactus_gi_224514853_ref_NZ_', 'Coprococcus_eutactus_gi_224514846_ref_NZ_', 'Coprococcus_eutactus_gi_224514875_ref_NZ_', 'Coprococcus_eutactus_gi_224514862_ref_NZ_']
+ERROR: Reference Coprococcus_eutactus_gi_224514873_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Coprococcus_eutactus_gi_224514871_ref_NZ_', 'Coprococcus_eutactus_gi_224514860_ref_NZ_', 'Coprococcus_eutactus_gi_224514866_ref_NZ_', 'Coprococcus_eutactus_gi_224514868_ref_NZ_', 'Coprococcus_eutactus_gi_224514851_ref_NZ_', 'Coprococcus_eutactus_gi_224514849_ref_NZ_', 'Coprococcus_eutactus_gi_224514861_ref_NZ_', 'Coprococcus_eutactus_gi_224514865_ref_NZ_', 'Coprococcus_eutactus_gi_224514852_ref_NZ_', 'Coprococcus_eutactus_gi_224514853_ref_NZ_', 'Coprococcus_eutactus_gi_224514846_ref_NZ_', 'Coprococcus_eutactus_gi_224514875_ref_NZ_', 'Coprococcus_eutactus_gi_224514862_ref_NZ_']
+	Reference Coprococcus_eutactus_gi_224514846_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 2931 (2931 bp)
+			START in gap: 1 to 2001 (2000 bp)
+			Align 1: 2001 2757 scaffold_24704 1 755
+				Gap between this and next alignment: 2757 to 2760 (2 bp)
+				Next Alignment: 2760 2919 scaffold_20862 1 160
+
+			Align 2: 2760 2919 scaffold_20862 1 160
+			END in gap: 2919 to 2931 (12 bp)
+
+	Reference Coprococcus_eutactus_gi_224514862_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 172583 (172583 bp)
+			START in gap: 1 to 143823 (143822 bp)
+			Align 1: 143823 144188 scaffold_83 366 1
+				Negative gap (overlap) between this and next alignment: 144188 to 144115 (-73 bp)
+				Next Alignment: 144115 145885 scaffold_7305 1772 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1772 to 1698.
+			Align 2: 144189 145885 scaffold_7305 1698 1
+			END in gap: 145885 to 172583 (26698 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Coprococcus_eutactus/contigs_reports/nucmer_output/IDBA_UD.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 1
+		Relocations: 0
+		Translocations: 1
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 1
+	Misassembled Contig Bases: 664
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 30 part
+Partially Unaligned Contigs with Misassemblies: 1
+Unaligned Contig Bases: 546512
+
+Ambiguously Mapped Contigs: 3
+Total Bases in Ambiguously Mapped Contigs: 2115
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 38496
+
+	SNPs: 663
+	Insertions: 30
+	Deletions: 23
+
+	Positive Gaps: 52
+		Internal Gaps:  0
+		External Gaps:  52
+		External Gap Total:  2365106
+		External Gap Average: 45483
+	Negative Gaps: 6
+		Internal Overlaps:  0
+		External Overlaps:  6
+		External Overlaps Total: -413
+		External Overlaps Average: -69
+	Contigs with Redundant Alignments: 3 (938)

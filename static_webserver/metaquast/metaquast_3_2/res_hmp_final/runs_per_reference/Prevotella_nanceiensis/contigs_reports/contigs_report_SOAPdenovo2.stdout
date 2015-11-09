@@ -1,0 +1,2327 @@
+Aligning contigs to reference...
+	Running Nucmer
+Parsing coords...
+Loading reference...
+	Loaded [Prevotella_nanceiensis_gi_483528923_ref_NZ_]
+	Loaded [Prevotella_nanceiensis_gi_483529071_ref_NZ_]
+	Loaded [Prevotella_nanceiensis_gi_483529300_ref_NZ_]
+	Loaded [Prevotella_nanceiensis_gi_483529517_ref_NZ_]
+	Loaded [Prevotella_nanceiensis_gi_483529657_ref_NZ_]
+	Loaded [Prevotella_nanceiensis_gi_483529859_ref_NZ_]
+	Loaded [Prevotella_nanceiensis_gi_483530088_ref_NZ_]
+	Loaded [Prevotella_nanceiensis_gi_483530284_ref_NZ_]
+	Loaded [Prevotella_nanceiensis_gi_483530477_ref_NZ_]
+	Loaded [Prevotella_nanceiensis_gi_483530682_ref_NZ_]
+	Loaded [Prevotella_nanceiensis_gi_483530864_ref_NZ_]
+	Loaded [Prevotella_nanceiensis_gi_483530964_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 12
+	Total Region Length: 2650108
+Analyzing contigs...
+CONTIG: scaffold32335__5.5 (3090bp)
+Top Length: 2653  Top ID: 95.38
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 7 between Alignment 1 and 2:  259 702 | 2647 3090 | 444 444 --> 266 702 | 2654 3090 | 437 437
+			Real Alignment 1: 2107 4768 | 1 2653 | 2662 2653 | 95.38 | Prevotella_nanceiensis_gi_483530864_ref_NZ_ scaffold32335__5.5
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 266 702 | 2654 3090 | 437 437 | 96.85 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ scaffold32335__5.5
+
+CONTIG: scaffold6657__6.9 (15235bp)
+Top Length: 15235  Top ID: 96.73
+		One align captures most of this contig: 25406 40605 | 15235 1 | 15200 15235 | 96.73 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ scaffold6657__6.9
+
+CONTIG: scaffold10159__5.8 (1375bp)
+Top Length: 1183  Top ID: 97.72
+		This contig is partially unaligned. (Aligned 1183 out of 1375 bases)
+		Alignment: 7016 8198 | 193 1375 | 1183 1183 | 97.72 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ scaffold10159__5.8
+		Unaligned bases: 1 to 192 (192)
+
+CONTIG: scaffold16944__6.4 (5113bp)
+Top Length: 3106  Top ID: 99.03
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 1031 4137 | 3106 1 | 3107 3106 | 99.03 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ scaffold16944__6.4
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 77368 77442 | 5113 5039 | 75 75 | 100.0 | Prevotella_nanceiensis_gi_483530477_ref_NZ_ scaffold16944__6.4
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold19883__5.3 (5802bp)
+Top Length: 2661  Top ID: 98.72
+		This contig is partially unaligned. (Aligned 2661 out of 5802 bases)
+		Alignment: 76744 79404 | 1 2661 | 2661 2661 | 98.72 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ scaffold19883__5.3
+		Unaligned bases: 2662 to 5802 (3141)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold26962__3.4 (627bp)
+Top Length: 241  Top ID: 98.34
+		This contig is partially unaligned. (Aligned 241 out of 627 bases)
+		Alignment: 9349 9589 | 4 244 | 241 241 | 98.34 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ scaffold26962__3.4
+		Unaligned bases: 1 to 3 (3)
+		Unaligned bases: 245 to 627 (383)
+
+CONTIG: scaffold28265__7.3 (33764bp)
+Top Length: 30438  Top ID: 97.48
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 191305 221650 | 1 30438 | 30346 30438 | 97.48 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ scaffold28265__7.3
+			  Gap between these two alignments (local misassembly). Inconsistency = 0 
+			Real Alignment 2: 222080 224975 | 30868 33764 | 2896 2897 | 97.96 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ scaffold28265__7.3
+
+CONTIG: scaffold31532__7.5 (77938bp)
+Top Length: 46302  Top ID: 97.61
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 79443 110343 | 512 31430 | 30901 30919 | 96.98 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ scaffold31532__7.5
+			  Gap between these two alignments (local misassembly). Inconsistency = 60 
+			Real Alignment 2: 110609 156810 | 31636 77937 | 46202 46302 | 97.61 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ scaffold31532__7.5
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold31883__8.2 (59275bp)
+Top Length: 5690  Top ID: 97.33
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 59275 and total length of all aligns is 8124
+		Alignment: 40567 43000 | 1 2434 | 2434 2434 | 96.63 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ scaffold31883__8.2
+		Alignment: 44748 50436 | 4233 9922 | 5689 5690 | 97.33 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ scaffold31883__8.2
+		Unaligned bases: 51151
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold32341__6.9 (11776bp)
+Top Length: 11776  Top ID: 96.96
+		One align captures most of this contig: 156779 168527 | 11776 1 | 11749 11776 | 96.96 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ scaffold32341__6.9
+
+CONTIG: scaffold32353__7.7 (11905bp)
+Top Length: 11905  Top ID: 97.48
+		One align captures most of this contig: 179425 191303 | 1 11905 | 11879 11905 | 97.48 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ scaffold32353__7.7
+
+CONTIG: scaffold32387__6.6 (16215bp)
+Top Length: 9432  Top ID: 97.29
+		This contig is partially unaligned. (Aligned 9432 out of 16215 bases)
+		Alignment: 226512 235945 | 16212 6781 | 9434 9432 | 97.29 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ scaffold32387__6.6
+		Unaligned bases: 1 to 6780 (6780)
+		Unaligned bases: 16213 to 16215 (3)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold32420__7.1 (22451bp)
+Top Length: 4309  Top ID: 96.08
+		This contig is partially unaligned. (Aligned 4309 out of 22451 bases)
+		Alignment: 50390 54676 | 4309 1 | 4287 4309 | 96.08 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ scaffold32420__7.1
+		Unaligned bases: 4310 to 22451 (18142)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold32456__7.0 (19729bp)
+Top Length: 19728  Top ID: 97.19
+		One align captures most of this contig: 57020 76784 | 19728 1 | 19765 19728 | 97.19 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ scaffold32456__7.0
+
+CONTIG: C850434__5.0 (736bp)
+Top Length: 736  Top ID: 95.52
+		One align captures most of this contig: 9539 10274 | 736 1 | 736 736 | 95.52 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ C850434__5.0
+
+CONTIG: C859698__5.0 (892bp)
+Top Length: 892  Top ID: 97.42
+		One align captures most of this contig: 22822 23713 | 1 892 | 892 892 | 97.42 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ C859698__5.0
+
+CONTIG: C872324__6.0 (1442bp)
+Top Length: 1442  Top ID: 97.92
+		One align captures most of this contig: 8148 9589 | 1 1442 | 1442 1442 | 97.92 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ C872324__6.0
+
+CONTIG: C873436__9.0 (1557bp)
+Top Length: 1557  Top ID: 96.47
+		One align captures most of this contig: 224972 226528 | 1 1557 | 1557 1557 | 96.47 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ C873436__9.0
+
+CONTIG: scaffold361__8.2 (57959bp)
+Top Length: 29619  Top ID: 97.49
+		Skipping redundant alignment 18562 18760 | 199 1 | 199 199 | 96.98 | Prevotella_nanceiensis_gi_483530682_ref_NZ_ scaffold361__8.2
+		Skipping redundant alignment 403066 403142 | 44443 44519 | 77 77 | 100.0 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold361__8.2
+		Skipping redundant alignment 403402 403478 | 44443 44519 | 77 77 | 100.0 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold361__8.2
+		Skipping redundant alignment 100784 100868 | 50439 50355 | 85 85 | 100.0 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ scaffold361__8.2
+		Skipping redundant alignment 103954 104038 | 50355 50439 | 85 85 | 98.82 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ scaffold361__8.2
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 750735 750802 | 18906 18839 | 68 68 | 100.0 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold361__8.2
+		This contig is misassembled. 11 total aligns.
+			Real Alignment 1: 51 18565 | 1 18456 | 18515 18456 | 97.47 | Prevotella_nanceiensis_gi_483530682_ref_NZ_ scaffold361__8.2
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 43 110 | 18839 18906 | 68 68 | 100.0 | Prevotella_nanceiensis_gi_483530477_ref_NZ_ scaffold361__8.2
+			  Extensive misassembly ( translocation ) between these two alignments
+			Excluding internal overlap of size 1 between Alignment 3 and 4:  718393 719070 | 49493 48814 | 678 680 --> 718393 719069 | 49493 48815 | 677 679
+			Real Alignment 3: 720985 750499 | 48814 19196 | 29515 29619 | 97.49 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold361__8.2
+			  Extensive misassembly ( relocation, inconsistency = 1915 ) between these two alignments
+			Real Alignment 4: 718393 719069 | 49493 48815 | 677 679 | 98.82 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold361__8.2
+			  Gap between these two alignments (local misassembly). Inconsistency = 258 
+			Real Alignment 5: 709666 717273 | 57959 50355 | 7608 7605 | 97.88 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold361__8.2
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold1800__8.7 (16013bp)
+Top Length: 191  Top ID: 97.91
+		Skipping redundant alignment 217889 218077 | 9340 9528 | 189 189 | 97.88 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ scaffold1800__8.7
+		Skipping redundant alignment 1 189 | 9340 9528 | 189 189 | 97.88 | Prevotella_nanceiensis_gi_483530964_ref_NZ_ scaffold1800__8.7
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 4764 4954 | 9338 9528 | 191 191 | 97.91 | Prevotella_nanceiensis_gi_483530864_ref_NZ_ scaffold1800__8.7
+		This contig is partially unaligned. (Aligned 191 out of 16013 bases)
+		Alignment: 77437 77626 | 9339 9528 | 190 190 | 97.89 | Prevotella_nanceiensis_gi_483530477_ref_NZ_ scaffold1800__8.7
+		Unaligned bases: 1 to 9338 (9338)
+		Unaligned bases: 9529 to 16013 (6485)
+
+CONTIG: scaffold12350__4.9 (3270bp)
+Top Length: 2299  Top ID: 99.96
+		This contig is partially unaligned. (Aligned 2299 out of 3270 bases)
+		Alignment: 68181 70479 | 972 3270 | 2299 2299 | 99.96 | Prevotella_nanceiensis_gi_483530477_ref_NZ_ scaffold12350__4.9
+		Unaligned bases: 1 to 971 (971)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold31052__3.9 (3107bp)
+Top Length: 3107  Top ID: 95.35
+		One align captures most of this contig: 71721 74767 | 1 3107 | 3047 3107 | 95.35 | Prevotella_nanceiensis_gi_483530477_ref_NZ_ scaffold31052__3.9
+
+CONTIG: scaffold32062__4.8 (1744bp)
+Top Length: 1744  Top ID: 98.22
+		One align captures most of this contig: 74737 76471 | 1744 1 | 1735 1744 | 98.22 | Prevotella_nanceiensis_gi_483530477_ref_NZ_ scaffold32062__4.8
+
+CONTIG: scaffold32271__7.3 (47460bp)
+Top Length: 41975  Top ID: 97.63
+		This contig is partially unaligned. (Aligned 41975 out of 47460 bases)
+		Alignment: 22969 64913 | 47460 5486 | 41945 41975 | 97.63 | Prevotella_nanceiensis_gi_483530477_ref_NZ_ scaffold32271__7.3
+		Unaligned bases: 1 to 5485 (5485)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold32426__8.0 (22713bp)
+Top Length: 19472  Top ID: 97.65
+		Skipping redundant alignment 750467 750552 | 22629 22713 | 86 85 | 96.51 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold32426__8.0
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 20137 22991 | 2855 1 | 2855 2855 | 97.44 | Prevotella_nanceiensis_gi_483530477_ref_NZ_ scaffold32426__8.0
+			  Overlap between these two alignments (local misassembly). Inconsistency = -14 
+			Real Alignment 2: 293 19764 | 22713 3242 | 19472 19472 | 97.65 | Prevotella_nanceiensis_gi_483530477_ref_NZ_ scaffold32426__8.0
+
+CONTIG: C863576_16.0 (998bp)
+Top Length: 998  Top ID: 99.9
+		One align captures most of this contig: 76421 77418 | 998 1 | 998 998 | 99.9 | Prevotella_nanceiensis_gi_483530477_ref_NZ_ C863576_16.0
+
+CONTIG: C870408__4.0 (1305bp)
+Top Length: 1305  Top ID: 100.0
+		One align captures most of this contig: 70445 71749 | 1305 1 | 1305 1305 | 100.0 | Prevotella_nanceiensis_gi_483530477_ref_NZ_ C870408__4.0
+
+CONTIG: scaffold20473__6.2 (2127bp)
+Top Length: 870  Top ID: 97.93
+		This contig is partially unaligned. (Aligned 870 out of 2127 bases)
+		Alignment: 159982 160848 | 1 870 | 867 870 | 97.93 | Prevotella_nanceiensis_gi_483530284_ref_NZ_ scaffold20473__6.2
+		Unaligned bases: 871 to 2127 (1257)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold28457__6.7 (20432bp)
+Top Length: 8655  Top ID: 95.89
+		Skipping redundant alignment 240 461 | 20432 20210 | 222 223 | 97.31 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold28457__6.7
+		Skipping redundant alignment 770944 771165 | 20210 20432 | 222 223 | 97.31 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold28457__6.7
+		This contig is misassembled. 4 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 20432 and total length of all aligns is 8887
+		Alignment: 367867 376554 | 1281 9935 | 8688 8655 | 95.89 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ scaffold28457__6.7
+		Alignment: 166467 166698 | 20201 20432 | 232 232 | 95.71 | Prevotella_nanceiensis_gi_483530284_ref_NZ_ scaffold28457__6.7
+		Unaligned bases: 11545
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold29069__7.0 (2039bp)
+Top Length: 1705  Top ID: 97.71
+		This contig is partially unaligned. (Aligned 1705 out of 2039 bases)
+		Alignment: 322 2026 | 335 2039 | 1705 1705 | 97.71 | Prevotella_nanceiensis_gi_483530284_ref_NZ_ scaffold29069__7.0
+		Unaligned bases: 1 to 334 (334)
+
+CONTIG: scaffold32127__7.0 (63168bp)
+Top Length: 38165  Top ID: 97.48
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 19404 57566 | 1 38165 | 38163 38165 | 97.48 | Prevotella_nanceiensis_gi_483530284_ref_NZ_ scaffold32127__7.0
+			  Extensive misassembly ( relocation, inconsistency = 2342 ) between these two alignments
+			Real Alignment 2: 59912 84915 | 38169 63168 | 25004 25000 | 97.19 | Prevotella_nanceiensis_gi_483530284_ref_NZ_ scaffold32127__7.0
+
+CONTIG: scaffold32404__8.0 (15753bp)
+Top Length: 15753  Top ID: 97.0
+		One align captures most of this contig: 129966 145737 | 1 15753 | 15772 15753 | 97.0 | Prevotella_nanceiensis_gi_483530284_ref_NZ_ scaffold32404__8.0
+
+CONTIG: scaffold32413__7.6 (6683bp)
+Top Length: 6683  Top ID: 96.75
+		One align captures most of this contig: 84884 91549 | 1 6683 | 6666 6683 | 96.75 | Prevotella_nanceiensis_gi_483530284_ref_NZ_ scaffold32413__7.6
+
+CONTIG: scaffold32419__7.2 (38468bp)
+Top Length: 15225  Top ID: 95.78
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 91523 106696 | 4 15228 | 15174 15225 | 95.78 | Prevotella_nanceiensis_gi_483530284_ref_NZ_ scaffold32419__7.2
+			  Gap between these two alignments (local misassembly). Inconsistency = 57 
+			Real Alignment 2: 106880 116653 | 15355 25131 | 9774 9777 | 97.55 | Prevotella_nanceiensis_gi_483530284_ref_NZ_ scaffold32419__7.2
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 3: 117602 129964 | 26080 38468 | 12363 12389 | 96.18 | Prevotella_nanceiensis_gi_483530284_ref_NZ_ scaffold32419__7.2
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: C881840__7.0 (4724bp)
+Top Length: 4722  Top ID: 97.08
+		One align captures most of this contig: 145697 150418 | 3 4724 | 4722 4722 | 97.08 | Prevotella_nanceiensis_gi_483530284_ref_NZ_ C881840__7.0
+
+CONTIG: C883598__7.0 (9607bp)
+Top Length: 9607  Top ID: 98.07
+		One align captures most of this contig: 150395 160001 | 1 9607 | 9607 9607 | 98.07 | Prevotella_nanceiensis_gi_483530284_ref_NZ_ C883598__7.0
+
+CONTIG: C883674__7.0 (9961bp)
+Top Length: 9893  Top ID: 97.19
+		One align captures most of this contig: 1987 11878 | 1 9893 | 9892 9893 | 97.19 | Prevotella_nanceiensis_gi_483530284_ref_NZ_ C883674__7.0
+
+CONTIG: scaffold2__7.0 (5820bp)
+Top Length: 2803  Top ID: 96.5
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 104114 106915 | 2945 143 | 2802 2803 | 96.5 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ scaffold2__7.0
+			  Extensive misassembly ( relocation, inconsistency = 3531 ) between these two alignments
+			Real Alignment 2: 97705 100499 | 5820 3029 | 2795 2792 | 96.46 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ scaffold2__7.0
+
+CONTIG: scaffold37__7.6 (41024bp)
+Top Length: 28878  Top ID: 95.33
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 152037 159715 | 366 8077 | 7679 7712 | 95.53 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ scaffold37__7.6
+			  Extensive misassembly ( relocation, inconsistency = 3034 ) between these two alignments
+			Real Alignment 2: 166819 195690 | 12147 41024 | 28872 28878 | 95.33 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ scaffold37__7.6
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold3763__7.0 (11858bp)
+Top Length: 11857  Top ID: 96.24
+		One align captures most of this contig: 41972 53831 | 11857 1 | 11860 11857 | 96.24 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ scaffold3763__7.0
+
+CONTIG: scaffold4906__6.9 (12906bp)
+Top Length: 12037  Top ID: 96.56
+		This contig is partially unaligned. (Aligned 12037 out of 12906 bases)
+		Alignment: 195647 207630 | 12906 870 | 11984 12037 | 96.56 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ scaffold4906__6.9
+		Unaligned bases: 1 to 869 (869)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold8306__9.5 (63957bp)
+Top Length: 664  Top ID: 97.89
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 63957 and total length of all aligns is 1065
+		Alignment: 717383 717783 | 34566 34166 | 401 401 | 99.25 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold8306__9.5
+		Alignment: 132866 133527 | 34870 35533 | 662 664 | 97.89 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ scaffold8306__9.5
+		Unaligned bases: 62892
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold11767_10.6 (2157bp)
+Top Length: 256  Top ID: 97.66
+		This contig is partially unaligned. (Aligned 256 out of 2157 bases)
+		Alignment: 130100 130355 | 1 256 | 256 256 | 97.66 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ scaffold11767_10.6
+		Unaligned bases: 257 to 2157 (1901)
+
+CONTIG: scaffold15471__4.1 (1366bp)
+Top Length: 1366  Top ID: 97.73
+		One align captures most of this contig: 208210 209570 | 1 1366 | 1361 1366 | 97.73 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ scaffold15471__4.1
+
+CONTIG: scaffold25418__6.0 (8268bp)
+Top Length: 8268  Top ID: 95.71
+		One align captures most of this contig: 66535 74752 | 8268 1 | 8218 8268 | 95.71 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ scaffold25418__6.0
+
+CONTIG: scaffold28030__5.0 (732bp)
+Top Length: 732  Top ID: 96.31
+		One align captures most of this contig: 210097 210816 | 1 732 | 720 732 | 96.31 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ scaffold28030__5.0
+
+CONTIG: scaffold30139__9.4 (661bp)
+Top Length: 121  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 121 out of 661 bases)
+		Alignment: 131532 131652 | 1 121 | 121 121 | 100.0 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ scaffold30139__9.4
+		Unaligned bases: 122 to 661 (540)
+
+CONTIG: scaffold31634__6.6 (8619bp)
+Top Length: 8619  Top ID: 97.38
+		One align captures most of this contig: 17779 26391 | 1 8619 | 8613 8619 | 97.38 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ scaffold31634__6.6
+
+CONTIG: scaffold32191__6.0 (8533bp)
+Top Length: 8533  Top ID: 96.78
+		One align captures most of this contig: 55511 64021 | 1 8533 | 8511 8533 | 96.78 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ scaffold32191__6.0
+
+CONTIG: scaffold32249__7.0 (9890bp)
+Top Length: 8288  Top ID: 96.62
+		This contig is partially unaligned. (Aligned 8288 out of 9890 bases)
+		Alignment: 88517 96763 | 3 8290 | 8247 8288 | 96.62 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ scaffold32249__7.0
+		Unaligned bases: 1 to 2 (2)
+		Unaligned bases: 8291 to 9890 (1600)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold32320__6.4 (17150bp)
+Top Length: 17150  Top ID: 96.83
+		One align captures most of this contig: 668 17817 | 1 17150 | 17150 17150 | 96.83 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ scaffold32320__6.4
+
+CONTIG: scaffold32347__7.0 (3883bp)
+Top Length: 3883  Top ID: 97.0
+		One align captures most of this contig: 34138 38032 | 1 3883 | 3895 3883 | 97.0 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ scaffold32347__7.0
+
+CONTIG: C831718_18.0 (569bp)
+Top Length: 437  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 437 out of 569 bases)
+		Alignment: 131146 131582 | 437 1 | 437 437 | 100.0 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ C831718_18.0
+		Unaligned bases: 438 to 569 (132)
+
+CONTIG: C849584__7.0 (726bp)
+Top Length: 617  Top ID: 95.48
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 100869 100981 | 1 112 | 113 112 | 97.35 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ C849584__7.0
+		This contig is misassembled. 3 total aligns.
+			Excluding internal overlap of size 2 between Alignment 1 and 2:  103843 103953 | 111 1 | 111 111 --> 103845 103953 | 109 1 | 109 109
+			Real Alignment 1: 103845 103953 | 109 1 | 109 109 | 99.1 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ C849584__7.0
+			  Extensive misassembly ( relocation, inconsistency = -28328 ) between these two alignments
+			Real Alignment 2: 131532 132172 | 726 110 | 641 617 | 95.48 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ C849584__7.0
+
+CONTIG: C864868_10.0 (1038bp)
+Top Length: 1038  Top ID: 95.47
+		One align captures most of this contig: 129115 130150 | 1 1038 | 1036 1038 | 95.47 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ C864868_10.0
+
+CONTIG: C875270__6.0 (1772bp)
+Top Length: 1772  Top ID: 97.74
+		One align captures most of this contig: 53781 55552 | 1 1772 | 1772 1772 | 97.74 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ C875270__6.0
+
+CONTIG: C878402__6.0 (2469bp)
+Top Length: 2469  Top ID: 95.79
+		One align captures most of this contig: 64109 66577 | 2469 1 | 2469 2469 | 95.79 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ C878402__6.0
+
+CONTIG: C880578__6.0 (3527bp)
+Top Length: 3527  Top ID: 96.4
+		One align captures most of this contig: 26393 29920 | 1 3527 | 3528 3527 | 96.4 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ C880578__6.0
+
+CONTIG: C881070__7.0 (3934bp)
+Top Length: 3933  Top ID: 96.31
+		One align captures most of this contig: 38035 41967 | 2 3934 | 3933 3933 | 96.31 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ C881070__7.0
+
+CONTIG: C881486__7.0 (4288bp)
+Top Length: 4288  Top ID: 96.57
+		One align captures most of this contig: 29874 34163 | 1 4288 | 4290 4288 | 96.57 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ C881486__7.0
+
+CONTIG: C881896__6.0 (4793bp)
+Top Length: 4793  Top ID: 96.43
+		One align captures most of this contig: 83760 88552 | 1 4793 | 4793 4793 | 96.43 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ C881896__6.0
+
+CONTIG: C883408__6.0 (8616bp)
+Top Length: 8616  Top ID: 95.65
+		One align captures most of this contig: 74756 83374 | 8616 1 | 8619 8616 | 95.65 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ C883408__6.0
+
+CONTIG: scaffold11147__7.4 (27514bp)
+Top Length: 243  Top ID: 96.3
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 77438 77680 | 24634 24392 | 243 243 | 96.3 | Prevotella_nanceiensis_gi_483530477_ref_NZ_ scaffold11147__7.4
+		Skipping redundant alignment 4766 5008 | 24634 24392 | 243 243 | 96.3 | Prevotella_nanceiensis_gi_483530864_ref_NZ_ scaffold11147__7.4
+		Skipping redundant alignment 1 243 | 24634 24392 | 243 243 | 96.3 | Prevotella_nanceiensis_gi_483530964_ref_NZ_ scaffold11147__7.4
+		This contig is partially unaligned. (Aligned 243 out of 27514 bases)
+		Alignment: 217889 218131 | 24634 24392 | 243 243 | 96.3 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ scaffold11147__7.4
+		Unaligned bases: 1 to 24391 (24391)
+		Unaligned bases: 24635 to 27514 (2880)
+
+CONTIG: scaffold267__5.0 (6768bp)
+Top Length: 6641  Top ID: 97.88
+		This contig is partially unaligned. (Aligned 6641 out of 6768 bases)
+		Alignment: 589859 596499 | 6768 128 | 6641 6641 | 97.88 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold267__5.0
+		Unaligned bases: 1 to 127 (127)
+
+CONTIG: scaffold456__6.0 (5260bp)
+Top Length: 5089  Top ID: 97.6
+		This contig is partially unaligned. (Aligned 5089 out of 5260 bases)
+		Alignment: 19262 24350 | 5260 172 | 5089 5089 | 97.6 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold456__6.0
+		Unaligned bases: 1 to 171 (171)
+
+CONTIG: scaffold3050__6.0 (40116bp)
+Top Length: 20052  Top ID: 95.7
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 45329 61653 | 19250 2939 | 16325 16312 | 95.05 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold3050__6.0
+			  Gap between these two alignments (local misassembly). Inconsistency = 12 
+			Real Alignment 2: 24509 44502 | 40116 20065 | 19994 20052 | 95.7 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold3050__6.0
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold6803__6.0 (15496bp)
+Top Length: 15496  Top ID: 95.31
+		One align captures most of this contig: 64301 79686 | 15496 1 | 15386 15496 | 95.31 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold6803__6.0
+
+CONTIG: scaffold11030__5.9 (10578bp)
+Top Length: 9599  Top ID: 96.11
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 392933 393705 | 3 775 | 773 773 | 97.93 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold11030__5.9
+			  Overlap between these two alignments (local misassembly). Inconsistency = -34 
+			Real Alignment 2: 393876 403449 | 980 10578 | 9574 9599 | 96.11 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold11030__5.9
+
+CONTIG: scaffold18344__6.2 (9267bp)
+Top Length: 9267  Top ID: 95.15
+		One align captures most of this contig: 540701 550012 | 9267 1 | 9312 9267 | 95.15 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold18344__6.2
+
+CONTIG: scaffold21865_16.1 (32945bp)
+Top Length: 18835  Top ID: 99.53
+		This contig is partially unaligned. (Aligned 18835 out of 32945 bases)
+		Alignment: 176391 195180 | 4494 23328 | 18790 18835 | 99.53 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold21865_16.1
+		Unaligned bases: 1 to 4493 (4493)
+		Unaligned bases: 23329 to 32945 (9617)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold22194__6.2 (18563bp)
+Top Length: 9676  Top ID: 95.35
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 289945 296214 | 6274 1 | 6270 6274 | 96.54 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold22194__6.2
+			  Overlap between these two alignments (local misassembly). Inconsistency = -914 
+			Real Alignment 2: 278554 288245 | 18563 8888 | 9692 9676 | 95.35 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold22194__6.2
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold22393__6.1 (15614bp)
+Top Length: 7380  Top ID: 97.31
+		This contig is partially unaligned. (Aligned 7380 out of 15614 bases)
+		Alignment: 609198 616599 | 15614 8235 | 7402 7380 | 97.31 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold22393__6.1
+		Unaligned bases: 1 to 8234 (8234)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold25568__4.8 (981bp)
+Top Length: 981  Top ID: 95.92
+		One align captures most of this contig: 79979 80935 | 981 1 | 957 981 | 95.92 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold25568__4.8
+
+CONTIG: scaffold26848__6.0 (24458bp)
+Top Length: 24458  Top ID: 95.44
+		One align captures most of this contig: 734048 758509 | 1 24458 | 24462 24458 | 95.44 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold26848__6.0
+
+CONTIG: scaffold28129__6.3 (11169bp)
+Top Length: 11169  Top ID: 95.24
+		One align captures most of this contig: 666081 677228 | 11169 1 | 11148 11169 | 95.24 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold28129__6.3
+
+CONTIG: scaffold28532__6.5 (4972bp)
+Top Length: 4972  Top ID: 95.75
+		One align captures most of this contig: 597536 602520 | 4972 1 | 4985 4972 | 95.75 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold28532__6.5
+
+CONTIG: scaffold28973__5.6 (18364bp)
+Top Length: 18279  Top ID: 95.99
+		One align captures most of this contig: 82845 101088 | 1 18279 | 18244 18279 | 95.99 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold28973__5.6
+
+CONTIG: scaffold29638__6.4 (3890bp)
+Top Length: 890  Top ID: 96.85
+		This contig is partially unaligned. (Aligned 890 out of 3890 bases)
+		Alignment: 300073 300962 | 3890 3001 | 890 890 | 96.85 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold29638__6.4
+		Unaligned bases: 1 to 3000 (3000)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold31139__6.0 (10353bp)
+Top Length: 10353  Top ID: 96.29
+		One align captures most of this contig: 623691 634102 | 10353 1 | 10412 10353 | 96.29 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold31139__6.0
+
+CONTIG: scaffold31305__6.0 (9763bp)
+Top Length: 7736  Top ID: 95.26
+		This contig is partially unaligned. (Aligned 7736 out of 9763 bases)
+		Alignment: 758481 766167 | 1 7736 | 7687 7736 | 95.26 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold31305__6.0
+		Unaligned bases: 7737 to 9763 (2027)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold31462__5.9 (19750bp)
+Top Length: 17366  Top ID: 95.38
+		This contig is partially unaligned. (Aligned 17366 out of 19750 bases)
+		Alignment: 425052 442330 | 1 17366 | 17279 17366 | 95.38 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold31462__5.9
+		Unaligned bases: 17367 to 19750 (2384)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold32134__6.0 (22704bp)
+Top Length: 22704  Top ID: 95.08
+		One align captures most of this contig: 359902 382549 | 1 22704 | 22648 22704 | 95.08 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold32134__6.0
+
+CONTIG: scaffold32172__5.1 (6089bp)
+Top Length: 6089  Top ID: 95.27
+		One align captures most of this contig: 550002 556066 | 1 6089 | 6065 6089 | 95.27 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold32172__5.1
+
+CONTIG: scaffold32226__5.8 (4062bp)
+Top Length: 4062  Top ID: 95.36
+		One align captures most of this contig: 310030 314106 | 1 4062 | 4077 4062 | 95.36 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold32226__5.8
+
+CONTIG: scaffold32264__5.0 (9371bp)
+Top Length: 9371  Top ID: 96.28
+		One align captures most of this contig: 521312 530618 | 1 9371 | 9307 9371 | 96.28 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold32264__5.0
+
+CONTIG: scaffold32273__6.0 (3610bp)
+Top Length: 3602  Top ID: 97.31
+		One align captures most of this contig: 225325 228928 | 3602 1 | 3604 3602 | 97.31 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold32273__6.0
+
+CONTIG: scaffold32298__5.1 (9112bp)
+Top Length: 9112  Top ID: 96.08
+		One align captures most of this contig: 492598 501700 | 1 9112 | 9103 9112 | 96.08 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold32298__5.1
+
+CONTIG: scaffold32304__6.2 (21366bp)
+Top Length: 17652  Top ID: 95.79
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 586139 589865 | 3714 1 | 3727 3714 | 96.67 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold32304__6.2
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 556029 573689 | 21366 3715 | 17661 17652 | 95.79 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold32304__6.2
+
+CONTIG: scaffold32306__6.3 (11168bp)
+Top Length: 11158  Top ID: 95.34
+		One align captures most of this contig: 101135 112278 | 11159 2 | 11144 11158 | 95.34 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold32306__6.3
+
+CONTIG: scaffold32333__6.1 (9639bp)
+Top Length: 9639  Top ID: 97.42
+		One align captures most of this contig: 260244 269895 | 1 9639 | 9652 9639 | 97.42 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold32333__6.1
+
+CONTIG: scaffold32342__6.9 (11171bp)
+Top Length: 11171  Top ID: 95.7
+		One align captures most of this contig: 8147 19291 | 1 11171 | 11145 11171 | 95.7 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold32342__6.9
+
+CONTIG: scaffold32343__5.6 (8728bp)
+Top Length: 8728  Top ID: 96.01
+		One align captures most of this contig: 634059 642850 | 8728 1 | 8792 8728 | 96.01 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold32343__5.6
+
+CONTIG: scaffold32349__6.0 (4889bp)
+Top Length: 4657  Top ID: 96.24
+		This contig is partially unaligned. (Aligned 4657 out of 4889 bases)
+		Alignment: 442350 446998 | 233 4889 | 4649 4657 | 96.24 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold32349__6.0
+		Unaligned bases: 1 to 232 (232)
+
+CONTIG: scaffold32358__6.0 (27792bp)
+Top Length: 9599  Top ID: 97.27
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 677522 687119 | 1 9599 | 9598 9599 | 97.27 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold32358__6.0
+			  Extensive misassembly ( relocation, inconsistency = 2029 ) between these two alignments
+			Real Alignment 2: 699815 707342 | 20266 27792 | 7528 7527 | 95.75 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold32358__6.0
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold32384__5.6 (31385bp)
+Top Length: 31385  Top ID: 95.74
+		One align captures most of this contig: 316108 347504 | 31385 1 | 31397 31385 | 95.74 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold32384__5.6
+
+CONTIG: scaffold32393__6.7 (6699bp)
+Top Length: 6694  Top ID: 95.79
+		One align captures most of this contig: 140851 147538 | 1 6694 | 6688 6694 | 95.79 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold32393__6.7
+
+CONTIG: scaffold32402__6.0 (9849bp)
+Top Length: 9849  Top ID: 96.98
+		One align captures most of this contig: 470829 480685 | 1 9849 | 9857 9849 | 96.98 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold32402__6.0
+
+CONTIG: scaffold32409__5.8 (13223bp)
+Top Length: 8259  Top ID: 95.15
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 661183 666118 | 4936 1 | 4936 4936 | 95.56 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold32409__5.8
+			  Fake misassembly between these two alignments: inconsistency = 62 , gap in the contig is small or absent or filled mostly with Ns (long indel: deletion of length 62; 0 mismatches)
+			Real Alignment 2: 652866 661092 | 13223 4965 | 8227 8259 | 95.15 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold32409__5.8
+
+CONTIG: scaffold32414__6.0 (19038bp)
+Top Length: 11208  Top ID: 95.83
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 4 between Alignment 1 and 2:  168488 176343 | 1 7834 | 7856 7834 --> 168488 176339 | 1 7830 | 7852 7830
+			Real Alignment 1: 168488 176339 | 1 7830 | 7852 7830 | 98.27 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold32414__6.0
+			  Extensive misassembly ( relocation, inconsistency = 18845 ) between these two alignments
+			Real Alignment 2: 195185 206396 | 7831 19038 | 11212 11208 | 95.83 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold32414__6.0
+
+CONTIG: scaffold32416__5.0 (13531bp)
+Top Length: 13531  Top ID: 96.01
+		One align captures most of this contig: 211810 225351 | 1 13531 | 13542 13531 | 96.01 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold32416__5.0
+
+CONTIG: scaffold32417__6.0 (22079bp)
+Top Length: 22079  Top ID: 96.32
+		One align captures most of this contig: 118815 140869 | 1 22079 | 22055 22079 | 96.32 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold32417__6.0
+
+CONTIG: scaffold32424__6.0 (9954bp)
+Top Length: 9954  Top ID: 96.72
+		One align captures most of this contig: 249790 259708 | 1 9954 | 9919 9954 | 96.72 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold32424__6.0
+
+CONTIG: scaffold32425__5.5 (15012bp)
+Top Length: 15012  Top ID: 95.98
+		One align captures most of this contig: 408768 423738 | 1 15012 | 14971 15012 | 95.98 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold32425__5.5
+
+CONTIG: scaffold32431__6.0 (6992bp)
+Top Length: 6989  Top ID: 95.11
+		Marking as insignificant: 537632 537703 | 6921 6992 | 72 72 | 97.22 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold32431__6.0
+		One align captures most of this contig: 530621 537593 | 4 6992 | 6973 6989 | 95.11 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold32431__6.0
+
+CONTIG: scaffold32435__6.6 (20397bp)
+Top Length: 20397  Top ID: 95.91
+		One align captures most of this contig: 148112 168509 | 20397 1 | 20398 20397 | 95.91 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold32435__6.6
+
+CONTIG: scaffold32446__5.0 (13294bp)
+Top Length: 9385  Top ID: 95.55
+		This contig is partially unaligned. (Aligned 9385 out of 13294 bases)
+		Alignment: 350560 359922 | 3910 13294 | 9363 9385 | 95.55 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ scaffold32446__5.0
+		Unaligned bases: 1 to 3909 (3909)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: C819828_21.0 (508bp)
+Top Length: 290  Top ID: 99.31
+		Skipping redundant alignment 391262 391522 | 1 261 | 261 261 | 99.23 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ C819828_21.0
+		Skipping redundant alignment 166648 166902 | 1 255 | 255 255 | 99.22 | Prevotella_nanceiensis_gi_483530284_ref_NZ_ C819828_21.0
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 771115 771404 | 1 290 | 290 290 | 99.31 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C819828_21.0
+		This contig is partially unaligned. (Aligned 290 out of 508 bases)
+		Alignment: 1 290 | 290 1 | 290 290 | 99.31 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C819828_21.0
+		Unaligned bases: 291 to 508 (218)
+
+CONTIG: C820994__5.0 (513bp)
+Top Length: 513  Top ID: 96.69
+		One align captures most of this contig: 296198 296710 | 1 513 | 513 513 | 96.69 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C820994__5.0
+
+CONTIG: C826284__7.0 (538bp)
+Top Length: 538  Top ID: 97.58
+		One align captures most of this contig: 232983 233520 | 538 1 | 538 538 | 97.58 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C826284__7.0
+
+CONTIG: C836328__7.0 (599bp)
+Top Length: 599  Top ID: 96.99
+		One align captures most of this contig: 147504 148102 | 1 599 | 599 599 | 96.99 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C836328__7.0
+
+CONTIG: C840438__4.0 (630bp)
+Top Length: 630  Top ID: 99.68
+		One align captures most of this contig: 259636 260265 | 1 630 | 630 630 | 99.68 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C840438__4.0
+
+CONTIG: C844232__5.0 (665bp)
+Top Length: 665  Top ID: 95.34
+		One align captures most of this contig: 501667 502331 | 665 1 | 665 665 | 95.34 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C844232__5.0
+
+CONTIG: C863350__7.0 (990bp)
+Top Length: 990  Top ID: 96.87
+		One align captures most of this contig: 707298 708287 | 990 1 | 990 990 | 96.87 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C863350__7.0
+
+CONTIG: C864232__7.0 (1018bp)
+Top Length: 1015  Top ID: 95.07
+		One align captures most of this contig: 210794 211808 | 4 1018 | 1015 1015 | 95.07 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C864232__7.0
+
+CONTIG: C866322__7.0 (1096bp)
+Top Length: 1095  Top ID: 95.07
+		One align captures most of this contig: 491530 492624 | 1 1095 | 1095 1095 | 95.07 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C866322__7.0
+
+CONTIG: C866676__5.0 (1113bp)
+Top Length: 1110  Top ID: 98.02
+		One align captures most of this contig: 469710 470817 | 1110 1 | 1108 1110 | 98.02 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C866676__5.0
+
+CONTIG: C867856__5.0 (1164bp)
+Top Length: 1164  Top ID: 96.74
+		One align captures most of this contig: 233485 234648 | 1164 1 | 1164 1164 | 96.74 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C867856__5.0
+
+CONTIG: C867922__6.0 (1167bp)
+Top Length: 1166  Top ID: 96.14
+		One align captures most of this contig: 732904 734068 | 2 1167 | 1165 1166 | 96.14 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C867922__6.0
+
+CONTIG: C869226__6.0 (1231bp)
+Top Length: 1231  Top ID: 99.11
+		One align captures most of this contig: 604296 605526 | 1 1231 | 1231 1231 | 99.11 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C869226__6.0
+
+CONTIG: C869390__6.0 (1239bp)
+Top Length: 1239  Top ID: 97.09
+		One align captures most of this contig: 607998 609236 | 1239 1 | 1239 1239 | 97.09 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C869390__6.0
+
+CONTIG: C870698__6.0 (1322bp)
+Top Length: 1322  Top ID: 97.88
+		One align captures most of this contig: 423741 425061 | 1 1322 | 1321 1322 | 97.88 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C870698__6.0
+
+CONTIG: C870796__6.0 (1328bp)
+Top Length: 1328  Top ID: 98.87
+		One align captures most of this contig: 277243 278570 | 1328 1 | 1328 1328 | 98.87 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C870796__6.0
+
+CONTIG: C870924__7.0 (1337bp)
+Top Length: 1337  Top ID: 98.73
+		One align captures most of this contig: 447384 448720 | 1337 1 | 1337 1337 | 98.73 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C870924__7.0
+
+CONTIG: C875636__6.0 (1828bp)
+Top Length: 1828  Top ID: 98.74
+		One align captures most of this contig: 602516 604343 | 1828 1 | 1828 1828 | 98.74 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C875636__6.0
+
+CONTIG: C877024__6.0 (2088bp)
+Top Length: 2088  Top ID: 95.17
+		One align captures most of this contig: 234604 236690 | 2088 1 | 2087 2088 | 95.17 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C877024__6.0
+
+CONTIG: C877056__6.0 (2095bp)
+Top Length: 2095  Top ID: 96.61
+		One align captures most of this contig: 112260 114354 | 2095 1 | 2095 2095 | 96.61 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C877056__6.0
+
+CONTIG: C877284__4.0 (2150bp)
+Top Length: 2150  Top ID: 95.31
+		One align captures most of this contig: 489408 491557 | 1 2150 | 2150 2150 | 95.31 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C877284__4.0
+
+CONTIG: C877304__6.0 (2153bp)
+Top Length: 2152  Top ID: 95.59
+		One align captures most of this contig: 208640 210789 | 2 2153 | 2150 2152 | 95.59 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C877304__6.0
+
+CONTIG: C877376__5.0 (2179bp)
+Top Length: 2179  Top ID: 96.93
+		One align captures most of this contig: 464127 466305 | 1 2179 | 2179 2179 | 96.93 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C877376__5.0
+
+CONTIG: C878918__6.0 (2645bp)
+Top Length: 2645  Top ID: 96.29
+		One align captures most of this contig: 503597 506241 | 1 2645 | 2645 2645 | 96.29 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C878918__6.0
+
+CONTIG: C878986__6.0 (2667bp)
+Top Length: 2667  Top ID: 95.76
+		One align captures most of this contig: 1824 4488 | 2667 1 | 2665 2667 | 95.76 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C878986__6.0
+
+CONTIG: C879446__6.0 (2864bp)
+Top Length: 2864  Top ID: 96.86
+		One align captures most of this contig: 537653 540516 | 2864 1 | 2864 2864 | 96.86 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C879446__6.0
+
+CONTIG: C880468__6.0 (3443bp)
+Top Length: 3442  Top ID: 95.93
+		One align captures most of this contig: 382506 385947 | 1 3442 | 3442 3442 | 95.93 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C880468__6.0
+
+CONTIG: C880518__6.0 (3472bp)
+Top Length: 3472  Top ID: 96.98
+		One align captures most of this contig: 466271 469743 | 1 3472 | 3473 3472 | 96.98 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C880518__6.0
+
+CONTIG: C880834__6.0 (3704bp)
+Top Length: 3704  Top ID: 95.53
+		One align captures most of this contig: 506219 509933 | 3704 1 | 3715 3704 | 95.53 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C880834__6.0
+
+CONTIG: C881672__6.0 (4480bp)
+Top Length: 4478  Top ID: 97.23
+		One align captures most of this contig: 114356 118833 | 1 4478 | 4478 4478 | 97.23 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C881672__6.0
+
+CONTIG: C881792__5.0 (4665bp)
+Top Length: 901  Top ID: 95.12
+		This contig is partially unaligned. (Aligned 901 out of 4665 bases)
+		Alignment: 296657 297557 | 4665 3765 | 901 901 | 95.12 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C881792__5.0
+		Unaligned bases: 1 to 3764 (3764)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: C882192__6.0 (5249bp)
+Top Length: 5249  Top ID: 95.14
+		One align captures most of this contig: 403550 408798 | 1 5249 | 5249 5249 | 95.14 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C882192__6.0
+
+CONTIG: C882826__7.0 (6552bp)
+Top Length: 6552  Top ID: 97.33
+		One align captures most of this contig: 642852 649445 | 1 6552 | 6594 6552 | 97.33 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C882826__7.0
+
+CONTIG: C883252__5.0 (7957bp)
+Top Length: 7957  Top ID: 96.85
+		One align captures most of this contig: 448686 456640 | 1 7957 | 7955 7957 | 96.85 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C883252__5.0
+
+CONTIG: C884466__6.0 (22315bp)
+Top Length: 18346  Top ID: 95.84
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 3 between Alignment 1 and 2:  708262 712233 | 1 3972 | 3972 3972 --> 708262 712230 | 1 3969 | 3969 3969
+			Real Alignment 1: 708262 712230 | 1 3969 | 3969 3969 | 98.31 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C884466__6.0
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 714601 732948 | 3970 22315 | 18348 18346 | 95.84 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ C884466__6.0
+
+CONTIG: scaffold20__6.5 (65094bp)
+Top Length: 44510  Top ID: 97.27
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 187669 208232 | 1 20582 | 20564 20582 | 96.79 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ scaffold20__6.5
+			  Gap between these two alignments (local misassembly). Inconsistency = 264 
+			Real Alignment 2: 208499 252920 | 20585 65094 | 44422 44510 | 97.27 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ scaffold20__6.5
+
+CONTIG: scaffold452_10.7 (1061bp)
+Top Length: 917  Top ID: 95.2
+		This contig is partially unaligned. (Aligned 917 out of 1061 bases)
+		Alignment: 102668 103584 | 145 1061 | 917 917 | 95.2 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ scaffold452_10.7
+		Unaligned bases: 1 to 144 (144)
+
+CONTIG: scaffold870__7.5 (29876bp)
+Top Length: 688  Top ID: 95.94
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 29876 and total length of all aligns is 834
+		Alignment: 118766 119453 | 11502 12189 | 688 688 | 95.94 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ scaffold870__7.5
+		Alignment: 121185 121327 | 12744 12889 | 143 146 | 95.21 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ scaffold870__7.5
+		Unaligned bases: 29042
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold9896__8.1 (41998bp)
+Top Length: 79  Top ID: 97.47
+		This contig is partially unaligned. (Aligned 79 out of 41998 bases)
+		Alignment: 233580 233658 | 38840 38762 | 79 79 | 97.47 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ scaffold9896__8.1
+		Unaligned bases: 1 to 38761 (38761)
+		Unaligned bases: 38841 to 41998 (3158)
+
+CONTIG: scaffold21850__6.9 (13704bp)
+Top Length: 13704  Top ID: 96.05
+		One align captures most of this contig: 330454 344155 | 13704 1 | 13702 13704 | 96.05 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ scaffold21850__6.9
+
+CONTIG: scaffold22501__2.3 (635bp)
+Top Length: 199  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 199 out of 635 bases)
+		Alignment: 95294 95492 | 199 1 | 199 199 | 100.0 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ scaffold22501__2.3
+		Unaligned bases: 200 to 635 (436)
+
+CONTIG: scaffold28357__4.5 (504bp)
+Top Length: 271  Top ID: 95.94
+		This contig is partially unaligned. (Aligned 271 out of 504 bases)
+		Alignment: 104876 105146 | 1 271 | 271 271 | 95.94 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ scaffold28357__4.5
+		Unaligned bases: 272 to 504 (233)
+
+CONTIG: scaffold31947__6.6 (40733bp)
+Top Length: 22631  Top ID: 96.62
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 179090 187708 | 8619 1 | 8619 8619 | 95.23 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ scaffold31947__6.6
+			  Extensive misassembly ( relocation, inconsistency = 83285 ) between these two alignments
+			Real Alignment 2: 63736 86321 | 40733 18103 | 22586 22631 | 96.62 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ scaffold31947__6.6
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold32022__6.1 (32104bp)
+Top Length: 30855  Top ID: 95.9
+		This contig is partially unaligned. (Aligned 30855 out of 32104 bases)
+		Alignment: 6506 37362 | 1247 32101 | 30857 30855 | 95.9 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ scaffold32022__6.1
+		Unaligned bases: 1 to 1246 (1246)
+		Unaligned bases: 32102 to 32104 (3)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold32234__6.8 (25846bp)
+Top Length: 125  Top ID: 98.4
+		This contig is partially unaligned. (Aligned 125 out of 25846 bases)
+		Alignment: 128723 128847 | 3580 3456 | 125 125 | 98.4 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ scaffold32234__6.8
+		Unaligned bases: 1 to 3455 (3455)
+		Unaligned bases: 3581 to 25846 (22266)
+
+CONTIG: scaffold32394__6.0 (12629bp)
+Top Length: 12629  Top ID: 95.9
+		One align captures most of this contig: 47252 59898 | 1 12629 | 12647 12629 | 95.9 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ scaffold32394__6.0
+
+CONTIG: scaffold32418__7.0 (66381bp)
+Top Length: 35326  Top ID: 97.36
+		This contig is misassembled. 3 total aligns.
+			Excluding internal overlap of size 68 between Alignment 1 and 2:  326547 330455 | 3909 1 | 3909 3909 --> 326615 330455 | 3841 1 | 3841 3841
+			Real Alignment 1: 326615 330455 | 3841 1 | 3841 3841 | 95.68 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ scaffold32418__7.0
+			  Fake misassembly between these two alignments: inconsistency = -67 , gap in the contig is small or absent or filled mostly with Ns (long indel: insertion of length 67; 0 mismatches)
+			Real Alignment 2: 299711 326681 | 30779 3842 | 26971 26938 | 97.51 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ scaffold32418__7.0
+			  Extensive misassembly ( relocation, inconsistency = 2254 ) between these two alignments
+			Real Alignment 3: 261884 297180 | 66381 31056 | 35297 35326 | 97.36 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ scaffold32418__7.0
+
+CONTIG: scaffold32444__7.0 (21533bp)
+Top Length: 21533  Top ID: 97.59
+		One align captures most of this contig: 345746 367267 | 1 21533 | 21522 21533 | 97.59 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ scaffold32444__7.0
+
+CONTIG: C845512__6.0 (678bp)
+Top Length: 628  Top ID: 97.45
+		This contig is partially unaligned. (Aligned 628 out of 678 bases)
+		Alignment: 367243 367870 | 678 51 | 628 628 | 97.45 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ C845512__6.0
+		Unaligned bases: 1 to 50 (50)
+
+CONTIG: C873516__8.0 (1565bp)
+Top Length: 1561  Top ID: 96.42
+		One align captures most of this contig: 344122 345682 | 1561 1 | 1561 1561 | 96.42 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ C873516__8.0
+
+CONTIG: C881012__7.0 (3869bp)
+Top Length: 3869  Top ID: 97.39
+		One align captures most of this contig: 59891 63759 | 1 3869 | 3869 3869 | 97.39 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ C881012__7.0
+
+CONTIG: C883488__6.0 (9025bp)
+Top Length: 9024  Top ID: 97.62
+		One align captures most of this contig: 252887 261911 | 9025 2 | 9025 9024 | 97.62 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ C883488__6.0
+
+CONTIG: C883672__7.0 (9960bp)
+Top Length: 9959  Top ID: 96.8
+		One align captures most of this contig: 37334 47292 | 2 9960 | 9959 9959 | 96.8 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ C883672__7.0
+
+CONTIG: scaffold42__8.7 (125206bp)
+Top Length: 82378  Top ID: 97.55
+		This contig is misassembled. 7 total aligns.
+			Real Alignment 1: 268873 351185 | 1 82378 | 82313 82378 | 97.55 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold42__8.7
+			  Overlap between these two alignments (local misassembly). Inconsistency = -134 
+			Real Alignment 2: 351290 352215 | 82617 83540 | 926 924 | 95.58 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold42__8.7
+			  Overlap between these two alignments (local misassembly). Inconsistency = -28 
+			Real Alignment 3: 352408 362470 | 83761 93890 | 10063 10130 | 97.68 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold42__8.7
+			  Extensive misassembly ( relocation, inconsistency = -2327 ) between these two alignments
+			Real Alignment 4: 363439 370917 | 97186 104659 | 7479 7474 | 96.67 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold42__8.7
+			  Extensive misassembly ( relocation, inconsistency = 12758 ) between these two alignments
+			Real Alignment 5: 387436 388385 | 108420 109369 | 950 950 | 97.79 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold42__8.7
+			  Extensive misassembly ( relocation, inconsistency = -2311 ) between these two alignments
+			Real Alignment 6: 388988 389722 | 112283 113017 | 735 735 | 95.79 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold42__8.7
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 7: 398405 399747 | 113189 114530 | 1343 1342 | 95.68 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold42__8.7
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold307__9.0 (36615bp)
+Top Length: 18730  Top ID: 96.17
+		This contig is misassembled. 3 total aligns.
+			Excluding internal overlap of size 1 between Alignment 1 and 2:  46906 57586 | 154 10841 | 10681 10688 --> 46906 57585 | 154 10840 | 10680 10687
+			Real Alignment 1: 46906 57585 | 154 10840 | 10680 10687 | 96.64 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold307__9.0
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 66244 84976 | 10841 29570 | 18733 18730 | 96.17 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold307__9.0
+			  Overlap between these two alignments (local misassembly). Inconsistency = -176 
+			Real Alignment 3: 85022 91845 | 29792 36615 | 6824 6824 | 97.8 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold307__9.0
+
+CONTIG: scaffold4518__6.2 (3787bp)
+Top Length: 1642  Top ID: 96.04
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 208429 210052 | 1838 197 | 1624 1642 | 96.04 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold4518__6.2
+			  Gap between these two alignments (local misassembly). Inconsistency = 122 
+			Real Alignment 2: 206377 207478 | 3787 2667 | 1102 1121 | 96.43 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold4518__6.2
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold6178__8.1 (139242bp)
+Top Length: 76104  Top ID: 97.06
+		This contig is misassembled. 6 total aligns.
+			Real Alignment 1: 684629 709687 | 25055 1 | 25059 25055 | 97.24 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold6178__8.1
+			  Overlap between these two alignments (local misassembly). Inconsistency = -1 
+			Real Alignment 2: 680300 684329 | 29385 25356 | 4030 4030 | 98.31 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold6178__8.1
+			  Extensive misassembly ( relocation, inconsistency = -5518 ) between these two alignments
+			Real Alignment 3: 604065 680180 | 111126 35023 | 76116 76104 | 97.06 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold6178__8.1
+			  Extensive misassembly ( relocation, inconsistency = 7304 ) between these two alignments
+			Real Alignment 4: 585766 594160 | 122099 113727 | 8395 8373 | 96.13 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold6178__8.1
+			  Extensive misassembly ( relocation, inconsistency = 6028 ) between these two alignments
+			Real Alignment 5: 562957 576969 | 138878 124868 | 14013 14011 | 97.11 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold6178__8.1
+			  Fake misassembly between these two alignments: inconsistency = -79 , gap in the contig is small or absent or filled mostly with Ns (long indel: insertion of length 79; 6 mismatches)
+			Real Alignment 6: 562675 562871 | 139239 139043 | 197 197 | 99.49 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold6178__8.1
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold7581_12.6 (2219bp)
+Top Length: 111  Top ID: 98.2
+		Skipping redundant alignment 1 107 | 1490 1384 | 107 107 | 98.15 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ scaffold7581_12.6
+		This contig is partially unaligned. (Aligned 111 out of 2219 bases)
+		Alignment: 1 110 | 1494 1384 | 110 111 | 98.2 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold7581_12.6
+		Unaligned bases: 1 to 1383 (1383)
+		Unaligned bases: 1495 to 2219 (725)
+
+CONTIG: scaffold11945__8.1 (56684bp)
+Top Length: 17245  Top ID: 96.13
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 210053 227261 | 1 17245 | 17209 17245 | 96.13 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold11945__8.1
+			  Overlap between these two alignments (local misassembly). Inconsistency = -1 
+			Real Alignment 2: 229521 243974 | 19506 34004 | 14454 14499 | 96.56 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold11945__8.1
+			  Extensive misassembly ( relocation, inconsistency = -2569 ) between these two alignments
+			Real Alignment 3: 244247 253368 | 36846 45967 | 9122 9122 | 97.22 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold11945__8.1
+			  Overlap between these two alignments (local misassembly). Inconsistency = -821 
+			Real Alignment 4: 253369 255940 | 46789 49360 | 2572 2572 | 96.35 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold11945__8.1
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold13520__6.3 (1842bp)
+Top Length: 1151  Top ID: 99.13
+		This contig is partially unaligned. (Aligned 1151 out of 1842 bases)
+		Alignment: 549805 550955 | 1151 1 | 1151 1151 | 99.13 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold13520__6.3
+		Unaligned bases: 1152 to 1842 (691)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold19024__4.0 (1683bp)
+Top Length: 1681  Top ID: 95.66
+		One align captures most of this contig: 559676 561312 | 1683 3 | 1637 1681 | 95.66 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold19024__4.0
+
+CONTIG: scaffold21321__8.8 (2614bp)
+Top Length: 2614  Top ID: 95.98
+		One align captures most of this contig: 31635 34209 | 1 2614 | 2575 2614 | 95.98 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold21321__8.8
+
+CONTIG: scaffold23311__5.5 (585bp)
+Top Length: 349  Top ID: 98.28
+		This contig is partially unaligned. (Aligned 349 out of 585 bases)
+		Alignment: 548947 549295 | 237 585 | 349 349 | 98.28 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold23311__5.5
+		Unaligned bases: 1 to 236 (236)
+
+CONTIG: scaffold24811__7.1 (1874bp)
+Top Length: 1874  Top ID: 95.46
+		One align captures most of this contig: 550905 552720 | 1874 1 | 1816 1874 | 95.46 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold24811__7.1
+
+CONTIG: scaffold28989__8.0 (109992bp)
+Top Length: 24096  Top ID: 96.53
+		This contig is misassembled. 8 total aligns.
+			Real Alignment 1: 191012 206427 | 15455 1 | 15416 15455 | 97.5 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold28989__8.0
+			  Gap between these two alignments (local misassembly). Inconsistency = 155 
+			Real Alignment 2: 172040 190645 | 34336 15667 | 18606 18670 | 97.05 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold28989__8.0
+			  Overlap between these two alignments (local misassembly). Inconsistency = -133 
+			Real Alignment 3: 164096 171906 | 42411 34603 | 7811 7809 | 97.38 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold28989__8.0
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 4: 147547 154190 | 49159 42494 | 6644 6666 | 97.2 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold28989__8.0
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 5: 122181 146258 | 73293 49198 | 24078 24096 | 96.53 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold28989__8.0
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 6: 111338 119635 | 81612 73317 | 8298 8296 | 97.77 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold28989__8.0
+			  Extensive misassembly ( relocation, inconsistency = 474468 ) between these two alignments
+			Real Alignment 7: 596091 602560 | 83600 90071 | 6470 6472 | 98.07 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold28989__8.0
+			  Extensive misassembly ( relocation, inconsistency = -511145 ) between these two alignments
+			Real Alignment 8: 91848 111335 | 109991 90504 | 19488 19488 | 98.32 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold28989__8.0
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold29001__8.2 (7752bp)
+Top Length: 5190  Top ID: 96.55
+		This contig is partially unaligned. (Aligned 5190 out of 7752 bases)
+		Alignment: 26576 31685 | 2563 7752 | 5110 5190 | 96.55 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold29001__8.2
+		Unaligned bases: 1 to 2562 (2562)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold29641__7.4 (1297bp)
+Top Length: 309  Top ID: 97.41
+		This contig is partially unaligned. (Aligned 309 out of 1297 bases)
+		Alignment: 547067 547375 | 309 1 | 309 309 | 97.41 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold29641__7.4
+		Unaligned bases: 310 to 1297 (988)
+
+CONTIG: scaffold30262__8.2 (46756bp)
+Top Length: 18403  Top ID: 97.13
+		This contig is misassembled. 5 total aligns.
+			Real Alignment 1: 481438 496906 | 372 15817 | 15469 15446 | 97.42 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold30262__8.2
+			  Overlap between these two alignments (local misassembly). Inconsistency = -637 
+			Excluding internal overlap of size 19 between Alignment 2 and 3:  520380 522787 | 35137 37545 | 2408 2409 --> 520399 522787 | 35156 37545 | 2389 2390
+			Real Alignment 2: 497205 515610 | 16753 35155 | 18406 18403 | 97.13 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold30262__8.2
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 3: 520399 522787 | 35156 37545 | 2389 2390 | 96.39 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold30262__8.2
+			  Overlap between these two alignments (local misassembly). Inconsistency = -131 
+			Excluding internal overlap of size 1 between Alignment 4 and 5:  522790 523733 | 37679 38623 | 944 945 --> 522790 523732 | 37679 38622 | 943 944
+			Real Alignment 4: 522790 523732 | 37679 38622 | 943 944 | 95.46 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold30262__8.2
+			  Extensive misassembly ( relocation, inconsistency = 18716 ) between these two alignments
+			Real Alignment 5: 542449 543593 | 38623 39765 | 1145 1143 | 95.64 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold30262__8.2
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold30435__9.0 (76749bp)
+Top Length: 25787  Top ID: 95.45
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 470695 476547 | 5867 1 | 5853 5867 | 97.7 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold30435__9.0
+			  Extensive misassembly ( relocation, inconsistency = -8120 ) between these two alignments
+			Real Alignment 2: 444950 470673 | 39795 14009 | 25724 25787 | 95.45 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold30435__9.0
+			  Gap between these two alignments (local misassembly). Inconsistency = 86 
+			Real Alignment 3: 433501 444860 | 51156 39799 | 11360 11358 | 98.27 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold30435__9.0
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 4: 406556 431043 | 75881 51417 | 24488 24465 | 95.34 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold30435__9.0
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold31337__5.5 (900bp)
+Top Length: 430  Top ID: 97.21
+		This contig is partially unaligned. (Aligned 430 out of 900 bases)
+		Alignment: 558122 558551 | 900 471 | 430 430 | 97.21 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold31337__5.5
+		Unaligned bases: 1 to 470 (470)
+
+CONTIG: scaffold32077__7.0 (12385bp)
+Top Length: 6875  Top ID: 97.46
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 256125 256224 | 1171 1270 | 100 100 | 96.0 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold32077__7.0
+			  Extensive misassembly ( relocation, inconsistency = -4241 ) between these two alignments
+			Real Alignment 2: 256224 263099 | 5511 12385 | 6876 6875 | 97.46 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold32077__7.0
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold32450__7.4 (26273bp)
+Top Length: 26273  Top ID: 97.65
+		One align captures most of this contig: 265 26529 | 1 26273 | 26265 26273 | 97.65 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ scaffold32450__7.4
+
+CONTIG: C821810__4.0 (516bp)
+Top Length: 516  Top ID: 96.32
+		One align captures most of this contig: 547297 547812 | 1 516 | 516 516 | 96.32 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ C821810__4.0
+
+CONTIG: C831860__3.0 (570bp)
+Top Length: 570  Top ID: 95.44
+		One align captures most of this contig: 559676 560245 | 570 1 | 570 570 | 95.44 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ C831860__3.0
+
+CONTIG: C844908__7.0 (671bp)
+Top Length: 671  Top ID: 97.76
+		One align captures most of this contig: 553920 554590 | 1 671 | 671 671 | 97.76 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ C844908__7.0
+
+CONTIG: C881982__8.0 (4910bp)
+Top Length: 4910  Top ID: 96.95
+		One align captures most of this contig: 41942 46851 | 4910 1 | 4910 4910 | 96.95 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ C881982__8.0
+
+CONTIG: C882570_10.0 (5887bp)
+Top Length: 5887  Top ID: 96.3
+		One align captures most of this contig: 263058 268923 | 1 5887 | 5866 5887 | 96.3 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ C882570_10.0
+
+CONTIG: C882676__8.0 (6118bp)
+Top Length: 6118  Top ID: 97.35
+		One align captures most of this contig: 35866 41983 | 1 6118 | 6118 6118 | 97.35 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ C882676__8.0
+
+CONTIG: scaffold1799_29.1 (2532bp)
+Top Length: 128  Top ID: 96.88
+		This contig is partially unaligned. (Aligned 128 out of 2532 bases)
+		Alignment: 783 910 | 1179 1306 | 128 128 | 96.88 | Prevotella_nanceiensis_gi_483529300_ref_NZ_ scaffold1799_29.1
+		Unaligned bases: 1 to 1178 (1178)
+		Unaligned bases: 1307 to 2532 (1226)
+
+CONTIG: C834750_23.0 (589bp)
+Top Length: 472  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 472 out of 589 bases)
+		Alignment: 1 472 | 472 1 | 472 472 | 100.0 | Prevotella_nanceiensis_gi_483529300_ref_NZ_ C834750_23.0
+		Unaligned bases: 473 to 589 (117)
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Prevotella_nanceiensis/contigs_reports/nucmer_output/SOAPdenovo2.used_snps
+	Reference Prevotella_nanceiensis_gi_483530864_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 5020 (5020 bp)
+			START in gap: 1 to 2107 (2106 bp)
+			Align 1: 2107 4768 scaffold32335__5.5 1 2653
+			END in gap: 4768 to 5020 (252 bp)
+
+	Reference Prevotella_nanceiensis_gi_483529657_ref_NZ_: 24 total alignments. 1 total regions.
+		Region: 1 to 391522 (391522 bp)
+			START in gap: 1 to 6506 (6505 bp)
+			Align 1: 6506 37362 scaffold32022__6.1 1247 32101
+				Negative gap (overlap) between this and next alignment: 37362 to 37334 (-28 bp)
+				Next Alignment: 37334 47292 C883672__7.0 2 9960
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 2 to 31.
+			Align 2: 37363 47292 C883672__7.0 31 9960
+				Negative gap (overlap) between this and next alignment: 47292 to 47252 (-40 bp)
+				Next Alignment: 47252 59898 scaffold32394__6.0 1 12629
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 43.
+			Align 3: 47293 59898 scaffold32394__6.0 43 12629
+				Negative gap (overlap) between this and next alignment: 59898 to 59891 (-7 bp)
+				Next Alignment: 59891 63759 C881012__7.0 1 3869
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 9.
+			Align 4: 59899 63759 C881012__7.0 9 3869
+				Negative gap (overlap) between this and next alignment: 63759 to 63736 (-23 bp)
+				Next Alignment: 63736 86321 scaffold31947__6.6 40733 18103
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 40733 to 40709.
+			Align 5: 63760 86321 scaffold31947__6.6 40709 18103
+				Gap between this and next alignment: 86321 to 95294 (8972 bp)
+				Next Alignment: 95294 95492 scaffold22501__2.3 199 1
+
+			Align 6: 95294 95492 scaffold22501__2.3 199 1
+				Gap between this and next alignment: 95492 to 102668 (7175 bp)
+				Next Alignment: 102668 103584 scaffold452_10.7 145 1061
+
+			Align 7: 102668 103584 scaffold452_10.7 145 1061
+				Gap between this and next alignment: 103584 to 104876 (1291 bp)
+				Next Alignment: 104876 105146 scaffold28357__4.5 1 271
+
+			Align 8: 104876 105146 scaffold28357__4.5 1 271
+				Gap between this and next alignment: 105146 to 118766 (13619 bp)
+				Next Alignment: 118766 119453 scaffold870__7.5 11502 12189
+
+			Align 9: 118766 119453 scaffold870__7.5 11502 12189
+				Gap between this and next alignment: 119453 to 121185 (1731 bp)
+				Next Alignment: 121185 121327 scaffold870__7.5 12744 12889
+
+			Align 10: 121185 121327 scaffold870__7.5 12744 12889
+				Gap between this and next alignment: 121327 to 128723 (7395 bp)
+				Next Alignment: 128723 128847 scaffold32234__6.8 3580 3456
+
+			Align 11: 128723 128847 scaffold32234__6.8 3580 3456
+				Gap between this and next alignment: 128847 to 179090 (50242 bp)
+				Next Alignment: 179090 187708 scaffold31947__6.6 8619 1
+
+			Align 12: 179090 187708 scaffold31947__6.6 8619 1
+				Negative gap (overlap) between this and next alignment: 187708 to 187669 (-39 bp)
+				Next Alignment: 187669 208232 scaffold20__6.5 1 20582
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 41.
+			Align 13: 187709 208232 scaffold20__6.5 41 20582
+				Gap between this and next alignment: 208232 to 208499 (266 bp)
+				Next Alignment: 208499 252920 scaffold20__6.5 20585 65094
+
+			Align 14: 208499 252920 scaffold20__6.5 20585 65094
+				The next alignment (233580 233658 scaffold9896__8.1 38840 38762) is redundant. Skipping.
+				Negative gap (overlap) between this and next alignment: 252920 to 252887 (-33 bp)
+				Next Alignment: 252887 261911 C883488__6.0 9025 2
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 9025 to 8991.
+			Align 16: 252921 261911 C883488__6.0 8991 2
+				Negative gap (overlap) between this and next alignment: 261911 to 261884 (-27 bp)
+				Next Alignment: 261884 297180 scaffold32418__7.0 66381 31056
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 66381 to 66353.
+			Align 17: 261912 297180 scaffold32418__7.0 66353 31056
+				Gap between this and next alignment: 297180 to 299711 (2530 bp)
+				Next Alignment: 299711 326681 scaffold32418__7.0 30779 3842
+
+			Align 18: 299711 326681 scaffold32418__7.0 30779 3842
+				Negative gap (overlap) between this and next alignment: 326681 to 326615 (-66 bp)
+				Next Alignment: 326615 330455 scaffold32418__7.0 3841 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 3841 to 3776.
+			Align 19: 326682 330455 scaffold32418__7.0 3776 1
+				Negative gap (overlap) between this and next alignment: 330455 to 330454 (-1 bp)
+				Next Alignment: 330454 344155 scaffold21850__6.9 13704 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 13704 to 13702.
+			Align 20: 330456 344155 scaffold21850__6.9 13702 1
+				Negative gap (overlap) between this and next alignment: 344155 to 344122 (-33 bp)
+				Next Alignment: 344122 345682 C873516__8.0 1561 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1561 to 1527.
+			Align 21: 344156 345682 C873516__8.0 1527 1
+				Gap between this and next alignment: 345682 to 345746 (63 bp)
+				Next Alignment: 345746 367267 scaffold32444__7.0 1 21533
+
+			Align 22: 345746 367267 scaffold32444__7.0 1 21533
+				Negative gap (overlap) between this and next alignment: 367267 to 367243 (-24 bp)
+				Next Alignment: 367243 367870 C845512__6.0 678 51
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 678 to 653.
+			Align 23: 367268 367870 C845512__6.0 653 51
+				Negative gap (overlap) between this and next alignment: 367870 to 367867 (-3 bp)
+				Next Alignment: 367867 376554 scaffold28457__6.7 1281 9935
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1281 to 1285.
+			Align 24: 367871 376554 scaffold28457__6.7 1285 9935
+			END in gap: 376554 to 391522 (14968 bp)
+
+	Reference Prevotella_nanceiensis_gi_483530477_ref_NZ_: 11 total alignments. 1 total regions.
+		Region: 1 to 77692 (77692 bp)
+			START in gap: 1 to 43 (42 bp)
+			Align 1: 43 110 scaffold361__8.2 18839 18906
+				Gap between this and next alignment: 110 to 293 (182 bp)
+				Next Alignment: 293 19764 scaffold32426__8.0 22713 3242
+
+			Align 2: 293 19764 scaffold32426__8.0 22713 3242
+				Gap between this and next alignment: 19764 to 20137 (372 bp)
+				Next Alignment: 20137 22991 scaffold32426__8.0 2855 1
+
+			Align 3: 20137 22991 scaffold32426__8.0 2855 1
+				Negative gap (overlap) between this and next alignment: 22991 to 22969 (-22 bp)
+				Next Alignment: 22969 64913 scaffold32271__7.3 47460 5486
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 47460 to 47437.
+			Align 4: 22992 64913 scaffold32271__7.3 47437 5486
+				Gap between this and next alignment: 64913 to 68181 (3267 bp)
+				Next Alignment: 68181 70479 scaffold12350__4.9 972 3270
+
+			Align 5: 68181 70479 scaffold12350__4.9 972 3270
+				Negative gap (overlap) between this and next alignment: 70479 to 70445 (-34 bp)
+				Next Alignment: 70445 71749 C870408__4.0 1305 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1305 to 1270.
+			Align 6: 70480 71749 C870408__4.0 1270 1
+				Negative gap (overlap) between this and next alignment: 71749 to 71721 (-28 bp)
+				Next Alignment: 71721 74767 scaffold31052__3.9 1 3107
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 30.
+			Align 7: 71750 74767 scaffold31052__3.9 30 3107
+				Negative gap (overlap) between this and next alignment: 74767 to 74737 (-30 bp)
+				Next Alignment: 74737 76471 scaffold32062__4.8 1744 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1744 to 1713.
+			Align 8: 74768 76471 scaffold32062__4.8 1713 1
+				Negative gap (overlap) between this and next alignment: 76471 to 76421 (-50 bp)
+				Next Alignment: 76421 77418 C863576_16.0 998 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 998 to 947.
+			Align 9: 76472 77418 C863576_16.0 947 1
+				Negative gap (overlap) between this and next alignment: 77418 to 77368 (-50 bp)
+				Next Alignment: 77368 77442 scaffold16944__6.4 5113 5039
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 5113 to 5062.
+			Align 10: 77419 77442 scaffold16944__6.4 5062 5039
+				Negative gap (overlap) between this and next alignment: 77442 to 77437 (-5 bp)
+				Next Alignment: 77437 77626 scaffold1800__8.7 9339 9528
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 9339 to 9345.
+			Align 11: 77443 77626 scaffold1800__8.7 9345 9528
+			END in gap: 77626 to 77692 (66 bp)
+
+	Reference Prevotella_nanceiensis_gi_483529300_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 1197 (1197 bp)
+			Align 1: 1 472 C834750_23.0 472 1
+				Gap between this and next alignment: 472 to 783 (310 bp)
+				Next Alignment: 783 910 scaffold1799_29.1 1179 1306
+
+			Align 2: 783 910 scaffold1799_29.1 1179 1306
+			END in gap: 910 to 1197 (287 bp)
+
+ERROR: Reference Prevotella_nanceiensis_gi_483529517_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Prevotella_nanceiensis_gi_483530864_ref_NZ_', 'Prevotella_nanceiensis_gi_483530088_ref_NZ_', 'Prevotella_nanceiensis_gi_483529300_ref_NZ_', 'Prevotella_nanceiensis_gi_483530284_ref_NZ_', 'Prevotella_nanceiensis_gi_483529859_ref_NZ_', 'Prevotella_nanceiensis_gi_483530477_ref_NZ_', 'Prevotella_nanceiensis_gi_483529657_ref_NZ_', 'Prevotella_nanceiensis_gi_483529071_ref_NZ_', 'Prevotella_nanceiensis_gi_483528923_ref_NZ_', 'Prevotella_nanceiensis_gi_483530682_ref_NZ_']
+	Reference Prevotella_nanceiensis_gi_483530284_ref_NZ_: 13 total alignments. 1 total regions.
+		Region: 1 to 166902 (166902 bp)
+			START in gap: 1 to 322 (321 bp)
+			Align 1: 322 2026 scaffold29069__7.0 335 2039
+				Negative gap (overlap) between this and next alignment: 2026 to 1987 (-39 bp)
+				Next Alignment: 1987 11878 C883674__7.0 1 9893
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 41.
+			Align 2: 2027 11878 C883674__7.0 41 9893
+				Gap between this and next alignment: 11878 to 19404 (7525 bp)
+				Next Alignment: 19404 57566 scaffold32127__7.0 1 38165
+
+			Align 3: 19404 57566 scaffold32127__7.0 1 38165
+				Gap between this and next alignment: 57566 to 59912 (2345 bp)
+				Next Alignment: 59912 84915 scaffold32127__7.0 38169 63168
+
+			Align 4: 59912 84915 scaffold32127__7.0 38169 63168
+				Negative gap (overlap) between this and next alignment: 84915 to 84884 (-31 bp)
+				Next Alignment: 84884 91549 scaffold32413__7.6 1 6683
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 33.
+			Align 5: 84916 91549 scaffold32413__7.6 33 6683
+				Negative gap (overlap) between this and next alignment: 91549 to 91523 (-26 bp)
+				Next Alignment: 91523 106696 scaffold32419__7.2 4 15228
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 4 to 31.
+			Align 6: 91550 106696 scaffold32419__7.2 31 15228
+				Gap between this and next alignment: 106696 to 106880 (183 bp)
+				Next Alignment: 106880 116653 scaffold32419__7.2 15355 25131
+
+			Align 7: 106880 116653 scaffold32419__7.2 15355 25131
+				Gap between this and next alignment: 116653 to 117602 (948 bp)
+				Next Alignment: 117602 129964 scaffold32419__7.2 26080 38468
+
+			Align 8: 117602 129964 scaffold32419__7.2 26080 38468
+				Gap between this and next alignment: 129964 to 129966 (1 bp)
+				Next Alignment: 129966 145737 scaffold32404__8.0 1 15753
+
+			Align 9: 129966 145737 scaffold32404__8.0 1 15753
+				Negative gap (overlap) between this and next alignment: 145737 to 145697 (-40 bp)
+				Next Alignment: 145697 150418 C881840__7.0 3 4724
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 3 to 44.
+			Align 10: 145738 150418 C881840__7.0 44 4724
+				Negative gap (overlap) between this and next alignment: 150418 to 150395 (-23 bp)
+				Next Alignment: 150395 160001 C883598__7.0 1 9607
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 25.
+			Align 11: 150419 160001 C883598__7.0 25 9607
+				Negative gap (overlap) between this and next alignment: 160001 to 159982 (-19 bp)
+				Next Alignment: 159982 160848 scaffold20473__6.2 1 870
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 21.
+			Align 12: 160002 160848 scaffold20473__6.2 21 870
+				Gap between this and next alignment: 160848 to 166467 (5618 bp)
+				Next Alignment: 166467 166698 scaffold28457__6.7 20201 20432
+
+			Align 13: 166467 166698 scaffold28457__6.7 20201 20432
+			END in gap: 166698 to 166902 (204 bp)
+
+	Reference Prevotella_nanceiensis_gi_483529859_ref_NZ_: 20 total alignments. 1 total regions.
+		Region: 1 to 245687 (245687 bp)
+			START in gap: 1 to 1031 (1030 bp)
+			Align 1: 1031 4137 scaffold16944__6.4 3106 1
+				Gap between this and next alignment: 4137 to 7016 (2878 bp)
+				Next Alignment: 7016 8198 scaffold10159__5.8 193 1375
+
+			Align 2: 7016 8198 scaffold10159__5.8 193 1375
+				Negative gap (overlap) between this and next alignment: 8198 to 8148 (-50 bp)
+				Next Alignment: 8148 9589 C872324__6.0 1 1442
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 52.
+			Align 3: 8199 9589 C872324__6.0 52 1442
+				The next alignment (9349 9589 scaffold26962__3.4 4 244) is redundant. Skipping.
+				Negative gap (overlap) between this and next alignment: 9589 to 9539 (-50 bp)
+				Next Alignment: 9539 10274 C850434__5.0 736 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 736 to 685.
+			Align 5: 9590 10274 C850434__5.0 685 1
+				Gap between this and next alignment: 10274 to 22822 (12547 bp)
+				Next Alignment: 22822 23713 C859698__5.0 1 892
+
+			Align 6: 22822 23713 C859698__5.0 1 892
+				Gap between this and next alignment: 23713 to 25406 (1692 bp)
+				Next Alignment: 25406 40605 scaffold6657__6.9 15235 1
+
+			Align 7: 25406 40605 scaffold6657__6.9 15235 1
+				Negative gap (overlap) between this and next alignment: 40605 to 40567 (-38 bp)
+				Next Alignment: 40567 43000 scaffold31883__8.2 1 2434
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 40.
+			Align 8: 40606 43000 scaffold31883__8.2 40 2434
+				Gap between this and next alignment: 43000 to 44748 (1747 bp)
+				Next Alignment: 44748 50436 scaffold31883__8.2 4233 9922
+
+			Align 9: 44748 50436 scaffold31883__8.2 4233 9922
+				Negative gap (overlap) between this and next alignment: 50436 to 50390 (-46 bp)
+				Next Alignment: 50390 54676 scaffold32420__7.1 4309 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 4309 to 4262.
+			Align 10: 50437 54676 scaffold32420__7.1 4262 1
+				Gap between this and next alignment: 54676 to 57020 (2343 bp)
+				Next Alignment: 57020 76784 scaffold32456__7.0 19728 1
+
+			Align 11: 57020 76784 scaffold32456__7.0 19728 1
+				Negative gap (overlap) between this and next alignment: 76784 to 76744 (-40 bp)
+				Next Alignment: 76744 79404 scaffold19883__5.3 1 2661
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 42.
+			Align 12: 76785 79404 scaffold19883__5.3 42 2661
+				Gap between this and next alignment: 79404 to 79443 (38 bp)
+				Next Alignment: 79443 110343 scaffold31532__7.5 512 31430
+
+			Align 13: 79443 110343 scaffold31532__7.5 512 31430
+				Gap between this and next alignment: 110343 to 110609 (265 bp)
+				Next Alignment: 110609 156810 scaffold31532__7.5 31636 77937
+
+			Align 14: 110609 156810 scaffold31532__7.5 31636 77937
+				Negative gap (overlap) between this and next alignment: 156810 to 156779 (-31 bp)
+				Next Alignment: 156779 168527 scaffold32341__6.9 11776 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 11776 to 11744.
+			Align 15: 156811 168527 scaffold32341__6.9 11744 1
+				Gap between this and next alignment: 168527 to 179425 (10897 bp)
+				Next Alignment: 179425 191303 scaffold32353__7.7 1 11905
+
+			Align 16: 179425 191303 scaffold32353__7.7 1 11905
+				Gap between this and next alignment: 191303 to 191305 (1 bp)
+				Next Alignment: 191305 221650 scaffold28265__7.3 1 30438
+
+			Align 17: 191305 221650 scaffold28265__7.3 1 30438
+				Gap between this and next alignment: 221650 to 222080 (429 bp)
+				Next Alignment: 222080 224975 scaffold28265__7.3 30868 33764
+
+			Align 18: 222080 224975 scaffold28265__7.3 30868 33764
+				Negative gap (overlap) between this and next alignment: 224975 to 224972 (-3 bp)
+				Next Alignment: 224972 226528 C873436__9.0 1 1557
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 5.
+			Align 19: 224976 226528 C873436__9.0 5 1557
+				Negative gap (overlap) between this and next alignment: 226528 to 226512 (-16 bp)
+				Next Alignment: 226512 235945 scaffold32387__6.6 16212 6781
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 16212 to 16195.
+			Align 20: 226529 235945 scaffold32387__6.6 16195 6781
+			END in gap: 235945 to 245687 (9742 bp)
+
+ERROR: Reference Prevotella_nanceiensis_gi_483530964_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Prevotella_nanceiensis_gi_483530864_ref_NZ_', 'Prevotella_nanceiensis_gi_483530088_ref_NZ_', 'Prevotella_nanceiensis_gi_483529300_ref_NZ_', 'Prevotella_nanceiensis_gi_483530284_ref_NZ_', 'Prevotella_nanceiensis_gi_483529859_ref_NZ_', 'Prevotella_nanceiensis_gi_483530477_ref_NZ_', 'Prevotella_nanceiensis_gi_483529657_ref_NZ_', 'Prevotella_nanceiensis_gi_483529071_ref_NZ_', 'Prevotella_nanceiensis_gi_483528923_ref_NZ_', 'Prevotella_nanceiensis_gi_483530682_ref_NZ_']
+	Reference Prevotella_nanceiensis_gi_483530088_ref_NZ_: 30 total alignments. 1 total regions.
+		Region: 1 to 218184 (218184 bp)
+			START in gap: 1 to 266 (265 bp)
+			Align 1: 266 702 scaffold32335__5.5 2654 3090
+				Negative gap (overlap) between this and next alignment: 702 to 668 (-34 bp)
+				Next Alignment: 668 17817 scaffold32320__6.4 1 17150
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 36.
+			Align 2: 703 17817 scaffold32320__6.4 36 17150
+				Negative gap (overlap) between this and next alignment: 17817 to 17779 (-38 bp)
+				Next Alignment: 17779 26391 scaffold31634__6.6 1 8619
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 40.
+			Align 3: 17818 26391 scaffold31634__6.6 40 8619
+				Gap between this and next alignment: 26391 to 26393 (1 bp)
+				Next Alignment: 26393 29920 C880578__6.0 1 3527
+
+			Align 4: 26393 29920 C880578__6.0 1 3527
+				Negative gap (overlap) between this and next alignment: 29920 to 29874 (-46 bp)
+				Next Alignment: 29874 34163 C881486__7.0 1 4288
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 48.
+			Align 5: 29921 34163 C881486__7.0 48 4288
+				Negative gap (overlap) between this and next alignment: 34163 to 34138 (-25 bp)
+				Next Alignment: 34138 38032 scaffold32347__7.0 1 3883
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 27.
+			Align 6: 34164 38032 scaffold32347__7.0 27 3883
+				Gap between this and next alignment: 38032 to 38035 (2 bp)
+				Next Alignment: 38035 41967 C881070__7.0 2 3934
+
+			Align 7: 38035 41967 C881070__7.0 2 3934
+				Gap between this and next alignment: 41967 to 41972 (4 bp)
+				Next Alignment: 41972 53831 scaffold3763__7.0 11857 1
+
+			Align 8: 41972 53831 scaffold3763__7.0 11857 1
+				Negative gap (overlap) between this and next alignment: 53831 to 53781 (-50 bp)
+				Next Alignment: 53781 55552 C875270__6.0 1 1772
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 52.
+			Align 9: 53832 55552 C875270__6.0 52 1772
+				Negative gap (overlap) between this and next alignment: 55552 to 55511 (-41 bp)
+				Next Alignment: 55511 64021 scaffold32191__6.0 1 8533
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 43.
+			Align 10: 55553 64021 scaffold32191__6.0 43 8533
+				Gap between this and next alignment: 64021 to 64109 (87 bp)
+				Next Alignment: 64109 66577 C878402__6.0 2469 1
+
+			Align 11: 64109 66577 C878402__6.0 2469 1
+				Negative gap (overlap) between this and next alignment: 66577 to 66535 (-42 bp)
+				Next Alignment: 66535 74752 scaffold25418__6.0 8268 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 8268 to 8225.
+			Align 12: 66578 74752 scaffold25418__6.0 8225 1
+				Gap between this and next alignment: 74752 to 74756 (3 bp)
+				Next Alignment: 74756 83374 C883408__6.0 8616 1
+
+			Align 13: 74756 83374 C883408__6.0 8616 1
+				Gap between this and next alignment: 83374 to 83760 (385 bp)
+				Next Alignment: 83760 88552 C881896__6.0 1 4793
+
+			Align 14: 83760 88552 C881896__6.0 1 4793
+				Negative gap (overlap) between this and next alignment: 88552 to 88517 (-35 bp)
+				Next Alignment: 88517 96763 scaffold32249__7.0 3 8290
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 3 to 39.
+			Align 15: 88553 96763 scaffold32249__7.0 39 8290
+				Gap between this and next alignment: 96763 to 97705 (941 bp)
+				Next Alignment: 97705 100499 scaffold2__7.0 5820 3029
+
+			Align 16: 97705 100499 scaffold2__7.0 5820 3029
+				Gap between this and next alignment: 100499 to 103845 (3345 bp)
+				Next Alignment: 103845 103953 C849584__7.0 109 1
+
+			Align 17: 103845 103953 C849584__7.0 109 1
+				Gap between this and next alignment: 103953 to 104114 (160 bp)
+				Next Alignment: 104114 106915 scaffold2__7.0 2945 143
+
+			Align 18: 104114 106915 scaffold2__7.0 2945 143
+				Gap between this and next alignment: 106915 to 129115 (22199 bp)
+				Next Alignment: 129115 130150 C864868_10.0 1 1038
+
+			Align 19: 129115 130150 C864868_10.0 1 1038
+				Negative gap (overlap) between this and next alignment: 130150 to 130100 (-50 bp)
+				Next Alignment: 130100 130355 scaffold11767_10.6 1 256
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 52.
+			Align 20: 130151 130355 scaffold11767_10.6 52 256
+				Gap between this and next alignment: 130355 to 131146 (790 bp)
+				Next Alignment: 131146 131582 C831718_18.0 437 1
+
+			Align 21: 131146 131582 C831718_18.0 437 1
+				Negative gap (overlap) between this and next alignment: 131582 to 131532 (-50 bp)
+				Next Alignment: 131532 131652 scaffold30139__9.4 1 121
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 52.
+			Align 22: 131583 131652 scaffold30139__9.4 52 121
+				Negative gap (overlap) between this and next alignment: 131652 to 131532 (-120 bp)
+				Next Alignment: 131532 132172 C849584__7.0 726 110
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 726 to 607.
+			Align 23: 131653 132172 C849584__7.0 607 110
+				Gap between this and next alignment: 132172 to 132866 (693 bp)
+				Next Alignment: 132866 133527 scaffold8306__9.5 34870 35533
+
+			Align 24: 132866 133527 scaffold8306__9.5 34870 35533
+				Gap between this and next alignment: 133527 to 152037 (18509 bp)
+				Next Alignment: 152037 159715 scaffold37__7.6 366 8077
+
+			Align 25: 152037 159715 scaffold37__7.6 366 8077
+				Gap between this and next alignment: 159715 to 166819 (7103 bp)
+				Next Alignment: 166819 195690 scaffold37__7.6 12147 41024
+
+			Align 26: 166819 195690 scaffold37__7.6 12147 41024
+				Negative gap (overlap) between this and next alignment: 195690 to 195647 (-43 bp)
+				Next Alignment: 195647 207630 scaffold4906__6.9 12906 870
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 12906 to 12862.
+			Align 27: 195691 207630 scaffold4906__6.9 12862 870
+				Gap between this and next alignment: 207630 to 208210 (579 bp)
+				Next Alignment: 208210 209570 scaffold15471__4.1 1 1366
+
+			Align 28: 208210 209570 scaffold15471__4.1 1 1366
+				Gap between this and next alignment: 209570 to 210097 (526 bp)
+				Next Alignment: 210097 210816 scaffold28030__5.0 1 732
+
+			Align 29: 210097 210816 scaffold28030__5.0 1 732
+				Gap between this and next alignment: 210816 to 217889 (7072 bp)
+				Next Alignment: 217889 218131 scaffold11147__7.4 24634 24392
+
+			Align 30: 217889 218131 scaffold11147__7.4 24634 24392
+			END in gap: 218131 to 218184 (53 bp)
+
+	Reference Prevotella_nanceiensis_gi_483529071_ref_NZ_: 61 total alignments. 1 total regions.
+		Region: 1 to 750844 (750844 bp)
+			Align 1: 1 110 scaffold7581_12.6 1494 1384
+				Gap between this and next alignment: 110 to 265 (154 bp)
+				Next Alignment: 265 26529 scaffold32450__7.4 1 26273
+
+			Align 2: 265 26529 scaffold32450__7.4 1 26273
+				Gap between this and next alignment: 26529 to 26576 (46 bp)
+				Next Alignment: 26576 31685 scaffold29001__8.2 2563 7752
+
+			Align 3: 26576 31685 scaffold29001__8.2 2563 7752
+				Negative gap (overlap) between this and next alignment: 31685 to 31635 (-50 bp)
+				Next Alignment: 31635 34209 scaffold21321__8.8 1 2614
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 52.
+			Align 4: 31686 34209 scaffold21321__8.8 52 2614
+				Gap between this and next alignment: 34209 to 35866 (1656 bp)
+				Next Alignment: 35866 41983 C882676__8.0 1 6118
+
+			Align 5: 35866 41983 C882676__8.0 1 6118
+				Negative gap (overlap) between this and next alignment: 41983 to 41942 (-41 bp)
+				Next Alignment: 41942 46851 C881982__8.0 4910 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 4910 to 4868.
+			Align 6: 41984 46851 C881982__8.0 4868 1
+				Gap between this and next alignment: 46851 to 46906 (54 bp)
+				Next Alignment: 46906 57585 scaffold307__9.0 154 10840
+
+			Align 7: 46906 57585 scaffold307__9.0 154 10840
+				Gap between this and next alignment: 57585 to 66244 (8658 bp)
+				Next Alignment: 66244 84976 scaffold307__9.0 10841 29570
+
+			Align 8: 66244 84976 scaffold307__9.0 10841 29570
+				Gap between this and next alignment: 84976 to 85022 (45 bp)
+				Next Alignment: 85022 91845 scaffold307__9.0 29792 36615
+
+			Align 9: 85022 91845 scaffold307__9.0 29792 36615
+				Gap between this and next alignment: 91845 to 91848 (2 bp)
+				Next Alignment: 91848 111335 scaffold28989__8.0 109991 90504
+
+			Align 10: 91848 111335 scaffold28989__8.0 109991 90504
+				Gap between this and next alignment: 111335 to 111338 (2 bp)
+				Next Alignment: 111338 119635 scaffold28989__8.0 81612 73317
+
+			Align 11: 111338 119635 scaffold28989__8.0 81612 73317
+				Gap between this and next alignment: 119635 to 122181 (2545 bp)
+				Next Alignment: 122181 146258 scaffold28989__8.0 73293 49198
+
+			Align 12: 122181 146258 scaffold28989__8.0 73293 49198
+				Gap between this and next alignment: 146258 to 147547 (1288 bp)
+				Next Alignment: 147547 154190 scaffold28989__8.0 49159 42494
+
+			Align 13: 147547 154190 scaffold28989__8.0 49159 42494
+				Gap between this and next alignment: 154190 to 164096 (9905 bp)
+				Next Alignment: 164096 171906 scaffold28989__8.0 42411 34603
+
+			Align 14: 164096 171906 scaffold28989__8.0 42411 34603
+				Gap between this and next alignment: 171906 to 172040 (133 bp)
+				Next Alignment: 172040 190645 scaffold28989__8.0 34336 15667
+
+			Align 15: 172040 190645 scaffold28989__8.0 34336 15667
+				Gap between this and next alignment: 190645 to 191012 (366 bp)
+				Next Alignment: 191012 206427 scaffold28989__8.0 15455 1
+
+			Align 16: 191012 206427 scaffold28989__8.0 15455 1
+				Negative gap (overlap) between this and next alignment: 206427 to 206377 (-50 bp)
+				Next Alignment: 206377 207478 scaffold4518__6.2 3787 2667
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 3787 to 3736.
+			Align 17: 206428 207478 scaffold4518__6.2 3736 2667
+				Gap between this and next alignment: 207478 to 208429 (950 bp)
+				Next Alignment: 208429 210052 scaffold4518__6.2 1838 197
+
+			Align 18: 208429 210052 scaffold4518__6.2 1838 197
+				Next Alignment: 210053 227261 scaffold11945__8.1 1 17245
+
+			Align 19: 210053 227261 scaffold11945__8.1 1 17245
+				Gap between this and next alignment: 227261 to 229521 (2259 bp)
+				Next Alignment: 229521 243974 scaffold11945__8.1 19506 34004
+
+			Align 20: 229521 243974 scaffold11945__8.1 19506 34004
+				Gap between this and next alignment: 243974 to 244247 (272 bp)
+				Next Alignment: 244247 253368 scaffold11945__8.1 36846 45967
+
+			Align 21: 244247 253368 scaffold11945__8.1 36846 45967
+				Next Alignment: 253369 255940 scaffold11945__8.1 46789 49360
+
+			Align 22: 253369 255940 scaffold11945__8.1 46789 49360
+				Gap between this and next alignment: 255940 to 256125 (184 bp)
+				Next Alignment: 256125 256224 scaffold32077__7.0 1171 1270
+
+			Align 23: 256125 256224 scaffold32077__7.0 1171 1270
+				Negative gap (overlap) between this and next alignment: 256224 to 256224 (0 bp)
+				Next Alignment: 256224 263099 scaffold32077__7.0 5511 12385
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 5511 to 5512.
+			Align 24: 256225 263099 scaffold32077__7.0 5512 12385
+				Negative gap (overlap) between this and next alignment: 263099 to 263058 (-41 bp)
+				Next Alignment: 263058 268923 C882570_10.0 1 5887
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 43.
+			Align 25: 263100 268923 C882570_10.0 43 5887
+				Negative gap (overlap) between this and next alignment: 268923 to 268873 (-50 bp)
+				Next Alignment: 268873 351185 scaffold42__8.7 1 82378
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 52.
+			Align 26: 268924 351185 scaffold42__8.7 52 82378
+				Gap between this and next alignment: 351185 to 351290 (104 bp)
+				Next Alignment: 351290 352215 scaffold42__8.7 82617 83540
+
+			Align 27: 351290 352215 scaffold42__8.7 82617 83540
+				Gap between this and next alignment: 352215 to 352408 (192 bp)
+				Next Alignment: 352408 362470 scaffold42__8.7 83761 93890
+
+			Align 28: 352408 362470 scaffold42__8.7 83761 93890
+				Gap between this and next alignment: 362470 to 363439 (968 bp)
+				Next Alignment: 363439 370917 scaffold42__8.7 97186 104659
+
+			Align 29: 363439 370917 scaffold42__8.7 97186 104659
+				Gap between this and next alignment: 370917 to 387436 (16518 bp)
+				Next Alignment: 387436 388385 scaffold42__8.7 108420 109369
+
+			Align 30: 387436 388385 scaffold42__8.7 108420 109369
+				Gap between this and next alignment: 388385 to 388988 (602 bp)
+				Next Alignment: 388988 389722 scaffold42__8.7 112283 113017
+
+			Align 31: 388988 389722 scaffold42__8.7 112283 113017
+				Gap between this and next alignment: 389722 to 398405 (8682 bp)
+				Next Alignment: 398405 399747 scaffold42__8.7 113189 114530
+
+			Align 32: 398405 399747 scaffold42__8.7 113189 114530
+				Gap between this and next alignment: 399747 to 406556 (6808 bp)
+				Next Alignment: 406556 431043 scaffold30435__9.0 75881 51417
+
+			Align 33: 406556 431043 scaffold30435__9.0 75881 51417
+				Gap between this and next alignment: 431043 to 433501 (2457 bp)
+				Next Alignment: 433501 444860 scaffold30435__9.0 51156 39799
+
+			Align 34: 433501 444860 scaffold30435__9.0 51156 39799
+				Gap between this and next alignment: 444860 to 444950 (89 bp)
+				Next Alignment: 444950 470673 scaffold30435__9.0 39795 14009
+
+			Align 35: 444950 470673 scaffold30435__9.0 39795 14009
+				Gap between this and next alignment: 470673 to 470695 (21 bp)
+				Next Alignment: 470695 476547 scaffold30435__9.0 5867 1
+
+			Align 36: 470695 476547 scaffold30435__9.0 5867 1
+				Gap between this and next alignment: 476547 to 481438 (4890 bp)
+				Next Alignment: 481438 496906 scaffold30262__8.2 372 15817
+
+			Align 37: 481438 496906 scaffold30262__8.2 372 15817
+				Gap between this and next alignment: 496906 to 497205 (298 bp)
+				Next Alignment: 497205 515610 scaffold30262__8.2 16753 35155
+
+			Align 38: 497205 515610 scaffold30262__8.2 16753 35155
+				Gap between this and next alignment: 515610 to 520399 (4788 bp)
+				Next Alignment: 520399 522787 scaffold30262__8.2 35156 37545
+
+			Align 39: 520399 522787 scaffold30262__8.2 35156 37545
+				Gap between this and next alignment: 522787 to 522790 (2 bp)
+				Next Alignment: 522790 523732 scaffold30262__8.2 37679 38622
+
+			Align 40: 522790 523732 scaffold30262__8.2 37679 38622
+				Gap between this and next alignment: 523732 to 542449 (18716 bp)
+				Next Alignment: 542449 543593 scaffold30262__8.2 38623 39765
+
+			Align 41: 542449 543593 scaffold30262__8.2 38623 39765
+				Gap between this and next alignment: 543593 to 547067 (3473 bp)
+				Next Alignment: 547067 547375 scaffold29641__7.4 309 1
+
+			Align 42: 547067 547375 scaffold29641__7.4 309 1
+				Negative gap (overlap) between this and next alignment: 547375 to 547297 (-78 bp)
+				Next Alignment: 547297 547812 C821810__4.0 1 516
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 80.
+			Align 43: 547376 547812 C821810__4.0 80 516
+				Gap between this and next alignment: 547812 to 548947 (1134 bp)
+				Next Alignment: 548947 549295 scaffold23311__5.5 237 585
+
+			Align 44: 548947 549295 scaffold23311__5.5 237 585
+				Gap between this and next alignment: 549295 to 549805 (509 bp)
+				Next Alignment: 549805 550955 scaffold13520__6.3 1151 1
+
+			Align 45: 549805 550955 scaffold13520__6.3 1151 1
+				Negative gap (overlap) between this and next alignment: 550955 to 550905 (-50 bp)
+				Next Alignment: 550905 552720 scaffold24811__7.1 1874 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1874 to 1823.
+			Align 46: 550956 552720 scaffold24811__7.1 1823 1
+				Gap between this and next alignment: 552720 to 553920 (1199 bp)
+				Next Alignment: 553920 554590 C844908__7.0 1 671
+
+			Align 47: 553920 554590 C844908__7.0 1 671
+				Gap between this and next alignment: 554590 to 558122 (3531 bp)
+				Next Alignment: 558122 558551 scaffold31337__5.5 900 471
+
+			Align 48: 558122 558551 scaffold31337__5.5 900 471
+				Gap between this and next alignment: 558551 to 559676 (1124 bp)
+				Next Alignment: 559676 561312 scaffold19024__4.0 1683 3
+
+			Align 49: 559676 561312 scaffold19024__4.0 1683 3
+				The next alignment (559676 560245 C831860__3.0 570 1) is redundant. Skipping.
+				Gap between this and next alignment: 561312 to 562675 (1362 bp)
+				Next Alignment: 562675 562871 scaffold6178__8.1 139239 139043
+
+			Align 51: 562675 562871 scaffold6178__8.1 139239 139043
+				Gap between this and next alignment: 562871 to 562957 (85 bp)
+				Next Alignment: 562957 576969 scaffold6178__8.1 138878 124868
+
+			Align 52: 562957 576969 scaffold6178__8.1 138878 124868
+				Gap between this and next alignment: 576969 to 585766 (8796 bp)
+				Next Alignment: 585766 594160 scaffold6178__8.1 122099 113727
+
+			Align 53: 585766 594160 scaffold6178__8.1 122099 113727
+				Gap between this and next alignment: 594160 to 596091 (1930 bp)
+				Next Alignment: 596091 602560 scaffold28989__8.0 83600 90071
+
+			Align 54: 596091 602560 scaffold28989__8.0 83600 90071
+				Gap between this and next alignment: 602560 to 604065 (1504 bp)
+				Next Alignment: 604065 680180 scaffold6178__8.1 111126 35023
+
+			Align 55: 604065 680180 scaffold6178__8.1 111126 35023
+				Gap between this and next alignment: 680180 to 680300 (119 bp)
+				Next Alignment: 680300 684329 scaffold6178__8.1 29385 25356
+
+			Align 56: 680300 684329 scaffold6178__8.1 29385 25356
+				Gap between this and next alignment: 684329 to 684629 (299 bp)
+				Next Alignment: 684629 709687 scaffold6178__8.1 25055 1
+
+			Align 57: 684629 709687 scaffold6178__8.1 25055 1
+				Negative gap (overlap) between this and next alignment: 709687 to 709666 (-21 bp)
+				Next Alignment: 709666 717273 scaffold361__8.2 57959 50355
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 57959 to 57937.
+			Align 58: 709688 717273 scaffold361__8.2 57937 50355
+				Gap between this and next alignment: 717273 to 717383 (109 bp)
+				Next Alignment: 717383 717783 scaffold8306__9.5 34566 34166
+
+			Align 59: 717383 717783 scaffold8306__9.5 34566 34166
+				Gap between this and next alignment: 717783 to 718393 (609 bp)
+				Next Alignment: 718393 719069 scaffold361__8.2 49493 48815
+
+			Align 60: 718393 719069 scaffold361__8.2 49493 48815
+				Gap between this and next alignment: 719069 to 720985 (1915 bp)
+				Next Alignment: 720985 750499 scaffold361__8.2 48814 19196
+
+			Align 61: 720985 750499 scaffold361__8.2 48814 19196
+			END in gap: 750499 to 750844 (345 bp)
+
+	Reference Prevotella_nanceiensis_gi_483528923_ref_NZ_: 86 total alignments. 1 total regions.
+		Region: 1 to 771404 (771404 bp)
+			Align 1: 1 290 C819828_21.0 290 1
+				Gap between this and next alignment: 290 to 1824 (1533 bp)
+				Next Alignment: 1824 4488 C878986__6.0 2667 1
+
+			Align 2: 1824 4488 C878986__6.0 2667 1
+				Gap between this and next alignment: 4488 to 8147 (3658 bp)
+				Next Alignment: 8147 19291 scaffold32342__6.9 1 11171
+
+			Align 3: 8147 19291 scaffold32342__6.9 1 11171
+				Negative gap (overlap) between this and next alignment: 19291 to 19262 (-29 bp)
+				Next Alignment: 19262 24350 scaffold456__6.0 5260 172
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 5260 to 5230.
+			Align 4: 19292 24350 scaffold456__6.0 5230 172
+				Gap between this and next alignment: 24350 to 24509 (158 bp)
+				Next Alignment: 24509 44502 scaffold3050__6.0 40116 20065
+
+			Align 5: 24509 44502 scaffold3050__6.0 40116 20065
+				Gap between this and next alignment: 44502 to 45329 (826 bp)
+				Next Alignment: 45329 61653 scaffold3050__6.0 19250 2939
+
+			Align 6: 45329 61653 scaffold3050__6.0 19250 2939
+				Gap between this and next alignment: 61653 to 64301 (2647 bp)
+				Next Alignment: 64301 79686 scaffold6803__6.0 15496 1
+
+			Align 7: 64301 79686 scaffold6803__6.0 15496 1
+				Gap between this and next alignment: 79686 to 79979 (292 bp)
+				Next Alignment: 79979 80935 scaffold25568__4.8 981 1
+
+			Align 8: 79979 80935 scaffold25568__4.8 981 1
+				Gap between this and next alignment: 80935 to 82845 (1909 bp)
+				Next Alignment: 82845 101088 scaffold28973__5.6 1 18279
+
+			Align 9: 82845 101088 scaffold28973__5.6 1 18279
+				Gap between this and next alignment: 101088 to 101135 (46 bp)
+				Next Alignment: 101135 112278 scaffold32306__6.3 11159 2
+
+			Align 10: 101135 112278 scaffold32306__6.3 11159 2
+				Negative gap (overlap) between this and next alignment: 112278 to 112260 (-18 bp)
+				Next Alignment: 112260 114354 C877056__6.0 2095 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 2095 to 2076.
+			Align 11: 112279 114354 C877056__6.0 2076 1
+				Gap between this and next alignment: 114354 to 114356 (1 bp)
+				Next Alignment: 114356 118833 C881672__6.0 1 4478
+
+			Align 12: 114356 118833 C881672__6.0 1 4478
+				Negative gap (overlap) between this and next alignment: 118833 to 118815 (-18 bp)
+				Next Alignment: 118815 140869 scaffold32417__6.0 1 22079
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 20.
+			Align 13: 118834 140869 scaffold32417__6.0 20 22079
+				Negative gap (overlap) between this and next alignment: 140869 to 140851 (-18 bp)
+				Next Alignment: 140851 147538 scaffold32393__6.7 1 6694
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 20.
+			Align 14: 140870 147538 scaffold32393__6.7 20 6694
+				Negative gap (overlap) between this and next alignment: 147538 to 147504 (-34 bp)
+				Next Alignment: 147504 148102 C836328__7.0 1 599
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 36.
+			Align 15: 147539 148102 C836328__7.0 36 599
+				Gap between this and next alignment: 148102 to 148112 (9 bp)
+				Next Alignment: 148112 168509 scaffold32435__6.6 20397 1
+
+			Align 16: 148112 168509 scaffold32435__6.6 20397 1
+				Negative gap (overlap) between this and next alignment: 168509 to 168488 (-21 bp)
+				Next Alignment: 168488 176339 scaffold32414__6.0 1 7830
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 23.
+			Align 17: 168510 176339 scaffold32414__6.0 23 7830
+				Gap between this and next alignment: 176339 to 176391 (51 bp)
+				Next Alignment: 176391 195180 scaffold21865_16.1 4494 23328
+
+			Align 18: 176391 195180 scaffold21865_16.1 4494 23328
+				Gap between this and next alignment: 195180 to 195185 (4 bp)
+				Next Alignment: 195185 206396 scaffold32414__6.0 7831 19038
+
+			Align 19: 195185 206396 scaffold32414__6.0 7831 19038
+				Gap between this and next alignment: 206396 to 208640 (2243 bp)
+				Next Alignment: 208640 210789 C877304__6.0 2 2153
+
+			Align 20: 208640 210789 C877304__6.0 2 2153
+				Gap between this and next alignment: 210789 to 210794 (4 bp)
+				Next Alignment: 210794 211808 C864232__7.0 4 1018
+
+			Align 21: 210794 211808 C864232__7.0 4 1018
+				Gap between this and next alignment: 211808 to 211810 (1 bp)
+				Next Alignment: 211810 225351 scaffold32416__5.0 1 13531
+
+			Align 22: 211810 225351 scaffold32416__5.0 1 13531
+				Negative gap (overlap) between this and next alignment: 225351 to 225325 (-26 bp)
+				Next Alignment: 225325 228928 scaffold32273__6.0 3602 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 3602 to 3575.
+			Align 23: 225352 228928 scaffold32273__6.0 3575 1
+				Gap between this and next alignment: 228928 to 232983 (4054 bp)
+				Next Alignment: 232983 233520 C826284__7.0 538 1
+
+			Align 24: 232983 233520 C826284__7.0 538 1
+				Negative gap (overlap) between this and next alignment: 233520 to 233485 (-35 bp)
+				Next Alignment: 233485 234648 C867856__5.0 1164 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1164 to 1128.
+			Align 25: 233521 234648 C867856__5.0 1128 1
+				Negative gap (overlap) between this and next alignment: 234648 to 234604 (-44 bp)
+				Next Alignment: 234604 236690 C877024__6.0 2088 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 2088 to 2043.
+			Align 26: 234649 236690 C877024__6.0 2043 1
+				Gap between this and next alignment: 236690 to 249790 (13099 bp)
+				Next Alignment: 249790 259708 scaffold32424__6.0 1 9954
+
+			Align 27: 249790 259708 scaffold32424__6.0 1 9954
+				Negative gap (overlap) between this and next alignment: 259708 to 259636 (-72 bp)
+				Next Alignment: 259636 260265 C840438__4.0 1 630
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 74.
+			Align 28: 259709 260265 C840438__4.0 74 630
+				Negative gap (overlap) between this and next alignment: 260265 to 260244 (-21 bp)
+				Next Alignment: 260244 269895 scaffold32333__6.1 1 9639
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 23.
+			Align 29: 260266 269895 scaffold32333__6.1 23 9639
+				Gap between this and next alignment: 269895 to 277243 (7347 bp)
+				Next Alignment: 277243 278570 C870796__6.0 1328 1
+
+			Align 30: 277243 278570 C870796__6.0 1328 1
+				Negative gap (overlap) between this and next alignment: 278570 to 278554 (-16 bp)
+				Next Alignment: 278554 288245 scaffold22194__6.2 18563 8888
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 18563 to 18546.
+			Align 31: 278571 288245 scaffold22194__6.2 18546 8888
+				Gap between this and next alignment: 288245 to 289945 (1699 bp)
+				Next Alignment: 289945 296214 scaffold22194__6.2 6274 1
+
+			Align 32: 289945 296214 scaffold22194__6.2 6274 1
+				Negative gap (overlap) between this and next alignment: 296214 to 296198 (-16 bp)
+				Next Alignment: 296198 296710 C820994__5.0 1 513
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 18.
+			Align 33: 296215 296710 C820994__5.0 18 513
+				Negative gap (overlap) between this and next alignment: 296710 to 296657 (-53 bp)
+				Next Alignment: 296657 297557 C881792__5.0 4665 3765
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 4665 to 4611.
+			Align 34: 296711 297557 C881792__5.0 4611 3765
+				Gap between this and next alignment: 297557 to 300073 (2515 bp)
+				Next Alignment: 300073 300962 scaffold29638__6.4 3890 3001
+
+			Align 35: 300073 300962 scaffold29638__6.4 3890 3001
+				Gap between this and next alignment: 300962 to 310030 (9067 bp)
+				Next Alignment: 310030 314106 scaffold32226__5.8 1 4062
+
+			Align 36: 310030 314106 scaffold32226__5.8 1 4062
+				Gap between this and next alignment: 314106 to 316108 (2001 bp)
+				Next Alignment: 316108 347504 scaffold32384__5.6 31385 1
+
+			Align 37: 316108 347504 scaffold32384__5.6 31385 1
+				Gap between this and next alignment: 347504 to 350560 (3055 bp)
+				Next Alignment: 350560 359922 scaffold32446__5.0 3910 13294
+
+			Align 38: 350560 359922 scaffold32446__5.0 3910 13294
+				Negative gap (overlap) between this and next alignment: 359922 to 359902 (-20 bp)
+				Next Alignment: 359902 382549 scaffold32134__6.0 1 22704
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 22.
+			Align 39: 359923 382549 scaffold32134__6.0 22 22704
+				Negative gap (overlap) between this and next alignment: 382549 to 382506 (-43 bp)
+				Next Alignment: 382506 385947 C880468__6.0 1 3442
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 45.
+			Align 40: 382550 385947 C880468__6.0 45 3442
+				Gap between this and next alignment: 385947 to 392933 (6985 bp)
+				Next Alignment: 392933 393705 scaffold11030__5.9 3 775
+
+			Align 41: 392933 393705 scaffold11030__5.9 3 775
+				Gap between this and next alignment: 393705 to 393876 (170 bp)
+				Next Alignment: 393876 403449 scaffold11030__5.9 980 10578
+
+			Align 42: 393876 403449 scaffold11030__5.9 980 10578
+				Gap between this and next alignment: 403449 to 403550 (100 bp)
+				Next Alignment: 403550 408798 C882192__6.0 1 5249
+
+			Align 43: 403550 408798 C882192__6.0 1 5249
+				Negative gap (overlap) between this and next alignment: 408798 to 408768 (-30 bp)
+				Next Alignment: 408768 423738 scaffold32425__5.5 1 15012
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 32.
+			Align 44: 408799 423738 scaffold32425__5.5 32 15012
+				Gap between this and next alignment: 423738 to 423741 (2 bp)
+				Next Alignment: 423741 425061 C870698__6.0 1 1322
+
+			Align 45: 423741 425061 C870698__6.0 1 1322
+				Negative gap (overlap) between this and next alignment: 425061 to 425052 (-9 bp)
+				Next Alignment: 425052 442330 scaffold31462__5.9 1 17366
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 11.
+			Align 46: 425062 442330 scaffold31462__5.9 11 17366
+				Gap between this and next alignment: 442330 to 442350 (19 bp)
+				Next Alignment: 442350 446998 scaffold32349__6.0 233 4889
+
+			Align 47: 442350 446998 scaffold32349__6.0 233 4889
+				Gap between this and next alignment: 446998 to 447384 (385 bp)
+				Next Alignment: 447384 448720 C870924__7.0 1337 1
+
+			Align 48: 447384 448720 C870924__7.0 1337 1
+				Negative gap (overlap) between this and next alignment: 448720 to 448686 (-34 bp)
+				Next Alignment: 448686 456640 C883252__5.0 1 7957
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 36.
+			Align 49: 448721 456640 C883252__5.0 36 7957
+				Gap between this and next alignment: 456640 to 464127 (7486 bp)
+				Next Alignment: 464127 466305 C877376__5.0 1 2179
+
+			Align 50: 464127 466305 C877376__5.0 1 2179
+				Negative gap (overlap) between this and next alignment: 466305 to 466271 (-34 bp)
+				Next Alignment: 466271 469743 C880518__6.0 1 3472
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 36.
+			Align 51: 466306 469743 C880518__6.0 36 3472
+				Negative gap (overlap) between this and next alignment: 469743 to 469710 (-33 bp)
+				Next Alignment: 469710 470817 C866676__5.0 1110 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1110 to 1076.
+			Align 52: 469744 470817 C866676__5.0 1076 1
+				Gap between this and next alignment: 470817 to 470829 (11 bp)
+				Next Alignment: 470829 480685 scaffold32402__6.0 1 9849
+
+			Align 53: 470829 480685 scaffold32402__6.0 1 9849
+				Gap between this and next alignment: 480685 to 489408 (8722 bp)
+				Next Alignment: 489408 491557 C877284__4.0 1 2150
+
+			Align 54: 489408 491557 C877284__4.0 1 2150
+				Negative gap (overlap) between this and next alignment: 491557 to 491530 (-27 bp)
+				Next Alignment: 491530 492624 C866322__7.0 1 1095
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 29.
+			Align 55: 491558 492624 C866322__7.0 29 1095
+				Negative gap (overlap) between this and next alignment: 492624 to 492598 (-26 bp)
+				Next Alignment: 492598 501700 scaffold32298__5.1 1 9112
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 28.
+			Align 56: 492625 501700 scaffold32298__5.1 28 9112
+				Negative gap (overlap) between this and next alignment: 501700 to 501667 (-33 bp)
+				Next Alignment: 501667 502331 C844232__5.0 665 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 665 to 631.
+			Align 57: 501701 502331 C844232__5.0 631 1
+				Gap between this and next alignment: 502331 to 503597 (1265 bp)
+				Next Alignment: 503597 506241 C878918__6.0 1 2645
+
+			Align 58: 503597 506241 C878918__6.0 1 2645
+				Negative gap (overlap) between this and next alignment: 506241 to 506219 (-22 bp)
+				Next Alignment: 506219 509933 C880834__6.0 3704 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 3704 to 3681.
+			Align 59: 506242 509933 C880834__6.0 3681 1
+				Gap between this and next alignment: 509933 to 521312 (11378 bp)
+				Next Alignment: 521312 530618 scaffold32264__5.0 1 9371
+
+			Align 60: 521312 530618 scaffold32264__5.0 1 9371
+				Gap between this and next alignment: 530618 to 530621 (2 bp)
+				Next Alignment: 530621 537593 scaffold32431__6.0 4 6992
+
+			Align 61: 530621 537593 scaffold32431__6.0 4 6992
+				Gap between this and next alignment: 537593 to 537653 (59 bp)
+				Next Alignment: 537653 540516 C879446__6.0 2864 1
+
+			Align 62: 537653 540516 C879446__6.0 2864 1
+				Gap between this and next alignment: 540516 to 540701 (184 bp)
+				Next Alignment: 540701 550012 scaffold18344__6.2 9267 1
+
+			Align 63: 540701 550012 scaffold18344__6.2 9267 1
+				Negative gap (overlap) between this and next alignment: 550012 to 550002 (-10 bp)
+				Next Alignment: 550002 556066 scaffold32172__5.1 1 6089
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 12.
+			Align 64: 550013 556066 scaffold32172__5.1 12 6089
+				Negative gap (overlap) between this and next alignment: 556066 to 556029 (-37 bp)
+				Next Alignment: 556029 573689 scaffold32304__6.2 21366 3715
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 21366 to 21328.
+			Align 65: 556067 573689 scaffold32304__6.2 21328 3715
+				Gap between this and next alignment: 573689 to 586139 (12449 bp)
+				Next Alignment: 586139 589865 scaffold32304__6.2 3714 1
+
+			Align 66: 586139 589865 scaffold32304__6.2 3714 1
+				Negative gap (overlap) between this and next alignment: 589865 to 589859 (-6 bp)
+				Next Alignment: 589859 596499 scaffold267__5.0 6768 128
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 6768 to 6761.
+			Align 67: 589866 596499 scaffold267__5.0 6761 128
+				Gap between this and next alignment: 596499 to 597536 (1036 bp)
+				Next Alignment: 597536 602520 scaffold28532__6.5 4972 1
+
+			Align 68: 597536 602520 scaffold28532__6.5 4972 1
+				Negative gap (overlap) between this and next alignment: 602520 to 602516 (-4 bp)
+				Next Alignment: 602516 604343 C875636__6.0 1828 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1828 to 1823.
+			Align 69: 602521 604343 C875636__6.0 1823 1
+				Negative gap (overlap) between this and next alignment: 604343 to 604296 (-47 bp)
+				Next Alignment: 604296 605526 C869226__6.0 1 1231
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 49.
+			Align 70: 604344 605526 C869226__6.0 49 1231
+				Gap between this and next alignment: 605526 to 607998 (2471 bp)
+				Next Alignment: 607998 609236 C869390__6.0 1239 1
+
+			Align 71: 607998 609236 C869390__6.0 1239 1
+				Negative gap (overlap) between this and next alignment: 609236 to 609198 (-38 bp)
+				Next Alignment: 609198 616599 scaffold22393__6.1 15614 8235
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 15614 to 15575.
+			Align 72: 609237 616599 scaffold22393__6.1 15575 8235
+				Gap between this and next alignment: 616599 to 623691 (7091 bp)
+				Next Alignment: 623691 634102 scaffold31139__6.0 10353 1
+
+			Align 73: 623691 634102 scaffold31139__6.0 10353 1
+				Negative gap (overlap) between this and next alignment: 634102 to 634059 (-43 bp)
+				Next Alignment: 634059 642850 scaffold32343__5.6 8728 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 8728 to 8684.
+			Align 74: 634103 642850 scaffold32343__5.6 8684 1
+				Gap between this and next alignment: 642850 to 642852 (1 bp)
+				Next Alignment: 642852 649445 C882826__7.0 1 6552
+
+			Align 75: 642852 649445 C882826__7.0 1 6552
+				Gap between this and next alignment: 649445 to 652866 (3420 bp)
+				Next Alignment: 652866 661092 scaffold32409__5.8 13223 4965
+
+			Align 76: 652866 661092 scaffold32409__5.8 13223 4965
+				Gap between this and next alignment: 661092 to 661183 (90 bp)
+				Next Alignment: 661183 666118 scaffold32409__5.8 4936 1
+
+			Align 77: 661183 666118 scaffold32409__5.8 4936 1
+				Negative gap (overlap) between this and next alignment: 666118 to 666081 (-37 bp)
+				Next Alignment: 666081 677228 scaffold28129__6.3 11169 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 11169 to 11131.
+			Align 78: 666119 677228 scaffold28129__6.3 11131 1
+				Gap between this and next alignment: 677228 to 677522 (293 bp)
+				Next Alignment: 677522 687119 scaffold32358__6.0 1 9599
+
+			Align 79: 677522 687119 scaffold32358__6.0 1 9599
+				Gap between this and next alignment: 687119 to 699815 (12695 bp)
+				Next Alignment: 699815 707342 scaffold32358__6.0 20266 27792
+
+			Align 80: 699815 707342 scaffold32358__6.0 20266 27792
+				Negative gap (overlap) between this and next alignment: 707342 to 707298 (-44 bp)
+				Next Alignment: 707298 708287 C863350__7.0 990 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 990 to 945.
+			Align 81: 707343 708287 C863350__7.0 945 1
+				Negative gap (overlap) between this and next alignment: 708287 to 708262 (-25 bp)
+				Next Alignment: 708262 712230 C884466__6.0 1 3969
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 27.
+			Align 82: 708288 712230 C884466__6.0 27 3969
+				Gap between this and next alignment: 712230 to 714601 (2370 bp)
+				Next Alignment: 714601 732948 C884466__6.0 3970 22315
+
+			Align 83: 714601 732948 C884466__6.0 3970 22315
+				Negative gap (overlap) between this and next alignment: 732948 to 732904 (-44 bp)
+				Next Alignment: 732904 734068 C867922__6.0 2 1167
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 2 to 47.
+			Align 84: 732949 734068 C867922__6.0 47 1167
+				Negative gap (overlap) between this and next alignment: 734068 to 734048 (-20 bp)
+				Next Alignment: 734048 758509 scaffold26848__6.0 1 24458
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 22.
+			Align 85: 734069 758509 scaffold26848__6.0 22 24458
+				Negative gap (overlap) between this and next alignment: 758509 to 758481 (-28 bp)
+				Next Alignment: 758481 766167 scaffold31305__6.0 1 7736
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 30.
+			Align 86: 758510 766167 scaffold31305__6.0 30 7736
+			END in gap: 766167 to 771404 (5237 bp)
+
+	Reference Prevotella_nanceiensis_gi_483530682_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 18810 (18810 bp)
+			START in gap: 1 to 51 (50 bp)
+			Align 1: 51 18565 scaffold361__8.2 1 18456
+			END in gap: 18565 to 18810 (245 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Prevotella_nanceiensis/contigs_reports/nucmer_output/SOAPdenovo2.used_snps
+
+Results:
+	Local Misassemblies: 21
+	Misassemblies: 25
+		Relocations: 21
+		Translocations: 4
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 10
+	Misassembled Contigs: 18
+	Misassembled Contig Bases: 897858
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 46 part
+Partially Unaligned Contigs with Misassemblies: 4
+Unaligned Contig Bases: 356963
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 2140018
+
+	SNPs: 60064
+	Insertions: 4277
+	Deletions: 2335
+
+	Positive Gaps: 159
+		Internal Gaps:  47
+		External Gaps:  112
+		External Gap Total:  367952
+		External Gap Average: 3285
+	Negative Gaps: 92
+		Internal Overlaps:  2
+		External Overlaps:  90
+		External Overlaps Total: -2999
+		External Overlaps Average: -33
+	Contigs with Redundant Alignments: 3 (890)

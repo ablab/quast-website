@@ -1,0 +1,153 @@
+/home/gurevich/rep/quast/quast.pyc -t 16 -j  --meta  --bed-file /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/combined_reference/structural_variations/combined_reference.bed --no-check-meta  --contig-thresholds 1000,5000,10000,25000,50000 -R /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Parabacteroides_johnsonii.fasta -o /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_johnsonii --labels "IDBA_UD, Ray, SOAPdenovo2, SPAdes" /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/IDBA_UD_to_Parabacteroides_johnsonii.fasta /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Ray_to_Parabacteroides_johnsonii.fasta /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SOAPdenovo2_to_Parabacteroides_johnsonii.fasta /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SPAdes_to_Parabacteroides_johnsonii.fasta
+
+Started: 2015-11-09 20:29:11
+
+Logging to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_johnsonii/quast.log
+
+NOTICE: Output directory already exists. Existing Nucmer alignments can be used.
+
+Reference:
+  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Parabacteroides_johnsonii.fasta ==> Parabacteroides_johnsonii
+
+Contigs:
+  1  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/IDBA_UD_to_Parabacteroides_johnsonii.fasta ==> IDBA_UD
+  2  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Ray_to_Parabacteroides_johnsonii.fasta ==> Ray
+  3  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SOAPdenovo2_to_Parabacteroides_johnsonii.fasta ==> SOAPdenovo2
+  4  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SPAdes_to_Parabacteroides_johnsonii.fasta ==> SPAdes
+
+2015-11-09 20:29:12
+Running Basic statistics processor...
+  Reference genome:
+    Parabacteroides_johnsonii.fasta, Reference length = 4629061, Reference GC % = 45.13
+  Contig files: 
+    1  IDBA_UD
+    2  Ray
+    3  SOAPdenovo2
+    4  SPAdes
+  Calculating N50 and L50...
+    1  IDBA_UD, N50 = 68188, L50 = 1, Total length = 105745, GC % = 43.39, # N's per 100 kbp =  43.50
+    2  Ray, N50 = 60771, L50 = 1, Total length = 72674, GC % = 45.89, # N's per 100 kbp =  1508.10
+    3  SOAPdenovo2, N50 = 2869, L50 = 7, Total length = 68759, GC % = 43.65, # N's per 100 kbp =  397.04
+    4  SPAdes, N50 = 54211, L50 = 1, Total length = 105257, GC % = 43.62, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_johnsonii/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_johnsonii/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_johnsonii/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_johnsonii/basic_stats/GC_content_plot.pdf
+Done.
+
+2015-11-09 20:29:14
+Running Contig analyzer...
+  1  IDBA_UD
+  2  Ray
+  3  SOAPdenovo2
+  4  SPAdes
+  1  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_johnsonii/contigs_reports/contigs_report_IDBA_UD.stdout and contigs_report_IDBA_UD.stderr...
+  4  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_johnsonii/contigs_reports/contigs_report_SPAdes.stdout and contigs_report_SPAdes.stderr...
+  2  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_johnsonii/contigs_reports/contigs_report_Ray.stdout and contigs_report_Ray.stderr...
+  3  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_johnsonii/contigs_reports/contigs_report_SOAPdenovo2.stdout and contigs_report_SOAPdenovo2.stderr...
+  4  Running Nucmer
+  1  Using existing Nucmer alignments... 
+  4  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/nucmer -c 65 -l 65 --maxmatch \
+     -p runs_per_reference/Parabacteroides_johnsonii/contigs_reports/nucmer_output/SPAdes \
+     runs_per_reference/Parabacteroides_johnsonii/quast_corrected_input/Parabacteroides_johnsonii.fasta \
+     quast_corrected_input/SPAdes_to_Parabacteroides_johnsonii.fasta >> runs_per_reference/Parabacteroides_johnsonii/contigs_reports/contigs_report_SPAdes.stdout \
+     2>> runs_per_reference/Parabacteroides_johnsonii/contigs_reports/contigs_report_SPAdes.stderr
+  2  Using existing Nucmer alignments... 
+  3  Running Nucmer
+  3  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/nucmer -c 65 -l 65 --maxmatch \
+     -p runs_per_reference/Parabacteroides_johnsonii/contigs_reports/nucmer_output/SOAPdenovo2 \
+     runs_per_reference/Parabacteroides_johnsonii/quast_corrected_input/Parabacteroides_johnsonii.fasta \
+     quast_corrected_input/SOAPdenovo2_to_Parabacteroides_johnsonii.fasta >> runs_per_reference/Parabacteroides_johnsonii/contigs_reports/contigs_report_SOAPdenovo2.stdout \
+     2>> runs_per_reference/Parabacteroides_johnsonii/contigs_reports/contigs_report_SOAPdenovo2.stderr
+  2  Alignments: runs_per_reference/Parabacteroides_johnsonii/contigs_reports/alignments_Ray.tsv
+  2  Analysis is finished.
+
+  1  Alignments: runs_per_reference/Parabacteroides_johnsonii/contigs_reports/alignments_IDBA_UD.tsv
+  1  Analysis is finished.
+
+  3  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/delta-filter -i 95 -l 0 runs_per_reference/Parabacteroides_johnsonii/contigs_reports/nucmer_output/SOAPdenovo2.delta \
+     > runs_per_reference/Parabacteroides_johnsonii/contigs_reports/nucmer_output/SOAPdenovo2.fdelta \
+     2> runs_per_reference/Parabacteroides_johnsonii/contigs_reports/contigs_report_SOAPdenovo2.stderr
+  3  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-coords runs_per_reference/Parabacteroides_johnsonii/contigs_reports/nucmer_output/SOAPdenovo2.delta \
+     > runs_per_reference/Parabacteroides_johnsonii/contigs_reports/nucmer_output/SOAPdenovo2.coords_tmp \
+     2> runs_per_reference/Parabacteroides_johnsonii/contigs_reports/contigs_report_SOAPdenovo2.stderr
+  3  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-snps -S -T -H runs_per_reference/Parabacteroides_johnsonii/contigs_reports/nucmer_output/SOAPdenovo2.delta \
+     < runs_per_reference/Parabacteroides_johnsonii/contigs_reports/nucmer_output/SOAPdenovo2.coords.headless \
+     > runs_per_reference/Parabacteroides_johnsonii/contigs_reports/nucmer_output/SOAPdenovo2.all_snps \
+     2> runs_per_reference/Parabacteroides_johnsonii/contigs_reports/contigs_report_SOAPdenovo2.stderr
+  4  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/delta-filter -i 95 -l 0 runs_per_reference/Parabacteroides_johnsonii/contigs_reports/nucmer_output/SPAdes.delta \
+     > runs_per_reference/Parabacteroides_johnsonii/contigs_reports/nucmer_output/SPAdes.fdelta \
+     2> runs_per_reference/Parabacteroides_johnsonii/contigs_reports/contigs_report_SPAdes.stderr
+  4  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-coords runs_per_reference/Parabacteroides_johnsonii/contigs_reports/nucmer_output/SPAdes.delta \
+     > runs_per_reference/Parabacteroides_johnsonii/contigs_reports/nucmer_output/SPAdes.coords_tmp \
+     2> runs_per_reference/Parabacteroides_johnsonii/contigs_reports/contigs_report_SPAdes.stderr
+  4  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-snps -S -T -H runs_per_reference/Parabacteroides_johnsonii/contigs_reports/nucmer_output/SPAdes.delta \
+     < runs_per_reference/Parabacteroides_johnsonii/contigs_reports/nucmer_output/SPAdes.coords.headless \
+     > runs_per_reference/Parabacteroides_johnsonii/contigs_reports/nucmer_output/SPAdes.all_snps \
+     2> runs_per_reference/Parabacteroides_johnsonii/contigs_reports/contigs_report_SPAdes.stderr
+  3  Alignments: runs_per_reference/Parabacteroides_johnsonii/contigs_reports/alignments_SOAPdenovo2.tsv
+  3  Analysis is finished.
+
+  4  Alignments: runs_per_reference/Parabacteroides_johnsonii/contigs_reports/alignments_SPAdes.tsv
+  4  Analysis is finished.
+
+  Creating total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_johnsonii/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_johnsonii/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_johnsonii/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_johnsonii/contigs_reports/misassemblies_plot.pdf
+Done.
+
+2015-11-09 20:29:20
+Running NA-NGA calculation...
+  1  IDBA_UD, Largest alignment = 8218, NA50 = None, LA50 = None
+  2  Ray, Largest alignment = 6002, NA50 = None, LA50 = None
+  3  SOAPdenovo2, Largest alignment = 9696, NA50 = 1801, LA50 = 9
+  4  SPAdes, Largest alignment = 6852, NA50 = None, LA50 = None
+  Drawing cumulative plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_johnsonii/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_johnsonii/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_johnsonii/aligned_stats/NGAx_plot.pdf
+Done.
+
+2015-11-09 20:29:22
+Running Genome analyzer...
+  NOTICE: No file with genes provided. Use the -G option if you want to specify it.
+  NOTICE: No file with operons provided. Use the -O option if you want to specify it.
+  1  IDBA_UD
+  2  Ray
+  3  SOAPdenovo2
+  4  SPAdes
+  2  Analysis is finished.
+  1  Analysis is finished.
+  4  Analysis is finished.
+  3  Analysis is finished.
+  Drawing Genome fraction, % histogram...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_johnsonii/genome_stats/genome_fraction_histogram.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding option to enable it.
+
+2015-11-09 20:29:24
+Drawing large plots...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating contig alignment plot...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2015-11-09 20:29:27
+RESULTS:
+  Text versions of total report are saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_johnsonii/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_johnsonii/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_johnsonii/report.html
+  PDF version (tables and plots) saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_johnsonii/report.pdf
+  Contig alignment plot: /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_johnsonii/alignment.svg

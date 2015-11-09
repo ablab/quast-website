@@ -1,0 +1,121 @@
+/home/gurevich/rep/quast/quast.pyc -t 16 -j  --meta  --bed-file /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/combined_reference/structural_variations/combined_reference.bed --no-check-meta  --contig-thresholds 1000,5000,10000,25000,50000 -R /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Bacteroides_pectinophilus.fasta -o /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_pectinophilus --labels "IDBA_UD, Ray, SOAPdenovo2, SPAdes" /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/IDBA_UD_to_Bacteroides_pectinophilus.fasta /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Ray_to_Bacteroides_pectinophilus.fasta /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SOAPdenovo2_to_Bacteroides_pectinophilus.fasta /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SPAdes_to_Bacteroides_pectinophilus.fasta
+
+Started: 2015-11-09 20:11:27
+
+Logging to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_pectinophilus/quast.log
+
+NOTICE: Output directory already exists. Existing Nucmer alignments can be used.
+
+Reference:
+  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Bacteroides_pectinophilus.fasta ==> Bacteroides_pectinophilus
+
+Contigs:
+  1  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/IDBA_UD_to_Bacteroides_pectinophilus.fasta ==> IDBA_UD
+  2  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Ray_to_Bacteroides_pectinophilus.fasta ==> Ray
+  3  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SOAPdenovo2_to_Bacteroides_pectinophilus.fasta ==> SOAPdenovo2
+  4  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SPAdes_to_Bacteroides_pectinophilus.fasta ==> SPAdes
+
+2015-11-09 20:11:28
+Running Basic statistics processor...
+  Reference genome:
+    Bacteroides_pectinophilus.fasta, Reference length = 29332, Reference GC % = 36.96
+  Contig files: 
+    1  IDBA_UD
+    2  Ray
+    3  SOAPdenovo2
+    4  SPAdes
+  Calculating N50 and L50...
+    1  IDBA_UD, N50 = 10709, L50 = 2, Total length = 75522, GC % = 41.01, # N's per 100 kbp =  186.70
+    2  Ray, N50 = 33075, L50 = 1, Total length = 49097, GC % = 42.33, # N's per 100 kbp =  1433.90
+    3  SOAPdenovo2, N50 = 624, L50 = 4, Total length = 5850, GC % = 36.04, # N's per 100 kbp =  6752.14
+    4  SPAdes, N50 = 9186, L50 = 2, Total length = 71278, GC % = 41.76, # N's per 100 kbp =  171.16
+  Drawing Nx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_pectinophilus/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_pectinophilus/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_pectinophilus/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_pectinophilus/basic_stats/GC_content_plot.pdf
+Done.
+
+2015-11-09 20:11:29
+Running Contig analyzer...
+  1  IDBA_UD
+  2  Ray
+  3  SOAPdenovo2
+  4  SPAdes
+  3  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_pectinophilus/contigs_reports/contigs_report_SOAPdenovo2.stdout and contigs_report_SOAPdenovo2.stderr...
+  2  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_pectinophilus/contigs_reports/contigs_report_Ray.stdout and contigs_report_Ray.stderr...
+  4  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_pectinophilus/contigs_reports/contigs_report_SPAdes.stdout and contigs_report_SPAdes.stderr...
+  2  Using existing Nucmer alignments... 
+  3  Using existing Nucmer alignments... 
+  4  Using existing Nucmer alignments... 
+  2  Alignments: runs_per_reference/Bacteroides_pectinophilus/contigs_reports/alignments_Ray.tsv
+  2  Analysis is finished.
+
+  1  Alignments: runs_per_reference/Bacteroides_pectinophilus/contigs_reports/alignments_IDBA_UD.tsv
+  1  Analysis is finished.
+
+  4  Alignments: runs_per_reference/Bacteroides_pectinophilus/contigs_reports/alignments_SPAdes.tsv
+  4  Analysis is finished.
+
+  3  Alignments: runs_per_reference/Bacteroides_pectinophilus/contigs_reports/alignments_SOAPdenovo2.tsv
+  3  Analysis is finished.
+
+  Creating total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_pectinophilus/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_pectinophilus/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_pectinophilus/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_pectinophilus/contigs_reports/misassemblies_plot.pdf
+Done.
+
+2015-11-09 20:11:31
+Running NA-NGA calculation...
+  1  IDBA_UD, Largest alignment = 3695, NA50 = None, NGA50 = 1793, LA50 = None, LGA50 = 6
+  2  Ray, Largest alignment = 2326, NA50 = None, LA50 = None
+  3  SOAPdenovo2, Largest alignment = 1044, NA50 = 538, LA50 = 5
+  4  SPAdes, Largest alignment = 2624, NA50 = None, NGA50 = 667, LA50 = None, LGA50 = 12
+  Drawing cumulative plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_pectinophilus/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_pectinophilus/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_pectinophilus/aligned_stats/NGAx_plot.pdf
+Done.
+
+2015-11-09 20:11:32
+Running Genome analyzer...
+  NOTICE: No file with genes provided. Use the -G option if you want to specify it.
+  NOTICE: No file with operons provided. Use the -O option if you want to specify it.
+  1  IDBA_UD
+  2  Ray
+  3  SOAPdenovo2
+  4  SPAdes
+  3  Analysis is finished.
+  4  Analysis is finished.
+  2  Analysis is finished.
+  1  Analysis is finished.
+  Drawing Genome fraction, % histogram...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_pectinophilus/genome_stats/genome_fraction_histogram.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding option to enable it.
+
+2015-11-09 20:11:33
+Drawing large plots...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating contig alignment plot...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2015-11-09 20:11:38
+RESULTS:
+  Text versions of total report are saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_pectinophilus/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_pectinophilus/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_pectinophilus/report.html
+  PDF version (tables and plots) saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_pectinophilus/report.pdf
+  Contig alignment plot: /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_pectinophilus/alignment.svg

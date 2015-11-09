@@ -1,0 +1,386 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Anaerotruncus_colihominis_gi_224021158_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 1
+	Total Region Length: 3719688
+Analyzing contigs...
+CONTIG: scaffold-21 (34615bp)
+Top Length: 77  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 77 out of 34615 bases)
+		Alignment: 1342160 1342236 | 32658 32582 | 77 77 | 100.0 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-21
+		Unaligned bases: 1 to 32581 (32581)
+		Unaligned bases: 32659 to 34615 (1957)
+
+CONTIG: scaffold-56 (16669bp)
+Top Length: 12273  Top ID: 96.44
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 1174075 1186349 | 2359 14631 | 12275 12273 | 96.44 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-56
+			  Overlap between these two alignments (local misassembly). Inconsistency = -189 
+			Real Alignment 2: 1186349 1188198 | 14820 16669 | 1850 1850 | 98.27 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-56
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-468 (11226bp)
+Top Length: 4117  Top ID: 96.92
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 11226 and total length of all aligns is 5171
+		Alignment: 1139030 1140083 | 4098 5151 | 1054 1054 | 95.16 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-468
+		Alignment: 1140078 1144193 | 5344 9460 | 4116 4117 | 96.92 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-468
+		Unaligned bases: 6055
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold-725 (16421bp)
+Top Length: 312  Top ID: 95.83
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 2584469 2584780 | 16421 16110 | 312 312 | 95.83 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-725
+		This contig is partially unaligned. (Aligned 312 out of 16421 bases)
+		Alignment: 182185 182496 | 16421 16110 | 312 312 | 95.19 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-725
+		Unaligned bases: 1 to 16109 (16109)
+
+CONTIG: scaffold-2291 (4698bp)
+Top Length: 1552  Top ID: 96.78
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 1134875 1135360 | 844 359 | 486 486 | 96.09 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-2291
+			  Overlap between these two alignments (local misassembly). Inconsistency = -99 
+			Real Alignment 2: 1133325 1134875 | 2494 943 | 1551 1552 | 96.78 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-2291
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 3: 382364 383101 | 3234 2495 | 738 740 | 97.3 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-2291
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-2412 (10831bp)
+Top Length: 7228  Top ID: 96.43
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 372820 373378 | 1 559 | 559 559 | 98.57 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-2412
+			  Overlap between these two alignments (local misassembly). Inconsistency = -144 
+			Real Alignment 2: 373385 374334 | 710 1659 | 950 950 | 97.89 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-2412
+			  Overlap between these two alignments (local misassembly). Inconsistency = -149 
+			Real Alignment 3: 374303 381529 | 1777 9004 | 7227 7228 | 96.43 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-2412
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-2521 (1993bp)
+Top Length: 1320  Top ID: 98.33
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 2586225 2586812 | 1993 1406 | 588 588 | 95.75 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-2521
+		Skipping redundant alignment 2586719 2588037 | 1321 3 | 1319 1319 | 97.8 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-2521
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 184181 185500 | 1321 2 | 1320 1320 | 98.33 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-2521
+			  Overlap between these two alignments (local misassembly). Inconsistency = -178 
+			Real Alignment 2: 183687 184274 | 1993 1406 | 588 588 | 95.58 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-2521
+
+CONTIG: scaffold-2541 (1513bp)
+Top Length: 714  Top ID: 97.06
+		Skipping redundant alignment 188079 188703 | 1513 889 | 625 625 | 97.6 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-2541
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 188738 189451 | 714 1 | 714 714 | 96.22 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-2541
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 2590840 2591553 | 714 1 | 714 714 | 97.06 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-2541
+			  Overlap between these two alignments (local misassembly). Inconsistency = -140 
+			Real Alignment 2: 2590181 2590829 | 1513 865 | 649 649 | 97.23 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-2541
+
+CONTIG: scaffold-2721 (6837bp)
+Top Length: 6835  Top ID: 97.0
+		One align captures most of this contig: 366262 373096 | 1 6835 | 6835 6835 | 97.0 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-2721
+
+CONTIG: scaffold-2796 (1759bp)
+Top Length: 1759  Top ID: 97.95
+		One align captures most of this contig: 1188531 1190289 | 1759 1 | 1759 1759 | 97.95 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-2796
+
+CONTIG: scaffold-2839 (10341bp)
+Top Length: 137  Top ID: 97.08
+		This contig is partially unaligned. (Aligned 137 out of 10341 bases)
+		Alignment: 2564084 2564220 | 10205 10341 | 137 137 | 97.08 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-2839
+		Unaligned bases: 1 to 10204 (10204)
+
+CONTIG: scaffold-3266 (4971bp)
+Top Length: 4964  Top ID: 98.73
+		One align captures most of this contig: 1190601 1195563 | 4971 8 | 4963 4964 | 98.73 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-3266
+
+CONTIG: scaffold-3342 (4219bp)
+Top Length: 3538  Top ID: 98.78
+		This contig is partially unaligned. (Aligned 3538 out of 4219 bases)
+		Alignment: 352624 356161 | 3538 1 | 3538 3538 | 98.78 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-3342
+		Unaligned bases: 3539 to 4219 (681)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-3963 (1739bp)
+Top Length: 1739  Top ID: 99.94
+		One align captures most of this contig: 2566712 2568450 | 1739 1 | 1739 1739 | 99.94 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-3963
+
+CONTIG: scaffold-7117 (9462bp)
+Top Length: 9462  Top ID: 98.33
+		One align captures most of this contig: 356489 365950 | 1 9462 | 9462 9462 | 98.33 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-7117
+
+CONTIG: scaffold-7149 (2133bp)
+Top Length: 1775  Top ID: 98.54
+		This contig is partially unaligned. (Aligned 1775 out of 2133 bases)
+		Alignment: 2574625 2576397 | 1 1775 | 1773 1775 | 98.54 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-7149
+		Unaligned bases: 1776 to 2133 (358)
+
+CONTIG: scaffold-8875 (1919bp)
+Top Length: 1907  Top ID: 98.48
+		This contig has 2 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 190585 192491 | 1 1907 | 1907 1907 | 98.48 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-8875
+		Skipping alignment  2592687 2594605 | 1 1919 | 1919 1919 | 97.45 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-8875
+
+CONTIG: scaffold-12245 (1247bp)
+Top Length: 1247  Top ID: 95.75
+		One align captures most of this contig: 1152497 1153742 | 1 1247 | 1246 1247 | 95.75 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-12245
+
+CONTIG: scaffold-24826 (707bp)
+Top Length: 707  Top ID: 97.88
+		One align captures most of this contig: 2573319 2574025 | 707 1 | 707 707 | 97.88 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-24826
+
+CONTIG: scaffold-32204 (628bp)
+Top Length: 625  Top ID: 98.88
+		One align captures most of this contig: 2604368 2604992 | 628 4 | 625 625 | 98.88 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-32204
+
+CONTIG: scaffold-36202 (630bp)
+Top Length: 80  Top ID: 97.53
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 89766 89845 | 111 190 | 80 80 | 97.53 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-36202
+		Skipping redundant alignment 320556 320635 | 111 190 | 80 80 | 97.53 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-36202
+		Skipping redundant alignment 3475215 3475294 | 111 190 | 80 80 | 97.53 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-36202
+		This contig is partially unaligned. (Aligned 80 out of 630 bases)
+		Alignment: 74849 74928 | 111 190 | 80 80 | 97.53 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-36202
+		Unaligned bases: 1 to 110 (110)
+		Unaligned bases: 191 to 630 (440)
+
+CONTIG: scaffold-61445 (917bp)
+Top Length: 917  Top ID: 97.71
+		One align captures most of this contig: 2609234 2610150 | 1 917 | 917 917 | 97.71 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-61445
+
+CONTIG: scaffold-78909 (516bp)
+Top Length: 515  Top ID: 99.42
+		One align captures most of this contig: 1347186 1347700 | 515 1 | 515 515 | 99.42 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-78909
+
+CONTIG: scaffold-79411 (1146bp)
+Top Length: 1146  Top ID: 97.73
+		One align captures most of this contig: 2561851 2562988 | 1146 1 | 1138 1146 | 97.73 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-79411
+
+CONTIG: scaffold-82490 (1078bp)
+Top Length: 1078  Top ID: 97.03
+		One align captures most of this contig: 187206 188283 | 1078 1 | 1078 1078 | 97.03 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-82490
+
+CONTIG: scaffold-91375 (1262bp)
+Top Length: 1262  Top ID: 96.59
+		One align captures most of this contig: 2564525 2565786 | 1 1262 | 1262 1262 | 96.59 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-91375
+
+CONTIG: scaffold-100198 (1567bp)
+Top Length: 1567  Top ID: 97.58
+		One align captures most of this contig: 1344464 1346031 | 1567 1 | 1568 1567 | 97.58 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-100198
+
+CONTIG: scaffold-176291 (707bp)
+Top Length: 707  Top ID: 100.0
+		One align captures most of this contig: 2603544 2604250 | 1 707 | 707 707 | 100.0 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-176291
+
+CONTIG: scaffold-192767 (893bp)
+Top Length: 893  Top ID: 99.55
+		One align captures most of this contig: 2600235 2601127 | 893 1 | 893 893 | 99.55 | Anaerotruncus_colihominis_gi_224021158_ref_NZ_ scaffold-192767
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Anaerotruncus_colihominis/contigs_reports/nucmer_output/Ray.used_snps
+	Reference Anaerotruncus_colihominis_gi_224021158_ref_NZ_: 37 total alignments. 1 total regions.
+		Region: 1 to 3719688 (3719688 bp)
+			START in gap: 1 to 74849 (74848 bp)
+			Align 1: 74849 74928 scaffold-36202 111 190
+				Gap between this and next alignment: 74928 to 182185 (107256 bp)
+				Next Alignment: 182185 182496 scaffold-725 16421 16110
+
+			Align 2: 182185 182496 scaffold-725 16421 16110
+				Gap between this and next alignment: 182496 to 183687 (1190 bp)
+				Next Alignment: 183687 184274 scaffold-2521 1993 1406
+
+			Align 3: 183687 184274 scaffold-2521 1993 1406
+				Negative gap (overlap) between this and next alignment: 184274 to 184181 (-93 bp)
+				Next Alignment: 184181 185500 scaffold-2521 1321 2
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1321 to 1227.
+			Align 4: 184275 185500 scaffold-2521 1227 2
+				Gap between this and next alignment: 185500 to 187206 (1705 bp)
+				Next Alignment: 187206 188283 scaffold-82490 1078 1
+
+			Align 5: 187206 188283 scaffold-82490 1078 1
+				Gap between this and next alignment: 188283 to 190585 (2301 bp)
+				Next Alignment: 190585 192491 scaffold-8875 1 1907
+
+			Align 6: 190585 192491 scaffold-8875 1 1907
+				Gap between this and next alignment: 192491 to 352624 (160132 bp)
+				Next Alignment: 352624 356161 scaffold-3342 3538 1
+
+			Align 7: 352624 356161 scaffold-3342 3538 1
+				Gap between this and next alignment: 356161 to 356489 (327 bp)
+				Next Alignment: 356489 365950 scaffold-7117 1 9462
+
+			Align 8: 356489 365950 scaffold-7117 1 9462
+				Gap between this and next alignment: 365950 to 366262 (311 bp)
+				Next Alignment: 366262 373096 scaffold-2721 1 6835
+
+			Align 9: 366262 373096 scaffold-2721 1 6835
+				Negative gap (overlap) between this and next alignment: 373096 to 372820 (-276 bp)
+				Next Alignment: 372820 373378 scaffold-2412 1 559
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 278.
+			Align 10: 373097 373378 scaffold-2412 278 559
+				Gap between this and next alignment: 373378 to 373385 (6 bp)
+				Next Alignment: 373385 374334 scaffold-2412 710 1659
+
+			Align 11: 373385 374334 scaffold-2412 710 1659
+				Negative gap (overlap) between this and next alignment: 374334 to 374303 (-31 bp)
+				Next Alignment: 374303 381529 scaffold-2412 1777 9004
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1777 to 1809.
+			Align 12: 374335 381529 scaffold-2412 1809 9004
+				Gap between this and next alignment: 381529 to 382364 (834 bp)
+				Next Alignment: 382364 383101 scaffold-2291 3234 2495
+
+			Align 13: 382364 383101 scaffold-2291 3234 2495
+				Gap between this and next alignment: 383101 to 1133325 (750223 bp)
+				Next Alignment: 1133325 1134875 scaffold-2291 2494 943
+
+			Align 14: 1133325 1134875 scaffold-2291 2494 943
+				Negative gap (overlap) between this and next alignment: 1134875 to 1134875 (0 bp)
+				Next Alignment: 1134875 1135360 scaffold-2291 844 359
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 844 to 843.
+			Align 15: 1134876 1135360 scaffold-2291 843 359
+				Gap between this and next alignment: 1135360 to 1139030 (3669 bp)
+				Next Alignment: 1139030 1140083 scaffold-468 4098 5151
+
+			Align 16: 1139030 1140083 scaffold-468 4098 5151
+				Negative gap (overlap) between this and next alignment: 1140083 to 1140078 (-5 bp)
+				Next Alignment: 1140078 1144193 scaffold-468 5344 9460
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 5344 to 5350.
+			Align 17: 1140084 1144193 scaffold-468 5350 9460
+				Gap between this and next alignment: 1144193 to 1152497 (8303 bp)
+				Next Alignment: 1152497 1153742 scaffold-12245 1 1247
+
+			Align 18: 1152497 1153742 scaffold-12245 1 1247
+				Gap between this and next alignment: 1153742 to 1174075 (20332 bp)
+				Next Alignment: 1174075 1186349 scaffold-56 2359 14631
+
+			Align 19: 1174075 1186349 scaffold-56 2359 14631
+				Negative gap (overlap) between this and next alignment: 1186349 to 1186349 (0 bp)
+				Next Alignment: 1186349 1188198 scaffold-56 14820 16669
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 14820 to 14821.
+			Align 20: 1186350 1188198 scaffold-56 14821 16669
+				Gap between this and next alignment: 1188198 to 1188531 (332 bp)
+				Next Alignment: 1188531 1190289 scaffold-2796 1759 1
+
+			Align 21: 1188531 1190289 scaffold-2796 1759 1
+				Gap between this and next alignment: 1190289 to 1190601 (311 bp)
+				Next Alignment: 1190601 1195563 scaffold-3266 4971 8
+
+			Align 22: 1190601 1195563 scaffold-3266 4971 8
+				Gap between this and next alignment: 1195563 to 1342160 (146596 bp)
+				Next Alignment: 1342160 1342236 scaffold-21 32658 32582
+
+			Align 23: 1342160 1342236 scaffold-21 32658 32582
+				Gap between this and next alignment: 1342236 to 1344464 (2227 bp)
+				Next Alignment: 1344464 1346031 scaffold-100198 1567 1
+
+			Align 24: 1344464 1346031 scaffold-100198 1567 1
+				Gap between this and next alignment: 1346031 to 1347186 (1154 bp)
+				Next Alignment: 1347186 1347700 scaffold-78909 515 1
+
+			Align 25: 1347186 1347700 scaffold-78909 515 1
+				Gap between this and next alignment: 1347700 to 2561851 (1214150 bp)
+				Next Alignment: 2561851 2562988 scaffold-79411 1146 1
+
+			Align 26: 2561851 2562988 scaffold-79411 1146 1
+				Gap between this and next alignment: 2562988 to 2564084 (1095 bp)
+				Next Alignment: 2564084 2564220 scaffold-2839 10205 10341
+
+			Align 27: 2564084 2564220 scaffold-2839 10205 10341
+				Gap between this and next alignment: 2564220 to 2564525 (304 bp)
+				Next Alignment: 2564525 2565786 scaffold-91375 1 1262
+
+			Align 28: 2564525 2565786 scaffold-91375 1 1262
+				Gap between this and next alignment: 2565786 to 2566712 (925 bp)
+				Next Alignment: 2566712 2568450 scaffold-3963 1739 1
+
+			Align 29: 2566712 2568450 scaffold-3963 1739 1
+				Gap between this and next alignment: 2568450 to 2573319 (4868 bp)
+				Next Alignment: 2573319 2574025 scaffold-24826 707 1
+
+			Align 30: 2573319 2574025 scaffold-24826 707 1
+				Gap between this and next alignment: 2574025 to 2574625 (599 bp)
+				Next Alignment: 2574625 2576397 scaffold-7149 1 1775
+
+			Align 31: 2574625 2576397 scaffold-7149 1 1775
+				Gap between this and next alignment: 2576397 to 2590181 (13783 bp)
+				Next Alignment: 2590181 2590829 scaffold-2541 1513 865
+
+			Align 32: 2590181 2590829 scaffold-2541 1513 865
+				Gap between this and next alignment: 2590829 to 2590840 (10 bp)
+				Next Alignment: 2590840 2591553 scaffold-2541 714 1
+
+			Align 33: 2590840 2591553 scaffold-2541 714 1
+				Gap between this and next alignment: 2591553 to 2600235 (8681 bp)
+				Next Alignment: 2600235 2601127 scaffold-192767 893 1
+
+			Align 34: 2600235 2601127 scaffold-192767 893 1
+				Gap between this and next alignment: 2601127 to 2603544 (2416 bp)
+				Next Alignment: 2603544 2604250 scaffold-176291 1 707
+
+			Align 35: 2603544 2604250 scaffold-176291 1 707
+				Gap between this and next alignment: 2604250 to 2604368 (117 bp)
+				Next Alignment: 2604368 2604992 scaffold-32204 628 4
+
+			Align 36: 2604368 2604992 scaffold-32204 628 4
+				Gap between this and next alignment: 2604992 to 2609234 (4241 bp)
+				Next Alignment: 2609234 2610150 scaffold-61445 1 917
+
+			Align 37: 2609234 2610150 scaffold-61445 1 917
+			END in gap: 2610150 to 3719688 (1109538 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Anaerotruncus_colihominis/contigs_reports/nucmer_output/Ray.used_snps
+
+Results:
+	Local Misassemblies: 6
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 1
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 7 part
+Partially Unaligned Contigs with Misassemblies: 1
+Unaligned Contig Bases: 68495
+
+Ambiguously Mapped Contigs: 1
+Total Bases in Ambiguously Mapped Contigs: 1907
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 76904
+
+	SNPs: 1444
+	Insertions: 19
+	Deletions: 9
+
+	Positive Gaps: 32
+		Internal Gaps:  3
+		External Gaps:  29
+		External Gap Total:  2892545
+		External Gap Average: 99743
+	Negative Gaps: 6
+		Internal Overlaps:  5
+		External Overlaps:  1
+		External Overlaps Total: -276
+		External Overlaps Average: -276
+	Contigs with Redundant Alignments: 0 (0)

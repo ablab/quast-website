@@ -1,0 +1,411 @@
+Aligning contigs to reference...
+	Running Nucmer
+Parsing coords...
+Loading reference...
+	Loaded [Parabacteroides_johnsonii_gi_423340855_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 1
+	Total Region Length: 4629061
+Analyzing contigs...
+CONTIG: scaffold11889__2.5 (619bp)
+Top Length: 104  Top ID: 97.12
+		This contig is partially unaligned. (Aligned 104 out of 619 bases)
+		Alignment: 3632179 3632282 | 1 104 | 104 104 | 97.12 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ scaffold11889__2.5
+		Unaligned bases: 105 to 619 (515)
+
+CONTIG: scaffold20506__8.1 (5994bp)
+Top Length: 99  Top ID: 100.0
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 4041919 4042017 | 4263 4165 | 99 99 | 100.0 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ scaffold20506__8.1
+		Skipping redundant alignment 4617912 4618010 | 4263 4165 | 99 99 | 100.0 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ scaffold20506__8.1
+		This contig is partially unaligned. (Aligned 99 out of 5994 bases)
+		Alignment: 1720665 1720763 | 4263 4165 | 99 99 | 100.0 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ scaffold20506__8.1
+		Unaligned bases: 1 to 4164 (4164)
+		Unaligned bases: 4264 to 5994 (1731)
+
+CONTIG: scaffold52939__6.4 (712bp)
+Top Length: 352  Top ID: 99.43
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 1222017 1222368 | 361 712 | 352 352 | 99.43 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ scaffold52939__6.4
+		Skipping redundant alignment 1508239 1508590 | 361 712 | 352 352 | 99.43 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ scaffold52939__6.4
+		Skipping redundant alignment 4040150 4040501 | 361 712 | 352 352 | 99.43 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ scaffold52939__6.4
+		Skipping redundant alignment 4225779 4226130 | 361 712 | 352 352 | 99.43 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ scaffold52939__6.4
+		This contig is partially unaligned. (Aligned 352 out of 712 bases)
+		Alignment: 913470 913821 | 361 712 | 352 352 | 99.43 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ scaffold52939__6.4
+		Unaligned bases: 1 to 360 (360)
+
+CONTIG: C721386_64.0 (517bp)
+Top Length: 517  Top ID: 100.0
+		One align captures most of this contig: 4157790 4158306 | 517 1 | 517 517 | 100.0 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C721386_64.0
+
+CONTIG: C728274_57.0 (591bp)
+Top Length: 591  Top ID: 98.98
+		One align captures most of this contig: 4182287 4182877 | 1 591 | 591 591 | 98.98 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C728274_57.0
+
+CONTIG: C728898_62.0 (599bp)
+Top Length: 599  Top ID: 100.0
+		One align captures most of this contig: 4246030 4246628 | 1 599 | 599 599 | 100.0 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C728898_62.0
+
+CONTIG: C731648_62.0 (633bp)
+Top Length: 632  Top ID: 99.84
+		One align captures most of this contig: 4159320 4159951 | 1 632 | 632 632 | 99.84 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C731648_62.0
+
+CONTIG: C732066_58.0 (639bp)
+Top Length: 639  Top ID: 99.84
+		One align captures most of this contig: 4165926 4166564 | 1 639 | 639 639 | 99.84 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C732066_58.0
+
+CONTIG: C732320_44.0 (643bp)
+Top Length: 519  Top ID: 96.35
+		Skipping redundant alignment 1839518 1839682 | 1 165 | 165 165 | 97.58 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C732320_44.0
+		This contig is partially unaligned. (Aligned 519 out of 643 bases)
+		Alignment: 3758103 3758622 | 519 1 | 520 519 | 96.35 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C732320_44.0
+		Unaligned bases: 520 to 643 (124)
+
+CONTIG: C732484_60.0 (646bp)
+Top Length: 646  Top ID: 100.0
+		One align captures most of this contig: 4158705 4159350 | 646 1 | 646 646 | 100.0 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C732484_60.0
+
+CONTIG: C733296_17.0 (657bp)
+Top Length: 657  Top ID: 100.0
+		This contig has 3 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 1726172 1726828 | 657 1 | 657 657 | 100.0 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C733296_17.0
+		Skipping alignment  4047426 4048082 | 657 1 | 657 657 | 100.0 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C733296_17.0
+		Skipping alignment  4623419 4624075 | 657 1 | 657 657 | 100.0 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C733296_17.0
+
+CONTIG: C735352_42.0 (690bp)
+Top Length: 690  Top ID: 99.71
+		One align captures most of this contig: 4169888 4170577 | 1 690 | 690 690 | 99.71 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C735352_42.0
+
+CONTIG: C735414_24.0 (691bp)
+Top Length: 691  Top ID: 99.71
+		This contig has 3 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 1723177 1723867 | 691 1 | 691 691 | 99.71 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C735414_24.0
+		Skipping alignment  4044431 4045121 | 691 1 | 691 691 | 99.71 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C735414_24.0
+		Skipping alignment  4620424 4621114 | 691 1 | 691 691 | 99.71 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C735414_24.0
+
+CONTIG: C737512__3.0 (730bp)
+Top Length: 730  Top ID: 99.32
+		One align captures most of this contig: 4230200 4230929 | 730 1 | 730 730 | 99.32 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C737512__3.0
+
+CONTIG: C738732__8.0 (757bp)
+Top Length: 757  Top ID: 97.89
+		One align captures most of this contig: 720579 721335 | 757 1 | 757 757 | 97.89 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C738732__8.0
+
+CONTIG: C740098_63.0 (788bp)
+Top Length: 788  Top ID: 99.49
+		One align captures most of this contig: 4266588 4267375 | 788 1 | 788 788 | 99.49 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C740098_63.0
+
+CONTIG: C741014_51.0 (812bp)
+Top Length: 812  Top ID: 99.01
+		One align captures most of this contig: 4185801 4186611 | 1 812 | 811 812 | 99.01 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C741014_51.0
+
+CONTIG: C741360_56.0 (821bp)
+Top Length: 821  Top ID: 99.51
+		One align captures most of this contig: 4175721 4176541 | 1 821 | 821 821 | 99.51 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C741360_56.0
+
+CONTIG: C742018_14.0 (839bp)
+Top Length: 839  Top ID: 96.07
+		One align captures most of this contig: 3026356 3027194 | 1 839 | 839 839 | 96.07 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C742018_14.0
+
+CONTIG: C742734_58.0 (860bp)
+Top Length: 860  Top ID: 98.95
+		One align captures most of this contig: 4184346 4185206 | 860 1 | 861 860 | 98.95 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C742734_58.0
+
+CONTIG: C744064_55.0 (903bp)
+Top Length: 903  Top ID: 99.67
+		One align captures most of this contig: 4173828 4174730 | 903 1 | 903 903 | 99.67 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C744064_55.0
+
+CONTIG: C745116_55.0 (935bp)
+Top Length: 935  Top ID: 99.25
+		One align captures most of this contig: 4164563 4165497 | 935 1 | 935 935 | 99.25 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C745116_55.0
+
+CONTIG: C749240_61.0 (1121bp)
+Top Length: 1121  Top ID: 99.11
+		One align captures most of this contig: 4159922 4161042 | 1 1121 | 1121 1121 | 99.11 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C749240_61.0
+
+CONTIG: C752522_62.0 (1319bp)
+Top Length: 1319  Top ID: 99.47
+		One align captures most of this contig: 4176955 4178273 | 1319 1 | 1319 1319 | 99.47 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C752522_62.0
+
+CONTIG: C755226_58.0 (1570bp)
+Top Length: 1570  Top ID: 99.55
+		One align captures most of this contig: 4166579 4168148 | 1 1570 | 1570 1570 | 99.55 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C755226_58.0
+
+CONTIG: C755256_51.0 (1572bp)
+Top Length: 1572  Top ID: 99.43
+		One align captures most of this contig: 4172287 4173858 | 1 1572 | 1572 1572 | 99.43 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C755256_51.0
+
+CONTIG: C755642_61.0 (1608bp)
+Top Length: 1608  Top ID: 99.56
+		One align captures most of this contig: 4273721 4275326 | 1608 1 | 1606 1608 | 99.56 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C755642_61.0
+
+CONTIG: C756932__5.0 (1761bp)
+Top Length: 1761  Top ID: 99.89
+		One align captures most of this contig: 4626815 4628575 | 1761 1 | 1761 1761 | 99.89 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C756932__5.0
+
+CONTIG: C757258_44.0 (1801bp)
+Top Length: 1801  Top ID: 99.61
+		One align captures most of this contig: 4168118 4169918 | 1801 1 | 1801 1801 | 99.61 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C757258_44.0
+
+CONTIG: C758116_65.0 (1939bp)
+Top Length: 1939  Top ID: 99.59
+		One align captures most of this contig: 4277821 4279760 | 1939 1 | 1940 1939 | 99.59 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C758116_65.0
+
+CONTIG: C760528_66.0 (2413bp)
+Top Length: 2413  Top ID: 99.75
+		One align captures most of this contig: 4275439 4277849 | 1 2413 | 2411 2413 | 99.75 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C760528_66.0
+
+CONTIG: C761146_62.0 (2586bp)
+Top Length: 2586  Top ID: 99.96
+		One align captures most of this contig: 4192954 4195539 | 2586 1 | 2586 2586 | 99.96 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C761146_62.0
+
+CONTIG: C762004__7.0 (2869bp)
+Top Length: 151  Top ID: 98.68
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 4041789 4041938 | 150 1 | 150 150 | 98.67 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C762004__7.0
+		Skipping redundant alignment 4617781 4617931 | 151 1 | 151 151 | 98.68 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C762004__7.0
+		This contig is partially unaligned. (Aligned 151 out of 2869 bases)
+		Alignment: 1720535 1720684 | 150 1 | 150 150 | 98.67 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C762004__7.0
+		Unaligned bases: 151 to 2869 (2719)
+
+CONTIG: C762272_54.0 (2977bp)
+Top Length: 2977  Top ID: 99.53
+		One align captures most of this contig: 4246606 4249582 | 1 2977 | 2977 2977 | 99.53 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C762272_54.0
+
+CONTIG: C763368_56.0 (3516bp)
+Top Length: 3516  Top ID: 99.26
+		One align captures most of this contig: 4178777 4182292 | 1 3516 | 3516 3516 | 99.26 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C763368_56.0
+
+CONTIG: C764734_59.0 (4638bp)
+Top Length: 4638  Top ID: 99.35
+		One align captures most of this contig: 4241013 4245649 | 4638 1 | 4637 4638 | 99.35 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C764734_59.0
+
+CONTIG: C765766_64.0 (6297bp)
+Top Length: 6297  Top ID: 99.38
+		One align captures most of this contig: 4267448 4273747 | 6297 1 | 6300 6297 | 99.38 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C765766_64.0
+
+CONTIG: C766502_63.0 (9696bp)
+Top Length: 9696  Top ID: 99.98
+		One align captures most of this contig: 4195533 4205228 | 9696 1 | 9696 9696 | 99.98 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ C766502_63.0
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_johnsonii/contigs_reports/nucmer_output/SOAPdenovo2.used_snps
+	Reference Parabacteroides_johnsonii_gi_423340855_ref_NZ_: 38 total alignments. 1 total regions.
+		Region: 1 to 4629061 (4629061 bp)
+			START in gap: 1 to 720579 (720578 bp)
+			Align 1: 720579 721335 C738732__8.0 757 1
+				Gap between this and next alignment: 721335 to 913470 (192134 bp)
+				Next Alignment: 913470 913821 scaffold52939__6.4 361 712
+
+			Align 2: 913470 913821 scaffold52939__6.4 361 712
+				Gap between this and next alignment: 913821 to 1720535 (806713 bp)
+				Next Alignment: 1720535 1720684 C762004__7.0 150 1
+
+			Align 3: 1720535 1720684 C762004__7.0 150 1
+				Negative gap (overlap) between this and next alignment: 1720684 to 1720665 (-19 bp)
+				Next Alignment: 1720665 1720763 scaffold20506__8.1 4263 4165
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 4263 to 4243.
+			Align 4: 1720685 1720763 scaffold20506__8.1 4243 4165
+				Gap between this and next alignment: 1720763 to 1723177 (2413 bp)
+				Next Alignment: 1723177 1723867 C735414_24.0 691 1
+
+			Align 5: 1723177 1723867 C735414_24.0 691 1
+				Gap between this and next alignment: 1723867 to 1726172 (2304 bp)
+				Next Alignment: 1726172 1726828 C733296_17.0 657 1
+
+			Align 6: 1726172 1726828 C733296_17.0 657 1
+				Gap between this and next alignment: 1726828 to 3026356 (1299527 bp)
+				Next Alignment: 3026356 3027194 C742018_14.0 1 839
+
+			Align 7: 3026356 3027194 C742018_14.0 1 839
+				Gap between this and next alignment: 3027194 to 3632179 (604984 bp)
+				Next Alignment: 3632179 3632282 scaffold11889__2.5 1 104
+
+			Align 8: 3632179 3632282 scaffold11889__2.5 1 104
+				Gap between this and next alignment: 3632282 to 3758103 (125820 bp)
+				Next Alignment: 3758103 3758622 C732320_44.0 519 1
+
+			Align 9: 3758103 3758622 C732320_44.0 519 1
+				Gap between this and next alignment: 3758622 to 4157790 (399167 bp)
+				Next Alignment: 4157790 4158306 C721386_64.0 517 1
+
+			Align 10: 4157790 4158306 C721386_64.0 517 1
+				Gap between this and next alignment: 4158306 to 4158705 (398 bp)
+				Next Alignment: 4158705 4159350 C732484_60.0 646 1
+
+			Align 11: 4158705 4159350 C732484_60.0 646 1
+				Negative gap (overlap) between this and next alignment: 4159350 to 4159320 (-30 bp)
+				Next Alignment: 4159320 4159951 C731648_62.0 1 632
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 32.
+			Align 12: 4159351 4159951 C731648_62.0 32 632
+				Negative gap (overlap) between this and next alignment: 4159951 to 4159922 (-29 bp)
+				Next Alignment: 4159922 4161042 C749240_61.0 1 1121
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 31.
+			Align 13: 4159952 4161042 C749240_61.0 31 1121
+				Gap between this and next alignment: 4161042 to 4164563 (3520 bp)
+				Next Alignment: 4164563 4165497 C745116_55.0 935 1
+
+			Align 14: 4164563 4165497 C745116_55.0 935 1
+				Gap between this and next alignment: 4165497 to 4165926 (428 bp)
+				Next Alignment: 4165926 4166564 C732066_58.0 1 639
+
+			Align 15: 4165926 4166564 C732066_58.0 1 639
+				Gap between this and next alignment: 4166564 to 4166579 (14 bp)
+				Next Alignment: 4166579 4168148 C755226_58.0 1 1570
+
+			Align 16: 4166579 4168148 C755226_58.0 1 1570
+				Negative gap (overlap) between this and next alignment: 4168148 to 4168118 (-30 bp)
+				Next Alignment: 4168118 4169918 C757258_44.0 1801 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1801 to 1770.
+			Align 17: 4168149 4169918 C757258_44.0 1770 1
+				Negative gap (overlap) between this and next alignment: 4169918 to 4169888 (-30 bp)
+				Next Alignment: 4169888 4170577 C735352_42.0 1 690
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 32.
+			Align 18: 4169919 4170577 C735352_42.0 32 690
+				Gap between this and next alignment: 4170577 to 4172287 (1709 bp)
+				Next Alignment: 4172287 4173858 C755256_51.0 1 1572
+
+			Align 19: 4172287 4173858 C755256_51.0 1 1572
+				Negative gap (overlap) between this and next alignment: 4173858 to 4173828 (-30 bp)
+				Next Alignment: 4173828 4174730 C744064_55.0 903 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 903 to 872.
+			Align 20: 4173859 4174730 C744064_55.0 872 1
+				Gap between this and next alignment: 4174730 to 4175721 (990 bp)
+				Next Alignment: 4175721 4176541 C741360_56.0 1 821
+
+			Align 21: 4175721 4176541 C741360_56.0 1 821
+				Gap between this and next alignment: 4176541 to 4176955 (413 bp)
+				Next Alignment: 4176955 4178273 C752522_62.0 1319 1
+
+			Align 22: 4176955 4178273 C752522_62.0 1319 1
+				Gap between this and next alignment: 4178273 to 4178777 (503 bp)
+				Next Alignment: 4178777 4182292 C763368_56.0 1 3516
+
+			Align 23: 4178777 4182292 C763368_56.0 1 3516
+				Negative gap (overlap) between this and next alignment: 4182292 to 4182287 (-5 bp)
+				Next Alignment: 4182287 4182877 C728274_57.0 1 591
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 7.
+			Align 24: 4182293 4182877 C728274_57.0 7 591
+				Gap between this and next alignment: 4182877 to 4184346 (1468 bp)
+				Next Alignment: 4184346 4185206 C742734_58.0 860 1
+
+			Align 25: 4184346 4185206 C742734_58.0 860 1
+				Gap between this and next alignment: 4185206 to 4185801 (594 bp)
+				Next Alignment: 4185801 4186611 C741014_51.0 1 812
+
+			Align 26: 4185801 4186611 C741014_51.0 1 812
+				Gap between this and next alignment: 4186611 to 4192954 (6342 bp)
+				Next Alignment: 4192954 4195539 C761146_62.0 2586 1
+
+			Align 27: 4192954 4195539 C761146_62.0 2586 1
+				Negative gap (overlap) between this and next alignment: 4195539 to 4195533 (-6 bp)
+				Next Alignment: 4195533 4205228 C766502_63.0 9696 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 9696 to 9689.
+			Align 28: 4195540 4205228 C766502_63.0 9689 1
+				Gap between this and next alignment: 4205228 to 4230200 (24971 bp)
+				Next Alignment: 4230200 4230929 C737512__3.0 730 1
+
+			Align 29: 4230200 4230929 C737512__3.0 730 1
+				Gap between this and next alignment: 4230929 to 4241013 (10083 bp)
+				Next Alignment: 4241013 4245649 C764734_59.0 4638 1
+
+			Align 30: 4241013 4245649 C764734_59.0 4638 1
+				Gap between this and next alignment: 4245649 to 4246030 (380 bp)
+				Next Alignment: 4246030 4246628 C728898_62.0 1 599
+
+			Align 31: 4246030 4246628 C728898_62.0 1 599
+				Negative gap (overlap) between this and next alignment: 4246628 to 4246606 (-22 bp)
+				Next Alignment: 4246606 4249582 C762272_54.0 1 2977
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 24.
+			Align 32: 4246629 4249582 C762272_54.0 24 2977
+				Gap between this and next alignment: 4249582 to 4266588 (17005 bp)
+				Next Alignment: 4266588 4267375 C740098_63.0 788 1
+
+			Align 33: 4266588 4267375 C740098_63.0 788 1
+				Gap between this and next alignment: 4267375 to 4267448 (72 bp)
+				Next Alignment: 4267448 4273747 C765766_64.0 6297 1
+
+			Align 34: 4267448 4273747 C765766_64.0 6297 1
+				Negative gap (overlap) between this and next alignment: 4273747 to 4273721 (-26 bp)
+				Next Alignment: 4273721 4275326 C755642_61.0 1608 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1608 to 1581.
+			Align 35: 4273748 4275326 C755642_61.0 1581 1
+				Gap between this and next alignment: 4275326 to 4275439 (112 bp)
+				Next Alignment: 4275439 4277849 C760528_66.0 1 2413
+
+			Align 36: 4275439 4277849 C760528_66.0 1 2413
+				Negative gap (overlap) between this and next alignment: 4277849 to 4277821 (-28 bp)
+				Next Alignment: 4277821 4279760 C758116_65.0 1939 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1939 to 1910.
+			Align 37: 4277850 4279760 C758116_65.0 1910 1
+				Gap between this and next alignment: 4279760 to 4626815 (347054 bp)
+				Next Alignment: 4626815 4628575 C756932__5.0 1761 1
+
+			Align 38: 4626815 4628575 C756932__5.0 1761 1
+			END in gap: 4628575 to 4629061 (486 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_johnsonii/contigs_reports/nucmer_output/SOAPdenovo2.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 5 part
+Partially Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 9613
+
+Ambiguously Mapped Contigs: 2
+Total Bases in Ambiguously Mapped Contigs: 1348
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 58879
+
+	SNPs: 288
+	Insertions: 7
+	Deletions: 7
+
+	Positive Gaps: 28
+		Internal Gaps:  0
+		External Gaps:  28
+		External Gap Total:  4570182
+		External Gap Average: 163221
+	Negative Gaps: 11
+		Internal Overlaps:  0
+		External Overlaps:  11
+		External Overlaps Total: -255
+		External Overlaps Average: -23
+	Contigs with Redundant Alignments: 0 (0)

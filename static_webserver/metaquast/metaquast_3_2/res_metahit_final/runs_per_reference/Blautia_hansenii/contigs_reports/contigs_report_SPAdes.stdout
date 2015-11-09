@@ -1,0 +1,319 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Blautia_hansenii_gi_256402711_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 1
+	Total Region Length: 3058721
+Analyzing contigs...
+CONTIG: NODE_353_length_28935_cov_7.33293_ID_705 (28935bp)
+Top Length: 11565  Top ID: 96.89
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 1218559 1224123 | 5458 11025 | 5565 5568 | 97.52 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_353_length_28935_cov_7.33293_ID_705
+			  Extensive misassembly ( relocation, inconsistency = 25288 ) between these two alignments
+			Real Alignment 2: 1249418 1255750 | 11032 17364 | 6333 6333 | 97.09 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_353_length_28935_cov_7.33293_ID_705
+			  Gap between these two alignments (local misassembly). Inconsistency = 96 
+			Real Alignment 3: 1255853 1267421 | 17371 28935 | 11569 11565 | 96.89 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_353_length_28935_cov_7.33293_ID_705
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_1268_length_9930_cov_5.22441_ID_2535 (9930bp)
+Top Length: 7956  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 7956 out of 9930 bases)
+		Alignment: 2764869 2772824 | 9930 1975 | 7956 7956 | 100.0 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_1268_length_9930_cov_5.22441_ID_2535
+		Unaligned bases: 1 to 1974 (1974)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_2494_length_5683_cov_1.89179_ID_4987 (5683bp)
+Top Length: 3171  Top ID: 98.14
+		Skipping redundant alignment 2356125 2356294 | 1861 1692 | 170 170 | 98.24 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_2494_length_5683_cov_1.89179_ID_4987
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 2354837 2354998 | 1064 903 | 162 162 | 95.68 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_2494_length_5683_cov_1.89179_ID_4987
+		Skipping redundant alignment 2356017 2356178 | 1064 903 | 162 162 | 96.3 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_2494_length_5683_cov_1.89179_ID_4987
+		This contig is misassembled. 6 total aligns.
+			Real Alignment 1: 2352900 2353061 | 1064 903 | 162 162 | 95.68 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_2494_length_5683_cov_1.89179_ID_4987
+			  Overlap between these two alignments (local misassembly). Inconsistency = -906 
+			Excluding internal overlap of size 121 between Alignment 2 and 3:  2353008 2353381 | 1861 1489 | 374 373 --> 2353129 2353381 | 1740 1489 | 253 252
+			Real Alignment 2: 2353129 2353381 | 1740 1489 | 253 252 | 97.33 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_2494_length_5683_cov_1.89179_ID_4987
+			  Gap between these two alignments (local misassembly). Inconsistency = 778 
+			Real Alignment 3: 2349180 2352350 | 4911 1741 | 3171 3171 | 98.14 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_2494_length_5683_cov_1.89179_ID_4987
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_3696_length_4203_cov_2.77604_ID_7391 (4203bp)
+Top Length: 165  Top ID: 96.97
+		This contig is partially unaligned. (Aligned 165 out of 4203 bases)
+		Alignment: 1235434 1235598 | 4039 4203 | 165 165 | 96.97 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_3696_length_4203_cov_2.77604_ID_7391
+		Unaligned bases: 1 to 4038 (4038)
+
+CONTIG: NODE_5328_length_3158_cov_12.3732_ID_10655 (3158bp)
+Top Length: 1881  Top ID: 98.78
+		This contig is partially unaligned. (Aligned 1881 out of 3158 bases)
+		Alignment: 1238078 1239958 | 1881 1 | 1881 1881 | 98.78 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_5328_length_3158_cov_12.3732_ID_10655
+		Unaligned bases: 1882 to 3158 (1277)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_5993_length_2878_cov_1.86787_ID_11985 (2878bp)
+Top Length: 86  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 86 out of 2878 bases)
+		Alignment: 2983197 2983282 | 1841 1756 | 86 86 | 100.0 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_5993_length_2878_cov_1.86787_ID_11985
+		Unaligned bases: 1 to 1755 (1755)
+		Unaligned bases: 1842 to 2878 (1037)
+
+CONTIG: NODE_7801_length_2289_cov_45.4794_ID_15601 (2289bp)
+Top Length: 2289  Top ID: 99.48
+		One align captures most of this contig: 2762366 2764654 | 1 2289 | 2289 2289 | 99.48 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_7801_length_2289_cov_45.4794_ID_15601
+
+CONTIG: NODE_10771_length_1725_cov_0.804192_ID_21541 (1725bp)
+Top Length: 213  Top ID: 98.59
+		This contig is partially unaligned. (Aligned 213 out of 1725 bases)
+		Alignment: 3019798 3020010 | 213 1 | 213 213 | 98.59 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_10771_length_1725_cov_0.804192_ID_21541
+		Unaligned bases: 214 to 1725 (1512)
+
+CONTIG: NODE_14453_length_1313_cov_17.4746_ID_28905 (1313bp)
+Top Length: 1313  Top ID: 98.48
+		One align captures most of this contig: 1240944 1242256 | 1313 1 | 1313 1313 | 98.48 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_14453_length_1313_cov_17.4746_ID_28905
+
+CONTIG: NODE_18744_length_1024_cov_0.5387_ID_37487 (1024bp)
+Top Length: 723  Top ID: 96.82
+		This contig is partially unaligned. (Aligned 723 out of 1024 bases)
+		Alignment: 3033575 3034297 | 723 1 | 723 723 | 96.82 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_18744_length_1024_cov_0.5387_ID_37487
+		Unaligned bases: 724 to 1024 (301)
+
+CONTIG: NODE_19194_length_1001_cov_0.762156_ID_38387 (1001bp)
+Top Length: 298  Top ID: 98.32
+		This contig is partially unaligned. (Aligned 298 out of 1001 bases)
+		Alignment: 879470 879767 | 1001 704 | 298 298 | 98.32 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_19194_length_1001_cov_0.762156_ID_38387
+		Unaligned bases: 1 to 703 (703)
+
+CONTIG: NODE_21305_length_907_cov_42.2617_ID_42609 (907bp)
+Top Length: 135  Top ID: 96.32
+		This contig is partially unaligned. (Aligned 135 out of 907 bases)
+		Alignment: 1703593 1703727 | 1 135 | 135 135 | 96.32 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_21305_length_907_cov_42.2617_ID_42609
+		Unaligned bases: 136 to 907 (772)
+
+CONTIG: NODE_22207_length_874_cov_0.710623_ID_44413 (874bp)
+Top Length: 874  Top ID: 99.31
+		One align captures most of this contig: 3027155 3028028 | 874 1 | 874 874 | 99.31 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_22207_length_874_cov_0.710623_ID_44413
+
+CONTIG: NODE_22414_length_865_cov_0.67284_ID_44827 (865bp)
+Top Length: 865  Top ID: 97.0
+		One align captures most of this contig: 543543 544408 | 1 865 | 866 865 | 97.0 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_22414_length_865_cov_0.67284_ID_44827
+
+CONTIG: NODE_23557_length_824_cov_0.760728_ID_47113 (824bp)
+Top Length: 499  Top ID: 96.59
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 3012897 3013119 | 232 10 | 223 223 | 99.1 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_23557_length_824_cov_0.760728_ID_47113
+			  Fake misassembly between these two alignments: inconsistency = -1 , gap in the contig is small or absent or filled mostly with Ns (short indel: insertion of length 1; 3 mismatches)
+			Real Alignment 2: 3012306 3012804 | 824 326 | 499 499 | 96.59 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_23557_length_824_cov_0.760728_ID_47113
+
+CONTIG: NODE_25315_length_765_cov_0.594366_ID_50629 (765bp)
+Top Length: 437  Top ID: 98.4
+		This contig is partially unaligned. (Aligned 437 out of 765 bases)
+		Alignment: 190084 190520 | 437 1 | 437 437 | 98.4 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_25315_length_765_cov_0.594366_ID_50629
+		Unaligned bases: 438 to 765 (328)
+
+CONTIG: NODE_26002_length_744_cov_0.564586_ID_52003 (744bp)
+Top Length: 246  Top ID: 98.37
+		This contig is partially unaligned. (Aligned 246 out of 744 bases)
+		Alignment: 209301 209546 | 246 1 | 246 246 | 98.37 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_26002_length_744_cov_0.564586_ID_52003
+		Unaligned bases: 247 to 744 (498)
+
+CONTIG: NODE_26790_length_723_cov_0.741018_ID_53579 (723bp)
+Top Length: 723  Top ID: 99.72
+		One align captures most of this contig: 3015206 3015928 | 723 1 | 723 723 | 99.72 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_26790_length_723_cov_0.741018_ID_53579
+
+CONTIG: NODE_27012_length_717_cov_0.725076_ID_54023 (717bp)
+Top Length: 717  Top ID: 95.81
+		One align captures most of this contig: 3013688 3014427 | 717 1 | 740 717 | 95.81 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_27012_length_717_cov_0.725076_ID_54023
+
+CONTIG: NODE_30223_length_644_cov_1.6927_ID_60445 (644bp)
+Top Length: 82  Top ID: 96.39
+		Skipping redundant alignment 3055050 3055130 | 90 170 | 81 81 | 97.53 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_30223_length_644_cov_1.6927_ID_60445
+		This contig is partially unaligned. (Aligned 82 out of 644 bases)
+		Alignment: 169022 169104 | 88 169 | 83 82 | 96.39 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_30223_length_644_cov_1.6927_ID_60445
+		Unaligned bases: 1 to 87 (87)
+		Unaligned bases: 170 to 644 (475)
+
+CONTIG: NODE_30305_length_642_cov_0.517888_ID_60609 (642bp)
+Top Length: 140  Top ID: 95.71
+		This contig is partially unaligned. (Aligned 140 out of 642 bases)
+		Alignment: 197611 197750 | 152 13 | 140 140 | 95.71 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_30305_length_642_cov_0.517888_ID_60609
+		Unaligned bases: 1 to 12 (12)
+		Unaligned bases: 153 to 642 (490)
+
+CONTIG: NODE_33860_length_582_cov_1.40607_ID_67719 (582bp)
+Top Length: 579  Top ID: 99.48
+		One align captures most of this contig: 2037059 2037637 | 582 4 | 579 579 | 99.48 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_33860_length_582_cov_1.40607_ID_67719
+
+CONTIG: NODE_35034_length_566_cov_2.29159_ID_70067 (566bp)
+Top Length: 564  Top ID: 96.81
+		One align captures most of this contig: 1233174 1233737 | 3 566 | 564 564 | 96.81 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_35034_length_566_cov_2.29159_ID_70067
+
+CONTIG: NODE_38183_length_526_cov_0.656051_ID_76365 (526bp)
+Top Length: 417  Top ID: 96.16
+		This contig is partially unaligned. (Aligned 417 out of 526 bases)
+		Alignment: 3036686 3037102 | 508 92 | 417 417 | 96.16 | Blautia_hansenii_gi_256402711_ref_NZ_ NODE_38183_length_526_cov_0.656051_ID_76365
+		Unaligned bases: 1 to 91 (91)
+		Unaligned bases: 509 to 526 (18)
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Blautia_hansenii/contigs_reports/nucmer_output/SPAdes.used_snps
+	Reference Blautia_hansenii_gi_256402711_ref_NZ_: 29 total alignments. 1 total regions.
+		Region: 1 to 3058721 (3058721 bp)
+			START in gap: 1 to 169022 (169021 bp)
+			Align 1: 169022 169104 NODE_30223_length_644_cov_1.6927_ID_60445 88 169
+				Gap between this and next alignment: 169104 to 190084 (20979 bp)
+				Next Alignment: 190084 190520 NODE_25315_length_765_cov_0.594366_ID_50629 437 1
+
+			Align 2: 190084 190520 NODE_25315_length_765_cov_0.594366_ID_50629 437 1
+				Gap between this and next alignment: 190520 to 197611 (7090 bp)
+				Next Alignment: 197611 197750 NODE_30305_length_642_cov_0.517888_ID_60609 152 13
+
+			Align 3: 197611 197750 NODE_30305_length_642_cov_0.517888_ID_60609 152 13
+				Gap between this and next alignment: 197750 to 209301 (11550 bp)
+				Next Alignment: 209301 209546 NODE_26002_length_744_cov_0.564586_ID_52003 246 1
+
+			Align 4: 209301 209546 NODE_26002_length_744_cov_0.564586_ID_52003 246 1
+				Gap between this and next alignment: 209546 to 543543 (333996 bp)
+				Next Alignment: 543543 544408 NODE_22414_length_865_cov_0.67284_ID_44827 1 865
+
+			Align 5: 543543 544408 NODE_22414_length_865_cov_0.67284_ID_44827 1 865
+				Gap between this and next alignment: 544408 to 879470 (335061 bp)
+				Next Alignment: 879470 879767 NODE_19194_length_1001_cov_0.762156_ID_38387 1001 704
+
+			Align 6: 879470 879767 NODE_19194_length_1001_cov_0.762156_ID_38387 1001 704
+				Gap between this and next alignment: 879767 to 1218559 (338791 bp)
+				Next Alignment: 1218559 1224123 NODE_353_length_28935_cov_7.33293_ID_705 5458 11025
+
+			Align 7: 1218559 1224123 NODE_353_length_28935_cov_7.33293_ID_705 5458 11025
+				Gap between this and next alignment: 1224123 to 1233174 (9050 bp)
+				Next Alignment: 1233174 1233737 NODE_35034_length_566_cov_2.29159_ID_70067 3 566
+
+			Align 8: 1233174 1233737 NODE_35034_length_566_cov_2.29159_ID_70067 3 566
+				Gap between this and next alignment: 1233737 to 1235434 (1696 bp)
+				Next Alignment: 1235434 1235598 NODE_3696_length_4203_cov_2.77604_ID_7391 4039 4203
+
+			Align 9: 1235434 1235598 NODE_3696_length_4203_cov_2.77604_ID_7391 4039 4203
+				Gap between this and next alignment: 1235598 to 1238078 (2479 bp)
+				Next Alignment: 1238078 1239958 NODE_5328_length_3158_cov_12.3732_ID_10655 1881 1
+
+			Align 10: 1238078 1239958 NODE_5328_length_3158_cov_12.3732_ID_10655 1881 1
+				Gap between this and next alignment: 1239958 to 1240944 (985 bp)
+				Next Alignment: 1240944 1242256 NODE_14453_length_1313_cov_17.4746_ID_28905 1313 1
+
+			Align 11: 1240944 1242256 NODE_14453_length_1313_cov_17.4746_ID_28905 1313 1
+				Gap between this and next alignment: 1242256 to 1249418 (7161 bp)
+				Next Alignment: 1249418 1255750 NODE_353_length_28935_cov_7.33293_ID_705 11032 17364
+
+			Align 12: 1249418 1255750 NODE_353_length_28935_cov_7.33293_ID_705 11032 17364
+				Gap between this and next alignment: 1255750 to 1255853 (102 bp)
+				Next Alignment: 1255853 1267421 NODE_353_length_28935_cov_7.33293_ID_705 17371 28935
+
+			Align 13: 1255853 1267421 NODE_353_length_28935_cov_7.33293_ID_705 17371 28935
+				Gap between this and next alignment: 1267421 to 1703593 (436171 bp)
+				Next Alignment: 1703593 1703727 NODE_21305_length_907_cov_42.2617_ID_42609 1 135
+
+			Align 14: 1703593 1703727 NODE_21305_length_907_cov_42.2617_ID_42609 1 135
+				Gap between this and next alignment: 1703727 to 2037059 (333331 bp)
+				Next Alignment: 2037059 2037637 NODE_33860_length_582_cov_1.40607_ID_67719 582 4
+
+			Align 15: 2037059 2037637 NODE_33860_length_582_cov_1.40607_ID_67719 582 4
+				Gap between this and next alignment: 2037637 to 2349180 (311542 bp)
+				Next Alignment: 2349180 2352350 NODE_2494_length_5683_cov_1.89179_ID_4987 4911 1741
+
+			Align 16: 2349180 2352350 NODE_2494_length_5683_cov_1.89179_ID_4987 4911 1741
+				Gap between this and next alignment: 2352350 to 2352900 (549 bp)
+				Next Alignment: 2352900 2353061 NODE_2494_length_5683_cov_1.89179_ID_4987 1064 903
+
+			Align 17: 2352900 2353061 NODE_2494_length_5683_cov_1.89179_ID_4987 1064 903
+				Gap between this and next alignment: 2353061 to 2353129 (67 bp)
+				Next Alignment: 2353129 2353381 NODE_2494_length_5683_cov_1.89179_ID_4987 1740 1489
+
+			Align 18: 2353129 2353381 NODE_2494_length_5683_cov_1.89179_ID_4987 1740 1489
+				Gap between this and next alignment: 2353381 to 2762366 (408984 bp)
+				Next Alignment: 2762366 2764654 NODE_7801_length_2289_cov_45.4794_ID_15601 1 2289
+
+			Align 19: 2762366 2764654 NODE_7801_length_2289_cov_45.4794_ID_15601 1 2289
+				Gap between this and next alignment: 2764654 to 2764869 (214 bp)
+				Next Alignment: 2764869 2772824 NODE_1268_length_9930_cov_5.22441_ID_2535 9930 1975
+
+			Align 20: 2764869 2772824 NODE_1268_length_9930_cov_5.22441_ID_2535 9930 1975
+				Gap between this and next alignment: 2772824 to 2983197 (210372 bp)
+				Next Alignment: 2983197 2983282 NODE_5993_length_2878_cov_1.86787_ID_11985 1841 1756
+
+			Align 21: 2983197 2983282 NODE_5993_length_2878_cov_1.86787_ID_11985 1841 1756
+				Gap between this and next alignment: 2983282 to 3012306 (29023 bp)
+				Next Alignment: 3012306 3012804 NODE_23557_length_824_cov_0.760728_ID_47113 824 326
+
+			Align 22: 3012306 3012804 NODE_23557_length_824_cov_0.760728_ID_47113 824 326
+				Gap between this and next alignment: 3012804 to 3012897 (92 bp)
+				Next Alignment: 3012897 3013119 NODE_23557_length_824_cov_0.760728_ID_47113 232 10
+
+			Align 23: 3012897 3013119 NODE_23557_length_824_cov_0.760728_ID_47113 232 10
+				Gap between this and next alignment: 3013119 to 3013688 (568 bp)
+				Next Alignment: 3013688 3014427 NODE_27012_length_717_cov_0.725076_ID_54023 717 1
+
+			Align 24: 3013688 3014427 NODE_27012_length_717_cov_0.725076_ID_54023 717 1
+				Gap between this and next alignment: 3014427 to 3015206 (778 bp)
+				Next Alignment: 3015206 3015928 NODE_26790_length_723_cov_0.741018_ID_53579 723 1
+
+			Align 25: 3015206 3015928 NODE_26790_length_723_cov_0.741018_ID_53579 723 1
+				Gap between this and next alignment: 3015928 to 3019798 (3869 bp)
+				Next Alignment: 3019798 3020010 NODE_10771_length_1725_cov_0.804192_ID_21541 213 1
+
+			Align 26: 3019798 3020010 NODE_10771_length_1725_cov_0.804192_ID_21541 213 1
+				Gap between this and next alignment: 3020010 to 3027155 (7144 bp)
+				Next Alignment: 3027155 3028028 NODE_22207_length_874_cov_0.710623_ID_44413 874 1
+
+			Align 27: 3027155 3028028 NODE_22207_length_874_cov_0.710623_ID_44413 874 1
+				Gap between this and next alignment: 3028028 to 3033575 (5546 bp)
+				Next Alignment: 3033575 3034297 NODE_18744_length_1024_cov_0.5387_ID_37487 723 1
+
+			Align 28: 3033575 3034297 NODE_18744_length_1024_cov_0.5387_ID_37487 723 1
+				Gap between this and next alignment: 3034297 to 3036686 (2388 bp)
+				Next Alignment: 3036686 3037102 NODE_38183_length_526_cov_0.656051_ID_76365 508 92
+
+			Align 29: 3036686 3037102 NODE_38183_length_526_cov_0.656051_ID_76365 508 92
+			END in gap: 3037102 to 3058721 (21619 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Blautia_hansenii/contigs_reports/nucmer_output/SPAdes.used_snps
+
+Results:
+	Local Misassemblies: 3
+	Misassemblies: 1
+		Relocations: 1
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 1
+	Misassembled Contig Bases: 28935
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 13 part
+Partially Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 15368
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 48503
+
+	SNPs: 888
+	Insertions: 5
+	Deletions: 30
+
+	Positive Gaps: 30
+		Internal Gaps:  4
+		External Gaps:  26
+		External Gap Total:  3009408
+		External Gap Average: 115746
+	Negative Gaps: 0
+		Internal Overlaps:  0
+		External Overlaps:  0
+		External Overlaps Total:  0
+		External Overlaps Average: 0
+	Contigs with Redundant Alignments: 0 (0)

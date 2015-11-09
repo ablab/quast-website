@@ -1,0 +1,136 @@
+/home/gurevich/rep/quast/quast.pyc -t 16 -j  --meta  --bed-file /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/combined_reference/structural_variations/combined_reference.bed --no-check-meta  --contig-thresholds 1000,5000,10000,25000,50000 -R /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Prevotella_copri.fasta -o /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Prevotella_copri --labels "IDBA_UD, Ray, SOAPdenovo2, SPAdes" /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/IDBA_UD_to_Prevotella_copri.fasta /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Ray_to_Prevotella_copri.fasta /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SOAPdenovo2_to_Prevotella_copri.fasta /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SPAdes_to_Prevotella_copri.fasta
+
+Started: 2015-11-09 20:29:44
+
+Logging to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Prevotella_copri/quast.log
+
+NOTICE: Output directory already exists. Existing Nucmer alignments can be used.
+
+Reference:
+  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Prevotella_copri.fasta ==> Prevotella_copri
+
+Contigs:
+  1  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/IDBA_UD_to_Prevotella_copri.fasta ==> IDBA_UD
+  2  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Ray_to_Prevotella_copri.fasta ==> Ray
+  3  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SOAPdenovo2_to_Prevotella_copri.fasta ==> SOAPdenovo2
+  4  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SPAdes_to_Prevotella_copri.fasta ==> SPAdes
+
+2015-11-09 20:29:45
+Running Basic statistics processor...
+  Reference genome:
+    Prevotella_copri.fasta, Reference length = 3512473, Reference GC % = 44.85
+  Contig files: 
+    1  IDBA_UD
+    2  Ray
+    3  SOAPdenovo2
+    4  SPAdes
+  Calculating N50 and L50...
+    1  IDBA_UD, N50 = 80521, L50 = 3, Total length = 536059, GC % = 50.78, # N's per 100 kbp =  18.47
+    2  Ray, N50 = 8025, L50 = 3, Total length = 73412, GC % = 44.22, # N's per 100 kbp =  1551.52
+    3  SOAPdenovo2, N50 = 4868, L50 = 3, Total length = 31014, GC % = 45.29, # N's per 100 kbp =  0.00
+    4  SPAdes, N50 = 45577, L50 = 2, Total length = 208277, GC % = 49.89, # N's per 100 kbp =  45.13
+  Drawing Nx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Prevotella_copri/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Prevotella_copri/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Prevotella_copri/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Prevotella_copri/basic_stats/GC_content_plot.pdf
+Done.
+
+2015-11-09 20:29:47
+Running Contig analyzer...
+  1  IDBA_UD
+  2  Ray
+  4  SPAdes
+  3  SOAPdenovo2
+  1  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Prevotella_copri/contigs_reports/contigs_report_IDBA_UD.stdout and contigs_report_IDBA_UD.stderr...
+  3  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Prevotella_copri/contigs_reports/contigs_report_SOAPdenovo2.stdout and contigs_report_SOAPdenovo2.stderr...
+  2  Using existing Nucmer alignments... 
+  4  Using existing Nucmer alignments... 
+  3  Running Nucmer
+  3  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/nucmer -c 65 -l 65 --maxmatch \
+     -p runs_per_reference/Prevotella_copri/contigs_reports/nucmer_output/SOAPdenovo2 \
+     runs_per_reference/Prevotella_copri/quast_corrected_input/Prevotella_copri.fasta \
+     quast_corrected_input/SOAPdenovo2_to_Prevotella_copri.fasta >> runs_per_reference/Prevotella_copri/contigs_reports/contigs_report_SOAPdenovo2.stdout \
+     2>> runs_per_reference/Prevotella_copri/contigs_reports/contigs_report_SOAPdenovo2.stderr
+  1  Using existing Nucmer alignments... 
+  4  Alignments: runs_per_reference/Prevotella_copri/contigs_reports/alignments_SPAdes.tsv
+  4  Analysis is finished.
+
+  1  Alignments: runs_per_reference/Prevotella_copri/contigs_reports/alignments_IDBA_UD.tsv
+  1  Analysis is finished.
+  2  Alignments: runs_per_reference/Prevotella_copri/contigs_reports/alignments_Ray.tsv
+
+  2  Analysis is finished.
+
+  3  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/delta-filter -i 95 -l 0 runs_per_reference/Prevotella_copri/contigs_reports/nucmer_output/SOAPdenovo2.delta \
+     > runs_per_reference/Prevotella_copri/contigs_reports/nucmer_output/SOAPdenovo2.fdelta \
+     2> runs_per_reference/Prevotella_copri/contigs_reports/contigs_report_SOAPdenovo2.stderr
+  3  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-coords runs_per_reference/Prevotella_copri/contigs_reports/nucmer_output/SOAPdenovo2.delta \
+     > runs_per_reference/Prevotella_copri/contigs_reports/nucmer_output/SOAPdenovo2.coords_tmp \
+     2> runs_per_reference/Prevotella_copri/contigs_reports/contigs_report_SOAPdenovo2.stderr
+  3  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-snps -S -T -H runs_per_reference/Prevotella_copri/contigs_reports/nucmer_output/SOAPdenovo2.delta \
+     < runs_per_reference/Prevotella_copri/contigs_reports/nucmer_output/SOAPdenovo2.coords.headless \
+     > runs_per_reference/Prevotella_copri/contigs_reports/nucmer_output/SOAPdenovo2.all_snps \
+     2> runs_per_reference/Prevotella_copri/contigs_reports/contigs_report_SOAPdenovo2.stderr
+  3  Alignments: runs_per_reference/Prevotella_copri/contigs_reports/alignments_SOAPdenovo2.tsv
+  3  Analysis is finished.
+
+  Creating total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Prevotella_copri/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Prevotella_copri/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Prevotella_copri/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Prevotella_copri/contigs_reports/misassemblies_plot.pdf
+Done.
+
+2015-11-09 20:29:53
+Running NA-NGA calculation...
+  1  IDBA_UD, Largest alignment = 3643, NA50 = None, LA50 = None
+  2  Ray, Largest alignment = 4935, NA50 = None, LA50 = None
+  3  SOAPdenovo2, Largest alignment = 3643, NA50 = None, LA50 = None
+  4  SPAdes, Largest alignment = 4935, NA50 = None, LA50 = None
+  Drawing cumulative plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Prevotella_copri/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Prevotella_copri/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Prevotella_copri/aligned_stats/NGAx_plot.pdf
+Done.
+
+2015-11-09 20:29:54
+Running Genome analyzer...
+  NOTICE: No file with genes provided. Use the -G option if you want to specify it.
+  NOTICE: No file with operons provided. Use the -O option if you want to specify it.
+  1  IDBA_UD
+  2  Ray
+  3  SOAPdenovo2
+  4  SPAdes
+  1  Analysis is finished.
+  4  Analysis is finished.
+  3  Analysis is finished.
+  2  Analysis is finished.
+  Drawing Genome fraction, % histogram...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Prevotella_copri/genome_stats/genome_fraction_histogram.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding option to enable it.
+
+2015-11-09 20:29:55
+Drawing large plots...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating contig alignment plot...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2015-11-09 20:29:59
+RESULTS:
+  Text versions of total report are saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Prevotella_copri/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Prevotella_copri/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Prevotella_copri/report.html
+  PDF version (tables and plots) saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Prevotella_copri/report.pdf
+  Contig alignment plot: /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Prevotella_copri/alignment.svg

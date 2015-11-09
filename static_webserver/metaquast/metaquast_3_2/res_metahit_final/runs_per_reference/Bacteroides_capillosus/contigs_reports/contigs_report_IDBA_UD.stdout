@@ -1,0 +1,411 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Bacteroides_capillosus_gi_146386150_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 1
+	Total Region Length: 4241076
+Analyzing contigs...
+CONTIG: scaffold_1072 (10542bp)
+Top Length: 81  Top ID: 100.0
+		Skipping redundant alignment 3229957 3230034 | 9437 9514 | 78 78 | 100.0 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_1072
+		Skipping redundant alignment 3230057 3230133 | 9438 9514 | 77 77 | 100.0 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_1072
+		This contig is partially unaligned. (Aligned 81 out of 10542 bases)
+		Alignment: 4068315 4068395 | 9514 9434 | 81 81 | 100.0 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_1072
+		Unaligned bases: 1 to 9433 (9433)
+		Unaligned bases: 9515 to 10542 (1028)
+
+CONTIG: scaffold_1082 (7442bp)
+Top Length: 7442  Top ID: 99.33
+		Marking as insignificant: 2857472 2858803 | 5918 7252 | 1332 1335 | 98.95 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_1082
+		One align captures most of this contig: 2643133 2650572 | 7442 1 | 7440 7442 | 99.33 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_1082
+
+CONTIG: scaffold_1093 (7373bp)
+Top Length: 176  Top ID: 99.43
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 1877739 1877914 | 7373 7198 | 176 176 | 99.43 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_1093
+		This contig is misassembled. 3 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 7373 and total length of all aligns is 308
+		Alignment: 4120130 4120261 | 132 1 | 132 132 | 98.48 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_1093
+		Alignment: 4009081 4009256 | 7198 7373 | 176 176 | 97.73 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_1093
+		Unaligned bases: 7065
+CONTIG: scaffold_2033 (4184bp)
+Top Length: 2457  Top ID: 99.02
+		This contig is partially unaligned. (Aligned 2457 out of 4184 bases)
+		Alignment: 2624625 2627079 | 1728 4184 | 2455 2457 | 99.02 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_2033
+		Unaligned bases: 1 to 1727 (1727)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_2595 (3419bp)
+Top Length: 3343  Top ID: 97.97
+		This contig is partially unaligned. (Aligned 3343 out of 3419 bases)
+		Alignment: 2611452 2614797 | 3403 61 | 3346 3343 | 97.97 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_2595
+		Unaligned bases: 1 to 60 (60)
+		Unaligned bases: 3404 to 3419 (16)
+
+CONTIG: scaffold_2825 (3922bp)
+Top Length: 3922  Top ID: 98.65
+		One align captures most of this contig: 2582829 2586755 | 3922 1 | 3927 3922 | 98.65 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_2825
+
+CONTIG: scaffold_2910 (3149bp)
+Top Length: 3117  Top ID: 99.01
+		This contig is partially unaligned. (Aligned 3117 out of 3149 bases)
+		Alignment: 2621488 2624603 | 3117 1 | 3116 3117 | 99.01 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_2910
+		Unaligned bases: 3118 to 3149 (32)
+
+CONTIG: scaffold_4360 (2357bp)
+Top Length: 123  Top ID: 99.19
+		This contig is partially unaligned. (Aligned 123 out of 2357 bases)
+		Alignment: 2643109 2643231 | 2235 2357 | 123 123 | 99.19 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_4360
+		Unaligned bases: 1 to 2234 (2234)
+
+CONTIG: scaffold_5003 (4095bp)
+Top Length: 4095  Top ID: 96.76
+		One align captures most of this contig: 2578795 2582905 | 4095 1 | 4111 4095 | 96.76 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_5003
+
+CONTIG: scaffold_5544 (1985bp)
+Top Length: 1515  Top ID: 97.23
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 2641567 2643081 | 1515 1 | 1515 1515 | 97.23 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_5544
+			  Gap between these two alignments (local misassembly). Inconsistency = 455 
+			Real Alignment 2: 2640642 2641099 | 1985 1528 | 458 458 | 96.29 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_5544
+
+CONTIG: scaffold_5592 (1973bp)
+Top Length: 1973  Top ID: 95.89
+		One align captures most of this contig: 2597453 2599425 | 1 1973 | 1973 1973 | 95.89 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_5592
+
+CONTIG: scaffold_5896 (1902bp)
+Top Length: 1902  Top ID: 97.69
+		One align captures most of this contig: 2586644 2588545 | 1902 1 | 1902 1902 | 97.69 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_5896
+
+CONTIG: scaffold_6561 (1769bp)
+Top Length: 1769  Top ID: 98.98
+		Marking as insignificant: 4232064 4232637 | 1 574 | 574 574 | 98.95 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_6561
+		One align captures most of this contig: 2650474 2652242 | 1769 1 | 1769 1769 | 98.98 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_6561
+
+CONTIG: scaffold_6669 (1752bp)
+Top Length: 1745  Top ID: 98.4
+		One align captures most of this contig: 2654831 2656575 | 1 1745 | 1745 1745 | 98.4 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_6669
+
+CONTIG: scaffold_8054 (1855bp)
+Top Length: 264  Top ID: 95.08
+		This contig is partially unaligned. (Aligned 264 out of 1855 bases)
+		Alignment: 2311352 2311614 | 1356 1093 | 263 264 | 95.08 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_8054
+		Unaligned bases: 1 to 1092 (1092)
+		Unaligned bases: 1357 to 1855 (499)
+
+CONTIG: scaffold_8492 (1474bp)
+Top Length: 1119  Top ID: 99.46
+		This contig is partially unaligned. (Aligned 1119 out of 1474 bases)
+		Alignment: 2606840 2607958 | 356 1474 | 1119 1119 | 99.46 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_8492
+		Unaligned bases: 1 to 355 (355)
+
+CONTIG: scaffold_8509 (1471bp)
+Top Length: 454  Top ID: 95.37
+		This contig is partially unaligned. (Aligned 454 out of 1471 bases)
+		Alignment: 2854817 2855270 | 1471 1018 | 454 454 | 95.37 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_8509
+		Unaligned bases: 1 to 1017 (1017)
+
+CONTIG: scaffold_8865 (2010bp)
+Top Length: 99  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 99 out of 2010 bases)
+		Alignment: 2590618 2590716 | 99 1 | 99 99 | 100.0 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_8865
+		Unaligned bases: 100 to 2010 (1911)
+
+CONTIG: scaffold_8920 (1953bp)
+Top Length: 1953  Top ID: 98.21
+		One align captures most of this contig: 2608856 2610808 | 1 1953 | 1953 1953 | 98.21 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_8920
+
+CONTIG: scaffold_9796 (2126bp)
+Top Length: 201  Top ID: 95.05
+		This contig is partially unaligned. (Aligned 201 out of 2126 bases)
+		Alignment: 2979076 2979277 | 1926 2126 | 202 201 | 95.05 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_9796
+		Unaligned bases: 1 to 1925 (1925)
+
+CONTIG: scaffold_10306 (1272bp)
+Top Length: 138  Top ID: 97.83
+		This contig is partially unaligned. (Aligned 138 out of 1272 bases)
+		Alignment: 2643094 2643231 | 1135 1272 | 138 138 | 97.83 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_10306
+		Unaligned bases: 1 to 1134 (1134)
+
+CONTIG: scaffold_12913 (1066bp)
+Top Length: 1066  Top ID: 96.25
+		One align captures most of this contig: 2599855 2600920 | 1066 1 | 1066 1066 | 96.25 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_12913
+
+CONTIG: scaffold_13930 (1849bp)
+Top Length: 1849  Top ID: 99.19
+		One align captures most of this contig: 2588872 2590716 | 1 1849 | 1845 1849 | 99.19 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_13930
+
+CONTIG: scaffold_16018 (893bp)
+Top Length: 885  Top ID: 97.18
+		One align captures most of this contig: 2639773 2640657 | 885 1 | 885 885 | 97.18 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_16018
+
+CONTIG: scaffold_16809 (861bp)
+Top Length: 861  Top ID: 96.98
+		Marking as insignificant: 3320910 3321438 | 861 333 | 529 529 | 95.84 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_16809
+		One align captures most of this contig: 2856463 2857322 | 861 1 | 860 861 | 96.98 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_16809
+
+CONTIG: scaffold_19923 (759bp)
+Top Length: 756  Top ID: 95.5
+		One align captures most of this contig: 2634043 2634798 | 4 759 | 756 756 | 95.5 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_19923
+
+CONTIG: scaffold_21798 (705bp)
+Top Length: 298  Top ID: 96.98
+		This contig is partially unaligned. (Aligned 298 out of 705 bases)
+		Alignment: 2978687 2978983 | 298 1 | 297 298 | 96.98 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_21798
+		Unaligned bases: 299 to 705 (407)
+
+CONTIG: scaffold_21878 (703bp)
+Top Length: 703  Top ID: 97.16
+		One align captures most of this contig: 4007898 4008600 | 1 703 | 703 703 | 97.16 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_21878
+
+CONTIG: scaffold_23302 (668bp)
+Top Length: 550  Top ID: 98.73
+		This contig is partially unaligned. (Aligned 550 out of 668 bases)
+		Alignment: 2637402 2637951 | 1 550 | 550 550 | 98.73 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_23302
+		Unaligned bases: 551 to 668 (118)
+
+CONTIG: scaffold_23775 (658bp)
+Top Length: 658  Top ID: 96.2
+		One align captures most of this contig: 2608157 2608814 | 658 1 | 658 658 | 96.2 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_23775
+
+CONTIG: scaffold_25372 (1236bp)
+Top Length: 588  Top ID: 98.64
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 2656502 2656979 | 8 485 | 478 478 | 98.74 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_25372
+			  Fake misassembly between these two alignments: inconsistency = -2 , gap in the contig is small or absent or filled mostly with Ns (short indel: insertion of length 2; 0 mismatches)
+			Real Alignment 2: 2657103 2657690 | 611 1198 | 588 588 | 98.64 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_25372
+
+CONTIG: scaffold_27564 (579bp)
+Top Length: 574  Top ID: 97.74
+		One align captures most of this contig: 4010744 4011317 | 6 579 | 574 574 | 97.74 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_27564
+
+CONTIG: scaffold_28077 (562bp)
+Top Length: 562  Top ID: 95.91
+		One align captures most of this contig: 2653093 2653654 | 562 1 | 562 562 | 95.91 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_28077
+
+CONTIG: scaffold_28236 (557bp)
+Top Length: 557  Top ID: 98.03
+		One align captures most of this contig: 2601722 2602278 | 1 557 | 557 557 | 98.03 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_28236
+
+CONTIG: scaffold_30182 (507bp)
+Top Length: 507  Top ID: 98.82
+		One align captures most of this contig: 2591614 2592120 | 1 507 | 507 507 | 98.82 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_30182
+
+CONTIG: scaffold_30413 (799bp)
+Top Length: 799  Top ID: 98.25
+		One align captures most of this contig: 2592498 2593293 | 799 1 | 796 799 | 98.25 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_30413
+
+CONTIG: scaffold_30832 (707bp)
+Top Length: 707  Top ID: 98.46
+		One align captures most of this contig: 2854633 2855346 | 707 1 | 714 707 | 98.46 | Bacteroides_capillosus_gi_146386150_ref_NZ_ scaffold_30832
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_capillosus/contigs_reports/nucmer_output/IDBA_UD.used_snps
+	Reference Bacteroides_capillosus_gi_146386150_ref_NZ_: 40 total alignments. 1 total regions.
+		Region: 1 to 4241076 (4241076 bp)
+			START in gap: 1 to 2311352 (2311351 bp)
+			Align 1: 2311352 2311614 scaffold_8054 1356 1093
+				Gap between this and next alignment: 2311614 to 2578795 (267180 bp)
+				Next Alignment: 2578795 2582905 scaffold_5003 4095 1
+
+			Align 2: 2578795 2582905 scaffold_5003 4095 1
+				Negative gap (overlap) between this and next alignment: 2582905 to 2582829 (-76 bp)
+				Next Alignment: 2582829 2586755 scaffold_2825 3922 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 3922 to 3845.
+			Align 3: 2582906 2586755 scaffold_2825 3845 1
+				Negative gap (overlap) between this and next alignment: 2586755 to 2586644 (-111 bp)
+				Next Alignment: 2586644 2588545 scaffold_5896 1902 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1902 to 1790.
+			Align 4: 2586756 2588545 scaffold_5896 1790 1
+				Gap between this and next alignment: 2588545 to 2588872 (326 bp)
+				Next Alignment: 2588872 2590716 scaffold_13930 1 1849
+
+			Align 5: 2588872 2590716 scaffold_13930 1 1849
+				The next alignment (2590618 2590716 scaffold_8865 99 1) is redundant. Skipping.
+				Gap between this and next alignment: 2590716 to 2591614 (897 bp)
+				Next Alignment: 2591614 2592120 scaffold_30182 1 507
+
+			Align 7: 2591614 2592120 scaffold_30182 1 507
+				Gap between this and next alignment: 2592120 to 2592498 (377 bp)
+				Next Alignment: 2592498 2593293 scaffold_30413 799 1
+
+			Align 8: 2592498 2593293 scaffold_30413 799 1
+				Gap between this and next alignment: 2593293 to 2597453 (4159 bp)
+				Next Alignment: 2597453 2599425 scaffold_5592 1 1973
+
+			Align 9: 2597453 2599425 scaffold_5592 1 1973
+				Gap between this and next alignment: 2599425 to 2599855 (429 bp)
+				Next Alignment: 2599855 2600920 scaffold_12913 1066 1
+
+			Align 10: 2599855 2600920 scaffold_12913 1066 1
+				Gap between this and next alignment: 2600920 to 2601722 (801 bp)
+				Next Alignment: 2601722 2602278 scaffold_28236 1 557
+
+			Align 11: 2601722 2602278 scaffold_28236 1 557
+				Gap between this and next alignment: 2602278 to 2606840 (4561 bp)
+				Next Alignment: 2606840 2607958 scaffold_8492 356 1474
+
+			Align 12: 2606840 2607958 scaffold_8492 356 1474
+				Gap between this and next alignment: 2607958 to 2608157 (198 bp)
+				Next Alignment: 2608157 2608814 scaffold_23775 658 1
+
+			Align 13: 2608157 2608814 scaffold_23775 658 1
+				Gap between this and next alignment: 2608814 to 2608856 (41 bp)
+				Next Alignment: 2608856 2610808 scaffold_8920 1 1953
+
+			Align 14: 2608856 2610808 scaffold_8920 1 1953
+				Gap between this and next alignment: 2610808 to 2611452 (643 bp)
+				Next Alignment: 2611452 2614797 scaffold_2595 3403 61
+
+			Align 15: 2611452 2614797 scaffold_2595 3403 61
+				Gap between this and next alignment: 2614797 to 2621488 (6690 bp)
+				Next Alignment: 2621488 2624603 scaffold_2910 3117 1
+
+			Align 16: 2621488 2624603 scaffold_2910 3117 1
+				Gap between this and next alignment: 2624603 to 2624625 (21 bp)
+				Next Alignment: 2624625 2627079 scaffold_2033 1728 4184
+
+			Align 17: 2624625 2627079 scaffold_2033 1728 4184
+				Gap between this and next alignment: 2627079 to 2634043 (6963 bp)
+				Next Alignment: 2634043 2634798 scaffold_19923 4 759
+
+			Align 18: 2634043 2634798 scaffold_19923 4 759
+				Gap between this and next alignment: 2634798 to 2637402 (2603 bp)
+				Next Alignment: 2637402 2637951 scaffold_23302 1 550
+
+			Align 19: 2637402 2637951 scaffold_23302 1 550
+				Gap between this and next alignment: 2637951 to 2639773 (1821 bp)
+				Next Alignment: 2639773 2640657 scaffold_16018 885 1
+
+			Align 20: 2639773 2640657 scaffold_16018 885 1
+				Negative gap (overlap) between this and next alignment: 2640657 to 2640642 (-15 bp)
+				Next Alignment: 2640642 2641099 scaffold_5544 1985 1528
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1985 to 1969.
+			Align 21: 2640658 2641099 scaffold_5544 1969 1528
+				Gap between this and next alignment: 2641099 to 2641567 (467 bp)
+				Next Alignment: 2641567 2643081 scaffold_5544 1515 1
+
+			Align 22: 2641567 2643081 scaffold_5544 1515 1
+				Gap between this and next alignment: 2643081 to 2643094 (12 bp)
+				Next Alignment: 2643094 2643231 scaffold_10306 1135 1272
+
+			Align 23: 2643094 2643231 scaffold_10306 1135 1272
+				The next alignment (2643109 2643231 scaffold_4360 2235 2357) is redundant. Skipping.
+				Negative gap (overlap) between this and next alignment: 2643231 to 2643133 (-98 bp)
+				Next Alignment: 2643133 2650572 scaffold_1082 7442 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 7442 to 7343.
+			Align 25: 2643232 2650572 scaffold_1082 7343 1
+				Negative gap (overlap) between this and next alignment: 2650572 to 2650474 (-98 bp)
+				Next Alignment: 2650474 2652242 scaffold_6561 1769 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1769 to 1670.
+			Align 26: 2650573 2652242 scaffold_6561 1670 1
+				Gap between this and next alignment: 2652242 to 2653093 (850 bp)
+				Next Alignment: 2653093 2653654 scaffold_28077 562 1
+
+			Align 27: 2653093 2653654 scaffold_28077 562 1
+				Gap between this and next alignment: 2653654 to 2654831 (1176 bp)
+				Next Alignment: 2654831 2656575 scaffold_6669 1 1745
+
+			Align 28: 2654831 2656575 scaffold_6669 1 1745
+				Negative gap (overlap) between this and next alignment: 2656575 to 2656502 (-73 bp)
+				Next Alignment: 2656502 2656979 scaffold_25372 8 485
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 8 to 82.
+			Align 29: 2656576 2656979 scaffold_25372 82 485
+				Gap between this and next alignment: 2656979 to 2657103 (123 bp)
+				Next Alignment: 2657103 2657690 scaffold_25372 611 1198
+
+			Align 30: 2657103 2657690 scaffold_25372 611 1198
+				Gap between this and next alignment: 2657690 to 2854633 (196942 bp)
+				Next Alignment: 2854633 2855346 scaffold_30832 707 1
+
+			Align 31: 2854633 2855346 scaffold_30832 707 1
+				The next alignment (2854817 2855270 scaffold_8509 1471 1018) is redundant. Skipping.
+				Gap between this and next alignment: 2855346 to 2856463 (1116 bp)
+				Next Alignment: 2856463 2857322 scaffold_16809 861 1
+
+			Align 33: 2856463 2857322 scaffold_16809 861 1
+				Gap between this and next alignment: 2857322 to 2978687 (121364 bp)
+				Next Alignment: 2978687 2978983 scaffold_21798 298 1
+
+			Align 34: 2978687 2978983 scaffold_21798 298 1
+				Gap between this and next alignment: 2978983 to 2979076 (92 bp)
+				Next Alignment: 2979076 2979277 scaffold_9796 1926 2126
+
+			Align 35: 2979076 2979277 scaffold_9796 1926 2126
+				Gap between this and next alignment: 2979277 to 4007898 (1028620 bp)
+				Next Alignment: 4007898 4008600 scaffold_21878 1 703
+
+			Align 36: 4007898 4008600 scaffold_21878 1 703
+				Gap between this and next alignment: 4008600 to 4009081 (480 bp)
+				Next Alignment: 4009081 4009256 scaffold_1093 7198 7373
+
+			Align 37: 4009081 4009256 scaffold_1093 7198 7373
+				Gap between this and next alignment: 4009256 to 4010744 (1487 bp)
+				Next Alignment: 4010744 4011317 scaffold_27564 6 579
+
+			Align 38: 4010744 4011317 scaffold_27564 6 579
+				Gap between this and next alignment: 4011317 to 4068315 (56997 bp)
+				Next Alignment: 4068315 4068395 scaffold_1072 9514 9434
+
+			Align 39: 4068315 4068395 scaffold_1072 9514 9434
+				Gap between this and next alignment: 4068395 to 4120130 (51734 bp)
+				Next Alignment: 4120130 4120261 scaffold_1093 132 1
+
+			Align 40: 4120130 4120261 scaffold_1093 132 1
+			END in gap: 4120261 to 4241076 (120815 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_capillosus/contigs_reports/nucmer_output/IDBA_UD.used_snps
+
+Results:
+	Local Misassemblies: 1
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 14 part
+Partially Unaligned Contigs with Misassemblies: 1
+Unaligned Contig Bases: 30053
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 49740
+
+	SNPs: 895
+	Insertions: 18
+	Deletions: 33
+
+	Positive Gaps: 32
+		Internal Gaps:  2
+		External Gaps:  30
+		External Gap Total:  4190746
+		External Gap Average: 139692
+	Negative Gaps: 6
+		Internal Overlaps:  0
+		External Overlaps:  6
+		External Overlaps Total: -471
+		External Overlaps Average: -78
+	Contigs with Redundant Alignments: 3 (676)

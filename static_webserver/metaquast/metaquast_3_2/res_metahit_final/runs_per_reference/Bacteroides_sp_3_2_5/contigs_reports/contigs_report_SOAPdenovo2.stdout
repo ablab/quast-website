@@ -1,0 +1,763 @@
+Aligning contigs to reference...
+	Running Nucmer
+Parsing coords...
+Loading reference...
+	Loaded [Bacteroides_sp_3_2_5_gi_384096968_ref_NZ_]
+	Loaded [Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_]
+	Loaded [Bacteroides_sp_3_2_5_gi_384096970_ref_NZ_]
+	Loaded [Bacteroides_sp_3_2_5_gi_384096971_ref_NZ_]
+	Loaded [Bacteroides_sp_3_2_5_gi_384096972_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 5
+	Total Region Length: 5116282
+Analyzing contigs...
+CONTIG: scaffold10289__2.2 (551bp)
+Top Length: 79  Top ID: 98.73
+		This contig is partially unaligned. (Aligned 79 out of 551 bases)
+		Alignment: 265287 265365 | 391 469 | 79 79 | 98.73 | Bacteroides_sp_3_2_5_gi_384096968_ref_NZ_ scaffold10289__2.2
+		Unaligned bases: 1 to 390 (390)
+		Unaligned bases: 470 to 551 (82)
+
+CONTIG: scaffold50659__6.8 (775bp)
+Top Length: 274  Top ID: 97.45
+		This contig is partially unaligned. (Aligned 274 out of 775 bases)
+		Alignment: 13034 13307 | 438 711 | 274 274 | 97.45 | Bacteroides_sp_3_2_5_gi_384096968_ref_NZ_ scaffold50659__6.8
+		Unaligned bases: 1 to 437 (437)
+		Unaligned bases: 712 to 775 (64)
+
+CONTIG: scaffold55058__9.0 (1199bp)
+Top Length: 268  Top ID: 95.52
+		This contig is partially unaligned. (Aligned 268 out of 1199 bases)
+		Alignment: 10333 10600 | 1 268 | 268 268 | 95.52 | Bacteroides_sp_3_2_5_gi_384096968_ref_NZ_ scaffold55058__9.0
+		Unaligned bases: 269 to 1199 (931)
+
+CONTIG: C736336_16.0 (707bp)
+Top Length: 707  Top ID: 100.0
+		One align captures most of this contig: 83493 84199 | 1 707 | 707 707 | 100.0 | Bacteroides_sp_3_2_5_gi_384096968_ref_NZ_ C736336_16.0
+
+CONTIG: C743078_27.0 (871bp)
+Top Length: 871  Top ID: 100.0
+		One align captures most of this contig: 79630 80500 | 871 1 | 871 871 | 100.0 | Bacteroides_sp_3_2_5_gi_384096968_ref_NZ_ C743078_27.0
+
+CONTIG: C758868_21.0 (2065bp)
+Top Length: 2065  Top ID: 100.0
+		One align captures most of this contig: 80839 82903 | 1 2065 | 2065 2065 | 100.0 | Bacteroides_sp_3_2_5_gi_384096968_ref_NZ_ C758868_21.0
+
+CONTIG: scaffold3098__5.5 (938bp)
+Top Length: 438  Top ID: 95.66
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 1541379 1541480 | 1 102 | 102 102 | 100.0 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ scaffold3098__5.5
+			  Gap between these two alignments (local misassembly). Inconsistency = 147 
+			Real Alignment 2: 1541667 1541855 | 142 330 | 189 189 | 100.0 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ scaffold3098__5.5
+			  Gap between these two alignments (local misassembly). Inconsistency = 155 
+			Real Alignment 3: 1542097 1542534 | 417 854 | 438 438 | 95.66 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ scaffold3098__5.5
+
+CONTIG: scaffold4922__3.4 (670bp)
+Top Length: 286  Top ID: 98.6
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 2380623 2380777 | 276 122 | 155 155 | 98.06 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ scaffold4922__3.4
+			  Gap between these two alignments (local misassembly). Inconsistency = 141 
+			Real Alignment 2: 2380088 2380373 | 670 385 | 286 286 | 98.6 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ scaffold4922__3.4
+
+CONTIG: scaffold11504__3.9 (1833bp)
+Top Length: 1486  Top ID: 99.6
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 1540726 1540859 | 134 1 | 134 134 | 99.25 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ scaffold11504__3.9
+			  Gap between these two alignments (local misassembly). Inconsistency = 286 
+			Real Alignment 2: 1538741 1540226 | 1833 348 | 1486 1486 | 99.6 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ scaffold11504__3.9
+
+CONTIG: scaffold11821__2.6 (523bp)
+Top Length: 197  Top ID: 96.45
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 1045724 1045831 | 1 108 | 108 108 | 98.15 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ scaffold11821__2.6
+			  Gap between these two alignments (local misassembly). Inconsistency = 152 
+			Real Alignment 2: 1046096 1046292 | 221 417 | 197 197 | 96.45 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ scaffold11821__2.6
+			  Gap between these two alignments (local misassembly). Inconsistency = 125 
+			Real Alignment 3: 1046429 1046523 | 429 523 | 95 95 | 100.0 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ scaffold11821__2.6
+
+CONTIG: scaffold12738__3.0 (503bp)
+Top Length: 95  Top ID: 100.0
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 503 and total length of all aligns is 173
+		Alignment: 2382496 2382573 | 356 279 | 78 78 | 100.0 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ scaffold12738__3.0
+		Alignment: 2382203 2382297 | 503 409 | 95 95 | 100.0 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ scaffold12738__3.0
+		Unaligned bases: 330
+CONTIG: scaffold13705__1.8 (569bp)
+Top Length: 210  Top ID: 99.05
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 1214624 1214733 | 1 110 | 110 110 | 99.09 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ scaffold13705__1.8
+			  Gap between these two alignments (local misassembly). Inconsistency = 146 
+			Real Alignment 2: 1214972 1215181 | 203 412 | 210 210 | 99.05 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ scaffold13705__1.8
+			  Gap between these two alignments (local misassembly). Inconsistency = 148 
+			Real Alignment 3: 1215392 1215486 | 475 569 | 95 95 | 100.0 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ scaffold13705__1.8
+
+CONTIG: scaffold50266__2.6 (645bp)
+Top Length: 212  Top ID: 100.0
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 1540216 1540420 | 1 205 | 205 205 | 99.51 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ scaffold50266__2.6
+			  Gap between these two alignments (local misassembly). Inconsistency = 148 
+			Real Alignment 2: 1540586 1540745 | 223 382 | 160 160 | 99.38 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ scaffold50266__2.6
+			  Gap between these two alignments (local misassembly). Inconsistency = 151 
+			Real Alignment 3: 1540948 1541159 | 434 645 | 212 212 | 100.0 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ scaffold50266__2.6
+
+CONTIG: scaffold55573__2.0 (623bp)
+Top Length: 325  Top ID: 96.0
+		This contig is partially unaligned. (Aligned 325 out of 623 bases)
+		Alignment: 1415746 1416070 | 623 299 | 325 325 | 96.0 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ scaffold55573__2.0
+		Unaligned bases: 1 to 298 (298)
+
+CONTIG: scaffold56139__2.8 (1419bp)
+Top Length: 641  Top ID: 97.5
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 1414888 1415195 | 308 1 | 308 308 | 99.68 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ scaffold56139__2.8
+			  Gap between these two alignments (local misassembly). Inconsistency = 155 
+			Real Alignment 2: 1414337 1414727 | 704 314 | 391 391 | 98.47 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ scaffold56139__2.8
+			  Gap between these two alignments (local misassembly). Inconsistency = 154 
+			Real Alignment 3: 1413468 1414108 | 1419 779 | 641 641 | 97.5 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ scaffold56139__2.8
+
+CONTIG: C721386_64.0 (517bp)
+Top Length: 517  Top ID: 99.42
+		One align captures most of this contig: 2031024 2031539 | 517 1 | 516 517 | 99.42 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C721386_64.0
+
+CONTIG: C725186_33.0 (554bp)
+Top Length: 554  Top ID: 100.0
+		One align captures most of this contig: 3008948 3009501 | 554 1 | 554 554 | 100.0 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C725186_33.0
+
+CONTIG: C725634__6.0 (559bp)
+Top Length: 559  Top ID: 100.0
+		One align captures most of this contig: 1544487 1545045 | 559 1 | 559 559 | 100.0 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C725634__6.0
+
+CONTIG: C725852_61.0 (562bp)
+Top Length: 562  Top ID: 99.64
+		One align captures most of this contig: 2996204 2996765 | 562 1 | 562 562 | 99.64 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C725852_61.0
+
+CONTIG: C725958_66.0 (563bp)
+Top Length: 563  Top ID: 100.0
+		One align captures most of this contig: 2036591 2037153 | 1 563 | 563 563 | 100.0 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C725958_66.0
+
+CONTIG: C726812_48.0 (573bp)
+Top Length: 573  Top ID: 100.0
+		One align captures most of this contig: 2997748 2998320 | 1 573 | 573 573 | 100.0 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C726812_48.0
+
+CONTIG: C728274_57.0 (591bp)
+Top Length: 591  Top ID: 99.83
+		One align captures most of this contig: 2055514 2056104 | 1 591 | 591 591 | 99.83 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C728274_57.0
+
+CONTIG: C728898_62.0 (599bp)
+Top Length: 599  Top ID: 99.83
+		One align captures most of this contig: 2109866 2110464 | 1 599 | 599 599 | 99.83 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C728898_62.0
+
+CONTIG: C731648_62.0 (633bp)
+Top Length: 632  Top ID: 99.68
+		One align captures most of this contig: 2032553 2033184 | 1 632 | 632 632 | 99.68 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C731648_62.0
+
+CONTIG: C731878_63.0 (637bp)
+Top Length: 637  Top ID: 100.0
+		One align captures most of this contig: 2058388 2059024 | 1 637 | 637 637 | 100.0 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C731878_63.0
+
+CONTIG: C732066_58.0 (639bp)
+Top Length: 639  Top ID: 99.84
+		One align captures most of this contig: 2039158 2039796 | 1 639 | 639 639 | 99.84 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C732066_58.0
+
+CONTIG: C732484_60.0 (646bp)
+Top Length: 646  Top ID: 99.23
+		One align captures most of this contig: 2031938 2032583 | 646 1 | 646 646 | 99.23 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C732484_60.0
+
+CONTIG: C734836_56.0 (681bp)
+Top Length: 681  Top ID: 100.0
+		One align captures most of this contig: 2037145 2037825 | 681 1 | 681 681 | 100.0 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C734836_56.0
+
+CONTIG: C735352_42.0 (690bp)
+Top Length: 690  Top ID: 99.28
+		One align captures most of this contig: 2043120 2043809 | 1 690 | 690 690 | 99.28 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C735352_42.0
+
+CONTIG: C740098_63.0 (788bp)
+Top Length: 788  Top ID: 99.37
+		One align captures most of this contig: 2130412 2131199 | 788 1 | 788 788 | 99.37 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C740098_63.0
+
+CONTIG: C741014_51.0 (812bp)
+Top Length: 812  Top ID: 100.0
+		One align captures most of this contig: 2059013 2059824 | 1 812 | 812 812 | 100.0 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C741014_51.0
+
+CONTIG: C741360_56.0 (821bp)
+Top Length: 821  Top ID: 99.76
+		One align captures most of this contig: 2048948 2049768 | 1 821 | 821 821 | 99.76 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C741360_56.0
+
+CONTIG: C742734_58.0 (860bp)
+Top Length: 860  Top ID: 99.88
+		One align captures most of this contig: 2057558 2058418 | 860 1 | 861 860 | 99.88 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C742734_58.0
+
+CONTIG: C743988_45.0 (900bp)
+Top Length: 900  Top ID: 99.89
+		One align captures most of this contig: 2999599 3000498 | 900 1 | 900 900 | 99.89 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C743988_45.0
+
+CONTIG: C744028_29.0 (901bp)
+Top Length: 900  Top ID: 100.0
+		One align captures most of this contig: 3002861 3003760 | 1 900 | 900 900 | 100.0 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C744028_29.0
+
+CONTIG: C744064_55.0 (903bp)
+Top Length: 903  Top ID: 99.89
+		One align captures most of this contig: 2047054 2047956 | 903 1 | 903 903 | 99.89 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C744064_55.0
+
+CONTIG: C744132_53.0 (905bp)
+Top Length: 905  Top ID: 100.0
+		One align captures most of this contig: 3013723 3014627 | 1 905 | 905 905 | 100.0 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C744132_53.0
+
+CONTIG: C745116_55.0 (935bp)
+Top Length: 935  Top ID: 99.36
+		One align captures most of this contig: 2037795 2038729 | 935 1 | 935 935 | 99.36 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C745116_55.0
+
+CONTIG: C747860_57.0 (1053bp)
+Top Length: 1053  Top ID: 100.0
+		One align captures most of this contig: 2047926 2048978 | 1053 1 | 1053 1053 | 100.0 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C747860_57.0
+
+CONTIG: C748892_31.0 (1105bp)
+Top Length: 1105  Top ID: 99.91
+		One align captures most of this contig: 3003762 3004866 | 1 1105 | 1105 1105 | 99.91 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C748892_31.0
+
+CONTIG: C749240_61.0 (1121bp)
+Top Length: 1121  Top ID: 99.91
+		One align captures most of this contig: 2033155 2034275 | 1 1121 | 1121 1121 | 99.91 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C749240_61.0
+
+CONTIG: C749496_59.0 (1134bp)
+Top Length: 1134  Top ID: 97.88
+		One align captures most of this contig: 2113406 2114539 | 1134 1 | 1134 1134 | 97.88 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C749496_59.0
+
+CONTIG: C750564_45.0 (1195bp)
+Top Length: 1195  Top ID: 99.92
+		One align captures most of this contig: 2994968 2996162 | 1 1195 | 1195 1195 | 99.92 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C750564_45.0
+
+CONTIG: C750854_59.0 (1211bp)
+Top Length: 1211  Top ID: 99.83
+		One align captures most of this contig: 2056337 2057548 | 1211 1 | 1212 1211 | 99.83 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C750854_59.0
+
+CONTIG: C751410_44.0 (1245bp)
+Top Length: 1243  Top ID: 100.0
+		One align captures most of this contig: 3020176 3021418 | 3 1245 | 1243 1243 | 100.0 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C751410_44.0
+
+CONTIG: C752192_63.0 (1295bp)
+Top Length: 1295  Top ID: 100.0
+		One align captures most of this contig: 2991830 2993124 | 1 1295 | 1295 1295 | 100.0 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C752192_63.0
+
+CONTIG: C752490_64.0 (1318bp)
+Top Length: 1318  Top ID: 99.39
+		One align captures most of this contig: 2044218 2045535 | 1 1318 | 1318 1318 | 99.39 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C752490_64.0
+
+CONTIG: C752522_62.0 (1319bp)
+Top Length: 1319  Top ID: 99.7
+		One align captures most of this contig: 2050182 2051500 | 1319 1 | 1319 1319 | 99.7 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C752522_62.0
+
+CONTIG: C753710_57.0 (1414bp)
+Top Length: 1414  Top ID: 99.86
+		One align captures most of this contig: 2993558 2994971 | 1 1414 | 1414 1414 | 99.86 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C753710_57.0
+
+CONTIG: C755226_58.0 (1570bp)
+Top Length: 1570  Top ID: 99.55
+		One align captures most of this contig: 2039811 2041380 | 1 1570 | 1570 1570 | 99.55 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C755226_58.0
+
+CONTIG: C755256_51.0 (1572bp)
+Top Length: 1572  Top ID: 99.36
+		One align captures most of this contig: 2045513 2047084 | 1 1572 | 1572 1572 | 99.36 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C755256_51.0
+
+CONTIG: C755642_61.0 (1608bp)
+Top Length: 1608  Top ID: 99.5
+		One align captures most of this contig: 2137543 2139150 | 1608 1 | 1608 1608 | 99.5 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C755642_61.0
+
+CONTIG: C756690_49.0 (1730bp)
+Top Length: 1730  Top ID: 99.94
+		One align captures most of this contig: 3007249 3008978 | 1 1730 | 1730 1730 | 99.94 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C756690_49.0
+
+CONTIG: C757258_44.0 (1801bp)
+Top Length: 1801  Top ID: 99.11
+		One align captures most of this contig: 2041350 2043150 | 1801 1 | 1801 1801 | 99.11 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C757258_44.0
+
+CONTIG: C758116_65.0 (1939bp)
+Top Length: 1939  Top ID: 99.54
+		One align captures most of this contig: 2141648 2143588 | 1939 1 | 1941 1939 | 99.54 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C758116_65.0
+
+CONTIG: C760078_57.0 (2301bp)
+Top Length: 2301  Top ID: 99.39
+		One align captures most of this contig: 2059815 2062115 | 1 2301 | 2301 2301 | 99.39 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C760078_57.0
+
+CONTIG: C760520_26.0 (2412bp)
+Top Length: 2412  Top ID: 99.83
+		One align captures most of this contig: 3004836 3007247 | 1 2412 | 2412 2412 | 99.83 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C760520_26.0
+
+CONTIG: C760528_66.0 (2413bp)
+Top Length: 2413  Top ID: 99.92
+		One align captures most of this contig: 2139263 2141676 | 1 2413 | 2414 2413 | 99.92 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C760528_66.0
+
+CONTIG: C760598_55.0 (2428bp)
+Top Length: 2428  Top ID: 99.88
+		One align captures most of this contig: 2988474 2990901 | 1 2428 | 2428 2428 | 99.88 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C760598_55.0
+
+CONTIG: C762272_54.0 (2977bp)
+Top Length: 2977  Top ID: 99.73
+		One align captures most of this contig: 2110442 2113418 | 1 2977 | 2977 2977 | 99.73 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C762272_54.0
+
+CONTIG: C763368_56.0 (3516bp)
+Top Length: 3516  Top ID: 99.94
+		One align captures most of this contig: 2052004 2055519 | 1 3516 | 3516 3516 | 99.94 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C763368_56.0
+
+CONTIG: C763504_43.0 (3581bp)
+Top Length: 3581  Top ID: 99.94
+		One align captures most of this contig: 2983338 2986918 | 3581 1 | 3581 3581 | 99.94 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C763504_43.0
+
+CONTIG: C763860_41.0 (3847bp)
+Top Length: 3847  Top ID: 98.93
+		One align captures most of this contig: 2062097 2065937 | 3847 1 | 3841 3847 | 98.93 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C763860_41.0
+
+CONTIG: C764386_35.0 (4283bp)
+Top Length: 4283  Top ID: 100.0
+		One align captures most of this contig: 3009471 3013753 | 4283 1 | 4283 4283 | 100.0 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C764386_35.0
+
+CONTIG: C764734_59.0 (4638bp)
+Top Length: 4638  Top ID: 99.46
+		One align captures most of this contig: 2104848 2109485 | 4638 1 | 4638 4638 | 99.46 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C764734_59.0
+
+CONTIG: C765374_47.0 (5467bp)
+Top Length: 5467  Top ID: 99.96
+		One align captures most of this contig: 3014731 3020197 | 1 5467 | 5467 5467 | 99.96 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C765374_47.0
+
+CONTIG: C765766_64.0 (6297bp)
+Top Length: 6297  Top ID: 99.59
+		One align captures most of this contig: 2131272 2137569 | 6297 1 | 6298 6297 | 99.59 | Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_ C765766_64.0
+
+CONTIG: scaffold35710__5.2 (697bp)
+Top Length: 128  Top ID: 96.09
+		This contig is partially unaligned. (Aligned 128 out of 697 bases)
+		Alignment: 125447 125574 | 555 428 | 128 128 | 96.09 | Bacteroides_sp_3_2_5_gi_384096972_ref_NZ_ scaffold35710__5.2
+		Unaligned bases: 1 to 427 (427)
+		Unaligned bases: 556 to 697 (142)
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_sp_3_2_5/contigs_reports/nucmer_output/SOAPdenovo2.used_snps
+	Reference Bacteroides_sp_3_2_5_gi_384096968_ref_NZ_: 6 total alignments. 1 total regions.
+		Region: 1 to 616139 (616139 bp)
+			START in gap: 1 to 10333 (10332 bp)
+			Align 1: 10333 10600 scaffold55058__9.0 1 268
+				Gap between this and next alignment: 10600 to 13034 (2433 bp)
+				Next Alignment: 13034 13307 scaffold50659__6.8 438 711
+
+			Align 2: 13034 13307 scaffold50659__6.8 438 711
+				Gap between this and next alignment: 13307 to 79630 (66322 bp)
+				Next Alignment: 79630 80500 C743078_27.0 871 1
+
+			Align 3: 79630 80500 C743078_27.0 871 1
+				Gap between this and next alignment: 80500 to 80839 (338 bp)
+				Next Alignment: 80839 82903 C758868_21.0 1 2065
+
+			Align 4: 80839 82903 C758868_21.0 1 2065
+				Gap between this and next alignment: 82903 to 83493 (589 bp)
+				Next Alignment: 83493 84199 C736336_16.0 1 707
+
+			Align 5: 83493 84199 C736336_16.0 1 707
+				Gap between this and next alignment: 84199 to 265287 (181087 bp)
+				Next Alignment: 265287 265365 scaffold10289__2.2 391 469
+
+			Align 6: 265287 265365 scaffold10289__2.2 391 469
+			END in gap: 265365 to 616139 (350774 bp)
+
+	Reference Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_: 74 total alignments. 1 total regions.
+		Region: 1 to 3253542 (3253542 bp)
+			START in gap: 1 to 1045724 (1045723 bp)
+			Align 1: 1045724 1045831 scaffold11821__2.6 1 108
+				Gap between this and next alignment: 1045831 to 1046096 (264 bp)
+				Next Alignment: 1046096 1046292 scaffold11821__2.6 221 417
+
+			Align 2: 1046096 1046292 scaffold11821__2.6 221 417
+				Gap between this and next alignment: 1046292 to 1046429 (136 bp)
+				Next Alignment: 1046429 1046523 scaffold11821__2.6 429 523
+
+			Align 3: 1046429 1046523 scaffold11821__2.6 429 523
+				Gap between this and next alignment: 1046523 to 1214624 (168100 bp)
+				Next Alignment: 1214624 1214733 scaffold13705__1.8 1 110
+
+			Align 4: 1214624 1214733 scaffold13705__1.8 1 110
+				Gap between this and next alignment: 1214733 to 1214972 (238 bp)
+				Next Alignment: 1214972 1215181 scaffold13705__1.8 203 412
+
+			Align 5: 1214972 1215181 scaffold13705__1.8 203 412
+				Gap between this and next alignment: 1215181 to 1215392 (210 bp)
+				Next Alignment: 1215392 1215486 scaffold13705__1.8 475 569
+
+			Align 6: 1215392 1215486 scaffold13705__1.8 475 569
+				Gap between this and next alignment: 1215486 to 1413468 (197981 bp)
+				Next Alignment: 1413468 1414108 scaffold56139__2.8 1419 779
+
+			Align 7: 1413468 1414108 scaffold56139__2.8 1419 779
+				Gap between this and next alignment: 1414108 to 1414337 (228 bp)
+				Next Alignment: 1414337 1414727 scaffold56139__2.8 704 314
+
+			Align 8: 1414337 1414727 scaffold56139__2.8 704 314
+				Gap between this and next alignment: 1414727 to 1414888 (160 bp)
+				Next Alignment: 1414888 1415195 scaffold56139__2.8 308 1
+
+			Align 9: 1414888 1415195 scaffold56139__2.8 308 1
+				Gap between this and next alignment: 1415195 to 1415746 (550 bp)
+				Next Alignment: 1415746 1416070 scaffold55573__2.0 623 299
+
+			Align 10: 1415746 1416070 scaffold55573__2.0 623 299
+				Gap between this and next alignment: 1416070 to 1538741 (122670 bp)
+				Next Alignment: 1538741 1540226 scaffold11504__3.9 1833 348
+
+			Align 11: 1538741 1540226 scaffold11504__3.9 1833 348
+				Negative gap (overlap) between this and next alignment: 1540226 to 1540216 (-10 bp)
+				Next Alignment: 1540216 1540420 scaffold50266__2.6 1 205
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 12.
+			Align 12: 1540227 1540420 scaffold50266__2.6 12 205
+				Gap between this and next alignment: 1540420 to 1540586 (165 bp)
+				Next Alignment: 1540586 1540745 scaffold50266__2.6 223 382
+
+			Align 13: 1540586 1540745 scaffold50266__2.6 223 382
+				Negative gap (overlap) between this and next alignment: 1540745 to 1540726 (-19 bp)
+				Next Alignment: 1540726 1540859 scaffold11504__3.9 134 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 134 to 114.
+			Align 14: 1540746 1540859 scaffold11504__3.9 114 1
+				Gap between this and next alignment: 1540859 to 1540948 (88 bp)
+				Next Alignment: 1540948 1541159 scaffold50266__2.6 434 645
+
+			Align 15: 1540948 1541159 scaffold50266__2.6 434 645
+				Gap between this and next alignment: 1541159 to 1541379 (219 bp)
+				Next Alignment: 1541379 1541480 scaffold3098__5.5 1 102
+
+			Align 16: 1541379 1541480 scaffold3098__5.5 1 102
+				Gap between this and next alignment: 1541480 to 1541667 (186 bp)
+				Next Alignment: 1541667 1541855 scaffold3098__5.5 142 330
+
+			Align 17: 1541667 1541855 scaffold3098__5.5 142 330
+				Gap between this and next alignment: 1541855 to 1542097 (241 bp)
+				Next Alignment: 1542097 1542534 scaffold3098__5.5 417 854
+
+			Align 18: 1542097 1542534 scaffold3098__5.5 417 854
+				Gap between this and next alignment: 1542534 to 1544487 (1952 bp)
+				Next Alignment: 1544487 1545045 C725634__6.0 559 1
+
+			Align 19: 1544487 1545045 C725634__6.0 559 1
+				Gap between this and next alignment: 1545045 to 2031024 (485978 bp)
+				Next Alignment: 2031024 2031539 C721386_64.0 517 1
+
+			Align 20: 2031024 2031539 C721386_64.0 517 1
+				Gap between this and next alignment: 2031539 to 2031938 (398 bp)
+				Next Alignment: 2031938 2032583 C732484_60.0 646 1
+
+			Align 21: 2031938 2032583 C732484_60.0 646 1
+				Negative gap (overlap) between this and next alignment: 2032583 to 2032553 (-30 bp)
+				Next Alignment: 2032553 2033184 C731648_62.0 1 632
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 32.
+			Align 22: 2032584 2033184 C731648_62.0 32 632
+				Negative gap (overlap) between this and next alignment: 2033184 to 2033155 (-29 bp)
+				Next Alignment: 2033155 2034275 C749240_61.0 1 1121
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 31.
+			Align 23: 2033185 2034275 C749240_61.0 31 1121
+				Gap between this and next alignment: 2034275 to 2036591 (2315 bp)
+				Next Alignment: 2036591 2037153 C725958_66.0 1 563
+
+			Align 24: 2036591 2037153 C725958_66.0 1 563
+				Negative gap (overlap) between this and next alignment: 2037153 to 2037145 (-8 bp)
+				Next Alignment: 2037145 2037825 C734836_56.0 681 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 681 to 672.
+			Align 25: 2037154 2037825 C734836_56.0 672 1
+				Negative gap (overlap) between this and next alignment: 2037825 to 2037795 (-30 bp)
+				Next Alignment: 2037795 2038729 C745116_55.0 935 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 935 to 904.
+			Align 26: 2037826 2038729 C745116_55.0 904 1
+				Gap between this and next alignment: 2038729 to 2039158 (428 bp)
+				Next Alignment: 2039158 2039796 C732066_58.0 1 639
+
+			Align 27: 2039158 2039796 C732066_58.0 1 639
+				Gap between this and next alignment: 2039796 to 2039811 (14 bp)
+				Next Alignment: 2039811 2041380 C755226_58.0 1 1570
+
+			Align 28: 2039811 2041380 C755226_58.0 1 1570
+				Negative gap (overlap) between this and next alignment: 2041380 to 2041350 (-30 bp)
+				Next Alignment: 2041350 2043150 C757258_44.0 1801 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1801 to 1770.
+			Align 29: 2041381 2043150 C757258_44.0 1770 1
+				Negative gap (overlap) between this and next alignment: 2043150 to 2043120 (-30 bp)
+				Next Alignment: 2043120 2043809 C735352_42.0 1 690
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 32.
+			Align 30: 2043151 2043809 C735352_42.0 32 690
+				Gap between this and next alignment: 2043809 to 2044218 (408 bp)
+				Next Alignment: 2044218 2045535 C752490_64.0 1 1318
+
+			Align 31: 2044218 2045535 C752490_64.0 1 1318
+				Negative gap (overlap) between this and next alignment: 2045535 to 2045513 (-22 bp)
+				Next Alignment: 2045513 2047084 C755256_51.0 1 1572
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 24.
+			Align 32: 2045536 2047084 C755256_51.0 24 1572
+				Negative gap (overlap) between this and next alignment: 2047084 to 2047054 (-30 bp)
+				Next Alignment: 2047054 2047956 C744064_55.0 903 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 903 to 872.
+			Align 33: 2047085 2047956 C744064_55.0 872 1
+				Negative gap (overlap) between this and next alignment: 2047956 to 2047926 (-30 bp)
+				Next Alignment: 2047926 2048978 C747860_57.0 1053 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1053 to 1022.
+			Align 34: 2047957 2048978 C747860_57.0 1022 1
+				Negative gap (overlap) between this and next alignment: 2048978 to 2048948 (-30 bp)
+				Next Alignment: 2048948 2049768 C741360_56.0 1 821
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 32.
+			Align 35: 2048979 2049768 C741360_56.0 32 821
+				Gap between this and next alignment: 2049768 to 2050182 (413 bp)
+				Next Alignment: 2050182 2051500 C752522_62.0 1319 1
+
+			Align 36: 2050182 2051500 C752522_62.0 1319 1
+				Gap between this and next alignment: 2051500 to 2052004 (503 bp)
+				Next Alignment: 2052004 2055519 C763368_56.0 1 3516
+
+			Align 37: 2052004 2055519 C763368_56.0 1 3516
+				Negative gap (overlap) between this and next alignment: 2055519 to 2055514 (-5 bp)
+				Next Alignment: 2055514 2056104 C728274_57.0 1 591
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 7.
+			Align 38: 2055520 2056104 C728274_57.0 7 591
+				Gap between this and next alignment: 2056104 to 2056337 (232 bp)
+				Next Alignment: 2056337 2057548 C750854_59.0 1211 1
+
+			Align 39: 2056337 2057548 C750854_59.0 1211 1
+				Gap between this and next alignment: 2057548 to 2057558 (9 bp)
+				Next Alignment: 2057558 2058418 C742734_58.0 860 1
+
+			Align 40: 2057558 2058418 C742734_58.0 860 1
+				Negative gap (overlap) between this and next alignment: 2058418 to 2058388 (-30 bp)
+				Next Alignment: 2058388 2059024 C731878_63.0 1 637
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 32.
+			Align 41: 2058419 2059024 C731878_63.0 32 637
+				Negative gap (overlap) between this and next alignment: 2059024 to 2059013 (-11 bp)
+				Next Alignment: 2059013 2059824 C741014_51.0 1 812
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 13.
+			Align 42: 2059025 2059824 C741014_51.0 13 812
+				Negative gap (overlap) between this and next alignment: 2059824 to 2059815 (-9 bp)
+				Next Alignment: 2059815 2062115 C760078_57.0 1 2301
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 11.
+			Align 43: 2059825 2062115 C760078_57.0 11 2301
+				Negative gap (overlap) between this and next alignment: 2062115 to 2062097 (-18 bp)
+				Next Alignment: 2062097 2065937 C763860_41.0 3847 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 3847 to 3828.
+			Align 44: 2062116 2065937 C763860_41.0 3828 1
+				Gap between this and next alignment: 2065937 to 2104848 (38910 bp)
+				Next Alignment: 2104848 2109485 C764734_59.0 4638 1
+
+			Align 45: 2104848 2109485 C764734_59.0 4638 1
+				Gap between this and next alignment: 2109485 to 2109866 (380 bp)
+				Next Alignment: 2109866 2110464 C728898_62.0 1 599
+
+			Align 46: 2109866 2110464 C728898_62.0 1 599
+				Negative gap (overlap) between this and next alignment: 2110464 to 2110442 (-22 bp)
+				Next Alignment: 2110442 2113418 C762272_54.0 1 2977
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 24.
+			Align 47: 2110465 2113418 C762272_54.0 24 2977
+				Negative gap (overlap) between this and next alignment: 2113418 to 2113406 (-12 bp)
+				Next Alignment: 2113406 2114539 C749496_59.0 1134 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1134 to 1121.
+			Align 48: 2113419 2114539 C749496_59.0 1121 1
+				Gap between this and next alignment: 2114539 to 2130412 (15872 bp)
+				Next Alignment: 2130412 2131199 C740098_63.0 788 1
+
+			Align 49: 2130412 2131199 C740098_63.0 788 1
+				Gap between this and next alignment: 2131199 to 2131272 (72 bp)
+				Next Alignment: 2131272 2137569 C765766_64.0 6297 1
+
+			Align 50: 2131272 2137569 C765766_64.0 6297 1
+				Negative gap (overlap) between this and next alignment: 2137569 to 2137543 (-26 bp)
+				Next Alignment: 2137543 2139150 C755642_61.0 1608 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1608 to 1581.
+			Align 51: 2137570 2139150 C755642_61.0 1581 1
+				Gap between this and next alignment: 2139150 to 2139263 (112 bp)
+				Next Alignment: 2139263 2141676 C760528_66.0 1 2413
+
+			Align 52: 2139263 2141676 C760528_66.0 1 2413
+				Negative gap (overlap) between this and next alignment: 2141676 to 2141648 (-28 bp)
+				Next Alignment: 2141648 2143588 C758116_65.0 1939 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1939 to 1910.
+			Align 53: 2141677 2143588 C758116_65.0 1910 1
+				Gap between this and next alignment: 2143588 to 2380088 (236499 bp)
+				Next Alignment: 2380088 2380373 scaffold4922__3.4 670 385
+
+			Align 54: 2380088 2380373 scaffold4922__3.4 670 385
+				Gap between this and next alignment: 2380373 to 2380623 (249 bp)
+				Next Alignment: 2380623 2380777 scaffold4922__3.4 276 122
+
+			Align 55: 2380623 2380777 scaffold4922__3.4 276 122
+				Gap between this and next alignment: 2380777 to 2382203 (1425 bp)
+				Next Alignment: 2382203 2382297 scaffold12738__3.0 503 409
+
+			Align 56: 2382203 2382297 scaffold12738__3.0 503 409
+				Gap between this and next alignment: 2382297 to 2382496 (198 bp)
+				Next Alignment: 2382496 2382573 scaffold12738__3.0 356 279
+
+			Align 57: 2382496 2382573 scaffold12738__3.0 356 279
+				Gap between this and next alignment: 2382573 to 2983338 (600764 bp)
+				Next Alignment: 2983338 2986918 C763504_43.0 3581 1
+
+			Align 58: 2983338 2986918 C763504_43.0 3581 1
+				Gap between this and next alignment: 2986918 to 2988474 (1555 bp)
+				Next Alignment: 2988474 2990901 C760598_55.0 1 2428
+
+			Align 59: 2988474 2990901 C760598_55.0 1 2428
+				Gap between this and next alignment: 2990901 to 2991830 (928 bp)
+				Next Alignment: 2991830 2993124 C752192_63.0 1 1295
+
+			Align 60: 2991830 2993124 C752192_63.0 1 1295
+				Gap between this and next alignment: 2993124 to 2993558 (433 bp)
+				Next Alignment: 2993558 2994971 C753710_57.0 1 1414
+
+			Align 61: 2993558 2994971 C753710_57.0 1 1414
+				Negative gap (overlap) between this and next alignment: 2994971 to 2994968 (-3 bp)
+				Next Alignment: 2994968 2996162 C750564_45.0 1 1195
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 5.
+			Align 62: 2994972 2996162 C750564_45.0 5 1195
+				Gap between this and next alignment: 2996162 to 2996204 (41 bp)
+				Next Alignment: 2996204 2996765 C725852_61.0 562 1
+
+			Align 63: 2996204 2996765 C725852_61.0 562 1
+				Gap between this and next alignment: 2996765 to 2997748 (982 bp)
+				Next Alignment: 2997748 2998320 C726812_48.0 1 573
+
+			Align 64: 2997748 2998320 C726812_48.0 1 573
+				Gap between this and next alignment: 2998320 to 2999599 (1278 bp)
+				Next Alignment: 2999599 3000498 C743988_45.0 900 1
+
+			Align 65: 2999599 3000498 C743988_45.0 900 1
+				Gap between this and next alignment: 3000498 to 3002861 (2362 bp)
+				Next Alignment: 3002861 3003760 C744028_29.0 1 900
+
+			Align 66: 3002861 3003760 C744028_29.0 1 900
+				Gap between this and next alignment: 3003760 to 3003762 (1 bp)
+				Next Alignment: 3003762 3004866 C748892_31.0 1 1105
+
+			Align 67: 3003762 3004866 C748892_31.0 1 1105
+				Negative gap (overlap) between this and next alignment: 3004866 to 3004836 (-30 bp)
+				Next Alignment: 3004836 3007247 C760520_26.0 1 2412
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 32.
+			Align 68: 3004867 3007247 C760520_26.0 32 2412
+				Gap between this and next alignment: 3007247 to 3007249 (1 bp)
+				Next Alignment: 3007249 3008978 C756690_49.0 1 1730
+
+			Align 69: 3007249 3008978 C756690_49.0 1 1730
+				Negative gap (overlap) between this and next alignment: 3008978 to 3008948 (-30 bp)
+				Next Alignment: 3008948 3009501 C725186_33.0 554 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 554 to 523.
+			Align 70: 3008979 3009501 C725186_33.0 523 1
+				Negative gap (overlap) between this and next alignment: 3009501 to 3009471 (-30 bp)
+				Next Alignment: 3009471 3013753 C764386_35.0 4283 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 4283 to 4252.
+			Align 71: 3009502 3013753 C764386_35.0 4252 1
+				Negative gap (overlap) between this and next alignment: 3013753 to 3013723 (-30 bp)
+				Next Alignment: 3013723 3014627 C744132_53.0 1 905
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 32.
+			Align 72: 3013754 3014627 C744132_53.0 32 905
+				Gap between this and next alignment: 3014627 to 3014731 (103 bp)
+				Next Alignment: 3014731 3020197 C765374_47.0 1 5467
+
+			Align 73: 3014731 3020197 C765374_47.0 1 5467
+				Negative gap (overlap) between this and next alignment: 3020197 to 3020176 (-21 bp)
+				Next Alignment: 3020176 3021418 C751410_44.0 3 1245
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 3 to 25.
+			Align 74: 3020198 3021418 C751410_44.0 25 1245
+			END in gap: 3021418 to 3253542 (232124 bp)
+
+ERROR: Reference Bacteroides_sp_3_2_5_gi_384096971_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_3_2_5_gi_384096968_ref_NZ_', 'Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_', 'Bacteroides_sp_3_2_5_gi_384096972_ref_NZ_']
+ERROR: Reference Bacteroides_sp_3_2_5_gi_384096970_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_3_2_5_gi_384096968_ref_NZ_', 'Bacteroides_sp_3_2_5_gi_384096969_ref_NZ_', 'Bacteroides_sp_3_2_5_gi_384096972_ref_NZ_']
+	Reference Bacteroides_sp_3_2_5_gi_384096972_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 141246 (141246 bp)
+			START in gap: 1 to 125447 (125446 bp)
+			Align 1: 125447 125574 scaffold35710__5.2 555 428
+			END in gap: 125574 to 141246 (15672 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_sp_3_2_5/contigs_reports/nucmer_output/SOAPdenovo2.used_snps
+
+Results:
+	Local Misassemblies: 12
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 6 part
+Partially Unaligned Contigs with Misassemblies: 1
+Unaligned Contig Bases: 3101
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 93836
+
+	SNPs: 352
+	Insertions: 7
+	Deletions: 6
+
+	Positive Gaps: 57
+		Internal Gaps:  11
+		External Gaps:  46
+		External Gap Total:  3914816
+		External Gap Average: 85105
+	Negative Gaps: 27
+		Internal Overlaps:  0
+		External Overlaps:  27
+		External Overlaps Total: -603
+		External Overlaps Average: -22
+	Contigs with Redundant Alignments: 0 (0)

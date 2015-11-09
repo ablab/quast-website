@@ -1,0 +1,489 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Alistipes_putredinis_gi_224021120_ref_NZ_]
+	Loaded [Alistipes_putredinis_gi_224021121_ref_NZ_]
+	Loaded [Alistipes_putredinis_gi_224021122_ref_NZ_]
+	Loaded [Alistipes_putredinis_gi_224021123_ref_NZ_]
+	Loaded [Alistipes_putredinis_gi_224021124_ref_NZ_]
+	Loaded [Alistipes_putredinis_gi_224021125_ref_NZ_]
+	Loaded [Alistipes_putredinis_gi_224021126_ref_NZ_]
+	Loaded [Alistipes_putredinis_gi_224021127_ref_NZ_]
+	Loaded [Alistipes_putredinis_gi_224021128_ref_NZ_]
+	Loaded [Alistipes_putredinis_gi_224021129_ref_NZ_]
+	Loaded [Alistipes_putredinis_gi_224021130_ref_NZ_]
+	Loaded [Alistipes_putredinis_gi_224021131_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 12
+	Total Region Length: 2550678
+Analyzing contigs...
+CONTIG: NODE_8849_length_2060_cov_0.941147_ID_17697 (2060bp)
+Top Length: 1938  Top ID: 98.15
+		This contig is partially unaligned. (Aligned 1938 out of 2060 bases)
+		Alignment: 417263 419207 | 123 2060 | 1945 1938 | 98.15 | Alistipes_putredinis_gi_224021129_ref_NZ_ NODE_8849_length_2060_cov_0.941147_ID_17697
+		Unaligned bases: 1 to 122 (122)
+
+CONTIG: NODE_9628_length_1912_cov_0.933226_ID_19255 (1912bp)
+Top Length: 1693  Top ID: 99.05
+		This contig is partially unaligned. (Aligned 1693 out of 1912 bases)
+		Alignment: 415560 417252 | 1912 220 | 1693 1693 | 99.05 | Alistipes_putredinis_gi_224021129_ref_NZ_ NODE_9628_length_1912_cov_0.933226_ID_19255
+		Unaligned bases: 1 to 219 (219)
+
+CONTIG: NODE_14193_length_1335_cov_1.06719_ID_28385 (1335bp)
+Top Length: 1046  Top ID: 99.05
+		This contig is partially unaligned. (Aligned 1046 out of 1335 bases)
+		Alignment: 419370 420421 | 1221 176 | 1052 1046 | 99.05 | Alistipes_putredinis_gi_224021129_ref_NZ_ NODE_14193_length_1335_cov_1.06719_ID_28385
+		Unaligned bases: 1 to 175 (175)
+		Unaligned bases: 1222 to 1335 (114)
+
+CONTIG: NODE_15989_length_1191_cov_0.75_ID_31977 (1191bp)
+Top Length: 1191  Top ID: 97.23
+		One align captures most of this contig: 112460 113650 | 1 1191 | 1191 1191 | 97.23 | Alistipes_putredinis_gi_224021129_ref_NZ_ NODE_15989_length_1191_cov_0.75_ID_31977
+
+CONTIG: NODE_30109_length_646_cov_1.1709_ID_60217 (646bp)
+Top Length: 230  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 230 out of 646 bases)
+		Alignment: 409959 410188 | 230 1 | 230 230 | 100.0 | Alistipes_putredinis_gi_224021129_ref_NZ_ NODE_30109_length_646_cov_1.1709_ID_60217
+		Unaligned bases: 231 to 646 (416)
+
+CONTIG: NODE_33099_length_594_cov_1.17069_ID_66197 (594bp)
+Top Length: 590  Top ID: 99.15
+		One align captures most of this contig: 420523 421112 | 5 594 | 590 590 | 99.15 | Alistipes_putredinis_gi_224021129_ref_NZ_ NODE_33099_length_594_cov_1.17069_ID_66197
+
+CONTIG: NODE_33883_length_582_cov_0.618596_ID_67765 (582bp)
+Top Length: 579  Top ID: 96.72
+		One align captures most of this contig: 111677 112246 | 1 579 | 570 579 | 96.72 | Alistipes_putredinis_gi_224021129_ref_NZ_ NODE_33883_length_582_cov_0.618596_ID_67765
+
+CONTIG: NODE_37255_length_538_cov_0.724638_ID_74509 (538bp)
+Top Length: 330  Top ID: 96.06
+		This contig is partially unaligned. (Aligned 330 out of 538 bases)
+		Alignment: 108702 109031 | 333 4 | 330 330 | 96.06 | Alistipes_putredinis_gi_224021129_ref_NZ_ NODE_37255_length_538_cov_0.724638_ID_74509
+		Unaligned bases: 1 to 3 (3)
+		Unaligned bases: 334 to 538 (205)
+
+CONTIG: NODE_40192_length_504_cov_1.76615_ID_80383 (504bp)
+Top Length: 500  Top ID: 96.8
+		This contig has 2 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 623131 623630 | 4 503 | 500 500 | 96.8 | Alistipes_putredinis_gi_224021129_ref_NZ_ NODE_40192_length_504_cov_1.76615_ID_80383
+		Skipping alignment  226829 227328 | 4 503 | 500 500 | 96.8 | Alistipes_putredinis_gi_224021130_ref_NZ_ NODE_40192_length_504_cov_1.76615_ID_80383
+
+CONTIG: NODE_7343_length_2417_cov_1.5961_ID_14685 (2417bp)
+Top Length: 1712  Top ID: 99.71
+		Skipping redundant alignment 1 918 | 1296 2213 | 918 918 | 99.67 | Alistipes_putredinis_gi_224021131_ref_NZ_ NODE_7343_length_2417_cov_1.5961_ID_14685
+		Skipping redundant alignment 1600 2189 | 1620 2213 | 590 594 | 97.82 | Alistipes_putredinis_gi_224021122_ref_NZ_ NODE_7343_length_2417_cov_1.5961_ID_14685
+		Skipping redundant alignment 227145 227614 | 2213 1744 | 470 470 | 99.57 | Alistipes_putredinis_gi_224021131_ref_NZ_ NODE_7343_length_2417_cov_1.5961_ID_14685
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 114807 116517 | 502 2213 | 1711 1712 | 99.71 | Alistipes_putredinis_gi_224021131_ref_NZ_ NODE_7343_length_2417_cov_1.5961_ID_14685
+		This contig is partially unaligned. (Aligned 1712 out of 2417 bases)
+		Alignment: 898268 899979 | 2213 501 | 1712 1713 | 99.65 | Alistipes_putredinis_gi_224021127_ref_NZ_ NODE_7343_length_2417_cov_1.5961_ID_14685
+		Unaligned bases: 1 to 500 (500)
+		Unaligned bases: 2214 to 2417 (204)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_10970_length_1695_cov_0.805488_ID_21939 (1695bp)
+Top Length: 1065  Top ID: 96.53
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 771495 772559 | 39 1103 | 1065 1065 | 96.53 | Alistipes_putredinis_gi_224021127_ref_NZ_ NODE_10970_length_1695_cov_0.805488_ID_21939
+		This contig is partially unaligned. (Aligned 1065 out of 1695 bases)
+		Alignment: 744572 745636 | 1103 39 | 1065 1065 | 95.49 | Alistipes_putredinis_gi_224021127_ref_NZ_ NODE_10970_length_1695_cov_0.805488_ID_21939
+		Unaligned bases: 1 to 38 (38)
+		Unaligned bases: 1104 to 1695 (592)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_11408_length_1633_cov_1.22433_ID_22815 (1633bp)
+Top Length: 288  Top ID: 95.86
+		This contig is partially unaligned. (Aligned 288 out of 1633 bases)
+		Alignment: 907966 908254 | 585 298 | 289 288 | 95.86 | Alistipes_putredinis_gi_224021127_ref_NZ_ NODE_11408_length_1633_cov_1.22433_ID_22815
+		Unaligned bases: 1 to 297 (297)
+		Unaligned bases: 586 to 1633 (1048)
+
+CONTIG: NODE_12241_length_1529_cov_1.12958_ID_24481 (1529bp)
+Top Length: 1410  Top ID: 96.6
+		This contig is partially unaligned. (Aligned 1410 out of 1529 bases)
+		Alignment: 186409 187820 | 1472 63 | 1412 1410 | 96.6 | Alistipes_putredinis_gi_224021127_ref_NZ_ NODE_12241_length_1529_cov_1.12958_ID_24481
+		Unaligned bases: 1 to 62 (62)
+		Unaligned bases: 1473 to 1529 (57)
+
+CONTIG: NODE_13396_length_1407_cov_0.83432_ID_26791 (1407bp)
+Top Length: 1404  Top ID: 96.03
+		This contig has 2 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 769339 770748 | 1404 1 | 1410 1404 | 96.03 | Alistipes_putredinis_gi_224021127_ref_NZ_ NODE_13396_length_1407_cov_0.83432_ID_26791
+		Skipping alignment  531415 532821 | 1407 1 | 1407 1407 | 95.24 | Alistipes_putredinis_gi_224021127_ref_NZ_ NODE_13396_length_1407_cov_0.83432_ID_26791
+
+CONTIG: NODE_13485_length_1399_cov_0.611607_ID_26969 (1399bp)
+Top Length: 1019  Top ID: 97.17
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 905392 905626 | 235 1 | 235 235 | 96.17 | Alistipes_putredinis_gi_224021127_ref_NZ_ NODE_13485_length_1399_cov_0.611607_ID_26969
+			  Fake misassembly between these two alignments: inconsistency = -12 , gap in the contig is small or absent or filled mostly with Ns (long indel: insertion of length 12; 0 mismatches)
+			Real Alignment 2: 904242 905266 | 1391 373 | 1025 1019 | 97.17 | Alistipes_putredinis_gi_224021127_ref_NZ_ NODE_13485_length_1399_cov_0.611607_ID_26969
+
+CONTIG: NODE_13793_length_1371_cov_1.50076_ID_27585 (1371bp)
+Top Length: 1009  Top ID: 97.62
+		This contig is partially unaligned. (Aligned 1009 out of 1371 bases)
+		Alignment: 550948 551956 | 1 1009 | 1009 1009 | 97.62 | Alistipes_putredinis_gi_224021127_ref_NZ_ NODE_13793_length_1371_cov_1.50076_ID_27585
+		Unaligned bases: 1010 to 1371 (362)
+
+CONTIG: NODE_14093_length_1344_cov_0.831652_ID_28185 (1344bp)
+Top Length: 463  Top ID: 95.68
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 1344 and total length of all aligns is 559
+		Alignment: 894039 894501 | 254 716 | 463 463 | 95.68 | Alistipes_putredinis_gi_224021127_ref_NZ_ NODE_14093_length_1344_cov_0.831652_ID_28185
+		Alignment: 1129511 1129696 | 627 812 | 186 186 | 96.77 | Alistipes_putredinis_gi_224021127_ref_NZ_ NODE_14093_length_1344_cov_0.831652_ID_28185
+		Unaligned bases: 785
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: NODE_16627_length_1149_cov_0.709324_ID_33253 (1149bp)
+Top Length: 71  Top ID: 98.59
+		This contig is partially unaligned. (Aligned 71 out of 1149 bases)
+		Alignment: 747904 747974 | 185 115 | 71 71 | 98.59 | Alistipes_putredinis_gi_224021127_ref_NZ_ NODE_16627_length_1149_cov_0.709324_ID_33253
+		Unaligned bases: 1 to 114 (114)
+		Unaligned bases: 186 to 1149 (964)
+
+CONTIG: NODE_19289_length_997_cov_0.799363_ID_38577 (997bp)
+Top Length: 978  Top ID: 98.47
+		This contig is partially unaligned. (Aligned 978 out of 997 bases)
+		Alignment: 558775 559753 | 1 978 | 979 978 | 98.47 | Alistipes_putredinis_gi_224021127_ref_NZ_ NODE_19289_length_997_cov_0.799363_ID_38577
+		Unaligned bases: 979 to 997 (19)
+
+CONTIG: NODE_20133_length_954_cov_0.895439_ID_40265 (954bp)
+Top Length: 591  Top ID: 95.09
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 563375 563964 | 1 591 | 590 591 | 95.09 | Alistipes_putredinis_gi_224021127_ref_NZ_ NODE_20133_length_954_cov_0.895439_ID_40265
+			  Fake misassembly between these two alignments: inconsistency = -8 , gap in the contig is small or absent or filled mostly with Ns (long indel: insertion of length 8; 0 mismatches)
+			Real Alignment 2: 564050 564319 | 685 954 | 270 270 | 100.0 | Alistipes_putredinis_gi_224021127_ref_NZ_ NODE_20133_length_954_cov_0.895439_ID_40265
+
+CONTIG: NODE_22519_length_861_cov_0.630273_ID_45037 (861bp)
+Top Length: 74  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 74 out of 861 bases)
+		Alignment: 81417 81490 | 161 88 | 74 74 | 100.0 | Alistipes_putredinis_gi_224021127_ref_NZ_ NODE_22519_length_861_cov_0.630273_ID_45037
+		Unaligned bases: 1 to 87 (87)
+		Unaligned bases: 162 to 861 (700)
+
+CONTIG: NODE_31333_length_623_cov_0.635563_ID_62665 (623bp)
+Top Length: 312  Top ID: 99.36
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 902768 903079 | 312 1 | 312 312 | 99.36 | Alistipes_putredinis_gi_224021127_ref_NZ_ NODE_31333_length_623_cov_0.635563_ID_62665
+			  Fake misassembly between these two alignments: inconsistency = -5 , gap in the contig is small or absent or filled mostly with Ns (short indel: insertion of length 5; 0 mismatches)
+			Real Alignment 2: 902462 902675 | 623 410 | 214 214 | 98.13 | Alistipes_putredinis_gi_224021127_ref_NZ_ NODE_31333_length_623_cov_0.635563_ID_62665
+
+CONTIG: NODE_32046_length_611_cov_0.68705_ID_64091 (611bp)
+Top Length: 581  Top ID: 95.87
+		This contig is partially unaligned. (Aligned 581 out of 611 bases)
+		Alignment: 535294 535874 | 611 31 | 581 581 | 95.87 | Alistipes_putredinis_gi_224021127_ref_NZ_ NODE_32046_length_611_cov_0.68705_ID_64091
+		Unaligned bases: 1 to 30 (30)
+
+CONTIG: NODE_33468_length_588_cov_0.562852_ID_66935 (588bp)
+Top Length: 224  Top ID: 95.98
+		This contig is partially unaligned. (Aligned 224 out of 588 bases)
+		Alignment: 536373 536596 | 1 224 | 224 224 | 95.98 | Alistipes_putredinis_gi_224021127_ref_NZ_ NODE_33468_length_588_cov_0.562852_ID_66935
+		Unaligned bases: 225 to 588 (364)
+
+CONTIG: NODE_34631_length_571_cov_0.5_ID_69261 (571bp)
+Top Length: 254  Top ID: 96.06
+		This contig is partially unaligned. (Aligned 254 out of 571 bases)
+		Alignment: 996528 996781 | 318 571 | 254 254 | 96.06 | Alistipes_putredinis_gi_224021127_ref_NZ_ NODE_34631_length_571_cov_0.5_ID_69261
+		Unaligned bases: 1 to 317 (317)
+
+CONTIG: NODE_39240_length_514_cov_0.910675_ID_78479 (514bp)
+Top Length: 514  Top ID: 99.61
+		One align captures most of this contig: 560590 561101 | 514 1 | 512 514 | 99.61 | Alistipes_putredinis_gi_224021127_ref_NZ_ NODE_39240_length_514_cov_0.910675_ID_78479
+
+CONTIG: NODE_7207_length_2458_cov_1.35955_ID_14413 (2458bp)
+Top Length: 116  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 116 out of 2458 bases)
+		Alignment: 7400 7515 | 2458 2343 | 116 116 | 100.0 | Alistipes_putredinis_gi_224021131_ref_NZ_ NODE_7207_length_2458_cov_1.35955_ID_14413
+		Unaligned bases: 1 to 2342 (2342)
+
+CONTIG: NODE_12813_length_1465_cov_0.968794_ID_25625 (1465bp)
+Top Length: 472  Top ID: 97.67
+		This contig is partially unaligned. (Aligned 472 out of 1465 bases)
+		Alignment: 113401 113872 | 1465 994 | 472 472 | 97.67 | Alistipes_putredinis_gi_224021131_ref_NZ_ NODE_12813_length_1465_cov_0.968794_ID_25625
+		Unaligned bases: 1 to 993 (993)
+
+CONTIG: NODE_36300_length_549_cov_1.0081_ID_72599 (549bp)
+Top Length: 549  Top ID: 99.27
+		One align captures most of this contig: 112687 113235 | 1 549 | 549 549 | 99.27 | Alistipes_putredinis_gi_224021131_ref_NZ_ NODE_36300_length_549_cov_1.0081_ID_72599
+
+CONTIG: NODE_37078_length_540_cov_0.71134_ID_74155 (540bp)
+Top Length: 540  Top ID: 98.89
+		One align captures most of this contig: 1812 2351 | 1 540 | 540 540 | 98.89 | Alistipes_putredinis_gi_224021131_ref_NZ_ NODE_37078_length_540_cov_0.71134_ID_74155
+
+CONTIG: NODE_39819_length_508_cov_1.07726_ID_79637 (508bp)
+Top Length: 467  Top ID: 99.57
+		This contig is partially unaligned. (Aligned 467 out of 508 bases)
+		Alignment: 112234 112700 | 508 42 | 467 467 | 99.57 | Alistipes_putredinis_gi_224021131_ref_NZ_ NODE_39819_length_508_cov_1.07726_ID_79637
+		Unaligned bases: 1 to 41 (41)
+
+CONTIG: NODE_6920_length_2545_cov_1.18795_ID_13839 (2545bp)
+Top Length: 1185  Top ID: 96.89
+		This contig is partially unaligned. (Aligned 1185 out of 2545 bases)
+		Alignment: 150849 152039 | 2303 1119 | 1191 1185 | 96.89 | Alistipes_putredinis_gi_224021130_ref_NZ_ NODE_6920_length_2545_cov_1.18795_ID_13839
+		Unaligned bases: 1 to 1118 (1118)
+		Unaligned bases: 2304 to 2545 (242)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_12832_length_1464_cov_0.953158_ID_25663 (1464bp)
+Top Length: 1324  Top ID: 98.04
+		This contig is partially unaligned. (Aligned 1324 out of 1464 bases)
+		Alignment: 138452 139774 | 1449 126 | 1323 1324 | 98.04 | Alistipes_putredinis_gi_224021130_ref_NZ_ NODE_12832_length_1464_cov_0.953158_ID_25663
+		Unaligned bases: 1 to 125 (125)
+		Unaligned bases: 1450 to 1464 (15)
+
+CONTIG: NODE_14396_length_1318_cov_0.650831_ID_28791 (1318bp)
+Top Length: 1298  Top ID: 96.92
+		This contig is partially unaligned. (Aligned 1298 out of 1318 bases)
+		Alignment: 148278 149575 | 21 1318 | 1298 1298 | 96.92 | Alistipes_putredinis_gi_224021130_ref_NZ_ NODE_14396_length_1318_cov_0.650831_ID_28791
+		Unaligned bases: 1 to 20 (20)
+
+CONTIG: NODE_21039_length_917_cov_0.809745_ID_42077 (917bp)
+Top Length: 911  Top ID: 99.01
+		One align captures most of this contig: 119761 120671 | 911 1 | 911 911 | 99.01 | Alistipes_putredinis_gi_224021130_ref_NZ_ NODE_21039_length_917_cov_0.809745_ID_42077
+
+CONTIG: NODE_25039_length_774_cov_0.981919_ID_50077 (774bp)
+Top Length: 523  Top ID: 98.09
+		This contig is partially unaligned. (Aligned 523 out of 774 bases)
+		Alignment: 141769 142291 | 49 571 | 523 523 | 98.09 | Alistipes_putredinis_gi_224021130_ref_NZ_ NODE_25039_length_774_cov_0.981919_ID_50077
+		Unaligned bases: 1 to 48 (48)
+		Unaligned bases: 572 to 774 (203)
+
+CONTIG: NODE_25961_length_745_cov_0.926087_ID_51921 (745bp)
+Top Length: 119  Top ID: 98.32
+		This contig is partially unaligned. (Aligned 119 out of 745 bases)
+		Alignment: 466789 466907 | 745 627 | 119 119 | 98.32 | Alistipes_putredinis_gi_224021130_ref_NZ_ NODE_25961_length_745_cov_0.926087_ID_51921
+		Unaligned bases: 1 to 626 (626)
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Alistipes_putredinis/contigs_reports/nucmer_output/SPAdes.used_snps
+ERROR: Reference Alistipes_putredinis_gi_224021125_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Alistipes_putredinis_gi_224021130_ref_NZ_', 'Alistipes_putredinis_gi_224021131_ref_NZ_', 'Alistipes_putredinis_gi_224021129_ref_NZ_', 'Alistipes_putredinis_gi_224021127_ref_NZ_']
+ERROR: Reference Alistipes_putredinis_gi_224021124_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Alistipes_putredinis_gi_224021130_ref_NZ_', 'Alistipes_putredinis_gi_224021131_ref_NZ_', 'Alistipes_putredinis_gi_224021129_ref_NZ_', 'Alistipes_putredinis_gi_224021127_ref_NZ_']
+ERROR: Reference Alistipes_putredinis_gi_224021122_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Alistipes_putredinis_gi_224021130_ref_NZ_', 'Alistipes_putredinis_gi_224021131_ref_NZ_', 'Alistipes_putredinis_gi_224021129_ref_NZ_', 'Alistipes_putredinis_gi_224021127_ref_NZ_']
+ERROR: Reference Alistipes_putredinis_gi_224021128_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Alistipes_putredinis_gi_224021130_ref_NZ_', 'Alistipes_putredinis_gi_224021131_ref_NZ_', 'Alistipes_putredinis_gi_224021129_ref_NZ_', 'Alistipes_putredinis_gi_224021127_ref_NZ_']
+ERROR: Reference Alistipes_putredinis_gi_224021121_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Alistipes_putredinis_gi_224021130_ref_NZ_', 'Alistipes_putredinis_gi_224021131_ref_NZ_', 'Alistipes_putredinis_gi_224021129_ref_NZ_', 'Alistipes_putredinis_gi_224021127_ref_NZ_']
+ERROR: Reference Alistipes_putredinis_gi_224021123_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Alistipes_putredinis_gi_224021130_ref_NZ_', 'Alistipes_putredinis_gi_224021131_ref_NZ_', 'Alistipes_putredinis_gi_224021129_ref_NZ_', 'Alistipes_putredinis_gi_224021127_ref_NZ_']
+	Reference Alistipes_putredinis_gi_224021130_ref_NZ_: 6 total alignments. 1 total regions.
+		Region: 1 to 479642 (479642 bp)
+			START in gap: 1 to 119761 (119760 bp)
+			Align 1: 119761 120671 NODE_21039_length_917_cov_0.809745_ID_42077 911 1
+				Gap between this and next alignment: 120671 to 138452 (17780 bp)
+				Next Alignment: 138452 139774 NODE_12832_length_1464_cov_0.953158_ID_25663 1449 126
+
+			Align 2: 138452 139774 NODE_12832_length_1464_cov_0.953158_ID_25663 1449 126
+				Gap between this and next alignment: 139774 to 141769 (1994 bp)
+				Next Alignment: 141769 142291 NODE_25039_length_774_cov_0.981919_ID_50077 49 571
+
+			Align 3: 141769 142291 NODE_25039_length_774_cov_0.981919_ID_50077 49 571
+				Gap between this and next alignment: 142291 to 148278 (5986 bp)
+				Next Alignment: 148278 149575 NODE_14396_length_1318_cov_0.650831_ID_28791 21 1318
+
+			Align 4: 148278 149575 NODE_14396_length_1318_cov_0.650831_ID_28791 21 1318
+				Gap between this and next alignment: 149575 to 150849 (1273 bp)
+				Next Alignment: 150849 152039 NODE_6920_length_2545_cov_1.18795_ID_13839 2303 1119
+
+			Align 5: 150849 152039 NODE_6920_length_2545_cov_1.18795_ID_13839 2303 1119
+				Gap between this and next alignment: 152039 to 466789 (314749 bp)
+				Next Alignment: 466789 466907 NODE_25961_length_745_cov_0.926087_ID_51921 745 627
+
+			Align 6: 466789 466907 NODE_25961_length_745_cov_0.926087_ID_51921 745 627
+			END in gap: 466907 to 479642 (12735 bp)
+
+	Reference Alistipes_putredinis_gi_224021131_ref_NZ_: 5 total alignments. 1 total regions.
+		Region: 1 to 227614 (227614 bp)
+			START in gap: 1 to 1812 (1811 bp)
+			Align 1: 1812 2351 NODE_37078_length_540_cov_0.71134_ID_74155 1 540
+				Gap between this and next alignment: 2351 to 7400 (5048 bp)
+				Next Alignment: 7400 7515 NODE_7207_length_2458_cov_1.35955_ID_14413 2458 2343
+
+			Align 2: 7400 7515 NODE_7207_length_2458_cov_1.35955_ID_14413 2458 2343
+				Gap between this and next alignment: 7515 to 112234 (104718 bp)
+				Next Alignment: 112234 112700 NODE_39819_length_508_cov_1.07726_ID_79637 508 42
+
+			Align 3: 112234 112700 NODE_39819_length_508_cov_1.07726_ID_79637 508 42
+				Negative gap (overlap) between this and next alignment: 112700 to 112687 (-13 bp)
+				Next Alignment: 112687 113235 NODE_36300_length_549_cov_1.0081_ID_72599 1 549
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 15.
+			Align 4: 112701 113235 NODE_36300_length_549_cov_1.0081_ID_72599 15 549
+				Gap between this and next alignment: 113235 to 113401 (165 bp)
+				Next Alignment: 113401 113872 NODE_12813_length_1465_cov_0.968794_ID_25625 1465 994
+
+			Align 5: 113401 113872 NODE_12813_length_1465_cov_0.968794_ID_25625 1465 994
+			END in gap: 113872 to 227614 (113742 bp)
+
+	Reference Alistipes_putredinis_gi_224021129_ref_NZ_: 9 total alignments. 1 total regions.
+		Region: 1 to 626692 (626692 bp)
+			START in gap: 1 to 108702 (108701 bp)
+			Align 1: 108702 109031 NODE_37255_length_538_cov_0.724638_ID_74509 333 4
+				Gap between this and next alignment: 109031 to 111677 (2645 bp)
+				Next Alignment: 111677 112246 NODE_33883_length_582_cov_0.618596_ID_67765 1 579
+
+			Align 2: 111677 112246 NODE_33883_length_582_cov_0.618596_ID_67765 1 579
+				Gap between this and next alignment: 112246 to 112460 (213 bp)
+				Next Alignment: 112460 113650 NODE_15989_length_1191_cov_0.75_ID_31977 1 1191
+
+			Align 3: 112460 113650 NODE_15989_length_1191_cov_0.75_ID_31977 1 1191
+				Gap between this and next alignment: 113650 to 409959 (296308 bp)
+				Next Alignment: 409959 410188 NODE_30109_length_646_cov_1.1709_ID_60217 230 1
+
+			Align 4: 409959 410188 NODE_30109_length_646_cov_1.1709_ID_60217 230 1
+				Gap between this and next alignment: 410188 to 415560 (5371 bp)
+				Next Alignment: 415560 417252 NODE_9628_length_1912_cov_0.933226_ID_19255 1912 220
+
+			Align 5: 415560 417252 NODE_9628_length_1912_cov_0.933226_ID_19255 1912 220
+				Gap between this and next alignment: 417252 to 417263 (10 bp)
+				Next Alignment: 417263 419207 NODE_8849_length_2060_cov_0.941147_ID_17697 123 2060
+
+			Align 6: 417263 419207 NODE_8849_length_2060_cov_0.941147_ID_17697 123 2060
+				Gap between this and next alignment: 419207 to 419370 (162 bp)
+				Next Alignment: 419370 420421 NODE_14193_length_1335_cov_1.06719_ID_28385 1221 176
+
+			Align 7: 419370 420421 NODE_14193_length_1335_cov_1.06719_ID_28385 1221 176
+				Gap between this and next alignment: 420421 to 420523 (101 bp)
+				Next Alignment: 420523 421112 NODE_33099_length_594_cov_1.17069_ID_66197 5 594
+
+			Align 8: 420523 421112 NODE_33099_length_594_cov_1.17069_ID_66197 5 594
+				Gap between this and next alignment: 421112 to 623131 (202018 bp)
+				Next Alignment: 623131 623630 NODE_40192_length_504_cov_1.76615_ID_80383 4 503
+
+			Align 9: 623131 623630 NODE_40192_length_504_cov_1.76615_ID_80383 4 503
+			END in gap: 623630 to 626692 (3062 bp)
+
+	Reference Alistipes_putredinis_gi_224021127_ref_NZ_: 21 total alignments. 1 total regions.
+		Region: 1 to 1197641 (1197641 bp)
+			START in gap: 1 to 81417 (81416 bp)
+			Align 1: 81417 81490 NODE_22519_length_861_cov_0.630273_ID_45037 161 88
+				Gap between this and next alignment: 81490 to 186409 (104918 bp)
+				Next Alignment: 186409 187820 NODE_12241_length_1529_cov_1.12958_ID_24481 1472 63
+
+			Align 2: 186409 187820 NODE_12241_length_1529_cov_1.12958_ID_24481 1472 63
+				Gap between this and next alignment: 187820 to 535294 (347473 bp)
+				Next Alignment: 535294 535874 NODE_32046_length_611_cov_0.68705_ID_64091 611 31
+
+			Align 3: 535294 535874 NODE_32046_length_611_cov_0.68705_ID_64091 611 31
+				Gap between this and next alignment: 535874 to 536373 (498 bp)
+				Next Alignment: 536373 536596 NODE_33468_length_588_cov_0.562852_ID_66935 1 224
+
+			Align 4: 536373 536596 NODE_33468_length_588_cov_0.562852_ID_66935 1 224
+				Gap between this and next alignment: 536596 to 550948 (14351 bp)
+				Next Alignment: 550948 551956 NODE_13793_length_1371_cov_1.50076_ID_27585 1 1009
+
+			Align 5: 550948 551956 NODE_13793_length_1371_cov_1.50076_ID_27585 1 1009
+				Gap between this and next alignment: 551956 to 558775 (6818 bp)
+				Next Alignment: 558775 559753 NODE_19289_length_997_cov_0.799363_ID_38577 1 978
+
+			Align 6: 558775 559753 NODE_19289_length_997_cov_0.799363_ID_38577 1 978
+				Gap between this and next alignment: 559753 to 560590 (836 bp)
+				Next Alignment: 560590 561101 NODE_39240_length_514_cov_0.910675_ID_78479 514 1
+
+			Align 7: 560590 561101 NODE_39240_length_514_cov_0.910675_ID_78479 514 1
+				Gap between this and next alignment: 561101 to 563375 (2273 bp)
+				Next Alignment: 563375 563964 NODE_20133_length_954_cov_0.895439_ID_40265 1 591
+
+			Align 8: 563375 563964 NODE_20133_length_954_cov_0.895439_ID_40265 1 591
+				Gap between this and next alignment: 563964 to 564050 (85 bp)
+				Next Alignment: 564050 564319 NODE_20133_length_954_cov_0.895439_ID_40265 685 954
+
+			Align 9: 564050 564319 NODE_20133_length_954_cov_0.895439_ID_40265 685 954
+				Gap between this and next alignment: 564319 to 744572 (180252 bp)
+				Next Alignment: 744572 745636 NODE_10970_length_1695_cov_0.805488_ID_21939 1103 39
+
+			Align 10: 744572 745636 NODE_10970_length_1695_cov_0.805488_ID_21939 1103 39
+				Gap between this and next alignment: 745636 to 747904 (2267 bp)
+				Next Alignment: 747904 747974 NODE_16627_length_1149_cov_0.709324_ID_33253 185 115
+
+			Align 11: 747904 747974 NODE_16627_length_1149_cov_0.709324_ID_33253 185 115
+				Gap between this and next alignment: 747974 to 769339 (21364 bp)
+				Next Alignment: 769339 770748 NODE_13396_length_1407_cov_0.83432_ID_26791 1404 1
+
+			Align 12: 769339 770748 NODE_13396_length_1407_cov_0.83432_ID_26791 1404 1
+				Gap between this and next alignment: 770748 to 894039 (123290 bp)
+				Next Alignment: 894039 894501 NODE_14093_length_1344_cov_0.831652_ID_28185 254 716
+
+			Align 13: 894039 894501 NODE_14093_length_1344_cov_0.831652_ID_28185 254 716
+				Gap between this and next alignment: 894501 to 898268 (3766 bp)
+				Next Alignment: 898268 899979 NODE_7343_length_2417_cov_1.5961_ID_14685 2213 501
+
+			Align 14: 898268 899979 NODE_7343_length_2417_cov_1.5961_ID_14685 2213 501
+				Gap between this and next alignment: 899979 to 902462 (2482 bp)
+				Next Alignment: 902462 902675 NODE_31333_length_623_cov_0.635563_ID_62665 623 410
+
+			Align 15: 902462 902675 NODE_31333_length_623_cov_0.635563_ID_62665 623 410
+				Gap between this and next alignment: 902675 to 902768 (92 bp)
+				Next Alignment: 902768 903079 NODE_31333_length_623_cov_0.635563_ID_62665 312 1
+
+			Align 16: 902768 903079 NODE_31333_length_623_cov_0.635563_ID_62665 312 1
+				Gap between this and next alignment: 903079 to 904242 (1162 bp)
+				Next Alignment: 904242 905266 NODE_13485_length_1399_cov_0.611607_ID_26969 1391 373
+
+			Align 17: 904242 905266 NODE_13485_length_1399_cov_0.611607_ID_26969 1391 373
+				Gap between this and next alignment: 905266 to 905392 (125 bp)
+				Next Alignment: 905392 905626 NODE_13485_length_1399_cov_0.611607_ID_26969 235 1
+
+			Align 18: 905392 905626 NODE_13485_length_1399_cov_0.611607_ID_26969 235 1
+				Gap between this and next alignment: 905626 to 907966 (2339 bp)
+				Next Alignment: 907966 908254 NODE_11408_length_1633_cov_1.22433_ID_22815 585 298
+
+			Align 19: 907966 908254 NODE_11408_length_1633_cov_1.22433_ID_22815 585 298
+				Gap between this and next alignment: 908254 to 996528 (88273 bp)
+				Next Alignment: 996528 996781 NODE_34631_length_571_cov_0.5_ID_69261 318 571
+
+			Align 20: 996528 996781 NODE_34631_length_571_cov_0.5_ID_69261 318 571
+				Gap between this and next alignment: 996781 to 1129511 (132729 bp)
+				Next Alignment: 1129511 1129696 NODE_14093_length_1344_cov_0.831652_ID_28185 627 812
+
+			Align 21: 1129511 1129696 NODE_14093_length_1344_cov_0.831652_ID_28185 627 812
+			END in gap: 1129696 to 1197641 (67945 bp)
+
+ERROR: Reference Alistipes_putredinis_gi_224021126_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Alistipes_putredinis_gi_224021130_ref_NZ_', 'Alistipes_putredinis_gi_224021131_ref_NZ_', 'Alistipes_putredinis_gi_224021129_ref_NZ_', 'Alistipes_putredinis_gi_224021127_ref_NZ_']
+ERROR: Reference Alistipes_putredinis_gi_224021120_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Alistipes_putredinis_gi_224021130_ref_NZ_', 'Alistipes_putredinis_gi_224021131_ref_NZ_', 'Alistipes_putredinis_gi_224021129_ref_NZ_', 'Alistipes_putredinis_gi_224021127_ref_NZ_']
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Alistipes_putredinis/contigs_reports/nucmer_output/SPAdes.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 25 part
+Partially Unaligned Contigs with Misassemblies: 1
+Unaligned Contig Bases: 13567
+
+Ambiguously Mapped Contigs: 2
+Total Bases in Ambiguously Mapped Contigs: 1904
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 28483
+
+	SNPs: 512
+	Insertions: 45
+	Deletions: 41
+
+	Positive Gaps: 44
+		Internal Gaps:  3
+		External Gaps:  41
+		External Gap Total:  2502804
+		External Gap Average: 61044
+	Negative Gaps: 1
+		Internal Overlaps:  0
+		External Overlaps:  1
+		External Overlaps Total: -13
+		External Overlaps Average: -13
+	Contigs with Redundant Alignments: 0 (0)

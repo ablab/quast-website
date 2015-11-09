@@ -1,0 +1,17 @@
+reference chromosomes:
+	Bacteroides_fragilis_3_1_12_gi_224485478_ref_NZ_ (total length: 5530115 bp, maximal covered length: 151063 bp)
+
+total genome size: 5530115
+
+gap min size: 50
+partial gene/operon min size: 100
+
+
+
+assembly                 | genome    | duplication | gaps      | genes     | partial   | operons   | partial   |
+                         | fraction  | ratio       | number    |           | genes     |           | operons   |
+================================================================================================================
+IDBA_UD_to_Bacteroides_f | 2.29239%  | 1.16494     | 31        | -         | -         | -         | -         |
+Ray_to_Bacteroides_fragi | 1.34576%  | 1.05818     | 23        | -         | -         | -         | -         |
+SOAPdenovo2_to_Bacteroid | 2.73164%  | 1.01550     | 79        | -         | -         | -         | -         |
+SPAdes_to_Bacteroides_fr | 1.86003%  | 1.02413     | 50        | -         | -         | -         | -         |

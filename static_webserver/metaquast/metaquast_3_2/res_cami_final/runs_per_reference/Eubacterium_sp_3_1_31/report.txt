@@ -1,0 +1,48 @@
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                     Gold_Assembly  IDBA_UD     Ray         SOAPdenovo2  SPAdes    
+# contigs (>= 1000 bp)       59             31          40          307          23        
+# contigs (>= 5000 bp)       49             24          30          2            20        
+# contigs (>= 10000 bp)      46             24          29          0            20        
+# contigs (>= 25000 bp)      40             22          26          0            19        
+# contigs (>= 50000 bp)      23             18          22          0            14        
+Total length (>= 1000 bp)    6155820        3105721     3114933     417724       3088772   
+Total length (>= 5000 bp)    6133385        3092963     3092166     11050        3083339   
+Total length (>= 10000 bp)   6110609        3092963     3087159     0            3083339   
+Total length (>= 25000 bp)   5982633        3047653     3017223     0            3062156   
+Total length (>= 50000 bp)   5328956        2881317     2867634     0            2866756   
+# contigs                    65             37          41          1560         25        
+Largest contig               679003         489962      490164      5668         514709    
+Total length                 6159994        3109793     3115823     1271809      3090222   
+Reference length             3571452        3571452     3571452     3571452      3571452   
+GC (%)                       38.13          38.14       38.11       37.88        38.12     
+Reference GC (%)             37.89          37.89       37.89       37.89        37.89     
+N50                          322981         174114      151837      816          220876    
+NG50                         361481         162333      119086      -            187831    
+N75                          162689         119232      77824       636          163851    
+NG75                         338777         66123       58396       -            111153    
+L50                          7              6           7           550          5         
+LG50                         4              8           9           -            7         
+L75                          15             11          14          998          10        
+LG75                         6              15          19          -            12        
+# misassemblies              109            50          51          2            48        
+# misassembled contigs       31             19          21          2            16        
+Misassembled contigs length  5529524        2881316     2727347     2283         2811363   
+# local misassemblies        44             23          22          2            25        
+# structural variations      84             45          43          15           41        
+# unaligned contigs          0 + 10 part    0 + 5 part  0 + 9 part  0 + 47 part  0 + 1 part
+Unaligned length             116960         72382       101445      12943        36207     
+Genome fraction (%)          73.752         71.879      71.943      35.150       71.943    
+Duplication ratio            2.294          1.183       1.173       1.003        1.189     
+# N's per 100 kbp            0.00           0.00        1.19        0.00         0.00      
+# mismatches per 100 kbp     1329.15        1296.55     1302.90     1125.64      1307.62   
+# indels per 100 kbp         46.24          44.29       44.10       28.04        44.37     
+Largest alignment            326383         324197      324197      5668         323982    
+NA50                         48880          50141       48880       804          50738     
+NGA50                        101492         43382       40791       -            42313     
+NA75                         18318          18318       17973       629          21128     
+NGA75                        58772          -           -           -            -         
+LA50                         31             14          18          561          14        
+LGA50                        11             19          23          -            19        
+LA75                         84             39          44          1015         38        
+LGA75                        23             -           -           -            -         

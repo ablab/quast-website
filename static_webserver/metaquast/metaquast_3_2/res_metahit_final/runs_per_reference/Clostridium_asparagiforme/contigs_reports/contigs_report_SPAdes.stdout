@@ -1,0 +1,141 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Clostridium_asparagiforme_gi_224486038_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 1
+	Total Region Length: 6417332
+Analyzing contigs...
+CONTIG: NODE_294_length_32100_cov_2.59195_ID_587 (32100bp)
+Top Length: 89  Top ID: 97.75
+		Skipping redundant alignment 1240850 1240920 | 31983 32053 | 71 71 | 100.0 | Clostridium_asparagiforme_gi_224486038_ref_NZ_ NODE_294_length_32100_cov_2.59195_ID_587
+		This contig is partially unaligned. (Aligned 89 out of 32100 bases)
+		Alignment: 641890 641978 | 31975 32063 | 89 89 | 97.75 | Clostridium_asparagiforme_gi_224486038_ref_NZ_ NODE_294_length_32100_cov_2.59195_ID_587
+		Unaligned bases: 1 to 31974 (31974)
+		Unaligned bases: 32064 to 32100 (37)
+
+CONTIG: NODE_1357_length_9295_cov_2.51071_ID_2713 (9295bp)
+Top Length: 3573  Top ID: 96.98
+		This contig is partially unaligned. (Aligned 3573 out of 9295 bases)
+		Alignment: 375275 378847 | 9237 5665 | 3573 3573 | 96.98 | Clostridium_asparagiforme_gi_224486038_ref_NZ_ NODE_1357_length_9295_cov_2.51071_ID_2713
+		Unaligned bases: 1 to 5664 (5664)
+		Unaligned bases: 9238 to 9295 (58)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_2760_length_5268_cov_2.09764_ID_5519 (5268bp)
+Top Length: 4835  Top ID: 97.44
+		This contig is partially unaligned. (Aligned 4835 out of 5268 bases)
+		Alignment: 1884228 1889061 | 400 5234 | 4834 4835 | 97.44 | Clostridium_asparagiforme_gi_224486038_ref_NZ_ NODE_2760_length_5268_cov_2.09764_ID_5519
+		Unaligned bases: 1 to 399 (399)
+		Unaligned bases: 5235 to 5268 (34)
+
+CONTIG: NODE_4681_length_3495_cov_2.42035_ID_9361 (3495bp)
+Top Length: 2460  Top ID: 97.0
+		This contig is partially unaligned. (Aligned 2460 out of 3495 bases)
+		Alignment: 347075 349528 | 919 3378 | 2454 2460 | 97.0 | Clostridium_asparagiforme_gi_224486038_ref_NZ_ NODE_4681_length_3495_cov_2.42035_ID_9361
+		Unaligned bases: 1 to 918 (918)
+		Unaligned bases: 3379 to 3495 (117)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_13468_length_1401_cov_1.12853_ID_26935 (1401bp)
+Top Length: 185  Top ID: 95.14
+		This contig is partially unaligned. (Aligned 185 out of 1401 bases)
+		Alignment: 358873 359057 | 3 187 | 185 185 | 95.14 | Clostridium_asparagiforme_gi_224486038_ref_NZ_ NODE_13468_length_1401_cov_1.12853_ID_26935
+		Unaligned bases: 1 to 2 (2)
+		Unaligned bases: 188 to 1401 (1214)
+
+CONTIG: NODE_13514_length_1398_cov_8.98138_ID_27027 (1398bp)
+Top Length: 121  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 121 out of 1398 bases)
+		Alignment: 350154 350274 | 668 548 | 121 121 | 100.0 | Clostridium_asparagiforme_gi_224486038_ref_NZ_ NODE_13514_length_1398_cov_8.98138_ID_27027
+		Unaligned bases: 1 to 547 (547)
+		Unaligned bases: 669 to 1398 (730)
+
+CONTIG: NODE_14394_length_1318_cov_0.940618_ID_28787 (1318bp)
+Top Length: 1231  Top ID: 96.59
+		This contig is partially unaligned. (Aligned 1231 out of 1318 bases)
+		Alignment: 357027 358257 | 1318 88 | 1231 1231 | 96.59 | Clostridium_asparagiforme_gi_224486038_ref_NZ_ NODE_14394_length_1318_cov_0.940618_ID_28787
+		Unaligned bases: 1 to 87 (87)
+
+CONTIG: NODE_39623_length_510_cov_0.698901_ID_79245 (510bp)
+Top Length: 510  Top ID: 95.72
+		One align captures most of this contig: 3211982 3212495 | 1 510 | 514 510 | 95.72 | Clostridium_asparagiforme_gi_224486038_ref_NZ_ NODE_39623_length_510_cov_0.698901_ID_79245
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Clostridium_asparagiforme/contigs_reports/nucmer_output/SPAdes.used_snps
+	Reference Clostridium_asparagiforme_gi_224486038_ref_NZ_: 8 total alignments. 1 total regions.
+		Region: 1 to 6417332 (6417332 bp)
+			START in gap: 1 to 347075 (347074 bp)
+			Align 1: 347075 349528 NODE_4681_length_3495_cov_2.42035_ID_9361 919 3378
+				Gap between this and next alignment: 349528 to 350154 (625 bp)
+				Next Alignment: 350154 350274 NODE_13514_length_1398_cov_8.98138_ID_27027 668 548
+
+			Align 2: 350154 350274 NODE_13514_length_1398_cov_8.98138_ID_27027 668 548
+				Gap between this and next alignment: 350274 to 357027 (6752 bp)
+				Next Alignment: 357027 358257 NODE_14394_length_1318_cov_0.940618_ID_28787 1318 88
+
+			Align 3: 357027 358257 NODE_14394_length_1318_cov_0.940618_ID_28787 1318 88
+				Gap between this and next alignment: 358257 to 358873 (615 bp)
+				Next Alignment: 358873 359057 NODE_13468_length_1401_cov_1.12853_ID_26935 3 187
+
+			Align 4: 358873 359057 NODE_13468_length_1401_cov_1.12853_ID_26935 3 187
+				Gap between this and next alignment: 359057 to 375275 (16217 bp)
+				Next Alignment: 375275 378847 NODE_1357_length_9295_cov_2.51071_ID_2713 9237 5665
+
+			Align 5: 375275 378847 NODE_1357_length_9295_cov_2.51071_ID_2713 9237 5665
+				Gap between this and next alignment: 378847 to 641890 (263042 bp)
+				Next Alignment: 641890 641978 NODE_294_length_32100_cov_2.59195_ID_587 31975 32063
+
+			Align 6: 641890 641978 NODE_294_length_32100_cov_2.59195_ID_587 31975 32063
+				Gap between this and next alignment: 641978 to 1884228 (1242249 bp)
+				Next Alignment: 1884228 1889061 NODE_2760_length_5268_cov_2.09764_ID_5519 400 5234
+
+			Align 7: 1884228 1889061 NODE_2760_length_5268_cov_2.09764_ID_5519 400 5234
+				Gap between this and next alignment: 1889061 to 3211982 (1322920 bp)
+				Next Alignment: 3211982 3212495 NODE_39623_length_510_cov_0.698901_ID_79245 1 510
+
+			Align 8: 3211982 3212495 NODE_39623_length_510_cov_0.698901_ID_79245 1 510
+			END in gap: 3212495 to 6417332 (3204837 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Clostridium_asparagiforme/contigs_reports/nucmer_output/SPAdes.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 7 part
+Partially Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 41781
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 13001
+
+	SNPs: 320
+	Insertions: 11
+	Deletions: 8
+
+	Positive Gaps: 9
+		Internal Gaps:  0
+		External Gaps:  9
+		External Gap Total:  6404331
+		External Gap Average: 711592
+	Negative Gaps: 0
+		Internal Overlaps:  0
+		External Overlaps:  0
+		External Overlaps Total:  0
+		External Overlaps Average: 0
+	Contigs with Redundant Alignments: 0 (0)

@@ -1,0 +1,10 @@
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                          IDBA_UD  Ray    SOAPdenovo2  SPAdes
+# fully unaligned contigs         0        0      0            0     
+Fully unaligned length            0        0      0            0     
+# partially unaligned contigs     42       6      29           72    
+    # with misassembly            3        1      5            3     
+    # both parts are significant  6        2      0            13    
+Partially unaligned length        122703   27411  21066        203170
+# N's                             1219     255    5524         4361  

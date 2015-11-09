@@ -1,0 +1,135 @@
+/home/gurevich/rep/quast/quast.pyc -t 16 -j  --meta  --bed-file /Molly/gurevich/MetaQUAST/res_final/res_cami_final/combined_reference/structural_variations/combined_reference.bed --no-check-meta  --contig-thresholds 1000,5000,10000,25000,50000 -R /Molly/gurevich/MetaQUAST/res_final/res_cami_final/quast_corrected_input/Sphingopyxis_sp_MC1.fasta -o /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Sphingopyxis_sp_MC1 --labels "Gold_Assembly, IDBA_UD, Ray, SOAPdenovo2, SPAdes" /Molly/gurevich/MetaQUAST/res_final/res_cami_final/quast_corrected_input/Gold_Assembly_to_Sphingopyxis_sp_MC1.fasta /Molly/gurevich/MetaQUAST/res_final/res_cami_final/quast_corrected_input/IDBA_UD_to_Sphingopyxis_sp_MC1.fasta /Molly/gurevich/MetaQUAST/res_final/res_cami_final/quast_corrected_input/Ray_to_Sphingopyxis_sp_MC1.fasta /Molly/gurevich/MetaQUAST/res_final/res_cami_final/quast_corrected_input/SOAPdenovo2_to_Sphingopyxis_sp_MC1.fasta /Molly/gurevich/MetaQUAST/res_final/res_cami_final/quast_corrected_input/SPAdes_to_Sphingopyxis_sp_MC1.fasta
+
+Started: 2015-11-09 19:53:47
+
+Logging to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Sphingopyxis_sp_MC1/quast.log
+
+NOTICE: Output directory already exists. Existing Nucmer alignments can be used.
+
+Reference:
+  /Molly/gurevich/MetaQUAST/res_final/res_cami_final/quast_corrected_input/Sphingopyxis_sp_MC1.fasta ==> Sphingopyxis_sp_MC1
+
+Contigs:
+  1  /Molly/gurevich/MetaQUAST/res_final/res_cami_final/quast_corrected_input/Gold_Assembly_to_Sphingopyxis_sp_MC1.fasta ==> Gold_Assembly
+  2  /Molly/gurevich/MetaQUAST/res_final/res_cami_final/quast_corrected_input/IDBA_UD_to_Sphingopyxis_sp_MC1.fasta ==> IDBA_UD
+  3  /Molly/gurevich/MetaQUAST/res_final/res_cami_final/quast_corrected_input/Ray_to_Sphingopyxis_sp_MC1.fasta ==> Ray
+  4  /Molly/gurevich/MetaQUAST/res_final/res_cami_final/quast_corrected_input/SOAPdenovo2_to_Sphingopyxis_sp_MC1.fasta ==> SOAPdenovo2
+  5  /Molly/gurevich/MetaQUAST/res_final/res_cami_final/quast_corrected_input/SPAdes_to_Sphingopyxis_sp_MC1.fasta ==> SPAdes
+
+2015-11-09 19:53:48
+Running Basic statistics processor...
+  Reference genome:
+    Sphingopyxis_sp_MC1.fasta, Reference length = 3653464, Reference GC % = 65.15
+  Contig files: 
+    1  Gold_Assembly
+    2  IDBA_UD
+    3  Ray
+    4  SOAPdenovo2
+    5  SPAdes
+  Calculating N50 and L50...
+    1  Gold_Assembly, N50 = 1018, L50 = 784, Total length = 2282565, GC % = 65.12, # N's per 100 kbp =  0.00
+    2  IDBA_UD, N50 = 914, L50 = 185, Total length = 893367, GC % = 64.65, # N's per 100 kbp =  0.00
+    3  Ray, N50 = 519, L50 = 2, Total length = 2063, GC % = 68.06, # N's per 100 kbp =  0.00
+    4  SOAPdenovo2, N50 = 564, L50 = 37, Total length = 46590, GC % = 64.04, # N's per 100 kbp =  49.37
+    5  SPAdes, N50 = 977, L50 = 188, Total length = 1306286, GC % = 65.54, # N's per 100 kbp =  69.59
+  Drawing Nx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Sphingopyxis_sp_MC1/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Sphingopyxis_sp_MC1/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Sphingopyxis_sp_MC1/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Sphingopyxis_sp_MC1/basic_stats/GC_content_plot.pdf
+Done.
+
+2015-11-09 19:53:50
+Running Contig analyzer...
+  1  Gold_Assembly
+  2  IDBA_UD
+  3  Ray
+  4  SOAPdenovo2
+  5  SPAdes
+  3  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Sphingopyxis_sp_MC1/contigs_reports/contigs_report_Ray.stdout and contigs_report_Ray.stderr...
+  4  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Sphingopyxis_sp_MC1/contigs_reports/contigs_report_SOAPdenovo2.stdout and contigs_report_SOAPdenovo2.stderr...
+  5  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Sphingopyxis_sp_MC1/contigs_reports/contigs_report_SPAdes.stdout and contigs_report_SPAdes.stderr...
+  1  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Sphingopyxis_sp_MC1/contigs_reports/contigs_report_Gold_Assembly.stdout and contigs_report_Gold_Assembly.stderr...
+  1  Using existing Nucmer alignments... 
+  3  Using existing Nucmer alignments... 
+  5  Using existing Nucmer alignments... 
+  4  Using existing Nucmer alignments... 
+  2  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Sphingopyxis_sp_MC1/contigs_reports/contigs_report_IDBA_UD.stdout and contigs_report_IDBA_UD.stderr...
+  2  Using existing Nucmer alignments... 
+  3  Alignments: runs_per_reference/Sphingopyxis_sp_MC1/contigs_reports/alignments_Ray.tsv
+  3  Analysis is finished.
+
+  4  Alignments: runs_per_reference/Sphingopyxis_sp_MC1/contigs_reports/alignments_SOAPdenovo2.tsv
+  4  Analysis is finished.
+
+  2  Alignments: runs_per_reference/Sphingopyxis_sp_MC1/contigs_reports/alignments_IDBA_UD.tsv
+  2  Analysis is finished.
+
+  1  Alignments: runs_per_reference/Sphingopyxis_sp_MC1/contigs_reports/alignments_Gold_Assembly.tsv
+  1  Analysis is finished.
+
+  5  Alignments: runs_per_reference/Sphingopyxis_sp_MC1/contigs_reports/alignments_SPAdes.tsv
+  5  Analysis is finished.
+
+  Creating total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Sphingopyxis_sp_MC1/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Sphingopyxis_sp_MC1/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Sphingopyxis_sp_MC1/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Sphingopyxis_sp_MC1/contigs_reports/misassemblies_plot.pdf
+Done.
+
+2015-11-09 19:53:53
+Running NA-NGA calculation...
+  1  Gold_Assembly, Largest alignment = 3526, NA50 = 1018, NGA50 = 691, LA50 = 784, LGA50 = 1603
+  2  IDBA_UD, Largest alignment = 1909, NA50 = 510, LA50 = 659
+  3  Ray, Largest alignment = 524, NA50 = 519, LA50 = 2
+  4  SOAPdenovo2, Largest alignment = 816, NA50 = 564, LA50 = 37
+  5  SPAdes, Largest alignment = 1758, NA50 = 403, LA50 = 1017
+  Drawing cumulative plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Sphingopyxis_sp_MC1/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Sphingopyxis_sp_MC1/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Sphingopyxis_sp_MC1/aligned_stats/NGAx_plot.pdf
+Done.
+
+2015-11-09 19:53:55
+Running Genome analyzer...
+  NOTICE: No file with genes provided. Use the -G option if you want to specify it.
+  NOTICE: No file with operons provided. Use the -O option if you want to specify it.
+  1  Gold_Assembly
+  2  IDBA_UD
+  3  Ray
+  4  SOAPdenovo2
+  5  SPAdes
+  3  Analysis is finished.
+  4  Analysis is finished.
+  2  Analysis is finished.
+  5  Analysis is finished.
+  1  Analysis is finished.
+  Drawing Genome fraction, % histogram...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Sphingopyxis_sp_MC1/genome_stats/genome_fraction_histogram.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding option to enable it.
+
+2015-11-09 19:53:58
+Drawing large plots...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating contig alignment plot...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2015-11-09 19:54:17
+RESULTS:
+  Text versions of total report are saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Sphingopyxis_sp_MC1/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Sphingopyxis_sp_MC1/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Sphingopyxis_sp_MC1/report.html
+  PDF version (tables and plots) saved to /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Sphingopyxis_sp_MC1/report.pdf
+  Contig alignment plot: /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Sphingopyxis_sp_MC1/alignment.svg

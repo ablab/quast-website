@@ -1,0 +1,17 @@
+reference chromosomes:
+	Streptococcus_parasanguinis_ATCC_15912_gi_337281488_ref_NC_ (total length: 2153652 bp, maximal covered length: 1090130 bp)
+
+total genome size: 2153652
+
+gap min size: 50
+partial gene/operon min size: 100
+
+
+
+assembly                 | genome    | duplication | gaps      | genes     | partial   | operons   | partial   |
+                         | fraction  | ratio       | number    |           | genes     |           | operons   |
+================================================================================================================
+IDBA_UD_to_Streptococcus | 50.61774% | 1.27146     | 869       | -         | -         | -         | -         |
+Ray_to_Streptococcus_par | 40.85572% | 1.34306     | 419       | -         | -         | -         | -         |
+SOAPdenovo2_to_Streptoco | 13.28627% | 1.08602     | 790       | -         | -         | -         | -         |
+SPAdes_to_Streptococcus_ | 50.41005% | 1.19146     | 619       | -         | -         | -         | -         |

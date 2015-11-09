@@ -1,0 +1,139 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Clostridium_methylpentosum_gi_224515374_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 1
+	Total Region Length: 3478423
+Analyzing contigs...
+CONTIG: scaffold20832__3.0 (1219bp)
+Top Length: 777  Top ID: 96.4
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 1878554 1879330 | 1 777 | 777 777 | 96.4 | Clostridium_methylpentosum_gi_224515374_ref_NZ_ scaffold20832__3.0
+			  Gap between these two alignments (local misassembly). Inconsistency = 131 
+			Real Alignment 2: 1879463 1879545 | 779 861 | 83 83 | 100.0 | Clostridium_methylpentosum_gi_224515374_ref_NZ_ scaffold20832__3.0
+			  Gap between these two alignments (local misassembly). Inconsistency = 147 
+			Real Alignment 3: 1879778 1880048 | 947 1217 | 271 271 | 95.94 | Clostridium_methylpentosum_gi_224515374_ref_NZ_ scaffold20832__3.0
+
+CONTIG: scaffold36261_11.1 (516bp)
+Top Length: 187  Top ID: 100.0
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 3047928 3048066 | 1 139 | 139 139 | 100.0 | Clostridium_methylpentosum_gi_224515374_ref_NZ_ scaffold36261_11.1
+			  Gap between these two alignments (local misassembly). Inconsistency = 122 
+			Real Alignment 2: 3048190 3048376 | 141 327 | 187 187 | 100.0 | Clostridium_methylpentosum_gi_224515374_ref_NZ_ scaffold36261_11.1
+			  Gap between these two alignments (local misassembly). Inconsistency = 155 
+			Real Alignment 3: 3048565 3048720 | 361 516 | 156 156 | 98.72 | Clostridium_methylpentosum_gi_224515374_ref_NZ_ scaffold36261_11.1
+
+CONTIG: scaffold36611_12.6 (614bp)
+Top Length: 455  Top ID: 99.78
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 3047551 3047690 | 140 1 | 140 140 | 100.0 | Clostridium_methylpentosum_gi_224515374_ref_NZ_ scaffold36611_12.6
+			  Gap between these two alignments (local misassembly). Inconsistency = 146 
+			Real Alignment 2: 3046931 3047385 | 614 160 | 455 455 | 99.78 | Clostridium_methylpentosum_gi_224515374_ref_NZ_ scaffold36611_12.6
+
+CONTIG: scaffold55568__6.2 (1198bp)
+Top Length: 285  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 285 out of 1198 bases)
+		Alignment: 3048759 3049043 | 1 285 | 285 285 | 100.0 | Clostridium_methylpentosum_gi_224515374_ref_NZ_ scaffold55568__6.2
+		Unaligned bases: 286 to 1198 (913)
+
+CONTIG: C754212_27.0 (1464bp)
+Top Length: 1464  Top ID: 100.0
+		One align captures most of this contig: 3039978 3041441 | 1 1464 | 1464 1464 | 100.0 | Clostridium_methylpentosum_gi_224515374_ref_NZ_ C754212_27.0
+
+CONTIG: C755926_25.0 (1640bp)
+Top Length: 1640  Top ID: 99.94
+		One align captures most of this contig: 3038369 3040008 | 1 1640 | 1640 1640 | 99.94 | Clostridium_methylpentosum_gi_224515374_ref_NZ_ C755926_25.0
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Clostridium_methylpentosum/contigs_reports/nucmer_output/SOAPdenovo2.used_snps
+	Reference Clostridium_methylpentosum_gi_224515374_ref_NZ_: 11 total alignments. 1 total regions.
+		Region: 1 to 3478423 (3478423 bp)
+			START in gap: 1 to 1878554 (1878553 bp)
+			Align 1: 1878554 1879330 scaffold20832__3.0 1 777
+				Gap between this and next alignment: 1879330 to 1879463 (132 bp)
+				Next Alignment: 1879463 1879545 scaffold20832__3.0 779 861
+
+			Align 2: 1879463 1879545 scaffold20832__3.0 779 861
+				Gap between this and next alignment: 1879545 to 1879778 (232 bp)
+				Next Alignment: 1879778 1880048 scaffold20832__3.0 947 1217
+
+			Align 3: 1879778 1880048 scaffold20832__3.0 947 1217
+				Gap between this and next alignment: 1880048 to 3038369 (1158320 bp)
+				Next Alignment: 3038369 3040008 C755926_25.0 1 1640
+
+			Align 4: 3038369 3040008 C755926_25.0 1 1640
+				Negative gap (overlap) between this and next alignment: 3040008 to 3039978 (-30 bp)
+				Next Alignment: 3039978 3041441 C754212_27.0 1 1464
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 32.
+			Align 5: 3040009 3041441 C754212_27.0 32 1464
+				Gap between this and next alignment: 3041441 to 3046931 (5489 bp)
+				Next Alignment: 3046931 3047385 scaffold36611_12.6 614 160
+
+			Align 6: 3046931 3047385 scaffold36611_12.6 614 160
+				Gap between this and next alignment: 3047385 to 3047551 (165 bp)
+				Next Alignment: 3047551 3047690 scaffold36611_12.6 140 1
+
+			Align 7: 3047551 3047690 scaffold36611_12.6 140 1
+				Gap between this and next alignment: 3047690 to 3047928 (237 bp)
+				Next Alignment: 3047928 3048066 scaffold36261_11.1 1 139
+
+			Align 8: 3047928 3048066 scaffold36261_11.1 1 139
+				Gap between this and next alignment: 3048066 to 3048190 (123 bp)
+				Next Alignment: 3048190 3048376 scaffold36261_11.1 141 327
+
+			Align 9: 3048190 3048376 scaffold36261_11.1 141 327
+				Gap between this and next alignment: 3048376 to 3048565 (188 bp)
+				Next Alignment: 3048565 3048720 scaffold36261_11.1 361 516
+
+			Align 10: 3048565 3048720 scaffold36261_11.1 361 516
+				Gap between this and next alignment: 3048720 to 3048759 (38 bp)
+				Next Alignment: 3048759 3049043 scaffold55568__6.2 1 285
+
+			Align 11: 3048759 3049043 scaffold55568__6.2 1 285
+			END in gap: 3049043 to 3478423 (429380 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Clostridium_methylpentosum/contigs_reports/nucmer_output/SOAPdenovo2.used_snps
+
+Results:
+	Local Misassemblies: 5
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 1 part
+Partially Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 913
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 5566
+
+	SNPs: 43
+	Insertions: 0
+	Deletions: 0
+
+	Positive Gaps: 11
+		Internal Gaps:  5
+		External Gaps:  6
+		External Gap Total:  3472017
+		External Gap Average: 578670
+	Negative Gaps: 1
+		Internal Overlaps:  0
+		External Overlaps:  1
+		External Overlaps Total: -30
+		External Overlaps Average: -30
+	Contigs with Redundant Alignments: 0 (0)

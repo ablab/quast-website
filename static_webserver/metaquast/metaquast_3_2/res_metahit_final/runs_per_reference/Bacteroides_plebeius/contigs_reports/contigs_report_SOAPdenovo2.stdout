@@ -1,0 +1,704 @@
+Aligning contigs to reference...
+	Running Nucmer
+Parsing coords...
+Loading reference...
+	Loaded [Bacteroides_plebeius_gi_223955885_ref_NZ_]
+	Loaded [Bacteroides_plebeius_gi_223955886_ref_NZ_]
+	Loaded [Bacteroides_plebeius_gi_223955887_ref_NZ_]
+	Loaded [Bacteroides_plebeius_gi_223955889_ref_NZ_]
+	Loaded [Bacteroides_plebeius_gi_223955890_ref_NZ_]
+	Loaded [Bacteroides_plebeius_gi_223955891_ref_NZ_]
+	Loaded [Bacteroides_plebeius_gi_223955892_ref_NZ_]
+	Loaded [Bacteroides_plebeius_gi_223955893_ref_NZ_]
+	Loaded [Bacteroides_plebeius_gi_223955894_ref_NZ_]
+	Loaded [Bacteroides_plebeius_gi_223955895_ref_NZ_]
+	Loaded [Bacteroides_plebeius_gi_223955896_ref_NZ_]
+	Loaded [Bacteroides_plebeius_gi_223955897_ref_NZ_]
+	Loaded [Bacteroides_plebeius_gi_223955898_ref_NZ_]
+	Loaded [Bacteroides_plebeius_gi_223955899_ref_NZ_]
+	Loaded [Bacteroides_plebeius_gi_223955900_ref_NZ_]
+	Loaded [Bacteroides_plebeius_gi_223955901_ref_NZ_]
+	Loaded [Bacteroides_plebeius_gi_223955902_ref_NZ_]
+	Loaded [Bacteroides_plebeius_gi_223955903_ref_NZ_]
+	Loaded [Bacteroides_plebeius_gi_320444482_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 19
+	Total Region Length: 4421924
+Analyzing contigs...
+CONTIG: scaffold7672__5.5 (843bp)
+Top Length: 105  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 105 out of 843 bases)
+		Alignment: 385830 385934 | 1 105 | 105 105 | 100.0 | Bacteroides_plebeius_gi_223955902_ref_NZ_ scaffold7672__5.5
+		Unaligned bases: 106 to 843 (738)
+
+CONTIG: scaffold7846__2.9 (858bp)
+Top Length: 523  Top ID: 99.43
+		This contig is partially unaligned. (Aligned 523 out of 858 bases)
+		Alignment: 77430 77952 | 858 336 | 523 523 | 99.43 | Bacteroides_plebeius_gi_223955902_ref_NZ_ scaffold7846__2.9
+		Unaligned bases: 1 to 335 (335)
+
+CONTIG: scaffold13448__4.9 (1533bp)
+Top Length: 309  Top ID: 97.41
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 377461 377635 | 317 491 | 175 175 | 97.14 | Bacteroides_plebeius_gi_223955902_ref_NZ_ scaffold13448__4.9
+			  Gap between these two alignments (local misassembly). Inconsistency = 293 
+			Real Alignment 2: 378198 378505 | 761 1069 | 308 309 | 97.41 | Bacteroides_plebeius_gi_223955902_ref_NZ_ scaffold13448__4.9
+			  Gap between these two alignments (local misassembly). Inconsistency = 150 
+			Real Alignment 3: 378713 378886 | 1127 1300 | 174 174 | 100.0 | Bacteroides_plebeius_gi_223955902_ref_NZ_ scaffold13448__4.9
+			  Gap between these two alignments (local misassembly). Inconsistency = 143 
+			Real Alignment 4: 379122 379262 | 1393 1533 | 141 141 | 100.0 | Bacteroides_plebeius_gi_223955902_ref_NZ_ scaffold13448__4.9
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold22115__3.0 (876bp)
+Top Length: 442  Top ID: 95.7
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 84603 85044 | 120 561 | 442 442 | 95.7 | Bacteroides_plebeius_gi_223955902_ref_NZ_ scaffold22115__3.0
+			  Gap between these two alignments (local misassembly). Inconsistency = 138 
+			Real Alignment 2: 85231 85497 | 610 876 | 267 267 | 99.63 | Bacteroides_plebeius_gi_223955902_ref_NZ_ scaffold22115__3.0
+
+CONTIG: scaffold23300__3.2 (592bp)
+Top Length: 206  Top ID: 98.54
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 90444 90562 | 119 1 | 119 119 | 99.16 | Bacteroides_plebeius_gi_223955902_ref_NZ_ scaffold23300__3.2
+			  Gap between these two alignments (local misassembly). Inconsistency = 147 
+			Real Alignment 2: 90057 90262 | 359 154 | 206 206 | 98.54 | Bacteroides_plebeius_gi_223955902_ref_NZ_ scaffold23300__3.2
+
+CONTIG: scaffold30749__2.4 (538bp)
+Top Length: 118  Top ID: 97.46
+		This contig is partially unaligned. (Aligned 118 out of 538 bases)
+		Alignment: 71198 71315 | 120 3 | 118 118 | 97.46 | Bacteroides_plebeius_gi_223955902_ref_NZ_ scaffold30749__2.4
+		Unaligned bases: 1 to 2 (2)
+		Unaligned bases: 121 to 538 (418)
+
+CONTIG: scaffold31140__2.0 (986bp)
+Top Length: 801  Top ID: 99.13
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 72157 72286 | 1 130 | 130 130 | 98.46 | Bacteroides_plebeius_gi_223955902_ref_NZ_ scaffold31140__2.0
+			  Gap between these two alignments (local misassembly). Inconsistency = 142 
+			Real Alignment 2: 72484 73284 | 186 986 | 801 801 | 99.13 | Bacteroides_plebeius_gi_223955902_ref_NZ_ scaffold31140__2.0
+
+CONTIG: scaffold32085__6.5 (701bp)
+Top Length: 195  Top ID: 95.38
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 701 and total length of all aligns is 321
+		Alignment: 382330 382522 | 195 1 | 193 195 | 95.38 | Bacteroides_plebeius_gi_223955902_ref_NZ_ scaffold32085__6.5
+		Alignment: 382039 382164 | 334 209 | 126 126 | 96.83 | Bacteroides_plebeius_gi_223955902_ref_NZ_ scaffold32085__6.5
+		Unaligned bases: 380
+CONTIG: scaffold40636__3.6 (562bp)
+Top Length: 236  Top ID: 99.58
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 88504 88652 | 149 1 | 149 149 | 100.0 | Bacteroides_plebeius_gi_223955902_ref_NZ_ scaffold40636__3.6
+			  Gap between these two alignments (local misassembly). Inconsistency = 147 
+			Real Alignment 2: 88095 88330 | 411 176 | 236 236 | 99.58 | Bacteroides_plebeius_gi_223955902_ref_NZ_ scaffold40636__3.6
+			  Gap between these two alignments (local misassembly). Inconsistency = 152 
+			Real Alignment 3: 87792 87941 | 562 413 | 150 150 | 99.33 | Bacteroides_plebeius_gi_223955902_ref_NZ_ scaffold40636__3.6
+
+CONTIG: scaffold56394__3.7 (721bp)
+Top Length: 325  Top ID: 99.69
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 74102 74426 | 1 325 | 325 325 | 99.69 | Bacteroides_plebeius_gi_223955902_ref_NZ_ scaffold56394__3.7
+			  Gap between these two alignments (local misassembly). Inconsistency = 128 
+			Real Alignment 2: 74644 74949 | 415 720 | 306 306 | 100.0 | Bacteroides_plebeius_gi_223955902_ref_NZ_ scaffold56394__3.7
+
+CONTIG: scaffold56809__2.0 (698bp)
+Top Length: 363  Top ID: 99.45
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 75818 76180 | 363 1 | 363 363 | 99.45 | Bacteroides_plebeius_gi_223955902_ref_NZ_ scaffold56809__2.0
+			  Gap between these two alignments (local misassembly). Inconsistency = 147 
+			Real Alignment 2: 75336 75669 | 698 365 | 334 334 | 99.7 | Bacteroides_plebeius_gi_223955902_ref_NZ_ scaffold56809__2.0
+
+CONTIG: scaffold57854__4.5 (2363bp)
+Top Length: 652  Top ID: 99.69
+		This contig is partially unaligned. (Aligned 652 out of 2363 bases)
+		Alignment: 86056 86707 | 652 1 | 652 652 | 99.69 | Bacteroides_plebeius_gi_223955902_ref_NZ_ scaffold57854__4.5
+		Unaligned bases: 653 to 2363 (1711)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: C723688__3.0 (538bp)
+Top Length: 538  Top ID: 98.33
+		One align captures most of this contig: 17486 18023 | 1 538 | 538 538 | 98.33 | Bacteroides_plebeius_gi_223955902_ref_NZ_ C723688__3.0
+
+CONTIG: C724256_19.0 (544bp)
+Top Length: 544  Top ID: 99.45
+		One align captures most of this contig: 358429 358972 | 1 544 | 544 544 | 99.45 | Bacteroides_plebeius_gi_223955902_ref_NZ_ C724256_19.0
+
+CONTIG: C724460__8.0 (546bp)
+Top Length: 546  Top ID: 99.82
+		One align captures most of this contig: 342966 343511 | 546 1 | 546 546 | 99.82 | Bacteroides_plebeius_gi_223955902_ref_NZ_ C724460__8.0
+
+CONTIG: C726310__3.0 (567bp)
+Top Length: 567  Top ID: 99.12
+		One align captures most of this contig: 89037 89603 | 567 1 | 567 567 | 99.12 | Bacteroides_plebeius_gi_223955902_ref_NZ_ C726310__3.0
+
+CONTIG: C727330__6.0 (580bp)
+Top Length: 580  Top ID: 99.83
+		One align captures most of this contig: 348316 348895 | 1 580 | 580 580 | 99.83 | Bacteroides_plebeius_gi_223955902_ref_NZ_ C727330__6.0
+
+CONTIG: C727920_10.0 (587bp)
+Top Length: 587  Top ID: 100.0
+		One align captures most of this contig: 359647 360233 | 587 1 | 587 587 | 100.0 | Bacteroides_plebeius_gi_223955902_ref_NZ_ C727920_10.0
+
+CONTIG: C731026_20.0 (626bp)
+Top Length: 625  Top ID: 99.68
+		One align captures most of this contig: 370507 371131 | 2 626 | 625 625 | 99.68 | Bacteroides_plebeius_gi_223955902_ref_NZ_ C731026_20.0
+
+CONTIG: C735996__3.0 (701bp)
+Top Length: 701  Top ID: 98.86
+		One align captures most of this contig: 6052 6752 | 1 701 | 701 701 | 98.86 | Bacteroides_plebeius_gi_223955902_ref_NZ_ C735996__3.0
+
+CONTIG: C739192__9.0 (767bp)
+Top Length: 767  Top ID: 99.09
+		One align captures most of this contig: 342227 342993 | 1 767 | 767 767 | 99.09 | Bacteroides_plebeius_gi_223955902_ref_NZ_ C739192__9.0
+
+CONTIG: C740998_11.0 (811bp)
+Top Length: 811  Top ID: 99.26
+		One align captures most of this contig: 368569 369379 | 1 811 | 811 811 | 99.26 | Bacteroides_plebeius_gi_223955902_ref_NZ_ C740998_11.0
+
+CONTIG: C746796_15.0 (1003bp)
+Top Length: 1003  Top ID: 100.0
+		One align captures most of this contig: 24462 25464 | 1003 1 | 1003 1003 | 100.0 | Bacteroides_plebeius_gi_223955902_ref_NZ_ C746796_15.0
+
+CONTIG: C747042_10.0 (1015bp)
+Top Length: 1015  Top ID: 99.9
+		One align captures most of this contig: 363839 364853 | 1 1015 | 1015 1015 | 99.9 | Bacteroides_plebeius_gi_223955902_ref_NZ_ C747042_10.0
+
+CONTIG: C749738_21.0 (1146bp)
+Top Length: 1146  Top ID: 99.74
+		One align captures most of this contig: 355221 356366 | 1 1146 | 1146 1146 | 99.74 | Bacteroides_plebeius_gi_223955902_ref_NZ_ C749738_21.0
+
+CONTIG: C754270_16.0 (1471bp)
+Top Length: 1471  Top ID: 99.86
+		One align captures most of this contig: 22709 24179 | 1 1471 | 1471 1471 | 99.86 | Bacteroides_plebeius_gi_223955902_ref_NZ_ C754270_16.0
+
+CONTIG: C754986__4.0 (1545bp)
+Top Length: 1545  Top ID: 98.32
+		One align captures most of this contig: 20564 22108 | 1545 1 | 1545 1545 | 98.32 | Bacteroides_plebeius_gi_223955902_ref_NZ_ C754986__4.0
+
+CONTIG: C763382_10.0 (3524bp)
+Top Length: 3524  Top ID: 99.97
+		One align captures most of this contig: 360359 363882 | 3524 1 | 3524 3524 | 99.97 | Bacteroides_plebeius_gi_223955902_ref_NZ_ C763382_10.0
+
+CONTIG: C728860_44.0 (598bp)
+Top Length: 287  Top ID: 96.18
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 99602 99888 | 290 4 | 287 287 | 96.18 | Bacteroides_plebeius_gi_223955900_ref_NZ_ C728860_44.0
+			  Overlap between these two alignments (local misassembly). Inconsistency = -3 
+			Real Alignment 2: 99297 99371 | 598 524 | 75 75 | 100.0 | Bacteroides_plebeius_gi_223955900_ref_NZ_ C728860_44.0
+
+CONTIG: C729360_22.0 (604bp)
+Top Length: 604  Top ID: 99.67
+		One align captures most of this contig: 125379 125982 | 1 604 | 604 604 | 99.67 | Bacteroides_plebeius_gi_223955900_ref_NZ_ C729360_22.0
+
+CONTIG: C735048__3.0 (684bp)
+Top Length: 684  Top ID: 100.0
+		One align captures most of this contig: 144982 145665 | 684 1 | 684 684 | 100.0 | Bacteroides_plebeius_gi_223955900_ref_NZ_ C735048__3.0
+
+CONTIG: C737628_32.0 (733bp)
+Top Length: 733  Top ID: 96.04
+		One align captures most of this contig: 86168 86900 | 1 733 | 733 733 | 96.04 | Bacteroides_plebeius_gi_223955900_ref_NZ_ C737628_32.0
+
+CONTIG: C737906_24.0 (739bp)
+Top Length: 739  Top ID: 99.86
+		One align captures most of this contig: 83017 83755 | 739 1 | 739 739 | 99.86 | Bacteroides_plebeius_gi_223955900_ref_NZ_ C737906_24.0
+
+CONTIG: C738784__4.0 (758bp)
+Top Length: 758  Top ID: 99.6
+		One align captures most of this contig: 143920 144677 | 1 758 | 758 758 | 99.6 | Bacteroides_plebeius_gi_223955900_ref_NZ_ C738784__4.0
+
+CONTIG: C752400_26.0 (1310bp)
+Top Length: 1310  Top ID: 99.39
+		One align captures most of this contig: 133467 134773 | 1 1310 | 1307 1310 | 99.39 | Bacteroides_plebeius_gi_223955900_ref_NZ_ C752400_26.0
+
+CONTIG: C752962_27.0 (1350bp)
+Top Length: 1345  Top ID: 97.25
+		One align captures most of this contig: 76276 77620 | 1345 1 | 1345 1345 | 97.25 | Bacteroides_plebeius_gi_223955900_ref_NZ_ C752962_27.0
+
+CONTIG: C758854_26.0 (2062bp)
+Top Length: 2062  Top ID: 99.9
+		One align captures most of this contig: 130942 133003 | 2062 1 | 2062 2062 | 99.9 | Bacteroides_plebeius_gi_223955900_ref_NZ_ C758854_26.0
+
+CONTIG: C760678_31.0 (2450bp)
+Top Length: 2450  Top ID: 99.47
+		One align captures most of this contig: 83757 86206 | 1 2450 | 2450 2450 | 99.47 | Bacteroides_plebeius_gi_223955900_ref_NZ_ C760678_31.0
+
+CONTIG: C765358_33.0 (5451bp)
+Top Length: 5451  Top ID: 96.04
+		One align captures most of this contig: 77590 83040 | 1 5451 | 5451 5451 | 96.04 | Bacteroides_plebeius_gi_223955900_ref_NZ_ C765358_33.0
+
+CONTIG: C766466_38.0 (9328bp)
+Top Length: 5295  Top ID: 96.69
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 86902 92195 | 1 5295 | 5294 5295 | 96.69 | Bacteroides_plebeius_gi_223955900_ref_NZ_ C766466_38.0
+			  Gap between these two alignments (local misassembly). Inconsistency = 176 
+			Real Alignment 2: 93248 96407 | 6172 9328 | 3160 3157 | 96.74 | Bacteroides_plebeius_gi_223955900_ref_NZ_ C766466_38.0
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: C749868_151.0 (1152bp)
+Top Length: 1152  Top ID: 99.65
+		One align captures most of this contig: 678 1829 | 1 1152 | 1152 1152 | 99.65 | Bacteroides_plebeius_gi_223955896_ref_NZ_ C749868_151.0
+
+CONTIG: C722860__7.0 (531bp)
+Top Length: 531  Top ID: 98.49
+		One align captures most of this contig: 556593 557123 | 1 531 | 531 531 | 98.49 | Bacteroides_plebeius_gi_223955887_ref_NZ_ C722860__7.0
+
+CONTIG: C742026_26.0 (839bp)
+Top Length: 839  Top ID: 99.28
+		One align captures most of this contig: 566867 567704 | 839 1 | 838 839 | 99.28 | Bacteroides_plebeius_gi_223955887_ref_NZ_ C742026_26.0
+
+CONTIG: C742448_13.0 (851bp)
+Top Length: 851  Top ID: 99.06
+		One align captures most of this contig: 557116 557966 | 851 1 | 851 851 | 99.06 | Bacteroides_plebeius_gi_223955887_ref_NZ_ C742448_13.0
+
+CONTIG: C743082_16.0 (872bp)
+Top Length: 872  Top ID: 99.08
+		One align captures most of this contig: 545085 545956 | 1 872 | 872 872 | 99.08 | Bacteroides_plebeius_gi_223955887_ref_NZ_ C743082_16.0
+
+CONTIG: C743350_32.0 (880bp)
+Top Length: 880  Top ID: 99.55
+		One align captures most of this contig: 509429 510308 | 880 1 | 880 880 | 99.55 | Bacteroides_plebeius_gi_223955887_ref_NZ_ C743350_32.0
+
+CONTIG: C748742_17.0 (1098bp)
+Top Length: 1096  Top ID: 99.27
+		One align captures most of this contig: 521746 522841 | 3 1098 | 1096 1096 | 99.27 | Bacteroides_plebeius_gi_223955887_ref_NZ_ C748742_17.0
+
+CONTIG: C750420_16.0 (1185bp)
+Top Length: 1185  Top ID: 98.99
+		One align captures most of this contig: 555423 556616 | 1 1185 | 1194 1185 | 98.99 | Bacteroides_plebeius_gi_223955887_ref_NZ_ C750420_16.0
+
+CONTIG: C751600_32.0 (1258bp)
+Top Length: 1258  Top ID: 98.89
+		One align captures most of this contig: 510286 511542 | 1258 1 | 1257 1258 | 98.89 | Bacteroides_plebeius_gi_223955887_ref_NZ_ C751600_32.0
+
+CONTIG: C751782_15.0 (1269bp)
+Top Length: 1269  Top ID: 98.82
+		One align captures most of this contig: 519772 521040 | 1269 1 | 1269 1269 | 98.82 | Bacteroides_plebeius_gi_223955887_ref_NZ_ C751782_15.0
+
+CONTIG: C752470_41.0 (1316bp)
+Top Length: 1316  Top ID: 98.4
+		One align captures most of this contig: 508117 509432 | 1 1316 | 1316 1316 | 98.4 | Bacteroides_plebeius_gi_223955887_ref_NZ_ C752470_41.0
+
+CONTIG: C758396_19.0 (1986bp)
+Top Length: 1986  Top ID: 99.19
+		One align captures most of this contig: 548241 550223 | 1 1986 | 1983 1986 | 99.19 | Bacteroides_plebeius_gi_223955887_ref_NZ_ C758396_19.0
+
+CONTIG: C759858_20.0 (2264bp)
+Top Length: 2264  Top ID: 99.12
+		One align captures most of this contig: 545986 548249 | 2264 1 | 2264 2264 | 99.12 | Bacteroides_plebeius_gi_223955887_ref_NZ_ C759858_20.0
+
+CONTIG: C762008_17.0 (2870bp)
+Top Length: 2870  Top ID: 99.41
+		One align captures most of this contig: 552309 555178 | 2870 1 | 2870 2870 | 99.41 | Bacteroides_plebeius_gi_223955887_ref_NZ_ C762008_17.0
+
+CONTIG: C762228_21.0 (2966bp)
+Top Length: 2966  Top ID: 98.62
+		One align captures most of this contig: 511517 514482 | 1 2966 | 2966 2966 | 98.62 | Bacteroides_plebeius_gi_223955887_ref_NZ_ C762228_21.0
+
+CONTIG: C764870_17.0 (4799bp)
+Top Length: 4799  Top ID: 98.71
+		One align captures most of this contig: 514464 519262 | 4799 1 | 4799 4799 | 98.71 | Bacteroides_plebeius_gi_223955887_ref_NZ_ C764870_17.0
+
+CONTIG: C720784_40.0 (512bp)
+Top Length: 512  Top ID: 99.02
+		One align captures most of this contig: 150948 151459 | 1 512 | 512 512 | 99.02 | Bacteroides_plebeius_gi_223955899_ref_NZ_ C720784_40.0
+
+CONTIG: C724968_45.0 (552bp)
+Top Length: 552  Top ID: 98.91
+		One align captures most of this contig: 116592 117143 | 1 552 | 552 552 | 98.91 | Bacteroides_plebeius_gi_223955899_ref_NZ_ C724968_45.0
+
+CONTIG: C737618_49.0 (733bp)
+Top Length: 733  Top ID: 99.05
+		One align captures most of this contig: 131857 132589 | 1 733 | 733 733 | 99.05 | Bacteroides_plebeius_gi_223955899_ref_NZ_ C737618_49.0
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_plebeius/contigs_reports/nucmer_output/SOAPdenovo2.used_snps
+ERROR: Reference Bacteroides_plebeius_gi_223955903_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_plebeius_gi_223955887_ref_NZ_', 'Bacteroides_plebeius_gi_223955902_ref_NZ_', 'Bacteroides_plebeius_gi_223955900_ref_NZ_', 'Bacteroides_plebeius_gi_223955899_ref_NZ_', 'Bacteroides_plebeius_gi_223955896_ref_NZ_']
+	Reference Bacteroides_plebeius_gi_223955896_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 4306 (4306 bp)
+			START in gap: 1 to 678 (677 bp)
+			Align 1: 678 1829 C749868_151.0 1 1152
+			END in gap: 1829 to 4306 (2477 bp)
+
+ERROR: Reference Bacteroides_plebeius_gi_223955886_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_plebeius_gi_223955887_ref_NZ_', 'Bacteroides_plebeius_gi_223955902_ref_NZ_', 'Bacteroides_plebeius_gi_223955900_ref_NZ_', 'Bacteroides_plebeius_gi_223955899_ref_NZ_', 'Bacteroides_plebeius_gi_223955896_ref_NZ_']
+	Reference Bacteroides_plebeius_gi_223955887_ref_NZ_: 15 total alignments. 1 total regions.
+		Region: 1 to 571288 (571288 bp)
+			START in gap: 1 to 508117 (508116 bp)
+			Align 1: 508117 509432 C752470_41.0 1 1316
+				Negative gap (overlap) between this and next alignment: 509432 to 509429 (-3 bp)
+				Next Alignment: 509429 510308 C743350_32.0 880 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 880 to 876.
+			Align 2: 509433 510308 C743350_32.0 876 1
+				Negative gap (overlap) between this and next alignment: 510308 to 510286 (-22 bp)
+				Next Alignment: 510286 511542 C751600_32.0 1258 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1258 to 1235.
+			Align 3: 510309 511542 C751600_32.0 1235 1
+				Negative gap (overlap) between this and next alignment: 511542 to 511517 (-25 bp)
+				Next Alignment: 511517 514482 C762228_21.0 1 2966
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 27.
+			Align 4: 511543 514482 C762228_21.0 27 2966
+				Negative gap (overlap) between this and next alignment: 514482 to 514464 (-18 bp)
+				Next Alignment: 514464 519262 C764870_17.0 4799 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 4799 to 4780.
+			Align 5: 514483 519262 C764870_17.0 4780 1
+				Gap between this and next alignment: 519262 to 519772 (509 bp)
+				Next Alignment: 519772 521040 C751782_15.0 1269 1
+
+			Align 6: 519772 521040 C751782_15.0 1269 1
+				Gap between this and next alignment: 521040 to 521746 (705 bp)
+				Next Alignment: 521746 522841 C748742_17.0 3 1098
+
+			Align 7: 521746 522841 C748742_17.0 3 1098
+				Gap between this and next alignment: 522841 to 545085 (22243 bp)
+				Next Alignment: 545085 545956 C743082_16.0 1 872
+
+			Align 8: 545085 545956 C743082_16.0 1 872
+				Gap between this and next alignment: 545956 to 545986 (29 bp)
+				Next Alignment: 545986 548249 C759858_20.0 2264 1
+
+			Align 9: 545986 548249 C759858_20.0 2264 1
+				Negative gap (overlap) between this and next alignment: 548249 to 548241 (-8 bp)
+				Next Alignment: 548241 550223 C758396_19.0 1 1986
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 10.
+			Align 10: 548250 550223 C758396_19.0 10 1986
+				Gap between this and next alignment: 550223 to 552309 (2085 bp)
+				Next Alignment: 552309 555178 C762008_17.0 2870 1
+
+			Align 11: 552309 555178 C762008_17.0 2870 1
+				Gap between this and next alignment: 555178 to 555423 (244 bp)
+				Next Alignment: 555423 556616 C750420_16.0 1 1185
+
+			Align 12: 555423 556616 C750420_16.0 1 1185
+				Negative gap (overlap) between this and next alignment: 556616 to 556593 (-23 bp)
+				Next Alignment: 556593 557123 C722860__7.0 1 531
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 25.
+			Align 13: 556617 557123 C722860__7.0 25 531
+				Negative gap (overlap) between this and next alignment: 557123 to 557116 (-7 bp)
+				Next Alignment: 557116 557966 C742448_13.0 851 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 851 to 843.
+			Align 14: 557124 557966 C742448_13.0 843 1
+				Gap between this and next alignment: 557966 to 566867 (8900 bp)
+				Next Alignment: 566867 567704 C742026_26.0 839 1
+
+			Align 15: 566867 567704 C742026_26.0 839 1
+			END in gap: 567704 to 571288 (3584 bp)
+
+ERROR: Reference Bacteroides_plebeius_gi_223955893_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_plebeius_gi_223955887_ref_NZ_', 'Bacteroides_plebeius_gi_223955902_ref_NZ_', 'Bacteroides_plebeius_gi_223955900_ref_NZ_', 'Bacteroides_plebeius_gi_223955899_ref_NZ_', 'Bacteroides_plebeius_gi_223955896_ref_NZ_']
+ERROR: Reference Bacteroides_plebeius_gi_223955892_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_plebeius_gi_223955887_ref_NZ_', 'Bacteroides_plebeius_gi_223955902_ref_NZ_', 'Bacteroides_plebeius_gi_223955900_ref_NZ_', 'Bacteroides_plebeius_gi_223955899_ref_NZ_', 'Bacteroides_plebeius_gi_223955896_ref_NZ_']
+ERROR: Reference Bacteroides_plebeius_gi_223955894_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_plebeius_gi_223955887_ref_NZ_', 'Bacteroides_plebeius_gi_223955902_ref_NZ_', 'Bacteroides_plebeius_gi_223955900_ref_NZ_', 'Bacteroides_plebeius_gi_223955899_ref_NZ_', 'Bacteroides_plebeius_gi_223955896_ref_NZ_']
+	Reference Bacteroides_plebeius_gi_223955900_ref_NZ_: 14 total alignments. 1 total regions.
+		Region: 1 to 148376 (148376 bp)
+			START in gap: 1 to 76276 (76275 bp)
+			Align 1: 76276 77620 C752962_27.0 1345 1
+				Negative gap (overlap) between this and next alignment: 77620 to 77590 (-30 bp)
+				Next Alignment: 77590 83040 C765358_33.0 1 5451
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 32.
+			Align 2: 77621 83040 C765358_33.0 32 5451
+				Negative gap (overlap) between this and next alignment: 83040 to 83017 (-23 bp)
+				Next Alignment: 83017 83755 C737906_24.0 739 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 739 to 715.
+			Align 3: 83041 83755 C737906_24.0 715 1
+				Gap between this and next alignment: 83755 to 83757 (1 bp)
+				Next Alignment: 83757 86206 C760678_31.0 1 2450
+
+			Align 4: 83757 86206 C760678_31.0 1 2450
+				Negative gap (overlap) between this and next alignment: 86206 to 86168 (-38 bp)
+				Next Alignment: 86168 86900 C737628_32.0 1 733
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 40.
+			Align 5: 86207 86900 C737628_32.0 40 733
+				Gap between this and next alignment: 86900 to 86902 (1 bp)
+				Next Alignment: 86902 92195 C766466_38.0 1 5295
+
+			Align 6: 86902 92195 C766466_38.0 1 5295
+				Gap between this and next alignment: 92195 to 93248 (1052 bp)
+				Next Alignment: 93248 96407 C766466_38.0 6172 9328
+
+			Align 7: 93248 96407 C766466_38.0 6172 9328
+				Gap between this and next alignment: 96407 to 99297 (2889 bp)
+				Next Alignment: 99297 99371 C728860_44.0 598 524
+
+			Align 8: 99297 99371 C728860_44.0 598 524
+				Gap between this and next alignment: 99371 to 99602 (230 bp)
+				Next Alignment: 99602 99888 C728860_44.0 290 4
+
+			Align 9: 99602 99888 C728860_44.0 290 4
+				Gap between this and next alignment: 99888 to 125379 (25490 bp)
+				Next Alignment: 125379 125982 C729360_22.0 1 604
+
+			Align 10: 125379 125982 C729360_22.0 1 604
+				Gap between this and next alignment: 125982 to 130942 (4959 bp)
+				Next Alignment: 130942 133003 C758854_26.0 2062 1
+
+			Align 11: 130942 133003 C758854_26.0 2062 1
+				Gap between this and next alignment: 133003 to 133467 (463 bp)
+				Next Alignment: 133467 134773 C752400_26.0 1 1310
+
+			Align 12: 133467 134773 C752400_26.0 1 1310
+				Gap between this and next alignment: 134773 to 143920 (9146 bp)
+				Next Alignment: 143920 144677 C738784__4.0 1 758
+
+			Align 13: 143920 144677 C738784__4.0 1 758
+				Gap between this and next alignment: 144677 to 144982 (304 bp)
+				Next Alignment: 144982 145665 C735048__3.0 684 1
+
+			Align 14: 144982 145665 C735048__3.0 684 1
+			END in gap: 145665 to 148376 (2711 bp)
+
+ERROR: Reference Bacteroides_plebeius_gi_223955885_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_plebeius_gi_223955887_ref_NZ_', 'Bacteroides_plebeius_gi_223955902_ref_NZ_', 'Bacteroides_plebeius_gi_223955900_ref_NZ_', 'Bacteroides_plebeius_gi_223955899_ref_NZ_', 'Bacteroides_plebeius_gi_223955896_ref_NZ_']
+	Reference Bacteroides_plebeius_gi_223955902_ref_NZ_: 39 total alignments. 1 total regions.
+		Region: 1 to 722256 (722256 bp)
+			START in gap: 1 to 6052 (6051 bp)
+			Align 1: 6052 6752 C735996__3.0 1 701
+				Gap between this and next alignment: 6752 to 17486 (10733 bp)
+				Next Alignment: 17486 18023 C723688__3.0 1 538
+
+			Align 2: 17486 18023 C723688__3.0 1 538
+				Gap between this and next alignment: 18023 to 20564 (2540 bp)
+				Next Alignment: 20564 22108 C754986__4.0 1545 1
+
+			Align 3: 20564 22108 C754986__4.0 1545 1
+				Gap between this and next alignment: 22108 to 22709 (600 bp)
+				Next Alignment: 22709 24179 C754270_16.0 1 1471
+
+			Align 4: 22709 24179 C754270_16.0 1 1471
+				Gap between this and next alignment: 24179 to 24462 (282 bp)
+				Next Alignment: 24462 25464 C746796_15.0 1003 1
+
+			Align 5: 24462 25464 C746796_15.0 1003 1
+				Gap between this and next alignment: 25464 to 71198 (45733 bp)
+				Next Alignment: 71198 71315 scaffold30749__2.4 120 3
+
+			Align 6: 71198 71315 scaffold30749__2.4 120 3
+				Gap between this and next alignment: 71315 to 72157 (841 bp)
+				Next Alignment: 72157 72286 scaffold31140__2.0 1 130
+
+			Align 7: 72157 72286 scaffold31140__2.0 1 130
+				Gap between this and next alignment: 72286 to 72484 (197 bp)
+				Next Alignment: 72484 73284 scaffold31140__2.0 186 986
+
+			Align 8: 72484 73284 scaffold31140__2.0 186 986
+				Gap between this and next alignment: 73284 to 74102 (817 bp)
+				Next Alignment: 74102 74426 scaffold56394__3.7 1 325
+
+			Align 9: 74102 74426 scaffold56394__3.7 1 325
+				Gap between this and next alignment: 74426 to 74644 (217 bp)
+				Next Alignment: 74644 74949 scaffold56394__3.7 415 720
+
+			Align 10: 74644 74949 scaffold56394__3.7 415 720
+				Gap between this and next alignment: 74949 to 75336 (386 bp)
+				Next Alignment: 75336 75669 scaffold56809__2.0 698 365
+
+			Align 11: 75336 75669 scaffold56809__2.0 698 365
+				Gap between this and next alignment: 75669 to 75818 (148 bp)
+				Next Alignment: 75818 76180 scaffold56809__2.0 363 1
+
+			Align 12: 75818 76180 scaffold56809__2.0 363 1
+				Gap between this and next alignment: 76180 to 77430 (1249 bp)
+				Next Alignment: 77430 77952 scaffold7846__2.9 858 336
+
+			Align 13: 77430 77952 scaffold7846__2.9 858 336
+				Gap between this and next alignment: 77952 to 84603 (6650 bp)
+				Next Alignment: 84603 85044 scaffold22115__3.0 120 561
+
+			Align 14: 84603 85044 scaffold22115__3.0 120 561
+				Gap between this and next alignment: 85044 to 85231 (186 bp)
+				Next Alignment: 85231 85497 scaffold22115__3.0 610 876
+
+			Align 15: 85231 85497 scaffold22115__3.0 610 876
+				Gap between this and next alignment: 85497 to 86056 (558 bp)
+				Next Alignment: 86056 86707 scaffold57854__4.5 652 1
+
+			Align 16: 86056 86707 scaffold57854__4.5 652 1
+				Gap between this and next alignment: 86707 to 87792 (1084 bp)
+				Next Alignment: 87792 87941 scaffold40636__3.6 562 413
+
+			Align 17: 87792 87941 scaffold40636__3.6 562 413
+				Gap between this and next alignment: 87941 to 88095 (153 bp)
+				Next Alignment: 88095 88330 scaffold40636__3.6 411 176
+
+			Align 18: 88095 88330 scaffold40636__3.6 411 176
+				Gap between this and next alignment: 88330 to 88504 (173 bp)
+				Next Alignment: 88504 88652 scaffold40636__3.6 149 1
+
+			Align 19: 88504 88652 scaffold40636__3.6 149 1
+				Gap between this and next alignment: 88652 to 89037 (384 bp)
+				Next Alignment: 89037 89603 C726310__3.0 567 1
+
+			Align 20: 89037 89603 C726310__3.0 567 1
+				Gap between this and next alignment: 89603 to 90057 (453 bp)
+				Next Alignment: 90057 90262 scaffold23300__3.2 359 154
+
+			Align 21: 90057 90262 scaffold23300__3.2 359 154
+				Gap between this and next alignment: 90262 to 90444 (181 bp)
+				Next Alignment: 90444 90562 scaffold23300__3.2 119 1
+
+			Align 22: 90444 90562 scaffold23300__3.2 119 1
+				Gap between this and next alignment: 90562 to 342227 (251664 bp)
+				Next Alignment: 342227 342993 C739192__9.0 1 767
+
+			Align 23: 342227 342993 C739192__9.0 1 767
+				Negative gap (overlap) between this and next alignment: 342993 to 342966 (-27 bp)
+				Next Alignment: 342966 343511 C724460__8.0 546 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 546 to 518.
+			Align 24: 342994 343511 C724460__8.0 518 1
+				Gap between this and next alignment: 343511 to 348316 (4804 bp)
+				Next Alignment: 348316 348895 C727330__6.0 1 580
+
+			Align 25: 348316 348895 C727330__6.0 1 580
+				Gap between this and next alignment: 348895 to 355221 (6325 bp)
+				Next Alignment: 355221 356366 C749738_21.0 1 1146
+
+			Align 26: 355221 356366 C749738_21.0 1 1146
+				Gap between this and next alignment: 356366 to 358429 (2062 bp)
+				Next Alignment: 358429 358972 C724256_19.0 1 544
+
+			Align 27: 358429 358972 C724256_19.0 1 544
+				Gap between this and next alignment: 358972 to 359647 (674 bp)
+				Next Alignment: 359647 360233 C727920_10.0 587 1
+
+			Align 28: 359647 360233 C727920_10.0 587 1
+				Gap between this and next alignment: 360233 to 360359 (125 bp)
+				Next Alignment: 360359 363882 C763382_10.0 3524 1
+
+			Align 29: 360359 363882 C763382_10.0 3524 1
+				Negative gap (overlap) between this and next alignment: 363882 to 363839 (-43 bp)
+				Next Alignment: 363839 364853 C747042_10.0 1 1015
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 45.
+			Align 30: 363883 364853 C747042_10.0 45 1015
+				Gap between this and next alignment: 364853 to 368569 (3715 bp)
+				Next Alignment: 368569 369379 C740998_11.0 1 811
+
+			Align 31: 368569 369379 C740998_11.0 1 811
+				Gap between this and next alignment: 369379 to 370507 (1127 bp)
+				Next Alignment: 370507 371131 C731026_20.0 2 626
+
+			Align 32: 370507 371131 C731026_20.0 2 626
+				Gap between this and next alignment: 371131 to 377461 (6329 bp)
+				Next Alignment: 377461 377635 scaffold13448__4.9 317 491
+
+			Align 33: 377461 377635 scaffold13448__4.9 317 491
+				Gap between this and next alignment: 377635 to 378198 (562 bp)
+				Next Alignment: 378198 378505 scaffold13448__4.9 761 1069
+
+			Align 34: 378198 378505 scaffold13448__4.9 761 1069
+				Gap between this and next alignment: 378505 to 378713 (207 bp)
+				Next Alignment: 378713 378886 scaffold13448__4.9 1127 1300
+
+			Align 35: 378713 378886 scaffold13448__4.9 1127 1300
+				Gap between this and next alignment: 378886 to 379122 (235 bp)
+				Next Alignment: 379122 379262 scaffold13448__4.9 1393 1533
+
+			Align 36: 379122 379262 scaffold13448__4.9 1393 1533
+				Gap between this and next alignment: 379262 to 382039 (2776 bp)
+				Next Alignment: 382039 382164 scaffold32085__6.5 334 209
+
+			Align 37: 382039 382164 scaffold32085__6.5 334 209
+				Gap between this and next alignment: 382164 to 382330 (165 bp)
+				Next Alignment: 382330 382522 scaffold32085__6.5 195 1
+
+			Align 38: 382330 382522 scaffold32085__6.5 195 1
+				Gap between this and next alignment: 382522 to 385830 (3307 bp)
+				Next Alignment: 385830 385934 scaffold7672__5.5 1 105
+
+			Align 39: 385830 385934 scaffold7672__5.5 1 105
+			END in gap: 385934 to 722256 (336322 bp)
+
+ERROR: Reference Bacteroides_plebeius_gi_223955897_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_plebeius_gi_223955887_ref_NZ_', 'Bacteroides_plebeius_gi_223955902_ref_NZ_', 'Bacteroides_plebeius_gi_223955900_ref_NZ_', 'Bacteroides_plebeius_gi_223955899_ref_NZ_', 'Bacteroides_plebeius_gi_223955896_ref_NZ_']
+ERROR: Reference Bacteroides_plebeius_gi_223955889_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_plebeius_gi_223955887_ref_NZ_', 'Bacteroides_plebeius_gi_223955902_ref_NZ_', 'Bacteroides_plebeius_gi_223955900_ref_NZ_', 'Bacteroides_plebeius_gi_223955899_ref_NZ_', 'Bacteroides_plebeius_gi_223955896_ref_NZ_']
+	Reference Bacteroides_plebeius_gi_223955899_ref_NZ_: 3 total alignments. 1 total regions.
+		Region: 1 to 192302 (192302 bp)
+			START in gap: 1 to 116592 (116591 bp)
+			Align 1: 116592 117143 C724968_45.0 1 552
+				Gap between this and next alignment: 117143 to 131857 (14713 bp)
+				Next Alignment: 131857 132589 C737618_49.0 1 733
+
+			Align 2: 131857 132589 C737618_49.0 1 733
+				Gap between this and next alignment: 132589 to 150948 (18358 bp)
+				Next Alignment: 150948 151459 C720784_40.0 1 512
+
+			Align 3: 150948 151459 C720784_40.0 1 512
+			END in gap: 151459 to 192302 (40843 bp)
+
+ERROR: Reference Bacteroides_plebeius_gi_223955898_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_plebeius_gi_223955887_ref_NZ_', 'Bacteroides_plebeius_gi_223955902_ref_NZ_', 'Bacteroides_plebeius_gi_223955900_ref_NZ_', 'Bacteroides_plebeius_gi_223955899_ref_NZ_', 'Bacteroides_plebeius_gi_223955896_ref_NZ_']
+ERROR: Reference Bacteroides_plebeius_gi_223955895_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_plebeius_gi_223955887_ref_NZ_', 'Bacteroides_plebeius_gi_223955902_ref_NZ_', 'Bacteroides_plebeius_gi_223955900_ref_NZ_', 'Bacteroides_plebeius_gi_223955899_ref_NZ_', 'Bacteroides_plebeius_gi_223955896_ref_NZ_']
+ERROR: Reference Bacteroides_plebeius_gi_223955890_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_plebeius_gi_223955887_ref_NZ_', 'Bacteroides_plebeius_gi_223955902_ref_NZ_', 'Bacteroides_plebeius_gi_223955900_ref_NZ_', 'Bacteroides_plebeius_gi_223955899_ref_NZ_', 'Bacteroides_plebeius_gi_223955896_ref_NZ_']
+ERROR: Reference Bacteroides_plebeius_gi_223955901_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_plebeius_gi_223955887_ref_NZ_', 'Bacteroides_plebeius_gi_223955902_ref_NZ_', 'Bacteroides_plebeius_gi_223955900_ref_NZ_', 'Bacteroides_plebeius_gi_223955899_ref_NZ_', 'Bacteroides_plebeius_gi_223955896_ref_NZ_']
+ERROR: Reference Bacteroides_plebeius_gi_223955891_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_plebeius_gi_223955887_ref_NZ_', 'Bacteroides_plebeius_gi_223955902_ref_NZ_', 'Bacteroides_plebeius_gi_223955900_ref_NZ_', 'Bacteroides_plebeius_gi_223955899_ref_NZ_', 'Bacteroides_plebeius_gi_223955896_ref_NZ_']
+ERROR: Reference Bacteroides_plebeius_gi_320444482_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_plebeius_gi_223955887_ref_NZ_', 'Bacteroides_plebeius_gi_223955902_ref_NZ_', 'Bacteroides_plebeius_gi_223955900_ref_NZ_', 'Bacteroides_plebeius_gi_223955899_ref_NZ_', 'Bacteroides_plebeius_gi_223955896_ref_NZ_']
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_plebeius/contigs_reports/nucmer_output/SOAPdenovo2.used_snps
+
+Results:
+	Local Misassemblies: 12
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 5 part
+Partially Unaligned Contigs with Misassemblies: 1
+Unaligned Contig Bases: 3584
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 74918
+
+	SNPs: 995
+	Insertions: 16
+	Deletions: 16
+
+	Positive Gaps: 65
+		Internal Gaps:  13
+		External Gaps:  52
+		External Gap Total:  1559904
+		External Gap Average: 29998
+	Negative Gaps: 12
+		Internal Overlaps:  0
+		External Overlaps:  12
+		External Overlaps Total: -267
+		External Overlaps Average: -22
+	Contigs with Redundant Alignments: 0 (0)

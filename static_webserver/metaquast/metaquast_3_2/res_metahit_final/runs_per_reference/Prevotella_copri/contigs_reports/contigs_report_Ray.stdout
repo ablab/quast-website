@@ -1,0 +1,341 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Prevotella_copri_gi_260447129_ref_NZ_]
+	Loaded [Prevotella_copri_gi_260447130_ref_NZ_]
+	Loaded [Prevotella_copri_gi_260447131_ref_NZ_]
+	Loaded [Prevotella_copri_gi_260447132_ref_NZ_]
+	Loaded [Prevotella_copri_gi_260447133_ref_NZ_]
+	Loaded [Prevotella_copri_gi_260447134_ref_NZ_]
+	Loaded [Prevotella_copri_gi_260447135_ref_NZ_]
+	Loaded [Prevotella_copri_gi_260447136_ref_NZ_]
+	Loaded [Prevotella_copri_gi_260447137_ref_NZ_]
+	Loaded [Prevotella_copri_gi_260447138_ref_NZ_]
+	Loaded [Prevotella_copri_gi_260447139_ref_NZ_]
+	Loaded [Prevotella_copri_gi_260447140_ref_NZ_]
+	Loaded [Prevotella_copri_gi_260447141_ref_NZ_]
+	Loaded [Prevotella_copri_gi_260447142_ref_NZ_]
+	Loaded [Prevotella_copri_gi_260447143_ref_NZ_]
+	Loaded [Prevotella_copri_gi_260447144_ref_NZ_]
+	Loaded [Prevotella_copri_gi_260447145_ref_NZ_]
+	Loaded [Prevotella_copri_gi_260447146_ref_NZ_]
+	Loaded [Prevotella_copri_gi_260447147_ref_NZ_]
+	Loaded [Prevotella_copri_gi_260447148_ref_NZ_]
+	Loaded [Prevotella_copri_gi_260447149_ref_NZ_]
+	Loaded [Prevotella_copri_gi_260447150_ref_NZ_]
+	Loaded [Prevotella_copri_gi_260447151_ref_NZ_]
+	Loaded [Prevotella_copri_gi_260447152_ref_NZ_]
+	Loaded [Prevotella_copri_gi_260447153_ref_NZ_]
+	Loaded [Prevotella_copri_gi_260447154_ref_NZ_]
+	Loaded [Prevotella_copri_gi_260447155_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 27
+	Total Region Length: 3512473
+Analyzing contigs...
+CONTIG: scaffold-7 (21121bp)
+Top Length: 530  Top ID: 96.42
+		Skipping redundant alignment 339 435 | 21121 21025 | 97 97 | 100.0 | Prevotella_copri_gi_260447150_ref_NZ_ scaffold-7
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 259369 259899 | 20592 21121 | 531 530 | 96.42 | Prevotella_copri_gi_260447132_ref_NZ_ scaffold-7
+		This contig is partially unaligned. (Aligned 530 out of 21121 bases)
+		Alignment: 439003 439533 | 20592 21121 | 531 530 | 96.23 | Prevotella_copri_gi_260447131_ref_NZ_ scaffold-7
+		Unaligned bases: 1 to 20591 (20591)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-4746 (1088bp)
+Top Length: 87  Top ID: 97.7
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 1088 and total length of all aligns is 165
+		Alignment: 24393 24470 | 819 742 | 78 78 | 100.0 | Prevotella_copri_gi_260447129_ref_NZ_ scaffold-4746
+		Alignment: 54442 54528 | 967 881 | 87 87 | 97.7 | Prevotella_copri_gi_260447130_ref_NZ_ scaffold-4746
+		Unaligned bases: 923
+CONTIG: scaffold-241 (7459bp)
+Top Length: 2441  Top ID: 96.07
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 329704 332120 | 978 3418 | 2417 2441 | 96.07 | Prevotella_copri_gi_260447129_ref_NZ_ scaffold-241
+			  Overlap between these two alignments (local misassembly). Inconsistency = -431 
+			Real Alignment 2: 332267 333468 | 3996 5197 | 1202 1202 | 96.59 | Prevotella_copri_gi_260447129_ref_NZ_ scaffold-241
+			  Overlap between these two alignments (local misassembly). Inconsistency = -511 
+			Real Alignment 3: 333468 334514 | 5708 6756 | 1047 1049 | 96.47 | Prevotella_copri_gi_260447129_ref_NZ_ scaffold-241
+			  Overlap between these two alignments (local misassembly). Inconsistency = -141 
+			Real Alignment 4: 334514 334756 | 6897 7139 | 243 243 | 97.94 | Prevotella_copri_gi_260447129_ref_NZ_ scaffold-241
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-257 (8945bp)
+Top Length: 922  Top ID: 96.42
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 8945 and total length of all aligns is 1680
+		Alignment: 276582 277503 | 3071 2150 | 922 922 | 96.42 | Prevotella_copri_gi_260447129_ref_NZ_ scaffold-257
+		Alignment: 275733 276490 | 5301 4544 | 758 758 | 96.17 | Prevotella_copri_gi_260447129_ref_NZ_ scaffold-257
+		Unaligned bases: 7265
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold-853 (5188bp)
+Top Length: 1436  Top ID: 99.3
+		Skipping redundant alignment 1 205 | 2847 2644 | 205 204 | 96.59 | Prevotella_copri_gi_260447145_ref_NZ_ scaffold-853
+		Skipping redundant alignment 71603 72933 | 4298 2967 | 1331 1332 | 98.72 | Prevotella_copri_gi_260447141_ref_NZ_ scaffold-853
+		Skipping redundant alignment 173904 174727 | 3791 2967 | 824 825 | 99.15 | Prevotella_copri_gi_260447129_ref_NZ_ scaffold-853
+		Skipping redundant alignment 3239 3469 | 4402 4172 | 231 231 | 99.57 | Prevotella_copri_gi_260447151_ref_NZ_ scaffold-853
+		Skipping redundant alignment 78059 78236 | 4404 4227 | 178 178 | 100.0 | Prevotella_copri_gi_260447141_ref_NZ_ scaffold-853
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 177373 177611 | 2882 2644 | 239 239 | 97.49 | Prevotella_copri_gi_260447129_ref_NZ_ scaffold-853
+		Skipping redundant alignment 72859 73095 | 2880 2644 | 237 237 | 96.2 | Prevotella_copri_gi_260447141_ref_NZ_ scaffold-853
+		This contig is misassembled. 9 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 5188 and total length of all aligns is 1673
+		Alignment: 174653 174889 | 2880 2644 | 237 237 | 98.73 | Prevotella_copri_gi_260447129_ref_NZ_ scaffold-853
+		Alignment: 176014 177449 | 4402 2967 | 1436 1436 | 99.3 | Prevotella_copri_gi_260447129_ref_NZ_ scaffold-853
+		Unaligned bases: 3515
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold-1312 (2497bp)
+Top Length: 960  Top ID: 97.09
+		This contig is partially unaligned. (Aligned 960 out of 2497 bases)
+		Alignment: 340868 341827 | 1538 2497 | 960 960 | 97.09 | Prevotella_copri_gi_260447129_ref_NZ_ scaffold-1312
+		Unaligned bases: 1 to 1537 (1537)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-2653 (8025bp)
+Top Length: 2017  Top ID: 95.25
+		Skipping redundant alignment 285566 285750 | 6156 5972 | 185 185 | 95.14 | Prevotella_copri_gi_260447129_ref_NZ_ scaffold-2653
+		This contig is misassembled. 4 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 8025 and total length of all aligns is 3308
+		Alignment: 327700 329707 | 2194 178 | 2008 2017 | 95.25 | Prevotella_copri_gi_260447129_ref_NZ_ scaffold-2653
+		Alignment: 325166 325658 | 4997 4506 | 493 492 | 95.13 | Prevotella_copri_gi_260447129_ref_NZ_ scaffold-2653
+		Alignment: 343589 344387 | 6158 5360 | 799 799 | 95.12 | Prevotella_copri_gi_260447129_ref_NZ_ scaffold-2653
+		Unaligned bases: 4717
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold-2669 (5623bp)
+Top Length: 710  Top ID: 96.2
+		This contig is partially unaligned. (Aligned 710 out of 5623 bases)
+		Alignment: 334752 335461 | 358 1067 | 710 710 | 96.2 | Prevotella_copri_gi_260447129_ref_NZ_ scaffold-2669
+		Unaligned bases: 1 to 357 (357)
+		Unaligned bases: 1068 to 5623 (4556)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-3126 (3075bp)
+Top Length: 85  Top ID: 97.65
+		Skipping redundant alignment 563003 563079 | 100 24 | 77 77 | 100.0 | Prevotella_copri_gi_260447129_ref_NZ_ scaffold-3126
+		Skipping redundant alignment 112140 112215 | 99 24 | 76 76 | 100.0 | Prevotella_copri_gi_260447137_ref_NZ_ scaffold-3126
+		Skipping redundant alignment 112140 112213 | 202 129 | 74 74 | 100.0 | Prevotella_copri_gi_260447137_ref_NZ_ scaffold-3126
+		This contig is misassembled. 5 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 3075 and total length of all aligns is 160
+		Alignment: 563281 563364 | 108 24 | 84 85 | 97.65 | Prevotella_copri_gi_260447129_ref_NZ_ scaffold-3126
+		Alignment: 563288 563362 | 203 129 | 75 75 | 100.0 | Prevotella_copri_gi_260447129_ref_NZ_ scaffold-3126
+		Unaligned bases: 2915
+CONTIG: scaffold-3407 (1875bp)
+Top Length: 80  Top ID: 100.0
+		Skipping redundant alignment 563003 563081 | 102 180 | 79 79 | 100.0 | Prevotella_copri_gi_260447129_ref_NZ_ scaffold-3407
+		Skipping redundant alignment 112140 112218 | 103 181 | 79 79 | 100.0 | Prevotella_copri_gi_260447137_ref_NZ_ scaffold-3407
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 563289 563364 | 1 76 | 76 76 | 100.0 | Prevotella_copri_gi_260447129_ref_NZ_ scaffold-3407
+		Skipping redundant alignment 112140 112215 | 1 76 | 76 76 | 100.0 | Prevotella_copri_gi_260447137_ref_NZ_ scaffold-3407
+		This contig is misassembled. 6 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 1875 and total length of all aligns is 156
+		Alignment: 563004 563079 | 1 76 | 76 76 | 100.0 | Prevotella_copri_gi_260447129_ref_NZ_ scaffold-3407
+		Alignment: 563288 563367 | 102 181 | 80 80 | 100.0 | Prevotella_copri_gi_260447129_ref_NZ_ scaffold-3407
+		Unaligned bases: 1719
+CONTIG: scaffold-8864 (7428bp)
+Top Length: 78  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 78 out of 7428 bases)
+		Alignment: 274683 274760 | 4761 4684 | 78 78 | 100.0 | Prevotella_copri_gi_260447129_ref_NZ_ scaffold-8864
+		Unaligned bases: 1 to 4683 (4683)
+		Unaligned bases: 4762 to 7428 (2667)
+
+CONTIG: scaffold-9662 (1088bp)
+Top Length: 83  Top ID: 97.59
+		This contig is partially unaligned. (Aligned 83 out of 1088 bases)
+		Alignment: 130788 130870 | 1006 924 | 83 83 | 97.59 | Prevotella_copri_gi_260447136_ref_NZ_ scaffold-9662
+		Unaligned bases: 1 to 923 (923)
+		Unaligned bases: 1007 to 1088 (82)
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Prevotella_copri/contigs_reports/nucmer_output/Ray.used_snps
+	Reference Prevotella_copri_gi_260447136_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 155952 (155952 bp)
+			START in gap: 1 to 130788 (130787 bp)
+			Align 1: 130788 130870 scaffold-9662 1006 924
+			END in gap: 130870 to 155952 (25082 bp)
+
+ERROR: Reference Prevotella_copri_gi_260447150_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Prevotella_copri_gi_260447136_ref_NZ_', 'Prevotella_copri_gi_260447130_ref_NZ_', 'Prevotella_copri_gi_260447131_ref_NZ_', 'Prevotella_copri_gi_260447129_ref_NZ_']
+	Reference Prevotella_copri_gi_260447131_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 442348 (442348 bp)
+			START in gap: 1 to 439003 (439002 bp)
+			Align 1: 439003 439533 scaffold-7 20592 21121
+			END in gap: 439533 to 442348 (2815 bp)
+
+ERROR: Reference Prevotella_copri_gi_260447154_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Prevotella_copri_gi_260447136_ref_NZ_', 'Prevotella_copri_gi_260447130_ref_NZ_', 'Prevotella_copri_gi_260447131_ref_NZ_', 'Prevotella_copri_gi_260447129_ref_NZ_']
+ERROR: Reference Prevotella_copri_gi_260447148_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Prevotella_copri_gi_260447136_ref_NZ_', 'Prevotella_copri_gi_260447130_ref_NZ_', 'Prevotella_copri_gi_260447131_ref_NZ_', 'Prevotella_copri_gi_260447129_ref_NZ_']
+ERROR: Reference Prevotella_copri_gi_260447133_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Prevotella_copri_gi_260447136_ref_NZ_', 'Prevotella_copri_gi_260447130_ref_NZ_', 'Prevotella_copri_gi_260447131_ref_NZ_', 'Prevotella_copri_gi_260447129_ref_NZ_']
+ERROR: Reference Prevotella_copri_gi_260447144_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Prevotella_copri_gi_260447136_ref_NZ_', 'Prevotella_copri_gi_260447130_ref_NZ_', 'Prevotella_copri_gi_260447131_ref_NZ_', 'Prevotella_copri_gi_260447129_ref_NZ_']
+ERROR: Reference Prevotella_copri_gi_260447135_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Prevotella_copri_gi_260447136_ref_NZ_', 'Prevotella_copri_gi_260447130_ref_NZ_', 'Prevotella_copri_gi_260447131_ref_NZ_', 'Prevotella_copri_gi_260447129_ref_NZ_']
+ERROR: Reference Prevotella_copri_gi_260447134_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Prevotella_copri_gi_260447136_ref_NZ_', 'Prevotella_copri_gi_260447130_ref_NZ_', 'Prevotella_copri_gi_260447131_ref_NZ_', 'Prevotella_copri_gi_260447129_ref_NZ_']
+ERROR: Reference Prevotella_copri_gi_260447141_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Prevotella_copri_gi_260447136_ref_NZ_', 'Prevotella_copri_gi_260447130_ref_NZ_', 'Prevotella_copri_gi_260447131_ref_NZ_', 'Prevotella_copri_gi_260447129_ref_NZ_']
+ERROR: Reference Prevotella_copri_gi_260447140_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Prevotella_copri_gi_260447136_ref_NZ_', 'Prevotella_copri_gi_260447130_ref_NZ_', 'Prevotella_copri_gi_260447131_ref_NZ_', 'Prevotella_copri_gi_260447129_ref_NZ_']
+ERROR: Reference Prevotella_copri_gi_260447149_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Prevotella_copri_gi_260447136_ref_NZ_', 'Prevotella_copri_gi_260447130_ref_NZ_', 'Prevotella_copri_gi_260447131_ref_NZ_', 'Prevotella_copri_gi_260447129_ref_NZ_']
+ERROR: Reference Prevotella_copri_gi_260447132_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Prevotella_copri_gi_260447136_ref_NZ_', 'Prevotella_copri_gi_260447130_ref_NZ_', 'Prevotella_copri_gi_260447131_ref_NZ_', 'Prevotella_copri_gi_260447129_ref_NZ_']
+ERROR: Reference Prevotella_copri_gi_260447153_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Prevotella_copri_gi_260447136_ref_NZ_', 'Prevotella_copri_gi_260447130_ref_NZ_', 'Prevotella_copri_gi_260447131_ref_NZ_', 'Prevotella_copri_gi_260447129_ref_NZ_']
+ERROR: Reference Prevotella_copri_gi_260447138_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Prevotella_copri_gi_260447136_ref_NZ_', 'Prevotella_copri_gi_260447130_ref_NZ_', 'Prevotella_copri_gi_260447131_ref_NZ_', 'Prevotella_copri_gi_260447129_ref_NZ_']
+ERROR: Reference Prevotella_copri_gi_260447142_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Prevotella_copri_gi_260447136_ref_NZ_', 'Prevotella_copri_gi_260447130_ref_NZ_', 'Prevotella_copri_gi_260447131_ref_NZ_', 'Prevotella_copri_gi_260447129_ref_NZ_']
+	Reference Prevotella_copri_gi_260447130_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 493568 (493568 bp)
+			START in gap: 1 to 54442 (54441 bp)
+			Align 1: 54442 54528 scaffold-4746 967 881
+			END in gap: 54528 to 493568 (439040 bp)
+
+	Reference Prevotella_copri_gi_260447129_ref_NZ_: 19 total alignments. 1 total regions.
+		Region: 1 to 866821 (866821 bp)
+			START in gap: 1 to 24393 (24392 bp)
+			Align 1: 24393 24470 scaffold-4746 819 742
+				Gap between this and next alignment: 24470 to 174653 (150182 bp)
+				Next Alignment: 174653 174889 scaffold-853 2880 2644
+
+			Align 2: 174653 174889 scaffold-853 2880 2644
+				Gap between this and next alignment: 174889 to 176014 (1124 bp)
+				Next Alignment: 176014 177449 scaffold-853 4402 2967
+
+			Align 3: 176014 177449 scaffold-853 4402 2967
+				Gap between this and next alignment: 177449 to 274683 (97233 bp)
+				Next Alignment: 274683 274760 scaffold-8864 4761 4684
+
+			Align 4: 274683 274760 scaffold-8864 4761 4684
+				Gap between this and next alignment: 274760 to 275733 (972 bp)
+				Next Alignment: 275733 276490 scaffold-257 5301 4544
+
+			Align 5: 275733 276490 scaffold-257 5301 4544
+				Gap between this and next alignment: 276490 to 276582 (91 bp)
+				Next Alignment: 276582 277503 scaffold-257 3071 2150
+
+			Align 6: 276582 277503 scaffold-257 3071 2150
+				Gap between this and next alignment: 277503 to 325166 (47662 bp)
+				Next Alignment: 325166 325658 scaffold-2653 4997 4506
+
+			Align 7: 325166 325658 scaffold-2653 4997 4506
+				Gap between this and next alignment: 325658 to 327700 (2041 bp)
+				Next Alignment: 327700 329707 scaffold-2653 2194 178
+
+			Align 8: 327700 329707 scaffold-2653 2194 178
+				Negative gap (overlap) between this and next alignment: 329707 to 329704 (-3 bp)
+				Next Alignment: 329704 332120 scaffold-241 978 3418
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 978 to 982.
+			Align 9: 329708 332120 scaffold-241 982 3418
+				Gap between this and next alignment: 332120 to 332267 (146 bp)
+				Next Alignment: 332267 333468 scaffold-241 3996 5197
+
+			Align 10: 332267 333468 scaffold-241 3996 5197
+				Negative gap (overlap) between this and next alignment: 333468 to 333468 (0 bp)
+				Next Alignment: 333468 334514 scaffold-241 5708 6756
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 5708 to 5709.
+			Align 11: 333469 334514 scaffold-241 5709 6756
+				Negative gap (overlap) between this and next alignment: 334514 to 334514 (0 bp)
+				Next Alignment: 334514 334756 scaffold-241 6897 7139
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 6897 to 6898.
+			Align 12: 334515 334756 scaffold-241 6898 7139
+				Negative gap (overlap) between this and next alignment: 334756 to 334752 (-4 bp)
+				Next Alignment: 334752 335461 scaffold-2669 358 1067
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 358 to 363.
+			Align 13: 334757 335461 scaffold-2669 363 1067
+				Gap between this and next alignment: 335461 to 340868 (5406 bp)
+				Next Alignment: 340868 341827 scaffold-1312 1538 2497
+
+			Align 14: 340868 341827 scaffold-1312 1538 2497
+				Gap between this and next alignment: 341827 to 343589 (1761 bp)
+				Next Alignment: 343589 344387 scaffold-2653 6158 5360
+
+			Align 15: 343589 344387 scaffold-2653 6158 5360
+				Gap between this and next alignment: 344387 to 563004 (218616 bp)
+				Next Alignment: 563004 563079 scaffold-3407 1 76
+
+			Align 16: 563004 563079 scaffold-3407 1 76
+				Gap between this and next alignment: 563079 to 563281 (201 bp)
+				Next Alignment: 563281 563364 scaffold-3126 108 24
+
+			Align 17: 563281 563364 scaffold-3126 108 24
+				The next alignment (563288 563362 scaffold-3126 203 129) is redundant. Skipping.
+				Negative gap (overlap) between this and next alignment: 563364 to 563288 (-76 bp)
+				Next Alignment: 563288 563367 scaffold-3407 102 181
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 102 to 179.
+			Align 19: 563365 563367 scaffold-3407 179 181
+			END in gap: 563367 to 866821 (303454 bp)
+
+ERROR: Reference Prevotella_copri_gi_260447145_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Prevotella_copri_gi_260447136_ref_NZ_', 'Prevotella_copri_gi_260447130_ref_NZ_', 'Prevotella_copri_gi_260447131_ref_NZ_', 'Prevotella_copri_gi_260447129_ref_NZ_']
+ERROR: Reference Prevotella_copri_gi_260447147_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Prevotella_copri_gi_260447136_ref_NZ_', 'Prevotella_copri_gi_260447130_ref_NZ_', 'Prevotella_copri_gi_260447131_ref_NZ_', 'Prevotella_copri_gi_260447129_ref_NZ_']
+ERROR: Reference Prevotella_copri_gi_260447155_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Prevotella_copri_gi_260447136_ref_NZ_', 'Prevotella_copri_gi_260447130_ref_NZ_', 'Prevotella_copri_gi_260447131_ref_NZ_', 'Prevotella_copri_gi_260447129_ref_NZ_']
+ERROR: Reference Prevotella_copri_gi_260447137_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Prevotella_copri_gi_260447136_ref_NZ_', 'Prevotella_copri_gi_260447130_ref_NZ_', 'Prevotella_copri_gi_260447131_ref_NZ_', 'Prevotella_copri_gi_260447129_ref_NZ_']
+ERROR: Reference Prevotella_copri_gi_260447146_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Prevotella_copri_gi_260447136_ref_NZ_', 'Prevotella_copri_gi_260447130_ref_NZ_', 'Prevotella_copri_gi_260447131_ref_NZ_', 'Prevotella_copri_gi_260447129_ref_NZ_']
+ERROR: Reference Prevotella_copri_gi_260447152_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Prevotella_copri_gi_260447136_ref_NZ_', 'Prevotella_copri_gi_260447130_ref_NZ_', 'Prevotella_copri_gi_260447131_ref_NZ_', 'Prevotella_copri_gi_260447129_ref_NZ_']
+ERROR: Reference Prevotella_copri_gi_260447151_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Prevotella_copri_gi_260447136_ref_NZ_', 'Prevotella_copri_gi_260447130_ref_NZ_', 'Prevotella_copri_gi_260447131_ref_NZ_', 'Prevotella_copri_gi_260447129_ref_NZ_']
+ERROR: Reference Prevotella_copri_gi_260447139_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Prevotella_copri_gi_260447136_ref_NZ_', 'Prevotella_copri_gi_260447130_ref_NZ_', 'Prevotella_copri_gi_260447131_ref_NZ_', 'Prevotella_copri_gi_260447129_ref_NZ_']
+ERROR: Reference Prevotella_copri_gi_260447143_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Prevotella_copri_gi_260447136_ref_NZ_', 'Prevotella_copri_gi_260447130_ref_NZ_', 'Prevotella_copri_gi_260447131_ref_NZ_', 'Prevotella_copri_gi_260447129_ref_NZ_']
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Prevotella_copri/contigs_reports/nucmer_output/Ray.used_snps
+
+Results:
+	Local Misassemblies: 3
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 11 part
+Partially Unaligned Contigs with Misassemblies: 6
+Unaligned Contig Bases: 56450
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 14241
+
+	SNPs: 438
+	Insertions: 45
+	Deletions: 11
+
+	Positive Gaps: 20
+		Internal Gaps:  4
+		External Gaps:  16
+		External Gap Total:  1941046
+		External Gap Average: 121315
+	Negative Gaps: 5
+		Internal Overlaps:  2
+		External Overlaps:  3
+		External Overlaps Total: -83
+		External Overlaps Average: -28
+	Contigs with Redundant Alignments: 1 (75)

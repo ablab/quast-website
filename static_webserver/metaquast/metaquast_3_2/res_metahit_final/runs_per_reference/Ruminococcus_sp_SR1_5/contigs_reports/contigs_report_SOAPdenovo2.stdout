@@ -1,0 +1,638 @@
+Aligning contigs to reference...
+	Running Nucmer
+Parsing coords...
+Loading reference...
+	Loaded [Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 1
+	Total Region Length: 3545606
+Analyzing contigs...
+CONTIG: scaffold3261__3.0 (2418bp)
+Top Length: 104  Top ID: 96.15
+		This contig is partially unaligned. (Aligned 104 out of 2418 bases)
+		Alignment: 3032855 3032958 | 1792 1689 | 104 104 | 96.15 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold3261__3.0
+		Unaligned bases: 1 to 1688 (1688)
+		Unaligned bases: 1793 to 2418 (626)
+
+CONTIG: scaffold3707__2.0 (510bp)
+Top Length: 113  Top ID: 99.12
+		This contig is partially unaligned. (Aligned 113 out of 510 bases)
+		Alignment: 2667634 2667746 | 510 398 | 113 113 | 99.12 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold3707__2.0
+		Unaligned bases: 1 to 397 (397)
+
+CONTIG: scaffold7037__2.8 (626bp)
+Top Length: 226  Top ID: 96.02
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 2377306 2377409 | 1 105 | 104 105 | 99.05 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold7037__2.8
+			  Gap between these two alignments (local misassembly). Inconsistency = 138 
+			Real Alignment 2: 2377649 2377725 | 207 283 | 77 77 | 100.0 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold7037__2.8
+			  Gap between these two alignments (local misassembly). Inconsistency = 149 
+			Real Alignment 3: 2377992 2378217 | 401 626 | 226 226 | 96.02 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold7037__2.8
+
+CONTIG: scaffold13351__2.5 (538bp)
+Top Length: 153  Top ID: 98.69
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 538 and total length of all aligns is 232
+		Alignment: 2392011 2392163 | 153 1 | 153 153 | 98.69 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold13351__2.5
+		Alignment: 2391656 2391734 | 357 279 | 79 79 | 100.0 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold13351__2.5
+		Unaligned bases: 306
+CONTIG: scaffold13438__2.8 (652bp)
+Top Length: 272  Top ID: 99.63
+		This contig is partially unaligned. (Aligned 272 out of 652 bases)
+		Alignment: 3129533 3129804 | 652 381 | 272 272 | 99.63 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold13438__2.8
+		Unaligned bases: 1 to 380 (380)
+
+CONTIG: scaffold14626__4.2 (721bp)
+Top Length: 272  Top ID: 95.04
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 2384990 2385271 | 192 463 | 282 272 | 95.04 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold14626__4.2
+			  Gap between these two alignments (local misassembly). Inconsistency = 145 
+			Real Alignment 2: 2385434 2385674 | 481 721 | 241 241 | 97.93 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold14626__4.2
+
+CONTIG: scaffold23508__3.3 (550bp)
+Top Length: 341  Top ID: 98.53
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 730145 730485 | 343 3 | 341 341 | 98.53 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold23508__3.3
+			  Gap between these two alignments (local misassembly). Inconsistency = 302 
+			Real Alignment 2: 729636 729700 | 550 486 | 65 65 | 100.0 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold23508__3.3
+
+CONTIG: scaffold24150__2.2 (573bp)
+Top Length: 151  Top ID: 98.68
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 573 and total length of all aligns is 217
+		Alignment: 2395254 2395319 | 188 253 | 66 66 | 100.0 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold24150__2.2
+		Alignment: 2395468 2395618 | 255 405 | 151 151 | 98.68 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold24150__2.2
+		Unaligned bases: 356
+CONTIG: scaffold26462__3.4 (654bp)
+Top Length: 199  Top ID: 100.0
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 1381051 1381170 | 123 4 | 120 120 | 100.0 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold26462__3.4
+			  Gap between these two alignments (local misassembly). Inconsistency = 137 
+			Real Alignment 2: 1380761 1380877 | 276 160 | 117 117 | 99.15 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold26462__3.4
+			  Gap between these two alignments (local misassembly). Inconsistency = 145 
+			Real Alignment 3: 1380386 1380584 | 506 308 | 199 199 | 100.0 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold26462__3.4
+			  Gap between these two alignments (local misassembly). Inconsistency = 138 
+			Real Alignment 4: 1380100 1380246 | 654 508 | 147 147 | 100.0 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold26462__3.4
+
+CONTIG: scaffold27695__5.3 (540bp)
+Top Length: 147  Top ID: 96.62
+		This contig is partially unaligned. (Aligned 147 out of 540 bases)
+		Alignment: 288252 288398 | 394 540 | 147 147 | 96.62 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold27695__5.3
+		Unaligned bases: 1 to 393 (393)
+
+CONTIG: scaffold29337__7.7 (913bp)
+Top Length: 467  Top ID: 99.79
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 733704 734170 | 600 134 | 467 467 | 99.79 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold29337__7.7
+			  Gap between these two alignments (local misassembly). Inconsistency = 144 
+			Real Alignment 2: 733247 733450 | 913 710 | 204 204 | 98.04 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold29337__7.7
+
+CONTIG: scaffold30917__2.8 (539bp)
+Top Length: 343  Top ID: 99.13
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 3036744 3036872 | 129 1 | 129 129 | 99.22 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold30917__2.8
+			  Gap between these two alignments (local misassembly). Inconsistency = 157 
+			Real Alignment 2: 3036179 3036521 | 537 195 | 343 343 | 99.13 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold30917__2.8
+
+CONTIG: scaffold31519__2.5 (797bp)
+Top Length: 66  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 66 out of 797 bases)
+		Alignment: 2262656 2262721 | 66 1 | 66 66 | 100.0 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold31519__2.5
+		Unaligned bases: 67 to 797 (731)
+
+CONTIG: scaffold32868__4.6 (549bp)
+Top Length: 134  Top ID: 98.52
+		This contig is partially unaligned. (Aligned 134 out of 549 bases)
+		Alignment: 2227035 2227169 | 142 9 | 135 134 | 98.52 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold32868__4.6
+		Unaligned bases: 1 to 8 (8)
+		Unaligned bases: 143 to 549 (407)
+
+CONTIG: scaffold37245_10.0 (574bp)
+Top Length: 430  Top ID: 96.98
+		This contig is partially unaligned. (Aligned 430 out of 574 bases)
+		Alignment: 754353 754780 | 574 145 | 428 430 | 96.98 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold37245_10.0
+		Unaligned bases: 1 to 144 (144)
+
+CONTIG: scaffold41648__4.3 (565bp)
+Top Length: 176  Top ID: 97.73
+		This contig is partially unaligned. (Aligned 176 out of 565 bases)
+		Alignment: 202491 202666 | 154 329 | 176 176 | 97.73 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold41648__4.3
+		Unaligned bases: 1 to 153 (153)
+		Unaligned bases: 330 to 565 (236)
+
+CONTIG: scaffold42637__1.9 (860bp)
+Top Length: 529  Top ID: 99.62
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 3131830 3132358 | 1 529 | 529 529 | 99.62 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold42637__1.9
+			  Gap between these two alignments (local misassembly). Inconsistency = 128 
+			Real Alignment 2: 3132488 3132611 | 531 654 | 124 124 | 96.77 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold42637__1.9
+			  Extensive misassembly ( relocation, inconsistency = 1187 ) between these two alignments
+			Real Alignment 3: 3133816 3134003 | 672 859 | 188 188 | 99.47 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold42637__1.9
+
+CONTIG: scaffold45912__9.4 (1212bp)
+Top Length: 616  Top ID: 99.03
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 2427636 2428251 | 674 59 | 616 616 | 99.03 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold45912__9.4
+			  Gap between these two alignments (local misassembly). Inconsistency = 223 
+			Real Alignment 2: 2427347 2427412 | 740 675 | 66 66 | 100.0 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold45912__9.4
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold50052__2.5 (761bp)
+Top Length: 224  Top ID: 99.55
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 1250371 1250594 | 1 224 | 224 224 | 99.55 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold50052__2.5
+			  Gap between these two alignments (local misassembly). Inconsistency = 143 
+			Real Alignment 2: 1250842 1250998 | 329 485 | 157 157 | 98.09 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold50052__2.5
+			  Gap between these two alignments (local misassembly). Inconsistency = 125 
+			Real Alignment 3: 1251125 1251332 | 487 694 | 208 208 | 97.6 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold50052__2.5
+			  Gap between these two alignments (local misassembly). Inconsistency = 111 
+			Real Alignment 4: 1251445 1251510 | 696 761 | 66 66 | 100.0 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold50052__2.5
+
+CONTIG: scaffold50606__6.0 (1234bp)
+Top Length: 237  Top ID: 95.78
+		This contig is partially unaligned. (Aligned 237 out of 1234 bases)
+		Alignment: 2619424 2619660 | 880 644 | 237 237 | 95.78 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold50606__6.0
+		Unaligned bases: 1 to 643 (643)
+		Unaligned bases: 881 to 1234 (354)
+
+CONTIG: scaffold51751__2.7 (1238bp)
+Top Length: 1010  Top ID: 98.91
+		This contig is partially unaligned. (Aligned 1010 out of 1238 bases)
+		Alignment: 741293 742302 | 229 1238 | 1010 1010 | 98.91 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold51751__2.7
+		Unaligned bases: 1 to 228 (228)
+
+CONTIG: scaffold52805__3.9 (1340bp)
+Top Length: 228  Top ID: 96.93
+		This contig is misassembled. 3 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 1340 and total length of all aligns is 564
+		Alignment: 266134 266361 | 1 228 | 228 228 | 96.93 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold52805__3.9
+		Alignment: 266956 267102 | 676 822 | 147 147 | 100.0 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold52805__3.9
+		Alignment: 267225 267413 | 827 1015 | 189 189 | 97.88 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold52805__3.9
+		Unaligned bases: 776
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold52846__3.4 (1449bp)
+Top Length: 947  Top ID: 97.78
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 212795 213014 | 220 1 | 220 220 | 95.45 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold52846__3.4
+			  Gap between these two alignments (local misassembly). Inconsistency = 145 
+			Real Alignment 2: 212432 212646 | 438 224 | 215 215 | 97.67 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold52846__3.4
+			  Gap between these two alignments (local misassembly). Inconsistency = 146 
+			Real Alignment 3: 211306 212252 | 1418 472 | 947 947 | 97.78 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold52846__3.4
+
+CONTIG: scaffold53265__4.7 (807bp)
+Top Length: 556  Top ID: 96.59
+		This contig is partially unaligned. (Aligned 556 out of 807 bases)
+		Alignment: 739331 739887 | 231 786 | 557 556 | 96.59 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold53265__4.7
+		Unaligned bases: 1 to 230 (230)
+		Unaligned bases: 787 to 807 (21)
+
+CONTIG: scaffold53626__3.4 (762bp)
+Top Length: 420  Top ID: 99.05
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 3040439 3040672 | 234 1 | 234 234 | 96.58 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold53626__3.4
+			  Gap between these two alignments (local misassembly). Inconsistency = 146 
+			Real Alignment 2: 3039765 3040184 | 762 343 | 420 420 | 99.05 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold53626__3.4
+
+CONTIG: scaffold54722__5.3 (1018bp)
+Top Length: 155  Top ID: 99.35
+		This contig is partially unaligned. (Aligned 155 out of 1018 bases)
+		Alignment: 753602 753756 | 155 1 | 155 155 | 99.35 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold54722__5.3
+		Unaligned bases: 156 to 1018 (863)
+
+CONTIG: scaffold58412_10.0 (8370bp)
+Top Length: 510  Top ID: 97.45
+		This contig is partially unaligned. (Aligned 510 out of 8370 bases)
+		Alignment: 3382146 3382655 | 23 532 | 510 510 | 97.45 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ scaffold58412_10.0
+		Unaligned bases: 1 to 22 (22)
+		Unaligned bases: 533 to 8370 (7838)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: C721468__4.0 (517bp)
+Top Length: 415  Top ID: 98.55
+		This contig is partially unaligned. (Aligned 415 out of 517 bases)
+		Alignment: 2428412 2428826 | 1 415 | 415 415 | 98.55 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ C721468__4.0
+		Unaligned bases: 416 to 517 (102)
+
+CONTIG: C725084_60.0 (553bp)
+Top Length: 553  Top ID: 98.37
+		One align captures most of this contig: 2633033 2633585 | 553 1 | 553 553 | 98.37 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ C725084_60.0
+
+CONTIG: C731318__3.0 (629bp)
+Top Length: 628  Top ID: 98.09
+		One align captures most of this contig: 753755 754382 | 629 2 | 628 628 | 98.09 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ C731318__3.0
+
+CONTIG: C731502__4.0 (632bp)
+Top Length: 632  Top ID: 99.68
+		One align captures most of this contig: 1374740 1375370 | 632 1 | 631 632 | 99.68 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ C731502__4.0
+
+CONTIG: C731856__7.0 (637bp)
+Top Length: 637  Top ID: 99.06
+		One align captures most of this contig: 2251601 2252235 | 637 1 | 635 637 | 99.06 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ C731856__7.0
+
+CONTIG: C733078_37.0 (654bp)
+Top Length: 654  Top ID: 98.78
+		One align captures most of this contig: 735645 736298 | 1 654 | 654 654 | 98.78 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ C733078_37.0
+
+CONTIG: C734090__9.0 (669bp)
+Top Length: 669  Top ID: 97.61
+		One align captures most of this contig: 2247923 2248591 | 669 1 | 669 669 | 97.61 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ C734090__9.0
+
+CONTIG: C734360__3.0 (673bp)
+Top Length: 673  Top ID: 95.54
+		One align captures most of this contig: 209149 209821 | 1 673 | 673 673 | 95.54 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ C734360__3.0
+
+CONTIG: C737226_22.0 (724bp)
+Top Length: 724  Top ID: 99.59
+		One align captures most of this contig: 2247230 2247953 | 1 724 | 724 724 | 99.59 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ C737226_22.0
+
+CONTIG: C744206__3.0 (907bp)
+Top Length: 907  Top ID: 99.34
+		One align captures most of this contig: 1393543 1394447 | 1 907 | 905 907 | 99.34 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ C744206__3.0
+
+CONTIG: C746460__8.0 (988bp)
+Top Length: 988  Top ID: 98.28
+		One align captures most of this contig: 1907118 1908105 | 1 988 | 988 988 | 98.28 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ C746460__8.0
+
+CONTIG: C747166_11.0 (1021bp)
+Top Length: 1021  Top ID: 96.18
+		One align captures most of this contig: 2248610 2249630 | 1 1021 | 1021 1021 | 96.18 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ C747166_11.0
+
+CONTIG: C748468__3.0 (1085bp)
+Top Length: 1085  Top ID: 99.17
+		One align captures most of this contig: 1384043 1385126 | 1 1085 | 1084 1085 | 99.17 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ C748468__3.0
+
+CONTIG: C748894__4.0 (1105bp)
+Top Length: 1105  Top ID: 99.82
+		One align captures most of this contig: 1377385 1378488 | 1105 1 | 1104 1105 | 99.82 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ C748894__4.0
+
+CONTIG: C750724_43.0 (1204bp)
+Top Length: 1203  Top ID: 99.17
+		One align captures most of this contig: 214936 216137 | 1204 2 | 1202 1203 | 99.17 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ C750724_43.0
+
+CONTIG: C754282_17.0 (1472bp)
+Top Length: 1472  Top ID: 98.78
+		One align captures most of this contig: 79554 81025 | 1 1472 | 1472 1472 | 98.78 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ C754282_17.0
+
+CONTIG: C754606_36.0 (1509bp)
+Top Length: 1509  Top ID: 99.67
+		One align captures most of this contig: 301494 303002 | 1509 1 | 1509 1509 | 99.67 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ C754606_36.0
+
+CONTIG: C755512__4.0 (1597bp)
+Top Length: 1597  Top ID: 99.44
+		One align captures most of this contig: 1378473 1380068 | 1 1597 | 1596 1597 | 99.44 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ C755512__4.0
+
+CONTIG: C760150_22.0 (2320bp)
+Top Length: 2320  Top ID: 99.66
+		One align captures most of this contig: 3258264 3260583 | 1 2320 | 2320 2320 | 99.66 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ C760150_22.0
+
+CONTIG: C760536_24.0 (2415bp)
+Top Length: 2413  Top ID: 99.63
+		One align captures most of this contig: 3260553 3262965 | 2415 3 | 2413 2413 | 99.63 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ C760536_24.0
+
+CONTIG: C763846_15.0 (3838bp)
+Top Length: 779  Top ID: 97.18
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 3838 and total length of all aligns is 1031
+		Alignment: 3025609 3026387 | 1 779 | 779 779 | 97.18 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ C763846_15.0
+		Alignment: 3026614 3026865 | 788 1039 | 252 252 | 96.83 | Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_ C763846_15.0
+		Unaligned bases: 2807
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+Analyzing coverage...
+Writing SNPs into /Molly/miheenko/quast_results/res_metahit_final/runs_per_reference/Ruminococcus_sp_SR1_5/contigs_reports/nucmer_output/SOAPdenovo2.used_snps
+	Reference Ruminococcus_sp_SR1_5_gi_479152295_ref_NC_: 71 total alignments. 1 total regions.
+		Region: 1 to 3545606 (3545606 bp)
+			START in gap: 1 to 79554 (79553 bp)
+			Align 1: 79554 81025 C754282_17.0 1 1472
+				Gap between this and next alignment: 81025 to 202491 (121465 bp)
+				Next Alignment: 202491 202666 scaffold41648__4.3 154 329
+
+			Align 2: 202491 202666 scaffold41648__4.3 154 329
+				Gap between this and next alignment: 202666 to 209149 (6482 bp)
+				Next Alignment: 209149 209821 C734360__3.0 1 673
+
+			Align 3: 209149 209821 C734360__3.0 1 673
+				Gap between this and next alignment: 209821 to 211306 (1484 bp)
+				Next Alignment: 211306 212252 scaffold52846__3.4 1418 472
+
+			Align 4: 211306 212252 scaffold52846__3.4 1418 472
+				Gap between this and next alignment: 212252 to 212432 (179 bp)
+				Next Alignment: 212432 212646 scaffold52846__3.4 438 224
+
+			Align 5: 212432 212646 scaffold52846__3.4 438 224
+				Gap between this and next alignment: 212646 to 212795 (148 bp)
+				Next Alignment: 212795 213014 scaffold52846__3.4 220 1
+
+			Align 6: 212795 213014 scaffold52846__3.4 220 1
+				Gap between this and next alignment: 213014 to 214936 (1921 bp)
+				Next Alignment: 214936 216137 C750724_43.0 1204 2
+
+			Align 7: 214936 216137 C750724_43.0 1204 2
+				Gap between this and next alignment: 216137 to 266134 (49996 bp)
+				Next Alignment: 266134 266361 scaffold52805__3.9 1 228
+
+			Align 8: 266134 266361 scaffold52805__3.9 1 228
+				Gap between this and next alignment: 266361 to 266956 (594 bp)
+				Next Alignment: 266956 267102 scaffold52805__3.9 676 822
+
+			Align 9: 266956 267102 scaffold52805__3.9 676 822
+				Gap between this and next alignment: 267102 to 267225 (122 bp)
+				Next Alignment: 267225 267413 scaffold52805__3.9 827 1015
+
+			Align 10: 267225 267413 scaffold52805__3.9 827 1015
+				Gap between this and next alignment: 267413 to 288252 (20838 bp)
+				Next Alignment: 288252 288398 scaffold27695__5.3 394 540
+
+			Align 11: 288252 288398 scaffold27695__5.3 394 540
+				Gap between this and next alignment: 288398 to 301494 (13095 bp)
+				Next Alignment: 301494 303002 C754606_36.0 1509 1
+
+			Align 12: 301494 303002 C754606_36.0 1509 1
+				Gap between this and next alignment: 303002 to 729636 (426633 bp)
+				Next Alignment: 729636 729700 scaffold23508__3.3 550 486
+
+			Align 13: 729636 729700 scaffold23508__3.3 550 486
+				Gap between this and next alignment: 729700 to 730145 (444 bp)
+				Next Alignment: 730145 730485 scaffold23508__3.3 343 3
+
+			Align 14: 730145 730485 scaffold23508__3.3 343 3
+				Gap between this and next alignment: 730485 to 733247 (2761 bp)
+				Next Alignment: 733247 733450 scaffold29337__7.7 913 710
+
+			Align 15: 733247 733450 scaffold29337__7.7 913 710
+				Gap between this and next alignment: 733450 to 733704 (253 bp)
+				Next Alignment: 733704 734170 scaffold29337__7.7 600 134
+
+			Align 16: 733704 734170 scaffold29337__7.7 600 134
+				Gap between this and next alignment: 734170 to 735645 (1474 bp)
+				Next Alignment: 735645 736298 C733078_37.0 1 654
+
+			Align 17: 735645 736298 C733078_37.0 1 654
+				Gap between this and next alignment: 736298 to 739331 (3032 bp)
+				Next Alignment: 739331 739887 scaffold53265__4.7 231 786
+
+			Align 18: 739331 739887 scaffold53265__4.7 231 786
+				Gap between this and next alignment: 739887 to 741293 (1405 bp)
+				Next Alignment: 741293 742302 scaffold51751__2.7 229 1238
+
+			Align 19: 741293 742302 scaffold51751__2.7 229 1238
+				Gap between this and next alignment: 742302 to 753602 (11299 bp)
+				Next Alignment: 753602 753756 scaffold54722__5.3 155 1
+
+			Align 20: 753602 753756 scaffold54722__5.3 155 1
+				Negative gap (overlap) between this and next alignment: 753756 to 753755 (-1 bp)
+				Next Alignment: 753755 754382 C731318__3.0 629 2
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 629 to 627.
+			Align 21: 753757 754382 C731318__3.0 627 2
+				Negative gap (overlap) between this and next alignment: 754382 to 754353 (-29 bp)
+				Next Alignment: 754353 754780 scaffold37245_10.0 574 145
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 574 to 544.
+			Align 22: 754383 754780 scaffold37245_10.0 544 145
+				Gap between this and next alignment: 754780 to 1250371 (495590 bp)
+				Next Alignment: 1250371 1250594 scaffold50052__2.5 1 224
+
+			Align 23: 1250371 1250594 scaffold50052__2.5 1 224
+				Gap between this and next alignment: 1250594 to 1250842 (247 bp)
+				Next Alignment: 1250842 1250998 scaffold50052__2.5 329 485
+
+			Align 24: 1250842 1250998 scaffold50052__2.5 329 485
+				Gap between this and next alignment: 1250998 to 1251125 (126 bp)
+				Next Alignment: 1251125 1251332 scaffold50052__2.5 487 694
+
+			Align 25: 1251125 1251332 scaffold50052__2.5 487 694
+				Gap between this and next alignment: 1251332 to 1251445 (112 bp)
+				Next Alignment: 1251445 1251510 scaffold50052__2.5 696 761
+
+			Align 26: 1251445 1251510 scaffold50052__2.5 696 761
+				Gap between this and next alignment: 1251510 to 1374740 (123229 bp)
+				Next Alignment: 1374740 1375370 C731502__4.0 632 1
+
+			Align 27: 1374740 1375370 C731502__4.0 632 1
+				Gap between this and next alignment: 1375370 to 1377385 (2014 bp)
+				Next Alignment: 1377385 1378488 C748894__4.0 1105 1
+
+			Align 28: 1377385 1378488 C748894__4.0 1105 1
+				Negative gap (overlap) between this and next alignment: 1378488 to 1378473 (-15 bp)
+				Next Alignment: 1378473 1380068 C755512__4.0 1 1597
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 17.
+			Align 29: 1378489 1380068 C755512__4.0 17 1597
+				Gap between this and next alignment: 1380068 to 1380100 (31 bp)
+				Next Alignment: 1380100 1380246 scaffold26462__3.4 654 508
+
+			Align 30: 1380100 1380246 scaffold26462__3.4 654 508
+				Gap between this and next alignment: 1380246 to 1380386 (139 bp)
+				Next Alignment: 1380386 1380584 scaffold26462__3.4 506 308
+
+			Align 31: 1380386 1380584 scaffold26462__3.4 506 308
+				Gap between this and next alignment: 1380584 to 1380761 (176 bp)
+				Next Alignment: 1380761 1380877 scaffold26462__3.4 276 160
+
+			Align 32: 1380761 1380877 scaffold26462__3.4 276 160
+				Gap between this and next alignment: 1380877 to 1381051 (173 bp)
+				Next Alignment: 1381051 1381170 scaffold26462__3.4 123 4
+
+			Align 33: 1381051 1381170 scaffold26462__3.4 123 4
+				Gap between this and next alignment: 1381170 to 1384043 (2872 bp)
+				Next Alignment: 1384043 1385126 C748468__3.0 1 1085
+
+			Align 34: 1384043 1385126 C748468__3.0 1 1085
+				Gap between this and next alignment: 1385126 to 1393543 (8416 bp)
+				Next Alignment: 1393543 1394447 C744206__3.0 1 907
+
+			Align 35: 1393543 1394447 C744206__3.0 1 907
+				Gap between this and next alignment: 1394447 to 1907118 (512670 bp)
+				Next Alignment: 1907118 1908105 C746460__8.0 1 988
+
+			Align 36: 1907118 1908105 C746460__8.0 1 988
+				Gap between this and next alignment: 1908105 to 2227035 (318929 bp)
+				Next Alignment: 2227035 2227169 scaffold32868__4.6 142 9
+
+			Align 37: 2227035 2227169 scaffold32868__4.6 142 9
+				Gap between this and next alignment: 2227169 to 2247230 (20060 bp)
+				Next Alignment: 2247230 2247953 C737226_22.0 1 724
+
+			Align 38: 2247230 2247953 C737226_22.0 1 724
+				Negative gap (overlap) between this and next alignment: 2247953 to 2247923 (-30 bp)
+				Next Alignment: 2247923 2248591 C734090__9.0 669 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 669 to 638.
+			Align 39: 2247954 2248591 C734090__9.0 638 1
+				Gap between this and next alignment: 2248591 to 2248610 (18 bp)
+				Next Alignment: 2248610 2249630 C747166_11.0 1 1021
+
+			Align 40: 2248610 2249630 C747166_11.0 1 1021
+				Gap between this and next alignment: 2249630 to 2251601 (1970 bp)
+				Next Alignment: 2251601 2252235 C731856__7.0 637 1
+
+			Align 41: 2251601 2252235 C731856__7.0 637 1
+				Gap between this and next alignment: 2252235 to 2262656 (10420 bp)
+				Next Alignment: 2262656 2262721 scaffold31519__2.5 66 1
+
+			Align 42: 2262656 2262721 scaffold31519__2.5 66 1
+				Gap between this and next alignment: 2262721 to 2377306 (114584 bp)
+				Next Alignment: 2377306 2377409 scaffold7037__2.8 1 105
+
+			Align 43: 2377306 2377409 scaffold7037__2.8 1 105
+				Gap between this and next alignment: 2377409 to 2377649 (239 bp)
+				Next Alignment: 2377649 2377725 scaffold7037__2.8 207 283
+
+			Align 44: 2377649 2377725 scaffold7037__2.8 207 283
+				Gap between this and next alignment: 2377725 to 2377992 (266 bp)
+				Next Alignment: 2377992 2378217 scaffold7037__2.8 401 626
+
+			Align 45: 2377992 2378217 scaffold7037__2.8 401 626
+				Gap between this and next alignment: 2378217 to 2384990 (6772 bp)
+				Next Alignment: 2384990 2385271 scaffold14626__4.2 192 463
+
+			Align 46: 2384990 2385271 scaffold14626__4.2 192 463
+				Gap between this and next alignment: 2385271 to 2385434 (162 bp)
+				Next Alignment: 2385434 2385674 scaffold14626__4.2 481 721
+
+			Align 47: 2385434 2385674 scaffold14626__4.2 481 721
+				Gap between this and next alignment: 2385674 to 2391656 (5981 bp)
+				Next Alignment: 2391656 2391734 scaffold13351__2.5 357 279
+
+			Align 48: 2391656 2391734 scaffold13351__2.5 357 279
+				Gap between this and next alignment: 2391734 to 2392011 (276 bp)
+				Next Alignment: 2392011 2392163 scaffold13351__2.5 153 1
+
+			Align 49: 2392011 2392163 scaffold13351__2.5 153 1
+				Gap between this and next alignment: 2392163 to 2395254 (3090 bp)
+				Next Alignment: 2395254 2395319 scaffold24150__2.2 188 253
+
+			Align 50: 2395254 2395319 scaffold24150__2.2 188 253
+				Gap between this and next alignment: 2395319 to 2395468 (148 bp)
+				Next Alignment: 2395468 2395618 scaffold24150__2.2 255 405
+
+			Align 51: 2395468 2395618 scaffold24150__2.2 255 405
+				Gap between this and next alignment: 2395618 to 2427347 (31728 bp)
+				Next Alignment: 2427347 2427412 scaffold45912__9.4 740 675
+
+			Align 52: 2427347 2427412 scaffold45912__9.4 740 675
+				Gap between this and next alignment: 2427412 to 2427636 (223 bp)
+				Next Alignment: 2427636 2428251 scaffold45912__9.4 674 59
+
+			Align 53: 2427636 2428251 scaffold45912__9.4 674 59
+				Gap between this and next alignment: 2428251 to 2428412 (160 bp)
+				Next Alignment: 2428412 2428826 C721468__4.0 1 415
+
+			Align 54: 2428412 2428826 C721468__4.0 1 415
+				Gap between this and next alignment: 2428826 to 2619424 (190597 bp)
+				Next Alignment: 2619424 2619660 scaffold50606__6.0 880 644
+
+			Align 55: 2619424 2619660 scaffold50606__6.0 880 644
+				Gap between this and next alignment: 2619660 to 2633033 (13372 bp)
+				Next Alignment: 2633033 2633585 C725084_60.0 553 1
+
+			Align 56: 2633033 2633585 C725084_60.0 553 1
+				Gap between this and next alignment: 2633585 to 2667634 (34048 bp)
+				Next Alignment: 2667634 2667746 scaffold3707__2.0 510 398
+
+			Align 57: 2667634 2667746 scaffold3707__2.0 510 398
+				Gap between this and next alignment: 2667746 to 3025609 (357862 bp)
+				Next Alignment: 3025609 3026387 C763846_15.0 1 779
+
+			Align 58: 3025609 3026387 C763846_15.0 1 779
+				Gap between this and next alignment: 3026387 to 3026614 (226 bp)
+				Next Alignment: 3026614 3026865 C763846_15.0 788 1039
+
+			Align 59: 3026614 3026865 C763846_15.0 788 1039
+				Gap between this and next alignment: 3026865 to 3032855 (5989 bp)
+				Next Alignment: 3032855 3032958 scaffold3261__3.0 1792 1689
+
+			Align 60: 3032855 3032958 scaffold3261__3.0 1792 1689
+				Gap between this and next alignment: 3032958 to 3036179 (3220 bp)
+				Next Alignment: 3036179 3036521 scaffold30917__2.8 537 195
+
+			Align 61: 3036179 3036521 scaffold30917__2.8 537 195
+				Gap between this and next alignment: 3036521 to 3036744 (222 bp)
+				Next Alignment: 3036744 3036872 scaffold30917__2.8 129 1
+
+			Align 62: 3036744 3036872 scaffold30917__2.8 129 1
+				Gap between this and next alignment: 3036872 to 3039765 (2892 bp)
+				Next Alignment: 3039765 3040184 scaffold53626__3.4 762 343
+
+			Align 63: 3039765 3040184 scaffold53626__3.4 762 343
+				Gap between this and next alignment: 3040184 to 3040439 (254 bp)
+				Next Alignment: 3040439 3040672 scaffold53626__3.4 234 1
+
+			Align 64: 3040439 3040672 scaffold53626__3.4 234 1
+				Gap between this and next alignment: 3040672 to 3129533 (88860 bp)
+				Next Alignment: 3129533 3129804 scaffold13438__2.8 652 381
+
+			Align 65: 3129533 3129804 scaffold13438__2.8 652 381
+				Gap between this and next alignment: 3129804 to 3131830 (2025 bp)
+				Next Alignment: 3131830 3132358 scaffold42637__1.9 1 529
+
+			Align 66: 3131830 3132358 scaffold42637__1.9 1 529
+				Gap between this and next alignment: 3132358 to 3132488 (129 bp)
+				Next Alignment: 3132488 3132611 scaffold42637__1.9 531 654
+
+			Align 67: 3132488 3132611 scaffold42637__1.9 531 654
+				Gap between this and next alignment: 3132611 to 3133816 (1204 bp)
+				Next Alignment: 3133816 3134003 scaffold42637__1.9 672 859
+
+			Align 68: 3133816 3134003 scaffold42637__1.9 672 859
+				Gap between this and next alignment: 3134003 to 3258264 (124260 bp)
+				Next Alignment: 3258264 3260583 C760150_22.0 1 2320
+
+			Align 69: 3258264 3260583 C760150_22.0 1 2320
+				Negative gap (overlap) between this and next alignment: 3260583 to 3260553 (-30 bp)
+				Next Alignment: 3260553 3262965 C760536_24.0 2415 3
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 2415 to 2384.
+			Align 70: 3260584 3262965 C760536_24.0 2384 3
+				Gap between this and next alignment: 3262965 to 3382146 (119180 bp)
+				Next Alignment: 3382146 3382655 scaffold58412_10.0 23 532
+
+			Align 71: 3382146 3382655 scaffold58412_10.0 23 532
+			END in gap: 3382655 to 3545606 (162951 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/miheenko/quast_results/res_metahit_final/runs_per_reference/Ruminococcus_sp_SR1_5/contigs_reports/nucmer_output/SOAPdenovo2.used_snps
+
+Results:
+	Local Misassemblies: 17
+	Misassemblies: 1
+		Relocations: 1
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 1
+	Misassembled Contig Bases: 860
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 18 part
+Partially Unaligned Contigs with Misassemblies: 4
+Unaligned Contig Bases: 19709
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 34316
+
+	SNPs: 438
+	Insertions: 14
+	Deletions: 14
+
+	Positive Gaps: 67
+		Internal Gaps:  23
+		External Gaps:  44
+		External Gap Total:  3505228
+		External Gap Average: 79664
+	Negative Gaps: 5
+		Internal Overlaps:  0
+		External Overlaps:  5
+		External Overlaps Total: -105
+		External Overlaps Average: -21
+	Contigs with Redundant Alignments: 0 (0)

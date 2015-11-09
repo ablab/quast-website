@@ -1,0 +1,126 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Collinsella_aerofaciens_gi_139436870_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 1
+	Total Region Length: 2439869
+Analyzing contigs...
+CONTIG: scaffold_14299 (982bp)
+Top Length: 982  Top ID: 97.05
+		One align captures most of this contig: 2269146 2270126 | 1 982 | 981 982 | 97.05 | Collinsella_aerofaciens_gi_139436870_ref_NZ_ scaffold_14299
+
+CONTIG: scaffold_15258 (930bp)
+Top Length: 930  Top ID: 96.05
+		This contig has 5 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 1687651 1688584 | 1 930 | 934 930 | 96.05 | Collinsella_aerofaciens_gi_139436870_ref_NZ_ scaffold_15258
+		Skipping alignment  2297732 2298666 | 1 930 | 935 930 | 95.95 | Collinsella_aerofaciens_gi_139436870_ref_NZ_ scaffold_15258
+		Skipping alignment  2254014 2254947 | 930 1 | 934 930 | 95.84 | Collinsella_aerofaciens_gi_139436870_ref_NZ_ scaffold_15258
+		Skipping alignment  1824318 1825250 | 1 930 | 933 930 | 95.83 | Collinsella_aerofaciens_gi_139436870_ref_NZ_ scaffold_15258
+		Skipping alignment  1950848 1951780 | 1 930 | 933 930 | 95.83 | Collinsella_aerofaciens_gi_139436870_ref_NZ_ scaffold_15258
+
+CONTIG: scaffold_16591 (869bp)
+Top Length: 869  Top ID: 96.21
+		Marking as insignificant: 2437490 2438207 | 78 793 | 718 716 | 95.83 | Collinsella_aerofaciens_gi_139436870_ref_NZ_ scaffold_16591
+		Marking as insignificant: 1949104 1949872 | 101 869 | 769 769 | 96.24 | Collinsella_aerofaciens_gi_139436870_ref_NZ_ scaffold_16591
+		Marking as insignificant: 479363 480131 | 869 101 | 769 769 | 96.24 | Collinsella_aerofaciens_gi_139436870_ref_NZ_ scaffold_16591
+		Marking as insignificant: 2295967 2296756 | 78 869 | 790 792 | 96.73 | Collinsella_aerofaciens_gi_139436870_ref_NZ_ scaffold_16591
+		Marking as insignificant: 1685862 1686675 | 54 869 | 814 816 | 97.43 | Collinsella_aerofaciens_gi_139436870_ref_NZ_ scaffold_16591
+		One align captures most of this contig: 1822473 1823341 | 1 869 | 869 869 | 96.21 | Collinsella_aerofaciens_gi_139436870_ref_NZ_ scaffold_16591
+
+CONTIG: scaffold_19556 (770bp)
+Top Length: 66  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 66 out of 770 bases)
+		Alignment: 1242897 1242962 | 1 66 | 66 66 | 100.0 | Collinsella_aerofaciens_gi_139436870_ref_NZ_ scaffold_19556
+		Unaligned bases: 67 to 770 (704)
+
+CONTIG: scaffold_27332 (586bp)
+Top Length: 583  Top ID: 96.42
+		Marking as insignificant: 1827459 1828035 | 4 580 | 577 577 | 95.35 | Collinsella_aerofaciens_gi_139436870_ref_NZ_ scaffold_27332
+		This contig has 4 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 1683285 1683868 | 4 586 | 584 583 | 96.42 | Collinsella_aerofaciens_gi_139436870_ref_NZ_ scaffold_27332
+		Skipping alignment  1690793 1691376 | 4 586 | 584 583 | 96.42 | Collinsella_aerofaciens_gi_139436870_ref_NZ_ scaffold_27332
+		Skipping alignment  1953989 1954570 | 4 586 | 582 583 | 95.73 | Collinsella_aerofaciens_gi_139436870_ref_NZ_ scaffold_27332
+		Skipping alignment  2251225 2251805 | 586 4 | 581 583 | 95.56 | Collinsella_aerofaciens_gi_139436870_ref_NZ_ scaffold_27332
+
+CONTIG: scaffold_30461 (502bp)
+Top Length: 231  Top ID: 98.27
+		Skipping redundant alignment 658117 658292 | 199 24 | 176 176 | 97.73 | Collinsella_aerofaciens_gi_139436870_ref_NZ_ scaffold_30461
+		Skipping redundant alignment 369331 369498 | 254 87 | 168 168 | 97.62 | Collinsella_aerofaciens_gi_139436870_ref_NZ_ scaffold_30461
+		This contig is partially unaligned. (Aligned 231 out of 502 bases)
+		Alignment: 2207890 2208120 | 24 254 | 231 231 | 98.27 | Collinsella_aerofaciens_gi_139436870_ref_NZ_ scaffold_30461
+		Unaligned bases: 1 to 23 (23)
+		Unaligned bases: 255 to 502 (248)
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Collinsella_aerofaciens/contigs_reports/nucmer_output/IDBA_UD.used_snps
+	Reference Collinsella_aerofaciens_gi_139436870_ref_NZ_: 6 total alignments. 1 total regions.
+		Region: 1 to 2439869 (2439869 bp)
+			START in gap: 1 to 1242897 (1242896 bp)
+			Align 1: 1242897 1242962 scaffold_19556 1 66
+				Gap between this and next alignment: 1242962 to 1683285 (440322 bp)
+				Next Alignment: 1683285 1683868 scaffold_27332 4 586
+
+			Align 2: 1683285 1683868 scaffold_27332 4 586
+				Gap between this and next alignment: 1683868 to 1687651 (3782 bp)
+				Next Alignment: 1687651 1688584 scaffold_15258 1 930
+
+			Align 3: 1687651 1688584 scaffold_15258 1 930
+				Gap between this and next alignment: 1688584 to 1822473 (133888 bp)
+				Next Alignment: 1822473 1823341 scaffold_16591 1 869
+
+			Align 4: 1822473 1823341 scaffold_16591 1 869
+				Gap between this and next alignment: 1823341 to 2207890 (384548 bp)
+				Next Alignment: 2207890 2208120 scaffold_30461 24 254
+
+			Align 5: 2207890 2208120 scaffold_30461 24 254
+				Gap between this and next alignment: 2208120 to 2269146 (61025 bp)
+				Next Alignment: 2269146 2270126 scaffold_14299 1 982
+
+			Align 6: 2269146 2270126 scaffold_14299 1 982
+			END in gap: 2270126 to 2439869 (169743 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Collinsella_aerofaciens/contigs_reports/nucmer_output/IDBA_UD.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 2 part
+Partially Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 975
+
+Ambiguously Mapped Contigs: 2
+Total Bases in Ambiguously Mapped Contigs: 1513
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 3665
+
+	SNPs: 104
+	Insertions: 8
+	Deletions: 12
+
+	Positive Gaps: 7
+		Internal Gaps:  0
+		External Gaps:  7
+		External Gap Total:  2436204
+		External Gap Average: 348029
+	Negative Gaps: 0
+		Internal Overlaps:  0
+		External Overlaps:  0
+		External Overlaps Total:  0
+		External Overlaps Average: 0
+	Contigs with Redundant Alignments: 0 (0)

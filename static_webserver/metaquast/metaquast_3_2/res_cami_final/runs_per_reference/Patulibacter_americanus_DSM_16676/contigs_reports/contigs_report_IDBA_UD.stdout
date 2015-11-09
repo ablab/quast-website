@@ -1,0 +1,619 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551307592_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551308003_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551308389_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551308645_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551308898_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551309139_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551309379_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551309565_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551309729_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551309874_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310007_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310131_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310245_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310329_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310421_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310498_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310561_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310604_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310645_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310687_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310726_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310761_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310794_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310812_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310823_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310830_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310834_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310836_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310837_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310838_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310840_ref_NZ_]
+	Loaded [Patulibacter_americanus_DSM_16676_gi_551310842_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 32
+	Total Region Length: 4470560
+Analyzing contigs...
+CONTIG: scaffold_85 (88062bp)
+Top Length: 88062  Top ID: 100.0
+		Marking as insignificant: 1 129 | 87934 88062 | 129 129 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310604_ref_NZ_ scaffold_85
+		Marking as insignificant: 1 129 | 87934 88062 | 129 129 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551309139_ref_NZ_ scaffold_85
+		Marking as insignificant: 41839 41970 | 132 1 | 132 132 | 98.48 | Patulibacter_americanus_DSM_16676_gi_551310645_ref_NZ_ scaffold_85
+		Marking as insignificant: 1 220 | 88062 87843 | 220 220 | 98.18 | Patulibacter_americanus_DSM_16676_gi_551310007_ref_NZ_ scaffold_85
+		One align captures most of this contig: 1 88062 | 88062 1 | 88062 88062 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310421_ref_NZ_ scaffold_85
+
+CONTIG: scaffold_6292 (1661bp)
+Top Length: 1533  Top ID: 100.0
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 1 319 | 319 1 | 319 319 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551309874_ref_NZ_ scaffold_6292
+		This contig is misassembled. 3 total aligns.
+			Excluding internal overlap of size 191 between Alignment 1 and 2:  1 319 | 319 1 | 319 319 --> 192 319 | 128 1 | 128 128
+			Real Alignment 1: 192 319 | 128 1 | 128 128 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310645_ref_NZ_ scaffold_6292
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 1 1533 | 129 1661 | 1533 1533 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310838_ref_NZ_ scaffold_6292
+
+CONTIG: scaffold_5 (399297bp)
+Top Length: 267930  Top ID: 100.0
+		Skipping redundant alignment 1 103 | 399195 399297 | 103 103 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310131_ref_NZ_ scaffold_5
+		This contig is misassembled. 5 total aligns.
+			Excluding internal overlap of size 64 between Alignment 1 and 2:  1 41805 | 117029 75225 | 41805 41805 --> 1 41741 | 117029 75289 | 41741 41741
+			Real Alignment 1: 10 75285 | 13 75288 | 75276 75276 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310561_ref_NZ_ scaffold_5
+			  Extensive misassembly ( translocation ) between these two alignments
+			Excluding internal overlap of size 226 between Alignment 2 and 3:  1 41741 | 117029 75289 | 41741 41741 --> 227 41741 | 116803 75289 | 41515 41515
+			Real Alignment 2: 227 41741 | 116803 75289 | 41515 41515 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310687_ref_NZ_ scaffold_5
+			  Extensive misassembly ( translocation ) between these two alignments
+			Excluding internal overlap of size 133 between Alignment 3 and 4:  1 14697 | 384601 399297 | 14697 14697 --> 134 14697 | 384734 399297 | 14564 14564
+			Real Alignment 3: 1 267930 | 384733 116804 | 267930 267930 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551309379_ref_NZ_ scaffold_5
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 4: 134 14697 | 384734 399297 | 14564 14564 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310812_ref_NZ_ scaffold_5
+
+CONTIG: scaffold_0 (800397bp)
+Top Length: 800397  Top ID: 100.0
+		One align captures most of this contig: 7 800403 | 800397 1 | 800397 800397 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551307592_ref_NZ_ scaffold_0
+
+CONTIG: scaffold_83 (88520bp)
+Top Length: 88520  Top ID: 100.0
+		Marking as insignificant: 156452 156637 | 88520 88335 | 186 186 | 97.31 | Patulibacter_americanus_DSM_16676_gi_551309565_ref_NZ_ scaffold_83
+		Marking as insignificant: 1 199 | 199 1 | 199 199 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310823_ref_NZ_ scaffold_83
+		Marking as insignificant: 1 255 | 255 1 | 255 255 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310245_ref_NZ_ scaffold_83
+		Marking as insignificant: 1 661 | 1 660 | 661 660 | 98.03 | Patulibacter_americanus_DSM_16676_gi_551308389_ref_NZ_ scaffold_83
+		One align captures most of this contig: 800357 888876 | 88520 1 | 88520 88520 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551307592_ref_NZ_ scaffold_83
+
+CONTIG: scaffold_263 (38897bp)
+Top Length: 38897  Top ID: 100.0
+		Marking as insignificant: 1 194 | 38869 38676 | 194 194 | 97.94 | Patulibacter_americanus_DSM_16676_gi_551310830_ref_NZ_ scaffold_263
+		One align captures most of this contig: 192 39088 | 38897 1 | 38897 38897 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310726_ref_NZ_ scaffold_263
+
+CONTIG: scaffold_56 (128957bp)
+Top Length: 128957  Top ID: 100.0
+		Marking as insignificant: 888778 888876 | 128957 128859 | 99 99 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551307592_ref_NZ_ scaffold_56
+		Marking as insignificant: 1 99 | 128859 128957 | 99 99 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551308389_ref_NZ_ scaffold_56
+		Marking as insignificant: 37424 37522 | 1 99 | 99 99 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310761_ref_NZ_ scaffold_56
+		Marking as insignificant: 101 300 | 128957 128758 | 200 200 | 97.0 | Patulibacter_americanus_DSM_16676_gi_551310823_ref_NZ_ scaffold_56
+		Marking as insignificant: 145923 146137 | 1 215 | 215 215 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310007_ref_NZ_ scaffold_56
+		Marking as insignificant: 57 707 | 1 651 | 651 651 | 96.93 | Patulibacter_americanus_DSM_16676_gi_551310498_ref_NZ_ scaffold_56
+		One align captures most of this contig: 157 129113 | 128957 1 | 128957 128957 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310245_ref_NZ_ scaffold_56
+
+CONTIG: scaffold_251 (39966bp)
+Top Length: 39782  Top ID: 99.99
+		Marking as insignificant: 1932 2038 | 39966 39860 | 107 107 | 98.13 | Patulibacter_americanus_DSM_16676_gi_551309874_ref_NZ_ scaffold_251
+		Marking as insignificant: 87931 88062 | 132 1 | 132 132 | 98.48 | Patulibacter_americanus_DSM_16676_gi_551310421_ref_NZ_ scaffold_251
+		Marking as insignificant: 41702 41970 | 269 1 | 269 269 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310645_ref_NZ_ scaffold_251
+		One align captures most of this contig: 1932 41713 | 39966 185 | 39782 39782 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551310645_ref_NZ_ scaffold_251
+
+CONTIG: scaffold_7438 (1801bp)
+Top Length: 1801  Top ID: 99.5
+		This contig has 2 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 221 2030 | 1801 1 | 1810 1801 | 99.5 | Patulibacter_americanus_DSM_16676_gi_551309874_ref_NZ_ scaffold_7438
+		Skipping alignment  221 2030 | 1801 1 | 1810 1801 | 99.5 | Patulibacter_americanus_DSM_16676_gi_551310645_ref_NZ_ scaffold_7438
+
+CONTIG: scaffold_178 (52704bp)
+Top Length: 52704  Top ID: 100.0
+		Marking as insignificant: 1 99 | 52606 52704 | 99 99 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310421_ref_NZ_ scaffold_178
+		Marking as insignificant: 1 99 | 52606 52704 | 99 99 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310007_ref_NZ_ scaffold_178
+		Marking as insignificant: 13777 13903 | 127 1 | 127 127 | 96.85 | Patulibacter_americanus_DSM_16676_gi_551310823_ref_NZ_ scaffold_178
+		One align captures most of this contig: 31 52734 | 52704 1 | 52704 52704 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310604_ref_NZ_ scaffold_178
+
+CONTIG: scaffold_34 (176828bp)
+Top Length: 141128  Top ID: 100.0
+		Skipping redundant alignment 1 102 | 35710 35811 | 102 102 | 98.04 | Patulibacter_americanus_DSM_16676_gi_551310834_ref_NZ_ scaffold_34
+		Skipping redundant alignment 14648 14925 | 176828 176551 | 278 278 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310812_ref_NZ_ scaffold_34
+		Skipping redundant alignment 1017 1159 | 176828 176686 | 143 143 | 97.9 | Patulibacter_americanus_DSM_16676_gi_551310842_ref_NZ_ scaffold_34
+		This contig is misassembled. 5 total aligns.
+			Excluding internal overlap of size 283 between Alignment 1 and 2:  1 35983 | 35983 1 | 35983 35983 --> 284 35983 | 35700 1 | 35700 35700
+			Real Alignment 1: 284 35983 | 35700 1 | 35700 35700 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310794_ref_NZ_ scaffold_34
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 54 141181 | 176828 35701 | 141128 141128 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310131_ref_NZ_ scaffold_34
+
+CONTIG: scaffold_10 (275977bp)
+Top Length: 191116  Top ID: 100.0
+		Skipping redundant alignment 189 287 | 1 99 | 99 99 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310329_ref_NZ_ scaffold_10
+		This contig is misassembled. 3 total aligns.
+			Excluding internal overlap of size 276 between Alignment 1 and 2:  194366 279502 | 275977 190841 | 85137 85137 --> 194366 279226 | 275977 191117 | 84861 84861
+			Real Alignment 1: 1 191116 | 191116 1 | 191116 191116 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551309565_ref_NZ_ scaffold_10
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 194366 279226 | 275977 191117 | 84861 84861 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551308898_ref_NZ_ scaffold_10
+
+CONTIG: scaffold_31 (182215bp)
+Top Length: 182181  Top ID: 100.0
+		One align captures most of this contig: 66 182246 | 182181 1 | 182181 182181 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551308898_ref_NZ_ scaffold_31
+
+CONTIG: scaffold_940 (12306bp)
+Top Length: 12306  Top ID: 100.0
+		One align captures most of this contig: 182148 194453 | 12306 1 | 12306 12306 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551308898_ref_NZ_ scaffold_940
+
+CONTIG: scaffold_59 (122940bp)
+Top Length: 122940  Top ID: 100.0
+		One align captures most of this contig: 152704 275643 | 1 122940 | 122940 122940 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551309139_ref_NZ_ scaffold_59
+
+CONTIG: scaffold_80 (93438bp)
+Top Length: 93438  Top ID: 100.0
+		Marking as insignificant: 1 99 | 93340 93438 | 99 99 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310421_ref_NZ_ scaffold_80
+		Marking as insignificant: 1 99 | 93340 93438 | 99 99 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310007_ref_NZ_ scaffold_80
+		One align captures most of this contig: 31 93468 | 93438 1 | 93438 93438 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551309139_ref_NZ_ scaffold_80
+
+CONTIG: scaffold_159 (59424bp)
+Top Length: 59424  Top ID: 100.0
+		One align captures most of this contig: 93371 152794 | 59424 1 | 59424 59424 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551309139_ref_NZ_ scaffold_159
+
+CONTIG: scaffold_8 (304612bp)
+Top Length: 304612  Top ID: 100.0
+		Marking as insignificant: 888217 888386 | 304442 304612 | 170 171 | 97.09 | Patulibacter_americanus_DSM_16676_gi_551307592_ref_NZ_ scaffold_8
+		One align captures most of this contig: 491 305102 | 304612 1 | 304612 304612 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551308389_ref_NZ_ scaffold_8
+
+CONTIG: scaffold_43 (154751bp)
+Top Length: 87085  Top ID: 100.0
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 505 between Alignment 1 and 2:  1 68171 | 86581 154751 | 68171 68171 --> 506 68171 | 87086 154751 | 67666 67666
+			Real Alignment 1: 313909 400993 | 1 87085 | 87085 87085 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551308389_ref_NZ_ scaffold_43
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 506 68171 | 87086 154751 | 67666 67666 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551308003_ref_NZ_ scaffold_43
+
+CONTIG: scaffold_1257 (8945bp)
+Top Length: 8945  Top ID: 100.0
+		One align captures most of this contig: 305025 313969 | 8945 1 | 8945 8945 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551308389_ref_NZ_ scaffold_1257
+
+CONTIG: scaffold_28 (202645bp)
+Top Length: 165876  Top ID: 100.0
+		Skipping redundant alignment 1932 2038 | 1 107 | 107 107 | 98.13 | Patulibacter_americanus_DSM_16676_gi_551310645_ref_NZ_ scaffold_28
+		Skipping redundant alignment 145644 145858 | 202431 202645 | 215 215 | 97.21 | Patulibacter_americanus_DSM_16676_gi_551310007_ref_NZ_ scaffold_28
+		Skipping redundant alignment 129178 129269 | 202645 202554 | 92 92 | 98.91 | Patulibacter_americanus_DSM_16676_gi_551310245_ref_NZ_ scaffold_28
+		This contig is misassembled. 5 total aligns.
+			Excluding internal overlap of size 590 between Alignment 1 and 2:  1 37359 | 165287 202645 | 37359 37359 --> 591 37359 | 165877 202645 | 36769 36769
+			Real Alignment 1: 1932 167807 | 1 165876 | 165876 165876 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551309874_ref_NZ_ scaffold_28
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 591 37359 | 165877 202645 | 36769 36769 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310761_ref_NZ_ scaffold_28
+
+CONTIG: scaffold_15919 (561bp)
+Top Length: 561  Top ID: 100.0
+		One align captures most of this contig: 734 1294 | 561 1 | 561 561 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310837_ref_NZ_ scaffold_15919
+
+CONTIG: scaffold_17504 (506bp)
+Top Length: 506  Top ID: 100.0
+		One align captures most of this contig: 1196 1701 | 506 1 | 506 506 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310837_ref_NZ_ scaffold_17504
+
+CONTIG: scaffold_2138 (4926bp)
+Top Length: 4926  Top ID: 100.0
+		Marking as insignificant: 228 413 | 4926 4741 | 186 186 | 97.85 | Patulibacter_americanus_DSM_16676_gi_551310726_ref_NZ_ scaffold_2138
+		One align captures most of this contig: 9 4934 | 4926 1 | 4926 4926 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310830_ref_NZ_ scaffold_2138
+
+CONTIG: scaffold_162 (59213bp)
+Top Length: 59213  Top ID: 100.0
+		Marking as insignificant: 191018 191116 | 59115 59213 | 99 99 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551309565_ref_NZ_ scaffold_162
+		Marking as insignificant: 13983 14109 | 1 127 | 127 127 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310823_ref_NZ_ scaffold_162
+		Marking as insignificant: 52814 52940 | 1 127 | 127 127 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310604_ref_NZ_ scaffold_162
+		One align captures most of this contig: 189 59401 | 59213 1 | 59213 59213 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310329_ref_NZ_ scaffold_162
+
+CONTIG: scaffold_285 (35933bp)
+Top Length: 35933  Top ID: 100.0
+		Marking as insignificant: 13983 14081 | 99 1 | 99 99 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310823_ref_NZ_ scaffold_285
+		Marking as insignificant: 52814 52912 | 99 1 | 99 99 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310604_ref_NZ_ scaffold_285
+		One align captures most of this contig: 59303 95235 | 1 35933 | 35933 35933 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310329_ref_NZ_ scaffold_285
+
+CONTIG: scaffold_14 (261133bp)
+Top Length: 178590  Top ID: 99.99
+		Skipping redundant alignment 128463 129113 | 260483 261133 | 651 651 | 96.93 | Patulibacter_americanus_DSM_16676_gi_551310245_ref_NZ_ scaffold_14
+		Skipping redundant alignment 145923 146137 | 261133 260919 | 215 215 | 96.74 | Patulibacter_americanus_DSM_16676_gi_551310007_ref_NZ_ scaffold_14
+		Skipping redundant alignment 37424 37522 | 261133 261035 | 99 99 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310761_ref_NZ_ scaffold_14
+		This contig is misassembled. 5 total aligns.
+			Excluding internal overlap of size 74 between Alignment 1 and 2:  57 82673 | 261133 178517 | 82617 82617 --> 57 82599 | 261133 178591 | 82543 82543
+			Real Alignment 1: 1 178590 | 178590 1 | 178590 178590 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551309729_ref_NZ_ scaffold_14
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 57 82599 | 261133 178591 | 82543 82543 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310498_ref_NZ_ scaffold_14
+
+CONTIG: scaffold_1500 (7152bp)
+Top Length: 7152  Top ID: 100.0
+		One align captures most of this contig: 178853 186004 | 1 7152 | 7152 7152 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551309729_ref_NZ_ scaffold_1500
+
+CONTIG: scaffold_2611 (4046bp)
+Top Length: 4046  Top ID: 99.98
+		Marking as insignificant: 1 79 | 79 1 | 79 79 | 98.73 | Patulibacter_americanus_DSM_16676_gi_551310812_ref_NZ_ scaffold_2611
+		Marking as insignificant: 173 258 | 3961 4046 | 86 86 | 97.67 | Patulibacter_americanus_DSM_16676_gi_551310794_ref_NZ_ scaffold_2611
+		Marking as insignificant: 141071 141156 | 3961 4046 | 86 86 | 97.67 | Patulibacter_americanus_DSM_16676_gi_551310131_ref_NZ_ scaffold_2611
+		One align captures most of this contig: 17 4062 | 4046 1 | 4046 4046 | 99.98 | Patulibacter_americanus_DSM_16676_gi_551310834_ref_NZ_ scaffold_2611
+
+CONTIG: scaffold_6161 (1700bp)
+Top Length: 1155  Top ID: 100.0
+		Skipping redundant alignment 14835 14925 | 1 91 | 91 91 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310812_ref_NZ_ scaffold_6161
+		This contig is misassembled. 3 total aligns.
+			Excluding internal overlap of size 288 between Alignment 1 and 2:  1 833 | 868 1700 | 833 833 --> 289 833 | 1156 1700 | 545 545
+			Real Alignment 1: 5 1159 | 1 1155 | 1155 1155 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310842_ref_NZ_ scaffold_6161
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 289 833 | 1156 1700 | 545 545 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310840_ref_NZ_ scaffold_6161
+
+CONTIG: scaffold_1 (690424bp)
+Top Length: 396778  Top ID: 99.99
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 483 between Alignment 1 and 2:  1 294129 | 396296 690424 | 294129 294129 --> 484 294129 | 396779 690424 | 293646 293646
+			Real Alignment 1: 68197 464974 | 1 396778 | 396778 396778 | 99.99 | Patulibacter_americanus_DSM_16676_gi_551308003_ref_NZ_ scaffold_1
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 484 294129 | 396779 690424 | 293646 293646 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551308645_ref_NZ_ scaffold_1
+
+CONTIG: scaffold_851 (13803bp)
+Top Length: 13803  Top ID: 100.0
+		Marking as insignificant: 888778 888876 | 13803 13705 | 99 99 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551307592_ref_NZ_ scaffold_851
+		Marking as insignificant: 1 99 | 13705 13803 | 99 99 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551308389_ref_NZ_ scaffold_851
+		Marking as insignificant: 52608 52734 | 127 1 | 127 127 | 96.85 | Patulibacter_americanus_DSM_16676_gi_551310604_ref_NZ_ scaffold_851
+		Marking as insignificant: 157 356 | 13803 13604 | 200 200 | 97.0 | Patulibacter_americanus_DSM_16676_gi_551310245_ref_NZ_ scaffold_851
+		One align captures most of this contig: 101 13903 | 13803 1 | 13803 13803 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310823_ref_NZ_ scaffold_851
+
+CONTIG: scaffold_5013 (2128bp)
+Top Length: 2128  Top ID: 100.0
+		Marking as insignificant: 1 94 | 2035 2128 | 94 94 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551309379_ref_NZ_ scaffold_5013
+		One align captures most of this contig: 3 2130 | 1 2128 | 2128 2128 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310836_ref_NZ_ scaffold_5013
+
+CONTIG: scaffold_65 (116197bp)
+Top Length: 116197  Top ID: 100.0
+		One align captures most of this contig: 6838 123034 | 1 116197 | 116197 116197 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310007_ref_NZ_ scaffold_65
+
+CONTIG: scaffold_822 (14187bp)
+Top Length: 14187  Top ID: 100.0
+		One align captures most of this contig: 122965 137151 | 14187 1 | 14187 14187 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310007_ref_NZ_ scaffold_822
+
+CONTIG: scaffold_1253 (8964bp)
+Top Length: 8964  Top ID: 100.0
+		Marking as insignificant: 1 155 | 155 1 | 155 155 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310498_ref_NZ_ scaffold_1253
+		Marking as insignificant: 129015 129269 | 1 255 | 255 255 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310245_ref_NZ_ scaffold_1253
+		Marking as insignificant: 37145 37522 | 378 1 | 378 378 | 98.15 | Patulibacter_americanus_DSM_16676_gi_551310761_ref_NZ_ scaffold_1253
+		One align captures most of this contig: 137058 146021 | 8964 1 | 8964 8964 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310007_ref_NZ_ scaffold_1253
+
+CONTIG: scaffold_1630 (6551bp)
+Top Length: 6551  Top ID: 100.0
+		Marking as insignificant: 1 95 | 6457 6551 | 95 95 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310604_ref_NZ_ scaffold_1630
+		Marking as insignificant: 1 95 | 6457 6551 | 95 95 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551309139_ref_NZ_ scaffold_1630
+		Marking as insignificant: 35 220 | 6551 6366 | 186 186 | 97.85 | Patulibacter_americanus_DSM_16676_gi_551310421_ref_NZ_ scaffold_1630
+		One align captures most of this contig: 35 6585 | 6551 1 | 6551 6551 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310007_ref_NZ_ scaffold_1630
+
+CONTIG: scaffold_17380 (510bp)
+Top Length: 510  Top ID: 100.0
+		One align captures most of this contig: 768 1277 | 1 510 | 510 510 | 100.0 | Patulibacter_americanus_DSM_16676_gi_551310840_ref_NZ_ scaffold_17380
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Patulibacter_americanus_DSM_16676/contigs_reports/nucmer_output/IDBA_UD.used_snps
+	Reference Patulibacter_americanus_DSM_16676_gi_551309379_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 267930 (267930 bp)
+			Align 1: 1 267930 scaffold_5 384733 116804
+			END in current alignment.  Modifying 267930 to 267930.
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551307592_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 888876 (888876 bp)
+			START in gap: 1 to 7 (6 bp)
+			Align 1: 7 800403 scaffold_0 800397 1
+				Negative gap (overlap) between this and next alignment: 800403 to 800357 (-46 bp)
+				Next Alignment: 800357 888876 scaffold_83 88520 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 88520 to 88473.
+			Align 2: 800404 888876 scaffold_83 88473 1
+			END in current alignment.  Modifying 888876 to 888876.
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310812_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 14925 (14925 bp)
+			START in gap: 1 to 134 (133 bp)
+			Align 1: 134 14697 scaffold_5 384734 399297
+			END in gap: 14697 to 14925 (228 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310604_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 52940 (52940 bp)
+			START in gap: 1 to 31 (30 bp)
+			Align 1: 31 52734 scaffold_178 52704 1
+			END in gap: 52734 to 52940 (206 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310761_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 37522 (37522 bp)
+			START in gap: 1 to 591 (590 bp)
+			Align 1: 591 37359 scaffold_28 165877 202645
+			END in gap: 37359 to 37522 (163 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310842_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 1159 (1159 bp)
+			START in gap: 1 to 5 (4 bp)
+			Align 1: 5 1159 scaffold_6161 1 1155
+			END in current alignment.  Modifying 1159 to 1159.
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310794_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 35985 (35985 bp)
+			START in gap: 1 to 284 (283 bp)
+			Align 1: 284 35983 scaffold_34 35700 1
+			END in gap: 35983 to 35985 (2 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310823_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 14109 (14109 bp)
+			START in gap: 1 to 101 (100 bp)
+			Align 1: 101 13903 scaffold_851 13803 1
+			END in gap: 13903 to 14109 (206 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310726_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 39125 (39125 bp)
+			START in gap: 1 to 192 (191 bp)
+			Align 1: 192 39088 scaffold_263 38897 1
+			END in gap: 39088 to 39125 (37 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310498_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 82673 (82673 bp)
+			START in gap: 1 to 57 (56 bp)
+			Align 1: 57 82599 scaffold_14 261133 178591
+			END in gap: 82599 to 82673 (74 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551308645_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 294135 (294135 bp)
+			START in gap: 1 to 484 (483 bp)
+			Align 1: 484 294129 scaffold_1 396779 690424
+			END in gap: 294129 to 294135 (6 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551308898_ref_NZ_: 3 total alignments. 1 total regions.
+		Region: 1 to 279502 (279502 bp)
+			START in gap: 1 to 66 (65 bp)
+			Align 1: 66 182246 scaffold_31 182181 1
+				Negative gap (overlap) between this and next alignment: 182246 to 182148 (-98 bp)
+				Next Alignment: 182148 194453 scaffold_940 12306 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 12306 to 12207.
+			Align 2: 182247 194453 scaffold_940 12207 1
+				Negative gap (overlap) between this and next alignment: 194453 to 194366 (-87 bp)
+				Next Alignment: 194366 279226 scaffold_10 275977 191117
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 275977 to 275889.
+			Align 3: 194454 279226 scaffold_10 275889 191117
+			END in gap: 279226 to 279502 (276 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310131_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 141181 (141181 bp)
+			START in gap: 1 to 54 (53 bp)
+			Align 1: 54 141181 scaffold_34 176828 35701
+			END in current alignment.  Modifying 141181 to 141181.
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310421_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 88209 (88209 bp)
+			Align 1: 1 88062 scaffold_85 88062 1
+			END in gap: 88062 to 88209 (147 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310329_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 95236 (95236 bp)
+			START in gap: 1 to 189 (188 bp)
+			Align 1: 189 59401 scaffold_162 59213 1
+				Negative gap (overlap) between this and next alignment: 59401 to 59303 (-98 bp)
+				Next Alignment: 59303 95235 scaffold_285 1 35933
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 100.
+			Align 2: 59402 95235 scaffold_285 100 35933
+			END in gap: 95235 to 95236 (1 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551309729_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 186014 (186014 bp)
+			Align 1: 1 178590 scaffold_14 178590 1
+				Gap between this and next alignment: 178590 to 178853 (262 bp)
+				Next Alignment: 178853 186004 scaffold_1500 1 7152
+
+			Align 2: 178853 186004 scaffold_1500 1 7152
+			END in gap: 186004 to 186014 (10 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310645_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 42117 (42117 bp)
+			START in gap: 1 to 192 (191 bp)
+			Align 1: 192 319 scaffold_6292 128 1
+				Gap between this and next alignment: 319 to 1932 (1612 bp)
+				Next Alignment: 1932 41713 scaffold_251 39966 185
+
+			Align 2: 1932 41713 scaffold_251 39966 185
+			END in gap: 41713 to 42117 (404 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310830_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 4944 (4944 bp)
+			START in gap: 1 to 9 (8 bp)
+			Align 1: 9 4934 scaffold_2138 4926 1
+			END in gap: 4934 to 4944 (10 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551308003_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 464974 (464974 bp)
+			START in gap: 1 to 506 (505 bp)
+			Align 1: 506 68171 scaffold_43 87086 154751
+				Gap between this and next alignment: 68171 to 68197 (25 bp)
+				Next Alignment: 68197 464974 scaffold_1 1 396778
+
+			Align 2: 68197 464974 scaffold_1 1 396778
+			END in current alignment.  Modifying 464974 to 464974.
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310245_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 129269 (129269 bp)
+			START in gap: 1 to 157 (156 bp)
+			Align 1: 157 129113 scaffold_56 128957 1
+			END in gap: 129113 to 129269 (156 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310007_ref_NZ_: 4 total alignments. 1 total regions.
+		Region: 1 to 146137 (146137 bp)
+			START in gap: 1 to 35 (34 bp)
+			Align 1: 35 6585 scaffold_1630 6551 1
+				Gap between this and next alignment: 6585 to 6838 (252 bp)
+				Next Alignment: 6838 123034 scaffold_65 1 116197
+
+			Align 2: 6838 123034 scaffold_65 1 116197
+				Negative gap (overlap) between this and next alignment: 123034 to 122965 (-69 bp)
+				Next Alignment: 122965 137151 scaffold_822 14187 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 14187 to 14117.
+			Align 3: 123035 137151 scaffold_822 14117 1
+				Negative gap (overlap) between this and next alignment: 137151 to 137058 (-93 bp)
+				Next Alignment: 137058 146021 scaffold_1253 8964 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 8964 to 8870.
+			Align 4: 137152 146021 scaffold_1253 8870 1
+			END in gap: 146021 to 146137 (116 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551309565_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 191304 (191304 bp)
+			Align 1: 1 191116 scaffold_10 191116 1
+			END in gap: 191116 to 191304 (188 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310838_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 1559 (1559 bp)
+			Align 1: 1 1533 scaffold_6292 129 1661
+			END in gap: 1533 to 1559 (26 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551309139_ref_NZ_: 3 total alignments. 1 total regions.
+		Region: 1 to 275652 (275652 bp)
+			START in gap: 1 to 31 (30 bp)
+			Align 1: 31 93468 scaffold_80 93438 1
+				Negative gap (overlap) between this and next alignment: 93468 to 93371 (-97 bp)
+				Next Alignment: 93371 152794 scaffold_159 59424 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 59424 to 59326.
+			Align 2: 93469 152794 scaffold_159 59326 1
+				Negative gap (overlap) between this and next alignment: 152794 to 152704 (-90 bp)
+				Next Alignment: 152704 275643 scaffold_59 1 122940
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 92.
+			Align 3: 152795 275643 scaffold_59 92 122940
+			END in gap: 275643 to 275652 (9 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310837_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 1711 (1711 bp)
+			START in gap: 1 to 734 (733 bp)
+			Align 1: 734 1294 scaffold_15919 561 1
+				Negative gap (overlap) between this and next alignment: 1294 to 1196 (-98 bp)
+				Next Alignment: 1196 1701 scaffold_17504 506 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 506 to 407.
+			Align 2: 1295 1701 scaffold_17504 407 1
+			END in gap: 1701 to 1711 (10 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551308389_ref_NZ_: 3 total alignments. 1 total regions.
+		Region: 1 to 400993 (400993 bp)
+			START in gap: 1 to 491 (490 bp)
+			Align 1: 491 305102 scaffold_8 304612 1
+				Negative gap (overlap) between this and next alignment: 305102 to 305025 (-77 bp)
+				Next Alignment: 305025 313969 scaffold_1257 8945 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 8945 to 8867.
+			Align 2: 305103 313969 scaffold_1257 8867 1
+				Negative gap (overlap) between this and next alignment: 313969 to 313909 (-60 bp)
+				Next Alignment: 313909 400993 scaffold_43 1 87085
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 62.
+			Align 3: 313970 400993 scaffold_43 62 87085
+			END in current alignment.  Modifying 400993 to 400993.
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310561_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 75285 (75285 bp)
+			START in gap: 1 to 10 (9 bp)
+			Align 1: 10 75285 scaffold_5 13 75288
+			END in current alignment.  Modifying 75285 to 75285.
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551309874_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 167807 (167807 bp)
+			START in gap: 1 to 221 (220 bp)
+			Align 1: 221 2030 scaffold_7438 1801 1
+				Negative gap (overlap) between this and next alignment: 2030 to 1932 (-98 bp)
+				Next Alignment: 1932 167807 scaffold_28 1 165876
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 100.
+			Align 2: 2031 167807 scaffold_28 100 165876
+			END in current alignment.  Modifying 167807 to 167807.
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310834_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 4068 (4068 bp)
+			START in gap: 1 to 17 (16 bp)
+			Align 1: 17 4062 scaffold_2611 4046 1
+			END in gap: 4062 to 4068 (6 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310840_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 1283 (1283 bp)
+			START in gap: 1 to 289 (288 bp)
+			Align 1: 289 833 scaffold_6161 1156 1700
+				Negative gap (overlap) between this and next alignment: 833 to 768 (-65 bp)
+				Next Alignment: 768 1277 scaffold_17380 1 510
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 67.
+			Align 2: 834 1277 scaffold_17380 67 510
+			END in gap: 1277 to 1283 (6 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310836_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 2131 (2131 bp)
+			START in gap: 1 to 3 (2 bp)
+			Align 1: 3 2130 scaffold_5013 1 2128
+			END in gap: 2130 to 2131 (1 bp)
+
+	Reference Patulibacter_americanus_DSM_16676_gi_551310687_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 41805 (41805 bp)
+			START in gap: 1 to 227 (226 bp)
+			Align 1: 227 41741 scaffold_5 116803 75289
+			END in gap: 41741 to 41805 (64 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Patulibacter_americanus_DSM_16676/contigs_reports/nucmer_output/IDBA_UD.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 11
+		Relocations: 0
+		Translocations: 11
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 9
+	Misassembled Contig Bases: 2164416
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 0 part
+Partially Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 0
+
+Ambiguously Mapped Contigs: 1
+Total Bases in Ambiguously Mapped Contigs: 1801
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 4460967
+
+	SNPs: 9
+	Insertions: 0
+	Deletions: 9
+
+	Positive Gaps: 55
+		Internal Gaps:  0
+		External Gaps:  55
+		External Gap Total:  9593
+		External Gap Average: 174
+	Negative Gaps: 13
+		Internal Overlaps:  0
+		External Overlaps:  13
+		External Overlaps Total: -1076
+		External Overlaps Average: -83
+	Contigs with Redundant Alignments: 0 (0)

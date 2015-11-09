@@ -1,0 +1,1886 @@
+Aligning contigs to reference...
+	Running Nucmer
+Parsing coords...
+Loading reference...
+	Loaded [Campylobacter_concisus_13826_gi_157163852_ref_NC_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 1
+	Total Region Length: 2052007
+Analyzing contigs...
+CONTIG: NODE_53_length_92179_cov_6.5865_ID_105 (92179bp)
+Top Length: 22914  Top ID: 95.21
+		This contig is misassembled. 7 total aligns.
+			Real Alignment 1: 1518871 1521128 | 1 2259 | 2258 2259 | 95.13 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_53_length_92179_cov_6.5865_ID_105
+			  Overlap between these two alignments (local misassembly). Inconsistency = -575 
+			Real Alignment 2: 1521467 1529239 | 3173 10947 | 7773 7775 | 95.54 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_53_length_92179_cov_6.5865_ID_105
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 3: 1530327 1532405 | 13884 15962 | 2079 2079 | 95.29 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_53_length_92179_cov_6.5865_ID_105
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 4: 1551647 1574561 | 31543 54456 | 22915 22914 | 95.21 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_53_length_92179_cov_6.5865_ID_105
+			  Extensive misassembly ( relocation, inconsistency = 31824 ) between these two alignments
+			Real Alignment 5: 1616160 1629796 | 64231 77864 | 13637 13634 | 95.73 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_53_length_92179_cov_6.5865_ID_105
+			  Overlap between these two alignments (local misassembly). Inconsistency = -265 
+			Real Alignment 6: 1629804 1640777 | 78137 89112 | 10974 10976 | 95.56 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_53_length_92179_cov_6.5865_ID_105
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 7: 1643066 1645451 | 89794 92179 | 2386 2386 | 97.57 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_53_length_92179_cov_6.5865_ID_105
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_107_length_60950_cov_7.58364_ID_213 (60950bp)
+Top Length: 20523  Top ID: 95.6
+		Skipping redundant alignment 131219 131428 | 60209 60000 | 210 210 | 95.71 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_107_length_60950_cov_7.58364_ID_213
+		This contig is misassembled. 6 total aligns.
+			Real Alignment 1: 176127 196592 | 21439 917 | 20466 20523 | 95.6 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_107_length_60950_cov_7.58364_ID_213
+			  Extensive misassembly ( relocation, inconsistency = 1704 ) between these two alignments
+			Real Alignment 2: 169062 173989 | 26824 21873 | 4928 4952 | 95.56 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_107_length_60950_cov_7.58364_ID_213
+			  Gap between these two alignments (local misassembly). Inconsistency = 67 
+			Real Alignment 3: 151518 154028 | 44293 41791 | 2511 2503 | 95.22 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_107_length_60950_cov_7.58364_ID_213
+			  Extensive misassembly ( relocation, inconsistency = 2181 ) between these two alignments
+			Real Alignment 4: 133402 148598 | 60228 45032 | 15197 15197 | 96.57 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_107_length_60950_cov_7.58364_ID_213
+			  Extensive misassembly ( relocation, inconsistency = 4413 ) between these two alignments
+			Real Alignment 5: 128267 128427 | 60950 60790 | 161 161 | 96.27 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_107_length_60950_cov_7.58364_ID_213
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_177_length_38373_cov_5.97163_ID_353 (38373bp)
+Top Length: 14730  Top ID: 95.56
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 1229209 1243938 | 4 14733 | 14730 14730 | 95.56 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_177_length_38373_cov_5.97163_ID_353
+			  Overlap between these two alignments (local misassembly). Inconsistency = -507 
+			Real Alignment 2: 1245417 1253794 | 16719 25087 | 8378 8369 | 95.54 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_177_length_38373_cov_5.97163_ID_353
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_184_length_36882_cov_6.00087_ID_367 (36882bp)
+Top Length: 36776  Top ID: 96.74
+		One align captures most of this contig: 639024 675838 | 107 36882 | 36815 36776 | 96.74 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_184_length_36882_cov_6.00087_ID_367
+
+CONTIG: NODE_216_length_33064_cov_7.85928_ID_431 (33064bp)
+Top Length: 16208  Top ID: 95.09
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 79446 95653 | 3 16210 | 16208 16208 | 95.09 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_216_length_33064_cov_7.85928_ID_431
+			  Overlap between these two alignments (local misassembly). Inconsistency = -280 
+			Real Alignment 2: 99584 112221 | 20421 33064 | 12638 12644 | 95.97 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_216_length_33064_cov_7.85928_ID_431
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_239_length_31422_cov_6.06944_ID_477 (31422bp)
+Top Length: 22618  Top ID: 95.76
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 535218 557825 | 90 22707 | 22608 22618 | 95.76 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_239_length_31422_cov_6.06944_ID_477
+			  Overlap between these two alignments (local misassembly). Inconsistency = -171 
+			Real Alignment 2: 558143 566380 | 23196 31422 | 8238 8227 | 95.85 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_239_length_31422_cov_6.06944_ID_477
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_240_length_31308_cov_7.20756_ID_479 (31308bp)
+Top Length: 12031  Top ID: 95.66
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 1736311 1744207 | 7899 1 | 7897 7899 | 95.71 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_240_length_31308_cov_7.20756_ID_479
+			  Extensive misassembly ( relocation, inconsistency = -1479209 ) between these two alignments
+			Real Alignment 2: 265105 275852 | 8006 18706 | 10748 10701 | 96.08 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_240_length_31308_cov_7.20756_ID_479
+			  Overlap between these two alignments (local misassembly). Inconsistency = -300 
+			Real Alignment 3: 276124 288157 | 19278 31308 | 12034 12031 | 95.66 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_240_length_31308_cov_7.20756_ID_479
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_246_length_30637_cov_5.75159_ID_491 (30637bp)
+Top Length: 12580  Top ID: 95.23
+		Skipping redundant alignment 1359858 1360719 | 1633 2494 | 862 862 | 96.4 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_246_length_30637_cov_5.75159_ID_491
+		Skipping redundant alignment 622998 623864 | 2500 1634 | 867 867 | 95.73 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_246_length_30637_cov_5.75159_ID_491
+		Skipping redundant alignment 1416745 1417597 | 1642 2494 | 853 853 | 95.19 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_246_length_30637_cov_5.75159_ID_491
+		Skipping redundant alignment 197666 197743 | 30637 30560 | 78 78 | 100.0 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_246_length_30637_cov_5.75159_ID_491
+		This contig is misassembled. 10 total aligns.
+			Real Alignment 1: 1415407 1416549 | 2 1145 | 1143 1144 | 96.33 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_246_length_30637_cov_5.75159_ID_491
+			  Extensive misassembly ( relocation, inconsistency = 285597 ) between these two alignments
+			Real Alignment 2: 1702354 1702469 | 1467 1353 | 116 115 | 95.69 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_246_length_30637_cov_5.75159_ID_491
+			  Extensive misassembly ( relocation, inconsistency = -592617 ) between these two alignments
+			Excluding internal overlap of size 2 between Alignment 3 and 4:  1118231 1121962 | 6503 10234 | 3732 3732 --> 1118233 1121962 | 6505 10234 | 3730 3730
+			Real Alignment 3: 1110019 1114891 | 1634 6504 | 4873 4871 | 96.02 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_246_length_30637_cov_5.75159_ID_491
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 4: 1118233 1121962 | 6505 10234 | 3730 3730 | 96.57 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_246_length_30637_cov_5.75159_ID_491
+			  Extensive misassembly ( relocation, inconsistency = -3440 ) between these two alignments
+			Real Alignment 5: 1121966 1134543 | 13678 26257 | 12578 12580 | 95.23 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_246_length_30637_cov_5.75159_ID_491
+			  Overlap between these two alignments (local misassembly). Inconsistency = -216 
+			Real Alignment 6: 1135494 1138717 | 27424 30637 | 3224 3214 | 96.06 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_246_length_30637_cov_5.75159_ID_491
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_253_length_29901_cov_6.22898_ID_505 (29901bp)
+Top Length: 20203  Top ID: 95.47
+		This contig is partially unaligned. (Aligned 20203 out of 29901 bases)
+		Alignment: 1272575 1292729 | 2 20204 | 20155 20203 | 95.47 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_253_length_29901_cov_6.22898_ID_505
+		Unaligned bases: 1 to 1 (1)
+		Unaligned bases: 20205 to 29901 (9697)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_257_length_29236_cov_5.60481_ID_513 (29236bp)
+Top Length: 18849  Top ID: 95.02
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 578906 588779 | 1 9876 | 9874 9876 | 95.35 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_257_length_29236_cov_5.60481_ID_513
+			  Gap between these two alignments (local misassembly). Inconsistency = 875 
+			Real Alignment 2: 590166 609021 | 10388 29236 | 18856 18849 | 95.02 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_257_length_29236_cov_5.60481_ID_513
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_259_length_29197_cov_5.27287_ID_517 (29197bp)
+Top Length: 29197  Top ID: 95.21
+		One align captures most of this contig: 1051247 1080451 | 29197 1 | 29205 29197 | 95.21 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_259_length_29197_cov_5.27287_ID_517
+
+CONTIG: NODE_271_length_28096_cov_6.64791_ID_541 (28096bp)
+Top Length: 28096  Top ID: 96.1
+		One align captures most of this contig: 464839 492928 | 1 28096 | 28090 28096 | 96.1 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_271_length_28096_cov_6.64791_ID_541
+
+CONTIG: NODE_288_length_26680_cov_6.41345_ID_575 (26680bp)
+Top Length: 107  Top ID: 96.26
+		This contig is partially unaligned. (Aligned 107 out of 26680 bases)
+		Alignment: 251902 252007 | 11029 11135 | 106 107 | 96.26 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_288_length_26680_cov_6.41345_ID_575
+		Unaligned bases: 1 to 11028 (11028)
+		Unaligned bases: 11136 to 26680 (15545)
+
+CONTIG: NODE_297_length_25249_cov_5.32051_ID_593 (25249bp)
+Top Length: 13269  Top ID: 95.06
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 970860 980850 | 2 9982 | 9991 9981 | 95.44 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_297_length_25249_cov_5.32051_ID_593
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 982016 983976 | 9990 11950 | 1961 1961 | 95.92 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_297_length_25249_cov_5.32051_ID_593
+			  Gap between these two alignments (local misassembly). Inconsistency = 135 
+			Real Alignment 3: 984142 997407 | 11981 25249 | 13266 13269 | 95.06 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_297_length_25249_cov_5.32051_ID_593
+
+CONTIG: NODE_303_length_24813_cov_6.35633_ID_605 (24813bp)
+Top Length: 4306  Top ID: 95.1
+		This contig is misassembled. 3 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 24813 and total length of all aligns is 7843
+		Alignment: 393376 397681 | 4306 1 | 4306 4306 | 95.1 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_303_length_24813_cov_6.35633_ID_605
+		Alignment: 389535 392627 | 8078 4985 | 3093 3094 | 96.64 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_303_length_24813_cov_6.35633_ID_605
+		Alignment: 388210 388716 | 8521 8015 | 507 507 | 98.03 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_303_length_24813_cov_6.35633_ID_605
+		Unaligned bases: 16970
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: NODE_311_length_24462_cov_6.5092_ID_621 (24462bp)
+Top Length: 24334  Top ID: 95.77
+		One align captures most of this contig: 1494544 1518869 | 24335 2 | 24326 24334 | 95.77 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_311_length_24462_cov_6.5092_ID_621
+
+CONTIG: NODE_312_length_24437_cov_7.9028_ID_623 (24437bp)
+Top Length: 22634  Top ID: 97.16
+		This contig is partially unaligned. (Aligned 22634 out of 24437 bases)
+		Alignment: 1878081 1900705 | 1 22634 | 22625 22634 | 97.16 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_312_length_24437_cov_7.9028_ID_623
+		Unaligned bases: 22635 to 24437 (1803)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_327_length_23169_cov_6.30942_ID_653 (23169bp)
+Top Length: 17637  Top ID: 95.47
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 1378992 1383199 | 4739 534 | 4208 4206 | 95.22 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_327_length_23169_cov_6.30942_ID_653
+			  Gap between these two alignments (local misassembly). Inconsistency = 569 
+			Real Alignment 2: 1360754 1378381 | 22417 4781 | 17628 17637 | 95.47 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_327_length_23169_cov_6.30942_ID_653
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_340_length_22304_cov_7.54344_ID_679 (22304bp)
+Top Length: 3711  Top ID: 95.27
+		This contig is misassembled. 3 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 22304 and total length of all aligns is 5607
+		Alignment: 1954433 1956252 | 1820 1 | 1820 1820 | 97.97 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_340_length_22304_cov_7.54344_ID_679
+		Alignment: 1950051 1953817 | 6125 2415 | 3767 3711 | 95.27 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_340_length_22304_cov_7.54344_ID_679
+		Alignment: 1005188 1005263 | 20963 21038 | 76 76 | 100.0 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_340_length_22304_cov_7.54344_ID_679
+		Unaligned bases: 16697
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: NODE_343_length_21966_cov_7.06417_ID_685 (21966bp)
+Top Length: 16703  Top ID: 95.95
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 297321 314025 | 16712 10 | 16705 16703 | 95.95 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_343_length_21966_cov_7.06417_ID_685
+			  Extensive misassembly ( relocation, inconsistency = -2590 ) between these two alignments
+			Real Alignment 2: 294669 297277 | 21966 19346 | 2609 2621 | 95.2 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_343_length_21966_cov_7.06417_ID_685
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_348_length_21746_cov_6.49076_ID_695 (21746bp)
+Top Length: 21745  Top ID: 96.03
+		Marking as insignificant: 1853142 1853253 | 1 112 | 112 112 | 95.54 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_348_length_21746_cov_6.49076_ID_695
+		Marking as insignificant: 1861030 1861146 | 1 117 | 117 117 | 95.73 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_348_length_21746_cov_6.49076_ID_695
+		One align captures most of this contig: 1444550 1466318 | 1 21745 | 21769 21745 | 96.03 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_348_length_21746_cov_6.49076_ID_695
+
+CONTIG: NODE_355_length_21549_cov_5.95943_ID_709 (21549bp)
+Top Length: 21548  Top ID: 95.44
+		One align captures most of this contig: 1417816 1439354 | 1 21548 | 21539 21548 | 95.44 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_355_length_21549_cov_5.95943_ID_709
+
+CONTIG: NODE_374_length_20896_cov_6.65664_ID_747 (20896bp)
+Top Length: 20533  Top ID: 96.67
+		This contig is partially unaligned. (Aligned 20533 out of 20896 bases)
+		Alignment: 1751521 1772024 | 20803 271 | 20504 20533 | 96.67 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_374_length_20896_cov_6.65664_ID_747
+		Unaligned bases: 1 to 270 (270)
+		Unaligned bases: 20804 to 20896 (93)
+
+CONTIG: NODE_380_length_20658_cov_6.55327_ID_759 (20658bp)
+Top Length: 16973  Top ID: 97.14
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 1336322 1338148 | 3444 1620 | 1827 1825 | 95.63 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_380_length_20658_cov_6.55327_ID_759
+			  Overlap between these two alignments (local misassembly). Inconsistency = -71 
+			Real Alignment 2: 1319177 1336152 | 20657 3685 | 16976 16973 | 97.14 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_380_length_20658_cov_6.55327_ID_759
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_384_length_20312_cov_7.60591_ID_767 (20312bp)
+Top Length: 9891  Top ID: 95.06
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 58590 64437 | 1 5845 | 5848 5845 | 96.19 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_384_length_20312_cov_7.60591_ID_767
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 66234 76141 | 6931 16821 | 9908 9891 | 95.06 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_384_length_20312_cov_7.60591_ID_767
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_386_length_20159_cov_5.27686_ID_771 (20159bp)
+Top Length: 9942  Top ID: 95.9
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 768025 773185 | 5293 134 | 5161 5160 | 95.0 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_386_length_20159_cov_5.27686_ID_771
+			  Gap between these two alignments (local misassembly). Inconsistency = 0 
+			Real Alignment 2: 757897 767837 | 15422 5481 | 9941 9942 | 95.9 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_386_length_20159_cov_5.27686_ID_771
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_410_length_19129_cov_5.61959_ID_819 (19129bp)
+Top Length: 18863  Top ID: 96.05
+		This contig is partially unaligned. (Aligned 18863 out of 19129 bases)
+		Alignment: 797891 816748 | 1 18863 | 18858 18863 | 96.05 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_410_length_19129_cov_5.61959_ID_819
+		Unaligned bases: 18864 to 19129 (266)
+
+CONTIG: NODE_439_length_18440_cov_6.44297_ID_877 (18440bp)
+Top Length: 10668  Top ID: 96.26
+		Skipping redundant alignment 382964 383112 | 10430 10578 | 149 149 | 97.32 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_439_length_18440_cov_6.44297_ID_877
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 1645425 1656065 | 2 10669 | 10641 10668 | 96.26 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_439_length_18440_cov_6.44297_ID_877
+			  Overlap between these two alignments (local misassembly). Inconsistency = -319 
+			Real Alignment 2: 1656127 1663488 | 11050 18410 | 7362 7361 | 95.26 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_439_length_18440_cov_6.44297_ID_877
+
+CONTIG: NODE_444_length_18289_cov_5.68997_ID_887 (18289bp)
+Top Length: 18286  Top ID: 96.05
+		One align captures most of this contig: 1210595 1228878 | 18286 1 | 18284 18286 | 96.05 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_444_length_18289_cov_5.68997_ID_887
+
+CONTIG: NODE_464_length_17762_cov_6.71091_ID_927 (17762bp)
+Top Length: 17762  Top ID: 95.41
+		One align captures most of this contig: 324262 342044 | 17762 1 | 17783 17762 | 95.41 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_464_length_17762_cov_6.71091_ID_927
+
+CONTIG: NODE_480_length_17234_cov_5.89778_ID_959 (17234bp)
+Top Length: 6745  Top ID: 95.31
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 842412 849172 | 4266 11010 | 6761 6745 | 95.31 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_480_length_17234_cov_5.89778_ID_959
+			  Extensive misassembly ( relocation, inconsistency = -1736 ) between these two alignments
+			Real Alignment 2: 849182 853659 | 12756 17233 | 4478 4478 | 95.73 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_480_length_17234_cov_5.89778_ID_959
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_499_length_16599_cov_6.77654_ID_997 (16599bp)
+Top Length: 9999  Top ID: 95.12
+		This contig is partially unaligned. (Aligned 9999 out of 16599 bases)
+		Alignment: 1788296 1798306 | 16599 6601 | 10011 9999 | 95.12 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_499_length_16599_cov_6.77654_ID_997
+		Unaligned bases: 1 to 6600 (6600)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_502_length_16420_cov_7.68506_ID_1003 (16420bp)
+Top Length: 690  Top ID: 96.67
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 16420 and total length of all aligns is 854
+		Alignment: 129262 129951 | 1123 434 | 690 690 | 96.67 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_502_length_16420_cov_7.68506_ID_1003
+		Alignment: 119854 120017 | 10738 10575 | 164 164 | 95.12 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_502_length_16420_cov_7.68506_ID_1003
+		Unaligned bases: 15566
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: NODE_513_length_16244_cov_5.56143_ID_1025 (16244bp)
+Top Length: 16243  Top ID: 96.0
+		One align captures most of this contig: 954624 970857 | 1 16243 | 16234 16243 | 96.0 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_513_length_16244_cov_5.56143_ID_1025
+
+CONTIG: NODE_515_length_16143_cov_5.63476_ID_1029 (16143bp)
+Top Length: 5979  Top ID: 98.23
+		This contig is partially unaligned. (Aligned 5979 out of 16143 bases)
+		Alignment: 1147684 1153663 | 10165 16143 | 5980 5979 | 98.23 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_515_length_16143_cov_5.63476_ID_1029
+		Unaligned bases: 1 to 10164 (10164)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_533_length_15585_cov_6.08197_ID_1065 (15585bp)
+Top Length: 7356  Top ID: 96.37
+		This contig is partially unaligned. (Aligned 7356 out of 15585 bases)
+		Alignment: 418300 425654 | 15585 8230 | 7355 7356 | 96.37 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_533_length_15585_cov_6.08197_ID_1065
+		Unaligned bases: 1 to 8229 (8229)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_534_length_15577_cov_8.79758_ID_1067 (15577bp)
+Top Length: 9983  Top ID: 95.43
+		This contig is partially unaligned. (Aligned 9983 out of 15577 bases)
+		Alignment: 2013001 2022983 | 15577 5595 | 9983 9983 | 95.43 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_534_length_15577_cov_8.79758_ID_1067
+		Unaligned bases: 1 to 5594 (5594)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_548_length_15389_cov_5.74918_ID_1095 (15389bp)
+Top Length: 15387  Top ID: 95.5
+		One align captures most of this contig: 678761 694131 | 15389 3 | 15371 15387 | 95.5 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_548_length_15389_cov_5.74918_ID_1095
+
+CONTIG: NODE_549_length_15314_cov_5.08657_ID_1097 (15314bp)
+Top Length: 6032  Top ID: 95.44
+		This contig is partially unaligned. (Aligned 6032 out of 15314 bases)
+		Alignment: 929658 935686 | 6910 879 | 6029 6032 | 95.44 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_549_length_15314_cov_5.08657_ID_1097
+		Unaligned bases: 1 to 878 (878)
+		Unaligned bases: 6911 to 15314 (8404)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_552_length_15270_cov_6.99428_ID_1103 (15270bp)
+Top Length: 9074  Top ID: 95.84
+		This contig is partially unaligned. (Aligned 9074 out of 15270 bases)
+		Alignment: 1809966 1819039 | 1 9074 | 9074 9074 | 95.84 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_552_length_15270_cov_6.99428_ID_1103
+		Unaligned bases: 9075 to 15270 (6196)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_580_length_14467_cov_7.79531_ID_1159 (14467bp)
+Top Length: 7689  Top ID: 95.05
+		This contig is partially unaligned. (Aligned 7689 out of 14467 bases)
+		Alignment: 1987810 1995417 | 5289 12977 | 7608 7689 | 95.05 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_580_length_14467_cov_7.79531_ID_1159
+		Unaligned bases: 1 to 5288 (5288)
+		Unaligned bases: 12978 to 14467 (1490)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_646_length_13338_cov_6.85169_ID_1291 (13338bp)
+Top Length: 11185  Top ID: 96.04
+		This contig is partially unaligned. (Aligned 11185 out of 13338 bases)
+		Alignment: 1383583 1394757 | 13338 2154 | 11175 11185 | 96.04 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_646_length_13338_cov_6.85169_ID_1291
+		Unaligned bases: 1 to 2153 (2153)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_659_length_12916_cov_6.12783_ID_1317 (12916bp)
+Top Length: 10770  Top ID: 95.91
+		This contig is partially unaligned. (Aligned 10770 out of 12916 bases)
+		Alignment: 502611 513377 | 1 10770 | 10767 10770 | 95.91 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_659_length_12916_cov_6.12783_ID_1317
+		Unaligned bases: 10771 to 12916 (2146)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_683_length_12505_cov_5.38064_ID_1365 (12505bp)
+Top Length: 11716  Top ID: 96.04
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 1109726 1109842 | 428 544 | 117 117 | 97.44 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_683_length_12505_cov_5.38064_ID_1365
+			  Extensive misassembly ( relocation, inconsistency = -12460 ) between these two alignments
+			Real Alignment 2: 1097628 1109347 | 12505 790 | 11720 11716 | 96.04 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_683_length_12505_cov_5.38064_ID_1365
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_738_length_11694_cov_5.81614_ID_1475 (11694bp)
+Top Length: 11586  Top ID: 95.54
+		One align captures most of this contig: 873955 885494 | 11586 1 | 11540 11586 | 95.54 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_738_length_11694_cov_5.81614_ID_1475
+
+CONTIG: NODE_741_length_11673_cov_8.46256_ID_1481 (11673bp)
+Top Length: 11672  Top ID: 96.17
+		One align captures most of this contig: 2030712 2042383 | 11672 1 | 11672 11672 | 96.17 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_741_length_11673_cov_8.46256_ID_1481
+
+CONTIG: NODE_754_length_11506_cov_5.03825_ID_1507 (11506bp)
+Top Length: 9022  Top ID: 95.05
+		This contig is partially unaligned. (Aligned 9022 out of 11506 bases)
+		Alignment: 825260 834282 | 11504 2483 | 9023 9022 | 95.05 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_754_length_11506_cov_5.03825_ID_1507
+		Unaligned bases: 1 to 2482 (2482)
+		Unaligned bases: 11505 to 11506 (2)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_766_length_11376_cov_8.23646_ID_1531 (11376bp)
+Top Length: 11317  Top ID: 95.94
+		Marking as insignificant: 1802908 1802982 | 11302 11376 | 75 75 | 100.0 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_766_length_11376_cov_8.23646_ID_1531
+		Marking as insignificant: 1841945 1842204 | 57 316 | 260 260 | 98.85 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_766_length_11376_cov_8.23646_ID_1531
+		One align captures most of this contig: 1842150 1853458 | 1 11317 | 11309 11317 | 95.94 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_766_length_11376_cov_8.23646_ID_1531
+
+CONTIG: NODE_830_length_10681_cov_5.29804_ID_1659 (10681bp)
+Top Length: 10452  Top ID: 95.1
+		This contig is partially unaligned. (Aligned 10452 out of 10681 bases)
+		Alignment: 725878 736372 | 10680 229 | 10495 10452 | 95.1 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_830_length_10681_cov_5.29804_ID_1659
+		Unaligned bases: 1 to 228 (228)
+		Unaligned bases: 10681 to 10681 (1)
+
+CONTIG: NODE_862_length_10423_cov_5.12519_ID_1723 (10423bp)
+Top Length: 10421  Top ID: 95.2
+		One align captures most of this contig: 1308730 1319175 | 10421 1 | 10446 10421 | 95.2 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_862_length_10423_cov_5.12519_ID_1723
+
+CONTIG: NODE_925_length_9850_cov_6.35008_ID_1849 (9850bp)
+Top Length: 3838  Top ID: 95.84
+		This contig is partially unaligned. (Aligned 3838 out of 9850 bases)
+		Alignment: 1355639 1359478 | 5574 9411 | 3840 3838 | 95.84 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_925_length_9850_cov_6.35008_ID_1849
+		Unaligned bases: 1 to 5573 (5573)
+		Unaligned bases: 9412 to 9850 (439)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_967_length_9609_cov_8.51874_ID_1933 (9609bp)
+Top Length: 73  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 73 out of 9609 bases)
+		Alignment: 464031 464103 | 1816 1744 | 73 73 | 100.0 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_967_length_9609_cov_8.51874_ID_1933
+		Unaligned bases: 1 to 1743 (1743)
+		Unaligned bases: 1817 to 9609 (7793)
+
+CONTIG: NODE_978_length_9536_cov_6.08069_ID_1955 (9536bp)
+Top Length: 8267  Top ID: 96.36
+		This contig is partially unaligned. (Aligned 8267 out of 9536 bases)
+		Alignment: 494144 502439 | 1270 9536 | 8296 8267 | 96.36 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_978_length_9536_cov_6.08069_ID_1955
+		Unaligned bases: 1 to 1269 (1269)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_999_length_9418_cov_5.55228_ID_1997 (9418bp)
+Top Length: 9415  Top ID: 95.8
+		One align captures most of this contig: 1153664 1163087 | 9418 4 | 9424 9415 | 95.8 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_999_length_9418_cov_5.55228_ID_1997
+
+CONTIG: NODE_1021_length_9252_cov_8.18767_ID_2041 (9252bp)
+Top Length: 9252  Top ID: 97.21
+		One align captures most of this contig: 1901774 1911023 | 1 9252 | 9250 9252 | 97.21 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1021_length_9252_cov_8.18767_ID_2041
+
+CONTIG: NODE_1050_length_9086_cov_4.81287_ID_2099 (9086bp)
+Top Length: 3036  Top ID: 98.48
+		This contig is partially unaligned. (Aligned 3036 out of 9086 bases)
+		Alignment: 743472 746507 | 6051 9086 | 3036 3036 | 98.48 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1050_length_9086_cov_4.81287_ID_2099
+		Unaligned bases: 1 to 6050 (6050)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_1062_length_9024_cov_5.47497_ID_2123 (9024bp)
+Top Length: 2691  Top ID: 95.58
+		This contig is partially unaligned. (Aligned 2691 out of 9024 bases)
+		Alignment: 793085 795773 | 6333 9023 | 2689 2691 | 95.58 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1062_length_9024_cov_5.47497_ID_2123
+		Unaligned bases: 1 to 6332 (6332)
+		Unaligned bases: 9024 to 9024 (1)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_1083_length_8844_cov_7.55251_ID_2165 (8844bp)
+Top Length: 504  Top ID: 95.44
+		This contig is partially unaligned. (Aligned 504 out of 8844 bases)
+		Alignment: 463756 464259 | 8341 8844 | 504 504 | 95.44 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1083_length_8844_cov_7.55251_ID_2165
+		Unaligned bases: 1 to 8340 (8340)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_1086_length_8839_cov_4.69923_ID_2171 (8839bp)
+Top Length: 8782  Top ID: 95.47
+		One align captures most of this contig: 1163450 1172247 | 8783 2 | 8798 8782 | 95.47 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1086_length_8839_cov_4.69923_ID_2171
+
+CONTIG: NODE_1150_length_8472_cov_5.73197_ID_2299 (8472bp)
+Top Length: 8472  Top ID: 97.89
+		One align captures most of this contig: 1466320 1474791 | 1 8472 | 8472 8472 | 97.89 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1150_length_8472_cov_5.73197_ID_2299
+
+CONTIG: NODE_1169_length_8350_cov_6.04533_ID_2337 (8350bp)
+Top Length: 2641  Top ID: 95.24
+		This contig is partially unaligned. (Aligned 2641 out of 8350 bases)
+		Alignment: 1412766 1415405 | 2641 1 | 2640 2641 | 95.24 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1169_length_8350_cov_6.04533_ID_2337
+		Unaligned bases: 2642 to 8350 (5709)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_1176_length_8276_cov_5.63216_ID_2351 (8276bp)
+Top Length: 8276  Top ID: 95.23
+		One align captures most of this contig: 1198506 1206781 | 1 8276 | 8276 8276 | 95.23 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1176_length_8276_cov_5.63216_ID_2351
+
+CONTIG: NODE_1187_length_8192_cov_8.16738_ID_2373 (8192bp)
+Top Length: 2981  Top ID: 96.98
+		This contig is partially unaligned. (Aligned 2981 out of 8192 bases)
+		Alignment: 1 2981 | 5209 8189 | 2981 2981 | 96.98 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1187_length_8192_cov_8.16738_ID_2373
+		Unaligned bases: 1 to 5208 (5208)
+		Unaligned bases: 8190 to 8192 (3)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_1213_length_8119_cov_6.12587_ID_2425 (8119bp)
+Top Length: 3935  Top ID: 98.25
+		This contig is partially unaligned. (Aligned 3935 out of 8119 bases)
+		Alignment: 1399064 1402998 | 8119 4185 | 3935 3935 | 98.25 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1213_length_8119_cov_6.12587_ID_2425
+		Unaligned bases: 1 to 4184 (4184)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_1215_length_8104_cov_6.24562_ID_2429 (8104bp)
+Top Length: 5680  Top ID: 95.16
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 1782621 1788293 | 5681 2 | 5673 5680 | 95.16 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1215_length_8104_cov_6.24562_ID_2429
+			  Overlap between these two alignments (local misassembly). Inconsistency = -502 
+			Real Alignment 2: 1780701 1782344 | 8103 6460 | 1644 1644 | 95.87 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1215_length_8104_cov_6.24562_ID_2429
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_1224_length_8041_cov_6.85487_ID_2447 (8041bp)
+Top Length: 6976  Top ID: 96.88
+		This contig is partially unaligned. (Aligned 6976 out of 8041 bases)
+		Alignment: 1825199 1832173 | 8041 1066 | 6975 6976 | 96.88 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1224_length_8041_cov_6.85487_ID_2447
+		Unaligned bases: 1 to 1065 (1065)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_1237_length_7943_cov_5.68484_ID_2473 (7943bp)
+Top Length: 3437  Top ID: 95.61
+		Skipping redundant alignment 1110831 1110933 | 7943 7841 | 103 103 | 96.12 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1237_length_7943_cov_5.68484_ID_2473
+		This contig is partially unaligned. (Aligned 3437 out of 7943 bases)
+		Alignment: 619616 623052 | 4507 7943 | 3437 3437 | 95.61 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1237_length_7943_cov_5.68484_ID_2473
+		Unaligned bases: 1 to 4506 (4506)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_1262_length_7836_cov_5.93857_ID_2523 (7836bp)
+Top Length: 7836  Top ID: 96.89
+		One align captures most of this contig: 566381 574216 | 7836 1 | 7836 7836 | 96.89 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1262_length_7836_cov_5.93857_ID_2523
+
+CONTIG: NODE_1268_length_7820_cov_6.09401_ID_2535 (7820bp)
+Top Length: 3684  Top ID: 96.07
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 288511 290579 | 1861 3929 | 2069 2069 | 95.36 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1268_length_7820_cov_6.09401_ID_2535
+			  Gap between these two alignments (local misassembly). Inconsistency = 211 
+			Real Alignment 2: 290998 294668 | 4137 7820 | 3671 3684 | 96.07 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1268_length_7820_cov_6.09401_ID_2535
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_1278_length_7739_cov_7.80297_ID_2555 (7739bp)
+Top Length: 7738  Top ID: 96.18
+		One align captures most of this contig: 1724607 1732340 | 1 7738 | 7734 7738 | 96.18 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1278_length_7739_cov_7.80297_ID_2555
+
+CONTIG: NODE_1308_length_7551_cov_5.34992_ID_2615 (7551bp)
+Top Length: 7551  Top ID: 95.36
+		One align captures most of this contig: 695012 702527 | 1 7551 | 7516 7551 | 95.36 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1308_length_7551_cov_5.34992_ID_2615
+
+CONTIG: NODE_1319_length_7483_cov_5.73411_ID_2637 (7483bp)
+Top Length: 7115  Top ID: 95.62
+		This contig is partially unaligned. (Aligned 7115 out of 7483 bases)
+		Alignment: 624275 631388 | 182 7296 | 7114 7115 | 95.62 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1319_length_7483_cov_5.73411_ID_2637
+		Unaligned bases: 1 to 181 (181)
+		Unaligned bases: 7297 to 7483 (187)
+
+CONTIG: NODE_1355_length_7344_cov_17.2067_ID_2709 (7344bp)
+Top Length: 4307  Top ID: 99.3
+		Skipping redundant alignment 709643 710408 | 1 766 | 766 766 | 98.96 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1355_length_7344_cov_17.2067_ID_2709
+		Skipping redundant alignment 710552 714055 | 802 4307 | 3504 3506 | 99.23 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1355_length_7344_cov_17.2067_ID_2709
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 1832491 1836795 | 4307 1 | 4305 4307 | 99.3 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1355_length_7344_cov_17.2067_ID_2709
+		This contig is partially unaligned. (Aligned 4307 out of 7344 bases)
+		Alignment: 1082505 1086809 | 4307 1 | 4305 4307 | 99.3 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1355_length_7344_cov_17.2067_ID_2709
+		Unaligned bases: 4308 to 7344 (3037)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_1388_length_7255_cov_12.1394_ID_2775 (7255bp)
+Top Length: 7255  Top ID: 96.32
+		One align captures most of this contig: 702285 709563 | 7255 1 | 7279 7255 | 96.32 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1388_length_7255_cov_12.1394_ID_2775
+
+CONTIG: NODE_1402_length_7216_cov_7.97109_ID_2803 (7216bp)
+Top Length: 7215  Top ID: 95.22
+		One align captures most of this contig: 45157 52390 | 1 7215 | 7234 7215 | 95.22 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1402_length_7216_cov_7.97109_ID_2803
+
+CONTIG: NODE_1405_length_7203_cov_7.06058_ID_2809 (7203bp)
+Top Length: 7202  Top ID: 95.39
+		One align captures most of this contig: 1744209 1751409 | 7202 1 | 7201 7202 | 95.39 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1405_length_7203_cov_7.06058_ID_2809
+
+CONTIG: NODE_1468_length_6964_cov_5.50384_ID_2935 (6964bp)
+Top Length: 6964  Top ID: 95.09
+		One align captures most of this contig: 716139 723102 | 1 6964 | 6964 6964 | 95.09 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1468_length_6964_cov_5.50384_ID_2935
+
+CONTIG: NODE_1470_length_6960_cov_4.27183_ID_2939 (6960bp)
+Top Length: 292  Top ID: 97.61
+		This contig is partially unaligned. (Aligned 292 out of 6960 bases)
+		Alignment: 463761 464053 | 292 1 | 293 292 | 97.61 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1470_length_6960_cov_4.27183_ID_2939
+		Unaligned bases: 293 to 6960 (6668)
+
+CONTIG: NODE_1471_length_6959_cov_8.75898_ID_2941 (6959bp)
+Top Length: 4663  Top ID: 96.25
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 204053 204927 | 1968 1094 | 875 875 | 95.66 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1471_length_6959_cov_8.75898_ID_2941
+			  Fake misassembly between these two alignments: inconsistency = -55 , gap in the contig is small or absent or filled mostly with Ns (long indel: insertion of length 55; 0 mismatches)
+			Real Alignment 2: 199161 203821 | 6917 2255 | 4661 4663 | 96.25 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1471_length_6959_cov_8.75898_ID_2941
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_1621_length_6504_cov_5.72771_ID_3241 (6504bp)
+Top Length: 6166  Top ID: 95.39
+		This contig is partially unaligned. (Aligned 6166 out of 6504 bases)
+		Alignment: 1679744 1685909 | 6497 332 | 6166 6166 | 95.39 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1621_length_6504_cov_5.72771_ID_3241
+		Unaligned bases: 1 to 331 (331)
+		Unaligned bases: 6498 to 6504 (7)
+
+CONTIG: NODE_1727_length_6201_cov_5.41279_ID_3453 (6201bp)
+Top Length: 6201  Top ID: 96.0
+		One align captures most of this contig: 746508 752715 | 6201 1 | 6208 6201 | 96.0 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1727_length_6201_cov_5.41279_ID_3453
+
+CONTIG: NODE_1753_length_6144_cov_5.62867_ID_3505 (6144bp)
+Top Length: 2928  Top ID: 95.53
+		This contig is partially unaligned. (Aligned 2928 out of 6144 bases)
+		Alignment: 1342007 1344925 | 2731 5658 | 2919 2928 | 95.53 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1753_length_6144_cov_5.62867_ID_3505
+		Unaligned bases: 1 to 2730 (2730)
+		Unaligned bases: 5659 to 6144 (486)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_1777_length_6064_cov_6.79048_ID_3553 (6064bp)
+Top Length: 5517  Top ID: 95.78
+		This contig is partially unaligned. (Aligned 5517 out of 6064 bases)
+		Alignment: 404118 409635 | 5518 2 | 5518 5517 | 95.78 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1777_length_6064_cov_6.79048_ID_3553
+		Unaligned bases: 1 to 1 (1)
+		Unaligned bases: 5519 to 6064 (546)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_1826_length_5927_cov_6.8343_ID_3651 (5927bp)
+Top Length: 5927  Top ID: 95.41
+		One align captures most of this contig: 409637 415562 | 1 5927 | 5926 5927 | 95.41 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1826_length_5927_cov_6.8343_ID_3651
+
+CONTIG: NODE_1853_length_5865_cov_5.74303_ID_3705 (5865bp)
+Top Length: 5865  Top ID: 97.12
+		One align captures most of this contig: 1087964 1093828 | 5865 1 | 5865 5865 | 97.12 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1853_length_5865_cov_5.74303_ID_3705
+
+CONTIG: NODE_1889_length_5794_cov_5.88325_ID_3777 (5794bp)
+Top Length: 2880  Top ID: 97.05
+		This contig is partially unaligned. (Aligned 2880 out of 5794 bases)
+		Alignment: 865888 868766 | 2880 1 | 2879 2880 | 97.05 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_1889_length_5794_cov_5.88325_ID_3777
+		Unaligned bases: 2881 to 5794 (2914)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_2071_length_5380_cov_76.1142_ID_4141 (5380bp)
+Top Length: 189  Top ID: 96.83
+		This contig is partially unaligned. (Aligned 189 out of 5380 bases)
+		Alignment: 218070 218256 | 552 364 | 187 189 | 96.83 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_2071_length_5380_cov_76.1142_ID_4141
+		Unaligned bases: 1 to 363 (363)
+		Unaligned bases: 553 to 5380 (4828)
+
+CONTIG: NODE_2103_length_5316_cov_6.79795_ID_4205 (5316bp)
+Top Length: 5315  Top ID: 97.23
+		One align captures most of this contig: 1713524 1718838 | 5315 1 | 5315 5315 | 97.23 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_2103_length_5316_cov_6.79795_ID_4205
+
+CONTIG: NODE_2113_length_5289_cov_5.36301_ID_4225 (5289bp)
+Top Length: 5200  Top ID: 96.22
+		This contig is partially unaligned. (Aligned 5200 out of 5289 bases)
+		Alignment: 868699 873901 | 5289 90 | 5203 5200 | 96.22 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_2113_length_5289_cov_5.36301_ID_4225
+		Unaligned bases: 1 to 89 (89)
+
+CONTIG: NODE_2197_length_5135_cov_6.74272_ID_4393 (5135bp)
+Top Length: 3528  Top ID: 96.17
+		This contig is partially unaligned. (Aligned 3528 out of 5135 bases)
+		Alignment: 320734 324261 | 1608 5135 | 3528 3528 | 96.17 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_2197_length_5135_cov_6.74272_ID_4393
+		Unaligned bases: 1 to 1607 (1607)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_2345_length_4895_cov_5.98471_ID_4689 (4895bp)
+Top Length: 4895  Top ID: 95.92
+		One align captures most of this contig: 574005 578905 | 1 4895 | 4901 4895 | 95.92 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_2345_length_4895_cov_5.98471_ID_4689
+
+CONTIG: NODE_2616_length_4516_cov_5.039_ID_5231 (4516bp)
+Top Length: 4516  Top ID: 95.17
+		One align captures most of this contig: 950244 954759 | 4516 1 | 4516 4516 | 95.17 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_2616_length_4516_cov_5.039_ID_5231
+
+CONTIG: NODE_2628_length_4502_cov_5.18664_ID_5255 (4502bp)
+Top Length: 4502  Top ID: 95.62
+		One align captures most of this contig: 609303 613804 | 4502 1 | 4502 4502 | 95.62 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_2628_length_4502_cov_5.18664_ID_5255
+
+CONTIG: NODE_2836_length_4264_cov_7.39225_ID_5671 (4264bp)
+Top Length: 2959  Top ID: 95.07
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 1805297 1808255 | 88 3046 | 2959 2959 | 95.07 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_2836_length_4264_cov_7.39225_ID_5671
+			  Overlap between these two alignments (local misassembly). Inconsistency = -574 
+			Real Alignment 2: 1808307 1808897 | 3672 4264 | 591 593 | 97.47 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_2836_length_4264_cov_7.39225_ID_5671
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_2948_length_4146_cov_5.4637_ID_5895 (4146bp)
+Top Length: 4146  Top ID: 95.27
+		One align captures most of this contig: 1194578 1198724 | 4146 1 | 4147 4146 | 95.27 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_2948_length_4146_cov_5.4637_ID_5895
+
+CONTIG: NODE_2993_length_4100_cov_7.95649_ID_5985 (4100bp)
+Top Length: 1405  Top ID: 97.02
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 4100 and total length of all aligns is 1701
+		Alignment: 222870 224277 | 1405 1 | 1408 1405 | 97.02 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_2993_length_4100_cov_7.95649_ID_5985
+		Alignment: 221513 221809 | 2501 2206 | 297 296 | 95.62 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_2993_length_4100_cov_7.95649_ID_5985
+		Unaligned bases: 2399
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: NODE_2999_length_4096_cov_5.85251_ID_5997 (4096bp)
+Top Length: 3745  Top ID: 95.46
+		This contig is partially unaligned. (Aligned 3745 out of 4096 bases)
+		Alignment: 1482702 1486446 | 351 4095 | 3745 3745 | 95.46 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_2999_length_4096_cov_5.85251_ID_5997
+		Unaligned bases: 1 to 350 (350)
+		Unaligned bases: 4096 to 4096 (1)
+
+CONTIG: NODE_3004_length_4092_cov_5.34729_ID_6007 (4092bp)
+Top Length: 3700  Top ID: 96.33
+		This contig is partially unaligned. (Aligned 3700 out of 4092 bases)
+		Alignment: 1490343 1494041 | 1 3700 | 3699 3700 | 96.33 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_3004_length_4092_cov_5.34729_ID_6007
+		Unaligned bases: 3701 to 4092 (392)
+
+CONTIG: NODE_3033_length_4064_cov_5.30282_ID_6065 (4064bp)
+Top Length: 2296  Top ID: 95.51
+		This contig is partially unaligned. (Aligned 2296 out of 4064 bases)
+		Alignment: 1093831 1096126 | 4062 1767 | 2296 2296 | 95.51 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_3033_length_4064_cov_5.30282_ID_6065
+		Unaligned bases: 1 to 1766 (1766)
+		Unaligned bases: 4063 to 4064 (2)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_3052_length_4049_cov_6.39359_ID_6103 (4049bp)
+Top Length: 4049  Top ID: 95.63
+		One align captures most of this contig: 314789 318837 | 4049 1 | 4049 4049 | 95.63 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_3052_length_4049_cov_6.39359_ID_6103
+
+CONTIG: NODE_3133_length_3978_cov_6.99873_ID_6265 (3978bp)
+Top Length: 2509  Top ID: 95.26
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 1839472 1841977 | 2509 1 | 2506 2509 | 95.26 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_3133_length_3978_cov_6.99873_ID_6265
+			  Extensive misassembly ( relocation, inconsistency = -1135037 ) between these two alignments
+			Real Alignment 2: 708268 708409 | 3837 3978 | 142 142 | 100.0 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_3133_length_3978_cov_6.99873_ID_6265
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_3182_length_3934_cov_7.39727_ID_6363 (3934bp)
+Top Length: 140  Top ID: 98.57
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 210752 210891 | 1 140 | 140 140 | 98.57 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_3182_length_3934_cov_7.39727_ID_6363
+		This contig is partially unaligned. (Aligned 140 out of 3934 bases)
+		Alignment: 206631 206770 | 1 140 | 140 140 | 98.57 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_3182_length_3934_cov_7.39727_ID_6363
+		Unaligned bases: 141 to 3934 (3794)
+
+CONTIG: NODE_3226_length_3893_cov_5.88953_ID_6451 (3893bp)
+Top Length: 3893  Top ID: 95.43
+		One align captures most of this contig: 1486448 1490342 | 1 3893 | 3895 3893 | 95.43 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_3226_length_3893_cov_5.88953_ID_6451
+
+CONTIG: NODE_3272_length_3851_cov_6.95785_ID_6543 (3851bp)
+Top Length: 3024  Top ID: 96.36
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 2009500 2010083 | 586 1 | 584 586 | 95.05 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_3272_length_3851_cov_6.95785_ID_6543
+			  Overlap between these two alignments (local misassembly). Inconsistency = -10 
+			Real Alignment 2: 2006246 2009268 | 3851 828 | 3023 3024 | 96.36 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_3272_length_3851_cov_6.95785_ID_6543
+
+CONTIG: NODE_3311_length_3819_cov_5.94952_ID_6621 (3819bp)
+Top Length: 3817  Top ID: 96.44
+		One align captures most of this contig: 1206783 1210590 | 3818 2 | 3808 3817 | 96.44 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_3311_length_3819_cov_5.94952_ID_6621
+
+CONTIG: NODE_3389_length_3747_cov_7.47481_ID_6777 (3747bp)
+Top Length: 839  Top ID: 96.78
+		Skipping redundant alignment 206631 207456 | 1 826 | 826 826 | 96.25 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_3389_length_3747_cov_7.47481_ID_6777
+		Skipping redundant alignment 215513 215987 | 352 826 | 475 475 | 95.79 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_3389_length_3747_cov_7.47481_ID_6777
+		This contig is partially unaligned. (Aligned 839 out of 3747 bases)
+		Alignment: 210752 211590 | 1 839 | 839 839 | 96.78 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_3389_length_3747_cov_7.47481_ID_6777
+		Unaligned bases: 840 to 3747 (2908)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_3515_length_3634_cov_7.09081_ID_7029 (3634bp)
+Top Length: 3634  Top ID: 95.82
+		One align captures most of this contig: 399492 403125 | 3634 1 | 3634 3634 | 95.82 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_3515_length_3634_cov_7.09081_ID_7029
+
+CONTIG: NODE_3765_length_3454_cov_6.24095_ID_7529 (3454bp)
+Top Length: 3199  Top ID: 95.06
+		This contig is partially unaligned. (Aligned 3199 out of 3454 bases)
+		Alignment: 631900 635115 | 3199 1 | 3216 3199 | 95.06 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_3765_length_3454_cov_6.24095_ID_7529
+		Unaligned bases: 3200 to 3454 (255)
+
+CONTIG: NODE_4107_length_3221_cov_6.62792_ID_8213 (3221bp)
+Top Length: 3216  Top ID: 95.18
+		One align captures most of this contig: 1721404 1724601 | 1 3216 | 3198 3216 | 95.18 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_4107_length_3221_cov_6.62792_ID_8213
+
+CONTIG: NODE_4231_length_3151_cov_7.5969_ID_8461 (3151bp)
+Top Length: 3151  Top ID: 96.6
+		One align captures most of this contig: 2043643 2046790 | 1 3151 | 3148 3151 | 96.6 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_4231_length_3151_cov_7.5969_ID_8461
+
+CONTIG: NODE_4255_length_3137_cov_5.77839_ID_8509 (3137bp)
+Top Length: 3137  Top ID: 96.56
+		One align captures most of this contig: 635358 638494 | 3137 1 | 3137 3137 | 96.56 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_4255_length_3137_cov_5.77839_ID_8509
+
+CONTIG: NODE_4307_length_3109_cov_6.24525_ID_8613 (3109bp)
+Top Length: 3109  Top ID: 96.62
+		One align captures most of this contig: 1676628 1679736 | 3109 1 | 3109 3109 | 96.62 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_4307_length_3109_cov_6.24525_ID_8613
+
+CONTIG: NODE_4469_length_3030_cov_11.5462_ID_8937 (3030bp)
+Top Length: 407  Top ID: 95.34
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 1964836 1965243 | 2624 3030 | 408 407 | 95.34 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_4469_length_3030_cov_11.5462_ID_8937
+		Skipping redundant alignment 1965767 1966170 | 2627 3030 | 404 404 | 95.3 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_4469_length_3030_cov_11.5462_ID_8937
+		This contig is partially unaligned. (Aligned 407 out of 3030 bases)
+		Alignment: 1963909 1964316 | 2624 3030 | 408 407 | 95.34 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_4469_length_3030_cov_11.5462_ID_8937
+		Unaligned bases: 1 to 2623 (2623)
+
+CONTIG: NODE_4681_length_2939_cov_7.23058_ID_9361 (2939bp)
+Top Length: 113  Top ID: 98.25
+		This contig is partially unaligned. (Aligned 113 out of 2939 bases)
+		Alignment: 403326 403439 | 92 204 | 114 113 | 98.25 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_4681_length_2939_cov_7.23058_ID_9361
+		Unaligned bases: 1 to 91 (91)
+		Unaligned bases: 205 to 2939 (2735)
+
+CONTIG: NODE_4725_length_2923_cov_6.04324_ID_9449 (2923bp)
+Top Length: 2922  Top ID: 97.16
+		One align captures most of this contig: 675840 678760 | 2922 1 | 2921 2922 | 97.16 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_4725_length_2923_cov_6.04324_ID_9449
+
+CONTIG: NODE_5099_length_2774_cov_5.90879_ID_10197 (2774bp)
+Top Length: 2774  Top ID: 97.91
+		One align captures most of this contig: 723103 725876 | 2774 1 | 2774 2774 | 97.91 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_5099_length_2774_cov_5.90879_ID_10197
+
+CONTIG: NODE_5191_length_2737_cov_6.1264_ID_10381 (2737bp)
+Top Length: 2736  Top ID: 96.35
+		One align captures most of this contig: 415563 418298 | 1 2736 | 2736 2736 | 96.35 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_5191_length_2737_cov_6.1264_ID_10381
+
+CONTIG: NODE_5648_length_2565_cov_6.62829_ID_11295 (2565bp)
+Top Length: 2565  Top ID: 95.48
+		One align captures most of this contig: 1718839 1721403 | 2565 1 | 2565 2565 | 95.48 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_5648_length_2565_cov_6.62829_ID_11295
+
+CONTIG: NODE_6028_length_2443_cov_5.68467_ID_12055 (2443bp)
+Top Length: 2443  Top ID: 96.32
+		One align captures most of this contig: 901685 904129 | 2443 1 | 2445 2443 | 96.32 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_6028_length_2443_cov_5.68467_ID_12055
+
+CONTIG: NODE_6312_length_2364_cov_1.60849_ID_12623 (2364bp)
+Top Length: 2364  Top ID: 95.6
+		One align captures most of this contig: 430304 432667 | 1 2364 | 2364 2364 | 95.6 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_6312_length_2364_cov_1.60849_ID_12623
+
+CONTIG: NODE_6657_length_2268_cov_7.40985_ID_13313 (2268bp)
+Top Length: 345  Top ID: 98.26
+		This contig is partially unaligned. (Aligned 345 out of 2268 bases)
+		Alignment: 52671 53015 | 2268 1924 | 345 345 | 98.26 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_6657_length_2268_cov_7.40985_ID_13313
+		Unaligned bases: 1 to 1923 (1923)
+
+CONTIG: NODE_6670_length_2266_cov_7.29353_ID_13339 (2266bp)
+Top Length: 2265  Top ID: 96.6
+		One align captures most of this contig: 1911024 1913288 | 2266 2 | 2265 2265 | 96.6 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_6670_length_2266_cov_7.29353_ID_13339
+
+CONTIG: NODE_6863_length_2213_cov_6.20528_ID_13725 (2213bp)
+Top Length: 2211  Top ID: 96.29
+		One align captures most of this contig: 1396852 1399062 | 2212 2 | 2211 2211 | 96.29 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_6863_length_2213_cov_6.20528_ID_13725
+
+CONTIG: NODE_7048_length_2171_cov_6.31144_ID_14095 (2171bp)
+Top Length: 1480  Top ID: 96.69
+		This contig is partially unaligned. (Aligned 1480 out of 2171 bases)
+		Alignment: 16858 18337 | 1 1480 | 1480 1480 | 96.69 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_7048_length_2171_cov_6.31144_ID_14095
+		Unaligned bases: 1481 to 2171 (691)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_7388_length_2101_cov_7.58944_ID_14775 (2101bp)
+Top Length: 2097  Top ID: 96.0
+		One align captures most of this contig: 1875980 1878076 | 1 2097 | 2097 2097 | 96.0 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_7388_length_2101_cov_7.58944_ID_14775
+
+CONTIG: NODE_8061_length_1976_cov_7.557_ID_16121 (1976bp)
+Top Length: 1976  Top ID: 97.42
+		One align captures most of this contig: 1732342 1734317 | 1 1976 | 1976 1976 | 97.42 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_8061_length_1976_cov_7.557_ID_16121
+
+CONTIG: NODE_8490_length_1902_cov_2.81862_ID_16979 (1902bp)
+Top Length: 90  Top ID: 98.89
+		This contig is partially unaligned. (Aligned 90 out of 1902 bases)
+		Alignment: 26253 26342 | 1812 1901 | 90 90 | 98.89 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_8490_length_1902_cov_2.81862_ID_16979
+		Unaligned bases: 1 to 1811 (1811)
+		Unaligned bases: 1902 to 1902 (1)
+
+CONTIG: NODE_8622_length_1881_cov_6.43319_ID_17243 (1881bp)
+Top Length: 1881  Top ID: 96.17
+		One align captures most of this contig: 1778819 1780699 | 1881 1 | 1881 1881 | 96.17 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_8622_length_1881_cov_6.43319_ID_17243
+
+CONTIG: NODE_9630_length_1739_cov_6.18112_ID_19259 (1739bp)
+Top Length: 1557  Top ID: 96.28
+		Skipping redundant alignment 624034 624147 | 4 117 | 114 114 | 95.61 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_9630_length_1739_cov_6.18112_ID_19259
+		Skipping redundant alignment 1853142 1853253 | 4 115 | 112 112 | 97.32 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_9630_length_1739_cov_6.18112_ID_19259
+		This contig is misassembled. 4 total aligns.
+			Excluding internal overlap of size 15 between Alignment 1 and 2:  1861027 1861142 | 1 116 | 116 116 --> 1861027 1861127 | 1 101 | 101 101
+			Real Alignment 1: 1861027 1861127 | 1 101 | 101 101 | 95.69 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_9630_length_1739_cov_6.18112_ID_19259
+			  Extensive misassembly ( relocation, inconsistency = -7684 ) between these two alignments
+			Real Alignment 2: 1853444 1855001 | 102 1658 | 1558 1557 | 96.28 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_9630_length_1739_cov_6.18112_ID_19259
+
+CONTIG: NODE_10745_length_1600_cov_5.70485_ID_21489 (1600bp)
+Top Length: 762  Top ID: 97.9
+		This contig is partially unaligned. (Aligned 762 out of 1600 bases)
+		Alignment: 897545 898306 | 1 762 | 762 762 | 97.9 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_10745_length_1600_cov_5.70485_ID_21489
+		Unaligned bases: 763 to 1600 (838)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_10998_length_1571_cov_1.84367_ID_21995 (1571bp)
+Top Length: 1262  Top ID: 98.42
+		This contig is partially unaligned. (Aligned 1262 out of 1571 bases)
+		Alignment: 225616 226876 | 1456 195 | 1261 1262 | 98.42 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_10998_length_1571_cov_1.84367_ID_21995
+		Unaligned bases: 1 to 194 (194)
+		Unaligned bases: 1457 to 1571 (115)
+
+CONTIG: NODE_12525_length_1435_cov_6.05217_ID_25049 (1435bp)
+Top Length: 1435  Top ID: 95.06
+		One align captures most of this contig: 1734318 1735740 | 1435 1 | 1423 1435 | 95.06 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_12525_length_1435_cov_6.05217_ID_25049
+
+CONTIG: NODE_14263_length_1300_cov_1.96787_ID_28525 (1300bp)
+Top Length: 134  Top ID: 96.27
+		This contig is partially unaligned. (Aligned 134 out of 1300 bases)
+		Alignment: 318704 318837 | 1167 1300 | 134 134 | 96.27 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_14263_length_1300_cov_1.96787_ID_28525
+		Unaligned bases: 1 to 1166 (1166)
+
+CONTIG: NODE_14291_length_1298_cov_2.01931_ID_28581 (1298bp)
+Top Length: 71  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 71 out of 1298 bases)
+		Alignment: 16858 16928 | 1 71 | 71 71 | 100.0 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_14291_length_1298_cov_2.01931_ID_28581
+		Unaligned bases: 72 to 1298 (1227)
+
+CONTIG: NODE_16361_length_1175_cov_4.52411_ID_32721 (1175bp)
+Top Length: 1175  Top ID: 96.34
+		This contig has 2 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 207363 208537 | 1175 1 | 1175 1175 | 96.34 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_16361_length_1175_cov_4.52411_ID_32721
+		Skipping alignment  215894 217068 | 1175 1 | 1175 1175 | 96.34 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_16361_length_1175_cov_4.52411_ID_32721
+
+CONTIG: NODE_16843_length_1149_cov_1.53565_ID_33685 (1149bp)
+Top Length: 1149  Top ID: 95.65
+		One align captures most of this contig: 1674665 1675813 | 1149 1 | 1149 1149 | 95.65 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_16843_length_1149_cov_1.53565_ID_33685
+
+CONTIG: NODE_18854_length_1056_cov_7.12088_ID_37707 (1056bp)
+Top Length: 514  Top ID: 96.69
+		Skipping redundant alignment 131219 131527 | 309 1 | 309 309 | 97.09 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_18854_length_1056_cov_7.12088_ID_37707
+		Skipping redundant alignment 133396 133630 | 334 100 | 235 235 | 95.32 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_18854_length_1056_cov_7.12088_ID_37707
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 128985 129316 | 332 1 | 332 332 | 96.39 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_18854_length_1056_cov_7.12088_ID_37707
+			  Extensive misassembly ( relocation, inconsistency = -2211 ) between these two alignments
+			Real Alignment 2: 130472 130985 | 1056 543 | 514 514 | 96.69 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_18854_length_1056_cov_7.12088_ID_37707
+
+CONTIG: NODE_18872_length_1055_cov_1.743_ID_37743 (1055bp)
+Top Length: 400  Top ID: 98.0
+		This contig is partially unaligned. (Aligned 400 out of 1055 bases)
+		Alignment: 214529 214928 | 74 473 | 400 400 | 98.0 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_18872_length_1055_cov_1.743_ID_37743
+		Unaligned bases: 1 to 73 (73)
+		Unaligned bases: 474 to 1055 (582)
+
+CONTIG: NODE_19502_length_1029_cov_2.70739_ID_39003 (1029bp)
+Top Length: 332  Top ID: 95.18
+		This contig is partially unaligned. (Aligned 332 out of 1029 bases)
+		Alignment: 343090 343421 | 332 1 | 332 332 | 95.18 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_19502_length_1029_cov_2.70739_ID_39003
+		Unaligned bases: 333 to 1029 (697)
+
+CONTIG: NODE_21343_length_965_cov_2.28352_ID_42685 (965bp)
+Top Length: 207  Top ID: 96.62
+		This contig is partially unaligned. (Aligned 207 out of 965 bases)
+		Alignment: 208555 208761 | 1 207 | 207 207 | 96.62 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_21343_length_965_cov_2.28352_ID_42685
+		Unaligned bases: 208 to 965 (758)
+
+CONTIG: NODE_21658_length_954_cov_7.71301_ID_43315 (954bp)
+Top Length: 228  Top ID: 97.81
+		This contig is partially unaligned. (Aligned 228 out of 954 bases)
+		Alignment: 388806 389033 | 727 954 | 228 228 | 97.81 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_21658_length_954_cov_7.71301_ID_43315
+		Unaligned bases: 1 to 726 (726)
+
+CONTIG: NODE_22937_length_914_cov_2.00698_ID_45873 (914bp)
+Top Length: 601  Top ID: 97.34
+		This contig is partially unaligned. (Aligned 601 out of 914 bases)
+		Alignment: 221864 222464 | 314 914 | 601 601 | 97.34 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_22937_length_914_cov_2.00698_ID_45873
+		Unaligned bases: 1 to 313 (313)
+
+CONTIG: NODE_25338_length_850_cov_1.51572_ID_50675 (850bp)
+Top Length: 283  Top ID: 95.41
+		This contig is partially unaligned. (Aligned 283 out of 850 bases)
+		Alignment: 1923999 1924281 | 283 1 | 283 283 | 95.41 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_25338_length_850_cov_1.51572_ID_50675
+		Unaligned bases: 284 to 850 (567)
+
+CONTIG: NODE_26630_length_819_cov_8.73953_ID_53259 (819bp)
+Top Length: 819  Top ID: 97.8
+		This contig has 3 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 1956481 1957299 | 819 1 | 819 819 | 97.8 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_26630_length_819_cov_8.73953_ID_53259
+		Skipping alignment  1958488 1959306 | 819 1 | 819 819 | 97.8 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_26630_length_819_cov_8.73953_ID_53259
+		Skipping alignment  1960495 1961313 | 819 1 | 819 819 | 97.8 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_26630_length_819_cov_8.73953_ID_53259
+
+CONTIG: NODE_27226_length_806_cov_9.21704_ID_54451 (806bp)
+Top Length: 806  Top ID: 98.14
+		One align captures most of this contig: 1714955 1715760 | 806 1 | 806 806 | 98.14 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_27226_length_806_cov_9.21704_ID_54451
+
+CONTIG: NODE_27539_length_799_cov_7.9664_ID_55077 (799bp)
+Top Length: 799  Top ID: 97.12
+		One align captures most of this contig: 105954 106752 | 1 799 | 799 799 | 97.12 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_27539_length_799_cov_7.9664_ID_55077
+
+CONTIG: NODE_28294_length_782_cov_13.8459_ID_56587 (782bp)
+Top Length: 782  Top ID: 97.57
+		This contig has 2 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 1957478 1958259 | 1 782 | 782 782 | 97.57 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_28294_length_782_cov_13.8459_ID_56587
+		Skipping alignment  1959485 1960266 | 1 782 | 782 782 | 97.57 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_28294_length_782_cov_13.8459_ID_56587
+
+CONTIG: NODE_28442_length_778_cov_6.08714_ID_56883 (778bp)
+Top Length: 76  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 76 out of 778 bases)
+		Alignment: 1802907 1802982 | 76 1 | 76 76 | 100.0 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_28442_length_778_cov_6.08714_ID_56883
+		Unaligned bases: 77 to 778 (702)
+
+CONTIG: NODE_30789_length_732_cov_2.23486_ID_61577 (732bp)
+Top Length: 732  Top ID: 97.54
+		One align captures most of this contig: 427086 427817 | 1 732 | 732 732 | 97.54 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_30789_length_732_cov_2.23486_ID_61577
+
+CONTIG: NODE_31853_length_713_cov_7.2538_ID_63705 (713bp)
+Top Length: 710  Top ID: 97.04
+		One align captures most of this contig: 2007865 2008574 | 4 713 | 710 710 | 97.04 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_31853_length_713_cov_7.2538_ID_63705
+
+CONTIG: NODE_32302_length_706_cov_2.20891_ID_64603 (706bp)
+Top Length: 118  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 118 out of 706 bases)
+		Alignment: 79326 79443 | 589 706 | 118 118 | 100.0 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_32302_length_706_cov_2.20891_ID_64603
+		Unaligned bases: 1 to 588 (588)
+
+CONTIG: NODE_33844_length_681_cov_10.361_ID_67687 (681bp)
+Top Length: 675  Top ID: 96.0
+		One align captures most of this contig: 204053 204727 | 675 1 | 675 675 | 96.0 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_33844_length_681_cov_10.361_ID_67687
+
+CONTIG: NODE_34480_length_670_cov_1.4813_ID_68959 (670bp)
+Top Length: 668  Top ID: 97.16
+		One align captures most of this contig: 1675845 1676512 | 1 668 | 668 668 | 97.16 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_34480_length_670_cov_1.4813_ID_68959
+
+CONTIG: NODE_35032_length_661_cov_1.24917_ID_70063 (661bp)
+Top Length: 116  Top ID: 96.55
+		This contig is partially unaligned. (Aligned 116 out of 661 bases)
+		Alignment: 1302951 1303066 | 661 546 | 116 116 | 96.55 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_35032_length_661_cov_1.24917_ID_70063
+		Unaligned bases: 1 to 545 (545)
+
+CONTIG: NODE_36163_length_645_cov_1.32542_ID_72325 (645bp)
+Top Length: 644  Top ID: 96.43
+		One align captures most of this contig: 694135 694778 | 644 1 | 644 644 | 96.43 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_36163_length_645_cov_1.32542_ID_72325
+
+CONTIG: NODE_36421_length_641_cov_2.11092_ID_72841 (641bp)
+Top Length: 411  Top ID: 97.81
+		This contig is partially unaligned. (Aligned 411 out of 641 bases)
+		Alignment: 226896 227306 | 1 411 | 411 411 | 97.81 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_36421_length_641_cov_2.11092_ID_72841
+		Unaligned bases: 412 to 641 (230)
+
+CONTIG: NODE_37716_length_622_cov_1.84127_ID_75431 (622bp)
+Top Length: 622  Top ID: 95.98
+		One align captures most of this contig: 1930846 1931467 | 622 1 | 622 622 | 95.98 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_37716_length_622_cov_1.84127_ID_75431
+
+CONTIG: NODE_38662_length_610_cov_8.19279_ID_77323 (610bp)
+Top Length: 610  Top ID: 98.85
+		One align captures most of this contig: 2043089 2043697 | 610 1 | 609 610 | 98.85 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_38662_length_610_cov_8.19279_ID_77323
+
+CONTIG: NODE_40862_length_583_cov_4.9053_ID_81723 (583bp)
+Top Length: 583  Top ID: 95.2
+		One align captures most of this contig: 1228296 1228878 | 583 1 | 583 583 | 95.2 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_40862_length_583_cov_4.9053_ID_81723
+
+CONTIG: NODE_41689_length_573_cov_1.76641_ID_83377 (573bp)
+Top Length: 573  Top ID: 95.12
+		One align captures most of this contig: 222450 223022 | 573 1 | 573 573 | 95.12 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_41689_length_573_cov_1.76641_ID_83377
+
+CONTIG: NODE_43143_length_557_cov_1.59163_ID_86285 (557bp)
+Top Length: 554  Top ID: 97.29
+		One align captures most of this contig: 898384 898937 | 554 1 | 554 554 | 97.29 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_43143_length_557_cov_1.59163_ID_86285
+
+CONTIG: NODE_46018_length_529_cov_1.56751_ID_92035 (529bp)
+Top Length: 529  Top ID: 96.03
+		One align captures most of this contig: 1306396 1306924 | 529 1 | 529 529 | 96.03 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_46018_length_529_cov_1.56751_ID_92035
+
+CONTIG: NODE_46483_length_525_cov_35.3872_ID_92965 (525bp)
+Top Length: 525  Top ID: 97.33
+		This contig has 4 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 1963332 1963856 | 1 525 | 525 525 | 97.33 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_46483_length_525_cov_35.3872_ID_92965
+		Skipping alignment  1966116 1966640 | 1 525 | 525 525 | 97.33 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_46483_length_525_cov_35.3872_ID_92965
+		Skipping alignment  1964262 1964783 | 1 525 | 522 525 | 96.76 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_46483_length_525_cov_35.3872_ID_92965
+		Skipping alignment  1965189 1965710 | 1 525 | 522 525 | 96.76 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_46483_length_525_cov_35.3872_ID_92965
+
+CONTIG: NODE_47865_length_513_cov_20.3996_ID_95729 (513bp)
+Top Length: 88  Top ID: 96.59
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 1959219 1959306 | 88 1 | 88 88 | 96.59 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_47865_length_513_cov_20.3996_ID_95729
+		Skipping redundant alignment 1961226 1961313 | 88 1 | 88 88 | 96.59 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_47865_length_513_cov_20.3996_ID_95729
+		This contig is partially unaligned. (Aligned 88 out of 513 bases)
+		Alignment: 1957212 1957299 | 88 1 | 88 88 | 96.59 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ NODE_47865_length_513_cov_20.3996_ID_95729
+		Unaligned bases: 89 to 513 (425)
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Campylobacter_concisus_13826/contigs_reports/nucmer_output/SPAdes.used_snps
+	Reference Campylobacter_concisus_13826_gi_157163852_ref_NC_: 209 total alignments. 1 total regions.
+		Region: 1 to 2052007 (2052007 bp)
+			Align 1: 1 2981 NODE_1187_length_8192_cov_8.16738_ID_2373 5209 8189
+				Gap between this and next alignment: 2981 to 16858 (13876 bp)
+				Next Alignment: 16858 18337 NODE_7048_length_2171_cov_6.31144_ID_14095 1 1480
+
+			Align 2: 16858 18337 NODE_7048_length_2171_cov_6.31144_ID_14095 1 1480
+				The next alignment (16858 16928 NODE_14291_length_1298_cov_2.01931_ID_28581 1 71) is redundant. Skipping.
+				Gap between this and next alignment: 18337 to 26253 (7915 bp)
+				Next Alignment: 26253 26342 NODE_8490_length_1902_cov_2.81862_ID_16979 1812 1901
+
+			Align 4: 26253 26342 NODE_8490_length_1902_cov_2.81862_ID_16979 1812 1901
+				Gap between this and next alignment: 26342 to 45157 (18814 bp)
+				Next Alignment: 45157 52390 NODE_1402_length_7216_cov_7.97109_ID_2803 1 7215
+
+			Align 5: 45157 52390 NODE_1402_length_7216_cov_7.97109_ID_2803 1 7215
+				Gap between this and next alignment: 52390 to 52671 (280 bp)
+				Next Alignment: 52671 53015 NODE_6657_length_2268_cov_7.40985_ID_13313 2268 1924
+
+			Align 6: 52671 53015 NODE_6657_length_2268_cov_7.40985_ID_13313 2268 1924
+				Gap between this and next alignment: 53015 to 58590 (5574 bp)
+				Next Alignment: 58590 64437 NODE_384_length_20312_cov_7.60591_ID_767 1 5845
+
+			Align 7: 58590 64437 NODE_384_length_20312_cov_7.60591_ID_767 1 5845
+				Gap between this and next alignment: 64437 to 66234 (1796 bp)
+				Next Alignment: 66234 76141 NODE_384_length_20312_cov_7.60591_ID_767 6931 16821
+
+			Align 8: 66234 76141 NODE_384_length_20312_cov_7.60591_ID_767 6931 16821
+				Gap between this and next alignment: 76141 to 79326 (3184 bp)
+				Next Alignment: 79326 79443 NODE_32302_length_706_cov_2.20891_ID_64603 589 706
+
+			Align 9: 79326 79443 NODE_32302_length_706_cov_2.20891_ID_64603 589 706
+				Gap between this and next alignment: 79443 to 79446 (2 bp)
+				Next Alignment: 79446 95653 NODE_216_length_33064_cov_7.85928_ID_431 3 16210
+
+			Align 10: 79446 95653 NODE_216_length_33064_cov_7.85928_ID_431 3 16210
+				Gap between this and next alignment: 95653 to 99584 (3930 bp)
+				Next Alignment: 99584 112221 NODE_216_length_33064_cov_7.85928_ID_431 20421 33064
+
+			Align 11: 99584 112221 NODE_216_length_33064_cov_7.85928_ID_431 20421 33064
+				The next alignment (105954 106752 NODE_27539_length_799_cov_7.9664_ID_55077 1 799) is redundant. Skipping.
+				Gap between this and next alignment: 112221 to 119854 (7632 bp)
+				Next Alignment: 119854 120017 NODE_502_length_16420_cov_7.68506_ID_1003 10738 10575
+
+			Align 13: 119854 120017 NODE_502_length_16420_cov_7.68506_ID_1003 10738 10575
+				Gap between this and next alignment: 120017 to 128267 (8249 bp)
+				Next Alignment: 128267 128427 NODE_107_length_60950_cov_7.58364_ID_213 60950 60790
+
+			Align 14: 128267 128427 NODE_107_length_60950_cov_7.58364_ID_213 60950 60790
+				Gap between this and next alignment: 128427 to 128985 (557 bp)
+				Next Alignment: 128985 129316 NODE_18854_length_1056_cov_7.12088_ID_37707 332 1
+
+			Align 15: 128985 129316 NODE_18854_length_1056_cov_7.12088_ID_37707 332 1
+				Negative gap (overlap) between this and next alignment: 129316 to 129262 (-54 bp)
+				Next Alignment: 129262 129951 NODE_502_length_16420_cov_7.68506_ID_1003 1123 434
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1123 to 1068.
+			Align 16: 129317 129951 NODE_502_length_16420_cov_7.68506_ID_1003 1068 434
+				Gap between this and next alignment: 129951 to 130472 (520 bp)
+				Next Alignment: 130472 130985 NODE_18854_length_1056_cov_7.12088_ID_37707 1056 543
+
+			Align 17: 130472 130985 NODE_18854_length_1056_cov_7.12088_ID_37707 1056 543
+				Gap between this and next alignment: 130985 to 133402 (2416 bp)
+				Next Alignment: 133402 148598 NODE_107_length_60950_cov_7.58364_ID_213 60228 45032
+
+			Align 18: 133402 148598 NODE_107_length_60950_cov_7.58364_ID_213 60228 45032
+				Gap between this and next alignment: 148598 to 151518 (2919 bp)
+				Next Alignment: 151518 154028 NODE_107_length_60950_cov_7.58364_ID_213 44293 41791
+
+			Align 19: 151518 154028 NODE_107_length_60950_cov_7.58364_ID_213 44293 41791
+				Gap between this and next alignment: 154028 to 169062 (15033 bp)
+				Next Alignment: 169062 173989 NODE_107_length_60950_cov_7.58364_ID_213 26824 21873
+
+			Align 20: 169062 173989 NODE_107_length_60950_cov_7.58364_ID_213 26824 21873
+				Gap between this and next alignment: 173989 to 176127 (2137 bp)
+				Next Alignment: 176127 196592 NODE_107_length_60950_cov_7.58364_ID_213 21439 917
+
+			Align 21: 176127 196592 NODE_107_length_60950_cov_7.58364_ID_213 21439 917
+				Gap between this and next alignment: 196592 to 199161 (2568 bp)
+				Next Alignment: 199161 203821 NODE_1471_length_6959_cov_8.75898_ID_2941 6917 2255
+
+			Align 22: 199161 203821 NODE_1471_length_6959_cov_8.75898_ID_2941 6917 2255
+				Gap between this and next alignment: 203821 to 204053 (231 bp)
+				Next Alignment: 204053 204927 NODE_1471_length_6959_cov_8.75898_ID_2941 1968 1094
+
+			Align 23: 204053 204927 NODE_1471_length_6959_cov_8.75898_ID_2941 1968 1094
+				The next alignment (204053 204727 NODE_33844_length_681_cov_10.361_ID_67687 675 1) is redundant. Skipping.
+				Gap between this and next alignment: 204927 to 206631 (1703 bp)
+				Next Alignment: 206631 206770 NODE_3182_length_3934_cov_7.39727_ID_6363 1 140
+
+			Align 25: 206631 206770 NODE_3182_length_3934_cov_7.39727_ID_6363 1 140
+				Gap between this and next alignment: 206770 to 207363 (592 bp)
+				Next Alignment: 207363 208537 NODE_16361_length_1175_cov_4.52411_ID_32721 1175 1
+
+			Align 26: 207363 208537 NODE_16361_length_1175_cov_4.52411_ID_32721 1175 1
+				Gap between this and next alignment: 208537 to 208555 (17 bp)
+				Next Alignment: 208555 208761 NODE_21343_length_965_cov_2.28352_ID_42685 1 207
+
+			Align 27: 208555 208761 NODE_21343_length_965_cov_2.28352_ID_42685 1 207
+				Gap between this and next alignment: 208761 to 210752 (1990 bp)
+				Next Alignment: 210752 211590 NODE_3389_length_3747_cov_7.47481_ID_6777 1 839
+
+			Align 28: 210752 211590 NODE_3389_length_3747_cov_7.47481_ID_6777 1 839
+				Gap between this and next alignment: 211590 to 214529 (2938 bp)
+				Next Alignment: 214529 214928 NODE_18872_length_1055_cov_1.743_ID_37743 74 473
+
+			Align 29: 214529 214928 NODE_18872_length_1055_cov_1.743_ID_37743 74 473
+				Gap between this and next alignment: 214928 to 218070 (3141 bp)
+				Next Alignment: 218070 218256 NODE_2071_length_5380_cov_76.1142_ID_4141 552 364
+
+			Align 30: 218070 218256 NODE_2071_length_5380_cov_76.1142_ID_4141 552 364
+				Gap between this and next alignment: 218256 to 221513 (3256 bp)
+				Next Alignment: 221513 221809 NODE_2993_length_4100_cov_7.95649_ID_5985 2501 2206
+
+			Align 31: 221513 221809 NODE_2993_length_4100_cov_7.95649_ID_5985 2501 2206
+				Gap between this and next alignment: 221809 to 221864 (54 bp)
+				Next Alignment: 221864 222464 NODE_22937_length_914_cov_2.00698_ID_45873 314 914
+
+			Align 32: 221864 222464 NODE_22937_length_914_cov_2.00698_ID_45873 314 914
+				Negative gap (overlap) between this and next alignment: 222464 to 222450 (-14 bp)
+				Next Alignment: 222450 223022 NODE_41689_length_573_cov_1.76641_ID_83377 573 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 573 to 558.
+			Align 33: 222465 223022 NODE_41689_length_573_cov_1.76641_ID_83377 558 1
+				Negative gap (overlap) between this and next alignment: 223022 to 222870 (-152 bp)
+				Next Alignment: 222870 224277 NODE_2993_length_4100_cov_7.95649_ID_5985 1405 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1405 to 1256.
+			Align 34: 223023 224277 NODE_2993_length_4100_cov_7.95649_ID_5985 1256 1
+				Gap between this and next alignment: 224277 to 225616 (1338 bp)
+				Next Alignment: 225616 226876 NODE_10998_length_1571_cov_1.84367_ID_21995 1456 195
+
+			Align 35: 225616 226876 NODE_10998_length_1571_cov_1.84367_ID_21995 1456 195
+				Gap between this and next alignment: 226876 to 226896 (19 bp)
+				Next Alignment: 226896 227306 NODE_36421_length_641_cov_2.11092_ID_72841 1 411
+
+			Align 36: 226896 227306 NODE_36421_length_641_cov_2.11092_ID_72841 1 411
+				Gap between this and next alignment: 227306 to 251902 (24595 bp)
+				Next Alignment: 251902 252007 NODE_288_length_26680_cov_6.41345_ID_575 11029 11135
+
+			Align 37: 251902 252007 NODE_288_length_26680_cov_6.41345_ID_575 11029 11135
+				Gap between this and next alignment: 252007 to 265105 (13097 bp)
+				Next Alignment: 265105 275852 NODE_240_length_31308_cov_7.20756_ID_479 8006 18706
+
+			Align 38: 265105 275852 NODE_240_length_31308_cov_7.20756_ID_479 8006 18706
+				Gap between this and next alignment: 275852 to 276124 (271 bp)
+				Next Alignment: 276124 288157 NODE_240_length_31308_cov_7.20756_ID_479 19278 31308
+
+			Align 39: 276124 288157 NODE_240_length_31308_cov_7.20756_ID_479 19278 31308
+				Gap between this and next alignment: 288157 to 288511 (353 bp)
+				Next Alignment: 288511 290579 NODE_1268_length_7820_cov_6.09401_ID_2535 1861 3929
+
+			Align 40: 288511 290579 NODE_1268_length_7820_cov_6.09401_ID_2535 1861 3929
+				Gap between this and next alignment: 290579 to 290998 (418 bp)
+				Next Alignment: 290998 294668 NODE_1268_length_7820_cov_6.09401_ID_2535 4137 7820
+
+			Align 41: 290998 294668 NODE_1268_length_7820_cov_6.09401_ID_2535 4137 7820
+				Next Alignment: 294669 297277 NODE_343_length_21966_cov_7.06417_ID_685 21966 19346
+
+			Align 42: 294669 297277 NODE_343_length_21966_cov_7.06417_ID_685 21966 19346
+				Gap between this and next alignment: 297277 to 297321 (43 bp)
+				Next Alignment: 297321 314025 NODE_343_length_21966_cov_7.06417_ID_685 16712 10
+
+			Align 43: 297321 314025 NODE_343_length_21966_cov_7.06417_ID_685 16712 10
+				Gap between this and next alignment: 314025 to 314789 (763 bp)
+				Next Alignment: 314789 318837 NODE_3052_length_4049_cov_6.39359_ID_6103 4049 1
+
+			Align 44: 314789 318837 NODE_3052_length_4049_cov_6.39359_ID_6103 4049 1
+				The next alignment (318704 318837 NODE_14263_length_1300_cov_1.96787_ID_28525 1167 1300) is redundant. Skipping.
+				Gap between this and next alignment: 318837 to 320734 (1896 bp)
+				Next Alignment: 320734 324261 NODE_2197_length_5135_cov_6.74272_ID_4393 1608 5135
+
+			Align 46: 320734 324261 NODE_2197_length_5135_cov_6.74272_ID_4393 1608 5135
+				Next Alignment: 324262 342044 NODE_464_length_17762_cov_6.71091_ID_927 17762 1
+
+			Align 47: 324262 342044 NODE_464_length_17762_cov_6.71091_ID_927 17762 1
+				Gap between this and next alignment: 342044 to 343090 (1045 bp)
+				Next Alignment: 343090 343421 NODE_19502_length_1029_cov_2.70739_ID_39003 332 1
+
+			Align 48: 343090 343421 NODE_19502_length_1029_cov_2.70739_ID_39003 332 1
+				Gap between this and next alignment: 343421 to 388210 (44788 bp)
+				Next Alignment: 388210 388716 NODE_303_length_24813_cov_6.35633_ID_605 8521 8015
+
+			Align 49: 388210 388716 NODE_303_length_24813_cov_6.35633_ID_605 8521 8015
+				Gap between this and next alignment: 388716 to 388806 (89 bp)
+				Next Alignment: 388806 389033 NODE_21658_length_954_cov_7.71301_ID_43315 727 954
+
+			Align 50: 388806 389033 NODE_21658_length_954_cov_7.71301_ID_43315 727 954
+				Gap between this and next alignment: 389033 to 389535 (501 bp)
+				Next Alignment: 389535 392627 NODE_303_length_24813_cov_6.35633_ID_605 8078 4985
+
+			Align 51: 389535 392627 NODE_303_length_24813_cov_6.35633_ID_605 8078 4985
+				Gap between this and next alignment: 392627 to 393376 (748 bp)
+				Next Alignment: 393376 397681 NODE_303_length_24813_cov_6.35633_ID_605 4306 1
+
+			Align 52: 393376 397681 NODE_303_length_24813_cov_6.35633_ID_605 4306 1
+				Gap between this and next alignment: 397681 to 399492 (1810 bp)
+				Next Alignment: 399492 403125 NODE_3515_length_3634_cov_7.09081_ID_7029 3634 1
+
+			Align 53: 399492 403125 NODE_3515_length_3634_cov_7.09081_ID_7029 3634 1
+				Gap between this and next alignment: 403125 to 403326 (200 bp)
+				Next Alignment: 403326 403439 NODE_4681_length_2939_cov_7.23058_ID_9361 92 204
+
+			Align 54: 403326 403439 NODE_4681_length_2939_cov_7.23058_ID_9361 92 204
+				Gap between this and next alignment: 403439 to 404118 (678 bp)
+				Next Alignment: 404118 409635 NODE_1777_length_6064_cov_6.79048_ID_3553 5518 2
+
+			Align 55: 404118 409635 NODE_1777_length_6064_cov_6.79048_ID_3553 5518 2
+				Gap between this and next alignment: 409635 to 409637 (1 bp)
+				Next Alignment: 409637 415562 NODE_1826_length_5927_cov_6.8343_ID_3651 1 5927
+
+			Align 56: 409637 415562 NODE_1826_length_5927_cov_6.8343_ID_3651 1 5927
+				Next Alignment: 415563 418298 NODE_5191_length_2737_cov_6.1264_ID_10381 1 2736
+
+			Align 57: 415563 418298 NODE_5191_length_2737_cov_6.1264_ID_10381 1 2736
+				Gap between this and next alignment: 418298 to 418300 (1 bp)
+				Next Alignment: 418300 425654 NODE_533_length_15585_cov_6.08197_ID_1065 15585 8230
+
+			Align 58: 418300 425654 NODE_533_length_15585_cov_6.08197_ID_1065 15585 8230
+				Gap between this and next alignment: 425654 to 427086 (1431 bp)
+				Next Alignment: 427086 427817 NODE_30789_length_732_cov_2.23486_ID_61577 1 732
+
+			Align 59: 427086 427817 NODE_30789_length_732_cov_2.23486_ID_61577 1 732
+				Gap between this and next alignment: 427817 to 430304 (2486 bp)
+				Next Alignment: 430304 432667 NODE_6312_length_2364_cov_1.60849_ID_12623 1 2364
+
+			Align 60: 430304 432667 NODE_6312_length_2364_cov_1.60849_ID_12623 1 2364
+				Gap between this and next alignment: 432667 to 463756 (31088 bp)
+				Next Alignment: 463756 464259 NODE_1083_length_8844_cov_7.55251_ID_2165 8341 8844
+
+			Align 61: 463756 464259 NODE_1083_length_8844_cov_7.55251_ID_2165 8341 8844
+				The next alignment (463761 464053 NODE_1470_length_6960_cov_4.27183_ID_2939 292 1) is redundant. Skipping.
+				The next alignment (464031 464103 NODE_967_length_9609_cov_8.51874_ID_1933 1816 1744) is redundant. Skipping.
+				Gap between this and next alignment: 464259 to 464839 (579 bp)
+				Next Alignment: 464839 492928 NODE_271_length_28096_cov_6.64791_ID_541 1 28096
+
+			Align 64: 464839 492928 NODE_271_length_28096_cov_6.64791_ID_541 1 28096
+				Gap between this and next alignment: 492928 to 494144 (1215 bp)
+				Next Alignment: 494144 502439 NODE_978_length_9536_cov_6.08069_ID_1955 1270 9536
+
+			Align 65: 494144 502439 NODE_978_length_9536_cov_6.08069_ID_1955 1270 9536
+				Gap between this and next alignment: 502439 to 502611 (171 bp)
+				Next Alignment: 502611 513377 NODE_659_length_12916_cov_6.12783_ID_1317 1 10770
+
+			Align 66: 502611 513377 NODE_659_length_12916_cov_6.12783_ID_1317 1 10770
+				Gap between this and next alignment: 513377 to 535218 (21840 bp)
+				Next Alignment: 535218 557825 NODE_239_length_31422_cov_6.06944_ID_477 90 22707
+
+			Align 67: 535218 557825 NODE_239_length_31422_cov_6.06944_ID_477 90 22707
+				Gap between this and next alignment: 557825 to 558143 (317 bp)
+				Next Alignment: 558143 566380 NODE_239_length_31422_cov_6.06944_ID_477 23196 31422
+
+			Align 68: 558143 566380 NODE_239_length_31422_cov_6.06944_ID_477 23196 31422
+				Next Alignment: 566381 574216 NODE_1262_length_7836_cov_5.93857_ID_2523 7836 1
+
+			Align 69: 566381 574216 NODE_1262_length_7836_cov_5.93857_ID_2523 7836 1
+				Negative gap (overlap) between this and next alignment: 574216 to 574005 (-211 bp)
+				Next Alignment: 574005 578905 NODE_2345_length_4895_cov_5.98471_ID_4689 1 4895
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 213.
+			Align 70: 574217 578905 NODE_2345_length_4895_cov_5.98471_ID_4689 213 4895
+				Next Alignment: 578906 588779 NODE_257_length_29236_cov_5.60481_ID_513 1 9876
+
+			Align 71: 578906 588779 NODE_257_length_29236_cov_5.60481_ID_513 1 9876
+				Gap between this and next alignment: 588779 to 590166 (1386 bp)
+				Next Alignment: 590166 609021 NODE_257_length_29236_cov_5.60481_ID_513 10388 29236
+
+			Align 72: 590166 609021 NODE_257_length_29236_cov_5.60481_ID_513 10388 29236
+				Gap between this and next alignment: 609021 to 609303 (281 bp)
+				Next Alignment: 609303 613804 NODE_2628_length_4502_cov_5.18664_ID_5255 4502 1
+
+			Align 73: 609303 613804 NODE_2628_length_4502_cov_5.18664_ID_5255 4502 1
+				Gap between this and next alignment: 613804 to 619616 (5811 bp)
+				Next Alignment: 619616 623052 NODE_1237_length_7943_cov_5.68484_ID_2473 4507 7943
+
+			Align 74: 619616 623052 NODE_1237_length_7943_cov_5.68484_ID_2473 4507 7943
+				Gap between this and next alignment: 623052 to 624275 (1222 bp)
+				Next Alignment: 624275 631388 NODE_1319_length_7483_cov_5.73411_ID_2637 182 7296
+
+			Align 75: 624275 631388 NODE_1319_length_7483_cov_5.73411_ID_2637 182 7296
+				Gap between this and next alignment: 631388 to 631900 (511 bp)
+				Next Alignment: 631900 635115 NODE_3765_length_3454_cov_6.24095_ID_7529 3199 1
+
+			Align 76: 631900 635115 NODE_3765_length_3454_cov_6.24095_ID_7529 3199 1
+				Gap between this and next alignment: 635115 to 635358 (242 bp)
+				Next Alignment: 635358 638494 NODE_4255_length_3137_cov_5.77839_ID_8509 3137 1
+
+			Align 77: 635358 638494 NODE_4255_length_3137_cov_5.77839_ID_8509 3137 1
+				Gap between this and next alignment: 638494 to 639024 (529 bp)
+				Next Alignment: 639024 675838 NODE_184_length_36882_cov_6.00087_ID_367 107 36882
+
+			Align 78: 639024 675838 NODE_184_length_36882_cov_6.00087_ID_367 107 36882
+				Gap between this and next alignment: 675838 to 675840 (1 bp)
+				Next Alignment: 675840 678760 NODE_4725_length_2923_cov_6.04324_ID_9449 2922 1
+
+			Align 79: 675840 678760 NODE_4725_length_2923_cov_6.04324_ID_9449 2922 1
+				Next Alignment: 678761 694131 NODE_548_length_15389_cov_5.74918_ID_1095 15389 3
+
+			Align 80: 678761 694131 NODE_548_length_15389_cov_5.74918_ID_1095 15389 3
+				Gap between this and next alignment: 694131 to 694135 (3 bp)
+				Next Alignment: 694135 694778 NODE_36163_length_645_cov_1.32542_ID_72325 644 1
+
+			Align 81: 694135 694778 NODE_36163_length_645_cov_1.32542_ID_72325 644 1
+				Gap between this and next alignment: 694778 to 695012 (233 bp)
+				Next Alignment: 695012 702527 NODE_1308_length_7551_cov_5.34992_ID_2615 1 7551
+
+			Align 82: 695012 702527 NODE_1308_length_7551_cov_5.34992_ID_2615 1 7551
+				Negative gap (overlap) between this and next alignment: 702527 to 702285 (-242 bp)
+				Next Alignment: 702285 709563 NODE_1388_length_7255_cov_12.1394_ID_2775 7255 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 7255 to 7012.
+			Align 83: 702528 709563 NODE_1388_length_7255_cov_12.1394_ID_2775 7012 1
+				The next alignment (708268 708409 NODE_3133_length_3978_cov_6.99873_ID_6265 3837 3978) is redundant. Skipping.
+				Gap between this and next alignment: 709563 to 716139 (6575 bp)
+				Next Alignment: 716139 723102 NODE_1468_length_6964_cov_5.50384_ID_2935 1 6964
+
+			Align 85: 716139 723102 NODE_1468_length_6964_cov_5.50384_ID_2935 1 6964
+				Next Alignment: 723103 725876 NODE_5099_length_2774_cov_5.90879_ID_10197 2774 1
+
+			Align 86: 723103 725876 NODE_5099_length_2774_cov_5.90879_ID_10197 2774 1
+				Gap between this and next alignment: 725876 to 725878 (1 bp)
+				Next Alignment: 725878 736372 NODE_830_length_10681_cov_5.29804_ID_1659 10680 229
+
+			Align 87: 725878 736372 NODE_830_length_10681_cov_5.29804_ID_1659 10680 229
+				Gap between this and next alignment: 736372 to 743472 (7099 bp)
+				Next Alignment: 743472 746507 NODE_1050_length_9086_cov_4.81287_ID_2099 6051 9086
+
+			Align 88: 743472 746507 NODE_1050_length_9086_cov_4.81287_ID_2099 6051 9086
+				Next Alignment: 746508 752715 NODE_1727_length_6201_cov_5.41279_ID_3453 6201 1
+
+			Align 89: 746508 752715 NODE_1727_length_6201_cov_5.41279_ID_3453 6201 1
+				Gap between this and next alignment: 752715 to 757897 (5181 bp)
+				Next Alignment: 757897 767837 NODE_386_length_20159_cov_5.27686_ID_771 15422 5481
+
+			Align 90: 757897 767837 NODE_386_length_20159_cov_5.27686_ID_771 15422 5481
+				Gap between this and next alignment: 767837 to 768025 (187 bp)
+				Next Alignment: 768025 773185 NODE_386_length_20159_cov_5.27686_ID_771 5293 134
+
+			Align 91: 768025 773185 NODE_386_length_20159_cov_5.27686_ID_771 5293 134
+				Gap between this and next alignment: 773185 to 793085 (19899 bp)
+				Next Alignment: 793085 795773 NODE_1062_length_9024_cov_5.47497_ID_2123 6333 9023
+
+			Align 92: 793085 795773 NODE_1062_length_9024_cov_5.47497_ID_2123 6333 9023
+				Gap between this and next alignment: 795773 to 797891 (2117 bp)
+				Next Alignment: 797891 816748 NODE_410_length_19129_cov_5.61959_ID_819 1 18863
+
+			Align 93: 797891 816748 NODE_410_length_19129_cov_5.61959_ID_819 1 18863
+				Gap between this and next alignment: 816748 to 825260 (8511 bp)
+				Next Alignment: 825260 834282 NODE_754_length_11506_cov_5.03825_ID_1507 11504 2483
+
+			Align 94: 825260 834282 NODE_754_length_11506_cov_5.03825_ID_1507 11504 2483
+				Gap between this and next alignment: 834282 to 842412 (8129 bp)
+				Next Alignment: 842412 849172 NODE_480_length_17234_cov_5.89778_ID_959 4266 11010
+
+			Align 95: 842412 849172 NODE_480_length_17234_cov_5.89778_ID_959 4266 11010
+				Gap between this and next alignment: 849172 to 849182 (9 bp)
+				Next Alignment: 849182 853659 NODE_480_length_17234_cov_5.89778_ID_959 12756 17233
+
+			Align 96: 849182 853659 NODE_480_length_17234_cov_5.89778_ID_959 12756 17233
+				Gap between this and next alignment: 853659 to 865888 (12228 bp)
+				Next Alignment: 865888 868766 NODE_1889_length_5794_cov_5.88325_ID_3777 2880 1
+
+			Align 97: 865888 868766 NODE_1889_length_5794_cov_5.88325_ID_3777 2880 1
+				Negative gap (overlap) between this and next alignment: 868766 to 868699 (-67 bp)
+				Next Alignment: 868699 873901 NODE_2113_length_5289_cov_5.36301_ID_4225 5289 90
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 5289 to 5221.
+			Align 98: 868767 873901 NODE_2113_length_5289_cov_5.36301_ID_4225 5221 90
+				Gap between this and next alignment: 873901 to 873955 (53 bp)
+				Next Alignment: 873955 885494 NODE_738_length_11694_cov_5.81614_ID_1475 11586 1
+
+			Align 99: 873955 885494 NODE_738_length_11694_cov_5.81614_ID_1475 11586 1
+				Gap between this and next alignment: 885494 to 897545 (12050 bp)
+				Next Alignment: 897545 898306 NODE_10745_length_1600_cov_5.70485_ID_21489 1 762
+
+			Align 100: 897545 898306 NODE_10745_length_1600_cov_5.70485_ID_21489 1 762
+				Gap between this and next alignment: 898306 to 898384 (77 bp)
+				Next Alignment: 898384 898937 NODE_43143_length_557_cov_1.59163_ID_86285 554 1
+
+			Align 101: 898384 898937 NODE_43143_length_557_cov_1.59163_ID_86285 554 1
+				Gap between this and next alignment: 898937 to 901685 (2747 bp)
+				Next Alignment: 901685 904129 NODE_6028_length_2443_cov_5.68467_ID_12055 2443 1
+
+			Align 102: 901685 904129 NODE_6028_length_2443_cov_5.68467_ID_12055 2443 1
+				Gap between this and next alignment: 904129 to 929658 (25528 bp)
+				Next Alignment: 929658 935686 NODE_549_length_15314_cov_5.08657_ID_1097 6910 879
+
+			Align 103: 929658 935686 NODE_549_length_15314_cov_5.08657_ID_1097 6910 879
+				Gap between this and next alignment: 935686 to 950244 (14557 bp)
+				Next Alignment: 950244 954759 NODE_2616_length_4516_cov_5.039_ID_5231 4516 1
+
+			Align 104: 950244 954759 NODE_2616_length_4516_cov_5.039_ID_5231 4516 1
+				Negative gap (overlap) between this and next alignment: 954759 to 954624 (-135 bp)
+				Next Alignment: 954624 970857 NODE_513_length_16244_cov_5.56143_ID_1025 1 16243
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 137.
+			Align 105: 954760 970857 NODE_513_length_16244_cov_5.56143_ID_1025 137 16243
+				Gap between this and next alignment: 970857 to 970860 (2 bp)
+				Next Alignment: 970860 980850 NODE_297_length_25249_cov_5.32051_ID_593 2 9982
+
+			Align 106: 970860 980850 NODE_297_length_25249_cov_5.32051_ID_593 2 9982
+				Gap between this and next alignment: 980850 to 982016 (1165 bp)
+				Next Alignment: 982016 983976 NODE_297_length_25249_cov_5.32051_ID_593 9990 11950
+
+			Align 107: 982016 983976 NODE_297_length_25249_cov_5.32051_ID_593 9990 11950
+				Gap between this and next alignment: 983976 to 984142 (165 bp)
+				Next Alignment: 984142 997407 NODE_297_length_25249_cov_5.32051_ID_593 11981 25249
+
+			Align 108: 984142 997407 NODE_297_length_25249_cov_5.32051_ID_593 11981 25249
+				Gap between this and next alignment: 997407 to 1005188 (7780 bp)
+				Next Alignment: 1005188 1005263 NODE_340_length_22304_cov_7.54344_ID_679 20963 21038
+
+			Align 109: 1005188 1005263 NODE_340_length_22304_cov_7.54344_ID_679 20963 21038
+				Gap between this and next alignment: 1005263 to 1051247 (45983 bp)
+				Next Alignment: 1051247 1080451 NODE_259_length_29197_cov_5.27287_ID_517 29197 1
+
+			Align 110: 1051247 1080451 NODE_259_length_29197_cov_5.27287_ID_517 29197 1
+				Gap between this and next alignment: 1080451 to 1082505 (2053 bp)
+				Next Alignment: 1082505 1086809 NODE_1355_length_7344_cov_17.2067_ID_2709 4307 1
+
+			Align 111: 1082505 1086809 NODE_1355_length_7344_cov_17.2067_ID_2709 4307 1
+				Gap between this and next alignment: 1086809 to 1087964 (1154 bp)
+				Next Alignment: 1087964 1093828 NODE_1853_length_5865_cov_5.74303_ID_3705 5865 1
+
+			Align 112: 1087964 1093828 NODE_1853_length_5865_cov_5.74303_ID_3705 5865 1
+				Gap between this and next alignment: 1093828 to 1093831 (2 bp)
+				Next Alignment: 1093831 1096126 NODE_3033_length_4064_cov_5.30282_ID_6065 4062 1767
+
+			Align 113: 1093831 1096126 NODE_3033_length_4064_cov_5.30282_ID_6065 4062 1767
+				Gap between this and next alignment: 1096126 to 1097628 (1501 bp)
+				Next Alignment: 1097628 1109347 NODE_683_length_12505_cov_5.38064_ID_1365 12505 790
+
+			Align 114: 1097628 1109347 NODE_683_length_12505_cov_5.38064_ID_1365 12505 790
+				Gap between this and next alignment: 1109347 to 1109726 (378 bp)
+				Next Alignment: 1109726 1109842 NODE_683_length_12505_cov_5.38064_ID_1365 428 544
+
+			Align 115: 1109726 1109842 NODE_683_length_12505_cov_5.38064_ID_1365 428 544
+				Gap between this and next alignment: 1109842 to 1110019 (176 bp)
+				Next Alignment: 1110019 1114891 NODE_246_length_30637_cov_5.75159_ID_491 1634 6504
+
+			Align 116: 1110019 1114891 NODE_246_length_30637_cov_5.75159_ID_491 1634 6504
+				Gap between this and next alignment: 1114891 to 1118233 (3341 bp)
+				Next Alignment: 1118233 1121962 NODE_246_length_30637_cov_5.75159_ID_491 6505 10234
+
+			Align 117: 1118233 1121962 NODE_246_length_30637_cov_5.75159_ID_491 6505 10234
+				Gap between this and next alignment: 1121962 to 1121966 (3 bp)
+				Next Alignment: 1121966 1134543 NODE_246_length_30637_cov_5.75159_ID_491 13678 26257
+
+			Align 118: 1121966 1134543 NODE_246_length_30637_cov_5.75159_ID_491 13678 26257
+				Gap between this and next alignment: 1134543 to 1135494 (950 bp)
+				Next Alignment: 1135494 1138717 NODE_246_length_30637_cov_5.75159_ID_491 27424 30637
+
+			Align 119: 1135494 1138717 NODE_246_length_30637_cov_5.75159_ID_491 27424 30637
+				Gap between this and next alignment: 1138717 to 1147684 (8966 bp)
+				Next Alignment: 1147684 1153663 NODE_515_length_16143_cov_5.63476_ID_1029 10165 16143
+
+			Align 120: 1147684 1153663 NODE_515_length_16143_cov_5.63476_ID_1029 10165 16143
+				Next Alignment: 1153664 1163087 NODE_999_length_9418_cov_5.55228_ID_1997 9418 4
+
+			Align 121: 1153664 1163087 NODE_999_length_9418_cov_5.55228_ID_1997 9418 4
+				Gap between this and next alignment: 1163087 to 1163450 (362 bp)
+				Next Alignment: 1163450 1172247 NODE_1086_length_8839_cov_4.69923_ID_2171 8783 2
+
+			Align 122: 1163450 1172247 NODE_1086_length_8839_cov_4.69923_ID_2171 8783 2
+				Gap between this and next alignment: 1172247 to 1194578 (22330 bp)
+				Next Alignment: 1194578 1198724 NODE_2948_length_4146_cov_5.4637_ID_5895 4146 1
+
+			Align 123: 1194578 1198724 NODE_2948_length_4146_cov_5.4637_ID_5895 4146 1
+				Negative gap (overlap) between this and next alignment: 1198724 to 1198506 (-218 bp)
+				Next Alignment: 1198506 1206781 NODE_1176_length_8276_cov_5.63216_ID_2351 1 8276
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 220.
+			Align 124: 1198725 1206781 NODE_1176_length_8276_cov_5.63216_ID_2351 220 8276
+				Gap between this and next alignment: 1206781 to 1206783 (1 bp)
+				Next Alignment: 1206783 1210590 NODE_3311_length_3819_cov_5.94952_ID_6621 3818 2
+
+			Align 125: 1206783 1210590 NODE_3311_length_3819_cov_5.94952_ID_6621 3818 2
+				Gap between this and next alignment: 1210590 to 1210595 (4 bp)
+				Next Alignment: 1210595 1228878 NODE_444_length_18289_cov_5.68997_ID_887 18286 1
+
+			Align 126: 1210595 1228878 NODE_444_length_18289_cov_5.68997_ID_887 18286 1
+				The next alignment (1228296 1228878 NODE_40862_length_583_cov_4.9053_ID_81723 583 1) is redundant. Skipping.
+				Gap between this and next alignment: 1228878 to 1229209 (330 bp)
+				Next Alignment: 1229209 1243938 NODE_177_length_38373_cov_5.97163_ID_353 4 14733
+
+			Align 128: 1229209 1243938 NODE_177_length_38373_cov_5.97163_ID_353 4 14733
+				Gap between this and next alignment: 1243938 to 1245417 (1478 bp)
+				Next Alignment: 1245417 1253794 NODE_177_length_38373_cov_5.97163_ID_353 16719 25087
+
+			Align 129: 1245417 1253794 NODE_177_length_38373_cov_5.97163_ID_353 16719 25087
+				Gap between this and next alignment: 1253794 to 1272575 (18780 bp)
+				Next Alignment: 1272575 1292729 NODE_253_length_29901_cov_6.22898_ID_505 2 20204
+
+			Align 130: 1272575 1292729 NODE_253_length_29901_cov_6.22898_ID_505 2 20204
+				Gap between this and next alignment: 1292729 to 1302951 (10221 bp)
+				Next Alignment: 1302951 1303066 NODE_35032_length_661_cov_1.24917_ID_70063 661 546
+
+			Align 131: 1302951 1303066 NODE_35032_length_661_cov_1.24917_ID_70063 661 546
+				Gap between this and next alignment: 1303066 to 1306396 (3329 bp)
+				Next Alignment: 1306396 1306924 NODE_46018_length_529_cov_1.56751_ID_92035 529 1
+
+			Align 132: 1306396 1306924 NODE_46018_length_529_cov_1.56751_ID_92035 529 1
+				Gap between this and next alignment: 1306924 to 1308730 (1805 bp)
+				Next Alignment: 1308730 1319175 NODE_862_length_10423_cov_5.12519_ID_1723 10421 1
+
+			Align 133: 1308730 1319175 NODE_862_length_10423_cov_5.12519_ID_1723 10421 1
+				Gap between this and next alignment: 1319175 to 1319177 (1 bp)
+				Next Alignment: 1319177 1336152 NODE_380_length_20658_cov_6.55327_ID_759 20657 3685
+
+			Align 134: 1319177 1336152 NODE_380_length_20658_cov_6.55327_ID_759 20657 3685
+				Gap between this and next alignment: 1336152 to 1336322 (169 bp)
+				Next Alignment: 1336322 1338148 NODE_380_length_20658_cov_6.55327_ID_759 3444 1620
+
+			Align 135: 1336322 1338148 NODE_380_length_20658_cov_6.55327_ID_759 3444 1620
+				Gap between this and next alignment: 1338148 to 1342007 (3858 bp)
+				Next Alignment: 1342007 1344925 NODE_1753_length_6144_cov_5.62867_ID_3505 2731 5658
+
+			Align 136: 1342007 1344925 NODE_1753_length_6144_cov_5.62867_ID_3505 2731 5658
+				Gap between this and next alignment: 1344925 to 1355639 (10713 bp)
+				Next Alignment: 1355639 1359478 NODE_925_length_9850_cov_6.35008_ID_1849 5574 9411
+
+			Align 137: 1355639 1359478 NODE_925_length_9850_cov_6.35008_ID_1849 5574 9411
+				Gap between this and next alignment: 1359478 to 1360754 (1275 bp)
+				Next Alignment: 1360754 1378381 NODE_327_length_23169_cov_6.30942_ID_653 22417 4781
+
+			Align 138: 1360754 1378381 NODE_327_length_23169_cov_6.30942_ID_653 22417 4781
+				Gap between this and next alignment: 1378381 to 1378992 (610 bp)
+				Next Alignment: 1378992 1383199 NODE_327_length_23169_cov_6.30942_ID_653 4739 534
+
+			Align 139: 1378992 1383199 NODE_327_length_23169_cov_6.30942_ID_653 4739 534
+				Gap between this and next alignment: 1383199 to 1383583 (383 bp)
+				Next Alignment: 1383583 1394757 NODE_646_length_13338_cov_6.85169_ID_1291 13338 2154
+
+			Align 140: 1383583 1394757 NODE_646_length_13338_cov_6.85169_ID_1291 13338 2154
+				Gap between this and next alignment: 1394757 to 1396852 (2094 bp)
+				Next Alignment: 1396852 1399062 NODE_6863_length_2213_cov_6.20528_ID_13725 2212 2
+
+			Align 141: 1396852 1399062 NODE_6863_length_2213_cov_6.20528_ID_13725 2212 2
+				Gap between this and next alignment: 1399062 to 1399064 (1 bp)
+				Next Alignment: 1399064 1402998 NODE_1213_length_8119_cov_6.12587_ID_2425 8119 4185
+
+			Align 142: 1399064 1402998 NODE_1213_length_8119_cov_6.12587_ID_2425 8119 4185
+				Gap between this and next alignment: 1402998 to 1412766 (9767 bp)
+				Next Alignment: 1412766 1415405 NODE_1169_length_8350_cov_6.04533_ID_2337 2641 1
+
+			Align 143: 1412766 1415405 NODE_1169_length_8350_cov_6.04533_ID_2337 2641 1
+				Gap between this and next alignment: 1415405 to 1415407 (1 bp)
+				Next Alignment: 1415407 1416549 NODE_246_length_30637_cov_5.75159_ID_491 2 1145
+
+			Align 144: 1415407 1416549 NODE_246_length_30637_cov_5.75159_ID_491 2 1145
+				Gap between this and next alignment: 1416549 to 1417816 (1266 bp)
+				Next Alignment: 1417816 1439354 NODE_355_length_21549_cov_5.95943_ID_709 1 21548
+
+			Align 145: 1417816 1439354 NODE_355_length_21549_cov_5.95943_ID_709 1 21548
+				Gap between this and next alignment: 1439354 to 1444550 (5195 bp)
+				Next Alignment: 1444550 1466318 NODE_348_length_21746_cov_6.49076_ID_695 1 21745
+
+			Align 146: 1444550 1466318 NODE_348_length_21746_cov_6.49076_ID_695 1 21745
+				Gap between this and next alignment: 1466318 to 1466320 (1 bp)
+				Next Alignment: 1466320 1474791 NODE_1150_length_8472_cov_5.73197_ID_2299 1 8472
+
+			Align 147: 1466320 1474791 NODE_1150_length_8472_cov_5.73197_ID_2299 1 8472
+				Gap between this and next alignment: 1474791 to 1482702 (7910 bp)
+				Next Alignment: 1482702 1486446 NODE_2999_length_4096_cov_5.85251_ID_5997 351 4095
+
+			Align 148: 1482702 1486446 NODE_2999_length_4096_cov_5.85251_ID_5997 351 4095
+				Gap between this and next alignment: 1486446 to 1486448 (1 bp)
+				Next Alignment: 1486448 1490342 NODE_3226_length_3893_cov_5.88953_ID_6451 1 3893
+
+			Align 149: 1486448 1490342 NODE_3226_length_3893_cov_5.88953_ID_6451 1 3893
+				Next Alignment: 1490343 1494041 NODE_3004_length_4092_cov_5.34729_ID_6007 1 3700
+
+			Align 150: 1490343 1494041 NODE_3004_length_4092_cov_5.34729_ID_6007 1 3700
+				Gap between this and next alignment: 1494041 to 1494544 (502 bp)
+				Next Alignment: 1494544 1518869 NODE_311_length_24462_cov_6.5092_ID_621 24335 2
+
+			Align 151: 1494544 1518869 NODE_311_length_24462_cov_6.5092_ID_621 24335 2
+				Gap between this and next alignment: 1518869 to 1518871 (1 bp)
+				Next Alignment: 1518871 1521128 NODE_53_length_92179_cov_6.5865_ID_105 1 2259
+
+			Align 152: 1518871 1521128 NODE_53_length_92179_cov_6.5865_ID_105 1 2259
+				Gap between this and next alignment: 1521128 to 1521467 (338 bp)
+				Next Alignment: 1521467 1529239 NODE_53_length_92179_cov_6.5865_ID_105 3173 10947
+
+			Align 153: 1521467 1529239 NODE_53_length_92179_cov_6.5865_ID_105 3173 10947
+				Gap between this and next alignment: 1529239 to 1530327 (1087 bp)
+				Next Alignment: 1530327 1532405 NODE_53_length_92179_cov_6.5865_ID_105 13884 15962
+
+			Align 154: 1530327 1532405 NODE_53_length_92179_cov_6.5865_ID_105 13884 15962
+				Gap between this and next alignment: 1532405 to 1551647 (19241 bp)
+				Next Alignment: 1551647 1574561 NODE_53_length_92179_cov_6.5865_ID_105 31543 54456
+
+			Align 155: 1551647 1574561 NODE_53_length_92179_cov_6.5865_ID_105 31543 54456
+				Gap between this and next alignment: 1574561 to 1616160 (41598 bp)
+				Next Alignment: 1616160 1629796 NODE_53_length_92179_cov_6.5865_ID_105 64231 77864
+
+			Align 156: 1616160 1629796 NODE_53_length_92179_cov_6.5865_ID_105 64231 77864
+				Gap between this and next alignment: 1629796 to 1629804 (7 bp)
+				Next Alignment: 1629804 1640777 NODE_53_length_92179_cov_6.5865_ID_105 78137 89112
+
+			Align 157: 1629804 1640777 NODE_53_length_92179_cov_6.5865_ID_105 78137 89112
+				Gap between this and next alignment: 1640777 to 1643066 (2288 bp)
+				Next Alignment: 1643066 1645451 NODE_53_length_92179_cov_6.5865_ID_105 89794 92179
+
+			Align 158: 1643066 1645451 NODE_53_length_92179_cov_6.5865_ID_105 89794 92179
+				Negative gap (overlap) between this and next alignment: 1645451 to 1645425 (-26 bp)
+				Next Alignment: 1645425 1656065 NODE_439_length_18440_cov_6.44297_ID_877 2 10669
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 2 to 29.
+			Align 159: 1645452 1656065 NODE_439_length_18440_cov_6.44297_ID_877 29 10669
+				Gap between this and next alignment: 1656065 to 1656127 (61 bp)
+				Next Alignment: 1656127 1663488 NODE_439_length_18440_cov_6.44297_ID_877 11050 18410
+
+			Align 160: 1656127 1663488 NODE_439_length_18440_cov_6.44297_ID_877 11050 18410
+				Gap between this and next alignment: 1663488 to 1674665 (11176 bp)
+				Next Alignment: 1674665 1675813 NODE_16843_length_1149_cov_1.53565_ID_33685 1149 1
+
+			Align 161: 1674665 1675813 NODE_16843_length_1149_cov_1.53565_ID_33685 1149 1
+				Gap between this and next alignment: 1675813 to 1675845 (31 bp)
+				Next Alignment: 1675845 1676512 NODE_34480_length_670_cov_1.4813_ID_68959 1 668
+
+			Align 162: 1675845 1676512 NODE_34480_length_670_cov_1.4813_ID_68959 1 668
+				Gap between this and next alignment: 1676512 to 1676628 (115 bp)
+				Next Alignment: 1676628 1679736 NODE_4307_length_3109_cov_6.24525_ID_8613 3109 1
+
+			Align 163: 1676628 1679736 NODE_4307_length_3109_cov_6.24525_ID_8613 3109 1
+				Gap between this and next alignment: 1679736 to 1679744 (7 bp)
+				Next Alignment: 1679744 1685909 NODE_1621_length_6504_cov_5.72771_ID_3241 6497 332
+
+			Align 164: 1679744 1685909 NODE_1621_length_6504_cov_5.72771_ID_3241 6497 332
+				Gap between this and next alignment: 1685909 to 1702354 (16444 bp)
+				Next Alignment: 1702354 1702469 NODE_246_length_30637_cov_5.75159_ID_491 1467 1353
+
+			Align 165: 1702354 1702469 NODE_246_length_30637_cov_5.75159_ID_491 1467 1353
+				Gap between this and next alignment: 1702469 to 1713524 (11054 bp)
+				Next Alignment: 1713524 1718838 NODE_2103_length_5316_cov_6.79795_ID_4205 5315 1
+
+			Align 166: 1713524 1718838 NODE_2103_length_5316_cov_6.79795_ID_4205 5315 1
+				The next alignment (1714955 1715760 NODE_27226_length_806_cov_9.21704_ID_54451 806 1) is redundant. Skipping.
+				Next Alignment: 1718839 1721403 NODE_5648_length_2565_cov_6.62829_ID_11295 2565 1
+
+			Align 168: 1718839 1721403 NODE_5648_length_2565_cov_6.62829_ID_11295 2565 1
+				Next Alignment: 1721404 1724601 NODE_4107_length_3221_cov_6.62792_ID_8213 1 3216
+
+			Align 169: 1721404 1724601 NODE_4107_length_3221_cov_6.62792_ID_8213 1 3216
+				Gap between this and next alignment: 1724601 to 1724607 (5 bp)
+				Next Alignment: 1724607 1732340 NODE_1278_length_7739_cov_7.80297_ID_2555 1 7738
+
+			Align 170: 1724607 1732340 NODE_1278_length_7739_cov_7.80297_ID_2555 1 7738
+				Gap between this and next alignment: 1732340 to 1732342 (1 bp)
+				Next Alignment: 1732342 1734317 NODE_8061_length_1976_cov_7.557_ID_16121 1 1976
+
+			Align 171: 1732342 1734317 NODE_8061_length_1976_cov_7.557_ID_16121 1 1976
+				Next Alignment: 1734318 1735740 NODE_12525_length_1435_cov_6.05217_ID_25049 1435 1
+
+			Align 172: 1734318 1735740 NODE_12525_length_1435_cov_6.05217_ID_25049 1435 1
+				Gap between this and next alignment: 1735740 to 1736311 (570 bp)
+				Next Alignment: 1736311 1744207 NODE_240_length_31308_cov_7.20756_ID_479 7899 1
+
+			Align 173: 1736311 1744207 NODE_240_length_31308_cov_7.20756_ID_479 7899 1
+				Gap between this and next alignment: 1744207 to 1744209 (1 bp)
+				Next Alignment: 1744209 1751409 NODE_1405_length_7203_cov_7.06058_ID_2809 7202 1
+
+			Align 174: 1744209 1751409 NODE_1405_length_7203_cov_7.06058_ID_2809 7202 1
+				Gap between this and next alignment: 1751409 to 1751521 (111 bp)
+				Next Alignment: 1751521 1772024 NODE_374_length_20896_cov_6.65664_ID_747 20803 271
+
+			Align 175: 1751521 1772024 NODE_374_length_20896_cov_6.65664_ID_747 20803 271
+				Gap between this and next alignment: 1772024 to 1778819 (6794 bp)
+				Next Alignment: 1778819 1780699 NODE_8622_length_1881_cov_6.43319_ID_17243 1881 1
+
+			Align 176: 1778819 1780699 NODE_8622_length_1881_cov_6.43319_ID_17243 1881 1
+				Gap between this and next alignment: 1780699 to 1780701 (1 bp)
+				Next Alignment: 1780701 1782344 NODE_1215_length_8104_cov_6.24562_ID_2429 8103 6460
+
+			Align 177: 1780701 1782344 NODE_1215_length_8104_cov_6.24562_ID_2429 8103 6460
+				Gap between this and next alignment: 1782344 to 1782621 (276 bp)
+				Next Alignment: 1782621 1788293 NODE_1215_length_8104_cov_6.24562_ID_2429 5681 2
+
+			Align 178: 1782621 1788293 NODE_1215_length_8104_cov_6.24562_ID_2429 5681 2
+				Gap between this and next alignment: 1788293 to 1788296 (2 bp)
+				Next Alignment: 1788296 1798306 NODE_499_length_16599_cov_6.77654_ID_997 16599 6601
+
+			Align 179: 1788296 1798306 NODE_499_length_16599_cov_6.77654_ID_997 16599 6601
+				Gap between this and next alignment: 1798306 to 1802907 (4600 bp)
+				Next Alignment: 1802907 1802982 NODE_28442_length_778_cov_6.08714_ID_56883 76 1
+
+			Align 180: 1802907 1802982 NODE_28442_length_778_cov_6.08714_ID_56883 76 1
+				Gap between this and next alignment: 1802982 to 1805297 (2314 bp)
+				Next Alignment: 1805297 1808255 NODE_2836_length_4264_cov_7.39225_ID_5671 88 3046
+
+			Align 181: 1805297 1808255 NODE_2836_length_4264_cov_7.39225_ID_5671 88 3046
+				Gap between this and next alignment: 1808255 to 1808307 (51 bp)
+				Next Alignment: 1808307 1808897 NODE_2836_length_4264_cov_7.39225_ID_5671 3672 4264
+
+			Align 182: 1808307 1808897 NODE_2836_length_4264_cov_7.39225_ID_5671 3672 4264
+				Gap between this and next alignment: 1808897 to 1809966 (1068 bp)
+				Next Alignment: 1809966 1819039 NODE_552_length_15270_cov_6.99428_ID_1103 1 9074
+
+			Align 183: 1809966 1819039 NODE_552_length_15270_cov_6.99428_ID_1103 1 9074
+				Gap between this and next alignment: 1819039 to 1825199 (6159 bp)
+				Next Alignment: 1825199 1832173 NODE_1224_length_8041_cov_6.85487_ID_2447 8041 1066
+
+			Align 184: 1825199 1832173 NODE_1224_length_8041_cov_6.85487_ID_2447 8041 1066
+				Gap between this and next alignment: 1832173 to 1839472 (7298 bp)
+				Next Alignment: 1839472 1841977 NODE_3133_length_3978_cov_6.99873_ID_6265 2509 1
+
+			Align 185: 1839472 1841977 NODE_3133_length_3978_cov_6.99873_ID_6265 2509 1
+				Gap between this and next alignment: 1841977 to 1842150 (172 bp)
+				Next Alignment: 1842150 1853458 NODE_766_length_11376_cov_8.23646_ID_1531 1 11317
+
+			Align 186: 1842150 1853458 NODE_766_length_11376_cov_8.23646_ID_1531 1 11317
+				Negative gap (overlap) between this and next alignment: 1853458 to 1853444 (-14 bp)
+				Next Alignment: 1853444 1855001 NODE_9630_length_1739_cov_6.18112_ID_19259 102 1658
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 102 to 117.
+			Align 187: 1853459 1855001 NODE_9630_length_1739_cov_6.18112_ID_19259 117 1658
+				Gap between this and next alignment: 1855001 to 1861027 (6025 bp)
+				Next Alignment: 1861027 1861127 NODE_9630_length_1739_cov_6.18112_ID_19259 1 101
+
+			Align 188: 1861027 1861127 NODE_9630_length_1739_cov_6.18112_ID_19259 1 101
+				Gap between this and next alignment: 1861127 to 1875980 (14852 bp)
+				Next Alignment: 1875980 1878076 NODE_7388_length_2101_cov_7.58944_ID_14775 1 2097
+
+			Align 189: 1875980 1878076 NODE_7388_length_2101_cov_7.58944_ID_14775 1 2097
+				Gap between this and next alignment: 1878076 to 1878081 (4 bp)
+				Next Alignment: 1878081 1900705 NODE_312_length_24437_cov_7.9028_ID_623 1 22634
+
+			Align 190: 1878081 1900705 NODE_312_length_24437_cov_7.9028_ID_623 1 22634
+				Gap between this and next alignment: 1900705 to 1901774 (1068 bp)
+				Next Alignment: 1901774 1911023 NODE_1021_length_9252_cov_8.18767_ID_2041 1 9252
+
+			Align 191: 1901774 1911023 NODE_1021_length_9252_cov_8.18767_ID_2041 1 9252
+				Next Alignment: 1911024 1913288 NODE_6670_length_2266_cov_7.29353_ID_13339 2266 2
+
+			Align 192: 1911024 1913288 NODE_6670_length_2266_cov_7.29353_ID_13339 2266 2
+				Gap between this and next alignment: 1913288 to 1923999 (10710 bp)
+				Next Alignment: 1923999 1924281 NODE_25338_length_850_cov_1.51572_ID_50675 283 1
+
+			Align 193: 1923999 1924281 NODE_25338_length_850_cov_1.51572_ID_50675 283 1
+				Gap between this and next alignment: 1924281 to 1930846 (6564 bp)
+				Next Alignment: 1930846 1931467 NODE_37716_length_622_cov_1.84127_ID_75431 622 1
+
+			Align 194: 1930846 1931467 NODE_37716_length_622_cov_1.84127_ID_75431 622 1
+				Gap between this and next alignment: 1931467 to 1950051 (18583 bp)
+				Next Alignment: 1950051 1953817 NODE_340_length_22304_cov_7.54344_ID_679 6125 2415
+
+			Align 195: 1950051 1953817 NODE_340_length_22304_cov_7.54344_ID_679 6125 2415
+				Gap between this and next alignment: 1953817 to 1954433 (615 bp)
+				Next Alignment: 1954433 1956252 NODE_340_length_22304_cov_7.54344_ID_679 1820 1
+
+			Align 196: 1954433 1956252 NODE_340_length_22304_cov_7.54344_ID_679 1820 1
+				Gap between this and next alignment: 1956252 to 1956481 (228 bp)
+				Next Alignment: 1956481 1957299 NODE_26630_length_819_cov_8.73953_ID_53259 819 1
+
+			Align 197: 1956481 1957299 NODE_26630_length_819_cov_8.73953_ID_53259 819 1
+				The next alignment (1957212 1957299 NODE_47865_length_513_cov_20.3996_ID_95729 88 1) is redundant. Skipping.
+				Gap between this and next alignment: 1957299 to 1957478 (178 bp)
+				Next Alignment: 1957478 1958259 NODE_28294_length_782_cov_13.8459_ID_56587 1 782
+
+			Align 199: 1957478 1958259 NODE_28294_length_782_cov_13.8459_ID_56587 1 782
+				Gap between this and next alignment: 1958259 to 1963332 (5072 bp)
+				Next Alignment: 1963332 1963856 NODE_46483_length_525_cov_35.3872_ID_92965 1 525
+
+			Align 200: 1963332 1963856 NODE_46483_length_525_cov_35.3872_ID_92965 1 525
+				Gap between this and next alignment: 1963856 to 1963909 (52 bp)
+				Next Alignment: 1963909 1964316 NODE_4469_length_3030_cov_11.5462_ID_8937 2624 3030
+
+			Align 201: 1963909 1964316 NODE_4469_length_3030_cov_11.5462_ID_8937 2624 3030
+				Gap between this and next alignment: 1964316 to 1987810 (23493 bp)
+				Next Alignment: 1987810 1995417 NODE_580_length_14467_cov_7.79531_ID_1159 5289 12977
+
+			Align 202: 1987810 1995417 NODE_580_length_14467_cov_7.79531_ID_1159 5289 12977
+				Gap between this and next alignment: 1995417 to 2006246 (10828 bp)
+				Next Alignment: 2006246 2009268 NODE_3272_length_3851_cov_6.95785_ID_6543 3851 828
+
+			Align 203: 2006246 2009268 NODE_3272_length_3851_cov_6.95785_ID_6543 3851 828
+				The next alignment (2007865 2008574 NODE_31853_length_713_cov_7.2538_ID_63705 4 713) is redundant. Skipping.
+				Gap between this and next alignment: 2009268 to 2009500 (231 bp)
+				Next Alignment: 2009500 2010083 NODE_3272_length_3851_cov_6.95785_ID_6543 586 1
+
+			Align 205: 2009500 2010083 NODE_3272_length_3851_cov_6.95785_ID_6543 586 1
+				Gap between this and next alignment: 2010083 to 2013001 (2917 bp)
+				Next Alignment: 2013001 2022983 NODE_534_length_15577_cov_8.79758_ID_1067 15577 5595
+
+			Align 206: 2013001 2022983 NODE_534_length_15577_cov_8.79758_ID_1067 15577 5595
+				Gap between this and next alignment: 2022983 to 2030712 (7728 bp)
+				Next Alignment: 2030712 2042383 NODE_741_length_11673_cov_8.46256_ID_1481 11672 1
+
+			Align 207: 2030712 2042383 NODE_741_length_11673_cov_8.46256_ID_1481 11672 1
+				Gap between this and next alignment: 2042383 to 2043089 (705 bp)
+				Next Alignment: 2043089 2043697 NODE_38662_length_610_cov_8.19279_ID_77323 610 1
+
+			Align 208: 2043089 2043697 NODE_38662_length_610_cov_8.19279_ID_77323 610 1
+				Negative gap (overlap) between this and next alignment: 2043697 to 2043643 (-54 bp)
+				Next Alignment: 2043643 2046790 NODE_4231_length_3151_cov_7.5969_ID_8461 1 3151
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 56.
+			Align 209: 2043698 2046790 NODE_4231_length_3151_cov_7.5969_ID_8461 56 3151
+			END in gap: 2046790 to 2052007 (5217 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Campylobacter_concisus_13826/contigs_reports/nucmer_output/SPAdes.used_snps
+
+Results:
+	Local Misassemblies: 18
+	Misassemblies: 14
+		Relocations: 14
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 6
+	Misassembled Contigs: 10
+	Misassembled Contig Bases: 273552
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 67 part
+Partially Unaligned Contigs with Misassemblies: 4
+Unaligned Contig Bases: 261469
+
+Ambiguously Mapped Contigs: 4
+Total Bases in Ambiguously Mapped Contigs: 3301
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 1229788
+
+	SNPs: 48159
+	Insertions: 1227
+	Deletions: 1112
+
+	Positive Gaps: 173
+		Internal Gaps:  35
+		External Gaps:  138
+		External Gap Total:  712717
+		External Gap Average: 5165
+	Negative Gaps: 11
+		Internal Overlaps:  0
+		External Overlaps:  11
+		External Overlaps Total: -1187
+		External Overlaps Average: -108
+	Contigs with Redundant Alignments: 10 (4374)

@@ -1,0 +1,1206 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_]
+	Loaded [Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_]
+	Loaded [Eubacterium_sp_3_1_31_gi_482850063_ref_NZ_]
+	Loaded [Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_]
+	Loaded [Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_]
+	Loaded [Eubacterium_sp_3_1_31_gi_482850069_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 6
+	Total Region Length: 3571452
+Analyzing contigs...
+CONTIG: NODE_4474_length_2340_cov_73.0806_ID_8947 (2340bp)
+Top Length: 2340  Top ID: 97.66
+		This contig has 3 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 319109 321460 | 1 2340 | 2352 2340 | 97.66 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_4474_length_2340_cov_73.0806_ID_8947
+		Skipping alignment  141730 144081 | 1 2340 | 2352 2340 | 97.66 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_4474_length_2340_cov_73.0806_ID_8947
+		Skipping alignment  1247 3598 | 2340 1 | 2352 2340 | 97.66 | Eubacterium_sp_3_1_31_gi_482850069_ref_NZ_ NODE_4474_length_2340_cov_73.0806_ID_8947
+
+CONTIG: NODE_23_length_210865_cov_72.1903_ID_45 (210865bp)
+Top Length: 46925  Top ID: 99.05
+		Skipping redundant alignment 299030 317870 | 190955 209793 | 18841 18839 | 99.35 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_23_length_210865_cov_72.1903_ID_45
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 166539 189829 | 190948 167661 | 23291 23288 | 97.72 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_23_length_210865_cov_72.1903_ID_45
+		Skipping redundant alignment 198792 207277 | 157614 149182 | 8486 8433 | 96.06 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_23_length_210865_cov_72.1903_ID_45
+		Skipping redundant alignment 207282 227160 | 146110 126280 | 19879 19831 | 96.15 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_23_length_210865_cov_72.1903_ID_45
+		Skipping redundant alignment 227341 249759 | 120911 98456 | 22419 22456 | 96.59 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_23_length_210865_cov_72.1903_ID_45
+		Skipping redundant alignment 249746 249876 | 98339 98469 | 131 131 | 98.47 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_23_length_210865_cov_72.1903_ID_45
+		Skipping redundant alignment 249863 251371 | 98352 96844 | 1509 1509 | 97.75 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_23_length_210865_cov_72.1903_ID_45
+		Skipping redundant alignment 251479 251927 | 96846 96398 | 449 449 | 98.0 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_23_length_210865_cov_72.1903_ID_45
+		Skipping redundant alignment 252008 298918 | 95831 48907 | 46911 46925 | 99.05 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_23_length_210865_cov_72.1903_ID_45
+		Skipping redundant alignment 300140 305103 | 35106 30143 | 4964 4964 | 98.03 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_23_length_210865_cov_72.1903_ID_45
+		Skipping redundant alignment 306486 308405 | 30151 28232 | 1920 1920 | 98.85 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_23_length_210865_cov_72.1903_ID_45
+		Skipping redundant alignment 308402 319822 | 12273 843 | 11421 11431 | 98.18 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_23_length_210865_cov_72.1903_ID_45
+		Skipping redundant alignment 326395 327219 | 825 1 | 825 825 | 95.15 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_23_length_210865_cov_72.1903_ID_45
+		This contig is misassembled. 26 total aligns.
+			Real Alignment 1: 135966 136790 | 1 825 | 825 825 | 95.15 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_23_length_210865_cov_72.1903_ID_45
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 143363 154783 | 843 12273 | 11421 11431 | 98.18 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_23_length_210865_cov_72.1903_ID_45
+			  Extensive misassembly ( relocation, inconsistency = -15962 ) between these two alignments
+			Excluding internal overlap of size 9 between Alignment 3 and 4:  154780 156699 | 28232 30151 | 1920 1920 --> 154780 156690 | 28232 30142 | 1911 1911
+			Real Alignment 3: 154780 156690 | 28232 30142 | 1911 1911 | 98.85 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_23_length_210865_cov_72.1903_ID_45
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 4: 158082 163045 | 30143 35106 | 4964 4964 | 98.03 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_23_length_210865_cov_72.1903_ID_45
+			  Extensive misassembly ( relocation, inconsistency = -12579 ) between these two alignments
+			Real Alignment 5: 164267 211177 | 48907 95831 | 46911 46925 | 99.05 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_23_length_210865_cov_72.1903_ID_45
+			  Overlap between these two alignments (local misassembly). Inconsistency = -486 
+			Excluding internal overlap of size 3 between Alignment 6 and 7:  211258 211706 | 96398 96846 | 449 449 --> 211258 211703 | 96398 96843 | 446 446
+			Real Alignment 6: 211258 211703 | 96398 96843 | 446 446 | 98.0 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_23_length_210865_cov_72.1903_ID_45
+			  Gap between these two alignments (local misassembly). Inconsistency = 110 
+			Excluding internal overlap of size 14 between Alignment 7 and 8:  213309 213439 | 98469 98339 | 131 131 --> 213309 213425 | 98469 98353 | 117 117
+			Real Alignment 7: 211814 213322 | 96844 98352 | 1509 1509 | 97.75 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_23_length_210865_cov_72.1903_ID_45
+			  Extensive misassembly ( inversion ) between these two alignments
+			Excluding internal overlap of size 14 between Alignment 8 and 9:  213309 213425 | 98469 98353 | 117 117 --> 213323 213425 | 98455 98353 | 103 103
+			Real Alignment 8: 213323 213425 | 98455 98353 | 103 103 | 98.47 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_23_length_210865_cov_72.1903_ID_45
+			  Extensive misassembly ( inversion ) between these two alignments
+			Real Alignment 9: 213426 235844 | 98456 120911 | 22419 22456 | 96.59 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_23_length_210865_cov_72.1903_ID_45
+			  Extensive misassembly ( relocation, inconsistency = -5188 ) between these two alignments
+			Real Alignment 10: 236025 255903 | 126280 146110 | 19879 19831 | 96.16 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_23_length_210865_cov_72.1903_ID_45
+			  Extensive misassembly ( relocation, inconsistency = -3067 ) between these two alignments
+			Real Alignment 11: 255908 264393 | 149182 157614 | 8486 8433 | 96.06 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_23_length_210865_cov_72.1903_ID_45
+			  Extensive misassembly ( relocation, inconsistency = -1084 ) between these two alignments
+			Real Alignment 12: 273356 296646 | 167661 190948 | 23291 23288 | 97.72 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_23_length_210865_cov_72.1903_ID_45
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 13: 144243 164155 | 210865 190955 | 19913 19911 | 99.08 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_23_length_210865_cov_72.1903_ID_45
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_291_length_34452_cov_72.0854_ID_581 (34452bp)
+Top Length: 22803  Top ID: 98.73
+		Skipping redundant alignment 317845 318947 | 1103 1 | 1103 1103 | 99.55 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_291_length_34452_cov_72.0854_ID_581
+		Skipping redundant alignment 3760 4849 | 1 1090 | 1090 1090 | 99.72 | Eubacterium_sp_3_1_31_gi_482850069_ref_NZ_ NODE_291_length_34452_cov_72.0854_ID_581
+		Skipping redundant alignment 322694 344358 | 1078 22803 | 21665 21726 | 98.68 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_291_length_34452_cov_72.0854_ID_581
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 350963 351823 | 27864 28724 | 861 861 | 95.93 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_291_length_34452_cov_72.0854_ID_581
+		Skipping redundant alignment 353246 356215 | 30144 33114 | 2970 2971 | 95.02 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_291_length_34452_cov_72.0854_ID_581
+		Skipping redundant alignment 356411 357257 | 33306 34152 | 847 847 | 95.16 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_291_length_34452_cov_72.0854_ID_581
+		This contig is misassembled. 10 total aligns.
+			Real Alignment 1: 118827 141568 | 22803 1 | 22742 22803 | 98.73 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_291_length_34452_cov_72.0854_ID_581
+			  Extensive misassembly ( relocation, inconsistency = 1544 ) between these two alignments
+			Real Alignment 2: 111362 112222 | 28724 27864 | 861 861 | 95.93 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_291_length_34452_cov_72.0854_ID_581
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 3: 106970 109939 | 33114 30144 | 2970 2971 | 95.02 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_291_length_34452_cov_72.0854_ID_581
+			  Gap between these two alignments (local misassembly). Inconsistency = 4 
+			Real Alignment 4: 105928 106774 | 34152 33306 | 847 847 | 95.16 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_291_length_34452_cov_72.0854_ID_581
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_27_length_187831_cov_72.4555_ID_53 (187831bp)
+Top Length: 50911  Top ID: 99.05
+		Skipping redundant alignment 301191 301266 | 70267 70192 | 76 76 | 100.0 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+		Skipping redundant alignment 435345 435463 | 152996 153114 | 119 119 | 96.64 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+		Skipping redundant alignment 452971 453123 | 171890 172043 | 153 154 | 96.75 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+		Skipping redundant alignment 407625 407777 | 171890 172043 | 153 154 | 96.75 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+		Skipping redundant alignment 363464 363610 | 172037 171890 | 147 148 | 96.62 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+		Skipping redundant alignment 401881 402027 | 172037 171890 | 147 148 | 96.62 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+		Skipping redundant alignment 499042 499188 | 172037 171890 | 147 148 | 96.62 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+		Skipping redundant alignment 588429 588575 | 172037 171890 | 147 148 | 96.62 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+		Skipping redundant alignment 716273 716419 | 172037 171890 | 147 148 | 96.62 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+		Skipping redundant alignment 1211545 1211691 | 172037 171890 | 147 148 | 96.62 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+		Skipping redundant alignment 545772 545918 | 172037 171890 | 147 148 | 95.95 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+		Skipping redundant alignment 252936 253082 | 172037 171890 | 147 148 | 95.27 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+		Skipping redundant alignment 361724 361839 | 172152 172037 | 116 116 | 96.55 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+		Skipping redundant alignment 586689 586804 | 172152 172037 | 116 116 | 96.55 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+		Skipping redundant alignment 454748 454857 | 172043 172152 | 110 110 | 96.36 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+		Skipping redundant alignment 409402 409511 | 172043 172152 | 110 110 | 96.36 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+		Skipping redundant alignment 508657 508766 | 172043 172152 | 110 110 | 96.36 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 251189 251311 | 172159 172037 | 123 123 | 95.12 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+		Skipping redundant alignment 400134 400256 | 172159 172037 | 123 123 | 95.12 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+		Skipping redundant alignment 497294 497417 | 172159 172037 | 124 123 | 95.16 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+		Skipping redundant alignment 544027 544147 | 172158 172037 | 121 122 | 95.9 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+		Skipping redundant alignment 714525 714648 | 172159 172037 | 124 123 | 95.16 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+		Skipping redundant alignment 1209799 1209920 | 172158 172037 | 122 122 | 95.08 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+		This contig is misassembled. 32 total aligns.
+			Real Alignment 1: 771693 812611 | 2387 43299 | 40919 40913 | 99.06 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+			  Overlap between these two alignments (local misassembly). Inconsistency = -112 
+			Excluding internal overlap of size 10 between Alignment 2 and 3:  812611 834102 | 43411 65032 | 21492 21622 --> 812611 834092 | 43411 65022 | 21482 21612
+			Real Alignment 2: 812611 834092 | 43411 65022 | 21482 21612 | 98.15 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Excluding internal overlap of size 2 between Alignment 3 and 4:  862274 874605 | 88356 100672 | 12332 12317 --> 862276 874605 | 88358 100672 | 12330 12315
+			Real Alignment 3: 839041 862359 | 65023 88357 | 23319 23335 | 98.83 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+			  Fake misassembly between these two alignments: inconsistency = -84 , gap in the contig is small or absent or filled mostly with Ns (long indel: insertion of length 84; 0 mismatches)
+			Excluding internal overlap of size 12 between Alignment 4 and 5:  879027 881788 | 100661 103422 | 2762 2762 --> 879039 881788 | 100673 103422 | 2750 2750
+			Real Alignment 4: 862276 874605 | 88358 100672 | 12330 12315 | 98.69 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Excluding internal overlap of size 580 between Alignment 5 and 6:  879039 881788 | 100673 103422 | 2750 2750 --> 879039 881208 | 100673 102842 | 2170 2170
+			Real Alignment 5: 879039 881208 | 100673 102842 | 2170 2170 | 98.52 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+			  Gap between these two alignments (local misassembly). Inconsistency = 582 
+			Real Alignment 6: 881791 932697 | 102843 153753 | 50907 50911 | 99.05 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 7: 633 17744 | 154671 171778 | 17112 17108 | 99.07 | Eubacterium_sp_3_1_31_gi_482850063_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+			  Extensive misassembly ( translocation ) between these two alignments
+			Excluding internal overlap of size 7 between Alignment 8 and 9:  754114 754235 | 172037 172158 | 122 122 --> 754121 754235 | 172044 172158 | 115 115
+			Real Alignment 8: 506877 507032 | 171887 172043 | 156 157 | 96.82 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 9: 754121 754235 | 172044 172158 | 115 115 | 96.72 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_27_length_187831_cov_72.4555_ID_53
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_32_length_174028_cov_72.0951_ID_63 (174028bp)
+Top Length: 34997  Top ID: 97.76
+		Skipping redundant alignment 44845 44959 | 146622 146736 | 115 115 | 96.52 | Eubacterium_sp_3_1_31_gi_482850063_ref_NZ_ NODE_32_length_174028_cov_72.0951_ID_63
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 3797 13630 | 60394 50561 | 9834 9834 | 99.25 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_32_length_174028_cov_72.0951_ID_63
+		Skipping redundant alignment 15410 30560 | 50840 35696 | 15151 15145 | 98.95 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_32_length_174028_cov_72.0951_ID_63
+		Skipping redundant alignment 33785 68796 | 35374 378 | 35012 34997 | 97.76 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_32_length_174028_cov_72.0951_ID_63
+		This contig is misassembled. 15 total aligns.
+			Real Alignment 1: 394389 429400 | 378 35374 | 35012 34997 | 97.76 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_32_length_174028_cov_72.0951_ID_63
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Excluding internal overlap of size 280 between Alignment 2 and 3:  449555 459388 | 50561 60394 | 9834 9834 --> 449835 459388 | 50841 60394 | 9554 9554
+			Real Alignment 2: 432625 447775 | 35696 50840 | 15151 15145 | 98.95 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_32_length_174028_cov_72.0951_ID_63
+			  Extensive misassembly ( relocation, inconsistency = 2059 ) between these two alignments
+			Excluding internal overlap of size 17 between Alignment 3 and 4:  449835 459388 | 50841 60394 | 9554 9554 --> 449835 459371 | 50841 60377 | 9537 9537
+			Real Alignment 3: 449835 459371 | 50841 60377 | 9537 9537 | 99.25 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_32_length_174028_cov_72.0951_ID_63
+			  Extensive misassembly ( translocation ) between these two alignments
+			Excluding internal overlap of size 24 between Alignment 4 and 5:  126287 139798 | 73895 60378 | 13512 13518 --> 126311 139798 | 73871 60378 | 13488 13494
+			Real Alignment 4: 126311 139798 | 73871 60378 | 13488 13494 | 98.69 | Eubacterium_sp_3_1_31_gi_482850063_ref_NZ_ NODE_32_length_174028_cov_72.0951_ID_63
+			  Overlap between these two alignments (local misassembly). Inconsistency = -238 
+			Excluding internal overlap of size 5 between Alignment 5 and 6:  104278 106288 | 93938 91926 | 2011 2013 --> 104278 106283 | 93938 91931 | 2006 2008
+			Real Alignment 5: 108464 126548 | 91930 73872 | 18085 18059 | 98.84 | Eubacterium_sp_3_1_31_gi_482850063_ref_NZ_ NODE_32_length_174028_cov_72.0951_ID_63
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Excluding internal overlap of size 1 between Alignment 6 and 7:  104278 106283 | 93938 91931 | 2006 2008 --> 104279 106283 | 93937 91931 | 2005 2007
+			Real Alignment 6: 104279 106283 | 93937 91931 | 2005 2007 | 98.86 | Eubacterium_sp_3_1_31_gi_482850063_ref_NZ_ NODE_32_length_174028_cov_72.0951_ID_63
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 7: 96752 100644 | 97830 93938 | 3893 3893 | 99.02 | Eubacterium_sp_3_1_31_gi_482850063_ref_NZ_ NODE_32_length_174028_cov_72.0951_ID_63
+			  Fake misassembly between these two alignments: inconsistency = -62 , gap in the contig is small or absent or filled mostly with Ns (long indel: insertion of length 62; 0 mismatches)
+			Excluding internal overlap of size 6 between Alignment 8 and 9:  62575 73713 | 131344 120208 | 11139 11137 --> 62575 73707 | 131344 120214 | 11133 11131
+			Real Alignment 8: 74419 96813 | 120213 97831 | 22395 22383 | 98.88 | Eubacterium_sp_3_1_31_gi_482850063_ref_NZ_ NODE_32_length_174028_cov_72.0951_ID_63
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Excluding internal overlap of size 440 between Alignment 9 and 10:  62575 73707 | 131344 120214 | 11133 11131 --> 63015 73707 | 130904 120214 | 10693 10691
+			Real Alignment 9: 63015 73707 | 130904 120214 | 10693 10691 | 99.02 | Eubacterium_sp_3_1_31_gi_482850063_ref_NZ_ NODE_32_length_174028_cov_72.0951_ID_63
+			  Extensive misassembly ( relocation, inconsistency = 2348 ) between these two alignments
+			Real Alignment 10: 26824 60666 | 164756 130905 | 33843 33852 | 99.11 | Eubacterium_sp_3_1_31_gi_482850063_ref_NZ_ NODE_32_length_174028_cov_72.0951_ID_63
+			  Overlap between these two alignments (local misassembly). Inconsistency = -97 
+			Real Alignment 11: 17914 24854 | 173761 166823 | 6941 6939 | 98.29 | Eubacterium_sp_3_1_31_gi_482850063_ref_NZ_ NODE_32_length_174028_cov_72.0951_ID_63
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_1_length_514709_cov_72.0707_ID_1 (514709bp)
+Top Length: 154399  Top ID: 99.17
+		Skipping redundant alignment 598698 598898 | 203 3 | 201 201 | 99.0 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_1_length_514709_cov_72.0707_ID_1
+		Skipping redundant alignment 520557 520753 | 3 199 | 197 197 | 100.0 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_1_length_514709_cov_72.0707_ID_1
+		Skipping redundant alignment 326597 326780 | 3 186 | 184 184 | 99.46 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_1_length_514709_cov_72.0707_ID_1
+		Skipping redundant alignment 398212 398411 | 4 203 | 200 200 | 99.0 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_1_length_514709_cov_72.0707_ID_1
+		Skipping redundant alignment 844214 844289 | 392335 392260 | 76 76 | 100.0 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_1_length_514709_cov_72.0707_ID_1
+		This contig is misassembled. 16 total aligns.
+			Real Alignment 1: 1334343 1349662 | 3 15324 | 15320 15322 | 99.35 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_1_length_514709_cov_72.0707_ID_1
+			  Extensive misassembly ( relocation, inconsistency = -15761 ) between these two alignments
+			Real Alignment 2: 1349646 1352609 | 31069 34032 | 2964 2964 | 99.39 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_1_length_514709_cov_72.0707_ID_1
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 3: 1354420 1382567 | 34058 62219 | 28148 28162 | 99.25 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_1_length_514709_cov_72.0707_ID_1
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 4: 1384377 1454740 | 62238 132603 | 70364 70366 | 98.6 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_1_length_514709_cov_72.0707_ID_1
+			  Extensive misassembly ( relocation, inconsistency = -7779 ) between these two alignments
+			Real Alignment 5: 1455659 1504620 | 141301 190291 | 48962 48991 | 98.28 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_1_length_514709_cov_72.0707_ID_1
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 6: 1 154419 | 190525 344923 | 154419 154399 | 99.17 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_1_length_514709_cov_72.0707_ID_1
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Excluding internal overlap of size 1 between Alignment 7 and 8:  156011 156323 | 345042 345354 | 313 313 --> 156011 156322 | 345042 345353 | 312 312
+			Real Alignment 7: 156011 156322 | 345042 345353 | 312 312 | 96.49 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_1_length_514709_cov_72.0707_ID_1
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Excluding internal overlap of size 2 between Alignment 8 and 9:  158167 171638 | 345354 358781 | 13472 13428 --> 158167 171636 | 345354 358779 | 13470 13426
+			Real Alignment 8: 158167 171636 | 345354 358779 | 13470 13426 | 98.76 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_1_length_514709_cov_72.0707_ID_1
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Excluding internal overlap of size 1 between Alignment 9 and 10:  262735 283679 | 358780 379698 | 20945 20919 --> 262735 283678 | 358780 379697 | 20944 20918
+			Real Alignment 9: 262735 283678 | 358780 379697 | 20944 20918 | 99.3 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_1_length_514709_cov_72.0707_ID_1
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Excluding internal overlap of size 572 between Alignment 10 and 11:  375063 423776 | 465912 514624 | 48714 48713 --> 375635 423776 | 466484 514624 | 48142 48141
+			Real Alignment 10: 288628 375418 | 379698 466483 | 86791 86786 | 99.25 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_1_length_514709_cov_72.0707_ID_1
+			  Gap between these two alignments (local misassembly). Inconsistency = 216 
+			Real Alignment 11: 375635 423776 | 466484 514624 | 48142 48141 | 99.24 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_1_length_514709_cov_72.0707_ID_1
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_39_length_163851_cov_71.6063_ID_77 (163851bp)
+Top Length: 133931  Top ID: 99.04
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 464730 598686 | 133950 20 | 133957 133931 | 99.04 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_39_length_163851_cov_71.6063_ID_77
+			  Extensive misassembly ( relocation, inconsistency = 12426 ) between these two alignments
+			Real Alignment 2: 429074 451925 | 157154 134329 | 22852 22826 | 97.84 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_39_length_163851_cov_71.6063_ID_77
+			  Extensive misassembly ( relocation, inconsistency = -1327 ) between these two alignments
+			Real Alignment 3: 424038 426223 | 163517 161332 | 2186 2186 | 95.29 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_39_length_163851_cov_71.6063_ID_77
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_40_length_162405_cov_72.3606_ID_79 (162405bp)
+Top Length: 48817  Top ID: 98.24
+		Skipping redundant alignment 393313 397887 | 4576 1 | 4575 4576 | 99.69 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_40_length_162405_cov_72.3606_ID_79
+		Skipping redundant alignment 1329448 1334019 | 4574 1 | 4572 4574 | 99.65 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_40_length_162405_cov_72.3606_ID_79
+		Skipping redundant alignment 321730 326273 | 4546 1 | 4544 4546 | 99.58 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_40_length_162405_cov_72.3606_ID_79
+		Skipping redundant alignment 515765 520233 | 4472 1 | 4469 4472 | 99.62 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_40_length_162405_cov_72.3606_ID_79
+		Skipping redundant alignment 444279 444365 | 86695 86782 | 87 88 | 97.73 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_40_length_162405_cov_72.3606_ID_79
+		Skipping redundant alignment 588119 588581 | 144131 143668 | 463 464 | 95.91 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_40_length_162405_cov_72.3606_ID_79
+		Skipping redundant alignment 407624 408081 | 143673 144131 | 458 459 | 96.08 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_40_length_162405_cov_72.3606_ID_79
+		Skipping redundant alignment 605299 605755 | 144131 143674 | 457 458 | 96.72 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_40_length_162405_cov_72.3606_ID_79
+		Skipping redundant alignment 603859 604135 | 144407 144131 | 277 277 | 96.75 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_40_length_162405_cov_72.3606_ID_79
+		This contig is misassembled. 17 total aligns.
+			Excluding internal overlap of size 650 between Alignment 1 and 2:  627825 643592 | 27958 43724 | 15768 15767 --> 628475 643592 | 28608 43724 | 15118 15117
+			Real Alignment 1: 599222 627826 | 1 28607 | 28605 28607 | 99.11 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_40_length_162405_cov_72.3606_ID_79
+			  Gap between these two alignments (local misassembly). Inconsistency = 648 
+			Real Alignment 2: 628475 643592 | 28608 43724 | 15118 15117 | 98.69 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_40_length_162405_cov_72.3606_ID_79
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 3: 646586 695463 | 44727 93543 | 48878 48817 | 98.24 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_40_length_162405_cov_72.3606_ID_79
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 4: 696366 704528 | 94717 102876 | 8163 8160 | 96.55 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_40_length_162405_cov_72.3606_ID_79
+			  Overlap between these two alignments (local misassembly). Inconsistency = -420 
+			Real Alignment 5: 704647 708515 | 103415 107282 | 3869 3868 | 96.1 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_40_length_162405_cov_72.3606_ID_79
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Excluding internal overlap of size 5 between Alignment 6 and 7:  709255 715640 | 108011 114384 | 6386 6374 --> 709255 715635 | 108011 114379 | 6381 6369
+			Real Alignment 6: 709255 715635 | 108011 114379 | 6381 6369 | 96.6 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_40_length_162405_cov_72.3606_ID_79
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 7: 717145 734751 | 114380 131954 | 17607 17575 | 98.65 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_40_length_162405_cov_72.3606_ID_79
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 8: 741777 771514 | 131967 161683 | 29738 29717 | 98.91 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_40_length_162405_cov_72.3606_ID_79
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_6486_length_1667_cov_112.107_ID_12971 (1667bp)
+Top Length: 1377  Top ID: 95.36
+			Skipping redundant alignments which significantly overlap with adjacent alignments
+		Skipping redundant alignment 848280 849648 | 1592 216 | 1369 1377 | 95.36 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_6486_length_1667_cov_112.107_ID_12971
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 878237 879030 | 794 1 | 794 794 | 100.0 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_6486_length_1667_cov_112.107_ID_12971
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 874606 875478 | 1667 795 | 873 873 | 99.31 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_6486_length_1667_cov_112.107_ID_12971
+
+CONTIG: NODE_13_length_299970_cov_72.2216_ID_25 (299970bp)
+Top Length: 39704  Top ID: 99.15
+		Skipping redundant alignment 271034 271387 | 249967 250320 | 354 354 | 96.33 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_13_length_299970_cov_72.2216_ID_25
+		This contig is misassembled. 19 total aligns.
+			Excluding internal overlap of size 1 between Alignment 1 and 2:  54255 58568 | 28535 32851 | 4314 4317 --> 54256 58568 | 28536 32851 | 4313 4316
+			Real Alignment 1: 34278 43797 | 19014 28535 | 9520 9522 | 97.99 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_13_length_299970_cov_72.2216_ID_25
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 54256 58568 | 28536 32851 | 4313 4316 | 98.45 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_13_length_299970_cov_72.2216_ID_25
+			  Extensive misassembly ( relocation, inconsistency = -5424 ) between these two alignments
+			Real Alignment 3: 58621 81144 | 38328 60855 | 22524 22528 | 98.5 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_13_length_299970_cov_72.2216_ID_25
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 4: 82888 122602 | 61381 101084 | 39715 39704 | 99.15 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_13_length_299970_cov_72.2216_ID_25
+			  Extensive misassembly ( relocation, inconsistency = -3532 ) between these two alignments
+			Real Alignment 5: 122577 129518 | 104591 111544 | 6942 6954 | 98.53 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_13_length_299970_cov_72.2216_ID_25
+			  Gap between these two alignments (local misassembly). Inconsistency = 101 
+			Real Alignment 6: 129996 156301 | 111921 138247 | 26306 26327 | 97.89 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_13_length_299970_cov_72.2216_ID_25
+			  Extensive misassembly ( relocation, inconsistency = 3791 ) between these two alignments
+			Real Alignment 7: 162869 164537 | 141024 142693 | 1669 1670 | 95.39 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_13_length_299970_cov_72.2216_ID_25
+			  Extensive misassembly ( relocation, inconsistency = -1923 ) between these two alignments
+			Real Alignment 8: 164574 168878 | 144653 148959 | 4305 4307 | 96.63 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_13_length_299970_cov_72.2216_ID_25
+			  Gap between these two alignments (local misassembly). Inconsistency = 581 
+			Real Alignment 9: 169492 183504 | 148992 163002 | 14013 14011 | 97.56 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_13_length_299970_cov_72.2216_ID_25
+			  Extensive misassembly ( relocation, inconsistency = -5286 ) between these two alignments
+			Real Alignment 10: 183657 197322 | 168441 182091 | 13666 13651 | 97.62 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_13_length_299970_cov_72.2216_ID_25
+			  Gap between these two alignments (local misassembly). Inconsistency = 118 
+			Real Alignment 11: 197442 197711 | 182093 182364 | 270 272 | 96.32 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_13_length_299970_cov_72.2216_ID_25
+			  Overlap between these two alignments (local misassembly). Inconsistency = -675 
+			Excluding internal overlap of size 835 between Alignment 12 and 13:  208599 210510 | 191197 193108 | 1912 1912 --> 209434 210510 | 192032 193108 | 1077 1077
+			Real Alignment 12: 197696 206690 | 183024 192031 | 8995 9008 | 97.95 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_13_length_299970_cov_72.2216_ID_25
+			  Extensive misassembly ( relocation, inconsistency = 2743 ) between these two alignments
+			Excluding internal overlap of size 6 between Alignment 13 and 14:  209434 210510 | 192032 193108 | 1077 1077 --> 209434 210504 | 192032 193102 | 1071 1071
+			Real Alignment 13: 209434 210504 | 192032 193102 | 1071 1071 | 99.22 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_13_length_299970_cov_72.2216_ID_25
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 14: 212047 220857 | 193103 201901 | 8811 8799 | 97.52 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_13_length_299970_cov_72.2216_ID_25
+			  Overlap between these two alignments (local misassembly). Inconsistency = -107 
+			Real Alignment 15: 221458 251196 | 202609 232411 | 29739 29803 | 98.45 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_13_length_299970_cov_72.2216_ID_25
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Excluding internal overlap of size 14 between Alignment 16 and 17:  253081 270993 | 232412 250321 | 17913 17910 --> 253081 270979 | 232412 250307 | 17899 17896
+			Real Alignment 16: 253081 270979 | 232412 250307 | 17899 17896 | 99.05 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_13_length_299970_cov_72.2216_ID_25
+			  Extensive misassembly ( relocation, inconsistency = 3502 ) between these two alignments
+			Real Alignment 17: 274482 300135 | 250308 275959 | 25654 25652 | 98.25 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_13_length_299970_cov_72.2216_ID_25
+			  Extensive misassembly ( relocation, inconsistency = -2286 ) between these two alignments
+			Real Alignment 18: 300136 321815 | 278246 299970 | 21680 21725 | 99.05 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_13_length_299970_cov_72.2216_ID_25
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_16_length_275836_cov_72.4012_ID_31 (275836bp)
+Top Length: 38948  Top ID: 99.21
+		Skipping redundant alignment 1334287 1334539 | 275836 275584 | 253 253 | 98.42 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_16_length_275836_cov_72.4012_ID_31
+		Skipping redundant alignment 598702 598954 | 275584 275836 | 253 253 | 98.02 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_16_length_275836_cov_72.4012_ID_31
+		Skipping redundant alignment 398155 398407 | 275836 275584 | 253 253 | 97.63 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_16_length_275836_cov_72.4012_ID_31
+		Skipping redundant alignment 326541 326780 | 275836 275597 | 240 240 | 97.92 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_16_length_275836_cov_72.4012_ID_31
+		This contig is misassembled. 19 total aligns.
+			Real Alignment 1: 958834 959066 | 233 1 | 233 233 | 97.0 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_16_length_275836_cov_72.4012_ID_31
+			  Gap between these two alignments (local misassembly). Inconsistency = 759 
+			Real Alignment 2: 956393 958045 | 1915 263 | 1653 1653 | 96.98 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_16_length_275836_cov_72.4012_ID_31
+			  Extensive misassembly ( relocation, inconsistency = 190541 ) between these two alignments
+			Real Alignment 3: 737038 765330 | 30726 2437 | 28293 28290 | 98.98 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_16_length_275836_cov_72.4012_ID_31
+			  Overlap between these two alignments (local misassembly). Inconsistency = -881 
+			Real Alignment 4: 736892 737037 | 31753 31608 | 146 146 | 99.32 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_16_length_275836_cov_72.4012_ID_31
+			  Extensive misassembly ( relocation, inconsistency = -54510 ) between these two alignments
+			Real Alignment 5: 716417 736906 | 106736 86249 | 20490 20488 | 99.15 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_16_length_275836_cov_72.4012_ID_31
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 6: 697213 714531 | 124054 106737 | 17319 17318 | 98.65 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_16_length_275836_cov_72.4012_ID_31
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 7: 613154 652074 | 166445 127498 | 38921 38948 | 99.21 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_16_length_275836_cov_72.4012_ID_31
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 8: 610644 612350 | 168233 166529 | 1707 1705 | 95.85 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_16_length_275836_cov_72.4012_ID_31
+			  Gap between these two alignments (local misassembly). Inconsistency = 8 
+			Excluding internal overlap of size 1 between Alignment 9 and 10:  605754 607805 | 173115 171064 | 2052 2052 --> 605755 607805 | 173114 171064 | 2051 2051
+			Real Alignment 9: 605755 607805 | 173114 171064 | 2051 2051 | 96.79 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_16_length_275836_cov_72.4012_ID_31
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 10: 588573 603868 | 188409 173115 | 15296 15295 | 99.18 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_16_length_275836_cov_72.4012_ID_31
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 11: 583721 586686 | 191378 188410 | 2966 2969 | 98.62 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_16_length_275836_cov_72.4012_ID_31
+			  Extensive misassembly ( relocation, inconsistency = -7886 ) between these two alignments
+			Real Alignment 12: 567659 583782 | 215318 199203 | 16124 16116 | 99.0 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_16_length_275836_cov_72.4012_ID_31
+			  Extensive misassembly ( relocation, inconsistency = -16774 ) between these two alignments
+			Excluding internal overlap of size 1 between Alignment 13 and 14:  536397 544032 | 261471 253835 | 7636 7637 --> 536397 544031 | 261471 253836 | 7635 7636
+			Real Alignment 13: 545917 567401 | 253835 232350 | 21485 21486 | 99.14 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_16_length_275836_cov_72.4012_ID_31
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Excluding internal overlap of size 2 between Alignment 14 and 15:  536397 544031 | 261471 253836 | 7635 7636 --> 536399 544031 | 261469 253836 | 7633 7634
+			Real Alignment 14: 536399 544031 | 261469 253836 | 7633 7634 | 98.8 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_16_length_275836_cov_72.4012_ID_31
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 15: 520501 534856 | 275836 261470 | 14356 14367 | 98.59 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_16_length_275836_cov_72.4012_ID_31
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_22_length_220876_cov_72.2877_ID_43 (220876bp)
+Top Length: 96638  Top ID: 98.69
+		This contig is misassembled. 3 total aligns.
+			Excluding internal overlap of size 4 between Alignment 1 and 2:  1163465 1209796 | 143019 96690 | 46332 46330 --> 1163465 1209792 | 143019 96694 | 46328 46326
+			Real Alignment 1: 1211690 1308343 | 96693 56 | 96654 96638 | 98.69 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_22_length_220876_cov_72.2877_ID_43
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 1163465 1209792 | 143019 96694 | 46328 46326 | 99.13 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_22_length_220876_cov_72.2877_ID_43
+			  Extensive misassembly ( relocation, inconsistency = -4526 ) between these two alignments
+			Real Alignment 3: 1112427 1163127 | 198620 147883 | 50701 50738 | 98.72 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_22_length_220876_cov_72.2877_ID_43
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_30_length_181216_cov_72.3013_ID_59 (181216bp)
+Top Length: 34332  Top ID: 97.98
+		This contig is misassembled. 11 total aligns.
+			Real Alignment 1: 963000 963573 | 1 574 | 574 574 | 97.21 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_30_length_181216_cov_72.3013_ID_59
+			  Extensive misassembly ( relocation, inconsistency = -198120 ) between these two alignments
+			Excluding internal overlap of size 4 between Alignment 2 and 3:  765490 768747 | 611 3873 | 3258 3263 --> 765490 768743 | 611 3869 | 3254 3259
+			Real Alignment 2: 765490 768743 | 611 3869 | 3254 3259 | 97.52 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_30_length_181216_cov_72.3013_ID_59
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 3: 791667 811332 | 3870 23540 | 19666 19671 | 97.45 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_30_length_181216_cov_72.3013_ID_59
+			  Gap between these two alignments (local misassembly). Inconsistency = 924 
+			Real Alignment 4: 813042 829283 | 24326 40612 | 16242 16287 | 97.04 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_30_length_181216_cov_72.3013_ID_59
+			  Extensive misassembly ( relocation, inconsistency = -4479 ) between these two alignments
+			Real Alignment 5: 854960 889292 | 70768 105099 | 34333 34332 | 97.98 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_30_length_181216_cov_72.3013_ID_59
+			  Extensive misassembly ( relocation, inconsistency = -5171 ) between these two alignments
+			Real Alignment 6: 889291 893685 | 110269 114656 | 4395 4388 | 96.82 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_30_length_181216_cov_72.3013_ID_59
+			  Gap between these two alignments (local misassembly). Inconsistency = 578 
+			Real Alignment 7: 908407 913790 | 128800 134177 | 5384 5378 | 97.53 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_30_length_181216_cov_72.3013_ID_59
+			  Fake misassembly between these two alignments: inconsistency = -54 , gap in the contig is small or absent or filled mostly with Ns (long indel: insertion of length 54; 0 mismatches)
+			Real Alignment 8: 913789 926385 | 134230 146824 | 12597 12595 | 97.82 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_30_length_181216_cov_72.3013_ID_59
+			  Extensive misassembly ( relocation, inconsistency = -2337 ) between these two alignments
+			Real Alignment 9: 933431 950775 | 156207 173535 | 17345 17329 | 95.85 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_30_length_181216_cov_72.3013_ID_59
+			  Overlap between these two alignments (local misassembly). Inconsistency = -225 
+			Real Alignment 10: 950775 955140 | 173760 178126 | 4366 4367 | 95.76 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_30_length_181216_cov_72.3013_ID_59
+			  Extensive misassembly ( relocation, inconsistency = -1773 ) between these two alignments
+			Real Alignment 11: 955357 956454 | 180116 181216 | 1098 1101 | 96.64 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_30_length_181216_cov_72.3013_ID_59
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_65_length_111153_cov_72.498_ID_129 (111153bp)
+Top Length: 87768  Top ID: 98.93
+		Skipping redundant alignment 598681 598954 | 274 1 | 274 274 | 98.54 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_65_length_111153_cov_72.498_ID_129
+		Skipping redundant alignment 1334287 1334543 | 1 257 | 257 257 | 99.22 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_65_length_111153_cov_72.498_ID_129
+		Skipping redundant alignment 520501 520753 | 1 253 | 253 253 | 98.02 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_65_length_111153_cov_72.498_ID_129
+		Skipping redundant alignment 326541 326774 | 1 234 | 234 234 | 98.72 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_65_length_111153_cov_72.498_ID_129
+		Skipping redundant alignment 931940 932058 | 33426 33544 | 119 119 | 96.64 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_65_length_111153_cov_72.498_ID_129
+		Skipping redundant alignment 688547 688636 | 42362 42450 | 90 89 | 97.78 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_65_length_111153_cov_72.498_ID_129
+		This contig is misassembled. 12 total aligns.
+			Excluding internal overlap of size 1 between Alignment 1 and 2:  398155 400141 | 1 1989 | 1987 1989 --> 398155 400140 | 1 1988 | 1986 1988
+			Real Alignment 1: 398155 400140 | 1 1988 | 1986 1988 | 97.4 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_65_length_111153_cov_72.498_ID_129
+			  Extensive misassembly ( relocation, inconsistency = 1885 ) between these two alignments
+			Excluding internal overlap of size 1 between Alignment 2 and 3:  402026 407627 | 1989 7588 | 5602 5600 --> 402026 407626 | 1989 7587 | 5601 5599
+			Real Alignment 2: 402026 407626 | 1989 7587 | 5601 5599 | 99.2 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_65_length_111153_cov_72.498_ID_129
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 3: 409512 497300 | 7588 95355 | 87789 87768 | 98.93 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_65_length_111153_cov_72.498_ID_129
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Excluding internal overlap of size 2 between Alignment 4 and 5:  508766 509165 | 103093 103493 | 400 401 --> 508768 509165 | 103095 103493 | 398 399
+			Real Alignment 4: 499186 506882 | 95357 103094 | 7697 7738 | 98.28 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_65_length_111153_cov_72.498_ID_129
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 5: 508768 509165 | 103095 103493 | 398 399 | 97.76 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_65_length_111153_cov_72.498_ID_129
+			  Extensive misassembly ( relocation, inconsistency = -1023 ) between these two alignments
+			Real Alignment 6: 509167 515816 | 104518 111150 | 6650 6633 | 98.89 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_65_length_111153_cov_72.498_ID_129
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_115_length_70256_cov_71.8624_ID_229 (70256bp)
+Top Length: 53002  Top ID: 97.57
+		This contig is misassembled. 3 total aligns.
+			Excluding internal overlap of size 1 between Alignment 1 and 2:  1040085 1048600 | 53060 61572 | 8516 8513 --> 1040086 1048600 | 53061 61572 | 8515 8512
+			Real Alignment 1: 985812 1038798 | 59 53060 | 52987 53002 | 97.57 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_115_length_70256_cov_71.8624_ID_229
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 1040086 1048600 | 53061 61572 | 8515 8512 | 96.38 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_115_length_70256_cov_71.8624_ID_229
+			  Extensive misassembly ( relocation, inconsistency = 12977 ) between these two alignments
+			Real Alignment 3: 1064470 1070209 | 64465 70201 | 5740 5737 | 97.46 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_115_length_70256_cov_71.8624_ID_229
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_142_length_58422_cov_36.2416_ID_283 (58422bp)
+Top Length: 35184  Top ID: 98.99
+		Skipping redundant alignment 520501 520737 | 1 237 | 237 237 | 99.58 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_142_length_58422_cov_36.2416_ID_283
+		Skipping redundant alignment 1334287 1334520 | 1 234 | 234 234 | 99.15 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_142_length_58422_cov_36.2416_ID_283
+		Skipping redundant alignment 598721 598954 | 234 1 | 234 234 | 99.15 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_142_length_58422_cov_36.2416_ID_283
+		Skipping redundant alignment 398155 398388 | 1 234 | 234 234 | 98.72 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_142_length_58422_cov_36.2416_ID_283
+		Skipping redundant alignment 603636 603794 | 58422 58264 | 159 159 | 98.74 | Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_ NODE_142_length_58422_cov_36.2416_ID_283
+		Skipping redundant alignment 1329448 1329604 | 58266 58422 | 157 157 | 99.36 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_142_length_58422_cov_36.2416_ID_283
+		This contig is misassembled. 12 total aligns.
+			Real Alignment 1: 326541 361656 | 1 35184 | 35116 35184 | 98.99 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_142_length_58422_cov_36.2416_ID_283
+			  Extensive misassembly ( relocation, inconsistency = 1798 ) between these two alignments
+			Real Alignment 2: 363608 372147 | 35338 43880 | 8540 8543 | 99.15 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_142_length_58422_cov_36.2416_ID_283
+			  Overlap between these two alignments (local misassembly). Inconsistency = -179 
+			Real Alignment 3: 372145 372729 | 44057 44641 | 585 585 | 98.8 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_142_length_58422_cov_36.2416_ID_283
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 4: 377089 380662 | 44885 48476 | 3574 3592 | 96.33 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_142_length_58422_cov_36.2416_ID_283
+			  Extensive misassembly ( relocation, inconsistency = -5311 ) between these two alignments
+			Excluding internal overlap of size 11 between Alignment 5 and 6:  381407 381960 | 54532 55085 | 554 554 --> 381407 381949 | 54532 55074 | 543 543
+			Real Alignment 5: 381407 381949 | 54532 55074 | 543 543 | 98.38 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_142_length_58422_cov_36.2416_ID_283
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 6: 390127 393472 | 55075 58422 | 3346 3348 | 98.93 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_142_length_58422_cov_36.2416_ID_283
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_190_length_46858_cov_71.1859_ID_379 (46858bp)
+Top Length: 23147  Top ID: 98.37
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 1070202 1093285 | 56 23202 | 23084 23147 | 98.37 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_190_length_46858_cov_71.1859_ID_379
+			  Overlap between these two alignments (local misassembly). Inconsistency = -157 
+			Real Alignment 2: 1093295 1112452 | 23369 42534 | 19158 19166 | 98.41 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_190_length_46858_cov_71.1859_ID_379
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_382_length_27667_cov_72.1611_ID_763 (27667bp)
+Top Length: 22088  Top ID: 96.82
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 963515 963743 | 4 233 | 229 230 | 98.26 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_382_length_27667_cov_72.1611_ID_763
+			  Extensive misassembly ( relocation, inconsistency = -5278 ) between these two alignments
+			Real Alignment 2: 963742 985803 | 5510 27597 | 22062 22088 | 96.82 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_382_length_27667_cov_72.1611_ID_763
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_551_length_21183_cov_36.0313_ID_1101 (21183bp)
+Top Length: 21128  Top ID: 98.8
+		One align captures most of this contig: 1308336 1329502 | 21128 1 | 21167 21128 | 98.8 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_551_length_21183_cov_36.0313_ID_1101
+
+CONTIG: NODE_7493_length_1426_cov_160.509_ID_14985 (1426bp)
+Top Length: 1426  Top ID: 96.92
+		Marking as insignificant: 327165 328590 | 1426 1 | 1426 1426 | 95.02 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_7493_length_1426_cov_160.509_ID_14985
+		Marking as insignificant: 134595 136020 | 1 1426 | 1426 1426 | 95.02 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_7493_length_1426_cov_160.509_ID_14985
+		One align captures most of this contig: 961012 962437 | 1 1426 | 1426 1426 | 96.92 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_7493_length_1426_cov_160.509_ID_14985
+
+CONTIG: NODE_11014_length_935_cov_37.6307_ID_22027 (935bp)
+Top Length: 935  Top ID: 98.29
+		One align captures most of this contig: 957989 958923 | 935 1 | 935 935 | 98.29 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_11014_length_935_cov_37.6307_ID_22027
+
+CONTIG: NODE_19352_length_515_cov_207.465_ID_38703 (515bp)
+Top Length: 515  Top ID: 97.67
+		One align captures most of this contig: 962539 963053 | 515 1 | 515 515 | 97.67 | Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_ NODE_19352_length_515_cov_207.465_ID_38703
+
+CONTIG: NODE_21_length_235338_cov_71.8168_ID_41 (235338bp)
+Top Length: 56071  Top ID: 98.83
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 329278 339717 | 1677 12125 | 10440 10449 | 96.72 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_21_length_235338_cov_71.8168_ID_41
+		Skipping redundant alignment 340423 360551 | 12120 32245 | 20129 20126 | 99.16 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_21_length_235338_cov_71.8168_ID_41
+		Skipping redundant alignment 360550 373563 | 120072 133113 | 13014 13042 | 98.85 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_21_length_235338_cov_71.8168_ID_41
+		Skipping redundant alignment 373546 374217 | 136594 137265 | 672 672 | 98.36 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_21_length_235338_cov_71.8168_ID_41
+		Skipping redundant alignment 376224 376900 | 137048 137723 | 677 676 | 98.38 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_21_length_235338_cov_71.8168_ID_41
+		Skipping redundant alignment 376881 384778 | 137783 145682 | 7898 7900 | 97.94 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_21_length_235338_cov_71.8168_ID_41
+		Skipping redundant alignment 387320 443354 | 147688 203758 | 56035 56071 | 98.83 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_21_length_235338_cov_71.8168_ID_41
+		Skipping redundant alignment 443345 460690 | 214736 232082 | 17346 17347 | 98.65 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_21_length_235338_cov_71.8168_ID_41
+		This contig is misassembled. 16 total aligns.
+			Excluding internal overlap of size 1 between Alignment 1 and 2:  123473 133907 | 12120 1677 | 10435 10444 --> 123474 133907 | 12119 1677 | 10434 10443
+			Real Alignment 1: 123474 133907 | 12119 1677 | 10434 10443 | 96.73 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_21_length_235338_cov_71.8168_ID_41
+			  Gap between these two alignments (local misassembly). Inconsistency = 711 
+			Real Alignment 2: 102634 122762 | 32245 12120 | 20129 20126 | 99.16 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_21_length_235338_cov_71.8168_ID_41
+			  Extensive misassembly ( relocation, inconsistency = -87828 ) between these two alignments
+			Real Alignment 3: 89622 102635 | 133113 120072 | 13014 13042 | 98.85 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_21_length_235338_cov_71.8168_ID_41
+			  Extensive misassembly ( relocation, inconsistency = -3498 ) between these two alignments
+			Excluding internal overlap of size 218 between Alignment 4 and 5:  88968 89639 | 137265 136594 | 672 672 --> 89186 89639 | 137047 136594 | 454 454
+			Real Alignment 4: 89186 89639 | 137047 136594 | 454 454 | 98.36 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_21_length_235338_cov_71.8168_ID_41
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 5: 86285 86961 | 137723 137048 | 677 676 | 98.38 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_21_length_235338_cov_71.8168_ID_41
+			  Fake misassembly between these two alignments: inconsistency = -79 , gap in the contig is small or absent or filled mostly with Ns (long indel: insertion of length 79; 0 mismatches)
+			Real Alignment 6: 78407 86304 | 145682 137783 | 7898 7900 | 97.94 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_21_length_235338_cov_71.8168_ID_41
+			  Gap between these two alignments (local misassembly). Inconsistency = 536 
+			Real Alignment 7: 19831 75865 | 203758 147688 | 56035 56071 | 98.83 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_21_length_235338_cov_71.8168_ID_41
+			  Extensive misassembly ( relocation, inconsistency = -10987 ) between these two alignments
+			Real Alignment 8: 2495 19840 | 232082 214736 | 17346 17347 | 98.65 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_21_length_235338_cov_71.8168_ID_41
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_200_length_44893_cov_72.2663_ID_399 (44893bp)
+Top Length: 21744  Top ID: 97.14
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 83339 84158 | 10362 11187 | 820 826 | 95.04 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_200_length_44893_cov_72.2663_ID_399
+		Skipping redundant alignment 84161 105894 | 22766 44509 | 21734 21744 | 97.14 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_200_length_44893_cov_72.2663_ID_399
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 379027 379846 | 11187 10362 | 820 826 | 95.04 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_200_length_44893_cov_72.2663_ID_399
+			  Extensive misassembly ( relocation, inconsistency = -11576 ) between these two alignments
+			Real Alignment 2: 357291 379024 | 44509 22766 | 21734 21744 | 97.14 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_200_length_44893_cov_72.2663_ID_399
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_230_length_41530_cov_71.8199_ID_459 (41530bp)
+Top Length: 5323  Top ID: 96.96
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 70925 76247 | 5697 11019 | 5323 5323 | 96.96 | Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_ NODE_230_length_41530_cov_71.8199_ID_459
+		This contig is partially unaligned. (Aligned 5323 out of 41530 bases)
+		Alignment: 386938 392260 | 11019 5697 | 5323 5323 | 96.96 | Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_ NODE_230_length_41530_cov_71.8199_ID_459
+		Unaligned bases: 1 to 5696 (5696)
+		Unaligned bases: 11020 to 41530 (30511)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Eubacterium_sp_3_1_31/contigs_reports/nucmer_output/SPAdes.used_snps
+	Reference Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_: 26 total alignments. 1 total regions.
+		Region: 1 to 958858 (958858 bp)
+			Align 1: 1 154419 NODE_1_length_514709_cov_72.0707_ID_1 190525 344923
+				Gap between this and next alignment: 154419 to 156011 (1591 bp)
+				Next Alignment: 156011 156322 NODE_1_length_514709_cov_72.0707_ID_1 345042 345353
+
+			Align 2: 156011 156322 NODE_1_length_514709_cov_72.0707_ID_1 345042 345353
+				Gap between this and next alignment: 156322 to 158167 (1844 bp)
+				Next Alignment: 158167 171636 NODE_1_length_514709_cov_72.0707_ID_1 345354 358779
+
+			Align 3: 158167 171636 NODE_1_length_514709_cov_72.0707_ID_1 345354 358779
+				Gap between this and next alignment: 171636 to 262735 (91098 bp)
+				Next Alignment: 262735 283678 NODE_1_length_514709_cov_72.0707_ID_1 358780 379697
+
+			Align 4: 262735 283678 NODE_1_length_514709_cov_72.0707_ID_1 358780 379697
+				Gap between this and next alignment: 283678 to 288628 (4949 bp)
+				Next Alignment: 288628 375418 NODE_1_length_514709_cov_72.0707_ID_1 379698 466483
+
+			Align 5: 288628 375418 NODE_1_length_514709_cov_72.0707_ID_1 379698 466483
+				Gap between this and next alignment: 375418 to 375635 (216 bp)
+				Next Alignment: 375635 423776 NODE_1_length_514709_cov_72.0707_ID_1 466484 514624
+
+			Align 6: 375635 423776 NODE_1_length_514709_cov_72.0707_ID_1 466484 514624
+				Gap between this and next alignment: 423776 to 424038 (261 bp)
+				Next Alignment: 424038 426223 NODE_39_length_163851_cov_71.6063_ID_77 163517 161332
+
+			Align 7: 424038 426223 NODE_39_length_163851_cov_71.6063_ID_77 163517 161332
+				Gap between this and next alignment: 426223 to 429074 (2850 bp)
+				Next Alignment: 429074 451925 NODE_39_length_163851_cov_71.6063_ID_77 157154 134329
+
+			Align 8: 429074 451925 NODE_39_length_163851_cov_71.6063_ID_77 157154 134329
+				Gap between this and next alignment: 451925 to 464730 (12804 bp)
+				Next Alignment: 464730 598686 NODE_39_length_163851_cov_71.6063_ID_77 133950 20
+
+			Align 9: 464730 598686 NODE_39_length_163851_cov_71.6063_ID_77 133950 20
+				Gap between this and next alignment: 598686 to 599222 (535 bp)
+				Next Alignment: 599222 627826 NODE_40_length_162405_cov_72.3606_ID_79 1 28607
+
+			Align 10: 599222 627826 NODE_40_length_162405_cov_72.3606_ID_79 1 28607
+				Gap between this and next alignment: 627826 to 628475 (648 bp)
+				Next Alignment: 628475 643592 NODE_40_length_162405_cov_72.3606_ID_79 28608 43724
+
+			Align 11: 628475 643592 NODE_40_length_162405_cov_72.3606_ID_79 28608 43724
+				Gap between this and next alignment: 643592 to 646586 (2993 bp)
+				Next Alignment: 646586 695463 NODE_40_length_162405_cov_72.3606_ID_79 44727 93543
+
+			Align 12: 646586 695463 NODE_40_length_162405_cov_72.3606_ID_79 44727 93543
+				Gap between this and next alignment: 695463 to 696366 (902 bp)
+				Next Alignment: 696366 704528 NODE_40_length_162405_cov_72.3606_ID_79 94717 102876
+
+			Align 13: 696366 704528 NODE_40_length_162405_cov_72.3606_ID_79 94717 102876
+				Gap between this and next alignment: 704528 to 704647 (118 bp)
+				Next Alignment: 704647 708515 NODE_40_length_162405_cov_72.3606_ID_79 103415 107282
+
+			Align 14: 704647 708515 NODE_40_length_162405_cov_72.3606_ID_79 103415 107282
+				Gap between this and next alignment: 708515 to 709255 (739 bp)
+				Next Alignment: 709255 715635 NODE_40_length_162405_cov_72.3606_ID_79 108011 114379
+
+			Align 15: 709255 715635 NODE_40_length_162405_cov_72.3606_ID_79 108011 114379
+				Gap between this and next alignment: 715635 to 717145 (1509 bp)
+				Next Alignment: 717145 734751 NODE_40_length_162405_cov_72.3606_ID_79 114380 131954
+
+			Align 16: 717145 734751 NODE_40_length_162405_cov_72.3606_ID_79 114380 131954
+				Gap between this and next alignment: 734751 to 741777 (7025 bp)
+				Next Alignment: 741777 771514 NODE_40_length_162405_cov_72.3606_ID_79 131967 161683
+
+			Align 17: 741777 771514 NODE_40_length_162405_cov_72.3606_ID_79 131967 161683
+				The next alignment (754121 754235 NODE_27_length_187831_cov_72.4555_ID_53 172044 172158) is redundant. Skipping.
+				Gap between this and next alignment: 771514 to 771693 (178 bp)
+				Next Alignment: 771693 812611 NODE_27_length_187831_cov_72.4555_ID_53 2387 43299
+
+			Align 19: 771693 812611 NODE_27_length_187831_cov_72.4555_ID_53 2387 43299
+				Negative gap (overlap) between this and next alignment: 812611 to 812611 (0 bp)
+				Next Alignment: 812611 834092 NODE_27_length_187831_cov_72.4555_ID_53 43411 65022
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 43411 to 43412.
+			Align 20: 812612 834092 NODE_27_length_187831_cov_72.4555_ID_53 43412 65022
+				Gap between this and next alignment: 834092 to 839041 (4948 bp)
+				Next Alignment: 839041 862359 NODE_27_length_187831_cov_72.4555_ID_53 65023 88357
+
+			Align 21: 839041 862359 NODE_27_length_187831_cov_72.4555_ID_53 65023 88357
+				Negative gap (overlap) between this and next alignment: 862359 to 862276 (-83 bp)
+				Next Alignment: 862276 874605 NODE_27_length_187831_cov_72.4555_ID_53 88358 100672
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 88358 to 88442.
+			Align 22: 862360 874605 NODE_27_length_187831_cov_72.4555_ID_53 88442 100672
+				Next Alignment: 874606 875478 NODE_6486_length_1667_cov_112.107_ID_12971 1667 795
+
+			Align 23: 874606 875478 NODE_6486_length_1667_cov_112.107_ID_12971 1667 795
+				Gap between this and next alignment: 875478 to 878237 (2758 bp)
+				Next Alignment: 878237 879030 NODE_6486_length_1667_cov_112.107_ID_12971 794 1
+
+			Align 24: 878237 879030 NODE_6486_length_1667_cov_112.107_ID_12971 794 1
+				Gap between this and next alignment: 879030 to 879039 (8 bp)
+				Next Alignment: 879039 881208 NODE_27_length_187831_cov_72.4555_ID_53 100673 102842
+
+			Align 25: 879039 881208 NODE_27_length_187831_cov_72.4555_ID_53 100673 102842
+				Gap between this and next alignment: 881208 to 881791 (582 bp)
+				Next Alignment: 881791 932697 NODE_27_length_187831_cov_72.4555_ID_53 102843 153753
+
+			Align 26: 881791 932697 NODE_27_length_187831_cov_72.4555_ID_53 102843 153753
+			END in gap: 932697 to 958858 (26161 bp)
+
+	Reference Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_: 5 total alignments. 1 total regions.
+		Region: 1 to 463184 (463184 bp)
+			START in gap: 1 to 105928 (105927 bp)
+			Align 1: 105928 106774 NODE_291_length_34452_cov_72.0854_ID_581 34152 33306
+				Gap between this and next alignment: 106774 to 106970 (195 bp)
+				Next Alignment: 106970 109939 NODE_291_length_34452_cov_72.0854_ID_581 33114 30144
+
+			Align 2: 106970 109939 NODE_291_length_34452_cov_72.0854_ID_581 33114 30144
+				Gap between this and next alignment: 109939 to 111362 (1422 bp)
+				Next Alignment: 111362 112222 NODE_291_length_34452_cov_72.0854_ID_581 28724 27864
+
+			Align 3: 111362 112222 NODE_291_length_34452_cov_72.0854_ID_581 28724 27864
+				Gap between this and next alignment: 112222 to 118827 (6604 bp)
+				Next Alignment: 118827 141568 NODE_291_length_34452_cov_72.0854_ID_581 22803 1
+
+			Align 4: 118827 141568 NODE_291_length_34452_cov_72.0854_ID_581 22803 1
+				Gap between this and next alignment: 141568 to 144243 (2674 bp)
+				Next Alignment: 144243 164155 NODE_23_length_210865_cov_72.1903_ID_45 210865 190955
+
+			Align 5: 144243 164155 NODE_23_length_210865_cov_72.1903_ID_45 210865 190955
+			END in gap: 164155 to 463184 (299029 bp)
+
+	Reference Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_: 76 total alignments. 1 total regions.
+		Region: 1 to 1504620 (1504620 bp)
+			START in gap: 1 to 34278 (34277 bp)
+			Align 1: 34278 43797 NODE_13_length_299970_cov_72.2216_ID_25 19014 28535
+				Gap between this and next alignment: 43797 to 54256 (10458 bp)
+				Next Alignment: 54256 58568 NODE_13_length_299970_cov_72.2216_ID_25 28536 32851
+
+			Align 2: 54256 58568 NODE_13_length_299970_cov_72.2216_ID_25 28536 32851
+				Gap between this and next alignment: 58568 to 58621 (52 bp)
+				Next Alignment: 58621 81144 NODE_13_length_299970_cov_72.2216_ID_25 38328 60855
+
+			Align 3: 58621 81144 NODE_13_length_299970_cov_72.2216_ID_25 38328 60855
+				Gap between this and next alignment: 81144 to 82888 (1743 bp)
+				Next Alignment: 82888 122602 NODE_13_length_299970_cov_72.2216_ID_25 61381 101084
+
+			Align 4: 82888 122602 NODE_13_length_299970_cov_72.2216_ID_25 61381 101084
+				Negative gap (overlap) between this and next alignment: 122602 to 122577 (-25 bp)
+				Next Alignment: 122577 129518 NODE_13_length_299970_cov_72.2216_ID_25 104591 111544
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 104591 to 104617.
+			Align 5: 122603 129518 NODE_13_length_299970_cov_72.2216_ID_25 104617 111544
+				Gap between this and next alignment: 129518 to 129996 (477 bp)
+				Next Alignment: 129996 156301 NODE_13_length_299970_cov_72.2216_ID_25 111921 138247
+
+			Align 6: 129996 156301 NODE_13_length_299970_cov_72.2216_ID_25 111921 138247
+				Gap between this and next alignment: 156301 to 162869 (6567 bp)
+				Next Alignment: 162869 164537 NODE_13_length_299970_cov_72.2216_ID_25 141024 142693
+
+			Align 7: 162869 164537 NODE_13_length_299970_cov_72.2216_ID_25 141024 142693
+				Gap between this and next alignment: 164537 to 164574 (36 bp)
+				Next Alignment: 164574 168878 NODE_13_length_299970_cov_72.2216_ID_25 144653 148959
+
+			Align 8: 164574 168878 NODE_13_length_299970_cov_72.2216_ID_25 144653 148959
+				Gap between this and next alignment: 168878 to 169492 (613 bp)
+				Next Alignment: 169492 183504 NODE_13_length_299970_cov_72.2216_ID_25 148992 163002
+
+			Align 9: 169492 183504 NODE_13_length_299970_cov_72.2216_ID_25 148992 163002
+				Gap between this and next alignment: 183504 to 183657 (152 bp)
+				Next Alignment: 183657 197322 NODE_13_length_299970_cov_72.2216_ID_25 168441 182091
+
+			Align 10: 183657 197322 NODE_13_length_299970_cov_72.2216_ID_25 168441 182091
+				Gap between this and next alignment: 197322 to 197442 (119 bp)
+				Next Alignment: 197442 197711 NODE_13_length_299970_cov_72.2216_ID_25 182093 182364
+
+			Align 11: 197442 197711 NODE_13_length_299970_cov_72.2216_ID_25 182093 182364
+				Negative gap (overlap) between this and next alignment: 197711 to 197696 (-15 bp)
+				Next Alignment: 197696 206690 NODE_13_length_299970_cov_72.2216_ID_25 183024 192031
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 183024 to 183041.
+			Align 12: 197712 206690 NODE_13_length_299970_cov_72.2216_ID_25 183041 192031
+				Gap between this and next alignment: 206690 to 209434 (2743 bp)
+				Next Alignment: 209434 210504 NODE_13_length_299970_cov_72.2216_ID_25 192032 193102
+
+			Align 13: 209434 210504 NODE_13_length_299970_cov_72.2216_ID_25 192032 193102
+				Gap between this and next alignment: 210504 to 212047 (1542 bp)
+				Next Alignment: 212047 220857 NODE_13_length_299970_cov_72.2216_ID_25 193103 201901
+
+			Align 14: 212047 220857 NODE_13_length_299970_cov_72.2216_ID_25 193103 201901
+				Gap between this and next alignment: 220857 to 221458 (600 bp)
+				Next Alignment: 221458 251196 NODE_13_length_299970_cov_72.2216_ID_25 202609 232411
+
+			Align 15: 221458 251196 NODE_13_length_299970_cov_72.2216_ID_25 202609 232411
+				Gap between this and next alignment: 251196 to 253081 (1884 bp)
+				Next Alignment: 253081 270979 NODE_13_length_299970_cov_72.2216_ID_25 232412 250307
+
+			Align 16: 253081 270979 NODE_13_length_299970_cov_72.2216_ID_25 232412 250307
+				Gap between this and next alignment: 270979 to 274482 (3502 bp)
+				Next Alignment: 274482 300135 NODE_13_length_299970_cov_72.2216_ID_25 250308 275959
+
+			Align 17: 274482 300135 NODE_13_length_299970_cov_72.2216_ID_25 250308 275959
+				Next Alignment: 300136 321815 NODE_13_length_299970_cov_72.2216_ID_25 278246 299970
+
+			Align 18: 300136 321815 NODE_13_length_299970_cov_72.2216_ID_25 278246 299970
+				Gap between this and next alignment: 321815 to 326541 (4725 bp)
+				Next Alignment: 326541 361656 NODE_142_length_58422_cov_36.2416_ID_283 1 35184
+
+			Align 19: 326541 361656 NODE_142_length_58422_cov_36.2416_ID_283 1 35184
+				Gap between this and next alignment: 361656 to 363608 (1951 bp)
+				Next Alignment: 363608 372147 NODE_142_length_58422_cov_36.2416_ID_283 35338 43880
+
+			Align 20: 363608 372147 NODE_142_length_58422_cov_36.2416_ID_283 35338 43880
+				Negative gap (overlap) between this and next alignment: 372147 to 372145 (-2 bp)
+				Next Alignment: 372145 372729 NODE_142_length_58422_cov_36.2416_ID_283 44057 44641
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 44057 to 44060.
+			Align 21: 372148 372729 NODE_142_length_58422_cov_36.2416_ID_283 44060 44641
+				Gap between this and next alignment: 372729 to 377089 (4359 bp)
+				Next Alignment: 377089 380662 NODE_142_length_58422_cov_36.2416_ID_283 44885 48476
+
+			Align 22: 377089 380662 NODE_142_length_58422_cov_36.2416_ID_283 44885 48476
+				Gap between this and next alignment: 380662 to 381407 (744 bp)
+				Next Alignment: 381407 381949 NODE_142_length_58422_cov_36.2416_ID_283 54532 55074
+
+			Align 23: 381407 381949 NODE_142_length_58422_cov_36.2416_ID_283 54532 55074
+				Gap between this and next alignment: 381949 to 390127 (8177 bp)
+				Next Alignment: 390127 393472 NODE_142_length_58422_cov_36.2416_ID_283 55075 58422
+
+			Align 24: 390127 393472 NODE_142_length_58422_cov_36.2416_ID_283 55075 58422
+				Gap between this and next alignment: 393472 to 398155 (4682 bp)
+				Next Alignment: 398155 400140 NODE_65_length_111153_cov_72.498_ID_129 1 1988
+
+			Align 25: 398155 400140 NODE_65_length_111153_cov_72.498_ID_129 1 1988
+				Gap between this and next alignment: 400140 to 402026 (1885 bp)
+				Next Alignment: 402026 407626 NODE_65_length_111153_cov_72.498_ID_129 1989 7587
+
+			Align 26: 402026 407626 NODE_65_length_111153_cov_72.498_ID_129 1989 7587
+				Gap between this and next alignment: 407626 to 409512 (1885 bp)
+				Next Alignment: 409512 497300 NODE_65_length_111153_cov_72.498_ID_129 7588 95355
+
+			Align 27: 409512 497300 NODE_65_length_111153_cov_72.498_ID_129 7588 95355
+				Gap between this and next alignment: 497300 to 499186 (1885 bp)
+				Next Alignment: 499186 506882 NODE_65_length_111153_cov_72.498_ID_129 95357 103094
+
+			Align 28: 499186 506882 NODE_65_length_111153_cov_72.498_ID_129 95357 103094
+				Negative gap (overlap) between this and next alignment: 506882 to 506877 (-5 bp)
+				Next Alignment: 506877 507032 NODE_27_length_187831_cov_72.4555_ID_53 171887 172043
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 171887 to 171893.
+			Align 29: 506883 507032 NODE_27_length_187831_cov_72.4555_ID_53 171893 172043
+				Gap between this and next alignment: 507032 to 508768 (1735 bp)
+				Next Alignment: 508768 509165 NODE_65_length_111153_cov_72.498_ID_129 103095 103493
+
+			Align 30: 508768 509165 NODE_65_length_111153_cov_72.498_ID_129 103095 103493
+				Gap between this and next alignment: 509165 to 509167 (1 bp)
+				Next Alignment: 509167 515816 NODE_65_length_111153_cov_72.498_ID_129 104518 111150
+
+			Align 31: 509167 515816 NODE_65_length_111153_cov_72.498_ID_129 104518 111150
+				Gap between this and next alignment: 515816 to 520501 (4684 bp)
+				Next Alignment: 520501 534856 NODE_16_length_275836_cov_72.4012_ID_31 275836 261470
+
+			Align 32: 520501 534856 NODE_16_length_275836_cov_72.4012_ID_31 275836 261470
+				Gap between this and next alignment: 534856 to 536399 (1542 bp)
+				Next Alignment: 536399 544031 NODE_16_length_275836_cov_72.4012_ID_31 261469 253836
+
+			Align 33: 536399 544031 NODE_16_length_275836_cov_72.4012_ID_31 261469 253836
+				Gap between this and next alignment: 544031 to 545917 (1885 bp)
+				Next Alignment: 545917 567401 NODE_16_length_275836_cov_72.4012_ID_31 253835 232350
+
+			Align 34: 545917 567401 NODE_16_length_275836_cov_72.4012_ID_31 253835 232350
+				Gap between this and next alignment: 567401 to 567659 (257 bp)
+				Next Alignment: 567659 583782 NODE_16_length_275836_cov_72.4012_ID_31 215318 199203
+
+			Align 35: 567659 583782 NODE_16_length_275836_cov_72.4012_ID_31 215318 199203
+				Negative gap (overlap) between this and next alignment: 583782 to 583721 (-61 bp)
+				Next Alignment: 583721 586686 NODE_16_length_275836_cov_72.4012_ID_31 191378 188410
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 191378 to 191320.
+			Align 36: 583783 586686 NODE_16_length_275836_cov_72.4012_ID_31 191320 188410
+				Gap between this and next alignment: 586686 to 588573 (1886 bp)
+				Next Alignment: 588573 603868 NODE_16_length_275836_cov_72.4012_ID_31 188409 173115
+
+			Align 37: 588573 603868 NODE_16_length_275836_cov_72.4012_ID_31 188409 173115
+				Gap between this and next alignment: 603868 to 605755 (1886 bp)
+				Next Alignment: 605755 607805 NODE_16_length_275836_cov_72.4012_ID_31 173114 171064
+
+			Align 38: 605755 607805 NODE_16_length_275836_cov_72.4012_ID_31 173114 171064
+				Gap between this and next alignment: 607805 to 610644 (2838 bp)
+				Next Alignment: 610644 612350 NODE_16_length_275836_cov_72.4012_ID_31 168233 166529
+
+			Align 39: 610644 612350 NODE_16_length_275836_cov_72.4012_ID_31 168233 166529
+				Gap between this and next alignment: 612350 to 613154 (803 bp)
+				Next Alignment: 613154 652074 NODE_16_length_275836_cov_72.4012_ID_31 166445 127498
+
+			Align 40: 613154 652074 NODE_16_length_275836_cov_72.4012_ID_31 166445 127498
+				Gap between this and next alignment: 652074 to 697213 (45138 bp)
+				Next Alignment: 697213 714531 NODE_16_length_275836_cov_72.4012_ID_31 124054 106737
+
+			Align 41: 697213 714531 NODE_16_length_275836_cov_72.4012_ID_31 124054 106737
+				Gap between this and next alignment: 714531 to 716417 (1885 bp)
+				Next Alignment: 716417 736906 NODE_16_length_275836_cov_72.4012_ID_31 106736 86249
+
+			Align 42: 716417 736906 NODE_16_length_275836_cov_72.4012_ID_31 106736 86249
+				Negative gap (overlap) between this and next alignment: 736906 to 736892 (-14 bp)
+				Next Alignment: 736892 737037 NODE_16_length_275836_cov_72.4012_ID_31 31753 31608
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 31753 to 31738.
+			Align 43: 736907 737037 NODE_16_length_275836_cov_72.4012_ID_31 31738 31608
+				Next Alignment: 737038 765330 NODE_16_length_275836_cov_72.4012_ID_31 30726 2437
+
+			Align 44: 737038 765330 NODE_16_length_275836_cov_72.4012_ID_31 30726 2437
+				Gap between this and next alignment: 765330 to 765490 (159 bp)
+				Next Alignment: 765490 768743 NODE_30_length_181216_cov_72.3013_ID_59 611 3869
+
+			Align 45: 765490 768743 NODE_30_length_181216_cov_72.3013_ID_59 611 3869
+				Gap between this and next alignment: 768743 to 791667 (22923 bp)
+				Next Alignment: 791667 811332 NODE_30_length_181216_cov_72.3013_ID_59 3870 23540
+
+			Align 46: 791667 811332 NODE_30_length_181216_cov_72.3013_ID_59 3870 23540
+				Gap between this and next alignment: 811332 to 813042 (1709 bp)
+				Next Alignment: 813042 829283 NODE_30_length_181216_cov_72.3013_ID_59 24326 40612
+
+			Align 47: 813042 829283 NODE_30_length_181216_cov_72.3013_ID_59 24326 40612
+				Gap between this and next alignment: 829283 to 854960 (25676 bp)
+				Next Alignment: 854960 889292 NODE_30_length_181216_cov_72.3013_ID_59 70768 105099
+
+			Align 48: 854960 889292 NODE_30_length_181216_cov_72.3013_ID_59 70768 105099
+				Negative gap (overlap) between this and next alignment: 889292 to 889291 (-1 bp)
+				Next Alignment: 889291 893685 NODE_30_length_181216_cov_72.3013_ID_59 110269 114656
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 110269 to 110271.
+			Align 49: 889293 893685 NODE_30_length_181216_cov_72.3013_ID_59 110271 114656
+				Gap between this and next alignment: 893685 to 908407 (14721 bp)
+				Next Alignment: 908407 913790 NODE_30_length_181216_cov_72.3013_ID_59 128800 134177
+
+			Align 50: 908407 913790 NODE_30_length_181216_cov_72.3013_ID_59 128800 134177
+				Negative gap (overlap) between this and next alignment: 913790 to 913789 (-1 bp)
+				Next Alignment: 913789 926385 NODE_30_length_181216_cov_72.3013_ID_59 134230 146824
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 134230 to 134232.
+			Align 51: 913791 926385 NODE_30_length_181216_cov_72.3013_ID_59 134232 146824
+				Gap between this and next alignment: 926385 to 933431 (7045 bp)
+				Next Alignment: 933431 950775 NODE_30_length_181216_cov_72.3013_ID_59 156207 173535
+
+			Align 52: 933431 950775 NODE_30_length_181216_cov_72.3013_ID_59 156207 173535
+				Negative gap (overlap) between this and next alignment: 950775 to 950775 (0 bp)
+				Next Alignment: 950775 955140 NODE_30_length_181216_cov_72.3013_ID_59 173760 178126
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 173760 to 173761.
+			Align 53: 950776 955140 NODE_30_length_181216_cov_72.3013_ID_59 173761 178126
+				Gap between this and next alignment: 955140 to 955357 (216 bp)
+				Next Alignment: 955357 956454 NODE_30_length_181216_cov_72.3013_ID_59 180116 181216
+
+			Align 54: 955357 956454 NODE_30_length_181216_cov_72.3013_ID_59 180116 181216
+				Negative gap (overlap) between this and next alignment: 956454 to 956393 (-61 bp)
+				Next Alignment: 956393 958045 NODE_16_length_275836_cov_72.4012_ID_31 1915 263
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1915 to 1853.
+			Align 55: 956455 958045 NODE_16_length_275836_cov_72.4012_ID_31 1853 263
+				Negative gap (overlap) between this and next alignment: 958045 to 957989 (-56 bp)
+				Next Alignment: 957989 958923 NODE_11014_length_935_cov_37.6307_ID_22027 935 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 935 to 878.
+			Align 56: 958046 958923 NODE_11014_length_935_cov_37.6307_ID_22027 878 1
+				Negative gap (overlap) between this and next alignment: 958923 to 958834 (-89 bp)
+				Next Alignment: 958834 959066 NODE_16_length_275836_cov_72.4012_ID_31 233 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 233 to 143.
+			Align 57: 958924 959066 NODE_16_length_275836_cov_72.4012_ID_31 143 1
+				Gap between this and next alignment: 959066 to 961012 (1945 bp)
+				Next Alignment: 961012 962437 NODE_7493_length_1426_cov_160.509_ID_14985 1 1426
+
+			Align 58: 961012 962437 NODE_7493_length_1426_cov_160.509_ID_14985 1 1426
+				Gap between this and next alignment: 962437 to 962539 (101 bp)
+				Next Alignment: 962539 963053 NODE_19352_length_515_cov_207.465_ID_38703 515 1
+
+			Align 59: 962539 963053 NODE_19352_length_515_cov_207.465_ID_38703 515 1
+				Negative gap (overlap) between this and next alignment: 963053 to 963000 (-53 bp)
+				Next Alignment: 963000 963573 NODE_30_length_181216_cov_72.3013_ID_59 1 574
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 55.
+			Align 60: 963054 963573 NODE_30_length_181216_cov_72.3013_ID_59 55 574
+				Negative gap (overlap) between this and next alignment: 963573 to 963515 (-58 bp)
+				Next Alignment: 963515 963743 NODE_382_length_27667_cov_72.1611_ID_763 4 233
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 4 to 63.
+			Align 61: 963574 963743 NODE_382_length_27667_cov_72.1611_ID_763 63 233
+				Negative gap (overlap) between this and next alignment: 963743 to 963742 (-1 bp)
+				Next Alignment: 963742 985803 NODE_382_length_27667_cov_72.1611_ID_763 5510 27597
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 5510 to 5512.
+			Align 62: 963744 985803 NODE_382_length_27667_cov_72.1611_ID_763 5512 27597
+				Gap between this and next alignment: 985803 to 985812 (8 bp)
+				Next Alignment: 985812 1038798 NODE_115_length_70256_cov_71.8624_ID_229 59 53060
+
+			Align 63: 985812 1038798 NODE_115_length_70256_cov_71.8624_ID_229 59 53060
+				Gap between this and next alignment: 1038798 to 1040086 (1287 bp)
+				Next Alignment: 1040086 1048600 NODE_115_length_70256_cov_71.8624_ID_229 53061 61572
+
+			Align 64: 1040086 1048600 NODE_115_length_70256_cov_71.8624_ID_229 53061 61572
+				Gap between this and next alignment: 1048600 to 1064470 (15869 bp)
+				Next Alignment: 1064470 1070209 NODE_115_length_70256_cov_71.8624_ID_229 64465 70201
+
+			Align 65: 1064470 1070209 NODE_115_length_70256_cov_71.8624_ID_229 64465 70201
+				Negative gap (overlap) between this and next alignment: 1070209 to 1070202 (-7 bp)
+				Next Alignment: 1070202 1093285 NODE_190_length_46858_cov_71.1859_ID_379 56 23202
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 56 to 64.
+			Align 66: 1070210 1093285 NODE_190_length_46858_cov_71.1859_ID_379 64 23202
+				Gap between this and next alignment: 1093285 to 1093295 (9 bp)
+				Next Alignment: 1093295 1112452 NODE_190_length_46858_cov_71.1859_ID_379 23369 42534
+
+			Align 67: 1093295 1112452 NODE_190_length_46858_cov_71.1859_ID_379 23369 42534
+				Negative gap (overlap) between this and next alignment: 1112452 to 1112427 (-25 bp)
+				Next Alignment: 1112427 1163127 NODE_22_length_220876_cov_72.2877_ID_43 198620 147883
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 198620 to 198594.
+			Align 68: 1112453 1163127 NODE_22_length_220876_cov_72.2877_ID_43 198594 147883
+				Gap between this and next alignment: 1163127 to 1163465 (337 bp)
+				Next Alignment: 1163465 1209792 NODE_22_length_220876_cov_72.2877_ID_43 143019 96694
+
+			Align 69: 1163465 1209792 NODE_22_length_220876_cov_72.2877_ID_43 143019 96694
+				Gap between this and next alignment: 1209792 to 1211690 (1897 bp)
+				Next Alignment: 1211690 1308343 NODE_22_length_220876_cov_72.2877_ID_43 96693 56
+
+			Align 70: 1211690 1308343 NODE_22_length_220876_cov_72.2877_ID_43 96693 56
+				Negative gap (overlap) between this and next alignment: 1308343 to 1308336 (-7 bp)
+				Next Alignment: 1308336 1329502 NODE_551_length_21183_cov_36.0313_ID_1101 21128 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 21128 to 21120.
+			Align 71: 1308344 1329502 NODE_551_length_21183_cov_36.0313_ID_1101 21120 1
+				Gap between this and next alignment: 1329502 to 1334343 (4840 bp)
+				Next Alignment: 1334343 1349662 NODE_1_length_514709_cov_72.0707_ID_1 3 15324
+
+			Align 72: 1334343 1349662 NODE_1_length_514709_cov_72.0707_ID_1 3 15324
+				Negative gap (overlap) between this and next alignment: 1349662 to 1349646 (-16 bp)
+				Next Alignment: 1349646 1352609 NODE_1_length_514709_cov_72.0707_ID_1 31069 34032
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 31069 to 31086.
+			Align 73: 1349663 1352609 NODE_1_length_514709_cov_72.0707_ID_1 31086 34032
+				Gap between this and next alignment: 1352609 to 1354420 (1810 bp)
+				Next Alignment: 1354420 1382567 NODE_1_length_514709_cov_72.0707_ID_1 34058 62219
+
+			Align 74: 1354420 1382567 NODE_1_length_514709_cov_72.0707_ID_1 34058 62219
+				Gap between this and next alignment: 1382567 to 1384377 (1809 bp)
+				Next Alignment: 1384377 1454740 NODE_1_length_514709_cov_72.0707_ID_1 62238 132603
+
+			Align 75: 1384377 1454740 NODE_1_length_514709_cov_72.0707_ID_1 62238 132603
+				Gap between this and next alignment: 1454740 to 1455659 (918 bp)
+				Next Alignment: 1455659 1504620 NODE_1_length_514709_cov_72.0707_ID_1 141301 190291
+
+			Align 76: 1455659 1504620 NODE_1_length_514709_cov_72.0707_ID_1 141301 190291
+			END in current alignment.  Modifying 1504620 to 1504620.
+
+ERROR: Reference Eubacterium_sp_3_1_31_gi_482850069_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Eubacterium_sp_3_1_31_gi_482850060_ref_NZ_', 'Eubacterium_sp_3_1_31_gi_482850067_ref_NZ_', 'Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_', 'Eubacterium_sp_3_1_31_gi_482850058_ref_NZ_', 'Eubacterium_sp_3_1_31_gi_482850063_ref_NZ_']
+	Reference Eubacterium_sp_3_1_31_gi_482850063_ref_NZ_: 9 total alignments. 1 total regions.
+		Region: 1 to 176757 (176757 bp)
+			START in gap: 1 to 633 (632 bp)
+			Align 1: 633 17744 NODE_27_length_187831_cov_72.4555_ID_53 154671 171778
+				Gap between this and next alignment: 17744 to 17914 (169 bp)
+				Next Alignment: 17914 24854 NODE_32_length_174028_cov_72.0951_ID_63 173761 166823
+
+			Align 2: 17914 24854 NODE_32_length_174028_cov_72.0951_ID_63 173761 166823
+				Gap between this and next alignment: 24854 to 26824 (1969 bp)
+				Next Alignment: 26824 60666 NODE_32_length_174028_cov_72.0951_ID_63 164756 130905
+
+			Align 3: 26824 60666 NODE_32_length_174028_cov_72.0951_ID_63 164756 130905
+				Gap between this and next alignment: 60666 to 63015 (2348 bp)
+				Next Alignment: 63015 73707 NODE_32_length_174028_cov_72.0951_ID_63 130904 120214
+
+			Align 4: 63015 73707 NODE_32_length_174028_cov_72.0951_ID_63 130904 120214
+				Gap between this and next alignment: 73707 to 74419 (711 bp)
+				Next Alignment: 74419 96813 NODE_32_length_174028_cov_72.0951_ID_63 120213 97831
+
+			Align 5: 74419 96813 NODE_32_length_174028_cov_72.0951_ID_63 120213 97831
+				Negative gap (overlap) between this and next alignment: 96813 to 96752 (-61 bp)
+				Next Alignment: 96752 100644 NODE_32_length_174028_cov_72.0951_ID_63 97830 93938
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 97830 to 97768.
+			Align 6: 96814 100644 NODE_32_length_174028_cov_72.0951_ID_63 97768 93938
+				Gap between this and next alignment: 100644 to 104279 (3634 bp)
+				Next Alignment: 104279 106283 NODE_32_length_174028_cov_72.0951_ID_63 93937 91931
+
+			Align 7: 104279 106283 NODE_32_length_174028_cov_72.0951_ID_63 93937 91931
+				Gap between this and next alignment: 106283 to 108464 (2180 bp)
+				Next Alignment: 108464 126548 NODE_32_length_174028_cov_72.0951_ID_63 91930 73872
+
+			Align 8: 108464 126548 NODE_32_length_174028_cov_72.0951_ID_63 91930 73872
+				Negative gap (overlap) between this and next alignment: 126548 to 126311 (-237 bp)
+				Next Alignment: 126311 139798 NODE_32_length_174028_cov_72.0951_ID_63 73871 60378
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 73871 to 73629.
+			Align 9: 126549 139798 NODE_32_length_174028_cov_72.0951_ID_63 73629 60378
+			END in gap: 139798 to 176757 (36959 bp)
+
+	Reference Eubacterium_sp_3_1_31_gi_482850065_ref_NZ_: 27 total alignments. 1 total regions.
+		Region: 1 to 463184 (463184 bp)
+			START in gap: 1 to 2495 (2494 bp)
+			Align 1: 2495 19840 NODE_21_length_235338_cov_71.8168_ID_41 232082 214736
+				Negative gap (overlap) between this and next alignment: 19840 to 19831 (-9 bp)
+				Next Alignment: 19831 75865 NODE_21_length_235338_cov_71.8168_ID_41 203758 147688
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 203758 to 203748.
+			Align 2: 19841 75865 NODE_21_length_235338_cov_71.8168_ID_41 203748 147688
+				Gap between this and next alignment: 75865 to 78407 (2541 bp)
+				Next Alignment: 78407 86304 NODE_21_length_235338_cov_71.8168_ID_41 145682 137783
+
+			Align 3: 78407 86304 NODE_21_length_235338_cov_71.8168_ID_41 145682 137783
+				Negative gap (overlap) between this and next alignment: 86304 to 86285 (-19 bp)
+				Next Alignment: 86285 86961 NODE_21_length_235338_cov_71.8168_ID_41 137723 137048
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 137723 to 137704.
+			Align 4: 86305 86961 NODE_21_length_235338_cov_71.8168_ID_41 137704 137048
+				Gap between this and next alignment: 86961 to 89186 (2224 bp)
+				Next Alignment: 89186 89639 NODE_21_length_235338_cov_71.8168_ID_41 137047 136594
+
+			Align 5: 89186 89639 NODE_21_length_235338_cov_71.8168_ID_41 137047 136594
+				Negative gap (overlap) between this and next alignment: 89639 to 89622 (-17 bp)
+				Next Alignment: 89622 102635 NODE_21_length_235338_cov_71.8168_ID_41 133113 120072
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 133113 to 133096.
+			Align 6: 89640 102635 NODE_21_length_235338_cov_71.8168_ID_41 133096 120072
+				Negative gap (overlap) between this and next alignment: 102635 to 102634 (-1 bp)
+				Next Alignment: 102634 122762 NODE_21_length_235338_cov_71.8168_ID_41 32245 12120
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 32245 to 32243.
+			Align 7: 102636 122762 NODE_21_length_235338_cov_71.8168_ID_41 32243 12120
+				Gap between this and next alignment: 122762 to 123474 (711 bp)
+				Next Alignment: 123474 133907 NODE_21_length_235338_cov_71.8168_ID_41 12119 1677
+
+			Align 8: 123474 133907 NODE_21_length_235338_cov_71.8168_ID_41 12119 1677
+				Gap between this and next alignment: 133907 to 135966 (2058 bp)
+				Next Alignment: 135966 136790 NODE_23_length_210865_cov_72.1903_ID_45 1 825
+
+			Align 9: 135966 136790 NODE_23_length_210865_cov_72.1903_ID_45 1 825
+				Gap between this and next alignment: 136790 to 143363 (6572 bp)
+				Next Alignment: 143363 154783 NODE_23_length_210865_cov_72.1903_ID_45 843 12273
+
+			Align 10: 143363 154783 NODE_23_length_210865_cov_72.1903_ID_45 843 12273
+				Negative gap (overlap) between this and next alignment: 154783 to 154780 (-3 bp)
+				Next Alignment: 154780 156690 NODE_23_length_210865_cov_72.1903_ID_45 28232 30142
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 28232 to 28236.
+			Align 11: 154784 156690 NODE_23_length_210865_cov_72.1903_ID_45 28236 30142
+				Gap between this and next alignment: 156690 to 158082 (1391 bp)
+				Next Alignment: 158082 163045 NODE_23_length_210865_cov_72.1903_ID_45 30143 35106
+
+			Align 12: 158082 163045 NODE_23_length_210865_cov_72.1903_ID_45 30143 35106
+				Gap between this and next alignment: 163045 to 164267 (1221 bp)
+				Next Alignment: 164267 211177 NODE_23_length_210865_cov_72.1903_ID_45 48907 95831
+
+			Align 13: 164267 211177 NODE_23_length_210865_cov_72.1903_ID_45 48907 95831
+				Gap between this and next alignment: 211177 to 211258 (80 bp)
+				Next Alignment: 211258 211703 NODE_23_length_210865_cov_72.1903_ID_45 96398 96843
+
+			Align 14: 211258 211703 NODE_23_length_210865_cov_72.1903_ID_45 96398 96843
+				Gap between this and next alignment: 211703 to 211814 (110 bp)
+				Next Alignment: 211814 213322 NODE_23_length_210865_cov_72.1903_ID_45 96844 98352
+
+			Align 15: 211814 213322 NODE_23_length_210865_cov_72.1903_ID_45 96844 98352
+				Next Alignment: 213323 213425 NODE_23_length_210865_cov_72.1903_ID_45 98455 98353
+
+			Align 16: 213323 213425 NODE_23_length_210865_cov_72.1903_ID_45 98455 98353
+				Next Alignment: 213426 235844 NODE_23_length_210865_cov_72.1903_ID_45 98456 120911
+
+			Align 17: 213426 235844 NODE_23_length_210865_cov_72.1903_ID_45 98456 120911
+				Gap between this and next alignment: 235844 to 236025 (180 bp)
+				Next Alignment: 236025 255903 NODE_23_length_210865_cov_72.1903_ID_45 126280 146110
+
+			Align 18: 236025 255903 NODE_23_length_210865_cov_72.1903_ID_45 126280 146110
+				Gap between this and next alignment: 255903 to 255908 (4 bp)
+				Next Alignment: 255908 264393 NODE_23_length_210865_cov_72.1903_ID_45 149182 157614
+
+			Align 19: 255908 264393 NODE_23_length_210865_cov_72.1903_ID_45 149182 157614
+				Gap between this and next alignment: 264393 to 273356 (8962 bp)
+				Next Alignment: 273356 296646 NODE_23_length_210865_cov_72.1903_ID_45 167661 190948
+
+			Align 20: 273356 296646 NODE_23_length_210865_cov_72.1903_ID_45 167661 190948
+				Gap between this and next alignment: 296646 to 319109 (22462 bp)
+				Next Alignment: 319109 321460 NODE_4474_length_2340_cov_73.0806_ID_8947 1 2340
+
+			Align 21: 319109 321460 NODE_4474_length_2340_cov_73.0806_ID_8947 1 2340
+				Gap between this and next alignment: 321460 to 357291 (35830 bp)
+				Next Alignment: 357291 379024 NODE_200_length_44893_cov_72.2663_ID_399 44509 22766
+
+			Align 22: 357291 379024 NODE_200_length_44893_cov_72.2663_ID_399 44509 22766
+				Gap between this and next alignment: 379024 to 379027 (2 bp)
+				Next Alignment: 379027 379846 NODE_200_length_44893_cov_72.2663_ID_399 11187 10362
+
+			Align 23: 379027 379846 NODE_200_length_44893_cov_72.2663_ID_399 11187 10362
+				Gap between this and next alignment: 379846 to 386938 (7091 bp)
+				Next Alignment: 386938 392260 NODE_230_length_41530_cov_71.8199_ID_459 11019 5697
+
+			Align 24: 386938 392260 NODE_230_length_41530_cov_71.8199_ID_459 11019 5697
+				Gap between this and next alignment: 392260 to 394389 (2128 bp)
+				Next Alignment: 394389 429400 NODE_32_length_174028_cov_72.0951_ID_63 378 35374
+
+			Align 25: 394389 429400 NODE_32_length_174028_cov_72.0951_ID_63 378 35374
+				Gap between this and next alignment: 429400 to 432625 (3224 bp)
+				Next Alignment: 432625 447775 NODE_32_length_174028_cov_72.0951_ID_63 35696 50840
+
+			Align 26: 432625 447775 NODE_32_length_174028_cov_72.0951_ID_63 35696 50840
+				Gap between this and next alignment: 447775 to 449835 (2059 bp)
+				Next Alignment: 449835 459371 NODE_32_length_174028_cov_72.0951_ID_63 50841 60377
+
+			Align 27: 449835 459371 NODE_32_length_174028_cov_72.0951_ID_63 50841 60377
+			END in gap: 459371 to 463184 (3813 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Eubacterium_sp_3_1_31/contigs_reports/nucmer_output/SPAdes.used_snps
+
+Results:
+	Local Misassemblies: 25
+	Misassemblies: 48
+		Relocations: 40
+		Translocations: 6
+		Inversions: 2
+	Fake misassemblies matched with structural variations: 41
+	Misassembled Contigs: 16
+	Misassembled Contig Bases: 2811363
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 1 part
+Partially Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 36207
+
+Ambiguously Mapped Contigs: 1
+Total Bases in Ambiguously Mapped Contigs: 2340
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 2569399
+
+	SNPs: 33598
+	Insertions: 2049
+	Deletions: 1471
+
+	Positive Gaps: 112
+		Internal Gaps:  84
+		External Gaps:  28
+		External Gap Total:  605565
+		External Gap Average: 21627
+	Negative Gaps: 28
+		Internal Overlaps:  19
+		External Overlaps:  9
+		External Overlaps Total: -361
+		External Overlaps Average: -40
+	Contigs with Redundant Alignments: 1 (115)

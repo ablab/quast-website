@@ -1,0 +1,1154 @@
+Aligning contigs to reference...
+	Running Nucmer
+Parsing coords...
+Loading reference...
+	Loaded [Prevotella_nanceiensis_gi_483528923_ref_NZ_]
+	Loaded [Prevotella_nanceiensis_gi_483529071_ref_NZ_]
+	Loaded [Prevotella_nanceiensis_gi_483529300_ref_NZ_]
+	Loaded [Prevotella_nanceiensis_gi_483529517_ref_NZ_]
+	Loaded [Prevotella_nanceiensis_gi_483529657_ref_NZ_]
+	Loaded [Prevotella_nanceiensis_gi_483529859_ref_NZ_]
+	Loaded [Prevotella_nanceiensis_gi_483530088_ref_NZ_]
+	Loaded [Prevotella_nanceiensis_gi_483530284_ref_NZ_]
+	Loaded [Prevotella_nanceiensis_gi_483530477_ref_NZ_]
+	Loaded [Prevotella_nanceiensis_gi_483530682_ref_NZ_]
+	Loaded [Prevotella_nanceiensis_gi_483530864_ref_NZ_]
+	Loaded [Prevotella_nanceiensis_gi_483530964_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 12
+	Total Region Length: 2650108
+Analyzing contigs...
+CONTIG: NODE_26_length_140438_cov_7.20786_ID_51 (140438bp)
+Top Length: 96535  Top ID: 97.5
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 1 between Alignment 1 and 2:  178253 208478 | 110212 140438 | 30226 30227 --> 178254 208478 | 110213 140438 | 30225 30226
+			Real Alignment 1: 79392 175943 | 13678 110212 | 96552 96535 | 97.5 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ NODE_26_length_140438_cov_7.20786_ID_51
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 178254 208478 | 110213 140438 | 30225 30226 | 98.16 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ NODE_26_length_140438_cov_7.20786_ID_51
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_49_length_96814_cov_7.92012_ID_97 (96814bp)
+Top Length: 23254  Top ID: 97.12
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 96814 and total length of all aligns is 28944
+		Alignment: 19747 43000 | 3 23256 | 23254 23254 | 97.12 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ NODE_49_length_96814_cov_7.92012_ID_97
+		Alignment: 44748 50436 | 25055 30744 | 5689 5690 | 97.33 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ NODE_49_length_96814_cov_7.92012_ID_97
+		Unaligned bases: 67870
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: NODE_196_length_34818_cov_6.96266_ID_391 (34818bp)
+Top Length: 11389  Top ID: 98.17
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 53520 64913 | 1 11389 | 11394 11389 | 98.17 | Prevotella_nanceiensis_gi_483530477_ref_NZ_ NODE_196_length_34818_cov_6.96266_ID_391
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 237878 240957 | 16768 13690 | 3080 3079 | 96.46 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ NODE_196_length_34818_cov_6.96266_ID_391
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 3: 224972 235945 | 34818 23847 | 10974 10972 | 97.26 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ NODE_196_length_34818_cov_6.96266_ID_391
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_373_length_20955_cov_7.76584_ID_745 (20955bp)
+Top Length: 17246  Top ID: 96.57
+		This contig is partially unaligned. (Aligned 17246 out of 20955 bases)
+		Alignment: 50390 67639 | 3710 20955 | 17250 17246 | 96.57 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ NODE_373_length_20955_cov_7.76584_ID_745
+		Unaligned bases: 1 to 3709 (3709)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_494_length_16686_cov_6.1208_ID_987 (16686bp)
+Top Length: 11808  Top ID: 97.93
+		This contig is partially unaligned. (Aligned 11808 out of 16686 bases)
+		Alignment: 67597 79404 | 16686 4879 | 11808 11808 | 97.93 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ NODE_494_length_16686_cov_6.1208_ID_987
+		Unaligned bases: 1 to 4878 (4878)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_501_length_16491_cov_7.52269_ID_1001 (16491bp)
+Top Length: 13169  Top ID: 97.87
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 222080 224970 | 2893 2 | 2891 2892 | 97.99 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ NODE_501_length_16491_cov_7.52269_ID_1001
+			  Gap between these two alignments (local misassembly). Inconsistency = 0 
+			Real Alignment 2: 208479 221650 | 16491 3323 | 13172 13169 | 97.87 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ NODE_501_length_16491_cov_7.52269_ID_1001
+
+CONTIG: NODE_844_length_10546_cov_6.92251_ID_1687 (10546bp)
+Top Length: 9637  Top ID: 98.35
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 94 9731 | 9637 1 | 9638 9637 | 98.35 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ NODE_844_length_10546_cov_6.92251_ID_1687
+			  Extensive misassembly ( relocation, inconsistency = 234474 ) between these two alignments
+			Real Alignment 2: 244236 245011 | 9668 10443 | 776 776 | 99.87 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ NODE_844_length_10546_cov_6.92251_ID_1687
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 3: 77364 77442 | 10546 10468 | 79 79 | 100.0 | Prevotella_nanceiensis_gi_483530477_ref_NZ_ NODE_844_length_10546_cov_6.92251_ID_1687
+
+CONTIG: NODE_906_length_10014_cov_6.61362_ID_1811 (10014bp)
+Top Length: 10011  Top ID: 97.09
+		Marking as insignificant: 50921 50998 | 8722 8645 | 78 78 | 100.0 | Prevotella_nanceiensis_gi_483530477_ref_NZ_ NODE_906_length_10014_cov_6.61362_ID_1811
+		One align captures most of this contig: 9733 19742 | 10013 3 | 10010 10011 | 97.09 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ NODE_906_length_10014_cov_6.61362_ID_1811
+
+CONTIG: NODE_29842_length_750_cov_18.5424_ID_59683 (750bp)
+Top Length: 395  Top ID: 99.49
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 869 1197 | 1 329 | 329 329 | 100.0 | Prevotella_nanceiensis_gi_483529300_ref_NZ_ NODE_29842_length_750_cov_18.5424_ID_59683
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 784 1178 | 750 356 | 395 395 | 99.49 | Prevotella_nanceiensis_gi_483529517_ref_NZ_ NODE_29842_length_750_cov_18.5424_ID_59683
+
+CONTIG: NODE_3_length_335888_cov_23.6297_ID_5 (335888bp)
+Top Length: 79  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 79 out of 335888 bases)
+		Alignment: 50920 50998 | 105727 105805 | 79 79 | 100.0 | Prevotella_nanceiensis_gi_483530477_ref_NZ_ NODE_3_length_335888_cov_23.6297_ID_5
+		Unaligned bases: 1 to 105726 (105726)
+		Unaligned bases: 105806 to 335888 (230083)
+
+CONTIG: NODE_79_length_71432_cov_6.95943_ID_157 (71432bp)
+Top Length: 51044  Top ID: 96.71
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 68181 76475 | 8294 1 | 8295 8294 | 99.86 | Prevotella_nanceiensis_gi_483530477_ref_NZ_ NODE_79_length_71432_cov_6.95943_ID_157
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 166819 217856 | 59340 8297 | 51038 51044 | 96.71 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ NODE_79_length_71432_cov_6.95943_ID_157
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 3: 164052 165487 | 60857 59420 | 1436 1438 | 96.38 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ NODE_79_length_71432_cov_6.95943_ID_157
+			  Extensive misassembly ( relocation, inconsistency = 1842 ) between these two alignments
+			Real Alignment 4: 152037 159715 | 71063 63352 | 7679 7712 | 95.53 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ NODE_79_length_71432_cov_6.95943_ID_157
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_118_length_54856_cov_7.01146_ID_235 (54856bp)
+Top Length: 80  Top ID: 97.5
+		This contig is partially unaligned. (Aligned 80 out of 54856 bases)
+		Alignment: 19755 19834 | 48250 48171 | 80 80 | 97.5 | Prevotella_nanceiensis_gi_483530477_ref_NZ_ NODE_118_length_54856_cov_7.01146_ID_235
+		Unaligned bases: 1 to 48170 (48170)
+		Unaligned bases: 48251 to 54856 (6606)
+
+CONTIG: NODE_125_length_53271_cov_7.76669_ID_249 (53271bp)
+Top Length: 33423  Top ID: 97.61
+		Skipping redundant alignment 750467 750556 | 89 1 | 90 89 | 96.67 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_125_length_53271_cov_7.76669_ID_249
+		Skipping redundant alignment 11024 11099 | 50673 50748 | 76 76 | 100.0 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ NODE_125_length_53271_cov_7.76669_ID_249
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 289 19998 | 1 19710 | 19710 19710 | 97.58 | Prevotella_nanceiensis_gi_483530477_ref_NZ_ NODE_125_length_53271_cov_7.76669_ID_249
+			  Gap between these two alignments (local misassembly). Inconsistency = 0 
+			Real Alignment 2: 20137 53519 | 19849 53271 | 33383 33423 | 97.61 | Prevotella_nanceiensis_gi_483530477_ref_NZ_ NODE_125_length_53271_cov_7.76669_ID_249
+
+CONTIG: NODE_20396_length_998_cov_16.052_ID_40791 (998bp)
+Top Length: 998  Top ID: 99.9
+		One align captures most of this contig: 76421 77418 | 1 998 | 998 998 | 99.9 | Prevotella_nanceiensis_gi_483530477_ref_NZ_ NODE_20396_length_998_cov_16.052_ID_40791
+
+CONTIG: NODE_26215_length_829_cov_14.4574_ID_52429 (829bp)
+Top Length: 413  Top ID: 97.58
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 750502 750844 | 1 343 | 343 343 | 95.92 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_26215_length_829_cov_14.4574_ID_52429
+		Skipping redundant alignment 18398 18810 | 829 417 | 413 413 | 97.58 | Prevotella_nanceiensis_gi_483530682_ref_NZ_ NODE_26215_length_829_cov_14.4574_ID_52429
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 1 343 | 343 1 | 343 343 | 95.63 | Prevotella_nanceiensis_gi_483530477_ref_NZ_ NODE_26215_length_829_cov_14.4574_ID_52429
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 1 413 | 417 829 | 413 413 | 97.09 | Prevotella_nanceiensis_gi_483530682_ref_NZ_ NODE_26215_length_829_cov_14.4574_ID_52429
+
+CONTIG: NODE_21_length_157394_cov_7.5895_ID_41 (157394bp)
+Top Length: 46902  Top ID: 96.93
+		Skipping redundant alignment 1 294 | 884 1177 | 294 294 | 97.97 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_21_length_157394_cov_7.5895_ID_41
+		This contig is misassembled. 7 total aligns.
+			Excluding internal overlap of size 149 between Alignment 1 and 2:  1 382 | 888 1266 | 382 379 --> 1 233 | 888 1117 | 233 230
+			Real Alignment 1: 1 233 | 888 1117 | 233 230 | 97.13 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ NODE_21_length_157394_cov_7.5895_ID_41
+			  Extensive misassembly ( translocation ) between these two alignments
+			Excluding internal overlap of size 1537 between Alignment 2 and 3:  1 14245 | 1118 15384 | 14245 14267 --> 1 12708 | 1118 13847 | 12708 12730
+			Real Alignment 2: 1 12708 | 1118 13847 | 12708 12730 | 96.65 | Prevotella_nanceiensis_gi_483530284_ref_NZ_ NODE_21_length_157394_cov_7.5895_ID_41
+			  Extensive misassembly ( relocation, inconsistency = 3080 ) between these two alignments
+			Excluding internal overlap of size 24 between Alignment 3 and 4:  15789 57566 | 13848 55628 | 41778 41781 --> 15789 57542 | 13848 55604 | 41754 41757
+			Real Alignment 3: 15789 57542 | 13848 55604 | 41754 41757 | 97.5 | Prevotella_nanceiensis_gi_483530284_ref_NZ_ NODE_21_length_157394_cov_7.5895_ID_41
+			  Extensive misassembly ( relocation, inconsistency = 2342 ) between these two alignments
+			Real Alignment 4: 59885 106696 | 55605 102506 | 46812 46902 | 96.93 | Prevotella_nanceiensis_gi_483530284_ref_NZ_ NODE_21_length_157394_cov_7.5895_ID_41
+			  Gap between these two alignments (local misassembly). Inconsistency = 57 
+			Real Alignment 5: 106880 116653 | 102633 112409 | 9774 9777 | 97.55 | Prevotella_nanceiensis_gi_483530284_ref_NZ_ NODE_21_length_157394_cov_7.5895_ID_41
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 6: 117602 160988 | 113358 156739 | 43387 43382 | 97.14 | Prevotella_nanceiensis_gi_483530284_ref_NZ_ NODE_21_length_157394_cov_7.5895_ID_41
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_304_length_24808_cov_7.79635_ID_607 (24808bp)
+Top Length: 78  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 78 out of 24808 bases)
+		Alignment: 150368 150445 | 7845 7768 | 78 78 | 100.0 | Prevotella_nanceiensis_gi_483530284_ref_NZ_ NODE_304_length_24808_cov_7.79635_ID_607
+		Unaligned bases: 1 to 7767 (7767)
+		Unaligned bases: 7846 to 24808 (16963)
+
+CONTIG: NODE_20_length_161860_cov_8.39266_ID_39 (161860bp)
+Top Length: 76086  Top ID: 97.31
+		Skipping redundant alignment 100784 100981 | 161181 161377 | 198 197 | 98.48 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ NODE_20_length_161860_cov_8.39266_ID_39
+		Skipping redundant alignment 103843 104038 | 161376 161181 | 196 196 | 98.98 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ NODE_20_length_161860_cov_8.39266_ID_39
+		This contig is misassembled. 9 total aligns.
+			Real Alignment 1: 548208 577080 | 1 28961 | 28873 28961 | 96.86 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_20_length_161860_cov_8.39266_ID_39
+			  Extensive misassembly ( relocation, inconsistency = -1709 ) between these two alignments
+			Excluding internal overlap of size 7 between Alignment 2 and 3:  577080 577994 | 30670 31583 | 915 914 --> 577080 577987 | 30670 31576 | 908 907
+			Real Alignment 2: 577080 577987 | 30670 31576 | 908 907 | 95.41 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_20_length_161860_cov_8.39266_ID_39
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 3: 585766 595627 | 31577 41375 | 9862 9799 | 96.03 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_20_length_161860_cov_8.39266_ID_39
+			  Extensive misassembly ( relocation, inconsistency = 7238 ) between these two alignments
+			Real Alignment 4: 604065 680180 | 42575 118660 | 76116 76086 | 97.31 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_20_length_161860_cov_8.39266_ID_39
+			  Extensive misassembly ( relocation, inconsistency = -5518 ) between these two alignments
+			Real Alignment 5: 680300 684329 | 124298 128327 | 4030 4030 | 98.31 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_20_length_161860_cov_8.39266_ID_39
+			  Overlap between these two alignments (local misassembly). Inconsistency = -1 
+			Excluding internal overlap of size 1 between Alignment 6 and 7:  131687 132172 | 161860 161375 | 486 486 --> 131687 132171 | 161860 161376 | 485 485
+			Real Alignment 6: 684629 717383 | 128628 161375 | 32755 32748 | 97.36 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_20_length_161860_cov_8.39266_ID_39
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 7: 131687 132171 | 161860 161376 | 485 485 | 99.18 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ NODE_20_length_161860_cov_8.39266_ID_39
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_41_length_111277_cov_6.48696_ID_81 (111277bp)
+Top Length: 96492  Top ID: 97.05
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 259 96763 | 4009 100500 | 96505 96492 | 97.05 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ NODE_41_length_111277_cov_6.48696_ID_81
+			  Overlap between these two alignments (local misassembly). Inconsistency = -638 
+			Real Alignment 2: 97190 100499 | 101565 104869 | 3310 3305 | 95.23 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ NODE_41_length_111277_cov_6.48696_ID_81
+			  Extensive misassembly ( relocation, inconsistency = 3531 ) between these two alignments
+			Real Alignment 3: 104114 106943 | 104953 107783 | 2830 2831 | 96.54 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ NODE_41_length_111277_cov_6.48696_ID_81
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_128_length_51812_cov_10.1985_ID_255 (51812bp)
+Top Length: 664  Top ID: 97.89
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 51812 and total length of all aligns is 1065
+		Alignment: 132866 133527 | 47980 47317 | 662 664 | 97.89 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ NODE_128_length_51812_cov_10.1985_ID_255
+		Alignment: 717383 717783 | 48284 48684 | 401 401 | 99.25 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_128_length_51812_cov_10.1985_ID_255
+		Unaligned bases: 50747
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: NODE_383_length_20464_cov_8.82459_ID_765 (20464bp)
+Top Length: 271  Top ID: 95.57
+		Skipping redundant alignment 4764 5017 | 11753 11500 | 254 254 | 96.06 | Prevotella_nanceiensis_gi_483530864_ref_NZ_ NODE_383_length_20464_cov_8.82459_ID_765
+		Skipping redundant alignment 77437 77689 | 11752 11500 | 253 253 | 96.05 | Prevotella_nanceiensis_gi_483530477_ref_NZ_ NODE_383_length_20464_cov_8.82459_ID_765
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 1 271 | 11751 11481 | 271 271 | 95.57 | Prevotella_nanceiensis_gi_483530964_ref_NZ_ NODE_383_length_20464_cov_8.82459_ID_765
+		This contig is partially unaligned. (Aligned 271 out of 20464 bases)
+		Alignment: 217889 218159 | 11751 11481 | 271 271 | 95.57 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ NODE_383_length_20464_cov_8.82459_ID_765
+		Unaligned bases: 1 to 11480 (11480)
+		Unaligned bases: 11752 to 20464 (8713)
+
+CONTIG: NODE_588_length_14211_cov_7.36953_ID_1175 (14211bp)
+Top Length: 507  Top ID: 99.8
+		This contig is partially unaligned. (Aligned 507 out of 14211 bases)
+		Alignment: 131146 131652 | 13695 14201 | 507 507 | 99.8 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ NODE_588_length_14211_cov_7.36953_ID_1175
+		Unaligned bases: 1 to 13694 (13694)
+		Unaligned bases: 14202 to 14211 (10)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_40644_length_585_cov_1.77736_ID_81287 (585bp)
+Top Length: 585  Top ID: 99.15
+		One align captures most of this contig: 125971 126555 | 1 585 | 585 585 | 99.15 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ NODE_40644_length_585_cov_1.77736_ID_81287
+
+CONTIG: NODE_49365_length_500_cov_1.13483_ID_98729 (500bp)
+Top Length: 500  Top ID: 98.8
+		One align captures most of this contig: 119239 119738 | 1 500 | 500 500 | 98.8 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ NODE_49365_length_500_cov_1.13483_ID_98729
+
+CONTIG: NODE_129_length_51223_cov_7.84146_ID_257 (51223bp)
+Top Length: 243  Top ID: 96.3
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 77438 77680 | 24659 24901 | 243 243 | 96.3 | Prevotella_nanceiensis_gi_483530477_ref_NZ_ NODE_129_length_51223_cov_7.84146_ID_257
+		Skipping redundant alignment 4766 5008 | 24659 24901 | 243 243 | 96.3 | Prevotella_nanceiensis_gi_483530864_ref_NZ_ NODE_129_length_51223_cov_7.84146_ID_257
+		Skipping redundant alignment 1 243 | 24659 24901 | 243 243 | 96.3 | Prevotella_nanceiensis_gi_483530964_ref_NZ_ NODE_129_length_51223_cov_7.84146_ID_257
+		This contig is misassembled. 5 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 51223 and total length of all aligns is 321
+		Alignment: 50921 50998 | 16758 16835 | 78 78 | 100.0 | Prevotella_nanceiensis_gi_483530477_ref_NZ_ NODE_129_length_51223_cov_7.84146_ID_257
+		Alignment: 217889 218131 | 24659 24901 | 243 243 | 96.3 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ NODE_129_length_51223_cov_7.84146_ID_257
+		Unaligned bases: 50902
+CONTIG: NODE_27617_length_797_cov_1.50809_ID_55233 (797bp)
+Top Length: 687  Top ID: 99.85
+		Skipping redundant alignment 245413 245687 | 687 413 | 275 275 | 100.0 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ NODE_27617_length_797_cov_1.50809_ID_55233
+		Skipping redundant alignment 1 259 | 429 687 | 259 259 | 100.0 | Prevotella_nanceiensis_gi_483530088_ref_NZ_ NODE_27617_length_797_cov_1.50809_ID_55233
+		Skipping redundant alignment 1 94 | 594 687 | 94 94 | 100.0 | Prevotella_nanceiensis_gi_483529859_ref_NZ_ NODE_27617_length_797_cov_1.50809_ID_55233
+		This contig is partially unaligned. (Aligned 687 out of 797 bases)
+		Alignment: 981 1667 | 1 687 | 687 687 | 99.85 | Prevotella_nanceiensis_gi_483530964_ref_NZ_ NODE_27617_length_797_cov_1.50809_ID_55233
+		Unaligned bases: 688 to 797 (110)
+
+CONTIG: NODE_8_length_249718_cov_5.83251_ID_15 (249718bp)
+Top Length: 91777  Top ID: 95.96
+		Skipping redundant alignment 725179 725255 | 137590 137666 | 77 77 | 100.0 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_8_length_249718_cov_5.83251_ID_15
+		Skipping redundant alignment 725179 725255 | 137926 138002 | 77 77 | 100.0 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_8_length_249718_cov_5.83251_ID_15
+		This contig is misassembled. 8 total aligns.
+			Excluding internal overlap of size 1 between Alignment 1 and 2:  503342 537551 | 35361 1168 | 34210 34194 --> 503343 537551 | 35360 1168 | 34209 34193
+			Real Alignment 1: 503343 537551 | 35360 1168 | 34209 34193 | 95.87 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_8_length_249718_cov_5.83251_ID_15
+			  Gap between these two alignments (local misassembly). Inconsistency = 219 
+			Real Alignment 2: 442350 503123 | 96142 35361 | 60774 60782 | 96.34 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_8_length_249718_cov_5.83251_ID_15
+			  Extensive misassembly ( relocation, inconsistency = -2572 ) between these two alignments
+			Real Alignment 3: 350560 442330 | 190510 98734 | 91771 91777 | 95.96 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_8_length_249718_cov_5.83251_ID_15
+			  Overlap between these two alignments (local misassembly). Inconsistency = -833 
+			Real Alignment 4: 307124 350378 | 234803 191525 | 43255 43279 | 95.72 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_8_length_249718_cov_5.83251_ID_15
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 5: 297623 300962 | 238153 234815 | 3340 3339 | 95.27 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_8_length_249718_cov_5.83251_ID_15
+			  Extensive misassembly ( relocation, inconsistency = -1251 ) between these two alignments
+			Real Alignment 6: 288617 297557 | 248409 239470 | 8941 8940 | 96.44 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_8_length_249718_cov_5.83251_ID_15
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_39_length_114420_cov_6.29443_ID_77 (114420bp)
+Top Length: 51615  Top ID: 95.86
+		Skipping redundant alignment 391218 391522 | 557 252 | 305 306 | 99.02 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ NODE_39_length_114420_cov_6.29443_ID_77
+		Skipping redundant alignment 166577 166902 | 581 258 | 326 324 | 97.55 | Prevotella_nanceiensis_gi_483530284_ref_NZ_ NODE_39_length_114420_cov_6.29443_ID_77
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 771045 771404 | 581 223 | 360 359 | 98.06 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_39_length_114420_cov_6.29443_ID_77
+		This contig is misassembled. 7 total aligns.
+			Real Alignment 1: 1 360 | 223 581 | 360 359 | 98.06 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_39_length_114420_cov_6.29443_ID_77
+			  Extensive misassembly ( relocation, inconsistency = 712256 ) between these two alignments
+			Excluding internal overlap of size 3 between Alignment 2 and 3:  699815 712233 | 66596 54178 | 12419 12419 --> 699815 712230 | 66596 54181 | 12416 12416
+			Real Alignment 2: 714601 766167 | 54180 2566 | 51567 51615 | 95.86 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_39_length_114420_cov_6.29443_ID_77
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 3: 699815 712230 | 66596 54181 | 12416 12416 | 96.71 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_39_length_114420_cov_6.29443_ID_77
+			  Extensive misassembly ( relocation, inconsistency = 2054 ) between these two alignments
+			Real Alignment 4: 649944 687119 | 114420 77238 | 37176 37183 | 96.15 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_39_length_114420_cov_6.29443_ID_77
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_45_length_102721_cov_6.0427_ID_89 (102721bp)
+Top Length: 36164  Top ID: 96.4
+		This contig is misassembled. 4 total aligns.
+			Excluding internal overlap of size 83 between Alignment 1 and 2:  537530 537714 | 1513 1697 | 185 185 --> 537530 537631 | 1513 1614 | 102 102
+			Real Alignment 1: 537530 537631 | 1513 1614 | 102 102 | 99.46 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_45_length_102721_cov_6.0427_ID_89
+			  Overlap between these two alignments (local misassembly). Inconsistency = -110 
+			Real Alignment 2: 537522 573689 | 1615 37778 | 36168 36164 | 96.4 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_45_length_102721_cov_6.0427_ID_89
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 3: 586139 616599 | 37779 68236 | 30461 30458 | 97.39 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_45_length_102721_cov_6.0427_ID_89
+			  Extensive misassembly ( relocation, inconsistency = -1120 ) between these two alignments
+			Real Alignment 4: 616752 650009 | 69509 102721 | 33258 33213 | 96.66 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_45_length_102721_cov_6.0427_ID_89
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_67_length_83003_cov_6.14657_ID_133 (83003bp)
+Top Length: 44202  Top ID: 96.36
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 61685 83098 | 21440 2 | 21414 21439 | 96.34 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_67_length_83003_cov_6.14657_ID_133
+			  Overlap between these two alignments (local misassembly). Inconsistency = -218 
+			Real Alignment 2: 45329 61653 | 37987 21690 | 16325 16298 | 95.68 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_67_length_83003_cov_6.14657_ID_133
+			  Gap between these two alignments (local misassembly). Inconsistency = 12 
+			Real Alignment 3: 297 44502 | 83003 38802 | 44206 44202 | 96.36 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_67_length_83003_cov_6.14657_ID_133
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_74_length_73942_cov_6.32577_ID_147 (73942bp)
+Top Length: 73942  Top ID: 96.44
+		One align captures most of this contig: 82841 156760 | 73942 1 | 73920 73942 | 96.44 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_74_length_73942_cov_6.32577_ID_147
+
+CONTIG: NODE_95_length_64738_cov_5.94911_ID_189 (64738bp)
+Top Length: 64691  Top ID: 96.2
+		One align captures most of this contig: 223551 288245 | 64737 47 | 64695 64691 | 96.2 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_95_length_64738_cov_5.94911_ID_189
+
+CONTIG: NODE_139_length_48038_cov_6.15137_ID_277 (48038bp)
+Top Length: 28391  Top ID: 96.45
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 4 between Alignment 1 and 2:  156694 176343 | 48038 28388 | 19650 19651 --> 156694 176339 | 48038 28392 | 19646 19647
+			Real Alignment 1: 195185 223549 | 28391 1 | 28365 28391 | 96.45 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_139_length_48038_cov_6.15137_ID_277
+			  Extensive misassembly ( relocation, inconsistency = 18845 ) between these two alignments
+			Real Alignment 2: 156694 176339 | 48038 28392 | 19646 19647 | 97.35 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_139_length_48038_cov_6.15137_ID_277
+
+CONTIG: NODE_140_length_47957_cov_7.23049_ID_279 (47957bp)
+Top Length: 77  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 77 out of 47957 bases)
+		Alignment: 51997 52073 | 163 87 | 77 77 | 100.0 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_140_length_47957_cov_7.23049_ID_279
+		Unaligned bases: 1 to 86 (86)
+		Unaligned bases: 164 to 47957 (47794)
+
+CONTIG: NODE_310_length_24538_cov_15.8192_ID_619 (24538bp)
+Top Length: 14224  Top ID: 99.7
+		This contig is partially unaligned. (Aligned 14224 out of 24538 bases)
+		Alignment: 176340 190563 | 10315 24538 | 14224 14224 | 99.7 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_310_length_24538_cov_15.8192_ID_619
+		Unaligned bases: 1 to 10314 (10314)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_397_length_19780_cov_6.83975_ID_793 (19780bp)
+Top Length: 8688  Top ID: 96.34
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 283 461 | 1 180 | 179 180 | 96.67 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_397_length_19780_cov_6.83975_ID_793
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 770944 771122 | 180 1 | 179 180 | 96.67 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_397_length_19780_cov_6.83975_ID_793
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 381458 389943 | 9448 964 | 8486 8485 | 95.36 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ NODE_397_length_19780_cov_6.83975_ID_793
+			  Extensive misassembly ( relocation, inconsistency = 3873 ) between these two alignments
+			Real Alignment 3: 367867 376554 | 19166 10479 | 8688 8688 | 96.34 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ NODE_397_length_19780_cov_6.83975_ID_793
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_2164_length_5190_cov_19.8487_ID_4327 (5190bp)
+Top Length: 4628  Top ID: 99.94
+		This contig is partially unaligned. (Aligned 4628 out of 5190 bases)
+		Alignment: 190564 195191 | 5190 563 | 4628 4628 | 99.94 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_2164_length_5190_cov_19.8487_ID_4327
+		Unaligned bases: 1 to 562 (562)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_4036_length_3261_cov_8.81036_ID_8071 (3261bp)
+Top Length: 169  Top ID: 99.41
+		Skipping redundant alignment 51903 51979 | 186 262 | 77 77 | 100.0 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_4036_length_3261_cov_8.81036_ID_8071
+		This contig is misassembled. 3 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 3261 and total length of all aligns is 261
+		Alignment: 51904 52071 | 1 168 | 168 168 | 99.4 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_4036_length_3261_cov_8.81036_ID_8071
+		Alignment: 51903 52071 | 93 261 | 169 169 | 99.41 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_4036_length_3261_cov_8.81036_ID_8071
+		Unaligned bases: 3000
+CONTIG: NODE_34433_length_671_cov_2.70292_ID_68865 (671bp)
+Top Length: 120  Top ID: 95.83
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 771114 771232 | 298 416 | 119 119 | 95.8 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_34433_length_671_cov_2.70292_ID_68865
+		Skipping redundant alignment 391261 391379 | 297 416 | 119 120 | 95.83 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ NODE_34433_length_671_cov_2.70292_ID_68865
+		Skipping redundant alignment 166648 166765 | 298 416 | 118 119 | 95.8 | Prevotella_nanceiensis_gi_483530284_ref_NZ_ NODE_34433_length_671_cov_2.70292_ID_68865
+		This contig is partially unaligned. (Aligned 120 out of 671 bases)
+		Alignment: 173 291 | 416 298 | 119 119 | 95.8 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_34433_length_671_cov_2.70292_ID_68865
+		Unaligned bases: 1 to 297 (297)
+		Unaligned bases: 417 to 671 (255)
+
+CONTIG: NODE_451_length_17983_cov_8.12235_ID_901 (17983bp)
+Top Length: 17983  Top ID: 97.88
+		One align captures most of this contig: 414 18397 | 1 17983 | 17984 17983 | 97.88 | Prevotella_nanceiensis_gi_483530682_ref_NZ_ NODE_451_length_17983_cov_8.12235_ID_901
+
+CONTIG: NODE_6_length_277798_cov_6.82061_ID_11 (277798bp)
+Top Length: 88713  Top ID: 97.61
+		This contig is misassembled. 5 total aligns.
+			Excluding internal overlap of size 68 between Alignment 1 and 2:  299711 326681 | 68283 41312 | 26971 26972 --> 299711 326613 | 68283 41380 | 26903 26904
+			Real Alignment 1: 326547 367870 | 41379 56 | 41324 41324 | 97.33 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ NODE_6_length_277798_cov_6.82061_ID_11
+			  Fake misassembly between these two alignments: inconsistency = -67 , gap in the contig is small or absent or filled mostly with Ns (long indel: insertion of length 67; 0 mismatches)
+			Real Alignment 2: 299711 326613 | 68283 41380 | 26903 26904 | 97.86 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ NODE_6_length_277798_cov_6.82061_ID_11
+			  Extensive misassembly ( relocation, inconsistency = 2254 ) between these two alignments
+			Real Alignment 3: 208499 297180 | 157272 68560 | 88682 88713 | 97.61 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ NODE_6_length_277798_cov_6.82061_ID_11
+			  Gap between these two alignments (local misassembly). Inconsistency = 264 
+			Real Alignment 4: 179090 208232 | 186376 157275 | 29143 29102 | 96.81 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ NODE_6_length_277798_cov_6.82061_ID_11
+			  Extensive misassembly ( relocation, inconsistency = 83029 ) between these two alignments
+			Real Alignment 5: 6506 91358 | 275895 191079 | 84853 84817 | 96.61 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ NODE_6_length_277798_cov_6.82061_ID_11
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_162_length_42126_cov_8.58297_ID_323 (42126bp)
+Top Length: 79  Top ID: 97.47
+		This contig is partially unaligned. (Aligned 79 out of 42126 bases)
+		Alignment: 233580 233658 | 38964 38886 | 79 79 | 97.47 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ NODE_162_length_42126_cov_8.58297_ID_323
+		Unaligned bases: 1 to 38885 (38885)
+		Unaligned bases: 38965 to 42126 (3162)
+
+CONTIG: NODE_527_length_15766_cov_7.81026_ID_1053 (15766bp)
+Top Length: 146  Top ID: 95.21
+		This contig is partially unaligned. (Aligned 146 out of 15766 bases)
+		Alignment: 121185 121327 | 15543 15398 | 143 146 | 95.21 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ NODE_527_length_15766_cov_7.81026_ID_1053
+		Unaligned bases: 1 to 15397 (15397)
+		Unaligned bases: 15544 to 15766 (223)
+
+CONTIG: NODE_1064_length_9019_cov_7.93507_ID_2127 (9019bp)
+Top Length: 688  Top ID: 95.94
+		This contig is partially unaligned. (Aligned 688 out of 9019 bases)
+		Alignment: 118766 119453 | 984 297 | 688 688 | 95.94 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ NODE_1064_length_9019_cov_7.93507_ID_2127
+		Unaligned bases: 1 to 296 (296)
+		Unaligned bases: 985 to 9019 (8035)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_6630_length_2274_cov_7.30554_ID_13259 (2274bp)
+Top Length: 110  Top ID: 99.09
+		This contig is partially unaligned. (Aligned 110 out of 2274 bases)
+		Alignment: 391218 391326 | 2165 2274 | 109 110 | 99.09 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ NODE_6630_length_2274_cov_7.30554_ID_13259
+		Unaligned bases: 1 to 2164 (2164)
+
+CONTIG: NODE_6841_length_2218_cov_2.18632_ID_13681 (2218bp)
+Top Length: 225  Top ID: 96.02
+		This contig is partially unaligned. (Aligned 225 out of 2218 bases)
+		Alignment: 155572 155796 | 793 569 | 225 225 | 96.02 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ NODE_6841_length_2218_cov_2.18632_ID_13681
+		Unaligned bases: 1 to 568 (568)
+		Unaligned bases: 794 to 2218 (1425)
+
+CONTIG: NODE_23238_length_905_cov_10.8965_ID_46475 (905bp)
+Top Length: 905  Top ID: 97.9
+		One align captures most of this contig: 138631 139535 | 905 1 | 905 905 | 97.9 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ NODE_23238_length_905_cov_10.8965_ID_46475
+
+CONTIG: NODE_28913_length_768_cov_1.67041_ID_57825 (768bp)
+Top Length: 629  Top ID: 95.71
+		This contig is partially unaligned. (Aligned 629 out of 768 bases)
+		Alignment: 136769 137397 | 1 629 | 629 629 | 95.71 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ NODE_28913_length_768_cov_1.67041_ID_57825
+		Unaligned bases: 630 to 768 (139)
+
+CONTIG: NODE_40397_length_588_cov_16.3002_ID_80793 (588bp)
+Top Length: 584  Top ID: 97.09
+		One align captures most of this contig: 108023 108606 | 584 1 | 584 584 | 97.09 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ NODE_40397_length_588_cov_16.3002_ID_80793
+
+CONTIG: NODE_44134_length_547_cov_9.32927_ID_88267 (547bp)
+Top Length: 77  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 77 out of 547 bases)
+		Alignment: 343071 343147 | 2 78 | 77 77 | 100.0 | Prevotella_nanceiensis_gi_483529657_ref_NZ_ NODE_44134_length_547_cov_9.32927_ID_88267
+		Unaligned bases: 1 to 1 (1)
+		Unaligned bases: 79 to 547 (469)
+
+CONTIG: NODE_10_length_219536_cov_8.85057_ID_19 (219536bp)
+Top Length: 94962  Top ID: 97.75
+		This contig is misassembled. 10 total aligns.
+			Real Alignment 1: 470695 479689 | 8978 1 | 8995 8978 | 95.25 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_10_length_219536_cov_8.85057_ID_19
+			  Extensive misassembly ( relocation, inconsistency = -8120 ) between these two alignments
+			Real Alignment 2: 444950 470673 | 42906 17120 | 25724 25787 | 95.45 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_10_length_219536_cov_8.85057_ID_19
+			  Gap between these two alignments (local misassembly). Inconsistency = 86 
+			Real Alignment 3: 433501 444860 | 54267 42910 | 11360 11358 | 98.27 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_10_length_219536_cov_8.85057_ID_19
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 4: 406556 431043 | 78992 54528 | 24488 24465 | 95.34 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_10_length_219536_cov_8.85057_ID_19
+			  Extensive misassembly ( relocation, inconsistency = -5204 ) between these two alignments
+			Real Alignment 5: 398405 399747 | 92346 91005 | 1343 1342 | 95.68 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_10_length_219536_cov_8.85057_ID_19
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 6: 388988 389722 | 93252 92518 | 735 735 | 95.79 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_10_length_219536_cov_8.85057_ID_19
+			  Extensive misassembly ( relocation, inconsistency = -2311 ) between these two alignments
+			Real Alignment 7: 387436 388385 | 97115 96166 | 950 950 | 97.79 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_10_length_219536_cov_8.85057_ID_19
+			  Extensive misassembly ( relocation, inconsistency = 12758 ) between these two alignments
+			Real Alignment 8: 363439 370917 | 108352 100876 | 7479 7477 | 97.17 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_10_length_219536_cov_8.85057_ID_19
+			  Extensive misassembly ( relocation, inconsistency = -2368 ) between these two alignments
+			Real Alignment 9: 351290 362470 | 122934 111689 | 11181 11246 | 97.47 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_10_length_219536_cov_8.85057_ID_19
+			  Overlap between these two alignments (local misassembly). Inconsistency = -134 
+			Real Alignment 10: 256224 351185 | 218134 123173 | 94962 94962 | 97.75 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_10_length_219536_cov_8.85057_ID_19
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_63_length_84046_cov_8.13668_ID_125 (84046bp)
+Top Length: 24078  Top ID: 97.03
+		This contig is misassembled. 6 total aligns.
+			Real Alignment 1: 111338 119635 | 500 8795 | 8298 8296 | 97.77 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_63_length_84046_cov_8.13668_ID_125
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 122181 146258 | 8819 32896 | 24078 24078 | 97.03 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_63_length_84046_cov_8.13668_ID_125
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 3: 147547 154190 | 32935 39577 | 6644 6643 | 97.7 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_63_length_84046_cov_8.13668_ID_125
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 4: 164096 171906 | 39660 47468 | 7811 7809 | 97.38 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_63_length_84046_cov_8.13668_ID_125
+			  Overlap between these two alignments (local misassembly). Inconsistency = -133 
+			Real Alignment 5: 172040 190645 | 47735 66338 | 18606 18604 | 97.55 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_63_length_84046_cov_8.13668_ID_125
+			  Gap between these two alignments (local misassembly). Inconsistency = 155 
+			Real Alignment 6: 191012 208266 | 66550 83784 | 17255 17235 | 97.51 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_63_length_84046_cov_8.13668_ID_125
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_73_length_75576_cov_8.18456_ID_145 (75576bp)
+Top Length: 26314  Top ID: 98.18
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 596091 602560 | 1740 8211 | 6470 6472 | 98.07 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_73_length_75576_cov_8.18456_ID_145
+			  Extensive misassembly ( relocation, inconsistency = -517971 ) between these two alignments
+			Real Alignment 2: 85022 111335 | 34957 8644 | 26314 26314 | 98.18 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_73_length_75576_cov_8.18456_ID_145
+			  Overlap between these two alignments (local misassembly). Inconsistency = -176 
+			Excluding internal overlap of size 1 between Alignment 3 and 4:  66244 84976 | 53908 35179 | 18733 18730 --> 66245 84976 | 53907 35179 | 18732 18729
+			Real Alignment 3: 66245 84976 | 53907 35179 | 18732 18729 | 96.17 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_73_length_75576_cov_8.18456_ID_145
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 4: 35917 57586 | 75576 53908 | 21670 21669 | 96.99 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_73_length_75576_cov_8.18456_ID_145
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_134_length_49178_cov_8.39029_ID_267 (49178bp)
+Top Length: 18885  Top ID: 96.24
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 244247 253368 | 9932 811 | 9122 9122 | 97.22 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_134_length_49178_cov_8.39029_ID_267
+			  Extensive misassembly ( relocation, inconsistency = -2569 ) between these two alignments
+			Real Alignment 2: 229521 243974 | 27272 12774 | 14454 14499 | 96.56 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_134_length_49178_cov_8.39029_ID_267
+			  Overlap between these two alignments (local misassembly). Inconsistency = -1 
+			Real Alignment 3: 208399 227261 | 48417 29533 | 18863 18885 | 96.24 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_134_length_49178_cov_8.39029_ID_267
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_138_length_48220_cov_9.04478_ID_275 (48220bp)
+Top Length: 18403  Top ID: 97.14
+		This contig is misassembled. 6 total aligns.
+			Real Alignment 1: 546941 547844 | 902 1 | 904 902 | 96.24 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_138_length_48220_cov_9.04478_ID_275
+			  Extensive misassembly ( relocation, inconsistency = -4506 ) between these two alignments
+			Excluding internal overlap of size 1 between Alignment 2 and 3:  522790 523733 | 10842 9898 | 944 945 --> 522790 523732 | 10842 9899 | 943 944
+			Real Alignment 2: 542449 543593 | 9898 8756 | 1145 1143 | 95.64 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_138_length_48220_cov_9.04478_ID_275
+			  Extensive misassembly ( relocation, inconsistency = 18716 ) between these two alignments
+			Real Alignment 3: 522790 523732 | 10842 9899 | 943 944 | 95.46 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_138_length_48220_cov_9.04478_ID_275
+			  Overlap between these two alignments (local misassembly). Inconsistency = -131 
+			Excluding internal overlap of size 19 between Alignment 4 and 5:  520380 522787 | 13384 10976 | 2408 2409 --> 520399 522787 | 13365 10976 | 2389 2390
+			Real Alignment 4: 520399 522787 | 13365 10976 | 2389 2390 | 96.39 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_138_length_48220_cov_9.04478_ID_275
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 5: 497205 515610 | 31768 13366 | 18406 18403 | 97.14 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_138_length_48220_cov_9.04478_ID_275
+			  Overlap between these two alignments (local misassembly). Inconsistency = -637 
+			Real Alignment 6: 481387 496906 | 48220 32704 | 15520 15517 | 97.61 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_138_length_48220_cov_9.04478_ID_275
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_191_length_35695_cov_7.36459_ID_381 (35695bp)
+Top Length: 35695  Top ID: 97.81
+		One align captures most of this contig: 221 35916 | 1 35695 | 35696 35695 | 97.81 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_191_length_35695_cov_7.36459_ID_381
+
+CONTIG: NODE_244_length_30973_cov_8.19882_ID_487 (30973bp)
+Top Length: 29576  Top ID: 97.86
+		Skipping redundant alignment 403066 403142 | 5670 5594 | 77 77 | 100.0 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_244_length_30973_cov_8.19882_ID_487
+		Skipping redundant alignment 403402 403478 | 5670 5594 | 77 77 | 100.0 | Prevotella_nanceiensis_gi_483528923_ref_NZ_ NODE_244_length_30973_cov_8.19882_ID_487
+		This contig is misassembled. 4 total aligns.
+			Excluding internal overlap of size 1 between Alignment 1 and 2:  718393 719070 | 719 1398 | 678 680 --> 718393 719069 | 719 1397 | 677 679
+			Real Alignment 1: 718393 719069 | 719 1397 | 677 679 | 98.82 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_244_length_30973_cov_8.19882_ID_487
+			  Extensive misassembly ( relocation, inconsistency = 1915 ) between these two alignments
+			Real Alignment 2: 720985 750556 | 1398 30973 | 29572 29576 | 97.86 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_244_length_30973_cov_8.19882_ID_487
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_413_length_19072_cov_7.67461_ID_825 (19072bp)
+Top Length: 2620  Top ID: 96.41
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 19072 and total length of all aligns is 2720
+		Alignment: 253321 255940 | 5127 7746 | 2620 2620 | 96.41 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_413_length_19072_cov_7.67461_ID_825
+		Alignment: 256125 256224 | 16234 16333 | 100 100 | 96.0 | Prevotella_nanceiensis_gi_483529071_ref_NZ_ NODE_413_length_19072_cov_7.67461_ID_825
+		Unaligned bases: 16352
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: NODE_13840_length_1331_cov_19.5031_ID_27679 (1331bp)
+Top Length: 745  Top ID: 99.87
+		This contig is partially unaligned. (Aligned 745 out of 1331 bases)
+		Alignment: 1 744 | 745 1 | 744 745 | 99.87 | Prevotella_nanceiensis_gi_483529300_ref_NZ_ NODE_13840_length_1331_cov_19.5031_ID_27679
+		Unaligned bases: 746 to 1331 (586)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Prevotella_nanceiensis/contigs_reports/nucmer_output/SPAdes.used_snps
+ERROR: Reference Prevotella_nanceiensis_gi_483530864_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Prevotella_nanceiensis_gi_483529071_ref_NZ_', 'Prevotella_nanceiensis_gi_483530088_ref_NZ_', 'Prevotella_nanceiensis_gi_483529300_ref_NZ_', 'Prevotella_nanceiensis_gi_483529517_ref_NZ_', 'Prevotella_nanceiensis_gi_483530284_ref_NZ_', 'Prevotella_nanceiensis_gi_483529859_ref_NZ_', 'Prevotella_nanceiensis_gi_483530964_ref_NZ_', 'Prevotella_nanceiensis_gi_483529657_ref_NZ_', 'Prevotella_nanceiensis_gi_483530477_ref_NZ_', 'Prevotella_nanceiensis_gi_483528923_ref_NZ_', 'Prevotella_nanceiensis_gi_483530682_ref_NZ_']
+	Reference Prevotella_nanceiensis_gi_483529657_ref_NZ_: 17 total alignments. 1 total regions.
+		Region: 1 to 391522 (391522 bp)
+			Align 1: 1 233 NODE_21_length_157394_cov_7.5895_ID_41 888 1117
+				Gap between this and next alignment: 233 to 6506 (6272 bp)
+				Next Alignment: 6506 91358 NODE_6_length_277798_cov_6.82061_ID_11 275895 191079
+
+			Align 2: 6506 91358 NODE_6_length_277798_cov_6.82061_ID_11 275895 191079
+				Gap between this and next alignment: 91358 to 108023 (16664 bp)
+				Next Alignment: 108023 108606 NODE_40397_length_588_cov_16.3002_ID_80793 584 1
+
+			Align 3: 108023 108606 NODE_40397_length_588_cov_16.3002_ID_80793 584 1
+				Gap between this and next alignment: 108606 to 118766 (10159 bp)
+				Next Alignment: 118766 119453 NODE_1064_length_9019_cov_7.93507_ID_2127 984 297
+
+			Align 4: 118766 119453 NODE_1064_length_9019_cov_7.93507_ID_2127 984 297
+				Gap between this and next alignment: 119453 to 121185 (1731 bp)
+				Next Alignment: 121185 121327 NODE_527_length_15766_cov_7.81026_ID_1053 15543 15398
+
+			Align 5: 121185 121327 NODE_527_length_15766_cov_7.81026_ID_1053 15543 15398
+				Gap between this and next alignment: 121327 to 136769 (15441 bp)
+				Next Alignment: 136769 137397 NODE_28913_length_768_cov_1.67041_ID_57825 1 629
+
+			Align 6: 136769 137397 NODE_28913_length_768_cov_1.67041_ID_57825 1 629
+				Gap between this and next alignment: 137397 to 138631 (1233 bp)
+				Next Alignment: 138631 139535 NODE_23238_length_905_cov_10.8965_ID_46475 905 1
+
+			Align 7: 138631 139535 NODE_23238_length_905_cov_10.8965_ID_46475 905 1
+				Gap between this and next alignment: 139535 to 155572 (16036 bp)
+				Next Alignment: 155572 155796 NODE_6841_length_2218_cov_2.18632_ID_13681 793 569
+
+			Align 8: 155572 155796 NODE_6841_length_2218_cov_2.18632_ID_13681 793 569
+				Gap between this and next alignment: 155796 to 179090 (23293 bp)
+				Next Alignment: 179090 208232 NODE_6_length_277798_cov_6.82061_ID_11 186376 157275
+
+			Align 9: 179090 208232 NODE_6_length_277798_cov_6.82061_ID_11 186376 157275
+				Gap between this and next alignment: 208232 to 208499 (266 bp)
+				Next Alignment: 208499 297180 NODE_6_length_277798_cov_6.82061_ID_11 157272 68560
+
+			Align 10: 208499 297180 NODE_6_length_277798_cov_6.82061_ID_11 157272 68560
+				The next alignment (233580 233658 NODE_162_length_42126_cov_8.58297_ID_323 38964 38886) is redundant. Skipping.
+				Gap between this and next alignment: 297180 to 299711 (2530 bp)
+				Next Alignment: 299711 326613 NODE_6_length_277798_cov_6.82061_ID_11 68283 41380
+
+			Align 12: 299711 326613 NODE_6_length_277798_cov_6.82061_ID_11 68283 41380
+				Negative gap (overlap) between this and next alignment: 326613 to 326547 (-66 bp)
+				Next Alignment: 326547 367870 NODE_6_length_277798_cov_6.82061_ID_11 41379 56
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 41379 to 41312.
+			Align 13: 326614 367870 NODE_6_length_277798_cov_6.82061_ID_11 41312 56
+				The next alignment (343071 343147 NODE_44134_length_547_cov_9.32927_ID_88267 2 78) is redundant. Skipping.
+				Negative gap (overlap) between this and next alignment: 367870 to 367867 (-3 bp)
+				Next Alignment: 367867 376554 NODE_397_length_19780_cov_6.83975_ID_793 19166 10479
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 19166 to 19162.
+			Align 15: 367871 376554 NODE_397_length_19780_cov_6.83975_ID_793 19162 10479
+				Gap between this and next alignment: 376554 to 381458 (4903 bp)
+				Next Alignment: 381458 389943 NODE_397_length_19780_cov_6.83975_ID_793 9448 964
+
+			Align 16: 381458 389943 NODE_397_length_19780_cov_6.83975_ID_793 9448 964
+				Gap between this and next alignment: 389943 to 391218 (1274 bp)
+				Next Alignment: 391218 391326 NODE_6630_length_2274_cov_7.30554_ID_13259 2165 2274
+
+			Align 17: 391218 391326 NODE_6630_length_2274_cov_7.30554_ID_13259 2165 2274
+			END in gap: 391326 to 391522 (196 bp)
+
+	Reference Prevotella_nanceiensis_gi_483530477_ref_NZ_: 10 total alignments. 1 total regions.
+		Region: 1 to 77692 (77692 bp)
+			Align 1: 1 343 NODE_26215_length_829_cov_14.4574_ID_52429 343 1
+				Negative gap (overlap) between this and next alignment: 343 to 289 (-54 bp)
+				Next Alignment: 289 19998 NODE_125_length_53271_cov_7.76669_ID_249 1 19710
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 56.
+			Align 2: 344 19998 NODE_125_length_53271_cov_7.76669_ID_249 56 19710
+				The next alignment (19755 19834 NODE_118_length_54856_cov_7.01146_ID_235 48250 48171) is redundant. Skipping.
+				Gap between this and next alignment: 19998 to 20137 (138 bp)
+				Next Alignment: 20137 53519 NODE_125_length_53271_cov_7.76669_ID_249 19849 53271
+
+			Align 4: 20137 53519 NODE_125_length_53271_cov_7.76669_ID_249 19849 53271
+				The next alignment (50920 50998 NODE_3_length_335888_cov_23.6297_ID_5 105727 105805) is redundant. Skipping.
+				The next alignment (50921 50998 NODE_129_length_51223_cov_7.84146_ID_257 16758 16835) is redundant. Skipping.
+				Next Alignment: 53520 64913 NODE_196_length_34818_cov_6.96266_ID_391 1 11389
+
+			Align 7: 53520 64913 NODE_196_length_34818_cov_6.96266_ID_391 1 11389
+				Gap between this and next alignment: 64913 to 68181 (3267 bp)
+				Next Alignment: 68181 76475 NODE_79_length_71432_cov_6.95943_ID_157 8294 1
+
+			Align 8: 68181 76475 NODE_79_length_71432_cov_6.95943_ID_157 8294 1
+				Negative gap (overlap) between this and next alignment: 76475 to 76421 (-54 bp)
+				Next Alignment: 76421 77418 NODE_20396_length_998_cov_16.052_ID_40791 1 998
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 56.
+			Align 9: 76476 77418 NODE_20396_length_998_cov_16.052_ID_40791 56 998
+				Negative gap (overlap) between this and next alignment: 77418 to 77364 (-54 bp)
+				Next Alignment: 77364 77442 NODE_844_length_10546_cov_6.92251_ID_1687 10546 10468
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 10546 to 10491.
+			Align 10: 77419 77442 NODE_844_length_10546_cov_6.92251_ID_1687 10491 10468
+			END in gap: 77442 to 77692 (250 bp)
+
+	Reference Prevotella_nanceiensis_gi_483529300_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 1197 (1197 bp)
+			Align 1: 1 744 NODE_13840_length_1331_cov_19.5031_ID_27679 745 1
+				Gap between this and next alignment: 744 to 869 (124 bp)
+				Next Alignment: 869 1197 NODE_29842_length_750_cov_18.5424_ID_59683 1 329
+
+			Align 2: 869 1197 NODE_29842_length_750_cov_18.5424_ID_59683 1 329
+			END in current alignment.  Modifying 1197 to 1197.
+
+	Reference Prevotella_nanceiensis_gi_483529517_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 1178 (1178 bp)
+			START in gap: 1 to 784 (783 bp)
+			Align 1: 784 1178 NODE_29842_length_750_cov_18.5424_ID_59683 750 356
+			END in current alignment.  Modifying 1178 to 1178.
+
+	Reference Prevotella_nanceiensis_gi_483530284_ref_NZ_: 6 total alignments. 1 total regions.
+		Region: 1 to 166902 (166902 bp)
+			Align 1: 1 12708 NODE_21_length_157394_cov_7.5895_ID_41 1118 13847
+				Gap between this and next alignment: 12708 to 15789 (3080 bp)
+				Next Alignment: 15789 57542 NODE_21_length_157394_cov_7.5895_ID_41 13848 55604
+
+			Align 2: 15789 57542 NODE_21_length_157394_cov_7.5895_ID_41 13848 55604
+				Gap between this and next alignment: 57542 to 59885 (2342 bp)
+				Next Alignment: 59885 106696 NODE_21_length_157394_cov_7.5895_ID_41 55605 102506
+
+			Align 3: 59885 106696 NODE_21_length_157394_cov_7.5895_ID_41 55605 102506
+				Gap between this and next alignment: 106696 to 106880 (183 bp)
+				Next Alignment: 106880 116653 NODE_21_length_157394_cov_7.5895_ID_41 102633 112409
+
+			Align 4: 106880 116653 NODE_21_length_157394_cov_7.5895_ID_41 102633 112409
+				Gap between this and next alignment: 116653 to 117602 (948 bp)
+				Next Alignment: 117602 160988 NODE_21_length_157394_cov_7.5895_ID_41 113358 156739
+
+			Align 5: 117602 160988 NODE_21_length_157394_cov_7.5895_ID_41 113358 156739
+				The next alignment (150368 150445 NODE_304_length_24808_cov_7.79635_ID_607 7845 7768) is redundant. Skipping.
+
+	Reference Prevotella_nanceiensis_gi_483529859_ref_NZ_: 13 total alignments. 1 total regions.
+		Region: 1 to 245687 (245687 bp)
+			START in gap: 1 to 94 (93 bp)
+			Align 1: 94 9731 NODE_844_length_10546_cov_6.92251_ID_1687 9637 1
+				Gap between this and next alignment: 9731 to 9733 (1 bp)
+				Next Alignment: 9733 19742 NODE_906_length_10014_cov_6.61362_ID_1811 10013 3
+
+			Align 2: 9733 19742 NODE_906_length_10014_cov_6.61362_ID_1811 10013 3
+				Gap between this and next alignment: 19742 to 19747 (4 bp)
+				Next Alignment: 19747 43000 NODE_49_length_96814_cov_7.92012_ID_97 3 23256
+
+			Align 3: 19747 43000 NODE_49_length_96814_cov_7.92012_ID_97 3 23256
+				Gap between this and next alignment: 43000 to 44748 (1747 bp)
+				Next Alignment: 44748 50436 NODE_49_length_96814_cov_7.92012_ID_97 25055 30744
+
+			Align 4: 44748 50436 NODE_49_length_96814_cov_7.92012_ID_97 25055 30744
+				Negative gap (overlap) between this and next alignment: 50436 to 50390 (-46 bp)
+				Next Alignment: 50390 67639 NODE_373_length_20955_cov_7.76584_ID_745 3710 20955
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 3710 to 3757.
+			Align 5: 50437 67639 NODE_373_length_20955_cov_7.76584_ID_745 3757 20955
+				Negative gap (overlap) between this and next alignment: 67639 to 67597 (-42 bp)
+				Next Alignment: 67597 79404 NODE_494_length_16686_cov_6.1208_ID_987 16686 4879
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 16686 to 16643.
+			Align 6: 67640 79404 NODE_494_length_16686_cov_6.1208_ID_987 16643 4879
+				Negative gap (overlap) between this and next alignment: 79404 to 79392 (-12 bp)
+				Next Alignment: 79392 175943 NODE_26_length_140438_cov_7.20786_ID_51 13678 110212
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 13678 to 13691.
+			Align 7: 79405 175943 NODE_26_length_140438_cov_7.20786_ID_51 13691 110212
+				Gap between this and next alignment: 175943 to 178254 (2310 bp)
+				Next Alignment: 178254 208478 NODE_26_length_140438_cov_7.20786_ID_51 110213 140438
+
+			Align 8: 178254 208478 NODE_26_length_140438_cov_7.20786_ID_51 110213 140438
+				Next Alignment: 208479 221650 NODE_501_length_16491_cov_7.52269_ID_1001 16491 3323
+
+			Align 9: 208479 221650 NODE_501_length_16491_cov_7.52269_ID_1001 16491 3323
+				Gap between this and next alignment: 221650 to 222080 (429 bp)
+				Next Alignment: 222080 224970 NODE_501_length_16491_cov_7.52269_ID_1001 2893 2
+
+			Align 10: 222080 224970 NODE_501_length_16491_cov_7.52269_ID_1001 2893 2
+				Gap between this and next alignment: 224970 to 224972 (1 bp)
+				Next Alignment: 224972 235945 NODE_196_length_34818_cov_6.96266_ID_391 34818 23847
+
+			Align 11: 224972 235945 NODE_196_length_34818_cov_6.96266_ID_391 34818 23847
+				Gap between this and next alignment: 235945 to 237878 (1932 bp)
+				Next Alignment: 237878 240957 NODE_196_length_34818_cov_6.96266_ID_391 16768 13690
+
+			Align 12: 237878 240957 NODE_196_length_34818_cov_6.96266_ID_391 16768 13690
+				Gap between this and next alignment: 240957 to 244236 (3278 bp)
+				Next Alignment: 244236 245011 NODE_844_length_10546_cov_6.92251_ID_1687 9668 10443
+
+			Align 13: 244236 245011 NODE_844_length_10546_cov_6.92251_ID_1687 9668 10443
+			END in gap: 245011 to 245687 (676 bp)
+
+	Reference Prevotella_nanceiensis_gi_483530964_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 1668 (1668 bp)
+			START in gap: 1 to 981 (980 bp)
+			Align 1: 981 1667 NODE_27617_length_797_cov_1.50809_ID_55233 1 687
+			END in gap: 1667 to 1668 (1 bp)
+
+	Reference Prevotella_nanceiensis_gi_483530088_ref_NZ_: 13 total alignments. 1 total regions.
+		Region: 1 to 218184 (218184 bp)
+			START in gap: 1 to 259 (258 bp)
+			Align 1: 259 96763 NODE_41_length_111277_cov_6.48696_ID_81 4009 100500
+				Gap between this and next alignment: 96763 to 97190 (426 bp)
+				Next Alignment: 97190 100499 NODE_41_length_111277_cov_6.48696_ID_81 101565 104869
+
+			Align 2: 97190 100499 NODE_41_length_111277_cov_6.48696_ID_81 101565 104869
+				Gap between this and next alignment: 100499 to 104114 (3614 bp)
+				Next Alignment: 104114 106943 NODE_41_length_111277_cov_6.48696_ID_81 104953 107783
+
+			Align 3: 104114 106943 NODE_41_length_111277_cov_6.48696_ID_81 104953 107783
+				Gap between this and next alignment: 106943 to 119239 (12295 bp)
+				Next Alignment: 119239 119738 NODE_49365_length_500_cov_1.13483_ID_98729 1 500
+
+			Align 4: 119239 119738 NODE_49365_length_500_cov_1.13483_ID_98729 1 500
+				Gap between this and next alignment: 119738 to 125971 (6232 bp)
+				Next Alignment: 125971 126555 NODE_40644_length_585_cov_1.77736_ID_81287 1 585
+
+			Align 5: 125971 126555 NODE_40644_length_585_cov_1.77736_ID_81287 1 585
+				Gap between this and next alignment: 126555 to 131146 (4590 bp)
+				Next Alignment: 131146 131652 NODE_588_length_14211_cov_7.36953_ID_1175 13695 14201
+
+			Align 6: 131146 131652 NODE_588_length_14211_cov_7.36953_ID_1175 13695 14201
+				Gap between this and next alignment: 131652 to 131687 (34 bp)
+				Next Alignment: 131687 132171 NODE_20_length_161860_cov_8.39266_ID_39 161860 161376
+
+			Align 7: 131687 132171 NODE_20_length_161860_cov_8.39266_ID_39 161860 161376
+				Gap between this and next alignment: 132171 to 132866 (694 bp)
+				Next Alignment: 132866 133527 NODE_128_length_51812_cov_10.1985_ID_255 47980 47317
+
+			Align 8: 132866 133527 NODE_128_length_51812_cov_10.1985_ID_255 47980 47317
+				Gap between this and next alignment: 133527 to 152037 (18509 bp)
+				Next Alignment: 152037 159715 NODE_79_length_71432_cov_6.95943_ID_157 71063 63352
+
+			Align 9: 152037 159715 NODE_79_length_71432_cov_6.95943_ID_157 71063 63352
+				Gap between this and next alignment: 159715 to 164052 (4336 bp)
+				Next Alignment: 164052 165487 NODE_79_length_71432_cov_6.95943_ID_157 60857 59420
+
+			Align 10: 164052 165487 NODE_79_length_71432_cov_6.95943_ID_157 60857 59420
+				Gap between this and next alignment: 165487 to 166819 (1331 bp)
+				Next Alignment: 166819 217856 NODE_79_length_71432_cov_6.95943_ID_157 59340 8297
+
+			Align 11: 166819 217856 NODE_79_length_71432_cov_6.95943_ID_157 59340 8297
+				Gap between this and next alignment: 217856 to 217889 (32 bp)
+				Next Alignment: 217889 218159 NODE_383_length_20464_cov_8.82459_ID_765 11751 11481
+
+			Align 12: 217889 218159 NODE_383_length_20464_cov_8.82459_ID_765 11751 11481
+				The next alignment (217889 218131 NODE_129_length_51223_cov_7.84146_ID_257 24659 24901) is redundant. Skipping.
+
+	Reference Prevotella_nanceiensis_gi_483529071_ref_NZ_: 41 total alignments. 1 total regions.
+		Region: 1 to 750844 (750844 bp)
+			START in gap: 1 to 221 (220 bp)
+			Align 1: 221 35916 NODE_191_length_35695_cov_7.36459_ID_381 1 35695
+				Next Alignment: 35917 57586 NODE_73_length_75576_cov_8.18456_ID_145 75576 53908
+
+			Align 2: 35917 57586 NODE_73_length_75576_cov_8.18456_ID_145 75576 53908
+				Gap between this and next alignment: 57586 to 66245 (8658 bp)
+				Next Alignment: 66245 84976 NODE_73_length_75576_cov_8.18456_ID_145 53907 35179
+
+			Align 3: 66245 84976 NODE_73_length_75576_cov_8.18456_ID_145 53907 35179
+				Gap between this and next alignment: 84976 to 85022 (45 bp)
+				Next Alignment: 85022 111335 NODE_73_length_75576_cov_8.18456_ID_145 34957 8644
+
+			Align 4: 85022 111335 NODE_73_length_75576_cov_8.18456_ID_145 34957 8644
+				Gap between this and next alignment: 111335 to 111338 (2 bp)
+				Next Alignment: 111338 119635 NODE_63_length_84046_cov_8.13668_ID_125 500 8795
+
+			Align 5: 111338 119635 NODE_63_length_84046_cov_8.13668_ID_125 500 8795
+				Gap between this and next alignment: 119635 to 122181 (2545 bp)
+				Next Alignment: 122181 146258 NODE_63_length_84046_cov_8.13668_ID_125 8819 32896
+
+			Align 6: 122181 146258 NODE_63_length_84046_cov_8.13668_ID_125 8819 32896
+				Gap between this and next alignment: 146258 to 147547 (1288 bp)
+				Next Alignment: 147547 154190 NODE_63_length_84046_cov_8.13668_ID_125 32935 39577
+
+			Align 7: 147547 154190 NODE_63_length_84046_cov_8.13668_ID_125 32935 39577
+				Gap between this and next alignment: 154190 to 164096 (9905 bp)
+				Next Alignment: 164096 171906 NODE_63_length_84046_cov_8.13668_ID_125 39660 47468
+
+			Align 8: 164096 171906 NODE_63_length_84046_cov_8.13668_ID_125 39660 47468
+				Gap between this and next alignment: 171906 to 172040 (133 bp)
+				Next Alignment: 172040 190645 NODE_63_length_84046_cov_8.13668_ID_125 47735 66338
+
+			Align 9: 172040 190645 NODE_63_length_84046_cov_8.13668_ID_125 47735 66338
+				Gap between this and next alignment: 190645 to 191012 (366 bp)
+				Next Alignment: 191012 208266 NODE_63_length_84046_cov_8.13668_ID_125 66550 83784
+
+			Align 10: 191012 208266 NODE_63_length_84046_cov_8.13668_ID_125 66550 83784
+				Gap between this and next alignment: 208266 to 208399 (132 bp)
+				Next Alignment: 208399 227261 NODE_134_length_49178_cov_8.39029_ID_267 48417 29533
+
+			Align 11: 208399 227261 NODE_134_length_49178_cov_8.39029_ID_267 48417 29533
+				Gap between this and next alignment: 227261 to 229521 (2259 bp)
+				Next Alignment: 229521 243974 NODE_134_length_49178_cov_8.39029_ID_267 27272 12774
+
+			Align 12: 229521 243974 NODE_134_length_49178_cov_8.39029_ID_267 27272 12774
+				Gap between this and next alignment: 243974 to 244247 (272 bp)
+				Next Alignment: 244247 253368 NODE_134_length_49178_cov_8.39029_ID_267 9932 811
+
+			Align 13: 244247 253368 NODE_134_length_49178_cov_8.39029_ID_267 9932 811
+				Negative gap (overlap) between this and next alignment: 253368 to 253321 (-47 bp)
+				Next Alignment: 253321 255940 NODE_413_length_19072_cov_7.67461_ID_825 5127 7746
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 5127 to 5175.
+			Align 14: 253369 255940 NODE_413_length_19072_cov_7.67461_ID_825 5175 7746
+				Gap between this and next alignment: 255940 to 256125 (184 bp)
+				Next Alignment: 256125 256224 NODE_413_length_19072_cov_7.67461_ID_825 16234 16333
+
+			Align 15: 256125 256224 NODE_413_length_19072_cov_7.67461_ID_825 16234 16333
+				Negative gap (overlap) between this and next alignment: 256224 to 256224 (0 bp)
+				Next Alignment: 256224 351185 NODE_10_length_219536_cov_8.85057_ID_19 218134 123173
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 218134 to 218133.
+			Align 16: 256225 351185 NODE_10_length_219536_cov_8.85057_ID_19 218133 123173
+				Gap between this and next alignment: 351185 to 351290 (104 bp)
+				Next Alignment: 351290 362470 NODE_10_length_219536_cov_8.85057_ID_19 122934 111689
+
+			Align 17: 351290 362470 NODE_10_length_219536_cov_8.85057_ID_19 122934 111689
+				Gap between this and next alignment: 362470 to 363439 (968 bp)
+				Next Alignment: 363439 370917 NODE_10_length_219536_cov_8.85057_ID_19 108352 100876
+
+			Align 18: 363439 370917 NODE_10_length_219536_cov_8.85057_ID_19 108352 100876
+				Gap between this and next alignment: 370917 to 387436 (16518 bp)
+				Next Alignment: 387436 388385 NODE_10_length_219536_cov_8.85057_ID_19 97115 96166
+
+			Align 19: 387436 388385 NODE_10_length_219536_cov_8.85057_ID_19 97115 96166
+				Gap between this and next alignment: 388385 to 388988 (602 bp)
+				Next Alignment: 388988 389722 NODE_10_length_219536_cov_8.85057_ID_19 93252 92518
+
+			Align 20: 388988 389722 NODE_10_length_219536_cov_8.85057_ID_19 93252 92518
+				Gap between this and next alignment: 389722 to 398405 (8682 bp)
+				Next Alignment: 398405 399747 NODE_10_length_219536_cov_8.85057_ID_19 92346 91005
+
+			Align 21: 398405 399747 NODE_10_length_219536_cov_8.85057_ID_19 92346 91005
+				Gap between this and next alignment: 399747 to 406556 (6808 bp)
+				Next Alignment: 406556 431043 NODE_10_length_219536_cov_8.85057_ID_19 78992 54528
+
+			Align 22: 406556 431043 NODE_10_length_219536_cov_8.85057_ID_19 78992 54528
+				Gap between this and next alignment: 431043 to 433501 (2457 bp)
+				Next Alignment: 433501 444860 NODE_10_length_219536_cov_8.85057_ID_19 54267 42910
+
+			Align 23: 433501 444860 NODE_10_length_219536_cov_8.85057_ID_19 54267 42910
+				Gap between this and next alignment: 444860 to 444950 (89 bp)
+				Next Alignment: 444950 470673 NODE_10_length_219536_cov_8.85057_ID_19 42906 17120
+
+			Align 24: 444950 470673 NODE_10_length_219536_cov_8.85057_ID_19 42906 17120
+				Gap between this and next alignment: 470673 to 470695 (21 bp)
+				Next Alignment: 470695 479689 NODE_10_length_219536_cov_8.85057_ID_19 8978 1
+
+			Align 25: 470695 479689 NODE_10_length_219536_cov_8.85057_ID_19 8978 1
+				Gap between this and next alignment: 479689 to 481387 (1697 bp)
+				Next Alignment: 481387 496906 NODE_138_length_48220_cov_9.04478_ID_275 48220 32704
+
+			Align 26: 481387 496906 NODE_138_length_48220_cov_9.04478_ID_275 48220 32704
+				Gap between this and next alignment: 496906 to 497205 (298 bp)
+				Next Alignment: 497205 515610 NODE_138_length_48220_cov_9.04478_ID_275 31768 13366
+
+			Align 27: 497205 515610 NODE_138_length_48220_cov_9.04478_ID_275 31768 13366
+				Gap between this and next alignment: 515610 to 520399 (4788 bp)
+				Next Alignment: 520399 522787 NODE_138_length_48220_cov_9.04478_ID_275 13365 10976
+
+			Align 28: 520399 522787 NODE_138_length_48220_cov_9.04478_ID_275 13365 10976
+				Gap between this and next alignment: 522787 to 522790 (2 bp)
+				Next Alignment: 522790 523732 NODE_138_length_48220_cov_9.04478_ID_275 10842 9899
+
+			Align 29: 522790 523732 NODE_138_length_48220_cov_9.04478_ID_275 10842 9899
+				Gap between this and next alignment: 523732 to 542449 (18716 bp)
+				Next Alignment: 542449 543593 NODE_138_length_48220_cov_9.04478_ID_275 9898 8756
+
+			Align 30: 542449 543593 NODE_138_length_48220_cov_9.04478_ID_275 9898 8756
+				Gap between this and next alignment: 543593 to 546941 (3347 bp)
+				Next Alignment: 546941 547844 NODE_138_length_48220_cov_9.04478_ID_275 902 1
+
+			Align 31: 546941 547844 NODE_138_length_48220_cov_9.04478_ID_275 902 1
+				Gap between this and next alignment: 547844 to 548208 (363 bp)
+				Next Alignment: 548208 577080 NODE_20_length_161860_cov_8.39266_ID_39 1 28961
+
+			Align 32: 548208 577080 NODE_20_length_161860_cov_8.39266_ID_39 1 28961
+				Negative gap (overlap) between this and next alignment: 577080 to 577080 (0 bp)
+				Next Alignment: 577080 577987 NODE_20_length_161860_cov_8.39266_ID_39 30670 31576
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 30670 to 30671.
+			Align 33: 577081 577987 NODE_20_length_161860_cov_8.39266_ID_39 30671 31576
+				Gap between this and next alignment: 577987 to 585766 (7778 bp)
+				Next Alignment: 585766 595627 NODE_20_length_161860_cov_8.39266_ID_39 31577 41375
+
+			Align 34: 585766 595627 NODE_20_length_161860_cov_8.39266_ID_39 31577 41375
+				Gap between this and next alignment: 595627 to 596091 (463 bp)
+				Next Alignment: 596091 602560 NODE_73_length_75576_cov_8.18456_ID_145 1740 8211
+
+			Align 35: 596091 602560 NODE_73_length_75576_cov_8.18456_ID_145 1740 8211
+				Gap between this and next alignment: 602560 to 604065 (1504 bp)
+				Next Alignment: 604065 680180 NODE_20_length_161860_cov_8.39266_ID_39 42575 118660
+
+			Align 36: 604065 680180 NODE_20_length_161860_cov_8.39266_ID_39 42575 118660
+				Gap between this and next alignment: 680180 to 680300 (119 bp)
+				Next Alignment: 680300 684329 NODE_20_length_161860_cov_8.39266_ID_39 124298 128327
+
+			Align 37: 680300 684329 NODE_20_length_161860_cov_8.39266_ID_39 124298 128327
+				Gap between this and next alignment: 684329 to 684629 (299 bp)
+				Next Alignment: 684629 717383 NODE_20_length_161860_cov_8.39266_ID_39 128628 161375
+
+			Align 38: 684629 717383 NODE_20_length_161860_cov_8.39266_ID_39 128628 161375
+				Negative gap (overlap) between this and next alignment: 717383 to 717383 (0 bp)
+				Next Alignment: 717383 717783 NODE_128_length_51812_cov_10.1985_ID_255 48284 48684
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 48284 to 48285.
+			Align 39: 717384 717783 NODE_128_length_51812_cov_10.1985_ID_255 48285 48684
+				Gap between this and next alignment: 717783 to 718393 (609 bp)
+				Next Alignment: 718393 719069 NODE_244_length_30973_cov_8.19882_ID_487 719 1397
+
+			Align 40: 718393 719069 NODE_244_length_30973_cov_8.19882_ID_487 719 1397
+				Gap between this and next alignment: 719069 to 720985 (1915 bp)
+				Next Alignment: 720985 750556 NODE_244_length_30973_cov_8.19882_ID_487 1398 30973
+
+			Align 41: 720985 750556 NODE_244_length_30973_cov_8.19882_ID_487 1398 30973
+			END in gap: 750556 to 750844 (288 bp)
+
+	Reference Prevotella_nanceiensis_gi_483528923_ref_NZ_: 28 total alignments. 1 total regions.
+		Region: 1 to 771404 (771404 bp)
+			Align 1: 1 360 NODE_39_length_114420_cov_6.29443_ID_77 223 581
+				The next alignment (173 291 NODE_34433_length_671_cov_2.70292_ID_68865 416 298) is redundant. Skipping.
+				Negative gap (overlap) between this and next alignment: 360 to 297 (-63 bp)
+				Next Alignment: 297 44502 NODE_67_length_83003_cov_6.14657_ID_133 83003 38802
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 83003 to 82940.
+			Align 3: 361 44502 NODE_67_length_83003_cov_6.14657_ID_133 82940 38802
+				Gap between this and next alignment: 44502 to 45329 (826 bp)
+				Next Alignment: 45329 61653 NODE_67_length_83003_cov_6.14657_ID_133 37987 21690
+
+			Align 4: 45329 61653 NODE_67_length_83003_cov_6.14657_ID_133 37987 21690
+				The next alignment (51903 52071 NODE_4036_length_3261_cov_8.81036_ID_8071 93 261) is redundant. Skipping.
+				The next alignment (51904 52071 NODE_4036_length_3261_cov_8.81036_ID_8071 1 168) is redundant. Skipping.
+				The next alignment (51997 52073 NODE_140_length_47957_cov_7.23049_ID_279 163 87) is redundant. Skipping.
+				Gap between this and next alignment: 61653 to 61685 (31 bp)
+				Next Alignment: 61685 83098 NODE_67_length_83003_cov_6.14657_ID_133 21440 2
+
+			Align 8: 61685 83098 NODE_67_length_83003_cov_6.14657_ID_133 21440 2
+				Negative gap (overlap) between this and next alignment: 83098 to 82841 (-257 bp)
+				Next Alignment: 82841 156760 NODE_74_length_73942_cov_6.32577_ID_147 73942 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 73942 to 73685.
+			Align 9: 83099 156760 NODE_74_length_73942_cov_6.32577_ID_147 73685 1
+				Negative gap (overlap) between this and next alignment: 156760 to 156694 (-66 bp)
+				Next Alignment: 156694 176339 NODE_139_length_48038_cov_6.15137_ID_277 48038 28392
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 48038 to 47971.
+			Align 10: 156761 176339 NODE_139_length_48038_cov_6.15137_ID_277 47971 28392
+				Next Alignment: 176340 190563 NODE_310_length_24538_cov_15.8192_ID_619 10315 24538
+
+			Align 11: 176340 190563 NODE_310_length_24538_cov_15.8192_ID_619 10315 24538
+				Next Alignment: 190564 195191 NODE_2164_length_5190_cov_19.8487_ID_4327 5190 563
+
+			Align 12: 190564 195191 NODE_2164_length_5190_cov_19.8487_ID_4327 5190 563
+				Negative gap (overlap) between this and next alignment: 195191 to 195185 (-6 bp)
+				Next Alignment: 195185 223549 NODE_139_length_48038_cov_6.15137_ID_277 28391 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 28391 to 28384.
+			Align 13: 195192 223549 NODE_139_length_48038_cov_6.15137_ID_277 28384 1
+				Gap between this and next alignment: 223549 to 223551 (1 bp)
+				Next Alignment: 223551 288245 NODE_95_length_64738_cov_5.94911_ID_189 64737 47
+
+			Align 14: 223551 288245 NODE_95_length_64738_cov_5.94911_ID_189 64737 47
+				Gap between this and next alignment: 288245 to 288617 (371 bp)
+				Next Alignment: 288617 297557 NODE_8_length_249718_cov_5.83251_ID_15 248409 239470
+
+			Align 15: 288617 297557 NODE_8_length_249718_cov_5.83251_ID_15 248409 239470
+				Gap between this and next alignment: 297557 to 297623 (65 bp)
+				Next Alignment: 297623 300962 NODE_8_length_249718_cov_5.83251_ID_15 238153 234815
+
+			Align 16: 297623 300962 NODE_8_length_249718_cov_5.83251_ID_15 238153 234815
+				Gap between this and next alignment: 300962 to 307124 (6161 bp)
+				Next Alignment: 307124 350378 NODE_8_length_249718_cov_5.83251_ID_15 234803 191525
+
+			Align 17: 307124 350378 NODE_8_length_249718_cov_5.83251_ID_15 234803 191525
+				Gap between this and next alignment: 350378 to 350560 (181 bp)
+				Next Alignment: 350560 442330 NODE_8_length_249718_cov_5.83251_ID_15 190510 98734
+
+			Align 18: 350560 442330 NODE_8_length_249718_cov_5.83251_ID_15 190510 98734
+				Gap between this and next alignment: 442330 to 442350 (19 bp)
+				Next Alignment: 442350 503123 NODE_8_length_249718_cov_5.83251_ID_15 96142 35361
+
+			Align 19: 442350 503123 NODE_8_length_249718_cov_5.83251_ID_15 96142 35361
+				Gap between this and next alignment: 503123 to 503343 (219 bp)
+				Next Alignment: 503343 537551 NODE_8_length_249718_cov_5.83251_ID_15 35360 1168
+
+			Align 20: 503343 537551 NODE_8_length_249718_cov_5.83251_ID_15 35360 1168
+				Negative gap (overlap) between this and next alignment: 537551 to 537522 (-29 bp)
+				Next Alignment: 537522 573689 NODE_45_length_102721_cov_6.0427_ID_89 1615 37778
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1615 to 1645.
+			Align 21: 537552 573689 NODE_45_length_102721_cov_6.0427_ID_89 1645 37778
+				The next alignment (537530 537631 NODE_45_length_102721_cov_6.0427_ID_89 1513 1614) is redundant. Skipping.
+				Gap between this and next alignment: 573689 to 586139 (12449 bp)
+				Next Alignment: 586139 616599 NODE_45_length_102721_cov_6.0427_ID_89 37779 68236
+
+			Align 23: 586139 616599 NODE_45_length_102721_cov_6.0427_ID_89 37779 68236
+				Gap between this and next alignment: 616599 to 616752 (152 bp)
+				Next Alignment: 616752 650009 NODE_45_length_102721_cov_6.0427_ID_89 69509 102721
+
+			Align 24: 616752 650009 NODE_45_length_102721_cov_6.0427_ID_89 69509 102721
+				Negative gap (overlap) between this and next alignment: 650009 to 649944 (-65 bp)
+				Next Alignment: 649944 687119 NODE_39_length_114420_cov_6.29443_ID_77 114420 77238
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 114420 to 114354.
+			Align 25: 650010 687119 NODE_39_length_114420_cov_6.29443_ID_77 114354 77238
+				Gap between this and next alignment: 687119 to 699815 (12695 bp)
+				Next Alignment: 699815 712230 NODE_39_length_114420_cov_6.29443_ID_77 66596 54181
+
+			Align 26: 699815 712230 NODE_39_length_114420_cov_6.29443_ID_77 66596 54181
+				Gap between this and next alignment: 712230 to 714601 (2370 bp)
+				Next Alignment: 714601 766167 NODE_39_length_114420_cov_6.29443_ID_77 54180 2566
+
+			Align 27: 714601 766167 NODE_39_length_114420_cov_6.29443_ID_77 54180 2566
+				Gap between this and next alignment: 766167 to 770944 (4776 bp)
+				Next Alignment: 770944 771122 NODE_397_length_19780_cov_6.83975_ID_793 180 1
+
+			Align 28: 770944 771122 NODE_397_length_19780_cov_6.83975_ID_793 180 1
+			END in gap: 771122 to 771404 (282 bp)
+
+	Reference Prevotella_nanceiensis_gi_483530682_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 18810 (18810 bp)
+			Align 1: 1 413 NODE_26215_length_829_cov_14.4574_ID_52429 417 829
+				Next Alignment: 414 18397 NODE_451_length_17983_cov_8.12235_ID_901 1 17983
+
+			Align 2: 414 18397 NODE_451_length_17983_cov_8.12235_ID_901 1 17983
+			END in gap: 18397 to 18810 (413 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Prevotella_nanceiensis/contigs_reports/nucmer_output/SPAdes.used_snps
+
+Results:
+	Local Misassemblies: 19
+	Misassemblies: 35
+		Relocations: 27
+		Translocations: 8
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 15
+	Misassembled Contigs: 19
+	Misassembled Contig Bases: 1784864
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 25 part
+Partially Unaligned Contigs with Misassemblies: 5
+Unaligned Contig Bases: 777438
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 2318778
+
+	SNPs: 67803
+	Insertions: 1611
+	Deletions: 1270
+
+	Positive Gaps: 99
+		Internal Gaps:  55
+		External Gaps:  44
+		External Gap Total:  155522
+		External Gap Average: 3535
+	Negative Gaps: 18
+		Internal Overlaps:  2
+		External Overlaps:  16
+		External Overlaps Total: -798
+		External Overlaps Average: -50
+	Contigs with Redundant Alignments: 7 (1349)

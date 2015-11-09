@@ -1,0 +1,152 @@
+/home/gurevich/rep/quast/quast.pyc -t 16 -j  --meta  --bed-file /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/combined_reference/structural_variations/combined_reference.bed --no-check-meta  --contig-thresholds 1000,5000,10000,25000,50000 -R /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Bacteroides_uniformis.fasta -o /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_uniformis --labels "IDBA_UD, Ray, SOAPdenovo2, SPAdes" /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/IDBA_UD_to_Bacteroides_uniformis.fasta /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Ray_to_Bacteroides_uniformis.fasta /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SOAPdenovo2_to_Bacteroides_uniformis.fasta /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SPAdes_to_Bacteroides_uniformis.fasta
+
+Started: 2015-11-09 20:21:39
+
+Logging to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_uniformis/quast.log
+
+NOTICE: Output directory already exists. Existing Nucmer alignments can be used.
+
+Reference:
+  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Bacteroides_uniformis.fasta ==> Bacteroides_uniformis
+
+Contigs:
+  1  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/IDBA_UD_to_Bacteroides_uniformis.fasta ==> IDBA_UD
+  2  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Ray_to_Bacteroides_uniformis.fasta ==> Ray
+  3  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SOAPdenovo2_to_Bacteroides_uniformis.fasta ==> SOAPdenovo2
+  4  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SPAdes_to_Bacteroides_uniformis.fasta ==> SPAdes
+
+2015-11-09 20:21:40
+Running Basic statistics processor...
+  Reference genome:
+    Bacteroides_uniformis.fasta, Reference length = 4835507, Reference GC % = 46.49
+  Contig files: 
+    1  IDBA_UD
+    2  Ray
+    3  SOAPdenovo2
+    4  SPAdes
+  Calculating N50 and L50...
+    1  IDBA_UD, N50 = 92168, L50 = 16, Total length = 4378740, GC % = 46.30, # N's per 100 kbp =  7.86
+    2  Ray, N50 = 37090, L50 = 37, Total length = 4211304, GC % = 46.62, # N's per 100 kbp =  832.09
+    3  SOAPdenovo2, N50 = 3089, L50 = 267, Total length = 3066458, GC % = 47.01, # N's per 100 kbp =  38.42
+    4  SPAdes, N50 = 57361, L50 = 25, Total length = 4794148, GC % = 46.32, # N's per 100 kbp =  28.97
+  Drawing Nx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_uniformis/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_uniformis/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_uniformis/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_uniformis/basic_stats/GC_content_plot.pdf
+Done.
+
+2015-11-09 20:21:43
+Running Contig analyzer...
+  3  SOAPdenovo2
+  1  IDBA_UD
+  2  Ray
+  4  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_uniformis/contigs_reports/contigs_report_SPAdes.stdout and contigs_report_SPAdes.stderr...
+  1  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_uniformis/contigs_reports/contigs_report_IDBA_UD.stdout and contigs_report_IDBA_UD.stderr...
+  4  Running Nucmer
+  1  Running Nucmer
+  4  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/nucmer -c 65 -l 65 --maxmatch \
+     -p runs_per_reference/Bacteroides_uniformis/contigs_reports/nucmer_output/SPAdes \
+     runs_per_reference/Bacteroides_uniformis/quast_corrected_input/Bacteroides_uniformis.fasta \
+     quast_corrected_input/SPAdes_to_Bacteroides_uniformis.fasta >> runs_per_reference/Bacteroides_uniformis/contigs_reports/contigs_report_SPAdes.stdout \
+     2>> runs_per_reference/Bacteroides_uniformis/contigs_reports/contigs_report_SPAdes.stderr
+  1  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/nucmer -c 65 -l 65 --maxmatch \
+     -p runs_per_reference/Bacteroides_uniformis/contigs_reports/nucmer_output/IDBA_UD \
+     runs_per_reference/Bacteroides_uniformis/quast_corrected_input/Bacteroides_uniformis.fasta \
+     quast_corrected_input/IDBA_UD_to_Bacteroides_uniformis.fasta >> runs_per_reference/Bacteroides_uniformis/contigs_reports/contigs_report_IDBA_UD.stdout \
+     2>> runs_per_reference/Bacteroides_uniformis/contigs_reports/contigs_report_IDBA_UD.stderr
+  3  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_uniformis/contigs_reports/contigs_report_SOAPdenovo2.stdout and contigs_report_SOAPdenovo2.stderr...
+  3  Using existing Nucmer alignments... 
+  2  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_uniformis/contigs_reports/contigs_report_Ray.stdout and contigs_report_Ray.stderr...
+  2  Using existing Nucmer alignments... 
+  3  Alignments: runs_per_reference/Bacteroides_uniformis/contigs_reports/alignments_SOAPdenovo2.tsv
+  3  Analysis is finished.
+
+  2  Alignments: runs_per_reference/Bacteroides_uniformis/contigs_reports/alignments_Ray.tsv
+  2  Analysis is finished.
+
+  1  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/delta-filter -i 95 -l 0 runs_per_reference/Bacteroides_uniformis/contigs_reports/nucmer_output/IDBA_UD.delta \
+     > runs_per_reference/Bacteroides_uniformis/contigs_reports/nucmer_output/IDBA_UD.fdelta \
+     2> runs_per_reference/Bacteroides_uniformis/contigs_reports/contigs_report_IDBA_UD.stderr
+  1  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-coords runs_per_reference/Bacteroides_uniformis/contigs_reports/nucmer_output/IDBA_UD.delta \
+     > runs_per_reference/Bacteroides_uniformis/contigs_reports/nucmer_output/IDBA_UD.coords_tmp \
+     2> runs_per_reference/Bacteroides_uniformis/contigs_reports/contigs_report_IDBA_UD.stderr
+  1  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-snps -S -T -H runs_per_reference/Bacteroides_uniformis/contigs_reports/nucmer_output/IDBA_UD.delta \
+     < runs_per_reference/Bacteroides_uniformis/contigs_reports/nucmer_output/IDBA_UD.coords.headless \
+     > runs_per_reference/Bacteroides_uniformis/contigs_reports/nucmer_output/IDBA_UD.all_snps \
+     2> runs_per_reference/Bacteroides_uniformis/contigs_reports/contigs_report_IDBA_UD.stderr
+  4  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/delta-filter -i 95 -l 0 runs_per_reference/Bacteroides_uniformis/contigs_reports/nucmer_output/SPAdes.delta \
+     > runs_per_reference/Bacteroides_uniformis/contigs_reports/nucmer_output/SPAdes.fdelta \
+     2> runs_per_reference/Bacteroides_uniformis/contigs_reports/contigs_report_SPAdes.stderr
+  4  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-coords runs_per_reference/Bacteroides_uniformis/contigs_reports/nucmer_output/SPAdes.delta \
+     > runs_per_reference/Bacteroides_uniformis/contigs_reports/nucmer_output/SPAdes.coords_tmp \
+     2> runs_per_reference/Bacteroides_uniformis/contigs_reports/contigs_report_SPAdes.stderr
+  4  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-snps -S -T -H runs_per_reference/Bacteroides_uniformis/contigs_reports/nucmer_output/SPAdes.delta \
+     < runs_per_reference/Bacteroides_uniformis/contigs_reports/nucmer_output/SPAdes.coords.headless \
+     > runs_per_reference/Bacteroides_uniformis/contigs_reports/nucmer_output/SPAdes.all_snps \
+     2> runs_per_reference/Bacteroides_uniformis/contigs_reports/contigs_report_SPAdes.stderr
+  1  Alignments: runs_per_reference/Bacteroides_uniformis/contigs_reports/alignments_IDBA_UD.tsv
+  1  Analysis is finished.
+
+  4  Alignments: runs_per_reference/Bacteroides_uniformis/contigs_reports/alignments_SPAdes.tsv
+  4  Analysis is finished.
+
+  Creating total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_uniformis/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_uniformis/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_uniformis/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_uniformis/contigs_reports/misassemblies_plot.pdf
+Done.
+
+2015-11-09 20:22:12
+Running NA-NGA calculation...
+  1  IDBA_UD, Largest alignment = 118704, NA50 = 32189, NGA50 = 26880, LA50 = 41, LGA50 = 48
+  2  Ray, Largest alignment = 72570, NA50 = 15126, NGA50 = 12965, LA50 = 70, LGA50 = 92
+  3  SOAPdenovo2, Largest alignment = 21339, NA50 = 2377, NGA50 = 868, LA50 = 352, LGA50 = 975
+  4  SPAdes, Largest alignment = 108559, NA50 = 22673, NGA50 = 22673, LA50 = 61, LGA50 = 61
+  Drawing cumulative plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_uniformis/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_uniformis/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_uniformis/aligned_stats/NGAx_plot.pdf
+Done.
+
+2015-11-09 20:22:13
+Running Genome analyzer...
+  NOTICE: No file with genes provided. Use the -G option if you want to specify it.
+  NOTICE: No file with operons provided. Use the -O option if you want to specify it.
+  1  IDBA_UD
+  2  Ray
+  3  SOAPdenovo2
+  4  SPAdes
+  3  Analysis is finished.
+  1  Analysis is finished.
+  2  Analysis is finished.
+  4  Analysis is finished.
+  Drawing Genome fraction, % histogram...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_uniformis/genome_stats/genome_fraction_histogram.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding option to enable it.
+
+2015-11-09 20:22:16
+Drawing large plots...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating contig alignment plot...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2015-11-09 20:22:29
+RESULTS:
+  Text versions of total report are saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_uniformis/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_uniformis/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_uniformis/report.html
+  PDF version (tables and plots) saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_uniformis/report.pdf
+  Contig alignment plot: /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_uniformis/alignment.svg

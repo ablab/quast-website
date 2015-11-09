@@ -1,0 +1,441 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Ruminococcus_gnavus_gi_146386217_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386218_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386219_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386220_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386221_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386222_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386223_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386224_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386225_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386226_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386227_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386228_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386229_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386230_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386231_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386232_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386233_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386234_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386235_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386236_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386237_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386238_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386239_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386240_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386241_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386242_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386243_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386244_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386245_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386246_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386247_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386248_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386249_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386250_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386251_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386252_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386253_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386254_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386255_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386256_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386257_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386258_ref_NZ_]
+	Loaded [Ruminococcus_gnavus_gi_146386259_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 43
+	Total Region Length: 3501911
+Analyzing contigs...
+CONTIG: NODE_363_length_28342_cov_5.34348_ID_725 (28342bp)
+Top Length: 3255  Top ID: 97.39
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 28342 and total length of all aligns is 5461
+		Alignment: 49110 51311 | 24399 22194 | 2202 2206 | 96.55 | Ruminococcus_gnavus_gi_146386222_ref_NZ_ NODE_363_length_28342_cov_5.34348_ID_725
+		Alignment: 40579 43833 | 28342 25088 | 3255 3255 | 97.39 | Ruminococcus_gnavus_gi_146386222_ref_NZ_ NODE_363_length_28342_cov_5.34348_ID_725
+		Unaligned bases: 22881
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: NODE_505_length_21719_cov_5.71663_ID_1009 (21719bp)
+Top Length: 2052  Top ID: 96.17
+		This contig is partially unaligned. (Aligned 2052 out of 21719 bases)
+		Alignment: 29611 31673 | 13134 15185 | 2063 2052 | 96.17 | Ruminococcus_gnavus_gi_146386222_ref_NZ_ NODE_505_length_21719_cov_5.71663_ID_1009
+		Unaligned bases: 1 to 13133 (13133)
+		Unaligned bases: 15186 to 21719 (6534)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_902_length_13198_cov_5.02503_ID_1803 (13198bp)
+Top Length: 4112  Top ID: 95.65
+		This contig is partially unaligned. (Aligned 4112 out of 13198 bases)
+		Alignment: 36511 40623 | 9066 13177 | 4113 4112 | 95.65 | Ruminococcus_gnavus_gi_146386222_ref_NZ_ NODE_902_length_13198_cov_5.02503_ID_1803
+		Unaligned bases: 1 to 9065 (9065)
+		Unaligned bases: 13178 to 13198 (21)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_14453_length_1313_cov_17.4746_ID_28905 (1313bp)
+Top Length: 1313  Top ID: 98.48
+		One align captures most of this contig: 90825 92137 | 1 1313 | 1313 1313 | 98.48 | Ruminococcus_gnavus_gi_146386222_ref_NZ_ NODE_14453_length_1313_cov_17.4746_ID_28905
+
+CONTIG: NODE_40110_length_505_cov_5.06667_ID_80219 (505bp)
+Top Length: 494  Top ID: 98.58
+		This contig is partially unaligned. (Aligned 494 out of 505 bases)
+		Alignment: 27773 28266 | 505 12 | 494 494 | 98.58 | Ruminococcus_gnavus_gi_146386222_ref_NZ_ NODE_40110_length_505_cov_5.06667_ID_80219
+		Unaligned bases: 1 to 11 (11)
+
+CONTIG: NODE_3111_length_4802_cov_3.33642_ID_6221 (4802bp)
+Top Length: 1334  Top ID: 100.0
+		Skipping redundant alignment 229025 230284 | 302 1561 | 1260 1260 | 100.0 | Ruminococcus_gnavus_gi_146386248_ref_NZ_ NODE_3111_length_4802_cov_3.33642_ID_6221
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 35764 37097 | 1636 303 | 1334 1334 | 100.0 | Ruminococcus_gnavus_gi_146386243_ref_NZ_ NODE_3111_length_4802_cov_3.33642_ID_6221
+		Skipping redundant alignment 199489 200822 | 303 1636 | 1334 1334 | 100.0 | Ruminococcus_gnavus_gi_146386248_ref_NZ_ NODE_3111_length_4802_cov_3.33642_ID_6221
+		This contig is partially unaligned. (Aligned 1334 out of 4802 bases)
+		Alignment: 23718 25051 | 1636 303 | 1334 1334 | 100.0 | Ruminococcus_gnavus_gi_146386226_ref_NZ_ NODE_3111_length_4802_cov_3.33642_ID_6221
+		Unaligned bases: 1 to 302 (302)
+		Unaligned bases: 1637 to 4802 (3166)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_113_length_57182_cov_10.214_ID_225 (57182bp)
+Top Length: 1316  Top ID: 95.74
+		This contig is misassembled. 3 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 57182 and total length of all aligns is 2181
+		Alignment: 159985 160330 | 346 1 | 346 346 | 98.55 | Ruminococcus_gnavus_gi_146386248_ref_NZ_ NODE_113_length_57182_cov_10.214_ID_225
+		Alignment: 35673 36191 | 3832 4350 | 519 519 | 96.92 | Ruminococcus_gnavus_gi_146386239_ref_NZ_ NODE_113_length_57182_cov_10.214_ID_225
+		Alignment: 79022 80337 | 10063 8748 | 1316 1316 | 95.74 | Ruminococcus_gnavus_gi_146386237_ref_NZ_ NODE_113_length_57182_cov_10.214_ID_225
+		Unaligned bases: 55001
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: NODE_7801_length_2289_cov_45.4794_ID_15601 (2289bp)
+Top Length: 2289  Top ID: 99.48
+		One align captures most of this contig: 160531 162819 | 1 2289 | 2289 2289 | 99.48 | Ruminococcus_gnavus_gi_146386248_ref_NZ_ NODE_7801_length_2289_cov_45.4794_ID_15601
+
+CONTIG: NODE_34823_length_569_cov_3.08171_ID_69645 (569bp)
+Top Length: 569  Top ID: 99.82
+		One align captures most of this contig: 1833 2401 | 569 1 | 569 569 | 99.82 | Ruminococcus_gnavus_gi_146386223_ref_NZ_ NODE_34823_length_569_cov_3.08171_ID_69645
+
+CONTIG: NODE_5916_length_2908_cov_1.14826_ID_11831 (2908bp)
+Top Length: 169  Top ID: 98.82
+		This contig is partially unaligned. (Aligned 169 out of 2908 bases)
+		Alignment: 36673 36841 | 1145 1313 | 169 169 | 98.82 | Ruminococcus_gnavus_gi_146386239_ref_NZ_ NODE_5916_length_2908_cov_1.14826_ID_11831
+		Unaligned bases: 1 to 1144 (1144)
+		Unaligned bases: 1314 to 2908 (1595)
+
+CONTIG: NODE_24488_length_791_cov_0.877717_ID_48975 (791bp)
+Top Length: 791  Top ID: 98.86
+		One align captures most of this contig: 32259 33049 | 1 791 | 791 791 | 98.86 | Ruminococcus_gnavus_gi_146386239_ref_NZ_ NODE_24488_length_791_cov_0.877717_ID_48975
+
+CONTIG: NODE_22207_length_874_cov_0.710623_ID_44413 (874bp)
+Top Length: 874  Top ID: 99.31
+		One align captures most of this contig: 40347 41220 | 1 874 | 874 874 | 99.31 | Ruminococcus_gnavus_gi_146386232_ref_NZ_ NODE_22207_length_874_cov_0.710623_ID_44413
+
+CONTIG: NODE_26790_length_723_cov_0.741018_ID_53579 (723bp)
+Top Length: 723  Top ID: 99.72
+		One align captures most of this contig: 52393 53115 | 1 723 | 723 723 | 99.72 | Ruminococcus_gnavus_gi_146386232_ref_NZ_ NODE_26790_length_723_cov_0.741018_ID_53579
+
+CONTIG: NODE_27012_length_717_cov_0.725076_ID_54023 (717bp)
+Top Length: 717  Top ID: 95.81
+		One align captures most of this contig: 53894 54633 | 1 717 | 740 717 | 95.81 | Ruminococcus_gnavus_gi_146386232_ref_NZ_ NODE_27012_length_717_cov_0.725076_ID_54023
+
+CONTIG: NODE_22182_length_875_cov_3.3378_ID_44363 (875bp)
+Top Length: 856  Top ID: 96.38
+		Skipping redundant alignment 1 227 | 629 856 | 227 228 | 97.81 | Ruminococcus_gnavus_gi_146386234_ref_NZ_ NODE_22182_length_875_cov_3.3378_ID_44363
+		This contig is partially unaligned. (Aligned 856 out of 875 bases)
+		Alignment: 198853 199707 | 1 856 | 855 856 | 96.38 | Ruminococcus_gnavus_gi_146386227_ref_NZ_ NODE_22182_length_875_cov_3.3378_ID_44363
+		Unaligned bases: 857 to 875 (19)
+
+CONTIG: NODE_890_length_13369_cov_1.68236_ID_1779 (13369bp)
+Top Length: 75  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 75 out of 13369 bases)
+		Alignment: 33783 33857 | 1 75 | 75 75 | 100.0 | Ruminococcus_gnavus_gi_146386244_ref_NZ_ NODE_890_length_13369_cov_1.68236_ID_1779
+		Unaligned bases: 76 to 13369 (13294)
+
+CONTIG: NODE_1989_length_6736_cov_2.11031_ID_3977 (6736bp)
+Top Length: 6152  Top ID: 99.82
+		This contig is partially unaligned. (Aligned 6152 out of 6736 bases)
+		Alignment: 10387 16536 | 6736 585 | 6150 6152 | 99.82 | Ruminococcus_gnavus_gi_146386244_ref_NZ_ NODE_1989_length_6736_cov_2.11031_ID_3977
+		Unaligned bases: 1 to 584 (584)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_22843_length_850_cov_88.7119_ID_45685 (850bp)
+Top Length: 850  Top ID: 95.19
+		This contig has 2 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 17392 18242 | 1 850 | 851 850 | 95.19 | Ruminococcus_gnavus_gi_146386240_ref_NZ_ NODE_22843_length_850_cov_88.7119_ID_45685
+		Skipping alignment  86399 87249 | 1 850 | 851 850 | 95.19 | Ruminococcus_gnavus_gi_146386244_ref_NZ_ NODE_22843_length_850_cov_88.7119_ID_45685
+
+CONTIG: NODE_695_length_16660_cov_6.54767_ID_1389 (16660bp)
+Top Length: 83  Top ID: 98.8
+		Skipping redundant alignment 23591 23661 | 16485 16555 | 71 71 | 100.0 | Ruminococcus_gnavus_gi_146386239_ref_NZ_ NODE_695_length_16660_cov_6.54767_ID_1389
+		This contig is partially unaligned. (Aligned 83 out of 16660 bases)
+		Alignment: 13472 13554 | 16479 16561 | 83 83 | 98.8 | Ruminococcus_gnavus_gi_146386240_ref_NZ_ NODE_695_length_16660_cov_6.54767_ID_1389
+		Unaligned bases: 1 to 16478 (16478)
+		Unaligned bases: 16562 to 16660 (99)
+
+CONTIG: NODE_9872_length_1865_cov_1.05525_ID_19743 (1865bp)
+Top Length: 82  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 82 out of 1865 bases)
+		Alignment: 53461 53542 | 1 82 | 82 82 | 100.0 | Ruminococcus_gnavus_gi_146386224_ref_NZ_ NODE_9872_length_1865_cov_1.05525_ID_19743
+		Unaligned bases: 83 to 1865 (1783)
+
+CONTIG: NODE_17747_length_1080_cov_0.788293_ID_35493 (1080bp)
+Top Length: 145  Top ID: 96.55
+		This contig is partially unaligned. (Aligned 145 out of 1080 bases)
+		Alignment: 51823 51967 | 156 12 | 145 145 | 96.55 | Ruminococcus_gnavus_gi_146386224_ref_NZ_ NODE_17747_length_1080_cov_0.788293_ID_35493
+		Unaligned bases: 1 to 11 (11)
+		Unaligned bases: 157 to 1080 (924)
+
+CONTIG: NODE_39625_length_510_cov_0.863736_ID_79249 (510bp)
+Top Length: 222  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 222 out of 510 bases)
+		Alignment: 49143 49364 | 222 1 | 222 222 | 100.0 | Ruminococcus_gnavus_gi_146386224_ref_NZ_ NODE_39625_length_510_cov_0.863736_ID_79249
+		Unaligned bases: 223 to 510 (288)
+
+CONTIG: NODE_3127_length_4786_cov_6.06996_ID_6253 (4786bp)
+Top Length: 4786  Top ID: 98.12
+		One align captures most of this contig: 57300 62084 | 1 4786 | 4785 4786 | 98.12 | Ruminococcus_gnavus_gi_146386236_ref_NZ_ NODE_3127_length_4786_cov_6.06996_ID_6253
+
+CONTIG: NODE_19102_length_1006_cov_0.844374_ID_38203 (1006bp)
+Top Length: 76  Top ID: 98.68
+		This contig is partially unaligned. (Aligned 76 out of 1006 bases)
+		Alignment: 29665 29740 | 79 4 | 76 76 | 98.68 | Ruminococcus_gnavus_gi_146386228_ref_NZ_ NODE_19102_length_1006_cov_0.844374_ID_38203
+		Unaligned bases: 1 to 3 (3)
+		Unaligned bases: 80 to 1006 (927)
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Ruminococcus_gnavus/contigs_reports/nucmer_output/SPAdes.used_snps
+ERROR: Reference Ruminococcus_gnavus_gi_146386225_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Ruminococcus_gnavus_gi_146386224_ref_NZ_', 'Ruminococcus_gnavus_gi_146386223_ref_NZ_', 'Ruminococcus_gnavus_gi_146386237_ref_NZ_', 'Ruminococcus_gnavus_gi_146386239_ref_NZ_', 'Ruminococcus_gnavus_gi_146386244_ref_NZ_', 'Ruminococcus_gnavus_gi_146386240_ref_NZ_', 'Ruminococcus_gnavus_gi_146386222_ref_NZ_', 'Ruminococcus_gnavus_gi_146386236_ref_NZ_', 'Ruminococcus_gnavus_gi_146386228_ref_NZ_', 'Ruminococcus_gnavus_gi_146386227_ref_NZ_', 'Ruminococcus_gnavus_gi_146386226_ref_NZ_', 'Ruminococcus_gnavus_gi_146386232_ref_NZ_', 'Ruminococcus_gnavus_gi_146386248_ref_NZ_']
+ERROR: Reference Ruminococcus_gnavus_gi_146386243_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Ruminococcus_gnavus_gi_146386224_ref_NZ_', 'Ruminococcus_gnavus_gi_146386223_ref_NZ_', 'Ruminococcus_gnavus_gi_146386237_ref_NZ_', 'Ruminococcus_gnavus_gi_146386239_ref_NZ_', 'Ruminococcus_gnavus_gi_146386244_ref_NZ_', 'Ruminococcus_gnavus_gi_146386240_ref_NZ_', 'Ruminococcus_gnavus_gi_146386222_ref_NZ_', 'Ruminococcus_gnavus_gi_146386236_ref_NZ_', 'Ruminococcus_gnavus_gi_146386228_ref_NZ_', 'Ruminococcus_gnavus_gi_146386227_ref_NZ_', 'Ruminococcus_gnavus_gi_146386226_ref_NZ_', 'Ruminococcus_gnavus_gi_146386232_ref_NZ_', 'Ruminococcus_gnavus_gi_146386248_ref_NZ_']
+ERROR: Reference Ruminococcus_gnavus_gi_146386241_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Ruminococcus_gnavus_gi_146386224_ref_NZ_', 'Ruminococcus_gnavus_gi_146386223_ref_NZ_', 'Ruminococcus_gnavus_gi_146386237_ref_NZ_', 'Ruminococcus_gnavus_gi_146386239_ref_NZ_', 'Ruminococcus_gnavus_gi_146386244_ref_NZ_', 'Ruminococcus_gnavus_gi_146386240_ref_NZ_', 'Ruminococcus_gnavus_gi_146386222_ref_NZ_', 'Ruminococcus_gnavus_gi_146386236_ref_NZ_', 'Ruminococcus_gnavus_gi_146386228_ref_NZ_', 'Ruminococcus_gnavus_gi_146386227_ref_NZ_', 'Ruminococcus_gnavus_gi_146386226_ref_NZ_', 'Ruminococcus_gnavus_gi_146386232_ref_NZ_', 'Ruminococcus_gnavus_gi_146386248_ref_NZ_']
+ERROR: Reference Ruminococcus_gnavus_gi_146386238_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Ruminococcus_gnavus_gi_146386224_ref_NZ_', 'Ruminococcus_gnavus_gi_146386223_ref_NZ_', 'Ruminococcus_gnavus_gi_146386237_ref_NZ_', 'Ruminococcus_gnavus_gi_146386239_ref_NZ_', 'Ruminococcus_gnavus_gi_146386244_ref_NZ_', 'Ruminococcus_gnavus_gi_146386240_ref_NZ_', 'Ruminococcus_gnavus_gi_146386222_ref_NZ_', 'Ruminococcus_gnavus_gi_146386236_ref_NZ_', 'Ruminococcus_gnavus_gi_146386228_ref_NZ_', 'Ruminococcus_gnavus_gi_146386227_ref_NZ_', 'Ruminococcus_gnavus_gi_146386226_ref_NZ_', 'Ruminococcus_gnavus_gi_146386232_ref_NZ_', 'Ruminococcus_gnavus_gi_146386248_ref_NZ_']
+ERROR: Reference Ruminococcus_gnavus_gi_146386258_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Ruminococcus_gnavus_gi_146386224_ref_NZ_', 'Ruminococcus_gnavus_gi_146386223_ref_NZ_', 'Ruminococcus_gnavus_gi_146386237_ref_NZ_', 'Ruminococcus_gnavus_gi_146386239_ref_NZ_', 'Ruminococcus_gnavus_gi_146386244_ref_NZ_', 'Ruminococcus_gnavus_gi_146386240_ref_NZ_', 'Ruminococcus_gnavus_gi_146386222_ref_NZ_', 'Ruminococcus_gnavus_gi_146386236_ref_NZ_', 'Ruminococcus_gnavus_gi_146386228_ref_NZ_', 'Ruminococcus_gnavus_gi_146386227_ref_NZ_', 'Ruminococcus_gnavus_gi_146386226_ref_NZ_', 'Ruminococcus_gnavus_gi_146386232_ref_NZ_', 'Ruminococcus_gnavus_gi_146386248_ref_NZ_']
+ERROR: Reference Ruminococcus_gnavus_gi_146386220_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Ruminococcus_gnavus_gi_146386224_ref_NZ_', 'Ruminococcus_gnavus_gi_146386223_ref_NZ_', 'Ruminococcus_gnavus_gi_146386237_ref_NZ_', 'Ruminococcus_gnavus_gi_146386239_ref_NZ_', 'Ruminococcus_gnavus_gi_146386244_ref_NZ_', 'Ruminococcus_gnavus_gi_146386240_ref_NZ_', 'Ruminococcus_gnavus_gi_146386222_ref_NZ_', 'Ruminococcus_gnavus_gi_146386236_ref_NZ_', 'Ruminococcus_gnavus_gi_146386228_ref_NZ_', 'Ruminococcus_gnavus_gi_146386227_ref_NZ_', 'Ruminococcus_gnavus_gi_146386226_ref_NZ_', 'Ruminococcus_gnavus_gi_146386232_ref_NZ_', 'Ruminococcus_gnavus_gi_146386248_ref_NZ_']
+	Reference Ruminococcus_gnavus_gi_146386222_ref_NZ_: 6 total alignments. 1 total regions.
+		Region: 1 to 124664 (124664 bp)
+			START in gap: 1 to 27773 (27772 bp)
+			Align 1: 27773 28266 NODE_40110_length_505_cov_5.06667_ID_80219 505 12
+				Gap between this and next alignment: 28266 to 29611 (1344 bp)
+				Next Alignment: 29611 31673 NODE_505_length_21719_cov_5.71663_ID_1009 13134 15185
+
+			Align 2: 29611 31673 NODE_505_length_21719_cov_5.71663_ID_1009 13134 15185
+				Gap between this and next alignment: 31673 to 36511 (4837 bp)
+				Next Alignment: 36511 40623 NODE_902_length_13198_cov_5.02503_ID_1803 9066 13177
+
+			Align 3: 36511 40623 NODE_902_length_13198_cov_5.02503_ID_1803 9066 13177
+				Negative gap (overlap) between this and next alignment: 40623 to 40579 (-44 bp)
+				Next Alignment: 40579 43833 NODE_363_length_28342_cov_5.34348_ID_725 28342 25088
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 28342 to 28297.
+			Align 4: 40624 43833 NODE_363_length_28342_cov_5.34348_ID_725 28297 25088
+				Gap between this and next alignment: 43833 to 49110 (5276 bp)
+				Next Alignment: 49110 51311 NODE_363_length_28342_cov_5.34348_ID_725 24399 22194
+
+			Align 5: 49110 51311 NODE_363_length_28342_cov_5.34348_ID_725 24399 22194
+				Gap between this and next alignment: 51311 to 90825 (39513 bp)
+				Next Alignment: 90825 92137 NODE_14453_length_1313_cov_17.4746_ID_28905 1 1313
+
+			Align 6: 90825 92137 NODE_14453_length_1313_cov_17.4746_ID_28905 1 1313
+			END in gap: 92137 to 124664 (32527 bp)
+
+	Reference Ruminococcus_gnavus_gi_146386227_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 394300 (394300 bp)
+			START in gap: 1 to 198853 (198852 bp)
+			Align 1: 198853 199707 NODE_22182_length_875_cov_3.3378_ID_44363 1 856
+			END in gap: 199707 to 394300 (194593 bp)
+
+ERROR: Reference Ruminococcus_gnavus_gi_146386234_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Ruminococcus_gnavus_gi_146386224_ref_NZ_', 'Ruminococcus_gnavus_gi_146386223_ref_NZ_', 'Ruminococcus_gnavus_gi_146386237_ref_NZ_', 'Ruminococcus_gnavus_gi_146386239_ref_NZ_', 'Ruminococcus_gnavus_gi_146386244_ref_NZ_', 'Ruminococcus_gnavus_gi_146386240_ref_NZ_', 'Ruminococcus_gnavus_gi_146386222_ref_NZ_', 'Ruminococcus_gnavus_gi_146386236_ref_NZ_', 'Ruminococcus_gnavus_gi_146386228_ref_NZ_', 'Ruminococcus_gnavus_gi_146386227_ref_NZ_', 'Ruminococcus_gnavus_gi_146386226_ref_NZ_', 'Ruminococcus_gnavus_gi_146386232_ref_NZ_', 'Ruminococcus_gnavus_gi_146386248_ref_NZ_']
+ERROR: Reference Ruminococcus_gnavus_gi_146386217_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Ruminococcus_gnavus_gi_146386224_ref_NZ_', 'Ruminococcus_gnavus_gi_146386223_ref_NZ_', 'Ruminococcus_gnavus_gi_146386237_ref_NZ_', 'Ruminococcus_gnavus_gi_146386239_ref_NZ_', 'Ruminococcus_gnavus_gi_146386244_ref_NZ_', 'Ruminococcus_gnavus_gi_146386240_ref_NZ_', 'Ruminococcus_gnavus_gi_146386222_ref_NZ_', 'Ruminococcus_gnavus_gi_146386236_ref_NZ_', 'Ruminococcus_gnavus_gi_146386228_ref_NZ_', 'Ruminococcus_gnavus_gi_146386227_ref_NZ_', 'Ruminococcus_gnavus_gi_146386226_ref_NZ_', 'Ruminococcus_gnavus_gi_146386232_ref_NZ_', 'Ruminococcus_gnavus_gi_146386248_ref_NZ_']
+ERROR: Reference Ruminococcus_gnavus_gi_146386254_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Ruminococcus_gnavus_gi_146386224_ref_NZ_', 'Ruminococcus_gnavus_gi_146386223_ref_NZ_', 'Ruminococcus_gnavus_gi_146386237_ref_NZ_', 'Ruminococcus_gnavus_gi_146386239_ref_NZ_', 'Ruminococcus_gnavus_gi_146386244_ref_NZ_', 'Ruminococcus_gnavus_gi_146386240_ref_NZ_', 'Ruminococcus_gnavus_gi_146386222_ref_NZ_', 'Ruminococcus_gnavus_gi_146386236_ref_NZ_', 'Ruminococcus_gnavus_gi_146386228_ref_NZ_', 'Ruminococcus_gnavus_gi_146386227_ref_NZ_', 'Ruminococcus_gnavus_gi_146386226_ref_NZ_', 'Ruminococcus_gnavus_gi_146386232_ref_NZ_', 'Ruminococcus_gnavus_gi_146386248_ref_NZ_']
+	Reference Ruminococcus_gnavus_gi_146386224_ref_NZ_: 3 total alignments. 1 total regions.
+		Region: 1 to 61660 (61660 bp)
+			START in gap: 1 to 49143 (49142 bp)
+			Align 1: 49143 49364 NODE_39625_length_510_cov_0.863736_ID_79249 222 1
+				Gap between this and next alignment: 49364 to 51823 (2458 bp)
+				Next Alignment: 51823 51967 NODE_17747_length_1080_cov_0.788293_ID_35493 156 12
+
+			Align 2: 51823 51967 NODE_17747_length_1080_cov_0.788293_ID_35493 156 12
+				Gap between this and next alignment: 51967 to 53461 (1493 bp)
+				Next Alignment: 53461 53542 NODE_9872_length_1865_cov_1.05525_ID_19743 1 82
+
+			Align 3: 53461 53542 NODE_9872_length_1865_cov_1.05525_ID_19743 1 82
+			END in gap: 53542 to 61660 (8118 bp)
+
+	Reference Ruminococcus_gnavus_gi_146386223_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 47680 (47680 bp)
+			START in gap: 1 to 1833 (1832 bp)
+			Align 1: 1833 2401 NODE_34823_length_569_cov_3.08171_ID_69645 569 1
+			END in gap: 2401 to 47680 (45279 bp)
+
+ERROR: Reference Ruminococcus_gnavus_gi_146386229_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Ruminococcus_gnavus_gi_146386224_ref_NZ_', 'Ruminococcus_gnavus_gi_146386223_ref_NZ_', 'Ruminococcus_gnavus_gi_146386237_ref_NZ_', 'Ruminococcus_gnavus_gi_146386239_ref_NZ_', 'Ruminococcus_gnavus_gi_146386244_ref_NZ_', 'Ruminococcus_gnavus_gi_146386240_ref_NZ_', 'Ruminococcus_gnavus_gi_146386222_ref_NZ_', 'Ruminococcus_gnavus_gi_146386236_ref_NZ_', 'Ruminococcus_gnavus_gi_146386228_ref_NZ_', 'Ruminococcus_gnavus_gi_146386227_ref_NZ_', 'Ruminococcus_gnavus_gi_146386226_ref_NZ_', 'Ruminococcus_gnavus_gi_146386232_ref_NZ_', 'Ruminococcus_gnavus_gi_146386248_ref_NZ_']
+	Reference Ruminococcus_gnavus_gi_146386239_ref_NZ_: 3 total alignments. 1 total regions.
+		Region: 1 to 51497 (51497 bp)
+			START in gap: 1 to 32259 (32258 bp)
+			Align 1: 32259 33049 NODE_24488_length_791_cov_0.877717_ID_48975 1 791
+				Gap between this and next alignment: 33049 to 35673 (2623 bp)
+				Next Alignment: 35673 36191 NODE_113_length_57182_cov_10.214_ID_225 3832 4350
+
+			Align 2: 35673 36191 NODE_113_length_57182_cov_10.214_ID_225 3832 4350
+				Gap between this and next alignment: 36191 to 36673 (481 bp)
+				Next Alignment: 36673 36841 NODE_5916_length_2908_cov_1.14826_ID_11831 1145 1313
+
+			Align 3: 36673 36841 NODE_5916_length_2908_cov_1.14826_ID_11831 1145 1313
+			END in gap: 36841 to 51497 (14656 bp)
+
+ERROR: Reference Ruminococcus_gnavus_gi_146386221_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Ruminococcus_gnavus_gi_146386224_ref_NZ_', 'Ruminococcus_gnavus_gi_146386223_ref_NZ_', 'Ruminococcus_gnavus_gi_146386237_ref_NZ_', 'Ruminococcus_gnavus_gi_146386239_ref_NZ_', 'Ruminococcus_gnavus_gi_146386244_ref_NZ_', 'Ruminococcus_gnavus_gi_146386240_ref_NZ_', 'Ruminococcus_gnavus_gi_146386222_ref_NZ_', 'Ruminococcus_gnavus_gi_146386236_ref_NZ_', 'Ruminococcus_gnavus_gi_146386228_ref_NZ_', 'Ruminococcus_gnavus_gi_146386227_ref_NZ_', 'Ruminococcus_gnavus_gi_146386226_ref_NZ_', 'Ruminococcus_gnavus_gi_146386232_ref_NZ_', 'Ruminococcus_gnavus_gi_146386248_ref_NZ_']
+ERROR: Reference Ruminococcus_gnavus_gi_146386230_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Ruminococcus_gnavus_gi_146386224_ref_NZ_', 'Ruminococcus_gnavus_gi_146386223_ref_NZ_', 'Ruminococcus_gnavus_gi_146386237_ref_NZ_', 'Ruminococcus_gnavus_gi_146386239_ref_NZ_', 'Ruminococcus_gnavus_gi_146386244_ref_NZ_', 'Ruminococcus_gnavus_gi_146386240_ref_NZ_', 'Ruminococcus_gnavus_gi_146386222_ref_NZ_', 'Ruminococcus_gnavus_gi_146386236_ref_NZ_', 'Ruminococcus_gnavus_gi_146386228_ref_NZ_', 'Ruminococcus_gnavus_gi_146386227_ref_NZ_', 'Ruminococcus_gnavus_gi_146386226_ref_NZ_', 'Ruminococcus_gnavus_gi_146386232_ref_NZ_', 'Ruminococcus_gnavus_gi_146386248_ref_NZ_']
+ERROR: Reference Ruminococcus_gnavus_gi_146386231_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Ruminococcus_gnavus_gi_146386224_ref_NZ_', 'Ruminococcus_gnavus_gi_146386223_ref_NZ_', 'Ruminococcus_gnavus_gi_146386237_ref_NZ_', 'Ruminococcus_gnavus_gi_146386239_ref_NZ_', 'Ruminococcus_gnavus_gi_146386244_ref_NZ_', 'Ruminococcus_gnavus_gi_146386240_ref_NZ_', 'Ruminococcus_gnavus_gi_146386222_ref_NZ_', 'Ruminococcus_gnavus_gi_146386236_ref_NZ_', 'Ruminococcus_gnavus_gi_146386228_ref_NZ_', 'Ruminococcus_gnavus_gi_146386227_ref_NZ_', 'Ruminococcus_gnavus_gi_146386226_ref_NZ_', 'Ruminococcus_gnavus_gi_146386232_ref_NZ_', 'Ruminococcus_gnavus_gi_146386248_ref_NZ_']
+	Reference Ruminococcus_gnavus_gi_146386226_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 118577 (118577 bp)
+			START in gap: 1 to 23718 (23717 bp)
+			Align 1: 23718 25051 NODE_3111_length_4802_cov_3.33642_ID_6221 1636 303
+			END in gap: 25051 to 118577 (93526 bp)
+
+	Reference Ruminococcus_gnavus_gi_146386232_ref_NZ_: 3 total alignments. 1 total regions.
+		Region: 1 to 162619 (162619 bp)
+			START in gap: 1 to 40347 (40346 bp)
+			Align 1: 40347 41220 NODE_22207_length_874_cov_0.710623_ID_44413 1 874
+				Gap between this and next alignment: 41220 to 52393 (11172 bp)
+				Next Alignment: 52393 53115 NODE_26790_length_723_cov_0.741018_ID_53579 1 723
+
+			Align 2: 52393 53115 NODE_26790_length_723_cov_0.741018_ID_53579 1 723
+				Gap between this and next alignment: 53115 to 53894 (778 bp)
+				Next Alignment: 53894 54633 NODE_27012_length_717_cov_0.725076_ID_54023 1 717
+
+			Align 3: 53894 54633 NODE_27012_length_717_cov_0.725076_ID_54023 1 717
+			END in gap: 54633 to 162619 (107986 bp)
+
+ERROR: Reference Ruminococcus_gnavus_gi_146386219_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Ruminococcus_gnavus_gi_146386224_ref_NZ_', 'Ruminococcus_gnavus_gi_146386223_ref_NZ_', 'Ruminococcus_gnavus_gi_146386237_ref_NZ_', 'Ruminococcus_gnavus_gi_146386239_ref_NZ_', 'Ruminococcus_gnavus_gi_146386244_ref_NZ_', 'Ruminococcus_gnavus_gi_146386240_ref_NZ_', 'Ruminococcus_gnavus_gi_146386222_ref_NZ_', 'Ruminococcus_gnavus_gi_146386236_ref_NZ_', 'Ruminococcus_gnavus_gi_146386228_ref_NZ_', 'Ruminococcus_gnavus_gi_146386227_ref_NZ_', 'Ruminococcus_gnavus_gi_146386226_ref_NZ_', 'Ruminococcus_gnavus_gi_146386232_ref_NZ_', 'Ruminococcus_gnavus_gi_146386248_ref_NZ_']
+	Reference Ruminococcus_gnavus_gi_146386248_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 254130 (254130 bp)
+			START in gap: 1 to 159985 (159984 bp)
+			Align 1: 159985 160330 NODE_113_length_57182_cov_10.214_ID_225 346 1
+				Gap between this and next alignment: 160330 to 160531 (200 bp)
+				Next Alignment: 160531 162819 NODE_7801_length_2289_cov_45.4794_ID_15601 1 2289
+
+			Align 2: 160531 162819 NODE_7801_length_2289_cov_45.4794_ID_15601 1 2289
+			END in gap: 162819 to 254130 (91311 bp)
+
+ERROR: Reference Ruminococcus_gnavus_gi_146386250_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Ruminococcus_gnavus_gi_146386224_ref_NZ_', 'Ruminococcus_gnavus_gi_146386223_ref_NZ_', 'Ruminococcus_gnavus_gi_146386237_ref_NZ_', 'Ruminococcus_gnavus_gi_146386239_ref_NZ_', 'Ruminococcus_gnavus_gi_146386244_ref_NZ_', 'Ruminococcus_gnavus_gi_146386240_ref_NZ_', 'Ruminococcus_gnavus_gi_146386222_ref_NZ_', 'Ruminococcus_gnavus_gi_146386236_ref_NZ_', 'Ruminococcus_gnavus_gi_146386228_ref_NZ_', 'Ruminococcus_gnavus_gi_146386227_ref_NZ_', 'Ruminococcus_gnavus_gi_146386226_ref_NZ_', 'Ruminococcus_gnavus_gi_146386232_ref_NZ_', 'Ruminococcus_gnavus_gi_146386248_ref_NZ_']
+	Reference Ruminococcus_gnavus_gi_146386237_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 82383 (82383 bp)
+			START in gap: 1 to 79022 (79021 bp)
+			Align 1: 79022 80337 NODE_113_length_57182_cov_10.214_ID_225 10063 8748
+			END in gap: 80337 to 82383 (2046 bp)
+
+ERROR: Reference Ruminococcus_gnavus_gi_146386242_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Ruminococcus_gnavus_gi_146386224_ref_NZ_', 'Ruminococcus_gnavus_gi_146386223_ref_NZ_', 'Ruminococcus_gnavus_gi_146386237_ref_NZ_', 'Ruminococcus_gnavus_gi_146386239_ref_NZ_', 'Ruminococcus_gnavus_gi_146386244_ref_NZ_', 'Ruminococcus_gnavus_gi_146386240_ref_NZ_', 'Ruminococcus_gnavus_gi_146386222_ref_NZ_', 'Ruminococcus_gnavus_gi_146386236_ref_NZ_', 'Ruminococcus_gnavus_gi_146386228_ref_NZ_', 'Ruminococcus_gnavus_gi_146386227_ref_NZ_', 'Ruminococcus_gnavus_gi_146386226_ref_NZ_', 'Ruminococcus_gnavus_gi_146386232_ref_NZ_', 'Ruminococcus_gnavus_gi_146386248_ref_NZ_']
+ERROR: Reference Ruminococcus_gnavus_gi_146386259_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Ruminococcus_gnavus_gi_146386224_ref_NZ_', 'Ruminococcus_gnavus_gi_146386223_ref_NZ_', 'Ruminococcus_gnavus_gi_146386237_ref_NZ_', 'Ruminococcus_gnavus_gi_146386239_ref_NZ_', 'Ruminococcus_gnavus_gi_146386244_ref_NZ_', 'Ruminococcus_gnavus_gi_146386240_ref_NZ_', 'Ruminococcus_gnavus_gi_146386222_ref_NZ_', 'Ruminococcus_gnavus_gi_146386236_ref_NZ_', 'Ruminococcus_gnavus_gi_146386228_ref_NZ_', 'Ruminococcus_gnavus_gi_146386227_ref_NZ_', 'Ruminococcus_gnavus_gi_146386226_ref_NZ_', 'Ruminococcus_gnavus_gi_146386232_ref_NZ_', 'Ruminococcus_gnavus_gi_146386248_ref_NZ_']
+ERROR: Reference Ruminococcus_gnavus_gi_146386235_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Ruminococcus_gnavus_gi_146386224_ref_NZ_', 'Ruminococcus_gnavus_gi_146386223_ref_NZ_', 'Ruminococcus_gnavus_gi_146386237_ref_NZ_', 'Ruminococcus_gnavus_gi_146386239_ref_NZ_', 'Ruminococcus_gnavus_gi_146386244_ref_NZ_', 'Ruminococcus_gnavus_gi_146386240_ref_NZ_', 'Ruminococcus_gnavus_gi_146386222_ref_NZ_', 'Ruminococcus_gnavus_gi_146386236_ref_NZ_', 'Ruminococcus_gnavus_gi_146386228_ref_NZ_', 'Ruminococcus_gnavus_gi_146386227_ref_NZ_', 'Ruminococcus_gnavus_gi_146386226_ref_NZ_', 'Ruminococcus_gnavus_gi_146386232_ref_NZ_', 'Ruminococcus_gnavus_gi_146386248_ref_NZ_']
+ERROR: Reference Ruminococcus_gnavus_gi_146386218_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Ruminococcus_gnavus_gi_146386224_ref_NZ_', 'Ruminococcus_gnavus_gi_146386223_ref_NZ_', 'Ruminococcus_gnavus_gi_146386237_ref_NZ_', 'Ruminococcus_gnavus_gi_146386239_ref_NZ_', 'Ruminococcus_gnavus_gi_146386244_ref_NZ_', 'Ruminococcus_gnavus_gi_146386240_ref_NZ_', 'Ruminococcus_gnavus_gi_146386222_ref_NZ_', 'Ruminococcus_gnavus_gi_146386236_ref_NZ_', 'Ruminococcus_gnavus_gi_146386228_ref_NZ_', 'Ruminococcus_gnavus_gi_146386227_ref_NZ_', 'Ruminococcus_gnavus_gi_146386226_ref_NZ_', 'Ruminococcus_gnavus_gi_146386232_ref_NZ_', 'Ruminococcus_gnavus_gi_146386248_ref_NZ_']
+ERROR: Reference Ruminococcus_gnavus_gi_146386245_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Ruminococcus_gnavus_gi_146386224_ref_NZ_', 'Ruminococcus_gnavus_gi_146386223_ref_NZ_', 'Ruminococcus_gnavus_gi_146386237_ref_NZ_', 'Ruminococcus_gnavus_gi_146386239_ref_NZ_', 'Ruminococcus_gnavus_gi_146386244_ref_NZ_', 'Ruminococcus_gnavus_gi_146386240_ref_NZ_', 'Ruminococcus_gnavus_gi_146386222_ref_NZ_', 'Ruminococcus_gnavus_gi_146386236_ref_NZ_', 'Ruminococcus_gnavus_gi_146386228_ref_NZ_', 'Ruminococcus_gnavus_gi_146386227_ref_NZ_', 'Ruminococcus_gnavus_gi_146386226_ref_NZ_', 'Ruminococcus_gnavus_gi_146386232_ref_NZ_', 'Ruminococcus_gnavus_gi_146386248_ref_NZ_']
+ERROR: Reference Ruminococcus_gnavus_gi_146386246_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Ruminococcus_gnavus_gi_146386224_ref_NZ_', 'Ruminococcus_gnavus_gi_146386223_ref_NZ_', 'Ruminococcus_gnavus_gi_146386237_ref_NZ_', 'Ruminococcus_gnavus_gi_146386239_ref_NZ_', 'Ruminococcus_gnavus_gi_146386244_ref_NZ_', 'Ruminococcus_gnavus_gi_146386240_ref_NZ_', 'Ruminococcus_gnavus_gi_146386222_ref_NZ_', 'Ruminococcus_gnavus_gi_146386236_ref_NZ_', 'Ruminococcus_gnavus_gi_146386228_ref_NZ_', 'Ruminococcus_gnavus_gi_146386227_ref_NZ_', 'Ruminococcus_gnavus_gi_146386226_ref_NZ_', 'Ruminococcus_gnavus_gi_146386232_ref_NZ_', 'Ruminococcus_gnavus_gi_146386248_ref_NZ_']
+ERROR: Reference Ruminococcus_gnavus_gi_146386257_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Ruminococcus_gnavus_gi_146386224_ref_NZ_', 'Ruminococcus_gnavus_gi_146386223_ref_NZ_', 'Ruminococcus_gnavus_gi_146386237_ref_NZ_', 'Ruminococcus_gnavus_gi_146386239_ref_NZ_', 'Ruminococcus_gnavus_gi_146386244_ref_NZ_', 'Ruminococcus_gnavus_gi_146386240_ref_NZ_', 'Ruminococcus_gnavus_gi_146386222_ref_NZ_', 'Ruminococcus_gnavus_gi_146386236_ref_NZ_', 'Ruminococcus_gnavus_gi_146386228_ref_NZ_', 'Ruminococcus_gnavus_gi_146386227_ref_NZ_', 'Ruminococcus_gnavus_gi_146386226_ref_NZ_', 'Ruminococcus_gnavus_gi_146386232_ref_NZ_', 'Ruminococcus_gnavus_gi_146386248_ref_NZ_']
+	Reference Ruminococcus_gnavus_gi_146386236_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 167462 (167462 bp)
+			START in gap: 1 to 57300 (57299 bp)
+			Align 1: 57300 62084 NODE_3127_length_4786_cov_6.06996_ID_6253 1 4786
+			END in gap: 62084 to 167462 (105378 bp)
+
+	Reference Ruminococcus_gnavus_gi_146386228_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 78537 (78537 bp)
+			START in gap: 1 to 29665 (29664 bp)
+			Align 1: 29665 29740 NODE_19102_length_1006_cov_0.844374_ID_38203 79 4
+			END in gap: 29740 to 78537 (48797 bp)
+
+ERROR: Reference Ruminococcus_gnavus_gi_146386252_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Ruminococcus_gnavus_gi_146386224_ref_NZ_', 'Ruminococcus_gnavus_gi_146386223_ref_NZ_', 'Ruminococcus_gnavus_gi_146386237_ref_NZ_', 'Ruminococcus_gnavus_gi_146386239_ref_NZ_', 'Ruminococcus_gnavus_gi_146386244_ref_NZ_', 'Ruminococcus_gnavus_gi_146386240_ref_NZ_', 'Ruminococcus_gnavus_gi_146386222_ref_NZ_', 'Ruminococcus_gnavus_gi_146386236_ref_NZ_', 'Ruminococcus_gnavus_gi_146386228_ref_NZ_', 'Ruminococcus_gnavus_gi_146386227_ref_NZ_', 'Ruminococcus_gnavus_gi_146386226_ref_NZ_', 'Ruminococcus_gnavus_gi_146386232_ref_NZ_', 'Ruminococcus_gnavus_gi_146386248_ref_NZ_']
+ERROR: Reference Ruminococcus_gnavus_gi_146386247_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Ruminococcus_gnavus_gi_146386224_ref_NZ_', 'Ruminococcus_gnavus_gi_146386223_ref_NZ_', 'Ruminococcus_gnavus_gi_146386237_ref_NZ_', 'Ruminococcus_gnavus_gi_146386239_ref_NZ_', 'Ruminococcus_gnavus_gi_146386244_ref_NZ_', 'Ruminococcus_gnavus_gi_146386240_ref_NZ_', 'Ruminococcus_gnavus_gi_146386222_ref_NZ_', 'Ruminococcus_gnavus_gi_146386236_ref_NZ_', 'Ruminococcus_gnavus_gi_146386228_ref_NZ_', 'Ruminococcus_gnavus_gi_146386227_ref_NZ_', 'Ruminococcus_gnavus_gi_146386226_ref_NZ_', 'Ruminococcus_gnavus_gi_146386232_ref_NZ_', 'Ruminococcus_gnavus_gi_146386248_ref_NZ_']
+ERROR: Reference Ruminococcus_gnavus_gi_146386251_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Ruminococcus_gnavus_gi_146386224_ref_NZ_', 'Ruminococcus_gnavus_gi_146386223_ref_NZ_', 'Ruminococcus_gnavus_gi_146386237_ref_NZ_', 'Ruminococcus_gnavus_gi_146386239_ref_NZ_', 'Ruminococcus_gnavus_gi_146386244_ref_NZ_', 'Ruminococcus_gnavus_gi_146386240_ref_NZ_', 'Ruminococcus_gnavus_gi_146386222_ref_NZ_', 'Ruminococcus_gnavus_gi_146386236_ref_NZ_', 'Ruminococcus_gnavus_gi_146386228_ref_NZ_', 'Ruminococcus_gnavus_gi_146386227_ref_NZ_', 'Ruminococcus_gnavus_gi_146386226_ref_NZ_', 'Ruminococcus_gnavus_gi_146386232_ref_NZ_', 'Ruminococcus_gnavus_gi_146386248_ref_NZ_']
+ERROR: Reference Ruminococcus_gnavus_gi_146386256_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Ruminococcus_gnavus_gi_146386224_ref_NZ_', 'Ruminococcus_gnavus_gi_146386223_ref_NZ_', 'Ruminococcus_gnavus_gi_146386237_ref_NZ_', 'Ruminococcus_gnavus_gi_146386239_ref_NZ_', 'Ruminococcus_gnavus_gi_146386244_ref_NZ_', 'Ruminococcus_gnavus_gi_146386240_ref_NZ_', 'Ruminococcus_gnavus_gi_146386222_ref_NZ_', 'Ruminococcus_gnavus_gi_146386236_ref_NZ_', 'Ruminococcus_gnavus_gi_146386228_ref_NZ_', 'Ruminococcus_gnavus_gi_146386227_ref_NZ_', 'Ruminococcus_gnavus_gi_146386226_ref_NZ_', 'Ruminococcus_gnavus_gi_146386232_ref_NZ_', 'Ruminococcus_gnavus_gi_146386248_ref_NZ_']
+	Reference Ruminococcus_gnavus_gi_146386240_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 22249 (22249 bp)
+			START in gap: 1 to 13472 (13471 bp)
+			Align 1: 13472 13554 NODE_695_length_16660_cov_6.54767_ID_1389 16479 16561
+				Gap between this and next alignment: 13554 to 17392 (3837 bp)
+				Next Alignment: 17392 18242 NODE_22843_length_850_cov_88.7119_ID_45685 1 850
+
+			Align 2: 17392 18242 NODE_22843_length_850_cov_88.7119_ID_45685 1 850
+			END in gap: 18242 to 22249 (4007 bp)
+
+	Reference Ruminococcus_gnavus_gi_146386244_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 89409 (89409 bp)
+			START in gap: 1 to 10387 (10386 bp)
+			Align 1: 10387 16536 NODE_1989_length_6736_cov_2.11031_ID_3977 6736 585
+				Gap between this and next alignment: 16536 to 33783 (17246 bp)
+				Next Alignment: 33783 33857 NODE_890_length_13369_cov_1.68236_ID_1779 1 75
+
+			Align 2: 33783 33857 NODE_890_length_13369_cov_1.68236_ID_1779 1 75
+			END in gap: 33857 to 89409 (55552 bp)
+
+ERROR: Reference Ruminococcus_gnavus_gi_146386255_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Ruminococcus_gnavus_gi_146386224_ref_NZ_', 'Ruminococcus_gnavus_gi_146386223_ref_NZ_', 'Ruminococcus_gnavus_gi_146386237_ref_NZ_', 'Ruminococcus_gnavus_gi_146386239_ref_NZ_', 'Ruminococcus_gnavus_gi_146386244_ref_NZ_', 'Ruminococcus_gnavus_gi_146386240_ref_NZ_', 'Ruminococcus_gnavus_gi_146386222_ref_NZ_', 'Ruminococcus_gnavus_gi_146386236_ref_NZ_', 'Ruminococcus_gnavus_gi_146386228_ref_NZ_', 'Ruminococcus_gnavus_gi_146386227_ref_NZ_', 'Ruminococcus_gnavus_gi_146386226_ref_NZ_', 'Ruminococcus_gnavus_gi_146386232_ref_NZ_', 'Ruminococcus_gnavus_gi_146386248_ref_NZ_']
+ERROR: Reference Ruminococcus_gnavus_gi_146386253_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Ruminococcus_gnavus_gi_146386224_ref_NZ_', 'Ruminococcus_gnavus_gi_146386223_ref_NZ_', 'Ruminococcus_gnavus_gi_146386237_ref_NZ_', 'Ruminococcus_gnavus_gi_146386239_ref_NZ_', 'Ruminococcus_gnavus_gi_146386244_ref_NZ_', 'Ruminococcus_gnavus_gi_146386240_ref_NZ_', 'Ruminococcus_gnavus_gi_146386222_ref_NZ_', 'Ruminococcus_gnavus_gi_146386236_ref_NZ_', 'Ruminococcus_gnavus_gi_146386228_ref_NZ_', 'Ruminococcus_gnavus_gi_146386227_ref_NZ_', 'Ruminococcus_gnavus_gi_146386226_ref_NZ_', 'Ruminococcus_gnavus_gi_146386232_ref_NZ_', 'Ruminococcus_gnavus_gi_146386248_ref_NZ_']
+ERROR: Reference Ruminococcus_gnavus_gi_146386233_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Ruminococcus_gnavus_gi_146386224_ref_NZ_', 'Ruminococcus_gnavus_gi_146386223_ref_NZ_', 'Ruminococcus_gnavus_gi_146386237_ref_NZ_', 'Ruminococcus_gnavus_gi_146386239_ref_NZ_', 'Ruminococcus_gnavus_gi_146386244_ref_NZ_', 'Ruminococcus_gnavus_gi_146386240_ref_NZ_', 'Ruminococcus_gnavus_gi_146386222_ref_NZ_', 'Ruminococcus_gnavus_gi_146386236_ref_NZ_', 'Ruminococcus_gnavus_gi_146386228_ref_NZ_', 'Ruminococcus_gnavus_gi_146386227_ref_NZ_', 'Ruminococcus_gnavus_gi_146386226_ref_NZ_', 'Ruminococcus_gnavus_gi_146386232_ref_NZ_', 'Ruminococcus_gnavus_gi_146386248_ref_NZ_']
+ERROR: Reference Ruminococcus_gnavus_gi_146386249_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Ruminococcus_gnavus_gi_146386224_ref_NZ_', 'Ruminococcus_gnavus_gi_146386223_ref_NZ_', 'Ruminococcus_gnavus_gi_146386237_ref_NZ_', 'Ruminococcus_gnavus_gi_146386239_ref_NZ_', 'Ruminococcus_gnavus_gi_146386244_ref_NZ_', 'Ruminococcus_gnavus_gi_146386240_ref_NZ_', 'Ruminococcus_gnavus_gi_146386222_ref_NZ_', 'Ruminococcus_gnavus_gi_146386236_ref_NZ_', 'Ruminococcus_gnavus_gi_146386228_ref_NZ_', 'Ruminococcus_gnavus_gi_146386227_ref_NZ_', 'Ruminococcus_gnavus_gi_146386226_ref_NZ_', 'Ruminococcus_gnavus_gi_146386232_ref_NZ_', 'Ruminococcus_gnavus_gi_146386248_ref_NZ_']
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Ruminococcus_gnavus/contigs_reports/nucmer_output/SPAdes.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 15 part
+Partially Unaligned Contigs with Misassemblies: 2
+Unaligned Contig Bases: 147263
+
+Ambiguously Mapped Contigs: 1
+Total Bases in Ambiguously Mapped Contigs: 850
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 36389
+
+	SNPs: 708
+	Insertions: 12
+	Deletions: 40
+
+	Positive Gaps: 39
+		Internal Gaps:  1
+		External Gaps:  38
+		External Gap Total:  1613502
+		External Gap Average: 42461
+	Negative Gaps: 1
+		Internal Overlaps:  0
+		External Overlaps:  1
+		External Overlaps Total: -44
+		External Overlaps Average: -44
+	Contigs with Redundant Alignments: 0 (0)

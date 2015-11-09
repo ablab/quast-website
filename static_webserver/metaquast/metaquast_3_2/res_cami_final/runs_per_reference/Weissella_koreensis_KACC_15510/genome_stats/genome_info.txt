@@ -1,0 +1,18 @@
+reference chromosomes:
+	Weissella_koreensis_KACC_15510_gi_339633914_ref_NC_ (total length: 1422478 bp, maximal covered length: 1290373 bp)
+
+total genome size: 1422478
+
+gap min size: 50
+partial gene/operon min size: 100
+
+
+
+assembly                 | genome    | duplication | gaps      | genes     | partial   | operons   | partial   |
+                         | fraction  | ratio       | number    |           | genes     |           | operons   |
+================================================================================================================
+Gold_Assembly_to_Weissel | 90.71304% | 1.00690     | 372       | -         | -         | -         | -         |
+IDBA_UD_to_Weissella_kor | 63.01546% | 1.00518     | 718       | -         | -         | -         | -         |
+Ray_to_Weissella_koreens | 1.86752%  | 1.00087     | 42        | -         | -         | -         | -         |
+SOAPdenovo2_to_Weissella | 18.24598% | 0.99882     | 357       | -         | -         | -         | -         |
+SPAdes_to_Weissella_kore | 63.25223% | 1.00515     | 750       | -         | -         | -         | -         |

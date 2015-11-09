@@ -1,0 +1,16 @@
+\documentclass[12pt,a4paper]{article}
+\begin{document}
+\begin{table}[ht]
+\begin{center}
+\caption{All statistics are based on contigs of size $\geq$ 500 bp, unless otherwise noted (e.g., "\# contigs ($\geq$ 0 bp)" and "Total length ($\geq$ 0 bp)" include all contigs).}
+\begin{tabular}{|l*{41}{|r}|}
+\hline
+Assembly & \# contigs ($\geq$ 1000 bp) & \# contigs ($\geq$ 5000 bp) & \# contigs ($\geq$ 10000 bp) & \# contigs ($\geq$ 25000 bp) & \# contigs ($\geq$ 50000 bp) & Total length ($\geq$ 1000 bp) & Total length ($\geq$ 5000 bp) & Total length ($\geq$ 10000 bp) & Total length ($\geq$ 25000 bp) & Total length ($\geq$ 50000 bp) & \# contigs & Largest contig & Total length & Reference length & GC (\%) & Reference GC (\%) & N50 & NG50 & N75 & L50 & LG50 & L75 & \# misassemblies & \# misassembled contigs & Misassembled contigs length & \# local misassemblies & \# structural variations & \# unaligned contigs & Unaligned length & Genome fraction (\%) & Duplication ratio & \# N's per 100 kbp & \# mismatches per 100 kbp & \# indels per 100 kbp & Largest alignment & NA50 & NGA50 & NA75 & LA50 & LGA50 & LA75 \\ \hline
+IDBA\_UD & 596 & 94 & 14 & 0 & 0 & 1881887 & 716891 & 180425 & 0 & 0 & 804 & 22168 & 2031046 & 2932121 & 36.94 & 36.59 & 3715 & 2220 & 2049 & 164 & 322 & 349 & 29 & 26 & 107992 & 20 & 8 & 0 + 256 part & 318206 & 57.239 & 1.021 & 0.00 & 2770.56 & 47.55 & 15691 & 2468 & 1110 & 952 & 228 & 494 & 550 \\ \hline
+Ray & 41 & 7 & 5 & 3 & 0 & 176440 & 131253 & 119631 & 91281 & 0 & 409 & 37555 & 409856 & 2932121 & 38.48 & 36.59 & 825 & - & 610 & 74 & - & 223 & 4 & 4 & 5287 & 1 & 2 & 0 + 37 part & 133011 & 9.345 & 1.010 & 0.00 & 2249.93 & 41.97 & 4967 & 560 & - & - & 268 & - & - \\ \hline
+SOAPdenovo2 & 104 & 4 & 3 & 2 & 1 & 378097 & 243772 & 234879 & 217082 & 169569 & 643 & 169569 & 736177 & 2932121 & 38.70 & 36.59 & 1025 & - & 674 & 95 & - & 323 & 4 & 4 & 3141 & 20 & 4 & 0 + 167 part & 308733 & 14.415 & 1.011 & 1897.23 & 2192.53 & 47.79 & 4940 & 510 & - & - & 488 & - & - \\ \hline
+SPAdes & 607 & 70 & 11 & 1 & 0 & 1765809 & 570209 & 185185 & 45693 & 0 & 820 & 45693 & 1922386 & 2932121 & 37.04 & 36.59 & 3336 & 1721 & 1773 & 168 & 381 & 368 & 29 & 27 & 111350 & 17 & 6 & 0 + 243 part & 245390 & 55.922 & 1.023 & 13.78 & 2727.37 & 45.86 & 15072 & 2290 & 995 & 1055 & 235 & 563 & 539 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+\end{document}

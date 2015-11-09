@@ -1,0 +1,107 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Clostridium_scindens_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 1
+	Total Region Length: 1631609
+Analyzing contigs...
+CONTIG: NODE_183_length_42610_cov_2.27731_ID_365 (42610bp)
+Top Length: 76  Top ID: 98.7
+		This contig is partially unaligned. (Aligned 76 out of 42610 bases)
+		Alignment: 393768 393844 | 2255 2180 | 77 76 | 98.7 | Clostridium_scindens_ NODE_183_length_42610_cov_2.27731_ID_365
+		Unaligned bases: 1 to 2179 (2179)
+		Unaligned bases: 2256 to 42610 (40355)
+
+CONTIG: NODE_768_length_15125_cov_2.7633_ID_1535 (15125bp)
+Top Length: 8733  Top ID: 95.89
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 990003 998683 | 11757 3025 | 8681 8733 | 95.89 | Clostridium_scindens_ NODE_768_length_15125_cov_2.7633_ID_1535
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 985806 989151 | 15125 11789 | 3346 3337 | 96.96 | Clostridium_scindens_ NODE_768_length_15125_cov_2.7633_ID_1535
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_7801_length_2289_cov_45.4794_ID_15601 (2289bp)
+Top Length: 2289  Top ID: 99.48
+		One align captures most of this contig: 1014166 1016454 | 2289 1 | 2289 2289 | 99.48 | Clostridium_scindens_ NODE_7801_length_2289_cov_45.4794_ID_15601
+
+CONTIG: NODE_9887_length_1863_cov_1.56416_ID_19773 (1863bp)
+Top Length: 1750  Top ID: 95.49
+		This contig is partially unaligned. (Aligned 1750 out of 1863 bases)
+		Alignment: 588490 590239 | 1863 114 | 1750 1750 | 95.49 | Clostridium_scindens_ NODE_9887_length_1863_cov_1.56416_ID_19773
+		Unaligned bases: 1 to 113 (113)
+
+CONTIG: NODE_12780_length_1469_cov_3.78925_ID_25559 (1469bp)
+Top Length: 1469  Top ID: 97.41
+		One align captures most of this contig: 981990 983458 | 1 1469 | 1469 1469 | 97.41 | Clostridium_scindens_ NODE_12780_length_1469_cov_3.78925_ID_25559
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Clostridium_scindens/contigs_reports/nucmer_output/SPAdes.used_snps
+	Reference Clostridium_scindens_: 6 total alignments. 1 total regions.
+		Region: 1 to 1631609 (1631609 bp)
+			START in gap: 1 to 393768 (393767 bp)
+			Align 1: 393768 393844 NODE_183_length_42610_cov_2.27731_ID_365 2255 2180
+				Gap between this and next alignment: 393844 to 588490 (194645 bp)
+				Next Alignment: 588490 590239 NODE_9887_length_1863_cov_1.56416_ID_19773 1863 114
+
+			Align 2: 588490 590239 NODE_9887_length_1863_cov_1.56416_ID_19773 1863 114
+				Gap between this and next alignment: 590239 to 981990 (391750 bp)
+				Next Alignment: 981990 983458 NODE_12780_length_1469_cov_3.78925_ID_25559 1 1469
+
+			Align 3: 981990 983458 NODE_12780_length_1469_cov_3.78925_ID_25559 1 1469
+				Gap between this and next alignment: 983458 to 985806 (2347 bp)
+				Next Alignment: 985806 989151 NODE_768_length_15125_cov_2.7633_ID_1535 15125 11789
+
+			Align 4: 985806 989151 NODE_768_length_15125_cov_2.7633_ID_1535 15125 11789
+				Gap between this and next alignment: 989151 to 990003 (851 bp)
+				Next Alignment: 990003 998683 NODE_768_length_15125_cov_2.7633_ID_1535 11757 3025
+
+			Align 5: 990003 998683 NODE_768_length_15125_cov_2.7633_ID_1535 11757 3025
+				Gap between this and next alignment: 998683 to 1014166 (15482 bp)
+				Next Alignment: 1014166 1016454 NODE_7801_length_2289_cov_45.4794_ID_15601 2289 1
+
+			Align 6: 1014166 1016454 NODE_7801_length_2289_cov_45.4794_ID_15601 2289 1
+			END in gap: 1016454 to 1631609 (615155 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Clostridium_scindens/contigs_reports/nucmer_output/SPAdes.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 1
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 2 part
+Partially Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 42647
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 17612
+
+	SNPs: 448
+	Insertions: 62
+	Deletions: 20
+
+	Positive Gaps: 7
+		Internal Gaps:  1
+		External Gaps:  6
+		External Gap Total:  1613146
+		External Gap Average: 268858
+	Negative Gaps: 0
+		Internal Overlaps:  0
+		External Overlaps:  0
+		External Overlaps Total:  0
+		External Overlaps Average: 0
+	Contigs with Redundant Alignments: 0 (0)

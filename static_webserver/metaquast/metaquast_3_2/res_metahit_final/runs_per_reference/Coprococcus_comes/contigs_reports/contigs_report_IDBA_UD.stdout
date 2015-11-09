@@ -1,0 +1,3296 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Coprococcus_comes_gi_225594897_ref_NZ_]
+	Loaded [Coprococcus_comes_gi_225594898_ref_NZ_]
+	Loaded [Coprococcus_comes_gi_225594899_ref_NZ_]
+	Loaded [Coprococcus_comes_gi_225594900_ref_NZ_]
+	Loaded [Coprococcus_comes_gi_225594901_ref_NZ_]
+	Loaded [Coprococcus_comes_gi_225594902_ref_NZ_]
+	Loaded [Coprococcus_comes_gi_225594903_ref_NZ_]
+	Loaded [Coprococcus_comes_gi_225594904_ref_NZ_]
+	Loaded [Coprococcus_comes_gi_225594905_ref_NZ_]
+	Loaded [Coprococcus_comes_gi_225594906_ref_NZ_]
+	Loaded [Coprococcus_comes_gi_225594907_ref_NZ_]
+	Loaded [Coprococcus_comes_gi_225594908_ref_NZ_]
+	Loaded [Coprococcus_comes_gi_225594909_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 13
+	Total Region Length: 3242215
+Analyzing contigs...
+CONTIG: scaffold_83 (50587bp)
+Top Length: 844  Top ID: 95.97
+		This contig is misassembled. 3 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 50587 and total length of all aligns is 1300
+		Alignment: 519290 520118 | 1237 2080 | 829 844 | 95.97 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_83
+		Alignment: 10359 10595 | 2073 2309 | 237 237 | 98.73 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_83
+		Alignment: 199803 200029 | 2920 2694 | 227 227 | 98.68 | Coprococcus_comes_gi_225594905_ref_NZ_ scaffold_83
+		Unaligned bases: 49287
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold_168 (33424bp)
+Top Length: 87  Top ID: 97.7
+		This contig is partially unaligned. (Aligned 87 out of 33424 bases)
+		Alignment: 254322 254408 | 32993 33079 | 87 87 | 97.7 | Coprococcus_comes_gi_225594905_ref_NZ_ scaffold_168
+		Unaligned bases: 1 to 32992 (32992)
+		Unaligned bases: 33080 to 33424 (345)
+
+CONTIG: scaffold_6083 (1863bp)
+Top Length: 1863  Top ID: 99.73
+		One align captures most of this contig: 202854 204716 | 1863 1 | 1863 1863 | 99.73 | Coprococcus_comes_gi_225594905_ref_NZ_ scaffold_6083
+
+CONTIG: scaffold_6573 (3967bp)
+Top Length: 294  Top ID: 99.32
+		This contig is partially unaligned. (Aligned 294 out of 3967 bases)
+		Alignment: 165896 166189 | 294 1 | 294 294 | 99.32 | Coprococcus_comes_gi_225594905_ref_NZ_ scaffold_6573
+		Unaligned bases: 295 to 3967 (3673)
+
+CONTIG: scaffold_7286 (2218bp)
+Top Length: 188  Top ID: 99.47
+		This contig is partially unaligned. (Aligned 188 out of 2218 bases)
+		Alignment: 127584 127771 | 1 188 | 188 188 | 99.47 | Coprococcus_comes_gi_225594905_ref_NZ_ scaffold_7286
+		Unaligned bases: 189 to 2218 (2030)
+
+CONTIG: scaffold_8198 (1513bp)
+Top Length: 87  Top ID: 98.85
+		This contig is partially unaligned. (Aligned 87 out of 1513 bases)
+		Alignment: 254322 254408 | 1182 1268 | 87 87 | 98.85 | Coprococcus_comes_gi_225594905_ref_NZ_ scaffold_8198
+		Unaligned bases: 1 to 1181 (1181)
+		Unaligned bases: 1269 to 1513 (245)
+
+CONTIG: scaffold_9296 (1376bp)
+Top Length: 606  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 606 out of 1376 bases)
+		Alignment: 7305 7910 | 1376 771 | 606 606 | 100.0 | Coprococcus_comes_gi_225594905_ref_NZ_ scaffold_9296
+		Unaligned bases: 1 to 770 (770)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_10132 (2155bp)
+Top Length: 272  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 272 out of 2155 bases)
+		Alignment: 253125 253396 | 2155 1884 | 272 272 | 100.0 | Coprococcus_comes_gi_225594905_ref_NZ_ scaffold_10132
+		Unaligned bases: 1 to 1883 (1883)
+
+CONTIG: scaffold_12345 (1105bp)
+Top Length: 1105  Top ID: 99.28
+		One align captures most of this contig: 212156 213260 | 1 1105 | 1105 1105 | 99.28 | Coprococcus_comes_gi_225594905_ref_NZ_ scaffold_12345
+
+CONTIG: scaffold_12562 (1089bp)
+Top Length: 1089  Top ID: 99.82
+		One align captures most of this contig: 168483 169572 | 1 1089 | 1090 1089 | 99.82 | Coprococcus_comes_gi_225594905_ref_NZ_ scaffold_12562
+
+CONTIG: scaffold_14773 (956bp)
+Top Length: 71  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 71 out of 956 bases)
+		Alignment: 93089 93159 | 71 1 | 71 71 | 100.0 | Coprococcus_comes_gi_225594905_ref_NZ_ scaffold_14773
+		Unaligned bases: 72 to 956 (885)
+
+CONTIG: scaffold_15674 (909bp)
+Top Length: 255  Top ID: 96.08
+		This contig is partially unaligned. (Aligned 255 out of 909 bases)
+		Alignment: 193548 193801 | 655 909 | 254 255 | 96.08 | Coprococcus_comes_gi_225594905_ref_NZ_ scaffold_15674
+		Unaligned bases: 1 to 654 (654)
+
+CONTIG: scaffold_16431 (1221bp)
+Top Length: 1148  Top ID: 97.47
+		This contig is partially unaligned. (Aligned 1148 out of 1221 bases)
+		Alignment: 83080 84219 | 1148 1 | 1140 1148 | 97.47 | Coprococcus_comes_gi_225594905_ref_NZ_ scaffold_16431
+		Unaligned bases: 1149 to 1221 (73)
+
+CONTIG: scaffold_18560 (800bp)
+Top Length: 200  Top ID: 99.0
+		This contig is partially unaligned. (Aligned 200 out of 800 bases)
+		Alignment: 36871 37071 | 800 601 | 201 200 | 99.0 | Coprococcus_comes_gi_225594905_ref_NZ_ scaffold_18560
+		Unaligned bases: 1 to 600 (600)
+
+CONTIG: scaffold_19937 (759bp)
+Top Length: 749  Top ID: 98.66
+		This contig is partially unaligned. (Aligned 749 out of 759 bases)
+		Alignment: 174730 175478 | 10 758 | 749 749 | 98.66 | Coprococcus_comes_gi_225594905_ref_NZ_ scaffold_19937
+		Unaligned bases: 1 to 9 (9)
+		Unaligned bases: 759 to 759 (1)
+
+CONTIG: scaffold_20288 (748bp)
+Top Length: 121  Top ID: 99.18
+		This contig is partially unaligned. (Aligned 121 out of 748 bases)
+		Alignment: 72075 72196 | 628 748 | 122 121 | 99.18 | Coprococcus_comes_gi_225594905_ref_NZ_ scaffold_20288
+		Unaligned bases: 1 to 627 (627)
+
+CONTIG: scaffold_21371 (717bp)
+Top Length: 716  Top ID: 98.88
+		One align captures most of this contig: 56230 56945 | 717 2 | 716 716 | 98.88 | Coprococcus_comes_gi_225594905_ref_NZ_ scaffold_21371
+
+CONTIG: scaffold_23297 (1079bp)
+Top Length: 1078  Top ID: 97.04
+		One align captures most of this contig: 195081 196162 | 1079 2 | 1082 1078 | 97.04 | Coprococcus_comes_gi_225594905_ref_NZ_ scaffold_23297
+
+CONTIG: scaffold_23332 (668bp)
+Top Length: 668  Top ID: 99.7
+		One align captures most of this contig: 61667 62333 | 1 668 | 667 668 | 99.7 | Coprococcus_comes_gi_225594905_ref_NZ_ scaffold_23332
+
+CONTIG: scaffold_24606 (641bp)
+Top Length: 641  Top ID: 98.6
+		One align captures most of this contig: 136369 137009 | 641 1 | 641 641 | 98.6 | Coprococcus_comes_gi_225594905_ref_NZ_ scaffold_24606
+
+CONTIG: scaffold_25303 (627bp)
+Top Length: 627  Top ID: 98.56
+		One align captures most of this contig: 250691 251316 | 627 1 | 626 627 | 98.56 | Coprococcus_comes_gi_225594905_ref_NZ_ scaffold_25303
+
+CONTIG: scaffold_25470 (623bp)
+Top Length: 623  Top ID: 98.88
+		One align captures most of this contig: 75658 76280 | 1 623 | 623 623 | 98.88 | Coprococcus_comes_gi_225594905_ref_NZ_ scaffold_25470
+
+CONTIG: scaffold_26084 (612bp)
+Top Length: 612  Top ID: 99.84
+		One align captures most of this contig: 164864 165475 | 612 1 | 612 612 | 99.84 | Coprococcus_comes_gi_225594905_ref_NZ_ scaffold_26084
+
+CONTIG: scaffold_26194 (610bp)
+Top Length: 610  Top ID: 99.18
+		One align captures most of this contig: 116709 117319 | 610 1 | 611 610 | 99.18 | Coprococcus_comes_gi_225594905_ref_NZ_ scaffold_26194
+
+CONTIG: scaffold_27858 (570bp)
+Top Length: 134  Top ID: 97.76
+		This contig is partially unaligned. (Aligned 134 out of 570 bases)
+		Alignment: 171179 171312 | 437 570 | 134 134 | 97.76 | Coprococcus_comes_gi_225594905_ref_NZ_ scaffold_27858
+		Unaligned bases: 1 to 436 (436)
+
+CONTIG: scaffold_28126 (561bp)
+Top Length: 548  Top ID: 99.82
+		This contig is partially unaligned. (Aligned 548 out of 561 bases)
+		Alignment: 17107 17654 | 548 1 | 548 548 | 99.82 | Coprococcus_comes_gi_225594905_ref_NZ_ scaffold_28126
+		Unaligned bases: 549 to 561 (13)
+
+CONTIG: scaffold_28939 (536bp)
+Top Length: 536  Top ID: 99.63
+		One align captures most of this contig: 63879 64415 | 536 1 | 537 536 | 99.63 | Coprococcus_comes_gi_225594905_ref_NZ_ scaffold_28939
+
+CONTIG: scaffold_29494 (523bp)
+Top Length: 278  Top ID: 97.5
+		This contig is partially unaligned. (Aligned 278 out of 523 bases)
+		Alignment: 35544 35822 | 523 246 | 279 278 | 97.5 | Coprococcus_comes_gi_225594905_ref_NZ_ scaffold_29494
+		Unaligned bases: 1 to 245 (245)
+
+CONTIG: scaffold_34504 (851bp)
+Top Length: 75  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 75 out of 851 bases)
+		Alignment: 88628 88702 | 777 851 | 75 75 | 100.0 | Coprococcus_comes_gi_225594905_ref_NZ_ scaffold_34504
+		Unaligned bases: 1 to 776 (776)
+
+CONTIG: scaffold_4362 (3730bp)
+Top Length: 137  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 137 out of 3730 bases)
+		Alignment: 32862 32998 | 137 1 | 137 137 | 100.0 | Coprococcus_comes_gi_225594901_ref_NZ_ scaffold_4362
+		Unaligned bases: 138 to 3730 (3593)
+
+CONTIG: scaffold_14883 (950bp)
+Top Length: 950  Top ID: 96.63
+		One align captures most of this contig: 18919 19868 | 1 950 | 950 950 | 96.63 | Coprococcus_comes_gi_225594901_ref_NZ_ scaffold_14883
+
+CONTIG: scaffold_14953 (946bp)
+Top Length: 176  Top ID: 97.73
+		This contig is partially unaligned. (Aligned 176 out of 946 bases)
+		Alignment: 26027 26202 | 1 176 | 176 176 | 97.73 | Coprococcus_comes_gi_225594901_ref_NZ_ scaffold_14953
+		Unaligned bases: 177 to 946 (770)
+
+CONTIG: scaffold_18990 (787bp)
+Top Length: 787  Top ID: 99.75
+		One align captures most of this contig: 33704 34490 | 1 787 | 787 787 | 99.75 | Coprococcus_comes_gi_225594901_ref_NZ_ scaffold_18990
+
+CONTIG: scaffold_23234 (1424bp)
+Top Length: 559  Top ID: 98.93
+		This contig is partially unaligned. (Aligned 559 out of 1424 bases)
+		Alignment: 36798 37356 | 1 559 | 559 559 | 98.93 | Coprococcus_comes_gi_225594901_ref_NZ_ scaffold_23234
+		Unaligned bases: 560 to 1424 (865)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_24327 (647bp)
+Top Length: 647  Top ID: 96.95
+		Marking as insignificant: 7112 7311 | 599 401 | 200 199 | 97.5 | Coprococcus_comes_gi_225594901_ref_NZ_ scaffold_24327
+		Marking as insignificant: 103824 104122 | 564 266 | 299 299 | 96.99 | Coprococcus_comes_gi_225594903_ref_NZ_ scaffold_24327
+		Marking as insignificant: 248562 248943 | 647 266 | 382 382 | 96.86 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_24327
+		Marking as insignificant: 3474 4072 | 599 1 | 599 599 | 97.83 | Coprococcus_comes_gi_225594901_ref_NZ_ scaffold_24327
+		One align captures most of this contig: 9350 10005 | 647 1 | 656 647 | 96.95 | Coprococcus_comes_gi_225594901_ref_NZ_ scaffold_24327
+
+CONTIG: scaffold_24351 (646bp)
+Top Length: 333  Top ID: 99.4
+		This contig is partially unaligned. (Aligned 333 out of 646 bases)
+		Alignment: 38415 38747 | 314 646 | 333 333 | 99.4 | Coprococcus_comes_gi_225594901_ref_NZ_ scaffold_24351
+		Unaligned bases: 1 to 313 (313)
+
+CONTIG: scaffold_1045 (7736bp)
+Top Length: 697  Top ID: 95.98
+		This contig is partially unaligned. (Aligned 697 out of 7736 bases)
+		Alignment: 215080 215776 | 2396 3092 | 697 697 | 95.98 | Coprococcus_comes_gi_225594902_ref_NZ_ scaffold_1045
+		Unaligned bases: 1 to 2395 (2395)
+		Unaligned bases: 3093 to 7736 (4644)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_6155 (1848bp)
+Top Length: 360  Top ID: 97.78
+		This contig is partially unaligned. (Aligned 360 out of 1848 bases)
+		Alignment: 202846 203204 | 1489 1848 | 359 360 | 97.78 | Coprococcus_comes_gi_225594902_ref_NZ_ scaffold_6155
+		Unaligned bases: 1 to 1488 (1488)
+
+CONTIG: scaffold_11157 (1197bp)
+Top Length: 1197  Top ID: 95.66
+		One align captures most of this contig: 215934 217130 | 1 1197 | 1197 1197 | 95.66 | Coprococcus_comes_gi_225594902_ref_NZ_ scaffold_11157
+
+CONTIG: scaffold_12121 (1121bp)
+Top Length: 1119  Top ID: 98.12
+		One align captures most of this contig: 205847 206965 | 1 1119 | 1119 1119 | 98.12 | Coprococcus_comes_gi_225594902_ref_NZ_ scaffold_12121
+
+CONTIG: scaffold_17379 (840bp)
+Top Length: 836  Top ID: 97.73
+		One align captures most of this contig: 211804 212638 | 840 5 | 835 836 | 97.73 | Coprococcus_comes_gi_225594902_ref_NZ_ scaffold_17379
+
+CONTIG: scaffold_17946 (821bp)
+Top Length: 116  Top ID: 99.14
+		This contig is partially unaligned. (Aligned 116 out of 821 bases)
+		Alignment: 227854 227969 | 116 1 | 116 116 | 99.14 | Coprococcus_comes_gi_225594902_ref_NZ_ scaffold_17946
+		Unaligned bases: 117 to 821 (705)
+
+CONTIG: scaffold_20225 (749bp)
+Top Length: 749  Top ID: 99.33
+		One align captures most of this contig: 223821 224570 | 1 749 | 750 749 | 99.33 | Coprococcus_comes_gi_225594902_ref_NZ_ scaffold_20225
+
+CONTIG: scaffold_20850 (731bp)
+Top Length: 731  Top ID: 98.91
+		One align captures most of this contig: 221501 222231 | 1 731 | 731 731 | 98.91 | Coprococcus_comes_gi_225594902_ref_NZ_ scaffold_20850
+
+CONTIG: scaffold_24844 (636bp)
+Top Length: 636  Top ID: 99.53
+		One align captures most of this contig: 55231 55866 | 636 1 | 636 636 | 99.53 | Coprococcus_comes_gi_225594902_ref_NZ_ scaffold_24844
+
+CONTIG: scaffold_24984 (633bp)
+Top Length: 633  Top ID: 99.68
+		One align captures most of this contig: 180152 180784 | 1 633 | 633 633 | 99.68 | Coprococcus_comes_gi_225594902_ref_NZ_ scaffold_24984
+
+CONTIG: scaffold_28804 (540bp)
+Top Length: 540  Top ID: 99.44
+		One align captures most of this contig: 996 1535 | 540 1 | 540 540 | 99.44 | Coprococcus_comes_gi_225594902_ref_NZ_ scaffold_28804
+
+CONTIG: scaffold_31 (83095bp)
+Top Length: 86  Top ID: 96.51
+		Skipping redundant alignment 129373 129444 | 41747 41818 | 72 72 | 100.0 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_31
+		Skipping redundant alignment 836139 836209 | 41818 41748 | 71 71 | 100.0 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_31
+		This contig is misassembled. 4 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 83095 and total length of all aligns is 160
+		Alignment: 69683 69768 | 21564 21479 | 86 86 | 96.51 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_31
+		Alignment: 58809 58882 | 41818 41745 | 74 74 | 100.0 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_31
+		Unaligned bases: 82935
+CONTIG: scaffold_43 (94894bp)
+Top Length: 86  Top ID: 96.51
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 94894 and total length of all aligns is 166
+		Alignment: 69683 69768 | 94273 94358 | 86 86 | 96.51 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_43
+		Alignment: 288966 289045 | 94455 94376 | 80 80 | 98.75 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_43
+		Unaligned bases: 94728
+CONTIG: scaffold_1213 (12243bp)
+Top Length: 6363  Top ID: 95.32
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 256495 260011 | 881 4392 | 3517 3512 | 95.11 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_1213
+			  Gap between these two alignments (local misassembly). Inconsistency = 336 
+			Excluding internal overlap of size 4 between Alignment 2 and 3:  275666 277150 | 10759 12243 | 1485 1485 --> 275670 277150 | 10763 12243 | 1481 1481
+			Real Alignment 2: 260355 266716 | 4400 10762 | 6362 6363 | 95.32 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_1213
+			  Extensive misassembly ( relocation, inconsistency = 8953 ) between these two alignments
+			Real Alignment 3: 275670 277150 | 10763 12243 | 1481 1481 | 95.29 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_1213
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_1226 (8322bp)
+Top Length: 505  Top ID: 97.82
+		This contig is partially unaligned. (Aligned 505 out of 8322 bases)
+		Alignment: 295333 295837 | 505 1 | 505 505 | 97.82 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_1226
+		Unaligned bases: 506 to 8322 (7817)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_1366 (5928bp)
+Top Length: 112  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 112 out of 5928 bases)
+		Alignment: 243526 243637 | 112 1 | 112 112 | 100.0 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_1366
+		Unaligned bases: 113 to 5928 (5816)
+
+CONTIG: scaffold_1422 (6631bp)
+Top Length: 6424  Top ID: 96.72
+		This contig is partially unaligned. (Aligned 6424 out of 6631 bases)
+		Alignment: 155699 162127 | 206 6629 | 6429 6424 | 96.72 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_1422
+		Unaligned bases: 1 to 205 (205)
+		Unaligned bases: 6630 to 6631 (2)
+
+CONTIG: scaffold_2295 (4203bp)
+Top Length: 1797  Top ID: 95.55
+		This contig is partially unaligned. (Aligned 1797 out of 4203 bases)
+		Alignment: 254700 256496 | 1 1797 | 1797 1797 | 95.55 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_2295
+		Unaligned bases: 1798 to 4203 (2406)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_2423 (3618bp)
+Top Length: 3399  Top ID: 98.79
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 1384 1508 | 1 125 | 125 125 | 98.4 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_2423
+		Skipping redundant alignment 544374 544498 | 1 125 | 125 125 | 98.4 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_2423
+		This contig is misassembled. 5 total aligns.
+			Excluding internal overlap of size 3 between Alignment 1 and 2:  297674 297798 | 1 125 | 125 125 --> 297674 297795 | 1 122 | 122 122
+			Real Alignment 1: 297674 297795 | 1 122 | 122 122 | 99.2 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_2423
+			  Extensive misassembly ( translocation ) between these two alignments
+			Excluding internal overlap of size 2 between Alignment 2 and 3:  298380 298478 | 3520 3618 | 99 99 --> 298382 298478 | 3522 3618 | 97 97
+			Real Alignment 2: 539564 542952 | 123 3521 | 3389 3399 | 98.79 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_2423
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 3: 298382 298478 | 3522 3618 | 97 97 | 100.0 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_2423
+
+CONTIG: scaffold_2541 (3490bp)
+Top Length: 1741  Top ID: 95.3
+		This contig is partially unaligned. (Aligned 1741 out of 3490 bases)
+		Alignment: 64051 65791 | 1741 1 | 1741 1741 | 95.3 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_2541
+		Unaligned bases: 1742 to 3490 (1749)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_4240 (3200bp)
+Top Length: 3200  Top ID: 95.14
+		One align captures most of this contig: 277299 280569 | 1 3200 | 3271 3200 | 95.14 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_4240
+
+CONTIG: scaffold_4778 (4621bp)
+Top Length: 302  Top ID: 97.68
+		This contig is partially unaligned. (Aligned 302 out of 4621 bases)
+		Alignment: 148137 148438 | 302 1 | 302 302 | 97.68 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_4778
+		Unaligned bases: 303 to 4621 (4319)
+
+CONTIG: scaffold_5083 (3404bp)
+Top Length: 107  Top ID: 99.07
+		This contig is partially unaligned. (Aligned 107 out of 3404 bases)
+		Alignment: 209864 209970 | 107 1 | 107 107 | 99.07 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_5083
+		Unaligned bases: 108 to 3404 (3297)
+
+CONTIG: scaffold_6616 (3032bp)
+Top Length: 186  Top ID: 99.46
+		This contig is partially unaligned. (Aligned 186 out of 3032 bases)
+		Alignment: 26255 26440 | 1 186 | 186 186 | 99.46 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_6616
+		Unaligned bases: 187 to 3032 (2846)
+
+CONTIG: scaffold_7833 (1565bp)
+Top Length: 143  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 143 out of 1565 bases)
+		Alignment: 72010 72152 | 1548 1406 | 143 143 | 100.0 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_7833
+		Unaligned bases: 1 to 1405 (1405)
+		Unaligned bases: 1549 to 1565 (17)
+
+CONTIG: scaffold_9249 (1382bp)
+Top Length: 1380  Top ID: 98.84
+		One align captures most of this contig: 295741 297120 | 3 1382 | 1380 1380 | 98.84 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_9249
+
+CONTIG: scaffold_10681 (1235bp)
+Top Length: 1235  Top ID: 99.43
+		One align captures most of this contig: 23970 25204 | 1235 1 | 1235 1235 | 99.43 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_10681
+
+CONTIG: scaffold_11047 (1206bp)
+Top Length: 1206  Top ID: 98.92
+		One align captures most of this contig: 93897 95100 | 1206 1 | 1204 1206 | 98.92 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_11047
+
+CONTIG: scaffold_12655 (1659bp)
+Top Length: 116  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 116 out of 1659 bases)
+		Alignment: 203978 204093 | 1542 1657 | 116 116 | 100.0 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_12655
+		Unaligned bases: 1 to 1541 (1541)
+		Unaligned bases: 1658 to 1659 (2)
+
+CONTIG: scaffold_12949 (1063bp)
+Top Length: 1063  Top ID: 98.68
+		Marking as insignificant: 545369 546098 | 1 730 | 730 730 | 98.9 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_12949
+		One align captures most of this contig: 298667 299729 | 1 1063 | 1063 1063 | 98.68 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_12949
+
+CONTIG: scaffold_14018 (998bp)
+Top Length: 788  Top ID: 99.87
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 10 between Alignment 1 and 2:  90872 91091 | 1 220 | 220 220 --> 90872 91081 | 1 210 | 210 210
+			Real Alignment 1: 90872 91081 | 1 210 | 210 210 | 100.0 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_14018
+			  Extensive misassembly ( relocation, inconsistency = -1019 ) between these two alignments
+			Real Alignment 2: 90063 90850 | 998 211 | 788 788 | 99.87 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_14018
+
+CONTIG: scaffold_14490 (971bp)
+Top Length: 971  Top ID: 99.18
+		One align captures most of this contig: 4269 5239 | 971 1 | 971 971 | 99.18 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_14490
+
+CONTIG: scaffold_15085 (939bp)
+Top Length: 939  Top ID: 99.25
+		One align captures most of this contig: 26572 27510 | 1 939 | 939 939 | 99.25 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_15085
+
+CONTIG: scaffold_15508 (918bp)
+Top Length: 916  Top ID: 98.69
+		One align captures most of this contig: 73909 74827 | 1 916 | 919 916 | 98.69 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_15508
+
+CONTIG: scaffold_15560 (915bp)
+Top Length: 915  Top ID: 98.69
+		One align captures most of this contig: 124062 124976 | 915 1 | 915 915 | 98.69 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_15560
+
+CONTIG: scaffold_16475 (874bp)
+Top Length: 847  Top ID: 98.35
+		This contig is partially unaligned. (Aligned 847 out of 874 bases)
+		Alignment: 200551 201397 | 874 28 | 847 847 | 98.35 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_16475
+		Unaligned bases: 1 to 27 (27)
+
+CONTIG: scaffold_17479 (837bp)
+Top Length: 837  Top ID: 97.37
+		One align captures most of this contig: 128643 129479 | 837 1 | 837 837 | 97.37 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_17479
+
+CONTIG: scaffold_17676 (830bp)
+Top Length: 179  Top ID: 97.21
+		This contig is partially unaligned. (Aligned 179 out of 830 bases)
+		Alignment: 191525 191703 | 2 180 | 179 179 | 97.21 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_17676
+		Unaligned bases: 1 to 1 (1)
+		Unaligned bases: 181 to 830 (650)
+
+CONTIG: scaffold_19152 (782bp)
+Top Length: 782  Top ID: 98.59
+		One align captures most of this contig: 198368 199146 | 782 1 | 779 782 | 98.59 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_19152
+
+CONTIG: scaffold_20347 (746bp)
+Top Length: 746  Top ID: 99.2
+		One align captures most of this contig: 21116 21861 | 1 746 | 746 746 | 99.2 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_20347
+
+CONTIG: scaffold_20885 (1234bp)
+Top Length: 1231  Top ID: 98.54
+		One align captures most of this contig: 214051 215287 | 1231 1 | 1237 1231 | 98.54 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_20885
+
+CONTIG: scaffold_21574 (711bp)
+Top Length: 98  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 98 out of 711 bases)
+		Alignment: 61338 61435 | 98 1 | 98 98 | 100.0 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_21574
+		Unaligned bases: 99 to 711 (613)
+
+CONTIG: scaffold_21617 (710bp)
+Top Length: 131  Top ID: 95.49
+		This contig is partially unaligned. (Aligned 131 out of 710 bases)
+		Alignment: 26016 26148 | 534 404 | 133 131 | 95.49 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_21617
+		Unaligned bases: 1 to 403 (403)
+		Unaligned bases: 535 to 710 (176)
+
+CONTIG: scaffold_22193 (695bp)
+Top Length: 695  Top ID: 99.57
+		One align captures most of this contig: 28696 29389 | 695 1 | 694 695 | 99.57 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_22193
+
+CONTIG: scaffold_22524 (687bp)
+Top Length: 687  Top ID: 99.13
+		One align captures most of this contig: 37546 38231 | 687 1 | 686 687 | 99.13 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_22524
+
+CONTIG: scaffold_22811 (679bp)
+Top Length: 679  Top ID: 97.5
+		One align captures most of this contig: 44648 45327 | 679 1 | 680 679 | 97.5 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_22811
+
+CONTIG: scaffold_23601 (662bp)
+Top Length: 649  Top ID: 99.38
+		This contig is partially unaligned. (Aligned 649 out of 662 bases)
+		Alignment: 80628 81276 | 649 1 | 649 649 | 99.38 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_23601
+		Unaligned bases: 650 to 662 (13)
+
+CONTIG: scaffold_24095 (652bp)
+Top Length: 652  Top ID: 98.93
+		One align captures most of this contig: 111392 112043 | 1 652 | 652 652 | 98.93 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_24095
+
+CONTIG: scaffold_24369 (646bp)
+Top Length: 641  Top ID: 96.88
+		One align captures most of this contig: 121085 121725 | 1 641 | 641 641 | 96.88 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_24369
+
+CONTIG: scaffold_25016 (632bp)
+Top Length: 632  Top ID: 99.05
+		One align captures most of this contig: 226416 227047 | 1 632 | 632 632 | 99.05 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_25016
+
+CONTIG: scaffold_25541 (622bp)
+Top Length: 616  Top ID: 96.92
+		One align captures most of this contig: 155094 155707 | 7 622 | 614 616 | 96.92 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_25541
+
+CONTIG: scaffold_25845 (616bp)
+Top Length: 616  Top ID: 98.38
+		One align captures most of this contig: 112727 113342 | 616 1 | 616 616 | 98.38 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_25845
+
+CONTIG: scaffold_26650 (601bp)
+Top Length: 424  Top ID: 99.53
+		This contig is partially unaligned. (Aligned 424 out of 601 bases)
+		Alignment: 61497 61920 | 1 424 | 424 424 | 99.53 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_26650
+		Unaligned bases: 425 to 601 (177)
+
+CONTIG: scaffold_27320 (586bp)
+Top Length: 586  Top ID: 99.66
+		One align captures most of this contig: 51167 51753 | 586 1 | 587 586 | 99.66 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_27320
+
+CONTIG: scaffold_27525 (580bp)
+Top Length: 580  Top ID: 99.14
+		One align captures most of this contig: 207410 207989 | 1 580 | 580 580 | 99.14 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_27525
+
+CONTIG: scaffold_28476 (550bp)
+Top Length: 373  Top ID: 96.25
+		This contig is partially unaligned. (Aligned 373 out of 550 bases)
+		Alignment: 167887 168259 | 178 550 | 373 373 | 96.25 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_28476
+		Unaligned bases: 1 to 177 (177)
+
+CONTIG: scaffold_28874 (538bp)
+Top Length: 501  Top ID: 98.4
+		This contig is partially unaligned. (Aligned 501 out of 538 bases)
+		Alignment: 222355 222854 | 501 1 | 500 501 | 98.4 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_28874
+		Unaligned bases: 502 to 538 (37)
+
+CONTIG: scaffold_29285 (528bp)
+Top Length: 528  Top ID: 96.4
+		One align captures most of this contig: 121729 122256 | 1 528 | 528 528 | 96.4 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_29285
+
+CONTIG: scaffold_29805 (516bp)
+Top Length: 516  Top ID: 99.61
+		One align captures most of this contig: 41180 41695 | 1 516 | 516 516 | 99.61 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_29805
+
+CONTIG: scaffold_30198 (507bp)
+Top Length: 507  Top ID: 98.82
+		One align captures most of this contig: 60646 61151 | 507 1 | 506 507 | 98.82 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_30198
+
+CONTIG: scaffold_34745 (788bp)
+Top Length: 752  Top ID: 97.61
+		This contig is partially unaligned. (Aligned 752 out of 788 bases)
+		Alignment: 244007 244758 | 752 1 | 752 752 | 97.61 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_34745
+		Unaligned bases: 753 to 788 (36)
+
+CONTIG: scaffold_37930 (1016bp)
+Top Length: 628  Top ID: 96.86
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 30355 30483 | 367 239 | 129 129 | 99.22 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_37930
+		Skipping redundant alignment 111975 112103 | 239 367 | 129 129 | 95.35 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_37930
+		This contig is misassembled. 5 total aligns.
+			Excluding internal overlap of size 1 between Alignment 1 and 2:  223761 223889 | 239 367 | 129 129 --> 223762 223889 | 240 367 | 128 128
+			Real Alignment 1: 100440 100585 | 239 94 | 146 146 | 95.89 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_37930
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 223762 223889 | 240 367 | 128 128 | 97.67 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_37930
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 3: 99795 100430 | 1016 389 | 636 628 | 96.86 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_37930
+
+CONTIG: scaffold_405 (20242bp)
+Top Length: 79  Top ID: 96.2
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 49771 49849 | 14 92 | 79 79 | 96.2 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_405
+		This contig is partially unaligned. (Aligned 79 out of 20242 bases)
+		Alignment: 37 115 | 14 92 | 79 79 | 96.2 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_405
+		Unaligned bases: 1 to 13 (13)
+		Unaligned bases: 93 to 20242 (20150)
+
+CONTIG: scaffold_1682 (5344bp)
+Top Length: 444  Top ID: 97.3
+		This contig is partially unaligned. (Aligned 444 out of 5344 bases)
+		Alignment: 173111 173553 | 828 1271 | 443 444 | 97.3 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_1682
+		Unaligned bases: 1 to 827 (827)
+		Unaligned bases: 1272 to 5344 (4073)
+
+CONTIG: scaffold_4435 (2834bp)
+Top Length: 611  Top ID: 98.36
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 2834 and total length of all aligns is 812
+		Alignment: 28398 28598 | 201 1 | 201 201 | 99.5 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_4435
+		Alignment: 25846 26455 | 2834 2224 | 610 611 | 98.36 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_4435
+		Unaligned bases: 2022
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold_8390 (1486bp)
+Top Length: 1473  Top ID: 96.88
+		One align captures most of this contig: 154352 155826 | 1 1473 | 1475 1473 | 96.88 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_8390
+
+CONTIG: scaffold_8654 (1739bp)
+Top Length: 1739  Top ID: 96.68
+		One align captures most of this contig: 152263 153996 | 1739 1 | 1734 1739 | 96.68 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_8654
+
+CONTIG: scaffold_10109 (2057bp)
+Top Length: 192  Top ID: 98.96
+		This contig is partially unaligned. (Aligned 192 out of 2057 bases)
+		Alignment: 217087 217278 | 1866 2057 | 192 192 | 98.96 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_10109
+		Unaligned bases: 1 to 1865 (1865)
+
+CONTIG: scaffold_10543 (1247bp)
+Top Length: 1194  Top ID: 97.32
+		Skipping redundant alignment 7412 8275 | 862 1 | 864 862 | 97.8 | Coprococcus_comes_gi_225594901_ref_NZ_ scaffold_10543
+		Skipping redundant alignment 246828 247455 | 628 1 | 628 628 | 97.45 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_10543
+		Skipping redundant alignment 104129 104464 | 1194 859 | 336 336 | 97.62 | Coprococcus_comes_gi_225594903_ref_NZ_ scaffold_10543
+		This contig is partially unaligned. (Aligned 1194 out of 1247 bases)
+		Alignment: 248950 250144 | 1194 1 | 1195 1194 | 97.32 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_10543
+		Unaligned bases: 1195 to 1247 (53)
+
+CONTIG: scaffold_14118 (993bp)
+Top Length: 993  Top ID: 99.9
+		One align captures most of this contig: 228883 229875 | 993 1 | 993 993 | 99.9 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_14118
+
+CONTIG: scaffold_14727 (958bp)
+Top Length: 958  Top ID: 99.69
+		One align captures most of this contig: 210440 211397 | 958 1 | 958 958 | 99.69 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_14727
+
+CONTIG: scaffold_14884 (2387bp)
+Top Length: 88  Top ID: 97.73
+		This contig is partially unaligned. (Aligned 88 out of 2387 bases)
+		Alignment: 46127 46214 | 2387 2300 | 88 88 | 97.73 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_14884
+		Unaligned bases: 1 to 2299 (2299)
+
+CONTIG: scaffold_15589 (913bp)
+Top Length: 913  Top ID: 99.78
+		One align captures most of this contig: 204260 205172 | 1 913 | 913 913 | 99.78 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_15589
+
+CONTIG: scaffold_16931 (857bp)
+Top Length: 857  Top ID: 99.88
+		One align captures most of this contig: 224604 225460 | 1 857 | 857 857 | 99.88 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_16931
+
+CONTIG: scaffold_17181 (847bp)
+Top Length: 344  Top ID: 97.38
+		This contig is partially unaligned. (Aligned 344 out of 847 bases)
+		Alignment: 172542 172885 | 344 1 | 344 344 | 97.38 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_17181
+		Unaligned bases: 345 to 847 (503)
+
+CONTIG: scaffold_17581 (833bp)
+Top Length: 833  Top ID: 99.28
+		One align captures most of this contig: 56631 57464 | 833 1 | 834 833 | 99.28 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_17581
+
+CONTIG: scaffold_17783 (826bp)
+Top Length: 826  Top ID: 99.52
+		One align captures most of this contig: 101457 102281 | 1 826 | 825 826 | 99.52 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_17783
+
+CONTIG: scaffold_18471 (803bp)
+Top Length: 82  Top ID: 95.12
+		This contig is partially unaligned. (Aligned 82 out of 803 bases)
+		Alignment: 33 114 | 489 408 | 82 82 | 95.12 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_18471
+		Unaligned bases: 1 to 407 (407)
+		Unaligned bases: 490 to 803 (314)
+
+CONTIG: scaffold_18771 (793bp)
+Top Length: 216  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 216 out of 793 bases)
+		Alignment: 206888 207103 | 131 346 | 216 216 | 100.0 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_18771
+		Unaligned bases: 1 to 130 (130)
+		Unaligned bases: 347 to 793 (447)
+
+CONTIG: scaffold_19811 (762bp)
+Top Length: 290  Top ID: 99.31
+		This contig is partially unaligned. (Aligned 290 out of 762 bases)
+		Alignment: 7849 8138 | 473 762 | 290 290 | 99.31 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_19811
+		Unaligned bases: 1 to 472 (472)
+
+CONTIG: scaffold_19952 (758bp)
+Top Length: 756  Top ID: 98.15
+		One align captures most of this contig: 137258 138012 | 758 3 | 755 756 | 98.15 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_19952
+
+CONTIG: scaffold_20001 (756bp)
+Top Length: 727  Top ID: 98.21
+		This contig is partially unaligned. (Aligned 727 out of 756 bases)
+		Alignment: 171013 171738 | 754 28 | 726 727 | 98.21 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_20001
+		Unaligned bases: 1 to 27 (27)
+		Unaligned bases: 755 to 756 (2)
+
+CONTIG: scaffold_20091 (753bp)
+Top Length: 753  Top ID: 99.6
+		One align captures most of this contig: 234789 235541 | 1 753 | 753 753 | 99.6 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_20091
+
+CONTIG: scaffold_20275 (748bp)
+Top Length: 748  Top ID: 99.87
+		One align captures most of this contig: 77852 78599 | 1 748 | 748 748 | 99.87 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_20275
+
+CONTIG: scaffold_21075 (724bp)
+Top Length: 261  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 261 out of 724 bases)
+		Alignment: 241141 241401 | 261 1 | 261 261 | 100.0 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_21075
+		Unaligned bases: 262 to 724 (463)
+
+CONTIG: scaffold_21513 (713bp)
+Top Length: 713  Top ID: 99.44
+		One align captures most of this contig: 221377 222089 | 713 1 | 713 713 | 99.44 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_21513
+
+CONTIG: scaffold_21525 (1187bp)
+Top Length: 120  Top ID: 97.56
+		This contig is partially unaligned. (Aligned 120 out of 1187 bases)
+		Alignment: 206569 206691 | 971 852 | 123 120 | 97.56 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_21525
+		Unaligned bases: 1 to 851 (851)
+		Unaligned bases: 972 to 1187 (216)
+
+CONTIG: scaffold_21770 (706bp)
+Top Length: 706  Top ID: 100.0
+		One align captures most of this contig: 231864 232569 | 706 1 | 706 706 | 100.0 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_21770
+
+CONTIG: scaffold_22338 (1119bp)
+Top Length: 257  Top ID: 95.72
+		Skipping redundant alignment 8217 8291 | 876 802 | 75 75 | 98.67 | Coprococcus_comes_gi_225594902_ref_NZ_ scaffold_22338
+		Skipping redundant alignment 146650 146720 | 802 872 | 71 71 | 100.0 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_22338
+		This contig is misassembled. 4 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 1119 and total length of all aligns is 440
+		Alignment: 239019 239201 | 507 689 | 183 183 | 100.0 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_22338
+		Alignment: 239291 239547 | 802 1058 | 257 257 | 95.72 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_22338
+		Unaligned bases: 679
+CONTIG: scaffold_23839 (961bp)
+Top Length: 961  Top ID: 99.07
+		One align captures most of this contig: 100127 101093 | 961 1 | 967 961 | 99.07 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_23839
+
+CONTIG: scaffold_23879 (656bp)
+Top Length: 656  Top ID: 99.54
+		One align captures most of this contig: 136130 136784 | 656 1 | 655 656 | 99.54 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_23879
+
+CONTIG: scaffold_25285 (627bp)
+Top Length: 627  Top ID: 99.52
+		One align captures most of this contig: 207154 207781 | 627 1 | 628 627 | 99.52 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_25285
+
+CONTIG: scaffold_25428 (1331bp)
+Top Length: 621  Top ID: 100.0
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 123220 123784 | 565 1 | 565 565 | 99.65 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_25428
+			  Fake misassembly between these two alignments: inconsistency = 7 , gap in the contig is small or absent or filled mostly with Ns (long indel: deletion of length 7; 0 mismatches)
+			Real Alignment 2: 122450 123070 | 1328 708 | 621 621 | 100.0 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_25428
+
+CONTIG: scaffold_25539 (622bp)
+Top Length: 619  Top ID: 99.35
+		One align captures most of this contig: 140751 141369 | 4 622 | 619 619 | 99.35 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_25539
+
+CONTIG: scaffold_25860 (616bp)
+Top Length: 608  Top ID: 98.68
+		One align captures most of this contig: 20198 20805 | 9 616 | 608 608 | 98.68 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_25860
+
+CONTIG: scaffold_26577 (602bp)
+Top Length: 199  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 199 out of 602 bases)
+		Alignment: 195298 195496 | 404 602 | 199 199 | 100.0 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_26577
+		Unaligned bases: 1 to 403 (403)
+
+CONTIG: scaffold_27124 (590bp)
+Top Length: 590  Top ID: 99.15
+		One align captures most of this contig: 4011 4600 | 590 1 | 590 590 | 99.15 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_27124
+
+CONTIG: scaffold_27176 (888bp)
+Top Length: 113  Top ID: 97.35
+		This contig is partially unaligned. (Aligned 113 out of 888 bases)
+		Alignment: 45471 45583 | 113 1 | 113 113 | 97.35 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_27176
+		Unaligned bases: 114 to 888 (775)
+
+CONTIG: scaffold_27227 (588bp)
+Top Length: 380  Top ID: 98.69
+		Skipping redundant alignment 148261 148337 | 192 116 | 77 77 | 100.0 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_27227
+		Skipping redundant alignment 1 155 | 363 209 | 155 155 | 100.0 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_27227
+		Skipping redundant alignment 243364 243503 | 347 209 | 140 139 | 98.57 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_27227
+		This contig is misassembled. 5 total aligns.
+			Excluding internal overlap of size 131 between Alignment 1 and 2:  428 649 | 116 339 | 222 224 --> 428 518 | 116 208 | 91 93
+			Real Alignment 1: 428 518 | 116 208 | 91 93 | 99.11 | Coprococcus_comes_gi_225594908_ref_NZ_ scaffold_27227
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 47585 47965 | 588 209 | 381 380 | 98.69 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_27227
+
+CONTIG: scaffold_28613 (546bp)
+Top Length: 546  Top ID: 99.08
+		One align captures most of this contig: 142397 142942 | 546 1 | 546 546 | 99.08 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_28613
+
+CONTIG: scaffold_28617 (545bp)
+Top Length: 113  Top ID: 98.23
+		This contig is partially unaligned. (Aligned 113 out of 545 bases)
+		Alignment: 243221 243333 | 425 537 | 113 113 | 98.23 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_28617
+		Unaligned bases: 1 to 424 (424)
+		Unaligned bases: 538 to 545 (8)
+
+CONTIG: scaffold_29552 (522bp)
+Top Length: 522  Top ID: 99.81
+		One align captures most of this contig: 208869 209390 | 522 1 | 522 522 | 99.81 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_29552
+
+CONTIG: scaffold_29678 (519bp)
+Top Length: 393  Top ID: 98.73
+		This contig is partially unaligned. (Aligned 393 out of 519 bases)
+		Alignment: 50650 51042 | 127 519 | 393 393 | 98.73 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_29678
+		Unaligned bases: 1 to 126 (126)
+
+CONTIG: scaffold_30362 (504bp)
+Top Length: 504  Top ID: 99.8
+		One align captures most of this contig: 75631 76134 | 504 1 | 504 504 | 99.8 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_30362
+
+CONTIG: scaffold_30542 (500bp)
+Top Length: 83  Top ID: 95.29
+		This contig is partially unaligned. (Aligned 83 out of 500 bases)
+		Alignment: 33 117 | 304 386 | 85 83 | 95.29 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_30542
+		Unaligned bases: 1 to 303 (303)
+		Unaligned bases: 387 to 500 (114)
+
+CONTIG: scaffold_31628 (848bp)
+Top Length: 848  Top ID: 96.12
+		Marking as insignificant: 254896 255112 | 403 618 | 217 216 | 99.08 | Coprococcus_comes_gi_225594905_ref_NZ_ scaffold_31628
+		Marking as insignificant: 220300 220524 | 395 618 | 225 224 | 98.67 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_31628
+		Marking as insignificant: 916 1145 | 633 406 | 230 228 | 98.7 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_31628
+		Marking as insignificant: 281967 282442 | 101 575 | 476 475 | 96.85 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_31628
+		Marking as insignificant: 688 1184 | 597 101 | 497 497 | 97.39 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_31628
+		Marking as insignificant: 1 587 | 731 143 | 587 589 | 97.97 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_31628
+		One align captures most of this contig: 49618 50461 | 848 1 | 844 848 | 96.12 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_31628
+
+CONTIG: scaffold_3117 (2989bp)
+Top Length: 2854  Top ID: 99.33
+		This contig is partially unaligned. (Aligned 2854 out of 2989 bases)
+		Alignment: 294129 296981 | 2945 92 | 2853 2854 | 99.33 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_3117
+		Unaligned bases: 1 to 91 (91)
+		Unaligned bases: 2946 to 2989 (44)
+
+CONTIG: scaffold_5680 (1954bp)
+Top Length: 1948  Top ID: 96.36
+		One align captures most of this contig: 198318 200265 | 7 1954 | 1948 1948 | 96.36 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_5680
+
+CONTIG: scaffold_6211 (3462bp)
+Top Length: 3462  Top ID: 99.02
+		Marking as insignificant: 303289 303491 | 3428 3226 | 203 203 | 100.0 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_6211
+		Marking as insignificant: 69098 69587 | 2973 3462 | 490 490 | 100.0 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_6211
+		One align captures most of this contig: 289390 292846 | 3462 1 | 3457 3462 | 99.02 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_6211
+
+CONTIG: scaffold_6650 (1755bp)
+Top Length: 168  Top ID: 98.81
+		This contig is partially unaligned. (Aligned 168 out of 1755 bases)
+		Alignment: 183620 183787 | 1755 1588 | 168 168 | 98.81 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_6650
+		Unaligned bases: 1 to 1587 (1587)
+
+CONTIG: scaffold_8691 (1446bp)
+Top Length: 163  Top ID: 96.32
+		This contig is partially unaligned. (Aligned 163 out of 1446 bases)
+		Alignment: 88873 89034 | 163 1 | 162 163 | 96.32 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_8691
+		Unaligned bases: 164 to 1446 (1283)
+
+CONTIG: scaffold_10534 (1248bp)
+Top Length: 1242  Top ID: 99.28
+		One align captures most of this contig: 100620 101861 | 1 1242 | 1242 1242 | 99.28 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_10534
+
+CONTIG: scaffold_12179 (1117bp)
+Top Length: 261  Top ID: 99.62
+		This contig is partially unaligned. (Aligned 261 out of 1117 bases)
+		Alignment: 206817 207077 | 1117 857 | 261 261 | 99.62 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_12179
+		Unaligned bases: 1 to 856 (856)
+
+CONTIG: scaffold_12349 (1104bp)
+Top Length: 132  Top ID: 96.21
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 192747 192878 | 1 132 | 132 132 | 95.45 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_12349
+		This contig is partially unaligned. (Aligned 132 out of 1104 bases)
+		Alignment: 190201 190332 | 1 132 | 132 132 | 96.21 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_12349
+		Unaligned bases: 133 to 1104 (972)
+
+CONTIG: scaffold_12537 (1092bp)
+Top Length: 1092  Top ID: 99.45
+		One align captures most of this contig: 193912 195003 | 1 1092 | 1092 1092 | 99.45 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_12537
+
+CONTIG: scaffold_12725 (1276bp)
+Top Length: 1276  Top ID: 99.76
+		One align captures most of this contig: 301370 302643 | 1 1276 | 1274 1276 | 99.76 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_12725
+
+CONTIG: scaffold_15237 (1224bp)
+Top Length: 91  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 91 out of 1224 bases)
+		Alignment: 197740 197830 | 1134 1224 | 91 91 | 100.0 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_15237
+		Unaligned bases: 1 to 1133 (1133)
+
+CONTIG: scaffold_20643 (738bp)
+Top Length: 631  Top ID: 99.52
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 10 between Alignment 1 and 2:  38233 38349 | 1 117 | 117 117 --> 38233 38339 | 1 107 | 107 107
+			Real Alignment 1: 38233 38339 | 1 107 | 107 107 | 100.0 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_20643
+			  Fake misassembly between these two alignments: inconsistency = 36 , gap in the contig is small or absent or filled mostly with Ns (long indel: deletion of length 36; 0 mismatches)
+			Real Alignment 2: 38376 39006 | 108 738 | 631 631 | 99.52 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_20643
+
+CONTIG: scaffold_21462 (1134bp)
+Top Length: 1134  Top ID: 98.52
+		One align captures most of this contig: 209022 210166 | 1 1134 | 1145 1134 | 98.52 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_21462
+
+CONTIG: scaffold_21898 (703bp)
+Top Length: 703  Top ID: 97.16
+		One align captures most of this contig: 200310 201012 | 1 703 | 703 703 | 97.16 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_21898
+
+CONTIG: scaffold_22752 (990bp)
+Top Length: 82  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 82 out of 990 bases)
+		Alignment: 159452 159533 | 909 990 | 82 82 | 100.0 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_22752
+		Unaligned bases: 1 to 908 (908)
+
+CONTIG: scaffold_23883 (656bp)
+Top Length: 656  Top ID: 96.19
+		One align captures most of this contig: 258068 258723 | 656 1 | 656 656 | 96.19 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_23883
+
+CONTIG: scaffold_24229 (649bp)
+Top Length: 649  Top ID: 98.61
+		One align captures most of this contig: 279988 280636 | 649 1 | 649 649 | 98.61 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_24229
+
+CONTIG: scaffold_24627 (640bp)
+Top Length: 640  Top ID: 100.0
+		One align captures most of this contig: 9675 10314 | 640 1 | 640 640 | 100.0 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_24627
+
+CONTIG: scaffold_25282 (922bp)
+Top Length: 922  Top ID: 99.35
+		One align captures most of this contig: 71775 72701 | 1 922 | 927 922 | 99.35 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_25282
+
+CONTIG: scaffold_25973 (614bp)
+Top Length: 614  Top ID: 96.91
+		One align captures most of this contig: 261948 262562 | 614 1 | 615 614 | 96.91 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_25973
+
+CONTIG: scaffold_26978 (594bp)
+Top Length: 594  Top ID: 98.82
+		One align captures most of this contig: 63404 63990 | 1 594 | 587 594 | 98.82 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_26978
+
+CONTIG: scaffold_27223 (588bp)
+Top Length: 588  Top ID: 98.64
+		One align captures most of this contig: 135111 135698 | 1 588 | 588 588 | 98.64 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_27223
+
+CONTIG: scaffold_27599 (965bp)
+Top Length: 122  Top ID: 95.9
+		This contig is partially unaligned. (Aligned 122 out of 965 bases)
+		Alignment: 211134 211255 | 423 544 | 122 122 | 95.9 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_27599
+		Unaligned bases: 1 to 422 (422)
+		Unaligned bases: 545 to 965 (421)
+
+CONTIG: scaffold_27747 (574bp)
+Top Length: 574  Top ID: 99.65
+		One align captures most of this contig: 114022 114595 | 574 1 | 574 574 | 99.65 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_27747
+
+CONTIG: scaffold_27827 (571bp)
+Top Length: 571  Top ID: 99.48
+		One align captures most of this contig: 305159 305731 | 1 571 | 573 571 | 99.48 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_27827
+
+CONTIG: scaffold_28230 (558bp)
+Top Length: 556  Top ID: 97.12
+		One align captures most of this contig: 108555 109108 | 1 556 | 554 556 | 97.12 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_28230
+
+CONTIG: scaffold_28232 (558bp)
+Top Length: 325  Top ID: 97.23
+		This contig is partially unaligned. (Aligned 325 out of 558 bases)
+		Alignment: 259464 259788 | 224 548 | 325 325 | 97.23 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_28232
+		Unaligned bases: 1 to 223 (223)
+		Unaligned bases: 549 to 558 (10)
+
+CONTIG: scaffold_28600 (546bp)
+Top Length: 282  Top ID: 100.0
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 10 between Alignment 1 and 2:  226469 226742 | 546 273 | 274 274 --> 226469 226732 | 546 283 | 264 264
+			Real Alignment 1: 226766 227047 | 1 282 | 282 282 | 100.0 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_28600
+			  Extensive misassembly ( inversion ) between these two alignments
+			Real Alignment 2: 226469 226732 | 546 283 | 264 264 | 100.0 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_28600
+
+CONTIG: scaffold_32993 (580bp)
+Top Length: 580  Top ID: 98.11
+		One align captures most of this contig: 194905 195486 | 1 580 | 582 580 | 98.11 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_32993
+
+CONTIG: scaffold_302 (33193bp)
+Top Length: 31794  Top ID: 99.81
+		This contig is misassembled. 3 total aligns.
+			Excluding internal overlap of size 1 between Alignment 1 and 2:  79081 79276 | 196 1 | 196 196 --> 79082 79276 | 195 1 | 195 195
+			Real Alignment 1: 79082 79276 | 195 1 | 195 195 | 97.96 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_302
+			  Gap between these two alignments (local misassembly). Inconsistency = 361 
+			Excluding internal overlap of size 14 between Alignment 2 and 3:  77503 78720 | 1413 196 | 1218 1218 --> 77517 78720 | 1399 196 | 1204 1204
+			Real Alignment 2: 77517 78720 | 1399 196 | 1204 1204 | 99.18 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_302
+			  Extensive misassembly ( relocation, inconsistency = 11177 ) between these two alignments
+			Real Alignment 3: 34546 66339 | 33193 1400 | 31794 31794 | 99.81 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_302
+
+CONTIG: scaffold_439 (29169bp)
+Top Length: 74  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 74 out of 29169 bases)
+		Alignment: 394941 395014 | 23736 23809 | 74 74 | 100.0 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_439
+		Unaligned bases: 1 to 23735 (23735)
+		Unaligned bases: 23810 to 29169 (5360)
+
+CONTIG: scaffold_646 (28503bp)
+Top Length: 19617  Top ID: 99.38
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 8 between Alignment 1 and 2:  103394 112286 | 19612 28503 | 8893 8892 --> 103402 112286 | 19620 28503 | 8885 8884
+			Real Alignment 1: 79226 98846 | 3 19619 | 19621 19617 | 99.38 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_646
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 103402 112286 | 19620 28503 | 8885 8884 | 98.37 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_646
+
+CONTIG: scaffold_870 (10786bp)
+Top Length: 822  Top ID: 98.66
+		This contig is partially unaligned. (Aligned 822 out of 10786 bases)
+		Alignment: 8368 9189 | 10743 9922 | 822 822 | 98.66 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_870
+		Unaligned bases: 1 to 9921 (9921)
+		Unaligned bases: 10744 to 10786 (43)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_962 (8487bp)
+Top Length: 8200  Top ID: 99.16
+		This contig is partially unaligned. (Aligned 8200 out of 8487 bases)
+		Alignment: 120824 129025 | 1 8200 | 8202 8200 | 99.16 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_962
+		Unaligned bases: 8201 to 8487 (287)
+
+CONTIG: scaffold_1169 (6894bp)
+Top Length: 397  Top ID: 98.99
+		This contig is partially unaligned. (Aligned 397 out of 6894 bases)
+		Alignment: 11612 12008 | 4845 4449 | 397 397 | 98.99 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_1169
+		Unaligned bases: 1 to 4448 (4448)
+		Unaligned bases: 4846 to 6894 (2049)
+
+CONTIG: scaffold_1311 (10061bp)
+Top Length: 4480  Top ID: 99.46
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 112475 116955 | 1 4480 | 4481 4480 | 99.46 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_1311
+			  Extensive misassembly ( relocation, inconsistency = -1695 ) between these two alignments
+			Real Alignment 2: 117978 120842 | 7198 10061 | 2865 2864 | 99.44 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_1311
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_1604 (11319bp)
+Top Length: 4273  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 4273 out of 11319 bases)
+		Alignment: 73240 77512 | 5160 888 | 4273 4273 | 100.0 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_1604
+		Unaligned bases: 1 to 887 (887)
+		Unaligned bases: 5161 to 11319 (6159)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_1769 (4686bp)
+Top Length: 1197  Top ID: 97.83
+		This contig is partially unaligned. (Aligned 1197 out of 4686 bases)
+		Alignment: 9169 10364 | 4582 3386 | 1196 1197 | 97.83 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_1769
+		Unaligned bases: 1 to 3385 (3385)
+		Unaligned bases: 4583 to 4686 (104)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_2067 (4627bp)
+Top Length: 147  Top ID: 98.0
+		This contig is partially unaligned. (Aligned 147 out of 4627 bases)
+		Alignment: 345098 345247 | 4627 4481 | 150 147 | 98.0 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_2067
+		Unaligned bases: 1 to 4480 (4480)
+
+CONTIG: scaffold_2422 (4166bp)
+Top Length: 2462  Top ID: 99.39
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 276 between Alignment 1 and 2:  855554 857534 | 2187 4166 | 1981 1980 --> 855830 857534 | 2463 4166 | 1705 1704
+			Real Alignment 1: 240812 243261 | 1 2462 | 2450 2462 | 99.39 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_2422
+			  Extensive misassembly ( relocation, inconsistency = 612568 ) between these two alignments
+			Real Alignment 2: 855830 857534 | 2463 4166 | 1705 1704 | 99.75 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_2422
+
+CONTIG: scaffold_2527 (3505bp)
+Top Length: 3505  Top ID: 99.86
+		One align captures most of this contig: 228662 232165 | 3505 1 | 3504 3505 | 99.86 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_2527
+
+CONTIG: scaffold_2971 (3096bp)
+Top Length: 3096  Top ID: 97.58
+		One align captures most of this contig: 18578 21672 | 1 3096 | 3095 3096 | 97.58 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_2971
+
+CONTIG: scaffold_3613 (3558bp)
+Top Length: 729  Top ID: 99.59
+		This contig is partially unaligned. (Aligned 729 out of 3558 bases)
+		Alignment: 233754 234483 | 1 729 | 730 729 | 99.59 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_3613
+		Unaligned bases: 730 to 3558 (2829)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_3887 (2565bp)
+Top Length: 2431  Top ID: 99.71
+		This contig is partially unaligned. (Aligned 2431 out of 2565 bases)
+		Alignment: 235153 237586 | 26 2456 | 2434 2431 | 99.71 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_3887
+		Unaligned bases: 1 to 25 (25)
+		Unaligned bases: 2457 to 2565 (109)
+
+CONTIG: scaffold_4172 (3233bp)
+Top Length: 264  Top ID: 98.11
+		This contig is partially unaligned. (Aligned 264 out of 3233 bases)
+		Alignment: 79226 79489 | 3231 2968 | 264 264 | 98.11 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_4172
+		Unaligned bases: 1 to 2967 (2967)
+		Unaligned bases: 3232 to 3233 (2)
+
+CONTIG: scaffold_4314 (2374bp)
+Top Length: 2374  Top ID: 99.75
+		One align captures most of this contig: 238178 240552 | 1 2374 | 2375 2374 | 99.75 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_4314
+
+CONTIG: scaffold_5071 (3694bp)
+Top Length: 359  Top ID: 99.72
+		Skipping redundant alignment 670252 670428 | 1447 1271 | 177 177 | 99.44 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_5071
+		This contig is misassembled. 3 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 3694 and total length of all aligns is 458
+		Alignment: 573517 573875 | 1101 1459 | 359 359 | 99.72 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_5071
+		Alignment: 573871 573969 | 1498 1596 | 99 99 | 100.0 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_5071
+		Unaligned bases: 3236
+CONTIG: scaffold_5222 (2070bp)
+Top Length: 1909  Top ID: 99.84
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 2 between Alignment 1 and 2:  861070 861198 | 1908 2036 | 129 129 --> 861072 861198 | 1910 2036 | 127 127
+			Real Alignment 1: 857549 859456 | 1 1909 | 1908 1909 | 99.84 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_5222
+			  Extensive misassembly ( relocation, inconsistency = 1615 ) between these two alignments
+			Real Alignment 2: 861072 861198 | 1910 2036 | 127 127 | 98.45 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_5222
+
+CONTIG: scaffold_6414 (1796bp)
+Top Length: 342  Top ID: 95.63
+		This contig is partially unaligned. (Aligned 342 out of 1796 bases)
+		Alignment: 314208 314549 | 342 1 | 342 342 | 95.63 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_6414
+		Unaligned bases: 343 to 1796 (1454)
+
+CONTIG: scaffold_7056 (2334bp)
+Top Length: 293  Top ID: 99.66
+		This contig is partially unaligned. (Aligned 293 out of 2334 bases)
+		Alignment: 18266 18559 | 1 293 | 294 293 | 99.66 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_7056
+		Unaligned bases: 294 to 2334 (2041)
+
+CONTIG: scaffold_7471 (1618bp)
+Top Length: 159  Top ID: 96.23
+		This contig is partially unaligned. (Aligned 159 out of 1618 bases)
+		Alignment: 66066 66224 | 1457 1615 | 159 159 | 96.23 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_7471
+		Unaligned bases: 1 to 1456 (1456)
+		Unaligned bases: 1616 to 1618 (3)
+
+CONTIG: scaffold_9064 (1405bp)
+Top Length: 1005  Top ID: 97.92
+		This contig is partially unaligned. (Aligned 1005 out of 1405 bases)
+		Alignment: 227423 228430 | 1367 363 | 1008 1005 | 97.92 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_9064
+		Unaligned bases: 1 to 362 (362)
+		Unaligned bases: 1368 to 1405 (38)
+
+CONTIG: scaffold_9096 (1401bp)
+Top Length: 1401  Top ID: 98.0
+		One align captures most of this contig: 16987 18387 | 1 1401 | 1401 1401 | 98.0 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_9096
+
+CONTIG: scaffold_9801 (1323bp)
+Top Length: 1323  Top ID: 99.62
+		One align captures most of this contig: 70488 71810 | 1323 1 | 1323 1323 | 99.62 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_9801
+
+CONTIG: scaffold_9864 (1316bp)
+Top Length: 349  Top ID: 98.85
+		This contig is partially unaligned. (Aligned 349 out of 1316 bases)
+		Alignment: 573157 573503 | 968 1316 | 347 349 | 98.85 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_9864
+		Unaligned bases: 1 to 967 (967)
+
+CONTIG: scaffold_10347 (2157bp)
+Top Length: 505  Top ID: 99.41
+		This contig is partially unaligned. (Aligned 505 out of 2157 bases)
+		Alignment: 206807 207311 | 88 592 | 505 505 | 99.41 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_10347
+		Unaligned bases: 1 to 87 (87)
+		Unaligned bases: 593 to 2157 (1565)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_10503 (1251bp)
+Top Length: 1146  Top ID: 99.04
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 10 between Alignment 1 and 2:  430032 430130 | 1153 1251 | 99 99 --> 430042 430130 | 1163 1251 | 89 89
+			Real Alignment 1: 7229 8375 | 1162 17 | 1147 1146 | 99.04 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_10503
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 430042 430130 | 1163 1251 | 89 89 | 100.0 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_10503
+
+CONTIG: scaffold_11777 (1147bp)
+Top Length: 91  Top ID: 95.6
+		This contig is partially unaligned. (Aligned 91 out of 1147 bases)
+		Alignment: 226886 226976 | 1057 1147 | 91 91 | 95.6 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_11777
+		Unaligned bases: 1 to 1056 (1056)
+
+CONTIG: scaffold_11881 (1138bp)
+Top Length: 913  Top ID: 98.36
+		This contig is partially unaligned. (Aligned 913 out of 1138 bases)
+		Alignment: 21605 22518 | 913 1 | 914 913 | 98.36 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_11881
+		Unaligned bases: 914 to 1138 (225)
+
+CONTIG: scaffold_12526 (1092bp)
+Top Length: 309  Top ID: 95.79
+		This contig is partially unaligned. (Aligned 309 out of 1092 bases)
+		Alignment: 300506 300814 | 350 42 | 309 309 | 95.79 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_12526
+		Unaligned bases: 1 to 41 (41)
+		Unaligned bases: 351 to 1092 (742)
+
+CONTIG: scaffold_12551 (1955bp)
+Top Length: 161  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 161 out of 1955 bases)
+		Alignment: 347579 347739 | 1795 1955 | 161 161 | 100.0 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_12551
+		Unaligned bases: 1 to 1794 (1794)
+
+CONTIG: scaffold_12849 (1071bp)
+Top Length: 211  Top ID: 97.16
+		This contig is partially unaligned. (Aligned 211 out of 1071 bases)
+		Alignment: 517881 518091 | 171 381 | 211 211 | 97.16 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_12849
+		Unaligned bases: 1 to 170 (170)
+		Unaligned bases: 382 to 1071 (690)
+
+CONTIG: scaffold_13446 (1033bp)
+Top Length: 209  Top ID: 95.22
+		This contig is partially unaligned. (Aligned 209 out of 1033 bases)
+		Alignment: 13140 13348 | 209 1 | 209 209 | 95.22 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_13446
+		Unaligned bases: 210 to 1033 (824)
+
+CONTIG: scaffold_13673 (1019bp)
+Top Length: 1016  Top ID: 98.52
+		One align captures most of this contig: 211707 212722 | 1 1016 | 1016 1016 | 98.52 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_13673
+
+CONTIG: scaffold_13775 (1012bp)
+Top Length: 310  Top ID: 97.1
+		This contig is partially unaligned. (Aligned 310 out of 1012 bases)
+		Alignment: 77909 78218 | 703 1012 | 310 310 | 97.1 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_13775
+		Unaligned bases: 1 to 702 (702)
+
+CONTIG: scaffold_13921 (1004bp)
+Top Length: 1004  Top ID: 99.4
+		One align captures most of this contig: 166932 167936 | 1004 1 | 1005 1004 | 99.4 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_13921
+
+CONTIG: scaffold_14629 (963bp)
+Top Length: 963  Top ID: 99.48
+		One align captures most of this contig: 232436 233399 | 963 1 | 964 963 | 99.48 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_14629
+
+CONTIG: scaffold_17330 (841bp)
+Top Length: 296  Top ID: 98.99
+		This contig is partially unaligned. (Aligned 296 out of 841 bases)
+		Alignment: 486885 487180 | 841 546 | 296 296 | 98.99 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_17330
+		Unaligned bases: 1 to 545 (545)
+
+CONTIG: scaffold_17491 (836bp)
+Top Length: 836  Top ID: 99.4
+		One align captures most of this contig: 164339 165174 | 1 836 | 836 836 | 99.4 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_17491
+
+CONTIG: scaffold_17968 (820bp)
+Top Length: 127  Top ID: 99.21
+		This contig is partially unaligned. (Aligned 127 out of 820 bases)
+		Alignment: 279063 279189 | 127 1 | 127 127 | 99.21 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_17968
+		Unaligned bases: 128 to 820 (693)
+
+CONTIG: scaffold_19601 (768bp)
+Top Length: 768  Top ID: 99.61
+		One align captures most of this contig: 668099 668866 | 1 768 | 768 768 | 99.61 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_19601
+
+CONTIG: scaffold_20222 (749bp)
+Top Length: 155  Top ID: 97.42
+		This contig is partially unaligned. (Aligned 155 out of 749 bases)
+		Alignment: 486427 486581 | 595 749 | 155 155 | 97.42 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_20222
+		Unaligned bases: 1 to 594 (594)
+
+CONTIG: scaffold_20786 (733bp)
+Top Length: 733  Top ID: 99.86
+		One align captures most of this contig: 248523 249255 | 733 1 | 733 733 | 99.86 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_20786
+
+CONTIG: scaffold_20972 (1045bp)
+Top Length: 1026  Top ID: 98.45
+		This contig is partially unaligned. (Aligned 1026 out of 1045 bases)
+		Alignment: 884944 885972 | 1 1026 | 1029 1026 | 98.45 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_20972
+		Unaligned bases: 1027 to 1045 (19)
+
+CONTIG: scaffold_21680 (708bp)
+Top Length: 708  Top ID: 98.73
+		One align captures most of this contig: 176544 177249 | 1 708 | 706 708 | 98.73 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_21680
+
+CONTIG: scaffold_21901 (702bp)
+Top Length: 700  Top ID: 98.71
+		One align captures most of this contig: 886141 886840 | 3 702 | 700 700 | 98.71 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_21901
+
+CONTIG: scaffold_22164 (696bp)
+Top Length: 696  Top ID: 99.43
+		One align captures most of this contig: 326136 326834 | 696 1 | 699 696 | 99.43 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_22164
+
+CONTIG: scaffold_22268 (693bp)
+Top Length: 693  Top ID: 99.57
+		One align captures most of this contig: 184241 184934 | 693 1 | 694 693 | 99.57 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_22268
+
+CONTIG: scaffold_22490 (688bp)
+Top Length: 688  Top ID: 99.56
+		One align captures most of this contig: 78588 79276 | 688 1 | 689 688 | 99.56 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_22490
+
+CONTIG: scaffold_22515 (687bp)
+Top Length: 255  Top ID: 99.61
+		This contig is partially unaligned. (Aligned 255 out of 687 bases)
+		Alignment: 641692 641946 | 687 433 | 255 255 | 99.61 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_22515
+		Unaligned bases: 1 to 432 (432)
+
+CONTIG: scaffold_23285 (669bp)
+Top Length: 669  Top ID: 99.7
+		One align captures most of this contig: 218899 219568 | 1 669 | 670 669 | 99.7 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_23285
+
+CONTIG: scaffold_23753 (659bp)
+Top Length: 659  Top ID: 99.7
+		One align captures most of this contig: 348601 349259 | 659 1 | 659 659 | 99.7 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_23753
+
+CONTIG: scaffold_23796 (658bp)
+Top Length: 658  Top ID: 99.24
+		One align captures most of this contig: 564390 565047 | 1 658 | 658 658 | 99.24 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_23796
+
+CONTIG: scaffold_24311 (898bp)
+Top Length: 678  Top ID: 96.03
+		This contig is partially unaligned. (Aligned 678 out of 898 bases)
+		Alignment: 24876 25548 | 1 678 | 673 678 | 96.03 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_24311
+		Unaligned bases: 679 to 898 (220)
+
+CONTIG: scaffold_24331 (647bp)
+Top Length: 647  Top ID: 99.23
+		One align captures most of this contig: 389408 390053 | 647 1 | 646 647 | 99.23 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_24331
+
+CONTIG: scaffold_24460 (644bp)
+Top Length: 644  Top ID: 100.0
+		One align captures most of this contig: 184946 185589 | 644 1 | 644 644 | 100.0 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_24460
+
+CONTIG: scaffold_24704 (755bp)
+Top Length: 755  Top ID: 95.39
+		Marking as insignificant: 45564 46219 | 755 102 | 656 654 | 95.74 | Coprococcus_comes_gi_225594898_ref_NZ_ scaffold_24704
+		One align captures most of this contig: 889230 889987 | 755 1 | 758 755 | 95.39 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_24704
+
+CONTIG: scaffold_24790 (637bp)
+Top Length: 637  Top ID: 98.59
+		One align captures most of this contig: 222332 222968 | 1 637 | 637 637 | 98.59 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_24790
+
+CONTIG: scaffold_25368 (626bp)
+Top Length: 626  Top ID: 99.68
+		One align captures most of this contig: 728761 729386 | 626 1 | 626 626 | 99.68 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_25368
+
+CONTIG: scaffold_25619 (621bp)
+Top Length: 612  Top ID: 97.71
+		One align captures most of this contig: 875688 876296 | 9 620 | 609 612 | 97.71 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_25619
+
+CONTIG: scaffold_25752 (618bp)
+Top Length: 618  Top ID: 98.38
+		One align captures most of this contig: 874359 874976 | 618 1 | 618 618 | 98.38 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_25752
+
+CONTIG: scaffold_26162 (610bp)
+Top Length: 316  Top ID: 98.75
+		This contig is partially unaligned. (Aligned 316 out of 610 bases)
+		Alignment: 171069 171387 | 610 295 | 319 316 | 98.75 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_26162
+		Unaligned bases: 1 to 294 (294)
+
+CONTIG: scaffold_26574 (602bp)
+Top Length: 602  Top ID: 99.67
+		One align captures most of this contig: 163007 163607 | 602 1 | 601 602 | 99.67 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_26574
+
+CONTIG: scaffold_26698 (600bp)
+Top Length: 600  Top ID: 99.83
+		One align captures most of this contig: 603252 603851 | 1 600 | 600 600 | 99.83 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_26698
+
+CONTIG: scaffold_26853 (597bp)
+Top Length: 597  Top ID: 98.49
+		One align captures most of this contig: 165448 166044 | 597 1 | 597 597 | 98.49 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_26853
+
+CONTIG: scaffold_26948 (595bp)
+Top Length: 595  Top ID: 97.98
+		One align captures most of this contig: 454020 454614 | 1 595 | 595 595 | 97.98 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_26948
+
+CONTIG: scaffold_26952 (595bp)
+Top Length: 594  Top ID: 98.48
+		One align captures most of this contig: 877824 878417 | 594 1 | 594 594 | 98.48 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_26952
+
+CONTIG: scaffold_27069 (592bp)
+Top Length: 592  Top ID: 99.49
+		One align captures most of this contig: 318115 318706 | 1 592 | 592 592 | 99.49 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_27069
+
+CONTIG: scaffold_27237 (588bp)
+Top Length: 588  Top ID: 99.15
+		One align captures most of this contig: 177523 178110 | 1 588 | 588 588 | 99.15 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_27237
+
+CONTIG: scaffold_27433 (583bp)
+Top Length: 580  Top ID: 98.97
+		One align captures most of this contig: 168920 169499 | 1 580 | 580 580 | 98.97 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_27433
+
+CONTIG: scaffold_27966 (566bp)
+Top Length: 423  Top ID: 98.58
+		This contig is partially unaligned. (Aligned 423 out of 566 bases)
+		Alignment: 117496 117919 | 566 144 | 424 423 | 98.58 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_27966
+		Unaligned bases: 1 to 143 (143)
+
+CONTIG: scaffold_27980 (566bp)
+Top Length: 566  Top ID: 99.65
+		One align captures most of this contig: 454973 455538 | 566 1 | 566 566 | 99.65 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_27980
+
+CONTIG: scaffold_28601 (546bp)
+Top Length: 546  Top ID: 99.82
+		One align captures most of this contig: 658565 659110 | 546 1 | 546 546 | 99.82 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_28601
+
+CONTIG: scaffold_28770 (541bp)
+Top Length: 269  Top ID: 99.63
+		This contig is partially unaligned. (Aligned 269 out of 541 bases)
+		Alignment: 215775 216043 | 269 1 | 269 269 | 99.63 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_28770
+		Unaligned bases: 270 to 541 (272)
+
+CONTIG: scaffold_29153 (531bp)
+Top Length: 531  Top ID: 99.06
+		One align captures most of this contig: 485831 486362 | 1 531 | 532 531 | 99.06 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_29153
+
+CONTIG: scaffold_29432 (524bp)
+Top Length: 97  Top ID: 98.97
+		This contig is partially unaligned. (Aligned 97 out of 524 bases)
+		Alignment: 522750 522846 | 97 1 | 97 97 | 98.97 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_29432
+		Unaligned bases: 98 to 524 (427)
+
+CONTIG: scaffold_29700 (518bp)
+Top Length: 518  Top ID: 99.61
+		One align captures most of this contig: 275000 275517 | 518 1 | 518 518 | 99.61 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_29700
+
+CONTIG: scaffold_35092 (822bp)
+Top Length: 822  Top ID: 99.51
+		One align captures most of this contig: 139044 139863 | 1 822 | 820 822 | 99.51 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_35092
+
+CONTIG: scaffold_36537 (786bp)
+Top Length: 134  Top ID: 95.52
+		This contig is partially unaligned. (Aligned 134 out of 786 bases)
+		Alignment: 398356 398489 | 179 46 | 134 134 | 95.52 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_36537
+		Unaligned bases: 1 to 45 (45)
+		Unaligned bases: 180 to 786 (607)
+
+CONTIG: scaffold_37100 (663bp)
+Top Length: 121  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 121 out of 663 bases)
+		Alignment: 736030 736150 | 663 543 | 121 121 | 100.0 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_37100
+		Unaligned bases: 1 to 542 (542)
+
+CONTIG: scaffold_42083 (569bp)
+Top Length: 302  Top ID: 96.69
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 429679 429980 | 5 306 | 302 302 | 96.69 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_42083
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 11489 11587 | 569 471 | 99 99 | 100.0 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_42083
+
+CONTIG: scaffold_321 (58577bp)
+Top Length: 76  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 76 out of 58577 bases)
+		Alignment: 330 405 | 2039 2114 | 76 76 | 100.0 | Coprococcus_comes_gi_225594908_ref_NZ_ scaffold_321
+		Unaligned bases: 1 to 2038 (2038)
+		Unaligned bases: 2115 to 58577 (56463)
+
+CONTIG: scaffold_250 (27793bp)
+Top Length: 958  Top ID: 96.47
+		This contig is partially unaligned. (Aligned 958 out of 27793 bases)
+		Alignment: 8142 9104 | 134 1091 | 963 958 | 96.47 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_250
+		Unaligned bases: 1 to 133 (133)
+		Unaligned bases: 1092 to 27793 (26702)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_329 (35512bp)
+Top Length: 141  Top ID: 99.29
+		This contig is partially unaligned. (Aligned 141 out of 35512 bases)
+		Alignment: 18756 18896 | 11317 11457 | 141 141 | 99.29 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_329
+		Unaligned bases: 1 to 11316 (11316)
+		Unaligned bases: 11458 to 35512 (24055)
+
+CONTIG: scaffold_1123 (15997bp)
+Top Length: 1427  Top ID: 97.13
+		This contig is partially unaligned. (Aligned 1427 out of 15997 bases)
+		Alignment: 376619 378045 | 2226 3652 | 1427 1427 | 97.13 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_1123
+		Unaligned bases: 1 to 2225 (2225)
+		Unaligned bases: 3653 to 15997 (12345)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_1249 (6433bp)
+Top Length: 1296  Top ID: 99.61
+		Skipping redundant alignment 220625 221054 | 867 438 | 430 430 | 99.53 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_1249
+		Skipping redundant alignment 164756 164910 | 592 438 | 155 155 | 99.35 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_1249
+		Skipping redundant alignment 1 660 | 1055 1714 | 660 660 | 99.24 | Coprococcus_comes_gi_225594906_ref_NZ_ scaffold_1249
+		This contig is partially unaligned. (Aligned 1296 out of 6433 bases)
+		Alignment: 422785 424080 | 1733 438 | 1296 1296 | 99.61 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_1249
+		Unaligned bases: 1 to 437 (437)
+		Unaligned bases: 1734 to 6433 (4700)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_2249 (3837bp)
+Top Length: 3837  Top ID: 99.04
+		One align captures most of this contig: 521663 525500 | 3837 1 | 3838 3837 | 99.04 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_2249
+
+CONTIG: scaffold_2254 (5431bp)
+Top Length: 378  Top ID: 96.56
+		This contig is partially unaligned. (Aligned 378 out of 5431 bases)
+		Alignment: 455522 455899 | 414 37 | 378 378 | 96.56 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_2254
+		Unaligned bases: 1 to 36 (36)
+		Unaligned bases: 415 to 5431 (5017)
+
+CONTIG: scaffold_2408 (9474bp)
+Top Length: 1797  Top ID: 96.33
+		This contig is partially unaligned. (Aligned 1797 out of 9474 bases)
+		Alignment: 650801 652596 | 3473 5269 | 1796 1797 | 96.33 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_2408
+		Unaligned bases: 1 to 3472 (3472)
+		Unaligned bases: 5270 to 9474 (4205)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_2566 (6589bp)
+Top Length: 6589  Top ID: 97.54
+		One align captures most of this contig: 390488 397062 | 6589 1 | 6575 6589 | 97.54 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_2566
+
+CONTIG: scaffold_2786 (3248bp)
+Top Length: 122  Top ID: 98.36
+		This contig is partially unaligned. (Aligned 122 out of 3248 bases)
+		Alignment: 834021 834142 | 3127 3248 | 122 122 | 98.36 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_2786
+		Unaligned bases: 1 to 3126 (3126)
+
+CONTIG: scaffold_3387 (2831bp)
+Top Length: 253  Top ID: 98.42
+		This contig is partially unaligned. (Aligned 253 out of 2831 bases)
+		Alignment: 602359 602611 | 2579 2831 | 253 253 | 98.42 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_3387
+		Unaligned bases: 1 to 2578 (2578)
+
+CONTIG: scaffold_4531 (2295bp)
+Top Length: 1517  Top ID: 98.81
+		This contig is partially unaligned. (Aligned 1517 out of 2295 bases)
+		Alignment: 9739 11255 | 2295 779 | 1517 1517 | 98.81 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_4531
+		Unaligned bases: 1 to 778 (778)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_4834 (2188bp)
+Top Length: 2117  Top ID: 98.11
+		This contig is partially unaligned. (Aligned 2117 out of 2188 bases)
+		Alignment: 15332 17449 | 2130 14 | 2118 2117 | 98.11 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_4834
+		Unaligned bases: 1 to 13 (13)
+		Unaligned bases: 2131 to 2188 (58)
+
+CONTIG: scaffold_5738 (1941bp)
+Top Length: 1600  Top ID: 97.25
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 525530 525643 | 1 114 | 114 114 | 100.0 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_5738
+			  Extensive misassembly ( relocation, inconsistency = -522392 ) between these two alignments
+			Real Alignment 2: 3479 5075 | 342 1941 | 1597 1600 | 97.25 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_5738
+
+CONTIG: scaffold_7118 (1678bp)
+Top Length: 108  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 108 out of 1678 bases)
+		Alignment: 265456 265563 | 1571 1678 | 108 108 | 100.0 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_7118
+		Unaligned bases: 1 to 1570 (1570)
+
+CONTIG: scaffold_7538 (1607bp)
+Top Length: 1607  Top ID: 98.07
+		One align captures most of this contig: 601005 602611 | 1 1607 | 1607 1607 | 98.07 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_7538
+
+CONTIG: scaffold_7710 (1581bp)
+Top Length: 1581  Top ID: 96.41
+		One align captures most of this contig: 622192 623780 | 1 1581 | 1589 1581 | 96.41 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_7710
+
+CONTIG: scaffold_7931 (1552bp)
+Top Length: 1529  Top ID: 99.87
+		Skipping redundant alignment 94350 94666 | 1536 1220 | 317 317 | 99.68 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_7931
+		Skipping redundant alignment 282543 282797 | 1288 1542 | 255 255 | 98.82 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_7931
+		This contig is partially unaligned. (Aligned 1529 out of 1552 bases)
+		Alignment: 357951 359478 | 1529 1 | 1528 1529 | 99.87 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_7931
+		Unaligned bases: 1530 to 1552 (23)
+
+CONTIG: scaffold_8002 (4262bp)
+Top Length: 3609  Top ID: 98.76
+		This contig is partially unaligned. (Aligned 3609 out of 4262 bases)
+		Alignment: 382794 386397 | 4262 654 | 3604 3609 | 98.76 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_8002
+		Unaligned bases: 1 to 653 (653)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_8080 (1528bp)
+Top Length: 1344  Top ID: 98.36
+		This contig is partially unaligned. (Aligned 1344 out of 1528 bases)
+		Alignment: 387257 388600 | 1344 1 | 1344 1344 | 98.36 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_8080
+		Unaligned bases: 1345 to 1528 (184)
+
+CONTIG: scaffold_8585 (1460bp)
+Top Length: 1460  Top ID: 99.66
+		One align captures most of this contig: 819840 821300 | 1460 1 | 1461 1460 | 99.66 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_8585
+
+CONTIG: scaffold_8955 (1416bp)
+Top Length: 1416  Top ID: 99.22
+		One align captures most of this contig: 826552 827967 | 1 1416 | 1416 1416 | 99.22 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_8955
+
+CONTIG: scaffold_9093 (1402bp)
+Top Length: 1402  Top ID: 99.22
+		Marking as insignificant: 1253 1370 | 118 1 | 118 118 | 100.0 | Coprococcus_comes_gi_225594901_ref_NZ_ scaffold_9093
+		Marking as insignificant: 1 386 | 386 1 | 386 386 | 99.74 | Coprococcus_comes_gi_225594904_ref_NZ_ scaffold_9093
+		One align captures most of this contig: 31689 33090 | 1402 1 | 1402 1402 | 99.22 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_9093
+
+CONTIG: scaffold_11037 (1207bp)
+Top Length: 677  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 677 out of 1207 bases)
+		Alignment: 447558 448234 | 531 1207 | 677 677 | 100.0 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_11037
+		Unaligned bases: 1 to 530 (530)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_11600 (1161bp)
+Top Length: 718  Top ID: 99.03
+		This contig is partially unaligned. (Aligned 718 out of 1161 bases)
+		Alignment: 492321 493038 | 718 1 | 718 718 | 99.03 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_11600
+		Unaligned bases: 719 to 1161 (443)
+
+CONTIG: scaffold_11850 (1456bp)
+Top Length: 1456  Top ID: 96.91
+		One align captures most of this contig: 168432 169882 | 1 1456 | 1451 1456 | 96.91 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_11850
+
+CONTIG: scaffold_12035 (1630bp)
+Top Length: 1425  Top ID: 98.46
+		This contig is partially unaligned. (Aligned 1425 out of 1630 bases)
+		Alignment: 527841 529259 | 1 1425 | 1419 1425 | 98.46 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_12035
+		Unaligned bases: 1426 to 1630 (205)
+
+CONTIG: scaffold_12615 (1087bp)
+Top Length: 350  Top ID: 97.43
+		Skipping redundant alignment 544636 544852 | 952 736 | 217 217 | 96.77 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_12615
+		Skipping redundant alignment 297936 298152 | 952 736 | 217 217 | 96.31 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_12615
+		This contig is misassembled. 4 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 1087 and total length of all aligns is 464
+		Alignment: 548831 549168 | 961 624 | 338 338 | 96.15 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_12615
+		Alignment: 546408 546756 | 1087 738 | 349 350 | 97.43 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_12615
+		Unaligned bases: 623
+CONTIG: scaffold_13274 (1043bp)
+Top Length: 892  Top ID: 95.53
+		This contig is partially unaligned. (Aligned 892 out of 1043 bases)
+		Alignment: 373898 374789 | 152 1043 | 892 892 | 95.53 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_13274
+		Unaligned bases: 1 to 151 (151)
+
+CONTIG: scaffold_13564 (3329bp)
+Top Length: 178  Top ID: 95.53
+		This contig is partially unaligned. (Aligned 178 out of 3329 bases)
+		Alignment: 600282 600460 | 993 816 | 179 178 | 95.53 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_13564
+		Unaligned bases: 1 to 815 (815)
+		Unaligned bases: 994 to 3329 (2336)
+
+CONTIG: scaffold_13779 (1012bp)
+Top Length: 1012  Top ID: 97.33
+		One align captures most of this contig: 167592 168602 | 1012 1 | 1011 1012 | 97.33 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_13779
+
+CONTIG: scaffold_14436 (1791bp)
+Top Length: 317  Top ID: 96.53
+		This contig is partially unaligned. (Aligned 317 out of 1791 bases)
+		Alignment: 525402 525718 | 1791 1475 | 317 317 | 96.53 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_14436
+		Unaligned bases: 1 to 1474 (1474)
+
+CONTIG: scaffold_14948 (946bp)
+Top Length: 111  Top ID: 99.1
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 548633 548743 | 946 836 | 111 111 | 98.2 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_14948
+		This contig is partially unaligned. (Aligned 111 out of 946 bases)
+		Alignment: 546283 546393 | 946 836 | 111 111 | 99.1 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_14948
+		Unaligned bases: 1 to 835 (835)
+
+CONTIG: scaffold_15221 (932bp)
+Top Length: 929  Top ID: 96.03
+		One align captures most of this contig: 378085 379017 | 4 932 | 933 929 | 96.03 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_15221
+
+CONTIG: scaffold_15248 (931bp)
+Top Length: 895  Top ID: 99.44
+		Skipping redundant alignment 104464 104811 | 37 385 | 348 349 | 99.71 | Coprococcus_comes_gi_225594903_ref_NZ_ scaffold_15248
+		Skipping redundant alignment 103523 103717 | 37 226 | 195 190 | 97.44 | Coprococcus_comes_gi_225594903_ref_NZ_ scaffold_15248
+		This contig is partially unaligned. (Aligned 895 out of 931 bases)
+		Alignment: 30611 31505 | 37 931 | 895 895 | 99.44 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_15248
+		Unaligned bases: 1 to 36 (36)
+
+CONTIG: scaffold_15345 (926bp)
+Top Length: 152  Top ID: 98.68
+		This contig is partially unaligned. (Aligned 152 out of 926 bases)
+		Alignment: 520347 520498 | 891 740 | 152 152 | 98.68 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_15345
+		Unaligned bases: 1 to 739 (739)
+		Unaligned bases: 892 to 926 (35)
+
+CONTIG: scaffold_15505 (918bp)
+Top Length: 459  Top ID: 99.35
+		This contig is partially unaligned. (Aligned 459 out of 918 bases)
+		Alignment: 521303 521761 | 459 1 | 459 459 | 99.35 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_15505
+		Unaligned bases: 460 to 918 (459)
+
+CONTIG: scaffold_15883 (900bp)
+Top Length: 900  Top ID: 99.33
+		One align captures most of this contig: 825535 826433 | 900 1 | 899 900 | 99.33 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_15883
+
+CONTIG: scaffold_16842 (860bp)
+Top Length: 653  Top ID: 98.62
+		This contig is partially unaligned. (Aligned 653 out of 860 bases)
+		Alignment: 159718 160370 | 1 653 | 653 653 | 98.62 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_16842
+		Unaligned bases: 654 to 860 (207)
+
+CONTIG: scaffold_18194 (812bp)
+Top Length: 812  Top ID: 98.77
+		One align captures most of this contig: 166916 167727 | 1 812 | 812 812 | 98.77 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_18194
+
+CONTIG: scaffold_19187 (780bp)
+Top Length: 780  Top ID: 99.49
+		One align captures most of this contig: 150942 151722 | 780 1 | 781 780 | 99.49 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_19187
+
+CONTIG: scaffold_19831 (1348bp)
+Top Length: 286  Top ID: 98.6
+		This contig is partially unaligned. (Aligned 286 out of 1348 bases)
+		Alignment: 346532 346817 | 1348 1063 | 286 286 | 98.6 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_19831
+		Unaligned bases: 1 to 1062 (1062)
+
+CONTIG: scaffold_20052 (755bp)
+Top Length: 102  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 102 out of 755 bases)
+		Alignment: 533697 533798 | 1 102 | 102 102 | 100.0 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_20052
+		Unaligned bases: 103 to 755 (653)
+
+CONTIG: scaffold_20211 (750bp)
+Top Length: 750  Top ID: 99.73
+		One align captures most of this contig: 97474 98223 | 1 750 | 750 750 | 99.73 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_20211
+
+CONTIG: scaffold_21027 (726bp)
+Top Length: 670  Top ID: 97.91
+		This contig is partially unaligned. (Aligned 670 out of 726 bases)
+		Alignment: 466621 467290 | 726 57 | 670 670 | 97.91 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_21027
+		Unaligned bases: 1 to 56 (56)
+
+CONTIG: scaffold_21040 (725bp)
+Top Length: 725  Top ID: 99.72
+		One align captures most of this contig: 494709 495433 | 1 725 | 725 725 | 99.72 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_21040
+
+CONTIG: scaffold_21288 (719bp)
+Top Length: 719  Top ID: 99.72
+		One align captures most of this contig: 471289 472007 | 1 719 | 719 719 | 99.72 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_21288
+
+CONTIG: scaffold_21477 (713bp)
+Top Length: 713  Top ID: 99.16
+		One align captures most of this contig: 543341 544053 | 1 713 | 713 713 | 99.16 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_21477
+
+CONTIG: scaffold_21833 (704bp)
+Top Length: 605  Top ID: 95.37
+		This contig is partially unaligned. (Aligned 605 out of 704 bases)
+		Alignment: 602513 603113 | 1 605 | 601 605 | 95.37 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_21833
+		Unaligned bases: 606 to 704 (99)
+
+CONTIG: scaffold_22899 (677bp)
+Top Length: 677  Top ID: 97.05
+		One align captures most of this contig: 386617 387293 | 677 1 | 677 677 | 97.05 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_22899
+
+CONTIG: scaffold_23040 (674bp)
+Top Length: 674  Top ID: 97.78
+		One align captures most of this contig: 508672 509345 | 1 674 | 674 674 | 97.78 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_23040
+
+CONTIG: scaffold_24182 (650bp)
+Top Length: 100  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 100 out of 650 bases)
+		Alignment: 12655 12754 | 100 1 | 100 100 | 100.0 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_24182
+		Unaligned bases: 101 to 650 (550)
+
+CONTIG: scaffold_24279 (888bp)
+Top Length: 107  Top ID: 99.07
+		This contig is partially unaligned. (Aligned 107 out of 888 bases)
+		Alignment: 430031 430137 | 782 888 | 107 107 | 99.07 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_24279
+		Unaligned bases: 1 to 781 (781)
+
+CONTIG: scaffold_24611 (837bp)
+Top Length: 327  Top ID: 95.17
+		This contig is partially unaligned. (Aligned 327 out of 837 bases)
+		Alignment: 431539 431869 | 837 511 | 331 327 | 95.17 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_24611
+		Unaligned bases: 1 to 510 (510)
+
+CONTIG: scaffold_25444 (624bp)
+Top Length: 624  Top ID: 99.36
+		Marking as insignificant: 297856 298478 | 624 1 | 623 624 | 97.92 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_25444
+		One align captures most of this contig: 544556 545180 | 624 1 | 625 624 | 99.36 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_25444
+
+CONTIG: scaffold_25772 (618bp)
+Top Length: 618  Top ID: 97.25
+		One align captures most of this contig: 322201 322817 | 1 618 | 617 618 | 97.25 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_25772
+
+CONTIG: scaffold_26624 (1002bp)
+Top Length: 1002  Top ID: 99.0
+		Marking as insignificant: 304283 304728 | 558 1002 | 446 445 | 99.1 | Coprococcus_comes_gi_225594900_ref_NZ_ scaffold_26624
+		One align captures most of this contig: 533014 534017 | 1 1002 | 1004 1002 | 99.0 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_26624
+
+CONTIG: scaffold_27097 (591bp)
+Top Length: 591  Top ID: 98.98
+		One align captures most of this contig: 254161 254751 | 1 591 | 591 591 | 98.98 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_27097
+
+CONTIG: scaffold_27280 (587bp)
+Top Length: 584  Top ID: 99.14
+		One align captures most of this contig: 537814 538397 | 587 4 | 584 584 | 99.14 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_27280
+
+CONTIG: scaffold_27347 (1075bp)
+Top Length: 1075  Top ID: 98.98
+		One align captures most of this contig: 460329 461410 | 1075 1 | 1082 1075 | 98.98 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_27347
+
+CONTIG: scaffold_27635 (577bp)
+Top Length: 575  Top ID: 96.17
+		One align captures most of this contig: 9154 9728 | 1 575 | 575 575 | 96.17 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_27635
+
+CONTIG: scaffold_27878 (570bp)
+Top Length: 358  Top ID: 98.32
+		This contig is partially unaligned. (Aligned 358 out of 570 bases)
+		Alignment: 487595 487952 | 213 570 | 358 358 | 98.32 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_27878
+		Unaligned bases: 1 to 212 (212)
+
+CONTIG: scaffold_28796 (540bp)
+Top Length: 540  Top ID: 100.0
+		One align captures most of this contig: 443489 444028 | 540 1 | 540 540 | 100.0 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_28796
+
+CONTIG: scaffold_29057 (533bp)
+Top Length: 302  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 302 out of 533 bases)
+		Alignment: 454815 455116 | 1 302 | 302 302 | 100.0 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_29057
+		Unaligned bases: 303 to 533 (231)
+
+CONTIG: scaffold_29483 (523bp)
+Top Length: 523  Top ID: 100.0
+		One align captures most of this contig: 469387 469909 | 1 523 | 523 523 | 100.0 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_29483
+
+CONTIG: scaffold_30334 (504bp)
+Top Length: 504  Top ID: 99.6
+		One align captures most of this contig: 455952 456454 | 1 504 | 503 504 | 99.6 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_30334
+
+CONTIG: scaffold_30524 (500bp)
+Top Length: 233  Top ID: 98.71
+		This contig is partially unaligned. (Aligned 233 out of 500 bases)
+		Alignment: 14866 15098 | 1 233 | 233 233 | 98.71 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_30524
+		Unaligned bases: 234 to 500 (267)
+
+CONTIG: scaffold_30997 (827bp)
+Top Length: 827  Top ID: 98.8
+		One align captures most of this contig: 490508 491339 | 827 1 | 832 827 | 98.8 | Coprococcus_comes_gi_225594899_ref_NZ_ scaffold_30997
+
+CONTIG: scaffold_2813 (3230bp)
+Top Length: 312  Top ID: 97.76
+		This contig is partially unaligned. (Aligned 312 out of 3230 bases)
+		Alignment: 102359 102670 | 2337 2648 | 312 312 | 97.76 | Coprococcus_comes_gi_225594903_ref_NZ_ scaffold_2813
+		Unaligned bases: 1 to 2336 (2336)
+		Unaligned bases: 2649 to 3230 (582)
+
+CONTIG: scaffold_26354 (606bp)
+Top Length: 606  Top ID: 98.51
+		One align captures most of this contig: 101250 101855 | 1 606 | 606 606 | 98.51 | Coprococcus_comes_gi_225594903_ref_NZ_ scaffold_26354
+
+CONTIG: scaffold_27865 (570bp)
+Top Length: 570  Top ID: 98.42
+		One align captures most of this contig: 82433 83002 | 1 570 | 570 570 | 98.42 | Coprococcus_comes_gi_225594903_ref_NZ_ scaffold_27865
+
+CONTIG: scaffold_29276 (528bp)
+Top Length: 528  Top ID: 98.86
+		One align captures most of this contig: 50192 50719 | 1 528 | 528 528 | 98.86 | Coprococcus_comes_gi_225594903_ref_NZ_ scaffold_29276
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Coprococcus_comes/contigs_reports/nucmer_output/IDBA_UD.used_snps
+	Reference Coprococcus_comes_gi_225594901_ref_NZ_: 7 total alignments. 1 total regions.
+		Region: 1 to 39677 (39677 bp)
+			START in gap: 1 to 9350 (9349 bp)
+			Align 1: 9350 10005 scaffold_24327 647 1
+				Gap between this and next alignment: 10005 to 18919 (8913 bp)
+				Next Alignment: 18919 19868 scaffold_14883 1 950
+
+			Align 2: 18919 19868 scaffold_14883 1 950
+				Gap between this and next alignment: 19868 to 26027 (6158 bp)
+				Next Alignment: 26027 26202 scaffold_14953 1 176
+
+			Align 3: 26027 26202 scaffold_14953 1 176
+				Gap between this and next alignment: 26202 to 32862 (6659 bp)
+				Next Alignment: 32862 32998 scaffold_4362 137 1
+
+			Align 4: 32862 32998 scaffold_4362 137 1
+				Gap between this and next alignment: 32998 to 33704 (705 bp)
+				Next Alignment: 33704 34490 scaffold_18990 1 787
+
+			Align 5: 33704 34490 scaffold_18990 1 787
+				Gap between this and next alignment: 34490 to 36798 (2307 bp)
+				Next Alignment: 36798 37356 scaffold_23234 1 559
+
+			Align 6: 36798 37356 scaffold_23234 1 559
+				Gap between this and next alignment: 37356 to 38415 (1058 bp)
+				Next Alignment: 38415 38747 scaffold_24351 314 646
+
+			Align 7: 38415 38747 scaffold_24351 314 646
+			END in gap: 38747 to 39677 (930 bp)
+
+	Reference Coprococcus_comes_gi_225594900_ref_NZ_: 57 total alignments. 1 total regions.
+		Region: 1 to 304863 (304863 bp)
+			START in gap: 1 to 4269 (4268 bp)
+			Align 1: 4269 5239 scaffold_14490 971 1
+				Gap between this and next alignment: 5239 to 21116 (15876 bp)
+				Next Alignment: 21116 21861 scaffold_20347 1 746
+
+			Align 2: 21116 21861 scaffold_20347 1 746
+				Gap between this and next alignment: 21861 to 23970 (2108 bp)
+				Next Alignment: 23970 25204 scaffold_10681 1235 1
+
+			Align 3: 23970 25204 scaffold_10681 1235 1
+				Gap between this and next alignment: 25204 to 26016 (811 bp)
+				Next Alignment: 26016 26148 scaffold_21617 534 404
+
+			Align 4: 26016 26148 scaffold_21617 534 404
+				Gap between this and next alignment: 26148 to 26255 (106 bp)
+				Next Alignment: 26255 26440 scaffold_6616 1 186
+
+			Align 5: 26255 26440 scaffold_6616 1 186
+				Gap between this and next alignment: 26440 to 26572 (131 bp)
+				Next Alignment: 26572 27510 scaffold_15085 1 939
+
+			Align 6: 26572 27510 scaffold_15085 1 939
+				Gap between this and next alignment: 27510 to 28696 (1185 bp)
+				Next Alignment: 28696 29389 scaffold_22193 695 1
+
+			Align 7: 28696 29389 scaffold_22193 695 1
+				Gap between this and next alignment: 29389 to 37546 (8156 bp)
+				Next Alignment: 37546 38231 scaffold_22524 687 1
+
+			Align 8: 37546 38231 scaffold_22524 687 1
+				Gap between this and next alignment: 38231 to 41180 (2948 bp)
+				Next Alignment: 41180 41695 scaffold_29805 1 516
+
+			Align 9: 41180 41695 scaffold_29805 1 516
+				Gap between this and next alignment: 41695 to 44648 (2952 bp)
+				Next Alignment: 44648 45327 scaffold_22811 679 1
+
+			Align 10: 44648 45327 scaffold_22811 679 1
+				Gap between this and next alignment: 45327 to 51167 (5839 bp)
+				Next Alignment: 51167 51753 scaffold_27320 586 1
+
+			Align 11: 51167 51753 scaffold_27320 586 1
+				Gap between this and next alignment: 51753 to 58809 (7055 bp)
+				Next Alignment: 58809 58882 scaffold_31 41818 41745
+
+			Align 12: 58809 58882 scaffold_31 41818 41745
+				Gap between this and next alignment: 58882 to 60646 (1763 bp)
+				Next Alignment: 60646 61151 scaffold_30198 507 1
+
+			Align 13: 60646 61151 scaffold_30198 507 1
+				Gap between this and next alignment: 61151 to 61338 (186 bp)
+				Next Alignment: 61338 61435 scaffold_21574 98 1
+
+			Align 14: 61338 61435 scaffold_21574 98 1
+				Gap between this and next alignment: 61435 to 61497 (61 bp)
+				Next Alignment: 61497 61920 scaffold_26650 1 424
+
+			Align 15: 61497 61920 scaffold_26650 1 424
+				Gap between this and next alignment: 61920 to 64051 (2130 bp)
+				Next Alignment: 64051 65791 scaffold_2541 1741 1
+
+			Align 16: 64051 65791 scaffold_2541 1741 1
+				Gap between this and next alignment: 65791 to 69683 (3891 bp)
+				Next Alignment: 69683 69768 scaffold_31 21564 21479
+
+			Align 17: 69683 69768 scaffold_31 21564 21479
+				The next alignment (69683 69768 scaffold_43 94273 94358) is redundant. Skipping.
+				Gap between this and next alignment: 69768 to 72010 (2241 bp)
+				Next Alignment: 72010 72152 scaffold_7833 1548 1406
+
+			Align 19: 72010 72152 scaffold_7833 1548 1406
+				Gap between this and next alignment: 72152 to 73909 (1756 bp)
+				Next Alignment: 73909 74827 scaffold_15508 1 916
+
+			Align 20: 73909 74827 scaffold_15508 1 916
+				Gap between this and next alignment: 74827 to 80628 (5800 bp)
+				Next Alignment: 80628 81276 scaffold_23601 649 1
+
+			Align 21: 80628 81276 scaffold_23601 649 1
+				Gap between this and next alignment: 81276 to 90063 (8786 bp)
+				Next Alignment: 90063 90850 scaffold_14018 998 211
+
+			Align 22: 90063 90850 scaffold_14018 998 211
+				Gap between this and next alignment: 90850 to 90872 (21 bp)
+				Next Alignment: 90872 91081 scaffold_14018 1 210
+
+			Align 23: 90872 91081 scaffold_14018 1 210
+				Gap between this and next alignment: 91081 to 93897 (2815 bp)
+				Next Alignment: 93897 95100 scaffold_11047 1206 1
+
+			Align 24: 93897 95100 scaffold_11047 1206 1
+				Gap between this and next alignment: 95100 to 99795 (4694 bp)
+				Next Alignment: 99795 100430 scaffold_37930 1016 389
+
+			Align 25: 99795 100430 scaffold_37930 1016 389
+				Gap between this and next alignment: 100430 to 100440 (9 bp)
+				Next Alignment: 100440 100585 scaffold_37930 239 94
+
+			Align 26: 100440 100585 scaffold_37930 239 94
+				Gap between this and next alignment: 100585 to 111392 (10806 bp)
+				Next Alignment: 111392 112043 scaffold_24095 1 652
+
+			Align 27: 111392 112043 scaffold_24095 1 652
+				Gap between this and next alignment: 112043 to 112727 (683 bp)
+				Next Alignment: 112727 113342 scaffold_25845 616 1
+
+			Align 28: 112727 113342 scaffold_25845 616 1
+				Gap between this and next alignment: 113342 to 121085 (7742 bp)
+				Next Alignment: 121085 121725 scaffold_24369 1 641
+
+			Align 29: 121085 121725 scaffold_24369 1 641
+				Gap between this and next alignment: 121725 to 121729 (3 bp)
+				Next Alignment: 121729 122256 scaffold_29285 1 528
+
+			Align 30: 121729 122256 scaffold_29285 1 528
+				Gap between this and next alignment: 122256 to 124062 (1805 bp)
+				Next Alignment: 124062 124976 scaffold_15560 915 1
+
+			Align 31: 124062 124976 scaffold_15560 915 1
+				Gap between this and next alignment: 124976 to 128643 (3666 bp)
+				Next Alignment: 128643 129479 scaffold_17479 837 1
+
+			Align 32: 128643 129479 scaffold_17479 837 1
+				Gap between this and next alignment: 129479 to 148137 (18657 bp)
+				Next Alignment: 148137 148438 scaffold_4778 302 1
+
+			Align 33: 148137 148438 scaffold_4778 302 1
+				Gap between this and next alignment: 148438 to 155094 (6655 bp)
+				Next Alignment: 155094 155707 scaffold_25541 7 622
+
+			Align 34: 155094 155707 scaffold_25541 7 622
+				Negative gap (overlap) between this and next alignment: 155707 to 155699 (-8 bp)
+				Next Alignment: 155699 162127 scaffold_1422 206 6629
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 206 to 215.
+			Align 35: 155708 162127 scaffold_1422 215 6629
+				Gap between this and next alignment: 162127 to 167887 (5759 bp)
+				Next Alignment: 167887 168259 scaffold_28476 178 550
+
+			Align 36: 167887 168259 scaffold_28476 178 550
+				Gap between this and next alignment: 168259 to 191525 (23265 bp)
+				Next Alignment: 191525 191703 scaffold_17676 2 180
+
+			Align 37: 191525 191703 scaffold_17676 2 180
+				Gap between this and next alignment: 191703 to 198368 (6664 bp)
+				Next Alignment: 198368 199146 scaffold_19152 782 1
+
+			Align 38: 198368 199146 scaffold_19152 782 1
+				Gap between this and next alignment: 199146 to 200551 (1404 bp)
+				Next Alignment: 200551 201397 scaffold_16475 874 28
+
+			Align 39: 200551 201397 scaffold_16475 874 28
+				Gap between this and next alignment: 201397 to 203978 (2580 bp)
+				Next Alignment: 203978 204093 scaffold_12655 1542 1657
+
+			Align 40: 203978 204093 scaffold_12655 1542 1657
+				Gap between this and next alignment: 204093 to 207410 (3316 bp)
+				Next Alignment: 207410 207989 scaffold_27525 1 580
+
+			Align 41: 207410 207989 scaffold_27525 1 580
+				Gap between this and next alignment: 207989 to 209864 (1874 bp)
+				Next Alignment: 209864 209970 scaffold_5083 107 1
+
+			Align 42: 209864 209970 scaffold_5083 107 1
+				Gap between this and next alignment: 209970 to 214051 (4080 bp)
+				Next Alignment: 214051 215287 scaffold_20885 1231 1
+
+			Align 43: 214051 215287 scaffold_20885 1231 1
+				Gap between this and next alignment: 215287 to 222355 (7067 bp)
+				Next Alignment: 222355 222854 scaffold_28874 501 1
+
+			Align 44: 222355 222854 scaffold_28874 501 1
+				Gap between this and next alignment: 222854 to 226416 (3561 bp)
+				Next Alignment: 226416 227047 scaffold_25016 1 632
+
+			Align 45: 226416 227047 scaffold_25016 1 632
+				Gap between this and next alignment: 227047 to 243526 (16478 bp)
+				Next Alignment: 243526 243637 scaffold_1366 112 1
+
+			Align 46: 243526 243637 scaffold_1366 112 1
+				Gap between this and next alignment: 243637 to 244007 (369 bp)
+				Next Alignment: 244007 244758 scaffold_34745 752 1
+
+			Align 47: 244007 244758 scaffold_34745 752 1
+				Gap between this and next alignment: 244758 to 254700 (9941 bp)
+				Next Alignment: 254700 256496 scaffold_2295 1 1797
+
+			Align 48: 254700 256496 scaffold_2295 1 1797
+				Negative gap (overlap) between this and next alignment: 256496 to 256495 (-1 bp)
+				Next Alignment: 256495 260011 scaffold_1213 881 4392
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 881 to 883.
+			Align 49: 256497 260011 scaffold_1213 883 4392
+				Gap between this and next alignment: 260011 to 260355 (343 bp)
+				Next Alignment: 260355 266716 scaffold_1213 4400 10762
+
+			Align 50: 260355 266716 scaffold_1213 4400 10762
+				Gap between this and next alignment: 266716 to 275670 (8953 bp)
+				Next Alignment: 275670 277150 scaffold_1213 10763 12243
+
+			Align 51: 275670 277150 scaffold_1213 10763 12243
+				Gap between this and next alignment: 277150 to 277299 (148 bp)
+				Next Alignment: 277299 280569 scaffold_4240 1 3200
+
+			Align 52: 277299 280569 scaffold_4240 1 3200
+				Gap between this and next alignment: 280569 to 295333 (14763 bp)
+				Next Alignment: 295333 295837 scaffold_1226 505 1
+
+			Align 53: 295333 295837 scaffold_1226 505 1
+				Negative gap (overlap) between this and next alignment: 295837 to 295741 (-96 bp)
+				Next Alignment: 295741 297120 scaffold_9249 3 1382
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 3 to 100.
+			Align 54: 295838 297120 scaffold_9249 100 1382
+				Gap between this and next alignment: 297120 to 297674 (553 bp)
+				Next Alignment: 297674 297795 scaffold_2423 1 122
+
+			Align 55: 297674 297795 scaffold_2423 1 122
+				Gap between this and next alignment: 297795 to 298382 (586 bp)
+				Next Alignment: 298382 298478 scaffold_2423 3522 3618
+
+			Align 56: 298382 298478 scaffold_2423 3522 3618
+				Gap between this and next alignment: 298478 to 298667 (188 bp)
+				Next Alignment: 298667 299729 scaffold_12949 1 1063
+
+			Align 57: 298667 299729 scaffold_12949 1 1063
+			END in gap: 299729 to 304863 (5134 bp)
+
+	Reference Coprococcus_comes_gi_225594898_ref_NZ_: 48 total alignments. 1 total regions.
+		Region: 1 to 250186 (250186 bp)
+			START in gap: 1 to 33 (32 bp)
+			Align 1: 33 114 scaffold_18471 489 408
+				Negative gap (overlap) between this and next alignment: 114 to 33 (-81 bp)
+				Next Alignment: 33 117 scaffold_30542 304 386
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 304 to 384.
+			Align 2: 115 117 scaffold_30542 384 386
+				The next alignment (37 115 scaffold_405 14 92) is redundant. Skipping.
+				Gap between this and next alignment: 117 to 4011 (3893 bp)
+				Next Alignment: 4011 4600 scaffold_27124 590 1
+
+			Align 4: 4011 4600 scaffold_27124 590 1
+				Gap between this and next alignment: 4600 to 7849 (3248 bp)
+				Next Alignment: 7849 8138 scaffold_19811 473 762
+
+			Align 5: 7849 8138 scaffold_19811 473 762
+				Gap between this and next alignment: 8138 to 20198 (12059 bp)
+				Next Alignment: 20198 20805 scaffold_25860 9 616
+
+			Align 6: 20198 20805 scaffold_25860 9 616
+				Gap between this and next alignment: 20805 to 25846 (5040 bp)
+				Next Alignment: 25846 26455 scaffold_4435 2834 2224
+
+			Align 7: 25846 26455 scaffold_4435 2834 2224
+				Gap between this and next alignment: 26455 to 28398 (1942 bp)
+				Next Alignment: 28398 28598 scaffold_4435 201 1
+
+			Align 8: 28398 28598 scaffold_4435 201 1
+				Gap between this and next alignment: 28598 to 45471 (16872 bp)
+				Next Alignment: 45471 45583 scaffold_27176 113 1
+
+			Align 9: 45471 45583 scaffold_27176 113 1
+				Gap between this and next alignment: 45583 to 46127 (543 bp)
+				Next Alignment: 46127 46214 scaffold_14884 2387 2300
+
+			Align 10: 46127 46214 scaffold_14884 2387 2300
+				Gap between this and next alignment: 46214 to 47585 (1370 bp)
+				Next Alignment: 47585 47965 scaffold_27227 588 209
+
+			Align 11: 47585 47965 scaffold_27227 588 209
+				Gap between this and next alignment: 47965 to 49618 (1652 bp)
+				Next Alignment: 49618 50461 scaffold_31628 848 1
+
+			Align 12: 49618 50461 scaffold_31628 848 1
+				Gap between this and next alignment: 50461 to 50650 (188 bp)
+				Next Alignment: 50650 51042 scaffold_29678 127 519
+
+			Align 13: 50650 51042 scaffold_29678 127 519
+				Gap between this and next alignment: 51042 to 56631 (5588 bp)
+				Next Alignment: 56631 57464 scaffold_17581 833 1
+
+			Align 14: 56631 57464 scaffold_17581 833 1
+				Gap between this and next alignment: 57464 to 75631 (18166 bp)
+				Next Alignment: 75631 76134 scaffold_30362 504 1
+
+			Align 15: 75631 76134 scaffold_30362 504 1
+				Gap between this and next alignment: 76134 to 77852 (1717 bp)
+				Next Alignment: 77852 78599 scaffold_20275 1 748
+
+			Align 16: 77852 78599 scaffold_20275 1 748
+				Gap between this and next alignment: 78599 to 100127 (21527 bp)
+				Next Alignment: 100127 101093 scaffold_23839 961 1
+
+			Align 17: 100127 101093 scaffold_23839 961 1
+				Gap between this and next alignment: 101093 to 101457 (363 bp)
+				Next Alignment: 101457 102281 scaffold_17783 1 826
+
+			Align 18: 101457 102281 scaffold_17783 1 826
+				Gap between this and next alignment: 102281 to 122450 (20168 bp)
+				Next Alignment: 122450 123070 scaffold_25428 1328 708
+
+			Align 19: 122450 123070 scaffold_25428 1328 708
+				Gap between this and next alignment: 123070 to 123220 (149 bp)
+				Next Alignment: 123220 123784 scaffold_25428 565 1
+
+			Align 20: 123220 123784 scaffold_25428 565 1
+				Gap between this and next alignment: 123784 to 136130 (12345 bp)
+				Next Alignment: 136130 136784 scaffold_23879 656 1
+
+			Align 21: 136130 136784 scaffold_23879 656 1
+				Gap between this and next alignment: 136784 to 137258 (473 bp)
+				Next Alignment: 137258 138012 scaffold_19952 758 3
+
+			Align 22: 137258 138012 scaffold_19952 758 3
+				Gap between this and next alignment: 138012 to 140751 (2738 bp)
+				Next Alignment: 140751 141369 scaffold_25539 4 622
+
+			Align 23: 140751 141369 scaffold_25539 4 622
+				Gap between this and next alignment: 141369 to 142397 (1027 bp)
+				Next Alignment: 142397 142942 scaffold_28613 546 1
+
+			Align 24: 142397 142942 scaffold_28613 546 1
+				Gap between this and next alignment: 142942 to 152263 (9320 bp)
+				Next Alignment: 152263 153996 scaffold_8654 1739 1
+
+			Align 25: 152263 153996 scaffold_8654 1739 1
+				Gap between this and next alignment: 153996 to 154352 (355 bp)
+				Next Alignment: 154352 155826 scaffold_8390 1 1473
+
+			Align 26: 154352 155826 scaffold_8390 1 1473
+				Gap between this and next alignment: 155826 to 171013 (15186 bp)
+				Next Alignment: 171013 171738 scaffold_20001 754 28
+
+			Align 27: 171013 171738 scaffold_20001 754 28
+				Gap between this and next alignment: 171738 to 172542 (803 bp)
+				Next Alignment: 172542 172885 scaffold_17181 344 1
+
+			Align 28: 172542 172885 scaffold_17181 344 1
+				Gap between this and next alignment: 172885 to 173111 (225 bp)
+				Next Alignment: 173111 173553 scaffold_1682 828 1271
+
+			Align 29: 173111 173553 scaffold_1682 828 1271
+				Gap between this and next alignment: 173553 to 195298 (21744 bp)
+				Next Alignment: 195298 195496 scaffold_26577 404 602
+
+			Align 30: 195298 195496 scaffold_26577 404 602
+				Gap between this and next alignment: 195496 to 204260 (8763 bp)
+				Next Alignment: 204260 205172 scaffold_15589 1 913
+
+			Align 31: 204260 205172 scaffold_15589 1 913
+				Gap between this and next alignment: 205172 to 206569 (1396 bp)
+				Next Alignment: 206569 206691 scaffold_21525 971 852
+
+			Align 32: 206569 206691 scaffold_21525 971 852
+				Gap between this and next alignment: 206691 to 206888 (196 bp)
+				Next Alignment: 206888 207103 scaffold_18771 131 346
+
+			Align 33: 206888 207103 scaffold_18771 131 346
+				Gap between this and next alignment: 207103 to 207154 (50 bp)
+				Next Alignment: 207154 207781 scaffold_25285 627 1
+
+			Align 34: 207154 207781 scaffold_25285 627 1
+				Gap between this and next alignment: 207781 to 208869 (1087 bp)
+				Next Alignment: 208869 209390 scaffold_29552 522 1
+
+			Align 35: 208869 209390 scaffold_29552 522 1
+				Gap between this and next alignment: 209390 to 210440 (1049 bp)
+				Next Alignment: 210440 211397 scaffold_14727 958 1
+
+			Align 36: 210440 211397 scaffold_14727 958 1
+				Gap between this and next alignment: 211397 to 217087 (5689 bp)
+				Next Alignment: 217087 217278 scaffold_10109 1866 2057
+
+			Align 37: 217087 217278 scaffold_10109 1866 2057
+				Gap between this and next alignment: 217278 to 221377 (4098 bp)
+				Next Alignment: 221377 222089 scaffold_21513 713 1
+
+			Align 38: 221377 222089 scaffold_21513 713 1
+				Gap between this and next alignment: 222089 to 223762 (1672 bp)
+				Next Alignment: 223762 223889 scaffold_37930 240 367
+
+			Align 39: 223762 223889 scaffold_37930 240 367
+				Gap between this and next alignment: 223889 to 224604 (714 bp)
+				Next Alignment: 224604 225460 scaffold_16931 1 857
+
+			Align 40: 224604 225460 scaffold_16931 1 857
+				Gap between this and next alignment: 225460 to 228883 (3422 bp)
+				Next Alignment: 228883 229875 scaffold_14118 993 1
+
+			Align 41: 228883 229875 scaffold_14118 993 1
+				Gap between this and next alignment: 229875 to 231864 (1988 bp)
+				Next Alignment: 231864 232569 scaffold_21770 706 1
+
+			Align 42: 231864 232569 scaffold_21770 706 1
+				Gap between this and next alignment: 232569 to 234789 (2219 bp)
+				Next Alignment: 234789 235541 scaffold_20091 1 753
+
+			Align 43: 234789 235541 scaffold_20091 1 753
+				Gap between this and next alignment: 235541 to 239019 (3477 bp)
+				Next Alignment: 239019 239201 scaffold_22338 507 689
+
+			Align 44: 239019 239201 scaffold_22338 507 689
+				Gap between this and next alignment: 239201 to 239291 (89 bp)
+				Next Alignment: 239291 239547 scaffold_22338 802 1058
+
+			Align 45: 239291 239547 scaffold_22338 802 1058
+				Gap between this and next alignment: 239547 to 241141 (1593 bp)
+				Next Alignment: 241141 241401 scaffold_21075 261 1
+
+			Align 46: 241141 241401 scaffold_21075 261 1
+				Gap between this and next alignment: 241401 to 243221 (1819 bp)
+				Next Alignment: 243221 243333 scaffold_28617 425 537
+
+			Align 47: 243221 243333 scaffold_28617 425 537
+				Gap between this and next alignment: 243333 to 248950 (5616 bp)
+				Next Alignment: 248950 250144 scaffold_10543 1194 1
+
+			Align 48: 248950 250144 scaffold_10543 1194 1
+			END in gap: 250144 to 250186 (42 bp)
+
+	Reference Coprococcus_comes_gi_225594904_ref_NZ_: 32 total alignments. 1 total regions.
+		Region: 1 to 307897 (307897 bp)
+			START in gap: 1 to 9675 (9674 bp)
+			Align 1: 9675 10314 scaffold_24627 640 1
+				Gap between this and next alignment: 10314 to 38233 (27918 bp)
+				Next Alignment: 38233 38339 scaffold_20643 1 107
+
+			Align 2: 38233 38339 scaffold_20643 1 107
+				Gap between this and next alignment: 38339 to 38376 (36 bp)
+				Next Alignment: 38376 39006 scaffold_20643 108 738
+
+			Align 3: 38376 39006 scaffold_20643 108 738
+				Gap between this and next alignment: 39006 to 63404 (24397 bp)
+				Next Alignment: 63404 63990 scaffold_26978 1 594
+
+			Align 4: 63404 63990 scaffold_26978 1 594
+				Gap between this and next alignment: 63990 to 71775 (7784 bp)
+				Next Alignment: 71775 72701 scaffold_25282 1 922
+
+			Align 5: 71775 72701 scaffold_25282 1 922
+				Gap between this and next alignment: 72701 to 88873 (16171 bp)
+				Next Alignment: 88873 89034 scaffold_8691 163 1
+
+			Align 6: 88873 89034 scaffold_8691 163 1
+				Gap between this and next alignment: 89034 to 100620 (11585 bp)
+				Next Alignment: 100620 101861 scaffold_10534 1 1242
+
+			Align 7: 100620 101861 scaffold_10534 1 1242
+				Gap between this and next alignment: 101861 to 108555 (6693 bp)
+				Next Alignment: 108555 109108 scaffold_28230 1 556
+
+			Align 8: 108555 109108 scaffold_28230 1 556
+				Gap between this and next alignment: 109108 to 114022 (4913 bp)
+				Next Alignment: 114022 114595 scaffold_27747 574 1
+
+			Align 9: 114022 114595 scaffold_27747 574 1
+				Gap between this and next alignment: 114595 to 135111 (20515 bp)
+				Next Alignment: 135111 135698 scaffold_27223 1 588
+
+			Align 10: 135111 135698 scaffold_27223 1 588
+				Gap between this and next alignment: 135698 to 159452 (23753 bp)
+				Next Alignment: 159452 159533 scaffold_22752 909 990
+
+			Align 11: 159452 159533 scaffold_22752 909 990
+				Gap between this and next alignment: 159533 to 183620 (24086 bp)
+				Next Alignment: 183620 183787 scaffold_6650 1755 1588
+
+			Align 12: 183620 183787 scaffold_6650 1755 1588
+				Gap between this and next alignment: 183787 to 190201 (6413 bp)
+				Next Alignment: 190201 190332 scaffold_12349 1 132
+
+			Align 13: 190201 190332 scaffold_12349 1 132
+				Gap between this and next alignment: 190332 to 193912 (3579 bp)
+				Next Alignment: 193912 195003 scaffold_12537 1 1092
+
+			Align 14: 193912 195003 scaffold_12537 1 1092
+				Negative gap (overlap) between this and next alignment: 195003 to 194905 (-98 bp)
+				Next Alignment: 194905 195486 scaffold_32993 1 580
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 100.
+			Align 15: 195004 195486 scaffold_32993 100 580
+				Gap between this and next alignment: 195486 to 197740 (2253 bp)
+				Next Alignment: 197740 197830 scaffold_15237 1134 1224
+
+			Align 16: 197740 197830 scaffold_15237 1134 1224
+				Gap between this and next alignment: 197830 to 198318 (487 bp)
+				Next Alignment: 198318 200265 scaffold_5680 7 1954
+
+			Align 17: 198318 200265 scaffold_5680 7 1954
+				Gap between this and next alignment: 200265 to 200310 (44 bp)
+				Next Alignment: 200310 201012 scaffold_21898 1 703
+
+			Align 18: 200310 201012 scaffold_21898 1 703
+				Gap between this and next alignment: 201012 to 206817 (5804 bp)
+				Next Alignment: 206817 207077 scaffold_12179 1117 857
+
+			Align 19: 206817 207077 scaffold_12179 1117 857
+				Gap between this and next alignment: 207077 to 209022 (1944 bp)
+				Next Alignment: 209022 210166 scaffold_21462 1 1134
+
+			Align 20: 209022 210166 scaffold_21462 1 1134
+				Gap between this and next alignment: 210166 to 211134 (967 bp)
+				Next Alignment: 211134 211255 scaffold_27599 423 544
+
+			Align 21: 211134 211255 scaffold_27599 423 544
+				Gap between this and next alignment: 211255 to 226469 (15213 bp)
+				Next Alignment: 226469 226732 scaffold_28600 546 283
+
+			Align 22: 226469 226732 scaffold_28600 546 283
+				Gap between this and next alignment: 226732 to 226766 (33 bp)
+				Next Alignment: 226766 227047 scaffold_28600 1 282
+
+			Align 23: 226766 227047 scaffold_28600 1 282
+				Gap between this and next alignment: 227047 to 258068 (31020 bp)
+				Next Alignment: 258068 258723 scaffold_23883 656 1
+
+			Align 24: 258068 258723 scaffold_23883 656 1
+				Gap between this and next alignment: 258723 to 259464 (740 bp)
+				Next Alignment: 259464 259788 scaffold_28232 224 548
+
+			Align 25: 259464 259788 scaffold_28232 224 548
+				Gap between this and next alignment: 259788 to 261948 (2159 bp)
+				Next Alignment: 261948 262562 scaffold_25973 614 1
+
+			Align 26: 261948 262562 scaffold_25973 614 1
+				Gap between this and next alignment: 262562 to 279988 (17425 bp)
+				Next Alignment: 279988 280636 scaffold_24229 649 1
+
+			Align 27: 279988 280636 scaffold_24229 649 1
+				Gap between this and next alignment: 280636 to 288966 (8329 bp)
+				Next Alignment: 288966 289045 scaffold_43 94455 94376
+
+			Align 28: 288966 289045 scaffold_43 94455 94376
+				Gap between this and next alignment: 289045 to 289390 (344 bp)
+				Next Alignment: 289390 292846 scaffold_6211 3462 1
+
+			Align 29: 289390 292846 scaffold_6211 3462 1
+				Gap between this and next alignment: 292846 to 294129 (1282 bp)
+				Next Alignment: 294129 296981 scaffold_3117 2945 92
+
+			Align 30: 294129 296981 scaffold_3117 2945 92
+				Gap between this and next alignment: 296981 to 301370 (4388 bp)
+				Next Alignment: 301370 302643 scaffold_12725 1 1276
+
+			Align 31: 301370 302643 scaffold_12725 1 1276
+				Gap between this and next alignment: 302643 to 305159 (2515 bp)
+				Next Alignment: 305159 305731 scaffold_27827 1 571
+
+			Align 32: 305159 305731 scaffold_27827 1 571
+			END in gap: 305731 to 307897 (2166 bp)
+
+ERROR: Reference Coprococcus_comes_gi_225594897_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Coprococcus_comes_gi_225594901_ref_NZ_', 'Coprococcus_comes_gi_225594900_ref_NZ_', 'Coprococcus_comes_gi_225594898_ref_NZ_', 'Coprococcus_comes_gi_225594904_ref_NZ_', 'Coprococcus_comes_gi_225594908_ref_NZ_', 'Coprococcus_comes_gi_225594906_ref_NZ_', 'Coprococcus_comes_gi_225594905_ref_NZ_', 'Coprococcus_comes_gi_225594903_ref_NZ_', 'Coprococcus_comes_gi_225594902_ref_NZ_', 'Coprococcus_comes_gi_225594899_ref_NZ_']
+	Reference Coprococcus_comes_gi_225594908_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 649 (649 bp)
+			START in gap: 1 to 330 (329 bp)
+			Align 1: 330 405 scaffold_321 2039 2114
+				Gap between this and next alignment: 405 to 428 (22 bp)
+				Next Alignment: 428 518 scaffold_27227 116 208
+
+			Align 2: 428 518 scaffold_27227 116 208
+			END in gap: 518 to 649 (131 bp)
+
+	Reference Coprococcus_comes_gi_225594906_ref_NZ_: 90 total alignments. 1 total regions.
+		Region: 1 to 891565 (891565 bp)
+			START in gap: 1 to 7229 (7228 bp)
+			Align 1: 7229 8375 scaffold_10503 1162 17
+				Negative gap (overlap) between this and next alignment: 8375 to 8368 (-7 bp)
+				Next Alignment: 8368 9189 scaffold_870 10743 9922
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 10743 to 10735.
+			Align 2: 8376 9189 scaffold_870 10735 9922
+				Negative gap (overlap) between this and next alignment: 9189 to 9169 (-20 bp)
+				Next Alignment: 9169 10364 scaffold_1769 4582 3386
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 4582 to 4560.
+			Align 3: 9190 10364 scaffold_1769 4560 3386
+				Negative gap (overlap) between this and next alignment: 10364 to 10359 (-5 bp)
+				Next Alignment: 10359 10595 scaffold_83 2073 2309
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 2073 to 2079.
+			Align 4: 10365 10595 scaffold_83 2079 2309
+				Gap between this and next alignment: 10595 to 11489 (893 bp)
+				Next Alignment: 11489 11587 scaffold_42083 569 471
+
+			Align 5: 11489 11587 scaffold_42083 569 471
+				Gap between this and next alignment: 11587 to 11612 (24 bp)
+				Next Alignment: 11612 12008 scaffold_1169 4845 4449
+
+			Align 6: 11612 12008 scaffold_1169 4845 4449
+				Gap between this and next alignment: 12008 to 13140 (1131 bp)
+				Next Alignment: 13140 13348 scaffold_13446 209 1
+
+			Align 7: 13140 13348 scaffold_13446 209 1
+				Gap between this and next alignment: 13348 to 16987 (3638 bp)
+				Next Alignment: 16987 18387 scaffold_9096 1 1401
+
+			Align 8: 16987 18387 scaffold_9096 1 1401
+				Negative gap (overlap) between this and next alignment: 18387 to 18266 (-121 bp)
+				Next Alignment: 18266 18559 scaffold_7056 1 293
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 123.
+			Align 9: 18388 18559 scaffold_7056 123 293
+				Gap between this and next alignment: 18559 to 18578 (18 bp)
+				Next Alignment: 18578 21672 scaffold_2971 1 3096
+
+			Align 10: 18578 21672 scaffold_2971 1 3096
+				Negative gap (overlap) between this and next alignment: 21672 to 21605 (-67 bp)
+				Next Alignment: 21605 22518 scaffold_11881 913 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 913 to 845.
+			Align 11: 21673 22518 scaffold_11881 845 1
+				Gap between this and next alignment: 22518 to 24876 (2357 bp)
+				Next Alignment: 24876 25548 scaffold_24311 1 678
+
+			Align 12: 24876 25548 scaffold_24311 1 678
+				Gap between this and next alignment: 25548 to 34546 (8997 bp)
+				Next Alignment: 34546 66339 scaffold_302 33193 1400
+
+			Align 13: 34546 66339 scaffold_302 33193 1400
+				The next alignment (66066 66224 scaffold_7471 1457 1615) is redundant. Skipping.
+				Gap between this and next alignment: 66339 to 70488 (4148 bp)
+				Next Alignment: 70488 71810 scaffold_9801 1323 1
+
+			Align 15: 70488 71810 scaffold_9801 1323 1
+				Gap between this and next alignment: 71810 to 73240 (1429 bp)
+				Next Alignment: 73240 77512 scaffold_1604 5160 888
+
+			Align 16: 73240 77512 scaffold_1604 5160 888
+				Gap between this and next alignment: 77512 to 77517 (4 bp)
+				Next Alignment: 77517 78720 scaffold_302 1399 196
+
+			Align 17: 77517 78720 scaffold_302 1399 196
+				The next alignment (77909 78218 scaffold_13775 703 1012) is redundant. Skipping.
+				Negative gap (overlap) between this and next alignment: 78720 to 78588 (-132 bp)
+				Next Alignment: 78588 79276 scaffold_22490 688 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 688 to 555.
+			Align 19: 78721 79276 scaffold_22490 555 1
+				The next alignment (79082 79276 scaffold_302 195 1) is redundant. Skipping.
+				Negative gap (overlap) between this and next alignment: 79276 to 79226 (-50 bp)
+				Next Alignment: 79226 98846 scaffold_646 3 19619
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 3 to 54.
+			Align 21: 79277 98846 scaffold_646 54 19619
+				The next alignment (79226 79489 scaffold_4172 3231 2968) is redundant. Skipping.
+				Gap between this and next alignment: 98846 to 103402 (4555 bp)
+				Next Alignment: 103402 112286 scaffold_646 19620 28503
+
+			Align 23: 103402 112286 scaffold_646 19620 28503
+				Gap between this and next alignment: 112286 to 112475 (188 bp)
+				Next Alignment: 112475 116955 scaffold_1311 1 4480
+
+			Align 24: 112475 116955 scaffold_1311 1 4480
+				Gap between this and next alignment: 116955 to 117496 (540 bp)
+				Next Alignment: 117496 117919 scaffold_27966 566 144
+
+			Align 25: 117496 117919 scaffold_27966 566 144
+				Gap between this and next alignment: 117919 to 117978 (58 bp)
+				Next Alignment: 117978 120842 scaffold_1311 7198 10061
+
+			Align 26: 117978 120842 scaffold_1311 7198 10061
+				Negative gap (overlap) between this and next alignment: 120842 to 120824 (-18 bp)
+				Next Alignment: 120824 129025 scaffold_962 1 8200
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 20.
+			Align 27: 120843 129025 scaffold_962 20 8200
+				Gap between this and next alignment: 129025 to 139044 (10018 bp)
+				Next Alignment: 139044 139863 scaffold_35092 1 822
+
+			Align 28: 139044 139863 scaffold_35092 1 822
+				Gap between this and next alignment: 139863 to 163007 (23143 bp)
+				Next Alignment: 163007 163607 scaffold_26574 602 1
+
+			Align 29: 163007 163607 scaffold_26574 602 1
+				Gap between this and next alignment: 163607 to 164339 (731 bp)
+				Next Alignment: 164339 165174 scaffold_17491 1 836
+
+			Align 30: 164339 165174 scaffold_17491 1 836
+				Gap between this and next alignment: 165174 to 165448 (273 bp)
+				Next Alignment: 165448 166044 scaffold_26853 597 1
+
+			Align 31: 165448 166044 scaffold_26853 597 1
+				Gap between this and next alignment: 166044 to 166932 (887 bp)
+				Next Alignment: 166932 167936 scaffold_13921 1004 1
+
+			Align 32: 166932 167936 scaffold_13921 1004 1
+				Gap between this and next alignment: 167936 to 168920 (983 bp)
+				Next Alignment: 168920 169499 scaffold_27433 1 580
+
+			Align 33: 168920 169499 scaffold_27433 1 580
+				Gap between this and next alignment: 169499 to 171069 (1569 bp)
+				Next Alignment: 171069 171387 scaffold_26162 610 295
+
+			Align 34: 171069 171387 scaffold_26162 610 295
+				Gap between this and next alignment: 171387 to 176544 (5156 bp)
+				Next Alignment: 176544 177249 scaffold_21680 1 708
+
+			Align 35: 176544 177249 scaffold_21680 1 708
+				Gap between this and next alignment: 177249 to 177523 (273 bp)
+				Next Alignment: 177523 178110 scaffold_27237 1 588
+
+			Align 36: 177523 178110 scaffold_27237 1 588
+				Gap between this and next alignment: 178110 to 184241 (6130 bp)
+				Next Alignment: 184241 184934 scaffold_22268 693 1
+
+			Align 37: 184241 184934 scaffold_22268 693 1
+				Gap between this and next alignment: 184934 to 184946 (11 bp)
+				Next Alignment: 184946 185589 scaffold_24460 644 1
+
+			Align 38: 184946 185589 scaffold_24460 644 1
+				Gap between this and next alignment: 185589 to 206807 (21217 bp)
+				Next Alignment: 206807 207311 scaffold_10347 88 592
+
+			Align 39: 206807 207311 scaffold_10347 88 592
+				Gap between this and next alignment: 207311 to 211707 (4395 bp)
+				Next Alignment: 211707 212722 scaffold_13673 1 1016
+
+			Align 40: 211707 212722 scaffold_13673 1 1016
+				Gap between this and next alignment: 212722 to 215775 (3052 bp)
+				Next Alignment: 215775 216043 scaffold_28770 269 1
+
+			Align 41: 215775 216043 scaffold_28770 269 1
+				Gap between this and next alignment: 216043 to 218899 (2855 bp)
+				Next Alignment: 218899 219568 scaffold_23285 1 669
+
+			Align 42: 218899 219568 scaffold_23285 1 669
+				Gap between this and next alignment: 219568 to 222332 (2763 bp)
+				Next Alignment: 222332 222968 scaffold_24790 1 637
+
+			Align 43: 222332 222968 scaffold_24790 1 637
+				Gap between this and next alignment: 222968 to 226886 (3917 bp)
+				Next Alignment: 226886 226976 scaffold_11777 1057 1147
+
+			Align 44: 226886 226976 scaffold_11777 1057 1147
+				Gap between this and next alignment: 226976 to 227423 (446 bp)
+				Next Alignment: 227423 228430 scaffold_9064 1367 363
+
+			Align 45: 227423 228430 scaffold_9064 1367 363
+				Gap between this and next alignment: 228430 to 228662 (231 bp)
+				Next Alignment: 228662 232165 scaffold_2527 3505 1
+
+			Align 46: 228662 232165 scaffold_2527 3505 1
+				Gap between this and next alignment: 232165 to 232436 (270 bp)
+				Next Alignment: 232436 233399 scaffold_14629 963 1
+
+			Align 47: 232436 233399 scaffold_14629 963 1
+				Gap between this and next alignment: 233399 to 233754 (354 bp)
+				Next Alignment: 233754 234483 scaffold_3613 1 729
+
+			Align 48: 233754 234483 scaffold_3613 1 729
+				Gap between this and next alignment: 234483 to 235153 (669 bp)
+				Next Alignment: 235153 237586 scaffold_3887 26 2456
+
+			Align 49: 235153 237586 scaffold_3887 26 2456
+				Gap between this and next alignment: 237586 to 238178 (591 bp)
+				Next Alignment: 238178 240552 scaffold_4314 1 2374
+
+			Align 50: 238178 240552 scaffold_4314 1 2374
+				Gap between this and next alignment: 240552 to 240812 (259 bp)
+				Next Alignment: 240812 243261 scaffold_2422 1 2462
+
+			Align 51: 240812 243261 scaffold_2422 1 2462
+				Gap between this and next alignment: 243261 to 248523 (5261 bp)
+				Next Alignment: 248523 249255 scaffold_20786 733 1
+
+			Align 52: 248523 249255 scaffold_20786 733 1
+				Gap between this and next alignment: 249255 to 275000 (25744 bp)
+				Next Alignment: 275000 275517 scaffold_29700 518 1
+
+			Align 53: 275000 275517 scaffold_29700 518 1
+				Gap between this and next alignment: 275517 to 279063 (3545 bp)
+				Next Alignment: 279063 279189 scaffold_17968 127 1
+
+			Align 54: 279063 279189 scaffold_17968 127 1
+				Gap between this and next alignment: 279189 to 300506 (21316 bp)
+				Next Alignment: 300506 300814 scaffold_12526 350 42
+
+			Align 55: 300506 300814 scaffold_12526 350 42
+				Gap between this and next alignment: 300814 to 314208 (13393 bp)
+				Next Alignment: 314208 314549 scaffold_6414 342 1
+
+			Align 56: 314208 314549 scaffold_6414 342 1
+				Gap between this and next alignment: 314549 to 318115 (3565 bp)
+				Next Alignment: 318115 318706 scaffold_27069 1 592
+
+			Align 57: 318115 318706 scaffold_27069 1 592
+				Gap between this and next alignment: 318706 to 326136 (7429 bp)
+				Next Alignment: 326136 326834 scaffold_22164 696 1
+
+			Align 58: 326136 326834 scaffold_22164 696 1
+				Gap between this and next alignment: 326834 to 345098 (18263 bp)
+				Next Alignment: 345098 345247 scaffold_2067 4627 4481
+
+			Align 59: 345098 345247 scaffold_2067 4627 4481
+				Gap between this and next alignment: 345247 to 347579 (2331 bp)
+				Next Alignment: 347579 347739 scaffold_12551 1795 1955
+
+			Align 60: 347579 347739 scaffold_12551 1795 1955
+				Gap between this and next alignment: 347739 to 348601 (861 bp)
+				Next Alignment: 348601 349259 scaffold_23753 659 1
+
+			Align 61: 348601 349259 scaffold_23753 659 1
+				Gap between this and next alignment: 349259 to 389408 (40148 bp)
+				Next Alignment: 389408 390053 scaffold_24331 647 1
+
+			Align 62: 389408 390053 scaffold_24331 647 1
+				Gap between this and next alignment: 390053 to 394941 (4887 bp)
+				Next Alignment: 394941 395014 scaffold_439 23736 23809
+
+			Align 63: 394941 395014 scaffold_439 23736 23809
+				Gap between this and next alignment: 395014 to 398356 (3341 bp)
+				Next Alignment: 398356 398489 scaffold_36537 179 46
+
+			Align 64: 398356 398489 scaffold_36537 179 46
+				Gap between this and next alignment: 398489 to 454020 (55530 bp)
+				Next Alignment: 454020 454614 scaffold_26948 1 595
+
+			Align 65: 454020 454614 scaffold_26948 1 595
+				Gap between this and next alignment: 454614 to 454973 (358 bp)
+				Next Alignment: 454973 455538 scaffold_27980 566 1
+
+			Align 66: 454973 455538 scaffold_27980 566 1
+				Gap between this and next alignment: 455538 to 485831 (30292 bp)
+				Next Alignment: 485831 486362 scaffold_29153 1 531
+
+			Align 67: 485831 486362 scaffold_29153 1 531
+				Gap between this and next alignment: 486362 to 486427 (64 bp)
+				Next Alignment: 486427 486581 scaffold_20222 595 749
+
+			Align 68: 486427 486581 scaffold_20222 595 749
+				Gap between this and next alignment: 486581 to 486885 (303 bp)
+				Next Alignment: 486885 487180 scaffold_17330 841 546
+
+			Align 69: 486885 487180 scaffold_17330 841 546
+				Gap between this and next alignment: 487180 to 517881 (30700 bp)
+				Next Alignment: 517881 518091 scaffold_12849 171 381
+
+			Align 70: 517881 518091 scaffold_12849 171 381
+				Gap between this and next alignment: 518091 to 522750 (4658 bp)
+				Next Alignment: 522750 522846 scaffold_29432 97 1
+
+			Align 71: 522750 522846 scaffold_29432 97 1
+				Gap between this and next alignment: 522846 to 564390 (41543 bp)
+				Next Alignment: 564390 565047 scaffold_23796 1 658
+
+			Align 72: 564390 565047 scaffold_23796 1 658
+				Gap between this and next alignment: 565047 to 573157 (8109 bp)
+				Next Alignment: 573157 573503 scaffold_9864 968 1316
+
+			Align 73: 573157 573503 scaffold_9864 968 1316
+				Gap between this and next alignment: 573503 to 573517 (13 bp)
+				Next Alignment: 573517 573875 scaffold_5071 1101 1459
+
+			Align 74: 573517 573875 scaffold_5071 1101 1459
+				Negative gap (overlap) between this and next alignment: 573875 to 573871 (-4 bp)
+				Next Alignment: 573871 573969 scaffold_5071 1498 1596
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1498 to 1503.
+			Align 75: 573876 573969 scaffold_5071 1503 1596
+				Gap between this and next alignment: 573969 to 603252 (29282 bp)
+				Next Alignment: 603252 603851 scaffold_26698 1 600
+
+			Align 76: 603252 603851 scaffold_26698 1 600
+				Gap between this and next alignment: 603851 to 641692 (37840 bp)
+				Next Alignment: 641692 641946 scaffold_22515 687 433
+
+			Align 77: 641692 641946 scaffold_22515 687 433
+				Gap between this and next alignment: 641946 to 658565 (16618 bp)
+				Next Alignment: 658565 659110 scaffold_28601 546 1
+
+			Align 78: 658565 659110 scaffold_28601 546 1
+				Gap between this and next alignment: 659110 to 668099 (8988 bp)
+				Next Alignment: 668099 668866 scaffold_19601 1 768
+
+			Align 79: 668099 668866 scaffold_19601 1 768
+				Gap between this and next alignment: 668866 to 728761 (59894 bp)
+				Next Alignment: 728761 729386 scaffold_25368 626 1
+
+			Align 80: 728761 729386 scaffold_25368 626 1
+				Gap between this and next alignment: 729386 to 736030 (6643 bp)
+				Next Alignment: 736030 736150 scaffold_37100 663 543
+
+			Align 81: 736030 736150 scaffold_37100 663 543
+				Gap between this and next alignment: 736150 to 855830 (119679 bp)
+				Next Alignment: 855830 857534 scaffold_2422 2463 4166
+
+			Align 82: 855830 857534 scaffold_2422 2463 4166
+				Gap between this and next alignment: 857534 to 857549 (14 bp)
+				Next Alignment: 857549 859456 scaffold_5222 1 1909
+
+			Align 83: 857549 859456 scaffold_5222 1 1909
+				Gap between this and next alignment: 859456 to 861072 (1615 bp)
+				Next Alignment: 861072 861198 scaffold_5222 1910 2036
+
+			Align 84: 861072 861198 scaffold_5222 1910 2036
+				Gap between this and next alignment: 861198 to 874359 (13160 bp)
+				Next Alignment: 874359 874976 scaffold_25752 618 1
+
+			Align 85: 874359 874976 scaffold_25752 618 1
+				Gap between this and next alignment: 874976 to 875688 (711 bp)
+				Next Alignment: 875688 876296 scaffold_25619 9 620
+
+			Align 86: 875688 876296 scaffold_25619 9 620
+				Gap between this and next alignment: 876296 to 877824 (1527 bp)
+				Next Alignment: 877824 878417 scaffold_26952 594 1
+
+			Align 87: 877824 878417 scaffold_26952 594 1
+				Gap between this and next alignment: 878417 to 884944 (6526 bp)
+				Next Alignment: 884944 885972 scaffold_20972 1 1026
+
+			Align 88: 884944 885972 scaffold_20972 1 1026
+				Gap between this and next alignment: 885972 to 886141 (168 bp)
+				Next Alignment: 886141 886840 scaffold_21901 3 702
+
+			Align 89: 886141 886840 scaffold_21901 3 702
+				Gap between this and next alignment: 886840 to 889230 (2389 bp)
+				Next Alignment: 889230 889987 scaffold_24704 755 1
+
+			Align 90: 889230 889987 scaffold_24704 755 1
+			END in gap: 889987 to 891565 (1578 bp)
+
+ERROR: Reference Coprococcus_comes_gi_225594909_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Coprococcus_comes_gi_225594901_ref_NZ_', 'Coprococcus_comes_gi_225594900_ref_NZ_', 'Coprococcus_comes_gi_225594898_ref_NZ_', 'Coprococcus_comes_gi_225594904_ref_NZ_', 'Coprococcus_comes_gi_225594908_ref_NZ_', 'Coprococcus_comes_gi_225594906_ref_NZ_', 'Coprococcus_comes_gi_225594905_ref_NZ_', 'Coprococcus_comes_gi_225594903_ref_NZ_', 'Coprococcus_comes_gi_225594902_ref_NZ_', 'Coprococcus_comes_gi_225594899_ref_NZ_']
+	Reference Coprococcus_comes_gi_225594905_ref_NZ_: 29 total alignments. 1 total regions.
+		Region: 1 to 255112 (255112 bp)
+			START in gap: 1 to 7305 (7304 bp)
+			Align 1: 7305 7910 scaffold_9296 1376 771
+				Gap between this and next alignment: 7910 to 17107 (9196 bp)
+				Next Alignment: 17107 17654 scaffold_28126 548 1
+
+			Align 2: 17107 17654 scaffold_28126 548 1
+				Gap between this and next alignment: 17654 to 35544 (17889 bp)
+				Next Alignment: 35544 35822 scaffold_29494 523 246
+
+			Align 3: 35544 35822 scaffold_29494 523 246
+				Gap between this and next alignment: 35822 to 36871 (1048 bp)
+				Next Alignment: 36871 37071 scaffold_18560 800 601
+
+			Align 4: 36871 37071 scaffold_18560 800 601
+				Gap between this and next alignment: 37071 to 56230 (19158 bp)
+				Next Alignment: 56230 56945 scaffold_21371 717 2
+
+			Align 5: 56230 56945 scaffold_21371 717 2
+				Gap between this and next alignment: 56945 to 61667 (4721 bp)
+				Next Alignment: 61667 62333 scaffold_23332 1 668
+
+			Align 6: 61667 62333 scaffold_23332 1 668
+				Gap between this and next alignment: 62333 to 63879 (1545 bp)
+				Next Alignment: 63879 64415 scaffold_28939 536 1
+
+			Align 7: 63879 64415 scaffold_28939 536 1
+				Gap between this and next alignment: 64415 to 72075 (7659 bp)
+				Next Alignment: 72075 72196 scaffold_20288 628 748
+
+			Align 8: 72075 72196 scaffold_20288 628 748
+				Gap between this and next alignment: 72196 to 75658 (3461 bp)
+				Next Alignment: 75658 76280 scaffold_25470 1 623
+
+			Align 9: 75658 76280 scaffold_25470 1 623
+				Gap between this and next alignment: 76280 to 83080 (6799 bp)
+				Next Alignment: 83080 84219 scaffold_16431 1148 1
+
+			Align 10: 83080 84219 scaffold_16431 1148 1
+				Gap between this and next alignment: 84219 to 88628 (4408 bp)
+				Next Alignment: 88628 88702 scaffold_34504 777 851
+
+			Align 11: 88628 88702 scaffold_34504 777 851
+				Gap between this and next alignment: 88702 to 93089 (4386 bp)
+				Next Alignment: 93089 93159 scaffold_14773 71 1
+
+			Align 12: 93089 93159 scaffold_14773 71 1
+				Gap between this and next alignment: 93159 to 116709 (23549 bp)
+				Next Alignment: 116709 117319 scaffold_26194 610 1
+
+			Align 13: 116709 117319 scaffold_26194 610 1
+				Gap between this and next alignment: 117319 to 127584 (10264 bp)
+				Next Alignment: 127584 127771 scaffold_7286 1 188
+
+			Align 14: 127584 127771 scaffold_7286 1 188
+				Gap between this and next alignment: 127771 to 136369 (8597 bp)
+				Next Alignment: 136369 137009 scaffold_24606 641 1
+
+			Align 15: 136369 137009 scaffold_24606 641 1
+				Gap between this and next alignment: 137009 to 164864 (27854 bp)
+				Next Alignment: 164864 165475 scaffold_26084 612 1
+
+			Align 16: 164864 165475 scaffold_26084 612 1
+				Gap between this and next alignment: 165475 to 165896 (420 bp)
+				Next Alignment: 165896 166189 scaffold_6573 294 1
+
+			Align 17: 165896 166189 scaffold_6573 294 1
+				Gap between this and next alignment: 166189 to 168483 (2293 bp)
+				Next Alignment: 168483 169572 scaffold_12562 1 1089
+
+			Align 18: 168483 169572 scaffold_12562 1 1089
+				Gap between this and next alignment: 169572 to 171179 (1606 bp)
+				Next Alignment: 171179 171312 scaffold_27858 437 570
+
+			Align 19: 171179 171312 scaffold_27858 437 570
+				Gap between this and next alignment: 171312 to 174730 (3417 bp)
+				Next Alignment: 174730 175478 scaffold_19937 10 758
+
+			Align 20: 174730 175478 scaffold_19937 10 758
+				Gap between this and next alignment: 175478 to 193548 (18069 bp)
+				Next Alignment: 193548 193801 scaffold_15674 655 909
+
+			Align 21: 193548 193801 scaffold_15674 655 909
+				Gap between this and next alignment: 193801 to 195081 (1279 bp)
+				Next Alignment: 195081 196162 scaffold_23297 1079 2
+
+			Align 22: 195081 196162 scaffold_23297 1079 2
+				Gap between this and next alignment: 196162 to 199803 (3640 bp)
+				Next Alignment: 199803 200029 scaffold_83 2920 2694
+
+			Align 23: 199803 200029 scaffold_83 2920 2694
+				Gap between this and next alignment: 200029 to 202854 (2824 bp)
+				Next Alignment: 202854 204716 scaffold_6083 1863 1
+
+			Align 24: 202854 204716 scaffold_6083 1863 1
+				Gap between this and next alignment: 204716 to 212156 (7439 bp)
+				Next Alignment: 212156 213260 scaffold_12345 1 1105
+
+			Align 25: 212156 213260 scaffold_12345 1 1105
+				Gap between this and next alignment: 213260 to 250691 (37430 bp)
+				Next Alignment: 250691 251316 scaffold_25303 627 1
+
+			Align 26: 250691 251316 scaffold_25303 627 1
+				Gap between this and next alignment: 251316 to 253125 (1808 bp)
+				Next Alignment: 253125 253396 scaffold_10132 2155 1884
+
+			Align 27: 253125 253396 scaffold_10132 2155 1884
+				Gap between this and next alignment: 253396 to 254322 (925 bp)
+				Next Alignment: 254322 254408 scaffold_168 32993 33079
+
+			Align 28: 254322 254408 scaffold_168 32993 33079
+				The next alignment (254322 254408 scaffold_8198 1182 1268) is redundant. Skipping.
+
+	Reference Coprococcus_comes_gi_225594903_ref_NZ_: 4 total alignments. 1 total regions.
+		Region: 1 to 104811 (104811 bp)
+			START in gap: 1 to 50192 (50191 bp)
+			Align 1: 50192 50719 scaffold_29276 1 528
+				Gap between this and next alignment: 50719 to 82433 (31713 bp)
+				Next Alignment: 82433 83002 scaffold_27865 1 570
+
+			Align 2: 82433 83002 scaffold_27865 1 570
+				Gap between this and next alignment: 83002 to 101250 (18247 bp)
+				Next Alignment: 101250 101855 scaffold_26354 1 606
+
+			Align 3: 101250 101855 scaffold_26354 1 606
+				Gap between this and next alignment: 101855 to 102359 (503 bp)
+				Next Alignment: 102359 102670 scaffold_2813 2337 2648
+
+			Align 4: 102359 102670 scaffold_2813 2337 2648
+			END in gap: 102670 to 104811 (2141 bp)
+
+	Reference Coprococcus_comes_gi_225594902_ref_NZ_: 11 total alignments. 1 total regions.
+		Region: 1 to 235797 (235797 bp)
+			START in gap: 1 to 996 (995 bp)
+			Align 1: 996 1535 scaffold_28804 540 1
+				Gap between this and next alignment: 1535 to 55231 (53695 bp)
+				Next Alignment: 55231 55866 scaffold_24844 636 1
+
+			Align 2: 55231 55866 scaffold_24844 636 1
+				Gap between this and next alignment: 55866 to 180152 (124285 bp)
+				Next Alignment: 180152 180784 scaffold_24984 1 633
+
+			Align 3: 180152 180784 scaffold_24984 1 633
+				Gap between this and next alignment: 180784 to 202846 (22061 bp)
+				Next Alignment: 202846 203204 scaffold_6155 1489 1848
+
+			Align 4: 202846 203204 scaffold_6155 1489 1848
+				Gap between this and next alignment: 203204 to 205847 (2642 bp)
+				Next Alignment: 205847 206965 scaffold_12121 1 1119
+
+			Align 5: 205847 206965 scaffold_12121 1 1119
+				Gap between this and next alignment: 206965 to 211804 (4838 bp)
+				Next Alignment: 211804 212638 scaffold_17379 840 5
+
+			Align 6: 211804 212638 scaffold_17379 840 5
+				Gap between this and next alignment: 212638 to 215080 (2441 bp)
+				Next Alignment: 215080 215776 scaffold_1045 2396 3092
+
+			Align 7: 215080 215776 scaffold_1045 2396 3092
+				Gap between this and next alignment: 215776 to 215934 (157 bp)
+				Next Alignment: 215934 217130 scaffold_11157 1 1197
+
+			Align 8: 215934 217130 scaffold_11157 1 1197
+				Gap between this and next alignment: 217130 to 221501 (4370 bp)
+				Next Alignment: 221501 222231 scaffold_20850 1 731
+
+			Align 9: 221501 222231 scaffold_20850 1 731
+				Gap between this and next alignment: 222231 to 223821 (1589 bp)
+				Next Alignment: 223821 224570 scaffold_20225 1 749
+
+			Align 10: 223821 224570 scaffold_20225 1 749
+				Gap between this and next alignment: 224570 to 227854 (3283 bp)
+				Next Alignment: 227854 227969 scaffold_17946 116 1
+
+			Align 11: 227854 227969 scaffold_17946 116 1
+			END in gap: 227969 to 235797 (7828 bp)
+
+	Reference Coprococcus_comes_gi_225594899_ref_NZ_: 73 total alignments. 1 total regions.
+		Region: 1 to 847455 (847455 bp)
+			START in gap: 1 to 3479 (3478 bp)
+			Align 1: 3479 5075 scaffold_5738 342 1941
+				Gap between this and next alignment: 5075 to 8142 (3066 bp)
+				Next Alignment: 8142 9104 scaffold_250 134 1091
+
+			Align 2: 8142 9104 scaffold_250 134 1091
+				Gap between this and next alignment: 9104 to 9154 (49 bp)
+				Next Alignment: 9154 9728 scaffold_27635 1 575
+
+			Align 3: 9154 9728 scaffold_27635 1 575
+				Gap between this and next alignment: 9728 to 9739 (10 bp)
+				Next Alignment: 9739 11255 scaffold_4531 2295 779
+
+			Align 4: 9739 11255 scaffold_4531 2295 779
+				Gap between this and next alignment: 11255 to 12655 (1399 bp)
+				Next Alignment: 12655 12754 scaffold_24182 100 1
+
+			Align 5: 12655 12754 scaffold_24182 100 1
+				Gap between this and next alignment: 12754 to 14866 (2111 bp)
+				Next Alignment: 14866 15098 scaffold_30524 1 233
+
+			Align 6: 14866 15098 scaffold_30524 1 233
+				Gap between this and next alignment: 15098 to 15332 (233 bp)
+				Next Alignment: 15332 17449 scaffold_4834 2130 14
+
+			Align 7: 15332 17449 scaffold_4834 2130 14
+				Gap between this and next alignment: 17449 to 18756 (1306 bp)
+				Next Alignment: 18756 18896 scaffold_329 11317 11457
+
+			Align 8: 18756 18896 scaffold_329 11317 11457
+				Gap between this and next alignment: 18896 to 30611 (11714 bp)
+				Next Alignment: 30611 31505 scaffold_15248 37 931
+
+			Align 9: 30611 31505 scaffold_15248 37 931
+				Gap between this and next alignment: 31505 to 31689 (183 bp)
+				Next Alignment: 31689 33090 scaffold_9093 1402 1
+
+			Align 10: 31689 33090 scaffold_9093 1402 1
+				Gap between this and next alignment: 33090 to 97474 (64383 bp)
+				Next Alignment: 97474 98223 scaffold_20211 1 750
+
+			Align 11: 97474 98223 scaffold_20211 1 750
+				Gap between this and next alignment: 98223 to 150942 (52718 bp)
+				Next Alignment: 150942 151722 scaffold_19187 780 1
+
+			Align 12: 150942 151722 scaffold_19187 780 1
+				Gap between this and next alignment: 151722 to 159718 (7995 bp)
+				Next Alignment: 159718 160370 scaffold_16842 1 653
+
+			Align 13: 159718 160370 scaffold_16842 1 653
+				Gap between this and next alignment: 160370 to 166916 (6545 bp)
+				Next Alignment: 166916 167727 scaffold_18194 1 812
+
+			Align 14: 166916 167727 scaffold_18194 1 812
+				Negative gap (overlap) between this and next alignment: 167727 to 167592 (-135 bp)
+				Next Alignment: 167592 168602 scaffold_13779 1012 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1012 to 876.
+			Align 15: 167728 168602 scaffold_13779 876 1
+				Negative gap (overlap) between this and next alignment: 168602 to 168432 (-170 bp)
+				Next Alignment: 168432 169882 scaffold_11850 1 1456
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 173.
+			Align 16: 168603 169882 scaffold_11850 173 1456
+				Gap between this and next alignment: 169882 to 254161 (84278 bp)
+				Next Alignment: 254161 254751 scaffold_27097 1 591
+
+			Align 17: 254161 254751 scaffold_27097 1 591
+				Gap between this and next alignment: 254751 to 265456 (10704 bp)
+				Next Alignment: 265456 265563 scaffold_7118 1571 1678
+
+			Align 18: 265456 265563 scaffold_7118 1571 1678
+				Gap between this and next alignment: 265563 to 322201 (56637 bp)
+				Next Alignment: 322201 322817 scaffold_25772 1 618
+
+			Align 19: 322201 322817 scaffold_25772 1 618
+				Gap between this and next alignment: 322817 to 346532 (23714 bp)
+				Next Alignment: 346532 346817 scaffold_19831 1348 1063
+
+			Align 20: 346532 346817 scaffold_19831 1348 1063
+				Gap between this and next alignment: 346817 to 357951 (11133 bp)
+				Next Alignment: 357951 359478 scaffold_7931 1529 1
+
+			Align 21: 357951 359478 scaffold_7931 1529 1
+				Gap between this and next alignment: 359478 to 373898 (14419 bp)
+				Next Alignment: 373898 374789 scaffold_13274 152 1043
+
+			Align 22: 373898 374789 scaffold_13274 152 1043
+				Gap between this and next alignment: 374789 to 376619 (1829 bp)
+				Next Alignment: 376619 378045 scaffold_1123 2226 3652
+
+			Align 23: 376619 378045 scaffold_1123 2226 3652
+				Gap between this and next alignment: 378045 to 378085 (39 bp)
+				Next Alignment: 378085 379017 scaffold_15221 4 932
+
+			Align 24: 378085 379017 scaffold_15221 4 932
+				Gap between this and next alignment: 379017 to 382794 (3776 bp)
+				Next Alignment: 382794 386397 scaffold_8002 4262 654
+
+			Align 25: 382794 386397 scaffold_8002 4262 654
+				Gap between this and next alignment: 386397 to 386617 (219 bp)
+				Next Alignment: 386617 387293 scaffold_22899 677 1
+
+			Align 26: 386617 387293 scaffold_22899 677 1
+				Negative gap (overlap) between this and next alignment: 387293 to 387257 (-36 bp)
+				Next Alignment: 387257 388600 scaffold_8080 1344 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1344 to 1307.
+			Align 27: 387294 388600 scaffold_8080 1307 1
+				Gap between this and next alignment: 388600 to 390488 (1887 bp)
+				Next Alignment: 390488 397062 scaffold_2566 6589 1
+
+			Align 28: 390488 397062 scaffold_2566 6589 1
+				Gap between this and next alignment: 397062 to 422785 (25722 bp)
+				Next Alignment: 422785 424080 scaffold_1249 1733 438
+
+			Align 29: 422785 424080 scaffold_1249 1733 438
+				Gap between this and next alignment: 424080 to 429679 (5598 bp)
+				Next Alignment: 429679 429980 scaffold_42083 5 306
+
+			Align 30: 429679 429980 scaffold_42083 5 306
+				Gap between this and next alignment: 429980 to 430031 (50 bp)
+				Next Alignment: 430031 430137 scaffold_24279 782 888
+
+			Align 31: 430031 430137 scaffold_24279 782 888
+				The next alignment (430042 430130 scaffold_10503 1163 1251) is redundant. Skipping.
+				Gap between this and next alignment: 430137 to 431539 (1401 bp)
+				Next Alignment: 431539 431869 scaffold_24611 837 511
+
+			Align 33: 431539 431869 scaffold_24611 837 511
+				Gap between this and next alignment: 431869 to 443489 (11619 bp)
+				Next Alignment: 443489 444028 scaffold_28796 540 1
+
+			Align 34: 443489 444028 scaffold_28796 540 1
+				Gap between this and next alignment: 444028 to 447558 (3529 bp)
+				Next Alignment: 447558 448234 scaffold_11037 531 1207
+
+			Align 35: 447558 448234 scaffold_11037 531 1207
+				Gap between this and next alignment: 448234 to 454815 (6580 bp)
+				Next Alignment: 454815 455116 scaffold_29057 1 302
+
+			Align 36: 454815 455116 scaffold_29057 1 302
+				Gap between this and next alignment: 455116 to 455522 (405 bp)
+				Next Alignment: 455522 455899 scaffold_2254 414 37
+
+			Align 37: 455522 455899 scaffold_2254 414 37
+				Gap between this and next alignment: 455899 to 455952 (52 bp)
+				Next Alignment: 455952 456454 scaffold_30334 1 504
+
+			Align 38: 455952 456454 scaffold_30334 1 504
+				Gap between this and next alignment: 456454 to 460329 (3874 bp)
+				Next Alignment: 460329 461410 scaffold_27347 1075 1
+
+			Align 39: 460329 461410 scaffold_27347 1075 1
+				Gap between this and next alignment: 461410 to 466621 (5210 bp)
+				Next Alignment: 466621 467290 scaffold_21027 726 57
+
+			Align 40: 466621 467290 scaffold_21027 726 57
+				Gap between this and next alignment: 467290 to 469387 (2096 bp)
+				Next Alignment: 469387 469909 scaffold_29483 1 523
+
+			Align 41: 469387 469909 scaffold_29483 1 523
+				Gap between this and next alignment: 469909 to 471289 (1379 bp)
+				Next Alignment: 471289 472007 scaffold_21288 1 719
+
+			Align 42: 471289 472007 scaffold_21288 1 719
+				Gap between this and next alignment: 472007 to 487595 (15587 bp)
+				Next Alignment: 487595 487952 scaffold_27878 213 570
+
+			Align 43: 487595 487952 scaffold_27878 213 570
+				Gap between this and next alignment: 487952 to 490508 (2555 bp)
+				Next Alignment: 490508 491339 scaffold_30997 827 1
+
+			Align 44: 490508 491339 scaffold_30997 827 1
+				Gap between this and next alignment: 491339 to 492321 (981 bp)
+				Next Alignment: 492321 493038 scaffold_11600 718 1
+
+			Align 45: 492321 493038 scaffold_11600 718 1
+				Gap between this and next alignment: 493038 to 494709 (1670 bp)
+				Next Alignment: 494709 495433 scaffold_21040 1 725
+
+			Align 46: 494709 495433 scaffold_21040 1 725
+				Gap between this and next alignment: 495433 to 508672 (13238 bp)
+				Next Alignment: 508672 509345 scaffold_23040 1 674
+
+			Align 47: 508672 509345 scaffold_23040 1 674
+				Gap between this and next alignment: 509345 to 519290 (9944 bp)
+				Next Alignment: 519290 520118 scaffold_83 1237 2080
+
+			Align 48: 519290 520118 scaffold_83 1237 2080
+				Gap between this and next alignment: 520118 to 520347 (228 bp)
+				Next Alignment: 520347 520498 scaffold_15345 891 740
+
+			Align 49: 520347 520498 scaffold_15345 891 740
+				Gap between this and next alignment: 520498 to 521303 (804 bp)
+				Next Alignment: 521303 521761 scaffold_15505 459 1
+
+			Align 50: 521303 521761 scaffold_15505 459 1
+				Negative gap (overlap) between this and next alignment: 521761 to 521663 (-98 bp)
+				Next Alignment: 521663 525500 scaffold_2249 3837 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 3837 to 3738.
+			Align 51: 521762 525500 scaffold_2249 3738 1
+				Negative gap (overlap) between this and next alignment: 525500 to 525402 (-98 bp)
+				Next Alignment: 525402 525718 scaffold_14436 1791 1475
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1791 to 1692.
+			Align 52: 525501 525718 scaffold_14436 1692 1475
+				The next alignment (525530 525643 scaffold_5738 1 114) is redundant. Skipping.
+				Gap between this and next alignment: 525718 to 527841 (2122 bp)
+				Next Alignment: 527841 529259 scaffold_12035 1 1425
+
+			Align 54: 527841 529259 scaffold_12035 1 1425
+				Gap between this and next alignment: 529259 to 533014 (3754 bp)
+				Next Alignment: 533014 534017 scaffold_26624 1 1002
+
+			Align 55: 533014 534017 scaffold_26624 1 1002
+				The next alignment (533697 533798 scaffold_20052 1 102) is redundant. Skipping.
+				Gap between this and next alignment: 534017 to 537814 (3796 bp)
+				Next Alignment: 537814 538397 scaffold_27280 587 4
+
+			Align 57: 537814 538397 scaffold_27280 587 4
+				Gap between this and next alignment: 538397 to 539564 (1166 bp)
+				Next Alignment: 539564 542952 scaffold_2423 123 3521
+
+			Align 58: 539564 542952 scaffold_2423 123 3521
+				Gap between this and next alignment: 542952 to 543341 (388 bp)
+				Next Alignment: 543341 544053 scaffold_21477 1 713
+
+			Align 59: 543341 544053 scaffold_21477 1 713
+				Gap between this and next alignment: 544053 to 544556 (502 bp)
+				Next Alignment: 544556 545180 scaffold_25444 624 1
+
+			Align 60: 544556 545180 scaffold_25444 624 1
+				Gap between this and next alignment: 545180 to 546283 (1102 bp)
+				Next Alignment: 546283 546393 scaffold_14948 946 836
+
+			Align 61: 546283 546393 scaffold_14948 946 836
+				Gap between this and next alignment: 546393 to 546408 (14 bp)
+				Next Alignment: 546408 546756 scaffold_12615 1087 738
+
+			Align 62: 546408 546756 scaffold_12615 1087 738
+				Gap between this and next alignment: 546756 to 548831 (2074 bp)
+				Next Alignment: 548831 549168 scaffold_12615 961 624
+
+			Align 63: 548831 549168 scaffold_12615 961 624
+				Gap between this and next alignment: 549168 to 600282 (51113 bp)
+				Next Alignment: 600282 600460 scaffold_13564 993 816
+
+			Align 64: 600282 600460 scaffold_13564 993 816
+				Gap between this and next alignment: 600460 to 601005 (544 bp)
+				Next Alignment: 601005 602611 scaffold_7538 1 1607
+
+			Align 65: 601005 602611 scaffold_7538 1 1607
+				The next alignment (602359 602611 scaffold_3387 2579 2831) is redundant. Skipping.
+				Negative gap (overlap) between this and next alignment: 602611 to 602513 (-98 bp)
+				Next Alignment: 602513 603113 scaffold_21833 1 605
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 100.
+			Align 67: 602612 603113 scaffold_21833 100 605
+				Gap between this and next alignment: 603113 to 622192 (19078 bp)
+				Next Alignment: 622192 623780 scaffold_7710 1 1581
+
+			Align 68: 622192 623780 scaffold_7710 1 1581
+				Gap between this and next alignment: 623780 to 650801 (27020 bp)
+				Next Alignment: 650801 652596 scaffold_2408 3473 5269
+
+			Align 69: 650801 652596 scaffold_2408 3473 5269
+				Gap between this and next alignment: 652596 to 819840 (167243 bp)
+				Next Alignment: 819840 821300 scaffold_8585 1460 1
+
+			Align 70: 819840 821300 scaffold_8585 1460 1
+				Gap between this and next alignment: 821300 to 825535 (4234 bp)
+				Next Alignment: 825535 826433 scaffold_15883 900 1
+
+			Align 71: 825535 826433 scaffold_15883 900 1
+				Gap between this and next alignment: 826433 to 826552 (118 bp)
+				Next Alignment: 826552 827967 scaffold_8955 1 1416
+
+			Align 72: 826552 827967 scaffold_8955 1 1416
+				Gap between this and next alignment: 827967 to 834021 (6053 bp)
+				Next Alignment: 834021 834142 scaffold_2786 3127 3248
+
+			Align 73: 834021 834142 scaffold_2786 3127 3248
+			END in gap: 834142 to 847455 (13313 bp)
+
+ERROR: Reference Coprococcus_comes_gi_225594907_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Coprococcus_comes_gi_225594901_ref_NZ_', 'Coprococcus_comes_gi_225594900_ref_NZ_', 'Coprococcus_comes_gi_225594898_ref_NZ_', 'Coprococcus_comes_gi_225594904_ref_NZ_', 'Coprococcus_comes_gi_225594908_ref_NZ_', 'Coprococcus_comes_gi_225594906_ref_NZ_', 'Coprococcus_comes_gi_225594905_ref_NZ_', 'Coprococcus_comes_gi_225594903_ref_NZ_', 'Coprococcus_comes_gi_225594902_ref_NZ_', 'Coprococcus_comes_gi_225594899_ref_NZ_']
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Coprococcus_comes/contigs_reports/nucmer_output/IDBA_UD.used_snps
+
+Results:
+	Local Misassemblies: 2
+	Misassemblies: 15
+		Relocations: 7
+		Translocations: 7
+		Inversions: 1
+	Fake misassemblies matched with structural variations: 1
+	Misassembled Contigs: 13
+	Misassembled Contig Bases: 72260
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 147 part
+Partially Unaligned Contigs with Misassemblies: 7
+Unaligned Contig Bases: 636239
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 336139
+
+	SNPs: 3836
+	Insertions: 216
+	Deletions: 350
+
+	Positive Gaps: 331
+		Internal Gaps:  13
+		External Gaps:  318
+		External Gap Total:  2880764
+		External Gap Average: 9059
+	Negative Gaps: 20
+		Internal Overlaps:  1
+		External Overlaps:  19
+		External Overlaps Total: -1339
+		External Overlaps Average: -70
+	Contigs with Redundant Alignments: 10 (1738)

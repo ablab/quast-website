@@ -1,0 +1,16 @@
+\documentclass[12pt,a4paper]{article}
+\begin{document}
+\begin{table}[ht]
+\begin{center}
+\caption{All statistics are based on contigs of size $\geq$ 500 bp, unless otherwise noted (e.g., "\# contigs ($\geq$ 0 bp)" and "Total length ($\geq$ 0 bp)" include all contigs).}
+\begin{tabular}{|l*{14}{|r}|}
+\hline
+Assembly & \# misassemblies &     \# relocations &     \# translocations &     \# inversions & \# possibly misassembled contigs & \# misassembled contigs & Misassembled contigs length & \# local misassemblies & \# structural variations & \# mismatches & \# indels &     \# short indels &     \# long indels & Indels length \\ \hline
+IDBA\_UD & 3 & 1 & 2 & 0 & 5 & 3 & 8107 & 0 & 0 & 346 & 19 & 19 & 0 & 26 \\ \hline
+Ray & 7 & 5 & 2 & 0 & 6 & 4 & 148285 & 6 & 0 & 969 & 36 & 35 & 1 & 53 \\ \hline
+SOAPdenovo2 & 1 & 1 & 0 & 0 & 7 & 1 & 2018 & 1 & 0 & 561 & 29 & 28 & 1 & 44 \\ \hline
+SPAdes & 5 & 3 & 2 & 0 & 7 & 4 & 126074 & 1 & 0 & 513 & 30 & 29 & 1 & 47 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+\end{document}

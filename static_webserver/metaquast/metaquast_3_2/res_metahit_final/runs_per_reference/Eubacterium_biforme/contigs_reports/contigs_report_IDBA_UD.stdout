@@ -1,0 +1,311 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Eubacterium_biforme_gi_224515307_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 1
+	Total Region Length: 2517763
+Analyzing contigs...
+CONTIG: scaffold_74 (72102bp)
+Top Length: 2940  Top ID: 99.01
+		This contig is partially unaligned. (Aligned 2940 out of 72102 bases)
+		Alignment: 740342 743282 | 3735 796 | 2941 2940 | 99.01 | Eubacterium_biforme_gi_224515307_ref_NZ_ scaffold_74
+		Unaligned bases: 1 to 795 (795)
+		Unaligned bases: 3736 to 72102 (68367)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_83 (50587bp)
+Top Length: 12054  Top ID: 97.18
+		This contig is misassembled. 6 total aligns.
+			Real Alignment 1: 746298 746928 | 2908 3538 | 631 631 | 97.78 | Eubacterium_biforme_gi_224515307_ref_NZ_ scaffold_83
+			  Overlap between these two alignments (local misassembly). Inconsistency = -2 
+			Real Alignment 2: 747239 755477 | 3851 12086 | 8239 8236 | 96.46 | Eubacterium_biforme_gi_224515307_ref_NZ_ scaffold_83
+			  Extensive misassembly ( relocation, inconsistency = 10060 ) between these two alignments
+			Real Alignment 3: 768134 777213 | 14683 23757 | 9080 9075 | 96.29 | Eubacterium_biforme_gi_224515307_ref_NZ_ scaffold_83
+			  Extensive misassembly ( relocation, inconsistency = 24047 ) between these two alignments
+			Excluding internal overlap of size 12 between Alignment 4 and 5:  802708 804350 | 25205 26847 | 1643 1643 --> 802708 804338 | 25205 26835 | 1631 1631
+			Real Alignment 4: 802708 804338 | 25205 26835 | 1631 1631 | 97.69 | Eubacterium_biforme_gi_224515307_ref_NZ_ scaffold_83
+			  Extensive misassembly ( relocation, inconsistency = 2091 ) between these two alignments
+			Real Alignment 5: 806430 818493 | 26836 38889 | 12064 12054 | 97.18 | Eubacterium_biforme_gi_224515307_ref_NZ_ scaffold_83
+			  Overlap between these two alignments (local misassembly). Inconsistency = -805 
+			Real Alignment 6: 827387 829386 | 48588 50587 | 2000 2000 | 96.95 | Eubacterium_biforme_gi_224515307_ref_NZ_ scaffold_83
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_93 (111563bp)
+Top Length: 749  Top ID: 98.0
+		This contig is partially unaligned. (Aligned 749 out of 111563 bases)
+		Alignment: 541039 541787 | 74706 75454 | 749 749 | 98.0 | Eubacterium_biforme_gi_224515307_ref_NZ_ scaffold_93
+		Unaligned bases: 1 to 74705 (74705)
+		Unaligned bases: 75455 to 111563 (36109)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_114 (59437bp)
+Top Length: 309  Top ID: 96.44
+		This contig is partially unaligned. (Aligned 309 out of 59437 bases)
+		Alignment: 540110 540418 | 59437 59129 | 309 309 | 96.44 | Eubacterium_biforme_gi_224515307_ref_NZ_ scaffold_114
+		Unaligned bases: 1 to 59128 (59128)
+
+CONTIG: scaffold_2416 (5399bp)
+Top Length: 87  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 87 out of 5399 bases)
+		Alignment: 818576 818662 | 5313 5399 | 87 87 | 100.0 | Eubacterium_biforme_gi_224515307_ref_NZ_ scaffold_2416
+		Unaligned bases: 1 to 5312 (5312)
+
+CONTIG: scaffold_2560 (3467bp)
+Top Length: 712  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 712 out of 3467 bases)
+		Alignment: 783795 784506 | 2756 3467 | 712 712 | 100.0 | Eubacterium_biforme_gi_224515307_ref_NZ_ scaffold_2560
+		Unaligned bases: 1 to 2755 (2755)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_2647 (3372bp)
+Top Length: 101  Top ID: 98.02
+		This contig is partially unaligned. (Aligned 101 out of 3372 bases)
+		Alignment: 832431 832531 | 1 101 | 101 101 | 98.02 | Eubacterium_biforme_gi_224515307_ref_NZ_ scaffold_2647
+		Unaligned bases: 102 to 3372 (3271)
+
+CONTIG: scaffold_3309 (2877bp)
+Top Length: 126  Top ID: 96.83
+		This contig is partially unaligned. (Aligned 126 out of 2877 bases)
+		Alignment: 799508 799633 | 127 2 | 126 126 | 96.83 | Eubacterium_biforme_gi_224515307_ref_NZ_ scaffold_3309
+		Unaligned bases: 1 to 1 (1)
+		Unaligned bases: 128 to 2877 (2750)
+
+CONTIG: scaffold_4166 (2433bp)
+Top Length: 880  Top ID: 98.86
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 9 between Alignment 1 and 2:  804339 805030 | 58 749 | 692 692 --> 804339 805021 | 58 740 | 683 683
+			Real Alignment 1: 804339 805021 | 58 740 | 683 683 | 97.83 | Eubacterium_biforme_gi_224515307_ref_NZ_ scaffold_4166
+			  Gap between these two alignments (local misassembly). Inconsistency = 534 
+			Real Alignment 2: 805556 806436 | 741 1620 | 881 880 | 98.86 | Eubacterium_biforme_gi_224515307_ref_NZ_ scaffold_4166
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_4997 (2138bp)
+Top Length: 99  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 99 out of 2138 bases)
+		Alignment: 789602 789700 | 99 1 | 99 99 | 100.0 | Eubacterium_biforme_gi_224515307_ref_NZ_ scaffold_4997
+		Unaligned bases: 100 to 2138 (2039)
+
+CONTIG: scaffold_6381 (1803bp)
+Top Length: 1803  Top ID: 96.06
+		One align captures most of this contig: 785951 787753 | 1 1803 | 1803 1803 | 96.06 | Eubacterium_biforme_gi_224515307_ref_NZ_ scaffold_6381
+
+CONTIG: scaffold_8146 (1520bp)
+Top Length: 1520  Top ID: 99.01
+		One align captures most of this contig: 788181 789700 | 1 1520 | 1520 1520 | 99.01 | Eubacterium_biforme_gi_224515307_ref_NZ_ scaffold_8146
+
+CONTIG: scaffold_11640 (1158bp)
+Top Length: 1158  Top ID: 95.6
+		One align captures most of this contig: 791360 792517 | 1158 1 | 1158 1158 | 95.6 | Eubacterium_biforme_gi_224515307_ref_NZ_ scaffold_11640
+
+CONTIG: scaffold_11712 (1152bp)
+Top Length: 509  Top ID: 98.23
+		This contig is partially unaligned. (Aligned 509 out of 1152 bases)
+		Alignment: 790910 791418 | 509 1 | 509 509 | 98.23 | Eubacterium_biforme_gi_224515307_ref_NZ_ scaffold_11712
+		Unaligned bases: 510 to 1152 (643)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_12049 (1407bp)
+Top Length: 504  Top ID: 98.21
+		This contig is partially unaligned. (Aligned 504 out of 1407 bases)
+		Alignment: 802235 802738 | 513 10 | 504 504 | 98.21 | Eubacterium_biforme_gi_224515307_ref_NZ_ scaffold_12049
+		Unaligned bases: 1 to 9 (9)
+		Unaligned bases: 514 to 1407 (894)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_15273 (929bp)
+Top Length: 929  Top ID: 96.77
+		One align captures most of this contig: 785028 785956 | 929 1 | 929 929 | 96.77 | Eubacterium_biforme_gi_224515307_ref_NZ_ scaffold_15273
+
+CONTIG: scaffold_16340 (879bp)
+Top Length: 879  Top ID: 98.86
+		One align captures most of this contig: 800177 801055 | 879 1 | 879 879 | 98.86 | Eubacterium_biforme_gi_224515307_ref_NZ_ scaffold_16340
+
+CONTIG: scaffold_21230 (720bp)
+Top Length: 651  Top ID: 98.92
+		This contig is partially unaligned. (Aligned 651 out of 720 bases)
+		Alignment: 745232 745882 | 718 68 | 651 651 | 98.92 | Eubacterium_biforme_gi_224515307_ref_NZ_ scaffold_21230
+		Unaligned bases: 1 to 67 (67)
+		Unaligned bases: 719 to 720 (2)
+
+CONTIG: scaffold_22336 (692bp)
+Top Length: 65  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 65 out of 692 bases)
+		Alignment: 750880 750944 | 1 65 | 65 65 | 100.0 | Eubacterium_biforme_gi_224515307_ref_NZ_ scaffold_22336
+		Unaligned bases: 66 to 692 (627)
+
+CONTIG: scaffold_24665 (640bp)
+Top Length: 640  Top ID: 100.0
+		One align captures most of this contig: 795467 796106 | 1 640 | 640 640 | 100.0 | Eubacterium_biforme_gi_224515307_ref_NZ_ scaffold_24665
+
+CONTIG: scaffold_27603 (578bp)
+Top Length: 578  Top ID: 97.75
+		One align captures most of this contig: 744624 745201 | 578 1 | 578 578 | 97.75 | Eubacterium_biforme_gi_224515307_ref_NZ_ scaffold_27603
+
+CONTIG: scaffold_29998 (919bp)
+Top Length: 811  Top ID: 99.51
+		This contig is partially unaligned. (Aligned 811 out of 919 bases)
+		Alignment: 801047 801857 | 919 109 | 811 811 | 99.51 | Eubacterium_biforme_gi_224515307_ref_NZ_ scaffold_29998
+		Unaligned bases: 1 to 108 (108)
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Eubacterium_biforme/contigs_reports/nucmer_output/IDBA_UD.used_snps
+	Reference Eubacterium_biforme_gi_224515307_ref_NZ_: 28 total alignments. 1 total regions.
+		Region: 1 to 2517763 (2517763 bp)
+			START in gap: 1 to 540110 (540109 bp)
+			Align 1: 540110 540418 scaffold_114 59437 59129
+				Gap between this and next alignment: 540418 to 541039 (620 bp)
+				Next Alignment: 541039 541787 scaffold_93 74706 75454
+
+			Align 2: 541039 541787 scaffold_93 74706 75454
+				Gap between this and next alignment: 541787 to 740342 (198554 bp)
+				Next Alignment: 740342 743282 scaffold_74 3735 796
+
+			Align 3: 740342 743282 scaffold_74 3735 796
+				Gap between this and next alignment: 743282 to 744624 (1341 bp)
+				Next Alignment: 744624 745201 scaffold_27603 578 1
+
+			Align 4: 744624 745201 scaffold_27603 578 1
+				Gap between this and next alignment: 745201 to 745232 (30 bp)
+				Next Alignment: 745232 745882 scaffold_21230 718 68
+
+			Align 5: 745232 745882 scaffold_21230 718 68
+				Gap between this and next alignment: 745882 to 746298 (415 bp)
+				Next Alignment: 746298 746928 scaffold_83 2908 3538
+
+			Align 6: 746298 746928 scaffold_83 2908 3538
+				Gap between this and next alignment: 746928 to 747239 (310 bp)
+				Next Alignment: 747239 755477 scaffold_83 3851 12086
+
+			Align 7: 747239 755477 scaffold_83 3851 12086
+				The next alignment (750880 750944 scaffold_22336 1 65) is redundant. Skipping.
+				Gap between this and next alignment: 755477 to 768134 (12656 bp)
+				Next Alignment: 768134 777213 scaffold_83 14683 23757
+
+			Align 9: 768134 777213 scaffold_83 14683 23757
+				Gap between this and next alignment: 777213 to 783795 (6581 bp)
+				Next Alignment: 783795 784506 scaffold_2560 2756 3467
+
+			Align 10: 783795 784506 scaffold_2560 2756 3467
+				Gap between this and next alignment: 784506 to 785028 (521 bp)
+				Next Alignment: 785028 785956 scaffold_15273 929 1
+
+			Align 11: 785028 785956 scaffold_15273 929 1
+				Negative gap (overlap) between this and next alignment: 785956 to 785951 (-5 bp)
+				Next Alignment: 785951 787753 scaffold_6381 1 1803
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 7.
+			Align 12: 785957 787753 scaffold_6381 7 1803
+				Gap between this and next alignment: 787753 to 788181 (427 bp)
+				Next Alignment: 788181 789700 scaffold_8146 1 1520
+
+			Align 13: 788181 789700 scaffold_8146 1 1520
+				The next alignment (789602 789700 scaffold_4997 99 1) is redundant. Skipping.
+				Gap between this and next alignment: 789700 to 790910 (1209 bp)
+				Next Alignment: 790910 791418 scaffold_11712 509 1
+
+			Align 15: 790910 791418 scaffold_11712 509 1
+				Negative gap (overlap) between this and next alignment: 791418 to 791360 (-58 bp)
+				Next Alignment: 791360 792517 scaffold_11640 1158 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1158 to 1099.
+			Align 16: 791419 792517 scaffold_11640 1099 1
+				Gap between this and next alignment: 792517 to 795467 (2949 bp)
+				Next Alignment: 795467 796106 scaffold_24665 1 640
+
+			Align 17: 795467 796106 scaffold_24665 1 640
+				Gap between this and next alignment: 796106 to 799508 (3401 bp)
+				Next Alignment: 799508 799633 scaffold_3309 127 2
+
+			Align 18: 799508 799633 scaffold_3309 127 2
+				Gap between this and next alignment: 799633 to 800177 (543 bp)
+				Next Alignment: 800177 801055 scaffold_16340 879 1
+
+			Align 19: 800177 801055 scaffold_16340 879 1
+				Negative gap (overlap) between this and next alignment: 801055 to 801047 (-8 bp)
+				Next Alignment: 801047 801857 scaffold_29998 919 109
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 919 to 910.
+			Align 20: 801056 801857 scaffold_29998 910 109
+				Gap between this and next alignment: 801857 to 802235 (377 bp)
+				Next Alignment: 802235 802738 scaffold_12049 513 10
+
+			Align 21: 802235 802738 scaffold_12049 513 10
+				Negative gap (overlap) between this and next alignment: 802738 to 802708 (-30 bp)
+				Next Alignment: 802708 804338 scaffold_83 25205 26835
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 25205 to 25236.
+			Align 22: 802739 804338 scaffold_83 25236 26835
+				Next Alignment: 804339 805021 scaffold_4166 58 740
+
+			Align 23: 804339 805021 scaffold_4166 58 740
+				Gap between this and next alignment: 805021 to 805556 (534 bp)
+				Next Alignment: 805556 806436 scaffold_4166 741 1620
+
+			Align 24: 805556 806436 scaffold_4166 741 1620
+				Negative gap (overlap) between this and next alignment: 806436 to 806430 (-6 bp)
+				Next Alignment: 806430 818493 scaffold_83 26836 38889
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 26836 to 26843.
+			Align 25: 806437 818493 scaffold_83 26843 38889
+				Gap between this and next alignment: 818493 to 818576 (82 bp)
+				Next Alignment: 818576 818662 scaffold_2416 5313 5399
+
+			Align 26: 818576 818662 scaffold_2416 5313 5399
+				Gap between this and next alignment: 818662 to 827387 (8724 bp)
+				Next Alignment: 827387 829386 scaffold_83 48588 50587
+
+			Align 27: 827387 829386 scaffold_83 48588 50587
+				Gap between this and next alignment: 829386 to 832431 (3044 bp)
+				Next Alignment: 832431 832531 scaffold_2647 1 101
+
+			Align 28: 832431 832531 scaffold_2647 1 101
+			END in gap: 832531 to 2517763 (1685232 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Eubacterium_biforme/contigs_reports/nucmer_output/IDBA_UD.used_snps
+
+Results:
+	Local Misassemblies: 3
+	Misassemblies: 3
+		Relocations: 3
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 1
+	Misassembled Contig Bases: 50587
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 13 part
+Partially Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 257582
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 50104
+
+	SNPs: 1333
+	Insertions: 14
+	Deletions: 34
+
+	Positive Gaps: 21
+		Internal Gaps:  3
+		External Gaps:  18
+		External Gap Total:  2454159
+		External Gap Average: 136342
+	Negative Gaps: 5
+		Internal Overlaps:  0
+		External Overlaps:  5
+		External Overlaps Total: -107
+		External Overlaps Average: -21
+	Contigs with Redundant Alignments: 2 (164)

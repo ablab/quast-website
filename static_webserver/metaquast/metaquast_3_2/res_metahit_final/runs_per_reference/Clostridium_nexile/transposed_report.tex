@@ -1,0 +1,16 @@
+\documentclass[12pt,a4paper]{article}
+\begin{document}
+\begin{table}[ht]
+\begin{center}
+\caption{All statistics are based on contigs of size $\geq$ 500 bp, unless otherwise noted (e.g., "\# contigs ($\geq$ 0 bp)" and "Total length ($\geq$ 0 bp)" include all contigs).}
+\begin{tabular}{|l*{36}{|r}|}
+\hline
+Assembly & \# contigs ($\geq$ 1000 bp) & \# contigs ($\geq$ 5000 bp) & \# contigs ($\geq$ 10000 bp) & \# contigs ($\geq$ 25000 bp) & \# contigs ($\geq$ 50000 bp) & Total length ($\geq$ 1000 bp) & Total length ($\geq$ 5000 bp) & Total length ($\geq$ 10000 bp) & Total length ($\geq$ 25000 bp) & Total length ($\geq$ 50000 bp) & \# contigs & Largest contig & Total length & Reference length & GC (\%) & Reference GC (\%) & N50 & N75 & L50 & L75 & \# misassemblies & \# misassembled contigs & Misassembled contigs length & \# local misassemblies & \# structural variations & \# unaligned contigs & Unaligned length & Genome fraction (\%) & Duplication ratio & \# N's per 100 kbp & \# mismatches per 100 kbp & \# indels per 100 kbp & Largest alignment & NA50 & NGA50 & LA50 \\ \hline
+IDBA\_UD & 66 & 20 & 13 & 8 & 3 & 649035 & 543217 & 490807 & 428709 & 265753 & 107 & 135115 & 677980 & 3995628 & 41.58 & 40.09 & 41370 & 9101 & 5 & 15 & 2 & 2 & 1949 & 1 & 1 & 0 + 62 part & 555102 & 2.964 & 1.038 & 99.56 & 2104.50 & 93.74 & 5378 & - & - & - \\ \hline
+Ray & 32 & 4 & 1 & 0 & 0 & 100558 & 33988 & 10965 & 0 & 0 & 48 & 10965 & 111955 & 3995628 & 41.88 & 40.09 & 3541 & 1895 & 10 & 21 & 2 & 2 & 5041 & 8 & 0 & 0 + 18 part & 41568 & 1.585 & 1.111 & 2026.71 & 1848.58 & 34.73 & 8592 & 706 & - & 31 \\ \hline
+SOAPdenovo2 & 28 & 2 & 1 & 0 & 0 & 65975 & 18302 & 12707 & 0 & 0 & 74 & 12707 & 96090 & 3995628 & 39.73 & 40.09 & 1603 & 797 & 15 & 35 & 2 & 2 & 1474 & 20 & 0 & 0 + 27 part & 22222 & 1.742 & 1.061 & 1996.05 & 1685.49 & 18.68 & 11065 & 731 & - & 28 \\ \hline
+SPAdes & 52 & 17 & 7 & 4 & 0 & 347006 & 265693 & 185446 & 139187 & 0 & 78 & 45766 & 365516 & 3995628 & 39.86 & 40.09 & 12830 & 4802 & 7 & 19 & 5 & 4 & 22213 & 1 & 0 & 0 + 51 part & 251133 & 2.612 & 1.096 & 468.65 & 2210.85 & 58.46 & 6828 & - & - & - \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+\end{document}

@@ -1,0 +1,16 @@
+\documentclass[12pt,a4paper]{article}
+\begin{document}
+\begin{table}[ht]
+\begin{center}
+\caption{All statistics are based on contigs of size $\geq$ 500 bp, unless otherwise noted (e.g., "\# contigs ($\geq$ 0 bp)" and "Total length ($\geq$ 0 bp)" include all contigs).}
+\begin{tabular}{|l*{38}{|r}|}
+\hline
+Assembly & \# contigs ($\geq$ 1000 bp) & \# contigs ($\geq$ 5000 bp) & \# contigs ($\geq$ 10000 bp) & \# contigs ($\geq$ 25000 bp) & \# contigs ($\geq$ 50000 bp) & Total length ($\geq$ 1000 bp) & Total length ($\geq$ 5000 bp) & Total length ($\geq$ 10000 bp) & Total length ($\geq$ 25000 bp) & Total length ($\geq$ 50000 bp) & \# contigs & Largest contig & Total length & Reference length & GC (\%) & Reference GC (\%) & N50 & N75 & L50 & L75 & \# misassemblies & \# misassembled contigs & Misassembled contigs length & \# local misassemblies & \# structural variations & \# unaligned contigs & Unaligned length & Genome fraction (\%) & Duplication ratio & \# N's per 100 kbp & \# mismatches per 100 kbp & \# indels per 100 kbp & Largest alignment & NA50 & NGA50 & NA75 & LA50 & LA75 \\ \hline
+IDBA\_UD & 24 & 3 & 1 & 0 & 0 & 72176 & 25357 & 10542 & 0 & 0 & 37 & 10542 & 81134 & 4241076 & 46.86 & 59.11 & 3419 & 1849 & 7 & 17 & 0 & 0 & 0 & 1 & 0 & 0 + 14 part & 30053 & 1.173 & 1.027 & 409.20 & 1799.36 & 50.26 & 7442 & 1066 & - & - & 16 & - \\ \hline
+Ray & 6 & 1 & 0 & 0 & 0 & 14817 & 6935 & 0 & 0 & 0 & 14 & 6935 & 20275 & 4241076 & 47.59 & 59.11 & 1919 & 855 & 3 & 7 & 0 & 0 & 0 & 0 & 0 & 0 + 3 part & 7778 & 0.270 & 1.093 & 0.00 & 1084.39 & 0.00 & 2215 & 627 & - & - & 9 & - \\ \hline
+SOAPdenovo2 & 8 & 0 & 0 & 0 & 0 & 12249 & 0 & 0 & 0 & 0 & 27 & 3103 & 24627 & 4241076 & 46.01 & 59.11 & 960 & 633 & 9 & 16 & 0 & 0 & 0 & 20 & 0 & 0 + 10 part & 4087 & 0.449 & 1.078 & 4754.94 & 1117.93 & 47.24 & 3004 & 600 & - & 246 & 10 & 24 \\ \hline
+SPAdes & 15 & 5 & 1 & 0 & 0 & 64121 & 38333 & 10781 & 0 & 0 & 25 & 10781 & 71127 & 4241076 & 47.47 & 59.11 & 5029 & 2268 & 5 & 10 & 1 & 1 & 10781 & 1 & 0 & 0 + 14 part & 23693 & 1.050 & 1.065 & 850.59 & 1966.24 & 26.93 & 8317 & 1870 & - & - & 10 & - \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+\end{document}

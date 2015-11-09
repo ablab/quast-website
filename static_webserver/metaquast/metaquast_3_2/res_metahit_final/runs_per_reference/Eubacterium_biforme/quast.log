@@ -1,0 +1,123 @@
+/home/gurevich/rep/quast/quast.pyc -t 16 -j  --meta  --bed-file /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/combined_reference/structural_variations/combined_reference.bed --no-check-meta  --contig-thresholds 1000,5000,10000,25000,50000 -R /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Eubacterium_biforme.fasta -o /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Eubacterium_biforme --labels "IDBA_UD, Ray, SOAPdenovo2, SPAdes" /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/IDBA_UD_to_Eubacterium_biforme.fasta /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Ray_to_Eubacterium_biforme.fasta /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SOAPdenovo2_to_Eubacterium_biforme.fasta /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SPAdes_to_Eubacterium_biforme.fasta
+
+Started: 2015-11-09 20:26:56
+
+Logging to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Eubacterium_biforme/quast.log
+
+NOTICE: Output directory already exists. Existing Nucmer alignments can be used.
+
+Reference:
+  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Eubacterium_biforme.fasta ==> Eubacterium_biforme
+
+Contigs:
+  1  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/IDBA_UD_to_Eubacterium_biforme.fasta ==> IDBA_UD
+  2  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Ray_to_Eubacterium_biforme.fasta ==> Ray
+  3  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SOAPdenovo2_to_Eubacterium_biforme.fasta ==> SOAPdenovo2
+  4  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SPAdes_to_Eubacterium_biforme.fasta ==> SPAdes
+
+2015-11-09 20:26:57
+Running Basic statistics processor...
+  Reference genome:
+    Eubacterium_biforme.fasta, Reference length = 2517763, Reference GC % = 33.79
+  Contig files: 
+    1  IDBA_UD
+    2  Ray
+    3  SOAPdenovo2
+    4  SPAdes
+  Calculating N50 and L50...
+    1  IDBA_UD, N50 = 72102, L50 = 2, Total length = 325772, GC % = 39.80, # N's per 100 kbp =  19.95
+    2  Ray, N50 = 21544, L50 = 2, Total length = 91111, GC % = 39.58, # N's per 100 kbp =  849.51
+    3  SOAPdenovo2, N50 = 2021, L50 = 8, Total length = 46147, GC % = 40.71, # N's per 100 kbp =  808.29
+    4  SPAdes, N50 = 57182, L50 = 2, Total length = 173487, GC % = 40.33, # N's per 100 kbp =  157.94
+  Drawing Nx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Eubacterium_biforme/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Eubacterium_biforme/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Eubacterium_biforme/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Eubacterium_biforme/basic_stats/GC_content_plot.pdf
+Done.
+
+2015-11-09 20:26:58
+Running Contig analyzer...
+  1  IDBA_UD
+  2  Ray
+  3  SOAPdenovo2
+  4  SPAdes
+  1  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Eubacterium_biforme/contigs_reports/contigs_report_IDBA_UD.stdout and contigs_report_IDBA_UD.stderr...
+  2  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Eubacterium_biforme/contigs_reports/contigs_report_Ray.stdout and contigs_report_Ray.stderr...
+  3  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Eubacterium_biforme/contigs_reports/contigs_report_SOAPdenovo2.stdout and contigs_report_SOAPdenovo2.stderr...
+  4  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Eubacterium_biforme/contigs_reports/contigs_report_SPAdes.stdout and contigs_report_SPAdes.stderr...
+  2  Using existing Nucmer alignments... 
+  1  Using existing Nucmer alignments... 
+  3  Using existing Nucmer alignments... 
+  4  Using existing Nucmer alignments... 
+  3  Alignments: runs_per_reference/Eubacterium_biforme/contigs_reports/alignments_SOAPdenovo2.tsv
+  3  Analysis is finished.
+
+  2  Alignments: runs_per_reference/Eubacterium_biforme/contigs_reports/alignments_Ray.tsv
+  2  Analysis is finished.
+
+  4  Alignments: runs_per_reference/Eubacterium_biforme/contigs_reports/alignments_SPAdes.tsv
+  4  Analysis is finished.
+
+  1  Alignments: runs_per_reference/Eubacterium_biforme/contigs_reports/alignments_IDBA_UD.tsv
+  1  Analysis is finished.
+
+  Creating total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Eubacterium_biforme/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Eubacterium_biforme/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Eubacterium_biforme/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Eubacterium_biforme/contigs_reports/misassemblies_plot.pdf
+Done.
+
+2015-11-09 20:27:01
+Running NA-NGA calculation...
+  1  IDBA_UD, Largest alignment = 14054, NA50 = None, LA50 = None
+  2  Ray, Largest alignment = 10443, NA50 = None, LA50 = None
+  3  SOAPdenovo2, Largest alignment = 3359, NA50 = 1614, LA50 = 11
+  4  SPAdes, Largest alignment = 14252, NA50 = None, LA50 = None
+  Drawing cumulative plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Eubacterium_biforme/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Eubacterium_biforme/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Eubacterium_biforme/aligned_stats/NGAx_plot.pdf
+Done.
+
+2015-11-09 20:27:02
+Running Genome analyzer...
+  NOTICE: No file with genes provided. Use the -G option if you want to specify it.
+  NOTICE: No file with operons provided. Use the -O option if you want to specify it.
+  1  IDBA_UD
+  2  Ray
+  3  SOAPdenovo2
+  4  SPAdes
+  4  Analysis is finished.
+  3  Analysis is finished.
+  1  Analysis is finished.
+  2  Analysis is finished.
+  Drawing Genome fraction, % histogram...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Eubacterium_biforme/genome_stats/genome_fraction_histogram.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding option to enable it.
+
+2015-11-09 20:27:03
+Drawing large plots...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating contig alignment plot...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2015-11-09 20:27:07
+RESULTS:
+  Text versions of total report are saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Eubacterium_biforme/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Eubacterium_biforme/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Eubacterium_biforme/report.html
+  PDF version (tables and plots) saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Eubacterium_biforme/report.pdf
+  Contig alignment plot: /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Eubacterium_biforme/alignment.svg

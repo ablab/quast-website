@@ -1,0 +1,488 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Bacteroides_cellulosilyticus_gi_423221344_ref_NZ_]
+	Loaded [Bacteroides_cellulosilyticus_gi_423222958_ref_NZ_]
+	Loaded [Bacteroides_cellulosilyticus_gi_423223955_ref_NZ_]
+	Loaded [Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_]
+	Loaded [Bacteroides_cellulosilyticus_gi_423226005_ref_NZ_]
+	Loaded [Bacteroides_cellulosilyticus_gi_423226541_ref_NZ_]
+	Loaded [Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_]
+	Loaded [Bacteroides_cellulosilyticus_gi_423227305_ref_NZ_]
+	Loaded [Bacteroides_cellulosilyticus_gi_423227372_ref_NZ_]
+	Loaded [Bacteroides_cellulosilyticus_gi_423227450_ref_NZ_]
+	Loaded [Bacteroides_cellulosilyticus_gi_423227488_ref_NZ_]
+	Loaded [Bacteroides_cellulosilyticus_gi_423227526_ref_NZ_]
+	Loaded [Bacteroides_cellulosilyticus_gi_423227552_ref_NZ_]
+	Loaded [Bacteroides_cellulosilyticus_gi_423227589_ref_NZ_]
+	Loaded [Bacteroides_cellulosilyticus_gi_423227618_ref_NZ_]
+	Loaded [Bacteroides_cellulosilyticus_gi_423227655_ref_NZ_]
+	Loaded [Bacteroides_cellulosilyticus_gi_423227674_ref_NZ_]
+	Loaded [Bacteroides_cellulosilyticus_gi_423227702_ref_NZ_]
+	Loaded [Bacteroides_cellulosilyticus_gi_423227713_ref_NZ_]
+	Loaded [Bacteroides_cellulosilyticus_gi_423227723_ref_NZ_]
+	Loaded [Bacteroides_cellulosilyticus_gi_423227732_ref_NZ_]
+	Loaded [Bacteroides_cellulosilyticus_gi_423227743_ref_NZ_]
+	Loaded [Bacteroides_cellulosilyticus_gi_423227747_ref_NZ_]
+	Loaded [Bacteroides_cellulosilyticus_gi_423227749_ref_NZ_]
+	Loaded [Bacteroides_cellulosilyticus_gi_423227770_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 25
+	Total Region Length: 7694202
+Analyzing contigs...
+CONTIG: scaffold-11576 (553bp)
+Top Length: 233  Top ID: 96.17
+		Skipping redundant alignment 54982 55210 | 1 229 | 229 229 | 96.94 | Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_ scaffold-11576
+		Skipping redundant alignment 1278787 1279014 | 1 228 | 228 228 | 96.93 | Bacteroides_cellulosilyticus_gi_423222958_ref_NZ_ scaffold-11576
+		Skipping redundant alignment 1080392 1080619 | 1 228 | 228 228 | 96.93 | Bacteroides_cellulosilyticus_gi_423223955_ref_NZ_ scaffold-11576
+		Skipping redundant alignment 568346 568572 | 227 1 | 227 227 | 96.92 | Bacteroides_cellulosilyticus_gi_423222958_ref_NZ_ scaffold-11576
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 175903 176133 | 1 231 | 231 231 | 96.54 | Bacteroides_cellulosilyticus_gi_423226005_ref_NZ_ scaffold-11576
+		This contig is partially unaligned. (Aligned 233 out of 553 bases)
+		Alignment: 1616784 1617018 | 1 233 | 235 233 | 96.17 | Bacteroides_cellulosilyticus_gi_423221344_ref_NZ_ scaffold-11576
+		Unaligned bases: 234 to 553 (320)
+
+CONTIG: scaffold-4957 (1130bp)
+Top Length: 1130  Top ID: 99.73
+		This contig has 2 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 1307982 1309111 | 1 1130 | 1130 1130 | 99.73 | Bacteroides_cellulosilyticus_gi_423221344_ref_NZ_ scaffold-4957
+		Skipping alignment  142450 143579 | 1 1130 | 1130 1130 | 99.73 | Bacteroides_cellulosilyticus_gi_423223955_ref_NZ_ scaffold-4957
+
+CONTIG: scaffold-161753 (561bp)
+Top Length: 425  Top ID: 95.06
+		This contig is partially unaligned. (Aligned 425 out of 561 bases)
+		Alignment: 450717 451141 | 425 1 | 425 425 | 95.06 | Bacteroides_cellulosilyticus_gi_423221344_ref_NZ_ scaffold-161753
+		Unaligned bases: 426 to 561 (136)
+
+CONTIG: scaffold-67 (21472bp)
+Top Length: 9875  Top ID: 99.54
+		Skipping redundant alignment 498668 501501 | 9875 7045 | 2834 2831 | 99.36 | Bacteroides_cellulosilyticus_gi_423226541_ref_NZ_ scaffold-67
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 8037 17936 | 1 9875 | 9900 9875 | 99.54 | Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_ scaffold-67
+			  Overlap between these two alignments (local misassembly). Inconsistency = -105 
+			Excluding internal overlap of size 5 between Alignment 2 and 3:  30896 33007 | 19361 21472 | 2112 2112 --> 30901 33007 | 19366 21472 | 2107 2107
+			Real Alignment 2: 17938 27325 | 9982 19365 | 9388 9384 | 99.83 | Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_ scaffold-67
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 3: 30901 33007 | 19366 21472 | 2107 2107 | 99.95 | Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_ scaffold-67
+
+CONTIG: scaffold-2378 (3036bp)
+Top Length: 2146  Top ID: 96.27
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 603302 605447 | 2146 1 | 2146 2146 | 96.27 | Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_ scaffold-2378
+			  Overlap between these two alignments (local misassembly). Inconsistency = -99 
+			Real Alignment 2: 602511 603302 | 3036 2245 | 792 792 | 95.08 | Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_ scaffold-2378
+
+CONTIG: scaffold-2416 (1955bp)
+Top Length: 135  Top ID: 97.78
+		This contig is partially unaligned. (Aligned 135 out of 1955 bases)
+		Alignment: 606589 606723 | 1953 1819 | 135 135 | 97.78 | Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_ scaffold-2416
+		Unaligned bases: 1 to 1818 (1818)
+		Unaligned bases: 1954 to 1955 (2)
+
+CONTIG: scaffold-2539 (2689bp)
+Top Length: 1303  Top ID: 98.08
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 595465 596118 | 5 658 | 654 654 | 97.86 | Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_ scaffold-2539
+			  Overlap between these two alignments (local misassembly). Inconsistency = -107 
+			Real Alignment 2: 596118 597420 | 765 2067 | 1303 1303 | 98.08 | Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_ scaffold-2539
+			  Overlap between these two alignments (local misassembly). Inconsistency = -175 
+			Real Alignment 3: 597407 597867 | 2229 2689 | 461 461 | 98.05 | Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_ scaffold-2539
+
+CONTIG: scaffold-4535 (740bp)
+Top Length: 738  Top ID: 97.29
+		One align captures most of this contig: 563790 564527 | 739 2 | 738 738 | 97.29 | Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_ scaffold-4535
+
+CONTIG: scaffold-6252 (656bp)
+Top Length: 656  Top ID: 98.48
+		One align captures most of this contig: 564541 565195 | 656 1 | 655 656 | 98.48 | Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_ scaffold-6252
+
+CONTIG: scaffold-7630 (804bp)
+Top Length: 275  Top ID: 95.29
+		Skipping redundant alignment 568346 568615 | 535 804 | 270 270 | 95.56 | Bacteroides_cellulosilyticus_gi_423222958_ref_NZ_ scaffold-7630
+		Skipping redundant alignment 1278744 1279013 | 804 535 | 270 270 | 95.56 | Bacteroides_cellulosilyticus_gi_423222958_ref_NZ_ scaffold-7630
+		Skipping redundant alignment 1616741 1617010 | 804 535 | 270 270 | 95.56 | Bacteroides_cellulosilyticus_gi_423221344_ref_NZ_ scaffold-7630
+		Skipping redundant alignment 1080349 1080618 | 804 535 | 270 270 | 95.56 | Bacteroides_cellulosilyticus_gi_423223955_ref_NZ_ scaffold-7630
+		Skipping redundant alignment 175860 176129 | 804 535 | 270 270 | 95.56 | Bacteroides_cellulosilyticus_gi_423226005_ref_NZ_ scaffold-7630
+		This contig is partially unaligned. (Aligned 275 out of 804 bases)
+		Alignment: 54939 55214 | 804 530 | 276 275 | 95.29 | Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_ scaffold-7630
+		Unaligned bases: 1 to 529 (529)
+
+CONTIG: scaffold-9382 (823bp)
+Top Length: 823  Top ID: 95.5
+		One align captures most of this contig: 581939 582761 | 1 823 | 823 823 | 95.5 | Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_ scaffold-9382
+
+CONTIG: scaffold-18886 (1280bp)
+Top Length: 1278  Top ID: 96.87
+		One align captures most of this contig: 585117 586394 | 1 1278 | 1278 1278 | 96.87 | Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_ scaffold-18886
+
+CONTIG: scaffold-36192 (802bp)
+Top Length: 802  Top ID: 98.5
+		One align captures most of this contig: 593695 594496 | 802 1 | 802 802 | 98.5 | Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_ scaffold-36192
+
+CONTIG: scaffold-143287 (978bp)
+Top Length: 977  Top ID: 96.11
+		One align captures most of this contig: 586253 587229 | 978 2 | 977 977 | 96.11 | Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_ scaffold-143287
+
+CONTIG: scaffold-172949 (830bp)
+Top Length: 830  Top ID: 98.07
+		One align captures most of this contig: 593131 593960 | 1 830 | 830 830 | 98.07 | Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_ scaffold-172949
+
+CONTIG: scaffold-195395 (15847bp)
+Top Length: 9169  Top ID: 98.51
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 277137 286308 | 1 9169 | 9172 9169 | 98.51 | Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_ scaffold-195395
+			  Extensive misassembly ( relocation, inconsistency = -2481 ) between these two alignments
+			Real Alignment 2: 286311 290505 | 11653 15847 | 4195 4195 | 99.26 | Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_ scaffold-195395
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-53 (88128bp)
+Top Length: 6121  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 6121 out of 88128 bases)
+		Alignment: 518248 524368 | 38198 44318 | 6121 6121 | 100.0 | Bacteroides_cellulosilyticus_gi_423226541_ref_NZ_ scaffold-53
+		Unaligned bases: 1 to 38197 (38197)
+		Unaligned bases: 44319 to 88128 (43810)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-3295 (1155bp)
+Top Length: 1155  Top ID: 100.0
+		Marking as insignificant: 524366 524460 | 1155 1061 | 95 95 | 100.0 | Bacteroides_cellulosilyticus_gi_423226541_ref_NZ_ scaffold-3295
+		Marking as insignificant: 516893 516987 | 1155 1061 | 95 95 | 100.0 | Bacteroides_cellulosilyticus_gi_423226541_ref_NZ_ scaffold-3295
+		This contig has 2 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 517088 518242 | 1155 1 | 1155 1155 | 100.0 | Bacteroides_cellulosilyticus_gi_423226541_ref_NZ_ scaffold-3295
+		Skipping alignment  524561 525715 | 1155 1 | 1155 1155 | 100.0 | Bacteroides_cellulosilyticus_gi_423226541_ref_NZ_ scaffold-3295
+
+CONTIG: scaffold-978 (3595bp)
+Top Length: 1684  Top ID: 99.7
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 242495 243534 | 1 1040 | 1040 1040 | 99.52 | Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_ scaffold-978
+			  Overlap between these two alignments (local misassembly). Inconsistency = -103 
+			Real Alignment 2: 243560 245243 | 1169 2852 | 1684 1684 | 99.7 | Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_ scaffold-978
+			  Overlap between these two alignments (local misassembly). Inconsistency = -189 
+			Real Alignment 3: 245249 245797 | 3047 3595 | 549 549 | 99.27 | Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_ scaffold-978
+
+CONTIG: scaffold-1251 (2982bp)
+Top Length: 961  Top ID: 97.92
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 255990 256913 | 4 927 | 924 924 | 99.68 | Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_ scaffold-1251
+			  Overlap between these two alignments (local misassembly). Inconsistency = -98 
+			Real Alignment 2: 256915 257875 | 1027 1987 | 961 961 | 97.92 | Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_ scaffold-1251
+			  Overlap between these two alignments (local misassembly). Inconsistency = -176 
+			Real Alignment 3: 258002 258694 | 2290 2982 | 693 693 | 97.55 | Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_ scaffold-1251
+
+CONTIG: scaffold-2428 (1894bp)
+Top Length: 953  Top ID: 99.48
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 240995 241947 | 1 953 | 953 953 | 99.48 | Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_ scaffold-2428
+			  Overlap between these two alignments (local misassembly). Inconsistency = -145 
+			Real Alignment 2: 242005 242743 | 1156 1894 | 739 739 | 99.32 | Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_ scaffold-2428
+
+CONTIG: scaffold-3997 (2392bp)
+Top Length: 2392  Top ID: 99.96
+		One align captures most of this contig: 265682 268073 | 2392 1 | 2392 2392 | 99.96 | Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_ scaffold-3997
+
+CONTIG: scaffold-4548 (1414bp)
+Top Length: 1414  Top ID: 99.93
+		One align captures most of this contig: 267251 268664 | 1414 1 | 1414 1414 | 99.93 | Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_ scaffold-4548
+
+CONTIG: scaffold-4643 (1346bp)
+Top Length: 1346  Top ID: 99.03
+		One align captures most of this contig: 253173 254518 | 1346 1 | 1346 1346 | 99.03 | Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_ scaffold-4643
+
+CONTIG: scaffold-7012 (556bp)
+Top Length: 556  Top ID: 99.82
+		One align captures most of this contig: 232231 232786 | 556 1 | 556 556 | 99.82 | Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_ scaffold-7012
+
+CONTIG: scaffold-7423 (1695bp)
+Top Length: 1695  Top ID: 99.88
+		One align captures most of this contig: 259688 261382 | 1 1695 | 1695 1695 | 99.88 | Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_ scaffold-7423
+
+CONTIG: scaffold-7483 (1462bp)
+Top Length: 1462  Top ID: 99.66
+		One align captures most of this contig: 263105 264566 | 1 1462 | 1462 1462 | 99.66 | Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_ scaffold-7483
+
+CONTIG: scaffold-8411 (843bp)
+Top Length: 843  Top ID: 99.76
+		One align captures most of this contig: 249691 250533 | 843 1 | 843 843 | 99.76 | Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_ scaffold-8411
+
+CONTIG: scaffold-11111 (773bp)
+Top Length: 773  Top ID: 99.48
+		One align captures most of this contig: 262079 262851 | 1 773 | 773 773 | 99.48 | Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_ scaffold-11111
+
+CONTIG: scaffold-52396 (1056bp)
+Top Length: 1056  Top ID: 99.15
+		One align captures most of this contig: 254762 255817 | 1 1056 | 1056 1056 | 99.15 | Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_ scaffold-52396
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_cellulosilyticus/contigs_reports/nucmer_output/Ray.used_snps
+ERROR: Reference Bacteroides_cellulosilyticus_gi_423226005_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226541_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423221344_ref_NZ_']
+	Reference Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_: 17 total alignments. 1 total regions.
+		Region: 1 to 391948 (391948 bp)
+			START in gap: 1 to 232231 (232230 bp)
+			Align 1: 232231 232786 scaffold-7012 556 1
+				Gap between this and next alignment: 232786 to 240995 (8208 bp)
+				Next Alignment: 240995 241947 scaffold-2428 1 953
+
+			Align 2: 240995 241947 scaffold-2428 1 953
+				Gap between this and next alignment: 241947 to 242005 (57 bp)
+				Next Alignment: 242005 242743 scaffold-2428 1156 1894
+
+			Align 3: 242005 242743 scaffold-2428 1156 1894
+				Negative gap (overlap) between this and next alignment: 242743 to 242495 (-248 bp)
+				Next Alignment: 242495 243534 scaffold-978 1 1040
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 250.
+			Align 4: 242744 243534 scaffold-978 250 1040
+				Gap between this and next alignment: 243534 to 243560 (25 bp)
+				Next Alignment: 243560 245243 scaffold-978 1169 2852
+
+			Align 5: 243560 245243 scaffold-978 1169 2852
+				Gap between this and next alignment: 245243 to 245249 (5 bp)
+				Next Alignment: 245249 245797 scaffold-978 3047 3595
+
+			Align 6: 245249 245797 scaffold-978 3047 3595
+				Gap between this and next alignment: 245797 to 249691 (3893 bp)
+				Next Alignment: 249691 250533 scaffold-8411 843 1
+
+			Align 7: 249691 250533 scaffold-8411 843 1
+				Gap between this and next alignment: 250533 to 253173 (2639 bp)
+				Next Alignment: 253173 254518 scaffold-4643 1346 1
+
+			Align 8: 253173 254518 scaffold-4643 1346 1
+				Gap between this and next alignment: 254518 to 254762 (243 bp)
+				Next Alignment: 254762 255817 scaffold-52396 1 1056
+
+			Align 9: 254762 255817 scaffold-52396 1 1056
+				Gap between this and next alignment: 255817 to 255990 (172 bp)
+				Next Alignment: 255990 256913 scaffold-1251 4 927
+
+			Align 10: 255990 256913 scaffold-1251 4 927
+				Gap between this and next alignment: 256913 to 256915 (1 bp)
+				Next Alignment: 256915 257875 scaffold-1251 1027 1987
+
+			Align 11: 256915 257875 scaffold-1251 1027 1987
+				Gap between this and next alignment: 257875 to 258002 (126 bp)
+				Next Alignment: 258002 258694 scaffold-1251 2290 2982
+
+			Align 12: 258002 258694 scaffold-1251 2290 2982
+				Gap between this and next alignment: 258694 to 259688 (993 bp)
+				Next Alignment: 259688 261382 scaffold-7423 1 1695
+
+			Align 13: 259688 261382 scaffold-7423 1 1695
+				Gap between this and next alignment: 261382 to 262079 (696 bp)
+				Next Alignment: 262079 262851 scaffold-11111 1 773
+
+			Align 14: 262079 262851 scaffold-11111 1 773
+				Gap between this and next alignment: 262851 to 263105 (253 bp)
+				Next Alignment: 263105 264566 scaffold-7483 1 1462
+
+			Align 15: 263105 264566 scaffold-7483 1 1462
+				Gap between this and next alignment: 264566 to 265682 (1115 bp)
+				Next Alignment: 265682 268073 scaffold-3997 2392 1
+
+			Align 16: 265682 268073 scaffold-3997 2392 1
+				Negative gap (overlap) between this and next alignment: 268073 to 267251 (-822 bp)
+				Next Alignment: 267251 268664 scaffold-4548 1414 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1414 to 591.
+			Align 17: 268074 268664 scaffold-4548 591 1
+			END in gap: 268664 to 391948 (123284 bp)
+
+ERROR: Reference Bacteroides_cellulosilyticus_gi_423227589_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226541_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423221344_ref_NZ_']
+ERROR: Reference Bacteroides_cellulosilyticus_gi_423227526_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226541_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423221344_ref_NZ_']
+ERROR: Reference Bacteroides_cellulosilyticus_gi_423227732_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226541_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423221344_ref_NZ_']
+ERROR: Reference Bacteroides_cellulosilyticus_gi_423227450_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226541_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423221344_ref_NZ_']
+ERROR: Reference Bacteroides_cellulosilyticus_gi_423227552_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226541_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423221344_ref_NZ_']
+ERROR: Reference Bacteroides_cellulosilyticus_gi_423223955_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226541_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423221344_ref_NZ_']
+ERROR: Reference Bacteroides_cellulosilyticus_gi_423227749_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226541_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423221344_ref_NZ_']
+ERROR: Reference Bacteroides_cellulosilyticus_gi_423227305_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226541_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423221344_ref_NZ_']
+ERROR: Reference Bacteroides_cellulosilyticus_gi_423227618_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226541_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423221344_ref_NZ_']
+ERROR: Reference Bacteroides_cellulosilyticus_gi_423227674_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226541_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423221344_ref_NZ_']
+	Reference Bacteroides_cellulosilyticus_gi_423221344_ref_NZ_: 3 total alignments. 1 total regions.
+		Region: 1 to 1854299 (1854299 bp)
+			START in gap: 1 to 450717 (450716 bp)
+			Align 1: 450717 451141 scaffold-161753 425 1
+				Gap between this and next alignment: 451141 to 1307982 (856840 bp)
+				Next Alignment: 1307982 1309111 scaffold-4957 1 1130
+
+			Align 2: 1307982 1309111 scaffold-4957 1 1130
+				Gap between this and next alignment: 1309111 to 1616784 (307672 bp)
+				Next Alignment: 1616784 1617018 scaffold-11576 1 233
+
+			Align 3: 1616784 1617018 scaffold-11576 1 233
+			END in gap: 1617018 to 1854299 (237281 bp)
+
+	Reference Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_: 19 total alignments. 1 total regions.
+		Region: 1 to 1037608 (1037608 bp)
+			START in gap: 1 to 8037 (8036 bp)
+			Align 1: 8037 17936 scaffold-67 1 9875
+				Gap between this and next alignment: 17936 to 17938 (1 bp)
+				Next Alignment: 17938 27325 scaffold-67 9982 19365
+
+			Align 2: 17938 27325 scaffold-67 9982 19365
+				Gap between this and next alignment: 27325 to 30901 (3575 bp)
+				Next Alignment: 30901 33007 scaffold-67 19366 21472
+
+			Align 3: 30901 33007 scaffold-67 19366 21472
+				Gap between this and next alignment: 33007 to 54939 (21931 bp)
+				Next Alignment: 54939 55214 scaffold-7630 804 530
+
+			Align 4: 54939 55214 scaffold-7630 804 530
+				Gap between this and next alignment: 55214 to 277137 (221922 bp)
+				Next Alignment: 277137 286308 scaffold-195395 1 9169
+
+			Align 5: 277137 286308 scaffold-195395 1 9169
+				Gap between this and next alignment: 286308 to 286311 (2 bp)
+				Next Alignment: 286311 290505 scaffold-195395 11653 15847
+
+			Align 6: 286311 290505 scaffold-195395 11653 15847
+				Gap between this and next alignment: 290505 to 563790 (273284 bp)
+				Next Alignment: 563790 564527 scaffold-4535 739 2
+
+			Align 7: 563790 564527 scaffold-4535 739 2
+				Gap between this and next alignment: 564527 to 564541 (13 bp)
+				Next Alignment: 564541 565195 scaffold-6252 656 1
+
+			Align 8: 564541 565195 scaffold-6252 656 1
+				Gap between this and next alignment: 565195 to 581939 (16743 bp)
+				Next Alignment: 581939 582761 scaffold-9382 1 823
+
+			Align 9: 581939 582761 scaffold-9382 1 823
+				Gap between this and next alignment: 582761 to 585117 (2355 bp)
+				Next Alignment: 585117 586394 scaffold-18886 1 1278
+
+			Align 10: 585117 586394 scaffold-18886 1 1278
+				Negative gap (overlap) between this and next alignment: 586394 to 586253 (-141 bp)
+				Next Alignment: 586253 587229 scaffold-143287 978 2
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 978 to 836.
+			Align 11: 586395 587229 scaffold-143287 836 2
+				Gap between this and next alignment: 587229 to 593131 (5901 bp)
+				Next Alignment: 593131 593960 scaffold-172949 1 830
+
+			Align 12: 593131 593960 scaffold-172949 1 830
+				Negative gap (overlap) between this and next alignment: 593960 to 593695 (-265 bp)
+				Next Alignment: 593695 594496 scaffold-36192 802 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 802 to 536.
+			Align 13: 593961 594496 scaffold-36192 536 1
+				Gap between this and next alignment: 594496 to 595465 (968 bp)
+				Next Alignment: 595465 596118 scaffold-2539 5 658
+
+			Align 14: 595465 596118 scaffold-2539 5 658
+				Negative gap (overlap) between this and next alignment: 596118 to 596118 (0 bp)
+				Next Alignment: 596118 597420 scaffold-2539 765 2067
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 765 to 766.
+			Align 15: 596119 597420 scaffold-2539 766 2067
+				Negative gap (overlap) between this and next alignment: 597420 to 597407 (-13 bp)
+				Next Alignment: 597407 597867 scaffold-2539 2229 2689
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 2229 to 2243.
+			Align 16: 597421 597867 scaffold-2539 2243 2689
+				Gap between this and next alignment: 597867 to 602511 (4643 bp)
+				Next Alignment: 602511 603302 scaffold-2378 3036 2245
+
+			Align 17: 602511 603302 scaffold-2378 3036 2245
+				Negative gap (overlap) between this and next alignment: 603302 to 603302 (0 bp)
+				Next Alignment: 603302 605447 scaffold-2378 2146 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 2146 to 2145.
+			Align 18: 603303 605447 scaffold-2378 2145 1
+				Gap between this and next alignment: 605447 to 606589 (1141 bp)
+				Next Alignment: 606589 606723 scaffold-2416 1953 1819
+
+			Align 19: 606589 606723 scaffold-2416 1953 1819
+			END in gap: 606723 to 1037608 (430885 bp)
+
+ERROR: Reference Bacteroides_cellulosilyticus_gi_423227655_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226541_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423221344_ref_NZ_']
+ERROR: Reference Bacteroides_cellulosilyticus_gi_423227743_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226541_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423221344_ref_NZ_']
+ERROR: Reference Bacteroides_cellulosilyticus_gi_423227713_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226541_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423221344_ref_NZ_']
+ERROR: Reference Bacteroides_cellulosilyticus_gi_423227372_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226541_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423221344_ref_NZ_']
+ERROR: Reference Bacteroides_cellulosilyticus_gi_423222958_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226541_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423221344_ref_NZ_']
+ERROR: Reference Bacteroides_cellulosilyticus_gi_423227723_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226541_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423221344_ref_NZ_']
+	Reference Bacteroides_cellulosilyticus_gi_423226541_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 529316 (529316 bp)
+			START in gap: 1 to 517088 (517087 bp)
+			Align 1: 517088 518242 scaffold-3295 1155 1
+				Gap between this and next alignment: 518242 to 518248 (5 bp)
+				Next Alignment: 518248 524368 scaffold-53 38198 44318
+
+			Align 2: 518248 524368 scaffold-53 38198 44318
+			END in gap: 524368 to 529316 (4948 bp)
+
+ERROR: Reference Bacteroides_cellulosilyticus_gi_423227488_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226541_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423221344_ref_NZ_']
+ERROR: Reference Bacteroides_cellulosilyticus_gi_423227702_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226541_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423221344_ref_NZ_']
+ERROR: Reference Bacteroides_cellulosilyticus_gi_423227747_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226541_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423221344_ref_NZ_']
+ERROR: Reference Bacteroides_cellulosilyticus_gi_423227770_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_cellulosilyticus_gi_423225019_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226969_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423226541_ref_NZ_', 'Bacteroides_cellulosilyticus_gi_423221344_ref_NZ_']
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_cellulosilyticus/contigs_reports/nucmer_output/Ray.used_snps
+
+Results:
+	Local Misassemblies: 9
+	Misassemblies: 1
+		Relocations: 1
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 1
+	Misassembled Contigs: 1
+	Misassembled Contig Bases: 15847
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 5 part
+Partially Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 84812
+
+Ambiguously Mapped Contigs: 2
+Total Bases in Ambiguously Mapped Contigs: 2285
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 73282
+
+	SNPs: 660
+	Insertions: 7
+	Deletions: 41
+
+	Positive Gaps: 38
+		Internal Gaps:  8
+		External Gaps:  30
+		External Gap Total:  3736097
+		External Gap Average: 124537
+	Negative Gaps: 7
+		Internal Overlaps:  3
+		External Overlaps:  4
+		External Overlaps Total: -1476
+		External Overlaps Average: -369
+	Contigs with Redundant Alignments: 0 (0)

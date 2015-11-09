@@ -1,0 +1,44 @@
+All statistics are based on contigs of size >= 500 bp, unless otherwise noted (e.g., "# contigs (>= 0 bp)" and "Total length (>= 0 bp)" include all contigs).
+
+Assembly                     IDBA_UD       Ray           SOAPdenovo2   SPAdes      
+# contigs (>= 1000 bp)       682           398           286           516         
+# contigs (>= 5000 bp)       45            147           15            65          
+# contigs (>= 10000 bp)      6             81            2             12          
+# contigs (>= 25000 bp)      0             28            0             0           
+# contigs (>= 50000 bp)      0             15            0             0           
+Total length (>= 1000 bp)    1485785       3379424       623770        1421670     
+Total length (>= 5000 bp)    378623        2826863       116444        548699      
+Total length (>= 10000 bp)   90695         2347941       26130         172626      
+Total length (>= 25000 bp)   0             1554492       0             0           
+Total length (>= 50000 bp)   0             1117588       0             0           
+# contigs                    1713          615           733           1159        
+Largest contig               19022         156859        13112         20844       
+Total length                 2197907       3529459       936044        1872872     
+Reference length             2153652       2153652       2153652       2153652     
+GC (%)                       41.23         41.65         42.00         41.18       
+Reference GC (%)             41.72         41.72         41.72         41.72       
+N50                          1449          17473         1549          2334        
+NG50                         1475          51487         -             1800        
+N75                          851           6880          846           1023        
+NG75                         876           22388         -             755         
+L50                          357           39            158           183         
+LG50                         342           15            -             252         
+L75                          859           117           372           500         
+LG75                         821           31            -             740         
+# misassemblies              35            45            1             24          
+# misassembled contigs       33            34            1             23          
+Misassembled contigs length  43553         297020        1032          75643       
+# local misassemblies        41            51            32            23          
+# structural variations      11            5             2             8           
+# unaligned contigs          0 + 515 part  0 + 281 part  0 + 530 part  0 + 366 part
+Unaligned length             811846        2347713       625289        579357      
+Genome fraction (%)          50.618        40.856        13.286        50.410      
+Duplication ratio            1.271         1.343         1.086         1.191       
+# N's per 100 kbp            0.59          687.78        9151.39       501.58      
+# mismatches per 100 kbp     3076.88       3580.11       2592.79       3170.34     
+# indels per 100 kbp         56.78         65.69         55.92         55.45       
+Largest alignment            9440          17580         8075          20729       
+NA50                         596           -             -             791         
+NGA50                        608           119           -             631         
+LA50                         1005          -             -             516         
+LGA50                        968           750           -             714         

@@ -1,0 +1,17 @@
+reference chromosomes:
+	Clostridium_scindens_ (total length: 1631609 bp, maximal covered length: 17943 bp)
+
+total genome size: 1631609
+
+gap min size: 50
+partial gene/operon min size: 100
+
+
+
+assembly                 | genome    | duplication | gaps      | genes     | partial   | operons   | partial   |
+                         | fraction  | ratio       | number    |           | genes     |           | operons   |
+================================================================================================================
+IDBA_UD_to_Clostridium_s | 1.09971%  | 1.04838     | 11        | -         | -         | -         | -         |
+Ray_to_Clostridium_scind | 0.69857%  | 1.00158     | 8         | -         | -         | -         | -         |
+SOAPdenovo2_to_Clostridi | 0.70979%  | 1.05725     | 13        | -         | -         | -         | -         |
+SPAdes_to_Clostridium_sc | 1.07943%  | 1.17585     | 7         | -         | -         | -         | -         |

@@ -1,0 +1,604 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Clostridium_nexile_gi_224515079_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 1
+	Total Region Length: 3995628
+Analyzing contigs...
+CONTIG: scaffold-302 (10965bp)
+Top Length: 1418  Top ID: 99.86
+		This contig is misassembled. 3 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 10965 and total length of all aligns is 1842
+		Alignment: 1501752 1503169 | 1779 362 | 1418 1418 | 99.86 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-302
+		Alignment: 1501412 1501753 | 9713 9372 | 342 342 | 100.0 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-302
+		Alignment: 1501329 1501410 | 9952 9871 | 82 82 | 100.0 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-302
+		Unaligned bases: 9123
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold-324 (3573bp)
+Top Length: 1336  Top ID: 99.63
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 1230 1730 | 1442 1942 | 501 501 | 99.2 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-324
+			  Overlap between these two alignments (local misassembly). Inconsistency = -190 
+			Real Alignment 2: 1836 3171 | 2238 3573 | 1336 1336 | 99.63 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-324
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-689 (3190bp)
+Top Length: 1447  Top ID: 98.83
+		Skipping redundant alignment 2516833 2517075 | 2948 3190 | 243 243 | 96.3 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-689
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 2499556 2500561 | 547 1552 | 1006 1006 | 99.8 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-689
+			  Overlap between these two alignments (local misassembly). Inconsistency = -192 
+			Real Alignment 2: 2500561 2502007 | 1744 3190 | 1447 1447 | 98.83 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-689
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-795 (3698bp)
+Top Length: 2131  Top ID: 99.86
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 1505299 1505809 | 1048 539 | 511 510 | 99.8 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-795
+			  Overlap between these two alignments (local misassembly). Inconsistency = -157 
+			Real Alignment 2: 1503167 1505297 | 3337 1207 | 2131 2131 | 99.86 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-795
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-967 (3996bp)
+Top Length: 2395  Top ID: 99.79
+		This contig is misassembled. 3 total aligns.
+			Excluding internal overlap of size 512 between Alignment 1 and 2:  3450 4440 | 2947 1957 | 991 991 --> 3450 3928 | 2947 2469 | 479 479
+			Real Alignment 1: 4793 7187 | 2468 74 | 2395 2395 | 99.79 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-967
+			  Gap between these two alignments (local misassembly). Inconsistency = 864 
+			Real Alignment 2: 3450 3928 | 2947 2469 | 479 479 | 100.0 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-967
+			  Overlap between these two alignments (local misassembly). Inconsistency = -185 
+			Real Alignment 3: 2586 3469 | 3996 3113 | 884 884 | 100.0 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-967
+
+CONTIG: scaffold-1008 (3587bp)
+Top Length: 1955  Top ID: 97.55
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 1809589 1811542 | 101 2055 | 1954 1955 | 97.55 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-1008
+			  Extensive misassembly ( relocation, inconsistency = -753413 ) between these two alignments
+			Real Alignment 2: 1058143 1059410 | 3337 2069 | 1268 1269 | 95.51 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-1008
+
+CONTIG: scaffold-1141 (7690bp)
+Top Length: 471  Top ID: 98.94
+		This contig is partially unaligned. (Aligned 471 out of 7690 bases)
+		Alignment: 3922856 3923326 | 3254 3724 | 471 471 | 98.94 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-1141
+		Unaligned bases: 1 to 3253 (3253)
+		Unaligned bases: 3725 to 7690 (3966)
+
+CONTIG: scaffold-1506 (2413bp)
+Top Length: 1431  Top ID: 99.09
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 2432346 2433776 | 1 1431 | 1431 1431 | 99.09 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-1506
+			  Overlap between these two alignments (local misassembly). Inconsistency = -150 
+			Real Alignment 2: 2433778 2434608 | 1583 2413 | 831 831 | 98.07 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-1506
+
+CONTIG: scaffold-1841 (1639bp)
+Top Length: 138  Top ID: 99.28
+		This contig is partially unaligned. (Aligned 138 out of 1639 bases)
+		Alignment: 628054 628191 | 1639 1502 | 138 138 | 99.28 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-1841
+		Unaligned bases: 1 to 1501 (1501)
+
+CONTIG: scaffold-2119 (1948bp)
+Top Length: 1030  Top ID: 98.45
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 2067547 2068289 | 787 45 | 743 743 | 97.44 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-2119
+			  Overlap between these two alignments (local misassembly). Inconsistency = -105 
+			Real Alignment 2: 2066491 2067520 | 1948 919 | 1030 1030 | 98.45 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-2119
+
+CONTIG: scaffold-2321 (9718bp)
+Top Length: 4237  Top ID: 98.4
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 2461877 2466113 | 1 4237 | 4237 4237 | 98.4 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-2321
+			  Overlap between these two alignments (local misassembly). Inconsistency = -261 
+			Real Alignment 2: 2466979 2471333 | 5364 9718 | 4355 4355 | 95.36 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-2321
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-2503 (1792bp)
+Top Length: 570  Top ID: 98.07
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 1792 and total length of all aligns is 819
+		Alignment: 969892 970140 | 249 1 | 249 249 | 96.39 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-2503
+		Alignment: 969323 969892 | 1026 457 | 570 570 | 98.07 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-2503
+		Unaligned bases: 973
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold-2520 (2886bp)
+Top Length: 1402  Top ID: 97.36
+		This contig is partially unaligned. (Aligned 1402 out of 2886 bases)
+		Alignment: 2457251 2458652 | 2886 1485 | 1402 1402 | 97.36 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-2520
+		Unaligned bases: 1 to 1484 (1484)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-2542 (5615bp)
+Top Length: 818  Top ID: 95.23
+		Skipping redundant alignment 2320987 2321663 | 2807 2131 | 677 677 | 97.05 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-2542
+		This contig is misassembled. 3 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 5615 and total length of all aligns is 1406
+		Alignment: 2368530 2369347 | 2805 1988 | 818 818 | 95.23 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-2542
+		Alignment: 2363270 2363857 | 3706 3119 | 588 588 | 96.09 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-2542
+		Unaligned bases: 4209
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold-2824 (3541bp)
+Top Length: 321  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 321 out of 3541 bases)
+		Alignment: 1499716 1500036 | 3182 3502 | 321 321 | 100.0 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-2824
+		Unaligned bases: 1 to 3181 (3181)
+		Unaligned bases: 3503 to 3541 (39)
+
+CONTIG: scaffold-3559 (3350bp)
+Top Length: 3348  Top ID: 98.89
+		One align captures most of this contig: 625134 628481 | 3 3350 | 3348 3348 | 98.89 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-3559
+
+CONTIG: scaffold-3951 (1314bp)
+Top Length: 1314  Top ID: 96.65
+		One align captures most of this contig: 2535458 2536771 | 1314 1 | 1314 1314 | 96.65 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-3951
+
+CONTIG: scaffold-4737 (1895bp)
+Top Length: 88  Top ID: 98.86
+		This contig is partially unaligned. (Aligned 88 out of 1895 bases)
+		Alignment: 3995283 3995370 | 1549 1636 | 88 88 | 98.86 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-4737
+		Unaligned bases: 1 to 1548 (1548)
+		Unaligned bases: 1637 to 1895 (259)
+
+CONTIG: scaffold-6262 (719bp)
+Top Length: 362  Top ID: 99.17
+		Skipping redundant alignment 684883 685213 | 1 329 | 331 329 | 97.89 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-6262
+		Skipping redundant alignment 684340 684637 | 1 298 | 298 298 | 96.98 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-6262
+		Skipping redundant alignment 3325062 3325374 | 354 42 | 313 313 | 97.44 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-6262
+		This contig is partially unaligned. (Aligned 362 out of 719 bases)
+		Alignment: 8408 8767 | 1 362 | 360 362 | 99.17 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-6262
+		Unaligned bases: 363 to 719 (357)
+
+CONTIG: scaffold-7721 (1454bp)
+Top Length: 1098  Top ID: 95.46
+		Skipping redundant alignment 1528513 1528774 | 1262 1001 | 262 262 | 100.0 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-7721
+		Skipping redundant alignment 1524556 1524820 | 1273 1008 | 265 266 | 99.25 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-7721
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 2336505 2337602 | 1262 165 | 1098 1098 | 95.46 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-7721
+			  Extensive misassembly ( relocation, inconsistency = 2335155 ) between these two alignments
+			Real Alignment 2: 1158 1231 | 1454 1381 | 74 74 | 100.0 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-7721
+
+CONTIG: scaffold-8875 (1919bp)
+Top Length: 1916  Top ID: 98.75
+		One align captures most of this contig: 3453935 3455850 | 1916 1 | 1916 1916 | 98.75 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-8875
+
+CONTIG: scaffold-10472 (1424bp)
+Top Length: 91  Top ID: 98.9
+		This contig is partially unaligned. (Aligned 91 out of 1424 bases)
+		Alignment: 3995283 3995373 | 658 748 | 91 91 | 98.9 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-10472
+		Unaligned bases: 1 to 657 (657)
+		Unaligned bases: 749 to 1424 (676)
+
+CONTIG: scaffold-11533 (2360bp)
+Top Length: 221  Top ID: 98.64
+		This contig is partially unaligned. (Aligned 221 out of 2360 bases)
+		Alignment: 713361 713581 | 1 221 | 221 221 | 98.64 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-11533
+		Unaligned bases: 222 to 2360 (2139)
+
+CONTIG: scaffold-14111 (806bp)
+Top Length: 170  Top ID: 98.24
+		This contig is partially unaligned. (Aligned 170 out of 806 bases)
+		Alignment: 499546 499715 | 170 1 | 170 170 | 98.24 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-14111
+		Unaligned bases: 171 to 806 (636)
+
+CONTIG: scaffold-15886 (1260bp)
+Top Length: 1260  Top ID: 98.97
+		One align captures most of this contig: 2520538 2521797 | 1260 1 | 1260 1260 | 98.97 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-15886
+
+CONTIG: scaffold-23179 (984bp)
+Top Length: 984  Top ID: 99.8
+		One align captures most of this contig: 509801 510784 | 1 984 | 984 984 | 99.8 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-23179
+
+CONTIG: scaffold-24826 (707bp)
+Top Length: 707  Top ID: 97.88
+		One align captures most of this contig: 997088 997794 | 1 707 | 707 707 | 97.88 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-24826
+
+CONTIG: scaffold-26027 (2934bp)
+Top Length: 2515  Top ID: 95.94
+		This contig is partially unaligned. (Aligned 2515 out of 2934 bases)
+		Alignment: 501378 503892 | 2933 419 | 2515 2515 | 95.94 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-26027
+		Unaligned bases: 1 to 418 (418)
+		Unaligned bases: 2934 to 2934 (1)
+
+CONTIG: scaffold-27683 (2055bp)
+Top Length: 2002  Top ID: 98.2
+		Skipping redundant alignment 3455909 3456135 | 1829 2055 | 227 227 | 98.24 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-27683
+		This contig is partially unaligned. (Aligned 2002 out of 2055 bases)
+		Alignment: 3162893 3164894 | 2055 54 | 2002 2002 | 98.2 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-27683
+		Unaligned bases: 1 to 53 (53)
+
+CONTIG: scaffold-32204 (628bp)
+Top Length: 625  Top ID: 98.88
+		One align captures most of this contig: 986070 986694 | 4 628 | 625 625 | 98.88 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-32204
+
+CONTIG: scaffold-42530 (532bp)
+Top Length: 532  Top ID: 99.62
+		One align captures most of this contig: 2448352 2448883 | 532 1 | 532 532 | 99.62 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-42530
+
+CONTIG: scaffold-47945 (648bp)
+Top Length: 447  Top ID: 98.88
+		This contig is partially unaligned. (Aligned 447 out of 648 bases)
+		Alignment: 2536455 2536901 | 4 450 | 447 447 | 98.88 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-47945
+		Unaligned bases: 1 to 3 (3)
+		Unaligned bases: 451 to 648 (198)
+
+CONTIG: scaffold-53014 (799bp)
+Top Length: 413  Top ID: 95.88
+		This contig is partially unaligned. (Aligned 413 out of 799 bases)
+		Alignment: 618975 619387 | 414 2 | 413 413 | 95.88 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-53014
+		Unaligned bases: 1 to 1 (1)
+		Unaligned bases: 415 to 799 (385)
+
+CONTIG: scaffold-55057 (588bp)
+Top Length: 585  Top ID: 97.26
+		One align captures most of this contig: 2481766 2482349 | 585 1 | 584 585 | 97.26 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-55057
+
+CONTIG: scaffold-61445 (917bp)
+Top Length: 917  Top ID: 97.71
+		One align captures most of this contig: 980912 981828 | 917 1 | 917 917 | 97.71 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-61445
+
+CONTIG: scaffold-66600 (709bp)
+Top Length: 706  Top ID: 98.02
+		One align captures most of this contig: 2938814 2939519 | 4 709 | 706 706 | 98.02 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-66600
+
+CONTIG: scaffold-78909 (516bp)
+Top Length: 516  Top ID: 98.26
+		One align captures most of this contig: 591031 591546 | 1 516 | 516 516 | 98.26 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-78909
+
+CONTIG: scaffold-79411 (1146bp)
+Top Length: 1146  Top ID: 98.69
+		One align captures most of this contig: 999139 1000284 | 1 1146 | 1146 1146 | 98.69 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-79411
+
+CONTIG: scaffold-82490 (1078bp)
+Top Length: 1078  Top ID: 97.59
+		Marking as insignificant: 3159338 3160415 | 1078 1 | 1078 1078 | 96.47 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-82490
+		One align captures most of this contig: 3458627 3459704 | 1 1078 | 1078 1078 | 97.59 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-82490
+
+CONTIG: scaffold-84446 (1406bp)
+Top Length: 1406  Top ID: 98.29
+		One align captures most of this contig: 2434760 2436165 | 1406 1 | 1406 1406 | 98.29 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-84446
+
+CONTIG: scaffold-85361 (552bp)
+Top Length: 552  Top ID: 98.19
+		One align captures most of this contig: 3374727 3375278 | 1 552 | 552 552 | 98.19 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-85361
+
+CONTIG: scaffold-87365 (1636bp)
+Top Length: 1635  Top ID: 97.49
+		One align captures most of this contig: 3376397 3378031 | 2 1636 | 1635 1635 | 97.49 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-87365
+
+CONTIG: scaffold-100198 (1567bp)
+Top Length: 1567  Top ID: 97.7
+		One align captures most of this contig: 592714 594281 | 1 1567 | 1568 1567 | 97.7 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-100198
+
+CONTIG: scaffold-110406 (2593bp)
+Top Length: 110  Top ID: 97.27
+		This contig is partially unaligned. (Aligned 110 out of 2593 bases)
+		Alignment: 2992941 2993050 | 1 110 | 110 110 | 97.27 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-110406
+		Unaligned bases: 111 to 2593 (2483)
+
+CONTIG: scaffold-116159 (692bp)
+Top Length: 692  Top ID: 98.41
+		One align captures most of this contig: 1001199 1001890 | 692 1 | 692 692 | 98.41 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-116159
+
+CONTIG: scaffold-176291 (707bp)
+Top Length: 707  Top ID: 100.0
+		One align captures most of this contig: 986812 987518 | 707 1 | 707 707 | 100.0 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-176291
+
+CONTIG: scaffold-192767 (893bp)
+Top Length: 893  Top ID: 99.55
+		One align captures most of this contig: 989935 990827 | 1 893 | 893 893 | 99.55 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-192767
+
+CONTIG: scaffold-195313 (4916bp)
+Top Length: 891  Top ID: 95.96
+		This contig is partially unaligned. (Aligned 891 out of 4916 bases)
+		Alignment: 2478573 2479463 | 4026 4916 | 891 891 | 95.96 | Clostridium_nexile_gi_224515079_ref_NZ_ scaffold-195313
+		Unaligned bases: 1 to 4025 (4025)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Clostridium_nexile/contigs_reports/nucmer_output/Ray.used_snps
+	Reference Clostridium_nexile_gi_224515079_ref_NZ_: 62 total alignments. 1 total regions.
+		Region: 1 to 3995628 (3995628 bp)
+			START in gap: 1 to 1158 (1157 bp)
+			Align 1: 1158 1231 scaffold-7721 1454 1381
+				Negative gap (overlap) between this and next alignment: 1231 to 1230 (-1 bp)
+				Next Alignment: 1230 1730 scaffold-324 1442 1942
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1442 to 1444.
+			Align 2: 1232 1730 scaffold-324 1444 1942
+				Gap between this and next alignment: 1730 to 1836 (105 bp)
+				Next Alignment: 1836 3171 scaffold-324 2238 3573
+
+			Align 3: 1836 3171 scaffold-324 2238 3573
+				Negative gap (overlap) between this and next alignment: 3171 to 2586 (-585 bp)
+				Next Alignment: 2586 3469 scaffold-967 3996 3113
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 3996 to 3410.
+			Align 4: 3172 3469 scaffold-967 3410 3113
+				Negative gap (overlap) between this and next alignment: 3469 to 3450 (-19 bp)
+				Next Alignment: 3450 3928 scaffold-967 2947 2469
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 2947 to 2927.
+			Align 5: 3470 3928 scaffold-967 2927 2469
+				Gap between this and next alignment: 3928 to 4793 (864 bp)
+				Next Alignment: 4793 7187 scaffold-967 2468 74
+
+			Align 6: 4793 7187 scaffold-967 2468 74
+				Gap between this and next alignment: 7187 to 8408 (1220 bp)
+				Next Alignment: 8408 8767 scaffold-6262 1 362
+
+			Align 7: 8408 8767 scaffold-6262 1 362
+				Gap between this and next alignment: 8767 to 499546 (490778 bp)
+				Next Alignment: 499546 499715 scaffold-14111 170 1
+
+			Align 8: 499546 499715 scaffold-14111 170 1
+				Gap between this and next alignment: 499715 to 501378 (1662 bp)
+				Next Alignment: 501378 503892 scaffold-26027 2933 419
+
+			Align 9: 501378 503892 scaffold-26027 2933 419
+				Gap between this and next alignment: 503892 to 509801 (5908 bp)
+				Next Alignment: 509801 510784 scaffold-23179 1 984
+
+			Align 10: 509801 510784 scaffold-23179 1 984
+				Gap between this and next alignment: 510784 to 591031 (80246 bp)
+				Next Alignment: 591031 591546 scaffold-78909 1 516
+
+			Align 11: 591031 591546 scaffold-78909 1 516
+				Gap between this and next alignment: 591546 to 592714 (1167 bp)
+				Next Alignment: 592714 594281 scaffold-100198 1 1567
+
+			Align 12: 592714 594281 scaffold-100198 1 1567
+				Gap between this and next alignment: 594281 to 618975 (24693 bp)
+				Next Alignment: 618975 619387 scaffold-53014 414 2
+
+			Align 13: 618975 619387 scaffold-53014 414 2
+				Gap between this and next alignment: 619387 to 625134 (5746 bp)
+				Next Alignment: 625134 628481 scaffold-3559 3 3350
+
+			Align 14: 625134 628481 scaffold-3559 3 3350
+				The next alignment (628054 628191 scaffold-1841 1639 1502) is redundant. Skipping.
+				Gap between this and next alignment: 628481 to 713361 (84879 bp)
+				Next Alignment: 713361 713581 scaffold-11533 1 221
+
+			Align 16: 713361 713581 scaffold-11533 1 221
+				Gap between this and next alignment: 713581 to 969323 (255741 bp)
+				Next Alignment: 969323 969892 scaffold-2503 1026 457
+
+			Align 17: 969323 969892 scaffold-2503 1026 457
+				Negative gap (overlap) between this and next alignment: 969892 to 969892 (0 bp)
+				Next Alignment: 969892 970140 scaffold-2503 249 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 249 to 248.
+			Align 18: 969893 970140 scaffold-2503 248 1
+				Gap between this and next alignment: 970140 to 980912 (10771 bp)
+				Next Alignment: 980912 981828 scaffold-61445 917 1
+
+			Align 19: 980912 981828 scaffold-61445 917 1
+				Gap between this and next alignment: 981828 to 986070 (4241 bp)
+				Next Alignment: 986070 986694 scaffold-32204 4 628
+
+			Align 20: 986070 986694 scaffold-32204 4 628
+				Gap between this and next alignment: 986694 to 986812 (117 bp)
+				Next Alignment: 986812 987518 scaffold-176291 707 1
+
+			Align 21: 986812 987518 scaffold-176291 707 1
+				Gap between this and next alignment: 987518 to 989935 (2416 bp)
+				Next Alignment: 989935 990827 scaffold-192767 1 893
+
+			Align 22: 989935 990827 scaffold-192767 1 893
+				Gap between this and next alignment: 990827 to 997088 (6260 bp)
+				Next Alignment: 997088 997794 scaffold-24826 1 707
+
+			Align 23: 997088 997794 scaffold-24826 1 707
+				Gap between this and next alignment: 997794 to 999139 (1344 bp)
+				Next Alignment: 999139 1000284 scaffold-79411 1 1146
+
+			Align 24: 999139 1000284 scaffold-79411 1 1146
+				Gap between this and next alignment: 1000284 to 1001199 (914 bp)
+				Next Alignment: 1001199 1001890 scaffold-116159 692 1
+
+			Align 25: 1001199 1001890 scaffold-116159 692 1
+				Gap between this and next alignment: 1001890 to 1058143 (56252 bp)
+				Next Alignment: 1058143 1059410 scaffold-1008 3337 2069
+
+			Align 26: 1058143 1059410 scaffold-1008 3337 2069
+				Gap between this and next alignment: 1059410 to 1499716 (440305 bp)
+				Next Alignment: 1499716 1500036 scaffold-2824 3182 3502
+
+			Align 27: 1499716 1500036 scaffold-2824 3182 3502
+				Gap between this and next alignment: 1500036 to 1501329 (1292 bp)
+				Next Alignment: 1501329 1501410 scaffold-302 9952 9871
+
+			Align 28: 1501329 1501410 scaffold-302 9952 9871
+				Gap between this and next alignment: 1501410 to 1501412 (1 bp)
+				Next Alignment: 1501412 1501753 scaffold-302 9713 9372
+
+			Align 29: 1501412 1501753 scaffold-302 9713 9372
+				Negative gap (overlap) between this and next alignment: 1501753 to 1501752 (-1 bp)
+				Next Alignment: 1501752 1503169 scaffold-302 1779 362
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1779 to 1777.
+			Align 30: 1501754 1503169 scaffold-302 1777 362
+				Negative gap (overlap) between this and next alignment: 1503169 to 1503167 (-2 bp)
+				Next Alignment: 1503167 1505297 scaffold-795 3337 1207
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 3337 to 3334.
+			Align 31: 1503170 1505297 scaffold-795 3334 1207
+				Gap between this and next alignment: 1505297 to 1505299 (1 bp)
+				Next Alignment: 1505299 1505809 scaffold-795 1048 539
+
+			Align 32: 1505299 1505809 scaffold-795 1048 539
+				Gap between this and next alignment: 1505809 to 1809589 (303779 bp)
+				Next Alignment: 1809589 1811542 scaffold-1008 101 2055
+
+			Align 33: 1809589 1811542 scaffold-1008 101 2055
+				Gap between this and next alignment: 1811542 to 2066491 (254948 bp)
+				Next Alignment: 2066491 2067520 scaffold-2119 1948 919
+
+			Align 34: 2066491 2067520 scaffold-2119 1948 919
+				Gap between this and next alignment: 2067520 to 2067547 (26 bp)
+				Next Alignment: 2067547 2068289 scaffold-2119 787 45
+
+			Align 35: 2067547 2068289 scaffold-2119 787 45
+				Gap between this and next alignment: 2068289 to 2336505 (268215 bp)
+				Next Alignment: 2336505 2337602 scaffold-7721 1262 165
+
+			Align 36: 2336505 2337602 scaffold-7721 1262 165
+				Gap between this and next alignment: 2337602 to 2363270 (25667 bp)
+				Next Alignment: 2363270 2363857 scaffold-2542 3706 3119
+
+			Align 37: 2363270 2363857 scaffold-2542 3706 3119
+				Gap between this and next alignment: 2363857 to 2368530 (4672 bp)
+				Next Alignment: 2368530 2369347 scaffold-2542 2805 1988
+
+			Align 38: 2368530 2369347 scaffold-2542 2805 1988
+				Gap between this and next alignment: 2369347 to 2432346 (62998 bp)
+				Next Alignment: 2432346 2433776 scaffold-1506 1 1431
+
+			Align 39: 2432346 2433776 scaffold-1506 1 1431
+				Gap between this and next alignment: 2433776 to 2433778 (1 bp)
+				Next Alignment: 2433778 2434608 scaffold-1506 1583 2413
+
+			Align 40: 2433778 2434608 scaffold-1506 1583 2413
+				Gap between this and next alignment: 2434608 to 2434760 (151 bp)
+				Next Alignment: 2434760 2436165 scaffold-84446 1406 1
+
+			Align 41: 2434760 2436165 scaffold-84446 1406 1
+				Gap between this and next alignment: 2436165 to 2448352 (12186 bp)
+				Next Alignment: 2448352 2448883 scaffold-42530 532 1
+
+			Align 42: 2448352 2448883 scaffold-42530 532 1
+				Gap between this and next alignment: 2448883 to 2457251 (8367 bp)
+				Next Alignment: 2457251 2458652 scaffold-2520 2886 1485
+
+			Align 43: 2457251 2458652 scaffold-2520 2886 1485
+				Gap between this and next alignment: 2458652 to 2461877 (3224 bp)
+				Next Alignment: 2461877 2466113 scaffold-2321 1 4237
+
+			Align 44: 2461877 2466113 scaffold-2321 1 4237
+				Gap between this and next alignment: 2466113 to 2466979 (865 bp)
+				Next Alignment: 2466979 2471333 scaffold-2321 5364 9718
+
+			Align 45: 2466979 2471333 scaffold-2321 5364 9718
+				Gap between this and next alignment: 2471333 to 2478573 (7239 bp)
+				Next Alignment: 2478573 2479463 scaffold-195313 4026 4916
+
+			Align 46: 2478573 2479463 scaffold-195313 4026 4916
+				Gap between this and next alignment: 2479463 to 2481766 (2302 bp)
+				Next Alignment: 2481766 2482349 scaffold-55057 585 1
+
+			Align 47: 2481766 2482349 scaffold-55057 585 1
+				Gap between this and next alignment: 2482349 to 2499556 (17206 bp)
+				Next Alignment: 2499556 2500561 scaffold-689 547 1552
+
+			Align 48: 2499556 2500561 scaffold-689 547 1552
+				Negative gap (overlap) between this and next alignment: 2500561 to 2500561 (0 bp)
+				Next Alignment: 2500561 2502007 scaffold-689 1744 3190
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1744 to 1745.
+			Align 49: 2500562 2502007 scaffold-689 1745 3190
+				Gap between this and next alignment: 2502007 to 2520538 (18530 bp)
+				Next Alignment: 2520538 2521797 scaffold-15886 1260 1
+
+			Align 50: 2520538 2521797 scaffold-15886 1260 1
+				Gap between this and next alignment: 2521797 to 2535458 (13660 bp)
+				Next Alignment: 2535458 2536771 scaffold-3951 1314 1
+
+			Align 51: 2535458 2536771 scaffold-3951 1314 1
+				Negative gap (overlap) between this and next alignment: 2536771 to 2536455 (-316 bp)
+				Next Alignment: 2536455 2536901 scaffold-47945 4 450
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 4 to 321.
+			Align 52: 2536772 2536901 scaffold-47945 321 450
+				Gap between this and next alignment: 2536901 to 2938814 (401912 bp)
+				Next Alignment: 2938814 2939519 scaffold-66600 4 709
+
+			Align 53: 2938814 2939519 scaffold-66600 4 709
+				Gap between this and next alignment: 2939519 to 2992941 (53421 bp)
+				Next Alignment: 2992941 2993050 scaffold-110406 1 110
+
+			Align 54: 2992941 2993050 scaffold-110406 1 110
+				Gap between this and next alignment: 2993050 to 3162893 (169842 bp)
+				Next Alignment: 3162893 3164894 scaffold-27683 2055 54
+
+			Align 55: 3162893 3164894 scaffold-27683 2055 54
+				Gap between this and next alignment: 3164894 to 3374727 (209832 bp)
+				Next Alignment: 3374727 3375278 scaffold-85361 1 552
+
+			Align 56: 3374727 3375278 scaffold-85361 1 552
+				Gap between this and next alignment: 3375278 to 3376397 (1118 bp)
+				Next Alignment: 3376397 3378031 scaffold-87365 2 1636
+
+			Align 57: 3376397 3378031 scaffold-87365 2 1636
+				Gap between this and next alignment: 3378031 to 3453935 (75903 bp)
+				Next Alignment: 3453935 3455850 scaffold-8875 1916 1
+
+			Align 58: 3453935 3455850 scaffold-8875 1916 1
+				Gap between this and next alignment: 3455850 to 3458627 (2776 bp)
+				Next Alignment: 3458627 3459704 scaffold-82490 1 1078
+
+			Align 59: 3458627 3459704 scaffold-82490 1 1078
+				Gap between this and next alignment: 3459704 to 3922856 (463151 bp)
+				Next Alignment: 3922856 3923326 scaffold-1141 3254 3724
+
+			Align 60: 3922856 3923326 scaffold-1141 3254 3724
+				Gap between this and next alignment: 3923326 to 3995283 (71956 bp)
+				Next Alignment: 3995283 3995370 scaffold-4737 1549 1636
+
+			Align 61: 3995283 3995370 scaffold-4737 1549 1636
+				Negative gap (overlap) between this and next alignment: 3995370 to 3995283 (-87 bp)
+				Next Alignment: 3995283 3995373 scaffold-10472 658 748
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 658 to 746.
+			Align 62: 3995371 3995373 scaffold-10472 746 748
+			END in gap: 3995373 to 3995628 (255 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Clostridium_nexile/contigs_reports/nucmer_output/Ray.used_snps
+
+Results:
+	Local Misassemblies: 8
+	Misassemblies: 2
+		Relocations: 2
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 2
+	Misassembled Contig Bases: 5041
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 18 part
+Partially Unaligned Contigs with Misassemblies: 3
+Unaligned Contig Bases: 41568
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 63346
+
+	SNPs: 1171
+	Insertions: 13
+	Deletions: 10
+
+	Positive Gaps: 53
+		Internal Gaps:  8
+		External Gaps:  45
+		External Gap Total:  3925747
+		External Gap Average: 87239
+	Negative Gaps: 9
+		Internal Overlaps:  4
+		External Overlaps:  5
+		External Overlaps Total: -991
+		External Overlaps Average: -198
+	Contigs with Redundant Alignments: 1 (138)

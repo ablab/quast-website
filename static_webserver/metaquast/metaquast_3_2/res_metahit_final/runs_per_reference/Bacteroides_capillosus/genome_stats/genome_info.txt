@@ -1,0 +1,17 @@
+reference chromosomes:
+	Bacteroides_capillosus_gi_146386150_ref_NZ_ (total length: 4241076 bp, maximal covered length: 49740 bp)
+
+total genome size: 4241076
+
+gap min size: 50
+partial gene/operon min size: 100
+
+
+
+assembly                 | genome    | duplication | gaps      | genes     | partial   | operons   | partial   |
+                         | fraction  | ratio       | number    |           | genes     |           | operons   |
+================================================================================================================
+IDBA_UD_to_Bacteroides_c | 1.17282%  | 1.02696     | 29        | -         | -         | -         | -         |
+Ray_to_Bacteroides_capil | 0.26962%  | 1.09287     | 13        | -         | -         | -         | -         |
+SOAPdenovo2_to_Bacteroid | 0.44925%  | 1.07805     | 46        | -         | -         | -         | -         |
+SPAdes_to_Bacteroides_ca | 1.05049%  | 1.06469     | 24        | -         | -         | -         | -         |

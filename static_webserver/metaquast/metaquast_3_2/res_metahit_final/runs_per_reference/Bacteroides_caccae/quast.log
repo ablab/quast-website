@@ -1,0 +1,122 @@
+/home/gurevich/rep/quast/quast.pyc -t 16 -j  --meta  --bed-file /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/combined_reference/structural_variations/combined_reference.bed --no-check-meta  --contig-thresholds 1000,5000,10000,25000,50000 -R /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Bacteroides_caccae.fasta -o /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_caccae --labels "IDBA_UD, Ray, SOAPdenovo2, SPAdes" /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/IDBA_UD_to_Bacteroides_caccae.fasta /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Ray_to_Bacteroides_caccae.fasta /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SOAPdenovo2_to_Bacteroides_caccae.fasta /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SPAdes_to_Bacteroides_caccae.fasta
+
+Started: 2015-11-09 20:05:39
+
+Logging to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_caccae/quast.log
+
+NOTICE: Output directory already exists. Existing Nucmer alignments can be used.
+
+Reference:
+  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Bacteroides_caccae.fasta ==> Bacteroides_caccae
+
+Contigs:
+  1  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/IDBA_UD_to_Bacteroides_caccae.fasta ==> IDBA_UD
+  2  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Ray_to_Bacteroides_caccae.fasta ==> Ray
+  3  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SOAPdenovo2_to_Bacteroides_caccae.fasta ==> SOAPdenovo2
+  4  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SPAdes_to_Bacteroides_caccae.fasta ==> SPAdes
+
+2015-11-09 20:05:40
+Running Basic statistics processor...
+  Reference genome:
+    Bacteroides_caccae.fasta, Reference length = 5493117, Reference GC % = 42.83
+  Contig files: 
+    1  IDBA_UD
+    2  Ray
+    3  SOAPdenovo2
+    4  SPAdes
+  Calculating N50 and L50...
+    1  IDBA_UD, N50 = 14202, L50 = 7, Total length = 482208, GC % = 45.86, # N's per 100 kbp =  204.68
+    2  Ray, N50 = 5593, L50 = 11, Total length = 202751, GC % = 46.00, # N's per 100 kbp =  2629.83
+    3  SOAPdenovo2, N50 = 1537, L50 = 44, Total length = 259033, GC % = 47.08, # N's per 100 kbp =  3626.18
+    4  SPAdes, N50 = 22352, L50 = 6, Total length = 501602, GC % = 44.73, # N's per 100 kbp =  725.28
+  Drawing Nx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_caccae/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_caccae/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_caccae/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_caccae/basic_stats/GC_content_plot.pdf
+Done.
+
+2015-11-09 20:05:42
+Running Contig analyzer...
+  1  IDBA_UD
+  3  SOAPdenovo2
+  4  SPAdes
+  1  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_caccae/contigs_reports/contigs_report_IDBA_UD.stdout and contigs_report_IDBA_UD.stderr...
+  4  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_caccae/contigs_reports/contigs_report_SPAdes.stdout and contigs_report_SPAdes.stderr...
+  2  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_caccae/contigs_reports/contigs_report_Ray.stdout and contigs_report_Ray.stderr...
+  1  Using existing Nucmer alignments... 
+  3  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_caccae/contigs_reports/contigs_report_SOAPdenovo2.stdout and contigs_report_SOAPdenovo2.stderr...
+  4  Using existing Nucmer alignments... 
+  2  Using existing Nucmer alignments... 
+  3  Using existing Nucmer alignments... 
+  4  Alignments: runs_per_reference/Bacteroides_caccae/contigs_reports/alignments_SPAdes.tsv
+  1  Alignments: runs_per_reference/Bacteroides_caccae/contigs_reports/alignments_IDBA_UD.tsv
+  1  Analysis is finished.
+
+  2  Alignments: runs_per_reference/Bacteroides_caccae/contigs_reports/alignments_Ray.tsv
+  2  Analysis is finished.
+
+  4  Analysis is finished.
+
+  3  Alignments: runs_per_reference/Bacteroides_caccae/contigs_reports/alignments_SOAPdenovo2.tsv
+  3  Analysis is finished.
+
+  Creating total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_caccae/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_caccae/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_caccae/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_caccae/contigs_reports/misassemblies_plot.pdf
+Done.
+
+2015-11-09 20:05:47
+Running NA-NGA calculation...
+  1  IDBA_UD, Largest alignment = 22513, NA50 = 1448, LA50 = 44
+  2  Ray, Largest alignment = 14187, NA50 = 1804, LA50 = 22
+  3  SOAPdenovo2, Largest alignment = 5467, NA50 = 1185, LA50 = 53
+  4  SPAdes, Largest alignment = 36125, NA50 = 973, LA50 = 52
+  Drawing cumulative plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_caccae/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_caccae/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_caccae/aligned_stats/NGAx_plot.pdf
+Done.
+
+2015-11-09 20:05:49
+Running Genome analyzer...
+  NOTICE: No file with genes provided. Use the -G option if you want to specify it.
+  NOTICE: No file with operons provided. Use the -O option if you want to specify it.
+  1  IDBA_UD
+  2  Ray
+  3  SOAPdenovo2
+  4  SPAdes
+  3  Analysis is finished.
+  4  Analysis is finished.
+  2  Analysis is finished.
+  1  Analysis is finished.
+  Drawing Genome fraction, % histogram...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_caccae/genome_stats/genome_fraction_histogram.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding option to enable it.
+
+2015-11-09 20:05:51
+Drawing large plots...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating contig alignment plot...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2015-11-09 20:05:57
+RESULTS:
+  Text versions of total report are saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_caccae/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_caccae/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_caccae/report.html
+  PDF version (tables and plots) saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_caccae/report.pdf
+  Contig alignment plot: /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_caccae/alignment.svg

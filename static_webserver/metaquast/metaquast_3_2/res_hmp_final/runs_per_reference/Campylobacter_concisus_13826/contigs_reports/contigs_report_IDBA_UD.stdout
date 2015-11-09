@@ -1,0 +1,1624 @@
+Aligning contigs to reference...
+	Running Nucmer
+Parsing coords...
+Loading reference...
+	Loaded [Campylobacter_concisus_13826_gi_157163852_ref_NC_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 1
+	Total Region Length: 2052007
+Analyzing contigs...
+CONTIG: scaffold_47 (95558bp)
+Top Length: 26732  Top ID: 95.62
+		This contig is misassembled. 5 total aligns.
+			Real Alignment 1: 1478733 1494041 | 1 15309 | 15309 15309 | 95.37 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_47
+			  Gap between these two alignments (local misassembly). Inconsistency = 106 
+			Real Alignment 2: 1494406 1521128 | 15568 42299 | 26723 26732 | 95.62 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_47
+			  Overlap between these two alignments (local misassembly). Inconsistency = -575 
+			Real Alignment 3: 1521467 1529239 | 43213 50987 | 7773 7775 | 95.54 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_47
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 4: 1530327 1532405 | 53924 56002 | 2079 2079 | 95.29 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_47
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 5: 1551647 1574561 | 71583 94496 | 22915 22914 | 95.21 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_47
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_59 (73199bp)
+Top Length: 34602  Top ID: 95.64
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 1922686 1922762 | 9145 9221 | 77 77 | 100.0 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_59
+			  Extensive misassembly ( relocation, inconsistency = -962028 ) between these two alignments
+			Real Alignment 2: 982016 983976 | 32463 30503 | 1961 1961 | 95.92 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_59
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 3: 946249 980850 | 67072 32471 | 34602 34602 | 95.64 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_59
+			  Extensive misassembly ( relocation, inconsistency = 10471 ) between these two alignments
+			Real Alignment 4: 929658 935686 | 73195 67164 | 6029 6032 | 95.39 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_59
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_61 (73060bp)
+Top Length: 49461  Top ID: 95.77
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 1254028 1267222 | 13191 1 | 13195 13191 | 95.25 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_61
+			  Overlap between these two alignments (local misassembly). Inconsistency = -319 
+			Real Alignment 2: 1194482 1243938 | 73060 23600 | 49457 49461 | 95.77 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_61
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_65 (69204bp)
+Top Length: 55133  Top ID: 96.46
+		Skipping redundant alignment 1702359 1702450 | 69110 69201 | 92 92 | 98.91 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_65
+		Skipping redundant alignment 825271 825341 | 69204 69134 | 71 71 | 100.0 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_65
+		This contig is misassembled. 5 total aligns.
+			Real Alignment 1: 695012 708366 | 13351 1 | 13355 13351 | 95.89 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_65
+			  Gap between these two alignments (local misassembly). Inconsistency = 709 
+			Real Alignment 2: 639024 694155 | 68631 13499 | 55132 55133 | 96.46 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_65
+			  Extensive misassembly ( relocation, inconsistency = 415095 ) between these two alignments
+			Real Alignment 3: 1109726 1109823 | 69107 69204 | 98 98 | 98.98 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_65
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_71 (65566bp)
+Top Length: 26628  Top ID: 96.44
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 1272064 1292729 | 4911 25636 | 20666 20726 | 95.37 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_71
+			  Extensive misassembly ( relocation, inconsistency = 7387 ) between these two alignments
+			Real Alignment 2: 1309501 1336152 | 35021 61648 | 26652 26628 | 96.44 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_71
+			  Overlap between these two alignments (local misassembly). Inconsistency = -71 
+			Real Alignment 3: 1336322 1338148 | 61889 63713 | 1827 1825 | 95.63 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_71
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_73 (64097bp)
+Top Length: 36198  Top ID: 95.74
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 510235 513377 | 1 3145 | 3143 3145 | 95.71 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_73
+			  Gap between these two alignments (local misassembly). Inconsistency = 63 
+			Real Alignment 2: 521589 557825 | 11294 47491 | 36237 36198 | 95.74 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_73
+			  Overlap between these two alignments (local misassembly). Inconsistency = -171 
+			Real Alignment 3: 558143 574271 | 47980 64097 | 16129 16118 | 96.48 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_73
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_84 (66674bp)
+Top Length: 20467  Top ID: 95.86
+		This contig is misassembled. 5 total aligns.
+			Real Alignment 1: 199161 203135 | 3977 1 | 3975 3977 | 96.23 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_84
+			  Gap between these two alignments (local misassembly). Inconsistency = 497 
+			Real Alignment 2: 176127 196592 | 26515 6049 | 20466 20467 | 95.86 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_84
+			  Extensive misassembly ( relocation, inconsistency = 1704 ) between these two alignments
+			Real Alignment 3: 169062 173989 | 31900 26949 | 4928 4952 | 95.54 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_84
+			  Gap between these two alignments (local misassembly). Inconsistency = 12 
+			Real Alignment 4: 151518 154028 | 49424 46922 | 2511 2503 | 95.22 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_84
+			  Extensive misassembly ( relocation, inconsistency = 2181 ) between these two alignments
+			Real Alignment 5: 133402 148598 | 65359 50163 | 15197 15197 | 96.55 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_84
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_86 (61489bp)
+Top Length: 10242  Top ID: 95.64
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 61489 and total length of all aligns is 10407
+		Alignment: 1014317 1024556 | 1 10242 | 10240 10242 | 95.64 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_86
+		Alignment: 462527 462691 | 61202 61038 | 165 165 | 97.58 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_86
+		Unaligned bases: 51082
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold_91 (60374bp)
+Top Length: 30338  Top ID: 96.63
+		Skipping redundant alignment 1360671 1360899 | 1 229 | 229 229 | 96.94 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_91
+		This contig is misassembled. 4 total aligns.
+			Excluding internal overlap of size 1 between Alignment 1 and 2:  1417549 1444345 | 1 26799 | 26797 26799 --> 1417549 1444344 | 1 26798 | 26796 26798
+			Real Alignment 1: 1417549 1444344 | 1 26798 | 26796 26798 | 95.23 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_91
+			  Gap between these two alignments (local misassembly). Inconsistency = 346 
+			Real Alignment 2: 1444691 1475029 | 26799 57136 | 30339 30338 | 96.63 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_91
+			  Gap between these two alignments (local misassembly). Inconsistency = 565 
+			Real Alignment 3: 1475666 1478831 | 57208 60374 | 3166 3167 | 95.11 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_91
+
+CONTIG: scaffold_98 (56766bp)
+Top Length: 15401  Top ID: 96.74
+		This contig is partially unaligned. (Aligned 15401 out of 56766 bases)
+		Alignment: 1147684 1163094 | 10210 25610 | 15411 15401 | 96.74 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_98
+		Unaligned bases: 1 to 10209 (10209)
+		Unaligned bases: 25611 to 56766 (31156)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_99 (56279bp)
+Top Length: 17759  Top ID: 95.59
+		This contig is misassembled. 6 total aligns.
+			Real Alignment 1: 1702354 1702469 | 266 380 | 116 115 | 95.69 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_99
+			  Extensive misassembly ( relocation, inconsistency = -289911 ) between these two alignments
+			Real Alignment 2: 1412766 1416549 | 4373 588 | 3784 3786 | 95.55 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_99
+			  Overlap between these two alignments (local misassembly). Inconsistency = -114 
+			Real Alignment 3: 1395217 1402998 | 22042 14255 | 7782 7788 | 96.53 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_99
+			  Overlap between these two alignments (local misassembly). Inconsistency = -54 
+			Real Alignment 4: 1383324 1394757 | 33998 22556 | 11434 11443 | 96.03 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_99
+			  Overlap between these two alignments (local misassembly). Inconsistency = -151 
+			Real Alignment 5: 1378992 1383199 | 38479 34274 | 4208 4206 | 95.22 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_99
+			  Gap between these two alignments (local misassembly). Inconsistency = 569 
+			Real Alignment 6: 1360622 1378381 | 56279 38521 | 17760 17759 | 95.59 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_99
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_115 (49073bp)
+Top Length: 31980  Top ID: 95.77
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 461876 493865 | 583 32562 | 31990 31980 | 95.77 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_115
+			  Overlap between these two alignments (local misassembly). Inconsistency = -55 
+			Real Alignment 2: 494144 510333 | 32896 49073 | 16190 16178 | 96.32 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_115
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_134 (42175bp)
+Top Length: 16323  Top ID: 95.03
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 99584 107170 | 7598 5 | 7587 7594 | 95.54 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_134
+			  Overlap between these two alignments (local misassembly). Inconsistency = -280 
+			Real Alignment 2: 79328 95653 | 28131 11809 | 16326 16323 | 95.03 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_134
+			  Overlap between these two alignments (local misassembly). Inconsistency = -192 
+			Real Alignment 3: 66234 76141 | 41431 31510 | 9908 9922 | 95.39 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_134
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_158 (36814bp)
+Top Length: 21361  Top ID: 95.33
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 285767 288506 | 1 2740 | 2740 2740 | 95.04 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_158
+			  Extensive misassembly ( relocation, inconsistency = -1507 ) between these two alignments
+			Real Alignment 2: 288511 290579 | 4252 6320 | 2069 2069 | 95.41 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_158
+			  Gap between these two alignments (local misassembly). Inconsistency = 211 
+			Real Alignment 3: 290998 297277 | 6528 12820 | 6280 6293 | 95.9 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_158
+			  Extensive misassembly ( relocation, inconsistency = -2590 ) between these two alignments
+			Real Alignment 4: 297321 318682 | 15454 36814 | 21362 21361 | 95.33 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_158
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_163 (36115bp)
+Top Length: 35801  Top ID: 96.11
+		One align captures most of this contig: 1736239 1772024 | 1 35801 | 35786 35801 | 96.11 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_163
+
+CONTIG: scaffold_165 (35791bp)
+Top Length: 9022  Top ID: 95.02
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 849182 856231 | 10924 3875 | 7050 7050 | 95.94 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_165
+			  Extensive misassembly ( relocation, inconsistency = -1736 ) between these two alignments
+			Real Alignment 2: 842412 849172 | 19414 12670 | 6761 6745 | 95.31 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_165
+			  Extensive misassembly ( relocation, inconsistency = 1382 ) between these two alignments
+			Real Alignment 3: 825260 834282 | 35183 26162 | 9023 9022 | 95.02 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_165
+			  Extensive misassembly ( relocation, inconsistency = 572739 ) between these two alignments
+			Real Alignment 4: 251914 252012 | 35789 35692 | 99 98 | 98.99 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_165
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_167 (35656bp)
+Top Length: 10022  Top ID: 95.01
+		This contig is misassembled. 5 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 35656 and total length of all aligns is 14544
+		Alignment: 389733 389922 | 19258 19447 | 190 190 | 95.26 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_167
+		Alignment: 388806 389600 | 20228 21022 | 795 795 | 96.11 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_167
+		Alignment: 388210 388716 | 21401 21907 | 507 507 | 98.03 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_167
+		Alignment: 389535 392627 | 21844 24937 | 3093 3094 | 96.64 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_167
+		Alignment: 393376 403408 | 25616 35637 | 10033 10022 | 95.01 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_167
+		Unaligned bases: 21112
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold_169 (35587bp)
+Top Length: 20807  Top ID: 95.94
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 437655 448971 | 11348 1 | 11317 11348 | 95.32 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_169
+			  Extensive misassembly ( relocation, inconsistency = 8569 ) between these two alignments
+			Real Alignment 2: 404851 425654 | 35586 14780 | 20804 20807 | 95.94 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_169
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_175 (34534bp)
+Top Length: 19420  Top ID: 95.07
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 574173 588779 | 1 14603 | 14607 14603 | 95.56 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_175
+			  Gap between these two alignments (local misassembly). Inconsistency = 875 
+			Real Alignment 2: 590166 609592 | 15115 34534 | 19427 19420 | 95.07 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_175
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_210 (28383bp)
+Top Length: 13027  Top ID: 96.52
+		Skipping redundant alignment 382964 383112 | 19910 20058 | 149 149 | 97.32 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_210
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 1634336 1640777 | 1 6441 | 6442 6441 | 95.56 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_210
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 1643066 1656065 | 7123 20149 | 13000 13027 | 96.52 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_210
+			  Overlap between these two alignments (local misassembly). Inconsistency = -319 
+			Real Alignment 3: 1656127 1663488 | 20530 27890 | 7362 7361 | 95.29 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_210
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_217 (27744bp)
+Top Length: 13975  Top ID: 96.12
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 10 between Alignment 1 and 2:  757888 767668 | 9782 1 | 9781 9782 --> 757898 767668 | 9772 1 | 9771 9772
+			Real Alignment 1: 757898 767668 | 9772 1 | 9771 9772 | 95.92 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_217
+			  Gap between these two alignments (local misassembly). Inconsistency = 443 
+			Real Alignment 2: 743472 757454 | 23747 9773 | 13983 13975 | 96.12 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_217
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_224 (26834bp)
+Top Length: 11162  Top ID: 95.9
+		Skipping redundant alignment 1842044 1842204 | 1 161 | 161 161 | 99.38 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_224
+		Skipping redundant alignment 1853142 1853253 | 11295 11406 | 112 112 | 97.32 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_224
+		This contig is misassembled. 7 total aligns.
+			Excluding internal overlap of size 16 between Alignment 1 and 2:  1802908 1803031 | 11147 11270 | 124 124 --> 1802924 1803031 | 11163 11270 | 108 108
+			Real Alignment 1: 1842305 1853458 | 1 11162 | 11154 11162 | 95.9 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_224
+			  Extensive misassembly ( relocation, inconsistency = -50535 ) between these two alignments
+			Real Alignment 2: 1802924 1803031 | 11163 11270 | 108 108 | 95.97 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_224
+			  Extensive misassembly ( relocation, inconsistency = -1179022 ) between these two alignments
+			Real Alignment 3: 624034 624147 | 11295 11408 | 114 114 | 95.61 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_224
+			  Extensive misassembly ( relocation, inconsistency = -228286 ) between these two alignments
+			Real Alignment 4: 403326 403439 | 18985 18873 | 114 113 | 98.25 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_224
+			  Extensive misassembly ( relocation, inconsistency = 1457059 ) between these two alignments
+			Real Alignment 5: 1861163 1868349 | 19650 26834 | 7187 7185 | 96.01 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_224
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_230 (26506bp)
+Top Length: 13634  Top ID: 95.72
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 1616160 1629796 | 7967 21600 | 13637 13634 | 95.72 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_230
+			  Overlap between these two alignments (local misassembly). Inconsistency = -265 
+			Real Alignment 2: 1629804 1634434 | 21873 26506 | 4631 4634 | 95.58 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_230
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_241 (24960bp)
+Top Length: 7689  Top ID: 95.05
+		This contig is partially unaligned. (Aligned 7689 out of 24960 bases)
+		Alignment: 1987810 1995417 | 5809 13497 | 7608 7689 | 95.05 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_241
+		Unaligned bases: 1 to 5808 (5808)
+		Unaligned bases: 13498 to 24960 (11463)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_256 (23584bp)
+Top Length: 23183  Top ID: 95.71
+		This contig is partially unaligned. (Aligned 23183 out of 23584 bases)
+		Alignment: 793581 816748 | 1 23183 | 23168 23183 | 95.71 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_256
+		Unaligned bases: 23184 to 23584 (401)
+
+CONTIG: scaffold_258 (23322bp)
+Top Length: 21852  Top ID: 95.55
+		This contig is partially unaligned. (Aligned 21852 out of 23322 bases)
+		Alignment: 320718 342577 | 219 22070 | 21860 21852 | 95.55 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_258
+		Unaligned bases: 1 to 218 (218)
+		Unaligned bases: 22071 to 23322 (1252)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_264 (23072bp)
+Top Length: 3766  Top ID: 96.71
+		This contig is misassembled. 3 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 23072 and total length of all aligns is 5665
+		Alignment: 1005188 1005263 | 1972 1897 | 76 76 | 100.0 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_264
+		Alignment: 1950051 1953817 | 16890 20655 | 3767 3766 | 96.71 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_264
+		Alignment: 1954433 1956255 | 21250 23072 | 1823 1823 | 97.97 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_264
+		Unaligned bases: 17407
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold_266 (22994bp)
+Top Length: 15662  Top ID: 95.55
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 251902 252007 | 805 699 | 106 107 | 96.26 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_266
+			  Extensive misassembly ( relocation, inconsistency = 1450486 ) between these two alignments
+			Real Alignment 2: 1709021 1724665 | 7333 22994 | 15645 15662 | 95.55 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_266
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_270 (22509bp)
+Top Length: 20366  Top ID: 95.45
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 736652 738353 | 1701 1 | 1702 1701 | 95.19 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_270
+			  Overlap between these two alignments (local misassembly). Inconsistency = -163 
+			Real Alignment 2: 715963 736372 | 22509 2144 | 20410 20366 | 95.45 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_270
+
+CONTIG: scaffold_274 (21994bp)
+Top Length: 20083  Top ID: 97.28
+		This contig is partially unaligned. (Aligned 20083 out of 21994 bases)
+		Alignment: 1880626 1900705 | 21994 1912 | 20080 20083 | 97.28 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_274
+		Unaligned bases: 1 to 1911 (1911)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_275 (21984bp)
+Top Length: 12216  Top ID: 95.93
+		Skipping redundant alignment 708355 708453 | 21886 21984 | 99 99 | 100.0 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_275
+		Skipping redundant alignment 1837906 1838004 | 21984 21886 | 99 99 | 100.0 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_275
+		This contig is misassembled. 5 total aligns.
+			Real Alignment 1: 1109740 1109842 | 1 103 | 103 103 | 97.09 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_275
+			  Extensive misassembly ( relocation, inconsistency = -12960 ) between these two alignments
+			Real Alignment 2: 1097128 1109347 | 12564 349 | 12220 12216 | 95.93 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_275
+			  Overlap between these two alignments (local misassembly). Inconsistency = -212 
+			Real Alignment 3: 1087920 1096126 | 21984 13778 | 8207 8207 | 96.69 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_275
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_287 (21283bp)
+Top Length: 3838  Top ID: 95.84
+		This contig is partially unaligned. (Aligned 3838 out of 21283 bases)
+		Alignment: 1355639 1359478 | 17018 20855 | 3840 3838 | 95.84 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_287
+		Unaligned bases: 1 to 17017 (17017)
+		Unaligned bases: 20856 to 21283 (428)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_292 (20950bp)
+Top Length: 5160  Top ID: 95.0
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 20950 and total length of all aligns is 5292
+		Alignment: 1802907 1803038 | 15016 15147 | 132 132 | 95.49 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_292
+		Alignment: 768025 773185 | 20495 15336 | 5161 5160 | 95.0 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_292
+		Unaligned bases: 15658
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold_300 (20458bp)
+Top Length: 9519  Top ID: 95.73
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 1809522 1819039 | 15393 5875 | 9518 9519 | 95.73 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_300
+			  Overlap between these two alignments (local misassembly). Inconsistency = -12 
+			Real Alignment 2: 1808307 1808944 | 16622 15983 | 638 640 | 97.19 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_300
+			  Overlap between these two alignments (local misassembly). Inconsistency = -574 
+			Real Alignment 3: 1805297 1808255 | 20206 17248 | 2959 2959 | 95.07 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_300
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_323 (19670bp)
+Top Length: 11411  Top ID: 95.21
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 45836 53015 | 1 7180 | 7180 7180 | 95.15 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_323
+			  Overlap between these two alignments (local misassembly). Inconsistency = -623 
+			Real Alignment 2: 53022 64437 | 7810 19220 | 11416 11411 | 95.21 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_323
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_347 (18282bp)
+Top Length: 13426  Top ID: 95.9
+		This contig is partially unaligned. (Aligned 13426 out of 18282 bases)
+		Alignment: 2028653 2042078 | 4857 18282 | 13426 13426 | 95.9 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_347
+		Unaligned bases: 1 to 4856 (4856)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_362 (17439bp)
+Top Length: 2253  Top ID: 95.07
+		This contig is partially unaligned. (Aligned 2253 out of 17439 bases)
+		Alignment: 1683730 1685980 | 1 2253 | 2251 2253 | 95.07 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_362
+		Unaligned bases: 2254 to 17439 (15186)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_386 (16225bp)
+Top Length: 4874  Top ID: 95.06
+		Skipping redundant alignment 622998 623171 | 16052 16225 | 174 174 | 98.28 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_386
+		Skipping redundant alignment 1360552 1360719 | 16225 16058 | 168 168 | 98.21 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_386
+		Skipping redundant alignment 1417430 1417597 | 16225 16058 | 168 168 | 98.21 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_386
+		This contig is misassembled. 6 total aligns.
+			Real Alignment 1: 1121966 1126840 | 4874 1 | 4875 4874 | 95.06 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_386
+			  Extensive misassembly ( relocation, inconsistency = -3440 ) between these two alignments
+			Excluding internal overlap of size 2 between Alignment 2 and 3:  1118231 1121962 | 12049 8318 | 3732 3732 --> 1118233 1121962 | 12047 8318 | 3730 3730
+			Real Alignment 2: 1118233 1121962 | 12047 8318 | 3730 3730 | 96.6 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_386
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 3: 1110712 1114891 | 16225 12048 | 4180 4178 | 96.24 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_386
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_394 (16427bp)
+Top Length: 3702  Top ID: 96.14
+		This contig is partially unaligned. (Aligned 3702 out of 16427 bases)
+		Alignment: 14636 18337 | 4020 319 | 3702 3702 | 96.14 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_394
+		Unaligned bases: 1 to 318 (318)
+		Unaligned bases: 4021 to 16427 (12407)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_438 (14302bp)
+Top Length: 14302  Top ID: 95.71
+		One align captures most of this contig: 31592 45934 | 1 14302 | 14343 14302 | 95.71 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_438
+
+CONTIG: scaffold_459 (13658bp)
+Top Length: 13342  Top ID: 95.45
+		This contig is partially unaligned. (Aligned 13342 out of 13658 bases)
+		Alignment: 873905 887202 | 317 13658 | 13298 13342 | 95.45 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_459
+		Unaligned bases: 1 to 316 (316)
+
+CONTIG: scaffold_503 (12207bp)
+Top Length: 7805  Top ID: 95.39
+		Skipping redundant alignment 197645 197743 | 1 100 | 99 100 | 99.0 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_503
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 1135494 1138739 | 3236 1 | 3246 3236 | 96.09 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_503
+			  Overlap between these two alignments (local misassembly). Inconsistency = -216 
+			Real Alignment 2: 1126742 1134543 | 12207 4403 | 7802 7805 | 95.39 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_503
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_504 (12203bp)
+Top Length: 95  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 95 out of 12203 bases)
+		Alignment: 929658 929752 | 12109 12203 | 95 95 | 100.0 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_504
+		Unaligned bases: 1 to 12108 (12108)
+
+CONTIG: scaffold_512 (12035bp)
+Top Length: 12035  Top ID: 95.53
+		One align captures most of this contig: 107076 119087 | 1 12035 | 12012 12035 | 95.53 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_512
+
+CONTIG: scaffold_516 (11951bp)
+Top Length: 11951  Top ID: 96.2
+		One align captures most of this contig: 1868251 1880202 | 11951 1 | 11952 11951 | 96.2 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_516
+
+CONTIG: scaffold_517 (11929bp)
+Top Length: 11318  Top ID: 97.22
+		This contig is partially unaligned. (Aligned 11318 out of 11929 bases)
+		Alignment: 448873 460206 | 1 11318 | 11334 11318 | 97.22 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_517
+		Unaligned bases: 11319 to 11929 (611)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_519 (11850bp)
+Top Length: 11159  Top ID: 95.28
+		This contig is partially unaligned. (Aligned 11159 out of 11850 bases)
+		Alignment: 887149 898306 | 1 11159 | 11158 11159 | 95.28 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_519
+		Unaligned bases: 11160 to 11850 (691)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_541 (11472bp)
+Top Length: 11472  Top ID: 96.03
+		One align captures most of this contig: 1724374 1735829 | 1 11472 | 11456 11472 | 96.03 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_541
+
+CONTIG: scaffold_546 (20979bp)
+Top Length: 15668  Top ID: 95.28
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 1798494 1799669 | 1176 1 | 1176 1176 | 95.49 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_546
+			  Gap between these two alignments (local misassembly). Inconsistency = 0 
+			Real Alignment 2: 1782621 1798306 | 17031 1364 | 15686 15668 | 95.28 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_546
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_568 (11029bp)
+Top Length: 8012  Top ID: 96.5
+		This contig is partially unaligned. (Aligned 8012 out of 11029 bases)
+		Alignment: 865888 873901 | 8101 90 | 8014 8012 | 96.5 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_568
+		Unaligned bases: 1 to 89 (89)
+		Unaligned bases: 8102 to 11029 (2928)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_665 (9907bp)
+Top Length: 8854  Top ID: 95.64
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 2041980 2042436 | 1 457 | 457 457 | 96.94 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_665
+			  Gap between these two alignments (local misassembly). Inconsistency = 40 
+			Real Alignment 2: 2043073 2051930 | 1054 9907 | 8858 8854 | 95.64 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_665
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_666 (9907bp)
+Top Length: 6314  Top ID: 95.37
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 1917873 1920983 | 3111 1 | 3111 3111 | 96.56 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_666
+			  Gap between these two alignments (local misassembly). Inconsistency = 140 
+			Real Alignment 2: 1910925 1917250 | 9907 3594 | 6326 6314 | 95.37 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_666
+
+CONTIG: scaffold_751 (9177bp)
+Top Length: 9177  Top ID: 97.19
+		One align captures most of this contig: 1901783 1910957 | 1 9177 | 9175 9177 | 97.19 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_751
+
+CONTIG: scaffold_768 (8969bp)
+Top Length: 3484  Top ID: 95.61
+		Skipping redundant alignment 1110784 1110933 | 3 152 | 150 150 | 96.0 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_768
+		This contig is partially unaligned. (Aligned 3484 out of 8969 bases)
+		Alignment: 619616 623099 | 3486 3 | 3484 3484 | 95.61 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_768
+		Unaligned bases: 1 to 2 (2)
+		Unaligned bases: 3487 to 8969 (5483)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_945 (7897bp)
+Top Length: 1405  Top ID: 97.02
+		Skipping redundant alignment 206627 207456 | 7851 7022 | 830 830 | 96.27 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_945
+		Skipping redundant alignment 215513 215987 | 7496 7022 | 475 475 | 95.79 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_945
+		This contig is misassembled. 5 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 7897 and total length of all aligns is 2590
+		Alignment: 222870 224277 | 1405 1 | 1408 1405 | 97.02 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_945
+		Alignment: 221513 221809 | 2501 2206 | 297 296 | 95.62 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_945
+		Alignment: 210702 211590 | 7897 7009 | 889 889 | 96.96 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_945
+		Unaligned bases: 5307
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold_948 (7863bp)
+Top Length: 6976  Top ID: 96.88
+		This contig is partially unaligned. (Aligned 6976 out of 7863 bases)
+		Alignment: 1825199 1832173 | 1 6976 | 6975 6976 | 96.88 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_948
+		Unaligned bases: 6977 to 7863 (887)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_952 (7848bp)
+Top Length: 6822  Top ID: 95.55
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 1701932 1702046 | 1 117 | 115 117 | 95.73 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_952
+			  Extensive misassembly ( relocation, inconsistency = -1077962 ) between these two alignments
+			Real Alignment 2: 624280 631102 | 313 7134 | 6823 6822 | 95.55 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_952
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_1042 (7369bp)
+Top Length: 7369  Top ID: 95.88
+		One align captures most of this contig: 1676460 1683828 | 7369 1 | 7369 7369 | 95.88 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_1042
+
+CONTIG: scaffold_1187 (6739bp)
+Top Length: 6739  Top ID: 95.86
+		One align captures most of this contig: 278620 285357 | 1 6739 | 6738 6739 | 95.86 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_1187
+
+CONTIG: scaffold_2214 (4619bp)
+Top Length: 4619  Top ID: 95.61
+		One align captures most of this contig: 609494 614113 | 4619 1 | 4620 4619 | 95.61 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_2214
+
+CONTIG: scaffold_2608 (4167bp)
+Top Length: 3804  Top ID: 96.61
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 1109740 1109842 | 1 103 | 103 103 | 97.09 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_2608
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 825226 825341 | 129 14 | 116 116 | 95.76 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_2608
+			  Extensive misassembly ( relocation, inconsistency = 186423 ) between these two alignments
+			Real Alignment 2: 634765 638568 | 4167 364 | 3804 3804 | 96.61 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_2608
+
+CONTIG: scaffold_2677 (4100bp)
+Top Length: 2674  Top ID: 95.48
+		Skipping redundant alignment 1842206 1842403 | 3903 4100 | 198 198 | 98.99 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_2677
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 708268 708366 | 99 1 | 99 99 | 100.0 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_2677
+			  Extensive misassembly ( relocation, inconsistency = 1129778 ) between these two alignments
+			Real Alignment 2: 1839472 1842142 | 1427 4100 | 2671 2674 | 95.48 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_2677
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_3236 (3669bp)
+Top Length: 2965  Top ID: 95.62
+		This contig is partially unaligned. (Aligned 2965 out of 3669 bases)
+		Alignment: 631900 634863 | 705 3669 | 2964 2965 | 95.62 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_3236
+		Unaligned bases: 1 to 704 (704)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_3296 (3632bp)
+Top Length: 400  Top ID: 98.0
+		This contig is partially unaligned. (Aligned 400 out of 3632 bases)
+		Alignment: 214529 214928 | 1 400 | 400 400 | 98.0 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_3296
+		Unaligned bases: 401 to 3632 (3232)
+
+CONTIG: scaffold_3307 (3621bp)
+Top Length: 3621  Top ID: 96.47
+		One align captures most of this contig: 901586 905208 | 3621 1 | 3623 3621 | 96.47 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_3307
+
+CONTIG: scaffold_4482 (2965bp)
+Top Length: 1239  Top ID: 95.16
+		This contig is partially unaligned. (Aligned 1239 out of 2965 bases)
+		Alignment: 714823 716061 | 1239 1 | 1239 1239 | 95.16 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_4482
+		Unaligned bases: 1240 to 2965 (1726)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_4727 (2863bp)
+Top Length: 2863  Top ID: 99.72
+		This contig has 3 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 710552 713414 | 1 2863 | 2863 2863 | 99.72 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_4727
+		Skipping alignment  1083146 1086008 | 2863 1 | 2863 2863 | 99.72 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_4727
+		Skipping alignment  1833132 1835994 | 2863 1 | 2863 2863 | 99.72 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_4727
+
+CONTIG: scaffold_6111 (2435bp)
+Top Length: 99  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 99 out of 2435 bases)
+		Alignment: 901586 901684 | 2435 2337 | 99 99 | 100.0 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_6111
+		Unaligned bases: 1 to 2336 (2336)
+
+CONTIG: scaffold_6407 (2364bp)
+Top Length: 2364  Top ID: 95.64
+		One align captures most of this contig: 430304 432667 | 1 2364 | 2364 2364 | 95.64 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_6407
+
+CONTIG: scaffold_7791 (2067bp)
+Top Length: 1261  Top ID: 96.19
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 215802 217062 | 807 2067 | 1261 1261 | 96.19 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_7791
+		This contig is partially unaligned. (Aligned 1261 out of 2067 bases)
+		Alignment: 207271 208531 | 807 2067 | 1261 1261 | 96.19 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_7791
+		Unaligned bases: 1 to 806 (806)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_8036 (2025bp)
+Top Length: 2025  Top ID: 99.75
+		Marking as insignificant: 1836060 1838004 | 2025 1 | 1945 2025 | 95.95 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_8036
+		Marking as insignificant: 1086074 1088018 | 2025 1 | 1945 2025 | 95.95 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_8036
+		One align captures most of this contig: 708355 710378 | 1 2025 | 2024 2025 | 99.75 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_8036
+
+CONTIG: scaffold_8600 (1931bp)
+Top Length: 292  Top ID: 97.27
+		This contig is partially unaligned. (Aligned 292 out of 1931 bases)
+		Alignment: 463761 464053 | 295 4 | 293 292 | 97.27 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_8600
+		Unaligned bases: 1 to 3 (3)
+		Unaligned bases: 296 to 1931 (1636)
+
+CONTIG: scaffold_9287 (1836bp)
+Top Length: 1183  Top ID: 96.37
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 225616 225770 | 155 1 | 155 155 | 100.0 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_9287
+			  Extensive misassembly ( relocation, inconsistency = 2458 ) between these two alignments
+			Real Alignment 2: 221864 223046 | 1449 267 | 1183 1183 | 96.37 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_9287
+
+CONTIG: scaffold_9965 (1752bp)
+Top Length: 686  Top ID: 96.36
+		Skipping redundant alignment 133396 133630 | 1375 1609 | 235 235 | 95.32 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_9965
+		Skipping redundant alignment 131219 131571 | 1400 1752 | 353 353 | 96.88 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_9965
+		This contig is misassembled. 5 total aligns.
+			Real Alignment 1: 129802 129950 | 1 149 | 149 149 | 98.66 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_9965
+			  Gap between these two alignments (local misassembly). Inconsistency = 18 
+			Real Alignment 2: 130300 130985 | 481 1166 | 686 686 | 96.36 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_9965
+			  Extensive misassembly ( relocation, inconsistency = -2211 ) between these two alignments
+			Real Alignment 3: 128985 129360 | 1377 1752 | 376 376 | 96.28 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_9965
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_10688 (1671bp)
+Top Length: 1671  Top ID: 95.33
+		One align captures most of this contig: 318584 320253 | 1 1671 | 1670 1671 | 95.33 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_10688
+
+CONTIG: scaffold_11859 (1562bp)
+Top Length: 192  Top ID: 96.88
+		Skipping redundant alignment 1082112 1082255 | 1 146 | 144 146 | 96.58 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_11859
+		This contig is partially unaligned. (Aligned 192 out of 1562 bases)
+		Alignment: 462468 462659 | 192 1 | 192 192 | 96.88 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_11859
+		Unaligned bases: 193 to 1562 (1370)
+
+CONTIG: scaffold_13834 (1409bp)
+Top Length: 138  Top ID: 99.28
+		This contig is partially unaligned. (Aligned 138 out of 1409 bases)
+		Alignment: 16791 16928 | 1 138 | 138 138 | 99.28 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_13834
+		Unaligned bases: 139 to 1409 (1271)
+
+CONTIG: scaffold_17237 (1213bp)
+Top Length: 178  Top ID: 96.07
+		This contig is partially unaligned. (Aligned 178 out of 1213 bases)
+		Alignment: 382348 382525 | 409 232 | 178 178 | 96.07 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_17237
+		Unaligned bases: 1 to 231 (231)
+		Unaligned bases: 410 to 1213 (804)
+
+CONTIG: scaffold_19340 (1116bp)
+Top Length: 1116  Top ID: 95.79
+		One align captures most of this contig: 1674685 1675800 | 1116 1 | 1116 1116 | 95.79 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_19340
+
+CONTIG: scaffold_19646 (1105bp)
+Top Length: 1105  Top ID: 98.1
+		One align captures most of this contig: 225805 226909 | 1 1105 | 1105 1105 | 98.1 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_19646
+
+CONTIG: scaffold_20613 (1067bp)
+Top Length: 989  Top ID: 95.15
+		This contig is partially unaligned. (Aligned 989 out of 1067 bases)
+		Alignment: 911793 912781 | 76 1064 | 989 989 | 95.15 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_20613
+		Unaligned bases: 1 to 75 (75)
+		Unaligned bases: 1065 to 1067 (3)
+
+CONTIG: scaffold_23054 (985bp)
+Top Length: 99  Top ID: 96.97
+		This contig is partially unaligned. (Aligned 99 out of 985 bases)
+		Alignment: 318584 318682 | 985 887 | 99 99 | 96.97 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_23054
+		Unaligned bases: 1 to 886 (886)
+
+CONTIG: scaffold_23611 (969bp)
+Top Length: 320  Top ID: 95.94
+		This contig is partially unaligned. (Aligned 320 out of 969 bases)
+		Alignment: 631070 631388 | 969 650 | 319 320 | 95.94 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_23611
+		Unaligned bases: 1 to 649 (649)
+
+CONTIG: scaffold_23724 (965bp)
+Top Length: 965  Top ID: 97.51
+		Marking as insignificant: 1966701 1966799 | 99 1 | 99 99 | 97.98 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_23724
+		This contig has 2 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 1957339 1958303 | 965 1 | 965 965 | 97.51 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_23724
+		Skipping alignment  1959346 1960310 | 965 1 | 965 965 | 97.51 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_23724
+
+CONTIG: scaffold_24099 (953bp)
+Top Length: 953  Top ID: 98.01
+		Marking as insignificant: 1966959 1967039 | 953 873 | 81 81 | 100.0 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_24099
+		This contig has 3 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 1956456 1957408 | 953 1 | 953 953 | 98.01 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_24099
+		Skipping alignment  1958463 1959415 | 953 1 | 953 953 | 98.01 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_24099
+		Skipping alignment  1960470 1961422 | 953 1 | 953 953 | 98.01 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_24099
+
+CONTIG: scaffold_25852 (904bp)
+Top Length: 904  Top ID: 95.26
+		One align captures most of this contig: 1308673 1309580 | 904 1 | 908 904 | 95.26 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_25852
+
+CONTIG: scaffold_28713 (835bp)
+Top Length: 242  Top ID: 97.52
+		This contig is partially unaligned. (Aligned 242 out of 835 bases)
+		Alignment: 817819 818059 | 243 2 | 241 242 | 97.52 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_28713
+		Unaligned bases: 1 to 1 (1)
+		Unaligned bases: 244 to 835 (592)
+
+CONTIG: scaffold_30903 (789bp)
+Top Length: 789  Top ID: 95.06
+		One align captures most of this contig: 968536 969324 | 789 1 | 789 789 | 95.06 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_30903
+
+CONTIG: scaffold_31468 (778bp)
+Top Length: 778  Top ID: 97.3
+		One align captures most of this contig: 427086 427863 | 1 778 | 778 778 | 97.3 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_31468
+
+CONTIG: scaffold_32181 (765bp)
+Top Length: 180  Top ID: 99.44
+		This contig is partially unaligned. (Aligned 180 out of 765 bases)
+		Alignment: 79326 79505 | 586 765 | 180 180 | 99.44 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_32181
+		Unaligned bases: 1 to 585 (585)
+
+CONTIG: scaffold_33955 (736bp)
+Top Length: 275  Top ID: 98.18
+		This contig is partially unaligned. (Aligned 275 out of 736 bases)
+		Alignment: 358495 358769 | 1 275 | 275 275 | 98.18 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_33955
+		Unaligned bases: 276 to 736 (461)
+
+CONTIG: scaffold_34110 (1266bp)
+Top Length: 723  Top ID: 97.24
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 1082498 1083214 | 544 1266 | 717 723 | 97.24 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_34110
+		Skipping redundant alignment 1832484 1833200 | 544 1266 | 717 723 | 97.24 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_34110
+		This contig is partially unaligned. (Aligned 723 out of 1266 bases)
+		Alignment: 713346 714062 | 1266 544 | 717 723 | 97.24 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_34110
+		Unaligned bases: 1 to 543 (543)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_35206 (715bp)
+Top Length: 715  Top ID: 95.94
+		One align captures most of this contig: 520862 521576 | 1 715 | 715 715 | 95.94 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_35206
+
+CONTIG: scaffold_35761 (706bp)
+Top Length: 706  Top ID: 97.17
+		One align captures most of this contig: 1675853 1676558 | 706 1 | 706 706 | 97.17 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_35761
+
+CONTIG: scaffold_36716 (692bp)
+Top Length: 81  Top ID: 98.77
+		This contig is partially unaligned. (Aligned 81 out of 692 bases)
+		Alignment: 1910959 1911039 | 692 612 | 81 81 | 98.77 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_36716
+		Unaligned bases: 1 to 611 (611)
+
+CONTIG: scaffold_38103 (672bp)
+Top Length: 329  Top ID: 97.26
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 251914 252011 | 3 99 | 98 97 | 98.98 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_38103
+			  Extensive misassembly ( relocation, inconsistency = 151862 ) between these two alignments
+			Real Alignment 2: 404118 404446 | 344 672 | 329 329 | 97.26 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_38103
+
+CONTIG: scaffold_40183 (644bp)
+Top Length: 644  Top ID: 95.96
+		One align captures most of this contig: 1393380 1394023 | 644 1 | 644 644 | 95.96 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_40183
+
+CONTIG: scaffold_40590 (640bp)
+Top Length: 638  Top ID: 96.87
+		One align captures most of this contig: 2049921 2050558 | 640 3 | 638 638 | 96.87 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_40590
+
+CONTIG: scaffold_41222 (632bp)
+Top Length: 632  Top ID: 96.99
+		One align captures most of this contig: 73859 74490 | 632 1 | 632 632 | 96.99 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_41222
+
+CONTIG: scaffold_42722 (614bp)
+Top Length: 161  Top ID: 96.27
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 211007 211167 | 454 614 | 161 161 | 96.27 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_42722
+		This contig is partially unaligned. (Aligned 161 out of 614 bases)
+		Alignment: 206886 207046 | 454 614 | 161 161 | 96.27 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_42722
+		Unaligned bases: 1 to 453 (453)
+
+CONTIG: scaffold_43152 (610bp)
+Top Length: 610  Top ID: 95.9
+		One align captures most of this contig: 1930846 1931455 | 610 1 | 610 610 | 95.9 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_43152
+
+CONTIG: scaffold_44467 (595bp)
+Top Length: 99  Top ID: 98.99
+		This contig is partially unaligned. (Aligned 99 out of 595 bases)
+		Alignment: 342799 342897 | 99 1 | 99 99 | 98.99 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_44467
+		Unaligned bases: 100 to 595 (496)
+
+CONTIG: scaffold_44970 (589bp)
+Top Length: 589  Top ID: 96.1
+		One align captures most of this contig: 1197497 1198085 | 589 1 | 589 589 | 96.1 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_44970
+
+CONTIG: scaffold_45775 (581bp)
+Top Length: 258  Top ID: 95.74
+		This contig is partially unaligned. (Aligned 258 out of 581 bases)
+		Alignment: 203854 204111 | 324 581 | 258 258 | 95.74 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_45775
+		Unaligned bases: 1 to 323 (323)
+
+CONTIG: scaffold_47017 (568bp)
+Top Length: 171  Top ID: 98.25
+		This contig is partially unaligned. (Aligned 171 out of 568 bases)
+		Alignment: 404666 404836 | 568 398 | 171 171 | 98.25 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_47017
+		Unaligned bases: 1 to 397 (397)
+
+CONTIG: scaffold_47712 (561bp)
+Top Length: 372  Top ID: 95.7
+		This contig is partially unaligned. (Aligned 372 out of 561 bases)
+		Alignment: 1306553 1306924 | 372 1 | 372 372 | 95.7 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_47712
+		Unaligned bases: 373 to 561 (189)
+
+CONTIG: scaffold_47749 (561bp)
+Top Length: 559  Top ID: 95.56
+		One align captures most of this contig: 357739 358300 | 561 3 | 562 559 | 95.56 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_47749
+
+CONTIG: scaffold_49294 (547bp)
+Top Length: 311  Top ID: 97.75
+		This contig is partially unaligned. (Aligned 311 out of 547 bases)
+		Alignment: 226996 227306 | 1 311 | 311 311 | 97.75 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_49294
+		Unaligned bases: 312 to 547 (236)
+
+CONTIG: scaffold_51072 (531bp)
+Top Length: 529  Top ID: 95.27
+		One align captures most of this contig: 178099 178627 | 529 1 | 529 529 | 95.27 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_51072
+
+CONTIG: scaffold_51645 (526bp)
+Top Length: 526  Top ID: 96.2
+		One align captures most of this contig: 762494 763019 | 1 526 | 526 526 | 96.2 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_51645
+
+CONTIG: scaffold_53288 (513bp)
+Top Length: 513  Top ID: 95.91
+		One align captures most of this contig: 2047495 2048007 | 513 1 | 513 513 | 95.91 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_53288
+
+CONTIG: scaffold_62172 (719bp)
+Top Length: 452  Top ID: 95.13
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 1964841 1965292 | 452 1 | 452 452 | 95.13 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_62172
+			  Extensive misassembly ( relocation, inconsistency = -1801 ) between these two alignments
+			Real Alignment 2: 1966372 1966640 | 719 454 | 269 266 | 97.03 | Campylobacter_concisus_13826_gi_157163852_ref_NC_ scaffold_62172
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Campylobacter_concisus_13826/contigs_reports/nucmer_output/IDBA_UD.used_snps
+	Reference Campylobacter_concisus_13826_gi_157163852_ref_NC_: 187 total alignments. 1 total regions.
+		Region: 1 to 2052007 (2052007 bp)
+			START in gap: 1 to 14636 (14635 bp)
+			Align 1: 14636 18337 scaffold_394 4020 319
+				The next alignment (16791 16928 scaffold_13834 1 138) is redundant. Skipping.
+				Gap between this and next alignment: 18337 to 31592 (13254 bp)
+				Next Alignment: 31592 45934 scaffold_438 1 14302
+
+			Align 3: 31592 45934 scaffold_438 1 14302
+				Negative gap (overlap) between this and next alignment: 45934 to 45836 (-98 bp)
+				Next Alignment: 45836 53015 scaffold_323 1 7180
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 100.
+			Align 4: 45935 53015 scaffold_323 100 7180
+				Gap between this and next alignment: 53015 to 53022 (6 bp)
+				Next Alignment: 53022 64437 scaffold_323 7810 19220
+
+			Align 5: 53022 64437 scaffold_323 7810 19220
+				Gap between this and next alignment: 64437 to 66234 (1796 bp)
+				Next Alignment: 66234 76141 scaffold_134 41431 31510
+
+			Align 6: 66234 76141 scaffold_134 41431 31510
+				The next alignment (73859 74490 scaffold_41222 632 1) is redundant. Skipping.
+				Gap between this and next alignment: 76141 to 79326 (3184 bp)
+				Next Alignment: 79326 79505 scaffold_32181 586 765
+
+			Align 8: 79326 79505 scaffold_32181 586 765
+				Negative gap (overlap) between this and next alignment: 79505 to 79328 (-177 bp)
+				Next Alignment: 79328 95653 scaffold_134 28131 11809
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 28131 to 27956.
+			Align 9: 79506 95653 scaffold_134 27956 11809
+				Gap between this and next alignment: 95653 to 99584 (3930 bp)
+				Next Alignment: 99584 107170 scaffold_134 7598 5
+
+			Align 10: 99584 107170 scaffold_134 7598 5
+				Negative gap (overlap) between this and next alignment: 107170 to 107076 (-94 bp)
+				Next Alignment: 107076 119087 scaffold_512 1 12035
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 96.
+			Align 11: 107171 119087 scaffold_512 96 12035
+				Gap between this and next alignment: 119087 to 128985 (9897 bp)
+				Next Alignment: 128985 129360 scaffold_9965 1377 1752
+
+			Align 12: 128985 129360 scaffold_9965 1377 1752
+				Gap between this and next alignment: 129360 to 129802 (441 bp)
+				Next Alignment: 129802 129950 scaffold_9965 1 149
+
+			Align 13: 129802 129950 scaffold_9965 1 149
+				Gap between this and next alignment: 129950 to 130300 (349 bp)
+				Next Alignment: 130300 130985 scaffold_9965 481 1166
+
+			Align 14: 130300 130985 scaffold_9965 481 1166
+				Gap between this and next alignment: 130985 to 133402 (2416 bp)
+				Next Alignment: 133402 148598 scaffold_84 65359 50163
+
+			Align 15: 133402 148598 scaffold_84 65359 50163
+				Gap between this and next alignment: 148598 to 151518 (2919 bp)
+				Next Alignment: 151518 154028 scaffold_84 49424 46922
+
+			Align 16: 151518 154028 scaffold_84 49424 46922
+				Gap between this and next alignment: 154028 to 169062 (15033 bp)
+				Next Alignment: 169062 173989 scaffold_84 31900 26949
+
+			Align 17: 169062 173989 scaffold_84 31900 26949
+				Gap between this and next alignment: 173989 to 176127 (2137 bp)
+				Next Alignment: 176127 196592 scaffold_84 26515 6049
+
+			Align 18: 176127 196592 scaffold_84 26515 6049
+				The next alignment (178099 178627 scaffold_51072 529 1) is redundant. Skipping.
+				Gap between this and next alignment: 196592 to 199161 (2568 bp)
+				Next Alignment: 199161 203135 scaffold_84 3977 1
+
+			Align 20: 199161 203135 scaffold_84 3977 1
+				Gap between this and next alignment: 203135 to 203854 (718 bp)
+				Next Alignment: 203854 204111 scaffold_45775 324 581
+
+			Align 21: 203854 204111 scaffold_45775 324 581
+				Gap between this and next alignment: 204111 to 206886 (2774 bp)
+				Next Alignment: 206886 207046 scaffold_42722 454 614
+
+			Align 22: 206886 207046 scaffold_42722 454 614
+				Gap between this and next alignment: 207046 to 207271 (224 bp)
+				Next Alignment: 207271 208531 scaffold_7791 807 2067
+
+			Align 23: 207271 208531 scaffold_7791 807 2067
+				Gap between this and next alignment: 208531 to 210702 (2170 bp)
+				Next Alignment: 210702 211590 scaffold_945 7897 7009
+
+			Align 24: 210702 211590 scaffold_945 7897 7009
+				Gap between this and next alignment: 211590 to 214529 (2938 bp)
+				Next Alignment: 214529 214928 scaffold_3296 1 400
+
+			Align 25: 214529 214928 scaffold_3296 1 400
+				Gap between this and next alignment: 214928 to 221513 (6584 bp)
+				Next Alignment: 221513 221809 scaffold_945 2501 2206
+
+			Align 26: 221513 221809 scaffold_945 2501 2206
+				Gap between this and next alignment: 221809 to 221864 (54 bp)
+				Next Alignment: 221864 223046 scaffold_9287 1449 267
+
+			Align 27: 221864 223046 scaffold_9287 1449 267
+				Negative gap (overlap) between this and next alignment: 223046 to 222870 (-176 bp)
+				Next Alignment: 222870 224277 scaffold_945 1405 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1405 to 1232.
+			Align 28: 223047 224277 scaffold_945 1232 1
+				Gap between this and next alignment: 224277 to 225616 (1338 bp)
+				Next Alignment: 225616 225770 scaffold_9287 155 1
+
+			Align 29: 225616 225770 scaffold_9287 155 1
+				Gap between this and next alignment: 225770 to 225805 (34 bp)
+				Next Alignment: 225805 226909 scaffold_19646 1 1105
+
+			Align 30: 225805 226909 scaffold_19646 1 1105
+				Gap between this and next alignment: 226909 to 226996 (86 bp)
+				Next Alignment: 226996 227306 scaffold_49294 1 311
+
+			Align 31: 226996 227306 scaffold_49294 1 311
+				Gap between this and next alignment: 227306 to 251902 (24595 bp)
+				Next Alignment: 251902 252007 scaffold_266 805 699
+
+			Align 32: 251902 252007 scaffold_266 805 699
+				Negative gap (overlap) between this and next alignment: 252007 to 251914 (-93 bp)
+				Next Alignment: 251914 252012 scaffold_165 35789 35692
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 35789 to 35696.
+			Align 33: 252008 252012 scaffold_165 35696 35692
+				The next alignment (251914 252011 scaffold_38103 3 99) is redundant. Skipping.
+				Gap between this and next alignment: 252012 to 278620 (26607 bp)
+				Next Alignment: 278620 285357 scaffold_1187 1 6739
+
+			Align 35: 278620 285357 scaffold_1187 1 6739
+				Gap between this and next alignment: 285357 to 285767 (409 bp)
+				Next Alignment: 285767 288506 scaffold_158 1 2740
+
+			Align 36: 285767 288506 scaffold_158 1 2740
+				Gap between this and next alignment: 288506 to 288511 (4 bp)
+				Next Alignment: 288511 290579 scaffold_158 4252 6320
+
+			Align 37: 288511 290579 scaffold_158 4252 6320
+				Gap between this and next alignment: 290579 to 290998 (418 bp)
+				Next Alignment: 290998 297277 scaffold_158 6528 12820
+
+			Align 38: 290998 297277 scaffold_158 6528 12820
+				Gap between this and next alignment: 297277 to 297321 (43 bp)
+				Next Alignment: 297321 318682 scaffold_158 15454 36814
+
+			Align 39: 297321 318682 scaffold_158 15454 36814
+				Negative gap (overlap) between this and next alignment: 318682 to 318584 (-98 bp)
+				Next Alignment: 318584 320253 scaffold_10688 1 1671
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 100.
+			Align 40: 318683 320253 scaffold_10688 100 1671
+				The next alignment (318584 318682 scaffold_23054 985 887) is redundant. Skipping.
+				Gap between this and next alignment: 320253 to 320718 (464 bp)
+				Next Alignment: 320718 342577 scaffold_258 219 22070
+
+			Align 42: 320718 342577 scaffold_258 219 22070
+				Gap between this and next alignment: 342577 to 342799 (221 bp)
+				Next Alignment: 342799 342897 scaffold_44467 99 1
+
+			Align 43: 342799 342897 scaffold_44467 99 1
+				Gap between this and next alignment: 342897 to 357739 (14841 bp)
+				Next Alignment: 357739 358300 scaffold_47749 561 3
+
+			Align 44: 357739 358300 scaffold_47749 561 3
+				Gap between this and next alignment: 358300 to 358495 (194 bp)
+				Next Alignment: 358495 358769 scaffold_33955 1 275
+
+			Align 45: 358495 358769 scaffold_33955 1 275
+				Gap between this and next alignment: 358769 to 382348 (23578 bp)
+				Next Alignment: 382348 382525 scaffold_17237 409 232
+
+			Align 46: 382348 382525 scaffold_17237 409 232
+				Gap between this and next alignment: 382525 to 388210 (5684 bp)
+				Next Alignment: 388210 388716 scaffold_167 21401 21907
+
+			Align 47: 388210 388716 scaffold_167 21401 21907
+				Gap between this and next alignment: 388716 to 388806 (89 bp)
+				Next Alignment: 388806 389600 scaffold_167 20228 21022
+
+			Align 48: 388806 389600 scaffold_167 20228 21022
+				Negative gap (overlap) between this and next alignment: 389600 to 389535 (-65 bp)
+				Next Alignment: 389535 392627 scaffold_167 21844 24937
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 21844 to 21911.
+			Align 49: 389601 392627 scaffold_167 21911 24937
+				The next alignment (389733 389922 scaffold_167 19258 19447) is redundant. Skipping.
+				Gap between this and next alignment: 392627 to 393376 (748 bp)
+				Next Alignment: 393376 403408 scaffold_167 25616 35637
+
+			Align 51: 393376 403408 scaffold_167 25616 35637
+				Negative gap (overlap) between this and next alignment: 403408 to 403326 (-82 bp)
+				Next Alignment: 403326 403439 scaffold_224 18985 18873
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 18985 to 18903.
+			Align 52: 403409 403439 scaffold_224 18903 18873
+				Gap between this and next alignment: 403439 to 404118 (678 bp)
+				Next Alignment: 404118 404446 scaffold_38103 344 672
+
+			Align 53: 404118 404446 scaffold_38103 344 672
+				Gap between this and next alignment: 404446 to 404666 (219 bp)
+				Next Alignment: 404666 404836 scaffold_47017 568 398
+
+			Align 54: 404666 404836 scaffold_47017 568 398
+				Gap between this and next alignment: 404836 to 404851 (14 bp)
+				Next Alignment: 404851 425654 scaffold_169 35586 14780
+
+			Align 55: 404851 425654 scaffold_169 35586 14780
+				Gap between this and next alignment: 425654 to 427086 (1431 bp)
+				Next Alignment: 427086 427863 scaffold_31468 1 778
+
+			Align 56: 427086 427863 scaffold_31468 1 778
+				Gap between this and next alignment: 427863 to 430304 (2440 bp)
+				Next Alignment: 430304 432667 scaffold_6407 1 2364
+
+			Align 57: 430304 432667 scaffold_6407 1 2364
+				Gap between this and next alignment: 432667 to 437655 (4987 bp)
+				Next Alignment: 437655 448971 scaffold_169 11348 1
+
+			Align 58: 437655 448971 scaffold_169 11348 1
+				Negative gap (overlap) between this and next alignment: 448971 to 448873 (-98 bp)
+				Next Alignment: 448873 460206 scaffold_517 1 11318
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 100.
+			Align 59: 448972 460206 scaffold_517 100 11318
+				Gap between this and next alignment: 460206 to 461876 (1669 bp)
+				Next Alignment: 461876 493865 scaffold_115 583 32562
+
+			Align 60: 461876 493865 scaffold_115 583 32562
+				The next alignment (462468 462659 scaffold_11859 192 1) is redundant. Skipping.
+				The next alignment (462527 462691 scaffold_86 61202 61038) is redundant. Skipping.
+				The next alignment (463761 464053 scaffold_8600 295 4) is redundant. Skipping.
+				Gap between this and next alignment: 493865 to 494144 (278 bp)
+				Next Alignment: 494144 510333 scaffold_115 32896 49073
+
+			Align 64: 494144 510333 scaffold_115 32896 49073
+				Negative gap (overlap) between this and next alignment: 510333 to 510235 (-98 bp)
+				Next Alignment: 510235 513377 scaffold_73 1 3145
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 100.
+			Align 65: 510334 513377 scaffold_73 100 3145
+				Gap between this and next alignment: 513377 to 520862 (7484 bp)
+				Next Alignment: 520862 521576 scaffold_35206 1 715
+
+			Align 66: 520862 521576 scaffold_35206 1 715
+				Gap between this and next alignment: 521576 to 521589 (12 bp)
+				Next Alignment: 521589 557825 scaffold_73 11294 47491
+
+			Align 67: 521589 557825 scaffold_73 11294 47491
+				Gap between this and next alignment: 557825 to 558143 (317 bp)
+				Next Alignment: 558143 574271 scaffold_73 47980 64097
+
+			Align 68: 558143 574271 scaffold_73 47980 64097
+				Negative gap (overlap) between this and next alignment: 574271 to 574173 (-98 bp)
+				Next Alignment: 574173 588779 scaffold_175 1 14603
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 100.
+			Align 69: 574272 588779 scaffold_175 100 14603
+				Gap between this and next alignment: 588779 to 590166 (1386 bp)
+				Next Alignment: 590166 609592 scaffold_175 15115 34534
+
+			Align 70: 590166 609592 scaffold_175 15115 34534
+				Negative gap (overlap) between this and next alignment: 609592 to 609494 (-98 bp)
+				Next Alignment: 609494 614113 scaffold_2214 4619 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 4619 to 4520.
+			Align 71: 609593 614113 scaffold_2214 4520 1
+				Gap between this and next alignment: 614113 to 619616 (5502 bp)
+				Next Alignment: 619616 623099 scaffold_768 3486 3
+
+			Align 72: 619616 623099 scaffold_768 3486 3
+				Gap between this and next alignment: 623099 to 624034 (934 bp)
+				Next Alignment: 624034 624147 scaffold_224 11295 11408
+
+			Align 73: 624034 624147 scaffold_224 11295 11408
+				Gap between this and next alignment: 624147 to 624280 (132 bp)
+				Next Alignment: 624280 631102 scaffold_952 313 7134
+
+			Align 74: 624280 631102 scaffold_952 313 7134
+				Negative gap (overlap) between this and next alignment: 631102 to 631070 (-32 bp)
+				Next Alignment: 631070 631388 scaffold_23611 969 650
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 969 to 936.
+			Align 75: 631103 631388 scaffold_23611 936 650
+				Gap between this and next alignment: 631388 to 631900 (511 bp)
+				Next Alignment: 631900 634863 scaffold_3236 705 3669
+
+			Align 76: 631900 634863 scaffold_3236 705 3669
+				Negative gap (overlap) between this and next alignment: 634863 to 634765 (-98 bp)
+				Next Alignment: 634765 638568 scaffold_2608 4167 364
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 4167 to 4068.
+			Align 77: 634864 638568 scaffold_2608 4068 364
+				Gap between this and next alignment: 638568 to 639024 (455 bp)
+				Next Alignment: 639024 694155 scaffold_65 68631 13499
+
+			Align 78: 639024 694155 scaffold_65 68631 13499
+				Gap between this and next alignment: 694155 to 695012 (856 bp)
+				Next Alignment: 695012 708366 scaffold_65 13351 1
+
+			Align 79: 695012 708366 scaffold_65 13351 1
+				The next alignment (708268 708366 scaffold_2677 99 1) is redundant. Skipping.
+				Negative gap (overlap) between this and next alignment: 708366 to 708355 (-11 bp)
+				Next Alignment: 708355 710378 scaffold_8036 1 2025
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 13.
+			Align 81: 708367 710378 scaffold_8036 13 2025
+				Gap between this and next alignment: 710378 to 710552 (173 bp)
+				Next Alignment: 710552 713414 scaffold_4727 1 2863
+
+			Align 82: 710552 713414 scaffold_4727 1 2863
+				Negative gap (overlap) between this and next alignment: 713414 to 713346 (-68 bp)
+				Next Alignment: 713346 714062 scaffold_34110 1266 544
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1266 to 1197.
+			Align 83: 713415 714062 scaffold_34110 1197 544
+				Gap between this and next alignment: 714062 to 714823 (760 bp)
+				Next Alignment: 714823 716061 scaffold_4482 1239 1
+
+			Align 84: 714823 716061 scaffold_4482 1239 1
+				Negative gap (overlap) between this and next alignment: 716061 to 715963 (-98 bp)
+				Next Alignment: 715963 736372 scaffold_270 22509 2144
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 22509 to 22411.
+			Align 85: 716062 736372 scaffold_270 22411 2144
+				Gap between this and next alignment: 736372 to 736652 (279 bp)
+				Next Alignment: 736652 738353 scaffold_270 1701 1
+
+			Align 86: 736652 738353 scaffold_270 1701 1
+				Gap between this and next alignment: 738353 to 743472 (5118 bp)
+				Next Alignment: 743472 757454 scaffold_217 23747 9773
+
+			Align 87: 743472 757454 scaffold_217 23747 9773
+				Gap between this and next alignment: 757454 to 757898 (443 bp)
+				Next Alignment: 757898 767668 scaffold_217 9772 1
+
+			Align 88: 757898 767668 scaffold_217 9772 1
+				The next alignment (762494 763019 scaffold_51645 1 526) is redundant. Skipping.
+				Gap between this and next alignment: 767668 to 768025 (356 bp)
+				Next Alignment: 768025 773185 scaffold_292 20495 15336
+
+			Align 90: 768025 773185 scaffold_292 20495 15336
+				Gap between this and next alignment: 773185 to 793581 (20395 bp)
+				Next Alignment: 793581 816748 scaffold_256 1 23183
+
+			Align 91: 793581 816748 scaffold_256 1 23183
+				Gap between this and next alignment: 816748 to 817819 (1070 bp)
+				Next Alignment: 817819 818059 scaffold_28713 243 2
+
+			Align 92: 817819 818059 scaffold_28713 243 2
+				Gap between this and next alignment: 818059 to 825226 (7166 bp)
+				Next Alignment: 825226 825341 scaffold_2608 129 14
+
+			Align 93: 825226 825341 scaffold_2608 129 14
+				Negative gap (overlap) between this and next alignment: 825341 to 825260 (-81 bp)
+				Next Alignment: 825260 834282 scaffold_165 35183 26162
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 35183 to 35102.
+			Align 94: 825342 834282 scaffold_165 35102 26162
+				Gap between this and next alignment: 834282 to 842412 (8129 bp)
+				Next Alignment: 842412 849172 scaffold_165 19414 12670
+
+			Align 95: 842412 849172 scaffold_165 19414 12670
+				Gap between this and next alignment: 849172 to 849182 (9 bp)
+				Next Alignment: 849182 856231 scaffold_165 10924 3875
+
+			Align 96: 849182 856231 scaffold_165 10924 3875
+				Gap between this and next alignment: 856231 to 865888 (9656 bp)
+				Next Alignment: 865888 873901 scaffold_568 8101 90
+
+			Align 97: 865888 873901 scaffold_568 8101 90
+				Gap between this and next alignment: 873901 to 873905 (3 bp)
+				Next Alignment: 873905 887202 scaffold_459 317 13658
+
+			Align 98: 873905 887202 scaffold_459 317 13658
+				Negative gap (overlap) between this and next alignment: 887202 to 887149 (-53 bp)
+				Next Alignment: 887149 898306 scaffold_519 1 11159
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 55.
+			Align 99: 887203 898306 scaffold_519 55 11159
+				Gap between this and next alignment: 898306 to 901586 (3279 bp)
+				Next Alignment: 901586 905208 scaffold_3307 3621 1
+
+			Align 100: 901586 905208 scaffold_3307 3621 1
+				The next alignment (901586 901684 scaffold_6111 2435 2337) is redundant. Skipping.
+				Gap between this and next alignment: 905208 to 911793 (6584 bp)
+				Next Alignment: 911793 912781 scaffold_20613 76 1064
+
+			Align 102: 911793 912781 scaffold_20613 76 1064
+				Gap between this and next alignment: 912781 to 929658 (16876 bp)
+				Next Alignment: 929658 935686 scaffold_59 73195 67164
+
+			Align 103: 929658 935686 scaffold_59 73195 67164
+				The next alignment (929658 929752 scaffold_504 12109 12203) is redundant. Skipping.
+				Gap between this and next alignment: 935686 to 946249 (10562 bp)
+				Next Alignment: 946249 980850 scaffold_59 67072 32471
+
+			Align 105: 946249 980850 scaffold_59 67072 32471
+				The next alignment (968536 969324 scaffold_30903 789 1) is redundant. Skipping.
+				Gap between this and next alignment: 980850 to 982016 (1165 bp)
+				Next Alignment: 982016 983976 scaffold_59 32463 30503
+
+			Align 107: 982016 983976 scaffold_59 32463 30503
+				Gap between this and next alignment: 983976 to 1005188 (21211 bp)
+				Next Alignment: 1005188 1005263 scaffold_264 1972 1897
+
+			Align 108: 1005188 1005263 scaffold_264 1972 1897
+				Gap between this and next alignment: 1005263 to 1014317 (9053 bp)
+				Next Alignment: 1014317 1024556 scaffold_86 1 10242
+
+			Align 109: 1014317 1024556 scaffold_86 1 10242
+				Gap between this and next alignment: 1024556 to 1087920 (63363 bp)
+				Next Alignment: 1087920 1096126 scaffold_275 21984 13778
+
+			Align 110: 1087920 1096126 scaffold_275 21984 13778
+				Gap between this and next alignment: 1096126 to 1097128 (1001 bp)
+				Next Alignment: 1097128 1109347 scaffold_275 12564 349
+
+			Align 111: 1097128 1109347 scaffold_275 12564 349
+				Gap between this and next alignment: 1109347 to 1109726 (378 bp)
+				Next Alignment: 1109726 1109823 scaffold_65 69107 69204
+
+			Align 112: 1109726 1109823 scaffold_65 69107 69204
+				Negative gap (overlap) between this and next alignment: 1109823 to 1109740 (-83 bp)
+				Next Alignment: 1109740 1109842 scaffold_275 1 103
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 85.
+			Align 113: 1109824 1109842 scaffold_275 85 103
+				Gap between this and next alignment: 1109842 to 1110712 (869 bp)
+				Next Alignment: 1110712 1114891 scaffold_386 16225 12048
+
+			Align 114: 1110712 1114891 scaffold_386 16225 12048
+				Gap between this and next alignment: 1114891 to 1118233 (3341 bp)
+				Next Alignment: 1118233 1121962 scaffold_386 12047 8318
+
+			Align 115: 1118233 1121962 scaffold_386 12047 8318
+				Gap between this and next alignment: 1121962 to 1121966 (3 bp)
+				Next Alignment: 1121966 1126840 scaffold_386 4874 1
+
+			Align 116: 1121966 1126840 scaffold_386 4874 1
+				Negative gap (overlap) between this and next alignment: 1126840 to 1126742 (-98 bp)
+				Next Alignment: 1126742 1134543 scaffold_503 12207 4403
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 12207 to 12108.
+			Align 117: 1126841 1134543 scaffold_503 12108 4403
+				Gap between this and next alignment: 1134543 to 1135494 (950 bp)
+				Next Alignment: 1135494 1138739 scaffold_503 3236 1
+
+			Align 118: 1135494 1138739 scaffold_503 3236 1
+				Gap between this and next alignment: 1138739 to 1147684 (8944 bp)
+				Next Alignment: 1147684 1163094 scaffold_98 10210 25610
+
+			Align 119: 1147684 1163094 scaffold_98 10210 25610
+				Gap between this and next alignment: 1163094 to 1194482 (31387 bp)
+				Next Alignment: 1194482 1243938 scaffold_61 73060 23600
+
+			Align 120: 1194482 1243938 scaffold_61 73060 23600
+				The next alignment (1197497 1198085 scaffold_44970 589 1) is redundant. Skipping.
+				Gap between this and next alignment: 1243938 to 1254028 (10089 bp)
+				Next Alignment: 1254028 1267222 scaffold_61 13191 1
+
+			Align 122: 1254028 1267222 scaffold_61 13191 1
+				Gap between this and next alignment: 1267222 to 1272064 (4841 bp)
+				Next Alignment: 1272064 1292729 scaffold_71 4911 25636
+
+			Align 123: 1272064 1292729 scaffold_71 4911 25636
+				Gap between this and next alignment: 1292729 to 1306553 (13823 bp)
+				Next Alignment: 1306553 1306924 scaffold_47712 372 1
+
+			Align 124: 1306553 1306924 scaffold_47712 372 1
+				Gap between this and next alignment: 1306924 to 1308673 (1748 bp)
+				Next Alignment: 1308673 1309580 scaffold_25852 904 1
+
+			Align 125: 1308673 1309580 scaffold_25852 904 1
+				Negative gap (overlap) between this and next alignment: 1309580 to 1309501 (-79 bp)
+				Next Alignment: 1309501 1336152 scaffold_71 35021 61648
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 35021 to 35101.
+			Align 126: 1309581 1336152 scaffold_71 35101 61648
+				Gap between this and next alignment: 1336152 to 1336322 (169 bp)
+				Next Alignment: 1336322 1338148 scaffold_71 61889 63713
+
+			Align 127: 1336322 1338148 scaffold_71 61889 63713
+				Gap between this and next alignment: 1338148 to 1355639 (17490 bp)
+				Next Alignment: 1355639 1359478 scaffold_287 17018 20855
+
+			Align 128: 1355639 1359478 scaffold_287 17018 20855
+				Gap between this and next alignment: 1359478 to 1360622 (1143 bp)
+				Next Alignment: 1360622 1378381 scaffold_99 56279 38521
+
+			Align 129: 1360622 1378381 scaffold_99 56279 38521
+				Gap between this and next alignment: 1378381 to 1378992 (610 bp)
+				Next Alignment: 1378992 1383199 scaffold_99 38479 34274
+
+			Align 130: 1378992 1383199 scaffold_99 38479 34274
+				Gap between this and next alignment: 1383199 to 1383324 (124 bp)
+				Next Alignment: 1383324 1394757 scaffold_99 33998 22556
+
+			Align 131: 1383324 1394757 scaffold_99 33998 22556
+				The next alignment (1393380 1394023 scaffold_40183 644 1) is redundant. Skipping.
+				Gap between this and next alignment: 1394757 to 1395217 (459 bp)
+				Next Alignment: 1395217 1402998 scaffold_99 22042 14255
+
+			Align 133: 1395217 1402998 scaffold_99 22042 14255
+				Gap between this and next alignment: 1402998 to 1412766 (9767 bp)
+				Next Alignment: 1412766 1416549 scaffold_99 4373 588
+
+			Align 134: 1412766 1416549 scaffold_99 4373 588
+				Gap between this and next alignment: 1416549 to 1417549 (999 bp)
+				Next Alignment: 1417549 1444344 scaffold_91 1 26798
+
+			Align 135: 1417549 1444344 scaffold_91 1 26798
+				Gap between this and next alignment: 1444344 to 1444691 (346 bp)
+				Next Alignment: 1444691 1475029 scaffold_91 26799 57136
+
+			Align 136: 1444691 1475029 scaffold_91 26799 57136
+				Gap between this and next alignment: 1475029 to 1475666 (636 bp)
+				Next Alignment: 1475666 1478831 scaffold_91 57208 60374
+
+			Align 137: 1475666 1478831 scaffold_91 57208 60374
+				Negative gap (overlap) between this and next alignment: 1478831 to 1478733 (-98 bp)
+				Next Alignment: 1478733 1494041 scaffold_47 1 15309
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 100.
+			Align 138: 1478832 1494041 scaffold_47 100 15309
+				Gap between this and next alignment: 1494041 to 1494406 (364 bp)
+				Next Alignment: 1494406 1521128 scaffold_47 15568 42299
+
+			Align 139: 1494406 1521128 scaffold_47 15568 42299
+				Gap between this and next alignment: 1521128 to 1521467 (338 bp)
+				Next Alignment: 1521467 1529239 scaffold_47 43213 50987
+
+			Align 140: 1521467 1529239 scaffold_47 43213 50987
+				Gap between this and next alignment: 1529239 to 1530327 (1087 bp)
+				Next Alignment: 1530327 1532405 scaffold_47 53924 56002
+
+			Align 141: 1530327 1532405 scaffold_47 53924 56002
+				Gap between this and next alignment: 1532405 to 1551647 (19241 bp)
+				Next Alignment: 1551647 1574561 scaffold_47 71583 94496
+
+			Align 142: 1551647 1574561 scaffold_47 71583 94496
+				Gap between this and next alignment: 1574561 to 1616160 (41598 bp)
+				Next Alignment: 1616160 1629796 scaffold_230 7967 21600
+
+			Align 143: 1616160 1629796 scaffold_230 7967 21600
+				Gap between this and next alignment: 1629796 to 1629804 (7 bp)
+				Next Alignment: 1629804 1634434 scaffold_230 21873 26506
+
+			Align 144: 1629804 1634434 scaffold_230 21873 26506
+				Negative gap (overlap) between this and next alignment: 1634434 to 1634336 (-98 bp)
+				Next Alignment: 1634336 1640777 scaffold_210 1 6441
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 100.
+			Align 145: 1634435 1640777 scaffold_210 100 6441
+				Gap between this and next alignment: 1640777 to 1643066 (2288 bp)
+				Next Alignment: 1643066 1656065 scaffold_210 7123 20149
+
+			Align 146: 1643066 1656065 scaffold_210 7123 20149
+				Gap between this and next alignment: 1656065 to 1656127 (61 bp)
+				Next Alignment: 1656127 1663488 scaffold_210 20530 27890
+
+			Align 147: 1656127 1663488 scaffold_210 20530 27890
+				Gap between this and next alignment: 1663488 to 1674685 (11196 bp)
+				Next Alignment: 1674685 1675800 scaffold_19340 1116 1
+
+			Align 148: 1674685 1675800 scaffold_19340 1116 1
+				Gap between this and next alignment: 1675800 to 1675853 (52 bp)
+				Next Alignment: 1675853 1676558 scaffold_35761 706 1
+
+			Align 149: 1675853 1676558 scaffold_35761 706 1
+				Negative gap (overlap) between this and next alignment: 1676558 to 1676460 (-98 bp)
+				Next Alignment: 1676460 1683828 scaffold_1042 7369 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 7369 to 7270.
+			Align 150: 1676559 1683828 scaffold_1042 7270 1
+				Negative gap (overlap) between this and next alignment: 1683828 to 1683730 (-98 bp)
+				Next Alignment: 1683730 1685980 scaffold_362 1 2253
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 100.
+			Align 151: 1683829 1685980 scaffold_362 100 2253
+				Gap between this and next alignment: 1685980 to 1701932 (15951 bp)
+				Next Alignment: 1701932 1702046 scaffold_952 1 117
+
+			Align 152: 1701932 1702046 scaffold_952 1 117
+				Gap between this and next alignment: 1702046 to 1702354 (307 bp)
+				Next Alignment: 1702354 1702469 scaffold_99 266 380
+
+			Align 153: 1702354 1702469 scaffold_99 266 380
+				Gap between this and next alignment: 1702469 to 1709021 (6551 bp)
+				Next Alignment: 1709021 1724665 scaffold_266 7333 22994
+
+			Align 154: 1709021 1724665 scaffold_266 7333 22994
+				Negative gap (overlap) between this and next alignment: 1724665 to 1724374 (-291 bp)
+				Next Alignment: 1724374 1735829 scaffold_541 1 11472
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 293.
+			Align 155: 1724666 1735829 scaffold_541 293 11472
+				Gap between this and next alignment: 1735829 to 1736239 (409 bp)
+				Next Alignment: 1736239 1772024 scaffold_163 1 35801
+
+			Align 156: 1736239 1772024 scaffold_163 1 35801
+				Gap between this and next alignment: 1772024 to 1782621 (10596 bp)
+				Next Alignment: 1782621 1798306 scaffold_546 17031 1364
+
+			Align 157: 1782621 1798306 scaffold_546 17031 1364
+				Gap between this and next alignment: 1798306 to 1798494 (187 bp)
+				Next Alignment: 1798494 1799669 scaffold_546 1176 1
+
+			Align 158: 1798494 1799669 scaffold_546 1176 1
+				Gap between this and next alignment: 1799669 to 1802907 (3237 bp)
+				Next Alignment: 1802907 1803038 scaffold_292 15016 15147
+
+			Align 159: 1802907 1803038 scaffold_292 15016 15147
+				The next alignment (1802924 1803031 scaffold_224 11163 11270) is redundant. Skipping.
+				Gap between this and next alignment: 1803038 to 1805297 (2258 bp)
+				Next Alignment: 1805297 1808255 scaffold_300 20206 17248
+
+			Align 161: 1805297 1808255 scaffold_300 20206 17248
+				Gap between this and next alignment: 1808255 to 1808307 (51 bp)
+				Next Alignment: 1808307 1808944 scaffold_300 16622 15983
+
+			Align 162: 1808307 1808944 scaffold_300 16622 15983
+				Gap between this and next alignment: 1808944 to 1809522 (577 bp)
+				Next Alignment: 1809522 1819039 scaffold_300 15393 5875
+
+			Align 163: 1809522 1819039 scaffold_300 15393 5875
+				Gap between this and next alignment: 1819039 to 1825199 (6159 bp)
+				Next Alignment: 1825199 1832173 scaffold_948 1 6976
+
+			Align 164: 1825199 1832173 scaffold_948 1 6976
+				Gap between this and next alignment: 1832173 to 1839472 (7298 bp)
+				Next Alignment: 1839472 1842142 scaffold_2677 1427 4100
+
+			Align 165: 1839472 1842142 scaffold_2677 1427 4100
+				Gap between this and next alignment: 1842142 to 1842305 (162 bp)
+				Next Alignment: 1842305 1853458 scaffold_224 1 11162
+
+			Align 166: 1842305 1853458 scaffold_224 1 11162
+				Gap between this and next alignment: 1853458 to 1861163 (7704 bp)
+				Next Alignment: 1861163 1868349 scaffold_224 19650 26834
+
+			Align 167: 1861163 1868349 scaffold_224 19650 26834
+				Negative gap (overlap) between this and next alignment: 1868349 to 1868251 (-98 bp)
+				Next Alignment: 1868251 1880202 scaffold_516 11951 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 11951 to 11852.
+			Align 168: 1868350 1880202 scaffold_516 11852 1
+				Gap between this and next alignment: 1880202 to 1880626 (423 bp)
+				Next Alignment: 1880626 1900705 scaffold_274 21994 1912
+
+			Align 169: 1880626 1900705 scaffold_274 21994 1912
+				Gap between this and next alignment: 1900705 to 1901783 (1077 bp)
+				Next Alignment: 1901783 1910957 scaffold_751 1 9177
+
+			Align 170: 1901783 1910957 scaffold_751 1 9177
+				Negative gap (overlap) between this and next alignment: 1910957 to 1910925 (-32 bp)
+				Next Alignment: 1910925 1917250 scaffold_666 9907 3594
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 9907 to 9874.
+			Align 171: 1910958 1917250 scaffold_666 9874 3594
+				The next alignment (1910959 1911039 scaffold_36716 692 612) is redundant. Skipping.
+				Gap between this and next alignment: 1917250 to 1917873 (622 bp)
+				Next Alignment: 1917873 1920983 scaffold_666 3111 1
+
+			Align 173: 1917873 1920983 scaffold_666 3111 1
+				Gap between this and next alignment: 1920983 to 1922686 (1702 bp)
+				Next Alignment: 1922686 1922762 scaffold_59 9145 9221
+
+			Align 174: 1922686 1922762 scaffold_59 9145 9221
+				Gap between this and next alignment: 1922762 to 1930846 (8083 bp)
+				Next Alignment: 1930846 1931455 scaffold_43152 610 1
+
+			Align 175: 1930846 1931455 scaffold_43152 610 1
+				Gap between this and next alignment: 1931455 to 1950051 (18595 bp)
+				Next Alignment: 1950051 1953817 scaffold_264 16890 20655
+
+			Align 176: 1950051 1953817 scaffold_264 16890 20655
+				Gap between this and next alignment: 1953817 to 1954433 (615 bp)
+				Next Alignment: 1954433 1956255 scaffold_264 21250 23072
+
+			Align 177: 1954433 1956255 scaffold_264 21250 23072
+				Gap between this and next alignment: 1956255 to 1956456 (200 bp)
+				Next Alignment: 1956456 1957408 scaffold_24099 953 1
+
+			Align 178: 1956456 1957408 scaffold_24099 953 1
+				Negative gap (overlap) between this and next alignment: 1957408 to 1957339 (-69 bp)
+				Next Alignment: 1957339 1958303 scaffold_23724 965 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 965 to 895.
+			Align 179: 1957409 1958303 scaffold_23724 895 1
+				Gap between this and next alignment: 1958303 to 1964841 (6537 bp)
+				Next Alignment: 1964841 1965292 scaffold_62172 452 1
+
+			Align 180: 1964841 1965292 scaffold_62172 452 1
+				Gap between this and next alignment: 1965292 to 1966372 (1079 bp)
+				Next Alignment: 1966372 1966640 scaffold_62172 719 454
+
+			Align 181: 1966372 1966640 scaffold_62172 719 454
+				Gap between this and next alignment: 1966640 to 1987810 (21169 bp)
+				Next Alignment: 1987810 1995417 scaffold_241 5809 13497
+
+			Align 182: 1987810 1995417 scaffold_241 5809 13497
+				Gap between this and next alignment: 1995417 to 2028653 (33235 bp)
+				Next Alignment: 2028653 2042078 scaffold_347 4857 18282
+
+			Align 183: 2028653 2042078 scaffold_347 4857 18282
+				Negative gap (overlap) between this and next alignment: 2042078 to 2041980 (-98 bp)
+				Next Alignment: 2041980 2042436 scaffold_665 1 457
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 100.
+			Align 184: 2042079 2042436 scaffold_665 100 457
+				Gap between this and next alignment: 2042436 to 2043073 (636 bp)
+				Next Alignment: 2043073 2051930 scaffold_665 1054 9907
+
+			Align 185: 2043073 2051930 scaffold_665 1054 9907
+				The next alignment (2047495 2048007 scaffold_53288 513 1) is redundant. Skipping.
+				The next alignment (2049921 2050558 scaffold_40590 640 3) is redundant. Skipping.
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Campylobacter_concisus_13826/contigs_reports/nucmer_output/IDBA_UD.used_snps
+
+Results:
+	Local Misassemblies: 33
+	Misassemblies: 27
+		Relocations: 27
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 5
+	Misassembled Contigs: 19
+	Misassembled Contig Bases: 548245
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 44 part
+Partially Unaligned Contigs with Misassemblies: 5
+Unaligned Contig Bases: 266930
+
+Ambiguously Mapped Contigs: 3
+Total Bases in Ambiguously Mapped Contigs: 4781
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 1308826
+
+	SNPs: 52180
+	Insertions: 1111
+	Deletions: 1000
+
+	Positive Gaps: 136
+		Internal Gaps:  50
+		External Gaps:  86
+		External Gap Total:  628643
+		External Gap Average: 7310
+	Negative Gaps: 31
+		Internal Overlaps:  1
+		External Overlaps:  30
+		External Overlaps Total: -2891
+		External Overlaps Average: -96
+	Contigs with Redundant Alignments: 16 (6517)

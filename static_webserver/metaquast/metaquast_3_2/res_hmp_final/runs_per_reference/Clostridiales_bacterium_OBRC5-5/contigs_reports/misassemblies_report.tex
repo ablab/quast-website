@@ -1,0 +1,26 @@
+\documentclass[12pt,a4paper]{article}
+\begin{document}
+\begin{table}[ht]
+\begin{center}
+\caption{All statistics are based on contigs of size $\geq$ 500 bp, unless otherwise noted (e.g., "\# contigs ($\geq$ 0 bp)" and "Total length ($\geq$ 0 bp)" include all contigs).}
+\begin{tabular}{|l*{4}{|r}|}
+\hline
+Assembly & IDBA\_UD & Ray & SOAPdenovo2 & SPAdes \\ \hline
+\# misassemblies & 29 & {\bf 4} & {\bf 4} & 29 \\ \hline
+\hspace{5mm}\# relocations & 28 & {\bf 4} & {\bf 4} & 27 \\ \hline
+\hspace{5mm}\# translocations & 0 & 0 & 0 & 0 \\ \hline
+\hspace{5mm}\# inversions & 1 & {\bf 0} & {\bf 0} & 2 \\ \hline
+\# possibly misassembled contigs & 87 & {\bf 5} & 13 & 78 \\ \hline
+\# misassembled contigs & 26 & {\bf 4} & {\bf 4} & 27 \\ \hline
+Misassembled contigs length & 107992 & 5287 & {\bf 3141} & 111350 \\ \hline
+\# local misassemblies & 20 & {\bf 1} & 20 & 17 \\ \hline
+\# structural variations & 8 & 2 & 4 & 6 \\ \hline
+\# mismatches & 46499 & {\bf 6165} & 9267 & 44721 \\ \hline
+\# indels & 798 & {\bf 115} & 202 & 752 \\ \hline
+\hspace{5mm}\# short indels & 737 & {\bf 109} & 142 & 696 \\ \hline
+\hspace{5mm}\# long indels & 61 & {\bf 6} & 60 & 56 \\ \hline
+Indels length & 1859 & {\bf 262} & 1404 & 1748 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+\end{document}

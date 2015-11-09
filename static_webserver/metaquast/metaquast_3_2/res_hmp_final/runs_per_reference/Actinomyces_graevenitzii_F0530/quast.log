@@ -1,0 +1,187 @@
+/home/gurevich/rep/quast/quast.pyc -t 16 -j  --meta  --bed-file /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/combined_reference/structural_variations/combined_reference.bed --no-check-meta  --contig-thresholds 1000,5000,10000,25000,50000 -R /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/quast_corrected_input/Actinomyces_graevenitzii_F0530.fasta -o /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530 --labels "IDBA_UD, Ray, SOAPdenovo2, SPAdes" /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/quast_corrected_input/IDBA_UD_to_Actinomyces_graevenitzii_F0530.fasta /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/quast_corrected_input/Ray_to_Actinomyces_graevenitzii_F0530.fasta /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/quast_corrected_input/SOAPdenovo2_to_Actinomyces_graevenitzii_F0530.fasta /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/quast_corrected_input/SPAdes_to_Actinomyces_graevenitzii_F0530.fasta
+
+Started: 2015-11-09 20:21:50
+
+Logging to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/quast.log
+
+NOTICE: Output directory already exists. Existing Nucmer alignments can be used.
+
+Reference:
+  /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/quast_corrected_input/Actinomyces_graevenitzii_F0530.fasta ==> Actinomyces_graevenitzii_F0530
+
+Contigs:
+  1  /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/quast_corrected_input/IDBA_UD_to_Actinomyces_graevenitzii_F0530.fasta ==> IDBA_UD
+  2  /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/quast_corrected_input/Ray_to_Actinomyces_graevenitzii_F0530.fasta ==> Ray
+  3  /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/quast_corrected_input/SOAPdenovo2_to_Actinomyces_graevenitzii_F0530.fasta ==> SOAPdenovo2
+  4  /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/quast_corrected_input/SPAdes_to_Actinomyces_graevenitzii_F0530.fasta ==> SPAdes
+
+2015-11-09 20:21:50
+Running Basic statistics processor...
+  Reference genome:
+    Actinomyces_graevenitzii_F0530.fasta, Reference length = 2090952, Reference GC % = 57.72
+  Contig files: 
+    1  IDBA_UD
+    2  Ray
+    3  SOAPdenovo2
+    4  SPAdes
+  Calculating N50 and L50...
+    1  IDBA_UD, N50 = 3101, L50 = 176, Total length = 1767476, GC % = 58.00, # N's per 100 kbp =  0.00
+    2  Ray, N50 = 729, L50 = 111, Total length = 333781, GC % = 56.40, # N's per 100 kbp =  648.63
+    3  SOAPdenovo2, N50 = 869, L50 = 123, Total length = 376199, GC % = 54.75, # N's per 100 kbp =  3979.01
+    4  SPAdes, N50 = 2222, L50 = 227, Total length = 1687463, GC % = 57.78, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/basic_stats/GC_content_plot.pdf
+Done.
+
+2015-11-09 20:21:53
+Running Contig analyzer...
+  1  IDBA_UD
+  3  SOAPdenovo2
+  2  Ray
+  4  SPAdes
+  3  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/contigs_report_SOAPdenovo2.stdout and contigs_report_SOAPdenovo2.stderr...
+  2  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/contigs_report_Ray.stdout and contigs_report_Ray.stderr...
+  3  Running Nucmer
+  2  Running Nucmer
+  3  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/nucmer -c 65 -l 65 --maxmatch \
+     -p /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/SOAPdenovo2 \
+     /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/quast_corrected_input/Actinomyces_graevenitzii_F0530.fasta \
+     /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/quast_corrected_input/SOAPdenovo2_to_Actinomyces_graevenitzii_F0530.fasta \
+     >> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/contigs_report_SOAPdenovo2.stdout \
+     2>> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/contigs_report_SOAPdenovo2.stderr
+  2  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/nucmer -c 65 -l 65 --maxmatch \
+     -p /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/Ray \
+     /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/quast_corrected_input/Actinomyces_graevenitzii_F0530.fasta \
+     /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/quast_corrected_input/Ray_to_Actinomyces_graevenitzii_F0530.fasta \
+     >> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/contigs_report_Ray.stdout \
+     2>> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/contigs_report_Ray.stderr
+  1  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/contigs_report_IDBA_UD.stdout and contigs_report_IDBA_UD.stderr...
+  1  Running Nucmer
+  1  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/nucmer -c 65 -l 65 --maxmatch \
+     -p /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/IDBA_UD \
+     /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/quast_corrected_input/Actinomyces_graevenitzii_F0530.fasta \
+     /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/quast_corrected_input/IDBA_UD_to_Actinomyces_graevenitzii_F0530.fasta \
+     >> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/contigs_report_IDBA_UD.stdout \
+     2>> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/contigs_report_IDBA_UD.stderr
+  4  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/contigs_report_SPAdes.stdout and contigs_report_SPAdes.stderr...
+  4  Running Nucmer
+  4  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/nucmer -c 65 -l 65 --maxmatch \
+     -p /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/SPAdes \
+     /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/quast_corrected_input/Actinomyces_graevenitzii_F0530.fasta \
+     /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/quast_corrected_input/SPAdes_to_Actinomyces_graevenitzii_F0530.fasta \
+     >> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/contigs_report_SPAdes.stdout \
+     2>> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/contigs_report_SPAdes.stderr
+  2  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/delta-filter -i 95 -l 0 /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/Ray.delta \
+     > /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/Ray.fdelta \
+     2> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/contigs_report_Ray.stderr
+  2  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-coords /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/Ray.delta \
+     > /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/Ray.coords_tmp \
+     2> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/contigs_report_Ray.stderr
+  3  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/delta-filter -i 95 -l 0 /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/SOAPdenovo2.delta \
+     > /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/SOAPdenovo2.fdelta \
+     2> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/contigs_report_SOAPdenovo2.stderr
+  2  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-snps -S -T -H /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/Ray.delta \
+     < /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/Ray.coords.headless \
+     > /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/Ray.all_snps \
+     2> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/contigs_report_Ray.stderr
+  3  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-coords /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/SOAPdenovo2.delta \
+     > /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/SOAPdenovo2.coords_tmp \
+     2> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/contigs_report_SOAPdenovo2.stderr
+  3  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-snps -S -T -H /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/SOAPdenovo2.delta \
+     < /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/SOAPdenovo2.coords.headless \
+     > /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/SOAPdenovo2.all_snps \
+     2> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/contigs_report_SOAPdenovo2.stderr
+  2  Alignments: ../runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/alignments_Ray.tsv
+  2  Analysis is finished.
+
+  3  Alignments: ../runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/alignments_SOAPdenovo2.tsv
+  3  Analysis is finished.
+
+  1  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/delta-filter -i 95 -l 0 /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/IDBA_UD.delta \
+     > /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/IDBA_UD.fdelta \
+     2> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/contigs_report_IDBA_UD.stderr
+  1  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-coords /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/IDBA_UD.delta \
+     > /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/IDBA_UD.coords_tmp \
+     2> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/contigs_report_IDBA_UD.stderr
+  1  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-snps -S -T -H /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/IDBA_UD.delta \
+     < /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/IDBA_UD.coords.headless \
+     > /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/IDBA_UD.all_snps \
+     2> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/contigs_report_IDBA_UD.stderr
+  4  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/delta-filter -i 95 -l 0 /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/SPAdes.delta \
+     > /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/SPAdes.fdelta \
+     2> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/contigs_report_SPAdes.stderr
+  4  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-coords /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/SPAdes.delta \
+     > /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/SPAdes.coords_tmp \
+     2> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/contigs_report_SPAdes.stderr
+  4  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-snps -S -T -H /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/SPAdes.delta \
+     < /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/SPAdes.coords.headless \
+     > /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/nucmer_output/SPAdes.all_snps \
+     2> /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/contigs_report_SPAdes.stderr
+  1  Alignments: ../runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/alignments_IDBA_UD.tsv
+  4  Alignments: ../runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/alignments_SPAdes.tsv
+  1  Analysis is finished.
+
+  4  Analysis is finished.
+
+  Creating total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/contigs_reports/misassemblies_plot.pdf
+Done.
+
+2015-11-09 20:22:06
+Running NA-NGA calculation...
+  1  IDBA_UD, Largest alignment = 13274, NA50 = 2394, NGA50 = 1931, LA50 = 210, LGA50 = 286
+  2  Ray, Largest alignment = 2299, NA50 = 598, LA50 = 212
+  3  SOAPdenovo2, Largest alignment = 3922, NA50 = 552, LA50 = 233
+  4  SPAdes, Largest alignment = 8610, NA50 = 1774, NGA50 = 1301, LA50 = 287, LGA50 = 419
+  Drawing cumulative plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/aligned_stats/NGAx_plot.pdf
+Done.
+
+2015-11-09 20:22:08
+Running Genome analyzer...
+  NOTICE: No file with genes provided. Use the -G option if you want to specify it.
+  NOTICE: No file with operons provided. Use the -O option if you want to specify it.
+  1  IDBA_UD
+  2  Ray
+  3  SOAPdenovo2
+  4  SPAdes
+  3  Analysis is finished.
+  2  Analysis is finished.
+  4  Analysis is finished.
+  1  Analysis is finished.
+  Drawing Genome fraction, % histogram...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/genome_stats/genome_fraction_histogram.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding option to enable it.
+
+2015-11-09 20:22:10
+Drawing large plots...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating contig alignment plot...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2015-11-09 20:22:38
+RESULTS:
+  Text versions of total report are saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/report.html
+  PDF version (tables and plots) saved to /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/report.pdf
+  Contig alignment plot: /Molly/gurevich/MetaQUAST/res_final/res_hmp_final/runs_per_reference/Actinomyces_graevenitzii_F0530/alignment.svg

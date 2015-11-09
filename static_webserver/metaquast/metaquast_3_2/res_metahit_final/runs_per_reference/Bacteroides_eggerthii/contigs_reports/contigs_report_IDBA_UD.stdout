@@ -1,0 +1,2565 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Bacteroides_eggerthii_gi_482849893_ref_NZ_]
+	Loaded [Bacteroides_eggerthii_gi_482849895_ref_NZ_]
+	Loaded [Bacteroides_eggerthii_gi_482849897_ref_NZ_]
+	Loaded [Bacteroides_eggerthii_gi_482849899_ref_NZ_]
+	Loaded [Bacteroides_eggerthii_gi_482849901_ref_NZ_]
+	Loaded [Bacteroides_eggerthii_gi_482849904_ref_NZ_]
+	Loaded [Bacteroides_eggerthii_gi_482849906_ref_NZ_]
+	Loaded [Bacteroides_eggerthii_gi_482849908_ref_NZ_]
+	Loaded [Bacteroides_eggerthii_gi_482849910_ref_NZ_]
+	Loaded [Bacteroides_eggerthii_gi_482849912_ref_NZ_]
+	Loaded [Bacteroides_eggerthii_gi_482849914_ref_NZ_]
+	Loaded [Bacteroides_eggerthii_gi_482849916_ref_NZ_]
+	Loaded [Bacteroides_eggerthii_gi_482849918_ref_NZ_]
+	Loaded [Bacteroides_eggerthii_gi_482849920_ref_NZ_]
+	Loaded [Bacteroides_eggerthii_gi_482849922_ref_NZ_]
+	Loaded [Bacteroides_eggerthii_gi_482849924_ref_NZ_]
+	Loaded [Bacteroides_eggerthii_gi_482849926_ref_NZ_]
+	Loaded [Bacteroides_eggerthii_gi_482849928_ref_NZ_]
+	Loaded [Bacteroides_eggerthii_gi_482849930_ref_NZ_]
+	Loaded [Bacteroides_eggerthii_gi_482849932_ref_NZ_]
+	Loaded [Bacteroides_eggerthii_gi_482849934_ref_NZ_]
+	Loaded [Bacteroides_eggerthii_gi_482849936_ref_NZ_]
+	Loaded [Bacteroides_eggerthii_gi_482849938_ref_NZ_]
+	Loaded [Bacteroides_eggerthii_gi_482849940_ref_NZ_]
+	Loaded [Bacteroides_eggerthii_gi_482849942_ref_NZ_]
+	Loaded [Bacteroides_eggerthii_gi_482849944_ref_NZ_]
+	Loaded [Bacteroides_eggerthii_gi_482849946_ref_NZ_]
+	Loaded [Bacteroides_eggerthii_gi_482849948_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 28
+	Total Region Length: 4611535
+Analyzing contigs...
+CONTIG: scaffold_86 (80260bp)
+Top Length: 106  Top ID: 99.06
+		Skipping redundant alignment 612446 612519 | 106 33 | 74 74 | 97.3 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_86
+		This contig is partially unaligned. (Aligned 106 out of 80260 bases)
+		Alignment: 19210 19315 | 106 1 | 106 106 | 99.06 | Bacteroides_eggerthii_gi_482849914_ref_NZ_ scaffold_86
+		Unaligned bases: 107 to 80260 (80154)
+
+CONTIG: scaffold_258 (41384bp)
+Top Length: 10184  Top ID: 98.95
+		Skipping redundant alignment 988 6049 | 7549 2484 | 5062 5066 | 98.54 | Bacteroides_eggerthii_gi_482849922_ref_NZ_ scaffold_258
+		Skipping redundant alignment 1 667 | 8168 7502 | 667 667 | 99.25 | Bacteroides_eggerthii_gi_482849922_ref_NZ_ scaffold_258
+		Skipping redundant alignment 1 3489 | 14502 11014 | 3489 3489 | 98.54 | Bacteroides_eggerthii_gi_482849926_ref_NZ_ scaffold_258
+		Skipping redundant alignment 636 1635 | 19842 20841 | 1000 1000 | 99.3 | Bacteroides_eggerthii_gi_482849918_ref_NZ_ scaffold_258
+		Skipping redundant alignment 51049 60337 | 32512 23221 | 9289 9292 | 99.09 | Bacteroides_eggerthii_gi_482849910_ref_NZ_ scaffold_258
+		Skipping redundant alignment 49764 50686 | 33404 32480 | 923 925 | 96.54 | Bacteroides_eggerthii_gi_482849910_ref_NZ_ scaffold_258
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 1298615 1300796 | 1 2181 | 2182 2181 | 99.13 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_258
+		Skipping redundant alignment 70317 71797 | 9283 7799 | 1481 1485 | 98.92 | Bacteroides_eggerthii_gi_482849910_ref_NZ_ scaffold_258
+		This contig is misassembled. 15 total aligns.
+			Real Alignment 1: 236681 238863 | 1 2182 | 2183 2182 | 99.13 | Bacteroides_eggerthii_gi_482849906_ref_NZ_ scaffold_258
+			  Extensive misassembly ( translocation ) between these two alignments
+			Excluding internal overlap of size 639 between Alignment 2 and 3:  1 940 | 2183 3122 | 940 940 --> 1 301 | 2183 2483 | 301 301
+			Real Alignment 2: 1 301 | 2183 2483 | 301 301 | 99.57 | Bacteroides_eggerthii_gi_482849948_ref_NZ_ scaffold_258
+			  Extensive misassembly ( translocation ) between these two alignments
+			Excluding internal overlap of size 370 between Alignment 3 and 4:  3623 5106 | 9283 7799 | 1484 1485 --> 3623 4736 | 9283 8169 | 1114 1115
+			Real Alignment 3: 1 5683 | 8168 2484 | 5683 5685 | 98.84 | Bacteroides_eggerthii_gi_482849924_ref_NZ_ scaffold_258
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 4: 3623 4736 | 9283 8169 | 1114 1115 | 98.99 | Bacteroides_eggerthii_gi_482849926_ref_NZ_ scaffold_258
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 5: 60338 70183 | 20841 11014 | 9846 9828 | 98.94 | Bacteroides_eggerthii_gi_482849910_ref_NZ_ scaffold_258
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 6: 1636 11817 | 23221 33404 | 10182 10184 | 98.95 | Bacteroides_eggerthii_gi_482849918_ref_NZ_ scaffold_258
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 7: 34132 34253 | 41384 41263 | 122 122 | 97.54 | Bacteroides_eggerthii_gi_482849914_ref_NZ_ scaffold_258
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_883 (9241bp)
+Top Length: 8991  Top ID: 99.3
+		Skipping redundant alignment 612446 612519 | 9137 9210 | 74 74 | 97.3 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_883
+		This contig is partially unaligned. (Aligned 8991 out of 9241 bases)
+		Alignment: 10324 19314 | 251 9241 | 8991 8991 | 99.3 | Bacteroides_eggerthii_gi_482849914_ref_NZ_ scaffold_883
+		Unaligned bases: 1 to 250 (250)
+
+CONTIG: scaffold_1193 (11417bp)
+Top Length: 10141  Top ID: 98.45
+		Skipping redundant alignment 93 243 | 1 151 | 151 151 | 98.68 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_1193
+		Skipping redundant alignment 93 243 | 1 151 | 151 151 | 98.68 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_1193
+		Skipping redundant alignment 93 243 | 1 151 | 151 151 | 98.68 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_1193
+		This contig is partially unaligned. (Aligned 10141 out of 11417 bases)
+		Alignment: 93 10207 | 1 10141 | 10115 10141 | 98.45 | Bacteroides_eggerthii_gi_482849914_ref_NZ_ scaffold_1193
+		Unaligned bases: 10142 to 11417 (1276)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_19835 (1104bp)
+Top Length: 1041  Top ID: 99.62
+		This contig is partially unaligned. (Aligned 1041 out of 1104 bases)
+		Alignment: 193 1235 | 1041 1 | 1043 1041 | 99.62 | Bacteroides_eggerthii_gi_482849934_ref_NZ_ scaffold_19835
+		Unaligned bases: 1042 to 1104 (63)
+
+CONTIG: scaffold_134 (50883bp)
+Top Length: 47120  Top ID: 99.2
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 127317 131053 | 3753 14 | 3737 3740 | 97.04 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_134
+			  Gap between these two alignments (local misassembly). Inconsistency = 467 
+			Real Alignment 2: 79707 126839 | 50883 3764 | 47133 47120 | 99.2 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_134
+
+CONTIG: scaffold_167 (37656bp)
+Top Length: 16517  Top ID: 99.22
+		This contig is misassembled. 3 total aligns.
+			Excluding internal overlap of size 4 between Alignment 1 and 2:  58706 70922 | 16537 28751 | 12217 12215 --> 58710 70922 | 16541 28751 | 12213 12211
+			Real Alignment 1: 4974 21494 | 16540 24 | 16521 16517 | 99.22 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_167
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 58710 70922 | 16541 28751 | 12213 12211 | 99.4 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_167
+			  Overlap between these two alignments (local misassembly). Inconsistency = -48 
+			Real Alignment 3: 71070 79805 | 28947 37656 | 8736 8710 | 97.77 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_167
+
+CONTIG: scaffold_289 (29207bp)
+Top Length: 25931  Top ID: 99.32
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 135644 138822 | 1 3179 | 3179 3179 | 99.56 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_289
+			  Extensive misassembly ( relocation, inconsistency = 3178 ) between these two alignments
+			Real Alignment 2: 142098 168029 | 3277 29207 | 25932 25931 | 99.32 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_289
+
+CONTIG: scaffold_352 (26899bp)
+Top Length: 26539  Top ID: 99.21
+		Skipping redundant alignment 435046 435129 | 26189 26271 | 84 83 | 98.81 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_352
+		Skipping redundant alignment 19840 19923 | 26426 26343 | 84 84 | 100.0 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_352
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 168054 194657 | 1 26539 | 26604 26539 | 99.21 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_352
+			  Fake misassembly between these two alignments: inconsistency = -2 , gap in the contig is small or absent or filled mostly with Ns (short indel: insertion of length 2; 0 mismatches)
+			Real Alignment 2: 194781 195015 | 26665 26899 | 235 235 | 97.87 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_352
+
+CONTIG: scaffold_495 (16770bp)
+Top Length: 16770  Top ID: 99.27
+		Marking as insignificant: 124766 125219 | 16316 16770 | 454 455 | 98.02 | Bacteroides_eggerthii_gi_482849908_ref_NZ_ scaffold_495
+		One align captures most of this contig: 242998 259740 | 1 16770 | 16743 16770 | 99.27 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_495
+
+CONTIG: scaffold_855 (10548bp)
+Top Length: 8062  Top ID: 98.06
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 204317 212384 | 1 8062 | 8068 8062 | 98.06 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_855
+			  Gap between these two alignments (local misassembly). Inconsistency = 0 
+			Real Alignment 2: 212551 214872 | 8229 10548 | 2322 2320 | 95.67 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_855
+
+CONTIG: scaffold_981 (8294bp)
+Top Length: 6396  Top ID: 99.14
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 232607 239004 | 1 6396 | 6398 6396 | 99.14 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_981
+			  Extensive misassembly ( relocation, inconsistency = -1139 ) between these two alignments
+			Real Alignment 2: 239051 239763 | 7582 8294 | 713 713 | 98.74 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_981
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_1684 (9297bp)
+Top Length: 2172  Top ID: 98.4
+		This contig is partially unaligned. (Aligned 2172 out of 9297 bases)
+		Alignment: 239668 241849 | 9297 7126 | 2182 2172 | 98.4 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_1684
+		Unaligned bases: 1 to 7125 (7125)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_1705 (4869bp)
+Top Length: 4868  Top ID: 99.75
+		One align captures most of this contig: 199190 204057 | 1 4868 | 4868 4868 | 99.75 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_1705
+
+CONTIG: scaffold_1943 (4323bp)
+Top Length: 4305  Top ID: 99.35
+		One align captures most of this contig: 131109 135416 | 19 4323 | 4308 4305 | 99.35 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_1943
+
+CONTIG: scaffold_2338 (3710bp)
+Top Length: 3710  Top ID: 99.43
+		One align captures most of this contig: 214833 218542 | 1 3710 | 3710 3710 | 99.43 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_2338
+
+CONTIG: scaffold_4062 (2479bp)
+Top Length: 2249  Top ID: 98.53
+		Skipping redundant alignment 857 996 | 2479 2340 | 140 140 | 97.14 | Bacteroides_eggerthii_gi_482849906_ref_NZ_ scaffold_4062
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 125030 125219 | 2290 2479 | 190 190 | 97.37 | Bacteroides_eggerthii_gi_482849908_ref_NZ_ scaffold_4062
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 996 3246 | 2249 1 | 2251 2249 | 98.53 | Bacteroides_eggerthii_gi_482849906_ref_NZ_ scaffold_4062
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 259551 259740 | 2290 2479 | 190 190 | 97.37 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_4062
+
+CONTIG: scaffold_4354 (2361bp)
+Top Length: 2361  Top ID: 99.87
+		One align captures most of this contig: 227370 229730 | 2361 1 | 2361 2361 | 99.87 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_4354
+
+CONTIG: scaffold_7912 (1555bp)
+Top Length: 1136  Top ID: 98.33
+		This contig is partially unaligned. (Aligned 1136 out of 1555 bases)
+		Alignment: 241794 242925 | 1545 410 | 1132 1136 | 98.33 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_7912
+		Unaligned bases: 1 to 409 (409)
+		Unaligned bases: 1546 to 1555 (10)
+
+CONTIG: scaffold_9823 (1321bp)
+Top Length: 1320  Top ID: 99.62
+		One align captures most of this contig: 197348 198667 | 1320 1 | 1320 1320 | 99.62 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_9823
+
+CONTIG: scaffold_10409 (1262bp)
+Top Length: 1262  Top ID: 100.0
+		One align captures most of this contig: 230146 231407 | 1262 1 | 1262 1262 | 100.0 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_10409
+
+CONTIG: scaffold_20144 (966bp)
+Top Length: 966  Top ID: 98.15
+		Marking as insignificant: 1 141 | 141 1 | 141 141 | 100.0 | Bacteroides_eggerthii_gi_482849906_ref_NZ_ scaffold_20144
+		This contig has 3 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 629316 630282 | 1 966 | 967 966 | 98.15 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_20144
+		Skipping alignment  260412 261377 | 1 966 | 966 966 | 97.94 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_20144
+		Skipping alignment  125891 126857 | 1 966 | 967 966 | 97.84 | Bacteroides_eggerthii_gi_482849908_ref_NZ_ scaffold_20144
+
+CONTIG: scaffold_20316 (747bp)
+Top Length: 747  Top ID: 99.6
+		One align captures most of this contig: 222415 223162 | 1 747 | 748 747 | 99.6 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_20316
+
+CONTIG: scaffold_22121 (697bp)
+Top Length: 697  Top ID: 99.86
+		One align captures most of this contig: 221639 222335 | 1 697 | 697 697 | 99.86 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_22121
+
+CONTIG: scaffold_22402 (690bp)
+Top Length: 690  Top ID: 99.57
+		One align captures most of this contig: 219143 219832 | 1 690 | 690 690 | 99.57 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_22402
+
+CONTIG: scaffold_22697 (682bp)
+Top Length: 682  Top ID: 99.85
+		One align captures most of this contig: 231841 232522 | 1 682 | 682 682 | 99.85 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_22697
+
+CONTIG: scaffold_28792 (540bp)
+Top Length: 540  Top ID: 100.0
+		One align captures most of this contig: 218555 219094 | 540 1 | 540 540 | 100.0 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_28792
+
+CONTIG: scaffold_190 (124668bp)
+Top Length: 68730  Top ID: 99.31
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 153247 221990 | 1714 70443 | 68744 68730 | 99.31 | Bacteroides_eggerthii_gi_482849906_ref_NZ_ scaffold_190
+			  Fake misassembly between these two alignments: inconsistency = 6 , gap in the contig is small or absent or filled mostly with Ns (long indel: deletion of length 6; 27 mismatches)
+			Real Alignment 2: 222177 230970 | 70624 79415 | 8794 8792 | 99.0 | Bacteroides_eggerthii_gi_482849906_ref_NZ_ scaffold_190
+			  Extensive misassembly ( translocation ) between these two alignments
+			Excluding internal overlap of size 25 between Alignment 3 and 4:  716591 716778 | 84719 84906 | 188 188 --> 716591 716753 | 84719 84881 | 163 163
+			Real Alignment 3: 716591 716753 | 84719 84881 | 163 163 | 96.81 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_190
+			  Extensive misassembly ( relocation, inconsistency = 9593 ) between these two alignments
+			Real Alignment 4: 726347 763830 | 84882 122363 | 37484 37482 | 99.38 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_190
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_221 (96143bp)
+Top Length: 42949  Top ID: 98.83
+		Skipping redundant alignment 1082030 1084060 | 81238 83268 | 2031 2031 | 99.66 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_221
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 3324 31025 | 12 27648 | 27702 27637 | 98.08 | Bacteroides_eggerthii_gi_482849906_ref_NZ_ scaffold_221
+			  Extensive misassembly ( relocation, inconsistency = 1320 ) between these two alignments
+			Real Alignment 2: 32525 75502 | 27828 70776 | 42978 42949 | 98.83 | Bacteroides_eggerthii_gi_482849906_ref_NZ_ scaffold_221
+			  Fake misassembly between these two alignments: inconsistency = 0 , gap in the contig is small or absent or filled mostly with Ns (no indel; 0 mismatches)
+			Real Alignment 3: 75596 100330 | 70870 95609 | 24735 24740 | 99.51 | Bacteroides_eggerthii_gi_482849906_ref_NZ_ scaffold_221
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_725 (12410bp)
+Top Length: 10250  Top ID: 99.47
+		This contig is partially unaligned. (Aligned 10250 out of 12410 bases)
+		Alignment: 100325 110578 | 12316 2067 | 10254 10250 | 99.47 | Bacteroides_eggerthii_gi_482849906_ref_NZ_ scaffold_725
+		Unaligned bases: 1 to 2066 (2066)
+		Unaligned bases: 12317 to 12410 (94)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_988 (15583bp)
+Top Length: 13028  Top ID: 99.56
+		This contig is partially unaligned. (Aligned 13028 out of 15583 bases)
+		Alignment: 110613 123639 | 1177 14204 | 13027 13028 | 99.56 | Bacteroides_eggerthii_gi_482849906_ref_NZ_ scaffold_988
+		Unaligned bases: 1 to 1176 (1176)
+		Unaligned bases: 14205 to 15583 (1379)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_1188 (12900bp)
+Top Length: 11930  Top ID: 99.59
+		This contig is partially unaligned. (Aligned 11930 out of 12900 bases)
+		Alignment: 141180 153106 | 12338 409 | 11927 11930 | 99.59 | Bacteroides_eggerthii_gi_482849906_ref_NZ_ scaffold_1188
+		Unaligned bases: 1 to 408 (408)
+		Unaligned bases: 12339 to 12900 (562)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_1983 (5463bp)
+Top Length: 2697  Top ID: 99.63
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 569594 572289 | 2921 228 | 2696 2694 | 99.63 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_1983
+		Skipping redundant alignment 594351 597044 | 225 2916 | 2694 2692 | 99.67 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_1983
+		Skipping redundant alignment 383468 386158 | 2916 228 | 2691 2689 | 99.67 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_1983
+		Skipping redundant alignment 493333 496028 | 2921 228 | 2696 2694 | 99.63 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_1983
+		Skipping redundant alignment 1837 4531 | 2920 228 | 2695 2693 | 99.63 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_1983
+		Skipping redundant alignment 1 2699 | 228 2924 | 2699 2697 | 99.63 | Bacteroides_eggerthii_gi_482849916_ref_NZ_ scaffold_1983
+		This contig is partially unaligned. (Aligned 2697 out of 5463 bases)
+		Alignment: 264553 267245 | 2916 226 | 2693 2691 | 99.67 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_1983
+		Unaligned bases: 1 to 225 (225)
+		Unaligned bases: 2917 to 5463 (2547)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_72 (179824bp)
+Top Length: 122202  Top ID: 99.35
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 244911 245009 | 13 111 | 99 99 | 95.96 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_72
+			  Extensive misassembly ( relocation, inconsistency = -57217 ) between these two alignments
+			Real Alignment 2: 187826 245108 | 57457 145 | 57283 57313 | 99.08 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_72
+			  Overlap between these two alignments (local misassembly). Inconsistency = -9 
+			Real Alignment 3: 65482 187675 | 179818 57617 | 122194 122202 | 99.35 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_72
+
+CONTIG: scaffold_92 (46764bp)
+Top Length: 44642  Top ID: 99.38
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 247268 291909 | 44642 1 | 44642 44642 | 99.38 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_92
+			  Fake misassembly between these two alignments: inconsistency = 2 , gap in the contig is small or absent or filled mostly with Ns (short indel: deletion of length 2; 11 mismatches)
+			Real Alignment 2: 245141 247158 | 46764 44750 | 2018 2015 | 98.17 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_92
+
+CONTIG: scaffold_119 (98185bp)
+Top Length: 40082  Top ID: 99.26
+		Skipping redundant alignment 605455 605532 | 74425 74502 | 78 78 | 98.72 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_119
+		This contig is misassembled. 5 total aligns.
+			Excluding internal overlap of size 8 between Alignment 1 and 2:  622442 629705 | 50808 58064 | 7264 7257 --> 622450 629705 | 50816 58064 | 7256 7249
+			Real Alignment 1: 552028 592115 | 10734 50815 | 40088 40082 | 99.26 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_119
+			  Extensive misassembly ( relocation, inconsistency = 30334 ) between these two alignments
+			Excluding internal overlap of size 15 between Alignment 2 and 3:  622450 629705 | 50816 58064 | 7256 7249 --> 622450 629690 | 50816 58049 | 7241 7234
+			Real Alignment 2: 622450 629690 | 50816 58049 | 7241 7234 | 99.11 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_119
+			  Extensive misassembly ( translocation ) between these two alignments
+			Excluding internal overlap of size 1 between Alignment 3 and 4:  2934 19207 | 58050 74334 | 16274 16285 --> 2934 19206 | 58050 74333 | 16273 16284
+			Real Alignment 3: 2934 19206 | 58050 74333 | 16273 16284 | 99.19 | Bacteroides_eggerthii_gi_482849908_ref_NZ_ scaffold_119
+			  Extensive misassembly ( relocation, inconsistency = 11573 ) between these two alignments
+			Real Alignment 4: 30780 49508 | 74334 93063 | 18729 18730 | 98.05 | Bacteroides_eggerthii_gi_482849908_ref_NZ_ scaffold_119
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_161 (146986bp)
+Top Length: 91109  Top ID: 99.01
+		Skipping redundant alignment 363568 363643 | 14867 14942 | 76 76 | 100.0 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_161
+		Skipping redundant alignment 363771 363846 | 14867 14942 | 76 76 | 100.0 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_161
+		Skipping redundant alignment 364090 364167 | 14868 14946 | 78 79 | 98.73 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_161
+		This contig is misassembled. 6 total aligns.
+			Excluding internal overlap of size 20 between Alignment 1 and 2:  447446 448786 | 105858 107198 | 1341 1341 --> 447466 448786 | 105878 107198 | 1321 1321
+			Real Alignment 1: 448767 540006 | 105877 14769 | 91240 91109 | 99.01 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_161
+			  Extensive misassembly ( relocation, inconsistency = -92541 ) between these two alignments
+			Excluding internal overlap of size 20 between Alignment 2 and 3:  447466 448786 | 105878 107198 | 1321 1321 --> 447466 448766 | 105878 107178 | 1301 1301
+			Real Alignment 2: 447466 448766 | 105878 107178 | 1301 1301 | 99.85 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_161
+			  Extensive misassembly ( relocation, inconsistency = -33847 ) between these two alignments
+			Real Alignment 3: 414920 447465 | 139727 107179 | 32546 32549 | 99.67 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_161
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_322 (23146bp)
+Top Length: 21266  Top ID: 99.83
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 22346 43611 | 21266 1 | 21266 21266 | 99.83 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_322
+			  Overlap between these two alignments (local misassembly). Inconsistency = -935 
+			Real Alignment 2: 21448 22345 | 23100 22202 | 898 899 | 98.78 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_322
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_398 (22969bp)
+Top Length: 22739  Top ID: 99.42
+		This contig is partially unaligned. (Aligned 22739 out of 22969 bases)
+		Alignment: 322427 345165 | 22739 1 | 22739 22739 | 99.42 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_398
+		Unaligned bases: 22740 to 22969 (230)
+
+CONTIG: scaffold_514 (21443bp)
+Top Length: 21346  Top ID: 99.31
+		Marking as insignificant: 572027 572125 | 99 1 | 99 99 | 100.0 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_514
+		One align captures most of this contig: 352177 373519 | 21443 98 | 21343 21346 | 99.31 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_514
+
+CONTIG: scaffold_596 (16251bp)
+Top Length: 7051  Top ID: 98.74
+		This contig is partially unaligned. (Aligned 7051 out of 16251 bases)
+		Alignment: 345328 352371 | 7051 1 | 7044 7051 | 98.74 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_596
+		Unaligned bases: 7052 to 16251 (9200)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_752 (23100bp)
+Top Length: 7811  Top ID: 98.94
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 298138 303135 | 1 4998 | 4998 4998 | 99.32 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_752
+			  Extensive misassembly ( relocation, inconsistency = -1984 ) between these two alignments
+			Real Alignment 2: 303347 311082 | 7194 14936 | 7736 7743 | 98.59 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_752
+			  Extensive misassembly ( relocation, inconsistency = 3482 ) between these two alignments
+			Real Alignment 3: 314640 322450 | 15012 22822 | 7811 7811 | 98.94 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_752
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_803 (11007bp)
+Top Length: 8265  Top ID: 99.36
+		This contig is partially unaligned. (Aligned 8265 out of 11007 bases)
+		Alignment: 57136 65400 | 11007 2743 | 8265 8265 | 99.36 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_803
+		Unaligned bases: 1 to 2742 (2742)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_934 (14566bp)
+Top Length: 11916  Top ID: 99.26
+		This contig is partially unaligned. (Aligned 11916 out of 14566 bases)
+		Alignment: 397784 409695 | 50 11965 | 11912 11916 | 99.26 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_934
+		Unaligned bases: 1 to 49 (49)
+		Unaligned bases: 11966 to 14566 (2601)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_957 (8525bp)
+Top Length: 7576  Top ID: 99.23
+		This contig is partially unaligned. (Aligned 7576 out of 8525 bases)
+		Alignment: 390217 397791 | 8525 950 | 7575 7576 | 99.23 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_957
+		Unaligned bases: 1 to 949 (949)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_1146 (13252bp)
+Top Length: 13252  Top ID: 99.37
+		One align captures most of this contig: 43898 57148 | 1 13252 | 13251 13252 | 99.37 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_1146
+
+CONTIG: scaffold_1326 (6067bp)
+Top Length: 6067  Top ID: 99.6
+		One align captures most of this contig: 292168 298234 | 6067 1 | 6067 6067 | 99.6 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_1326
+
+CONTIG: scaffold_1481 (8924bp)
+Top Length: 8922  Top ID: 96.95
+		Marking as insignificant: 377003 378320 | 8924 7607 | 1318 1318 | 97.34 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_1481
+		One align captures most of this contig: 379369 388280 | 8922 1 | 8912 8922 | 96.95 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_1481
+
+CONTIG: scaffold_7079 (1966bp)
+Top Length: 1966  Top ID: 98.28
+		One align captures most of this contig: 388282 390254 | 1 1966 | 1973 1966 | 98.28 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_7079
+
+CONTIG: scaffold_9276 (1378bp)
+Top Length: 745  Top ID: 96.26
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 380585 380667 | 1 83 | 83 83 | 98.8 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_9276
+			  Extensive misassembly ( relocation, inconsistency = -4865 ) between these two alignments
+			Real Alignment 2: 376353 377101 | 634 1378 | 749 745 | 96.26 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_9276
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_10278 (1275bp)
+Top Length: 1201  Top ID: 97.0
+		This contig is partially unaligned. (Aligned 1201 out of 1275 bases)
+		Alignment: 379369 380569 | 3 1203 | 1201 1201 | 97.0 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_10278
+		Unaligned bases: 1 to 2 (2)
+		Unaligned bases: 1204 to 1275 (72)
+
+CONTIG: scaffold_14616 (1529bp)
+Top Length: 1283  Top ID: 98.52
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 373511 374795 | 1283 1 | 1285 1283 | 98.52 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_14616
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 594129 594353 | 1529 1305 | 225 225 | 100.0 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_14616
+
+CONTIG: scaffold_16806 (861bp)
+Top Length: 801  Top ID: 98.75
+		This contig is partially unaligned. (Aligned 801 out of 861 bases)
+		Alignment: 375472 376272 | 3 803 | 801 801 | 98.75 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_16806
+		Unaligned bases: 1 to 2 (2)
+		Unaligned bases: 804 to 861 (58)
+
+CONTIG: scaffold_81 (51456bp)
+Top Length: 25897  Top ID: 99.44
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 83924 84086 | 51294 51456 | 163 163 | 96.93 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_81
+		Skipping redundant alignment 31757 31919 | 51294 51456 | 163 163 | 96.93 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_81
+		This contig is misassembled. 6 total aligns.
+			Real Alignment 1: 40737 44938 | 1 4202 | 4202 4202 | 99.31 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_81
+			  Extensive misassembly ( relocation, inconsistency = -2399 ) between these two alignments
+			Real Alignment 2: 44950 70846 | 6613 32509 | 25897 25897 | 99.44 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_81
+			  Gap between these two alignments (local misassembly). Inconsistency = 0 
+			Real Alignment 3: 71632 89465 | 33295 51133 | 17834 17839 | 99.46 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_81
+			  Gap between these two alignments (local misassembly). Inconsistency = 2 
+			Real Alignment 4: 89628 89790 | 51294 51456 | 163 163 | 96.93 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_81
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_110 (42622bp)
+Top Length: 41651  Top ID: 99.2
+		This contig is partially unaligned. (Aligned 41651 out of 42622 bases)
+		Alignment: 216663 258312 | 972 42622 | 41650 41651 | 99.2 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_110
+		Unaligned bases: 1 to 971 (971)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_117 (40121bp)
+Top Length: 21420  Top ID: 99.27
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 7 between Alignment 1 and 2:  452976 471658 | 21442 40121 | 18683 18680 --> 452983 471658 | 21449 40121 | 18676 18673
+			Real Alignment 1: 384960 406379 | 29 21448 | 21420 21420 | 99.27 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_117
+			  Extensive misassembly ( relocation, inconsistency = 46603 ) between these two alignments
+			Real Alignment 2: 452983 471658 | 21449 40121 | 18676 18673 | 99.42 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_117
+
+CONTIG: scaffold_174 (96437bp)
+Top Length: 43517  Top ID: 99.25
+		Skipping redundant alignment 260340 260412 | 2227 2155 | 73 73 | 100.0 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_174
+		Skipping redundant alignment 134533 134676 | 8285 8428 | 144 144 | 95.83 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_174
+		Skipping redundant alignment 57718 57848 | 8425 8295 | 131 131 | 99.24 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_174
+		This contig is misassembled. 6 total aligns.
+			Real Alignment 1: 258186 272527 | 1 14335 | 14342 14335 | 99.26 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_174
+			  Extensive misassembly ( relocation, inconsistency = -36009 ) between these two alignments
+			Real Alignment 2: 272527 273124 | 50344 50939 | 598 596 | 98.0 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_174
+			  Overlap between these two alignments (local misassembly). Inconsistency = -300 
+			Real Alignment 3: 273125 316654 | 51240 94756 | 43530 43517 | 99.25 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_174
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_274 (34261bp)
+Top Length: 28417  Top ID: 98.87
+		Skipping redundant alignment 205 359 | 34261 34107 | 155 155 | 98.71 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_274
+		This contig is misassembled. 3 total aligns.
+			Excluding internal overlap of size 9 between Alignment 1 and 2:  205 6064 | 34261 28409 | 5860 5853 --> 205 6055 | 34261 28418 | 5851 5844
+			Real Alignment 1: 7430 35863 | 28417 1 | 28434 28417 | 98.87 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_274
+			  Extensive misassembly ( relocation, inconsistency = 1374 ) between these two alignments
+			Real Alignment 2: 205 6055 | 34261 28418 | 5851 5844 | 97.88 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_274
+
+CONTIG: scaffold_362 (23829bp)
+Top Length: 23829  Top ID: 99.24
+		Marking as insignificant: 541300 543895 | 14785 17380 | 2596 2596 | 97.73 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_362
+		One align captures most of this contig: 345822 369621 | 23829 1 | 23800 23829 | 99.24 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_362
+
+CONTIG: scaffold_377 (37857bp)
+Top Length: 20499  Top ID: 99.36
+		Skipping redundant alignment 205743 205838 | 2050 2145 | 96 96 | 98.96 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_377
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 186664 207164 | 21222 724 | 20501 20499 | 99.36 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_377
+			  Extensive misassembly ( relocation, inconsistency = 2085 ) between these two alignments
+			Real Alignment 2: 180037 180223 | 25764 25578 | 187 187 | 95.19 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_377
+			  Extensive misassembly ( relocation, inconsistency = -2536 ) between these two alignments
+			Real Alignment 3: 170458 181299 | 37857 27038 | 10842 10820 | 98.13 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_377
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_431 (22971bp)
+Top Length: 9274  Top ID: 98.71
+		This contig is misassembled. 5 total aligns.
+			Real Alignment 1: 160716 169988 | 9274 1 | 9273 9274 | 98.71 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_431
+			  Extensive misassembly ( relocation, inconsistency = 5452 ) between these two alignments
+			Real Alignment 2: 154528 155080 | 10013 9458 | 553 556 | 97.66 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_431
+			  Extensive misassembly ( relocation, inconsistency = -1002 ) between these two alignments
+			Real Alignment 3: 153206 154498 | 12337 11045 | 1293 1293 | 98.92 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_431
+			  Overlap between these two alignments (local misassembly). Inconsistency = -132 
+			Real Alignment 4: 148975 153182 | 16694 12493 | 4208 4202 | 98.62 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_431
+			  Extensive misassembly ( relocation, inconsistency = 4651 ) between these two alignments
+			Real Alignment 5: 138046 144316 | 22971 16702 | 6271 6270 | 97.86 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_431
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_438 (27043bp)
+Top Length: 11862  Top ID: 99.17
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 85745 85843 | 1 99 | 99 99 | 98.99 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_438
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 33578 33676 | 1 99 | 99 99 | 98.99 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_438
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 93230 101175 | 2849 10789 | 7946 7941 | 99.07 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_438
+			  Extensive misassembly ( relocation, inconsistency = 1743 ) between these two alignments
+			Real Alignment 3: 106714 118533 | 14585 26446 | 11820 11862 | 99.17 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_438
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_507 (16816bp)
+Top Length: 485  Top ID: 97.73
+		This contig is partially unaligned. (Aligned 485 out of 16816 bases)
+		Alignment: 513171 513655 | 16332 16816 | 485 485 | 97.73 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_507
+		Unaligned bases: 1 to 16331 (16331)
+
+CONTIG: scaffold_571 (24705bp)
+Top Length: 24512  Top ID: 99.24
+		Marking as insignificant: 1194324 1194416 | 24705 24613 | 93 93 | 100.0 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_571
+		Marking as insignificant: 684324 684416 | 24705 24613 | 93 93 | 100.0 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_571
+		Marking as insignificant: 600706 600809 | 24602 24705 | 104 104 | 96.15 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_571
+		Marking as insignificant: 202343 202444 | 24705 24604 | 102 102 | 99.02 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_571
+		One align captures most of this contig: 318202 342685 | 24512 1 | 24484 24512 | 99.24 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_571
+
+CONTIG: scaffold_597 (14741bp)
+Top Length: 13776  Top ID: 99.22
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 1 between Alignment 1 and 2:  383838 384803 | 13776 14741 | 966 966 --> 383839 384803 | 13777 14741 | 965 965
+			Real Alignment 1: 369529 383284 | 1 13776 | 13756 13776 | 99.22 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_597
+			  Gap between these two alignments (local misassembly). Inconsistency = 554 
+			Real Alignment 2: 383839 384803 | 13777 14741 | 965 965 | 99.28 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_597
+
+CONTIG: scaffold_644 (12982bp)
+Top Length: 9647  Top ID: 99.48
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 481778 484375 | 2878 282 | 2598 2597 | 99.23 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_644
+			  Overlap between these two alignments (local misassembly). Inconsistency = -458 
+			Real Alignment 2: 472138 481778 | 12982 3336 | 9641 9647 | 99.48 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_644
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_677 (22495bp)
+Top Length: 20474  Top ID: 97.67
+		This contig is partially unaligned. (Aligned 20474 out of 22495 bases)
+		Alignment: 118651 139079 | 929 21402 | 20429 20474 | 97.67 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_677
+		Unaligned bases: 1 to 928 (928)
+		Unaligned bases: 21403 to 22495 (1093)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_1000 (16468bp)
+Top Length: 5198  Top ID: 98.94
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 21955 25746 | 4793 956 | 3792 3838 | 97.52 | Bacteroides_eggerthii_gi_482849908_ref_NZ_ scaffold_1000
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 207150 212336 | 7787 12984 | 5187 5198 | 98.94 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_1000
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_2875 (3189bp)
+Top Length: 3189  Top ID: 99.72
+		One align captures most of this contig: 342713 345901 | 3189 1 | 3189 3189 | 99.72 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_2875
+
+CONTIG: scaffold_4125 (3615bp)
+Top Length: 3615  Top ID: 98.92
+		One align captures most of this contig: 36151 39770 | 1 3615 | 3620 3615 | 98.92 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_4125
+
+CONTIG: scaffold_8281 (1860bp)
+Top Length: 1860  Top ID: 98.49
+		One align captures most of this contig: 430135 431983 | 1 1860 | 1849 1860 | 98.49 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_8281
+
+CONTIG: scaffold_10656 (1237bp)
+Top Length: 1237  Top ID: 99.35
+		This contig has 3 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 84066 85302 | 1 1237 | 1237 1237 | 99.35 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_10656
+		Skipping alignment  31899 33135 | 1 1237 | 1237 1237 | 99.35 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_10656
+		Skipping alignment  89770 91006 | 1 1237 | 1237 1237 | 99.35 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_10656
+
+CONTIG: scaffold_16680 (866bp)
+Top Length: 866  Top ID: 99.31
+		One align captures most of this contig: 516343 517208 | 1 866 | 866 866 | 99.31 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_16680
+
+CONTIG: scaffold_17103 (1228bp)
+Top Length: 106  Top ID: 99.06
+		This contig is partially unaligned. (Aligned 106 out of 1228 bases)
+		Alignment: 217401 217506 | 1228 1123 | 106 106 | 99.06 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_17103
+		Unaligned bases: 1 to 1122 (1122)
+
+CONTIG: scaffold_23322 (668bp)
+Top Length: 570  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 570 out of 668 bases)
+		Alignment: 435688 436257 | 99 668 | 570 570 | 100.0 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_23322
+		Unaligned bases: 1 to 98 (98)
+
+CONTIG: scaffold_34690 (732bp)
+Top Length: 732  Top ID: 99.32
+		One align captures most of this contig: 39973 40706 | 732 1 | 734 732 | 99.32 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_34690
+
+CONTIG: scaffold_242 (64420bp)
+Top Length: 38806  Top ID: 98.76
+		This contig is partially unaligned. (Aligned 38806 out of 64420 bases)
+		Alignment: 73795 112621 | 47410 8605 | 38827 38806 | 98.76 | Bacteroides_eggerthii_gi_482849908_ref_NZ_ scaffold_242
+		Unaligned bases: 1 to 8604 (8604)
+		Unaligned bases: 47411 to 64420 (17010)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_624 (13308bp)
+Top Length: 11481  Top ID: 97.35
+		This contig is partially unaligned. (Aligned 11481 out of 13308 bases)
+		Alignment: 113198 124681 | 413 11893 | 11484 11481 | 97.35 | Bacteroides_eggerthii_gi_482849908_ref_NZ_ scaffold_624
+		Unaligned bases: 1 to 412 (412)
+		Unaligned bases: 11894 to 13308 (1415)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_7015 (1695bp)
+Top Length: 946  Top ID: 97.78
+		This contig is partially unaligned. (Aligned 946 out of 1695 bases)
+		Alignment: 27862 28806 | 733 1678 | 945 946 | 97.78 | Bacteroides_eggerthii_gi_482849908_ref_NZ_ scaffold_7015
+		Unaligned bases: 1 to 732 (732)
+		Unaligned bases: 1679 to 1695 (17)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_24 (79805bp)
+Top Length: 79763  Top ID: 99.33
+		Marking as insignificant: 637668 637744 | 38520 38596 | 77 77 | 100.0 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_24
+		One align captures most of this contig: 173104 252848 | 79805 43 | 79745 79763 | 99.33 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_24
+
+CONTIG: scaffold_25 (111315bp)
+Top Length: 10112  Top ID: 97.24
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 214315 214390 | 86167 86242 | 76 76 | 100.0 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_25
+		This contig is misassembled. 5 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 111315 and total length of all aligns is 14739
+		Alignment: 706193 716301 | 10370 259 | 10109 10112 | 97.24 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_25
+		Alignment: 688959 689072 | 25513 25400 | 114 114 | 100.0 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_25
+		Alignment: 684453 688888 | 31103 26667 | 4436 4437 | 96.24 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_25
+		Alignment: 637668 637743 | 86242 86167 | 76 76 | 100.0 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_25
+		Unaligned bases: 96576
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold_48 (142086bp)
+Top Length: 79727  Top ID: 99.36
+		Skipping redundant alignment 1 346 | 47475 47130 | 346 346 | 99.13 | Bacteroides_eggerthii_gi_482849944_ref_NZ_ scaffold_48
+		Skipping redundant alignment 387 3026 | 51047 48408 | 2640 2640 | 99.36 | Bacteroides_eggerthii_gi_482849936_ref_NZ_ scaffold_48
+		Skipping redundant alignment 1 253 | 50795 51047 | 253 253 | 98.02 | Bacteroides_eggerthii_gi_482849908_ref_NZ_ scaffold_48
+		Skipping redundant alignment 684182 684420 | 69041 69276 | 239 236 | 96.25 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_48
+		Skipping redundant alignment 600717 600949 | 69272 69044 | 233 229 | 95.28 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_48
+		This contig is misassembled. 9 total aligns.
+			Real Alignment 1: 1127064 1206796 | 1923 81649 | 79733 79727 | 99.36 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_48
+			  Extensive misassembly ( relocation, inconsistency = -7710 ) between these two alignments
+			Real Alignment 2: 1207064 1222718 | 89627 105274 | 15655 15648 | 99.36 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_48
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Excluding internal overlap of size 6 between Alignment 3 and 4:  1241071 1242510 | 133684 135123 | 1440 1440 --> 1241071 1242504 | 133684 135117 | 1434 1434
+			Real Alignment 3: 1241071 1242504 | 133684 135117 | 1434 1434 | 98.54 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_48
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 4: 1254595 1261563 | 135118 142086 | 6969 6969 | 98.98 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_48
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_61 (56705bp)
+Top Length: 1236  Top ID: 95.63
+		This contig is partially unaligned. (Aligned 1236 out of 56705 bases)
+		Alignment: 1116077 1117310 | 56253 55018 | 1234 1236 | 95.63 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_61
+		Unaligned bases: 1 to 55017 (55017)
+		Unaligned bases: 56254 to 56705 (452)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_99 (62689bp)
+Top Length: 58908  Top ID: 99.23
+		Skipping redundant alignment 202343 202441 | 1 99 | 99 99 | 98.99 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_99
+		Skipping redundant alignment 684324 684416 | 1 93 | 93 93 | 100.0 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_99
+		Skipping redundant alignment 1194324 1194416 | 1 93 | 93 93 | 100.0 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_99
+		This contig is misassembled. 5 total aligns.
+			Excluding internal overlap of size 3 between Alignment 1 and 2:  600706 600809 | 104 1 | 104 104 --> 600709 600809 | 101 1 | 101 101
+			Real Alignment 1: 600709 600809 | 101 1 | 101 101 | 95.19 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_99
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 2: 403470 462369 | 59009 102 | 58900 58908 | 99.23 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_99
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_145 (36925bp)
+Top Length: 15286  Top ID: 99.48
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 954543 969828 | 99 15384 | 15286 15286 | 99.48 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_145
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 975445 982040 | 18764 25359 | 6596 6596 | 99.44 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_145
+			  Gap between these two alignments (local misassembly). Inconsistency = 39 
+			Real Alignment 3: 982739 991443 | 26019 34721 | 8705 8703 | 99.08 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_145
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_181 (77959bp)
+Top Length: 56009  Top ID: 99.61
+		Skipping redundant alignment 85961 86314 | 17292 16939 | 354 354 | 99.15 | Bacteroides_eggerthii_gi_482849906_ref_NZ_ scaffold_181
+		This contig is misassembled. 5 total aligns.
+			Excluding internal overlap of size 183 between Alignment 1 and 2:  1124288 1124999 | 977 265 | 712 713 --> 1124471 1124999 | 794 265 | 529 530
+			Real Alignment 1: 1124471 1124999 | 794 265 | 529 530 | 98.6 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_181
+			  Extensive misassembly ( relocation, inconsistency = 17025 ) between these two alignments
+			Real Alignment 2: 1092668 1107445 | 15565 795 | 14778 14771 | 99.11 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_181
+			  Extensive misassembly ( relocation, inconsistency = 8909 ) between these two alignments
+			Excluding internal overlap of size 17 between Alignment 3 and 4:  991440 995897 | 77391 72931 | 4458 4461 --> 991440 995880 | 77391 72948 | 4441 4444
+			Real Alignment 3: 1026382 1082385 | 72947 16939 | 56004 56009 | 99.61 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_181
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 4: 991440 995880 | 77391 72948 | 4441 4444 | 99.28 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_181
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_193 (39999bp)
+Top Length: 38637  Top ID: 99.32
+		Skipping redundant alignment 266480 266610 | 13808 13678 | 131 131 | 98.47 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_193
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 31557 31792 | 39913 39678 | 236 236 | 99.15 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_193
+		Skipping redundant alignment 31768 31879 | 39888 39999 | 112 112 | 99.11 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_193
+		Skipping redundant alignment 89428 89663 | 39913 39678 | 236 236 | 99.15 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_193
+		Skipping redundant alignment 89639 89750 | 39888 39999 | 112 112 | 99.11 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_193
+		This contig is misassembled. 8 total aligns.
+			Excluding internal overlap of size 25 between Alignment 1 and 2:  83725 83959 | 39912 39678 | 235 235 --> 83725 83934 | 39912 39703 | 210 210
+			Real Alignment 1: 45106 83749 | 1066 39702 | 38644 38637 | 99.32 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_193
+			  Extensive misassembly ( inversion ) between these two alignments
+			Excluding internal overlap of size 25 between Alignment 2 and 3:  83935 84046 | 39888 39999 | 112 112 --> 83960 84046 | 39913 39999 | 87 87
+			Real Alignment 2: 83725 83934 | 39912 39703 | 210 210 | 99.15 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_193
+			  Extensive misassembly ( inversion ) between these two alignments
+			Real Alignment 3: 83960 84046 | 39913 39999 | 87 87 | 99.11 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_193
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_220 (69054bp)
+Top Length: 57087  Top ID: 99.31
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 293450 350547 | 4540 61626 | 57098 57087 | 99.31 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_220
+			  Gap between these two alignments (local misassembly). Inconsistency = 0 
+			Real Alignment 2: 351928 357997 | 63007 69054 | 6070 6048 | 98.48 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_220
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_271 (52085bp)
+Top Length: 19314  Top ID: 99.32
+		This contig is partially unaligned. (Aligned 19314 out of 52085 bases)
+		Alignment: 813520 832834 | 52085 32772 | 19315 19314 | 99.32 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_271
+		Unaligned bases: 1 to 32771 (32771)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_285 (29020bp)
+Top Length: 26202  Top ID: 99.43
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 8 between Alignment 1 and 2:  264441 264552 | 29020 28909 | 112 112 --> 264441 264544 | 29020 28917 | 104 104
+			Real Alignment 1: 267244 293449 | 28916 2715 | 26206 26202 | 99.43 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_285
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 264441 264544 | 29020 28917 | 104 104 | 100.0 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_285
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_387 (45430bp)
+Top Length: 45430  Top ID: 99.11
+		Marking as insignificant: 214314 214390 | 41690 41614 | 77 77 | 100.0 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_387
+		Marking as insignificant: 1194287 1194420 | 4852 4718 | 134 135 | 95.56 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_387
+		Marking as insignificant: 684287 684420 | 4852 4718 | 134 135 | 95.56 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_387
+		Marking as insignificant: 202306 202448 | 4852 4710 | 143 143 | 96.5 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_387
+		One align captures most of this contig: 595995 641484 | 1 45430 | 45490 45430 | 99.11 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_387
+
+CONTIG: scaffold_425 (67479bp)
+Top Length: 7840  Top ID: 96.73
+		Skipping redundant alignment 1 91 | 1342 1432 | 91 91 | 100.0 | Bacteroides_eggerthii_gi_482849910_ref_NZ_ scaffold_425
+		This contig is misassembled. 3 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 67479 and total length of all aligns is 9271
+		Alignment: 34132 35564 | 1 1432 | 1433 1432 | 98.53 | Bacteroides_eggerthii_gi_482849914_ref_NZ_ scaffold_425
+		Alignment: 1290754 1298579 | 9271 1432 | 7826 7840 | 96.73 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_425
+		Unaligned bases: 58208
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold_480 (17106bp)
+Top Length: 15812  Top ID: 98.59
+		Skipping redundant alignment 600773 600949 | 1 176 | 177 176 | 98.31 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_480
+		Skipping redundant alignment 107952 108025 | 74 1 | 74 74 | 98.65 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_480
+		This contig is partially unaligned. (Aligned 15812 out of 17106 bases)
+		Alignment: 668464 684360 | 15812 1 | 15897 15812 | 98.59 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_480
+		Unaligned bases: 15813 to 17106 (1294)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_534 (27454bp)
+Top Length: 26820  Top ID: 99.2
+		This contig is partially unaligned. (Aligned 26820 out of 27454 bases)
+		Alignment: 104024 130880 | 1 26820 | 26857 26820 | 99.2 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_534
+		Unaligned bases: 26821 to 27454 (634)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_543 (15227bp)
+Top Length: 9451  Top ID: 99.47
+		This contig is partially unaligned. (Aligned 9451 out of 15227 bases)
+		Alignment: 840969 850419 | 1 9451 | 9451 9451 | 99.47 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_543
+		Unaligned bases: 9452 to 15227 (5776)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_562 (23815bp)
+Top Length: 23620  Top ID: 98.97
+		Marking as insignificant: 3101 3294 | 1 194 | 194 194 | 100.0 | Bacteroides_eggerthii_gi_482849934_ref_NZ_ scaffold_562
+		Marking as insignificant: 2 243 | 196 437 | 242 242 | 99.17 | Bacteroides_eggerthii_gi_482849914_ref_NZ_ scaffold_562
+		Marking as insignificant: 2 254 | 196 451 | 253 256 | 98.05 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_562
+		Marking as insignificant: 1 254 | 195 451 | 254 257 | 98.05 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_562
+		One align captures most of this contig: 2 23618 | 196 23815 | 23617 23620 | 98.97 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_562
+
+CONTIG: scaffold_583 (14939bp)
+Top Length: 9974  Top ID: 99.2
+		This contig is partially unaligned. (Aligned 9974 out of 14939 bases)
+		Alignment: 944572 954548 | 248 10221 | 9977 9974 | 99.2 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_583
+		Unaligned bases: 1 to 247 (247)
+		Unaligned bases: 10222 to 14939 (4718)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_599 (13910bp)
+Top Length: 7419  Top ID: 98.84
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 80 between Alignment 1 and 2:  166249 172820 | 6571 1 | 6572 6571 --> 166329 172820 | 6491 1 | 6492 6491
+			Real Alignment 1: 166329 172820 | 6491 1 | 6492 6491 | 99.19 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_599
+			  Gap between these two alignments (local misassembly). Inconsistency = 92 
+			Real Alignment 2: 158809 166236 | 13910 6492 | 7428 7419 | 98.84 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_599
+
+CONTIG: scaffold_616 (17906bp)
+Top Length: 13206  Top ID: 99.18
+		Skipping redundant alignment 202293 202430 | 13297 13435 | 138 139 | 96.4 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_616
+		Skipping redundant alignment 80997 81135 | 13435 13297 | 139 139 | 95.71 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_616
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 382097 382322 | 13210 13435 | 226 226 | 96.04 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_616
+		Skipping redundant alignment 600722 600946 | 13435 13210 | 225 226 | 95.58 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_616
+		This contig is misassembled. 7 total aligns.
+			Real Alignment 1: 781579 794789 | 1 13206 | 13211 13206 | 99.18 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_616
+			  Extensive misassembly ( relocation, inconsistency = -110605 ) between these two alignments
+			Excluding internal overlap of size 3 between Alignment 2 and 3:  684189 684411 | 13211 13435 | 223 225 --> 684189 684408 | 13211 13432 | 220 222
+			Real Alignment 2: 684189 684408 | 13211 13432 | 220 222 | 95.56 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_616
+			  Extensive misassembly ( relocation, inconsistency = 120646 ) between these two alignments
+			Real Alignment 3: 805055 809025 | 13433 17399 | 3971 3967 | 98.72 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_616
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_627 (13253bp)
+Top Length: 7405  Top ID: 98.65
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 646073 653476 | 8644 1240 | 7404 7405 | 98.65 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_627
+			  Gap between these two alignments (local misassembly). Inconsistency = 6 
+			Real Alignment 2: 641462 643155 | 13253 11556 | 1694 1698 | 97.35 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_627
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_633 (30006bp)
+Top Length: 30006  Top ID: 99.33
+		One align captures most of this contig: 1261529 1291538 | 1 30006 | 30010 30006 | 99.33 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_633
+
+CONTIG: scaffold_661 (24372bp)
+Top Length: 23865  Top ID: 98.87
+		This contig is partially unaligned. (Aligned 23865 out of 24372 bases)
+		Alignment: 130820 154613 | 341 24205 | 23794 23865 | 98.87 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_661
+		Unaligned bases: 1 to 340 (340)
+		Unaligned bases: 24206 to 24372 (167)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_665 (31009bp)
+Top Length: 28737  Top ID: 99.16
+		Skipping redundant alignment 600712 600953 | 18213 17971 | 242 243 | 97.12 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_665
+		Skipping redundant alignment 684185 684416 | 17975 18208 | 232 234 | 97.01 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_665
+		Skipping redundant alignment 202293 202440 | 18065 18213 | 148 149 | 97.32 | Bacteroides_eggerthii_gi_482849897_ref_NZ_ scaffold_665
+		Skipping redundant alignment 80988 81135 | 18212 18065 | 148 148 | 97.97 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_665
+		This contig is partially unaligned. (Aligned 28737 out of 31009 bases)
+		Alignment: 364161 392862 | 1 28737 | 28702 28737 | 99.16 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_665
+		Unaligned bases: 28738 to 31009 (2272)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_722 (23259bp)
+Top Length: 23259  Top ID: 99.47
+		One align captures most of this contig: 517999 541254 | 23259 1 | 23256 23259 | 99.47 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_722
+
+CONTIG: scaffold_732 (20660bp)
+Top Length: 20660  Top ID: 98.72
+		One align captures most of this contig: 541448 562141 | 1 20660 | 20694 20660 | 98.72 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_732
+
+CONTIG: scaffold_836 (32007bp)
+Top Length: 13676  Top ID: 98.87
+		This contig is misassembled. 5 total aligns.
+			Real Alignment 1: 582256 595914 | 13817 142 | 13659 13676 | 98.87 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_836
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 580195 581081 | 15734 14848 | 887 887 | 97.86 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_836
+			  Overlap between these two alignments (local misassembly). Inconsistency = -102 
+			Real Alignment 3: 576540 580092 | 19460 15939 | 3553 3522 | 96.19 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_836
+			  Overlap between these two alignments (local misassembly). Inconsistency = -211 
+			Real Alignment 4: 575578 576591 | 20609 19620 | 1014 990 | 96.35 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_836
+			  Extensive misassembly ( relocation, inconsistency = 2092 ) between these two alignments
+			Real Alignment 5: 562089 569602 | 32007 24493 | 7514 7515 | 98.18 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_836
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_987 (8240bp)
+Top Length: 8166  Top ID: 99.44
+		One align captures most of this contig: 832810 840975 | 8169 4 | 8166 8166 | 99.44 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_987
+
+CONTIG: scaffold_1026 (13563bp)
+Top Length: 13563  Top ID: 98.94
+		One align captures most of this contig: 23900 37514 | 13563 1 | 13615 13563 | 98.94 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_1026
+
+CONTIG: scaffold_1047 (7718bp)
+Top Length: 7452  Top ID: 99.58
+		This contig is partially unaligned. (Aligned 7452 out of 7718 bases)
+		Alignment: 37375 44826 | 1 7452 | 7452 7452 | 99.58 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_1047
+		Unaligned bases: 7453 to 7718 (266)
+
+CONTIG: scaffold_1077 (11859bp)
+Top Length: 5868  Top ID: 98.84
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 263832 264299 | 468 1 | 468 468 | 99.36 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_1077
+			  Extensive misassembly ( relocation, inconsistency = 4077 ) between these two alignments
+			Real Alignment 2: 252847 258722 | 7368 1501 | 5876 5868 | 98.84 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_1077
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_1109 (8211bp)
+Top Length: 646  Top ID: 99.38
+		This contig is partially unaligned. (Aligned 646 out of 8211 bases)
+		Alignment: 667746 668391 | 7268 7913 | 646 646 | 99.38 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_1109
+		Unaligned bases: 1 to 7267 (7267)
+		Unaligned bases: 7914 to 8211 (298)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_1212 (6843bp)
+Top Length: 6843  Top ID: 99.56
+		One align captures most of this contig: 774398 781236 | 6843 1 | 6839 6843 | 99.56 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_1212
+
+CONTIG: scaffold_1461 (5595bp)
+Top Length: 5595  Top ID: 99.05
+		Marking as insignificant: 363769 363833 | 65 1 | 65 65 | 100.0 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_1461
+		Marking as insignificant: 175086 175208 | 5473 5595 | 123 123 | 96.75 | Bacteroides_eggerthii_gi_482849906_ref_NZ_ scaffold_1461
+		One align captures most of this contig: 358038 363630 | 5595 1 | 5593 5595 | 99.05 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_1461
+
+CONTIG: scaffold_1572 (7917bp)
+Top Length: 233  Top ID: 97.0
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 33442 33674 | 1 233 | 233 233 | 97.0 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_1572
+		Skipping redundant alignment 91313 91545 | 1 233 | 233 233 | 97.0 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_1572
+		This contig is partially unaligned. (Aligned 233 out of 7917 bases)
+		Alignment: 85609 85841 | 1 233 | 233 233 | 97.0 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_1572
+		Unaligned bases: 234 to 7917 (7684)
+
+CONTIG: scaffold_1602 (5162bp)
+Top Length: 4352  Top ID: 99.31
+		This contig is partially unaligned. (Aligned 4352 out of 5162 bases)
+		Alignment: 99170 103520 | 281 4632 | 4351 4352 | 99.31 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_1602
+		Unaligned bases: 1 to 280 (280)
+		Unaligned bases: 4633 to 5162 (530)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_1697 (5682bp)
+Top Length: 4238  Top ID: 99.32
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 2 between Alignment 1 and 2:  512878 513758 | 520 1400 | 881 881 --> 512878 513756 | 520 1398 | 879 879
+			Real Alignment 1: 512878 513756 | 520 1398 | 879 879 | 98.75 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_1697
+			  Fake misassembly between these two alignments: inconsistency = 47 , gap in the contig is small or absent or filled mostly with Ns (long indel: deletion of length 47; 0 mismatches)
+			Real Alignment 2: 513804 518035 | 1399 5636 | 4232 4238 | 99.32 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_1697
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_1770 (7065bp)
+Top Length: 7049  Top ID: 98.4
+		One align captures most of this contig: 766873 773913 | 7065 17 | 7041 7049 | 98.4 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_1770
+
+CONTIG: scaffold_1882 (4423bp)
+Top Length: 4423  Top ID: 99.14
+		One align captures most of this contig: 809056 813490 | 4423 1 | 4435 4423 | 99.14 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_1882
+
+CONTIG: scaffold_2275 (3794bp)
+Top Length: 3794  Top ID: 99.76
+		One align captures most of this contig: 154823 158616 | 3794 1 | 3794 3794 | 99.76 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_2275
+
+CONTIG: scaffold_3330 (2860bp)
+Top Length: 2860  Top ID: 99.27
+		One align captures most of this contig: 763973 766832 | 1 2860 | 2860 2860 | 99.27 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_3330
+
+CONTIG: scaffold_4587 (2273bp)
+Top Length: 1406  Top ID: 99.43
+		This contig is partially unaligned. (Aligned 1406 out of 2273 bases)
+		Alignment: 97546 98950 | 1406 1 | 1405 1406 | 99.43 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_4587
+		Unaligned bases: 1407 to 2273 (867)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_12425 (1100bp)
+Top Length: 76  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 76 out of 1100 bases)
+		Alignment: 1117232 1117307 | 846 771 | 76 76 | 100.0 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_12425
+		Unaligned bases: 1 to 770 (770)
+		Unaligned bases: 847 to 1100 (254)
+
+CONTIG: scaffold_13485 (1031bp)
+Top Length: 1031  Top ID: 99.52
+		One align captures most of this contig: 684610 685640 | 1 1031 | 1031 1031 | 99.52 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_13485
+
+CONTIG: scaffold_19707 (766bp)
+Top Length: 496  Top ID: 95.37
+		This contig is partially unaligned. (Aligned 496 out of 766 bases)
+		Alignment: 1119145 1119640 | 1 496 | 496 496 | 95.37 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_19707
+		Unaligned bases: 497 to 766 (270)
+
+CONTIG: scaffold_20379 (745bp)
+Top Length: 745  Top ID: 99.73
+		One align captures most of this contig: 899842 900586 | 745 1 | 745 745 | 99.73 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_20379
+
+CONTIG: scaffold_23526 (664bp)
+Top Length: 121  Top ID: 98.35
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 33015 33135 | 544 664 | 121 121 | 98.35 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_23526
+		Skipping redundant alignment 90886 91006 | 544 664 | 121 121 | 98.35 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_23526
+		This contig is partially unaligned. (Aligned 121 out of 664 bases)
+		Alignment: 85182 85302 | 544 664 | 121 121 | 98.35 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_23526
+		Unaligned bases: 1 to 543 (543)
+
+CONTIG: scaffold_25180 (942bp)
+Top Length: 680  Top ID: 98.97
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 33658 34336 | 1 680 | 679 680 | 98.97 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_25180
+		This contig is partially unaligned. (Aligned 680 out of 942 bases)
+		Alignment: 85825 86503 | 1 680 | 679 680 | 98.97 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_25180
+		Unaligned bases: 681 to 942 (262)
+
+CONTIG: scaffold_26594 (602bp)
+Top Length: 349  Top ID: 97.43
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 3 between Alignment 1 and 2:  899842 899940 | 504 602 | 99 99 --> 899845 899940 | 507 602 | 96 96
+			Real Alignment 1: 898615 898964 | 158 506 | 350 349 | 97.43 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_26594
+			  Gap between these two alignments (local misassembly). Inconsistency = 880 
+			Real Alignment 2: 899845 899940 | 507 602 | 96 96 | 100.0 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_26594
+
+CONTIG: scaffold_76 (47375bp)
+Top Length: 36533  Top ID: 99.38
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 1 between Alignment 1 and 2:  191496 202338 | 10843 1 | 10843 10843 --> 191497 202338 | 10842 1 | 10842 10842
+			Real Alignment 1: 191497 202338 | 10842 1 | 10842 10842 | 99.85 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_76
+			  Extensive misassembly ( relocation, inconsistency = 1695 ) between these two alignments
+			Real Alignment 2: 153262 189801 | 47375 10843 | 36540 36533 | 99.38 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_76
+
+CONTIG: scaffold_123 (43072bp)
+Top Length: 23383  Top ID: 99.42
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 502061 525444 | 23383 1 | 23384 23383 | 99.42 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_123
+			  Gap between these two alignments (local misassembly). Inconsistency = 30 
+			Real Alignment 2: 482378 501530 | 43072 23884 | 19153 19189 | 98.99 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_123
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_137 (67265bp)
+Top Length: 60845  Top ID: 99.25
+		Skipping redundant alignment 195924 195997 | 43781 43854 | 74 74 | 100.0 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_137
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 267867 328733 | 60845 1 | 60867 60845 | 99.25 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_137
+			  Extensive misassembly ( relocation, inconsistency = -1551 ) between these two alignments
+			Real Alignment 2: 263141 267843 | 67110 62420 | 4703 4691 | 98.45 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_137
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_232 (52119bp)
+Top Length: 30034  Top ID: 99.5
+		Skipping redundant alignment 266470 266613 | 18751 18608 | 144 144 | 95.14 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_232
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 146148 153287 | 7131 1 | 7140 7131 | 99.03 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_232
+			  Overlap between these two alignments (local misassembly). Inconsistency = -5 
+			Real Alignment 2: 115990 146023 | 37294 7261 | 30034 30034 | 99.5 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_232
+			  Extensive misassembly ( relocation, inconsistency = 41949 ) between these two alignments
+			Real Alignment 3: 59212 73952 | 52119 37383 | 14741 14737 | 99.31 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_232
+
+CONTIG: scaffold_308 (23993bp)
+Top Length: 12566  Top ID: 99.48
+		Skipping redundant alignment 194308 194390 | 795 712 | 83 84 | 98.81 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_308
+		This contig is partially unaligned. (Aligned 12566 out of 23993 bases)
+		Alignment: 423275 435840 | 12566 1 | 12566 12566 | 99.48 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_308
+		Unaligned bases: 12567 to 23993 (11427)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_392 (46716bp)
+Top Length: 39570  Top ID: 99.36
+		This contig is misassembled. 3 total aligns.
+			Excluding internal overlap of size 23 between Alignment 1 and 2:  479615 482277 | 3151 486 | 2663 2666 --> 479638 482277 | 3128 486 | 2640 2643
+			Real Alignment 1: 479638 482277 | 3128 486 | 2640 2643 | 99.44 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_392
+			  Gap between these two alignments (local misassembly). Inconsistency = 228 
+			Real Alignment 2: 475520 479409 | 7018 3129 | 3890 3890 | 99.64 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_392
+			  Gap between these two alignments (local misassembly). Inconsistency = 1 
+			Real Alignment 3: 435814 475390 | 46716 7147 | 39577 39570 | 99.36 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_392
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_449 (23997bp)
+Top Length: 23142  Top ID: 99.26
+		Skipping redundant alignment 549811 550129 | 1 319 | 319 319 | 97.49 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_449
+		Skipping redundant alignment 1581 2244 | 843 1504 | 664 662 | 99.1 | Bacteroides_eggerthii_gi_482849940_ref_NZ_ scaffold_449
+		Skipping redundant alignment 547360 547569 | 843 1051 | 210 209 | 96.67 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_449
+		Skipping redundant alignment 548135 548481 | 1621 1964 | 347 344 | 98.27 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_449
+		This contig is misassembled. 6 total aligns.
+			Real Alignment 1: 548163 548859 | 1 697 | 697 697 | 96.28 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_449
+			  Gap between these two alignments (local misassembly). Inconsistency = 0 
+			Real Alignment 2: 548987 572134 | 825 23966 | 23148 23142 | 99.26 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_449
+
+CONTIG: scaffold_450 (35560bp)
+Top Length: 34626  Top ID: 99.21
+		This contig is partially unaligned. (Aligned 34626 out of 35560 bases)
+		Alignment: 227451 262083 | 35560 935 | 34633 34626 | 99.21 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_450
+		Unaligned bases: 1 to 934 (934)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_477 (24854bp)
+Top Length: 3830  Top ID: 99.43
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 580580 580714 | 24854 24721 | 135 134 | 97.04 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_477
+		This contig is misassembled. 3 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 24854 and total length of all aligns is 3964
+		Alignment: 328756 332585 | 12178 8349 | 3830 3830 | 99.43 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_477
+		Alignment: 328635 328768 | 24854 24721 | 134 134 | 100.0 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_477
+		Unaligned bases: 20890
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold_519 (15973bp)
+Top Length: 15973  Top ID: 99.13
+		Marking as insignificant: 86355 87721 | 1 1362 | 1367 1362 | 98.54 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_519
+		One align captures most of this contig: 34188 50115 | 1 15973 | 15928 15973 | 99.13 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_519
+
+CONTIG: scaffold_652 (24918bp)
+Top Length: 24918  Top ID: 99.26
+		One align captures most of this contig: 202336 227232 | 24918 1 | 24897 24918 | 99.26 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_652
+
+CONTIG: scaffold_786 (20306bp)
+Top Length: 9886  Top ID: 99.73
+		Skipping redundant alignment 194462 194545 | 9641 9724 | 84 84 | 100.0 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_786
+		This contig is misassembled. 4 total aligns.
+			Excluding internal overlap of size 135 between Alignment 1 and 2:  879 9030 | 17905 9752 | 8152 8154 --> 879 8895 | 17905 9887 | 8017 8019
+			Real Alignment 1: 19681 29556 | 9886 1 | 9876 9886 | 99.73 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_786
+			  Extensive misassembly ( relocation, inconsistency = 10785 ) between these two alignments
+			Excluding internal overlap of size 19 between Alignment 2 and 3:  568544 570736 | 20080 17887 | 2193 2194 --> 568544 570717 | 20080 17906 | 2174 2175
+			Real Alignment 2: 879 8895 | 17905 9887 | 8017 8019 | 99.28 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_786
+			  Extensive misassembly ( translocation ) between these two alignments
+			Real Alignment 3: 568544 570717 | 20080 17906 | 2174 2175 | 99.0 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_786
+
+CONTIG: scaffold_1606 (5151bp)
+Top Length: 4485  Top ID: 99.33
+		This contig is partially unaligned. (Aligned 4485 out of 5151 bases)
+		Alignment: 571766 576250 | 4553 69 | 4485 4485 | 99.33 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_1606
+		Unaligned bases: 1 to 68 (68)
+		Unaligned bases: 4554 to 5151 (598)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_1874 (4439bp)
+Top Length: 4439  Top ID: 99.21
+		Marking as insignificant: 328620 328733 | 115 1 | 114 115 | 96.52 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_1874
+		One align captures most of this contig: 576240 580679 | 4439 1 | 4440 4439 | 99.21 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_1874
+
+CONTIG: scaffold_2630 (4152bp)
+Top Length: 2736  Top ID: 99.31
+		This contig is partially unaligned. (Aligned 2736 out of 4152 bases)
+		Alignment: 545499 548238 | 2736 1 | 2740 2736 | 99.31 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_2630
+		Unaligned bases: 2737 to 4152 (1416)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_4255 (2397bp)
+Top Length: 2100  Top ID: 99.95
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 83935 84046 | 112 1 | 112 112 | 98.21 | Bacteroides_eggerthii_gi_482849893_ref_NZ_ scaffold_4255
+		Skipping redundant alignment 89639 89750 | 112 1 | 112 112 | 98.21 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_4255
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 31768 31879 | 112 1 | 112 112 | 98.21 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_4255
+			  Gap between these two alignments (local misassembly). Inconsistency = 0 
+			Real Alignment 2: 29483 31582 | 2397 298 | 2100 2100 | 99.95 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_4255
+
+CONTIG: scaffold_17989 (820bp)
+Top Length: 820  Top ID: 97.68
+		One align captures most of this contig: 588746 589565 | 1 820 | 820 820 | 97.68 | Bacteroides_eggerthii_gi_482849899_ref_NZ_ scaffold_17989
+
+CONTIG: scaffold_8873 (1600bp)
+Top Length: 1600  Top ID: 99.81
+		One align captures most of this contig: 2293 3889 | 1 1600 | 1597 1600 | 99.81 | Bacteroides_eggerthii_gi_482849932_ref_NZ_ scaffold_8873
+
+CONTIG: scaffold_1973 (7789bp)
+Top Length: 7789  Top ID: 99.58
+		One align captures most of this contig: 15514 23313 | 1 7789 | 7800 7789 | 99.58 | Bacteroides_eggerthii_gi_482849910_ref_NZ_ scaffold_1973
+
+CONTIG: scaffold_2172 (3937bp)
+Top Length: 3937  Top ID: 98.4
+		One align captures most of this contig: 36640 40570 | 3937 1 | 3931 3937 | 98.4 | Bacteroides_eggerthii_gi_482849910_ref_NZ_ scaffold_2172
+
+CONTIG: scaffold_4918 (2161bp)
+Top Length: 2161  Top ID: 99.54
+		One align captures most of this contig: 25494 27654 | 2161 1 | 2161 2161 | 99.54 | Bacteroides_eggerthii_gi_482849910_ref_NZ_ scaffold_4918
+
+CONTIG: scaffold_6942 (1707bp)
+Top Length: 1707  Top ID: 99.65
+		One align captures most of this contig: 32075 33781 | 1 1707 | 1707 1707 | 99.65 | Bacteroides_eggerthii_gi_482849910_ref_NZ_ scaffold_6942
+
+CONTIG: scaffold_7767 (1573bp)
+Top Length: 1573  Top ID: 99.68
+		One align captures most of this contig: 13171 14742 | 1 1573 | 1572 1573 | 99.68 | Bacteroides_eggerthii_gi_482849910_ref_NZ_ scaffold_7767
+
+CONTIG: scaffold_12167 (1118bp)
+Top Length: 726  Top ID: 99.04
+		This contig is partially unaligned. (Aligned 726 out of 1118 bases)
+		Alignment: 48723 49448 | 726 1 | 726 726 | 99.04 | Bacteroides_eggerthii_gi_482849910_ref_NZ_ scaffold_12167
+		Unaligned bases: 727 to 1118 (392)
+
+CONTIG: scaffold_16945 (856bp)
+Top Length: 856  Top ID: 99.42
+		One align captures most of this contig: 24263 25118 | 856 1 | 856 856 | 99.42 | Bacteroides_eggerthii_gi_482849910_ref_NZ_ scaffold_16945
+
+CONTIG: scaffold_13 (108525bp)
+Top Length: 55122  Top ID: 99.03
+		Skipping redundant alignment 205 359 | 1 155 | 155 155 | 96.13 | Bacteroides_eggerthii_gi_482849901_ref_NZ_ scaffold_13
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 205 55372 | 1 55122 | 55168 55122 | 99.03 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_13
+			  Overlap between these two alignments (local misassembly). Inconsistency = -433 
+			Real Alignment 2: 62185 108343 | 62368 108525 | 46159 46158 | 99.45 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_13
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_215 (54555bp)
+Top Length: 40834  Top ID: 99.5
+		This contig is partially unaligned. (Aligned 40834 out of 54555 bases)
+		Alignment: 525458 566298 | 13722 54555 | 40841 40834 | 99.5 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_215
+		Unaligned bases: 1 to 13721 (13721)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_234 (46607bp)
+Top Length: 22793  Top ID: 99.18
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 481663 504454 | 940 23732 | 22792 22793 | 99.18 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_234
+			  Gap between these two alignments (local misassembly). Inconsistency = 55 
+			Real Alignment 2: 510645 525461 | 29868 44691 | 14817 14824 | 98.94 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_234
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_294 (24996bp)
+Top Length: 24829  Top ID: 99.48
+		One align captures most of this contig: 108430 133258 | 24829 1 | 24829 24829 | 99.48 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_294
+
+CONTIG: scaffold_412 (99724bp)
+Top Length: 35651  Top ID: 99.19
+		This contig is misassembled. 4 total aligns.
+			Real Alignment 1: 389134 403529 | 15996 1599 | 14396 14398 | 99.35 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_412
+			  Extensive misassembly ( relocation, inconsistency = -2395 ) between these two alignments
+			Real Alignment 2: 352798 388450 | 54725 19075 | 35653 35651 | 99.19 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_412
+			  Extensive misassembly ( relocation, inconsistency = 6161 ) between these two alignments
+			Real Alignment 3: 328367 339859 | 72997 61503 | 11493 11495 | 99.25 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_412
+			  Extensive misassembly ( relocation, inconsistency = 167883 ) between these two alignments
+			Real Alignment 4: 133745 160464 | 99724 73017 | 26720 26708 | 99.07 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_412
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_587 (14202bp)
+Top Length: 14202  Top ID: 99.93
+		One align captures most of this contig: 572027 586229 | 14202 1 | 14203 14202 | 99.93 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_587
+
+CONTIG: scaffold_733 (21927bp)
+Top Length: 19183  Top ID: 98.84
+		This contig is partially unaligned. (Aligned 19183 out of 21927 bases)
+		Alignment: 462436 481660 | 2368 21550 | 19225 19183 | 98.84 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_733
+		Unaligned bases: 1 to 2367 (2367)
+		Unaligned bases: 21551 to 21927 (377)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_1177 (24764bp)
+Top Length: 7154  Top ID: 97.14
+		Skipping redundant alignment 30866 30944 | 13509 13587 | 79 79 | 100.0 | Bacteroides_eggerthii_gi_482849908_ref_NZ_ scaffold_1177
+		This contig is partially unaligned. (Aligned 7154 out of 24764 bases)
+		Alignment: 605455 612534 | 13514 20667 | 7080 7154 | 97.14 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_1177
+		Unaligned bases: 1 to 13513 (13513)
+		Unaligned bases: 20668 to 24764 (4097)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_2558 (6525bp)
+Top Length: 2364  Top ID: 96.76
+		This contig is partially unaligned. (Aligned 2364 out of 6525 bases)
+		Alignment: 566160 568534 | 2364 1 | 2375 2364 | 96.76 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_2558
+		Unaligned bases: 2365 to 6525 (4161)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_3078 (3019bp)
+Top Length: 3019  Top ID: 100.0
+		One align captures most of this contig: 586131 589149 | 3019 1 | 3019 3019 | 100.0 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_3078
+
+CONTIG: scaffold_3803 (4660bp)
+Top Length: 100  Top ID: 99.0
+		This contig is partially unaligned. (Aligned 100 out of 4660 bases)
+		Alignment: 572020 572119 | 4561 4660 | 100 100 | 99.0 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_3803
+		Unaligned bases: 1 to 4560 (4560)
+
+CONTIG: scaffold_5126 (2391bp)
+Top Length: 373  Top ID: 97.35
+		This contig is partially unaligned. (Aligned 373 out of 2391 bases)
+		Alignment: 617920 618297 | 2019 2391 | 378 373 | 97.35 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_5126
+		Unaligned bases: 1 to 2018 (2018)
+
+CONTIG: scaffold_5369 (2744bp)
+Top Length: 2744  Top ID: 99.42
+		One align captures most of this contig: 589654 592408 | 2744 1 | 2755 2744 | 99.42 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_5369
+
+CONTIG: scaffold_5565 (4012bp)
+Top Length: 3120  Top ID: 97.5
+		Skipping redundant alignment 260319 260510 | 3821 4012 | 192 192 | 96.35 | Bacteroides_eggerthii_gi_482849904_ref_NZ_ scaffold_5565
+		Skipping redundant alignment 125798 125989 | 3821 4012 | 192 192 | 96.35 | Bacteroides_eggerthii_gi_482849908_ref_NZ_ scaffold_5565
+		Skipping redundant alignment 43 234 | 4012 3821 | 192 192 | 96.35 | Bacteroides_eggerthii_gi_482849906_ref_NZ_ scaffold_5565
+		This contig is misassembled. 5 total aligns.
+			Real Alignment 1: 625524 626293 | 1 770 | 770 770 | 98.57 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_5565
+			  Overlap between these two alignments (local misassembly). Inconsistency = -122 
+			Real Alignment 2: 626294 629414 | 893 4012 | 3121 3120 | 97.5 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_5565
+
+CONTIG: scaffold_13870 (1007bp)
+Top Length: 376  Top ID: 96.29
+		This contig is partially unaligned. (Aligned 376 out of 1007 bases)
+		Alignment: 212726 213098 | 376 1 | 373 376 | 96.29 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_13870
+		Unaligned bases: 377 to 1007 (631)
+
+CONTIG: scaffold_19821 (762bp)
+Top Length: 762  Top ID: 96.72
+		One align captures most of this contig: 299590 300351 | 762 1 | 762 762 | 96.72 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_19821
+
+CONTIG: scaffold_26093 (612bp)
+Top Length: 612  Top ID: 97.55
+		One align captures most of this contig: 223336 223947 | 612 1 | 612 612 | 97.55 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_26093
+
+CONTIG: scaffold_28273 (556bp)
+Top Length: 554  Top ID: 98.74
+		One align captures most of this contig: 305860 306413 | 3 556 | 554 554 | 98.74 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_28273
+
+CONTIG: scaffold_28785 (865bp)
+Top Length: 865  Top ID: 96.99
+		One align captures most of this contig: 222227 223090 | 865 1 | 864 865 | 96.99 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_28785
+
+CONTIG: scaffold_36201 (673bp)
+Top Length: 200  Top ID: 95.5
+		This contig is partially unaligned. (Aligned 200 out of 673 bases)
+		Alignment: 629217 629414 | 474 673 | 198 200 | 95.5 | Bacteroides_eggerthii_gi_482849895_ref_NZ_ scaffold_36201
+		Unaligned bases: 1 to 473 (473)
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_eggerthii/contigs_reports/nucmer_output/IDBA_UD.used_snps
+ERROR: Reference Bacteroides_eggerthii_gi_482849938_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_eggerthii_gi_482849893_ref_NZ_', 'Bacteroides_eggerthii_gi_482849906_ref_NZ_', 'Bacteroides_eggerthii_gi_482849910_ref_NZ_', 'Bacteroides_eggerthii_gi_482849897_ref_NZ_', 'Bacteroides_eggerthii_gi_482849899_ref_NZ_', 'Bacteroides_eggerthii_gi_482849908_ref_NZ_', 'Bacteroides_eggerthii_gi_482849934_ref_NZ_', 'Bacteroides_eggerthii_gi_482849918_ref_NZ_', 'Bacteroides_eggerthii_gi_482849948_ref_NZ_', 'Bacteroides_eggerthii_gi_482849914_ref_NZ_', 'Bacteroides_eggerthii_gi_482849901_ref_NZ_', 'Bacteroides_eggerthii_gi_482849895_ref_NZ_', 'Bacteroides_eggerthii_gi_482849904_ref_NZ_', 'Bacteroides_eggerthii_gi_482849924_ref_NZ_', 'Bacteroides_eggerthii_gi_482849926_ref_NZ_', 'Bacteroides_eggerthii_gi_482849932_ref_NZ_']
+	Reference Bacteroides_eggerthii_gi_482849908_ref_NZ_: 6 total alignments. 1 total regions.
+		Region: 1 to 128129 (128129 bp)
+			START in gap: 1 to 2934 (2933 bp)
+			Align 1: 2934 19206 scaffold_119 58050 74333
+				Gap between this and next alignment: 19206 to 21955 (2748 bp)
+				Next Alignment: 21955 25746 scaffold_1000 4793 956
+
+			Align 2: 21955 25746 scaffold_1000 4793 956
+				Gap between this and next alignment: 25746 to 27862 (2115 bp)
+				Next Alignment: 27862 28806 scaffold_7015 733 1678
+
+			Align 3: 27862 28806 scaffold_7015 733 1678
+				Gap between this and next alignment: 28806 to 30780 (1973 bp)
+				Next Alignment: 30780 49508 scaffold_119 74334 93063
+
+			Align 4: 30780 49508 scaffold_119 74334 93063
+				Gap between this and next alignment: 49508 to 73795 (24286 bp)
+				Next Alignment: 73795 112621 scaffold_242 47410 8605
+
+			Align 5: 73795 112621 scaffold_242 47410 8605
+				Gap between this and next alignment: 112621 to 113198 (576 bp)
+				Next Alignment: 113198 124681 scaffold_624 413 11893
+
+			Align 6: 113198 124681 scaffold_624 413 11893
+			END in gap: 124681 to 128129 (3448 bp)
+
+ERROR: Reference Bacteroides_eggerthii_gi_482849930_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_eggerthii_gi_482849893_ref_NZ_', 'Bacteroides_eggerthii_gi_482849906_ref_NZ_', 'Bacteroides_eggerthii_gi_482849910_ref_NZ_', 'Bacteroides_eggerthii_gi_482849897_ref_NZ_', 'Bacteroides_eggerthii_gi_482849899_ref_NZ_', 'Bacteroides_eggerthii_gi_482849908_ref_NZ_', 'Bacteroides_eggerthii_gi_482849934_ref_NZ_', 'Bacteroides_eggerthii_gi_482849918_ref_NZ_', 'Bacteroides_eggerthii_gi_482849948_ref_NZ_', 'Bacteroides_eggerthii_gi_482849914_ref_NZ_', 'Bacteroides_eggerthii_gi_482849901_ref_NZ_', 'Bacteroides_eggerthii_gi_482849895_ref_NZ_', 'Bacteroides_eggerthii_gi_482849904_ref_NZ_', 'Bacteroides_eggerthii_gi_482849924_ref_NZ_', 'Bacteroides_eggerthii_gi_482849926_ref_NZ_', 'Bacteroides_eggerthii_gi_482849932_ref_NZ_']
+	Reference Bacteroides_eggerthii_gi_482849897_ref_NZ_: 31 total alignments. 1 total regions.
+		Region: 1 to 630106 (630106 bp)
+			START in gap: 1 to 4974 (4973 bp)
+			Align 1: 4974 21494 scaffold_167 16540 24
+				Negative gap (overlap) between this and next alignment: 21494 to 21448 (-46 bp)
+				Next Alignment: 21448 22345 scaffold_322 23100 22202
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 23100 to 23053.
+			Align 2: 21495 22345 scaffold_322 23053 22202
+				Next Alignment: 22346 43611 scaffold_322 21266 1
+
+			Align 3: 22346 43611 scaffold_322 21266 1
+				Gap between this and next alignment: 43611 to 43898 (286 bp)
+				Next Alignment: 43898 57148 scaffold_1146 1 13252
+
+			Align 4: 43898 57148 scaffold_1146 1 13252
+				Negative gap (overlap) between this and next alignment: 57148 to 57136 (-12 bp)
+				Next Alignment: 57136 65400 scaffold_803 11007 2743
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 11007 to 10994.
+			Align 5: 57149 65400 scaffold_803 10994 2743
+				Gap between this and next alignment: 65400 to 65482 (81 bp)
+				Next Alignment: 65482 187675 scaffold_72 179818 57617
+
+			Align 6: 65482 187675 scaffold_72 179818 57617
+				Gap between this and next alignment: 187675 to 187826 (150 bp)
+				Next Alignment: 187826 245108 scaffold_72 57457 145
+
+			Align 7: 187826 245108 scaffold_72 57457 145
+				The next alignment (244911 245009 scaffold_72 13 111) is redundant. Skipping.
+				Gap between this and next alignment: 245108 to 245141 (32 bp)
+				Next Alignment: 245141 247158 scaffold_92 46764 44750
+
+			Align 9: 245141 247158 scaffold_92 46764 44750
+				Gap between this and next alignment: 247158 to 247268 (109 bp)
+				Next Alignment: 247268 291909 scaffold_92 44642 1
+
+			Align 10: 247268 291909 scaffold_92 44642 1
+				Gap between this and next alignment: 291909 to 292168 (258 bp)
+				Next Alignment: 292168 298234 scaffold_1326 6067 1
+
+			Align 11: 292168 298234 scaffold_1326 6067 1
+				Negative gap (overlap) between this and next alignment: 298234 to 298138 (-96 bp)
+				Next Alignment: 298138 303135 scaffold_752 1 4998
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 98.
+			Align 12: 298235 303135 scaffold_752 98 4998
+				Gap between this and next alignment: 303135 to 303347 (211 bp)
+				Next Alignment: 303347 311082 scaffold_752 7194 14936
+
+			Align 13: 303347 311082 scaffold_752 7194 14936
+				Gap between this and next alignment: 311082 to 314640 (3557 bp)
+				Next Alignment: 314640 322450 scaffold_752 15012 22822
+
+			Align 14: 314640 322450 scaffold_752 15012 22822
+				Negative gap (overlap) between this and next alignment: 322450 to 322427 (-23 bp)
+				Next Alignment: 322427 345165 scaffold_398 22739 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 22739 to 22715.
+			Align 15: 322451 345165 scaffold_398 22715 1
+				Gap between this and next alignment: 345165 to 345328 (162 bp)
+				Next Alignment: 345328 352371 scaffold_596 7051 1
+
+			Align 16: 345328 352371 scaffold_596 7051 1
+				Negative gap (overlap) between this and next alignment: 352371 to 352177 (-194 bp)
+				Next Alignment: 352177 373519 scaffold_514 21443 98
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 21443 to 21248.
+			Align 17: 352372 373519 scaffold_514 21248 98
+				Negative gap (overlap) between this and next alignment: 373519 to 373511 (-8 bp)
+				Next Alignment: 373511 374795 scaffold_14616 1283 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1283 to 1274.
+			Align 18: 373520 374795 scaffold_14616 1274 1
+				Gap between this and next alignment: 374795 to 375472 (676 bp)
+				Next Alignment: 375472 376272 scaffold_16806 3 803
+
+			Align 19: 375472 376272 scaffold_16806 3 803
+				Gap between this and next alignment: 376272 to 376353 (80 bp)
+				Next Alignment: 376353 377101 scaffold_9276 634 1378
+
+			Align 20: 376353 377101 scaffold_9276 634 1378
+				Gap between this and next alignment: 377101 to 379369 (2267 bp)
+				Next Alignment: 379369 388280 scaffold_1481 8922 1
+
+			Align 21: 379369 388280 scaffold_1481 8922 1
+				The next alignment (379369 380569 scaffold_10278 3 1203) is redundant. Skipping.
+				The next alignment (380585 380667 scaffold_9276 1 83) is redundant. Skipping.
+				Gap between this and next alignment: 388280 to 388282 (1 bp)
+				Next Alignment: 388282 390254 scaffold_7079 1 1966
+
+			Align 24: 388282 390254 scaffold_7079 1 1966
+				Negative gap (overlap) between this and next alignment: 390254 to 390217 (-37 bp)
+				Next Alignment: 390217 397791 scaffold_957 8525 950
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 8525 to 8487.
+			Align 25: 390255 397791 scaffold_957 8487 950
+				Negative gap (overlap) between this and next alignment: 397791 to 397784 (-7 bp)
+				Next Alignment: 397784 409695 scaffold_934 50 11965
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 50 to 58.
+			Align 26: 397792 409695 scaffold_934 58 11965
+				Gap between this and next alignment: 409695 to 414920 (5224 bp)
+				Next Alignment: 414920 447465 scaffold_161 139727 107179
+
+			Align 27: 414920 447465 scaffold_161 139727 107179
+				Next Alignment: 447466 448766 scaffold_161 105878 107178
+
+			Align 28: 447466 448766 scaffold_161 105878 107178
+				Next Alignment: 448767 540006 scaffold_161 105877 14769
+
+			Align 29: 448767 540006 scaffold_161 105877 14769
+				Gap between this and next alignment: 540006 to 552028 (12021 bp)
+				Next Alignment: 552028 592115 scaffold_119 10734 50815
+
+			Align 30: 552028 592115 scaffold_119 10734 50815
+				Gap between this and next alignment: 592115 to 622450 (30334 bp)
+				Next Alignment: 622450 629690 scaffold_119 50816 58049
+
+			Align 31: 622450 629690 scaffold_119 50816 58049
+			END in gap: 629690 to 630106 (416 bp)
+
+	Reference Bacteroides_eggerthii_gi_482849893_ref_NZ_: 79 total alignments. 1 total regions.
+		Region: 1 to 1300797 (1300797 bp)
+			START in gap: 1 to 2 (1 bp)
+			Align 1: 2 23618 scaffold_562 196 23815
+				Gap between this and next alignment: 23618 to 23900 (281 bp)
+				Next Alignment: 23900 37514 scaffold_1026 13563 1
+
+			Align 2: 23900 37514 scaffold_1026 13563 1
+				Negative gap (overlap) between this and next alignment: 37514 to 37375 (-139 bp)
+				Next Alignment: 37375 44826 scaffold_1047 1 7452
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 141.
+			Align 3: 37515 44826 scaffold_1047 141 7452
+				Gap between this and next alignment: 44826 to 45106 (279 bp)
+				Next Alignment: 45106 83749 scaffold_193 1066 39702
+
+			Align 4: 45106 83749 scaffold_193 1066 39702
+				Negative gap (overlap) between this and next alignment: 83749 to 83725 (-24 bp)
+				Next Alignment: 83725 83934 scaffold_193 39912 39703
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 39912 to 39887.
+			Align 5: 83750 83934 scaffold_193 39887 39703
+				Gap between this and next alignment: 83934 to 83960 (25 bp)
+				Next Alignment: 83960 84046 scaffold_193 39913 39999
+
+			Align 6: 83960 84046 scaffold_193 39913 39999
+				Gap between this and next alignment: 84046 to 84066 (19 bp)
+				Next Alignment: 84066 85302 scaffold_10656 1 1237
+
+			Align 7: 84066 85302 scaffold_10656 1 1237
+				The next alignment (85182 85302 scaffold_23526 544 664) is redundant. Skipping.
+				Gap between this and next alignment: 85302 to 85609 (306 bp)
+				Next Alignment: 85609 85841 scaffold_1572 1 233
+
+			Align 9: 85609 85841 scaffold_1572 1 233
+				Negative gap (overlap) between this and next alignment: 85841 to 85825 (-16 bp)
+				Next Alignment: 85825 86503 scaffold_25180 1 680
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 18.
+			Align 10: 85842 86503 scaffold_25180 18 680
+				Gap between this and next alignment: 86503 to 97546 (11042 bp)
+				Next Alignment: 97546 98950 scaffold_4587 1406 1
+
+			Align 11: 97546 98950 scaffold_4587 1406 1
+				Gap between this and next alignment: 98950 to 99170 (219 bp)
+				Next Alignment: 99170 103520 scaffold_1602 281 4632
+
+			Align 12: 99170 103520 scaffold_1602 281 4632
+				Gap between this and next alignment: 103520 to 104024 (503 bp)
+				Next Alignment: 104024 130880 scaffold_534 1 26820
+
+			Align 13: 104024 130880 scaffold_534 1 26820
+				Negative gap (overlap) between this and next alignment: 130880 to 130820 (-60 bp)
+				Next Alignment: 130820 154613 scaffold_661 341 24205
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 341 to 402.
+			Align 14: 130881 154613 scaffold_661 402 24205
+				Gap between this and next alignment: 154613 to 154823 (209 bp)
+				Next Alignment: 154823 158616 scaffold_2275 3794 1
+
+			Align 15: 154823 158616 scaffold_2275 3794 1
+				Gap between this and next alignment: 158616 to 158809 (192 bp)
+				Next Alignment: 158809 166236 scaffold_599 13910 6492
+
+			Align 16: 158809 166236 scaffold_599 13910 6492
+				Gap between this and next alignment: 166236 to 166329 (92 bp)
+				Next Alignment: 166329 172820 scaffold_599 6491 1
+
+			Align 17: 166329 172820 scaffold_599 6491 1
+				Gap between this and next alignment: 172820 to 173104 (283 bp)
+				Next Alignment: 173104 252848 scaffold_24 79805 43
+
+			Align 18: 173104 252848 scaffold_24 79805 43
+				Negative gap (overlap) between this and next alignment: 252848 to 252847 (-1 bp)
+				Next Alignment: 252847 258722 scaffold_1077 7368 1501
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 7368 to 7366.
+			Align 19: 252849 258722 scaffold_1077 7366 1501
+				Gap between this and next alignment: 258722 to 263832 (5109 bp)
+				Next Alignment: 263832 264299 scaffold_1077 468 1
+
+			Align 20: 263832 264299 scaffold_1077 468 1
+				Gap between this and next alignment: 264299 to 264441 (141 bp)
+				Next Alignment: 264441 264544 scaffold_285 29020 28917
+
+			Align 21: 264441 264544 scaffold_285 29020 28917
+				Gap between this and next alignment: 264544 to 264553 (8 bp)
+				Next Alignment: 264553 267245 scaffold_1983 2916 226
+
+			Align 22: 264553 267245 scaffold_1983 2916 226
+				Negative gap (overlap) between this and next alignment: 267245 to 267244 (-1 bp)
+				Next Alignment: 267244 293449 scaffold_285 28916 2715
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 28916 to 28914.
+			Align 23: 267246 293449 scaffold_285 28914 2715
+				Next Alignment: 293450 350547 scaffold_220 4540 61626
+
+			Align 24: 293450 350547 scaffold_220 4540 61626
+				Gap between this and next alignment: 350547 to 351928 (1380 bp)
+				Next Alignment: 351928 357997 scaffold_220 63007 69054
+
+			Align 25: 351928 357997 scaffold_220 63007 69054
+				Gap between this and next alignment: 357997 to 358038 (40 bp)
+				Next Alignment: 358038 363630 scaffold_1461 5595 1
+
+			Align 26: 358038 363630 scaffold_1461 5595 1
+				Gap between this and next alignment: 363630 to 364161 (530 bp)
+				Next Alignment: 364161 392862 scaffold_665 1 28737
+
+			Align 27: 364161 392862 scaffold_665 1 28737
+				Gap between this and next alignment: 392862 to 512878 (120015 bp)
+				Next Alignment: 512878 513756 scaffold_1697 520 1398
+
+			Align 28: 512878 513756 scaffold_1697 520 1398
+				Gap between this and next alignment: 513756 to 513804 (47 bp)
+				Next Alignment: 513804 518035 scaffold_1697 1399 5636
+
+			Align 29: 513804 518035 scaffold_1697 1399 5636
+				Negative gap (overlap) between this and next alignment: 518035 to 517999 (-36 bp)
+				Next Alignment: 517999 541254 scaffold_722 23259 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 23259 to 23222.
+			Align 30: 518036 541254 scaffold_722 23222 1
+				Gap between this and next alignment: 541254 to 541448 (193 bp)
+				Next Alignment: 541448 562141 scaffold_732 1 20660
+
+			Align 31: 541448 562141 scaffold_732 1 20660
+				Negative gap (overlap) between this and next alignment: 562141 to 562089 (-52 bp)
+				Next Alignment: 562089 569602 scaffold_836 32007 24493
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 32007 to 31954.
+			Align 32: 562142 569602 scaffold_836 31954 24493
+				Gap between this and next alignment: 569602 to 575578 (5975 bp)
+				Next Alignment: 575578 576591 scaffold_836 20609 19620
+
+			Align 33: 575578 576591 scaffold_836 20609 19620
+				Negative gap (overlap) between this and next alignment: 576591 to 576540 (-51 bp)
+				Next Alignment: 576540 580092 scaffold_836 19460 15939
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 19460 to 19408.
+			Align 34: 576592 580092 scaffold_836 19408 15939
+				Gap between this and next alignment: 580092 to 580195 (102 bp)
+				Next Alignment: 580195 581081 scaffold_836 15734 14848
+
+			Align 35: 580195 581081 scaffold_836 15734 14848
+				Gap between this and next alignment: 581081 to 582256 (1174 bp)
+				Next Alignment: 582256 595914 scaffold_836 13817 142
+
+			Align 36: 582256 595914 scaffold_836 13817 142
+				Gap between this and next alignment: 595914 to 595995 (80 bp)
+				Next Alignment: 595995 641484 scaffold_387 1 45430
+
+			Align 37: 595995 641484 scaffold_387 1 45430
+				The next alignment (600709 600809 scaffold_99 101 1) is redundant. Skipping.
+				The next alignment (637668 637743 scaffold_25 86242 86167) is redundant. Skipping.
+				Negative gap (overlap) between this and next alignment: 641484 to 641462 (-22 bp)
+				Next Alignment: 641462 643155 scaffold_627 13253 11556
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 13253 to 13230.
+			Align 40: 641485 643155 scaffold_627 13230 11556
+				Gap between this and next alignment: 643155 to 646073 (2917 bp)
+				Next Alignment: 646073 653476 scaffold_627 8644 1240
+
+			Align 41: 646073 653476 scaffold_627 8644 1240
+				Gap between this and next alignment: 653476 to 667746 (14269 bp)
+				Next Alignment: 667746 668391 scaffold_1109 7268 7913
+
+			Align 42: 667746 668391 scaffold_1109 7268 7913
+				Gap between this and next alignment: 668391 to 668464 (72 bp)
+				Next Alignment: 668464 684360 scaffold_480 15812 1
+
+			Align 43: 668464 684360 scaffold_480 15812 1
+				Negative gap (overlap) between this and next alignment: 684360 to 684189 (-171 bp)
+				Next Alignment: 684189 684408 scaffold_616 13211 13432
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 13211 to 13384.
+			Align 44: 684361 684408 scaffold_616 13384 13432
+				Gap between this and next alignment: 684408 to 684453 (44 bp)
+				Next Alignment: 684453 688888 scaffold_25 31103 26667
+
+			Align 45: 684453 688888 scaffold_25 31103 26667
+				The next alignment (684610 685640 scaffold_13485 1 1031) is redundant. Skipping.
+				Gap between this and next alignment: 688888 to 688959 (70 bp)
+				Next Alignment: 688959 689072 scaffold_25 25513 25400
+
+			Align 47: 688959 689072 scaffold_25 25513 25400
+				Gap between this and next alignment: 689072 to 706193 (17120 bp)
+				Next Alignment: 706193 716301 scaffold_25 10370 259
+
+			Align 48: 706193 716301 scaffold_25 10370 259
+				Gap between this and next alignment: 716301 to 716591 (289 bp)
+				Next Alignment: 716591 716753 scaffold_190 84719 84881
+
+			Align 49: 716591 716753 scaffold_190 84719 84881
+				Gap between this and next alignment: 716753 to 726347 (9593 bp)
+				Next Alignment: 726347 763830 scaffold_190 84882 122363
+
+			Align 50: 726347 763830 scaffold_190 84882 122363
+				Gap between this and next alignment: 763830 to 763973 (142 bp)
+				Next Alignment: 763973 766832 scaffold_3330 1 2860
+
+			Align 51: 763973 766832 scaffold_3330 1 2860
+				Gap between this and next alignment: 766832 to 766873 (40 bp)
+				Next Alignment: 766873 773913 scaffold_1770 7065 17
+
+			Align 52: 766873 773913 scaffold_1770 7065 17
+				Gap between this and next alignment: 773913 to 774398 (484 bp)
+				Next Alignment: 774398 781236 scaffold_1212 6843 1
+
+			Align 53: 774398 781236 scaffold_1212 6843 1
+				Gap between this and next alignment: 781236 to 781579 (342 bp)
+				Next Alignment: 781579 794789 scaffold_616 1 13206
+
+			Align 54: 781579 794789 scaffold_616 1 13206
+				Gap between this and next alignment: 794789 to 805055 (10265 bp)
+				Next Alignment: 805055 809025 scaffold_616 13433 17399
+
+			Align 55: 805055 809025 scaffold_616 13433 17399
+				Gap between this and next alignment: 809025 to 809056 (30 bp)
+				Next Alignment: 809056 813490 scaffold_1882 4423 1
+
+			Align 56: 809056 813490 scaffold_1882 4423 1
+				Gap between this and next alignment: 813490 to 813520 (29 bp)
+				Next Alignment: 813520 832834 scaffold_271 52085 32772
+
+			Align 57: 813520 832834 scaffold_271 52085 32772
+				Negative gap (overlap) between this and next alignment: 832834 to 832810 (-24 bp)
+				Next Alignment: 832810 840975 scaffold_987 8169 4
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 8169 to 8144.
+			Align 58: 832835 840975 scaffold_987 8144 4
+				Negative gap (overlap) between this and next alignment: 840975 to 840969 (-6 bp)
+				Next Alignment: 840969 850419 scaffold_543 1 9451
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 8.
+			Align 59: 840976 850419 scaffold_543 8 9451
+				Gap between this and next alignment: 850419 to 898615 (48195 bp)
+				Next Alignment: 898615 898964 scaffold_26594 158 506
+
+			Align 60: 898615 898964 scaffold_26594 158 506
+				Gap between this and next alignment: 898964 to 899842 (877 bp)
+				Next Alignment: 899842 900586 scaffold_20379 745 1
+
+			Align 61: 899842 900586 scaffold_20379 745 1
+				The next alignment (899845 899940 scaffold_26594 507 602) is redundant. Skipping.
+				Gap between this and next alignment: 900586 to 944572 (43985 bp)
+				Next Alignment: 944572 954548 scaffold_583 248 10221
+
+			Align 63: 944572 954548 scaffold_583 248 10221
+				Negative gap (overlap) between this and next alignment: 954548 to 954543 (-5 bp)
+				Next Alignment: 954543 969828 scaffold_145 99 15384
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 99 to 105.
+			Align 64: 954549 969828 scaffold_145 105 15384
+				Gap between this and next alignment: 969828 to 975445 (5616 bp)
+				Next Alignment: 975445 982040 scaffold_145 18764 25359
+
+			Align 65: 975445 982040 scaffold_145 18764 25359
+				Gap between this and next alignment: 982040 to 982739 (698 bp)
+				Next Alignment: 982739 991443 scaffold_145 26019 34721
+
+			Align 66: 982739 991443 scaffold_145 26019 34721
+				Negative gap (overlap) between this and next alignment: 991443 to 991440 (-3 bp)
+				Next Alignment: 991440 995880 scaffold_181 77391 72948
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 77391 to 77387.
+			Align 67: 991444 995880 scaffold_181 77387 72948
+				Gap between this and next alignment: 995880 to 1026382 (30501 bp)
+				Next Alignment: 1026382 1082385 scaffold_181 72947 16939
+
+			Align 68: 1026382 1082385 scaffold_181 72947 16939
+				Gap between this and next alignment: 1082385 to 1092668 (10282 bp)
+				Next Alignment: 1092668 1107445 scaffold_181 15565 795
+
+			Align 69: 1092668 1107445 scaffold_181 15565 795
+				Gap between this and next alignment: 1107445 to 1116077 (8631 bp)
+				Next Alignment: 1116077 1117310 scaffold_61 56253 55018
+
+			Align 70: 1116077 1117310 scaffold_61 56253 55018
+				The next alignment (1117232 1117307 scaffold_12425 846 771) is redundant. Skipping.
+				Gap between this and next alignment: 1117310 to 1119145 (1834 bp)
+				Next Alignment: 1119145 1119640 scaffold_19707 1 496
+
+			Align 72: 1119145 1119640 scaffold_19707 1 496
+				Gap between this and next alignment: 1119640 to 1124471 (4830 bp)
+				Next Alignment: 1124471 1124999 scaffold_181 794 265
+
+			Align 73: 1124471 1124999 scaffold_181 794 265
+				Gap between this and next alignment: 1124999 to 1127064 (2064 bp)
+				Next Alignment: 1127064 1206796 scaffold_48 1923 81649
+
+			Align 74: 1127064 1206796 scaffold_48 1923 81649
+				Gap between this and next alignment: 1206796 to 1207064 (267 bp)
+				Next Alignment: 1207064 1222718 scaffold_48 89627 105274
+
+			Align 75: 1207064 1222718 scaffold_48 89627 105274
+				Gap between this and next alignment: 1222718 to 1241071 (18352 bp)
+				Next Alignment: 1241071 1242504 scaffold_48 133684 135117
+
+			Align 76: 1241071 1242504 scaffold_48 133684 135117
+				Gap between this and next alignment: 1242504 to 1254595 (12090 bp)
+				Next Alignment: 1254595 1261563 scaffold_48 135118 142086
+
+			Align 77: 1254595 1261563 scaffold_48 135118 142086
+				Negative gap (overlap) between this and next alignment: 1261563 to 1261529 (-34 bp)
+				Next Alignment: 1261529 1291538 scaffold_633 1 30006
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 36.
+			Align 78: 1261564 1291538 scaffold_633 36 30006
+				Negative gap (overlap) between this and next alignment: 1291538 to 1290754 (-784 bp)
+				Next Alignment: 1290754 1298579 scaffold_425 9271 1432
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 9271 to 8489.
+			Align 79: 1291539 1298579 scaffold_425 8489 1432
+			END in gap: 1298579 to 1300797 (2218 bp)
+
+ERROR: Reference Bacteroides_eggerthii_gi_482849940_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_eggerthii_gi_482849893_ref_NZ_', 'Bacteroides_eggerthii_gi_482849906_ref_NZ_', 'Bacteroides_eggerthii_gi_482849910_ref_NZ_', 'Bacteroides_eggerthii_gi_482849897_ref_NZ_', 'Bacteroides_eggerthii_gi_482849899_ref_NZ_', 'Bacteroides_eggerthii_gi_482849908_ref_NZ_', 'Bacteroides_eggerthii_gi_482849934_ref_NZ_', 'Bacteroides_eggerthii_gi_482849918_ref_NZ_', 'Bacteroides_eggerthii_gi_482849948_ref_NZ_', 'Bacteroides_eggerthii_gi_482849914_ref_NZ_', 'Bacteroides_eggerthii_gi_482849901_ref_NZ_', 'Bacteroides_eggerthii_gi_482849895_ref_NZ_', 'Bacteroides_eggerthii_gi_482849904_ref_NZ_', 'Bacteroides_eggerthii_gi_482849924_ref_NZ_', 'Bacteroides_eggerthii_gi_482849926_ref_NZ_', 'Bacteroides_eggerthii_gi_482849932_ref_NZ_']
+	Reference Bacteroides_eggerthii_gi_482849899_ref_NZ_: 29 total alignments. 1 total regions.
+		Region: 1 to 612519 (612519 bp)
+			START in gap: 1 to 879 (878 bp)
+			Align 1: 879 8895 scaffold_786 17905 9887
+				Gap between this and next alignment: 8895 to 19681 (10785 bp)
+				Next Alignment: 19681 29556 scaffold_786 9886 1
+
+			Align 2: 19681 29556 scaffold_786 9886 1
+				Negative gap (overlap) between this and next alignment: 29556 to 29483 (-73 bp)
+				Next Alignment: 29483 31582 scaffold_4255 2397 298
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 2397 to 2323.
+			Align 3: 29557 31582 scaffold_4255 2323 298
+				Gap between this and next alignment: 31582 to 31768 (185 bp)
+				Next Alignment: 31768 31879 scaffold_4255 112 1
+
+			Align 4: 31768 31879 scaffold_4255 112 1
+				Gap between this and next alignment: 31879 to 33578 (1698 bp)
+				Next Alignment: 33578 33676 scaffold_438 1 99
+
+			Align 5: 33578 33676 scaffold_438 1 99
+				Gap between this and next alignment: 33676 to 34188 (511 bp)
+				Next Alignment: 34188 50115 scaffold_519 1 15973
+
+			Align 6: 34188 50115 scaffold_519 1 15973
+				Gap between this and next alignment: 50115 to 59212 (9096 bp)
+				Next Alignment: 59212 73952 scaffold_232 52119 37383
+
+			Align 7: 59212 73952 scaffold_232 52119 37383
+				Gap between this and next alignment: 73952 to 115990 (42037 bp)
+				Next Alignment: 115990 146023 scaffold_232 37294 7261
+
+			Align 8: 115990 146023 scaffold_232 37294 7261
+				Gap between this and next alignment: 146023 to 146148 (124 bp)
+				Next Alignment: 146148 153287 scaffold_232 7131 1
+
+			Align 9: 146148 153287 scaffold_232 7131 1
+				Negative gap (overlap) between this and next alignment: 153287 to 153262 (-25 bp)
+				Next Alignment: 153262 189801 scaffold_76 47375 10843
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 47375 to 47349.
+			Align 10: 153288 189801 scaffold_76 47349 10843
+				Gap between this and next alignment: 189801 to 191497 (1695 bp)
+				Next Alignment: 191497 202338 scaffold_76 10842 1
+
+			Align 11: 191497 202338 scaffold_76 10842 1
+				Negative gap (overlap) between this and next alignment: 202338 to 202336 (-2 bp)
+				Next Alignment: 202336 227232 scaffold_652 24918 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 24918 to 24915.
+			Align 12: 202339 227232 scaffold_652 24915 1
+				Gap between this and next alignment: 227232 to 227451 (218 bp)
+				Next Alignment: 227451 262083 scaffold_450 35560 935
+
+			Align 13: 227451 262083 scaffold_450 35560 935
+				Gap between this and next alignment: 262083 to 263141 (1057 bp)
+				Next Alignment: 263141 267843 scaffold_137 67110 62420
+
+			Align 14: 263141 267843 scaffold_137 67110 62420
+				Gap between this and next alignment: 267843 to 267867 (23 bp)
+				Next Alignment: 267867 328733 scaffold_137 60845 1
+
+			Align 15: 267867 328733 scaffold_137 60845 1
+				Negative gap (overlap) between this and next alignment: 328733 to 328635 (-98 bp)
+				Next Alignment: 328635 328768 scaffold_477 24854 24721
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 24854 to 24755.
+			Align 16: 328734 328768 scaffold_477 24755 24721
+				Negative gap (overlap) between this and next alignment: 328768 to 328756 (-12 bp)
+				Next Alignment: 328756 332585 scaffold_477 12178 8349
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 12178 to 12165.
+			Align 17: 328769 332585 scaffold_477 12165 8349
+				Gap between this and next alignment: 332585 to 423275 (90689 bp)
+				Next Alignment: 423275 435840 scaffold_308 12566 1
+
+			Align 18: 423275 435840 scaffold_308 12566 1
+				Negative gap (overlap) between this and next alignment: 435840 to 435814 (-26 bp)
+				Next Alignment: 435814 475390 scaffold_392 46716 7147
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 46716 to 46689.
+			Align 19: 435841 475390 scaffold_392 46689 7147
+				Gap between this and next alignment: 475390 to 475520 (129 bp)
+				Next Alignment: 475520 479409 scaffold_392 7018 3129
+
+			Align 20: 475520 479409 scaffold_392 7018 3129
+				Gap between this and next alignment: 479409 to 479638 (228 bp)
+				Next Alignment: 479638 482277 scaffold_392 3128 486
+
+			Align 21: 479638 482277 scaffold_392 3128 486
+				Gap between this and next alignment: 482277 to 482378 (100 bp)
+				Next Alignment: 482378 501530 scaffold_123 43072 23884
+
+			Align 22: 482378 501530 scaffold_123 43072 23884
+				Gap between this and next alignment: 501530 to 502061 (530 bp)
+				Next Alignment: 502061 525444 scaffold_123 23383 1
+
+			Align 23: 502061 525444 scaffold_123 23383 1
+				Gap between this and next alignment: 525444 to 545499 (20054 bp)
+				Next Alignment: 545499 548238 scaffold_2630 2736 1
+
+			Align 24: 545499 548238 scaffold_2630 2736 1
+				Negative gap (overlap) between this and next alignment: 548238 to 548163 (-75 bp)
+				Next Alignment: 548163 548859 scaffold_449 1 697
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 76.
+			Align 25: 548239 548859 scaffold_449 76 697
+				Gap between this and next alignment: 548859 to 548987 (127 bp)
+				Next Alignment: 548987 572134 scaffold_449 825 23966
+
+			Align 26: 548987 572134 scaffold_449 825 23966
+				Negative gap (overlap) between this and next alignment: 572134 to 571766 (-368 bp)
+				Next Alignment: 571766 576250 scaffold_1606 4553 69
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 4553 to 4184.
+			Align 27: 572135 576250 scaffold_1606 4184 69
+				Negative gap (overlap) between this and next alignment: 576250 to 576240 (-10 bp)
+				Next Alignment: 576240 580679 scaffold_1874 4439 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 4439 to 4428.
+			Align 28: 576251 580679 scaffold_1874 4428 1
+				Gap between this and next alignment: 580679 to 588746 (8066 bp)
+				Next Alignment: 588746 589565 scaffold_17989 1 820
+
+			Align 29: 588746 589565 scaffold_17989 1 820
+			END in gap: 589565 to 612519 (22954 bp)
+
+	Reference Bacteroides_eggerthii_gi_482849934_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 3294 (3294 bp)
+			START in gap: 1 to 193 (192 bp)
+			Align 1: 193 1235 scaffold_19835 1041 1
+			END in gap: 1235 to 3294 (2059 bp)
+
+	Reference Bacteroides_eggerthii_gi_482849918_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 16873 (16873 bp)
+			START in gap: 1 to 1636 (1635 bp)
+			Align 1: 1636 11817 scaffold_258 23221 33404
+			END in gap: 11817 to 16873 (5056 bp)
+
+	Reference Bacteroides_eggerthii_gi_482849914_ref_NZ_: 5 total alignments. 1 total regions.
+		Region: 1 to 36692 (36692 bp)
+			START in gap: 1 to 93 (92 bp)
+			Align 1: 93 10207 scaffold_1193 1 10141
+				Gap between this and next alignment: 10207 to 10324 (116 bp)
+				Next Alignment: 10324 19314 scaffold_883 251 9241
+
+			Align 2: 10324 19314 scaffold_883 251 9241
+				Negative gap (overlap) between this and next alignment: 19314 to 19210 (-104 bp)
+				Next Alignment: 19210 19315 scaffold_86 106 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 106 to 1.
+			Align 3: 19315 19315 scaffold_86 1 1
+				Gap between this and next alignment: 19315 to 34132 (14816 bp)
+				Next Alignment: 34132 34253 scaffold_258 41384 41263
+
+			Align 4: 34132 34253 scaffold_258 41384 41263
+				Negative gap (overlap) between this and next alignment: 34253 to 34132 (-121 bp)
+				Next Alignment: 34132 35564 scaffold_425 1 1432
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 123.
+			Align 5: 34254 35564 scaffold_425 123 1432
+			END in gap: 35564 to 36692 (1128 bp)
+
+ERROR: Reference Bacteroides_eggerthii_gi_482849916_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_eggerthii_gi_482849893_ref_NZ_', 'Bacteroides_eggerthii_gi_482849906_ref_NZ_', 'Bacteroides_eggerthii_gi_482849910_ref_NZ_', 'Bacteroides_eggerthii_gi_482849897_ref_NZ_', 'Bacteroides_eggerthii_gi_482849899_ref_NZ_', 'Bacteroides_eggerthii_gi_482849908_ref_NZ_', 'Bacteroides_eggerthii_gi_482849934_ref_NZ_', 'Bacteroides_eggerthii_gi_482849918_ref_NZ_', 'Bacteroides_eggerthii_gi_482849948_ref_NZ_', 'Bacteroides_eggerthii_gi_482849914_ref_NZ_', 'Bacteroides_eggerthii_gi_482849901_ref_NZ_', 'Bacteroides_eggerthii_gi_482849895_ref_NZ_', 'Bacteroides_eggerthii_gi_482849904_ref_NZ_', 'Bacteroides_eggerthii_gi_482849924_ref_NZ_', 'Bacteroides_eggerthii_gi_482849926_ref_NZ_', 'Bacteroides_eggerthii_gi_482849932_ref_NZ_']
+	Reference Bacteroides_eggerthii_gi_482849926_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 5106 (5106 bp)
+			START in gap: 1 to 3623 (3622 bp)
+			Align 1: 3623 4736 scaffold_258 9283 8169
+			END in gap: 4736 to 5106 (370 bp)
+
+	Reference Bacteroides_eggerthii_gi_482849910_ref_NZ_: 8 total alignments. 1 total regions.
+		Region: 1 to 71797 (71797 bp)
+			START in gap: 1 to 13171 (13170 bp)
+			Align 1: 13171 14742 scaffold_7767 1 1573
+				Gap between this and next alignment: 14742 to 15514 (771 bp)
+				Next Alignment: 15514 23313 scaffold_1973 1 7789
+
+			Align 2: 15514 23313 scaffold_1973 1 7789
+				Gap between this and next alignment: 23313 to 24263 (949 bp)
+				Next Alignment: 24263 25118 scaffold_16945 856 1
+
+			Align 3: 24263 25118 scaffold_16945 856 1
+				Gap between this and next alignment: 25118 to 25494 (375 bp)
+				Next Alignment: 25494 27654 scaffold_4918 2161 1
+
+			Align 4: 25494 27654 scaffold_4918 2161 1
+				Gap between this and next alignment: 27654 to 32075 (4420 bp)
+				Next Alignment: 32075 33781 scaffold_6942 1 1707
+
+			Align 5: 32075 33781 scaffold_6942 1 1707
+				Gap between this and next alignment: 33781 to 36640 (2858 bp)
+				Next Alignment: 36640 40570 scaffold_2172 3937 1
+
+			Align 6: 36640 40570 scaffold_2172 3937 1
+				Gap between this and next alignment: 40570 to 48723 (8152 bp)
+				Next Alignment: 48723 49448 scaffold_12167 726 1
+
+			Align 7: 48723 49448 scaffold_12167 726 1
+				Gap between this and next alignment: 49448 to 60338 (10889 bp)
+				Next Alignment: 60338 70183 scaffold_258 20841 11014
+
+			Align 8: 60338 70183 scaffold_258 20841 11014
+			END in gap: 70183 to 71797 (1614 bp)
+
+ERROR: Reference Bacteroides_eggerthii_gi_482849922_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_eggerthii_gi_482849893_ref_NZ_', 'Bacteroides_eggerthii_gi_482849906_ref_NZ_', 'Bacteroides_eggerthii_gi_482849910_ref_NZ_', 'Bacteroides_eggerthii_gi_482849897_ref_NZ_', 'Bacteroides_eggerthii_gi_482849899_ref_NZ_', 'Bacteroides_eggerthii_gi_482849908_ref_NZ_', 'Bacteroides_eggerthii_gi_482849934_ref_NZ_', 'Bacteroides_eggerthii_gi_482849918_ref_NZ_', 'Bacteroides_eggerthii_gi_482849948_ref_NZ_', 'Bacteroides_eggerthii_gi_482849914_ref_NZ_', 'Bacteroides_eggerthii_gi_482849901_ref_NZ_', 'Bacteroides_eggerthii_gi_482849895_ref_NZ_', 'Bacteroides_eggerthii_gi_482849904_ref_NZ_', 'Bacteroides_eggerthii_gi_482849924_ref_NZ_', 'Bacteroides_eggerthii_gi_482849926_ref_NZ_', 'Bacteroides_eggerthii_gi_482849932_ref_NZ_']
+	Reference Bacteroides_eggerthii_gi_482849948_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 940 (940 bp)
+			Align 1: 1 301 scaffold_258 2183 2483
+			END in gap: 301 to 940 (639 bp)
+
+ERROR: Reference Bacteroides_eggerthii_gi_482849928_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_eggerthii_gi_482849893_ref_NZ_', 'Bacteroides_eggerthii_gi_482849906_ref_NZ_', 'Bacteroides_eggerthii_gi_482849910_ref_NZ_', 'Bacteroides_eggerthii_gi_482849897_ref_NZ_', 'Bacteroides_eggerthii_gi_482849899_ref_NZ_', 'Bacteroides_eggerthii_gi_482849908_ref_NZ_', 'Bacteroides_eggerthii_gi_482849934_ref_NZ_', 'Bacteroides_eggerthii_gi_482849918_ref_NZ_', 'Bacteroides_eggerthii_gi_482849948_ref_NZ_', 'Bacteroides_eggerthii_gi_482849914_ref_NZ_', 'Bacteroides_eggerthii_gi_482849901_ref_NZ_', 'Bacteroides_eggerthii_gi_482849895_ref_NZ_', 'Bacteroides_eggerthii_gi_482849904_ref_NZ_', 'Bacteroides_eggerthii_gi_482849924_ref_NZ_', 'Bacteroides_eggerthii_gi_482849926_ref_NZ_', 'Bacteroides_eggerthii_gi_482849932_ref_NZ_']
+ERROR: Reference Bacteroides_eggerthii_gi_482849912_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_eggerthii_gi_482849893_ref_NZ_', 'Bacteroides_eggerthii_gi_482849906_ref_NZ_', 'Bacteroides_eggerthii_gi_482849910_ref_NZ_', 'Bacteroides_eggerthii_gi_482849897_ref_NZ_', 'Bacteroides_eggerthii_gi_482849899_ref_NZ_', 'Bacteroides_eggerthii_gi_482849908_ref_NZ_', 'Bacteroides_eggerthii_gi_482849934_ref_NZ_', 'Bacteroides_eggerthii_gi_482849918_ref_NZ_', 'Bacteroides_eggerthii_gi_482849948_ref_NZ_', 'Bacteroides_eggerthii_gi_482849914_ref_NZ_', 'Bacteroides_eggerthii_gi_482849901_ref_NZ_', 'Bacteroides_eggerthii_gi_482849895_ref_NZ_', 'Bacteroides_eggerthii_gi_482849904_ref_NZ_', 'Bacteroides_eggerthii_gi_482849924_ref_NZ_', 'Bacteroides_eggerthii_gi_482849926_ref_NZ_', 'Bacteroides_eggerthii_gi_482849932_ref_NZ_']
+ERROR: Reference Bacteroides_eggerthii_gi_482849920_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_eggerthii_gi_482849893_ref_NZ_', 'Bacteroides_eggerthii_gi_482849906_ref_NZ_', 'Bacteroides_eggerthii_gi_482849910_ref_NZ_', 'Bacteroides_eggerthii_gi_482849897_ref_NZ_', 'Bacteroides_eggerthii_gi_482849899_ref_NZ_', 'Bacteroides_eggerthii_gi_482849908_ref_NZ_', 'Bacteroides_eggerthii_gi_482849934_ref_NZ_', 'Bacteroides_eggerthii_gi_482849918_ref_NZ_', 'Bacteroides_eggerthii_gi_482849948_ref_NZ_', 'Bacteroides_eggerthii_gi_482849914_ref_NZ_', 'Bacteroides_eggerthii_gi_482849901_ref_NZ_', 'Bacteroides_eggerthii_gi_482849895_ref_NZ_', 'Bacteroides_eggerthii_gi_482849904_ref_NZ_', 'Bacteroides_eggerthii_gi_482849924_ref_NZ_', 'Bacteroides_eggerthii_gi_482849926_ref_NZ_', 'Bacteroides_eggerthii_gi_482849932_ref_NZ_']
+	Reference Bacteroides_eggerthii_gi_482849932_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 4148 (4148 bp)
+			START in gap: 1 to 2293 (2292 bp)
+			Align 1: 2293 3889 scaffold_8873 1 1600
+			END in gap: 3889 to 4148 (259 bp)
+
+	Reference Bacteroides_eggerthii_gi_482849906_ref_NZ_: 10 total alignments. 1 total regions.
+		Region: 1 to 238863 (238863 bp)
+			START in gap: 1 to 996 (995 bp)
+			Align 1: 996 3246 scaffold_4062 2249 1
+				Gap between this and next alignment: 3246 to 3324 (77 bp)
+				Next Alignment: 3324 31025 scaffold_221 12 27648
+
+			Align 2: 3324 31025 scaffold_221 12 27648
+				Gap between this and next alignment: 31025 to 32525 (1499 bp)
+				Next Alignment: 32525 75502 scaffold_221 27828 70776
+
+			Align 3: 32525 75502 scaffold_221 27828 70776
+				Gap between this and next alignment: 75502 to 75596 (93 bp)
+				Next Alignment: 75596 100330 scaffold_221 70870 95609
+
+			Align 4: 75596 100330 scaffold_221 70870 95609
+				Negative gap (overlap) between this and next alignment: 100330 to 100325 (-5 bp)
+				Next Alignment: 100325 110578 scaffold_725 12316 2067
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 12316 to 12310.
+			Align 5: 100331 110578 scaffold_725 12310 2067
+				Gap between this and next alignment: 110578 to 110613 (34 bp)
+				Next Alignment: 110613 123639 scaffold_988 1177 14204
+
+			Align 6: 110613 123639 scaffold_988 1177 14204
+				Gap between this and next alignment: 123639 to 141180 (17540 bp)
+				Next Alignment: 141180 153106 scaffold_1188 12338 409
+
+			Align 7: 141180 153106 scaffold_1188 12338 409
+				Gap between this and next alignment: 153106 to 153247 (140 bp)
+				Next Alignment: 153247 221990 scaffold_190 1714 70443
+
+			Align 8: 153247 221990 scaffold_190 1714 70443
+				Gap between this and next alignment: 221990 to 222177 (186 bp)
+				Next Alignment: 222177 230970 scaffold_190 70624 79415
+
+			Align 9: 222177 230970 scaffold_190 70624 79415
+				Gap between this and next alignment: 230970 to 236681 (5710 bp)
+				Next Alignment: 236681 238863 scaffold_258 1 2182
+
+			Align 10: 236681 238863 scaffold_258 1 2182
+			END in current alignment.  Modifying 238863 to 238863.
+
+ERROR: Reference Bacteroides_eggerthii_gi_482849936_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_eggerthii_gi_482849893_ref_NZ_', 'Bacteroides_eggerthii_gi_482849906_ref_NZ_', 'Bacteroides_eggerthii_gi_482849910_ref_NZ_', 'Bacteroides_eggerthii_gi_482849897_ref_NZ_', 'Bacteroides_eggerthii_gi_482849899_ref_NZ_', 'Bacteroides_eggerthii_gi_482849908_ref_NZ_', 'Bacteroides_eggerthii_gi_482849934_ref_NZ_', 'Bacteroides_eggerthii_gi_482849918_ref_NZ_', 'Bacteroides_eggerthii_gi_482849948_ref_NZ_', 'Bacteroides_eggerthii_gi_482849914_ref_NZ_', 'Bacteroides_eggerthii_gi_482849901_ref_NZ_', 'Bacteroides_eggerthii_gi_482849895_ref_NZ_', 'Bacteroides_eggerthii_gi_482849904_ref_NZ_', 'Bacteroides_eggerthii_gi_482849924_ref_NZ_', 'Bacteroides_eggerthii_gi_482849926_ref_NZ_', 'Bacteroides_eggerthii_gi_482849932_ref_NZ_']
+ERROR: Reference Bacteroides_eggerthii_gi_482849942_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_eggerthii_gi_482849893_ref_NZ_', 'Bacteroides_eggerthii_gi_482849906_ref_NZ_', 'Bacteroides_eggerthii_gi_482849910_ref_NZ_', 'Bacteroides_eggerthii_gi_482849897_ref_NZ_', 'Bacteroides_eggerthii_gi_482849899_ref_NZ_', 'Bacteroides_eggerthii_gi_482849908_ref_NZ_', 'Bacteroides_eggerthii_gi_482849934_ref_NZ_', 'Bacteroides_eggerthii_gi_482849918_ref_NZ_', 'Bacteroides_eggerthii_gi_482849948_ref_NZ_', 'Bacteroides_eggerthii_gi_482849914_ref_NZ_', 'Bacteroides_eggerthii_gi_482849901_ref_NZ_', 'Bacteroides_eggerthii_gi_482849895_ref_NZ_', 'Bacteroides_eggerthii_gi_482849904_ref_NZ_', 'Bacteroides_eggerthii_gi_482849924_ref_NZ_', 'Bacteroides_eggerthii_gi_482849926_ref_NZ_', 'Bacteroides_eggerthii_gi_482849932_ref_NZ_']
+ERROR: Reference Bacteroides_eggerthii_gi_482849946_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_eggerthii_gi_482849893_ref_NZ_', 'Bacteroides_eggerthii_gi_482849906_ref_NZ_', 'Bacteroides_eggerthii_gi_482849910_ref_NZ_', 'Bacteroides_eggerthii_gi_482849897_ref_NZ_', 'Bacteroides_eggerthii_gi_482849899_ref_NZ_', 'Bacteroides_eggerthii_gi_482849908_ref_NZ_', 'Bacteroides_eggerthii_gi_482849934_ref_NZ_', 'Bacteroides_eggerthii_gi_482849918_ref_NZ_', 'Bacteroides_eggerthii_gi_482849948_ref_NZ_', 'Bacteroides_eggerthii_gi_482849914_ref_NZ_', 'Bacteroides_eggerthii_gi_482849901_ref_NZ_', 'Bacteroides_eggerthii_gi_482849895_ref_NZ_', 'Bacteroides_eggerthii_gi_482849904_ref_NZ_', 'Bacteroides_eggerthii_gi_482849924_ref_NZ_', 'Bacteroides_eggerthii_gi_482849926_ref_NZ_', 'Bacteroides_eggerthii_gi_482849932_ref_NZ_']
+ERROR: Reference Bacteroides_eggerthii_gi_482849944_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_eggerthii_gi_482849893_ref_NZ_', 'Bacteroides_eggerthii_gi_482849906_ref_NZ_', 'Bacteroides_eggerthii_gi_482849910_ref_NZ_', 'Bacteroides_eggerthii_gi_482849897_ref_NZ_', 'Bacteroides_eggerthii_gi_482849899_ref_NZ_', 'Bacteroides_eggerthii_gi_482849908_ref_NZ_', 'Bacteroides_eggerthii_gi_482849934_ref_NZ_', 'Bacteroides_eggerthii_gi_482849918_ref_NZ_', 'Bacteroides_eggerthii_gi_482849948_ref_NZ_', 'Bacteroides_eggerthii_gi_482849914_ref_NZ_', 'Bacteroides_eggerthii_gi_482849901_ref_NZ_', 'Bacteroides_eggerthii_gi_482849895_ref_NZ_', 'Bacteroides_eggerthii_gi_482849904_ref_NZ_', 'Bacteroides_eggerthii_gi_482849924_ref_NZ_', 'Bacteroides_eggerthii_gi_482849926_ref_NZ_', 'Bacteroides_eggerthii_gi_482849932_ref_NZ_']
+	Reference Bacteroides_eggerthii_gi_482849901_ref_NZ_: 38 total alignments. 1 total regions.
+		Region: 1 to 551171 (551171 bp)
+			START in gap: 1 to 205 (204 bp)
+			Align 1: 205 6055 scaffold_274 34261 28418
+				Gap between this and next alignment: 6055 to 7430 (1374 bp)
+				Next Alignment: 7430 35863 scaffold_274 28417 1
+
+			Align 2: 7430 35863 scaffold_274 28417 1
+				Gap between this and next alignment: 35863 to 36151 (287 bp)
+				Next Alignment: 36151 39770 scaffold_4125 1 3615
+
+			Align 3: 36151 39770 scaffold_4125 1 3615
+				Gap between this and next alignment: 39770 to 39973 (202 bp)
+				Next Alignment: 39973 40706 scaffold_34690 732 1
+
+			Align 4: 39973 40706 scaffold_34690 732 1
+				Gap between this and next alignment: 40706 to 40737 (30 bp)
+				Next Alignment: 40737 44938 scaffold_81 1 4202
+
+			Align 5: 40737 44938 scaffold_81 1 4202
+				Gap between this and next alignment: 44938 to 44950 (11 bp)
+				Next Alignment: 44950 70846 scaffold_81 6613 32509
+
+			Align 6: 44950 70846 scaffold_81 6613 32509
+				Gap between this and next alignment: 70846 to 71632 (785 bp)
+				Next Alignment: 71632 89465 scaffold_81 33295 51133
+
+			Align 7: 71632 89465 scaffold_81 33295 51133
+				Gap between this and next alignment: 89465 to 89628 (162 bp)
+				Next Alignment: 89628 89790 scaffold_81 51294 51456
+
+			Align 8: 89628 89790 scaffold_81 51294 51456
+				Gap between this and next alignment: 89790 to 93230 (3439 bp)
+				Next Alignment: 93230 101175 scaffold_438 2849 10789
+
+			Align 9: 93230 101175 scaffold_438 2849 10789
+				Gap between this and next alignment: 101175 to 106714 (5538 bp)
+				Next Alignment: 106714 118533 scaffold_438 14585 26446
+
+			Align 10: 106714 118533 scaffold_438 14585 26446
+				Gap between this and next alignment: 118533 to 118651 (117 bp)
+				Next Alignment: 118651 139079 scaffold_677 929 21402
+
+			Align 11: 118651 139079 scaffold_677 929 21402
+				Negative gap (overlap) between this and next alignment: 139079 to 138046 (-1033 bp)
+				Next Alignment: 138046 144316 scaffold_431 22971 16702
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 22971 to 21937.
+			Align 12: 139080 144316 scaffold_431 21937 16702
+				Gap between this and next alignment: 144316 to 148975 (4658 bp)
+				Next Alignment: 148975 153182 scaffold_431 16694 12493
+
+			Align 13: 148975 153182 scaffold_431 16694 12493
+				Gap between this and next alignment: 153182 to 153206 (23 bp)
+				Next Alignment: 153206 154498 scaffold_431 12337 11045
+
+			Align 14: 153206 154498 scaffold_431 12337 11045
+				Gap between this and next alignment: 154498 to 154528 (29 bp)
+				Next Alignment: 154528 155080 scaffold_431 10013 9458
+
+			Align 15: 154528 155080 scaffold_431 10013 9458
+				Gap between this and next alignment: 155080 to 160716 (5635 bp)
+				Next Alignment: 160716 169988 scaffold_431 9274 1
+
+			Align 16: 160716 169988 scaffold_431 9274 1
+				Gap between this and next alignment: 169988 to 170458 (469 bp)
+				Next Alignment: 170458 181299 scaffold_377 37857 27038
+
+			Align 17: 170458 181299 scaffold_377 37857 27038
+				The next alignment (180037 180223 scaffold_377 25764 25578) is redundant. Skipping.
+				Gap between this and next alignment: 181299 to 186664 (5364 bp)
+				Next Alignment: 186664 207164 scaffold_377 21222 724
+
+			Align 19: 186664 207164 scaffold_377 21222 724
+				Negative gap (overlap) between this and next alignment: 207164 to 207150 (-14 bp)
+				Next Alignment: 207150 212336 scaffold_1000 7787 12984
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 7787 to 7802.
+			Align 20: 207165 212336 scaffold_1000 7802 12984
+				Gap between this and next alignment: 212336 to 216663 (4326 bp)
+				Next Alignment: 216663 258312 scaffold_110 972 42622
+
+			Align 21: 216663 258312 scaffold_110 972 42622
+				The next alignment (217401 217506 scaffold_17103 1228 1123) is redundant. Skipping.
+				Negative gap (overlap) between this and next alignment: 258312 to 258186 (-126 bp)
+				Next Alignment: 258186 272527 scaffold_174 1 14335
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 128.
+			Align 23: 258313 272527 scaffold_174 128 14335
+				Negative gap (overlap) between this and next alignment: 272527 to 272527 (0 bp)
+				Next Alignment: 272527 273124 scaffold_174 50344 50939
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 50344 to 50345.
+			Align 24: 272528 273124 scaffold_174 50345 50939
+				Next Alignment: 273125 316654 scaffold_174 51240 94756
+
+			Align 25: 273125 316654 scaffold_174 51240 94756
+				Gap between this and next alignment: 316654 to 318202 (1547 bp)
+				Next Alignment: 318202 342685 scaffold_571 24512 1
+
+			Align 26: 318202 342685 scaffold_571 24512 1
+				Gap between this and next alignment: 342685 to 342713 (27 bp)
+				Next Alignment: 342713 345901 scaffold_2875 3189 1
+
+			Align 27: 342713 345901 scaffold_2875 3189 1
+				Negative gap (overlap) between this and next alignment: 345901 to 345822 (-79 bp)
+				Next Alignment: 345822 369621 scaffold_362 23829 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 23829 to 23749.
+			Align 28: 345902 369621 scaffold_362 23749 1
+				Negative gap (overlap) between this and next alignment: 369621 to 369529 (-92 bp)
+				Next Alignment: 369529 383284 scaffold_597 1 13776
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 94.
+			Align 29: 369622 383284 scaffold_597 94 13776
+				Gap between this and next alignment: 383284 to 383839 (554 bp)
+				Next Alignment: 383839 384803 scaffold_597 13777 14741
+
+			Align 30: 383839 384803 scaffold_597 13777 14741
+				Gap between this and next alignment: 384803 to 384960 (156 bp)
+				Next Alignment: 384960 406379 scaffold_117 29 21448
+
+			Align 31: 384960 406379 scaffold_117 29 21448
+				Gap between this and next alignment: 406379 to 430135 (23755 bp)
+				Next Alignment: 430135 431983 scaffold_8281 1 1860
+
+			Align 32: 430135 431983 scaffold_8281 1 1860
+				Gap between this and next alignment: 431983 to 435688 (3704 bp)
+				Next Alignment: 435688 436257 scaffold_23322 99 668
+
+			Align 33: 435688 436257 scaffold_23322 99 668
+				Gap between this and next alignment: 436257 to 452983 (16725 bp)
+				Next Alignment: 452983 471658 scaffold_117 21449 40121
+
+			Align 34: 452983 471658 scaffold_117 21449 40121
+				Gap between this and next alignment: 471658 to 472138 (479 bp)
+				Next Alignment: 472138 481778 scaffold_644 12982 3336
+
+			Align 35: 472138 481778 scaffold_644 12982 3336
+				Negative gap (overlap) between this and next alignment: 481778 to 481778 (0 bp)
+				Next Alignment: 481778 484375 scaffold_644 2878 282
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 2878 to 2877.
+			Align 36: 481779 484375 scaffold_644 2877 282
+				Gap between this and next alignment: 484375 to 513171 (28795 bp)
+				Next Alignment: 513171 513655 scaffold_507 16332 16816
+
+			Align 37: 513171 513655 scaffold_507 16332 16816
+				Gap between this and next alignment: 513655 to 516343 (2687 bp)
+				Next Alignment: 516343 517208 scaffold_16680 1 866
+
+			Align 38: 516343 517208 scaffold_16680 1 866
+			END in gap: 517208 to 551171 (33963 bp)
+
+	Reference Bacteroides_eggerthii_gi_482849895_ref_NZ_: 30 total alignments. 1 total regions.
+		Region: 1 to 631554 (631554 bp)
+			START in gap: 1 to 205 (204 bp)
+			Align 1: 205 55372 scaffold_13 1 55122
+				Gap between this and next alignment: 55372 to 62185 (6812 bp)
+				Next Alignment: 62185 108343 scaffold_13 62368 108525
+
+			Align 2: 62185 108343 scaffold_13 62368 108525
+				Gap between this and next alignment: 108343 to 108430 (86 bp)
+				Next Alignment: 108430 133258 scaffold_294 24829 1
+
+			Align 3: 108430 133258 scaffold_294 24829 1
+				Gap between this and next alignment: 133258 to 133745 (486 bp)
+				Next Alignment: 133745 160464 scaffold_412 99724 73017
+
+			Align 4: 133745 160464 scaffold_412 99724 73017
+				Gap between this and next alignment: 160464 to 212726 (52261 bp)
+				Next Alignment: 212726 213098 scaffold_13870 376 1
+
+			Align 5: 212726 213098 scaffold_13870 376 1
+				Gap between this and next alignment: 213098 to 222227 (9128 bp)
+				Next Alignment: 222227 223090 scaffold_28785 865 1
+
+			Align 6: 222227 223090 scaffold_28785 865 1
+				Gap between this and next alignment: 223090 to 223336 (245 bp)
+				Next Alignment: 223336 223947 scaffold_26093 612 1
+
+			Align 7: 223336 223947 scaffold_26093 612 1
+				Gap between this and next alignment: 223947 to 299590 (75642 bp)
+				Next Alignment: 299590 300351 scaffold_19821 762 1
+
+			Align 8: 299590 300351 scaffold_19821 762 1
+				Gap between this and next alignment: 300351 to 305860 (5508 bp)
+				Next Alignment: 305860 306413 scaffold_28273 3 556
+
+			Align 9: 305860 306413 scaffold_28273 3 556
+				Gap between this and next alignment: 306413 to 328367 (21953 bp)
+				Next Alignment: 328367 339859 scaffold_412 72997 61503
+
+			Align 10: 328367 339859 scaffold_412 72997 61503
+				Gap between this and next alignment: 339859 to 352798 (12938 bp)
+				Next Alignment: 352798 388450 scaffold_412 54725 19075
+
+			Align 11: 352798 388450 scaffold_412 54725 19075
+				Gap between this and next alignment: 388450 to 389134 (683 bp)
+				Next Alignment: 389134 403529 scaffold_412 15996 1599
+
+			Align 12: 389134 403529 scaffold_412 15996 1599
+				Negative gap (overlap) between this and next alignment: 403529 to 403470 (-59 bp)
+				Next Alignment: 403470 462369 scaffold_99 59009 102
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 59009 to 58949.
+			Align 13: 403530 462369 scaffold_99 58949 102
+				Gap between this and next alignment: 462369 to 462436 (66 bp)
+				Next Alignment: 462436 481660 scaffold_733 2368 21550
+
+			Align 14: 462436 481660 scaffold_733 2368 21550
+				Gap between this and next alignment: 481660 to 481663 (2 bp)
+				Next Alignment: 481663 504454 scaffold_234 940 23732
+
+			Align 15: 481663 504454 scaffold_234 940 23732
+				Gap between this and next alignment: 504454 to 510645 (6190 bp)
+				Next Alignment: 510645 525461 scaffold_234 29868 44691
+
+			Align 16: 510645 525461 scaffold_234 29868 44691
+				Negative gap (overlap) between this and next alignment: 525461 to 525458 (-3 bp)
+				Next Alignment: 525458 566298 scaffold_215 13722 54555
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 13722 to 13726.
+			Align 17: 525462 566298 scaffold_215 13726 54555
+				Negative gap (overlap) between this and next alignment: 566298 to 566160 (-138 bp)
+				Next Alignment: 566160 568534 scaffold_2558 2364 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 2364 to 2225.
+			Align 18: 566299 568534 scaffold_2558 2225 1
+				Gap between this and next alignment: 568534 to 568544 (9 bp)
+				Next Alignment: 568544 570717 scaffold_786 20080 17906
+
+			Align 19: 568544 570717 scaffold_786 20080 17906
+				Gap between this and next alignment: 570717 to 572020 (1302 bp)
+				Next Alignment: 572020 572119 scaffold_3803 4561 4660
+
+			Align 20: 572020 572119 scaffold_3803 4561 4660
+				Negative gap (overlap) between this and next alignment: 572119 to 572027 (-92 bp)
+				Next Alignment: 572027 586229 scaffold_587 14202 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 14202 to 14109.
+			Align 21: 572120 586229 scaffold_587 14109 1
+				Negative gap (overlap) between this and next alignment: 586229 to 586131 (-98 bp)
+				Next Alignment: 586131 589149 scaffold_3078 3019 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 3019 to 2920.
+			Align 22: 586230 589149 scaffold_3078 2920 1
+				Gap between this and next alignment: 589149 to 589654 (504 bp)
+				Next Alignment: 589654 592408 scaffold_5369 2744 1
+
+			Align 23: 589654 592408 scaffold_5369 2744 1
+				Gap between this and next alignment: 592408 to 594129 (1720 bp)
+				Next Alignment: 594129 594353 scaffold_14616 1529 1305
+
+			Align 24: 594129 594353 scaffold_14616 1529 1305
+				Gap between this and next alignment: 594353 to 605455 (11101 bp)
+				Next Alignment: 605455 612534 scaffold_1177 13514 20667
+
+			Align 25: 605455 612534 scaffold_1177 13514 20667
+				Gap between this and next alignment: 612534 to 617920 (5385 bp)
+				Next Alignment: 617920 618297 scaffold_5126 2019 2391
+
+			Align 26: 617920 618297 scaffold_5126 2019 2391
+				Gap between this and next alignment: 618297 to 625524 (7226 bp)
+				Next Alignment: 625524 626293 scaffold_5565 1 770
+
+			Align 27: 625524 626293 scaffold_5565 1 770
+				Next Alignment: 626294 629414 scaffold_5565 893 4012
+
+			Align 28: 626294 629414 scaffold_5565 893 4012
+				The next alignment (629217 629414 scaffold_36201 474 673) is redundant. Skipping.
+				Negative gap (overlap) between this and next alignment: 629414 to 629316 (-98 bp)
+				Next Alignment: 629316 630282 scaffold_20144 1 966
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 100.
+			Align 30: 629415 630282 scaffold_20144 100 966
+			END in gap: 630282 to 631554 (1272 bp)
+
+	Reference Bacteroides_eggerthii_gi_482849904_ref_NZ_: 27 total alignments. 1 total regions.
+		Region: 1 to 262649 (262649 bp)
+			START in gap: 1 to 58710 (58709 bp)
+			Align 1: 58710 70922 scaffold_167 16541 28751
+				Gap between this and next alignment: 70922 to 71070 (147 bp)
+				Next Alignment: 71070 79805 scaffold_167 28947 37656
+
+			Align 2: 71070 79805 scaffold_167 28947 37656
+				Negative gap (overlap) between this and next alignment: 79805 to 79707 (-98 bp)
+				Next Alignment: 79707 126839 scaffold_134 50883 3764
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 50883 to 50784.
+			Align 3: 79806 126839 scaffold_134 50784 3764
+				Gap between this and next alignment: 126839 to 127317 (477 bp)
+				Next Alignment: 127317 131053 scaffold_134 3753 14
+
+			Align 4: 127317 131053 scaffold_134 3753 14
+				Gap between this and next alignment: 131053 to 131109 (55 bp)
+				Next Alignment: 131109 135416 scaffold_1943 19 4323
+
+			Align 5: 131109 135416 scaffold_1943 19 4323
+				Gap between this and next alignment: 135416 to 135644 (227 bp)
+				Next Alignment: 135644 138822 scaffold_289 1 3179
+
+			Align 6: 135644 138822 scaffold_289 1 3179
+				Gap between this and next alignment: 138822 to 142098 (3275 bp)
+				Next Alignment: 142098 168029 scaffold_289 3277 29207
+
+			Align 7: 142098 168029 scaffold_289 3277 29207
+				Gap between this and next alignment: 168029 to 168054 (24 bp)
+				Next Alignment: 168054 194657 scaffold_352 1 26539
+
+			Align 8: 168054 194657 scaffold_352 1 26539
+				Gap between this and next alignment: 194657 to 194781 (123 bp)
+				Next Alignment: 194781 195015 scaffold_352 26665 26899
+
+			Align 9: 194781 195015 scaffold_352 26665 26899
+				Gap between this and next alignment: 195015 to 197348 (2332 bp)
+				Next Alignment: 197348 198667 scaffold_9823 1320 1
+
+			Align 10: 197348 198667 scaffold_9823 1320 1
+				Gap between this and next alignment: 198667 to 199190 (522 bp)
+				Next Alignment: 199190 204057 scaffold_1705 1 4868
+
+			Align 11: 199190 204057 scaffold_1705 1 4868
+				Gap between this and next alignment: 204057 to 204317 (259 bp)
+				Next Alignment: 204317 212384 scaffold_855 1 8062
+
+			Align 12: 204317 212384 scaffold_855 1 8062
+				Gap between this and next alignment: 212384 to 212551 (166 bp)
+				Next Alignment: 212551 214872 scaffold_855 8229 10548
+
+			Align 13: 212551 214872 scaffold_855 8229 10548
+				Negative gap (overlap) between this and next alignment: 214872 to 214833 (-39 bp)
+				Next Alignment: 214833 218542 scaffold_2338 1 3710
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 41.
+			Align 14: 214873 218542 scaffold_2338 41 3710
+				Gap between this and next alignment: 218542 to 218555 (12 bp)
+				Next Alignment: 218555 219094 scaffold_28792 540 1
+
+			Align 15: 218555 219094 scaffold_28792 540 1
+				Gap between this and next alignment: 219094 to 219143 (48 bp)
+				Next Alignment: 219143 219832 scaffold_22402 1 690
+
+			Align 16: 219143 219832 scaffold_22402 1 690
+				Gap between this and next alignment: 219832 to 221639 (1806 bp)
+				Next Alignment: 221639 222335 scaffold_22121 1 697
+
+			Align 17: 221639 222335 scaffold_22121 1 697
+				Gap between this and next alignment: 222335 to 222415 (79 bp)
+				Next Alignment: 222415 223162 scaffold_20316 1 747
+
+			Align 18: 222415 223162 scaffold_20316 1 747
+				Gap between this and next alignment: 223162 to 227370 (4207 bp)
+				Next Alignment: 227370 229730 scaffold_4354 2361 1
+
+			Align 19: 227370 229730 scaffold_4354 2361 1
+				Gap between this and next alignment: 229730 to 230146 (415 bp)
+				Next Alignment: 230146 231407 scaffold_10409 1262 1
+
+			Align 20: 230146 231407 scaffold_10409 1262 1
+				Gap between this and next alignment: 231407 to 231841 (433 bp)
+				Next Alignment: 231841 232522 scaffold_22697 1 682
+
+			Align 21: 231841 232522 scaffold_22697 1 682
+				Gap between this and next alignment: 232522 to 232607 (84 bp)
+				Next Alignment: 232607 239004 scaffold_981 1 6396
+
+			Align 22: 232607 239004 scaffold_981 1 6396
+				Gap between this and next alignment: 239004 to 239051 (46 bp)
+				Next Alignment: 239051 239763 scaffold_981 7582 8294
+
+			Align 23: 239051 239763 scaffold_981 7582 8294
+				Negative gap (overlap) between this and next alignment: 239763 to 239668 (-95 bp)
+				Next Alignment: 239668 241849 scaffold_1684 9297 7126
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 9297 to 9201.
+			Align 24: 239764 241849 scaffold_1684 9201 7126
+				Negative gap (overlap) between this and next alignment: 241849 to 241794 (-55 bp)
+				Next Alignment: 241794 242925 scaffold_7912 1545 410
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1545 to 1489.
+			Align 25: 241850 242925 scaffold_7912 1489 410
+				Gap between this and next alignment: 242925 to 242998 (72 bp)
+				Next Alignment: 242998 259740 scaffold_495 1 16770
+
+			Align 26: 242998 259740 scaffold_495 1 16770
+				The next alignment (259551 259740 scaffold_4062 2290 2479) is redundant. Skipping.
+
+	Reference Bacteroides_eggerthii_gi_482849924_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 5683 (5683 bp)
+			Align 1: 1 5683 scaffold_258 8168 2484
+			END in current alignment.  Modifying 5683 to 5683.
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_eggerthii/contigs_reports/nucmer_output/IDBA_UD.used_snps
+
+Results:
+	Local Misassemblies: 27
+	Misassemblies: 53
+		Relocations: 36
+		Translocations: 15
+		Inversions: 2
+	Fake misassemblies matched with structural variations: 6
+	Misassembled Contigs: 33
+	Misassembled Contig Bases: 1788741
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 58 part
+Partially Unaligned Contigs with Misassemblies: 3
+Unaligned Contig Bases: 521788
+
+Ambiguously Mapped Contigs: 2
+Total Bases in Ambiguously Mapped Contigs: 2203
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 3251886
+
+	SNPs: 23454
+	Insertions: 1478
+	Deletions: 1914
+
+	Positive Gaps: 207
+		Internal Gaps:  59
+		External Gaps:  148
+		External Gap Total:  966859
+		External Gap Average: 6533
+	Negative Gaps: 54
+		Internal Overlaps:  5
+		External Overlaps:  49
+		External Overlaps Total: -4803
+		External Overlaps Average: -98
+	Contigs with Redundant Alignments: 11 (3565)

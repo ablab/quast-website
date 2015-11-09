@@ -1,0 +1,123 @@
+/home/gurevich/rep/quast/quast.pyc -t 16 -j  --meta  --bed-file /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/combined_reference/structural_variations/combined_reference.bed --no-check-meta  --contig-thresholds 1000,5000,10000,25000,50000 -R /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Anaerotruncus_colihominis.fasta -o /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Anaerotruncus_colihominis --labels "IDBA_UD, Ray, SOAPdenovo2, SPAdes" /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/IDBA_UD_to_Anaerotruncus_colihominis.fasta /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Ray_to_Anaerotruncus_colihominis.fasta /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SOAPdenovo2_to_Anaerotruncus_colihominis.fasta /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SPAdes_to_Anaerotruncus_colihominis.fasta
+
+Started: 2015-11-09 20:05:27
+
+Logging to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Anaerotruncus_colihominis/quast.log
+
+NOTICE: Output directory already exists. Existing Nucmer alignments can be used.
+
+Reference:
+  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Anaerotruncus_colihominis.fasta ==> Anaerotruncus_colihominis
+
+Contigs:
+  1  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/IDBA_UD_to_Anaerotruncus_colihominis.fasta ==> IDBA_UD
+  2  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Ray_to_Anaerotruncus_colihominis.fasta ==> Ray
+  3  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SOAPdenovo2_to_Anaerotruncus_colihominis.fasta ==> SOAPdenovo2
+  4  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SPAdes_to_Anaerotruncus_colihominis.fasta ==> SPAdes
+
+2015-11-09 20:05:28
+Running Basic statistics processor...
+  Reference genome:
+    Anaerotruncus_colihominis.fasta, Reference length = 3719688, Reference GC % = 54.18
+  Contig files: 
+    1  IDBA_UD
+    2  Ray
+    3  SOAPdenovo2
+    4  SPAdes
+  Calculating N50 and L50...
+    1  IDBA_UD, N50 = 17341, L50 = 2, Total length = 174481, GC % = 47.76, # N's per 100 kbp =  24.07
+    2  Ray, N50 = 11226, L50 = 4, Total length = 152644, GC % = 46.63, # N's per 100 kbp =  1479.91
+    3  SOAPdenovo2, N50 = 7126, L50 = 5, Total length = 70110, GC % = 49.83, # N's per 100 kbp =  735.99
+    4  SPAdes, N50 = 27250, L50 = 3, Total length = 173026, GC % = 47.56, # N's per 100 kbp =  284.93
+  Drawing Nx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Anaerotruncus_colihominis/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Anaerotruncus_colihominis/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Anaerotruncus_colihominis/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Anaerotruncus_colihominis/basic_stats/GC_content_plot.pdf
+Done.
+
+2015-11-09 20:05:30
+Running Contig analyzer...
+  1  IDBA_UD
+  3  SOAPdenovo2
+  2  Ray
+  4  SPAdes
+  1  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Anaerotruncus_colihominis/contigs_reports/contigs_report_IDBA_UD.stdout and contigs_report_IDBA_UD.stderr...
+  3  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Anaerotruncus_colihominis/contigs_reports/contigs_report_SOAPdenovo2.stdout and contigs_report_SOAPdenovo2.stderr...
+  2  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Anaerotruncus_colihominis/contigs_reports/contigs_report_Ray.stdout and contigs_report_Ray.stderr...
+  1  Using existing Nucmer alignments... 
+  4  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Anaerotruncus_colihominis/contigs_reports/contigs_report_SPAdes.stdout and contigs_report_SPAdes.stderr...
+  3  Using existing Nucmer alignments... 
+  2  Using existing Nucmer alignments... 
+  4  Using existing Nucmer alignments... 
+  1  Alignments: runs_per_reference/Anaerotruncus_colihominis/contigs_reports/alignments_IDBA_UD.tsv
+  1  Analysis is finished.
+
+  2  Alignments: runs_per_reference/Anaerotruncus_colihominis/contigs_reports/alignments_Ray.tsv
+  2  Analysis is finished.
+
+  4  Alignments: runs_per_reference/Anaerotruncus_colihominis/contigs_reports/alignments_SPAdes.tsv
+  4  Analysis is finished.
+
+  3  Alignments: runs_per_reference/Anaerotruncus_colihominis/contigs_reports/alignments_SOAPdenovo2.tsv
+  3  Analysis is finished.
+
+  Creating total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Anaerotruncus_colihominis/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Anaerotruncus_colihominis/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Anaerotruncus_colihominis/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Anaerotruncus_colihominis/contigs_reports/misassemblies_plot.pdf
+Done.
+
+2015-11-09 20:05:32
+Running NA-NGA calculation...
+  1  IDBA_UD, Largest alignment = 21525, NA50 = 622, LA50 = 18
+  2  Ray, Largest alignment = 14123, NA50 = 515, LA50 = 26
+  3  SOAPdenovo2, Largest alignment = 10762, NA50 = 6232, LA50 = 5
+  4  SPAdes, Largest alignment = 31684, NA50 = None, LA50 = None
+  Drawing cumulative plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Anaerotruncus_colihominis/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Anaerotruncus_colihominis/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Anaerotruncus_colihominis/aligned_stats/NGAx_plot.pdf
+Done.
+
+2015-11-09 20:05:33
+Running Genome analyzer...
+  NOTICE: No file with genes provided. Use the -G option if you want to specify it.
+  NOTICE: No file with operons provided. Use the -O option if you want to specify it.
+  1  IDBA_UD
+  2  Ray
+  3  SOAPdenovo2
+  4  SPAdes
+  3  Analysis is finished.
+  2  Analysis is finished.
+  1  Analysis is finished.
+  4  Analysis is finished.
+  Drawing Genome fraction, % histogram...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Anaerotruncus_colihominis/genome_stats/genome_fraction_histogram.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding option to enable it.
+
+2015-11-09 20:05:35
+Drawing large plots...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating contig alignment plot...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2015-11-09 20:05:38
+RESULTS:
+  Text versions of total report are saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Anaerotruncus_colihominis/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Anaerotruncus_colihominis/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Anaerotruncus_colihominis/report.html
+  PDF version (tables and plots) saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Anaerotruncus_colihominis/report.pdf
+  Contig alignment plot: /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Anaerotruncus_colihominis/alignment.svg

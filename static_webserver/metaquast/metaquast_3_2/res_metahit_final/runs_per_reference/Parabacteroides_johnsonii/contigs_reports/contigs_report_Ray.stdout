@@ -1,0 +1,107 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Parabacteroides_johnsonii_gi_423340855_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 1
+	Total Region Length: 4629061
+Analyzing contigs...
+CONTIG: scaffold-387 (60771bp)
+Top Length: 566  Top ID: 95.94
+		Skipping redundant alignment 1839471 1839682 | 16797 17008 | 212 212 | 96.23 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ scaffold-387
+		This contig is partially unaligned. (Aligned 566 out of 60771 bases)
+		Alignment: 3758103 3758669 | 17362 16797 | 567 566 | 95.94 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ scaffold-387
+		Unaligned bases: 1 to 16796 (16796)
+		Unaligned bases: 17363 to 60771 (43409)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-1306 (8294bp)
+Top Length: 6002  Top ID: 98.8
+		Skipping redundant alignment 1721934 1727396 | 1 5465 | 5463 5465 | 99.76 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ scaffold-1306
+		Skipping redundant alignment 4043188 4048649 | 1 5464 | 5462 5464 | 99.76 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ scaffold-1306
+		This contig is partially unaligned. (Aligned 6002 out of 8294 bases)
+		Alignment: 4619181 4625176 | 1 6002 | 5996 6002 | 98.8 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ scaffold-1306
+		Unaligned bases: 6003 to 8294 (2292)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-2425 (2062bp)
+Top Length: 1249  Top ID: 95.36
+		This contig is partially unaligned. (Aligned 1249 out of 2062 bases)
+		Alignment: 3025966 3027214 | 1249 1 | 1249 1249 | 95.36 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ scaffold-2425
+		Unaligned bases: 1250 to 2062 (813)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-3493 (1038bp)
+Top Length: 1038  Top ID: 99.9
+		One align captures most of this contig: 4627070 4628107 | 1038 1 | 1038 1038 | 99.9 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ scaffold-3493
+
+CONTIG: scaffold-58960 (509bp)
+Top Length: 509  Top ID: 98.04
+		One align captures most of this contig: 720567 721075 | 509 1 | 509 509 | 98.04 | Parabacteroides_johnsonii_gi_423340855_ref_NZ_ scaffold-58960
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_johnsonii/contigs_reports/nucmer_output/Ray.used_snps
+	Reference Parabacteroides_johnsonii_gi_423340855_ref_NZ_: 5 total alignments. 1 total regions.
+		Region: 1 to 4629061 (4629061 bp)
+			START in gap: 1 to 720567 (720566 bp)
+			Align 1: 720567 721075 scaffold-58960 509 1
+				Gap between this and next alignment: 721075 to 3025966 (2304890 bp)
+				Next Alignment: 3025966 3027214 scaffold-2425 1249 1
+
+			Align 2: 3025966 3027214 scaffold-2425 1249 1
+				Gap between this and next alignment: 3027214 to 3758103 (730888 bp)
+				Next Alignment: 3758103 3758669 scaffold-387 17362 16797
+
+			Align 3: 3758103 3758669 scaffold-387 17362 16797
+				Gap between this and next alignment: 3758669 to 4619181 (860511 bp)
+				Next Alignment: 4619181 4625176 scaffold-1306 1 6002
+
+			Align 4: 4619181 4625176 scaffold-1306 1 6002
+				Gap between this and next alignment: 4625176 to 4627070 (1893 bp)
+				Next Alignment: 4627070 4628107 scaffold-3493 1038 1
+
+			Align 5: 4627070 4628107 scaffold-3493 1038 1
+			END in gap: 4628107 to 4629061 (954 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_johnsonii/contigs_reports/nucmer_output/Ray.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 3 part
+Partially Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 63310
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 9359
+
+	SNPs: 155
+	Insertions: 7
+	Deletions: 2
+
+	Positive Gaps: 6
+		Internal Gaps:  0
+		External Gaps:  6
+		External Gap Total:  4619702
+		External Gap Average: 769950
+	Negative Gaps: 0
+		Internal Overlaps:  0
+		External Overlaps:  0
+		External Overlaps Total:  0
+		External Overlaps Average: 0
+	Contigs with Redundant Alignments: 0 (0)

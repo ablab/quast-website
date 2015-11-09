@@ -1,0 +1,830 @@
+Aligning contigs to reference...
+	Running Nucmer
+Parsing coords...
+Loading reference...
+	Loaded [Clostridium_sp_M62_1_gi_283767235_ref_NZ_]
+	Loaded [Clostridium_sp_M62_1_gi_283767236_ref_NZ_]
+	Loaded [Clostridium_sp_M62_1_gi_283767237_ref_NZ_]
+	Loaded [Clostridium_sp_M62_1_gi_283767238_ref_NZ_]
+	Loaded [Clostridium_sp_M62_1_gi_283767239_ref_NZ_]
+	Loaded [Clostridium_sp_M62_1_gi_283767240_ref_NZ_]
+	Loaded [Clostridium_sp_M62_1_gi_283767241_ref_NZ_]
+	Loaded [Clostridium_sp_M62_1_gi_283767242_ref_NZ_]
+	Loaded [Clostridium_sp_M62_1_gi_283767243_ref_NZ_]
+	Loaded [Clostridium_sp_M62_1_gi_283767244_ref_NZ_]
+	Loaded [Clostridium_sp_M62_1_gi_283767245_ref_NZ_]
+	Loaded [Clostridium_sp_M62_1_gi_283767246_ref_NZ_]
+	Loaded [Clostridium_sp_M62_1_gi_283767247_ref_NZ_]
+	Loaded [Clostridium_sp_M62_1_gi_283767248_ref_NZ_]
+	Loaded [Clostridium_sp_M62_1_gi_283767249_ref_NZ_]
+	Loaded [Clostridium_sp_M62_1_gi_283767250_ref_NZ_]
+	Loaded [Clostridium_sp_M62_1_gi_283767251_ref_NZ_]
+	Loaded [Clostridium_sp_M62_1_gi_283767252_ref_NZ_]
+	Loaded [Clostridium_sp_M62_1_gi_283767253_ref_NZ_]
+	Loaded [Clostridium_sp_M62_1_gi_283767254_ref_NZ_]
+	Loaded [Clostridium_sp_M62_1_gi_283767255_ref_NZ_]
+	Loaded [Clostridium_sp_M62_1_gi_283767256_ref_NZ_]
+	Loaded [Clostridium_sp_M62_1_gi_283767257_ref_NZ_]
+	Loaded [Clostridium_sp_M62_1_gi_283767258_ref_NZ_]
+	Loaded [Clostridium_sp_M62_1_gi_283767259_ref_NZ_]
+	Loaded [Clostridium_sp_M62_1_gi_283767260_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 26
+	Total Region Length: 3842594
+Analyzing contigs...
+CONTIG: scaffold8956__2.0 (816bp)
+Top Length: 389  Top ID: 96.14
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 210145 210250 | 1 106 | 106 106 | 99.06 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ scaffold8956__2.0
+			  Gap between these two alignments (local misassembly). Inconsistency = 138 
+			Real Alignment 2: 210441 210829 | 159 547 | 389 389 | 96.14 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ scaffold8956__2.0
+			  Gap between these two alignments (local misassembly). Inconsistency = 294 
+			Real Alignment 3: 211280 211392 | 704 816 | 113 113 | 99.12 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ scaffold8956__2.0
+
+CONTIG: scaffold12672_14.0 (5401bp)
+Top Length: 5224  Top ID: 98.81
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 6411 6586 | 1 176 | 176 176 | 99.43 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ scaffold12672_14.0
+			  Gap between these two alignments (local misassembly). Inconsistency = 135 
+			Real Alignment 2: 6723 11945 | 178 5401 | 5223 5224 | 98.81 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ scaffold12672_14.0
+
+CONTIG: scaffold51178_12.8 (532bp)
+Top Length: 278  Top ID: 98.92
+		This contig is partially unaligned. (Aligned 278 out of 532 bases)
+		Alignment: 12308 12585 | 532 255 | 278 278 | 98.92 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ scaffold51178_12.8
+		Unaligned bases: 1 to 254 (254)
+
+CONTIG: C721092_20.0 (514bp)
+Top Length: 511  Top ID: 96.09
+		One align captures most of this contig: 5868 6378 | 514 4 | 511 511 | 96.09 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ C721092_20.0
+
+CONTIG: C723238_64.0 (534bp)
+Top Length: 534  Top ID: 100.0
+		One align captures most of this contig: 345034 345567 | 534 1 | 534 534 | 100.0 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ C723238_64.0
+
+CONTIG: C726218_46.0 (566bp)
+Top Length: 565  Top ID: 100.0
+		One align captures most of this contig: 356741 357305 | 2 566 | 565 565 | 100.0 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ C726218_46.0
+
+CONTIG: C728250_25.0 (590bp)
+Top Length: 590  Top ID: 97.46
+		One align captures most of this contig: 24652 25241 | 590 1 | 590 590 | 97.46 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ C728250_25.0
+
+CONTIG: C729352_27.0 (604bp)
+Top Length: 604  Top ID: 99.83
+		One align captures most of this contig: 44020 44623 | 604 1 | 604 604 | 99.83 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ C729352_27.0
+
+CONTIG: C736424_76.0 (708bp)
+Top Length: 708  Top ID: 99.72
+		One align captures most of this contig: 47510 48217 | 708 1 | 708 708 | 99.72 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ C736424_76.0
+
+CONTIG: C738100_19.0 (743bp)
+Top Length: 743  Top ID: 97.98
+		One align captures most of this contig: 2840 3582 | 743 1 | 743 743 | 97.98 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ C738100_19.0
+
+CONTIG: C739304_15.0 (769bp)
+Top Length: 769  Top ID: 99.87
+		One align captures most of this contig: 22299 23067 | 769 1 | 769 769 | 99.87 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ C739304_15.0
+
+CONTIG: C739398_27.0 (772bp)
+Top Length: 772  Top ID: 98.83
+		One align captures most of this contig: 54536 55307 | 1 772 | 772 772 | 98.83 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ C739398_27.0
+
+CONTIG: C741434_64.0 (823bp)
+Top Length: 823  Top ID: 100.0
+		One align captures most of this contig: 345540 346362 | 1 823 | 823 823 | 100.0 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ C741434_64.0
+
+CONTIG: C743824_17.0 (894bp)
+Top Length: 894  Top ID: 96.64
+		One align captures most of this contig: 23355 24248 | 1 894 | 894 894 | 96.64 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ C743824_17.0
+
+CONTIG: C747832_24.0 (1052bp)
+Top Length: 1052  Top ID: 99.62
+		One align captures most of this contig: 56433 57484 | 1 1052 | 1052 1052 | 99.62 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ C747832_24.0
+
+CONTIG: C747868_18.0 (1054bp)
+Top Length: 1054  Top ID: 96.02
+		One align captures most of this contig: 4360 5413 | 1 1054 | 1054 1054 | 96.02 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ C747868_18.0
+
+CONTIG: C748222_15.0 (1072bp)
+Top Length: 1072  Top ID: 95.8
+		One align captures most of this contig: 12958 14029 | 1 1072 | 1072 1072 | 95.8 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ C748222_15.0
+
+CONTIG: C748268_22.0 (1075bp)
+Top Length: 467  Top ID: 95.72
+		This contig is partially unaligned. (Aligned 467 out of 1075 bases)
+		Alignment: 26253 26718 | 1075 609 | 466 467 | 95.72 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ C748268_22.0
+		Unaligned bases: 1 to 608 (608)
+
+CONTIG: C749926_22.0 (1155bp)
+Top Length: 1155  Top ID: 98.62
+		One align captures most of this contig: 55309 56463 | 1155 1 | 1155 1155 | 98.62 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ C749926_22.0
+
+CONTIG: C752044_23.0 (1286bp)
+Top Length: 1286  Top ID: 99.77
+		One align captures most of this contig: 57484 58769 | 1 1286 | 1286 1286 | 99.77 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ C752044_23.0
+
+CONTIG: C752226_23.0 (1298bp)
+Top Length: 1298  Top ID: 97.77
+		One align captures most of this contig: 14028 15325 | 1298 1 | 1298 1298 | 97.77 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ C752226_23.0
+
+CONTIG: C752880_65.0 (1344bp)
+Top Length: 1344  Top ID: 100.0
+		One align captures most of this contig: 342954 344297 | 1 1344 | 1344 1344 | 100.0 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ C752880_65.0
+
+CONTIG: C753376_17.0 (1385bp)
+Top Length: 1384  Top ID: 96.97
+		One align captures most of this contig: 19748 21131 | 2 1385 | 1384 1384 | 96.97 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ C753376_17.0
+
+CONTIG: C753480_50.0 (1395bp)
+Top Length: 1395  Top ID: 100.0
+		One align captures most of this contig: 351056 352450 | 1395 1 | 1395 1395 | 100.0 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ C753480_50.0
+
+CONTIG: C755666_28.0 (1612bp)
+Top Length: 1612  Top ID: 99.32
+		One align captures most of this contig: 52947 54558 | 1612 1 | 1612 1612 | 99.32 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ C755666_28.0
+
+CONTIG: C757962_26.0 (1911bp)
+Top Length: 1911  Top ID: 99.79
+		One align captures most of this contig: 44968 46878 | 1911 1 | 1911 1911 | 99.79 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ C757962_26.0
+
+CONTIG: C763864_18.0 (3848bp)
+Top Length: 3848  Top ID: 98.08
+		One align captures most of this contig: 15651 19498 | 3848 1 | 3848 3848 | 98.08 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ C763864_18.0
+
+CONTIG: C764284_25.0 (4191bp)
+Top Length: 4191  Top ID: 99.09
+		One align captures most of this contig: 48483 52673 | 1 4191 | 4191 4191 | 99.09 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ C764284_25.0
+
+CONTIG: C764830_53.0 (4753bp)
+Top Length: 4753  Top ID: 99.98
+		One align captures most of this contig: 346334 351086 | 4753 1 | 4753 4753 | 99.98 | Clostridium_sp_M62_1_gi_283767237_ref_NZ_ C764830_53.0
+
+CONTIG: scaffold25675__3.9 (987bp)
+Top Length: 122  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 122 out of 987 bases)
+		Alignment: 16891 17012 | 1 122 | 122 122 | 100.0 | Clostridium_sp_M62_1_gi_283767246_ref_NZ_ scaffold25675__3.9
+		Unaligned bases: 123 to 987 (865)
+
+CONTIG: scaffold35579__2.9 (798bp)
+Top Length: 606  Top ID: 97.19
+		This contig is partially unaligned. (Aligned 606 out of 798 bases)
+		Alignment: 12873 13478 | 798 193 | 606 606 | 97.19 | Clostridium_sp_M62_1_gi_283767246_ref_NZ_ scaffold35579__2.9
+		Unaligned bases: 1 to 192 (192)
+
+CONTIG: scaffold51310__7.1 (2108bp)
+Top Length: 1025  Top ID: 97.37
+		Skipping redundant alignment 363 494 | 1025 893 | 132 133 | 97.74 | Clostridium_sp_M62_1_gi_283767249_ref_NZ_ scaffold51310__7.1
+		Skipping redundant alignment 3800 4017 | 1046 1264 | 218 219 | 98.17 | Clostridium_sp_M62_1_gi_283767246_ref_NZ_ scaffold51310__7.1
+		Skipping redundant alignment 1 191 | 1236 1046 | 191 191 | 98.43 | Clostridium_sp_M62_1_gi_283767249_ref_NZ_ scaffold51310__7.1
+		This contig is misassembled. 6 total aligns.
+			Real Alignment 1: 2603 3628 | 1 1025 | 1026 1025 | 97.37 | Clostridium_sp_M62_1_gi_283767246_ref_NZ_ scaffold51310__7.1
+			  Extensive misassembly ( relocation, inconsistency = 23083 ) between these two alignments
+			Real Alignment 2: 26732 27031 | 1046 1345 | 300 300 | 98.33 | Clostridium_sp_M62_1_gi_283767246_ref_NZ_ scaffold51310__7.1
+			  Gap between these two alignments (local misassembly). Inconsistency = 148 
+			Real Alignment 3: 27255 27424 | 1421 1590 | 170 170 | 98.24 | Clostridium_sp_M62_1_gi_283767246_ref_NZ_ scaffold51310__7.1
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold53452__7.7 (724bp)
+Top Length: 230  Top ID: 100.0
+		Skipping redundant alignment 1002 1069 | 1 68 | 68 68 | 100.0 | Clostridium_sp_M62_1_gi_283767249_ref_NZ_ scaffold53452__7.7
+		This contig is partially unaligned. (Aligned 230 out of 724 bases)
+		Alignment: 1301 1530 | 230 1 | 230 230 | 100.0 | Clostridium_sp_M62_1_gi_283767246_ref_NZ_ scaffold53452__7.7
+		Unaligned bases: 231 to 724 (494)
+
+CONTIG: scaffold54790__2.0 (595bp)
+Top Length: 260  Top ID: 97.7
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 11341 11600 | 1 260 | 260 260 | 97.7 | Clostridium_sp_M62_1_gi_283767246_ref_NZ_ scaffold54790__2.0
+			  Gap between these two alignments (local misassembly). Inconsistency = 140 
+			Real Alignment 2: 11824 12075 | 344 595 | 252 252 | 98.81 | Clostridium_sp_M62_1_gi_283767246_ref_NZ_ scaffold54790__2.0
+
+CONTIG: scaffold57409__2.0 (570bp)
+Top Length: 470  Top ID: 99.15
+		This contig is partially unaligned. (Aligned 470 out of 570 bases)
+		Alignment: 10883 11352 | 470 1 | 470 470 | 99.15 | Clostridium_sp_M62_1_gi_283767246_ref_NZ_ scaffold57409__2.0
+		Unaligned bases: 471 to 570 (100)
+
+CONTIG: scaffold58188_10.1 (1261bp)
+Top Length: 1134  Top ID: 99.65
+		Skipping redundant alignment 4 225 | 551 330 | 222 222 | 99.1 | Clostridium_sp_M62_1_gi_283767246_ref_NZ_ scaffold58188_10.1
+		Skipping redundant alignment 595 1032 | 702 1134 | 438 433 | 98.86 | Clostridium_sp_M62_1_gi_283767249_ref_NZ_ scaffold58188_10.1
+		Skipping redundant alignment 18573 18805 | 1068 836 | 233 233 | 99.14 | Clostridium_sp_M62_1_gi_283767246_ref_NZ_ scaffold58188_10.1
+		This contig is partially unaligned. (Aligned 1134 out of 1261 bases)
+		Alignment: 1500 2633 | 1134 1 | 1134 1134 | 99.65 | Clostridium_sp_M62_1_gi_283767246_ref_NZ_ scaffold58188_10.1
+		Unaligned bases: 1135 to 1261 (127)
+
+CONTIG: C719864__3.0 (503bp)
+Top Length: 503  Top ID: 99.4
+		One align captures most of this contig: 9314 9816 | 503 1 | 503 503 | 99.4 | Clostridium_sp_M62_1_gi_283767246_ref_NZ_ C719864__3.0
+
+CONTIG: C742884_73.0 (865bp)
+Top Length: 865  Top ID: 99.54
+		One align captures most of this contig: 4658 5522 | 865 1 | 865 865 | 99.54 | Clostridium_sp_M62_1_gi_283767246_ref_NZ_ C742884_73.0
+
+CONTIG: scaffold17425__3.1 (804bp)
+Top Length: 396  Top ID: 97.73
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 53312 53707 | 515 120 | 396 396 | 97.73 | Clostridium_sp_M62_1_gi_283767235_ref_NZ_ scaffold17425__3.1
+			  Gap between these two alignments (local misassembly). Inconsistency = 138 
+			Real Alignment 2: 52885 53019 | 804 670 | 135 135 | 100.0 | Clostridium_sp_M62_1_gi_283767235_ref_NZ_ scaffold17425__3.1
+
+CONTIG: scaffold20391__3.2 (764bp)
+Top Length: 365  Top ID: 99.45
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 158855 158970 | 1 116 | 116 116 | 98.28 | Clostridium_sp_M62_1_gi_283767235_ref_NZ_ scaffold20391__3.2
+			  Gap between these two alignments (local misassembly). Inconsistency = 146 
+			Real Alignment 2: 159177 159541 | 177 541 | 365 365 | 99.45 | Clostridium_sp_M62_1_gi_283767235_ref_NZ_ scaffold20391__3.2
+			  Gap between these two alignments (local misassembly). Inconsistency = 115 
+			Real Alignment 3: 159659 159879 | 544 764 | 221 221 | 99.1 | Clostridium_sp_M62_1_gi_283767235_ref_NZ_ scaffold20391__3.2
+
+CONTIG: scaffold47201__6.1 (765bp)
+Top Length: 172  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 172 out of 765 bases)
+		Alignment: 155986 156157 | 172 1 | 172 172 | 100.0 | Clostridium_sp_M62_1_gi_283767235_ref_NZ_ scaffold47201__6.1
+		Unaligned bases: 173 to 765 (593)
+
+CONTIG: scaffold47478__4.8 (1564bp)
+Top Length: 1348  Top ID: 99.85
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 54397 54570 | 1 174 | 174 174 | 98.85 | Clostridium_sp_M62_1_gi_283767235_ref_NZ_ scaffold47478__4.8
+			  Gap between these two alignments (local misassembly). Inconsistency = 149 
+			Real Alignment 2: 54762 56109 | 217 1564 | 1348 1348 | 99.85 | Clostridium_sp_M62_1_gi_283767235_ref_NZ_ scaffold47478__4.8
+
+CONTIG: scaffold50397__5.2 (569bp)
+Top Length: 285  Top ID: 98.95
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 724556 724747 | 192 1 | 192 192 | 100.0 | Clostridium_sp_M62_1_gi_283767235_ref_NZ_ scaffold50397__5.2
+			  Gap between these two alignments (local misassembly). Inconsistency = 144 
+			Real Alignment 2: 724035 724319 | 569 285 | 285 285 | 98.95 | Clostridium_sp_M62_1_gi_283767235_ref_NZ_ scaffold50397__5.2
+
+CONTIG: C721156_23.0 (515bp)
+Top Length: 515  Top ID: 99.42
+		One align captures most of this contig: 601370 601884 | 515 1 | 515 515 | 99.42 | Clostridium_sp_M62_1_gi_283767235_ref_NZ_ C721156_23.0
+
+CONTIG: C725084_60.0 (553bp)
+Top Length: 553  Top ID: 98.92
+		One align captures most of this contig: 595383 595935 | 553 1 | 553 553 | 98.92 | Clostridium_sp_M62_1_gi_283767235_ref_NZ_ C725084_60.0
+
+CONTIG: C727560_57.0 (582bp)
+Top Length: 582  Top ID: 96.74
+		One align captures most of this contig: 761433 762014 | 582 1 | 582 582 | 96.74 | Clostridium_sp_M62_1_gi_283767235_ref_NZ_ C727560_57.0
+
+CONTIG: C730708_32.0 (622bp)
+Top Length: 622  Top ID: 97.11
+		One align captures most of this contig: 750902 751523 | 1 622 | 622 622 | 97.11 | Clostridium_sp_M62_1_gi_283767235_ref_NZ_ C730708_32.0
+
+CONTIG: C731900__8.0 (637bp)
+Top Length: 637  Top ID: 99.53
+		One align captures most of this contig: 722867 723503 | 1 637 | 637 637 | 99.53 | Clostridium_sp_M62_1_gi_283767235_ref_NZ_ C731900__8.0
+
+CONTIG: C737544_22.0 (731bp)
+Top Length: 731  Top ID: 98.36
+		One align captures most of this contig: 704837 705567 | 731 1 | 731 731 | 98.36 | Clostridium_sp_M62_1_gi_283767235_ref_NZ_ C737544_22.0
+
+CONTIG: C741200_29.0 (816bp)
+Top Length: 816  Top ID: 98.04
+		One align captures most of this contig: 750050 750866 | 1 816 | 817 816 | 98.04 | Clostridium_sp_M62_1_gi_283767235_ref_NZ_ C741200_29.0
+
+CONTIG: C742634_16.0 (857bp)
+Top Length: 857  Top ID: 95.92
+		One align captures most of this contig: 703880 704735 | 857 1 | 856 857 | 95.92 | Clostridium_sp_M62_1_gi_283767235_ref_NZ_ C742634_16.0
+
+CONTIG: C747770_60.0 (1049bp)
+Top Length: 1049  Top ID: 99.9
+		One align captures most of this contig: 153947 154995 | 1 1049 | 1049 1049 | 99.9 | Clostridium_sp_M62_1_gi_283767235_ref_NZ_ C747770_60.0
+
+CONTIG: C748256_24.0 (1074bp)
+Top Length: 1074  Top ID: 99.91
+		One align captures most of this contig: 600320 601393 | 1074 1 | 1074 1074 | 99.91 | Clostridium_sp_M62_1_gi_283767235_ref_NZ_ C748256_24.0
+
+CONTIG: C751918__7.0 (1278bp)
+Top Length: 1278  Top ID: 97.57
+		One align captures most of this contig: 700685 701962 | 1278 1 | 1278 1278 | 97.57 | Clostridium_sp_M62_1_gi_283767235_ref_NZ_ C751918__7.0
+
+CONTIG: C754988_11.0 (1546bp)
+Top Length: 1544  Top ID: 96.96
+		One align captures most of this contig: 701934 703477 | 3 1546 | 1544 1544 | 96.96 | Clostridium_sp_M62_1_gi_283767235_ref_NZ_ C754988_11.0
+
+CONTIG: C755322_50.0 (1577bp)
+Top Length: 1577  Top ID: 98.35
+		One align captures most of this contig: 759793 761369 | 1 1577 | 1577 1577 | 98.35 | Clostridium_sp_M62_1_gi_283767235_ref_NZ_ C755322_50.0
+
+CONTIG: C755690__5.0 (1614bp)
+Top Length: 1614  Top ID: 99.38
+		One align captures most of this contig: 57449 59062 | 1614 1 | 1614 1614 | 99.38 | Clostridium_sp_M62_1_gi_283767235_ref_NZ_ C755690__5.0
+
+CONTIG: C759168_11.0 (2122bp)
+Top Length: 2122  Top ID: 97.36
+		One align captures most of this contig: 229709 231829 | 1 2122 | 2121 2122 | 97.36 | Clostridium_sp_M62_1_gi_283767235_ref_NZ_ C759168_11.0
+
+CONTIG: C761778_20.0 (2781bp)
+Top Length: 2781  Top ID: 100.0
+		One align captures most of this contig: 596987 599767 | 1 2781 | 2781 2781 | 100.0 | Clostridium_sp_M62_1_gi_283767235_ref_NZ_ C761778_20.0
+
+CONTIG: C763636_11.0 (3686bp)
+Top Length: 1083  Top ID: 95.01
+		This contig is partially unaligned. (Aligned 1083 out of 3686 bases)
+		Alignment: 228145 229227 | 2583 3665 | 1083 1083 | 95.01 | Clostridium_sp_M62_1_gi_283767235_ref_NZ_ C763636_11.0
+		Unaligned bases: 1 to 2582 (2582)
+		Unaligned bases: 3666 to 3686 (21)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: C766040_12.0 (7126bp)
+Top Length: 7126  Top ID: 98.54
+		One align captures most of this contig: 250476 257601 | 7126 1 | 7126 7126 | 98.54 | Clostridium_sp_M62_1_gi_283767235_ref_NZ_ C766040_12.0
+
+CONTIG: scaffold4483__4.7 (697bp)
+Top Length: 155  Top ID: 98.06
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 697 and total length of all aligns is 244
+		Alignment: 243699 243787 | 149 237 | 89 89 | 98.88 | Clostridium_sp_M62_1_gi_283767236_ref_NZ_ scaffold4483__4.7
+		Alignment: 244393 244547 | 538 692 | 155 155 | 98.06 | Clostridium_sp_M62_1_gi_283767236_ref_NZ_ scaffold4483__4.7
+		Unaligned bases: 453
+CONTIG: scaffold38269__8.6 (932bp)
+Top Length: 413  Top ID: 96.37
+		This contig is partially unaligned. (Aligned 413 out of 932 bases)
+		Alignment: 74332 74744 | 520 932 | 413 413 | 96.37 | Clostridium_sp_M62_1_gi_283767236_ref_NZ_ scaffold38269__8.6
+		Unaligned bases: 1 to 519 (519)
+
+CONTIG: scaffold39342__8.5 (1057bp)
+Top Length: 194  Top ID: 96.39
+		This contig is partially unaligned. (Aligned 194 out of 1057 bases)
+		Alignment: 259765 259958 | 864 1057 | 194 194 | 96.39 | Clostridium_sp_M62_1_gi_283767236_ref_NZ_ scaffold39342__8.5
+		Unaligned bases: 1 to 863 (863)
+
+CONTIG: scaffold40304__7.1 (576bp)
+Top Length: 148  Top ID: 97.3
+		This contig is partially unaligned. (Aligned 148 out of 576 bases)
+		Alignment: 236096 236243 | 148 1 | 148 148 | 97.3 | Clostridium_sp_M62_1_gi_283767236_ref_NZ_ scaffold40304__7.1
+		Unaligned bases: 149 to 576 (428)
+
+CONTIG: C726966__4.0 (575bp)
+Top Length: 575  Top ID: 99.65
+		One align captures most of this contig: 274490 275064 | 575 1 | 575 575 | 99.65 | Clostridium_sp_M62_1_gi_283767236_ref_NZ_ C726966__4.0
+
+CONTIG: C742564_17.0 (854bp)
+Top Length: 854  Top ID: 98.24
+		One align captures most of this contig: 260141 260994 | 854 1 | 854 854 | 98.24 | Clostridium_sp_M62_1_gi_283767236_ref_NZ_ C742564_17.0
+
+CONTIG: C754212_27.0 (1464bp)
+Top Length: 1464  Top ID: 100.0
+		One align captures most of this contig: 457323 458786 | 1464 1 | 1464 1464 | 100.0 | Clostridium_sp_M62_1_gi_283767236_ref_NZ_ C754212_27.0
+
+CONTIG: C754606_36.0 (1509bp)
+Top Length: 1509  Top ID: 99.07
+		One align captures most of this contig: 467396 468904 | 1 1509 | 1509 1509 | 99.07 | Clostridium_sp_M62_1_gi_283767236_ref_NZ_ C754606_36.0
+
+CONTIG: C755926_25.0 (1640bp)
+Top Length: 1640  Top ID: 99.94
+		One align captures most of this contig: 458756 460395 | 1640 1 | 1640 1640 | 99.94 | Clostridium_sp_M62_1_gi_283767236_ref_NZ_ C755926_25.0
+
+Analyzing coverage...
+Writing SNPs into /Molly/miheenko/quast_results/res_metahit_final/runs_per_reference/Clostridium_sp_M62_1/contigs_reports/nucmer_output/SOAPdenovo2.used_snps
+ERROR: Reference Clostridium_sp_M62_1_gi_283767254_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M62_1_gi_283767235_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767246_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767236_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M62_1_gi_283767238_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M62_1_gi_283767235_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767246_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767236_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M62_1_gi_283767242_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M62_1_gi_283767235_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767246_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767236_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M62_1_gi_283767257_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M62_1_gi_283767235_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767246_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767236_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M62_1_gi_283767241_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M62_1_gi_283767235_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767246_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767236_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M62_1_gi_283767255_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M62_1_gi_283767235_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767246_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767236_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M62_1_gi_283767239_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M62_1_gi_283767235_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767246_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767236_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M62_1_gi_283767260_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M62_1_gi_283767235_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767246_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767236_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M62_1_gi_283767243_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M62_1_gi_283767235_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767246_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767236_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M62_1_gi_283767253_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M62_1_gi_283767235_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767246_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767236_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767237_ref_NZ_']
+	Reference Clostridium_sp_M62_1_gi_283767237_ref_NZ_: 32 total alignments. 1 total regions.
+		Region: 1 to 463016 (463016 bp)
+			START in gap: 1 to 2840 (2839 bp)
+			Align 1: 2840 3582 C738100_19.0 743 1
+				Gap between this and next alignment: 3582 to 4360 (777 bp)
+				Next Alignment: 4360 5413 C747868_18.0 1 1054
+
+			Align 2: 4360 5413 C747868_18.0 1 1054
+				Gap between this and next alignment: 5413 to 5868 (454 bp)
+				Next Alignment: 5868 6378 C721092_20.0 514 4
+
+			Align 3: 5868 6378 C721092_20.0 514 4
+				Gap between this and next alignment: 6378 to 6411 (32 bp)
+				Next Alignment: 6411 6586 scaffold12672_14.0 1 176
+
+			Align 4: 6411 6586 scaffold12672_14.0 1 176
+				Gap between this and next alignment: 6586 to 6723 (136 bp)
+				Next Alignment: 6723 11945 scaffold12672_14.0 178 5401
+
+			Align 5: 6723 11945 scaffold12672_14.0 178 5401
+				Gap between this and next alignment: 11945 to 12308 (362 bp)
+				Next Alignment: 12308 12585 scaffold51178_12.8 532 255
+
+			Align 6: 12308 12585 scaffold51178_12.8 532 255
+				Gap between this and next alignment: 12585 to 12958 (372 bp)
+				Next Alignment: 12958 14029 C748222_15.0 1 1072
+
+			Align 7: 12958 14029 C748222_15.0 1 1072
+				Negative gap (overlap) between this and next alignment: 14029 to 14028 (-1 bp)
+				Next Alignment: 14028 15325 C752226_23.0 1298 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1298 to 1296.
+			Align 8: 14030 15325 C752226_23.0 1296 1
+				Gap between this and next alignment: 15325 to 15651 (325 bp)
+				Next Alignment: 15651 19498 C763864_18.0 3848 1
+
+			Align 9: 15651 19498 C763864_18.0 3848 1
+				Gap between this and next alignment: 19498 to 19748 (249 bp)
+				Next Alignment: 19748 21131 C753376_17.0 2 1385
+
+			Align 10: 19748 21131 C753376_17.0 2 1385
+				Gap between this and next alignment: 21131 to 22299 (1167 bp)
+				Next Alignment: 22299 23067 C739304_15.0 769 1
+
+			Align 11: 22299 23067 C739304_15.0 769 1
+				Gap between this and next alignment: 23067 to 23355 (287 bp)
+				Next Alignment: 23355 24248 C743824_17.0 1 894
+
+			Align 12: 23355 24248 C743824_17.0 1 894
+				Gap between this and next alignment: 24248 to 24652 (403 bp)
+				Next Alignment: 24652 25241 C728250_25.0 590 1
+
+			Align 13: 24652 25241 C728250_25.0 590 1
+				Gap between this and next alignment: 25241 to 26253 (1011 bp)
+				Next Alignment: 26253 26718 C748268_22.0 1075 609
+
+			Align 14: 26253 26718 C748268_22.0 1075 609
+				Gap between this and next alignment: 26718 to 44020 (17301 bp)
+				Next Alignment: 44020 44623 C729352_27.0 604 1
+
+			Align 15: 44020 44623 C729352_27.0 604 1
+				Gap between this and next alignment: 44623 to 44968 (344 bp)
+				Next Alignment: 44968 46878 C757962_26.0 1911 1
+
+			Align 16: 44968 46878 C757962_26.0 1911 1
+				Gap between this and next alignment: 46878 to 47510 (631 bp)
+				Next Alignment: 47510 48217 C736424_76.0 708 1
+
+			Align 17: 47510 48217 C736424_76.0 708 1
+				Gap between this and next alignment: 48217 to 48483 (265 bp)
+				Next Alignment: 48483 52673 C764284_25.0 1 4191
+
+			Align 18: 48483 52673 C764284_25.0 1 4191
+				Gap between this and next alignment: 52673 to 52947 (273 bp)
+				Next Alignment: 52947 54558 C755666_28.0 1612 1
+
+			Align 19: 52947 54558 C755666_28.0 1612 1
+				Negative gap (overlap) between this and next alignment: 54558 to 54536 (-22 bp)
+				Next Alignment: 54536 55307 C739398_27.0 1 772
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 24.
+			Align 20: 54559 55307 C739398_27.0 24 772
+				Gap between this and next alignment: 55307 to 55309 (1 bp)
+				Next Alignment: 55309 56463 C749926_22.0 1155 1
+
+			Align 21: 55309 56463 C749926_22.0 1155 1
+				Negative gap (overlap) between this and next alignment: 56463 to 56433 (-30 bp)
+				Next Alignment: 56433 57484 C747832_24.0 1 1052
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 32.
+			Align 22: 56464 57484 C747832_24.0 32 1052
+				Negative gap (overlap) between this and next alignment: 57484 to 57484 (0 bp)
+				Next Alignment: 57484 58769 C752044_23.0 1 1286
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 2.
+			Align 23: 57485 58769 C752044_23.0 2 1286
+				Gap between this and next alignment: 58769 to 210145 (151375 bp)
+				Next Alignment: 210145 210250 scaffold8956__2.0 1 106
+
+			Align 24: 210145 210250 scaffold8956__2.0 1 106
+				Gap between this and next alignment: 210250 to 210441 (190 bp)
+				Next Alignment: 210441 210829 scaffold8956__2.0 159 547
+
+			Align 25: 210441 210829 scaffold8956__2.0 159 547
+				Gap between this and next alignment: 210829 to 211280 (450 bp)
+				Next Alignment: 211280 211392 scaffold8956__2.0 704 816
+
+			Align 26: 211280 211392 scaffold8956__2.0 704 816
+				Gap between this and next alignment: 211392 to 342954 (131561 bp)
+				Next Alignment: 342954 344297 C752880_65.0 1 1344
+
+			Align 27: 342954 344297 C752880_65.0 1 1344
+				Gap between this and next alignment: 344297 to 345034 (736 bp)
+				Next Alignment: 345034 345567 C723238_64.0 534 1
+
+			Align 28: 345034 345567 C723238_64.0 534 1
+				Negative gap (overlap) between this and next alignment: 345567 to 345540 (-27 bp)
+				Next Alignment: 345540 346362 C741434_64.0 1 823
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 29.
+			Align 29: 345568 346362 C741434_64.0 29 823
+				Negative gap (overlap) between this and next alignment: 346362 to 346334 (-28 bp)
+				Next Alignment: 346334 351086 C764830_53.0 4753 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 4753 to 4724.
+			Align 30: 346363 351086 C764830_53.0 4724 1
+				Negative gap (overlap) between this and next alignment: 351086 to 351056 (-30 bp)
+				Next Alignment: 351056 352450 C753480_50.0 1395 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1395 to 1364.
+			Align 31: 351087 352450 C753480_50.0 1364 1
+				Gap between this and next alignment: 352450 to 356741 (4290 bp)
+				Next Alignment: 356741 357305 C726218_46.0 2 566
+
+			Align 32: 356741 357305 C726218_46.0 2 566
+			END in gap: 357305 to 463016 (105711 bp)
+
+ERROR: Reference Clostridium_sp_M62_1_gi_283767240_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M62_1_gi_283767235_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767246_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767236_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M62_1_gi_283767248_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M62_1_gi_283767235_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767246_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767236_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M62_1_gi_283767245_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M62_1_gi_283767235_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767246_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767236_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M62_1_gi_283767247_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M62_1_gi_283767235_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767246_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767236_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M62_1_gi_283767251_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M62_1_gi_283767235_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767246_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767236_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M62_1_gi_283767244_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M62_1_gi_283767235_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767246_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767236_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M62_1_gi_283767252_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M62_1_gi_283767235_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767246_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767236_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767237_ref_NZ_']
+	Reference Clostridium_sp_M62_1_gi_283767246_ref_NZ_: 12 total alignments. 1 total regions.
+		Region: 1 to 30658 (30658 bp)
+			START in gap: 1 to 1301 (1300 bp)
+			Align 1: 1301 1530 scaffold53452__7.7 230 1
+				Negative gap (overlap) between this and next alignment: 1530 to 1500 (-30 bp)
+				Next Alignment: 1500 2633 scaffold58188_10.1 1134 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1134 to 1103.
+			Align 2: 1531 2633 scaffold58188_10.1 1103 1
+				Negative gap (overlap) between this and next alignment: 2633 to 2603 (-30 bp)
+				Next Alignment: 2603 3628 scaffold51310__7.1 1 1025
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 32.
+			Align 3: 2634 3628 scaffold51310__7.1 32 1025
+				Gap between this and next alignment: 3628 to 4658 (1029 bp)
+				Next Alignment: 4658 5522 C742884_73.0 865 1
+
+			Align 4: 4658 5522 C742884_73.0 865 1
+				Gap between this and next alignment: 5522 to 9314 (3791 bp)
+				Next Alignment: 9314 9816 C719864__3.0 503 1
+
+			Align 5: 9314 9816 C719864__3.0 503 1
+				Gap between this and next alignment: 9816 to 10883 (1066 bp)
+				Next Alignment: 10883 11352 scaffold57409__2.0 470 1
+
+			Align 6: 10883 11352 scaffold57409__2.0 470 1
+				Negative gap (overlap) between this and next alignment: 11352 to 11341 (-11 bp)
+				Next Alignment: 11341 11600 scaffold54790__2.0 1 260
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 13.
+			Align 7: 11353 11600 scaffold54790__2.0 13 260
+				Gap between this and next alignment: 11600 to 11824 (223 bp)
+				Next Alignment: 11824 12075 scaffold54790__2.0 344 595
+
+			Align 8: 11824 12075 scaffold54790__2.0 344 595
+				Gap between this and next alignment: 12075 to 12873 (797 bp)
+				Next Alignment: 12873 13478 scaffold35579__2.9 798 193
+
+			Align 9: 12873 13478 scaffold35579__2.9 798 193
+				Gap between this and next alignment: 13478 to 16891 (3412 bp)
+				Next Alignment: 16891 17012 scaffold25675__3.9 1 122
+
+			Align 10: 16891 17012 scaffold25675__3.9 1 122
+				Gap between this and next alignment: 17012 to 26732 (9719 bp)
+				Next Alignment: 26732 27031 scaffold51310__7.1 1046 1345
+
+			Align 11: 26732 27031 scaffold51310__7.1 1046 1345
+				Gap between this and next alignment: 27031 to 27255 (223 bp)
+				Next Alignment: 27255 27424 scaffold51310__7.1 1421 1590
+
+			Align 12: 27255 27424 scaffold51310__7.1 1421 1590
+			END in gap: 27424 to 30658 (3234 bp)
+
+	Reference Clostridium_sp_M62_1_gi_283767236_ref_NZ_: 10 total alignments. 1 total regions.
+		Region: 1 to 648183 (648183 bp)
+			START in gap: 1 to 74332 (74331 bp)
+			Align 1: 74332 74744 scaffold38269__8.6 520 932
+				Gap between this and next alignment: 74744 to 236096 (161351 bp)
+				Next Alignment: 236096 236243 scaffold40304__7.1 148 1
+
+			Align 2: 236096 236243 scaffold40304__7.1 148 1
+				Gap between this and next alignment: 236243 to 243699 (7455 bp)
+				Next Alignment: 243699 243787 scaffold4483__4.7 149 237
+
+			Align 3: 243699 243787 scaffold4483__4.7 149 237
+				Gap between this and next alignment: 243787 to 244393 (605 bp)
+				Next Alignment: 244393 244547 scaffold4483__4.7 538 692
+
+			Align 4: 244393 244547 scaffold4483__4.7 538 692
+				Gap between this and next alignment: 244547 to 259765 (15217 bp)
+				Next Alignment: 259765 259958 scaffold39342__8.5 864 1057
+
+			Align 5: 259765 259958 scaffold39342__8.5 864 1057
+				Gap between this and next alignment: 259958 to 260141 (182 bp)
+				Next Alignment: 260141 260994 C742564_17.0 854 1
+
+			Align 6: 260141 260994 C742564_17.0 854 1
+				Gap between this and next alignment: 260994 to 274490 (13495 bp)
+				Next Alignment: 274490 275064 C726966__4.0 575 1
+
+			Align 7: 274490 275064 C726966__4.0 575 1
+				Gap between this and next alignment: 275064 to 457323 (182258 bp)
+				Next Alignment: 457323 458786 C754212_27.0 1464 1
+
+			Align 8: 457323 458786 C754212_27.0 1464 1
+				Negative gap (overlap) between this and next alignment: 458786 to 458756 (-30 bp)
+				Next Alignment: 458756 460395 C755926_25.0 1640 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1640 to 1609.
+			Align 9: 458787 460395 C755926_25.0 1609 1
+				Gap between this and next alignment: 460395 to 467396 (7000 bp)
+				Next Alignment: 467396 468904 C754606_36.0 1 1509
+
+			Align 10: 467396 468904 C754606_36.0 1 1509
+			END in gap: 468904 to 648183 (179279 bp)
+
+ERROR: Reference Clostridium_sp_M62_1_gi_283767250_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M62_1_gi_283767235_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767246_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767236_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M62_1_gi_283767258_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M62_1_gi_283767235_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767246_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767236_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M62_1_gi_283767259_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M62_1_gi_283767235_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767246_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767236_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767237_ref_NZ_']
+	Reference Clostridium_sp_M62_1_gi_283767235_ref_NZ_: 28 total alignments. 1 total regions.
+		Region: 1 to 947737 (947737 bp)
+			START in gap: 1 to 52885 (52884 bp)
+			Align 1: 52885 53019 scaffold17425__3.1 804 670
+				Gap between this and next alignment: 53019 to 53312 (292 bp)
+				Next Alignment: 53312 53707 scaffold17425__3.1 515 120
+
+			Align 2: 53312 53707 scaffold17425__3.1 515 120
+				Gap between this and next alignment: 53707 to 54397 (689 bp)
+				Next Alignment: 54397 54570 scaffold47478__4.8 1 174
+
+			Align 3: 54397 54570 scaffold47478__4.8 1 174
+				Gap between this and next alignment: 54570 to 54762 (191 bp)
+				Next Alignment: 54762 56109 scaffold47478__4.8 217 1564
+
+			Align 4: 54762 56109 scaffold47478__4.8 217 1564
+				Gap between this and next alignment: 56109 to 57449 (1339 bp)
+				Next Alignment: 57449 59062 C755690__5.0 1614 1
+
+			Align 5: 57449 59062 C755690__5.0 1614 1
+				Gap between this and next alignment: 59062 to 153947 (94884 bp)
+				Next Alignment: 153947 154995 C747770_60.0 1 1049
+
+			Align 6: 153947 154995 C747770_60.0 1 1049
+				Gap between this and next alignment: 154995 to 155986 (990 bp)
+				Next Alignment: 155986 156157 scaffold47201__6.1 172 1
+
+			Align 7: 155986 156157 scaffold47201__6.1 172 1
+				Gap between this and next alignment: 156157 to 158855 (2697 bp)
+				Next Alignment: 158855 158970 scaffold20391__3.2 1 116
+
+			Align 8: 158855 158970 scaffold20391__3.2 1 116
+				Gap between this and next alignment: 158970 to 159177 (206 bp)
+				Next Alignment: 159177 159541 scaffold20391__3.2 177 541
+
+			Align 9: 159177 159541 scaffold20391__3.2 177 541
+				Gap between this and next alignment: 159541 to 159659 (117 bp)
+				Next Alignment: 159659 159879 scaffold20391__3.2 544 764
+
+			Align 10: 159659 159879 scaffold20391__3.2 544 764
+				Gap between this and next alignment: 159879 to 228145 (68265 bp)
+				Next Alignment: 228145 229227 C763636_11.0 2583 3665
+
+			Align 11: 228145 229227 C763636_11.0 2583 3665
+				Gap between this and next alignment: 229227 to 229709 (481 bp)
+				Next Alignment: 229709 231829 C759168_11.0 1 2122
+
+			Align 12: 229709 231829 C759168_11.0 1 2122
+				Gap between this and next alignment: 231829 to 250476 (18646 bp)
+				Next Alignment: 250476 257601 C766040_12.0 7126 1
+
+			Align 13: 250476 257601 C766040_12.0 7126 1
+				Gap between this and next alignment: 257601 to 595383 (337781 bp)
+				Next Alignment: 595383 595935 C725084_60.0 553 1
+
+			Align 14: 595383 595935 C725084_60.0 553 1
+				Gap between this and next alignment: 595935 to 596987 (1051 bp)
+				Next Alignment: 596987 599767 C761778_20.0 1 2781
+
+			Align 15: 596987 599767 C761778_20.0 1 2781
+				Gap between this and next alignment: 599767 to 600320 (552 bp)
+				Next Alignment: 600320 601393 C748256_24.0 1074 1
+
+			Align 16: 600320 601393 C748256_24.0 1074 1
+				Negative gap (overlap) between this and next alignment: 601393 to 601370 (-23 bp)
+				Next Alignment: 601370 601884 C721156_23.0 515 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 515 to 491.
+			Align 17: 601394 601884 C721156_23.0 491 1
+				Gap between this and next alignment: 601884 to 700685 (98800 bp)
+				Next Alignment: 700685 701962 C751918__7.0 1278 1
+
+			Align 18: 700685 701962 C751918__7.0 1278 1
+				Negative gap (overlap) between this and next alignment: 701962 to 701934 (-28 bp)
+				Next Alignment: 701934 703477 C754988_11.0 3 1546
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 3 to 32.
+			Align 19: 701963 703477 C754988_11.0 32 1546
+				Gap between this and next alignment: 703477 to 703880 (402 bp)
+				Next Alignment: 703880 704735 C742634_16.0 857 1
+
+			Align 20: 703880 704735 C742634_16.0 857 1
+				Gap between this and next alignment: 704735 to 704837 (101 bp)
+				Next Alignment: 704837 705567 C737544_22.0 731 1
+
+			Align 21: 704837 705567 C737544_22.0 731 1
+				Gap between this and next alignment: 705567 to 722867 (17299 bp)
+				Next Alignment: 722867 723503 C731900__8.0 1 637
+
+			Align 22: 722867 723503 C731900__8.0 1 637
+				Gap between this and next alignment: 723503 to 724035 (531 bp)
+				Next Alignment: 724035 724319 scaffold50397__5.2 569 285
+
+			Align 23: 724035 724319 scaffold50397__5.2 569 285
+				Gap between this and next alignment: 724319 to 724556 (236 bp)
+				Next Alignment: 724556 724747 scaffold50397__5.2 192 1
+
+			Align 24: 724556 724747 scaffold50397__5.2 192 1
+				Gap between this and next alignment: 724747 to 750050 (25302 bp)
+				Next Alignment: 750050 750866 C741200_29.0 1 816
+
+			Align 25: 750050 750866 C741200_29.0 1 816
+				Gap between this and next alignment: 750866 to 750902 (35 bp)
+				Next Alignment: 750902 751523 C730708_32.0 1 622
+
+			Align 26: 750902 751523 C730708_32.0 1 622
+				Gap between this and next alignment: 751523 to 759793 (8269 bp)
+				Next Alignment: 759793 761369 C755322_50.0 1 1577
+
+			Align 27: 759793 761369 C755322_50.0 1 1577
+				Gap between this and next alignment: 761369 to 761433 (63 bp)
+				Next Alignment: 761433 762014 C727560_57.0 582 1
+
+			Align 28: 761433 762014 C727560_57.0 582 1
+			END in gap: 762014 to 947737 (185723 bp)
+
+ERROR: Reference Clostridium_sp_M62_1_gi_283767249_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M62_1_gi_283767235_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767246_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767236_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M62_1_gi_283767256_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M62_1_gi_283767235_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767246_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767236_ref_NZ_', 'Clostridium_sp_M62_1_gi_283767237_ref_NZ_']
+Analysis is finished!
+Founded SNPs were written into /Molly/miheenko/quast_results/res_metahit_final/runs_per_reference/Clostridium_sp_M62_1/contigs_reports/nucmer_output/SOAPdenovo2.used_snps
+
+Results:
+	Local Misassemblies: 10
+	Misassemblies: 1
+		Relocations: 1
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 1
+	Misassembled Contig Bases: 2108
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 13 part
+Partially Unaligned Contigs with Misassemblies: 1
+Unaligned Contig Bases: 8099
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 84259
+
+	SNPs: 1094
+	Insertions: 7
+	Deletions: 5
+
+	Positive Gaps: 73
+		Internal Gaps:  11
+		External Gaps:  62
+		External Gap Total:  2002466
+		External Gap Average: 32298
+	Negative Gaps: 13
+		Internal Overlaps:  0
+		External Overlaps:  13
+		External Overlaps Total: -290
+		External Overlaps Average: -22
+	Contigs with Redundant Alignments: 0 (0)

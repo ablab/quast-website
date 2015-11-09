@@ -1,0 +1,179 @@
+/home/gurevich/rep/quast/quast.pyc -t 16 -j  --meta  --bed-file /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/combined_reference/structural_variations/combined_reference.bed --no-check-meta  --contig-thresholds 1000,5000,10000,25000,50000 -R /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Bacteroides_sp_4_3_47FAA.fasta -o /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_sp_4_3_47FAA --labels "IDBA_UD, Ray, SOAPdenovo2, SPAdes" /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/IDBA_UD_to_Bacteroides_sp_4_3_47FAA.fasta /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Ray_to_Bacteroides_sp_4_3_47FAA.fasta /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SOAPdenovo2_to_Bacteroides_sp_4_3_47FAA.fasta /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SPAdes_to_Bacteroides_sp_4_3_47FAA.fasta
+
+Started: 2015-11-09 20:15:39
+
+Logging to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_sp_4_3_47FAA/quast.log
+
+Reference:
+  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Bacteroides_sp_4_3_47FAA.fasta ==> Bacteroides_sp_4_3_47FAA
+
+Contigs:
+  1  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/IDBA_UD_to_Bacteroides_sp_4_3_47FAA.fasta ==> IDBA_UD
+  2  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Ray_to_Bacteroides_sp_4_3_47FAA.fasta ==> Ray
+  3  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SOAPdenovo2_to_Bacteroides_sp_4_3_47FAA.fasta ==> SOAPdenovo2
+  4  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SPAdes_to_Bacteroides_sp_4_3_47FAA.fasta ==> SPAdes
+
+2015-11-09 20:15:40
+Running Basic statistics processor...
+  Reference genome:
+    Bacteroides_sp_4_3_47FAA.fasta, Reference length = 5442925, Reference GC % = 42.70
+  Contig files: 
+    1  IDBA_UD
+    2  Ray
+    3  SOAPdenovo2
+    4  SPAdes
+  Calculating N50 and L50...
+    1  IDBA_UD, N50 = 23507, L50 = 33, Total length = 2784038, GC % = 42.89, # N's per 100 kbp =  44.72
+    2  Ray, N50 = 13277, L50 = 57, Total length = 2739588, GC % = 42.51, # N's per 100 kbp =  1302.68
+    3  SOAPdenovo2, N50 = 1628, L50 = 537, Total length = 3001802, GC % = 42.53, # N's per 100 kbp =  336.76
+    4  SPAdes, N50 = 34196, L50 = 19, Total length = 2221858, GC % = 42.74, # N's per 100 kbp =  73.18
+  Drawing Nx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_sp_4_3_47FAA/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_sp_4_3_47FAA/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_sp_4_3_47FAA/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_sp_4_3_47FAA/basic_stats/GC_content_plot.pdf
+Done.
+
+2015-11-09 20:15:44
+Running Contig analyzer...
+  1  IDBA_UD
+  2  Ray
+  3  SOAPdenovo2
+  4  SPAdes
+  2  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/contigs_report_Ray.stdout and contigs_report_Ray.stderr...
+  3  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/contigs_report_SOAPdenovo2.stdout and contigs_report_SOAPdenovo2.stderr...
+  2  Running Nucmer
+  3  Running Nucmer
+  1  Running Nucmer
+  4  Running Nucmer
+  3  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/nucmer -c 65 -l 65 --maxmatch \
+     -p runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/SOAPdenovo2 \
+     runs_per_reference/Bacteroides_sp_4_3_47FAA/quast_corrected_input/Bacteroides_sp_4_3_47FAA.fasta \
+     quast_corrected_input/SOAPdenovo2_to_Bacteroides_sp_4_3_47FAA.fasta >> runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/contigs_report_SOAPdenovo2.stdout \
+     2>> runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/contigs_report_SOAPdenovo2.stderr
+  2  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/nucmer -c 65 -l 65 --maxmatch \
+     -p runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/Ray \
+     runs_per_reference/Bacteroides_sp_4_3_47FAA/quast_corrected_input/Bacteroides_sp_4_3_47FAA.fasta \
+     quast_corrected_input/Ray_to_Bacteroides_sp_4_3_47FAA.fasta >> runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/contigs_report_Ray.stdout \
+     2>> runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/contigs_report_Ray.stderr
+  1  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/nucmer -c 65 -l 65 --maxmatch \
+     -p runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/IDBA_UD \
+     runs_per_reference/Bacteroides_sp_4_3_47FAA/quast_corrected_input/Bacteroides_sp_4_3_47FAA.fasta \
+     quast_corrected_input/IDBA_UD_to_Bacteroides_sp_4_3_47FAA.fasta >> runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/contigs_report_IDBA_UD.stdout \
+     2>> runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/contigs_report_IDBA_UD.stderr
+  4  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/nucmer -c 65 -l 65 --maxmatch \
+     -p runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/SPAdes \
+     runs_per_reference/Bacteroides_sp_4_3_47FAA/quast_corrected_input/Bacteroides_sp_4_3_47FAA.fasta \
+     quast_corrected_input/SPAdes_to_Bacteroides_sp_4_3_47FAA.fasta >> runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/contigs_report_SPAdes.stdout \
+     2>> runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/contigs_report_SPAdes.stderr
+  4  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/delta-filter -i 95 -l 0 runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/SPAdes.delta \
+     > runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/SPAdes.fdelta \
+     2> runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/contigs_report_SPAdes.stderr
+  4  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-coords runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/SPAdes.delta \
+     > runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/SPAdes.coords_tmp \
+     2> runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/contigs_report_SPAdes.stderr
+  4  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-snps -S -T -H runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/SPAdes.delta \
+     < runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/SPAdes.coords.headless \
+     > runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/SPAdes.all_snps \
+     2> runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/contigs_report_SPAdes.stderr
+  3  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/delta-filter -i 95 -l 0 runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/SOAPdenovo2.delta \
+     > runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/SOAPdenovo2.fdelta \
+     2> runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/contigs_report_SOAPdenovo2.stderr
+  3  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-coords runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/SOAPdenovo2.delta \
+     > runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/SOAPdenovo2.coords_tmp \
+     2> runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/contigs_report_SOAPdenovo2.stderr
+  3  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-snps -S -T -H runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/SOAPdenovo2.delta \
+     < runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/SOAPdenovo2.coords.headless \
+     > runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/SOAPdenovo2.all_snps \
+     2> runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/contigs_report_SOAPdenovo2.stderr
+  2  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/delta-filter -i 95 -l 0 runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/Ray.delta \
+     > runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/Ray.fdelta \
+     2> runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/contigs_report_Ray.stderr
+  2  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-coords runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/Ray.delta \
+     > runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/Ray.coords_tmp \
+     2> runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/contigs_report_Ray.stderr
+  2  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-snps -S -T -H runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/Ray.delta \
+     < runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/Ray.coords.headless \
+     > runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/Ray.all_snps \
+     2> runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/contigs_report_Ray.stderr
+  1  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/delta-filter -i 95 -l 0 runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/IDBA_UD.delta \
+     > runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/IDBA_UD.fdelta \
+     2> runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/contigs_report_IDBA_UD.stderr
+  1  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-coords runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/IDBA_UD.delta \
+     > runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/IDBA_UD.coords_tmp \
+     2> runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/contigs_report_IDBA_UD.stderr
+  1  /home/gurevich/rep/quast/libs/MUMmer3.23-linux/show-snps -S -T -H runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/IDBA_UD.delta \
+     < runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/IDBA_UD.coords.headless \
+     > runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/nucmer_output/IDBA_UD.all_snps \
+     2> runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/contigs_report_IDBA_UD.stderr
+  4  Alignments: runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/alignments_SPAdes.tsv
+  4  Analysis is finished.
+
+  1  Alignments: runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/alignments_IDBA_UD.tsv
+  1  Analysis is finished.
+
+  3  Alignments: runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/alignments_SOAPdenovo2.tsv
+  3  Analysis is finished.
+
+  2  Alignments: runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/alignments_Ray.tsv
+  2  Analysis is finished.
+
+  Creating total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_sp_4_3_47FAA/contigs_reports/misassemblies_plot.pdf
+Done.
+
+2015-11-09 20:16:03
+Running NA-NGA calculation...
+  1  IDBA_UD, Largest alignment = 117419, NA50 = 16210, LA50 = 45
+  2  Ray, Largest alignment = 40426, NA50 = 9613, LA50 = 76
+  3  SOAPdenovo2, Largest alignment = 12799, NA50 = 1545, NGA50 = 595, LA50 = 556, LGA50 = 1835
+  4  SPAdes, Largest alignment = 114881, NA50 = 17344, LA50 = 37
+  Drawing cumulative plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_sp_4_3_47FAA/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_sp_4_3_47FAA/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_sp_4_3_47FAA/aligned_stats/NGAx_plot.pdf
+Done.
+
+2015-11-09 20:16:05
+Running Genome analyzer...
+  NOTICE: No file with genes provided. Use the -G option if you want to specify it.
+  NOTICE: No file with operons provided. Use the -O option if you want to specify it.
+  1  IDBA_UD
+  2  Ray
+  3  SOAPdenovo2
+  4  SPAdes
+  4  Analysis is finished.
+  1  Analysis is finished.
+  2  Analysis is finished.
+  3  Analysis is finished.
+  Drawing Genome fraction, % histogram...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_sp_4_3_47FAA/genome_stats/genome_fraction_histogram.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding option to enable it.
+
+2015-11-09 20:16:08
+Drawing large plots...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating contig alignment plot...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2015-11-09 20:16:26
+RESULTS:
+  Text versions of total report are saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_sp_4_3_47FAA/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_sp_4_3_47FAA/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_sp_4_3_47FAA/report.html
+  PDF version (tables and plots) saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_sp_4_3_47FAA/report.pdf
+  Contig alignment plot: /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_sp_4_3_47FAA/alignment.svg

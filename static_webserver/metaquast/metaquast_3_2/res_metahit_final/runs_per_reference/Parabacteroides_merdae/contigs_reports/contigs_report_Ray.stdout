@@ -1,0 +1,304 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Parabacteroides_merdae_gi_423721761_ref_NZ_]
+	Loaded [Parabacteroides_merdae_gi_423722616_ref_NZ_]
+	Loaded [Parabacteroides_merdae_gi_423723394_ref_NZ_]
+	Loaded [Parabacteroides_merdae_gi_423724126_ref_NZ_]
+	Loaded [Parabacteroides_merdae_gi_423724611_ref_NZ_]
+	Loaded [Parabacteroides_merdae_gi_423724986_ref_NZ_]
+	Loaded [Parabacteroides_merdae_gi_423725329_ref_NZ_]
+	Loaded [Parabacteroides_merdae_gi_423725517_ref_NZ_]
+	Loaded [Parabacteroides_merdae_gi_423725627_ref_NZ_]
+	Loaded [Parabacteroides_merdae_gi_423725688_ref_NZ_]
+	Loaded [Parabacteroides_merdae_gi_423725824_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 11
+	Total Region Length: 4458741
+Analyzing contigs...
+CONTIG: scaffold-1530 (66472bp)
+Top Length: 161  Top ID: 96.27
+		Skipping redundant alignment 83606 83684 | 14826 14904 | 79 79 | 98.73 | Parabacteroides_merdae_gi_423724126_ref_NZ_ scaffold-1530
+		This contig is misassembled. 3 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 66472 and total length of all aligns is 241
+		Alignment: 233390 233550 | 3201 3361 | 161 161 | 96.27 | Parabacteroides_merdae_gi_423724611_ref_NZ_ scaffold-1530
+		Alignment: 54151 54230 | 14904 14825 | 80 80 | 98.75 | Parabacteroides_merdae_gi_423723394_ref_NZ_ scaffold-1530
+		Unaligned bases: 66231
+CONTIG: scaffold-1654 (10350bp)
+Top Length: 1945  Top ID: 98.41
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 10350 and total length of all aligns is 2741
+		Alignment: 464510 465302 | 5997 5202 | 793 796 | 97.99 | Parabacteroides_merdae_gi_423723394_ref_NZ_ scaffold-1654
+		Alignment: 462564 464508 | 8093 6149 | 1945 1945 | 98.41 | Parabacteroides_merdae_gi_423723394_ref_NZ_ scaffold-1654
+		Unaligned bases: 7609
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold-3822 (1491bp)
+Top Length: 1491  Top ID: 99.73
+		One align captures most of this contig: 201013 202503 | 1491 1 | 1491 1491 | 99.73 | Parabacteroides_merdae_gi_423723394_ref_NZ_ scaffold-3822
+
+CONTIG: scaffold-5846 (1146bp)
+Top Length: 1146  Top ID: 99.83
+		One align captures most of this contig: 389475 390620 | 1 1146 | 1146 1146 | 99.83 | Parabacteroides_merdae_gi_423723394_ref_NZ_ scaffold-5846
+
+CONTIG: scaffold-6670 (526bp)
+Top Length: 526  Top ID: 100.0
+		One align captures most of this contig: 222876 223401 | 1 526 | 526 526 | 100.0 | Parabacteroides_merdae_gi_423723394_ref_NZ_ scaffold-6670
+
+CONTIG: scaffold-8122 (1105bp)
+Top Length: 1098  Top ID: 99.64
+		One align captures most of this contig: 398146 399243 | 1 1098 | 1098 1098 | 99.64 | Parabacteroides_merdae_gi_423723394_ref_NZ_ scaffold-8122
+
+CONTIG: scaffold-10856 (1661bp)
+Top Length: 1661  Top ID: 99.82
+		One align captures most of this contig: 390098 391758 | 1 1661 | 1661 1661 | 99.82 | Parabacteroides_merdae_gi_423723394_ref_NZ_ scaffold-10856
+
+CONTIG: scaffold-26756 (613bp)
+Top Length: 613  Top ID: 100.0
+		One align captures most of this contig: 386121 386733 | 613 1 | 613 613 | 100.0 | Parabacteroides_merdae_gi_423723394_ref_NZ_ scaffold-26756
+
+CONTIG: scaffold-44960 (1033bp)
+Top Length: 1033  Top ID: 99.81
+		One align captures most of this contig: 379552 380584 | 1033 1 | 1033 1033 | 99.81 | Parabacteroides_merdae_gi_423723394_ref_NZ_ scaffold-44960
+
+CONTIG: scaffold-51784 (1121bp)
+Top Length: 1121  Top ID: 99.29
+		One align captures most of this contig: 382160 383280 | 1121 1 | 1121 1121 | 99.29 | Parabacteroides_merdae_gi_423723394_ref_NZ_ scaffold-51784
+
+CONTIG: scaffold-57067 (780bp)
+Top Length: 780  Top ID: 99.1
+		One align captures most of this contig: 377551 378330 | 1 780 | 780 780 | 99.1 | Parabacteroides_merdae_gi_423723394_ref_NZ_ scaffold-57067
+
+CONTIG: scaffold-61227 (880bp)
+Top Length: 880  Top ID: 98.18
+		One align captures most of this contig: 383509 384388 | 880 1 | 880 880 | 98.18 | Parabacteroides_merdae_gi_423723394_ref_NZ_ scaffold-61227
+
+CONTIG: scaffold-84623 (907bp)
+Top Length: 907  Top ID: 99.78
+		One align captures most of this contig: 374148 375054 | 1 907 | 907 907 | 99.78 | Parabacteroides_merdae_gi_423723394_ref_NZ_ scaffold-84623
+
+CONTIG: scaffold-97615 (525bp)
+Top Length: 525  Top ID: 100.0
+		One align captures most of this contig: 381044 381568 | 1 525 | 525 525 | 100.0 | Parabacteroides_merdae_gi_423723394_ref_NZ_ scaffold-97615
+
+CONTIG: scaffold-128369 (1088bp)
+Top Length: 1088  Top ID: 99.26
+		One align captures most of this contig: 372803 373888 | 1088 1 | 1086 1088 | 99.26 | Parabacteroides_merdae_gi_423723394_ref_NZ_ scaffold-128369
+
+CONTIG: scaffold-195323 (5447bp)
+Top Length: 5447  Top ID: 99.98
+		One align captures most of this contig: 392248 397694 | 1 5447 | 5447 5447 | 99.98 | Parabacteroides_merdae_gi_423723394_ref_NZ_ scaffold-195323
+
+CONTIG: scaffold-1 (79037bp)
+Top Length: 12950  Top ID: 99.89
+		Skipping redundant alignment 239780 241732 | 22753 20801 | 1953 1953 | 96.36 | Parabacteroides_merdae_gi_423723394_ref_NZ_ scaffold-1
+		Skipping redundant alignment 232459 234686 | 30459 28231 | 2228 2229 | 95.78 | Parabacteroides_merdae_gi_423723394_ref_NZ_ scaffold-1
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 236134 237100 | 26358 25392 | 967 967 | 95.56 | Parabacteroides_merdae_gi_423723394_ref_NZ_ scaffold-1
+		This contig is misassembled. 13 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 79037 and total length of all aligns is 36300
+		Alignment: 677358 681781 | 25227 20804 | 4424 4424 | 99.59 | Parabacteroides_merdae_gi_423721761_ref_NZ_ scaffold-1
+		Alignment: 676398 677365 | 26358 25392 | 968 967 | 95.98 | Parabacteroides_merdae_gi_423721761_ref_NZ_ scaffold-1
+		Alignment: 675005 676399 | 28036 26642 | 1395 1395 | 96.2 | Parabacteroides_merdae_gi_423721761_ref_NZ_ scaffold-1
+		Alignment: 671951 674938 | 31218 28231 | 2988 2988 | 99.63 | Parabacteroides_merdae_gi_423721761_ref_NZ_ scaffold-1
+		Alignment: 671475 671963 | 31797 31309 | 489 489 | 100.0 | Parabacteroides_merdae_gi_423721761_ref_NZ_ scaffold-1
+		Alignment: 671292 671495 | 31777 31980 | 204 204 | 99.02 | Parabacteroides_merdae_gi_423721761_ref_NZ_ scaffold-1
+		Alignment: 670413 671312 | 32859 31960 | 900 900 | 100.0 | Parabacteroides_merdae_gi_423721761_ref_NZ_ scaffold-1
+		Alignment: 664368 670964 | 39535 32942 | 6597 6594 | 99.86 | Parabacteroides_merdae_gi_423721761_ref_NZ_ scaffold-1
+		Alignment: 658936 664368 | 45105 39675 | 5433 5431 | 99.91 | Parabacteroides_merdae_gi_423721761_ref_NZ_ scaffold-1
+		Alignment: 645981 658930 | 58160 45211 | 12950 12950 | 99.89 | Parabacteroides_merdae_gi_423721761_ref_NZ_ scaffold-1
+		Unaligned bases: 42737
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_merdae/contigs_reports/nucmer_output/Ray.used_snps
+	Reference Parabacteroides_merdae_gi_423721761_ref_NZ_: 10 total alignments. 1 total regions.
+		Region: 1 to 928763 (928763 bp)
+			START in gap: 1 to 645981 (645980 bp)
+			Align 1: 645981 658930 scaffold-1 58160 45211
+				Gap between this and next alignment: 658930 to 658936 (5 bp)
+				Next Alignment: 658936 664368 scaffold-1 45105 39675
+
+			Align 2: 658936 664368 scaffold-1 45105 39675
+				Negative gap (overlap) between this and next alignment: 664368 to 664368 (0 bp)
+				Next Alignment: 664368 670964 scaffold-1 39535 32942
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 39535 to 39534.
+			Align 3: 664369 670964 scaffold-1 39534 32942
+				Negative gap (overlap) between this and next alignment: 670964 to 670413 (-551 bp)
+				Next Alignment: 670413 671312 scaffold-1 32859 31960
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 32859 to 32307.
+			Align 4: 670965 671312 scaffold-1 32307 31960
+				Negative gap (overlap) between this and next alignment: 671312 to 671292 (-20 bp)
+				Next Alignment: 671292 671495 scaffold-1 31777 31980
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 31777 to 31798.
+			Align 5: 671313 671495 scaffold-1 31798 31980
+				Negative gap (overlap) between this and next alignment: 671495 to 671475 (-20 bp)
+				Next Alignment: 671475 671963 scaffold-1 31797 31309
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 31797 to 31776.
+			Align 6: 671496 671963 scaffold-1 31776 31309
+				Negative gap (overlap) between this and next alignment: 671963 to 671951 (-12 bp)
+				Next Alignment: 671951 674938 scaffold-1 31218 28231
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 31218 to 31205.
+			Align 7: 671964 674938 scaffold-1 31205 28231
+				Gap between this and next alignment: 674938 to 675005 (66 bp)
+				Next Alignment: 675005 676399 scaffold-1 28036 26642
+
+			Align 8: 675005 676399 scaffold-1 28036 26642
+				Negative gap (overlap) between this and next alignment: 676399 to 676398 (-1 bp)
+				Next Alignment: 676398 677365 scaffold-1 26358 25392
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 26358 to 26356.
+			Align 9: 676400 677365 scaffold-1 26356 25392
+				Negative gap (overlap) between this and next alignment: 677365 to 677358 (-7 bp)
+				Next Alignment: 677358 681781 scaffold-1 25227 20804
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 25227 to 25219.
+			Align 10: 677366 681781 scaffold-1 25219 20804
+			END in gap: 681781 to 928763 (246982 bp)
+
+ERROR: Reference Parabacteroides_merdae_gi_423724986_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Parabacteroides_merdae_gi_423721761_ref_NZ_', 'Parabacteroides_merdae_gi_423723394_ref_NZ_', 'Parabacteroides_merdae_gi_423724611_ref_NZ_']
+ERROR: Reference Parabacteroides_merdae_gi_423725517_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Parabacteroides_merdae_gi_423721761_ref_NZ_', 'Parabacteroides_merdae_gi_423723394_ref_NZ_', 'Parabacteroides_merdae_gi_423724611_ref_NZ_']
+	Reference Parabacteroides_merdae_gi_423723394_ref_NZ_: 17 total alignments. 1 total regions.
+		Region: 1 to 734811 (734811 bp)
+			START in gap: 1 to 54151 (54150 bp)
+			Align 1: 54151 54230 scaffold-1530 14904 14825
+				Gap between this and next alignment: 54230 to 201013 (146782 bp)
+				Next Alignment: 201013 202503 scaffold-3822 1491 1
+
+			Align 2: 201013 202503 scaffold-3822 1491 1
+				Gap between this and next alignment: 202503 to 222876 (20372 bp)
+				Next Alignment: 222876 223401 scaffold-6670 1 526
+
+			Align 3: 222876 223401 scaffold-6670 1 526
+				Gap between this and next alignment: 223401 to 372803 (149401 bp)
+				Next Alignment: 372803 373888 scaffold-128369 1088 1
+
+			Align 4: 372803 373888 scaffold-128369 1088 1
+				Gap between this and next alignment: 373888 to 374148 (259 bp)
+				Next Alignment: 374148 375054 scaffold-84623 1 907
+
+			Align 5: 374148 375054 scaffold-84623 1 907
+				Gap between this and next alignment: 375054 to 377551 (2496 bp)
+				Next Alignment: 377551 378330 scaffold-57067 1 780
+
+			Align 6: 377551 378330 scaffold-57067 1 780
+				Gap between this and next alignment: 378330 to 379552 (1221 bp)
+				Next Alignment: 379552 380584 scaffold-44960 1033 1
+
+			Align 7: 379552 380584 scaffold-44960 1033 1
+				Gap between this and next alignment: 380584 to 381044 (459 bp)
+				Next Alignment: 381044 381568 scaffold-97615 1 525
+
+			Align 8: 381044 381568 scaffold-97615 1 525
+				Gap between this and next alignment: 381568 to 382160 (591 bp)
+				Next Alignment: 382160 383280 scaffold-51784 1121 1
+
+			Align 9: 382160 383280 scaffold-51784 1121 1
+				Gap between this and next alignment: 383280 to 383509 (228 bp)
+				Next Alignment: 383509 384388 scaffold-61227 880 1
+
+			Align 10: 383509 384388 scaffold-61227 880 1
+				Gap between this and next alignment: 384388 to 386121 (1732 bp)
+				Next Alignment: 386121 386733 scaffold-26756 613 1
+
+			Align 11: 386121 386733 scaffold-26756 613 1
+				Gap between this and next alignment: 386733 to 389475 (2741 bp)
+				Next Alignment: 389475 390620 scaffold-5846 1 1146
+
+			Align 12: 389475 390620 scaffold-5846 1 1146
+				Negative gap (overlap) between this and next alignment: 390620 to 390098 (-522 bp)
+				Next Alignment: 390098 391758 scaffold-10856 1 1661
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 524.
+			Align 13: 390621 391758 scaffold-10856 524 1661
+				Gap between this and next alignment: 391758 to 392248 (489 bp)
+				Next Alignment: 392248 397694 scaffold-195323 1 5447
+
+			Align 14: 392248 397694 scaffold-195323 1 5447
+				Gap between this and next alignment: 397694 to 398146 (451 bp)
+				Next Alignment: 398146 399243 scaffold-8122 1 1098
+
+			Align 15: 398146 399243 scaffold-8122 1 1098
+				Gap between this and next alignment: 399243 to 462564 (63320 bp)
+				Next Alignment: 462564 464508 scaffold-1654 8093 6149
+
+			Align 16: 462564 464508 scaffold-1654 8093 6149
+				Gap between this and next alignment: 464508 to 464510 (1 bp)
+				Next Alignment: 464510 465302 scaffold-1654 5997 5202
+
+			Align 17: 464510 465302 scaffold-1654 5997 5202
+			END in gap: 465302 to 734811 (269509 bp)
+
+ERROR: Reference Parabacteroides_merdae_gi_423725688_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Parabacteroides_merdae_gi_423721761_ref_NZ_', 'Parabacteroides_merdae_gi_423723394_ref_NZ_', 'Parabacteroides_merdae_gi_423724611_ref_NZ_']
+	Reference Parabacteroides_merdae_gi_423724611_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 454576 (454576 bp)
+			START in gap: 1 to 233390 (233389 bp)
+			Align 1: 233390 233550 scaffold-1530 3201 3361
+			END in gap: 233550 to 454576 (221026 bp)
+
+ERROR: Reference Parabacteroides_merdae_gi_423725824_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Parabacteroides_merdae_gi_423721761_ref_NZ_', 'Parabacteroides_merdae_gi_423723394_ref_NZ_', 'Parabacteroides_merdae_gi_423724611_ref_NZ_']
+ERROR: Reference Parabacteroides_merdae_gi_423722616_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Parabacteroides_merdae_gi_423721761_ref_NZ_', 'Parabacteroides_merdae_gi_423723394_ref_NZ_', 'Parabacteroides_merdae_gi_423724611_ref_NZ_']
+ERROR: Reference Parabacteroides_merdae_gi_423725627_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Parabacteroides_merdae_gi_423721761_ref_NZ_', 'Parabacteroides_merdae_gi_423723394_ref_NZ_', 'Parabacteroides_merdae_gi_423724611_ref_NZ_']
+ERROR: Reference Parabacteroides_merdae_gi_423725329_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Parabacteroides_merdae_gi_423721761_ref_NZ_', 'Parabacteroides_merdae_gi_423723394_ref_NZ_', 'Parabacteroides_merdae_gi_423724611_ref_NZ_']
+ERROR: Reference Parabacteroides_merdae_gi_423724126_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Parabacteroides_merdae_gi_423721761_ref_NZ_', 'Parabacteroides_merdae_gi_423723394_ref_NZ_', 'Parabacteroides_merdae_gi_423724611_ref_NZ_']
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_merdae/contigs_reports/nucmer_output/Ray.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 3 part
+Partially Unaligned Contigs with Misassemblies: 3
+Unaligned Contig Bases: 116577
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 56500
+
+	SNPs: 239
+	Insertions: 10
+	Deletions: 11
+
+	Positive Gaps: 23
+		Internal Gaps:  3
+		External Gaps:  20
+		External Gap Total:  2061578
+		External Gap Average: 103079
+	Negative Gaps: 8
+		Internal Overlaps:  7
+		External Overlaps:  1
+		External Overlaps Total: -522
+		External Overlaps Average: -522
+	Contigs with Redundant Alignments: 0 (0)

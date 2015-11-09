@@ -1,0 +1,98 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Mollicutes_bacterium_D7_gi_224580900_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 1
+	Total Region Length: 3561737
+Analyzing contigs...
+CONTIG: scaffold18488_10.8 (726bp)
+Top Length: 124  Top ID: 96.77
+		This contig is partially unaligned. (Aligned 124 out of 726 bases)
+		Alignment: 3504204 3504327 | 124 1 | 124 124 | 96.77 | Mollicutes_bacterium_D7_gi_224580900_ref_NZ_ scaffold18488_10.8
+		Unaligned bases: 125 to 726 (602)
+
+CONTIG: scaffold34865__2.0 (769bp)
+Top Length: 360  Top ID: 97.78
+		This contig is partially unaligned. (Aligned 360 out of 769 bases)
+		Alignment: 2635310 2635669 | 769 410 | 360 360 | 97.78 | Mollicutes_bacterium_D7_gi_224580900_ref_NZ_ scaffold34865__2.0
+		Unaligned bases: 1 to 409 (409)
+
+CONTIG: scaffold50030__2.7 (1211bp)
+Top Length: 525  Top ID: 96.38
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 2623918 2624026 | 450 341 | 109 110 | 96.36 | Mollicutes_bacterium_D7_gi_224580900_ref_NZ_ scaffold50030__2.7
+			  Gap between these two alignments (local misassembly). Inconsistency = 145 
+			Real Alignment 2: 2623193 2623717 | 1030 506 | 525 525 | 96.38 | Mollicutes_bacterium_D7_gi_224580900_ref_NZ_ scaffold50030__2.7
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: C743486_30.0 (884bp)
+Top Length: 884  Top ID: 95.93
+		One align captures most of this contig: 2571785 2572668 | 884 1 | 884 884 | 95.93 | Mollicutes_bacterium_D7_gi_224580900_ref_NZ_ C743486_30.0
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Mollicutes_bacterium_D7/contigs_reports/nucmer_output/SOAPdenovo2.used_snps
+	Reference Mollicutes_bacterium_D7_gi_224580900_ref_NZ_: 5 total alignments. 1 total regions.
+		Region: 1 to 3561737 (3561737 bp)
+			START in gap: 1 to 2571785 (2571784 bp)
+			Align 1: 2571785 2572668 C743486_30.0 884 1
+				Gap between this and next alignment: 2572668 to 2623193 (50524 bp)
+				Next Alignment: 2623193 2623717 scaffold50030__2.7 1030 506
+
+			Align 2: 2623193 2623717 scaffold50030__2.7 1030 506
+				Gap between this and next alignment: 2623717 to 2623918 (200 bp)
+				Next Alignment: 2623918 2624026 scaffold50030__2.7 450 341
+
+			Align 3: 2623918 2624026 scaffold50030__2.7 450 341
+				Gap between this and next alignment: 2624026 to 2635310 (11283 bp)
+				Next Alignment: 2635310 2635669 scaffold34865__2.0 769 410
+
+			Align 4: 2635310 2635669 scaffold34865__2.0 769 410
+				Gap between this and next alignment: 2635669 to 3504204 (868534 bp)
+				Next Alignment: 3504204 3504327 scaffold18488_10.8 124 1
+
+			Align 5: 3504204 3504327 scaffold18488_10.8 124 1
+			END in gap: 3504327 to 3561737 (57410 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Mollicutes_bacterium_D7/contigs_reports/nucmer_output/SOAPdenovo2.used_snps
+
+Results:
+	Local Misassemblies: 1
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 2 part
+Partially Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 1011
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 2002
+
+	SNPs: 70
+	Insertions: 1
+	Deletions: 0
+
+	Positive Gaps: 6
+		Internal Gaps:  1
+		External Gaps:  5
+		External Gap Total:  3559535
+		External Gap Average: 711907
+	Negative Gaps: 0
+		Internal Overlaps:  0
+		External Overlaps:  0
+		External Overlaps Total:  0
+		External Overlaps Average: 0
+	Contigs with Redundant Alignments: 0 (0)

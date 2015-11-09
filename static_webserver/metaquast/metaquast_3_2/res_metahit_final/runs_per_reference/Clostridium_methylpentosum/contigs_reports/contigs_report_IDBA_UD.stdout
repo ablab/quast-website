@@ -1,0 +1,137 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Clostridium_methylpentosum_gi_224515374_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 1
+	Total Region Length: 3478423
+Analyzing contigs...
+CONTIG: scaffold_1 (215617bp)
+Top Length: 80  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 80 out of 215617 bases)
+		Alignment: 780022 780101 | 111101 111180 | 80 80 | 100.0 | Clostridium_methylpentosum_gi_224515374_ref_NZ_ scaffold_1
+		Unaligned bases: 1 to 111100 (111100)
+		Unaligned bases: 111181 to 215617 (104437)
+
+CONTIG: scaffold_253 (27331bp)
+Top Length: 158  Top ID: 95.57
+		Skipping redundant alignment 780022 780099 | 522 445 | 78 78 | 100.0 | Clostridium_methylpentosum_gi_224515374_ref_NZ_ scaffold_253
+		Skipping redundant alignment 2002471 2002547 | 522 446 | 77 77 | 100.0 | Clostridium_methylpentosum_gi_224515374_ref_NZ_ scaffold_253
+		This contig is partially unaligned. (Aligned 158 out of 27331 bases)
+		Alignment: 3437534 3437691 | 524 367 | 158 158 | 95.57 | Clostridium_methylpentosum_gi_224515374_ref_NZ_ scaffold_253
+		Unaligned bases: 1 to 366 (366)
+		Unaligned bases: 525 to 27331 (26807)
+
+CONTIG: scaffold_1537 (11128bp)
+Top Length: 2698  Top ID: 99.78
+		This contig is partially unaligned. (Aligned 2698 out of 11128 bases)
+		Alignment: 3046491 3049184 | 11128 8431 | 2694 2698 | 99.78 | Clostridium_methylpentosum_gi_224515374_ref_NZ_ scaffold_1537
+		Unaligned bases: 1 to 8430 (8430)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold_4080 (3200bp)
+Top Length: 76  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 76 out of 3200 bases)
+		Alignment: 843335 843410 | 169 244 | 76 76 | 100.0 | Clostridium_methylpentosum_gi_224515374_ref_NZ_ scaffold_4080
+		Unaligned bases: 1 to 168 (168)
+		Unaligned bases: 245 to 3200 (2956)
+
+CONTIG: scaffold_9801 (1323bp)
+Top Length: 1323  Top ID: 99.62
+		One align captures most of this contig: 3043700 3045022 | 1 1323 | 1323 1323 | 99.62 | Clostridium_methylpentosum_gi_224515374_ref_NZ_ scaffold_9801
+
+CONTIG: scaffold_16869 (859bp)
+Top Length: 158  Top ID: 97.47
+		This contig is partially unaligned. (Aligned 158 out of 859 bases)
+		Alignment: 1512846 1513003 | 1 158 | 158 158 | 97.47 | Clostridium_methylpentosum_gi_224515374_ref_NZ_ scaffold_16869
+		Unaligned bases: 159 to 859 (701)
+
+CONTIG: scaffold_24978 (633bp)
+Top Length: 76  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 76 out of 633 bases)
+		Alignment: 843335 843410 | 605 530 | 76 76 | 100.0 | Clostridium_methylpentosum_gi_224515374_ref_NZ_ scaffold_24978
+		Unaligned bases: 1 to 529 (529)
+		Unaligned bases: 606 to 633 (28)
+
+CONTIG: scaffold_27998 (565bp)
+Top Length: 367  Top ID: 95.93
+		This contig is partially unaligned. (Aligned 367 out of 565 bases)
+		Alignment: 1508396 1508763 | 369 3 | 368 367 | 95.93 | Clostridium_methylpentosum_gi_224515374_ref_NZ_ scaffold_27998
+		Unaligned bases: 1 to 2 (2)
+		Unaligned bases: 370 to 565 (196)
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Clostridium_methylpentosum/contigs_reports/nucmer_output/IDBA_UD.used_snps
+	Reference Clostridium_methylpentosum_gi_224515374_ref_NZ_: 8 total alignments. 1 total regions.
+		Region: 1 to 3478423 (3478423 bp)
+			START in gap: 1 to 780022 (780021 bp)
+			Align 1: 780022 780101 scaffold_1 111101 111180
+				Gap between this and next alignment: 780101 to 843335 (63233 bp)
+				Next Alignment: 843335 843410 scaffold_4080 169 244
+
+			Align 2: 843335 843410 scaffold_4080 169 244
+				The next alignment (843335 843410 scaffold_24978 605 530) is redundant. Skipping.
+				Gap between this and next alignment: 843410 to 1508396 (664985 bp)
+				Next Alignment: 1508396 1508763 scaffold_27998 369 3
+
+			Align 4: 1508396 1508763 scaffold_27998 369 3
+				Gap between this and next alignment: 1508763 to 1512846 (4082 bp)
+				Next Alignment: 1512846 1513003 scaffold_16869 1 158
+
+			Align 5: 1512846 1513003 scaffold_16869 1 158
+				Gap between this and next alignment: 1513003 to 3043700 (1530696 bp)
+				Next Alignment: 3043700 3045022 scaffold_9801 1 1323
+
+			Align 6: 3043700 3045022 scaffold_9801 1 1323
+				Gap between this and next alignment: 3045022 to 3046491 (1468 bp)
+				Next Alignment: 3046491 3049184 scaffold_1537 11128 8431
+
+			Align 7: 3046491 3049184 scaffold_1537 11128 8431
+				Gap between this and next alignment: 3049184 to 3437534 (388349 bp)
+				Next Alignment: 3437534 3437691 scaffold_253 524 367
+
+			Align 8: 3437534 3437691 scaffold_253 524 367
+			END in gap: 3437691 to 3478423 (40732 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Clostridium_methylpentosum/contigs_reports/nucmer_output/IDBA_UD.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 7 part
+Partially Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 255720
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 4857
+
+	SNPs: 30
+	Insertions: 5
+	Deletions: 2
+
+	Positive Gaps: 8
+		Internal Gaps:  0
+		External Gaps:  8
+		External Gap Total:  3473566
+		External Gap Average: 434196
+	Negative Gaps: 0
+		Internal Overlaps:  0
+		External Overlaps:  0
+		External Overlaps Total:  0
+		External Overlaps Average: 0
+	Contigs with Redundant Alignments: 1 (76)

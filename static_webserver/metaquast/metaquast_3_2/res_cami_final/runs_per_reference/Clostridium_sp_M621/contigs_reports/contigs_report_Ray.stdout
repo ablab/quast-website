@@ -1,0 +1,187 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Clostridium_sp_M621_gi_283767235_ref_NZ_]
+	Loaded [Clostridium_sp_M621_gi_283767236_ref_NZ_]
+	Loaded [Clostridium_sp_M621_gi_283767237_ref_NZ_]
+	Loaded [Clostridium_sp_M621_gi_283767238_ref_NZ_]
+	Loaded [Clostridium_sp_M621_gi_283767239_ref_NZ_]
+	Loaded [Clostridium_sp_M621_gi_283767240_ref_NZ_]
+	Loaded [Clostridium_sp_M621_gi_283767241_ref_NZ_]
+	Loaded [Clostridium_sp_M621_gi_283767242_ref_NZ_]
+	Loaded [Clostridium_sp_M621_gi_283767243_ref_NZ_]
+	Loaded [Clostridium_sp_M621_gi_283767244_ref_NZ_]
+	Loaded [Clostridium_sp_M621_gi_283767245_ref_NZ_]
+	Loaded [Clostridium_sp_M621_gi_283767246_ref_NZ_]
+	Loaded [Clostridium_sp_M621_gi_283767247_ref_NZ_]
+	Loaded [Clostridium_sp_M621_gi_283767248_ref_NZ_]
+	Loaded [Clostridium_sp_M621_gi_283767249_ref_NZ_]
+	Loaded [Clostridium_sp_M621_gi_283767250_ref_NZ_]
+	Loaded [Clostridium_sp_M621_gi_283767251_ref_NZ_]
+	Loaded [Clostridium_sp_M621_gi_283767252_ref_NZ_]
+	Loaded [Clostridium_sp_M621_gi_283767253_ref_NZ_]
+	Loaded [Clostridium_sp_M621_gi_283767254_ref_NZ_]
+	Loaded [Clostridium_sp_M621_gi_283767255_ref_NZ_]
+	Loaded [Clostridium_sp_M621_gi_283767256_ref_NZ_]
+	Loaded [Clostridium_sp_M621_gi_283767257_ref_NZ_]
+	Loaded [Clostridium_sp_M621_gi_283767258_ref_NZ_]
+	Loaded [Clostridium_sp_M621_gi_283767259_ref_NZ_]
+	Loaded [Clostridium_sp_M621_gi_283767260_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 26
+	Total Region Length: 3842594
+Analyzing contigs...
+CONTIG: scaffold-147 (242734bp)
+Top Length: 9283  Top ID: 95.14
+		This contig is misassembled. 8 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 242734 and total length of all aligns is 27899
+		Alignment: 266311 266973 | 147756 147094 | 663 663 | 99.4 | Clostridium_sp_M621_gi_283767236_ref_NZ_ scaffold-147
+		Alignment: 256930 266160 | 157033 147751 | 9231 9283 | 95.14 | Clostridium_sp_M621_gi_283767236_ref_NZ_ scaffold-147
+		Alignment: 248489 255398 | 165257 158344 | 6910 6914 | 98.96 | Clostridium_sp_M621_gi_283767236_ref_NZ_ scaffold-147
+		Alignment: 244988 248488 | 171492 167991 | 3501 3502 | 99.77 | Clostridium_sp_M621_gi_283767236_ref_NZ_ scaffold-147
+		Alignment: 231234 232803 | 173039 171471 | 1570 1569 | 98.85 | Clostridium_sp_M621_gi_283767236_ref_NZ_ scaffold-147
+		Alignment: 41928 43592 | 196778 198442 | 1665 1665 | 99.64 | Clostridium_sp_M621_gi_283767237_ref_NZ_ scaffold-147
+		Alignment: 47063 48372 | 198443 199752 | 1310 1310 | 99.31 | Clostridium_sp_M621_gi_283767237_ref_NZ_ scaffold-147
+		Alignment: 228223 231235 | 214884 211864 | 3013 3021 | 97.45 | Clostridium_sp_M621_gi_283767236_ref_NZ_ scaffold-147
+		Unaligned bases: 214835
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold-7313 (558bp)
+Top Length: 138  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 138 out of 558 bases)
+		Alignment: 53 190 | 303 440 | 138 138 | 100.0 | Clostridium_sp_M621_gi_283767247_ref_NZ_ scaffold-7313
+		Unaligned bases: 1 to 302 (302)
+		Unaligned bases: 441 to 558 (118)
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Clostridium_sp_M621/contigs_reports/nucmer_output/Ray.used_snps
+ERROR: Reference Clostridium_sp_M621_gi_283767248_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M621_gi_283767247_ref_NZ_', 'Clostridium_sp_M621_gi_283767236_ref_NZ_', 'Clostridium_sp_M621_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M621_gi_283767245_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M621_gi_283767247_ref_NZ_', 'Clostridium_sp_M621_gi_283767236_ref_NZ_', 'Clostridium_sp_M621_gi_283767237_ref_NZ_']
+	Reference Clostridium_sp_M621_gi_283767247_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 3104 (3104 bp)
+			START in gap: 1 to 53 (52 bp)
+			Align 1: 53 190 scaffold-7313 303 440
+			END in gap: 190 to 3104 (2914 bp)
+
+	Reference Clostridium_sp_M621_gi_283767236_ref_NZ_: 6 total alignments. 1 total regions.
+		Region: 1 to 648183 (648183 bp)
+			START in gap: 1 to 228223 (228222 bp)
+			Align 1: 228223 231235 scaffold-147 214884 211864
+				Negative gap (overlap) between this and next alignment: 231235 to 231234 (-1 bp)
+				Next Alignment: 231234 232803 scaffold-147 173039 171471
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 173039 to 173037.
+			Align 2: 231236 232803 scaffold-147 173037 171471
+				Gap between this and next alignment: 232803 to 244988 (12184 bp)
+				Next Alignment: 244988 248488 scaffold-147 171492 167991
+
+			Align 3: 244988 248488 scaffold-147 171492 167991
+				Next Alignment: 248489 255398 scaffold-147 165257 158344
+
+			Align 4: 248489 255398 scaffold-147 165257 158344
+				Gap between this and next alignment: 255398 to 256930 (1531 bp)
+				Next Alignment: 256930 266160 scaffold-147 157033 147751
+
+			Align 5: 256930 266160 scaffold-147 157033 147751
+				Gap between this and next alignment: 266160 to 266311 (150 bp)
+				Next Alignment: 266311 266973 scaffold-147 147756 147094
+
+			Align 6: 266311 266973 scaffold-147 147756 147094
+			END in gap: 266973 to 648183 (381210 bp)
+
+	Reference Clostridium_sp_M621_gi_283767237_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 463016 (463016 bp)
+			START in gap: 1 to 41928 (41927 bp)
+			Align 1: 41928 43592 scaffold-147 196778 198442
+				Gap between this and next alignment: 43592 to 47063 (3470 bp)
+				Next Alignment: 47063 48372 scaffold-147 198443 199752
+
+			Align 2: 47063 48372 scaffold-147 198443 199752
+			END in gap: 48372 to 463016 (414644 bp)
+
+ERROR: Reference Clostridium_sp_M621_gi_283767260_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M621_gi_283767247_ref_NZ_', 'Clostridium_sp_M621_gi_283767236_ref_NZ_', 'Clostridium_sp_M621_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M621_gi_283767239_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M621_gi_283767247_ref_NZ_', 'Clostridium_sp_M621_gi_283767236_ref_NZ_', 'Clostridium_sp_M621_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M621_gi_283767254_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M621_gi_283767247_ref_NZ_', 'Clostridium_sp_M621_gi_283767236_ref_NZ_', 'Clostridium_sp_M621_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M621_gi_283767242_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M621_gi_283767247_ref_NZ_', 'Clostridium_sp_M621_gi_283767236_ref_NZ_', 'Clostridium_sp_M621_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M621_gi_283767241_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M621_gi_283767247_ref_NZ_', 'Clostridium_sp_M621_gi_283767236_ref_NZ_', 'Clostridium_sp_M621_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M621_gi_283767257_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M621_gi_283767247_ref_NZ_', 'Clostridium_sp_M621_gi_283767236_ref_NZ_', 'Clostridium_sp_M621_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M621_gi_283767238_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M621_gi_283767247_ref_NZ_', 'Clostridium_sp_M621_gi_283767236_ref_NZ_', 'Clostridium_sp_M621_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M621_gi_283767259_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M621_gi_283767247_ref_NZ_', 'Clostridium_sp_M621_gi_283767236_ref_NZ_', 'Clostridium_sp_M621_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M621_gi_283767244_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M621_gi_283767247_ref_NZ_', 'Clostridium_sp_M621_gi_283767236_ref_NZ_', 'Clostridium_sp_M621_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M621_gi_283767246_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M621_gi_283767247_ref_NZ_', 'Clostridium_sp_M621_gi_283767236_ref_NZ_', 'Clostridium_sp_M621_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M621_gi_283767258_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M621_gi_283767247_ref_NZ_', 'Clostridium_sp_M621_gi_283767236_ref_NZ_', 'Clostridium_sp_M621_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M621_gi_283767252_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M621_gi_283767247_ref_NZ_', 'Clostridium_sp_M621_gi_283767236_ref_NZ_', 'Clostridium_sp_M621_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M621_gi_283767250_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M621_gi_283767247_ref_NZ_', 'Clostridium_sp_M621_gi_283767236_ref_NZ_', 'Clostridium_sp_M621_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M621_gi_283767235_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M621_gi_283767247_ref_NZ_', 'Clostridium_sp_M621_gi_283767236_ref_NZ_', 'Clostridium_sp_M621_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M621_gi_283767243_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M621_gi_283767247_ref_NZ_', 'Clostridium_sp_M621_gi_283767236_ref_NZ_', 'Clostridium_sp_M621_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M621_gi_283767255_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M621_gi_283767247_ref_NZ_', 'Clostridium_sp_M621_gi_283767236_ref_NZ_', 'Clostridium_sp_M621_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M621_gi_283767249_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M621_gi_283767247_ref_NZ_', 'Clostridium_sp_M621_gi_283767236_ref_NZ_', 'Clostridium_sp_M621_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M621_gi_283767256_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M621_gi_283767247_ref_NZ_', 'Clostridium_sp_M621_gi_283767236_ref_NZ_', 'Clostridium_sp_M621_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M621_gi_283767240_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M621_gi_283767247_ref_NZ_', 'Clostridium_sp_M621_gi_283767236_ref_NZ_', 'Clostridium_sp_M621_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M621_gi_283767253_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M621_gi_283767247_ref_NZ_', 'Clostridium_sp_M621_gi_283767236_ref_NZ_', 'Clostridium_sp_M621_gi_283767237_ref_NZ_']
+ERROR: Reference Clostridium_sp_M621_gi_283767251_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Clostridium_sp_M621_gi_283767247_ref_NZ_', 'Clostridium_sp_M621_gi_283767236_ref_NZ_', 'Clostridium_sp_M621_gi_283767237_ref_NZ_']
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_cami_final/runs_per_reference/Clostridium_sp_M621/contigs_reports/nucmer_output/Ray.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 2 part
+Partially Unaligned Contigs with Misassemblies: 1
+Unaligned Contig Bases: 215255
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 27999
+
+	SNPs: 542
+	Insertions: 84
+	Deletions: 20
+
+	Positive Gaps: 10
+		Internal Gaps:  4
+		External Gaps:  6
+		External Gap Total:  1068969
+		External Gap Average: 178162
+	Negative Gaps: 1
+		Internal Overlaps:  1
+		External Overlaps:  0
+		External Overlaps Total:  0
+		External Overlaps Average: 0
+	Contigs with Redundant Alignments: 0 (0)

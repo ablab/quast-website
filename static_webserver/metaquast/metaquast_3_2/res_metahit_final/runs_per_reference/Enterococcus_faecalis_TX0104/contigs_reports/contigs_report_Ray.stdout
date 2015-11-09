@@ -1,0 +1,112 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Enterococcus_faecalis_TX0104_gi_237754713_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 1
+	Total Region Length: 3156478
+Analyzing contigs...
+CONTIG: scaffold-324 (3573bp)
+Top Length: 391  Top ID: 100.0
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 3573 and total length of all aligns is 577
+		Alignment: 31299 31486 | 1 188 | 188 188 | 100.0 | Enterococcus_faecalis_TX0104_gi_237754713_ref_NZ_ scaffold-324
+		Alignment: 11528 11918 | 577 187 | 391 391 | 100.0 | Enterococcus_faecalis_TX0104_gi_237754713_ref_NZ_ scaffold-324
+		Unaligned bases: 2996
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold-3422 (2504bp)
+Top Length: 2423  Top ID: 95.05
+		This contig is partially unaligned. (Aligned 2423 out of 2504 bases)
+		Alignment: 1603313 1605734 | 2504 82 | 2422 2423 | 95.05 | Enterococcus_faecalis_TX0104_gi_237754713_ref_NZ_ scaffold-3422
+		Unaligned bases: 1 to 81 (81)
+
+CONTIG: scaffold-7340 (666bp)
+Top Length: 129  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 129 out of 666 bases)
+		Alignment: 630291 630419 | 170 42 | 129 129 | 100.0 | Enterococcus_faecalis_TX0104_gi_237754713_ref_NZ_ scaffold-7340
+		Unaligned bases: 1 to 41 (41)
+		Unaligned bases: 171 to 666 (496)
+
+CONTIG: scaffold-7721 (1454bp)
+Top Length: 126  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 126 out of 1454 bases)
+		Alignment: 630174 630299 | 1382 1257 | 126 126 | 100.0 | Enterococcus_faecalis_TX0104_gi_237754713_ref_NZ_ scaffold-7721
+		Unaligned bases: 1 to 1256 (1256)
+		Unaligned bases: 1383 to 1454 (72)
+
+CONTIG: scaffold-66600 (709bp)
+Top Length: 709  Top ID: 97.46
+		One align captures most of this contig: 1409714 1410422 | 1 709 | 709 709 | 97.46 | Enterococcus_faecalis_TX0104_gi_237754713_ref_NZ_ scaffold-66600
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Enterococcus_faecalis_TX0104/contigs_reports/nucmer_output/Ray.used_snps
+	Reference Enterococcus_faecalis_TX0104_gi_237754713_ref_NZ_: 6 total alignments. 1 total regions.
+		Region: 1 to 3156478 (3156478 bp)
+			START in gap: 1 to 11528 (11527 bp)
+			Align 1: 11528 11918 scaffold-324 577 187
+				Gap between this and next alignment: 11918 to 31299 (19380 bp)
+				Next Alignment: 31299 31486 scaffold-324 1 188
+
+			Align 2: 31299 31486 scaffold-324 1 188
+				Gap between this and next alignment: 31486 to 630174 (598687 bp)
+				Next Alignment: 630174 630299 scaffold-7721 1382 1257
+
+			Align 3: 630174 630299 scaffold-7721 1382 1257
+				Negative gap (overlap) between this and next alignment: 630299 to 630291 (-8 bp)
+				Next Alignment: 630291 630419 scaffold-7340 170 42
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 170 to 161.
+			Align 4: 630300 630419 scaffold-7340 161 42
+				Gap between this and next alignment: 630419 to 1409714 (779294 bp)
+				Next Alignment: 1409714 1410422 scaffold-66600 1 709
+
+			Align 5: 1409714 1410422 scaffold-66600 1 709
+				Gap between this and next alignment: 1410422 to 1603313 (192890 bp)
+				Next Alignment: 1603313 1605734 scaffold-3422 2504 82
+
+			Align 6: 1603313 1605734 scaffold-3422 2504 82
+			END in gap: 1605734 to 3156478 (1550744 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Enterococcus_faecalis_TX0104/contigs_reports/nucmer_output/Ray.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 4 part
+Partially Unaligned Contigs with Misassemblies: 1
+Unaligned Contig Bases: 4942
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 3956
+
+	SNPs: 137
+	Insertions: 1
+	Deletions: 0
+
+	Positive Gaps: 6
+		Internal Gaps:  1
+		External Gaps:  5
+		External Gap Total:  3133142
+		External Gap Average: 626628
+	Negative Gaps: 1
+		Internal Overlaps:  0
+		External Overlaps:  1
+		External Overlaps Total: -8
+		External Overlaps Average: -8
+	Contigs with Redundant Alignments: 0 (0)

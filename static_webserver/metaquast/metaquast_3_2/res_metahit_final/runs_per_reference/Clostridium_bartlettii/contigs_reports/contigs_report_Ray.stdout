@@ -1,0 +1,106 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Clostridium_bartlettii_gi_224104202_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 1
+	Total Region Length: 2972256
+Analyzing contigs...
+CONTIG: scaffold-3432 (1428bp)
+Top Length: 1427  Top ID: 96.85
+		One align captures most of this contig: 1118661 1120087 | 2 1428 | 1427 1427 | 96.85 | Clostridium_bartlettii_gi_224104202_ref_NZ_ scaffold-3432
+
+CONTIG: scaffold-7274 (615bp)
+Top Length: 615  Top ID: 98.05
+		One align captures most of this contig: 1123602 1124216 | 615 1 | 615 615 | 98.05 | Clostridium_bartlettii_gi_224104202_ref_NZ_ scaffold-7274
+
+CONTIG: scaffold-38033 (606bp)
+Top Length: 401  Top ID: 99.25
+		This contig is partially unaligned. (Aligned 401 out of 606 bases)
+		Alignment: 1140885 1141285 | 1 401 | 401 401 | 99.25 | Clostridium_bartlettii_gi_224104202_ref_NZ_ scaffold-38033
+		Unaligned bases: 402 to 606 (205)
+
+CONTIG: scaffold-60170 (598bp)
+Top Length: 598  Top ID: 97.99
+		One align captures most of this contig: 1122273 1122870 | 598 1 | 598 598 | 97.99 | Clostridium_bartlettii_gi_224104202_ref_NZ_ scaffold-60170
+
+CONTIG: scaffold-101367 (2666bp)
+Top Length: 2666  Top ID: 96.77
+		One align captures most of this contig: 1133313 1135978 | 2666 1 | 2666 2666 | 96.77 | Clostridium_bartlettii_gi_224104202_ref_NZ_ scaffold-101367
+
+CONTIG: scaffold-158963 (1560bp)
+Top Length: 1560  Top ID: 96.79
+		One align captures most of this contig: 1139703 1141262 | 1560 1 | 1560 1560 | 96.79 | Clostridium_bartlettii_gi_224104202_ref_NZ_ scaffold-158963
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Clostridium_bartlettii/contigs_reports/nucmer_output/Ray.used_snps
+	Reference Clostridium_bartlettii_gi_224104202_ref_NZ_: 6 total alignments. 1 total regions.
+		Region: 1 to 2972256 (2972256 bp)
+			START in gap: 1 to 1118661 (1118660 bp)
+			Align 1: 1118661 1120087 scaffold-3432 2 1428
+				Gap between this and next alignment: 1120087 to 1122273 (2185 bp)
+				Next Alignment: 1122273 1122870 scaffold-60170 598 1
+
+			Align 2: 1122273 1122870 scaffold-60170 598 1
+				Gap between this and next alignment: 1122870 to 1123602 (731 bp)
+				Next Alignment: 1123602 1124216 scaffold-7274 615 1
+
+			Align 3: 1123602 1124216 scaffold-7274 615 1
+				Gap between this and next alignment: 1124216 to 1133313 (9096 bp)
+				Next Alignment: 1133313 1135978 scaffold-101367 2666 1
+
+			Align 4: 1133313 1135978 scaffold-101367 2666 1
+				Gap between this and next alignment: 1135978 to 1139703 (3724 bp)
+				Next Alignment: 1139703 1141262 scaffold-158963 1560 1
+
+			Align 5: 1139703 1141262 scaffold-158963 1560 1
+				Negative gap (overlap) between this and next alignment: 1141262 to 1140885 (-377 bp)
+				Next Alignment: 1140885 1141285 scaffold-38033 1 401
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 379.
+			Align 6: 1141263 1141285 scaffold-38033 379 401
+			END in gap: 1141285 to 2972256 (1830971 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Clostridium_bartlettii/contigs_reports/nucmer_output/Ray.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 1 part
+Partially Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 205
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 6889
+
+	SNPs: 161
+	Insertions: 0
+	Deletions: 0
+
+	Positive Gaps: 6
+		Internal Gaps:  0
+		External Gaps:  6
+		External Gap Total:  2965367
+		External Gap Average: 494228
+	Negative Gaps: 1
+		Internal Overlaps:  0
+		External Overlaps:  1
+		External Overlaps Total: -377
+		External Overlaps Average: -377
+	Contigs with Redundant Alignments: 0 (0)

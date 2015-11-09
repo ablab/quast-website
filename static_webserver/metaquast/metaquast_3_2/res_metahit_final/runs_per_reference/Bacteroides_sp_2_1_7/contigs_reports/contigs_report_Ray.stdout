@@ -1,0 +1,574 @@
+Aligning contigs to reference...
+	Running Nucmer
+Parsing coords...
+Loading reference...
+	Loaded [Bacteroides_sp_2_1_7_gi_224485440_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485442_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485444_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485445_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485446_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485449_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485450_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485451_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485452_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485453_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485454_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485455_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485456_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485457_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485458_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485459_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485460_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485461_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485462_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485463_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485464_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485465_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485466_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485467_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485468_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485469_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485470_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485471_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485472_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485473_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485474_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485475_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485476_ref_NZ_]
+	Loaded [Bacteroides_sp_2_1_7_gi_224485477_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 38
+	Total Region Length: 5180144
+Analyzing contigs...
+CONTIG: scaffold-284 (25646bp)
+Top Length: 22548  Top ID: 97.71
+		Skipping redundant alignment 513559 513886 | 24271 23945 | 328 327 | 96.65 | Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_ scaffold-284
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 517838 540395 | 22548 1 | 22558 22548 | 97.71 | Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_ scaffold-284
+			  Overlap between these two alignments (local misassembly). Inconsistency = -150 
+			Real Alignment 2: 514878 517838 | 25646 22698 | 2961 2949 | 98.14 | Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_ scaffold-284
+
+CONTIG: scaffold-2644 (17224bp)
+Top Length: 17222  Top ID: 97.28
+		One align captures most of this contig: 540385 557681 | 2 17223 | 17297 17222 | 97.28 | Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_ scaffold-2644
+
+CONTIG: scaffold-2518 (2625bp)
+Top Length: 1224  Top ID: 98.37
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 84055 85104 | 1 1050 | 1050 1050 | 99.52 | Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_ scaffold-2518
+			  Overlap between these two alignments (local misassembly). Inconsistency = -129 
+			Real Alignment 2: 85327 86549 | 1402 2625 | 1223 1224 | 98.37 | Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_ scaffold-2518
+
+CONTIG: scaffold-5846 (1146bp)
+Top Length: 1146  Top ID: 99.83
+		One align captures most of this contig: 73005 74150 | 1 1146 | 1146 1146 | 99.83 | Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_ scaffold-5846
+
+CONTIG: scaffold-8122 (1105bp)
+Top Length: 1098  Top ID: 99.64
+		One align captures most of this contig: 81676 82773 | 1 1098 | 1098 1098 | 99.64 | Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_ scaffold-8122
+
+CONTIG: scaffold-10856 (1661bp)
+Top Length: 1661  Top ID: 99.76
+		One align captures most of this contig: 73628 75288 | 1 1661 | 1661 1661 | 99.76 | Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_ scaffold-10856
+
+CONTIG: scaffold-26756 (613bp)
+Top Length: 613  Top ID: 100.0
+		One align captures most of this contig: 69651 70263 | 613 1 | 613 613 | 100.0 | Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_ scaffold-26756
+
+CONTIG: scaffold-84623 (907bp)
+Top Length: 907  Top ID: 99.78
+		One align captures most of this contig: 57660 58566 | 1 907 | 907 907 | 99.78 | Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_ scaffold-84623
+
+CONTIG: scaffold-128369 (1088bp)
+Top Length: 1088  Top ID: 99.26
+		One align captures most of this contig: 56315 57400 | 1088 1 | 1086 1088 | 99.26 | Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_ scaffold-128369
+
+CONTIG: scaffold-195323 (5447bp)
+Top Length: 5447  Top ID: 99.91
+		One align captures most of this contig: 75778 81224 | 1 5447 | 5447 5447 | 99.91 | Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_ scaffold-195323
+
+CONTIG: scaffold-65181 (580bp)
+Top Length: 580  Top ID: 98.79
+		One align captures most of this contig: 22566 23145 | 1 580 | 580 580 | 98.79 | Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_ scaffold-65181
+
+CONTIG: scaffold-85 (3686bp)
+Top Length: 2931  Top ID: 100.0
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 140283 143213 | 2931 1 | 2931 2931 | 100.0 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-85
+			  Overlap between these two alignments (local misassembly). Inconsistency = -191 
+			Real Alignment 2: 139719 140297 | 3686 3108 | 579 579 | 100.0 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-85
+
+CONTIG: scaffold-1614 (1757bp)
+Top Length: 791  Top ID: 99.87
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 129941 130566 | 1 626 | 626 626 | 100.0 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-1614
+			  Overlap between these two alignments (local misassembly). Inconsistency = -133 
+			Real Alignment 2: 130774 131564 | 967 1757 | 791 791 | 99.87 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-1614
+
+CONTIG: scaffold-1871 (1482bp)
+Top Length: 734  Top ID: 100.0
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 115285 115837 | 1 553 | 553 553 | 100.0 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-1871
+			  Overlap between these two alignments (local misassembly). Inconsistency = -112 
+			Real Alignment 2: 115921 116654 | 749 1482 | 734 734 | 100.0 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-1871
+
+CONTIG: scaffold-1970 (1795bp)
+Top Length: 891  Top ID: 99.89
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 166831 167611 | 781 1 | 781 781 | 100.0 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-1970
+			  Overlap between these two alignments (local misassembly). Inconsistency = -149 
+			Real Alignment 2: 165966 166856 | 1795 905 | 891 891 | 99.89 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-1970
+
+CONTIG: scaffold-2255 (1251bp)
+Top Length: 565  Top ID: 99.82
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 124889 125453 | 565 1 | 565 565 | 99.82 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-2255
+			  Overlap between these two alignments (local misassembly). Inconsistency = -163 
+			Real Alignment 2: 124366 124821 | 1251 796 | 456 456 | 100.0 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-2255
+
+CONTIG: scaffold-2659 (15539bp)
+Top Length: 14965  Top ID: 97.54
+		This contig is partially unaligned. (Aligned 14965 out of 15539 bases)
+		Alignment: 190730 205682 | 1 14965 | 14953 14965 | 97.54 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-2659
+		Unaligned bases: 14966 to 15539 (574)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-3062 (1424bp)
+Top Length: 1424  Top ID: 100.0
+		One align captures most of this contig: 133702 135125 | 1424 1 | 1424 1424 | 100.0 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-3062
+
+CONTIG: scaffold-3071 (1261bp)
+Top Length: 1261  Top ID: 100.0
+		One align captures most of this contig: 117972 119232 | 1261 1 | 1261 1261 | 100.0 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-3071
+
+CONTIG: scaffold-3217 (1580bp)
+Top Length: 1580  Top ID: 99.94
+		One align captures most of this contig: 131360 132940 | 1580 1 | 1581 1580 | 99.94 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-3217
+
+CONTIG: scaffold-3235 (1803bp)
+Top Length: 1803  Top ID: 100.0
+		One align captures most of this contig: 147745 149547 | 1803 1 | 1803 1803 | 100.0 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-3235
+
+CONTIG: scaffold-3606 (938bp)
+Top Length: 938  Top ID: 99.79
+		One align captures most of this contig: 117055 117994 | 938 1 | 940 938 | 99.79 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-3606
+
+CONTIG: scaffold-3770 (961bp)
+Top Length: 961  Top ID: 99.9
+		One align captures most of this contig: 151293 152253 | 1 961 | 961 961 | 99.9 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-3770
+
+CONTIG: scaffold-4068 (1185bp)
+Top Length: 1185  Top ID: 99.66
+		One align captures most of this contig: 113420 114604 | 1 1185 | 1185 1185 | 99.66 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-4068
+
+CONTIG: scaffold-4778 (815bp)
+Top Length: 815  Top ID: 100.0
+		One align captures most of this contig: 143489 144303 | 815 1 | 815 815 | 100.0 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-4778
+
+CONTIG: scaffold-5051 (704bp)
+Top Length: 704  Top ID: 100.0
+		One align captures most of this contig: 137901 138604 | 704 1 | 704 704 | 100.0 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-5051
+
+CONTIG: scaffold-5304 (660bp)
+Top Length: 660  Top ID: 100.0
+		One align captures most of this contig: 165310 165969 | 660 1 | 660 660 | 100.0 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-5304
+
+CONTIG: scaffold-5559 (845bp)
+Top Length: 845  Top ID: 99.76
+		One align captures most of this contig: 120342 121186 | 845 1 | 845 845 | 99.76 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-5559
+
+CONTIG: scaffold-5625 (641bp)
+Top Length: 641  Top ID: 99.84
+		One align captures most of this contig: 145620 146260 | 1 641 | 641 641 | 99.84 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-5625
+
+CONTIG: scaffold-5678 (606bp)
+Top Length: 606  Top ID: 100.0
+		One align captures most of this contig: 153308 153913 | 1 606 | 606 606 | 100.0 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-5678
+
+CONTIG: scaffold-5888 (669bp)
+Top Length: 669  Top ID: 100.0
+		One align captures most of this contig: 128259 128927 | 1 669 | 669 669 | 100.0 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-5888
+
+CONTIG: scaffold-6203 (561bp)
+Top Length: 561  Top ID: 100.0
+		One align captures most of this contig: 127457 128017 | 1 561 | 561 561 | 100.0 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-6203
+
+CONTIG: scaffold-6245 (721bp)
+Top Length: 721  Top ID: 100.0
+		One align captures most of this contig: 137168 137888 | 721 1 | 721 721 | 100.0 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-6245
+
+CONTIG: scaffold-6708 (619bp)
+Top Length: 619  Top ID: 99.84
+		One align captures most of this contig: 121344 121962 | 1 619 | 619 619 | 99.84 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-6708
+
+CONTIG: scaffold-7983 (548bp)
+Top Length: 548  Top ID: 100.0
+		One align captures most of this contig: 146667 147214 | 548 1 | 548 548 | 100.0 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-7983
+
+CONTIG: scaffold-8635 (526bp)
+Top Length: 526  Top ID: 100.0
+		One align captures most of this contig: 112213 112738 | 1 526 | 526 526 | 100.0 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-8635
+
+CONTIG: scaffold-8688 (507bp)
+Top Length: 507  Top ID: 99.41
+		One align captures most of this contig: 155343 155849 | 507 1 | 507 507 | 99.41 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-8688
+
+CONTIG: scaffold-8692 (535bp)
+Top Length: 535  Top ID: 99.81
+		One align captures most of this contig: 119771 120305 | 535 1 | 535 535 | 99.81 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-8692
+
+CONTIG: scaffold-8939 (520bp)
+Top Length: 520  Top ID: 99.81
+		One align captures most of this contig: 138709 139227 | 520 1 | 519 520 | 99.81 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-8939
+
+CONTIG: scaffold-11582 (533bp)
+Top Length: 533  Top ID: 100.0
+		One align captures most of this contig: 145317 145849 | 533 1 | 533 533 | 100.0 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-11582
+
+CONTIG: scaffold-13815 (551bp)
+Top Length: 551  Top ID: 99.82
+		One align captures most of this contig: 133433 133983 | 551 1 | 551 551 | 99.82 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-13815
+
+CONTIG: scaffold-20255 (559bp)
+Top Length: 559  Top ID: 100.0
+		One align captures most of this contig: 150314 150872 | 559 1 | 559 559 | 100.0 | Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_ scaffold-20255
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_sp_2_1_7/contigs_reports/nucmer_output/Ray.used_snps
+	Reference Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_: 9 total alignments. 1 total regions.
+		Region: 1 to 139985 (139985 bp)
+			START in gap: 1 to 56315 (56314 bp)
+			Align 1: 56315 57400 scaffold-128369 1088 1
+				Gap between this and next alignment: 57400 to 57660 (259 bp)
+				Next Alignment: 57660 58566 scaffold-84623 1 907
+
+			Align 2: 57660 58566 scaffold-84623 1 907
+				Gap between this and next alignment: 58566 to 69651 (11084 bp)
+				Next Alignment: 69651 70263 scaffold-26756 613 1
+
+			Align 3: 69651 70263 scaffold-26756 613 1
+				Gap between this and next alignment: 70263 to 73005 (2741 bp)
+				Next Alignment: 73005 74150 scaffold-5846 1 1146
+
+			Align 4: 73005 74150 scaffold-5846 1 1146
+				Negative gap (overlap) between this and next alignment: 74150 to 73628 (-522 bp)
+				Next Alignment: 73628 75288 scaffold-10856 1 1661
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 524.
+			Align 5: 74151 75288 scaffold-10856 524 1661
+				Gap between this and next alignment: 75288 to 75778 (489 bp)
+				Next Alignment: 75778 81224 scaffold-195323 1 5447
+
+			Align 6: 75778 81224 scaffold-195323 1 5447
+				Gap between this and next alignment: 81224 to 81676 (451 bp)
+				Next Alignment: 81676 82773 scaffold-8122 1 1098
+
+			Align 7: 81676 82773 scaffold-8122 1 1098
+				Gap between this and next alignment: 82773 to 84055 (1281 bp)
+				Next Alignment: 84055 85104 scaffold-2518 1 1050
+
+			Align 8: 84055 85104 scaffold-2518 1 1050
+				Gap between this and next alignment: 85104 to 85327 (222 bp)
+				Next Alignment: 85327 86549 scaffold-2518 1402 2625
+
+			Align 9: 85327 86549 scaffold-2518 1402 2625
+			END in gap: 86549 to 139985 (53436 bp)
+
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485462_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485465_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485445_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+	Reference Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 188140 (188140 bp)
+			START in gap: 1 to 22566 (22565 bp)
+			Align 1: 22566 23145 scaffold-65181 1 580
+			END in gap: 23145 to 188140 (164995 bp)
+
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485458_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485460_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485468_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485454_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485470_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485457_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+	Reference Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_: 3 total alignments. 1 total regions.
+		Region: 1 to 1017756 (1017756 bp)
+			START in gap: 1 to 514878 (514877 bp)
+			Align 1: 514878 517838 scaffold-284 25646 22698
+				Negative gap (overlap) between this and next alignment: 517838 to 517838 (0 bp)
+				Next Alignment: 517838 540395 scaffold-284 22548 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 22548 to 22547.
+			Align 2: 517839 540395 scaffold-284 22547 1
+				Negative gap (overlap) between this and next alignment: 540395 to 540385 (-10 bp)
+				Next Alignment: 540385 557681 scaffold-2644 2 17223
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 2 to 13.
+			Align 3: 540396 557681 scaffold-2644 13 17223
+			END in gap: 557681 to 1017756 (460075 bp)
+
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485475_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485477_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485459_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485444_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485442_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485472_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485446_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+	Reference Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_: 36 total alignments. 1 total regions.
+		Region: 1 to 564508 (564508 bp)
+			START in gap: 1 to 112213 (112212 bp)
+			Align 1: 112213 112738 scaffold-8635 1 526
+				Gap between this and next alignment: 112738 to 113420 (681 bp)
+				Next Alignment: 113420 114604 scaffold-4068 1 1185
+
+			Align 2: 113420 114604 scaffold-4068 1 1185
+				Gap between this and next alignment: 114604 to 115285 (680 bp)
+				Next Alignment: 115285 115837 scaffold-1871 1 553
+
+			Align 3: 115285 115837 scaffold-1871 1 553
+				Gap between this and next alignment: 115837 to 115921 (83 bp)
+				Next Alignment: 115921 116654 scaffold-1871 749 1482
+
+			Align 4: 115921 116654 scaffold-1871 749 1482
+				Gap between this and next alignment: 116654 to 117055 (400 bp)
+				Next Alignment: 117055 117994 scaffold-3606 938 1
+
+			Align 5: 117055 117994 scaffold-3606 938 1
+				Negative gap (overlap) between this and next alignment: 117994 to 117972 (-22 bp)
+				Next Alignment: 117972 119232 scaffold-3071 1261 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1261 to 1238.
+			Align 6: 117995 119232 scaffold-3071 1238 1
+				Gap between this and next alignment: 119232 to 119771 (538 bp)
+				Next Alignment: 119771 120305 scaffold-8692 535 1
+
+			Align 7: 119771 120305 scaffold-8692 535 1
+				Gap between this and next alignment: 120305 to 120342 (36 bp)
+				Next Alignment: 120342 121186 scaffold-5559 845 1
+
+			Align 8: 120342 121186 scaffold-5559 845 1
+				Gap between this and next alignment: 121186 to 121344 (157 bp)
+				Next Alignment: 121344 121962 scaffold-6708 1 619
+
+			Align 9: 121344 121962 scaffold-6708 1 619
+				Gap between this and next alignment: 121962 to 124366 (2403 bp)
+				Next Alignment: 124366 124821 scaffold-2255 1251 796
+
+			Align 10: 124366 124821 scaffold-2255 1251 796
+				Gap between this and next alignment: 124821 to 124889 (67 bp)
+				Next Alignment: 124889 125453 scaffold-2255 565 1
+
+			Align 11: 124889 125453 scaffold-2255 565 1
+				Gap between this and next alignment: 125453 to 127457 (2003 bp)
+				Next Alignment: 127457 128017 scaffold-6203 1 561
+
+			Align 12: 127457 128017 scaffold-6203 1 561
+				Gap between this and next alignment: 128017 to 128259 (241 bp)
+				Next Alignment: 128259 128927 scaffold-5888 1 669
+
+			Align 13: 128259 128927 scaffold-5888 1 669
+				Gap between this and next alignment: 128927 to 129941 (1013 bp)
+				Next Alignment: 129941 130566 scaffold-1614 1 626
+
+			Align 14: 129941 130566 scaffold-1614 1 626
+				Gap between this and next alignment: 130566 to 130774 (207 bp)
+				Next Alignment: 130774 131564 scaffold-1614 967 1757
+
+			Align 15: 130774 131564 scaffold-1614 967 1757
+				Negative gap (overlap) between this and next alignment: 131564 to 131360 (-204 bp)
+				Next Alignment: 131360 132940 scaffold-3217 1580 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1580 to 1375.
+			Align 16: 131565 132940 scaffold-3217 1375 1
+				Gap between this and next alignment: 132940 to 133433 (492 bp)
+				Next Alignment: 133433 133983 scaffold-13815 551 1
+
+			Align 17: 133433 133983 scaffold-13815 551 1
+				Negative gap (overlap) between this and next alignment: 133983 to 133702 (-281 bp)
+				Next Alignment: 133702 135125 scaffold-3062 1424 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1424 to 1142.
+			Align 18: 133984 135125 scaffold-3062 1142 1
+				Gap between this and next alignment: 135125 to 137168 (2042 bp)
+				Next Alignment: 137168 137888 scaffold-6245 721 1
+
+			Align 19: 137168 137888 scaffold-6245 721 1
+				Gap between this and next alignment: 137888 to 137901 (12 bp)
+				Next Alignment: 137901 138604 scaffold-5051 704 1
+
+			Align 20: 137901 138604 scaffold-5051 704 1
+				Gap between this and next alignment: 138604 to 138709 (104 bp)
+				Next Alignment: 138709 139227 scaffold-8939 520 1
+
+			Align 21: 138709 139227 scaffold-8939 520 1
+				Gap between this and next alignment: 139227 to 139719 (491 bp)
+				Next Alignment: 139719 140297 scaffold-85 3686 3108
+
+			Align 22: 139719 140297 scaffold-85 3686 3108
+				Negative gap (overlap) between this and next alignment: 140297 to 140283 (-14 bp)
+				Next Alignment: 140283 143213 scaffold-85 2931 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 2931 to 2916.
+			Align 23: 140298 143213 scaffold-85 2916 1
+				Gap between this and next alignment: 143213 to 143489 (275 bp)
+				Next Alignment: 143489 144303 scaffold-4778 815 1
+
+			Align 24: 143489 144303 scaffold-4778 815 1
+				Gap between this and next alignment: 144303 to 145317 (1013 bp)
+				Next Alignment: 145317 145849 scaffold-11582 533 1
+
+			Align 25: 145317 145849 scaffold-11582 533 1
+				Negative gap (overlap) between this and next alignment: 145849 to 145620 (-229 bp)
+				Next Alignment: 145620 146260 scaffold-5625 1 641
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 231.
+			Align 26: 145850 146260 scaffold-5625 231 641
+				Gap between this and next alignment: 146260 to 146667 (406 bp)
+				Next Alignment: 146667 147214 scaffold-7983 548 1
+
+			Align 27: 146667 147214 scaffold-7983 548 1
+				Gap between this and next alignment: 147214 to 147745 (530 bp)
+				Next Alignment: 147745 149547 scaffold-3235 1803 1
+
+			Align 28: 147745 149547 scaffold-3235 1803 1
+				Gap between this and next alignment: 149547 to 150314 (766 bp)
+				Next Alignment: 150314 150872 scaffold-20255 559 1
+
+			Align 29: 150314 150872 scaffold-20255 559 1
+				Gap between this and next alignment: 150872 to 151293 (420 bp)
+				Next Alignment: 151293 152253 scaffold-3770 1 961
+
+			Align 30: 151293 152253 scaffold-3770 1 961
+				Gap between this and next alignment: 152253 to 153308 (1054 bp)
+				Next Alignment: 153308 153913 scaffold-5678 1 606
+
+			Align 31: 153308 153913 scaffold-5678 1 606
+				Gap between this and next alignment: 153913 to 155343 (1429 bp)
+				Next Alignment: 155343 155849 scaffold-8688 507 1
+
+			Align 32: 155343 155849 scaffold-8688 507 1
+				Gap between this and next alignment: 155849 to 165310 (9460 bp)
+				Next Alignment: 165310 165969 scaffold-5304 660 1
+
+			Align 33: 165310 165969 scaffold-5304 660 1
+				Negative gap (overlap) between this and next alignment: 165969 to 165966 (-3 bp)
+				Next Alignment: 165966 166856 scaffold-1970 1795 905
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1795 to 1791.
+			Align 34: 165970 166856 scaffold-1970 1791 905
+				Negative gap (overlap) between this and next alignment: 166856 to 166831 (-25 bp)
+				Next Alignment: 166831 167611 scaffold-1970 781 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 781 to 755.
+			Align 35: 166857 167611 scaffold-1970 755 1
+				Gap between this and next alignment: 167611 to 190730 (23118 bp)
+				Next Alignment: 190730 205682 scaffold-2659 1 14965
+
+			Align 36: 190730 205682 scaffold-2659 1 14965
+			END in gap: 205682 to 564508 (358826 bp)
+
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485467_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485471_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485476_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485452_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485449_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485450_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485473_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485455_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485469_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485463_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485440_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485456_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485466_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485464_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485453_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485461_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485451_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+ERROR: Reference Bacteroides_sp_2_1_7_gi_224485474_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Bacteroides_sp_2_1_7_gi_224485448_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485441_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485447_ref_NZ_', 'Bacteroides_sp_2_1_7_gi_224485443_ref_NZ_']
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_sp_2_1_7/contigs_reports/nucmer_output/Ray.used_snps
+
+Results:
+	Local Misassemblies: 7
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 1 part
+Partially Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 574
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 100441
+
+	SNPs: 1316
+	Insertions: 44
+	Deletions: 128
+
+	Positive Gaps: 43
+		Internal Gaps:  4
+		External Gaps:  39
+		External Gap Total:  1809369
+		External Gap Average: 46394
+	Negative Gaps: 10
+		Internal Overlaps:  3
+		External Overlaps:  7
+		External Overlaps Total: -1271
+		External Overlaps Average: -182
+	Contigs with Redundant Alignments: 0 (0)

@@ -1,0 +1,401 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Clostridium_bolteae_gi_488642143_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 1
+	Total Region Length: 6538460
+Analyzing contigs...
+CONTIG: NODE_160_length_46093_cov_5.68674_ID_319 (46093bp)
+Top Length: 2703  Top ID: 97.82
+		This contig is partially unaligned. (Aligned 2703 out of 46093 bases)
+		Alignment: 250254 252957 | 32837 30135 | 2704 2703 | 97.82 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_160_length_46093_cov_5.68674_ID_319
+		Unaligned bases: 1 to 30134 (30134)
+		Unaligned bases: 32838 to 46093 (13256)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_473_length_22813_cov_4.769_ID_945 (22813bp)
+Top Length: 10601  Top ID: 99.98
+		This contig is misassembled. 3 total aligns.
+			Real Alignment 1: 5881105 5882401 | 1730 3026 | 1297 1297 | 100.0 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_473_length_22813_cov_4.769_ID_945
+			  Extensive misassembly ( relocation, inconsistency = -2409 ) between these two alignments
+			Real Alignment 2: 5882399 5886673 | 5433 9707 | 4275 4275 | 100.0 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_473_length_22813_cov_4.769_ID_945
+			  Extensive misassembly ( relocation, inconsistency = -2506 ) between these two alignments
+			Real Alignment 3: 5886673 5897273 | 12213 22813 | 10601 10601 | 99.98 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_473_length_22813_cov_4.769_ID_945
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_617_length_18482_cov_6.28925_ID_1233 (18482bp)
+Top Length: 13743  Top ID: 96.17
+		This contig is partially unaligned. (Aligned 13743 out of 18482 bases)
+		Alignment: 198384 212090 | 1 13743 | 13707 13743 | 96.17 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_617_length_18482_cov_6.28925_ID_1233
+		Unaligned bases: 13744 to 18482 (4739)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_784_length_14949_cov_4.03102_ID_1567 (14949bp)
+Top Length: 3450  Top ID: 97.88
+		This contig is partially unaligned. (Aligned 3450 out of 14949 bases)
+		Alignment: 241640 245089 | 6869 3420 | 3450 3450 | 97.88 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_784_length_14949_cov_4.03102_ID_1567
+		Unaligned bases: 1 to 3419 (3419)
+		Unaligned bases: 6870 to 14949 (8080)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_802_length_14711_cov_4.96663_ID_1603 (14711bp)
+Top Length: 9535  Top ID: 97.4
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 5912819 5915336 | 4716 2199 | 2518 2518 | 97.93 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_802_length_14711_cov_4.96663_ID_1603
+			  Fake misassembly (caused by structural variations of genome) between these two alignments
+			Real Alignment 2: 5901161 5910694 | 14277 4743 | 9534 9535 | 97.4 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_802_length_14711_cov_4.96663_ID_1603
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_839_length_14051_cov_4.7147_ID_1677 (14051bp)
+Top Length: 7222  Top ID: 99.99
+		This contig is partially unaligned. (Aligned 7222 out of 14051 bases)
+		Alignment: 5868393 5875614 | 4912 12133 | 7222 7222 | 99.99 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_839_length_14051_cov_4.7147_ID_1677
+		Unaligned bases: 1 to 4911 (4911)
+		Unaligned bases: 12134 to 14051 (1918)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_1099_length_11227_cov_6.48666_ID_2197 (11227bp)
+Top Length: 4747  Top ID: 97.85
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 189876 194624 | 1968 6714 | 4749 4747 | 97.85 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_1099_length_11227_cov_6.48666_ID_2197
+			  Extensive misassembly ( relocation, inconsistency = -2437 ) between these two alignments
+			Real Alignment 2: 194635 196700 | 9162 11227 | 2066 2066 | 97.58 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_1099_length_11227_cov_6.48666_ID_2197
+		This contig has significant unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_2961_length_4983_cov_4.79566_ID_5921 (4983bp)
+Top Length: 4958  Top ID: 96.41
+		One align captures most of this contig: 2930356 2935303 | 4 4961 | 4948 4958 | 96.41 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_2961_length_4983_cov_4.79566_ID_5921
+
+CONTIG: NODE_3410_length_4483_cov_1.73893_ID_6819 (4483bp)
+Top Length: 494  Top ID: 98.99
+		This contig is partially unaligned. (Aligned 494 out of 4483 bases)
+		Alignment: 189384 189877 | 3937 4430 | 494 494 | 98.99 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_3410_length_4483_cov_1.73893_ID_6819
+		Unaligned bases: 1 to 3936 (3936)
+		Unaligned bases: 4431 to 4483 (53)
+
+CONTIG: NODE_3560_length_4328_cov_3.83688_ID_7119 (4328bp)
+Top Length: 2655  Top ID: 96.2
+		This contig is partially unaligned. (Aligned 2655 out of 4328 bases)
+		Alignment: 4400681 4403335 | 1 2655 | 2655 2655 | 96.2 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_3560_length_4328_cov_3.83688_ID_7119
+		Unaligned bases: 2656 to 4328 (1673)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_5279_length_3182_cov_5.48353_ID_10557 (3182bp)
+Top Length: 2499  Top ID: 99.16
+		This contig is partially unaligned. (Aligned 2499 out of 3182 bases)
+		Alignment: 5898051 5900549 | 3182 684 | 2499 2499 | 99.16 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_5279_length_3182_cov_5.48353_ID_10557
+		Unaligned bases: 1 to 683 (683)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_6954_length_2536_cov_5.45748_ID_13907 (2536bp)
+Top Length: 549  Top ID: 95.81
+		This contig is misassembled. 2 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 2536 and total length of all aligns is 657
+		Alignment: 4417928 4418035 | 108 1 | 108 108 | 99.07 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_6954_length_2536_cov_5.45748_ID_13907
+		Alignment: 4417388 4417936 | 1255 707 | 549 549 | 95.81 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_6954_length_2536_cov_5.45748_ID_13907
+		Unaligned bases: 1879
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: NODE_7061_length_2501_cov_7.88226_ID_14121 (2501bp)
+Top Length: 96  Top ID: 97.92
+		This contig is partially unaligned. (Aligned 96 out of 2501 bases)
+		Alignment: 188283 188378 | 2406 2501 | 96 96 | 97.92 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_7061_length_2501_cov_7.88226_ID_14121
+		Unaligned bases: 1 to 2405 (2405)
+
+CONTIG: NODE_7801_length_2289_cov_45.4794_ID_15601 (2289bp)
+Top Length: 2289  Top ID: 99.13
+		One align captures most of this contig: 212635 214923 | 1 2289 | 2289 2289 | 99.13 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_7801_length_2289_cov_45.4794_ID_15601
+
+CONTIG: NODE_14745_length_1287_cov_1.32549_ID_29489 (1287bp)
+Top Length: 343  Top ID: 99.42
+		This contig is partially unaligned. (Aligned 343 out of 1287 bases)
+		Alignment: 2931022 2931364 | 343 1 | 343 343 | 99.42 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_14745_length_1287_cov_1.32549_ID_29489
+		Unaligned bases: 344 to 1287 (944)
+
+CONTIG: NODE_18410_length_1042_cov_1.17021_ID_36819 (1042bp)
+Top Length: 967  Top ID: 95.66
+		This contig is partially unaligned. (Aligned 967 out of 1042 bases)
+		Alignment: 776356 777321 | 76 1042 | 966 967 | 95.66 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_18410_length_1042_cov_1.17021_ID_36819
+		Unaligned bases: 1 to 75 (75)
+
+CONTIG: NODE_19495_length_987_cov_0.781116_ID_38989 (987bp)
+Top Length: 987  Top ID: 99.29
+		One align captures most of this contig: 4427967 4428953 | 1 987 | 987 987 | 99.29 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_19495_length_987_cov_0.781116_ID_38989
+
+CONTIG: NODE_20986_length_919_cov_47.6192_ID_41971 (919bp)
+Top Length: 142  Top ID: 95.8
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 5620112 5620253 | 1 142 | 142 142 | 95.8 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_20986_length_919_cov_47.6192_ID_41971
+		This contig is partially unaligned. (Aligned 142 out of 919 bases)
+		Alignment: 69159 69300 | 142 1 | 142 142 | 95.8 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_20986_length_919_cov_47.6192_ID_41971
+		Unaligned bases: 143 to 919 (777)
+
+CONTIG: NODE_21864_length_887_cov_15.6611_ID_43727 (887bp)
+Top Length: 887  Top ID: 96.17
+		One align captures most of this contig: 5897219 5898105 | 1 887 | 887 887 | 96.17 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_21864_length_887_cov_15.6611_ID_43727
+
+CONTIG: NODE_22595_length_859_cov_4.95149_ID_45189 (859bp)
+Top Length: 723  Top ID: 95.99
+		This contig is partially unaligned. (Aligned 723 out of 859 bases)
+		Alignment: 4363717 4364439 | 137 859 | 723 723 | 95.99 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_22595_length_859_cov_4.95149_ID_45189
+		Unaligned bases: 1 to 136 (136)
+
+CONTIG: NODE_22843_length_850_cov_88.7119_ID_45685 (850bp)
+Top Length: 850  Top ID: 95.43
+		Marking as insignificant: 5768088 5768455 | 1 368 | 368 368 | 96.74 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_22843_length_850_cov_88.7119_ID_45685
+		This contig has 2 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 69246 70095 | 850 1 | 850 850 | 95.43 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_22843_length_850_cov_88.7119_ID_45685
+		Skipping alignment  5619317 5620166 | 1 850 | 850 850 | 95.43 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_22843_length_850_cov_88.7119_ID_45685
+
+CONTIG: NODE_26488_length_731_cov_1.7855_ID_52975 (731bp)
+Top Length: 208  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 208 out of 731 bases)
+		Alignment: 2928334 2928541 | 208 1 | 208 208 | 100.0 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_26488_length_731_cov_1.7855_ID_52975
+		Unaligned bases: 209 to 731 (523)
+
+CONTIG: NODE_26782_length_723_cov_0.651198_ID_53563 (723bp)
+Top Length: 365  Top ID: 95.63
+		This contig is misassembled. 2 total aligns.
+			Real Alignment 1: 4412283 4412514 | 1 232 | 232 232 | 99.14 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_26782_length_723_cov_0.651198_ID_53563
+			  Fake misassembly between these two alignments: inconsistency = -7 , gap in the contig is small or absent or filled mostly with Ns (long indel: insertion of length 7; 0 mismatches)
+			Real Alignment 2: 4412610 4412975 | 335 699 | 366 365 | 95.63 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_26782_length_723_cov_0.651198_ID_53563
+
+CONTIG: NODE_28841_length_673_cov_0.563107_ID_57681 (673bp)
+Top Length: 658  Top ID: 98.02
+		This contig is partially unaligned. (Aligned 658 out of 673 bases)
+		Alignment: 4414850 4415507 | 658 1 | 658 658 | 98.02 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_28841_length_673_cov_0.563107_ID_57681
+		Unaligned bases: 659 to 673 (15)
+
+CONTIG: NODE_30076_length_647_cov_0.638514_ID_60151 (647bp)
+Top Length: 647  Top ID: 97.37
+		One align captures most of this contig: 4415975 4416621 | 1 647 | 647 647 | 97.37 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_30076_length_647_cov_0.638514_ID_60151
+
+CONTIG: NODE_31842_length_614_cov_0.633274_ID_63683 (614bp)
+Top Length: 321  Top ID: 95.95
+		This contig is partially unaligned. (Aligned 321 out of 614 bases)
+		Alignment: 185715 186035 | 321 1 | 321 321 | 95.95 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_31842_length_614_cov_0.633274_ID_63683
+		Unaligned bases: 322 to 614 (293)
+
+CONTIG: NODE_32331_length_606_cov_4.57713_ID_64661 (606bp)
+Top Length: 606  Top ID: 98.51
+		One align captures most of this contig: 2931283 2931888 | 606 1 | 606 606 | 98.51 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_32331_length_606_cov_4.57713_ID_64661
+
+CONTIG: NODE_32644_length_601_cov_1.11172_ID_65287 (601bp)
+Top Length: 601  Top ID: 96.01
+		One align captures most of this contig: 775771 776371 | 601 1 | 601 601 | 96.01 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_32644_length_601_cov_1.11172_ID_65287
+
+CONTIG: NODE_36766_length_544_cov_11.9652_ID_73531 (544bp)
+Top Length: 544  Top ID: 99.45
+		One align captures most of this contig: 188324 188867 | 1 544 | 544 544 | 99.45 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_36766_length_544_cov_11.9652_ID_73531
+
+CONTIG: NODE_37819_length_531_cov_4.06933_ID_75637 (531bp)
+Top Length: 521  Top ID: 98.27
+		This contig is partially unaligned. (Aligned 521 out of 531 bases)
+		Alignment: 2929983 2930503 | 531 11 | 521 521 | 98.27 | Clostridium_bolteae_gi_488642143_ref_NZ_ NODE_37819_length_531_cov_4.06933_ID_75637
+		Unaligned bases: 1 to 10 (10)
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Clostridium_bolteae/contigs_reports/nucmer_output/SPAdes.used_snps
+	Reference Clostridium_bolteae_gi_488642143_ref_NZ_: 36 total alignments. 1 total regions.
+		Region: 1 to 6538460 (6538460 bp)
+			START in gap: 1 to 69159 (69158 bp)
+			Align 1: 69159 69300 NODE_20986_length_919_cov_47.6192_ID_41971 142 1
+				Negative gap (overlap) between this and next alignment: 69300 to 69246 (-54 bp)
+				Next Alignment: 69246 70095 NODE_22843_length_850_cov_88.7119_ID_45685 850 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 850 to 795.
+			Align 2: 69301 70095 NODE_22843_length_850_cov_88.7119_ID_45685 795 1
+				Gap between this and next alignment: 70095 to 185715 (115619 bp)
+				Next Alignment: 185715 186035 NODE_31842_length_614_cov_0.633274_ID_63683 321 1
+
+			Align 3: 185715 186035 NODE_31842_length_614_cov_0.633274_ID_63683 321 1
+				Gap between this and next alignment: 186035 to 188283 (2247 bp)
+				Next Alignment: 188283 188378 NODE_7061_length_2501_cov_7.88226_ID_14121 2406 2501
+
+			Align 4: 188283 188378 NODE_7061_length_2501_cov_7.88226_ID_14121 2406 2501
+				Negative gap (overlap) between this and next alignment: 188378 to 188324 (-54 bp)
+				Next Alignment: 188324 188867 NODE_36766_length_544_cov_11.9652_ID_73531 1 544
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 56.
+			Align 5: 188379 188867 NODE_36766_length_544_cov_11.9652_ID_73531 56 544
+				Gap between this and next alignment: 188867 to 189384 (516 bp)
+				Next Alignment: 189384 189877 NODE_3410_length_4483_cov_1.73893_ID_6819 3937 4430
+
+			Align 6: 189384 189877 NODE_3410_length_4483_cov_1.73893_ID_6819 3937 4430
+				Negative gap (overlap) between this and next alignment: 189877 to 189876 (-1 bp)
+				Next Alignment: 189876 194624 NODE_1099_length_11227_cov_6.48666_ID_2197 1968 6714
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1968 to 1970.
+			Align 7: 189878 194624 NODE_1099_length_11227_cov_6.48666_ID_2197 1970 6714
+				Gap between this and next alignment: 194624 to 194635 (10 bp)
+				Next Alignment: 194635 196700 NODE_1099_length_11227_cov_6.48666_ID_2197 9162 11227
+
+			Align 8: 194635 196700 NODE_1099_length_11227_cov_6.48666_ID_2197 9162 11227
+				Gap between this and next alignment: 196700 to 198384 (1683 bp)
+				Next Alignment: 198384 212090 NODE_617_length_18482_cov_6.28925_ID_1233 1 13743
+
+			Align 9: 198384 212090 NODE_617_length_18482_cov_6.28925_ID_1233 1 13743
+				Gap between this and next alignment: 212090 to 212635 (544 bp)
+				Next Alignment: 212635 214923 NODE_7801_length_2289_cov_45.4794_ID_15601 1 2289
+
+			Align 10: 212635 214923 NODE_7801_length_2289_cov_45.4794_ID_15601 1 2289
+				Gap between this and next alignment: 214923 to 241640 (26716 bp)
+				Next Alignment: 241640 245089 NODE_784_length_14949_cov_4.03102_ID_1567 6869 3420
+
+			Align 11: 241640 245089 NODE_784_length_14949_cov_4.03102_ID_1567 6869 3420
+				Gap between this and next alignment: 245089 to 250254 (5164 bp)
+				Next Alignment: 250254 252957 NODE_160_length_46093_cov_5.68674_ID_319 32837 30135
+
+			Align 12: 250254 252957 NODE_160_length_46093_cov_5.68674_ID_319 32837 30135
+				Gap between this and next alignment: 252957 to 775771 (522813 bp)
+				Next Alignment: 775771 776371 NODE_32644_length_601_cov_1.11172_ID_65287 601 1
+
+			Align 13: 775771 776371 NODE_32644_length_601_cov_1.11172_ID_65287 601 1
+				Negative gap (overlap) between this and next alignment: 776371 to 776356 (-15 bp)
+				Next Alignment: 776356 777321 NODE_18410_length_1042_cov_1.17021_ID_36819 76 1042
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 76 to 92.
+			Align 14: 776372 777321 NODE_18410_length_1042_cov_1.17021_ID_36819 92 1042
+				Gap between this and next alignment: 777321 to 2928334 (2151012 bp)
+				Next Alignment: 2928334 2928541 NODE_26488_length_731_cov_1.7855_ID_52975 208 1
+
+			Align 15: 2928334 2928541 NODE_26488_length_731_cov_1.7855_ID_52975 208 1
+				Gap between this and next alignment: 2928541 to 2929983 (1441 bp)
+				Next Alignment: 2929983 2930503 NODE_37819_length_531_cov_4.06933_ID_75637 531 11
+
+			Align 16: 2929983 2930503 NODE_37819_length_531_cov_4.06933_ID_75637 531 11
+				Negative gap (overlap) between this and next alignment: 2930503 to 2930356 (-147 bp)
+				Next Alignment: 2930356 2935303 NODE_2961_length_4983_cov_4.79566_ID_5921 4 4961
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 4 to 152.
+			Align 17: 2930504 2935303 NODE_2961_length_4983_cov_4.79566_ID_5921 152 4961
+				The next alignment (2931022 2931364 NODE_14745_length_1287_cov_1.32549_ID_29489 343 1) is redundant. Skipping.
+				The next alignment (2931283 2931888 NODE_32331_length_606_cov_4.57713_ID_64661 606 1) is redundant. Skipping.
+				Gap between this and next alignment: 2935303 to 4363717 (1428413 bp)
+				Next Alignment: 4363717 4364439 NODE_22595_length_859_cov_4.95149_ID_45189 137 859
+
+			Align 20: 4363717 4364439 NODE_22595_length_859_cov_4.95149_ID_45189 137 859
+				Gap between this and next alignment: 4364439 to 4400681 (36241 bp)
+				Next Alignment: 4400681 4403335 NODE_3560_length_4328_cov_3.83688_ID_7119 1 2655
+
+			Align 21: 4400681 4403335 NODE_3560_length_4328_cov_3.83688_ID_7119 1 2655
+				Gap between this and next alignment: 4403335 to 4412283 (8947 bp)
+				Next Alignment: 4412283 4412514 NODE_26782_length_723_cov_0.651198_ID_53563 1 232
+
+			Align 22: 4412283 4412514 NODE_26782_length_723_cov_0.651198_ID_53563 1 232
+				Gap between this and next alignment: 4412514 to 4412610 (95 bp)
+				Next Alignment: 4412610 4412975 NODE_26782_length_723_cov_0.651198_ID_53563 335 699
+
+			Align 23: 4412610 4412975 NODE_26782_length_723_cov_0.651198_ID_53563 335 699
+				Gap between this and next alignment: 4412975 to 4414850 (1874 bp)
+				Next Alignment: 4414850 4415507 NODE_28841_length_673_cov_0.563107_ID_57681 658 1
+
+			Align 24: 4414850 4415507 NODE_28841_length_673_cov_0.563107_ID_57681 658 1
+				Gap between this and next alignment: 4415507 to 4415975 (467 bp)
+				Next Alignment: 4415975 4416621 NODE_30076_length_647_cov_0.638514_ID_60151 1 647
+
+			Align 25: 4415975 4416621 NODE_30076_length_647_cov_0.638514_ID_60151 1 647
+				Gap between this and next alignment: 4416621 to 4417388 (766 bp)
+				Next Alignment: 4417388 4417936 NODE_6954_length_2536_cov_5.45748_ID_13907 1255 707
+
+			Align 26: 4417388 4417936 NODE_6954_length_2536_cov_5.45748_ID_13907 1255 707
+				Negative gap (overlap) between this and next alignment: 4417936 to 4417928 (-8 bp)
+				Next Alignment: 4417928 4418035 NODE_6954_length_2536_cov_5.45748_ID_13907 108 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 108 to 99.
+			Align 27: 4417937 4418035 NODE_6954_length_2536_cov_5.45748_ID_13907 99 1
+				Gap between this and next alignment: 4418035 to 4427967 (9931 bp)
+				Next Alignment: 4427967 4428953 NODE_19495_length_987_cov_0.781116_ID_38989 1 987
+
+			Align 28: 4427967 4428953 NODE_19495_length_987_cov_0.781116_ID_38989 1 987
+				Gap between this and next alignment: 4428953 to 5868393 (1439439 bp)
+				Next Alignment: 5868393 5875614 NODE_839_length_14051_cov_4.7147_ID_1677 4912 12133
+
+			Align 29: 5868393 5875614 NODE_839_length_14051_cov_4.7147_ID_1677 4912 12133
+				Gap between this and next alignment: 5875614 to 5881105 (5490 bp)
+				Next Alignment: 5881105 5882401 NODE_473_length_22813_cov_4.769_ID_945 1730 3026
+
+			Align 30: 5881105 5882401 NODE_473_length_22813_cov_4.769_ID_945 1730 3026
+				Negative gap (overlap) between this and next alignment: 5882401 to 5882399 (-2 bp)
+				Next Alignment: 5882399 5886673 NODE_473_length_22813_cov_4.769_ID_945 5433 9707
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 5433 to 5436.
+			Align 31: 5882402 5886673 NODE_473_length_22813_cov_4.769_ID_945 5436 9707
+				Negative gap (overlap) between this and next alignment: 5886673 to 5886673 (0 bp)
+				Next Alignment: 5886673 5897273 NODE_473_length_22813_cov_4.769_ID_945 12213 22813
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 12213 to 12214.
+			Align 32: 5886674 5897273 NODE_473_length_22813_cov_4.769_ID_945 12214 22813
+				Negative gap (overlap) between this and next alignment: 5897273 to 5897219 (-54 bp)
+				Next Alignment: 5897219 5898105 NODE_21864_length_887_cov_15.6611_ID_43727 1 887
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 56.
+			Align 33: 5897274 5898105 NODE_21864_length_887_cov_15.6611_ID_43727 56 887
+				Negative gap (overlap) between this and next alignment: 5898105 to 5898051 (-54 bp)
+				Next Alignment: 5898051 5900549 NODE_5279_length_3182_cov_5.48353_ID_10557 3182 684
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 3182 to 3127.
+			Align 34: 5898106 5900549 NODE_5279_length_3182_cov_5.48353_ID_10557 3127 684
+				Gap between this and next alignment: 5900549 to 5901161 (611 bp)
+				Next Alignment: 5901161 5910694 NODE_802_length_14711_cov_4.96663_ID_1603 14277 4743
+
+			Align 35: 5901161 5910694 NODE_802_length_14711_cov_4.96663_ID_1603 14277 4743
+				Gap between this and next alignment: 5910694 to 5912819 (2124 bp)
+				Next Alignment: 5912819 5915336 NODE_802_length_14711_cov_4.96663_ID_1603 4716 2199
+
+			Align 36: 5912819 5915336 NODE_802_length_14711_cov_4.96663_ID_1603 4716 2199
+			END in gap: 5915336 to 6538460 (623124 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Clostridium_bolteae/contigs_reports/nucmer_output/SPAdes.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 3
+		Relocations: 3
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 1
+	Misassembled Contigs: 2
+	Misassembled Contig Bases: 34040
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 17 part
+Partially Unaligned Contigs with Misassemblies: 1
+Unaligned Contig Bases: 79859
+
+Ambiguously Mapped Contigs: 1
+Total Bases in Ambiguously Mapped Contigs: 850
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 84015
+
+	SNPs: 1607
+	Insertions: 73
+	Deletions: 22
+
+	Positive Gaps: 25
+		Internal Gaps:  3
+		External Gaps:  22
+		External Gap Total:  6452216
+		External Gap Average: 293283
+	Negative Gaps: 10
+		Internal Overlaps:  3
+		External Overlaps:  7
+		External Overlaps Total: -379
+		External Overlaps Average: -54
+	Contigs with Redundant Alignments: 1 (949)

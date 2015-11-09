@@ -1,0 +1,22 @@
+reference chromosomes:
+	Bacteroides_caccae_gi_423220136_ref_NZ_ (total length: 674235 bp, maximal covered length: 5320 bp)
+	Bacteroides_caccae_gi_423221078_ref_NZ_ (total length: 237058 bp, maximal covered length: 18993 bp)
+	Bacteroides_caccae_gi_423220654_ref_NZ_ (total length: 530424 bp, maximal covered length: 2662 bp)
+	Bacteroides_caccae_gi_423221318_ref_NZ_ (total length: 7150 bp, maximal covered length: 0 bp)
+	Bacteroides_caccae_gi_423221334_ref_NZ_ (total length: 4243 bp, maximal covered length: 0 bp)
+	Bacteroides_caccae_gi_423216731_ref_NZ_ (total length: 4040007 bp, maximal covered length: 267492 bp)
+
+total genome size: 5493117
+
+gap min size: 50
+partial gene/operon min size: 100
+
+
+
+assembly                 | genome    | duplication | gaps      | genes     | partial   | operons   | partial   |
+                         | fraction  | ratio       | number    |           | genes     |           | operons   |
+================================================================================================================
+IDBA_UD_to_Bacteroides_c | 5.34323%  | 1.04885     | 105       | -         | -         | -         | -         |
+Ray_to_Bacteroides_cacca | 2.64293%  | 1.09586     | 68        | -         | -         | -         | -         |
+SOAPdenovo2_to_Bacteroid | 3.92793%  | 1.05226     | 257       | -         | -         | -         | -         |
+SPAdes_to_Bacteroides_ca | 5.13823%  | 1.07459     | 107       | -         | -         | -         | -         |

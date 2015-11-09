@@ -1,0 +1,254 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Parabacteroides_merdae_gi_423721761_ref_NZ_]
+	Loaded [Parabacteroides_merdae_gi_423722616_ref_NZ_]
+	Loaded [Parabacteroides_merdae_gi_423723394_ref_NZ_]
+	Loaded [Parabacteroides_merdae_gi_423724126_ref_NZ_]
+	Loaded [Parabacteroides_merdae_gi_423724611_ref_NZ_]
+	Loaded [Parabacteroides_merdae_gi_423724986_ref_NZ_]
+	Loaded [Parabacteroides_merdae_gi_423725329_ref_NZ_]
+	Loaded [Parabacteroides_merdae_gi_423725517_ref_NZ_]
+	Loaded [Parabacteroides_merdae_gi_423725627_ref_NZ_]
+	Loaded [Parabacteroides_merdae_gi_423725688_ref_NZ_]
+	Loaded [Parabacteroides_merdae_gi_423725824_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 11
+	Total Region Length: 4458741
+Analyzing contigs...
+CONTIG: NODE_18325_length_1047_cov_14.9103_ID_36649 (1047bp)
+Top Length: 75  Top ID: 98.67
+			Skipping redundant alignments after choosing the best set of alignments
+		Skipping redundant alignment 3067 3141 | 84 10 | 75 75 | 98.67 | Parabacteroides_merdae_gi_423724126_ref_NZ_ NODE_18325_length_1047_cov_14.9103_ID_36649
+		Skipping redundant alignment 451436 451510 | 10 84 | 75 75 | 98.67 | Parabacteroides_merdae_gi_423724611_ref_NZ_ NODE_18325_length_1047_cov_14.9103_ID_36649
+		Skipping redundant alignment 1785 1859 | 10 84 | 75 75 | 98.67 | Parabacteroides_merdae_gi_423724986_ref_NZ_ NODE_18325_length_1047_cov_14.9103_ID_36649
+		Skipping redundant alignment 427667 427741 | 10 84 | 75 75 | 98.67 | Parabacteroides_merdae_gi_423724986_ref_NZ_ NODE_18325_length_1047_cov_14.9103_ID_36649
+		Skipping redundant alignment 173144 173218 | 84 10 | 75 75 | 98.67 | Parabacteroides_merdae_gi_423725329_ref_NZ_ NODE_18325_length_1047_cov_14.9103_ID_36649
+		Skipping redundant alignment 128973 129047 | 10 84 | 75 75 | 98.67 | Parabacteroides_merdae_gi_423725517_ref_NZ_ NODE_18325_length_1047_cov_14.9103_ID_36649
+		Skipping redundant alignment 18195 18269 | 84 10 | 75 75 | 98.67 | Parabacteroides_merdae_gi_423725688_ref_NZ_ NODE_18325_length_1047_cov_14.9103_ID_36649
+		This contig is partially unaligned. (Aligned 75 out of 1047 bases)
+		Alignment: 3067 3141 | 84 10 | 75 75 | 98.67 | Parabacteroides_merdae_gi_423722616_ref_NZ_ NODE_18325_length_1047_cov_14.9103_ID_36649
+		Unaligned bases: 1 to 9 (9)
+		Unaligned bases: 85 to 1047 (963)
+
+CONTIG: NODE_33_length_92873_cov_11.4296_ID_65 (92873bp)
+Top Length: 25327  Top ID: 99.88
+		Skipping redundant alignment 232459 236135 | 62814 66505 | 3677 3692 | 95.07 | Parabacteroides_merdae_gi_423723394_ref_NZ_ NODE_33_length_92873_cov_11.4296_ID_65
+		Skipping redundant alignment 236134 238539 | 66789 69199 | 2406 2411 | 95.12 | Parabacteroides_merdae_gi_423723394_ref_NZ_ NODE_33_length_92873_cov_11.4296_ID_65
+		Skipping redundant alignment 239780 241732 | 70222 72174 | 1953 1953 | 96.36 | Parabacteroides_merdae_gi_423723394_ref_NZ_ NODE_33_length_92873_cov_11.4296_ID_65
+		This contig is misassembled. 7 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 92873 and total length of all aligns is 35799
+		Alignment: 645981 671312 | 36090 61416 | 25332 25327 | 99.88 | Parabacteroides_merdae_gi_423721761_ref_NZ_ NODE_33_length_92873_cov_11.4296_ID_65
+		Alignment: 671292 671495 | 61599 61396 | 204 204 | 99.02 | Parabacteroides_merdae_gi_423721761_ref_NZ_ NODE_33_length_92873_cov_11.4296_ID_65
+		Alignment: 671475 676399 | 61579 66505 | 4925 4927 | 98.68 | Parabacteroides_merdae_gi_423721761_ref_NZ_ NODE_33_length_92873_cov_11.4296_ID_65
+		Alignment: 676398 681781 | 66789 72171 | 5384 5383 | 98.9 | Parabacteroides_merdae_gi_423721761_ref_NZ_ NODE_33_length_92873_cov_11.4296_ID_65
+		Unaligned bases: 57074
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: NODE_32021_length_611_cov_0.559353_ID_64041 (611bp)
+Top Length: 277  Top ID: 96.03
+		This contig is partially unaligned. (Aligned 277 out of 611 bases)
+		Alignment: 749567 749843 | 608 332 | 277 277 | 96.03 | Parabacteroides_merdae_gi_423721761_ref_NZ_ NODE_32021_length_611_cov_0.559353_ID_64041
+		Unaligned bases: 1 to 331 (331)
+		Unaligned bases: 609 to 611 (3)
+
+CONTIG: NODE_38696_length_520_cov_0.847312_ID_77391 (520bp)
+Top Length: 520  Top ID: 96.35
+		One align captures most of this contig: 790205 790724 | 520 1 | 520 520 | 96.35 | Parabacteroides_merdae_gi_423721761_ref_NZ_ NODE_38696_length_520_cov_0.847312_ID_77391
+
+CONTIG: NODE_829_length_14207_cov_9.96933_ID_1657 (14207bp)
+Top Length: 161  Top ID: 96.27
+		This contig is partially unaligned. (Aligned 161 out of 14207 bases)
+		Alignment: 233390 233550 | 11684 11524 | 161 161 | 96.27 | Parabacteroides_merdae_gi_423724611_ref_NZ_ NODE_829_length_14207_cov_9.96933_ID_1657
+		Unaligned bases: 1 to 11523 (11523)
+		Unaligned bases: 11685 to 14207 (2523)
+
+CONTIG: NODE_35038_length_566_cov_0.937378_ID_70075 (566bp)
+Top Length: 566  Top ID: 98.59
+		One align captures most of this contig: 232798 233363 | 1 566 | 566 566 | 98.59 | Parabacteroides_merdae_gi_423724611_ref_NZ_ NODE_35038_length_566_cov_0.937378_ID_70075
+
+CONTIG: NODE_178_length_43754_cov_7.3296_ID_355 (43754bp)
+Top Length: 2742  Top ID: 98.25
+		This contig is partially unaligned. (Aligned 2742 out of 43754 bases)
+		Alignment: 462564 465302 | 2805 5546 | 2739 2742 | 98.25 | Parabacteroides_merdae_gi_423723394_ref_NZ_ NODE_178_length_43754_cov_7.3296_ID_355
+		Unaligned bases: 1 to 2804 (2804)
+		Unaligned bases: 5547 to 43754 (38208)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: NODE_276_length_33368_cov_5.02819_ID_551 (33368bp)
+Top Length: 33330  Top ID: 99.62
+		One align captures most of this contig: 372514 405843 | 33330 1 | 33330 33330 | 99.62 | Parabacteroides_merdae_gi_423723394_ref_NZ_ NODE_276_length_33368_cov_5.02819_ID_551
+
+CONTIG: NODE_7775_length_2298_cov_1.83816_ID_15549 (2298bp)
+Top Length: 2298  Top ID: 98.13
+		One align captures most of this contig: 409194 411491 | 2298 1 | 2298 2298 | 98.13 | Parabacteroides_merdae_gi_423723394_ref_NZ_ NODE_7775_length_2298_cov_1.83816_ID_15549
+
+CONTIG: NODE_8841_length_2061_cov_0.951645_ID_17681 (2061bp)
+Top Length: 250  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 250 out of 2061 bases)
+		Alignment: 223551 223800 | 1812 2061 | 250 250 | 100.0 | Parabacteroides_merdae_gi_423723394_ref_NZ_ NODE_8841_length_2061_cov_0.951645_ID_17681
+		Unaligned bases: 1 to 1811 (1811)
+
+CONTIG: NODE_14246_length_1331_cov_1.23197_ID_28491 (1331bp)
+Top Length: 1331  Top ID: 99.32
+		One align captures most of this contig: 216972 218302 | 1 1331 | 1331 1331 | 99.32 | Parabacteroides_merdae_gi_423723394_ref_NZ_ NODE_14246_length_1331_cov_1.23197_ID_28491
+
+CONTIG: NODE_15305_length_1242_cov_1.38079_ID_30609 (1242bp)
+Top Length: 1235  Top ID: 99.84
+		One align captures most of this contig: 210044 211278 | 8 1242 | 1235 1235 | 99.84 | Parabacteroides_merdae_gi_423723394_ref_NZ_ NODE_15305_length_1242_cov_1.38079_ID_30609
+
+CONTIG: NODE_23302_length_834_cov_2.10141_ID_46603 (834bp)
+Top Length: 834  Top ID: 95.71
+		One align captures most of this contig: 420804 421641 | 1 834 | 838 834 | 95.71 | Parabacteroides_merdae_gi_423723394_ref_NZ_ NODE_23302_length_834_cov_2.10141_ID_46603
+
+CONTIG: NODE_23554_length_825_cov_1.22597_ID_47107 (825bp)
+Top Length: 825  Top ID: 99.52
+		One align captures most of this contig: 220243 221067 | 1 825 | 825 825 | 99.52 | Parabacteroides_merdae_gi_423723394_ref_NZ_ NODE_23554_length_825_cov_1.22597_ID_47107
+
+CONTIG: NODE_33143_length_593_cov_1.34387_ID_66285 (593bp)
+Top Length: 593  Top ID: 99.66
+		One align captures most of this contig: 215999 216591 | 1 593 | 593 593 | 99.66 | Parabacteroides_merdae_gi_423723394_ref_NZ_ NODE_33143_length_593_cov_1.34387_ID_66285
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_merdae/contigs_reports/nucmer_output/SPAdes.used_snps
+	Reference Parabacteroides_merdae_gi_423721761_ref_NZ_: 6 total alignments. 1 total regions.
+		Region: 1 to 928763 (928763 bp)
+			START in gap: 1 to 645981 (645980 bp)
+			Align 1: 645981 671312 NODE_33_length_92873_cov_11.4296_ID_65 36090 61416
+				Negative gap (overlap) between this and next alignment: 671312 to 671292 (-20 bp)
+				Next Alignment: 671292 671495 NODE_33_length_92873_cov_11.4296_ID_65 61599 61396
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 61599 to 61578.
+			Align 2: 671313 671495 NODE_33_length_92873_cov_11.4296_ID_65 61578 61396
+				Negative gap (overlap) between this and next alignment: 671495 to 671475 (-20 bp)
+				Next Alignment: 671475 676399 NODE_33_length_92873_cov_11.4296_ID_65 61579 66505
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 61579 to 61600.
+			Align 3: 671496 676399 NODE_33_length_92873_cov_11.4296_ID_65 61600 66505
+				Negative gap (overlap) between this and next alignment: 676399 to 676398 (-1 bp)
+				Next Alignment: 676398 681781 NODE_33_length_92873_cov_11.4296_ID_65 66789 72171
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 66789 to 66791.
+			Align 4: 676400 681781 NODE_33_length_92873_cov_11.4296_ID_65 66791 72171
+				Gap between this and next alignment: 681781 to 749567 (67785 bp)
+				Next Alignment: 749567 749843 NODE_32021_length_611_cov_0.559353_ID_64041 608 332
+
+			Align 5: 749567 749843 NODE_32021_length_611_cov_0.559353_ID_64041 608 332
+				Gap between this and next alignment: 749843 to 790205 (40361 bp)
+				Next Alignment: 790205 790724 NODE_38696_length_520_cov_0.847312_ID_77391 520 1
+
+			Align 6: 790205 790724 NODE_38696_length_520_cov_0.847312_ID_77391 520 1
+			END in gap: 790724 to 928763 (138039 bp)
+
+ERROR: Reference Parabacteroides_merdae_gi_423724986_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Parabacteroides_merdae_gi_423721761_ref_NZ_', 'Parabacteroides_merdae_gi_423723394_ref_NZ_', 'Parabacteroides_merdae_gi_423722616_ref_NZ_', 'Parabacteroides_merdae_gi_423724611_ref_NZ_']
+ERROR: Reference Parabacteroides_merdae_gi_423725517_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Parabacteroides_merdae_gi_423721761_ref_NZ_', 'Parabacteroides_merdae_gi_423723394_ref_NZ_', 'Parabacteroides_merdae_gi_423722616_ref_NZ_', 'Parabacteroides_merdae_gi_423724611_ref_NZ_']
+	Reference Parabacteroides_merdae_gi_423723394_ref_NZ_: 9 total alignments. 1 total regions.
+		Region: 1 to 734811 (734811 bp)
+			START in gap: 1 to 210044 (210043 bp)
+			Align 1: 210044 211278 NODE_15305_length_1242_cov_1.38079_ID_30609 8 1242
+				Gap between this and next alignment: 211278 to 215999 (4720 bp)
+				Next Alignment: 215999 216591 NODE_33143_length_593_cov_1.34387_ID_66285 1 593
+
+			Align 2: 215999 216591 NODE_33143_length_593_cov_1.34387_ID_66285 1 593
+				Gap between this and next alignment: 216591 to 216972 (380 bp)
+				Next Alignment: 216972 218302 NODE_14246_length_1331_cov_1.23197_ID_28491 1 1331
+
+			Align 3: 216972 218302 NODE_14246_length_1331_cov_1.23197_ID_28491 1 1331
+				Gap between this and next alignment: 218302 to 220243 (1940 bp)
+				Next Alignment: 220243 221067 NODE_23554_length_825_cov_1.22597_ID_47107 1 825
+
+			Align 4: 220243 221067 NODE_23554_length_825_cov_1.22597_ID_47107 1 825
+				Gap between this and next alignment: 221067 to 223551 (2483 bp)
+				Next Alignment: 223551 223800 NODE_8841_length_2061_cov_0.951645_ID_17681 1812 2061
+
+			Align 5: 223551 223800 NODE_8841_length_2061_cov_0.951645_ID_17681 1812 2061
+				Gap between this and next alignment: 223800 to 372514 (148713 bp)
+				Next Alignment: 372514 405843 NODE_276_length_33368_cov_5.02819_ID_551 33330 1
+
+			Align 6: 372514 405843 NODE_276_length_33368_cov_5.02819_ID_551 33330 1
+				Gap between this and next alignment: 405843 to 409194 (3350 bp)
+				Next Alignment: 409194 411491 NODE_7775_length_2298_cov_1.83816_ID_15549 2298 1
+
+			Align 7: 409194 411491 NODE_7775_length_2298_cov_1.83816_ID_15549 2298 1
+				Gap between this and next alignment: 411491 to 420804 (9312 bp)
+				Next Alignment: 420804 421641 NODE_23302_length_834_cov_2.10141_ID_46603 1 834
+
+			Align 8: 420804 421641 NODE_23302_length_834_cov_2.10141_ID_46603 1 834
+				Gap between this and next alignment: 421641 to 462564 (40922 bp)
+				Next Alignment: 462564 465302 NODE_178_length_43754_cov_7.3296_ID_355 2805 5546
+
+			Align 9: 462564 465302 NODE_178_length_43754_cov_7.3296_ID_355 2805 5546
+			END in gap: 465302 to 734811 (269509 bp)
+
+ERROR: Reference Parabacteroides_merdae_gi_423725688_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Parabacteroides_merdae_gi_423721761_ref_NZ_', 'Parabacteroides_merdae_gi_423723394_ref_NZ_', 'Parabacteroides_merdae_gi_423722616_ref_NZ_', 'Parabacteroides_merdae_gi_423724611_ref_NZ_']
+	Reference Parabacteroides_merdae_gi_423724611_ref_NZ_: 2 total alignments. 1 total regions.
+		Region: 1 to 454576 (454576 bp)
+			START in gap: 1 to 232798 (232797 bp)
+			Align 1: 232798 233363 NODE_35038_length_566_cov_0.937378_ID_70075 1 566
+				Gap between this and next alignment: 233363 to 233390 (26 bp)
+				Next Alignment: 233390 233550 NODE_829_length_14207_cov_9.96933_ID_1657 11684 11524
+
+			Align 2: 233390 233550 NODE_829_length_14207_cov_9.96933_ID_1657 11684 11524
+			END in gap: 233550 to 454576 (221026 bp)
+
+ERROR: Reference Parabacteroides_merdae_gi_423725824_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Parabacteroides_merdae_gi_423721761_ref_NZ_', 'Parabacteroides_merdae_gi_423723394_ref_NZ_', 'Parabacteroides_merdae_gi_423722616_ref_NZ_', 'Parabacteroides_merdae_gi_423724611_ref_NZ_']
+	Reference Parabacteroides_merdae_gi_423722616_ref_NZ_: 1 total alignments. 1 total regions.
+		Region: 1 to 901995 (901995 bp)
+			START in gap: 1 to 3067 (3066 bp)
+			Align 1: 3067 3141 NODE_18325_length_1047_cov_14.9103_ID_36649 84 10
+			END in gap: 3141 to 901995 (898854 bp)
+
+ERROR: Reference Parabacteroides_merdae_gi_423725627_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Parabacteroides_merdae_gi_423721761_ref_NZ_', 'Parabacteroides_merdae_gi_423723394_ref_NZ_', 'Parabacteroides_merdae_gi_423722616_ref_NZ_', 'Parabacteroides_merdae_gi_423724611_ref_NZ_']
+ERROR: Reference Parabacteroides_merdae_gi_423725329_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Parabacteroides_merdae_gi_423721761_ref_NZ_', 'Parabacteroides_merdae_gi_423723394_ref_NZ_', 'Parabacteroides_merdae_gi_423722616_ref_NZ_', 'Parabacteroides_merdae_gi_423724611_ref_NZ_']
+ERROR: Reference Parabacteroides_merdae_gi_423724126_ref_NZ_ does not have any alignments!  Check that this is the same file used for alignment.
+ERROR: Alignment Reference Headers: ['Parabacteroides_merdae_gi_423721761_ref_NZ_', 'Parabacteroides_merdae_gi_423723394_ref_NZ_', 'Parabacteroides_merdae_gi_423722616_ref_NZ_', 'Parabacteroides_merdae_gi_423724611_ref_NZ_']
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Parabacteroides_merdae/contigs_reports/nucmer_output/SPAdes.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 6 part
+Partially Unaligned Contigs with Misassemblies: 1
+Unaligned Contig Bases: 115249
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 80839
+
+	SNPs: 438
+	Insertions: 13
+	Deletions: 18
+
+	Positive Gaps: 19
+		Internal Gaps:  0
+		External Gaps:  19
+		External Gap Total:  2939306
+		External Gap Average: 154700
+	Negative Gaps: 3
+		Internal Overlaps:  3
+		External Overlaps:  0
+		External Overlaps Total:  0
+		External Overlaps Average: 0
+	Contigs with Redundant Alignments: 0 (0)

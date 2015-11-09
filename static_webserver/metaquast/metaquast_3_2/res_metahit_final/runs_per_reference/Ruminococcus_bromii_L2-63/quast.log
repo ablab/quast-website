@@ -1,0 +1,123 @@
+/home/gurevich/rep/quast/quast.pyc -t 16 -j  --meta  --bed-file /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/combined_reference/structural_variations/combined_reference.bed --no-check-meta  --contig-thresholds 1000,5000,10000,25000,50000 -R /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Ruminococcus_bromii_L2-63.fasta -o /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Ruminococcus_bromii_L2-63 --labels "IDBA_UD, Ray, SOAPdenovo2, SPAdes" /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/IDBA_UD_to_Ruminococcus_bromii_L2-63.fasta /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Ray_to_Ruminococcus_bromii_L2-63.fasta /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SOAPdenovo2_to_Ruminococcus_bromii_L2-63.fasta /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SPAdes_to_Ruminococcus_bromii_L2-63.fasta
+
+Started: 2015-11-09 20:31:13
+
+Logging to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Ruminococcus_bromii_L2-63/quast.log
+
+NOTICE: Output directory already exists. Existing Nucmer alignments can be used.
+
+Reference:
+  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Ruminococcus_bromii_L2-63.fasta ==> Ruminococcus_bromii_L2-63
+
+Contigs:
+  1  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/IDBA_UD_to_Ruminococcus_bromii_L2-63.fasta ==> IDBA_UD
+  2  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/Ray_to_Ruminococcus_bromii_L2-63.fasta ==> Ray
+  3  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SOAPdenovo2_to_Ruminococcus_bromii_L2-63.fasta ==> SOAPdenovo2
+  4  /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/quast_corrected_input/SPAdes_to_Ruminococcus_bromii_L2-63.fasta ==> SPAdes
+
+2015-11-09 20:31:14
+Running Basic statistics processor...
+  Reference genome:
+    Ruminococcus_bromii_L2-63.fasta, Reference length = 2249085, Reference GC % = 41.39
+  Contig files: 
+    1  IDBA_UD
+    2  Ray
+    3  SOAPdenovo2
+    4  SPAdes
+  Calculating N50 and L50...
+    1  IDBA_UD, N50 = 125915, L50 = 3, Total length = 943382, GC % = 42.94, # N's per 100 kbp =  54.70
+    2  Ray, N50 = 2723, L50 = 6, Total length = 70434, GC % = 42.99, # N's per 100 kbp =  4098.87
+    3  SOAPdenovo2, N50 = 1475, L50 = 8, Total length = 50141, GC % = 43.28, # N's per 100 kbp =  3589.88
+    4  SPAdes, N50 = 14741, L50 = 8, Total length = 408526, GC % = 41.95, # N's per 100 kbp =  126.80
+  Drawing Nx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Ruminococcus_bromii_L2-63/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Ruminococcus_bromii_L2-63/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Ruminococcus_bromii_L2-63/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Ruminococcus_bromii_L2-63/basic_stats/GC_content_plot.pdf
+Done.
+
+2015-11-09 20:31:18
+Running Contig analyzer...
+  1  IDBA_UD
+  2  Ray
+  3  SOAPdenovo2
+  4  SPAdes
+  1  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Ruminococcus_bromii_L2-63/contigs_reports/contigs_report_IDBA_UD.stdout and contigs_report_IDBA_UD.stderr...
+  2  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Ruminococcus_bromii_L2-63/contigs_reports/contigs_report_Ray.stdout and contigs_report_Ray.stderr...
+  4  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Ruminococcus_bromii_L2-63/contigs_reports/contigs_report_SPAdes.stdout and contigs_report_SPAdes.stderr...
+  3  Logging to files /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Ruminococcus_bromii_L2-63/contigs_reports/contigs_report_SOAPdenovo2.stdout and contigs_report_SOAPdenovo2.stderr...
+  1  Using existing Nucmer alignments... 
+  2  Using existing Nucmer alignments... 
+  4  Using existing Nucmer alignments... 
+  3  Using existing Nucmer alignments... 
+  2  Alignments: runs_per_reference/Ruminococcus_bromii_L2-63/contigs_reports/alignments_Ray.tsv
+  2  Analysis is finished.
+
+  3  Alignments: runs_per_reference/Ruminococcus_bromii_L2-63/contigs_reports/alignments_SOAPdenovo2.tsv
+  4  Alignments: runs_per_reference/Ruminococcus_bromii_L2-63/contigs_reports/alignments_SPAdes.tsv
+  3  Analysis is finished.
+
+  1  Alignments: runs_per_reference/Ruminococcus_bromii_L2-63/contigs_reports/alignments_IDBA_UD.tsv
+  4  Analysis is finished.
+
+  1  Analysis is finished.
+
+  Creating total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Ruminococcus_bromii_L2-63/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Ruminococcus_bromii_L2-63/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Ruminococcus_bromii_L2-63/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Ruminococcus_bromii_L2-63/contigs_reports/misassemblies_plot.pdf
+Done.
+
+2015-11-09 20:31:21
+Running NA-NGA calculation...
+  1  IDBA_UD, Largest alignment = 8987, NA50 = None, LA50 = None
+  2  Ray, Largest alignment = 3620, NA50 = 625, LA50 = 25
+  3  SOAPdenovo2, Largest alignment = 7706, NA50 = 812, LA50 = 17
+  4  SPAdes, Largest alignment = 14642, NA50 = None, LA50 = None
+  Drawing cumulative plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Ruminococcus_bromii_L2-63/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Ruminococcus_bromii_L2-63/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Ruminococcus_bromii_L2-63/aligned_stats/NGAx_plot.pdf
+Done.
+
+2015-11-09 20:31:23
+Running Genome analyzer...
+  NOTICE: No file with genes provided. Use the -G option if you want to specify it.
+  NOTICE: No file with operons provided. Use the -O option if you want to specify it.
+  1  IDBA_UD
+  2  Ray
+  3  SOAPdenovo2
+  4  SPAdes
+  3  Analysis is finished.
+  2  Analysis is finished.
+  4  Analysis is finished.
+  1  Analysis is finished.
+  Drawing Genome fraction, % histogram...
+    saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Ruminococcus_bromii_L2-63/genome_stats/genome_fraction_histogram.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding option to enable it.
+
+2015-11-09 20:31:25
+Drawing large plots...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating contig alignment plot...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2015-11-09 20:31:30
+RESULTS:
+  Text versions of total report are saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Ruminococcus_bromii_L2-63/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Ruminococcus_bromii_L2-63/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Ruminococcus_bromii_L2-63/report.html
+  PDF version (tables and plots) saved to /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Ruminococcus_bromii_L2-63/report.pdf
+  Contig alignment plot: /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Ruminococcus_bromii_L2-63/alignment.svg

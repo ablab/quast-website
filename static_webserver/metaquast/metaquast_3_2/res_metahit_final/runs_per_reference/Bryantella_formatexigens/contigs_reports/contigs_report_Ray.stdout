@@ -1,0 +1,105 @@
+Aligning contigs to reference...
+	Using existing Nucmer alignments...
+Parsing coords...
+Loading reference...
+	Loaded [Bryantella_formatexigens_gi_241911836_ref_NZ_]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 1
+	Total Region Length: 4548960
+Analyzing contigs...
+CONTIG: scaffold-2953 (5606bp)
+Top Length: 82  Top ID: 96.34
+		This contig is partially unaligned. (Aligned 82 out of 5606 bases)
+		Alignment: 1639803 1639884 | 3109 3190 | 82 82 | 96.34 | Bryantella_formatexigens_gi_241911836_ref_NZ_ scaffold-2953
+		Unaligned bases: 1 to 3108 (3108)
+		Unaligned bases: 3191 to 5606 (2416)
+
+CONTIG: scaffold-15886 (1260bp)
+Top Length: 1260  Top ID: 98.25
+		One align captures most of this contig: 1436722 1437981 | 1260 1 | 1260 1260 | 98.25 | Bryantella_formatexigens_gi_241911836_ref_NZ_ scaffold-15886
+
+CONTIG: scaffold-28606 (1686bp)
+Top Length: 1686  Top ID: 98.1
+		One align captures most of this contig: 1433502 1435187 | 1686 1 | 1686 1686 | 98.1 | Bryantella_formatexigens_gi_241911836_ref_NZ_ scaffold-28606
+
+CONTIG: scaffold-98526 (592bp)
+Top Length: 592  Top ID: 98.65
+		One align captures most of this contig: 1399085 1399676 | 592 1 | 592 592 | 98.65 | Bryantella_formatexigens_gi_241911836_ref_NZ_ scaffold-98526
+
+CONTIG: scaffold-195373 (22545bp)
+Top Length: 81  Top ID: 97.53
+		Skipping redundant alignment 3202560 3202635 | 22183 22258 | 76 76 | 100.0 | Bryantella_formatexigens_gi_241911836_ref_NZ_ scaffold-195373
+		This contig is misassembled. 3 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 22545 and total length of all aligns is 158
+		Alignment: 3032524 3032600 | 22258 22182 | 77 77 | 100.0 | Bryantella_formatexigens_gi_241911836_ref_NZ_ scaffold-195373
+		Alignment: 3032233 3032313 | 22372 22292 | 81 81 | 97.53 | Bryantella_formatexigens_gi_241911836_ref_NZ_ scaffold-195373
+		Unaligned bases: 22387
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bryantella_formatexigens/contigs_reports/nucmer_output/Ray.used_snps
+	Reference Bryantella_formatexigens_gi_241911836_ref_NZ_: 6 total alignments. 1 total regions.
+		Region: 1 to 4548960 (4548960 bp)
+			START in gap: 1 to 1399085 (1399084 bp)
+			Align 1: 1399085 1399676 scaffold-98526 592 1
+				Gap between this and next alignment: 1399676 to 1433502 (33825 bp)
+				Next Alignment: 1433502 1435187 scaffold-28606 1686 1
+
+			Align 2: 1433502 1435187 scaffold-28606 1686 1
+				Gap between this and next alignment: 1435187 to 1436722 (1534 bp)
+				Next Alignment: 1436722 1437981 scaffold-15886 1260 1
+
+			Align 3: 1436722 1437981 scaffold-15886 1260 1
+				Gap between this and next alignment: 1437981 to 1639803 (201821 bp)
+				Next Alignment: 1639803 1639884 scaffold-2953 3109 3190
+
+			Align 4: 1639803 1639884 scaffold-2953 3109 3190
+				Gap between this and next alignment: 1639884 to 3032233 (1392348 bp)
+				Next Alignment: 3032233 3032313 scaffold-195373 22372 22292
+
+			Align 5: 3032233 3032313 scaffold-195373 22372 22292
+				Gap between this and next alignment: 3032313 to 3032524 (210 bp)
+				Next Alignment: 3032524 3032600 scaffold-195373 22258 22182
+
+			Align 6: 3032524 3032600 scaffold-195373 22258 22182
+			END in gap: 3032600 to 4548960 (1516360 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bryantella_formatexigens/contigs_reports/nucmer_output/Ray.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 2 part
+Partially Unaligned Contigs with Misassemblies: 1
+Unaligned Contig Bases: 27911
+
+Ambiguously Mapped Contigs: 0
+Total Bases in Ambiguously Mapped Contigs: 0
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 3778
+
+	SNPs: 67
+	Insertions: 0
+	Deletions: 0
+
+	Positive Gaps: 7
+		Internal Gaps:  1
+		External Gaps:  6
+		External Gap Total:  4544972
+		External Gap Average: 757495
+	Negative Gaps: 0
+		Internal Overlaps:  0
+		External Overlaps:  0
+		External Overlaps Total:  0
+		External Overlaps Average: 0
+	Contigs with Redundant Alignments: 0 (0)

@@ -1,0 +1,972 @@
+Aligning contigs to reference...
+	Running Nucmer
+Parsing coords...
+Loading reference...
+	Loaded [Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0]
+Loading SNPs...
+Loading regions...
+	No regions given, using whole reference.
+	Total Regions: 1
+	Total Region Length: 6260361
+Analyzing contigs...
+CONTIG: scaffold-47 (17196bp)
+Top Length: 205  Top ID: 99.51
+		This contig is partially unaligned. (Aligned 205 out of 17196 bases)
+		Alignment: 5843700 5843904 | 13513 13717 | 205 205 | 99.51 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-47
+		Unaligned bases: 1 to 13512 (13512)
+		Unaligned bases: 13718 to 17196 (3479)
+
+CONTIG: scaffold-285 (12982bp)
+Top Length: 173  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 173 out of 12982 bases)
+		Alignment: 5843700 5843872 | 12810 12982 | 173 173 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-285
+		Unaligned bases: 1 to 12809 (12809)
+
+CONTIG: scaffold-337 (17125bp)
+Top Length: 3099  Top ID: 97.87
+		This contig is misassembled. 3 total aligns.
+			Warning! This contig is more unaligned than misassembled. Contig length is 17125 and total length of all aligns is 4574
+		Alignment: 4017554 4017683 | 1274 1145 | 130 130 | 98.46 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-337
+		Alignment: 4005595 4006939 | 13864 12520 | 1345 1345 | 97.99 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-337
+		Alignment: 4001894 4004992 | 17033 13935 | 3099 3099 | 97.87 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-337
+		Unaligned bases: 12551
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+CONTIG: scaffold-643 (9508bp)
+Top Length: 549  Top ID: 98.36
+		This contig is partially unaligned. (Aligned 549 out of 9508 bases)
+		Alignment: 5961157 5961705 | 1895 1347 | 549 549 | 98.36 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-643
+		Unaligned bases: 1 to 1346 (1346)
+		Unaligned bases: 1896 to 9508 (7613)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-1284 (10371bp)
+Top Length: 566  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 566 out of 10371 bases)
+		Alignment: 5963984 5964549 | 919 1484 | 566 566 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-1284
+		Unaligned bases: 1 to 918 (918)
+		Unaligned bases: 1485 to 10371 (8887)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-1774 (2627bp)
+Top Length: 91  Top ID: 95.6
+		This contig is partially unaligned. (Aligned 91 out of 2627 bases)
+		Alignment: 2131838 2131928 | 91 1 | 91 91 | 95.6 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-1774
+		Unaligned bases: 92 to 2627 (2536)
+
+CONTIG: scaffold-2589 (14202bp)
+Top Length: 14202  Top ID: 99.9
+		One align captures most of this contig: 2448315 2462516 | 14202 1 | 14202 14202 | 99.9 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-2589
+
+CONTIG: scaffold-2756 (6040bp)
+Top Length: 1077  Top ID: 99.91
+		This contig is partially unaligned. (Aligned 1077 out of 6040 bases)
+		Alignment: 1382061 1383137 | 4964 6040 | 1077 1077 | 99.91 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-2756
+		Unaligned bases: 1 to 4963 (4963)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-3438 (1028bp)
+Top Length: 1028  Top ID: 99.9
+		One align captures most of this contig: 5226316 5227343 | 1028 1 | 1028 1028 | 99.9 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-3438
+
+CONTIG: scaffold-3471 (995bp)
+Top Length: 995  Top ID: 99.9
+		One align captures most of this contig: 4094008 4095002 | 1 995 | 995 995 | 99.9 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-3471
+
+CONTIG: scaffold-3558 (1615bp)
+Top Length: 1614  Top ID: 100.0
+		This contig has 8 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 3037553 3039166 | 1 1614 | 1614 1614 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-3558
+		Skipping alignment  3331528 3333133 | 1615 10 | 1606 1606 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-3558
+		Skipping alignment  4709613 4711218 | 9 1614 | 1606 1606 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-3558
+		Skipping alignment  430235 431839 | 11 1615 | 1605 1605 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-3558
+		Skipping alignment  1128628 1130231 | 11 1614 | 1604 1604 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-3558
+		Skipping alignment  2379247 2380850 | 1614 11 | 1604 1604 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-3558
+		Skipping alignment  2993452 2995055 | 1614 11 | 1604 1604 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-3558
+		Skipping alignment  5997644 5999247 | 1614 11 | 1604 1604 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-3558
+
+CONTIG: scaffold-3699 (950bp)
+Top Length: 950  Top ID: 99.89
+		One align captures most of this contig: 4127581 4128530 | 1 950 | 950 950 | 99.89 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-3699
+
+CONTIG: scaffold-3818 (1767bp)
+Top Length: 383  Top ID: 95.3
+		This contig is partially unaligned. (Aligned 383 out of 1767 bases)
+		Alignment: 255899 256281 | 775 393 | 383 383 | 95.3 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-3818
+		Unaligned bases: 1 to 392 (392)
+		Unaligned bases: 776 to 1767 (992)
+
+CONTIG: scaffold-3822 (1491bp)
+Top Length: 1491  Top ID: 99.66
+		One align captures most of this contig: 1383420 1384910 | 1491 1 | 1491 1491 | 99.66 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-3822
+
+CONTIG: scaffold-3929 (881bp)
+Top Length: 881  Top ID: 100.0
+		One align captures most of this contig: 2839278 2840158 | 881 1 | 881 881 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-3929
+
+CONTIG: scaffold-4226 (796bp)
+Top Length: 796  Top ID: 100.0
+		One align captures most of this contig: 4529752 4530547 | 1 796 | 796 796 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-4226
+
+CONTIG: scaffold-4268 (762bp)
+Top Length: 762  Top ID: 99.87
+		One align captures most of this contig: 5665934 5666695 | 1 762 | 762 762 | 99.87 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-4268
+
+CONTIG: scaffold-4421 (791bp)
+Top Length: 791  Top ID: 99.62
+		One align captures most of this contig: 3550887 3551677 | 1 791 | 791 791 | 99.62 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-4421
+
+CONTIG: scaffold-4468 (783bp)
+Top Length: 783  Top ID: 100.0
+		One align captures most of this contig: 4917622 4918404 | 783 1 | 783 783 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-4468
+
+CONTIG: scaffold-4521 (724bp)
+Top Length: 724  Top ID: 99.86
+		One align captures most of this contig: 2385042 2385765 | 1 724 | 724 724 | 99.86 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-4521
+
+CONTIG: scaffold-4549 (755bp)
+Top Length: 755  Top ID: 100.0
+		One align captures most of this contig: 2841424 2842178 | 1 755 | 755 755 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-4549
+
+CONTIG: scaffold-4562 (713bp)
+Top Length: 713  Top ID: 100.0
+		One align captures most of this contig: 5314644 5315356 | 713 1 | 713 713 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-4562
+
+CONTIG: scaffold-4591 (1684bp)
+Top Length: 1684  Top ID: 99.41
+		One align captures most of this contig: 4599797 4601480 | 1 1684 | 1684 1684 | 99.41 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-4591
+
+CONTIG: scaffold-4683 (758bp)
+Top Length: 758  Top ID: 99.74
+		One align captures most of this contig: 4199109 4199866 | 758 1 | 758 758 | 99.74 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-4683
+
+CONTIG: scaffold-4816 (710bp)
+Top Length: 710  Top ID: 100.0
+		One align captures most of this contig: 4095201 4095910 | 710 1 | 710 710 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-4816
+
+CONTIG: scaffold-4862 (702bp)
+Top Length: 702  Top ID: 99.72
+		One align captures most of this contig: 3948336 3949037 | 702 1 | 702 702 | 99.72 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-4862
+
+CONTIG: scaffold-4866 (709bp)
+Top Length: 709  Top ID: 99.72
+		One align captures most of this contig: 4136504 4137212 | 1 709 | 709 709 | 99.72 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-4866
+
+CONTIG: scaffold-4962 (686bp)
+Top Length: 686  Top ID: 100.0
+		One align captures most of this contig: 4503635 4504320 | 1 686 | 686 686 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-4962
+
+CONTIG: scaffold-4976 (685bp)
+Top Length: 685  Top ID: 99.85
+		One align captures most of this contig: 5147409 5148093 | 1 685 | 685 685 | 99.85 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-4976
+
+CONTIG: scaffold-4979 (695bp)
+Top Length: 695  Top ID: 100.0
+		One align captures most of this contig: 3927435 3928129 | 695 1 | 695 695 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-4979
+
+CONTIG: scaffold-5115 (670bp)
+Top Length: 670  Top ID: 100.0
+		One align captures most of this contig: 4132003 4132672 | 670 1 | 670 670 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-5115
+
+CONTIG: scaffold-5328 (605bp)
+Top Length: 605  Top ID: 100.0
+		One align captures most of this contig: 2676388 2676992 | 605 1 | 605 605 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-5328
+
+CONTIG: scaffold-5332 (645bp)
+Top Length: 645  Top ID: 99.84
+		One align captures most of this contig: 1569911 1570555 | 1 645 | 645 645 | 99.84 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-5332
+
+CONTIG: scaffold-5357 (641bp)
+Top Length: 641  Top ID: 100.0
+		One align captures most of this contig: 2659123 2659763 | 641 1 | 641 641 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-5357
+
+CONTIG: scaffold-5358 (1704bp)
+Top Length: 1703  Top ID: 98.77
+		Marking as insignificant: 4169158 4169259 | 1704 1603 | 102 102 | 98.04 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-5358
+		Marking as insignificant: 4976346 4976447 | 1603 1704 | 102 102 | 99.02 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-5358
+		Marking as insignificant: 4484348 4484464 | 1588 1704 | 117 117 | 99.15 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-5358
+		Marking as insignificant: 4976477 4978063 | 1588 2 | 1587 1587 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-5358
+		Marking as insignificant: 4816884 4818471 | 1588 1 | 1588 1588 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-5358
+		Marking as insignificant: 4484493 4486080 | 1589 2 | 1588 1588 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-5358
+		Marking as insignificant: 2690768 2692355 | 1589 2 | 1588 1588 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-5358
+		Marking as insignificant: 2347551 2349138 | 2 1589 | 1588 1588 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-5358
+		Marking as insignificant: 5651026 5652614 | 1589 1 | 1589 1589 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-5358
+		One align captures most of this contig: 3189017 3190698 | 2 1704 | 1682 1703 | 98.77 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-5358
+
+CONTIG: scaffold-5379 (615bp)
+Top Length: 615  Top ID: 99.35
+		One align captures most of this contig: 3550264 3550878 | 1 615 | 615 615 | 99.35 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-5379
+
+CONTIG: scaffold-5529 (602bp)
+Top Length: 602  Top ID: 98.67
+		One align captures most of this contig: 4351262 4351863 | 1 602 | 602 602 | 98.67 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-5529
+
+CONTIG: scaffold-5530 (601bp)
+Top Length: 601  Top ID: 100.0
+		One align captures most of this contig: 2136731 2137331 | 1 601 | 601 601 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-5530
+
+CONTIG: scaffold-5539 (600bp)
+Top Length: 600  Top ID: 99.83
+		One align captures most of this contig: 1350756 1351355 | 1 600 | 600 600 | 99.83 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-5539
+
+CONTIG: scaffold-5608 (575bp)
+Top Length: 575  Top ID: 98.43
+		One align captures most of this contig: 3313608 3314182 | 1 575 | 575 575 | 98.43 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-5608
+
+CONTIG: scaffold-5640 (594bp)
+Top Length: 594  Top ID: 99.49
+		One align captures most of this contig: 2738959 2739552 | 1 594 | 594 594 | 99.49 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-5640
+
+CONTIG: scaffold-5673 (602bp)
+Top Length: 602  Top ID: 100.0
+		One align captures most of this contig: 3933267 3933868 | 602 1 | 602 602 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-5673
+
+CONTIG: scaffold-5724 (588bp)
+Top Length: 588  Top ID: 100.0
+		One align captures most of this contig: 4135913 4136500 | 1 588 | 588 588 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-5724
+
+CONTIG: scaffold-5796 (591bp)
+Top Length: 591  Top ID: 99.66
+		One align captures most of this contig: 4514175 4514765 | 591 1 | 591 591 | 99.66 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-5796
+
+CONTIG: scaffold-5801 (591bp)
+Top Length: 591  Top ID: 100.0
+		One align captures most of this contig: 5593612 5594202 | 1 591 | 591 591 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-5801
+
+CONTIG: scaffold-5863 (568bp)
+Top Length: 568  Top ID: 100.0
+		One align captures most of this contig: 6168196 6168763 | 1 568 | 568 568 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-5863
+
+CONTIG: scaffold-5876 (599bp)
+Top Length: 599  Top ID: 99.83
+		One align captures most of this contig: 3937544 3938142 | 599 1 | 599 599 | 99.83 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-5876
+
+CONTIG: scaffold-5891 (619bp)
+Top Length: 619  Top ID: 99.84
+		One align captures most of this contig: 4870569 4871187 | 619 1 | 619 619 | 99.84 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-5891
+
+CONTIG: scaffold-5916 (551bp)
+Top Length: 551  Top ID: 100.0
+		One align captures most of this contig: 4130375 4130925 | 551 1 | 551 551 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-5916
+
+CONTIG: scaffold-5967 (709bp)
+Top Length: 709  Top ID: 99.86
+		One align captures most of this contig: 267389 268097 | 709 1 | 709 709 | 99.86 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-5967
+
+CONTIG: scaffold-5982 (648bp)
+Top Length: 648  Top ID: 98.92
+		One align captures most of this contig: 1062558 1063205 | 648 1 | 648 648 | 98.92 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-5982
+
+CONTIG: scaffold-6054 (1376bp)
+Top Length: 1376  Top ID: 99.85
+		This contig has 7 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+		Alignment: 600268 601643 | 1 1376 | 1376 1376 | 99.85 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6054
+		Skipping alignment  1973365 1974740 | 1 1376 | 1376 1376 | 99.85 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6054
+		Skipping alignment  2169230 2170605 | 1 1376 | 1376 1376 | 99.85 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6054
+		Skipping alignment  3891506 3892881 | 1 1376 | 1376 1376 | 99.85 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6054
+		Skipping alignment  4930632 4932007 | 1 1376 | 1376 1376 | 99.85 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6054
+		Skipping alignment  6218721 6220095 | 1375 1 | 1375 1375 | 99.85 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6054
+		Skipping alignment  1549999 1551375 | 1376 1 | 1377 1376 | 99.71 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6054
+
+CONTIG: scaffold-6109 (566bp)
+Top Length: 566  Top ID: 100.0
+		One align captures most of this contig: 1347129 1347694 | 1 566 | 566 566 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6109
+
+CONTIG: scaffold-6113 (539bp)
+Top Length: 539  Top ID: 99.07
+		One align captures most of this contig: 2747953 2748491 | 539 1 | 539 539 | 99.07 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6113
+
+CONTIG: scaffold-6202 (561bp)
+Top Length: 561  Top ID: 99.64
+		One align captures most of this contig: 1592776 1593336 | 561 1 | 561 561 | 99.64 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6202
+
+CONTIG: scaffold-6255 (568bp)
+Top Length: 568  Top ID: 99.65
+		One align captures most of this contig: 5568992 5569559 | 568 1 | 568 568 | 99.65 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6255
+
+CONTIG: scaffold-6270 (557bp)
+Top Length: 557  Top ID: 99.82
+		One align captures most of this contig: 4268220 4268776 | 557 1 | 557 557 | 99.82 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6270
+
+CONTIG: scaffold-6272 (566bp)
+Top Length: 566  Top ID: 99.82
+		One align captures most of this contig: 4552719 4553284 | 1 566 | 566 566 | 99.82 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6272
+
+CONTIG: scaffold-6448 (579bp)
+Top Length: 579  Top ID: 100.0
+		One align captures most of this contig: 3950086 3950664 | 579 1 | 579 579 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6448
+
+CONTIG: scaffold-6450 (518bp)
+Top Length: 518  Top ID: 100.0
+		One align captures most of this contig: 4520726 4521243 | 518 1 | 518 518 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6450
+
+CONTIG: scaffold-6503 (545bp)
+Top Length: 545  Top ID: 99.82
+		One align captures most of this contig: 3932369 3932914 | 545 1 | 546 545 | 99.82 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6503
+
+CONTIG: scaffold-6509 (585bp)
+Top Length: 585  Top ID: 99.83
+		One align captures most of this contig: 3926831 3927415 | 585 1 | 585 585 | 99.83 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6509
+
+CONTIG: scaffold-6557 (509bp)
+Top Length: 509  Top ID: 98.62
+		One align captures most of this contig: 3311560 3312068 | 509 1 | 509 509 | 98.62 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6557
+
+CONTIG: scaffold-6598 (3346bp)
+Top Length: 3346  Top ID: 99.94
+		One align captures most of this contig: 2437517 2440862 | 1 3346 | 3346 3346 | 99.94 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6598
+
+CONTIG: scaffold-6603 (507bp)
+Top Length: 507  Top ID: 99.21
+		One align captures most of this contig: 4140339 4140845 | 507 1 | 507 507 | 99.21 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6603
+
+CONTIG: scaffold-6615 (530bp)
+Top Length: 530  Top ID: 99.62
+		One align captures most of this contig: 3949220 3949750 | 1 530 | 531 530 | 99.62 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6615
+
+CONTIG: scaffold-6623 (532bp)
+Top Length: 504  Top ID: 100.0
+		This contig is partially unaligned. (Aligned 504 out of 532 bases)
+		Alignment: 4922263 4922766 | 532 29 | 504 504 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6623
+		Unaligned bases: 1 to 28 (28)
+
+CONTIG: scaffold-6627 (529bp)
+Top Length: 529  Top ID: 100.0
+		One align captures most of this contig: 123383 123911 | 1 529 | 529 529 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6627
+
+CONTIG: scaffold-6662 (650bp)
+Top Length: 650  Top ID: 100.0
+		One align captures most of this contig: 4922626 4923275 | 1 650 | 650 650 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6662
+
+CONTIG: scaffold-6670 (526bp)
+Top Length: 526  Top ID: 100.0
+		One align captures most of this contig: 1404810 1405335 | 1 526 | 526 526 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6670
+
+CONTIG: scaffold-6689 (500bp)
+Top Length: 500  Top ID: 99.6
+		One align captures most of this contig: 5352244 5352743 | 1 500 | 500 500 | 99.6 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6689
+
+CONTIG: scaffold-6753 (526bp)
+Top Length: 526  Top ID: 99.81
+		One align captures most of this contig: 5027919 5028444 | 1 526 | 526 526 | 99.81 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6753
+
+CONTIG: scaffold-6832 (572bp)
+Top Length: 572  Top ID: 99.48
+		One align captures most of this contig: 2350371 2350942 | 572 1 | 572 572 | 99.48 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6832
+
+CONTIG: scaffold-6857 (514bp)
+Top Length: 514  Top ID: 99.81
+		One align captures most of this contig: 5192760 5193273 | 514 1 | 514 514 | 99.81 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6857
+
+CONTIG: scaffold-6887 (512bp)
+Top Length: 512  Top ID: 99.41
+		One align captures most of this contig: 1794479 1794990 | 1 512 | 512 512 | 99.41 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6887
+
+CONTIG: scaffold-6970 (505bp)
+Top Length: 505  Top ID: 99.8
+		One align captures most of this contig: 4732007 4732512 | 505 1 | 506 505 | 99.8 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-6970
+
+CONTIG: scaffold-7351 (577bp)
+Top Length: 577  Top ID: 99.83
+		One align captures most of this contig: 4841868 4842444 | 577 1 | 577 577 | 99.83 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-7351
+
+CONTIG: scaffold-7553 (539bp)
+Top Length: 539  Top ID: 99.63
+		One align captures most of this contig: 1306166 1306704 | 1 539 | 539 539 | 99.63 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-7553
+
+CONTIG: scaffold-7582 (563bp)
+Top Length: 563  Top ID: 99.11
+		One align captures most of this contig: 4342675 4343237 | 1 563 | 563 563 | 99.11 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-7582
+
+CONTIG: scaffold-7791 (517bp)
+Top Length: 517  Top ID: 99.61
+		One align captures most of this contig: 5188977 5189493 | 1 517 | 517 517 | 99.61 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-7791
+
+CONTIG: scaffold-7806 (649bp)
+Top Length: 649  Top ID: 99.85
+		One align captures most of this contig: 5282412 5283060 | 649 1 | 649 649 | 99.85 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-7806
+
+CONTIG: scaffold-7850 (573bp)
+Top Length: 573  Top ID: 100.0
+		One align captures most of this contig: 4188672 4189244 | 573 1 | 573 573 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-7850
+
+CONTIG: scaffold-8595 (639bp)
+Top Length: 639  Top ID: 99.69
+		One align captures most of this contig: 3463477 3464115 | 1 639 | 639 639 | 99.69 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-8595
+
+CONTIG: scaffold-8802 (500bp)
+Top Length: 500  Top ID: 99.6
+		One align captures most of this contig: 3951286 3951785 | 500 1 | 500 500 | 99.6 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-8802
+
+CONTIG: scaffold-9213 (500bp)
+Top Length: 500  Top ID: 99.4
+		One align captures most of this contig: 5895952 5896451 | 1 500 | 500 500 | 99.4 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-9213
+
+CONTIG: scaffold-9411 (520bp)
+Top Length: 520  Top ID: 99.81
+		One align captures most of this contig: 2137794 2138313 | 1 520 | 520 520 | 99.81 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-9411
+
+CONTIG: scaffold-9507 (534bp)
+Top Length: 534  Top ID: 96.82
+		One align captures most of this contig: 3794260 3794793 | 534 1 | 534 534 | 96.82 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-9507
+
+CONTIG: scaffold-9508 (728bp)
+Top Length: 728  Top ID: 99.04
+		One align captures most of this contig: 4260510 4261237 | 1 728 | 728 728 | 99.04 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-9508
+
+CONTIG: scaffold-9651 (534bp)
+Top Length: 534  Top ID: 99.81
+		One align captures most of this contig: 4857007 4857540 | 534 1 | 534 534 | 99.81 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-9651
+
+CONTIG: scaffold-10704 (503bp)
+Top Length: 503  Top ID: 99.6
+		One align captures most of this contig: 4481833 4482335 | 1 503 | 503 503 | 99.6 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-10704
+
+CONTIG: scaffold-11308 (659bp)
+Top Length: 659  Top ID: 100.0
+		One align captures most of this contig: 4872796 4873454 | 1 659 | 659 659 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-11308
+
+CONTIG: scaffold-11378 (531bp)
+Top Length: 531  Top ID: 99.62
+		One align captures most of this contig: 4462905 4463435 | 531 1 | 531 531 | 99.62 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-11378
+
+CONTIG: scaffold-14184 (530bp)
+Top Length: 530  Top ID: 99.62
+		One align captures most of this contig: 5149259 5149788 | 530 1 | 530 530 | 99.62 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-14184
+
+CONTIG: scaffold-15962 (500bp)
+Top Length: 500  Top ID: 100.0
+		One align captures most of this contig: 4184687 4185186 | 500 1 | 500 500 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-15962
+
+CONTIG: scaffold-17003 (538bp)
+Top Length: 538  Top ID: 99.26
+		One align captures most of this contig: 4812948 4813485 | 1 538 | 538 538 | 99.26 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-17003
+
+CONTIG: scaffold-17910 (500bp)
+Top Length: 500  Top ID: 99.6
+		One align captures most of this contig: 5176791 5177290 | 1 500 | 500 500 | 99.6 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-17910
+
+CONTIG: scaffold-18939 (682bp)
+Top Length: 682  Top ID: 99.56
+		One align captures most of this contig: 2391372 2392053 | 1 682 | 682 682 | 99.56 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-18939
+
+CONTIG: scaffold-22471 (1539bp)
+Top Length: 1501  Top ID: 99.2
+		Skipping redundant alignment 3190966 3192443 | 62 1539 | 1478 1478 | 99.26 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-22471
+		Skipping redundant alignment 5439713 5441190 | 1539 62 | 1478 1478 | 99.26 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-22471
+		Skipping redundant alignment 1971759 1973234 | 1539 64 | 1476 1476 | 99.25 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-22471
+		This contig is partially unaligned. (Aligned 1501 out of 1539 bases)
+		Alignment: 5784597 5786098 | 1539 39 | 1502 1501 | 99.2 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-22471
+		Unaligned bases: 1 to 38 (38)
+
+CONTIG: scaffold-25832 (573bp)
+Top Length: 573  Top ID: 100.0
+		One align captures most of this contig: 2365281 2365853 | 1 573 | 573 573 | 100.0 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-25832
+
+CONTIG: scaffold-34262 (795bp)
+Top Length: 795  Top ID: 98.24
+		One align captures most of this contig: 6095667 6096461 | 795 1 | 795 795 | 98.24 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-34262
+
+CONTIG: scaffold-40748 (3088bp)
+Top Length: 2159  Top ID: 99.77
+		This contig is partially unaligned. (Aligned 2159 out of 3088 bases)
+		Alignment: 1390165 1392323 | 3087 929 | 2159 2159 | 99.77 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-40748
+		Unaligned bases: 1 to 928 (928)
+		Unaligned bases: 3088 to 3088 (1)
+		This contig has both significant aligned and unaligned parts (of length >= min-contig)! It can contain interspecies translocations
+
+CONTIG: scaffold-43327 (991bp)
+Top Length: 991  Top ID: 95.16
+		One align captures most of this contig: 5959232 5960222 | 1 991 | 991 991 | 95.16 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-43327
+
+CONTIG: scaffold-51265 (626bp)
+Top Length: 626  Top ID: 99.52
+		One align captures most of this contig: 4238013 4238638 | 1 626 | 626 626 | 99.52 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-51265
+
+CONTIG: scaffold-90069 (602bp)
+Top Length: 602  Top ID: 99.34
+		One align captures most of this contig: 5180710 5181311 | 602 1 | 602 602 | 99.34 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-90069
+
+CONTIG: scaffold-90264 (1109bp)
+Top Length: 1108  Top ID: 95.94
+		One align captures most of this contig: 3764236 3765342 | 1 1108 | 1107 1108 | 95.94 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-90264
+
+CONTIG: scaffold-103614 (657bp)
+Top Length: 656  Top ID: 98.63
+		One align captures most of this contig: 5541575 5542230 | 657 2 | 656 656 | 98.63 | Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0 scaffold-103614
+
+Analyzing coverage...
+Writing SNPs into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_thetaiotaomicron_VPI-5482/contigs_reports/nucmer_output/Ray.used_snps
+	Reference Bacteroides_thetaiotaomicron_VPI-5482_gi_29345410_ref_NC_0: 108 total alignments. 1 total regions.
+		Region: 1 to 6260361 (6260361 bp)
+			START in gap: 1 to 123383 (123382 bp)
+			Align 1: 123383 123911 scaffold-6627 1 529
+				Gap between this and next alignment: 123911 to 255899 (131987 bp)
+				Next Alignment: 255899 256281 scaffold-3818 775 393
+
+			Align 2: 255899 256281 scaffold-3818 775 393
+				Gap between this and next alignment: 256281 to 267389 (11107 bp)
+				Next Alignment: 267389 268097 scaffold-5967 709 1
+
+			Align 3: 267389 268097 scaffold-5967 709 1
+				Gap between this and next alignment: 268097 to 600268 (332170 bp)
+				Next Alignment: 600268 601643 scaffold-6054 1 1376
+
+			Align 4: 600268 601643 scaffold-6054 1 1376
+				Gap between this and next alignment: 601643 to 1062558 (460914 bp)
+				Next Alignment: 1062558 1063205 scaffold-5982 648 1
+
+			Align 5: 1062558 1063205 scaffold-5982 648 1
+				Gap between this and next alignment: 1063205 to 1306166 (242960 bp)
+				Next Alignment: 1306166 1306704 scaffold-7553 1 539
+
+			Align 6: 1306166 1306704 scaffold-7553 1 539
+				Gap between this and next alignment: 1306704 to 1347129 (40424 bp)
+				Next Alignment: 1347129 1347694 scaffold-6109 1 566
+
+			Align 7: 1347129 1347694 scaffold-6109 1 566
+				Gap between this and next alignment: 1347694 to 1350756 (3061 bp)
+				Next Alignment: 1350756 1351355 scaffold-5539 1 600
+
+			Align 8: 1350756 1351355 scaffold-5539 1 600
+				Gap between this and next alignment: 1351355 to 1382061 (30705 bp)
+				Next Alignment: 1382061 1383137 scaffold-2756 4964 6040
+
+			Align 9: 1382061 1383137 scaffold-2756 4964 6040
+				Gap between this and next alignment: 1383137 to 1383420 (282 bp)
+				Next Alignment: 1383420 1384910 scaffold-3822 1491 1
+
+			Align 10: 1383420 1384910 scaffold-3822 1491 1
+				Gap between this and next alignment: 1384910 to 1390165 (5254 bp)
+				Next Alignment: 1390165 1392323 scaffold-40748 3087 929
+
+			Align 11: 1390165 1392323 scaffold-40748 3087 929
+				Gap between this and next alignment: 1392323 to 1404810 (12486 bp)
+				Next Alignment: 1404810 1405335 scaffold-6670 1 526
+
+			Align 12: 1404810 1405335 scaffold-6670 1 526
+				Gap between this and next alignment: 1405335 to 1569911 (164575 bp)
+				Next Alignment: 1569911 1570555 scaffold-5332 1 645
+
+			Align 13: 1569911 1570555 scaffold-5332 1 645
+				Gap between this and next alignment: 1570555 to 1592776 (22220 bp)
+				Next Alignment: 1592776 1593336 scaffold-6202 561 1
+
+			Align 14: 1592776 1593336 scaffold-6202 561 1
+				Gap between this and next alignment: 1593336 to 1794479 (201142 bp)
+				Next Alignment: 1794479 1794990 scaffold-6887 1 512
+
+			Align 15: 1794479 1794990 scaffold-6887 1 512
+				Gap between this and next alignment: 1794990 to 2131838 (336847 bp)
+				Next Alignment: 2131838 2131928 scaffold-1774 91 1
+
+			Align 16: 2131838 2131928 scaffold-1774 91 1
+				Gap between this and next alignment: 2131928 to 2136731 (4802 bp)
+				Next Alignment: 2136731 2137331 scaffold-5530 1 601
+
+			Align 17: 2136731 2137331 scaffold-5530 1 601
+				Gap between this and next alignment: 2137331 to 2137794 (462 bp)
+				Next Alignment: 2137794 2138313 scaffold-9411 1 520
+
+			Align 18: 2137794 2138313 scaffold-9411 1 520
+				Gap between this and next alignment: 2138313 to 2350371 (212057 bp)
+				Next Alignment: 2350371 2350942 scaffold-6832 572 1
+
+			Align 19: 2350371 2350942 scaffold-6832 572 1
+				Gap between this and next alignment: 2350942 to 2365281 (14338 bp)
+				Next Alignment: 2365281 2365853 scaffold-25832 1 573
+
+			Align 20: 2365281 2365853 scaffold-25832 1 573
+				Gap between this and next alignment: 2365853 to 2385042 (19188 bp)
+				Next Alignment: 2385042 2385765 scaffold-4521 1 724
+
+			Align 21: 2385042 2385765 scaffold-4521 1 724
+				Gap between this and next alignment: 2385765 to 2391372 (5606 bp)
+				Next Alignment: 2391372 2392053 scaffold-18939 1 682
+
+			Align 22: 2391372 2392053 scaffold-18939 1 682
+				Gap between this and next alignment: 2392053 to 2437517 (45463 bp)
+				Next Alignment: 2437517 2440862 scaffold-6598 1 3346
+
+			Align 23: 2437517 2440862 scaffold-6598 1 3346
+				Gap between this and next alignment: 2440862 to 2448315 (7452 bp)
+				Next Alignment: 2448315 2462516 scaffold-2589 14202 1
+
+			Align 24: 2448315 2462516 scaffold-2589 14202 1
+				Gap between this and next alignment: 2462516 to 2659123 (196606 bp)
+				Next Alignment: 2659123 2659763 scaffold-5357 641 1
+
+			Align 25: 2659123 2659763 scaffold-5357 641 1
+				Gap between this and next alignment: 2659763 to 2676388 (16624 bp)
+				Next Alignment: 2676388 2676992 scaffold-5328 605 1
+
+			Align 26: 2676388 2676992 scaffold-5328 605 1
+				Gap between this and next alignment: 2676992 to 2738959 (61966 bp)
+				Next Alignment: 2738959 2739552 scaffold-5640 1 594
+
+			Align 27: 2738959 2739552 scaffold-5640 1 594
+				Gap between this and next alignment: 2739552 to 2747953 (8400 bp)
+				Next Alignment: 2747953 2748491 scaffold-6113 539 1
+
+			Align 28: 2747953 2748491 scaffold-6113 539 1
+				Gap between this and next alignment: 2748491 to 2839278 (90786 bp)
+				Next Alignment: 2839278 2840158 scaffold-3929 881 1
+
+			Align 29: 2839278 2840158 scaffold-3929 881 1
+				Gap between this and next alignment: 2840158 to 2841424 (1265 bp)
+				Next Alignment: 2841424 2842178 scaffold-4549 1 755
+
+			Align 30: 2841424 2842178 scaffold-4549 1 755
+				Gap between this and next alignment: 2842178 to 3037553 (195374 bp)
+				Next Alignment: 3037553 3039166 scaffold-3558 1 1614
+
+			Align 31: 3037553 3039166 scaffold-3558 1 1614
+				Gap between this and next alignment: 3039166 to 3189017 (149850 bp)
+				Next Alignment: 3189017 3190698 scaffold-5358 2 1704
+
+			Align 32: 3189017 3190698 scaffold-5358 2 1704
+				Gap between this and next alignment: 3190698 to 3311560 (120861 bp)
+				Next Alignment: 3311560 3312068 scaffold-6557 509 1
+
+			Align 33: 3311560 3312068 scaffold-6557 509 1
+				Gap between this and next alignment: 3312068 to 3313608 (1539 bp)
+				Next Alignment: 3313608 3314182 scaffold-5608 1 575
+
+			Align 34: 3313608 3314182 scaffold-5608 1 575
+				Gap between this and next alignment: 3314182 to 3463477 (149294 bp)
+				Next Alignment: 3463477 3464115 scaffold-8595 1 639
+
+			Align 35: 3463477 3464115 scaffold-8595 1 639
+				Gap between this and next alignment: 3464115 to 3550264 (86148 bp)
+				Next Alignment: 3550264 3550878 scaffold-5379 1 615
+
+			Align 36: 3550264 3550878 scaffold-5379 1 615
+				Gap between this and next alignment: 3550878 to 3550887 (8 bp)
+				Next Alignment: 3550887 3551677 scaffold-4421 1 791
+
+			Align 37: 3550887 3551677 scaffold-4421 1 791
+				Gap between this and next alignment: 3551677 to 3764236 (212558 bp)
+				Next Alignment: 3764236 3765342 scaffold-90264 1 1108
+
+			Align 38: 3764236 3765342 scaffold-90264 1 1108
+				Gap between this and next alignment: 3765342 to 3794260 (28917 bp)
+				Next Alignment: 3794260 3794793 scaffold-9507 534 1
+
+			Align 39: 3794260 3794793 scaffold-9507 534 1
+				Gap between this and next alignment: 3794793 to 3926831 (132037 bp)
+				Next Alignment: 3926831 3927415 scaffold-6509 585 1
+
+			Align 40: 3926831 3927415 scaffold-6509 585 1
+				Gap between this and next alignment: 3927415 to 3927435 (19 bp)
+				Next Alignment: 3927435 3928129 scaffold-4979 695 1
+
+			Align 41: 3927435 3928129 scaffold-4979 695 1
+				Gap between this and next alignment: 3928129 to 3932369 (4239 bp)
+				Next Alignment: 3932369 3932914 scaffold-6503 545 1
+
+			Align 42: 3932369 3932914 scaffold-6503 545 1
+				Gap between this and next alignment: 3932914 to 3933267 (352 bp)
+				Next Alignment: 3933267 3933868 scaffold-5673 602 1
+
+			Align 43: 3933267 3933868 scaffold-5673 602 1
+				Gap between this and next alignment: 3933868 to 3937544 (3675 bp)
+				Next Alignment: 3937544 3938142 scaffold-5876 599 1
+
+			Align 44: 3937544 3938142 scaffold-5876 599 1
+				Gap between this and next alignment: 3938142 to 3948336 (10193 bp)
+				Next Alignment: 3948336 3949037 scaffold-4862 702 1
+
+			Align 45: 3948336 3949037 scaffold-4862 702 1
+				Gap between this and next alignment: 3949037 to 3949220 (182 bp)
+				Next Alignment: 3949220 3949750 scaffold-6615 1 530
+
+			Align 46: 3949220 3949750 scaffold-6615 1 530
+				Gap between this and next alignment: 3949750 to 3950086 (335 bp)
+				Next Alignment: 3950086 3950664 scaffold-6448 579 1
+
+			Align 47: 3950086 3950664 scaffold-6448 579 1
+				Gap between this and next alignment: 3950664 to 3951286 (621 bp)
+				Next Alignment: 3951286 3951785 scaffold-8802 500 1
+
+			Align 48: 3951286 3951785 scaffold-8802 500 1
+				Gap between this and next alignment: 3951785 to 4001894 (50108 bp)
+				Next Alignment: 4001894 4004992 scaffold-337 17033 13935
+
+			Align 49: 4001894 4004992 scaffold-337 17033 13935
+				Gap between this and next alignment: 4004992 to 4005595 (602 bp)
+				Next Alignment: 4005595 4006939 scaffold-337 13864 12520
+
+			Align 50: 4005595 4006939 scaffold-337 13864 12520
+				Gap between this and next alignment: 4006939 to 4017554 (10614 bp)
+				Next Alignment: 4017554 4017683 scaffold-337 1274 1145
+
+			Align 51: 4017554 4017683 scaffold-337 1274 1145
+				Gap between this and next alignment: 4017683 to 4094008 (76324 bp)
+				Next Alignment: 4094008 4095002 scaffold-3471 1 995
+
+			Align 52: 4094008 4095002 scaffold-3471 1 995
+				Gap between this and next alignment: 4095002 to 4095201 (198 bp)
+				Next Alignment: 4095201 4095910 scaffold-4816 710 1
+
+			Align 53: 4095201 4095910 scaffold-4816 710 1
+				Gap between this and next alignment: 4095910 to 4127581 (31670 bp)
+				Next Alignment: 4127581 4128530 scaffold-3699 1 950
+
+			Align 54: 4127581 4128530 scaffold-3699 1 950
+				Gap between this and next alignment: 4128530 to 4130375 (1844 bp)
+				Next Alignment: 4130375 4130925 scaffold-5916 551 1
+
+			Align 55: 4130375 4130925 scaffold-5916 551 1
+				Gap between this and next alignment: 4130925 to 4132003 (1077 bp)
+				Next Alignment: 4132003 4132672 scaffold-5115 670 1
+
+			Align 56: 4132003 4132672 scaffold-5115 670 1
+				Gap between this and next alignment: 4132672 to 4135913 (3240 bp)
+				Next Alignment: 4135913 4136500 scaffold-5724 1 588
+
+			Align 57: 4135913 4136500 scaffold-5724 1 588
+				Gap between this and next alignment: 4136500 to 4136504 (3 bp)
+				Next Alignment: 4136504 4137212 scaffold-4866 1 709
+
+			Align 58: 4136504 4137212 scaffold-4866 1 709
+				Gap between this and next alignment: 4137212 to 4140339 (3126 bp)
+				Next Alignment: 4140339 4140845 scaffold-6603 507 1
+
+			Align 59: 4140339 4140845 scaffold-6603 507 1
+				Gap between this and next alignment: 4140845 to 4184687 (43841 bp)
+				Next Alignment: 4184687 4185186 scaffold-15962 500 1
+
+			Align 60: 4184687 4185186 scaffold-15962 500 1
+				Gap between this and next alignment: 4185186 to 4188672 (3485 bp)
+				Next Alignment: 4188672 4189244 scaffold-7850 573 1
+
+			Align 61: 4188672 4189244 scaffold-7850 573 1
+				Gap between this and next alignment: 4189244 to 4199109 (9864 bp)
+				Next Alignment: 4199109 4199866 scaffold-4683 758 1
+
+			Align 62: 4199109 4199866 scaffold-4683 758 1
+				Gap between this and next alignment: 4199866 to 4238013 (38146 bp)
+				Next Alignment: 4238013 4238638 scaffold-51265 1 626
+
+			Align 63: 4238013 4238638 scaffold-51265 1 626
+				Gap between this and next alignment: 4238638 to 4260510 (21871 bp)
+				Next Alignment: 4260510 4261237 scaffold-9508 1 728
+
+			Align 64: 4260510 4261237 scaffold-9508 1 728
+				Gap between this and next alignment: 4261237 to 4268220 (6982 bp)
+				Next Alignment: 4268220 4268776 scaffold-6270 557 1
+
+			Align 65: 4268220 4268776 scaffold-6270 557 1
+				Gap between this and next alignment: 4268776 to 4342675 (73898 bp)
+				Next Alignment: 4342675 4343237 scaffold-7582 1 563
+
+			Align 66: 4342675 4343237 scaffold-7582 1 563
+				Gap between this and next alignment: 4343237 to 4351262 (8024 bp)
+				Next Alignment: 4351262 4351863 scaffold-5529 1 602
+
+			Align 67: 4351262 4351863 scaffold-5529 1 602
+				Gap between this and next alignment: 4351863 to 4462905 (111041 bp)
+				Next Alignment: 4462905 4463435 scaffold-11378 531 1
+
+			Align 68: 4462905 4463435 scaffold-11378 531 1
+				Gap between this and next alignment: 4463435 to 4481833 (18397 bp)
+				Next Alignment: 4481833 4482335 scaffold-10704 1 503
+
+			Align 69: 4481833 4482335 scaffold-10704 1 503
+				Gap between this and next alignment: 4482335 to 4503635 (21299 bp)
+				Next Alignment: 4503635 4504320 scaffold-4962 1 686
+
+			Align 70: 4503635 4504320 scaffold-4962 1 686
+				Gap between this and next alignment: 4504320 to 4514175 (9854 bp)
+				Next Alignment: 4514175 4514765 scaffold-5796 591 1
+
+			Align 71: 4514175 4514765 scaffold-5796 591 1
+				Gap between this and next alignment: 4514765 to 4520726 (5960 bp)
+				Next Alignment: 4520726 4521243 scaffold-6450 518 1
+
+			Align 72: 4520726 4521243 scaffold-6450 518 1
+				Gap between this and next alignment: 4521243 to 4529752 (8508 bp)
+				Next Alignment: 4529752 4530547 scaffold-4226 1 796
+
+			Align 73: 4529752 4530547 scaffold-4226 1 796
+				Gap between this and next alignment: 4530547 to 4552719 (22171 bp)
+				Next Alignment: 4552719 4553284 scaffold-6272 1 566
+
+			Align 74: 4552719 4553284 scaffold-6272 1 566
+				Gap between this and next alignment: 4553284 to 4599797 (46512 bp)
+				Next Alignment: 4599797 4601480 scaffold-4591 1 1684
+
+			Align 75: 4599797 4601480 scaffold-4591 1 1684
+				Gap between this and next alignment: 4601480 to 4732007 (130526 bp)
+				Next Alignment: 4732007 4732512 scaffold-6970 505 1
+
+			Align 76: 4732007 4732512 scaffold-6970 505 1
+				Gap between this and next alignment: 4732512 to 4812948 (80435 bp)
+				Next Alignment: 4812948 4813485 scaffold-17003 1 538
+
+			Align 77: 4812948 4813485 scaffold-17003 1 538
+				Gap between this and next alignment: 4813485 to 4841868 (28382 bp)
+				Next Alignment: 4841868 4842444 scaffold-7351 577 1
+
+			Align 78: 4841868 4842444 scaffold-7351 577 1
+				Gap between this and next alignment: 4842444 to 4857007 (14562 bp)
+				Next Alignment: 4857007 4857540 scaffold-9651 534 1
+
+			Align 79: 4857007 4857540 scaffold-9651 534 1
+				Gap between this and next alignment: 4857540 to 4870569 (13028 bp)
+				Next Alignment: 4870569 4871187 scaffold-5891 619 1
+
+			Align 80: 4870569 4871187 scaffold-5891 619 1
+				Gap between this and next alignment: 4871187 to 4872796 (1608 bp)
+				Next Alignment: 4872796 4873454 scaffold-11308 1 659
+
+			Align 81: 4872796 4873454 scaffold-11308 1 659
+				Gap between this and next alignment: 4873454 to 4917622 (44167 bp)
+				Next Alignment: 4917622 4918404 scaffold-4468 783 1
+
+			Align 82: 4917622 4918404 scaffold-4468 783 1
+				Gap between this and next alignment: 4918404 to 4922263 (3858 bp)
+				Next Alignment: 4922263 4922766 scaffold-6623 532 29
+
+			Align 83: 4922263 4922766 scaffold-6623 532 29
+				Negative gap (overlap) between this and next alignment: 4922766 to 4922626 (-140 bp)
+				Next Alignment: 4922626 4923275 scaffold-6662 1 650
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 142.
+			Align 84: 4922767 4923275 scaffold-6662 142 650
+				Gap between this and next alignment: 4923275 to 5027919 (104643 bp)
+				Next Alignment: 5027919 5028444 scaffold-6753 1 526
+
+			Align 85: 5027919 5028444 scaffold-6753 1 526
+				Gap between this and next alignment: 5028444 to 5147409 (118964 bp)
+				Next Alignment: 5147409 5148093 scaffold-4976 1 685
+
+			Align 86: 5147409 5148093 scaffold-4976 1 685
+				Gap between this and next alignment: 5148093 to 5149259 (1165 bp)
+				Next Alignment: 5149259 5149788 scaffold-14184 530 1
+
+			Align 87: 5149259 5149788 scaffold-14184 530 1
+				Gap between this and next alignment: 5149788 to 5176791 (27002 bp)
+				Next Alignment: 5176791 5177290 scaffold-17910 1 500
+
+			Align 88: 5176791 5177290 scaffold-17910 1 500
+				Gap between this and next alignment: 5177290 to 5180710 (3419 bp)
+				Next Alignment: 5180710 5181311 scaffold-90069 602 1
+
+			Align 89: 5180710 5181311 scaffold-90069 602 1
+				Gap between this and next alignment: 5181311 to 5188977 (7665 bp)
+				Next Alignment: 5188977 5189493 scaffold-7791 1 517
+
+			Align 90: 5188977 5189493 scaffold-7791 1 517
+				Gap between this and next alignment: 5189493 to 5192760 (3266 bp)
+				Next Alignment: 5192760 5193273 scaffold-6857 514 1
+
+			Align 91: 5192760 5193273 scaffold-6857 514 1
+				Gap between this and next alignment: 5193273 to 5226316 (33042 bp)
+				Next Alignment: 5226316 5227343 scaffold-3438 1028 1
+
+			Align 92: 5226316 5227343 scaffold-3438 1028 1
+				Gap between this and next alignment: 5227343 to 5282412 (55068 bp)
+				Next Alignment: 5282412 5283060 scaffold-7806 649 1
+
+			Align 93: 5282412 5283060 scaffold-7806 649 1
+				Gap between this and next alignment: 5283060 to 5314644 (31583 bp)
+				Next Alignment: 5314644 5315356 scaffold-4562 713 1
+
+			Align 94: 5314644 5315356 scaffold-4562 713 1
+				Gap between this and next alignment: 5315356 to 5352244 (36887 bp)
+				Next Alignment: 5352244 5352743 scaffold-6689 1 500
+
+			Align 95: 5352244 5352743 scaffold-6689 1 500
+				Gap between this and next alignment: 5352743 to 5541575 (188831 bp)
+				Next Alignment: 5541575 5542230 scaffold-103614 657 2
+
+			Align 96: 5541575 5542230 scaffold-103614 657 2
+				Gap between this and next alignment: 5542230 to 5568992 (26761 bp)
+				Next Alignment: 5568992 5569559 scaffold-6255 568 1
+
+			Align 97: 5568992 5569559 scaffold-6255 568 1
+				Gap between this and next alignment: 5569559 to 5593612 (24052 bp)
+				Next Alignment: 5593612 5594202 scaffold-5801 1 591
+
+			Align 98: 5593612 5594202 scaffold-5801 1 591
+				Gap between this and next alignment: 5594202 to 5665934 (71731 bp)
+				Next Alignment: 5665934 5666695 scaffold-4268 1 762
+
+			Align 99: 5665934 5666695 scaffold-4268 1 762
+				Gap between this and next alignment: 5666695 to 5784597 (117901 bp)
+				Next Alignment: 5784597 5786098 scaffold-22471 1539 39
+
+			Align 100: 5784597 5786098 scaffold-22471 1539 39
+				Gap between this and next alignment: 5786098 to 5843700 (57601 bp)
+				Next Alignment: 5843700 5843904 scaffold-47 13513 13717
+
+			Align 101: 5843700 5843904 scaffold-47 13513 13717
+				The next alignment (5843700 5843872 scaffold-285 12810 12982) is redundant. Skipping.
+				Gap between this and next alignment: 5843904 to 5895952 (52047 bp)
+				Next Alignment: 5895952 5896451 scaffold-9213 1 500
+
+			Align 103: 5895952 5896451 scaffold-9213 1 500
+				Gap between this and next alignment: 5896451 to 5959232 (62780 bp)
+				Next Alignment: 5959232 5960222 scaffold-43327 1 991
+
+			Align 104: 5959232 5960222 scaffold-43327 1 991
+				Gap between this and next alignment: 5960222 to 5961157 (934 bp)
+				Next Alignment: 5961157 5961705 scaffold-643 1895 1347
+
+			Align 105: 5961157 5961705 scaffold-643 1895 1347
+				Gap between this and next alignment: 5961705 to 5963984 (2278 bp)
+				Next Alignment: 5963984 5964549 scaffold-1284 919 1484
+
+			Align 106: 5963984 5964549 scaffold-1284 919 1484
+				Gap between this and next alignment: 5964549 to 6095667 (131117 bp)
+				Next Alignment: 6095667 6096461 scaffold-34262 795 1
+
+			Align 107: 6095667 6096461 scaffold-34262 795 1
+				Gap between this and next alignment: 6096461 to 6168196 (71734 bp)
+				Next Alignment: 6168196 6168763 scaffold-5863 1 568
+
+			Align 108: 6168196 6168763 scaffold-5863 1 568
+			END in gap: 6168763 to 6260361 (91598 bp)
+
+Analysis is finished!
+Founded SNPs were written into /Molly/gurevich/MetaQUAST/res_final/res_metahit_final/runs_per_reference/Bacteroides_thetaiotaomicron_VPI-5482/contigs_reports/nucmer_output/Ray.used_snps
+
+Results:
+	Local Misassemblies: 0
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Fake misassemblies matched with structural variations: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 0 + 11 part
+Partially Unaligned Contigs with Misassemblies: 1
+Unaligned Contig Bases: 70993
+
+Ambiguously Mapped Contigs: 2
+Total Bases in Ambiguously Mapped Contigs: 2990
+Note that --allow-ambiguity option was set to "one" and only first alignment per each contig was used.
+
+	Covered Bases: 92334
+
+	SNPs: 445
+	Insertions: 22
+	Deletions: 4
+
+	Positive Gaps: 107
+		Internal Gaps:  2
+		External Gaps:  105
+		External Gap Total:  6156811
+		External Gap Average: 58636
+	Negative Gaps: 1
+		Internal Overlaps:  0
+		External Overlaps:  1
+		External Overlaps Total: -140
+		External Overlaps Average: -140
+	Contigs with Redundant Alignments: 1 (173)
