@@ -1,5 +1,6 @@
 from io import BufferedWriter, FileIO
-from django.db import DatabaseError
+import traceback
+from django.db import DatabaseError, OperationalError
 from django.http import HttpResponseBadRequest
 import os
 import random
@@ -30,6 +31,10 @@ class MyBaseUploadBackend(AbstractUploadBackend):
                 logger.error(traceback.format_exc())
                 try_number += 1
                 logger.error('Retrying. Try number ' + str(try_number))
+<<<<<<< Updated upstream
+=======
+                pass
+>>>>>>> Stashed changes
 
     def setup(self, filename):
         dirpath = self.quast_session.get_contigs_dirpath()

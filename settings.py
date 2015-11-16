@@ -42,13 +42,15 @@ database = 'sqlite'
 if os.environ.get('DEVELOPMENT', None):
     DEBUG = True
     ADDRESS = 'http://127.0.0.1:8000/'
-
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 else:
     DEBUG = False
     ADDRESS = 'http://quast.bioinf.spbau.ru/'
+    database = 'mysql'
+    EMAIL_HOST = 'localhost'
 
+<<<<<<< Updated upstream
     database = 'mysql'
 #EMAIL_HOST = 'localhost'
 #EMAIL_HOST = '127.0.0.1'
@@ -56,6 +58,10 @@ else:
 #EMAIL_HOST_PASSWORD = ''
 #EMAIL_PORT = 1025
 #TEMPLATE_DEBUG = DEBUG
+=======
+
+TEMPLATE_DEBUG = DEBUG
+>>>>>>> Stashed changes
 
 
 REPORTS_SHOW_LIMIT = 8

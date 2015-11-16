@@ -39,7 +39,6 @@ def get_or_create_session(request, page):
             except DatabaseError:
                 if i < tries - 1:
                     logger.warn('Database is locked, try #%d', i)
-                    time.sleep(2)
                 else:
                     logger.error('Database is locked (tried %d times)', tries)
                     raise

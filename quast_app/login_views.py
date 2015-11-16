@@ -58,7 +58,7 @@ def send_confirmation(user):
     link = '%slogin?email=%s&password=%s' % (settings.ADDRESS, user.email, user.password)
     logger.info('link = %s' % link)
 
-    arguments =  {'link': link }
+    arguments = {'link': link }
     html_content = render_to_string('emails/user_page_link_email.html', arguments)
     text_content = render_to_string('emails/user_page_link_email.txt', arguments)
     email = EmailMultiAlternatives('Personal page at QUAST', text_content, settings.SUPPORT_EMAIL, [user.email])
