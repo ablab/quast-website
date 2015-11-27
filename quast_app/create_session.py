@@ -1,4 +1,5 @@
 import time
+import traceback
 from django.conf import settings
 from django.db import DatabaseError
 
@@ -38,9 +39,12 @@ def get_or_create_session(request, page):
                 break
             except DatabaseError:
                 if i < tries - 1:
-                    logger.warn('Database is locked, try #%d', i)
+                    logger.warn(traceback.format_exc())
+                    logger.warn('Try #%d', i)
+                    time.sleep(2)
                 else:
-                    logger.error('Database is locked (tried %d times)', tries)
+                    logger.warn(traceback.format_exc())
+                    logger.error('Tried %d times', tries)
                     raise
 
         session_key = request.session.session_key

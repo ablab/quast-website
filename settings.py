@@ -23,8 +23,8 @@ QUAST_PY_FPATH              = os.path.join(QUAST_DIRPATH, 'quast.py')
 ERROR_LOG_FNAME             = 'error.log'
 GLOSSARY_PATH               = os.path.join(QUAST_DIRPATH, 'libs/html_saver/glossary.json')
 MANUAL_FPATH                = os.path.join(QUAST_DIRPATH, 'manual.html')
-CHANGES_FPATH               = os.path.join(QUAST_DIRPATH, 'CHANGES')
-LICENSE_FPATH               = os.path.join(QUAST_DIRPATH, 'LICENSE')
+CHANGES_FPATH               = os.path.join(QUAST_DIRPATH, 'CHANGES.txt')
+LICENSE_FPATH               = os.path.join(QUAST_DIRPATH, 'LICENSE.txt')
 BIB_FPATH                   = os.path.join(QUAST_DIRPATH, 'quast_ref.bib')
 
 
