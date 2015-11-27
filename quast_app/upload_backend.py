@@ -31,10 +31,6 @@ class MyBaseUploadBackend(AbstractUploadBackend):
                 logger.error(traceback.format_exc())
                 try_number += 1
                 logger.error('Retrying. Try number ' + str(try_number))
-<<<<<<< Updated upstream
-=======
-                pass
->>>>>>> Stashed changes
 
     def setup(self, filename):
         dirpath = self.quast_session.get_contigs_dirpath()

@@ -49,20 +49,9 @@ else:
     ADDRESS = 'http://quast.bioinf.spbau.ru/'
     database = 'mysql'
     EMAIL_HOST = 'localhost'
-
-<<<<<<< Updated upstream
     database = 'mysql'
-#EMAIL_HOST = 'localhost'
-#EMAIL_HOST = '127.0.0.1'
-#EMAIL_HOST_USER = ''
-#EMAIL_HOST_PASSWORD = ''
-#EMAIL_PORT = 1025
-#TEMPLATE_DEBUG = DEBUG
-=======
 
 TEMPLATE_DEBUG = DEBUG
->>>>>>> Stashed changes
-
 
 REPORTS_SHOW_LIMIT = 8
 
