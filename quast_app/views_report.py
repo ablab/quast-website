@@ -53,11 +53,11 @@ def get_report_response_dict(results_dirpath):
     genes_in_contigs        = get('genes_in_contigs')
     operons_in_contigs      = get('operons_in_contigs')
     gc_info                 = get('gc')
-    tick_x                 = get('tick_x')
-    coord_nx                 = get('coordNx')
-    coord_ngx                 = get('coordNGx')
-    coord_nax                 = get('coordNAx')
-    coord_ngax                 = get('coordNGAx')
+    tick_x                  = get('tick_x')
+    coord_nx                = get('coordNx')
+    coord_ngx               = get('coordNGx')
+    coord_nax               = get('coordNAx')
+    coord_ngax              = get('coordNGAx')
 
     if not settings.QUAST_DIRPATH in sys.path:
         sys.path.insert(1, settings.QUAST_DIRPATH)
@@ -123,14 +123,9 @@ def __set_downloading(qs, response_dict):
     html_report_fpath = os.path.join(qs.get_dirpath(),
                                      settings.REGULAR_REPORT_DIRNAME,
                                      settings.HTML_REPORT_FNAME)
-    html_aux_report_dirpath = os.path.join(qs.get_dirpath(),
-                                           settings.REGULAR_REPORT_DIRNAME,
-                                           settings.HTML_REPORT_AUX_DIRNAME)
-    response_dict['download'] = os.path.exists(html_report_fpath) and\
-                                os.path.exists(html_aux_report_dirpath)
+    response_dict['download'] = os.path.exists(html_report_fpath)
     if not response_dict['download']:
-        logger.warn('download_report: html_report_fpath and html_aux_report_dirpath'
-                    ' does not exist: \n%s\n%s' % (html_report_fpath, html_aux_report_dirpath))
+        logger.warn('download_report: html_report_fpath does not exist: \n%s' % html_report_fpath)
 
 
 def report_view(user_session, response_dict, request, link):
