@@ -254,7 +254,7 @@ def download_report_view(request, link):
             import zipfile, tempfile
             from django.core.servers.basehttp import FileWrapper
             temp_file = tempfile.TemporaryFile()
-            zip_file = zipfile.ZipFile(temp_file, 'w', zipfile.ZIP_DEFLATED)
+            zip_file = zipfile.ZipFile(temp_file, 'w', zipfile.ZIP_DEFLATED, allowZip64=True)
 
             zip_file.write(report_fpath)
 
