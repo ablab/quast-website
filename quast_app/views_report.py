@@ -58,6 +58,7 @@ def get_report_response_dict(results_dirpath):
     coord_ngx               = get('coordNGx')
     coord_nax               = get('coordNAx')
     coord_ngax              = get('coordNGAx')
+    icarus                  = get('icarus')
 
     if not settings.QUAST_DIRPATH in sys.path:
         sys.path.insert(1, settings.QUAST_DIRPATH)
@@ -81,6 +82,7 @@ def get_report_response_dict(results_dirpath):
         'coordNGx': coord_ngx,
         'coordNAx': coord_nax,
         'coordNGAx': coord_ngax,
+        'icarus': icarus,
 
       # 'qualities': quality_dict,
       # 'mainMetrics': main_metrics,

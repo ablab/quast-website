@@ -101,12 +101,28 @@
 {#                        </p>#}
 
                         {# Get filled in build_total_report.js. #}
-                        {# Don't change the formatting: adding line wrapping will add an unnecessary space #}
-                        <span style="display: none;" id="reference_length"><br>
-                            <span class='val'></span><span class='rhs'>&nbsp;</span>bp</span><span style='display: none;'>
+                        <span style="display: none;" id="reference_name">Aligned to
+                            "<span class='val'></span>"
+                        </span>
 
-                 </span><span style="display: none;" id="reference_gc">,
-                            G+C content: <span class='val'></span><span class='rhs'>&nbsp;</span>%
+                        <span style="display: none;" id="reference_length">|
+                            <span class='val'></span><span class='rhs'>&nbsp;</span>bp
+                        </span>
+
+                        <span style="display: none;" id="reference_gc">|
+                            <span class='val'></span><span class='rhs'>&nbsp;</span>% G+C
+                        </span>
+
+                        <span style="display: none;" id="reference_chr">|
+                            <span class='val'></span> chromosomes
+                        </span>
+
+                        <span style="display: none;" id="reference_genes"><br>
+                            <span class='val'></span> genes
+                        </span>
+
+                        <span style="display: none;" id="reference_operons">|
+                            <span class='val'></span> operons
                         </span>
 
 {#                        <span style="display: none;" id="reference_genes"><br>#}
@@ -153,6 +169,8 @@
         <br>
         {% endif %}
         <br>
+
+        <p id='icarus'></p>
         <p id='mincontig'>Loading...</p>
         <div id="extended_link"></div>
     </div>
@@ -280,6 +298,9 @@
             </div>
             <div id='glossary-json'>
                 {{ glossary }}
+            </div>
+            <div id='icarus-json'>
+                {{ icarus }}
             </div>
         </div>
     </div>
