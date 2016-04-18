@@ -8,7 +8,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 from django.conf import settings
-from quast_app import views, login_views
+from quast_app import views, login_views, example_reports_views
 from django.views.generic import TemplateView, RedirectView
 
 import logging
@@ -22,19 +22,19 @@ urlpatterns = patterns('',
     url(r'^favicon\.ico$', RedirectView.as_view(
         url=('/static/img/favicon_debug.ico' if settings.DEBUG else '/static/img/favicon.ico'))),
 
-    url(r'^/?$', 'quast_app.views.index'),
+    url(r'^/?$', quast_app.views.index),
 
-    url(r'^manual.*$', 'quast_app.views.manual'),
-    url(r'^changes.*$', 'quast_app.views.changes'),
-    url(r'^CHANGES.*$', 'quast_app.views.changes'),
-    url(r'^manual_1\.3/?$', 'quast_app.views.manual'),
-    url(r'^manual_1\.3\.html$', 'quast_app.views.manual'),
-    url(r'^license.*$', 'quast_app.views.license'),
-    url(r'^LICENSE.*$', 'quast_app.views.license'),
-    url(r'^quast_ref\.bib$', 'quast_app.views.bib'),
-    url(r'^benchmarking/?$', 'quast_app.views.benchmarking'),
-    url(r'^example/?$', 'quast_app.views.example'),
-    url(r'^ecoli/?$', 'quast_app.views.idba'),
+    url(r'^manual.*$', quast_app.views.manual),
+    url(r'^changes.*$', quast_app.views.changes),
+    url(r'^CHANGES.*$', quast_app.views.changes),
+    url(r'^manual_1\.3/?$', quast_app.views.manual),
+    url(r'^manual_1\.3\.html$', quast_app.views.manual),
+    url(r'^license.*$', quast_app.views.license),
+    url(r'^LICENSE.*$', quast_app.views.license),
+    url(r'^quast_ref\.bib$', quast_app.views.bib),
+    url(r'^benchmarking/?$', quast_app.views.benchmarking),
+    url(r'^example/?$', quast_app.views.example),
+    url(r'^ecoli/?$', quast_app.views.idba),
 
     url(r'^quast3/demo\.html$', RedirectView.as_view(url='/static/quast3/demo.html')),
     url(r'^metaquast/cami/summary/report\.html$', RedirectView.as_view(url='/static/metaquast/cami/summary/report.html')),
@@ -44,13 +44,13 @@ urlpatterns = patterns('',
     url(r'^metaquast/hmp\.tar\.gz$', RedirectView.as_view(url='/static/metaquast/hmp.tar.gz')),
     url(r'^metaquast/metahit\.tar\.gz$', RedirectView.as_view(url='/static/metaquast/metahit.tar.gz')),
 
-    url(r'^e.coli-single-cell/(?P<download_fname>.+)?/?$', 'quast_app.example_reports_views.e_coli_sc'),
-    url(r'^e.coli-isolate/(?P<download_fname>.+)?/?$', 'quast_app.example_reports_views.e_coli_mc'),
+    url(r'^e.coli-single-cell/(?P<download_fname>.+)?/?$', quast_app.example_reports_views.e_coli_sc),
+    url(r'^e.coli-isolate/(?P<download_fname>.+)?/?$', quast_app.example_reports_views.e_coli_mc),
 
     url(r'^paper/$', 'quast_app.example_reports_views.paper'),
-    url(r'^paper/e.coli/(?P<download_fname>.+)?/?$', 'quast_app.example_reports_views.e_coli'),
-    url(r'^paper/b.impatiens/(?P<download_fname>.+)?/?$', 'quast_app.example_reports_views.b_impatiens'),
-    url(r'^paper/h.sapiens_chr14/(?P<download_fname>.+)?/?$', 'quast_app.example_reports_views.h_sapiens'),
+    url(r'^paper/e.coli/(?P<download_fname>.+)?/?$', quast_app.example_reports_views.e_coli),
+    url(r'^paper/b.impatiens/(?P<download_fname>.+)?/?$', quast_app.example_reports_views.b_impatiens),
+    url(r'^paper/h.sapiens_chr14/(?P<download_fname>.+)?/?$', quast_app.example_reports_views.h_sapiens),
 
     url(r'^paper/h.sapiens_chr14/download/?$',
         RedirectView.as_view(url='/static/data_sets/h.sapiens_chr14/h_sapiens_chr14_quast_report.zip'),
@@ -90,7 +90,7 @@ urlpatterns = patterns('',
 for ver in ('2.5', '3.0'):
     urlpatterns += (
         url(r'^spades.' + ver + '-on-gage.b-data-sets/$',
-            'quast_app.example_reports_views.spades_on_gage_b_data_sets',
+            quast_app.example_reports_views.spades_on_gage_b_data_sets,
             {'spades_ver': ver}),
     )
 

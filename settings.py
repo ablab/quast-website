@@ -225,8 +225,6 @@ INSTALLED_APPS = (
 #    'django-celery',
     'quast_app',
     'ajaxuploader',
-    # 'south',
-#    'south_admin',
 #    'django_socketio',
     )
 

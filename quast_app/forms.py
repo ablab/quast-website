@@ -5,7 +5,8 @@ import logging
 logger = logging.getLogger('quast')
 
 from django.conf import settings
-from django.forms import forms, fields, widgets
+from django import forms
+from django.forms import fields, widgets
 if not settings.QUAST_DIRPATH in sys.path:
     sys.path.insert(1, settings.QUAST_DIRPATH)
 from libs import qconfig

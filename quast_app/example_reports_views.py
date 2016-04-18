@@ -1,7 +1,7 @@
 import os
 from django.conf import settings
 from django.http import HttpResponse, Http404
-from django.core.servers.basehttp import FileWrapper
+from django.core.files.base import ContentFile
 import mimetypes
 from views_report import get_report_response_dict
 from django.shortcuts import render_to_response
@@ -98,7 +98,7 @@ def common_view(dir_name, caption, slug_name, download_fname, template_dir_name=
           # response['Content-Length'] = 100
           # return response
 
-            wrapper = FileWrapper(open(download_fpath, 'r'))
+            wrapper = ContentFile(open(download_fpath, 'r'))
             content_type = mimetypes.guess_type(download_fpath)[0]
 
             response = HttpResponse(wrapper, content_type=content_type)

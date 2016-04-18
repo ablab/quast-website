@@ -254,7 +254,8 @@ def download_report_view(request, link):
             zip_fname = quast_session.get_download_name() + '.zip'
             
             import zipfile, tempfile
-            from django.core.servers.basehttp import FileWrapper
+            from django.core.files.base import ContentFile
+
             temp_file = tempfile.TemporaryFile()
             zip_file = zipfile.ZipFile(temp_file, 'w', zipfile.ZIP_DEFLATED, allowZip64=True)
 
@@ -275,7 +276,7 @@ def download_report_view(request, link):
             temp_file.flush()
             content_len = temp_file.tell()
             temp_file.seek(0)
-            wrapper = FileWrapper(temp_file)
+            wrapper = ContentFile(temp_file)
             response = HttpResponse(wrapper, content_type='application/zip')
             response['Content-Disposition'] = 'attachment; filename=%s' % zip_fname
             response['Content-Length'] = content_len
