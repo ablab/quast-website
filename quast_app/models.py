@@ -377,9 +377,23 @@ class QuastSession(models.Model):
         time = self.date.strftime('%d_%b_%Y_%H:%M:%S_%f')
         self.link = time + slugify(('_' + self.caption) if self.caption else '')
 
+    def get_report_html_link(self):
+        return os.path.join(settings.REPORT_LINK_BASE, self.link or self.report_id) + '/report.html'
+
+    def get_report_download_link(self):
+        return os.path.join(settings.REPORT_LINK_BASE, 'download', self.link or self.report_id)
+
+    def get_icarus_html_link(self):
+        return os.path.join(settings.REPORT_LINK_BASE, self.link or self.report_id) + '/icarus.html'
+
+    def get_icarus_alignment_viewer_html_link(self):
+        return os.path.join(settings.REPORT_LINK_BASE, self.link or self.report_id) + '/icarus/contig_alignment_viewer.html'
+
+    def get_icarus_contig_size_viewer_html_link(self):
+        return os.path.join(settings.REPORT_LINK_BASE, self.link or self.report_id) + '/icarus/contig_size_viewer.html'
+
     def get_download_name(self):
-        return 'quast_report_' + self.report_id + \
-               slugify('_' + self.caption if self.caption else '')
+        return 'quast_report_' + self.report_id + slugify('_' + self.caption if self.caption else '')
 
     def get_dirname(self):
         return str(self.report_id)

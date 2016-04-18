@@ -5,6 +5,7 @@ from django.middleware.csrf import get_token
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseBadRequest, Http404, HttpResponseRedirect
 from django.conf import settings
 from django.shortcuts import render_to_response
+from django.template.loader import render_to_string
 from django.template import RequestContext
 
 from tasks import start_quast
@@ -62,7 +63,6 @@ def get_report_response_dict(results_dirpath):
 
     if not settings.QUAST_DIRPATH in sys.path:
         sys.path.insert(1, settings.QUAST_DIRPATH)
-    from libs import reporting
 
     #    import json
     #    quality_dict = json.dumps(reporting.Fields.quality_dict)
@@ -120,7 +120,7 @@ def __set_title(qs, response_dict):
 
 
 def __set_downloading(qs, response_dict):
-    response_dict['download_link'] = settings.REPORT_LINK_BASE + 'download/' + qs.link
+    response_dict['download_link'] = qs.get_report_download_link()
 
     html_report_fpath = os.path.join(qs.get_dirpath(),
                                      settings.REGULAR_REPORT_DIRNAME,
@@ -130,7 +130,31 @@ def __set_downloading(qs, response_dict):
         logger.warn('download_report: html_report_fpath does not exist: \n%s' % html_report_fpath)
 
 
-def report_view(user_session, response_dict, request, link):
+def __waiting_report(user_session, response_dict, request, qs):
+    response_dict.update({
+        'csrf_token': get_token(request),
+        'session_key': request.session.session_key,
+        'link': qs.link,
+        'report_id': qs.report_id,
+        'comment': qs.comment,
+        'caption': qs.caption,
+        'data_set_name': qs.data_set.name if qs.data_set else None,
+        'email': user_session.get_email() if user_session and
+                 user_session == qs.user_session else None,
+        'fnames': [c_f.fname for c_f in qs.contigs_files.all()],
+        'error': error,
+        'state': {
+            'PENDING': 'PENDING',
+            'STARTED': 'PENDING',
+            'FAILURE': 'FAILURE',
+          }.get(state, 'FAILURE'),
+    })
+
+    return render_to_response('waiting-report.html', response_dict,
+        context_instance=RequestContext(request))
+
+
+def __report_view_base(request, link):
     found_qs = QuastSession.objects.filter(link=link)
     if not found_qs.exists():
         found_qs = QuastSession.objects.filter(report_id=link)
@@ -138,147 +162,124 @@ def report_view(user_session, response_dict, request, link):
     if not found_qs.exists():
         raise Http404()
 
-    if request.method == 'POST':
-        # check status of quast session, return result
-        pass
+    qs = found_qs[0]
 
-    if request.method == 'GET':
-        qs = found_qs[0]
-        if qs.user_session is None:
-            qs.user_session = UserSession(user=qs.user)
-            qs.save()
+    future = start_quast.AsyncResult(qs.task_id)
+    state = future.state
 
-      # If the celery tasks have lost but we sure that this evaluated successfully:
-      # if quast_session.task_id == '1045104510450145' or quast_session.task_id == 1045104510450145:
-      #     result = None
-      #     state = 'SUCCESS'
-      # else:
-        future = start_quast.AsyncResult(qs.task_id)
-        state = future.state
+    exit_code, error = None, None
+    if state == 'SUCCESS':
+        result = future.get()
+        if isinstance(result, tuple):
+            exit_code, error = result
+        else:
+            exit_code, error = result, None
 
-        exit_code, error = None, None
-        if state == 'SUCCESS':
-            result = future.get()
-            if isinstance(result, tuple):
-                exit_code, error = result
-            else:
-                exit_code, error = result, None
+    return qs, state, exit_code, error
 
-        if state != 'SUCCESS' or exit_code != 0:
-            response_dict.update({
-                'csrf_token': get_token(request),
-                'session_key': request.session.session_key,
-                'link': qs.link,
-                'report_id': qs.report_id,
-                'comment': qs.comment,
-                'caption': qs.caption,
-                'data_set_name': qs.data_set.name if qs.data_set else None,
-                'email': user_session.get_email() if user_session and
-                         user_session == qs.user_session else None,
-                'fnames': [c_f.fname for c_f in qs.contigs_files.all()],
-                'error': error,
-                'state': {
-                    'PENDING': 'PENDING',
-                    'STARTED': 'PENDING',
-                    'FAILURE': 'FAILURE',
-                  }.get(state, 'FAILURE'),
-            })
 
-            return render_to_response('waiting-report.html', response_dict,
-                context_instance=RequestContext(request))
+def report_view(user_session, response_dict, request, link):
+    qs, state, exit_code, error = __report_view_base(request, link)
 
-        response_dict.update(get_report_response_dict(qs.get_dirpath()))
-        response_dict['comment'] = escape(qs.comment)
-        response_dict['report_id'] = qs.report_id
+    if state != 'SUCCESS' or exit_code != 0:
+        return __waiting_report(user_session, response_dict, request, qs)
 
-        response_dict['hide_date'] = False
+    response_dict.update(get_report_response_dict(qs.get_dirpath()))
+    response_dict['comment'] = escape(qs.comment)
+    response_dict['report_id'] = qs.report_id
 
-        __set_data_set_info(qs, response_dict)
+    response_dict['hide_date'] = False
 
-        __set_title(qs, response_dict)
+    __set_data_set_info(qs, response_dict)
 
-        __set_downloading(qs, response_dict)
+    __set_title(qs, response_dict)
 
-        return render_to_response('assess-report.html', response_dict)
+    __set_downloading(qs, response_dict)
+
+    return render_to_response('assess-report.html', response_dict)
 
 
 def download_report_view(request, link):
-    found = QuastSession.objects.filter(link=link)
-    if not found.exists():
-        found = QuastSession.objects.filter(report_id=link)
+    qs, state, exit_code, error = __report_view_base(request, link)
 
-    if not found.exists():
-        raise Http404()
+    if state == 'SUCCESS' and exit_code == 0:
+        regular_report_path = os.path.join(qs.get_dirpath(),
+                                           settings.REGULAR_REPORT_DIRNAME)
+        old_regular_report_path = os.path.join(qs.get_dirpath(),
+                                               'regular_report')
 
-    quast_session = found[0]
+        if not os.path.exists(regular_report_path):
+            if os.path.exists(old_regular_report_path):
+                os.rename(old_regular_report_path, regular_report_path)
+            else:
+                logger.warning('quast_app_download_report:'
+                               ' User tried to download report, '
+                               'but neither %s nor %s exists' %
+                               (settings.REGULAR_REPORT_DIRNAME, 'regular_report'))
+                raise Http404()
 
-    # if quast_session.task_id == '1045104510450145' or\
-    #    quast_session.task_id == 1045104510450145:
-    #     # If the celery tasks have lost but we sure that this evaluated successfully
-    #     # If the next time you need to restore tasks already evaluated but the database
-    #     # is lost, put this task id to the quastsession record.
-    #     result = None
-    #     state = 'SUCCESS'
-    # else:
-    result = start_quast.AsyncResult(quast_session.task_id)
-    state = result.state
+        os.chdir(os.path.join(qs.get_dirpath(),
+                              settings.REGULAR_REPORT_DIRNAME))
 
-    if state == 'SUCCESS':
-        res = result.get()
-        if isinstance(res, tuple):
-            exit_code, error = res
-        else:
-            exit_code, error = res, None
+        report_fpath = settings.HTML_REPORT_FNAME
+        report_aux_dirpath = settings.HTML_REPORT_AUX_DIRNAME
+        zip_fname = qs.get_download_name() + '.zip'
 
-        if exit_code == 0:
-            regular_report_path = os.path.join(quast_session.get_dirpath(),
-                                               settings.REGULAR_REPORT_DIRNAME)
-            old_regular_report_path = os.path.join(quast_session.get_dirpath(),
-                                                   'regular_report')
+        import zipfile, tempfile
+        from django.core.files.base import ContentFile
 
-            if not os.path.exists(regular_report_path):
-                if os.path.exists(old_regular_report_path):
-                    os.rename(old_regular_report_path, regular_report_path)
-                else:
-                    logger.warning('quast_app_download_report:'
-                                   ' User tried to download report, '
-                                   'but neither %s nor %s exists' %
-                                   (settings.REGULAR_REPORT_DIRNAME, 'regular_report'))
-                    raise Http404()
+        temp_file = tempfile.TemporaryFile()
+        zip_file = zipfile.ZipFile(temp_file, 'w', zipfile.ZIP_DEFLATED, allowZip64=True)
 
-            os.chdir(os.path.join(quast_session.get_dirpath(),
-                                  settings.REGULAR_REPORT_DIRNAME))
+        zip_file.write(report_fpath)
 
-            report_fpath = settings.HTML_REPORT_FNAME
-            report_aux_dirpath = settings.HTML_REPORT_AUX_DIRNAME
-            zip_fname = quast_session.get_download_name() + '.zip'
-            
-            import zipfile, tempfile
-            from django.core.files.base import ContentFile
+        def zip_dir(dirpath):
+            for root, dirs, files in os.walk(dirpath):
+                for file in files:
+                    zip_file.write(os.path.join(root, file))
+                for dir in dirs:
+                    zip_dir(dir)
+        zip_dir(report_aux_dirpath)
 
-            temp_file = tempfile.TemporaryFile()
-            zip_file = zipfile.ZipFile(temp_file, 'w', zipfile.ZIP_DEFLATED, allowZip64=True)
+        os.chdir('..')
+        zip_dir(settings.REGULAR_REPORT_DIRNAME)
+        zip_file.close()
 
-            zip_file.write(report_fpath)
+        temp_file.flush()
+        content_len = temp_file.tell()
+        temp_file.seek(0)
+        wrapper = ContentFile(temp_file)
+        response = HttpResponse(wrapper, content_type='application/zip')
+        response['Content-Disposition'] = 'attachment; filename=%s' % zip_fname
+        response['Content-Length'] = content_len
 
-            def zip_dir(dirpath):
-                for root, dirs, files in os.walk(dirpath):
-                    for file in files:
-                        zip_file.write(os.path.join(root, file))
-                    for dir in dirs:
-                        zip_dir(dir)
-            zip_dir(report_aux_dirpath)
+        return response
 
-            os.chdir('..')
-            zip_dir(settings.REGULAR_REPORT_DIRNAME)
-            zip_file.close()
 
-            temp_file.flush()
-            content_len = temp_file.tell()
-            temp_file.seek(0)
-            wrapper = ContentFile(temp_file)
-            response = HttpResponse(wrapper, content_type='application/zip')
-            response['Content-Disposition'] = 'attachment; filename=%s' % zip_fname
-            response['Content-Length'] = content_len
+def icarus_view(user_session, response_dict, request, link):
+    qs, state, exit_code, error = __report_view_base(request, link)
 
-            return response
+    if state != 'SUCCESS' or exit_code != 0:
+        return __waiting_report(user_session, response_dict, request, qs)
+
+    # response_dict.update(get_report_response_dict(qs.get_dirpath()))
+    # response_dict['comment'] = escape(qs.comment)
+    # response_dict['report_id'] = qs.report_id
+    # response_dict['hide_date'] = False
+
+    with open(os.path.join(os.path.abspath(qs.get_dirpath()), 'full_output', 'icarus.html')) as f:
+        return HttpResponse(f.read())
+
+
+def icarus_alignment_viewer_view(user_session, response_dict, request, link):
+    qs, state, exit_code, error = __report_view_base(request, link)
+
+    with open(os.path.join(os.path.abspath(qs.get_dirpath()), 'full_output', 'icarus_viewers', 'alignment_viewer.html')) as f:
+        return HttpResponse(f.read())
+
+
+def icarus_contig_size_viewer_view(user_session, response_dict, request, link):
+    qs, state, exit_code, error = __report_view_base(request, link)
+
+    with open(os.path.join(os.path.abspath(qs.get_dirpath()), 'full_output', 'icarus_viewers', 'contig_size_viewer.html')) as f:
+        return HttpResponse(f.read())

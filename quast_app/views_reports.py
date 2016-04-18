@@ -63,8 +63,8 @@ def get_reports_response_dict(user_session, after_evaluation=False, limit=None):
                     state_repr = 'FAILURE'
 
             quast_session_info = {
-                'date': qs.date, #. strftime('%d %b %Y %H:%M:%S'),
-                'report_link': settings.REPORT_LINK_BASE + (qs.link or qs.report_id),
+                'date': qs.date,
+                'report_link': qs.get_report_html_link(),
                 'comment': qs.comment,
                 'caption': qs.caption,
                 'with_data_set': True if qs.data_set else False,

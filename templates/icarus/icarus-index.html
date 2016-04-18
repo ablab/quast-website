@@ -1,0 +1,46 @@
+{% extends "icarus/base_icarus.html" %}
+
+{% block page_subtitle %}
+    <b>QUAST Contig Browser</b> by <a href="http://bioinf.spbau.ru/en" class='dark_bg_link'>Center for Algorithmic Biotechnology</a>
+{% endblock %}
+
+{% block content %}
+	<div class="content">
+		<div class="icarus_summary_content">
+			<table class="summary_table assemblies_table">
+				<thead>
+					<!--- assemblies: ---->
+				</thead>
+				<tbody>
+					<!--- links: ---->
+				</tbody>
+			</table>
+			<br>
+				<!--- div_references: ---->
+			<h3>Select a viewer of contigs aligned to one of the following reference genomes:</h3>
+			<table class="summary_table meta_references_table">
+				<thead>
+					<th>
+						Genome
+					</th>
+					<th>
+						# fragments
+					</th>
+					<th>
+						Length, bp
+					</th>
+					<!--- th_assemblies: ---->
+					<th>
+						Mean genome fraction, %
+					</th>
+					<th>
+						# misassembled blocks
+					</th>
+				</thead>
+				<tbody>
+				<!--- references: ---->
+				</tbody>
+			</table>
+		</div>
+	</div>
+{% endblock %}

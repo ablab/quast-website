@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base-quast.html" %}
 
 {% block logo_class %}dark_bg_link{% endblock %}
 
@@ -11,26 +11,10 @@
 {% block extra_head %}
     <link rel="stylesheet" href="/static/report.css"/>
 
-    <script type="text/javascript" src="/static/jquery-1.8.2.min.js"></script>
-    <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="../excanvas.min.js"></script><![endif]-->
     <script type="text/javascript" src="/static/flot/jquery.flot.js"></script>
     <script type="text/javascript" src="/static/flot/jquery.flot.resize.js"></script>
     <script type="text/javascript" src="/static/flot/jquery.flot.dashes.js"></script>
-    <script type="text/javascript" src="/static/bootstrap/js/bootstrap.js"></script>
-    <script type="text/javascript" src="/static/bootstrap/bootstrap-tooltip-vlad.js"></script>
 
-    <!--<script type="text/javascript" src="/static/scripts/lighter_darker.js"></script>-->
-    <!--<script type="text/javascript" src="/static/scripts/hsvToRgb.js"></script>-->
-    <!--<script type="text/javascript" src="/static/scripts/utils.js"></script>-->
-    <!--<script type="text/javascript" src="/static/scripts/build_total_report.js"></script>-->
-    <!--<script type="text/javascript" src="/static/scripts/draw_cumulative_plot.js"></script>-->
-    <!--<script type="text/javascript" src="/static/scripts/draw_nx_plot.js"></script>-->
-    <!--<script type="text/javascript" src="/static/scripts/draw_gc_plot.js"></script>-->
-    <!--<script type="text/javascript" src="/static/scripts/draw_genes_plot.js"></script>-->
-    <!--<script type="text/javascript" src="/static/scripts/build_report.js"></script>-->
-    <!--<script type="text/javascript" src="/static/dragtable.js"></script>-->
-    <script type="text/javascript" src="/static/scripts/hsvToRgb.js"></script>
-    <script type="text/javascript" src="/static/scripts/utils.js"></script>
     <script type="text/javascript" src="/static/scripts/build_total_report_common.js"></script>
     <script type="text/javascript" src="/static/scripts/build_total_report.js"></script>
     <script type="text/javascript" src="/static/scripts/draw_cumulative_plot.js"></script>
@@ -39,7 +23,9 @@
     <script type="text/javascript" src="/static/scripts/draw_genes_plot.js"></script>
     <script type="text/javascript" src="/static/scripts/build_report_common.js"></script>
     <script type="text/javascript" src="/static/scripts/build_report.js"></script>
+
     <script type="text/javascript" src="/static/dragtable.js"></script>
+
     <script type="text/javascript">var colors = ["#FF0000", "#0000FF", "#008000", "#A22DCC",  "#FFA500",  "#800000", 
         "#00CCCC",  "#B2DF8A",  "#333300",  "#CCCC00",  "#000080",  "#008080", "#00FF00"]</script>
 

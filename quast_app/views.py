@@ -9,7 +9,8 @@ from django.conf import settings
 from django.core.files.base import ContentFile
 import mimetypes
 
-from views_report import get_report_response_dict, report_view, download_report_view
+from views_report import get_report_response_dict, report_view, download_report_view, \
+    icarus_view, icarus_alignment_viewer_view, icarus_contig_size_viewer_view
 from views_reports import reports_view
 from views_index import index_view
 
@@ -83,9 +84,20 @@ def report(request, link):
     user_session = get_session(request)
     return report_view(user_session, dict(settings.TEMPLATE_ARGS_BY_DEFAULT), request, link)
 
-
 def download_report(request, link):
     return download_report_view(request, link)
+
+def icarus(request, link):
+    user_session = get_session(request)
+    return icarus_view(user_session, dict(settings.TEMPLATE_ARGS_BY_DEFAULT), request, link)
+
+def icarus_alignment_viewer(request, link):
+    user_session = get_session(request)
+    return icarus_alignment_viewer_view(user_session, dict(settings.TEMPLATE_ARGS_BY_DEFAULT), request, link)
+
+def icarus_contig_size_viewer(request, link):
+    user_session = get_session(request)
+    return icarus_contig_size_viewer_view(user_session, dict(settings.TEMPLATE_ARGS_BY_DEFAULT), request, link)
 
 
 def download_data_set(request, data_set_id, what, file_ext):

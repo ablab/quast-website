@@ -86,7 +86,7 @@ def index_view(us, response_dict, request):
             logger.info('quast_app.views.index.POST: '
                         'caption = %s, link = %s, data set = %s, '
                         'min_contig = %d, scaffolds = %r, eukaryotic = %r, find_genes = %r',
-                        qs.caption, qs.link, qs.data_set.name if qs.data_set else '<unknown>',
+                        qs.caption, qs.get_report_html_link(), qs.data_set.name if qs.data_set else '<unknown>',
                         qs.min_contig, qs.scaffolds, qs.eukaryotic, qs.find_genes)
 
             # Starting Quast

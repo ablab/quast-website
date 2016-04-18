@@ -41,7 +41,7 @@ def start_quast((args, quast_session, user_session)):
     print '-' * 100
     logger.info('start_quast: running %s:' + command)
 
-    link = os.path.join(settings.REPORT_LINK_BASE, quast_session.link or quast_session.report_id)
+    link = quast_session.get_report_html_link()
 
     def send_result_mail(address, to_me, add_to_end='', fail=False, error_msg=None):
         if address is None or address == '':

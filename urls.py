@@ -1,6 +1,9 @@
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
+from django.core.urlresolvers import reverse, reverse_lazy
+from django.shortcuts import redirect
+
 import quast_app
 admin.autodiscover()
 
@@ -18,7 +21,7 @@ logger = logging.getLogger('quast')
 urlpatterns = patterns('',
     url(r'^robots\.txt$', RedirectView.as_view(url='/static/robots.txt')),
     url(r'^sitemap\.xml$', RedirectView.as_view(url='/static/sitemap.xml')),
-    url(r'^excanvas\.min\.js$', RedirectView.as_view(url='/static/float/excanvas.min.js')),
+    url(r'^excanvas\.min\.js$', RedirectView.as_view(url='/static/flot/excanvas.min.js')),
     url(r'^favicon\.ico$', RedirectView.as_view(
         url=('/static/img/favicon_debug.ico' if settings.DEBUG else '/static/img/favicon.ico'))),
 
@@ -44,13 +47,13 @@ urlpatterns = patterns('',
     url(r'^metaquast/hmp\.tar\.gz$', RedirectView.as_view(url='/static/metaquast/hmp.tar.gz')),
     url(r'^metaquast/metahit\.tar\.gz$', RedirectView.as_view(url='/static/metaquast/metahit.tar.gz')),
 
-    url(r'^e.coli-single-cell/(?P<download_fname>.+)?/?$', quast_app.example_reports_views.e_coli_sc),
-    url(r'^e.coli-isolate/(?P<download_fname>.+)?/?$', quast_app.example_reports_views.e_coli_mc),
+    url(r'^e\.coli-single-cell/(?P<download_fname>.+)?/?$', quast_app.example_reports_views.e_coli_sc),
+    url(r'^e\.coli-isolate/(?P<download_fname>.+)?/?$', quast_app.example_reports_views.e_coli_mc),
 
     url(r'^paper/$', 'quast_app.example_reports_views.paper'),
-    url(r'^paper/e.coli/(?P<download_fname>.+)?/?$', quast_app.example_reports_views.e_coli),
-    url(r'^paper/b.impatiens/(?P<download_fname>.+)?/?$', quast_app.example_reports_views.b_impatiens),
-    url(r'^paper/h.sapiens_chr14/(?P<download_fname>.+)?/?$', quast_app.example_reports_views.h_sapiens),
+    url(r'^paper/e\.coli/(?P<download_fname>.+)?/?$', quast_app.example_reports_views.e_coli),
+    url(r'^paper/b\.impatiens/(?P<download_fname>.+)?/?$', quast_app.example_reports_views.b_impatiens),
+    url(r'^paper/h\.sapiens_chr14/(?P<download_fname>.+)?/?$', quast_app.example_reports_views.h_sapiens),
 
     url(r'^paper/h.sapiens_chr14/download/?$',
         RedirectView.as_view(url='/static/data_sets/h.sapiens_chr14/h_sapiens_chr14_quast_report.zip'),
@@ -63,12 +66,13 @@ urlpatterns = patterns('',
     url(r'^ajax-delete-session$', views.delete_session, name='ajax_delete_session'),
 
     url(r'^reports/?$', quast_app.views.reports),
-    url(r'^report/?$', quast_app.views.reports),
 
     url(r'^reports/download/(?P<link>.+)/?$', quast_app.views.download_report),
-    url(r'^download-report/(?P<link>.+)$', quast_app.views.download_report),
-    url(r'^report/(?P<link>.+)/?$', quast_app.views.report),
-    url(r'^reports/(?P<link>.+)/?$', quast_app.views.report),
+    url(r'^reports/(?P<link>.+)/report\.html$', quast_app.views.report),
+    url(r'^reports/(?P<link>.+)/icarus\.html$', quast_app.views.icarus),
+    url(r'^reports/(?P<link>.+)/icarus(_viewers)?/alignment_viewer\.html$', quast_app.views.icarus_alignment_viewer),
+    url(r'^reports/(?P<link>.+)/icarus(_viewers)?/contig_size_viewer\.html$', quast_app.views.icarus_contig_size_viewer),
+    url(r'^reports/(?P<link>.+)/?$', lambda _, link: redirect('quast_app.views.report', link=link)),
 
     url(r'^data-sets/(?P<data_set_id>.+)_(?P<what>.+)(?P<file_ext>\..+)$',
         views.download_data_set, name='download_data_set'),

@@ -9,14 +9,19 @@
 <meta name="author" content="Algorithmic Biology Lab"/>
 <link href="/static/img/{% if debug %}favicon_debug{% else %}favicon{% endif %}.ico" rel="shortcut icon" type="image/x-icon">
 
-<script type="text/javascript" src="/static/jquery-1.8.2.min.js"></script>
 <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css"/>
 <link rel="stylesheet" href="/static/common.css"/>
 <link rel="stylesheet" href="/static/base.css"/>
+
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-    <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<script type="text/javascript" src="/static/jquery-1.8.2.min.js"></script>
+<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="excanvas.min.js"></script><![endif]-->
+<script type="text/javascript" src="/static/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="/static/bootstrap/bootstrap-tooltip-vlad.js"></script>
+
+<script type="text/javascript" src="/static/scripts/hsvToRgb.js"></script>
+<script type="text/javascript" src="/static/scripts/utils.js"></script>
 
 <script type="text/javascript">
     $.event.add(window, "load", resizeContent);
@@ -52,16 +57,15 @@
         <table class="layout-table">
             <tr>
             <td class='layout-table-td'>
-                <div style="width: 100%;" class="page_title";>
-                    <h1 style='letter-spacing: .10em;'>
-                        <a href="/" class='{% block logo_class %}{% endblock %}'>QUAST</a>
+                <div style="width: 100%;" class="page_title">
+                    <h1>
+                        <a href="/" class='{% block logo_class %}{% endblock %}'>
+                            {% block website_title %}{% endblock %}
+                        </a>
                     </h1>
-
-                    <div style='width: 100%;' class="page_subtitle">
-                        <p><b>Quality Assessment Tool for Genome Assemblies</b>
-                            by <a href="http://bioinf.spbau.ru/en" class='dark_bg_link'>Center for Algorithmic Biotechnology</a>
-                        </p>
-                    </div>
+                    <p class="page_subtitle">
+                        {% block website_subtitle %}{% endblock %}
+                    </p>
                 </div>
             </td>
             </tr>
@@ -71,7 +75,6 @@
     <div class='content'>
         {% block content %}{% endblock %}
     </div>
-
 
     <div class='footer'>
         <table class='layout-table'>
@@ -90,7 +93,6 @@
                                   vertical-align: top;
                                   padding: 0 16px 0 0;
                                   width: 100%;">
-{#                                  border: 1px solid red;">#}
                         <tr>
                             <td style="padding-right: 20px;">
                                 <span class='email'><a href="mailto:{{ support_email }}">{{ support_email }}</a></span>
