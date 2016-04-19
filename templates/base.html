@@ -23,6 +23,7 @@
 <script type="text/javascript" src="/static/scripts/hsvToRgb.js"></script>
 <script type="text/javascript" src="/static/scripts/utils.js"></script>
 
+{% block resizecontent %}
 <script type="text/javascript">
     $.event.add(window, "load", resizeContent);
     $.event.add(window, "resize", resizeContent);
@@ -36,7 +37,7 @@
 
     resizeContent();
 </script>
-
+{% endblock %}
 {% block extra_head %}{% endblock %}
 
 <script type="text/javascript">
@@ -53,11 +54,13 @@
 </head>
 
 <body>
+    {% block header %}{% endblock %}
     <div class='top-panel'>
         <table class="layout-table">
             <tr>
             <td class='layout-table-td'>
-                <div style="width: 100%;" class="page_title">
+                {% block icarus_menu_btn %}{% endblock %}
+                <div class="page_title">
                     <h1>
                         <a href="/" class='{% block logo_class %}{% endblock %}'>
                             {% block website_title %}{% endblock %}
@@ -68,12 +71,15 @@
                     </p>
                 </div>
             </td>
+                {% block controls_panel %}{% endblock %}
             </tr>
         </table>
     </div>
 
     <div class='content'>
-        {% block content %}{% endblock %}
+        {% block content %}
+            {% block after_content %}{% endblock %}
+        {% endblock %}
     </div>
 
     <div class='footer'>

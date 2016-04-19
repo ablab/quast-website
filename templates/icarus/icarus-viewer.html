@@ -1,0 +1,76 @@
+{% extends "icarus/base-icarus.html" %}
+
+{% block title %}
+    {% if title|length <= 100 %}{{ title }}
+    {% else %}{{ title|truncatechars:97 }}...
+    {% endif %} | Icarus
+{% endblock %}
+
+{% block header %}
+    <!--[if lt IE 9]>
+    <div class="ie_warning">
+        Your browser is not supported, please use Internet Explorer 9, Firefox, Safari or Google Chrome (recommended).
+    </div>
+    <![endif]-->
+{% endblock %}
+
+{% block icarus_menu_btn %}
+    <div class="btn btn-inverse" id="to_main_menu_button">
+        <a href="../icarus.html">Main menu</a>
+    </div>
+{% endblock %}
+
+{% block controls_panel %}
+    <td class="layout-table-td">
+        <div id='controls_panel'>
+            <span style="white-space: nowrap;">
+                Move
+                <button id="left_shift" class="btn btn-inverse"><<</button>
+                <button id="left" class="btn btn-inverse"><</button>
+                <button id="right" class="btn btn-inverse">></button>
+                <button id="right_shift" class="btn btn-inverse">>></button>
+            </span>
+            <span style="white-space: nowrap; margin-left: 7px">
+                zoom
+                <button id="zoom_in_5" class="btn btn-inverse">+<span class="rhs"></span>5x</button>
+                <button id="zoom_in" class="btn btn-inverse">+<span class="rhs"></span>2x</button>
+                <button id="zoom_out" class="btn btn-inverse">–<span class="rhs"></span>2x</button>
+                <button id="zoom_out_5" class="btn btn-inverse">–<span class="rhs"></span>5x</button>
+            </span>
+            <span style="white-space: nowrap; margin-left: 7px">
+                go to coordinate <input class="textBox" id="input_coords" type="text" maxlength="30" />
+            </span>
+            <br>
+            <span style="white-space: nowrap;">
+                {{ size_threshold | safe }}
+            </span>
+            <span id="misassemblies_selector_panel">
+                {{ ms_selector | safe }}
+            </span>
+        </div>
+    </td>
+{% endblock %}
+
+{% block content %}
+    {{ reference | safe }}
+    {{ warning | safe }}
+
+    {% block after_content %}
+        <button id="hideBtnAnnoMini" class="btn moving_button btn-mini" style="display: none; position: absolute;">Hide</button>
+        <button id="hideBtnAnnoMain" class="btn moving_button btn-mini" style="display: none; position: absolute;">Show annotation</button>
+        <button id="hideBtnCovMini" class="btn moving_button btn-mini" style="display: none; position: absolute;">Hide</button>
+        <button id="hideBtnCovMain" class="btn moving_button btn-mini" style="display: none; position: absolute;">Show coverage</button>
+        <script type="text/javascript">
+            window.onbeforeunload = function(){
+                window.scrollTo(0,0);
+            }
+        </script>
+        <script type="text/javascript">
+            {{ contig_alignments | safe }}
+            {{ contig_sizes | safe }}
+        </script>
+        <script type="text/javascript" src="/static/d3.js"></script>
+        <script type="text/javascript" src="/static/scripts/build_icarus.js"></script>
+    {% endblock %}
+{% endblock %}
+

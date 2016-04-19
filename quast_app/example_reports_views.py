@@ -1,7 +1,7 @@
 import os
 from django.conf import settings
 from django.http import HttpResponse, Http404
-from django.core.servers.basehttp import FileWrapper
+from wsgiref.util import FileWrapper
 # from django.core.files.base import ContentFile
 import mimetypes
 from views_report import get_report_response_dict
