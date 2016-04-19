@@ -6,7 +6,8 @@ from django.http import HttpResponse, HttpResponseNotFound, HttpResponseBadReque
 from django.shortcuts import render_to_response
 from upload_backend import ContigsUploadBackend, ReferenceUploadBackend, GenesUploadBackend, OperonsUploadBackend
 from django.conf import settings
-from django.core.files.base import ContentFile
+from django.core.servers.basehttp import FileWrapper
+# from django.core.files.base import ContentFile
 import mimetypes
 
 from views_report import get_report_response_dict, report_view, download_report_view, \
@@ -137,7 +138,7 @@ def __download(src_fpath, dist_fname):
     if not os.path.isfile(src_fpath):
         return HttpResponseNotFound()
 
-    wrapper = ContentFile(open(src_fpath, 'r'))
+    wrapper = FileWrapper(open(src_fpath, 'r'))
     response = HttpResponse(wrapper, content_type='application/x-download')
     response['Content-Length'] = os.path.getsize(src_fpath)
     response['Content-Disposition'] = 'attachment; ' \

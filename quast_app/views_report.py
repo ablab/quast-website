@@ -16,7 +16,6 @@ logger = logging.getLogger('quast')
 mailer = logging.getLogger('quast_mailer')
 
 
-glossary = '{}'
 with open(settings.GLOSSARY_PATH) as f:
     glossary = f.read()
 
@@ -130,30 +129,6 @@ def __set_downloading(qs, response_dict):
         logger.warn('download_report: html_report_fpath does not exist: \n%s' % html_report_fpath)
 
 
-def __waiting_report(user_session, response_dict, request, qs):
-    response_dict.update({
-        'csrf_token': get_token(request),
-        'session_key': request.session.session_key,
-        'link': qs.link,
-        'report_id': qs.report_id,
-        'comment': qs.comment,
-        'caption': qs.caption,
-        'data_set_name': qs.data_set.name if qs.data_set else None,
-        'email': user_session.get_email() if user_session and
-                 user_session == qs.user_session else None,
-        'fnames': [c_f.fname for c_f in qs.contigs_files.all()],
-        'error': error,
-        'state': {
-            'PENDING': 'PENDING',
-            'STARTED': 'PENDING',
-            'FAILURE': 'FAILURE',
-          }.get(state, 'FAILURE'),
-    })
-
-    return render_to_response('waiting-report.html', response_dict,
-        context_instance=RequestContext(request))
-
-
 def __report_view_base(request, link):
     found_qs = QuastSession.objects.filter(link=link)
     if not found_qs.exists():
@@ -178,11 +153,35 @@ def __report_view_base(request, link):
     return qs, state, exit_code, error
 
 
+def __waiting_report(user_session, response_dict, request, qs, error, state):
+    response_dict.update({
+        'csrf_token': get_token(request),
+        'session_key': request.session.session_key,
+        'link': qs.link,
+        'report_id': qs.report_id,
+        'comment': qs.comment,
+        'caption': qs.caption,
+        'data_set_name': qs.data_set.name if qs.data_set else None,
+        'email': user_session.get_email() if user_session and
+                 user_session == qs.user_session else None,
+        'fnames': [c_f.fname for c_f in qs.contigs_files.all()],
+        'error': error,
+        'state': {
+            'PENDING': 'PENDING',
+            'STARTED': 'PENDING',
+            'FAILURE': 'FAILURE',
+          }.get(state, 'FAILURE'),
+    })
+
+    return render_to_response('waiting-report.html', response_dict,
+        context_instance=RequestContext(request))
+
+
 def report_view(user_session, response_dict, request, link):
     qs, state, exit_code, error = __report_view_base(request, link)
 
     if state != 'SUCCESS' or exit_code != 0:
-        return __waiting_report(user_session, response_dict, request, qs)
+        return __waiting_report(user_session, response_dict, request, qs, error, state)
 
     response_dict.update(get_report_response_dict(qs.get_dirpath()))
     response_dict['comment'] = escape(qs.comment)
@@ -226,7 +225,8 @@ def download_report_view(request, link):
         zip_fname = qs.get_download_name() + '.zip'
 
         import zipfile, tempfile
-        from django.core.files.base import ContentFile
+        # from django.core.files.base import ContentFile
+        from django.core.servers.basehttp import FileWrapper
 
         temp_file = tempfile.TemporaryFile()
         zip_file = zipfile.ZipFile(temp_file, 'w', zipfile.ZIP_DEFLATED, allowZip64=True)
@@ -248,7 +248,7 @@ def download_report_view(request, link):
         temp_file.flush()
         content_len = temp_file.tell()
         temp_file.seek(0)
-        wrapper = ContentFile(temp_file)
+        wrapper = FileWrapper(temp_file)
         response = HttpResponse(wrapper, content_type='application/zip')
         response['Content-Disposition'] = 'attachment; filename=%s' % zip_fname
         response['Content-Length'] = content_len
@@ -260,7 +260,7 @@ def icarus_view(user_session, response_dict, request, link):
     qs, state, exit_code, error = __report_view_base(request, link)
 
     if state != 'SUCCESS' or exit_code != 0:
-        return __waiting_report(user_session, response_dict, request, qs)
+        return __waiting_report(user_session, response_dict, request, qs, error, state)
 
     # response_dict.update(get_report_response_dict(qs.get_dirpath()))
     # response_dict['comment'] = escape(qs.comment)
@@ -274,12 +274,18 @@ def icarus_view(user_session, response_dict, request, link):
 def icarus_alignment_viewer_view(user_session, response_dict, request, link):
     qs, state, exit_code, error = __report_view_base(request, link)
 
+    if state != 'SUCCESS' or exit_code != 0:
+        return __waiting_report(user_session, response_dict, request, qs, error, state)
+
     with open(os.path.join(os.path.abspath(qs.get_dirpath()), 'full_output', 'icarus_viewers', 'alignment_viewer.html')) as f:
         return HttpResponse(f.read())
 
 
 def icarus_contig_size_viewer_view(user_session, response_dict, request, link):
     qs, state, exit_code, error = __report_view_base(request, link)
+
+    if state != 'SUCCESS' or exit_code != 0:
+        return __waiting_report(user_session, response_dict, request, qs, error, state)
 
     with open(os.path.join(os.path.abspath(qs.get_dirpath()), 'full_output', 'icarus_viewers', 'contig_size_viewer.html')) as f:
         return HttpResponse(f.read())
