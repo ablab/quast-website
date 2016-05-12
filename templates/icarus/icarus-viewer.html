@@ -52,8 +52,8 @@
 {% endblock %}
 
 {% block content %}
-    {{ reference | safe }}
-    {{ warning | safe }}
+    <div class="reftitle"><b>{{ title }}</b></div>
+    {{ warning }}
 
     {% block after_content %}
         <button id="hideBtnAnnoMini" class="btn moving_button btn-mini" style="display: none; position: absolute;">Hide</button>
