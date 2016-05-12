@@ -46,7 +46,7 @@ def e_coli_mc_download(request, download_fname):
 def e_coli_sc_icarus(request):
     return icarus_view('', 'E. coli, single cell', 'e.coli-single-cell')
 
-def e_coli_mc_icarus(request, download_fname):
+def e_coli_mc_icarus(request):
     return icarus_view('', 'E. coli, isolate', 'e.coli-isolate')
 
 def e_coli_sc_icarus_alignment(request):
