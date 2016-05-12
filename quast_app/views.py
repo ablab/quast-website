@@ -51,7 +51,7 @@ def bib(request):
 
 
 def benchmarking(request):
-    return render_to_response('benchmarking.html', dict(settings.TEMPLATE_ARGS_BY_DEFAULT))
+    return render_to_response('examples/benchmarking.html', dict(settings.TEMPLATE_ARGS_BY_DEFAULT))
 
 
 def example(request):
@@ -73,7 +73,7 @@ def idba(request):
     response_dict['data_set'] = {
         'title': 'E. coli, single-cell',
     }
-    return render_to_response('idba.html', response_dict)
+    return render_to_response('examples/idba.html', response_dict)
 
 
 def index(request):

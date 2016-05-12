@@ -81,4 +81,4 @@ def common_view(dir_name, caption, slug_name, download_fname):
 
 
 def paper(request):
-    return render_to_response('paper/index.html')
+    return render_to_response('examples/paper/index.html')

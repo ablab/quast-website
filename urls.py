@@ -11,8 +11,9 @@ from django.conf.urls import patterns, include, url
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 from django.conf import settings
-from quast_app import views, login_views, example_reports_views
 from django.views.generic import TemplateView, RedirectView
+
+from quast_app import views, login_views, example_reports_views
 
 import logging
 logger = logging.getLogger('quast')
@@ -48,20 +49,20 @@ urlpatterns = patterns('',
     url(r'^metaquast/metahit\.tar\.gz$', RedirectView.as_view(url='/static/metaquast/metahit.tar.gz')),
 
     url(r'^e\.coli-single-cell/report\.html$', quast_app.example_reports_views.e_coli_sc),
+    url(r'^e\.coli-single-cell/?$', lambda _: redirect('quast_app.example_reports_views.e_coli_sc')),
     url(r'^e\.coli-single-cell/icarus\.html$', quast_app.example_reports_views.e_coli_sc_icarus),
-    url(r'^e\.coli-single-cell/icarus(_viewers)?/alignment_viewer\.html$', quast_app.example_reports_views.e_coli_sc_icarus_alignment),
-    url(r'^e\.coli-single-cell/icarus(_viewers)?/contig_size_viewer\.html$', quast_app.example_reports_views.e_coli_sc_icarus_contig_size),
-    url(r'^e\.coli-single-cell/?$', lambda _, link: redirect('quast_app.example_reports_views.e_coli_sc', link=link)),
+    url(r'^e\.coli-single-cell/icarus_viewers/alignment_viewer\.html$', quast_app.example_reports_views.e_coli_sc_icarus_alignment),
+    url(r'^e\.coli-single-cell/icarus_viewers/contig_size_viewer\.html$', quast_app.example_reports_views.e_coli_sc_icarus_contig_size),
     url(r'^e\.coli-single-cell/(?P<download_fname>.+)/?$', quast_app.example_reports_views.e_coli_sc_download),
 
     url(r'^e\.coli-isolate/report\.html$', quast_app.example_reports_views.e_coli_mc),
+    url(r'^e\.coli-isolate/?$', lambda _: redirect('quast_app.example_reports_views.e_coli_mc')),
     url(r'^e\.coli-isolate/icarus\.html$', quast_app.example_reports_views.e_coli_mc_icarus),
-    url(r'^e\.coli-isolate/icarus(_viewers)?/alignment_viewer\.html$', quast_app.example_reports_views.e_coli_mc_icarus_alignment),
-    url(r'^e\.coli-isolate/icarus(_viewers)?/contig_size_viewer\.html$', quast_app.example_reports_views.e_coli_mc_icarus_contig_size),
-    url(r'^e\.coli-isolate/?$', lambda _, link: redirect('quast_app.example_reports_views.e_coli_mc', link=link)),
+    url(r'^e\.coli-isolate/icarus_viewers/alignment_viewer\.html$', quast_app.example_reports_views.e_coli_mc_icarus_alignment),
+    url(r'^e\.coli-isolate/icarus_viewers/contig_size_viewer\.html$', quast_app.example_reports_views.e_coli_mc_icarus_contig_size),
     url(r'^e\.coli-isolate/(?P<download_fname>.+)/?$', quast_app.example_reports_views.e_coli_mc_download),
 
-    url(r'^paper/$', 'quast_app.example_reports_views.paper'),
+    url(r'^paper/$', quast_app.example_reports_views.paper),
     url(r'^paper/e\.coli/(?P<download_fname>.+)?/?$', quast_app.example_reports_views.e_coli),
     url(r'^paper/b\.impatiens/(?P<download_fname>.+)?/?$', quast_app.example_reports_views.b_impatiens),
     url(r'^paper/h\.sapiens_chr14/(?P<download_fname>.+)?/?$', quast_app.example_reports_views.h_sapiens),
@@ -81,8 +82,8 @@ urlpatterns = patterns('',
     url(r'^reports/download/(?P<link>.+)/?$', quast_app.views.download_report),
     url(r'^reports/(?P<link>.+)/report\.html$', quast_app.views.report),
     url(r'^reports/(?P<link>.+)/icarus\.html$', quast_app.views.icarus),
-    url(r'^reports/(?P<link>.+)/icarus(_viewers)?/alignment_viewer\.html$', quast_app.views.icarus_alignment_viewer),
-    url(r'^reports/(?P<link>.+)/icarus(_viewers)?/contig_size_viewer\.html$', quast_app.views.icarus_contig_size_viewer),
+    url(r'^reports/(?P<link>.+)/icarus_viewers/alignment_viewer\.html$', quast_app.views.icarus_alignment_viewer),
+    url(r'^reports/(?P<link>.+)/icarus_viewers/contig_size_viewer\.html$', quast_app.views.icarus_contig_size_viewer),
     url(r'^reports/(?P<link>.+)/?$', lambda _, link: redirect('quast_app.views.report', link=link)),
 
     url(r'^data-sets/(?P<data_set_id>.+)_(?P<what>.+)(?P<file_ext>\..+)$',

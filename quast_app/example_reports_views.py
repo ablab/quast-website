@@ -16,7 +16,7 @@ download_text = '' +\
 
 
 def paper(request):
-    return render_to_response('paper/index.html')
+    return render_to_response('examples/paper/index.html')
 
 
 def e_coli(request, download_fname):
@@ -52,19 +52,19 @@ def e_coli_mc_icarus(request, download_fname):
 def e_coli_sc_icarus_alignment(request):
     return icarus_alignment_viewer_view('', 'E. coli, single cell', 'e.coli-single-cell')
 
-def e_coli_mc_icarus_alignment(request, download_fname):
+def e_coli_mc_icarus_alignment(request):
     return icarus_alignment_viewer_view('', 'E. coli, isolate', 'e.coli-isolate')
 
 def e_coli_sc_icarus_contig_size(request):
     return icarus_contig_size_viewer_view('', 'E. coli, single cell', 'e.coli-single-cell')
 
-def e_coli_mc_icarus_contig_size(request, download_fname):
+def e_coli_mc_icarus_contig_size(request):
     return icarus_contig_size_viewer_view('', 'E. coli, isolate', 'e.coli-isolate')
 
 
 def report_view(dir_name, caption, slug_name, template_dir_name=None,
                 html_template_name=None, data_set_name=None, title=None):
-    template_dir_name = template_dir_name or dir_name
+    template_dir_name = 'examples/' + (template_dir_name or dir_name)
     html_template_name = html_template_name or slug_name
 
     response_dict = dict(settings.TEMPLATE_ARGS_BY_DEFAULT)
@@ -160,7 +160,7 @@ def __spades_on_gage_b_data_sets__common(download_fname, name, spades_ver, is_sc
 
 
 def spades_on_gage_b_data_sets(request, spades_ver):
-    return render_to_response('spades-on-gage.b-data-sets/index.html', {'version': spades_ver})
+    return render_to_response('examples/spades-on-gage.b-data-sets/index.html', {'version': spades_ver})
 
 def spades_on_gage_b_data_sets__b_cereus(request, download_fname, spades_ver, is_scaf=False):
     return __spades_on_gage_b_data_sets__common(download_fname, 'B. cereus', spades_ver, is_scaf)
@@ -177,7 +177,7 @@ def spades_on_gage_b_data_sets__v_cholerae(request, download_fname, spades_ver, 
 
 def common_view(dir_name, caption, slug_name, download_fname, template_dir_name=None,
                 html_template_name=None, data_set_name=None, title=None):
-    template_dir_name = template_dir_name or dir_name
+    template_dir_name = 'examples/' + (template_dir_name or dir_name)
     html_template_name = html_template_name or slug_name
 
     if download_fname:

@@ -55,125 +55,125 @@
 
 {% block content %}
 
-{% block extra_content %}<br><br>{% endblock %}
+    {% block extra_content %}<br><br>{% endblock %}
 
-<div class='report_outer_object'>
-    <div id='header'>
-        <table style='margin: -4px;'>
-            <tr>
-                <td style="width: 530px; text-align: left; padding-right: 100px; vertical-align: top;">
-                    <h1 id="header_element"
-                        style="{% if caption|length > 100 %}
-                                  font-size: 1em; padding-top: 12px;
-                               {% elif caption|length > 50 %}
-                                  font-size: 1.5em;
-                               {% else %}
-                                  font-size: 2em;
-                               {% endif %}">
-                        {{ caption|safe }}
-                    </h1>
+    <div class='report_outer_object'>
+        <div id='header'>
+            <table style='margin: -4px;'>
+                <tr>
+                    <td style="width: 530px; text-align: left; padding-right: 100px; vertical-align: top;">
+                        <h1 id="header_element"
+                            style="{% if caption|length > 100 %}
+                                      font-size: 1em; padding-top: 12px;
+                                   {% elif caption|length > 50 %}
+                                      font-size: 1.5em;
+                                   {% else %}
+                                      font-size: 2em;
+                                   {% endif %}">
+                            {{ caption|safe }}
+                        </h1>
 
-                    {% if data_set %}
-                    <p id="data_set_p">
-{#                        <p style="display: none; margin-bottom: -10px;" id="reference_name">Genome:#}
-{#                            {% if data_set.reference_ext %}#}
-{#                                <a href='data-sets/{{data_set.id}}_{{data_set.reference_ext}}'>#}
-{#                                <a href='{% url download_data_set data_set.id data_set.reference_ext %}'>#}
-{#                            {% endif %}#}
-{#                                {{ data_set.title|safe }}#}
-{#                            {% if data_set.reference_ext %}#}
-{#                                </a>#}
-{#                            {% endif %}#}
-{#                        </p>#}
+                        {% if data_set %}
+                        <p id="data_set_p">
+    {#                        <p style="display: none; margin-bottom: -10px;" id="reference_name">Genome:#}
+    {#                            {% if data_set.reference_ext %}#}
+    {#                                <a href='data-sets/{{data_set.id}}_{{data_set.reference_ext}}'>#}
+    {#                                <a href='{% url download_data_set data_set.id data_set.reference_ext %}'>#}
+    {#                            {% endif %}#}
+    {#                                {{ data_set.title|safe }}#}
+    {#                            {% if data_set.reference_ext %}#}
+    {#                                </a>#}
+    {#                            {% endif %}#}
+    {#                        </p>#}
 
-                        {# Get filled in build_total_report.js. #}
-                        <span style="display: none;" id="reference_name">Aligned to
-                            "<span class='val'></span>"
-                        </span>
+                            {# Get filled in build_total_report.js. #}
+                            <span style="display: none;" id="reference_name">Aligned to
+                                "<span class='val'></span>"
+                            </span>
 
-                        <span style="display: none;" id="reference_length">|
-                            <span class='val'></span><span class='rhs'>&nbsp;</span>bp
-                        </span>
+                            <span style="display: none;" id="reference_length">|
+                                <span class='val'></span><span class='rhs'>&nbsp;</span>bp
+                            </span>
 
-                        <span style="display: none;" id="reference_gc">|
-                            <span class='val'></span><span class='rhs'>&nbsp;</span>% G+C
-                        </span>
+                            <span style="display: none;" id="reference_gc">|
+                                <span class='val'></span><span class='rhs'>&nbsp;</span>% G+C
+                            </span>
 
-                        <span style="display: none;" id="reference_chr">|
-                            <span class='val'></span> chromosomes
-                        </span>
+                            <span style="display: none;" id="reference_chr">|
+                                <span class='val'></span> chromosomes
+                            </span>
 
-                        <span style="display: none;" id="reference_genes"><br>
-                            <span class='val'></span> genes
-                        </span>
+                            <span style="display: none;" id="reference_genes"><br>
+                                <span class='val'></span> genes
+                            </span>
 
-                        <span style="display: none;" id="reference_operons">|
-                            <span class='val'></span> operons
-                        </span>
+                            <span style="display: none;" id="reference_operons">|
+                                <span class='val'></span> operons
+                            </span>
 
-{#                        <span style="display: none;" id="reference_genes"><br>#}
-{#                            {% if data_set.genes_ext %}<a href="{% url download_data_set data_set.id 'genes' data_set.genes_ext %}">{% endif %}#}
-{#                            <span class='val'></span> genes{% if data_set.genes_ext %}</a>{% endif %}</span><span style='display: none;'>#}
-{##}
-{#                        </span><span style="display: none;" id="reference_operons">,#}
-{#                            {% if data_set.operons_ext %}<a href="{% url download_data_set data_set.id 'operons' data_set.operons_ext %}">{% endif %}#}
-{#                                <span class='val'></span> operons{% if data_set.operons_ext %}</a>{% endif %}#}
-{#                        </span>#}
-                        {################}
-                    </p>
-                    {% endif %}
-
-                    {% block genome_info %}{% endblock %}
-
-                    {% if not hide_date %}<p id='report_date'></p>{% endif %}
-                </td>
-
-                {% if download %}
-                <td style="text-align: left; vertical-align: top; white-space: nowrap;">
-                    <a class='btn' style="margin-top: 20px;" id="download_report" href="{{ download_link }}">
-                        Download report
-                    </a>
-                    <p style="text-align: left;">
-                        {% if download_text %}
-                            {{ download_text|safe }}
-                        {% else %}
-                            Text, TSV and Latex versions<br>
-                            of the table, plots in PDF.<br>
-                            <div class='small_line_indent'></div>
-                            Additionally, detailed contigs<br>
-                            and genome statistics.
+    {#                        <span style="display: none;" id="reference_genes"><br>#}
+    {#                            {% if data_set.genes_ext %}<a href="{% url download_data_set data_set.id 'genes' data_set.genes_ext %}">{% endif %}#}
+    {#                            <span class='val'></span> genes{% if data_set.genes_ext %}</a>{% endif %}</span><span style='display: none;'>#}
+    {##}
+    {#                        </span><span style="display: none;" id="reference_operons">,#}
+    {#                            {% if data_set.operons_ext %}<a href="{% url download_data_set data_set.id 'operons' data_set.operons_ext %}">{% endif %}#}
+    {#                                <span class='val'></span> operons{% if data_set.operons_ext %}</a>{% endif %}#}
+    {#                        </span>#}
+                            {################}
+                        </p>
                         {% endif %}
-                    </p>
-                </td>
-                {% endif %}
-            </tr>
-        </table>
 
-        {% if download %}
-        <br>
-        <br>
-        <br>
-        {% endif %}
-        <br>
+                        {% block genome_info %}{% endblock %}
 
-        <p id='icarus'></p>
-        <p id='mincontig'>Loading...</p>
-        <div id="extended_link"></div>
-    </div>
+                        {% if not hide_date %}<p id='report_date'></p>{% endif %}
+                    </td>
 
-    <noscript>
-        <div><br><br>
-            Unfortunately, <span style="font-weight: bold">JavaScript</span> in your
-            browser <span style="font-weight: bold">is disabled</span> or is not supported.<br>
-            We need JavaScript to build report and plots.
+                    {% if download %}
+                    <td style="text-align: left; vertical-align: top; white-space: nowrap;">
+                        <a class='btn' style="margin-top: 20px;" id="download_report" href="{{ download_link }}">
+                            Download report
+                        </a>
+                        <p style="text-align: left;">
+                            {% if download_text %}
+                                {{ download_text|safe }}
+                            {% else %}
+                                Text, TSV and Latex versions<br>
+                                of the table, plots in PDF.<br>
+                                <div class='small_line_indent'></div>
+                                Additionally, detailed contigs<br>
+                                and genome statistics.
+                            {% endif %}
+                        </p>
+                    </td>
+                    {% endif %}
+                </tr>
+            </table>
+
+            {% if download %}
+            <br>
+            <br>
+            <br>
+            {% endif %}
+            <br>
+
+            <p id='icarus'></p>
+            <p id='mincontig'>Loading...</p>
+            <div id="extended_link"></div>
         </div>
-    </noscript>
 
-    <br>
+        <noscript>
+            <div><br><br>
+                Unfortunately, <span style="font-weight: bold">JavaScript</span> in your
+                browser <span style="font-weight: bold">is disabled</span> or is not supported.<br>
+                We need JavaScript to build report and plots.
+            </div>
+        </noscript>
 
-    <div class='report-and-plots'>
-        <div class='report' id='main_report'>
-            <div id="heatmap_header" style='display: none;'>
+        <br>
+
+        <div class='report-and-plots'>
+            <div class='report' id='main_report'>
+                <div id="heatmap_header" style='display: none;'>
                     <div style="padding-right: 10px; display: inline-block; vertical-align:top;">
                         <canvas id="gradientHeatmap" width="150" height="6"></canvas>
                         <div style="margin-left: 0; text-align: justify;">
@@ -186,112 +186,111 @@
                     <label for="heatmaps_chbox"><input type="checkbox" checked="checked" id="heatmaps_chbox">Show heatmap</label>
                 </div>
             </div>
-        </div>
 
-        <div class='plots'>
-            <table style='margin: -3px;'>
-                <tr id='all-switches'>
-                    <td>
-                        <div id='plots-switches'></div>
-                    </td>
-                    <td style='text-align: right; padding-right: 22px;'>
-                        <span id='scale-placeholder'></span>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <div id='plot-placeholder' style=''></div>
-                    </td>
-                    <td>
-                        <div id='legend-placeholder'></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p id="contigs_are_ordered">Contigs are ordered from largest (contig #1) to smallest.</p>
-                        <p id="gc_info">Contigs are broken into nonoverlapping 100<span class="rhs">&nbsp;</span>bp windows.
-                            Plot shows numbers of windows for each GC percentage.</p>
-                    </td>
-                </tr>
-            </table>
-        </div>
-
-        <div style="clear: left"></div>
-        <div style="clear: right"></div>
-
-    {#    <div class='blocks'>#}
-    {#        <div class='plot-wrapper' id='cumulative-plot-div'>#}
-    {#        </div>#}
-    {#        <div class='plot-wrapper' id='nx-plot-div'>#}
-    {#        </div>#}
-    {#        <div class='plot-wrapper' id='ngx-plot-div'>#}
-    {#        </div>#}
-    {#        <div class='plot-wrapper' id='nax-plot-div'>#}
-    {#        </div>#}
-    {#        <div class='plot-wrapper' id='ngax-plot-div'>#}
-    {#        </div>#}
-    {#        <div class='plot-wrapper' id='genes-plot-div'>#}
-    {#        </div>#}
-    {#        <div class='plot-wrapper' id='operons-plot-div'>#}
-    {#        </div>#}
-    {#        <div class='plot-wrapper' id='gc-plot-div'>#}
-    {#        </div>#}
-    {#    </div>#}
-
-        <div class='json-code'>
-            <div id='total-report-json'>
-                {{ totalReport }}
-            </div>
-            <div id='qualities-json'>
-                {{ qualities }}
-            </div>
-            <div id='main-metrics-json'>
-                {{ mainMetrics }}
+            <div class='plots'>
+                <table style='margin: -3px;'>
+                    <tr id='all-switches'>
+                        <td>
+                            <div id='plots-switches'></div>
+                        </td>
+                        <td style='text-align: right; padding-right: 22px;'>
+                            <span id='scale-placeholder'></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div id='plot-placeholder' style=''></div>
+                        </td>
+                        <td>
+                            <div id='legend-placeholder'></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p id="contigs_are_ordered">Contigs are ordered from largest (contig #1) to smallest.</p>
+                            <p id="gc_info">Contigs are broken into nonoverlapping 100<span class="rhs">&nbsp;</span>bp windows.
+                                Plot shows numbers of windows for each GC percentage.</p>
+                        </td>
+                    </tr>
+                </table>
             </div>
 
-            <div id="contigs-lengths-json">
-                {{ contigsLengths }}
-            </div>
-            <div id='assemblies-lengths-json'>
-                {{ assembliesLengths }}
-            </div>
-            <div id='reference-length-json'>
-                {{ referenceLength }}
-            </div>
-            <div id='tick-x-json'>
-                {{ tickX }}
-            </div>
-            <div id='coord-nx-json'>
-                {{ coordNx }}
-            </div>
-            <div id='coord-ngx-json'>
-                {{ coordNGx }}
-            </div>
-            <div id='coord-nax-json'>
-                {{ coordNAx }}
-            </div>
-            <div id='coord-ngax-json'>
-                {{ coordNGAx }}
-            </div>
-            <div id='genes-in-contigs-json'>
-                {{ genesInContigs }}
-            </div>
-            <div id='operons-in-contigs-json'>
-                {{ operonsInContigs }}
-            </div>
-            <div id='gc-json'>
-                {{ gcInfo }}
-            </div>
-            <div id='glossary-json'>
-                {{ glossary }}
-            </div>
-            <div id='icarus-json'>
-                {{ icarus }}
+            <div style="clear: left"></div>
+            <div style="clear: right"></div>
+
+        {#    <div class='blocks'>#}
+        {#        <div class='plot-wrapper' id='cumulative-plot-div'>#}
+        {#        </div>#}
+        {#        <div class='plot-wrapper' id='nx-plot-div'>#}
+        {#        </div>#}
+        {#        <div class='plot-wrapper' id='ngx-plot-div'>#}
+        {#        </div>#}
+        {#        <div class='plot-wrapper' id='nax-plot-div'>#}
+        {#        </div>#}
+        {#        <div class='plot-wrapper' id='ngax-plot-div'>#}
+        {#        </div>#}
+        {#        <div class='plot-wrapper' id='genes-plot-div'>#}
+        {#        </div>#}
+        {#        <div class='plot-wrapper' id='operons-plot-div'>#}
+        {#        </div>#}
+        {#        <div class='plot-wrapper' id='gc-plot-div'>#}
+        {#        </div>#}
+        {#    </div>#}
+
+            <div class='json-code'>
+                <div id='total-report-json'>
+                    {{ totalReport }}
+                </div>
+                <div id='qualities-json'>
+                    {{ qualities }}
+                </div>
+                <div id='main-metrics-json'>
+                    {{ mainMetrics }}
+                </div>
+
+                <div id="contigs-lengths-json">
+                    {{ contigsLengths }}
+                </div>
+                <div id='assemblies-lengths-json'>
+                    {{ assembliesLengths }}
+                </div>
+                <div id='reference-length-json'>
+                    {{ referenceLength }}
+                </div>
+                <div id='tick-x-json'>
+                    {{ tickX }}
+                </div>
+                <div id='coord-nx-json'>
+                    {{ coordNx }}
+                </div>
+                <div id='coord-ngx-json'>
+                    {{ coordNGx }}
+                </div>
+                <div id='coord-nax-json'>
+                    {{ coordNAx }}
+                </div>
+                <div id='coord-ngax-json'>
+                    {{ coordNGAx }}
+                </div>
+                <div id='genes-in-contigs-json'>
+                    {{ genesInContigs }}
+                </div>
+                <div id='operons-in-contigs-json'>
+                    {{ operonsInContigs }}
+                </div>
+                <div id='gc-json'>
+                    {{ gcInfo }}
+                </div>
+                <div id='glossary-json'>
+                    {{ glossary }}
+                </div>
+                <div id='icarus-json'>
+                    {{ icarus }}
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-{% block after_content %}{% endblock %}
+    {% block after_content %}{% endblock %}
 
 {% endblock %}

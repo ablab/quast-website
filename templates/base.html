@@ -54,7 +54,6 @@
 </head>
 
 <body>
-    {% block header %}{% endblock %}
     <div class='top-panel'>
         <table class="layout-table">
             <tr>
@@ -78,6 +77,7 @@
 
     <div class='content'>
         {% block content %}
+            {% block extra_content %}{% endblock %}
             {% block after_content %}{% endblock %}
         {% endblock %}
     </div>
