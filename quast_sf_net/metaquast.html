@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QUAST</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+
+    <link rel="stylesheet" type="text/css" href="quast.css">
+</head>
+
+<body>
+<div class="top-panel">
+    <table class="layout-table">
+        <tr>
+        <td class='layout-table-td'>
+            <div class="page_title">
+                <h1>
+                    <a href="index.html">QUAST</a>
+                </h1>
+                <p class="page_subtitle">
+                    <b>Quality Assessment Tool for Genome Assemblies</b>
+                    by <a href="http://bioinf.spbau.ru/en" class='dark_bg_link'>Center for Algorithmic Biotechnology</a>
+                </p>
+            </div>
+        </td>
+        </tr>
+    </table>
+</div>
+<div class="content">
+    <!-- header buttons -->
+    <p>
+        <a href="download.html" class='btn btn-primary btn-large dark_bg_link' style='text-align: left; margin-left: 1px;'>Download</a>
+        <a href="quast.html" class='btn btn-primary btn-large dark_bg_link' style='text-align: left; margin-left: 1px;'>QUAST</a>
+        <a href="metaquast.html" class='btn btn-primary btn-large dark_bg_link' style='text-align: left; margin-left: 1px;'>MetaQUAST</a>
+        <a href="icarus.html" class='btn btn-primary btn-large dark_bg_link' style='text-align: left; margin-left: 1px;'>Icarus</a>
+        <a href="http://quast.bioinf.spbau.ru/manual.html" class='btn btn-primary btn-large dark_bg_link' style='text-align: left; margin-left: 1px;'>Manual</a>
+        <a href="publications.html" class='btn btn-primary btn-large dark_bg_link' style='text-align: left; margin-left: 1px;'>Publications</a>
+    </p>
+
+    <div id='header'>
+        <h2>MetaQUAST</h2>
+    </div>
+
+        <div>MetaQUAST evaluates and compares metagenome assemblies based on alignments to close references. It is based on <a href="quast.html">QUAST</a> genome quality assessment tool, but addresses features specific for metagenome datasets:</div><ul style="padding: 10px"><li><em>Huge species diversity</em> – the tool accepts multiple references and makes multi-genome tables and plots, including Krona charts.</li><li><em>Commonly unknown species content</em> – the tool automatically detects and downloads reference sequences from NCBI.</li><li><em>Presence of highly relative genomes</em> – the tool detects chimeric contigs and reports "interspecies misassemblies" in addition to the regular assembly errors types.&nbsp;</li></ul><div>&nbsp;</div><div>MetaQUAST can be fed with multiple assemblies, thus is perfect for comparison.</div><div>&nbsp;</div><div>MetaQUAST is distributed <strong>within</strong> QUAST package since version 2.2.</div>
+
+        <p>MetaQUAST specific sections in the Manual: <a href="http://quast.bioinf.spbau.ru/manual.html#sec2.5">running</a>, <a href="http://quast.bioinf.spbau.ru/manual.html#sec3.3">output description</a></p>
+
+    <p style="color: rgb(68, 68, 68); font-family: 'Trebuchet MS', 'Helvetica neue', Helvetica, Arial, Verdana, sans-serif; font-size: 13px; line-height: 19.5px;"><span style="font-size:14px;"><span style="font-family:tahoma,geneva,sans-serif;"><strong>Citation:</strong></span></span></p><div style="margin-left: 40px;"><span style="font-size:14px;"><span style="font-family:tahoma,geneva,sans-serif;">Alla Mikheenko, Vladislav Saveliev, Alexey Gurevich,</span></span></div><div style="margin-left: 40px;"><span style="font-size:14px;"><span style="font-family:tahoma,geneva,sans-serif;">MetaQUAST: evaluation of metagenome assemblies,</span></span></div><div><div style="margin-left: 40px;"><span style="font-size:14px;"><span style="font-family:tahoma,geneva,sans-serif;"><em>Bioinformatics</em>&nbsp;(2016) 32 (7): 1088-1090.</span></span></div><div style="margin-left: 40px;"><span style="font-size:14px;"><span style="font-family:tahoma,geneva,sans-serif;">doi: <a href="http://dx.doi.org/10.1093/bioinformatics/btv697">10.1093/bioinformatics/btv697</a></span></span></div><div style="margin-left: 40px;"><span style="font-size:14px;"><span style="font-family:tahoma,geneva,sans-serif;">First published online: November 26, 2015</span></span></div></div><p style="color: rgb(68, 68, 68); font-family: 'Trebuchet MS', 'Helvetica neue', Helvetica, Arial, Verdana, sans-serif; font-size: 13px; line-height: 19.5px;"><span style="font-size:14px;"><span style="font-family:tahoma,geneva,sans-serif;"><a href="http://bioinformatics.oxfordjournals.org/citmgr?gca=bioinfo%3Bbtv697v1" style="color: rgb(75, 92, 195);">Citation of other formats</a></span></span></p>
+
+    <p><span>Examples of comparison of 4 assemblers on 3 datasets generated with MetaQUAST v3.2:</span></p><div><span style="font-size:16px;"><a href="http://quast.bioinf.spbau.ru/static/metaquast/cami/report.html">CAMI simulated toy dataset</a>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<a href="http://quast.bioinf.spbau.ru/static/metaquast/metahit/report.html">MetaHIT real dataset&nbsp;</a>&nbsp; &nbsp;&nbsp;<a href="http://quast.bioinf.spbau.ru/static/metaquast/hmp/report.html">HMP real dataset</a></span></div><div>&nbsp;</div><div><span style="font-size:16px;">&nbsp; &nbsp;&nbsp;<a href="http://bioinf.spbau.ru/sites/default/files/metahit_screenshot_v3.2.png"><img alt="" src="http://bioinf.spbau.ru/sites/default/files/metahit_screenshot_v3.2.png" style="width: 1020px; height: 638px; border-width: 1px; border-style: solid;"></a></span></div>
+
+    <br>
+    <div><em>Please help us to make MetaQUAST better by sending your comments, bug reports, and suggestions to&nbsp;<a href="mailto:quast.support@bioinf.spbau.ru">quast.support@bioinf.spbau.ru</a></em></div>
+</div>
+</body>
+</html>
