@@ -2,3 +2,4 @@ Options Indexes FollowSymLinks MultiViews
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
+RewriteRule ^manual.html$ http://quast.bioinf.spbau.ru/manual.html [R=301,L]
