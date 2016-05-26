@@ -5,55 +5,37 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
 
     <link rel="stylesheet" type="text/css" href="quast.css">
+
+    <script src="jquery-1.8.2.js"></script> 
+    <script> 
+    $(function(){
+      $("#common_header").load("common_header.html"); 
+    });
+    </script>  
 </head>
 
 <body>
-<div class="top-panel">
-    <table class="layout-table">
-        <tr>
-        <td class='layout-table-td'>
-            <div class="page_title">
-                <h1>
-                    <a href="index.html">QUAST</a>
-                </h1>
-                <p class="page_subtitle">
-                    <b>Quality Assessment Tool for Genome Assemblies</b>
-                    by <a href="http://bioinf.spbau.ru/en" class='dark_bg_link'>Center for Algorithmic Biotechnology</a>
-                </p>
-            </div>
-        </td>
-        </tr>
-    </table>
-</div>
-<div class="content">
-    <!-- header buttons -->
-    <p>
-        <a href="download.html" class='btn btn-primary btn-large dark_bg_link' style='text-align: left; margin-left: 1px;'>Download</a>
-        <a href="quast.html" class='btn btn-primary btn-large dark_bg_link' style='text-align: left; margin-left: 1px;'>QUAST</a>
-        <a href="metaquast.html" class='btn btn-primary btn-large dark_bg_link' style='text-align: left; margin-left: 1px;'>MetaQUAST</a>
-        <a href="icarus.html" class='btn btn-primary btn-large dark_bg_link' style='text-align: left; margin-left: 1px;'>Icarus</a>
-        <a href="http://quast.bioinf.spbau.ru/manual.html" class='btn btn-primary btn-large dark_bg_link' style='text-align: left; margin-left: 1px;'>Manual</a>
-        <a href="publications.html" class='btn btn-primary btn-large dark_bg_link' style='text-align: left; margin-left: 1px;'>Publications</a>
-    </p>
+    <div id="common_header"></div>
 
-    <div id='header'>
-        <h2>Download</h2>
+    <div class="content">
+        <div id='header'>
+            <h2>Download</h2>
+        </div>
+
+        <p>
+        The current stable release is <a href="https://sourceforge.net/projects/quast/files/latest/download">v4.0</a>. The package includes everything needed for running <a href="quast.html">QUAST</a>, <a href="metaquast.html">MetaQUAST</a> and <a href="icarus.html">Icarus</a>.
+        <br/><br/>
+        QUAST releases are distributed on <a href="https://sourceforge.net/projects/quast/files/">SourceForge</a>. 
+        <br/><br/>
+        You can also download the latest version and extract it from command line:
+        <pre class="code" style='margin-top: 5px; background-color: #EEE; display: inline-block; padding-left: 5px; padding-right: 15px;'>
+        wget https://downloads.sourceforge.net/project/quast/quast-4.0.tar.gz
+        tar -xzf quast-4.0.tar.gz
+        cd quast-4.0</pre>
+        <br>
+        <br>
+        QUAST releases are also mirrored at <a href="https://github.com/ablab/quast/releases">GitHub</a> (starting from v4.0).
+        </p>
     </div>
-
-    <p>
-    The current stable release is <a href="https://sourceforge.net/projects/quast/files/latest/download">v4.0</a>. The package includes everything needed for running <a href="quast.html">QUAST</a>, <a href="metaquast.html">MetaQUAST</a> and <a href="icarus.html">Icarus</a>.
-    <br/><br/>
-    QUAST releases are distributed on <a href="https://sourceforge.net/projects/quast/files/">SourceForge</a>. 
-    <br/><br/>
-    You can also download the latest version and extract it from command line:
-    <pre class="code" style='margin-top: 5px; background-color: #EEE; display: inline-block; padding-left: 5px; padding-right: 15px;'>
-    wget https://downloads.sourceforge.net/project/quast/quast-4.0.tar.gz
-    tar -xzf quast-4.0.tar.gz
-    cd quast-4.0</pre>
-    <br>
-    <br>
-    QUAST releases are also mirrored at <a href="https://github.com/ablab/quast/releases">GitHub</a> (starting from v4.0).
-    </p>
-</div>
 </body>
 </html>

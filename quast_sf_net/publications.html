@@ -5,62 +5,44 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
 
     <link rel="stylesheet" type="text/css" href="quast.css">
+
+    <script src="jquery-1.8.2.js"></script> 
+    <script> 
+    $(function(){
+      $("#common_header").load("common_header.html"); 
+    });
+    </script>  
 </head>
 
 <body>
-<div class="top-panel">
-    <table class="layout-table">
-        <tr>
-        <td class='layout-table-td'>
-            <div class="page_title">
-                <h1>
-                    <a href="index.html">QUAST</a>
-                </h1>
-                <p class="page_subtitle">
-                    <b>Quality Assessment Tool for Genome Assemblies</b>
-                    by <a href="http://bioinf.spbau.ru/en" class='dark_bg_link'>Center for Algorithmic Biotechnology</a>
-                </p>
-            </div>
-        </td>
-        </tr>
-    </table>
-</div>
-<div class="content">
-    <!-- header buttons -->
-    <p>
-        <a href="download.html" class='btn btn-primary btn-large dark_bg_link' style='text-align: left; margin-left: 1px;'>Download</a>
-        <a href="quast.html" class='btn btn-primary btn-large dark_bg_link' style='text-align: left; margin-left: 1px;'>QUAST</a>
-        <a href="metaquast.html" class='btn btn-primary btn-large dark_bg_link' style='text-align: left; margin-left: 1px;'>MetaQUAST</a>
-        <a href="icarus.html" class='btn btn-primary btn-large dark_bg_link' style='text-align: left; margin-left: 1px;'>Icarus</a>
-        <a href="http://quast.bioinf.spbau.ru/manual.html" class='btn btn-primary btn-large dark_bg_link' style='text-align: left; margin-left: 1px;'>Manual</a>
-        <a href="publications.html" class='btn btn-primary btn-large dark_bg_link' style='text-align: left; margin-left: 1px;'>Publications</a>
-    </p>
+    <div id="common_header"></div>
 
-    <div id='header'>
-        <h2>Publications</h2>
+    <div class="content">
+        <div id='header'>
+            <h2>Publications</h2>
+        </div>
+        If you use <a href="quast.html">QUAST</a> in your research, please include <i>Gurevich et al., 2013</i> into your reference list:<br>
+        <div style='margin-top: 5px; padding-right: 30px; padding-left: 30px; padding-top: 5px; padding-bottom: 5px; background-color: #EEE; display: inline-block'>
+        Alexey Gurevich, Vladislav Saveliev, Nikolay Vyahhi and Glenn Tesler, <br>
+        QUAST: quality assessment tool for genome assemblies, <br>
+        <i>Bioinformatics</i> (2013) 29 (8): 1072-1075. doi: <a href="http://dx.doi.org/10.1093/bioinformatics/btt086">10.1093/bioinformatics/btt086</a><br>
+        First published online: February 19, 2013
+        </div>
+        <br><br>
+        If you use <a href="metaquast.html">MetaQUAST</a> in your research, please include <i>Mikheenko et al., 2016</i> into your reference list:<br>
+        <div style='margin-top: 5px; padding-right: 30px; padding-left: 30px; padding-top: 5px; padding-bottom: 5px; background-color: #EEE; display: inline-block'>
+        Alla Mikheenko, Vladislav Saveliev, Alexey Gurevich, <br>
+        MetaQUAST: evaluation of metagenome assemblies, <br>
+        <i>Bioinformatics</i> (2016) 32 (7): 1088-1090. doi: <a href="http://dx.doi.org/10.1093/bioinformatics/btv697">10.1093/bioinformatics/btv697</a><br>
+        First published online: November 26, 2015
+        </div>
+        <br><br>
+        If you use <a href="icarus.html">Icarus</a> visualizations in your research, please include <i>Mikheenko et al., 2016</i> into your reference list:<br>
+        <div style='margin-top: 5px; padding-right: 30px; padding-left: 30px; padding-top: 5px; padding-bottom: 5px; background-color: #EEE; display: inline-block'>
+        Alla Mikheenko, Gleb Valin, Andrey Prjibelski, Vladislav Saveliev, Alexey Gurevich, <br>
+        Icarus: visualizer for <i>de novo</i> assembly evaluation, <br>
+        Submitted (2016)
+        </div>
     </div>
-    If you use <a href="quast.html">QUAST</a> in your research, please include <i>Gurevich et al., 2013</i> into your reference list:<br>
-    <div style='margin-top: 5px; padding-right: 30px; padding-left: 30px; padding-top: 5px; padding-bottom: 5px; background-color: #EEE; display: inline-block'>
-    Alexey Gurevich, Vladislav Saveliev, Nikolay Vyahhi and Glenn Tesler, <br>
-    QUAST: quality assessment tool for genome assemblies, <br>
-    <i>Bioinformatics</i> (2013) 29 (8): 1072-1075. doi: <a href="http://dx.doi.org/10.1093/bioinformatics/btt086">10.1093/bioinformatics/btt086</a><br>
-    First published online: February 19, 2013
-    </div>
-    <br><br>
-    If you use <a href="metaquast.html">MetaQUAST</a> in your research, please include <i>Mikheenko et al., 2016</i> into your reference list:<br>
-    <div style='margin-top: 5px; padding-right: 30px; padding-left: 30px; padding-top: 5px; padding-bottom: 5px; background-color: #EEE; display: inline-block'>
-    Alla Mikheenko, Vladislav Saveliev, Alexey Gurevich, <br>
-    MetaQUAST: evaluation of metagenome assemblies, <br>
-    <i>Bioinformatics</i> (2016) 32 (7): 1088-1090. doi: <a href="http://dx.doi.org/10.1093/bioinformatics/btv697">10.1093/bioinformatics/btv697</a><br>
-    First published online: November 26, 2015
-    </div>
-    <br><br>
-    If you use <a href="icarus.html">Icarus</a> visualizations in your research, please include <i>Mikheenko et al., 2016</i> into your reference list:<br>
-    <div style='margin-top: 5px; padding-right: 30px; padding-left: 30px; padding-top: 5px; padding-bottom: 5px; background-color: #EEE; display: inline-block'>
-    Alla Mikheenko, Gleb Valin, Andrey Prjibelski, Vladislav Saveliev, Alexey Gurevich, <br>
-    Icarus: visualizer for <i>de novo</i> assembly evaluation, <br>
-    Submitted (2016)
-    </div>
-</div>
 </body>
 </html>
