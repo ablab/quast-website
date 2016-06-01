@@ -6,6 +6,7 @@ Ubuntu:
     $ sudo apt-get install sqlite3
     $ sudo apt-get install python-dev
     $ sudo apt-get install libevent-dev
+    # sudo apt-get install MySQL-python
 
 Mac OS:
     $ brew install sqlite3
