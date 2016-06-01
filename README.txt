@@ -17,8 +17,10 @@ $ mkdir quast
 $ cd quast
 
 Clone command line quast application:
-    $ git clone --recursive https://github.com/ablab/quast-website.git
-    $ mv quast-website source
+    $ git clone --recursive https://github.com/ablab/quast-website.git source
+    $ cd source
+    $ git submodule init
+    $ git submodule update
 
 Install python virtual environment:
     $ easy_install pip
