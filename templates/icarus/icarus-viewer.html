@@ -21,56 +21,95 @@
 {% endblock %}
 
 {% block controls_panel %}
-    <td class="layout-table-td">
-        <div id='controls_panel'>
-            <span style="white-space: nowrap;">
-                Move
-                <button id="left_shift" class="btn btn-inverse"><<</button>
-                <button id="left" class="btn btn-inverse"><</button>
-                <button id="right" class="btn btn-inverse">></button>
-                <button id="right_shift" class="btn btn-inverse">>></button>
-            </span>
-            <span style="white-space: nowrap; margin-left: 7px">
-                zoom
-                <button id="zoom_in_5" class="btn btn-inverse">+<span class="rhs"></span>5x</button>
-                <button id="zoom_in" class="btn btn-inverse">+<span class="rhs"></span>2x</button>
-                <button id="zoom_out" class="btn btn-inverse">–<span class="rhs"></span>2x</button>
-                <button id="zoom_out_5" class="btn btn-inverse">–<span class="rhs"></span>5x</button>
-            </span>
-            <span style="white-space: nowrap; margin-left: 7px">
-                go to coordinate <input class="textBox" id="input_coords" type="text" maxlength="30" />
-            </span>
-            <br>
-            <span style="white-space: nowrap;">
-                {{ size_threshold | safe }}
-            </span>
-            <span id="misassemblies_selector_panel">
-                {{ ms_selector | safe }}
-            </span>
+<td class="layout-table-td">
+    <div id='controls_panel'>
+        <table class="controls_table">
+            <tr>
+                <td rowspan="2" style="vertical-align: middle;">
+                    <span style="white-space: nowrap;">
+                        Move
+                        <button id="left_shift" class="btn btn-inverse"><<</button>
+                        <button id="left" class="btn btn-inverse"><</button>
+                        <button id="right" class="btn btn-inverse">></button>
+                        <button id="right_shift" class="btn btn-inverse">>></button>
+                    </span>
+                    <span style="white-space: nowrap; margin-left: 7px">
+                        zoom
+                        <button id="zoom_in_5" class="btn btn-inverse">+<span class="rhs"></span>5x</button>
+                        <button id="zoom_in" class="btn btn-inverse">+<span class="rhs"></span>2x</button>
+                        <button id="zoom_out" class="btn btn-inverse">–<span class="rhs"></span>2x</button>
+                        <button id="zoom_out_5" class="btn btn-inverse">–<span class="rhs"></span>5x</button>
+                    </span>
+                </td>
+                <td>
+                    <div class="coords_text_div">
+                        start:
+                    </div>
+                </td>
+                <td>
+                    <div class="coords_div">
+                        <select id="select_chr_start" style="display: none"></select>
+                        <input class="coords_textbox" id="input_coords_start" type="text"/>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="coords_text_div">
+                        end:
+                    </div>
+                </td>
+                <td>
+                    <div class="coords_div">
+                        <select id="select_chr_end" style="display: none"></select>
+                        <input class="coords_textbox" id="input_coords_end" type="text"/>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="text_div" style="clear: left">
+            {{ size_threshold | safe }}
         </div>
-    </td>
+        <div class="text_div">
+            {{ ms_selector | safe }}
+        </div>
+    </div>
+</td>
+<td class="last-td">
+    <div class="text_div">
+        Search: <input id="live_search" placeholder="Enter contig/gene name"/>
+    </div>
+</td>
 {% endblock %}
 
 {% block content %}
     <div class="reftitle"><b>{{ title }}</b></div>
     {{ warning }}
-
+    <button id="hideBtnAnnoMini" class="btn moving_button btn-mini" style="display: none; position: absolute;">Hide</button>
+    <button id="hideBtnAnnoMain" class="btn moving_button btn-mini" style="display: none; position: absolute;">Show annotation</button>
+    <button id="hideBtnCovMini" class="btn moving_button btn-mini" style="display: none; position: absolute;">Hide</button>
+    <button id="hideBtnCovMain" class="btn moving_button btn-mini" style="display: none; position: absolute;">Show coverage</button>
+    <button id="hideBtnPhysCovMain" class="btn moving_button btn-mini" style="display: none; position: absolute;">Show physical</button>
+    <button id="hideBtnPhysCovMini" class="btn moving_button btn-mini" style="display: none; position: absolute;">Show physical</button>
+    <div id="logScaleTogglerMain" style="display: none; position: absolute;"></div>
+    <div id="logScaleTogglerMini" style="display: none; position: absolute;"></div>
     {% block after_content %}
-        <button id="hideBtnAnnoMini" class="btn moving_button btn-mini" style="display: none; position: absolute;">Hide</button>
-        <button id="hideBtnAnnoMain" class="btn moving_button btn-mini" style="display: none; position: absolute;">Show annotation</button>
-        <button id="hideBtnCovMini" class="btn moving_button btn-mini" style="display: none; position: absolute;">Hide</button>
-        <button id="hideBtnCovMain" class="btn moving_button btn-mini" style="display: none; position: absolute;">Show coverage</button>
-        <script type="text/javascript">
-            window.onbeforeunload = function(){
-                window.scrollTo(0,0);
-            }
-        </script>
-        <script type="text/javascript">
-            {{ contig_alignments | safe }}
-            {{ contig_sizes | safe }}
-        </script>
-        <script type="text/javascript" src="/static/d3.js"></script>
-        <script type="text/javascript" src="/static/scripts/build_icarus.js"></script>
-    {% endblock %}
+    <script type="text/javascript">
+        window.onbeforeunload = function(){
+            window.scrollTo(0,0);
+        }
+    </script>
+    <script type="text/javascript">
+        {{ contig_alignments | safe }}
+        {{ contig_sizes | safe }}
+    </script>
+    <script type="text/javascript" src="/static/d3.js"></script>
+    <script type="text/javascript" src="/static/jquery-1.8.2.js"></script>
+    <script type="text/javascript" src="/static/jquery-ui.js"></script>
+    <script type="text/javascript" src="/static/scripts/icarus_interface.js"></script>
+    <script type="text/javascript" src="/static/scripts/icarus_utils.js"></script>
+    <script type="text/javascript" src="/static/scripts/display_icarus.js"></script>
+    <script type="text/javascript" src="/static/scripts/build_icarus.js"></script>
+{% endblock %}
 {% endblock %}
 
