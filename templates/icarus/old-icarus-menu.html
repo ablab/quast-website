@@ -1,0 +1,49 @@
+{% extends "icarus/base-icarus.html" %}
+
+{% block logo_class %}dark_bg_link{% endblock %}
+
+{% block title %}
+    {% if title|length <= 100 %}{{ title }}
+    {% else %}{{ title|truncatechars:97 }}...
+    {% endif %} | Icarus
+{% endblock %}
+
+{% block content %}
+    <div class="icarus_summary_content">
+        <table class="summary_table assemblies_table">
+            <thead>
+                {{ assemblies | safe }}
+            </thead>
+            <tbody>
+                {{ links | safe }}
+            </tbody>
+        </table>
+        <br>
+            {{ div_references | safe }}
+            <h3>Select a viewer of contigs aligned to one of the following reference genomes:</h3>
+            <table class="summary_table meta_references_table">
+                <thead>
+                    <th>
+                        Genome
+                    </th>
+                    <th>
+                        # fragments
+                    </th>
+                    <th>
+                        Length, bp
+                    </th>
+                    {{ th_assemblies | safe }}
+                    <th>
+                        Mean genome fraction, %
+                    </th>
+                    <th>
+                        # misassembled blocks
+                    </th>
+                </thead>
+                <tbody>
+                {{ references | safe }}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

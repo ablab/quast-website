@@ -12,14 +12,25 @@
     <div class="icarus_summary_content">
         <table class="summary_table assemblies_table">
             <thead>
-                {{ assemblies | safe }}
+                <b>Assemblies:</b> {{ assemblies | safe }}
             </thead>
             <tbody>
-                {{ links | safe }}
+                <tr><td><a href="{{ contig_size_html }}">Contig size viewer</a></td></tr>
+                <tr><td><a href="report.html">QUAST report</a></td></tr>
             </tbody>
         </table>
         <br>
-            {{ div_references | safe }}
+            {% if reference %}
+                <div class="contig_alignment_viewer_panel">
+                <a href="{{ reference.alignment_link }}">Contig alignment viewer</a>
+                  <div class="reference_details">
+                      <p>Aligned to sequences from {{ reference.ref_fpath }}</p>
+                      <p>Fragments: {{ reference.ref_fragments }}, length: {{ reference.ref_size }} bp, mean genome fraction: {{ reference.ref_gf }}%,
+                          misassembled blocks: {{ reference.num_misassemblies }}</p>
+                  </div>
+                </div>
+            {% endif %}
+            {% if table_references %}
             <h3>Select a viewer of contigs aligned to one of the following reference genomes:</h3>
             <table class="summary_table meta_references_table">
                 <thead>
@@ -32,7 +43,9 @@
                     <th>
                         Length, bp
                     </th>
-                    {{ th_assemblies | safe }}
+                    {% if table_references.th_assemblies %}
+                    <th># assemblies</th>
+                    {% endif %}
                     <th>
                         Mean genome fraction, %
                     </th>
@@ -41,9 +54,20 @@
                     </th>
                 </thead>
                 <tbody>
-                {{ references | safe }}
+                    {% for reference in table_references.references %}
+                        <tr>
+                            <td><a href="{{ reference.chr_link}}" data-toggle="tooltip" title="{{ reference.tooltip }}">{{ reference.chr_name }}</a></td>
+                            <td>{{ reference.num_contigs }}</td>
+                            <td>{{ reference.chr_size }}</td>
+                            {% if reference.num_assemblies %}
+                            <td>{{ reference.num_assemblies }}</td>
+                            {% endif %}
+                            <td>{{ reference.chr_gf }}</td>
+                            <td>{{ reference.num_misassemblies }}</td>
+                        </tr>
+                    {% endfor %}
                 </tbody>
             </table>
-        </div>
+            {% endif %}
     </div>
 {% endblock %}

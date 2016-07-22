@@ -4,7 +4,7 @@ from django.http import HttpResponse, Http404
 from wsgiref.util import FileWrapper
 # from django.core.files.base import ContentFile
 import mimetypes
-from views_report import get_report_response_dict, get_icarus_menu_response_dict, get_icarus_response_dict
+from views_report import get_report_response_dict, example_icarus_view
 from django.shortcuts import render_to_response
 from django.utils.encoding import smart_str
 
@@ -44,22 +44,22 @@ def e_coli_mc_download(request, download_fname):
     return download_report_view(download_fname)
 
 def e_coli_sc_icarus(request):
-    return icarus_view('', 'E. coli, single cell', 'e.coli-single-cell')
+    return example_icarus_view('', 'E. coli, single cell', 'e.coli-single-cell', is_menu=True)
 
 def e_coli_mc_icarus(request):
-    return icarus_view('', 'E. coli, isolate', 'e.coli-isolate')
+    return example_icarus_view('', 'E. coli, isolate', 'e.coli-isolate', is_menu=True)
 
 def e_coli_sc_icarus_alignment(request):
-    return icarus_alignment_viewer_view('', 'E. coli, single cell', 'e.coli-single-cell')
+    return example_icarus_view('', 'E. coli, single cell', 'e.coli-single-cell')
 
 def e_coli_mc_icarus_alignment(request):
-    return icarus_alignment_viewer_view('', 'E. coli, isolate', 'e.coli-isolate')
+    return example_icarus_view('', 'E. coli, isolate', 'e.coli-isolate')
 
 def e_coli_sc_icarus_contig_size(request):
-    return icarus_contig_size_viewer_view('', 'E. coli, single cell', 'e.coli-single-cell')
+    return example_icarus_view('', 'E. coli, single cell', 'e.coli-single-cell', is_contig_size_plot=True)
 
 def e_coli_mc_icarus_contig_size(request):
-    return icarus_contig_size_viewer_view('', 'E. coli, isolate', 'e.coli-isolate')
+    return example_icarus_view('', 'E. coli, isolate', 'e.coli-isolate', is_contig_size_plot=True)
 
 
 def report_view(dir_name, caption, slug_name, template_dir_name=None,
@@ -101,39 +101,6 @@ def download_report_view(download_fname):
         return response
     else:
         raise Http404('File %s does not exist' % download_fname)
-
-
-def icarus_view(dir_name, caption, slug_name, template_dir_name=None,
-                html_template_name=None, data_set_name=None, title=None):
-    response_dict = dict(settings.TEMPLATE_ARGS_BY_DEFAULT)
-    report_dict = get_icarus_menu_response_dict(os.path.join(settings.FILES_DIRPATH, dir_name, slug_name))
-    response_dict.update(report_dict)
-    response_dict['hide_date'] = True
-    response_dict['title'] = 'Icarus main menu'
-
-    return render_to_response('icarus/icarus-menu.html', response_dict)
-
-
-def icarus_alignment_viewer_view(dir_name, caption, slug_name, template_dir_name=None,
-                html_template_name=None, data_set_name=None, title=None):
-    response_dict = dict(settings.TEMPLATE_ARGS_BY_DEFAULT)
-    report_dict = get_icarus_response_dict(os.path.join(settings.FILES_DIRPATH, dir_name, slug_name))
-    response_dict.update(report_dict)
-    response_dict['hide_date'] = True
-    response_dict['title'] = 'Contig alignment viewer'
-
-    return render_to_response('icarus/icarus-viewer.html', response_dict)
-
-
-def icarus_contig_size_viewer_view(dir_name, caption, slug_name, template_dir_name=None,
-                html_template_name=None, data_set_name=None, title=None):
-    response_dict = dict(settings.TEMPLATE_ARGS_BY_DEFAULT)
-    report_dict = get_icarus_response_dict(os.path.join(settings.FILES_DIRPATH, dir_name, slug_name), is_contig_size_plot=True)
-    response_dict.update(report_dict)
-    response_dict['hide_date'] = True
-    response_dict['title'] = 'Contig size viewer'
-
-    return render_to_response('icarus/icarus-viewer.html', response_dict)
 
 
 __spades_on_gage_b__caption_template = '%s MiSeq SPAdes&nbsp;%s assemblies'

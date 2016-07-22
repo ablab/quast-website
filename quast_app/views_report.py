@@ -1,3 +1,4 @@
+import json
 import sys
 from django.utils.html import escape
 import os
@@ -92,73 +93,68 @@ def get_report_response_dict(results_dirpath):
     }
 
 
-def get_icarus_menu_response_dict(results_dirpath):
+def get_from_json(name, results_dirpath, is_required=False, msg=None):
+    contents = ''
+    fname = name + '.json'
+    try:
+        f = open(os.path.join(results_dirpath, fname))
+        contents = f.read()
+    except IOError:
+        if is_required:
+            logger.exception('%s is not found.' % fname)
+            raise Exception('%s is not found.' % fname)
+    return contents
+
+
+def get_icarus_menu_response_dict(results_dirpath, is_contig_size_plot=False):
     if not os.path.isdir(results_dirpath):
         logger.error('no results directory %s ', results_dirpath)
         raise Exception('No results directory %s' % results_dirpath)
 
-    def get(name, is_required=False, msg=None):
-        contents = ''
-        fname = name + '.json'
-        try:
-            f = open(os.path.join(results_dirpath, fname))
-            contents = f.read()
-        except IOError:
-            if is_required:
-                logger.exception('%s is not found.' % fname)
-                raise Exception('%s is not found.' % fname)
-        return contents
-
-    assemblies      = get('assemblies', is_required=True)
-    links           = get('links')
-    div_references  = get('div_references')
-    th_assemblies   = get('th_assemblies')
-    references      = get('references')
-
-    return {
-        'assemblies': assemblies,
-        'links': links,
-        'div_references': div_references,
-        'th_assemblies': th_assemblies,
-        'references': references,
-        'icarus_script': icarus_script,
-    }
-
-
-def get_icarus_response_dict(results_dirpath, is_contig_size_plot=False):
-    if not os.path.isdir(results_dirpath):
-        logger.error('no results directory %s ', results_dirpath)
-        raise Exception('No results directory %s' % results_dirpath)
-
-    def get(name, is_required=False, msg=None):
-        contents = ''
-        fname = name + '.json'
-        try:
-            f = open(os.path.join(results_dirpath, fname))
-            contents = f.read()
-        except IOError:
-            if is_required:
-                logger.exception('%s is not found.' % fname)
-                raise Exception('%s is not found.' % fname)
-        return contents
-
-    reference               = get('reference')
-    warning                 = get('warning')
-    ms_selector             = get('ms_selector')
-    size_threshold          = get('size_threshold')
-    response_dict           = {
-                                'reference': reference,
-                                'warning': warning,
-                                'icarus_script': icarus_script,
-                            }
-    if is_contig_size_plot:
-        response_dict['contig_sizes'] = get('contig_sizes')
-        response_dict['size_threshold'] = size_threshold
+    response_dict = dict()
+    use_old_template = False
+    if get_from_json('div_references', results_dirpath):  # old reports
+        use_old_template = True
+        dict_keys = ['assemblies', 'links', 'div_references', 'th_assemblies', 'references']
     else:
-        response_dict['contig_alignments'] = get('contig_alignments')
-        response_dict['ms_selector'] = ms_selector
+        if get_from_json('menu_reference', results_dirpath):
+            response_dict['reference'] = json.loads(get_from_json('menu_reference', results_dirpath))['menu_reference']
+        elif get_from_json('table_references', results_dirpath):
+            response_dict['table_references'] = json.loads(get_from_json('table_references', results_dirpath))['table_references']
+        dict_keys = ['contig_size_html', 'assemblies']
+    response_dict.update(dict((k, get_from_json(k, results_dirpath)) for k in dict_keys))
+    response_dict['title'] = 'Icarus main menu'
+    template_fpath = 'icarus/icarus-menu.html'
+    if use_old_template:
+        template_fpath = 'icarus/old-icarus-menu.html'
 
-    return response_dict
+    return response_dict, template_fpath
+
+
+def get_icarus_response_dict(results_dirpath, is_contig_size_plot=None):
+    if not os.path.isdir(results_dirpath):
+        logger.error('no results directory %s ', results_dirpath)
+        raise Exception('No results directory %s' % results_dirpath)
+
+    response_dict = dict()
+    use_old_template = False
+    data_json_fname = 'data_sizes' if is_contig_size_plot else 'data_alignments'
+    response_dict['all_data'] = get_from_json(data_json_fname, results_dirpath)
+    if not response_dict['all_data']:  # old reports
+        use_old_template = True
+        dict_keys = ['contig_sizes', 'size_threshold'] if is_contig_size_plot else ['contig_alignments', 'ms_selector']
+    else:
+        response_dict['ms_selector'] = json.loads(get_from_json('ms_selector', results_dirpath))['ms_selector'] if \
+            get_from_json('ms_selector', results_dirpath) and not is_contig_size_plot else None
+        response_dict['size_viewer'] = is_contig_size_plot
+        dict_keys = ['size_threshold', 'num_contigs_warning'] if is_contig_size_plot else ['reference']
+    response_dict.update(dict((k, get_from_json(k, results_dirpath)) for k in dict_keys))
+
+    response_dict['title'] = 'Contig size viewer' if is_contig_size_plot else 'Contig alignment viewer'
+    template_fpath = 'icarus/icarus-viewer.html'
+    if use_old_template:
+        template_fpath = 'icarus/old-icarus-viewer.html'
+    return response_dict, template_fpath
 
 
 def __set_data_set_info(qs, response_dict):
@@ -327,52 +323,34 @@ def download_report_view(request, link):
         return response
 
 
-def icarus_view(user_session, response_dict, request, link):
+def get_icarus_view(output_dirpath, is_menu=False, is_contig_size_plot=False, qs=None):
+    response_dict = dict(settings.TEMPLATE_ARGS_BY_DEFAULT)
+    get_response_fn = get_icarus_menu_response_dict if is_menu else get_icarus_response_dict
+    report_dict, template_fpath = get_response_fn(output_dirpath, is_contig_size_plot=is_contig_size_plot)
+    response_dict.update(report_dict)
+    response_dict['hide_date'] = True
+    if qs:
+        response_dict['comment'] = escape(qs.comment)
+        response_dict['report_id'] = qs.report_id
+
+    return response_dict, render_to_response(template_fpath, response_dict)
+
+
+def example_icarus_view(dir_name, caption, slug_name, is_menu=False, is_contig_size_plot=False):
+    output_dirpath = os.path.join(settings.FILES_DIRPATH, dir_name, slug_name)
+    report_dict, response = get_icarus_view(output_dirpath, is_menu, is_contig_size_plot)
+    return response
+
+
+def icarus_view(user_session, response_dict, request, link, is_menu=False, is_contig_size_plot=False):
     qs, state, exit_code, error = __report_view_base(request, link)
 
     if state != 'SUCCESS' or exit_code != 0:
         return __waiting_report(user_session, response_dict, request, qs, error, state)
-
-    response_dict.update(get_icarus_menu_response_dict(qs.get_dirpath()))
-    response_dict['comment'] = escape(qs.comment)
-    response_dict['report_id'] = qs.report_id
-    response_dict['hide_date'] = True
-    response_dict['title'] = 'Icarus main menu'
+    output_dirpath = qs.get_dirpath()
+    report_dict, response = get_icarus_view(output_dirpath, is_menu, is_contig_size_plot)
 
     __set_downloading(qs, response_dict)
 
-    return render_to_response('icarus/icarus-menu.html', response_dict)
+    return response
 
-
-def icarus_alignment_viewer_view(user_session, response_dict, request, link):
-    qs, state, exit_code, error = __report_view_base(request, link)
-
-    if state != 'SUCCESS' or exit_code != 0:
-        return __waiting_report(user_session, response_dict, request, qs, error, state)
-
-    response_dict.update(get_icarus_response_dict(qs.get_dirpath()))
-    response_dict['comment'] = escape(qs.comment)
-    response_dict['report_id'] = qs.report_id
-    response_dict['hide_date'] = True
-    response_dict['title'] = 'Contig alignment viewer'
-
-    __set_downloading(qs, response_dict)
-
-    return render_to_response('icarus/icarus-viewer.html', response_dict)
-
-
-def icarus_contig_size_viewer_view(user_session, response_dict, request, link):
-    qs, state, exit_code, error = __report_view_base(request, link)
-
-    if state != 'SUCCESS' or exit_code != 0:
-        return __waiting_report(user_session, response_dict, request, qs, error, state)
-
-    response_dict.update(get_icarus_response_dict(qs.get_dirpath(), is_contig_size_plot=True))
-    response_dict['comment'] = escape(qs.comment)
-    response_dict['report_id'] = qs.report_id
-    response_dict['hide_date'] = True
-    response_dict['title'] = 'Contig size viewer'
-
-    __set_downloading(qs, response_dict)
-
-    return render_to_response('icarus/icarus-viewer.html', response_dict)
