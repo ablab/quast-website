@@ -40,7 +40,7 @@ REPORT_LINK_BASE            = '/reports/'
 
 database = 'sqlite'
 
-if os.environ.get('DEVELOPMENT', None):
+if os.environ.get('DEVELOPMENT'):
     DEBUG = True
     ADDRESS = 'http://127.0.0.1:8000/'
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -51,8 +51,6 @@ else:
     database = 'mysql'
     EMAIL_HOST = 'localhost'
     database = 'mysql'
-
-TEMPLATE_DEBUG = DEBUG
 
 REPORTS_SHOW_LIMIT = 8
 
@@ -66,13 +64,6 @@ ADMINS = (
 MANAGERS = ADMINS
 
 SEND_BROKEN_LINK_EMAILS = False
-
-
-TEMPLATE_ARGS_BY_DEFAULT = {
-    'debug': DEBUG,
-    'support_email': SUPPORT_EMAIL,
-    'address_base': ADDRESS,
-}
 
 
 # BROKER_URL = 'redis://localhost/0'
@@ -179,21 +170,34 @@ STATICFILES_FINDERS = (
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '3ikccwwfa*6q7yw7^4-j_y*3&amp;6+o!j5zte!h2#%&amp;&amp;js6@hi12d'
 
-# List of callables that know how to import templates from various sources.
-TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
-    #     'django.template.loaders.eggs.Loader',
-    )
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [
+            os.path.join(SOURCE_DIRPATH, 'templates'),
+        ],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                # Insert your TEMPLATE_CONTEXT_PROCESSORS here or use this
+                # list if you haven't customized them:
+                'django.contrib.auth.context_processors.auth',
+                'django.template.context_processors.debug',
+                'django.template.context_processors.i18n',
+                'django.template.context_processors.media',
+                'django.template.context_processors.static',
+                'django.template.context_processors.tz',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
 
-TEMPLATE_CONTEXT_PROCESSORS = (
-    #    'django.core.context_processors.debug',
-    #    'django.core.context_processors.i18n',
-    #    'django.core.context_processors.files',
-    #    'django.core.context_processors.files',
-    'django.contrib.auth.context_processors.auth',
-    'django.contrib.messages.context_processors.messages',
-    )
+TEMPLATE_ARGS_BY_DEFAULT = {
+    'debug': DEBUG,
+    'support_email': SUPPORT_EMAIL,
+    'address_base': ADDRESS,
+}
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
@@ -203,14 +207,12 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    )
+)
 
 ROOT_URLCONF = 'urls'
 
 # Python dotted path to the WSGI application used by Djasngo's runserver.
 WSGI_APPLICATION = 'wsgi.application'
-
-TEMPLATE_DIRS = (os.path.join(SOURCE_DIRPATH, 'templates'),)
 
 INSTALLED_APPS = (
     'django.contrib.auth',

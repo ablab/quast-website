@@ -1,4 +1,3 @@
-
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 from django.core.urlresolvers import reverse, reverse_lazy
@@ -7,10 +6,9 @@ from django.shortcuts import redirect
 import quast_app
 admin.autodiscover()
 
-from django.conf.urls import patterns, include, url
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-
 from django.conf import settings
+from django.conf.urls import include, url
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.generic import TemplateView, RedirectView
 
 from quast_app import views, login_views, example_reports_views
@@ -19,14 +17,14 @@ import logging
 logger = logging.getLogger('quast')
 
 
-urlpatterns = patterns('',
+urlpatterns = [
     url(r'^robots\.txt$', RedirectView.as_view(url='/static/robots.txt')),
     url(r'^sitemap\.xml$', RedirectView.as_view(url='/static/sitemap.xml')),
     url(r'^excanvas\.min\.js$', RedirectView.as_view(url='/static/flot/excanvas.min.js')),
     url(r'^favicon\.ico$', RedirectView.as_view(
         url=('/static/img/favicon_debug.ico' if settings.DEBUG else '/static/img/favicon.ico'))),
 
-    url(r'^/?$', quast_app.views.index),
+    url(r'^$', quast_app.views.index),
 
     url(r'^manual.*$', quast_app.views.manual),
     url(r'^changes.*$', quast_app.views.changes),
@@ -49,14 +47,14 @@ urlpatterns = patterns('',
     url(r'^metaquast/metahit\.tar\.gz$', RedirectView.as_view(url='/static/metaquast/metahit.tar.gz')),
 
     url(r'^e\.coli-single-cell/report\.html$', quast_app.example_reports_views.e_coli_sc),
-    url(r'^e\.coli-single-cell/?$', lambda _: redirect('quast_app.example_reports_views.e_coli_sc')),
+    url(r'^e\.coli-single-cell/?$', lambda _: redirect(quast_app.example_reports_views.e_coli_sc)),
     url(r'^e\.coli-single-cell/icarus\.html$', quast_app.example_reports_views.e_coli_sc_icarus),
     url(r'^e\.coli-single-cell/icarus_viewers/alignment_viewer\.html$', quast_app.example_reports_views.e_coli_sc_icarus_alignment),
     url(r'^e\.coli-single-cell/icarus_viewers/contig_size_viewer\.html$', quast_app.example_reports_views.e_coli_sc_icarus_contig_size),
     url(r'^e\.coli-single-cell/(?P<download_fname>.+)/?$', quast_app.example_reports_views.e_coli_sc_download),
 
     url(r'^e\.coli-isolate/report\.html$', quast_app.example_reports_views.e_coli_mc),
-    url(r'^e\.coli-isolate/?$', lambda _: redirect('quast_app.example_reports_views.e_coli_mc')),
+    url(r'^e\.coli-isolate/?$', lambda _: redirect(quast_app.example_reports_views.e_coli_mc)),
     url(r'^e\.coli-isolate/icarus\.html$', quast_app.example_reports_views.e_coli_mc_icarus),
     url(r'^e\.coli-isolate/icarus_viewers/alignment_viewer\.html$', quast_app.example_reports_views.e_coli_mc_icarus_alignment),
     url(r'^e\.coli-isolate/icarus_viewers/contig_size_viewer\.html$', quast_app.example_reports_views.e_coli_mc_icarus_contig_size),
@@ -97,21 +95,19 @@ urlpatterns = patterns('',
     url(r'^404', TemplateView.as_view(template_name='404.html')),
 
     url(r'^ask_password', quast_app.login_views.ask_password, name='ask_password_link'),
-    url(r'^login', 'quast_app.login_views.login', name='login_link'),
+    url(r'^login', quast_app.login_views.login, name='login_link'),
 
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
-)
+]
 
 for ver in ('2.5', '3.0'):
-    urlpatterns += (
-        url(r'^spades.' + ver + '-on-gage.b-data-sets/$',
+    urlpatterns.append(url(r'^spades.' + ver + '-on-gage.b-data-sets/$',
             quast_app.example_reports_views.spades_on_gage_b_data_sets,
-            {'spades_ver': ver}),
-    )
+            {'spades_ver': ver}))
 
     for d_set_slug in ['b.cereus', 'm.abscessus', 'r.sphaeroides', 'v.cholerae']:
-        urlpatterns += (
+        urlpatterns.extend([
             url(r'^spades.' + ver + '-on-gage.b-data-sets/' + d_set_slug + '/(?P<download_fname>.+)?/?$',
                 'quast_app.example_reports_views.spades_on_gage_b_data_sets__' + d_set_slug.replace('.', '_'),
                 {'is_scaf': False, 'spades_ver': ver}),
@@ -119,7 +115,7 @@ for ver in ('2.5', '3.0'):
             url(r'^spades.' + ver + '-on-gage.b-data-sets/' + d_set_slug + '-scaffolds/(?P<download_fname>.+)?/?$',
                 'quast_app.example_reports_views.spades_on_gage_b_data_sets__' + d_set_slug.replace('.', '_'),
                 {'is_scaf': True, 'spades_ver': ver}),
-        )
+        ])
 
 urlpatterns += staticfiles_urlpatterns()
 
