@@ -38,11 +38,11 @@ body {
     border-color: #CCC;
 }
 
-.active, .active:hover, .active:visited {
+a.active, a.active:hover, a.active:visited {
     pointer-events: none;
     cursor: text;
     color: white;
-    border: 0px;
+    border: 0;
 }
 
 #login_link {
