@@ -1,0 +1,1160 @@
+Aligning contigs to reference...
+	Using existing alignments...
+Parsing coords...
+Loading reference...
+	Loaded [gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome]
+Loading SNPs...
+	Total Regions: 1
+	Total Region Length: 4639675
+Analyzing contigs...
+CONTIG: NODE_1_length_285114_cov_235.629_ID_1455 (285114bp)
+Top Length: 172756  Top ID: 99.99
+			Skipping redundant alignments after choosing the best group of alignments
+		Skipping redundant alignment 380484 381163 | 680 1 | 680 680 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_1_length_285114_cov_235.629_ID_1455
+		Skipping redundant alignment 1466585 1467264 | 1 680 | 680 680 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_1_length_285114_cov_235.629_ID_1455
+		Skipping redundant alignment 2067616 2068295 | 1 680 | 680 680 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_1_length_285114_cov_235.629_ID_1455
+		Skipping redundant alignment 2995034 2995713 | 1 680 | 680 680 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_1_length_285114_cov_235.629_ID_1455
+		Skipping redundant alignment 3184118 3184797 | 680 1 | 680 680 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_1_length_285114_cov_235.629_ID_1455
+		Skipping redundant alignment 1990066 1990141 | 106203 106278 | 76 76 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_1_length_285114_cov_235.629_ID_1455
+		Skipping redundant alignment 1990066 1990141 | 106314 106389 | 76 76 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_1_length_285114_cov_235.629_ID_1455
+		Skipping redundant alignment 1990066 1990141 | 106426 106501 | 76 76 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_1_length_285114_cov_235.629_ID_1455
+		Skipping redundant alignment 4293971 4294232 | 202389 202128 | 262 262 | 96.56 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_1_length_285114_cov_235.629_ID_1455
+		Skipping redundant alignment 4294084 4294294 | 202389 202179 | 211 211 | 99.53 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_1_length_285114_cov_235.629_ID_1455
+			The best group is below. Score: 285010.0, number of alignments: 3, unaligned bases: 0
+		This contig is misassembled. 13 total aligns.
+			Excluding internal overlap of size 284 between Alignment 1 and 2:  4294197 4324111 | 202389 172473 | 29915 29917 --> 4294197 4323827 | 202389 172757 | 29631 29633
+			Real Alignment 1: 4324128 4496883 | 172756 1 | 172756 172756 | 99.99 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_1_length_285114_cov_235.629_ID_1455
+			  Gap between these two alignments (local misassembly). Inconsistency = 300
+			Excluding internal overlap of size 262 between Alignment 2 and 3:  4294197 4323827 | 202389 172757 | 29631 29633 --> 4294459 4323827 | 202127 172757 | 29369 29371
+			Real Alignment 2: 4294459 4323827 | 202127 172757 | 29369 29371 | 99.96 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_1_length_285114_cov_235.629_ID_1455
+			  Gap between these two alignments (local misassembly). Inconsistency = 339
+			Real Alignment 3: 4211133 4294119 | 285114 202128 | 82987 82987 | 99.99 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_1_length_285114_cov_235.629_ID_1455
+
+CONTIG: NODE_2_length_264571_cov_233.765_ID_2441 (264571bp)
+Top Length: 178219  Top ID: 99.99
+			Skipping redundant alignments after choosing the best group of alignments
+		Skipping redundant alignment 289652 289857 | 28451 28656 | 206 206 | 99.51 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_2_length_264571_cov_233.765_ID_2441
+			The best group is below. Score: 264511.2, number of alignments: 2, unaligned bases: 0
+		This contig is misassembled. 3 total aligns.
+			Excluding internal overlap of size 354 between Alignment 1 and 2:  2729453 2816158 | 1 86706 | 86706 86706 --> 2729453 2815804 | 1 86352 | 86352 86352
+			Real Alignment 1: 2729453 2815804 | 1 86352 | 86352 86352 | 99.98 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_2_length_264571_cov_233.765_ID_2441
+			  Gap between these two alignments (local misassembly). Inconsistency = 414
+			Real Alignment 2: 2816219 2994437 | 86353 264571 | 178219 178219 | 99.99 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_2_length_264571_cov_233.765_ID_2441
+
+CONTIG: NODE_3_length_224567_cov_233.549_ID_821 (224567bp)
+Top Length: 209712  Top ID: 99.99
+			Skipping redundant alignments after choosing the best group of alignments
+		Skipping redundant alignment 273795 274373 | 1 579 | 579 579 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_3_length_224567_cov_233.549_ID_821
+		Skipping redundant alignment 574430 575008 | 1 579 | 579 579 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_3_length_224567_cov_233.549_ID_821
+		Skipping redundant alignment 687690 688268 | 1 579 | 579 579 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_3_length_224567_cov_233.549_ID_821
+		Skipping redundant alignment 1394068 1394646 | 579 1 | 579 579 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_3_length_224567_cov_233.549_ID_821
+		Skipping redundant alignment 3364194 3364772 | 1 579 | 579 579 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_3_length_224567_cov_233.549_ID_821
+		Skipping redundant alignment 3650675 3651253 | 1 579 | 579 579 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_3_length_224567_cov_233.549_ID_821
+		Skipping redundant alignment 2064799 2065377 | 1 579 | 579 579 | 99.83 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_3_length_224567_cov_233.549_ID_821
+		Skipping redundant alignment 2100389 2100971 | 1 583 | 583 583 | 99.83 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_3_length_224567_cov_233.549_ID_821
+		Skipping redundant alignment 3128164 3128746 | 583 1 | 583 583 | 99.83 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_3_length_224567_cov_233.549_ID_821
+		Skipping redundant alignment 1206786 1207027 | 182363 182122 | 242 242 | 95.04 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_3_length_224567_cov_233.549_ID_821
+			The best group is below. Score: 224504.2, number of alignments: 2, unaligned bases: 0
+		This contig is misassembled. 12 total aligns.
+			Excluding internal overlap of size 450 between Alignment 1 and 2:  2287557 2302861 | 1 15305 | 15305 15305 --> 2287557 2302411 | 1 14855 | 14855 14855
+			Real Alignment 1: 2287557 2302411 | 1 14855 | 14855 14855 | 99.97 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_3_length_224567_cov_233.549_ID_821
+			  Gap between these two alignments (local misassembly). Inconsistency = 226
+			Real Alignment 2: 2302638 2512349 | 14856 224567 | 209712 209712 | 99.99 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_3_length_224567_cov_233.549_ID_821
+
+CONTIG: NODE_4_length_221601_cov_225.672_ID_866 (221601bp)
+Top Length: 221546  Top ID: 99.99
+		One align captures most of this contig: 1649518 1871063 | 1 221546 | 221546 221546 | 99.99 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_4_length_221601_cov_225.672_ID_866
+
+CONTIG: NODE_5_length_204562_cov_219.086_ID_731 (204562bp)
+Top Length: 141027  Top ID: 100.0
+			The best group is below. Score: 204520.0, number of alignments: 2, unaligned bases: 0
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 185 between Alignment 1 and 2:  2660421 2724140 | 63720 1 | 63720 63720 --> 2660606 2724140 | 63535 1 | 63535 63535
+			Real Alignment 1: 2660606 2724140 | 63535 1 | 63535 63535 | 99.99 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_5_length_204562_cov_219.086_ID_731
+			  Gap between these two alignments (local misassembly). Inconsistency = 91
+			Real Alignment 2: 2519488 2660514 | 204562 63536 | 141027 141027 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_5_length_204562_cov_219.086_ID_731
+
+CONTIG: NODE_6_length_203221_cov_225.919_ID_1318 (203221bp)
+Top Length: 203221  Top ID: 100.0
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  4205866 4206078 | 215 1 | 213 215 | 98.6 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_6_length_203221_cov_225.919_ID_1318
+			Skipping alignment  3426876 3427020 | 1 145 | 145 145 | 99.31 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_6_length_203221_cov_225.919_ID_1318
+			Skipping alignment  3581450 3581555 | 203116 203221 | 106 106 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_6_length_203221_cov_225.919_ID_1318
+			Skipping alignment  279050 279154 | 203221 203117 | 105 105 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_6_length_203221_cov_225.919_ID_1318
+			Skipping alignment  290521 290625 | 203221 203117 | 105 105 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_6_length_203221_cov_225.919_ID_1318
+			Skipping alignment  1977190 1977294 | 203221 203117 | 105 105 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_6_length_203221_cov_225.919_ID_1318
+		One align captures most of this contig: 20459 223679 | 203221 1 | 203221 203221 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_6_length_203221_cov_225.919_ID_1318
+
+CONTIG: NODE_7_length_178481_cov_236.901_ID_1726 (178481bp)
+Top Length: 178481  Top ID: 100.0
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  2099768 2100069 | 178180 178481 | 302 302 | 99.67 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_7_length_178481_cov_236.901_ID_1726
+			Skipping alignment  573810 574110 | 178181 178481 | 301 301 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_7_length_178481_cov_236.901_ID_1726
+			Skipping alignment  687070 687370 | 178181 178481 | 301 301 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_7_length_178481_cov_236.901_ID_1726
+			Skipping alignment  1394966 1395266 | 178481 178181 | 301 301 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_7_length_178481_cov_236.901_ID_1726
+			Skipping alignment  3129066 3129366 | 178481 178181 | 301 301 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_7_length_178481_cov_236.901_ID_1726
+			Skipping alignment  3650055 3650355 | 178181 178481 | 301 301 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_7_length_178481_cov_236.901_ID_1726
+			Skipping alignment  273175 273475 | 178181 178481 | 301 301 | 99.67 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_7_length_178481_cov_236.901_ID_1726
+			Skipping alignment  2064180 2064479 | 178182 178481 | 300 300 | 99.67 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_7_length_178481_cov_236.901_ID_1726
+			Skipping alignment  2286941 2287237 | 178185 178481 | 297 297 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_7_length_178481_cov_236.901_ID_1726
+		One align captures most of this contig: 3185394 3363874 | 1 178481 | 178481 178481 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_7_length_178481_cov_236.901_ID_1726
+
+CONTIG: NODE_8_length_174196_cov_242.179_ID_783 (174196bp)
+Top Length: 174196  Top ID: 99.99
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  4033188 4033462 | 275 1 | 275 275 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_8_length_174196_cov_242.179_ID_783
+			Skipping alignment  4164322 4164590 | 269 1 | 269 269 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_8_length_174196_cov_242.179_ID_783
+			Skipping alignment  2729271 2729507 | 1 238 | 237 238 | 96.25 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_8_length_174196_cov_242.179_ID_783
+		One align captures most of this contig: 3765544 3939739 | 174196 1 | 174196 174196 | 99.99 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_8_length_174196_cov_242.179_ID_783
+
+CONTIG: NODE_9_length_171543_cov_228.877_ID_1096 (171543bp)
+Top Length: 171543  Top ID: 100.0
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  2469904 2470145 | 110200 109959 | 242 242 | 95.04 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_9_length_171543_cov_228.877_ID_1096
+		One align captures most of this contig: 1096828 1268370 | 1 171543 | 171543 171543 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_9_length_171543_cov_228.877_ID_1096
+
+CONTIG: NODE_10_length_148368_cov_234.866_ID_4872 (148368bp)
+Top Length: 105943  Top ID: 99.99
+			Skipping redundant alignments after choosing the best group of alignments
+		Skipping redundant alignment 3980628 3980715 | 97542 97455 | 88 88 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_10_length_148368_cov_234.866_ID_4872
+		Skipping redundant alignment 3980627 3980715 | 97779 97691 | 89 89 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_10_length_148368_cov_234.866_ID_4872
+			The best group is below. Score: 148320.6, number of alignments: 3, unaligned bases: 0
+		This contig is misassembled. 5 total aligns.
+			Excluding internal overlap of size 313 between Alignment 1 and 2:  4612379 4639675 | 105631 132927 | 27297 27297 --> 4612692 4639675 | 105944 132927 | 26984 26984
+			Real Alignment 1: 4506648 4612590 | 1 105943 | 105943 105943 | 99.99 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_10_length_148368_cov_234.866_ID_4872
+			  Gap between these two alignments (local misassembly). Inconsistency = 101
+			Real Alignment 2: 4612692 4639675 | 105944 132927 | 26984 26984 | 99.98 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_10_length_148368_cov_234.866_ID_4872
+			  Fake misassembly (linear representation of circular genome) between these two alignments
+			Real Alignment 3: 1 15441 | 132928 148368 | 15441 15441 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_10_length_148368_cov_234.866_ID_4872
+
+CONTIG: NODE_11_length_134691_cov_225.754_ID_986 (134691bp)
+Top Length: 134691  Top ID: 100.0
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  1096745 1096882 | 10650 10787 | 138 138 | 98.55 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_11_length_134691_cov_225.754_ID_986
+		One align captures most of this contig: 914415 1049105 | 1 134691 | 134691 134691 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_11_length_134691_cov_225.754_ID_986
+
+CONTIG: NODE_12_length_133309_cov_219.306_ID_1052 (133309bp)
+Top Length: 133309  Top ID: 99.99
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  596201 596328 | 21531 21658 | 128 128 | 99.22 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_12_length_133309_cov_219.306_ID_1052
+			Skipping alignment  3069293 3069418 | 21533 21658 | 126 126 | 98.41 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_12_length_133309_cov_219.306_ID_1052
+		One align captures most of this contig: 781013 914321 | 1 133309 | 133309 133309 | 99.99 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_12_length_133309_cov_219.306_ID_1052
+
+CONTIG: NODE_13_length_132831_cov_221.105_ID_905 (132831bp)
+Top Length: 132831  Top ID: 100.0
+		One align captures most of this contig: 392133 524963 | 1 132831 | 132831 132831 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_13_length_132831_cov_221.105_ID_905
+
+CONTIG: NODE_14_length_132564_cov_232.453_ID_1403 (132564bp)
+Top Length: 132564  Top ID: 100.0
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  596203 596330 | 58930 58803 | 128 128 | 99.22 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_14_length_132564_cov_232.453_ID_1403
+			Skipping alignment  802545 802670 | 58930 58805 | 126 126 | 98.41 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_14_length_132564_cov_232.453_ID_1403
+		One align captures most of this contig: 2995659 3128222 | 132564 1 | 132564 132564 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_14_length_132564_cov_232.453_ID_1403
+
+CONTIG: NODE_15_length_125485_cov_234.708_ID_1538 (125485bp)
+Top Length: 112825  Top ID: 99.99
+			Skipping redundant alignments after choosing the best group of alignments
+		Skipping redundant alignment 4169889 4169988 | 1 100 | 100 100 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_15_length_125485_cov_234.708_ID_1538
+			The best group is below. Score: 125437.9, number of alignments: 2, unaligned bases: 0
+		This contig is misassembled. 3 total aligns.
+			Excluding internal overlap of size 225 between Alignment 1 and 2:  4151492 4164376 | 112601 125485 | 12885 12885 --> 4151717 4164376 | 112826 125485 | 12660 12660
+			Real Alignment 1: 4038769 4151593 | 1 112825 | 112825 112825 | 99.99 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_15_length_125485_cov_234.708_ID_1538
+			  Gap between these two alignments (local misassembly). Inconsistency = 123
+			Real Alignment 2: 4151717 4164376 | 112826 125485 | 12660 12660 | 99.96 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_15_length_125485_cov_234.708_ID_1538
+
+CONTIG: NODE_16_length_112393_cov_228.797_ID_1018 (112393bp)
+Top Length: 112393  Top ID: 99.99
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  1977190 1977309 | 112393 112274 | 120 120 | 96.69 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_16_length_112393_cov_228.797_ID_1018
+			Skipping alignment  20459 20564 | 112393 112288 | 106 106 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_16_length_112393_cov_228.797_ID_1018
+			Skipping alignment  279050 279154 | 112393 112289 | 105 105 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_16_length_112393_cov_228.797_ID_1018
+			Skipping alignment  290521 290625 | 112393 112289 | 105 105 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_16_length_112393_cov_228.797_ID_1018
+		One align captures most of this contig: 3469162 3581555 | 1 112393 | 112394 112393 | 99.99 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_16_length_112393_cov_228.797_ID_1018
+
+CONTIG: NODE_17_length_105632_cov_225.083_ID_1176 (105632bp)
+Top Length: 105527  Top ID: 99.99
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  1977190 1977295 | 1 106 | 106 106 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_17_length_105632_cov_225.083_ID_1176
+			Skipping alignment  20459 20563 | 1 105 | 105 105 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_17_length_105632_cov_225.083_ID_1176
+			Skipping alignment  279050 279154 | 1 105 | 105 105 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_17_length_105632_cov_225.083_ID_1176
+			Skipping alignment  290521 290625 | 1 105 | 105 105 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_17_length_105632_cov_225.083_ID_1176
+			Skipping alignment  3581451 3581555 | 105 1 | 105 105 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_17_length_105632_cov_225.083_ID_1176
+		One align captures most of this contig: 1871055 1976581 | 106 105632 | 105527 105527 | 99.99 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_17_length_105632_cov_225.083_ID_1176
+
+CONTIG: NODE_18_length_95456_cov_224.825_ID_1264 (95456bp)
+Top Length: 95405  Top ID: 100.0
+		One align captures most of this contig: 1298718 1394122 | 52 95456 | 95405 95405 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_18_length_95456_cov_224.825_ID_1264
+
+CONTIG: NODE_19_length_94769_cov_234.655_ID_1660 (94769bp)
+Top Length: 53792  Top ID: 99.99
+			The best group is below. Score: 94721.6, number of alignments: 2, unaligned bases: 0
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 108 between Alignment 1 and 2:  3665405 3706489 | 1 41085 | 41085 41085 --> 3665405 3706381 | 1 40977 | 40977 40977
+			Real Alignment 1: 3665405 3706381 | 1 40977 | 40977 40977 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_19_length_94769_cov_234.655_ID_1660
+			  Gap between these two alignments (local misassembly). Inconsistency = 168
+			Real Alignment 2: 3706550 3760341 | 40978 94769 | 53792 53792 | 99.99 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_19_length_94769_cov_234.655_ID_1660
+
+CONTIG: NODE_20_length_88450_cov_229.473_ID_2036 (88450bp)
+Top Length: 88450  Top ID: 99.99
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  228826 229005 | 1 180 | 180 180 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_20_length_88450_cov_229.473_ID_2036
+			Skipping alignment  4604338 4604426 | 35923 35835 | 89 89 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_20_length_88450_cov_229.473_ID_2036
+			Skipping alignment  4604102 4604189 | 35923 35836 | 88 88 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_20_length_88450_cov_229.473_ID_2036
+			Skipping alignment  236931 237008 | 103 180 | 78 78 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_20_length_88450_cov_229.473_ID_2036
+		One align captures most of this contig: 3944793 4033242 | 1 88450 | 88450 88450 | 99.99 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_20_length_88450_cov_229.473_ID_2036
+
+CONTIG: NODE_21_length_87065_cov_234.58_ID_1964 (87065bp)
+Top Length: 87065  Top ID: 100.0
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  3581436 3581555 | 120 1 | 120 120 | 96.69 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_21_length_87065_cov_234.58_ID_1964
+			Skipping alignment  20459 20563 | 1 105 | 105 105 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_21_length_87065_cov_234.58_ID_1964
+			Skipping alignment  279050 279154 | 1 105 | 105 105 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_21_length_87065_cov_234.58_ID_1964
+			Skipping alignment  290521 290625 | 1 105 | 105 105 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_21_length_87065_cov_234.58_ID_1964
+			Skipping alignment  2042549 2042652 | 78961 78858 | 104 104 | 98.08 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_21_length_87065_cov_234.58_ID_1964
+			Skipping alignment  2056047 2056150 | 65463 65360 | 104 104 | 98.08 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_21_length_87065_cov_234.58_ID_1964
+			Skipping alignment  2056047 2056150 | 83174 83071 | 104 104 | 97.12 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_21_length_87065_cov_234.58_ID_1964
+			Skipping alignment  2060260 2060363 | 78961 78858 | 104 104 | 97.12 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_21_length_87065_cov_234.58_ID_1964
+			Skipping alignment  2056047 2056131 | 80765 80681 | 85 85 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_21_length_87065_cov_234.58_ID_1964
+			Skipping alignment  2057870 2057954 | 78942 78858 | 85 85 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_21_length_87065_cov_234.58_ID_1964
+			Skipping alignment  4390383 4390458 | 12952 12877 | 76 76 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_21_length_87065_cov_234.58_ID_1964
+			Skipping alignment  4390495 4390570 | 12952 12877 | 76 76 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_21_length_87065_cov_234.58_ID_1964
+			Skipping alignment  4390606 4390681 | 12952 12877 | 76 76 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_21_length_87065_cov_234.58_ID_1964
+		One align captures most of this contig: 1977190 2064254 | 1 87065 | 87065 87065 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_21_length_87065_cov_234.58_ID_1964
+
+CONTIG: NODE_22_length_78605_cov_226.371_ID_1365 (78605bp)
+Top Length: 78605  Top ID: 99.99
+		One align captures most of this contig: 608520 687124 | 1 78605 | 78605 78605 | 99.99 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_22_length_78605_cov_226.371_ID_1365
+
+CONTIG: NODE_23_length_67340_cov_222.631_ID_1620 (67340bp)
+Top Length: 67340  Top ID: 100.0
+		One align captures most of this contig: 2100913 2168252 | 67340 1 | 67340 67340 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_23_length_67340_cov_222.631_ID_1620
+
+CONTIG: NODE_24_length_64399_cov_220.123_ID_2339 (64399bp)
+Top Length: 23501  Top ID: 99.98
+			The best group is below. Score: 64249.0, number of alignments: 4, unaligned bases: 0
+		This contig is misassembled. 4 total aligns.
+			Excluding internal overlap of size 174 between Alignment 1 and 2:  339166 356898 | 23328 41060 | 17733 17733 --> 339340 356898 | 23502 41060 | 17559 17559
+			Real Alignment 1: 315653 339154 | 1 23501 | 23502 23501 | 99.98 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_24_length_64399_cov_220.123_ID_2339
+			  Gap between these two alignments (local misassembly). Inconsistency = 185
+			Excluding internal overlap of size 203 between Alignment 2 and 3:  339340 356898 | 23502 41060 | 17559 17559 --> 339340 356695 | 23502 40857 | 17356 17356
+			Real Alignment 2: 339340 356695 | 23502 40857 | 17356 17356 | 99.98 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_24_length_64399_cov_220.123_ID_2339
+			  Gap between these two alignments (local misassembly). Inconsistency = 199
+			Excluding internal overlap of size 343 between Alignment 3 and 4:  374247 380538 | 58108 64399 | 6292 6292 --> 374590 380538 | 58451 64399 | 5949 5949
+			Real Alignment 3: 356895 374490 | 40858 58450 | 17596 17593 | 99.9 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_24_length_64399_cov_220.123_ID_2339
+			  Gap between these two alignments (local misassembly). Inconsistency = 99
+			Real Alignment 4: 374590 380538 | 58451 64399 | 5949 5949 | 99.95 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_24_length_64399_cov_220.123_ID_2339
+
+CONTIG: NODE_25_length_62691_cov_249.267_ID_1694 (62691bp)
+Top Length: 62691  Top ID: 99.99
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  1430783 1432792 | 62691 60682 | 2010 2010 | 99.25 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_25_length_62691_cov_249.267_ID_1694
+		One align captures most of this contig: 1569871 1632561 | 1 62691 | 62691 62691 | 99.99 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_25_length_62691_cov_249.267_ID_1694
+
+CONTIG: NODE_26_length_59669_cov_223.314_ID_1782 (59669bp)
+Top Length: 59669  Top ID: 100.0
+		One align captures most of this contig: 2227327 2286995 | 59669 1 | 59669 59669 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_26_length_59669_cov_223.314_ID_1782
+
+CONTIG: NODE_27_length_57838_cov_222.456_ID_1818 (57838bp)
+Top Length: 57838  Top ID: 99.99
+		One align captures most of this contig: 2169398 2227233 | 1 57838 | 57836 57838 | 99.99 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_27_length_57838_cov_222.456_ID_1818
+
+CONTIG: NODE_28_length_57732_cov_231.792_ID_1848 (57732bp)
+Top Length: 57732  Top ID: 99.99
+		One align captures most of this contig: 1468486 1526217 | 1 57732 | 57732 57732 | 99.99 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_28_length_57732_cov_231.792_ID_1848
+
+CONTIG: NODE_29_length_56527_cov_235.877_ID_1880 (56527bp)
+Top Length: 31153  Top ID: 99.97
+			The best group is below. Score: 56475.7, number of alignments: 2, unaligned bases: 0
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 233 between Alignment 1 and 2:  3364718 3390324 | 1 25607 | 25607 25607 --> 3364718 3390091 | 1 25374 | 25374 25374
+			Real Alignment 1: 3364718 3390091 | 1 25374 | 25374 25374 | 99.99 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_29_length_56527_cov_235.877_ID_1880
+			  Gap between these two alignments (local misassembly). Inconsistency = 92
+			Real Alignment 2: 3390184 3421335 | 25375 56527 | 31152 31153 | 99.97 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_29_length_56527_cov_235.877_ID_1880
+
+CONTIG: NODE_30_length_54861_cov_230.931_ID_1920 (54861bp)
+Top Length: 54861  Top ID: 100.0
+		One align captures most of this contig: 3129312 3184172 | 54861 1 | 54861 54861 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_30_length_54861_cov_230.931_ID_1920
+
+CONTIG: NODE_31_length_43809_cov_220.832_ID_2093 (43809bp)
+Top Length: 43809  Top ID: 100.0
+		One align captures most of this contig: 1049714 1093522 | 1 43809 | 43809 43809 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_31_length_43809_cov_220.832_ID_2093
+
+CONTIG: NODE_32_length_43014_cov_226.4_ID_2157 (43014bp)
+Top Length: 43014  Top ID: 100.0
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  736574 736814 | 1 241 | 241 241 | 96.68 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_32_length_43014_cov_226.4_ID_2157
+			Skipping alignment  2519195 2519350 | 42451 42605 | 156 155 | 99.36 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_32_length_43014_cov_226.4_ID_2157
+			Skipping alignment  2519195 2519350 | 42148 42301 | 156 154 | 98.72 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_32_length_43014_cov_226.4_ID_2157
+			Skipping alignment  780800 780882 | 42752 42834 | 83 83 | 98.8 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_32_length_43014_cov_226.4_ID_2157
+			Skipping alignment  2519275 2519357 | 42752 42834 | 83 83 | 98.8 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_32_length_43014_cov_226.4_ID_2157
+			Skipping alignment  780800 780877 | 41937 42014 | 78 78 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_32_length_43014_cov_226.4_ID_2157
+			Skipping alignment  2519073 2519150 | 42451 42528 | 78 78 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_32_length_43014_cov_226.4_ID_2157
+			Skipping alignment  2519275 2519352 | 41937 42014 | 78 78 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_32_length_43014_cov_226.4_ID_2157
+			Skipping alignment  2519073 2519149 | 42148 42224 | 77 77 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_32_length_43014_cov_226.4_ID_2157
+			Skipping alignment  780800 780875 | 42226 42301 | 76 76 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_32_length_43014_cov_226.4_ID_2157
+			Skipping alignment  780800 780875 | 42530 42605 | 76 76 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_32_length_43014_cov_226.4_ID_2157
+			Skipping alignment  2518953 2519028 | 42451 42526 | 76 76 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_32_length_43014_cov_226.4_ID_2157
+			Skipping alignment  2518953 2519028 | 42148 42223 | 76 76 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_32_length_43014_cov_226.4_ID_2157
+		One align captures most of this contig: 737841 780854 | 1 43014 | 43014 43014 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_32_length_43014_cov_226.4_ID_2157
+
+CONTIG: NODE_33_length_41365_cov_254.609_ID_2237 (41365bp)
+Top Length: 41365  Top ID: 100.0
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  223535 223679 | 41221 41365 | 145 145 | 99.31 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_33_length_41365_cov_254.609_ID_2237
+			Skipping alignment  4205936 4206078 | 41221 41365 | 143 145 | 97.24 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_33_length_41365_cov_254.609_ID_2237
+		One align captures most of this contig: 3426876 3468240 | 41365 1 | 41365 41365 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_33_length_41365_cov_254.609_ID_2237
+
+CONTIG: NODE_34_length_40576_cov_223.898_ID_2383 (40576bp)
+Top Length: 40576  Top ID: 100.0
+		One align captures most of this contig: 688214 728789 | 1 40576 | 40576 40576 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_34_length_40576_cov_223.898_ID_2383
+
+CONTIG: NODE_35_length_40169_cov_230.946_ID_2269 (40169bp)
+Top Length: 40169  Top ID: 99.99
+		One align captures most of this contig: 525890 566057 | 1 40169 | 40168 40169 | 99.99 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_35_length_40169_cov_230.946_ID_2269
+
+CONTIG: NODE_36_length_37873_cov_223.76_ID_2750 (37873bp)
+Top Length: 37873  Top ID: 100.0
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  239278 239377 | 1 100 | 100 100 | 98.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_36_length_37873_cov_223.76_ID_2750
+		One align captures most of this contig: 1530876 1568748 | 1 37873 | 37873 37873 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_36_length_37873_cov_223.76_ID_2750
+
+CONTIG: NODE_37_length_35187_cov_211.835_ID_2305 (35187bp)
+Top Length: 35187  Top ID: 100.0
+		One align captures most of this contig: 3582164 3617350 | 1 35187 | 35187 35187 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_37_length_35187_cov_211.835_ID_2305
+
+CONTIG: NODE_38_length_33283_cov_225.018_ID_2543 (33283bp)
+Top Length: 33283  Top ID: 100.0
+		One align captures most of this contig: 1432706 1465988 | 33283 1 | 33283 33283 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_38_length_33283_cov_225.018_ID_2543
+
+CONTIG: NODE_39_length_31587_cov_227.644_ID_2503 (31587bp)
+Top Length: 31587  Top ID: 100.0
+		One align captures most of this contig: 2068241 2099827 | 1 31587 | 31587 31587 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_39_length_31587_cov_227.644_ID_2503
+
+CONTIG: NODE_40_length_31001_cov_231.793_ID_2597 (31001bp)
+Top Length: 31001  Top ID: 99.99
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  223465 223679 | 213 1 | 215 213 | 98.6 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_40_length_31001_cov_231.793_ID_2597
+			Skipping alignment  3426876 3427020 | 1 143 | 145 143 | 97.24 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_40_length_31001_cov_231.793_ID_2597
+		One align captures most of this contig: 4175078 4206078 | 31001 1 | 31001 31001 | 99.99 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_40_length_31001_cov_231.793_ID_2597
+
+CONTIG: NODE_41_length_28936_cov_229.08_ID_2831 (28936bp)
+Top Length: 16645  Top ID: 99.95
+			The best group is below. Score: 28831.7, number of alignments: 2, unaligned bases: 55
+		This contig is misassembled. 2 total aligns.
+			Excluding internal overlap of size 381 between Alignment 1 and 2:  1286105 1298721 | 16265 28881 | 12617 12617 --> 1286486 1298721 | 16646 28881 | 12236 12236
+			Real Alignment 1: 1269663 1286307 | 1 16645 | 16645 16645 | 99.95 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_41_length_28936_cov_229.08_ID_2831
+			  Gap between these two alignments (local misassembly). Inconsistency = 178
+			Real Alignment 2: 1286486 1298721 | 16646 28881 | 12236 12236 | 99.94 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_41_length_28936_cov_229.08_ID_2831
+
+CONTIG: NODE_42_length_26673_cov_235.793_ID_2669 (26673bp)
+Top Length: 26673  Top ID: 100.0
+		One align captures most of this contig: 3623437 3650109 | 26673 1 | 26673 26673 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_42_length_26673_cov_235.793_ID_2669
+
+CONTIG: NODE_43_length_26206_cov_243.374_ID_2631 (26206bp)
+Top Length: 26206  Top ID: 100.0
+		One align captures most of this contig: 1395212 1421417 | 1 26206 | 26206 26206 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_43_length_26206_cov_243.374_ID_2631
+
+CONTIG: NODE_44_length_26201_cov_229.153_ID_2879 (26201bp)
+Top Length: 26201  Top ID: 100.0
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  802543 802670 | 15118 15245 | 128 128 | 99.22 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_44_length_26201_cov_229.153_ID_2879
+			Skipping alignment  3069293 3069420 | 15120 15247 | 128 128 | 99.22 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_44_length_26201_cov_229.153_ID_2879
+		One align captures most of this contig: 581084 607284 | 1 26201 | 26201 26201 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_44_length_26201_cov_229.153_ID_2879
+
+CONTIG: NODE_45_length_23987_cov_242.499_ID_2793 (23987bp)
+Top Length: 23987  Top ID: 100.0
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  279050 279156 | 1 107 | 107 107 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_45_length_23987_cov_242.499_ID_2793
+			Skipping alignment  20459 20563 | 1 105 | 105 105 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_45_length_23987_cov_242.499_ID_2793
+			Skipping alignment  1977190 1977294 | 1 105 | 105 105 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_45_length_23987_cov_242.499_ID_2793
+			Skipping alignment  3581451 3581555 | 105 1 | 105 105 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_45_length_23987_cov_242.499_ID_2793
+		One align captures most of this contig: 290521 314507 | 1 23987 | 23987 23987 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_45_length_23987_cov_242.499_ID_2793
+
+CONTIG: NODE_46_length_18685_cov_223.773_ID_2716 (18685bp)
+Top Length: 18630  Top ID: 100.0
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  1530876 1530975 | 1 100 | 100 100 | 98.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_46_length_18685_cov_223.773_ID_2716
+		One align captures most of this contig: 239278 257907 | 1 18630 | 18630 18630 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_46_length_18685_cov_223.773_ID_2716
+
+CONTIG: NODE_47_length_14060_cov_248.442_ID_2917 (14060bp)
+Top Length: 14060  Top ID: 100.0
+		One align captures most of this contig: 1634862 1648921 | 14060 1 | 14060 14060 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_47_length_14060_cov_248.442_ID_2917
+
+CONTIG: NODE_48_length_13084_cov_267.449_ID_2947 (13084bp)
+Top Length: 13084  Top ID: 100.0
+		One align captures most of this contig: 3651199 3664282 | 13084 1 | 13084 13084 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_48_length_13084_cov_267.449_ID_2947
+
+CONTIG: NODE_49_length_12025_cov_239.857_ID_3229 (12025bp)
+Top Length: 11920  Top ID: 100.0
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  20459 20564 | 1 106 | 106 106 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_49_length_12025_cov_239.857_ID_3229
+			Skipping alignment  3581450 3581555 | 106 1 | 106 106 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_49_length_12025_cov_239.857_ID_3229
+			Skipping alignment  279050 279154 | 1 105 | 105 105 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_49_length_12025_cov_239.857_ID_3229
+			Skipping alignment  290521 290625 | 1 105 | 105 105 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_49_length_12025_cov_239.857_ID_3229
+			Skipping alignment  1977190 1977294 | 1 105 | 105 105 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_49_length_12025_cov_239.857_ID_3229
+		One align captures most of this contig: 257900 269819 | 106 12025 | 11920 11920 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_49_length_12025_cov_239.857_ID_3229
+
+CONTIG: NODE_50_length_10670_cov_179.837_ID_2985 (10670bp)
+Top Length: 10670  Top ID: 100.0
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  4505466 4505662 | 303 106 | 197 198 | 98.48 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_50_length_10670_cov_179.837_ID_2985
+			Skipping alignment  1468360 1468540 | 106 286 | 181 181 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_50_length_10670_cov_179.837_ID_2985
+			Skipping alignment  270805 270985 | 106 286 | 181 181 | 99.45 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_50_length_10670_cov_179.837_ID_2985
+			Skipping alignment  290521 290627 | 1 107 | 107 107 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_50_length_10670_cov_179.837_ID_2985
+			Skipping alignment  20459 20563 | 1 105 | 105 105 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_50_length_10670_cov_179.837_ID_2985
+			Skipping alignment  1977190 1977294 | 1 105 | 105 105 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_50_length_10670_cov_179.837_ID_2985
+			Skipping alignment  3581451 3581555 | 105 1 | 105 105 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_50_length_10670_cov_179.837_ID_2985
+		One align captures most of this contig: 279050 289719 | 1 10670 | 10670 10670 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_50_length_10670_cov_179.837_ID_2985
+
+CONTIG: NODE_51_length_10327_cov_251.244_ID_3071 (10327bp)
+Top Length: 10327  Top ID: 100.0
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  3944793 3944972 | 10327 10148 | 180 180 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_51_length_10327_cov_251.244_ID_3071
+			Skipping alignment  3944895 3944972 | 2222 2145 | 78 78 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_51_length_10327_cov_251.244_ID_3071
+		One align captures most of this contig: 228826 239152 | 10327 1 | 10327 10327 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_51_length_10327_cov_251.244_ID_3071
+
+CONTIG: NODE_52_length_9228_cov_239.145_ID_3037 (9228bp)
+Top Length: 9228  Top ID: 100.0
+		One align captures most of this contig: 381760 390987 | 1 9228 | 9228 9228 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_52_length_9228_cov_239.145_ID_3037
+
+CONTIG: NODE_53_length_8057_cov_270.723_ID_3119 (8057bp)
+Top Length: 8057  Top ID: 100.0
+		One align captures most of this contig: 4497480 4505536 | 8057 1 | 8057 8057 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_53_length_8057_cov_270.723_ID_3119
+
+CONTIG: NODE_54_length_6662_cov_264.028_ID_3159 (6662bp)
+Top Length: 6662  Top ID: 100.0
+		One align captures most of this contig: 567203 573864 | 6662 1 | 6662 6662 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_54_length_6662_cov_264.028_ID_3159
+
+CONTIG: NODE_55_length_5747_cov_255.892_ID_3419 (5747bp)
+Top Length: 5747  Top ID: 99.57
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  780291 780424 | 5613 5747 | 134 135 | 99.26 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_55_length_5747_cov_255.892_ID_3419
+			Skipping alignment  779988 780120 | 5613 5747 | 133 135 | 98.52 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_55_length_5747_cov_255.892_ID_3419
+			Skipping alignment  779988 780065 | 5369 5446 | 78 78 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_55_length_5747_cov_255.892_ID_3419
+			Skipping alignment  780291 780368 | 5491 5568 | 78 78 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_55_length_5747_cov_255.892_ID_3419
+			Skipping alignment  779988 780064 | 5491 5567 | 77 77 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_55_length_5747_cov_255.892_ID_3419
+			Skipping alignment  780291 780367 | 5369 5445 | 77 77 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_55_length_5747_cov_255.892_ID_3419
+		One align captures most of this contig: 2513585 2519329 | 1 5747 | 5745 5747 | 99.57 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_55_length_5747_cov_255.892_ID_3419
+
+CONTIG: NODE_56_length_4403_cov_227.223_ID_3351 (4403bp)
+Top Length: 4403  Top ID: 100.0
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  1632702 1633112 | 1 411 | 411 411 | 97.81 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_56_length_4403_cov_227.223_ID_3351
+		One align captures most of this contig: 1426240 1430642 | 4403 1 | 4403 4403 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_56_length_4403_cov_227.223_ID_3351
+
+CONTIG: NODE_57_length_4382_cov_262.606_ID_3199 (4382bp)
+Top Length: 4382  Top ID: 100.0
+		One align captures most of this contig: 1421539 1425920 | 1 4382 | 4382 4382 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_57_length_4382_cov_262.606_ID_3199
+
+CONTIG: NODE_58_length_4268_cov_276.411_ID_3283 (4268bp)
+Top Length: 4268  Top ID: 100.0
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  4038769 4038868 | 4268 4169 | 100 100 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_58_length_4268_cov_276.411_ID_3283
+		One align captures most of this contig: 4169889 4174156 | 4268 1 | 4268 4268 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_58_length_4268_cov_276.411_ID_3283
+
+CONTIG: NODE_59_length_4123_cov_198.686_ID_3317 (4123bp)
+Top Length: 4123  Top ID: 100.0
+		One align captures most of this contig: 274319 278441 | 1 4123 | 4123 4123 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_59_length_4123_cov_198.686_ID_3317
+
+CONTIG: NODE_60_length_3174_cov_245.693_ID_3387 (3174bp)
+Top Length: 3174  Top ID: 100.0
+		One align captures most of this contig: 16677 19850 | 3174 1 | 3174 3174 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_60_length_3174_cov_245.693_ID_3387
+
+CONTIG: NODE_61_length_3119_cov_292.081_ID_3476 (3119bp)
+Top Length: 3119  Top ID: 99.78
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  3622257 3622823 | 567 1 | 567 567 | 98.59 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_61_length_3119_cov_292.081_ID_3476
+			Skipping alignment  737195 737737 | 543 1 | 543 543 | 96.32 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_61_length_3119_cov_292.081_ID_3476
+		One align captures most of this contig: 1527144 1530262 | 3119 1 | 3119 3119 | 99.78 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_61_length_3119_cov_292.081_ID_3476
+
+CONTIG: NODE_62_length_3074_cov_1664.2_ID_5196 (3074bp)
+Top Length: 3074  Top ID: 99.87
+		This contig has 7 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+			Alignment: 3421752 3424825 | 1 3074 | 3074 3074 | 99.87 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_62_length_3074_cov_1664.2_ID_5196
+			Skipping alignment  2724153 2727226 | 1 3074 | 3074 3074 | 99.71 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_62_length_3074_cov_1664.2_ID_5196
+			Skipping alignment  4166644 4169717 | 3074 1 | 3074 3074 | 99.67 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_62_length_3074_cov_1664.2_ID_5196
+			Skipping alignment  225739 228813 | 3074 1 | 3075 3074 | 99.61 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_62_length_3074_cov_1664.2_ID_5196
+			Skipping alignment  3941707 3944780 | 3074 1 | 3074 3074 | 99.58 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_62_length_3074_cov_1664.2_ID_5196
+			Skipping alignment  4035522 4038597 | 3074 1 | 3076 3074 | 99.58 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_62_length_3074_cov_1664.2_ID_5196
+			Skipping alignment  4208046 4211120 | 3074 1 | 3075 3074 | 99.54 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_62_length_3074_cov_1664.2_ID_5196
+
+CONTIG: NODE_63_length_2590_cov_282.326_ID_3520 (2590bp)
+Top Length: 2590  Top ID: 100.0
+		One align captures most of this contig: 574954 577543 | 1 2590 | 2590 2590 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_63_length_2590_cov_282.326_ID_3520
+
+CONTIG: NODE_64_length_2303_cov_213.797_ID_3558 (2303bp)
+Top Length: 2303  Top ID: 100.0
+		One align captures most of this contig: 270931 273233 | 2303 1 | 2303 2303 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_64_length_2303_cov_213.797_ID_3558
+
+CONTIG: NODE_65_length_2060_cov_304.758_ID_3704 (2060bp)
+Top Length: 2060  Top ID: 100.0
+		One align captures most of this contig: 734262 736321 | 2060 1 | 2060 2060 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_65_length_2060_cov_304.758_ID_3704
+
+CONTIG: NODE_66_length_1922_cov_295.401_ID_3594 (1922bp)
+Top Length: 1922  Top ID: 100.0
+		One align captures most of this contig: 577665 579586 | 1 1922 | 1922 1922 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_66_length_1922_cov_295.401_ID_3594
+
+CONTIG: NODE_67_length_1752_cov_266.958_ID_3658 (1752bp)
+Top Length: 1752  Top ID: 100.0
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  1096546 1096781 | 1517 1752 | 236 236 | 99.15 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_67_length_1752_cov_266.958_ID_3658
+			Skipping alignment  1096365 1096600 | 1517 1752 | 236 236 | 98.73 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_67_length_1752_cov_266.958_ID_3658
+			Skipping alignment  1096727 1096806 | 1517 1596 | 80 80 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_67_length_1752_cov_266.958_ID_3658
+		One align captures most of this contig: 1094668 1096419 | 1 1752 | 1752 1752 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_67_length_1752_cov_266.958_ID_3658
+
+CONTIG: NODE_68_length_1702_cov_1672.58_ID_5212 (1702bp)
+Top Length: 1702  Top ID: 100.0
+		This contig has 7 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+			Alignment: 4206024 4207725 | 1 1702 | 1702 1702 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_68_length_1702_cov_1672.58_ID_5212
+			Skipping alignment  4164536 4166237 | 1 1702 | 1702 1702 | 99.94 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_68_length_1702_cov_1672.58_ID_5212
+			Skipping alignment  4033408 4035109 | 1 1702 | 1702 1702 | 99.88 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_68_length_1702_cov_1672.58_ID_5212
+			Skipping alignment  3939685 3941386 | 1 1702 | 1702 1702 | 99.65 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_68_length_1702_cov_1672.58_ID_5212
+			Skipping alignment  2727624 2729325 | 1702 1 | 1702 1702 | 99.53 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_68_length_1702_cov_1672.58_ID_5212
+			Skipping alignment  223625 225326 | 1 1702 | 1702 1702 | 99.47 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_68_length_1702_cov_1672.58_ID_5212
+			Skipping alignment  3425229 3426930 | 1702 1 | 1702 1702 | 99.47 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_68_length_1702_cov_1672.58_ID_5212
+
+CONTIG: NODE_69_length_1697_cov_278.775_ID_3624 (1697bp)
+Top Length: 1697  Top ID: 100.0
+		One align captures most of this contig: 2065323 2067019 | 1 1697 | 1697 1697 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_69_length_1697_cov_278.775_ID_3624
+
+CONTIG: NODE_70_length_1345_cov_705.082_ID_5200 (1345bp)
+Top Length: 1345  Top ID: 100.0
+		This contig has 3 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+			Alignment: 15387 16731 | 1 1345 | 1345 1345 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_70_length_1345_cov_705.082_ID_5200
+			Skipping alignment  607230 608574 | 1 1345 | 1345 1345 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_70_length_1345_cov_705.082_ID_5200
+			Skipping alignment  2512295 2513639 | 1 1345 | 1345 1345 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_70_length_1345_cov_705.082_ID_5200
+
+CONTIG: NODE_71_length_1301_cov_264.437_ID_3800 (1301bp)
+Top Length: 1301  Top ID: 100.0
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  733996 734405 | 1 410 | 410 410 | 95.38 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_71_length_1301_cov_264.437_ID_3800
+			Skipping alignment  3763525 3763918 | 1 394 | 394 394 | 96.95 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_71_length_1301_cov_264.437_ID_3800
+		One align captures most of this contig: 732125 733425 | 1 1301 | 1301 1301 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_71_length_1301_cov_264.437_ID_3800
+
+CONTIG: NODE_72_length_1262_cov_413.051_ID_4150 (1262bp)
+Top Length: 1262  Top ID: 99.52
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  730883 732144 | 1262 1 | 1262 1262 | 97.23 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_72_length_1262_cov_413.051_ID_4150
+			Skipping alignment  733371 734015 | 645 1 | 645 645 | 98.29 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_72_length_1262_cov_413.051_ID_4150
+		This contig has 2 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+			Alignment: 3762283 3763544 | 1262 1 | 1262 1262 | 99.52 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_72_length_1262_cov_413.051_ID_4150
+			Skipping alignment  3619292 3620553 | 1262 1 | 1262 1262 | 98.97 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_72_length_1262_cov_413.051_ID_4150
+
+CONTIG: NODE_73_length_1255_cov_1033.88_ID_5236 (1255bp)
+Top Length: 1255  Top ID: 100.0
+		This contig has 5 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+			Alignment: 314453 315707 | 1 1255 | 1255 1255 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_73_length_1255_cov_1033.88_ID_5236
+			Skipping alignment  390933 392187 | 1255 1 | 1255 1255 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_73_length_1255_cov_1033.88_ID_5236
+			Skipping alignment  566003 567257 | 1 1255 | 1255 1255 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_73_length_1255_cov_1033.88_ID_5236
+			Skipping alignment  1093468 1094722 | 1255 1 | 1255 1255 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_73_length_1255_cov_1033.88_ID_5236
+			Skipping alignment  2168198 2169452 | 1 1255 | 1255 1255 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_73_length_1255_cov_1033.88_ID_5236
+
+CONTIG: NODE_74_length_1232_cov_421.614_ID_5250 (1232bp)
+Top Length: 1232  Top ID: 100.0
+		This contig has 2 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+			Alignment: 3664228 3665459 | 1232 1 | 1232 1232 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_74_length_1232_cov_421.614_ID_5250
+			Skipping alignment  1568694 1569925 | 1232 1 | 1232 1232 | 99.27 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_74_length_1232_cov_421.614_ID_5250
+
+CONTIG: NODE_75_length_1199_cov_344.55_ID_5248 (1199bp)
+Top Length: 1199  Top ID: 100.0
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  728890 730085 | 4 1199 | 1196 1196 | 98.24 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_75_length_1199_cov_344.55_ID_5248
+		This contig has 2 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+			Alignment: 3617296 3618494 | 1 1199 | 1199 1199 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_75_length_1199_cov_344.55_ID_5248
+			Skipping alignment  3760287 3761485 | 1 1199 | 1199 1199 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_75_length_1199_cov_344.55_ID_5248
+
+CONTIG: NODE_76_length_1151_cov_288.035_ID_3764 (1151bp)
+Top Length: 1151  Top ID: 100.0
+		One align captures most of this contig: 3620800 3621950 | 1 1151 | 1151 1151 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_76_length_1151_cov_288.035_ID_3764
+
+CONTIG: NODE_77_length_1095_cov_868.952_ID_5732 (1095bp)
+Top Length: 1095  Top ID: 100.0
+		This contig has 3 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+			Alignment: 1467320 1468414 | 1 1095 | 1095 1095 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_77_length_1095_cov_868.952_ID_5732
+			Skipping alignment  4505608 4506702 | 1095 1 | 1095 1095 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_77_length_1095_cov_868.952_ID_5732
+			Skipping alignment  269765 270859 | 1 1095 | 1095 1095 | 99.73 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_77_length_1095_cov_868.952_ID_5732
+
+CONTIG: NODE_78_length_1036_cov_222.426_ID_5234 (1036bp)
+Top Length: 1036  Top ID: 100.0
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  1526163 1527198 | 1 1036 | 1036 1036 | 98.94 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_78_length_1036_cov_222.426_ID_5234
+		One align captures most of this contig: 524909 525944 | 1 1036 | 1036 1036 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_78_length_1036_cov_222.426_ID_5234
+
+CONTIG: NODE_79_length_1031_cov_460.73_ID_5246 (1031bp)
+Top Length: 1031  Top ID: 100.0
+		This contig has 2 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+			Alignment: 3468186 3469216 | 1031 1 | 1031 1031 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_79_length_1031_cov_460.73_ID_5246
+			Skipping alignment  4174102 4175132 | 1 1031 | 1031 1031 | 99.81 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_79_length_1031_cov_460.73_ID_5246
+
+CONTIG: NODE_80_length_928_cov_1.90378_ID_3850 (928bp)
+		This contig is unaligned. (928 bp)
+		Unaligned bases: 928  total: 928
+
+CONTIG: NODE_81_length_926_cov_210.24_ID_3942 (926bp)
+Top Length: 926  Top ID: 100.0
+		One align captures most of this contig: 1632992 1633917 | 926 1 | 926 926 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_81_length_926_cov_210.24_ID_3942
+
+CONTIG: NODE_82_length_820_cov_1.87059_ID_3864 (820bp)
+		This contig is unaligned. (820 bp)
+		Unaligned bases: 820  total: 1748
+
+CONTIG: NODE_83_length_773_cov_290.411_ID_3878 (773bp)
+Top Length: 773  Top ID: 100.0
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  3620475 3620644 | 169 1 | 170 169 | 95.88 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_83_length_773_cov_290.411_ID_3878
+			Skipping alignment  3763466 3763635 | 169 1 | 170 169 | 95.88 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_83_length_773_cov_290.411_ID_3878
+			Skipping alignment  733937 734106 | 169 1 | 170 169 | 95.29 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_83_length_773_cov_290.411_ID_3878
+		One align captures most of this contig: 3764616 3765388 | 773 1 | 773 773 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_83_length_773_cov_290.411_ID_3878
+
+CONTIG: NODE_84_length_718_cov_1743.05_ID_5204 (718bp)
+Top Length: 718  Top ID: 100.0
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  1049051 1049768 | 718 1 | 718 718 | 98.89 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_84_length_718_cov_1743.05_ID_5204
+			Skipping alignment  278387 279104 | 1 718 | 718 718 | 98.75 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_84_length_718_cov_1743.05_ID_5204
+			Skipping alignment  289858 290575 | 1 718 | 718 718 | 98.75 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_84_length_718_cov_1743.05_ID_5204
+		This contig has 3 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+			Alignment: 19796 20513 | 1 718 | 718 718 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_84_length_718_cov_1743.05_ID_5204
+			Skipping alignment  1976527 1977244 | 1 718 | 718 718 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_84_length_718_cov_1743.05_ID_5204
+			Skipping alignment  3581501 3582218 | 718 1 | 718 718 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_84_length_718_cov_1743.05_ID_5204
+
+CONTIG: NODE_85_length_706_cov_1513.47_ID_5198 (706bp)
+Top Length: 706  Top ID: 100.0
+		This contig has 7 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+			Alignment: 381109 381814 | 1 706 | 706 706 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_85_length_706_cov_1513.47_ID_5198
+			Skipping alignment  1465934 1466639 | 706 1 | 706 706 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_85_length_706_cov_1513.47_ID_5198
+			Skipping alignment  1648867 1649572 | 1 706 | 706 706 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_85_length_706_cov_1513.47_ID_5198
+			Skipping alignment  2066965 2067670 | 706 1 | 706 706 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_85_length_706_cov_1513.47_ID_5198
+			Skipping alignment  2994383 2995088 | 706 1 | 706 706 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_85_length_706_cov_1513.47_ID_5198
+			Skipping alignment  3184743 3185448 | 1 706 | 706 706 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_85_length_706_cov_1513.47_ID_5198
+			Skipping alignment  4496829 4497534 | 1 706 | 706 706 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_85_length_706_cov_1513.47_ID_5198
+
+CONTIG: NODE_86_length_664_cov_1.49261_ID_3914 (664bp)
+		This contig is unaligned. (664 bp)
+		Unaligned bases: 664  total: 2412
+
+CONTIG: NODE_87_length_657_cov_467.816_ID_5330 (657bp)
+Top Length: 657  Top ID: 100.0
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  730281 730937 | 1 657 | 657 657 | 97.56 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_87_length_657_cov_467.816_ID_5330
+		This contig has 2 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+			Alignment: 3761681 3762337 | 1 657 | 657 657 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_87_length_657_cov_467.816_ID_5330
+			Skipping alignment  3618690 3619346 | 1 657 | 657 657 | 99.85 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_87_length_657_cov_467.816_ID_5330
+
+CONTIG: NODE_88_length_610_cov_303.701_ID_3978 (610bp)
+Top Length: 610  Top ID: 100.0
+		One align captures most of this contig: 3763791 3764400 | 1 610 | 610 610 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_88_length_610_cov_303.701_ID_3978
+
+CONTIG: NODE_89_length_535_cov_1.94792_ID_4014 (535bp)
+		This contig is unaligned. (535 bp)
+		Unaligned bases: 535  total: 2947
+
+CONTIG: NODE_90_length_531_cov_431.414_ID_5340 (531bp)
+Top Length: 531  Top ID: 100.0
+		This contig has 2 significant alignments. [An ambiguously mapped contig]
+		Using only first of these alignment (option --ambiguity-usage is set to "one"):
+			Alignment: 580055 580585 | 531 1 | 531 531 | 100.0 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_90_length_531_cov_431.414_ID_5340
+			Skipping alignment  1633863 1634393 | 1 531 | 531 531 | 99.06 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_90_length_531_cov_431.414_ID_5340
+
+CONTIG: NODE_91_length_516_cov_731.525_ID_4972 (516bp)
+Top Length: 516  Top ID: 99.42
+		Skipping these alignments as insignificant (option --ambiguity-score is set to "0.99"):
+			Skipping alignment  3941458 3941761 | 213 516 | 304 304 | 99.67 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_91_length_516_cov_731.525_ID_4972
+			Skipping alignment  4207797 4208100 | 213 516 | 304 304 | 99.34 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_91_length_516_cov_731.525_ID_4972
+			Skipping alignment  4035420 4035576 | 360 516 | 157 157 | 99.36 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_91_length_516_cov_731.525_ID_4972
+		One align captures most of this contig: 4166183 4166698 | 1 516 | 516 516 | 99.42 | gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome NODE_91_length_516_cov_731.525_ID_4972
+
+Analyzing coverage...
+Writing SNPs into /home/saveliev/quast_results_ecoli_mc/contigs_reports/nucmer_output/SPAdes-3.7.scaffolds.used_snps
+	Reference gi_48994873_gb_U00096.2__Escherichia_coli_str._K-12_substr._MG1655__complete_genome: 101 total alignments. 1 total regions.
+		Region: 1 to 4639675 (4639675 bp)
+			Align 1: 1 15441 NODE_10_length_148368_cov_234.866_ID_4872 132928 148368
+				Negative gap (overlap) between this and next alignment: 15441 to 15387 (-54 bp)
+				Next Alignment: 15387 16731 NODE_70_length_1345_cov_705.082_ID_5200 1 1345
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 56.
+			Align 2: 15442 16731 NODE_70_length_1345_cov_705.082_ID_5200 56 1345
+				Negative gap (overlap) between this and next alignment: 16731 to 16677 (-54 bp)
+				Next Alignment: 16677 19850 NODE_60_length_3174_cov_245.693_ID_3387 3174 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 3174 to 3119.
+			Align 3: 16732 19850 NODE_60_length_3174_cov_245.693_ID_3387 3119 1
+				Negative gap (overlap) between this and next alignment: 19850 to 19796 (-54 bp)
+				Next Alignment: 19796 20513 NODE_84_length_718_cov_1743.05_ID_5204 1 718
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 56.
+			Align 4: 19851 20513 NODE_84_length_718_cov_1743.05_ID_5204 56 718
+				Negative gap (overlap) between this and next alignment: 20513 to 20459 (-54 bp)
+				Next Alignment: 20459 223679 NODE_6_length_203221_cov_225.919_ID_1318 203221 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 203221 to 203166.
+			Align 5: 20514 223679 NODE_6_length_203221_cov_225.919_ID_1318 203166 1
+				Gap between this and next alignment: 223679 to 228826 (5146 bp)
+				Next Alignment: 228826 239152 NODE_51_length_10327_cov_251.244_ID_3071 10327 1
+
+			Align 6: 228826 239152 NODE_51_length_10327_cov_251.244_ID_3071 10327 1
+				Gap between this and next alignment: 239152 to 239278 (125 bp)
+				Next Alignment: 239278 257907 NODE_46_length_18685_cov_223.773_ID_2716 1 18630
+
+			Align 7: 239278 257907 NODE_46_length_18685_cov_223.773_ID_2716 1 18630
+				Negative gap (overlap) between this and next alignment: 257907 to 257900 (-7 bp)
+				Next Alignment: 257900 269819 NODE_49_length_12025_cov_239.857_ID_3229 106 12025
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 106 to 114.
+			Align 8: 257908 269819 NODE_49_length_12025_cov_239.857_ID_3229 114 12025
+				Gap between this and next alignment: 269819 to 270931 (1111 bp)
+				Next Alignment: 270931 273233 NODE_64_length_2303_cov_213.797_ID_3558 2303 1
+
+			Align 9: 270931 273233 NODE_64_length_2303_cov_213.797_ID_3558 2303 1
+				Gap between this and next alignment: 273233 to 274319 (1085 bp)
+				Next Alignment: 274319 278441 NODE_59_length_4123_cov_198.686_ID_3317 1 4123
+
+			Align 10: 274319 278441 NODE_59_length_4123_cov_198.686_ID_3317 1 4123
+				Gap between this and next alignment: 278441 to 279050 (608 bp)
+				Next Alignment: 279050 289719 NODE_50_length_10670_cov_179.837_ID_2985 1 10670
+
+			Align 11: 279050 289719 NODE_50_length_10670_cov_179.837_ID_2985 1 10670
+				Gap between this and next alignment: 289719 to 290521 (801 bp)
+				Next Alignment: 290521 314507 NODE_45_length_23987_cov_242.499_ID_2793 1 23987
+
+			Align 12: 290521 314507 NODE_45_length_23987_cov_242.499_ID_2793 1 23987
+				Negative gap (overlap) between this and next alignment: 314507 to 314453 (-54 bp)
+				Next Alignment: 314453 315707 NODE_73_length_1255_cov_1033.88_ID_5236 1 1255
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 56.
+			Align 13: 314508 315707 NODE_73_length_1255_cov_1033.88_ID_5236 56 1255
+				Negative gap (overlap) between this and next alignment: 315707 to 315653 (-54 bp)
+				Next Alignment: 315653 339154 NODE_24_length_64399_cov_220.123_ID_2339 1 23501
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 56.
+			Align 14: 315708 339154 NODE_24_length_64399_cov_220.123_ID_2339 56 23501
+				Gap between this and next alignment: 339154 to 339340 (185 bp)
+				Next Alignment: 339340 356695 NODE_24_length_64399_cov_220.123_ID_2339 23502 40857
+
+			Align 15: 339340 356695 NODE_24_length_64399_cov_220.123_ID_2339 23502 40857
+				Gap between this and next alignment: 356695 to 356895 (199 bp)
+				Next Alignment: 356895 374490 NODE_24_length_64399_cov_220.123_ID_2339 40858 58450
+
+			Align 16: 356895 374490 NODE_24_length_64399_cov_220.123_ID_2339 40858 58450
+				Gap between this and next alignment: 374490 to 374590 (99 bp)
+				Next Alignment: 374590 380538 NODE_24_length_64399_cov_220.123_ID_2339 58451 64399
+
+			Align 17: 374590 380538 NODE_24_length_64399_cov_220.123_ID_2339 58451 64399
+				Gap between this and next alignment: 380538 to 381109 (570 bp)
+				Next Alignment: 381109 381814 NODE_85_length_706_cov_1513.47_ID_5198 1 706
+
+			Align 18: 381109 381814 NODE_85_length_706_cov_1513.47_ID_5198 1 706
+				Negative gap (overlap) between this and next alignment: 381814 to 381760 (-54 bp)
+				Next Alignment: 381760 390987 NODE_52_length_9228_cov_239.145_ID_3037 1 9228
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 56.
+			Align 19: 381815 390987 NODE_52_length_9228_cov_239.145_ID_3037 56 9228
+				Gap between this and next alignment: 390987 to 392133 (1145 bp)
+				Next Alignment: 392133 524963 NODE_13_length_132831_cov_221.105_ID_905 1 132831
+
+			Align 20: 392133 524963 NODE_13_length_132831_cov_221.105_ID_905 1 132831
+				Negative gap (overlap) between this and next alignment: 524963 to 524909 (-54 bp)
+				Next Alignment: 524909 525944 NODE_78_length_1036_cov_222.426_ID_5234 1 1036
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 56.
+			Align 21: 524964 525944 NODE_78_length_1036_cov_222.426_ID_5234 56 1036
+				Negative gap (overlap) between this and next alignment: 525944 to 525890 (-54 bp)
+				Next Alignment: 525890 566057 NODE_35_length_40169_cov_230.946_ID_2269 1 40169
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 56.
+			Align 22: 525945 566057 NODE_35_length_40169_cov_230.946_ID_2269 56 40169
+				Gap between this and next alignment: 566057 to 567203 (1145 bp)
+				Next Alignment: 567203 573864 NODE_54_length_6662_cov_264.028_ID_3159 6662 1
+
+			Align 23: 567203 573864 NODE_54_length_6662_cov_264.028_ID_3159 6662 1
+				Gap between this and next alignment: 573864 to 574954 (1089 bp)
+				Next Alignment: 574954 577543 NODE_63_length_2590_cov_282.326_ID_3520 1 2590
+
+			Align 24: 574954 577543 NODE_63_length_2590_cov_282.326_ID_3520 1 2590
+				Gap between this and next alignment: 577543 to 577665 (121 bp)
+				Next Alignment: 577665 579586 NODE_66_length_1922_cov_295.401_ID_3594 1 1922
+
+			Align 25: 577665 579586 NODE_66_length_1922_cov_295.401_ID_3594 1 1922
+				Gap between this and next alignment: 579586 to 580055 (468 bp)
+				Next Alignment: 580055 580585 NODE_90_length_531_cov_431.414_ID_5340 531 1
+
+			Align 26: 580055 580585 NODE_90_length_531_cov_431.414_ID_5340 531 1
+				Gap between this and next alignment: 580585 to 581084 (498 bp)
+				Next Alignment: 581084 607284 NODE_44_length_26201_cov_229.153_ID_2879 1 26201
+
+			Align 27: 581084 607284 NODE_44_length_26201_cov_229.153_ID_2879 1 26201
+				Gap between this and next alignment: 607284 to 608520 (1235 bp)
+				Next Alignment: 608520 687124 NODE_22_length_78605_cov_226.371_ID_1365 1 78605
+
+			Align 28: 608520 687124 NODE_22_length_78605_cov_226.371_ID_1365 1 78605
+				Gap between this and next alignment: 687124 to 688214 (1089 bp)
+				Next Alignment: 688214 728789 NODE_34_length_40576_cov_223.898_ID_2383 1 40576
+
+			Align 29: 688214 728789 NODE_34_length_40576_cov_223.898_ID_2383 1 40576
+				Gap between this and next alignment: 728789 to 732125 (3335 bp)
+				Next Alignment: 732125 733425 NODE_71_length_1301_cov_264.437_ID_3800 1 1301
+
+			Align 30: 732125 733425 NODE_71_length_1301_cov_264.437_ID_3800 1 1301
+				Gap between this and next alignment: 733425 to 734262 (836 bp)
+				Next Alignment: 734262 736321 NODE_65_length_2060_cov_304.758_ID_3704 2060 1
+
+			Align 31: 734262 736321 NODE_65_length_2060_cov_304.758_ID_3704 2060 1
+				Gap between this and next alignment: 736321 to 737841 (1519 bp)
+				Next Alignment: 737841 780854 NODE_32_length_43014_cov_226.4_ID_2157 1 43014
+
+			Align 32: 737841 780854 NODE_32_length_43014_cov_226.4_ID_2157 1 43014
+				Gap between this and next alignment: 780854 to 781013 (158 bp)
+				Next Alignment: 781013 914321 NODE_12_length_133309_cov_219.306_ID_1052 1 133309
+
+			Align 33: 781013 914321 NODE_12_length_133309_cov_219.306_ID_1052 1 133309
+				Gap between this and next alignment: 914321 to 914415 (93 bp)
+				Next Alignment: 914415 1049105 NODE_11_length_134691_cov_225.754_ID_986 1 134691
+
+			Align 34: 914415 1049105 NODE_11_length_134691_cov_225.754_ID_986 1 134691
+				Gap between this and next alignment: 1049105 to 1049714 (608 bp)
+				Next Alignment: 1049714 1093522 NODE_31_length_43809_cov_220.832_ID_2093 1 43809
+
+			Align 35: 1049714 1093522 NODE_31_length_43809_cov_220.832_ID_2093 1 43809
+				Gap between this and next alignment: 1093522 to 1094668 (1145 bp)
+				Next Alignment: 1094668 1096419 NODE_67_length_1752_cov_266.958_ID_3658 1 1752
+
+			Align 36: 1094668 1096419 NODE_67_length_1752_cov_266.958_ID_3658 1 1752
+				Gap between this and next alignment: 1096419 to 1096828 (408 bp)
+				Next Alignment: 1096828 1268370 NODE_9_length_171543_cov_228.877_ID_1096 1 171543
+
+			Align 37: 1096828 1268370 NODE_9_length_171543_cov_228.877_ID_1096 1 171543
+				Gap between this and next alignment: 1268370 to 1269663 (1292 bp)
+				Next Alignment: 1269663 1286307 NODE_41_length_28936_cov_229.08_ID_2831 1 16645
+
+			Align 38: 1269663 1286307 NODE_41_length_28936_cov_229.08_ID_2831 1 16645
+				Gap between this and next alignment: 1286307 to 1286486 (178 bp)
+				Next Alignment: 1286486 1298721 NODE_41_length_28936_cov_229.08_ID_2831 16646 28881
+
+			Align 39: 1286486 1298721 NODE_41_length_28936_cov_229.08_ID_2831 16646 28881
+				Negative gap (overlap) between this and next alignment: 1298721 to 1298718 (-3 bp)
+				Next Alignment: 1298718 1394122 NODE_18_length_95456_cov_224.825_ID_1264 52 95456
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 52 to 56.
+			Align 40: 1298722 1394122 NODE_18_length_95456_cov_224.825_ID_1264 56 95456
+				Gap between this and next alignment: 1394122 to 1395212 (1089 bp)
+				Next Alignment: 1395212 1421417 NODE_43_length_26206_cov_243.374_ID_2631 1 26206
+
+			Align 41: 1395212 1421417 NODE_43_length_26206_cov_243.374_ID_2631 1 26206
+				Gap between this and next alignment: 1421417 to 1421539 (121 bp)
+				Next Alignment: 1421539 1425920 NODE_57_length_4382_cov_262.606_ID_3199 1 4382
+
+			Align 42: 1421539 1425920 NODE_57_length_4382_cov_262.606_ID_3199 1 4382
+				Gap between this and next alignment: 1425920 to 1426240 (319 bp)
+				Next Alignment: 1426240 1430642 NODE_56_length_4403_cov_227.223_ID_3351 4403 1
+
+			Align 43: 1426240 1430642 NODE_56_length_4403_cov_227.223_ID_3351 4403 1
+				Gap between this and next alignment: 1430642 to 1432706 (2063 bp)
+				Next Alignment: 1432706 1465988 NODE_38_length_33283_cov_225.018_ID_2543 33283 1
+
+			Align 44: 1432706 1465988 NODE_38_length_33283_cov_225.018_ID_2543 33283 1
+				Gap between this and next alignment: 1465988 to 1467320 (1331 bp)
+				Next Alignment: 1467320 1468414 NODE_77_length_1095_cov_868.952_ID_5732 1 1095
+
+			Align 45: 1467320 1468414 NODE_77_length_1095_cov_868.952_ID_5732 1 1095
+				Gap between this and next alignment: 1468414 to 1468486 (71 bp)
+				Next Alignment: 1468486 1526217 NODE_28_length_57732_cov_231.792_ID_1848 1 57732
+
+			Align 46: 1468486 1526217 NODE_28_length_57732_cov_231.792_ID_1848 1 57732
+				Gap between this and next alignment: 1526217 to 1527144 (926 bp)
+				Next Alignment: 1527144 1530262 NODE_61_length_3119_cov_292.081_ID_3476 3119 1
+
+			Align 47: 1527144 1530262 NODE_61_length_3119_cov_292.081_ID_3476 3119 1
+				Gap between this and next alignment: 1530262 to 1530876 (613 bp)
+				Next Alignment: 1530876 1568748 NODE_36_length_37873_cov_223.76_ID_2750 1 37873
+
+			Align 48: 1530876 1568748 NODE_36_length_37873_cov_223.76_ID_2750 1 37873
+				Gap between this and next alignment: 1568748 to 1569871 (1122 bp)
+				Next Alignment: 1569871 1632561 NODE_25_length_62691_cov_249.267_ID_1694 1 62691
+
+			Align 49: 1569871 1632561 NODE_25_length_62691_cov_249.267_ID_1694 1 62691
+				Gap between this and next alignment: 1632561 to 1632992 (430 bp)
+				Next Alignment: 1632992 1633917 NODE_81_length_926_cov_210.24_ID_3942 926 1
+
+			Align 50: 1632992 1633917 NODE_81_length_926_cov_210.24_ID_3942 926 1
+				Gap between this and next alignment: 1633917 to 1634862 (944 bp)
+				Next Alignment: 1634862 1648921 NODE_47_length_14060_cov_248.442_ID_2917 14060 1
+
+			Align 51: 1634862 1648921 NODE_47_length_14060_cov_248.442_ID_2917 14060 1
+				Gap between this and next alignment: 1648921 to 1649518 (596 bp)
+				Next Alignment: 1649518 1871063 NODE_4_length_221601_cov_225.672_ID_866 1 221546
+
+			Align 52: 1649518 1871063 NODE_4_length_221601_cov_225.672_ID_866 1 221546
+				Negative gap (overlap) between this and next alignment: 1871063 to 1871055 (-8 bp)
+				Next Alignment: 1871055 1976581 NODE_17_length_105632_cov_225.083_ID_1176 106 105632
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 106 to 115.
+			Align 53: 1871064 1976581 NODE_17_length_105632_cov_225.083_ID_1176 115 105632
+				Gap between this and next alignment: 1976581 to 1977190 (608 bp)
+				Next Alignment: 1977190 2064254 NODE_21_length_87065_cov_234.58_ID_1964 1 87065
+
+			Align 54: 1977190 2064254 NODE_21_length_87065_cov_234.58_ID_1964 1 87065
+				Gap between this and next alignment: 2064254 to 2065323 (1068 bp)
+				Next Alignment: 2065323 2067019 NODE_69_length_1697_cov_278.775_ID_3624 1 1697
+
+			Align 55: 2065323 2067019 NODE_69_length_1697_cov_278.775_ID_3624 1 1697
+				Gap between this and next alignment: 2067019 to 2068241 (1221 bp)
+				Next Alignment: 2068241 2099827 NODE_39_length_31587_cov_227.644_ID_2503 1 31587
+
+			Align 56: 2068241 2099827 NODE_39_length_31587_cov_227.644_ID_2503 1 31587
+				Gap between this and next alignment: 2099827 to 2100913 (1085 bp)
+				Next Alignment: 2100913 2168252 NODE_23_length_67340_cov_222.631_ID_1620 67340 1
+
+			Align 57: 2100913 2168252 NODE_23_length_67340_cov_222.631_ID_1620 67340 1
+				Gap between this and next alignment: 2168252 to 2169398 (1145 bp)
+				Next Alignment: 2169398 2227233 NODE_27_length_57838_cov_222.456_ID_1818 1 57838
+
+			Align 58: 2169398 2227233 NODE_27_length_57838_cov_222.456_ID_1818 1 57838
+				Gap between this and next alignment: 2227233 to 2227327 (93 bp)
+				Next Alignment: 2227327 2286995 NODE_26_length_59669_cov_223.314_ID_1782 59669 1
+
+			Align 59: 2227327 2286995 NODE_26_length_59669_cov_223.314_ID_1782 59669 1
+				Gap between this and next alignment: 2286995 to 2287557 (561 bp)
+				Next Alignment: 2287557 2302411 NODE_3_length_224567_cov_233.549_ID_821 1 14855
+
+			Align 60: 2287557 2302411 NODE_3_length_224567_cov_233.549_ID_821 1 14855
+				Gap between this and next alignment: 2302411 to 2302638 (226 bp)
+				Next Alignment: 2302638 2512349 NODE_3_length_224567_cov_233.549_ID_821 14856 224567
+
+			Align 61: 2302638 2512349 NODE_3_length_224567_cov_233.549_ID_821 14856 224567
+				Gap between this and next alignment: 2512349 to 2513585 (1235 bp)
+				Next Alignment: 2513585 2519329 NODE_55_length_5747_cov_255.892_ID_3419 1 5747
+
+			Align 62: 2513585 2519329 NODE_55_length_5747_cov_255.892_ID_3419 1 5747
+				Gap between this and next alignment: 2519329 to 2519488 (158 bp)
+				Next Alignment: 2519488 2660514 NODE_5_length_204562_cov_219.086_ID_731 204562 63536
+
+			Align 63: 2519488 2660514 NODE_5_length_204562_cov_219.086_ID_731 204562 63536
+				Gap between this and next alignment: 2660514 to 2660606 (91 bp)
+				Next Alignment: 2660606 2724140 NODE_5_length_204562_cov_219.086_ID_731 63535 1
+
+			Align 64: 2660606 2724140 NODE_5_length_204562_cov_219.086_ID_731 63535 1
+				Gap between this and next alignment: 2724140 to 2729453 (5312 bp)
+				Next Alignment: 2729453 2815804 NODE_2_length_264571_cov_233.765_ID_2441 1 86352
+
+			Align 65: 2729453 2815804 NODE_2_length_264571_cov_233.765_ID_2441 1 86352
+				Gap between this and next alignment: 2815804 to 2816219 (414 bp)
+				Next Alignment: 2816219 2994437 NODE_2_length_264571_cov_233.765_ID_2441 86353 264571
+
+			Align 66: 2816219 2994437 NODE_2_length_264571_cov_233.765_ID_2441 86353 264571
+				Gap between this and next alignment: 2994437 to 2995659 (1221 bp)
+				Next Alignment: 2995659 3128222 NODE_14_length_132564_cov_232.453_ID_1403 132564 1
+
+			Align 67: 2995659 3128222 NODE_14_length_132564_cov_232.453_ID_1403 132564 1
+				Gap between this and next alignment: 3128222 to 3129312 (1089 bp)
+				Next Alignment: 3129312 3184172 NODE_30_length_54861_cov_230.931_ID_1920 54861 1
+
+			Align 68: 3129312 3184172 NODE_30_length_54861_cov_230.931_ID_1920 54861 1
+				Gap between this and next alignment: 3184172 to 3185394 (1221 bp)
+				Next Alignment: 3185394 3363874 NODE_7_length_178481_cov_236.901_ID_1726 1 178481
+
+			Align 69: 3185394 3363874 NODE_7_length_178481_cov_236.901_ID_1726 1 178481
+				Gap between this and next alignment: 3363874 to 3364718 (843 bp)
+				Next Alignment: 3364718 3390091 NODE_29_length_56527_cov_235.877_ID_1880 1 25374
+
+			Align 70: 3364718 3390091 NODE_29_length_56527_cov_235.877_ID_1880 1 25374
+				Gap between this and next alignment: 3390091 to 3390184 (92 bp)
+				Next Alignment: 3390184 3421335 NODE_29_length_56527_cov_235.877_ID_1880 25375 56527
+
+			Align 71: 3390184 3421335 NODE_29_length_56527_cov_235.877_ID_1880 25375 56527
+				Gap between this and next alignment: 3421335 to 3421752 (416 bp)
+				Next Alignment: 3421752 3424825 NODE_62_length_3074_cov_1664.2_ID_5196 1 3074
+
+			Align 72: 3421752 3424825 NODE_62_length_3074_cov_1664.2_ID_5196 1 3074
+				Gap between this and next alignment: 3424825 to 3426876 (2050 bp)
+				Next Alignment: 3426876 3468240 NODE_33_length_41365_cov_254.609_ID_2237 41365 1
+
+			Align 73: 3426876 3468240 NODE_33_length_41365_cov_254.609_ID_2237 41365 1
+				Negative gap (overlap) between this and next alignment: 3468240 to 3468186 (-54 bp)
+				Next Alignment: 3468186 3469216 NODE_79_length_1031_cov_460.73_ID_5246 1031 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1031 to 976.
+			Align 74: 3468241 3469216 NODE_79_length_1031_cov_460.73_ID_5246 976 1
+				Negative gap (overlap) between this and next alignment: 3469216 to 3469162 (-54 bp)
+				Next Alignment: 3469162 3581555 NODE_16_length_112393_cov_228.797_ID_1018 1 112393
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 56.
+			Align 75: 3469217 3581555 NODE_16_length_112393_cov_228.797_ID_1018 56 112393
+				Gap between this and next alignment: 3581555 to 3582164 (608 bp)
+				Next Alignment: 3582164 3617350 NODE_37_length_35187_cov_211.835_ID_2305 1 35187
+
+			Align 76: 3582164 3617350 NODE_37_length_35187_cov_211.835_ID_2305 1 35187
+				Negative gap (overlap) between this and next alignment: 3617350 to 3617296 (-54 bp)
+				Next Alignment: 3617296 3618494 NODE_75_length_1199_cov_344.55_ID_5248 1 1199
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 56.
+			Align 77: 3617351 3618494 NODE_75_length_1199_cov_344.55_ID_5248 56 1199
+				Gap between this and next alignment: 3618494 to 3620800 (2305 bp)
+				Next Alignment: 3620800 3621950 NODE_76_length_1151_cov_288.035_ID_3764 1 1151
+
+			Align 78: 3620800 3621950 NODE_76_length_1151_cov_288.035_ID_3764 1 1151
+				Gap between this and next alignment: 3621950 to 3623437 (1486 bp)
+				Next Alignment: 3623437 3650109 NODE_42_length_26673_cov_235.793_ID_2669 26673 1
+
+			Align 79: 3623437 3650109 NODE_42_length_26673_cov_235.793_ID_2669 26673 1
+				Gap between this and next alignment: 3650109 to 3651199 (1089 bp)
+				Next Alignment: 3651199 3664282 NODE_48_length_13084_cov_267.449_ID_2947 13084 1
+
+			Align 80: 3651199 3664282 NODE_48_length_13084_cov_267.449_ID_2947 13084 1
+				Negative gap (overlap) between this and next alignment: 3664282 to 3664228 (-54 bp)
+				Next Alignment: 3664228 3665459 NODE_74_length_1232_cov_421.614_ID_5250 1232 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1232 to 1177.
+			Align 81: 3664283 3665459 NODE_74_length_1232_cov_421.614_ID_5250 1177 1
+				Negative gap (overlap) between this and next alignment: 3665459 to 3665405 (-54 bp)
+				Next Alignment: 3665405 3706381 NODE_19_length_94769_cov_234.655_ID_1660 1 40977
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 56.
+			Align 82: 3665460 3706381 NODE_19_length_94769_cov_234.655_ID_1660 56 40977
+				Gap between this and next alignment: 3706381 to 3706550 (168 bp)
+				Next Alignment: 3706550 3760341 NODE_19_length_94769_cov_234.655_ID_1660 40978 94769
+
+			Align 83: 3706550 3760341 NODE_19_length_94769_cov_234.655_ID_1660 40978 94769
+				Gap between this and next alignment: 3760341 to 3761681 (1339 bp)
+				Next Alignment: 3761681 3762337 NODE_87_length_657_cov_467.816_ID_5330 1 657
+
+			Align 84: 3761681 3762337 NODE_87_length_657_cov_467.816_ID_5330 1 657
+				Negative gap (overlap) between this and next alignment: 3762337 to 3762283 (-54 bp)
+				Next Alignment: 3762283 3763544 NODE_72_length_1262_cov_413.051_ID_4150 1262 1
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1262 to 1207.
+			Align 85: 3762338 3763544 NODE_72_length_1262_cov_413.051_ID_4150 1207 1
+				Gap between this and next alignment: 3763544 to 3763791 (246 bp)
+				Next Alignment: 3763791 3764400 NODE_88_length_610_cov_303.701_ID_3978 1 610
+
+			Align 86: 3763791 3764400 NODE_88_length_610_cov_303.701_ID_3978 1 610
+				Gap between this and next alignment: 3764400 to 3764616 (215 bp)
+				Next Alignment: 3764616 3765388 NODE_83_length_773_cov_290.411_ID_3878 773 1
+
+			Align 87: 3764616 3765388 NODE_83_length_773_cov_290.411_ID_3878 773 1
+				Gap between this and next alignment: 3765388 to 3765544 (155 bp)
+				Next Alignment: 3765544 3939739 NODE_8_length_174196_cov_242.179_ID_783 174196 1
+
+			Align 88: 3765544 3939739 NODE_8_length_174196_cov_242.179_ID_783 174196 1
+				Gap between this and next alignment: 3939739 to 3944793 (5053 bp)
+				Next Alignment: 3944793 4033242 NODE_20_length_88450_cov_229.473_ID_2036 1 88450
+
+			Align 89: 3944793 4033242 NODE_20_length_88450_cov_229.473_ID_2036 1 88450
+				Gap between this and next alignment: 4033242 to 4038769 (5526 bp)
+				Next Alignment: 4038769 4151593 NODE_15_length_125485_cov_234.708_ID_1538 1 112825
+
+			Align 90: 4038769 4151593 NODE_15_length_125485_cov_234.708_ID_1538 1 112825
+				Gap between this and next alignment: 4151593 to 4151717 (123 bp)
+				Next Alignment: 4151717 4164376 NODE_15_length_125485_cov_234.708_ID_1538 112826 125485
+
+			Align 91: 4151717 4164376 NODE_15_length_125485_cov_234.708_ID_1538 112826 125485
+				Gap between this and next alignment: 4164376 to 4166183 (1806 bp)
+				Next Alignment: 4166183 4166698 NODE_91_length_516_cov_731.525_ID_4972 1 516
+
+			Align 92: 4166183 4166698 NODE_91_length_516_cov_731.525_ID_4972 1 516
+				Gap between this and next alignment: 4166698 to 4169889 (3190 bp)
+				Next Alignment: 4169889 4174156 NODE_58_length_4268_cov_276.411_ID_3283 4268 1
+
+			Align 93: 4169889 4174156 NODE_58_length_4268_cov_276.411_ID_3283 4268 1
+				Gap between this and next alignment: 4174156 to 4175078 (921 bp)
+				Next Alignment: 4175078 4206078 NODE_40_length_31001_cov_231.793_ID_2597 31001 1
+
+			Align 94: 4175078 4206078 NODE_40_length_31001_cov_231.793_ID_2597 31001 1
+				Negative gap (overlap) between this and next alignment: 4206078 to 4206024 (-54 bp)
+				Next Alignment: 4206024 4207725 NODE_68_length_1702_cov_1672.58_ID_5212 1 1702
+
+			Previous gap was negative, modifying coordinates to ignore overlap
+				Moving contig start from 1 to 56.
+			Align 95: 4206079 4207725 NODE_68_length_1702_cov_1672.58_ID_5212 56 1702
+				Gap between this and next alignment: 4207725 to 4211133 (3407 bp)
+				Next Alignment: 4211133 4294119 NODE_1_length_285114_cov_235.629_ID_1455 285114 202128
+
+			Align 96: 4211133 4294119 NODE_1_length_285114_cov_235.629_ID_1455 285114 202128
+				Gap between this and next alignment: 4294119 to 4294459 (339 bp)
+				Next Alignment: 4294459 4323827 NODE_1_length_285114_cov_235.629_ID_1455 202127 172757
+
+			Align 97: 4294459 4323827 NODE_1_length_285114_cov_235.629_ID_1455 202127 172757
+				Gap between this and next alignment: 4323827 to 4324128 (300 bp)
+				Next Alignment: 4324128 4496883 NODE_1_length_285114_cov_235.629_ID_1455 172756 1
+
+			Align 98: 4324128 4496883 NODE_1_length_285114_cov_235.629_ID_1455 172756 1
+				Gap between this and next alignment: 4496883 to 4497480 (596 bp)
+				Next Alignment: 4497480 4505536 NODE_53_length_8057_cov_270.723_ID_3119 8057 1
+
+			Align 99: 4497480 4505536 NODE_53_length_8057_cov_270.723_ID_3119 8057 1
+				Gap between this and next alignment: 4505536 to 4506648 (1111 bp)
+				Next Alignment: 4506648 4612590 NODE_10_length_148368_cov_234.866_ID_4872 1 105943
+
+			Align 100: 4506648 4612590 NODE_10_length_148368_cov_234.866_ID_4872 1 105943
+				Gap between this and next alignment: 4612590 to 4612692 (101 bp)
+				Next Alignment: 4612692 4639675 NODE_10_length_148368_cov_234.866_ID_4872 105944 132927
+
+			Align 101: 4612692 4639675 NODE_10_length_148368_cov_234.866_ID_4872 105944 132927
+			END in current alignment.  Modifying 4639675 to 4639675.
+
+Analysis is finished!
+Founded SNPs were written into /home/saveliev/quast_results_ecoli_mc/contigs_reports/nucmer_output/SPAdes-3.7.scaffolds.used_snps
+
+Results:
+	Local Misassemblies: 13
+	Misassemblies: 0
+		Relocations: 0
+		Translocations: 0
+		Inversions: 0
+	Misassembled Contigs: 0
+	Misassembled Contig Bases: 0
+	Misassemblies Inter-Contig Overlap: 0
+Uncovered Regions: 0 (0)
+Unaligned Contigs: 4 + 0 part
+Partially Unaligned Contigs with Misassemblies: 0
+Unaligned Contig Bases: 2947
+
+Ambiguously Mapped Contigs: 13
+Total Bases in Ambiguously Mapped Contigs: 15807
+Note that --allow-ambiguity option was set to "one" and only first alignment per each of these contigs was used.
+
+	Covered Bases: 4553526
+
+	SNPs: 120
+	Insertions: 12
+	Deletions: 11
+
+	Positive Gaps: 81
+		Internal Gaps:  13
+		External Gaps:  68
+		External Gap Total:  83634
+		External Gap Average: 1230
+	Negative Gaps: 19
+		Internal Overlaps:  0
+		External Overlaps:  19
+		External Overlaps Total: -882
+		External Overlaps Average: -46
+	Contigs with Redundant Alignments: 0 (0)
