@@ -126,6 +126,8 @@
                         {% block genome_info %}{% endblock %}
 
                         {% if not hide_date %}<p id='report_date'></p>{% endif %}
+
+                        <p id='icarus'></p>
                     </td>
 
                     {% if download %}
@@ -149,14 +151,10 @@
                 </tr>
             </table>
 
-            {% if download %}
-            <br>
-            <br>
-            <br>
-            {% endif %}
-            <br>
+{#            {% if download %}#}
+{#            <br>#}
+{#            {% endif %}#}
 
-            <p id='icarus'></p>
             <p id='mincontig'>Loading...</p>
             <div id="extended_link"></div>
         </div>
@@ -168,8 +166,6 @@
                 We need JavaScript to build report and plots.
             </div>
         </noscript>
-
-        <br>
 
         <div class='report-and-plots'>
             <div class='report' id='main_report'>
@@ -205,7 +201,7 @@
                             <div id='legend-placeholder'></div>
                         </td>
                     </tr>
-                    <tr>
+                    <tr id="plots-into-tr">
                         <td>
                             <p id="contigs_are_ordered">Contigs are ordered from largest (contig #1) to smallest.</p>
                             <p id="gc_info">Contigs are broken into nonoverlapping 100<span class="rhs">&nbsp;</span>bp windows.
