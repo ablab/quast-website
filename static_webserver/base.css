@@ -93,14 +93,14 @@ a.icon_link:hover {
     opacity: 0.5;
     float: left;
 }
-.email a {
+.email {
     opacity: 0.5;
 }
-.email a {
+.footer_link a, .footer_link a:visited{
     color: black;
     border-color: #888;
 }
-.email a:hover, .email:hover a {
+.footer_link a:hover, .footer_link:hover a {
     opacity: 1;
     color: black;
     border-color: #000;
