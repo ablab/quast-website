@@ -7,10 +7,9 @@ System information:
   Python version: 2.7.12
   CPUs number: 64
 
-Started: 2016-07-24 18:22:32
+Started: 2016-07-24 18:32:43
 
 Logging to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/quast.log
-NOTICE: Output directory already exists. Existing Nucmer alignments can be used
 NOTICE: Maximum number of threads is set to 16 (use --threads option to set it manually)
 
 Main parameters: 
@@ -26,7 +25,7 @@ Contigs:
   4  SPAdes-3.7.scaffolds.fasta ==> SPAdes-3.7.scaffolds
   5  SOAPdenovo2.fasta ==> SOAPdenovo2
 
-2016-07-24 18:22:35
+2016-07-24 18:32:45
 Running Basic statistics processor...
   Reference genome:
     reference.fasta, Reference length = 4639675, Reference GC % = 50.79
@@ -62,23 +61,98 @@ Running Basic statistics processor...
     saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/basic_stats/SPAdes-3.7.scaffolds_coverage_histogram.pdf
 Done.
 
-2016-07-24 18:22:41
+2016-07-24 18:32:51
 Running Contig analyzer...
   1  SPAdes-3.6
   2  SPAdes-3.6.scaffolds
+  4  SPAdes-3.7.scaffolds
   1  Logging to files /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SPAdes-3.6.stdout and contigs_report_SPAdes-3.6.stderr...
   2  Logging to files /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SPAdes-3.6.scaffolds.stdout and contigs_report_SPAdes-3.6.scaffolds.stderr...
   3  SPAdes-3.7
-  4  SPAdes-3.7.scaffolds
-  1  Using existing alignments... 
-  3  Logging to files /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SPAdes-3.7.stdout and contigs_report_SPAdes-3.7.stderr...
-  2  Using existing alignments... 
-  5  SOAPdenovo2
   4  Logging to files /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SPAdes-3.7.scaffolds.stdout and contigs_report_SPAdes-3.7.scaffolds.stderr...
+  2  Aligning contigs to the reference
+  1  Aligning contigs to the reference
+  3  Logging to files /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SPAdes-3.7.stdout and contigs_report_SPAdes-3.7.stderr...
+  5  SOAPdenovo2
+  4  Aligning contigs to the reference
+  2  /home/saveliev/quast/libs/E-MEM-linux/nucmer -c 65 -l 65 --maxmatch -p /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.6.scaffolds \
+     -t 3 /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/quast_corrected_input/reference.fasta \
+     /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/quast_corrected_input/SPAdes-3.6.scaffolds.fasta \
+     >> /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SPAdes-3.6.scaffolds.stdout \
+     2>> /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SPAdes-3.6.scaffolds.stderr
+  1  /home/saveliev/quast/libs/E-MEM-linux/nucmer -c 65 -l 65 --maxmatch -p /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.6 \
+     -t 3 /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/quast_corrected_input/reference.fasta \
+     /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/quast_corrected_input/SPAdes-3.6.fasta \
+     >> /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SPAdes-3.6.stdout \
+     2>> /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SPAdes-3.6.stderr
+  4  /home/saveliev/quast/libs/E-MEM-linux/nucmer -c 65 -l 65 --maxmatch -p /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.7.scaffolds \
+     -t 3 /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/quast_corrected_input/reference.fasta \
+     /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/quast_corrected_input/SPAdes-3.7.scaffolds.fasta \
+     >> /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SPAdes-3.7.scaffolds.stdout \
+     2>> /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SPAdes-3.7.scaffolds.stderr
+  3  Aligning contigs to the reference
   5  Logging to files /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SOAPdenovo2.stdout and contigs_report_SOAPdenovo2.stderr...
-  3  Using existing alignments... 
-  4  Using existing alignments... 
-  5  Using existing alignments... 
+  5  Aligning contigs to the reference
+  3  /home/saveliev/quast/libs/E-MEM-linux/nucmer -c 65 -l 65 --maxmatch -p /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.7 \
+     -t 3 /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/quast_corrected_input/reference.fasta \
+     /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/quast_corrected_input/SPAdes-3.7.fasta \
+     >> /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SPAdes-3.7.stdout \
+     2>> /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SPAdes-3.7.stderr
+  5  /home/saveliev/quast/libs/E-MEM-linux/nucmer -c 65 -l 65 --maxmatch -p /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SOAPdenovo2 \
+     -t 3 /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/quast_corrected_input/reference.fasta \
+     /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/quast_corrected_input/SOAPdenovo2.fasta \
+     >> /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SOAPdenovo2.stdout \
+     2>> /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SOAPdenovo2.stderr
+  5  /home/saveliev/quast/libs/E-MEM-linux/delta-filter -i 95.0 -l 0 /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SOAPdenovo2.delta \
+     > /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SOAPdenovo2.fdelta \
+     2> /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SOAPdenovo2.stderr
+  5  /home/saveliev/quast/libs/E-MEM-linux/show-coords /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SOAPdenovo2.delta \
+     > /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SOAPdenovo2.coords_tmp \
+     2> /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SOAPdenovo2.stderr
+  5  /home/saveliev/quast/libs/E-MEM-linux/show-snps -S -T -H /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SOAPdenovo2.delta \
+     < /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SOAPdenovo2.coords.headless \
+     > /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SOAPdenovo2.all_snps \
+     2> /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SOAPdenovo2.stderr
+  4  /home/saveliev/quast/libs/E-MEM-linux/delta-filter -i 95.0 -l 0 /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.7.scaffolds.delta \
+     > /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.7.scaffolds.fdelta \
+     2> /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SPAdes-3.7.scaffolds.stderr
+  4  /home/saveliev/quast/libs/E-MEM-linux/show-coords /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.7.scaffolds.delta \
+     > /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.7.scaffolds.coords_tmp \
+     2> /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SPAdes-3.7.scaffolds.stderr
+  4  /home/saveliev/quast/libs/E-MEM-linux/show-snps -S -T -H /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.7.scaffolds.delta \
+     < /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.7.scaffolds.coords.headless \
+     > /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.7.scaffolds.all_snps \
+     2> /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SPAdes-3.7.scaffolds.stderr
+  1  /home/saveliev/quast/libs/E-MEM-linux/delta-filter -i 95.0 -l 0 /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.6.delta \
+     > /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.6.fdelta \
+     2> /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SPAdes-3.6.stderr
+  1  /home/saveliev/quast/libs/E-MEM-linux/show-coords /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.6.delta \
+     > /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.6.coords_tmp \
+     2> /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SPAdes-3.6.stderr
+  1  /home/saveliev/quast/libs/E-MEM-linux/show-snps -S -T -H /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.6.delta \
+     < /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.6.coords.headless \
+     > /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.6.all_snps \
+     2> /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SPAdes-3.6.stderr
+  3  /home/saveliev/quast/libs/E-MEM-linux/delta-filter -i 95.0 -l 0 /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.7.delta \
+     > /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.7.fdelta \
+     2> /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SPAdes-3.7.stderr
+  3  /home/saveliev/quast/libs/E-MEM-linux/show-coords /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.7.delta \
+     > /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.7.coords_tmp \
+     2> /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SPAdes-3.7.stderr
+  3  /home/saveliev/quast/libs/E-MEM-linux/show-snps -S -T -H /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.7.delta \
+     < /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.7.coords.headless \
+     > /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.7.all_snps \
+     2> /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SPAdes-3.7.stderr
+  2  /home/saveliev/quast/libs/E-MEM-linux/delta-filter -i 95.0 -l 0 /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.6.scaffolds.delta \
+     > /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.6.scaffolds.fdelta \
+     2> /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SPAdes-3.6.scaffolds.stderr
+  2  /home/saveliev/quast/libs/E-MEM-linux/show-coords /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.6.scaffolds.delta \
+     > /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.6.scaffolds.coords_tmp \
+     2> /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SPAdes-3.6.scaffolds.stderr
+  2  /home/saveliev/quast/libs/E-MEM-linux/show-snps -S -T -H /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.6.scaffolds.delta \
+     < /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.6.scaffolds.coords.headless \
+     > /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/nucmer_output/SPAdes-3.6.scaffolds.all_snps \
+     2> /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SPAdes-3.6.scaffolds.stderr
   5  Alignments: ../../../../../home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/alignments_SOAPdenovo2.tsv
   5  Analysis is finished.
 
@@ -104,7 +178,7 @@ Running Contig analyzer...
     saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/misassemblies_plot.pdf
 Done.
 
-2016-07-24 18:22:45
+2016-07-24 18:32:58
 Running NA-NGA calculation...
   1  SPAdes-3.6, Largest alignment = 285114, NA50 = 132831, NGA50 = 132831, LA50 = 13, LGA50 = 13
   2  SPAdes-3.6.scaffolds, Largest alignment = 285114, NA50 = 133309, NGA50 = 133309, LA50 = 12, LGA50 = 12
@@ -119,7 +193,7 @@ Running NA-NGA calculation...
     saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/aligned_stats/NGAx_plot.pdf
 Done.
 
-2016-07-24 18:22:47
+2016-07-24 18:33:00
 Running Genome analyzer...
   Loaded 4324 genes
   NOTICE: No file with operons provided. Use the -O option if you want to specify it.
@@ -143,14 +217,14 @@ Done.
 
 NOTICE: Genes are not predicted by default. Use --gene-finding option to enable it.
 
-2016-07-24 18:22:52
+2016-07-24 18:33:05
 Creating large visual summaries...
 This may take a while: press Ctrl-C to skip this step..
   1 of 2: Creating Icarus viewers...
   2 of 2: Creating PDF with all tables and plots...
 Done
 
-2016-07-24 18:22:56
+2016-07-24 18:33:09
 RESULTS:
   Text versions of total report are saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/report.txt, report.tsv, and report.tex
   Text versions of transposed total report are saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
@@ -159,8 +233,8 @@ RESULTS:
   Icarus (contig browser) is saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/icarus.html
   Log saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/quast.log
 
-Finished: 2016-07-24 18:22:56
-Elapsed time: 0:00:23.778346
-NOTICEs: 4; WARNINGs: 0; non-fatal ERRORs: 0
+Finished: 2016-07-24 18:33:09
+Elapsed time: 0:00:26.602780
+NOTICEs: 3; WARNINGs: 0; non-fatal ERRORs: 0
 
 Thank you for using QUAST!

@@ -499,7 +499,7 @@
             float: left;
             font-size: 13px;
             margin-left: 30px;
-            min-width: 800px;
+            white-space: nowrap;
             /*margin-top: 7px;*/
         }
         
@@ -514,11 +514,15 @@
         }
         
         #live_search {
-            width: 150px;
+            width: 160px;
+        }
+        #search_label {
+            line-height: 20px;
         }
         
         .last-td {
-            width: 210px;
+            padding-left: 20px;
+            width: 213px;
         }
         
         /*#controls_panel span {*/
@@ -542,23 +546,14 @@
             color: white;
         }
         
-        .coords_text_div {
-            top: -5px;
-            left: 0;
-            color: white;
-            margin-left: 20px;
-            overflow-y: hidden;
-        }
-        
         .coords_div {
-            top: 2px;
-            left: 0;
+            color: white;
             overflow-y: hidden;
         }
         
         .coords_textbox {
-             width:75px;
-             margin-left: 10px;
+             width: 75px;
+             margin-left: 0;
         }
     </style>
     <style type="text/css" rel="stylesheet" name="common.css">
@@ -830,6 +825,7 @@
         }
         .page_subtitle {
             line-height: 100%;
+            white-space: nowrap;
         }
         .content {
             margin-left: 147px;
@@ -866,6 +862,13 @@
             display: block;
             width: 100%;
             margin-bottom: 10px;
+        }
+        
+        .logo_img {
+            height: 40px;
+            margin-bottom: -10px;
+            margin-left: -6px;
+            margin-right: -7px;
         }
     </style>
     <style type="text/css" rel="stylesheet" name="bootstrap/bootstrap.css">
@@ -1793,7 +1796,7 @@
                         Icarus
                     </h1>
                     <p class="page_subtitle">
-						<b>QUAST Contig Browser</b> by <a href="http://cab.spbu.ru" class='dark_bg_link'>Center for Algorithmic Biotechnology</a>
+						<b>QUAST Contig Browser</b> by <a href="http://cab.spbu.ru" class='dark_bg_link'>CAB</a>
 					</p>
 				</div>
 			</td>
