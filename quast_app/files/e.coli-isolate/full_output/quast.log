@@ -1,4 +1,4 @@
-/home/saveliev/quast/quast.py -R REF_FILES/reference.fasta -G REF_FILES/genes.txt SPAdes-3.6.fasta SPAdes-3.6.scaffolds.fasta SPAdes-3.7.fasta SPAdes-3.7.scaffolds.fasta SOAPdenovo2.fasta -o /home/saveliev/quast_results_ecoli_mc --save-json-to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/
+/home/saveliev/quast/quast.py -R REF_FILES/reference.fasta -G REF_FILES/genes.txt SPAdes-3.6.fasta SPAdes-3.6.scaffolds.fasta SPAdes-3.7.fasta SPAdes-3.7.scaffolds.fasta SOAPdenovo2.fasta -o /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/ --save-json-to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/
 
 Version: 4.2-dev
 
@@ -7,9 +7,9 @@ System information:
   Python version: 2.7.12
   CPUs number: 64
 
-Started: 2016-07-23 22:39:46
+Started: 2016-07-24 18:22:32
 
-Logging to /home/saveliev/quast_results_ecoli_mc/quast.log
+Logging to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/quast.log
 NOTICE: Output directory already exists. Existing Nucmer alignments can be used
 NOTICE: Maximum number of threads is set to 16 (use --threads option to set it manually)
 
@@ -26,7 +26,7 @@ Contigs:
   4  SPAdes-3.7.scaffolds.fasta ==> SPAdes-3.7.scaffolds
   5  SOAPdenovo2.fasta ==> SOAPdenovo2
 
-2016-07-23 22:39:48
+2016-07-24 18:22:35
 Running Basic statistics processor...
   Reference genome:
     reference.fasta, Reference length = 4639675, Reference GC % = 50.79
@@ -43,68 +43,68 @@ Running Basic statistics processor...
     4  SPAdes-3.7.scaffolds, N50 = 133309, L50 = 12, Total length = 4557803, GC % = 50.74, # N's per 100 kbp =  0.00
     5  SOAPdenovo2, N50 = 52524, L50 = 26, Total length = 4535469, GC % = 50.74, # N's per 100 kbp =  0.00
   Drawing Nx plot...
-    saved to /home/saveliev/quast_results_ecoli_mc/basic_stats/Nx_plot.pdf
+    saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/basic_stats/Nx_plot.pdf
   Drawing NGx plot...
-    saved to /home/saveliev/quast_results_ecoli_mc/basic_stats/NGx_plot.pdf
+    saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/basic_stats/NGx_plot.pdf
   Drawing cumulative plot...
-    saved to /home/saveliev/quast_results_ecoli_mc/basic_stats/cumulative_plot.pdf
+    saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/basic_stats/cumulative_plot.pdf
   Drawing GC content plot...
-    saved to /home/saveliev/quast_results_ecoli_mc/basic_stats/GC_content_plot.pdf
+    saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/basic_stats/GC_content_plot.pdf
   Drawing Coverage histogram (bin size: 3x)...
-    saved to /home/saveliev/quast_results_ecoli_mc/basic_stats/coverage_histogram.pdf
+    saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/basic_stats/coverage_histogram.pdf
   Drawing SPAdes-3.6 coverage histogram (bin size: 4x)...
-    saved to /home/saveliev/quast_results_ecoli_mc/basic_stats/SPAdes-3.6_coverage_histogram.pdf
+    saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/basic_stats/SPAdes-3.6_coverage_histogram.pdf
   Drawing SPAdes-3.6.scaffolds coverage histogram (bin size: 4x)...
-    saved to /home/saveliev/quast_results_ecoli_mc/basic_stats/SPAdes-3.6.scaffolds_coverage_histogram.pdf
+    saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/basic_stats/SPAdes-3.6.scaffolds_coverage_histogram.pdf
   Drawing SPAdes-3.7 coverage histogram (bin size: 3x)...
-    saved to /home/saveliev/quast_results_ecoli_mc/basic_stats/SPAdes-3.7_coverage_histogram.pdf
+    saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/basic_stats/SPAdes-3.7_coverage_histogram.pdf
   Drawing SPAdes-3.7.scaffolds coverage histogram (bin size: 4x)...
-    saved to /home/saveliev/quast_results_ecoli_mc/basic_stats/SPAdes-3.7.scaffolds_coverage_histogram.pdf
+    saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/basic_stats/SPAdes-3.7.scaffolds_coverage_histogram.pdf
 Done.
 
-2016-07-23 22:39:54
+2016-07-24 18:22:41
 Running Contig analyzer...
-  2  SPAdes-3.6.scaffolds
   1  SPAdes-3.6
+  2  SPAdes-3.6.scaffolds
+  1  Logging to files /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SPAdes-3.6.stdout and contigs_report_SPAdes-3.6.stderr...
+  2  Logging to files /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SPAdes-3.6.scaffolds.stdout and contigs_report_SPAdes-3.6.scaffolds.stderr...
   3  SPAdes-3.7
-  1  Logging to files /home/saveliev/quast_results_ecoli_mc/contigs_reports/contigs_report_SPAdes-3.6.stdout and contigs_report_SPAdes-3.6.stderr...
-  2  Logging to files /home/saveliev/quast_results_ecoli_mc/contigs_reports/contigs_report_SPAdes-3.6.scaffolds.stdout and contigs_report_SPAdes-3.6.scaffolds.stderr...
   4  SPAdes-3.7.scaffolds
-  3  Logging to files /home/saveliev/quast_results_ecoli_mc/contigs_reports/contigs_report_SPAdes-3.7.stdout and contigs_report_SPAdes-3.7.stderr...
-  5  SOAPdenovo2
-  4  Logging to files /home/saveliev/quast_results_ecoli_mc/contigs_reports/contigs_report_SPAdes-3.7.scaffolds.stdout and contigs_report_SPAdes-3.7.scaffolds.stderr...
-  2  Using existing alignments... 
   1  Using existing alignments... 
-  5  Logging to files /home/saveliev/quast_results_ecoli_mc/contigs_reports/contigs_report_SOAPdenovo2.stdout and contigs_report_SOAPdenovo2.stderr...
+  3  Logging to files /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SPAdes-3.7.stdout and contigs_report_SPAdes-3.7.stderr...
+  2  Using existing alignments... 
+  5  SOAPdenovo2
+  4  Logging to files /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SPAdes-3.7.scaffolds.stdout and contigs_report_SPAdes-3.7.scaffolds.stderr...
+  5  Logging to files /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/contigs_report_SOAPdenovo2.stdout and contigs_report_SOAPdenovo2.stderr...
   3  Using existing alignments... 
   4  Using existing alignments... 
   5  Using existing alignments... 
-  5  Alignments: ../../../../../home/saveliev/quast_results_ecoli_mc/contigs_reports/alignments_SOAPdenovo2.tsv
+  5  Alignments: ../../../../../home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/alignments_SOAPdenovo2.tsv
   5  Analysis is finished.
 
-  1  Alignments: ../../../../../home/saveliev/quast_results_ecoli_mc/contigs_reports/alignments_SPAdes-3.6.tsv
+  1  Alignments: ../../../../../home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/alignments_SPAdes-3.6.tsv
   1  Analysis is finished.
 
-  3  Alignments: ../../../../../home/saveliev/quast_results_ecoli_mc/contigs_reports/alignments_SPAdes-3.7.tsv
-  3  Analysis is finished.
-
-  2  Alignments: ../../../../../home/saveliev/quast_results_ecoli_mc/contigs_reports/alignments_SPAdes-3.6.scaffolds.tsv
-  2  Analysis is finished.
-
-  4  Alignments: ../../../../../home/saveliev/quast_results_ecoli_mc/contigs_reports/alignments_SPAdes-3.7.scaffolds.tsv
+  4  Alignments: ../../../../../home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/alignments_SPAdes-3.7.scaffolds.tsv
   4  Analysis is finished.
 
+  3  Alignments: ../../../../../home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/alignments_SPAdes-3.7.tsv
+  3  Analysis is finished.
+
+  2  Alignments: ../../../../../home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/alignments_SPAdes-3.6.scaffolds.tsv
+  2  Analysis is finished.
+
   Creating total report...
-    saved to /home/saveliev/quast_results_ecoli_mc/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+    saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
   Transposed version of total report...
-    saved to /home/saveliev/quast_results_ecoli_mc/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+    saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
   Creating total report...
-    saved to /home/saveliev/quast_results_ecoli_mc/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+    saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
   Drawing misassemblies by types plot...
-    saved to /home/saveliev/quast_results_ecoli_mc/contigs_reports/misassemblies_plot.pdf
+    saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/contigs_reports/misassemblies_plot.pdf
 Done.
 
-2016-07-23 22:39:58
+2016-07-24 18:22:45
 Running NA-NGA calculation...
   1  SPAdes-3.6, Largest alignment = 285114, NA50 = 132831, NGA50 = 132831, LA50 = 13, LGA50 = 13
   2  SPAdes-3.6.scaffolds, Largest alignment = 285114, NA50 = 133309, NGA50 = 133309, LA50 = 12, LGA50 = 12
@@ -112,14 +112,14 @@ Running NA-NGA calculation...
   4  SPAdes-3.7.scaffolds, Largest alignment = 285114, NA50 = 133309, NGA50 = 133309, LA50 = 12, LGA50 = 12
   5  SOAPdenovo2, Largest alignment = 165487, NA50 = 52524, NGA50 = 49626, LA50 = 26, LGA50 = 27
   Drawing cumulative plot...
-    saved to /home/saveliev/quast_results_ecoli_mc/aligned_stats/cumulative_plot.pdf
+    saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/aligned_stats/cumulative_plot.pdf
   Drawing NAx plot...
-    saved to /home/saveliev/quast_results_ecoli_mc/aligned_stats/NAx_plot.pdf
+    saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/aligned_stats/NAx_plot.pdf
   Drawing NGAx plot...
-    saved to /home/saveliev/quast_results_ecoli_mc/aligned_stats/NGAx_plot.pdf
+    saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/aligned_stats/NGAx_plot.pdf
 Done.
 
-2016-07-23 22:40:00
+2016-07-24 18:22:47
 Running Genome analyzer...
   Loaded 4324 genes
   NOTICE: No file with operons provided. Use the -O option if you want to specify it.
@@ -134,33 +134,33 @@ Running Genome analyzer...
   4  Analysis is finished.
   5  Analysis is finished.
   Drawing genes cumulative plot...
-    saved to /home/saveliev/quast_results_ecoli_mc/genome_stats/genes_cumulative_plot.pdf
+    saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/genome_stats/genes_cumulative_plot.pdf
   Drawing # complete genes histogram...
-    saved to /home/saveliev/quast_results_ecoli_mc/genome_stats/complete_genes_histogram.pdf
+    saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/genome_stats/complete_genes_histogram.pdf
   Drawing Genome fraction, % histogram...
-    saved to /home/saveliev/quast_results_ecoli_mc/genome_stats/genome_fraction_histogram.pdf
+    saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/genome_stats/genome_fraction_histogram.pdf
 Done.
 
 NOTICE: Genes are not predicted by default. Use --gene-finding option to enable it.
 
-2016-07-23 22:40:05
+2016-07-24 18:22:52
 Creating large visual summaries...
 This may take a while: press Ctrl-C to skip this step..
   1 of 2: Creating Icarus viewers...
   2 of 2: Creating PDF with all tables and plots...
 Done
 
-2016-07-23 22:40:09
+2016-07-24 18:22:56
 RESULTS:
-  Text versions of total report are saved to /home/saveliev/quast_results_ecoli_mc/report.txt, report.tsv, and report.tex
-  Text versions of transposed total report are saved to /home/saveliev/quast_results_ecoli_mc/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
-  HTML version (interactive tables and plots) saved to /home/saveliev/quast_results_ecoli_mc/report.html
-  PDF version (tables and plots) is saved to /home/saveliev/quast_results_ecoli_mc/report.pdf
-  Icarus (contig browser) is saved to /home/saveliev/quast_results_ecoli_mc/icarus.html
-  Log saved to /home/saveliev/quast_results_ecoli_mc/quast.log
+  Text versions of total report are saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/report.html
+  PDF version (tables and plots) is saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/report.pdf
+  Icarus (contig browser) is saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/icarus.html
+  Log saved to /home/saveliev/quast-website/quast_app/files/e.coli-isolate/full_output/quast.log
 
-Finished: 2016-07-23 22:40:09
-Elapsed time: 0:00:23.658108
+Finished: 2016-07-24 18:22:56
+Elapsed time: 0:00:23.778346
 NOTICEs: 4; WARNINGs: 0; non-fatal ERRORs: 0
 
 Thank you for using QUAST!
