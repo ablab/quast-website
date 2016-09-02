@@ -14,8 +14,8 @@ from django.db.models import Q
 import sys
 if not settings.QUAST_DIRPATH in sys.path:
     sys.path.insert(1, settings.QUAST_DIRPATH)
-from libs import qconfig, qutils
-from libs.qutils import splitext_for_fasta_file
+from quast_libs import qconfig, qutils
+from quast_libs.qutils import splitext_for_fasta_file
 
 
 import logging

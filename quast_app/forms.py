@@ -9,7 +9,7 @@ from django import forms
 from django.forms import fields, widgets
 if not settings.QUAST_DIRPATH in sys.path:
     sys.path.insert(1, settings.QUAST_DIRPATH)
-from libs import qconfig
+from quast_libs import qconfig
 
 from models import User, UserSession, DataSet, ContigsFile, QuastSession
 

@@ -40,17 +40,23 @@ REPORT_LINK_BASE            = '/reports/'
 
 database = 'sqlite'
 
-if os.environ.get('DEVELOPMENT'):
+if os.environ.get('DEVELOPMENT', None):
     DEBUG = True
     ADDRESS = 'http://127.0.0.1:8000/'
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 else:
+    # DEBUG = False
+    # ADDRESS = 'http://quast.bioinf.spbau.ru/'
+    # database = 'mysql'
+    # EMAIL_HOST = 'localhost'
+
     DEBUG = False
-    ADDRESS = 'http://quast.bioinf.spbau.ru/'
+    ADDRESS = 'http://quast.spbu.ru/'
     database = 'mysql'
     EMAIL_HOST = 'localhost'
-    database = 'mysql'
+
+TEMPLATE_DEBUG = DEBUG
 
 REPORTS_SHOW_LIMIT = 8
 
@@ -66,6 +72,13 @@ MANAGERS = ADMINS
 SEND_BROKEN_LINK_EMAILS = False
 
 
+TEMPLATE_ARGS_BY_DEFAULT = {
+    'debug': DEBUG,
+    'support_email': SUPPORT_EMAIL,
+    'address_base': ADDRESS,
+}
+
+
 # BROKER_URL = 'redis://localhost/0'
 # BROKER_URL = 'amqp'
 # Celery with sqlite
@@ -77,7 +90,8 @@ CELERY_SEND_EVENTS = True
 
 if database == 'mysql':
     db_engine = 'django.db.backends.mysql'
-    db_name = 'quast'
+    # db_name = 'quast'
+    db_name = 'quast_quast'
 else:
     db_engine = 'django.db.backends.sqlite3'
     db_name = quastdb_fpath
@@ -165,39 +179,26 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
-)
+    )
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '3ikccwwfa*6q7yw7^4-j_y*3&amp;6+o!j5zte!h2#%&amp;&amp;js6@hi12d'
 
-TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            os.path.join(SOURCE_DIRPATH, 'templates'),
-        ],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                # Insert your TEMPLATE_CONTEXT_PROCESSORS here or use this
-                # list if you haven't customized them:
-                'django.contrib.auth.context_processors.auth',
-                'django.template.context_processors.debug',
-                'django.template.context_processors.i18n',
-                'django.template.context_processors.media',
-                'django.template.context_processors.static',
-                'django.template.context_processors.tz',
-                'django.contrib.messages.context_processors.messages',
-            ],
-        },
-    },
-]
+# List of callables that know how to import templates from various sources.
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
+    #     'django.template.loaders.eggs.Loader',
+    )
 
-TEMPLATE_ARGS_BY_DEFAULT = {
-    'debug': DEBUG,
-    'support_email': SUPPORT_EMAIL,
-    'address_base': ADDRESS,
-}
+TEMPLATE_CONTEXT_PROCESSORS = (
+    #    'django.core.context_processors.debug',
+    #    'django.core.context_processors.i18n',
+    #    'django.core.context_processors.files',
+    #    'django.core.context_processors.files',
+    'django.contrib.auth.context_processors.auth',
+    'django.contrib.messages.context_processors.messages',
+    )
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
@@ -207,12 +208,14 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
-)
+    )
 
 ROOT_URLCONF = 'urls'
 
 # Python dotted path to the WSGI application used by Djasngo's runserver.
 WSGI_APPLICATION = 'wsgi.application'
+
+TEMPLATE_DIRS = (os.path.join(SOURCE_DIRPATH, 'templates'),)
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -229,7 +232,7 @@ INSTALLED_APPS = (
     'quast_app',
     'ajaxuploader',
 #    'django_socketio',
-)
+    )
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
