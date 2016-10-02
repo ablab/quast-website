@@ -180,7 +180,7 @@
                         allComplete = false;
                     },
                     onProgress: function(id, fileName, loaded, total) {
-                        if (loaded > {{ contig_max_size_mb }} * 1024 * 1024) {
+                        if (total > {{ contig_max_size_mb }} * 1024 * 1024) {
                             $('.qq-upload-size-exceeded-text').show();
                             sizeExceeded = true;
                             return false;

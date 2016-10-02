@@ -44,6 +44,7 @@ if os.environ.get('DEVELOPMENT'):
     DEBUG = True
     ADDRESS = 'http://127.0.0.1:8000/'
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    CONTIG_MAX_SIZE_MB = 1
 
 else:
     DEBUG = False
@@ -51,6 +52,7 @@ else:
     database = 'mysql'
     EMAIL_HOST = 'localhost'
     database = 'mysql'
+    CONTIG_MAX_SIZE_MB = 100
 
 REPORTS_SHOW_LIMIT = 8
 
@@ -64,8 +66,6 @@ ADMINS = (
 MANAGERS = ADMINS
 
 SEND_BROKEN_LINK_EMAILS = False
-
-CONTIG_MAX_SIZE_MB = 100
 
 
 # BROKER_URL = 'redis://localhost/0'

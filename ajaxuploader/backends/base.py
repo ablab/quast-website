@@ -3,7 +3,7 @@ logger = logging.getLogger('quast')
 mailer = logging.getLogger('quast_mailer')
 
 class AbstractUploadBackend(object):
-    BUFFER_SIZE = 10 * 1024 * 1024  # 10MB
+    BUFFER_SIZE = 1 * 1024 * 1024  # 10MB
 
     def __init__(self, **kwargs):
         self.__dict__.update(kwargs)
