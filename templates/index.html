@@ -148,8 +148,9 @@
             multiple: true,
             buttonClass: 'btn',
             buttonTabIndex: 1,
-            btnText: 'Add files',
-            areaText: 'drop files here',
+            btnText: 'Select files',
+            btnComment: 'File size limit is {{ contig_max_size_mb }}Mb',
+            areaText: 'or drop files here',
             areaClass: 'upload-drop-area',
             uploaded: '{% for fname in contigs_fnames %}<li>{{ fname }} &nbsp;' +
                 // '<a class="dotted-link" style="font-size: 0.8em;" href="#">Remove</a>' +
@@ -182,6 +183,9 @@
                         if (responseJSON.success) {
 {#                            $('#evaluate-button').prop('disabled', false);#}
 {#                            $('#evaluate-button').removeClass('disabled');#}
+                        } else if (responseJSON.sizeExceeded) {
+                            $('.qq-upload-size-exceeded-text').show();
+                            sizeExceeded = true;
                         }
                     },
                     onAllComplete: function(uploads) {
@@ -230,7 +234,8 @@
                     },
                     template:
                             '<div class="qq-uploader">' +
-                                '<span class="upload-button btn">' + parameters[i].btnText + '</span>' +
+                                '<span class="upload-button btn">' + parameters[i].btnText + '</span>&nbsp;&nbsp;&nbsp;' +
+                            '           <span class="upload-comment" style="vertical-align: -2px;">' + parameters[i].btnComment + '<span>' +
                                 '<div>' +
                                     '<div class="' + parameters[i].areaClass + '">' +
                                         '<div class="upload-list-div">' +
@@ -249,6 +254,7 @@
     {#                        '<a class="dotted-link qq-upload-remove" href="#" style="opacity: 0.5;"><img src="/static/pics/delete_icon.png" height=7></a>' +#}
                             '<a class="dotted-link qq-upload-remove" href="#">remove</a>' +
                             '<span class="qq-upload-failed-text">Failed</span>' +
+                            '<span class="qq-upload-size-exceeded-text">File size limit of {{ contig_max_size_mb }}Mb excceeded</span>' +
                          // '<a class="dotted-link" style="font-size: 0.8em;" href="#">Remove</a>' +
                             '</li>',
                     classes: {
@@ -267,6 +273,7 @@
                         // added to list item when upload completes
                         // used in css to hide progress spinner
                         success: 'qq-upload-success',
+                        sizeExceeded: 'qq-upload-size-exceeded',
                         fail: 'qq-upload-fail'
                     }
                 }));

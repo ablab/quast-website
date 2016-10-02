@@ -19,7 +19,7 @@
 
 .qq-upload-list {margin:15px 35px; padding:0; list-style:disc;}
 .qq-upload-list li { margin:0; padding:0; line-height:15px; font-size:12px;}
-.qq-upload-file, .qq-upload-spinner, .qq-upload-size, .qq-upload-cancel, .qq-upload-failed-text {
+.qq-upload-file, .qq-upload-spinner, .qq-upload-size, .qq-upload-cancel, .qq-upload-failed-text .qq-upload-size-exceeded-text {
     margin-right: 7px;
 }
 
@@ -28,5 +28,6 @@
 .qq-upload-size,.qq-upload-cancel {font-size:11px;}
 
 .qq-upload-failed-text {display:none;}
-.qq-upload-fail .qq-upload-failed-text {display:inline;}
+.qq-upload-size-exceeded-text {display:none; color:red;}
+.qq-upload-fail .qq-upload-failed-text .qq-upload-size-exceeded-text {display:inline;}
 

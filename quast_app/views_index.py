@@ -144,6 +144,7 @@ def index_view(us, response_dict, request):
     response_dict.update({
         'csrf_token': get_token(request),
         'contigs_fnames': [],
+        'contig_max_size_mb': settings.CONTIG_MAX_SIZE_MB,
         'qs_form': form,
         'email': us.get_email(),
         'session_key': us.session_key,

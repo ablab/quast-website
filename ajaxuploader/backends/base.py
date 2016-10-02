@@ -3,7 +3,7 @@ logger = logging.getLogger('quast')
 mailer = logging.getLogger('quast_mailer')
 
 class AbstractUploadBackend(object):
-    BUFFER_SIZE = 10485760  # 10MB
+    BUFFER_SIZE = 10 * 1024 * 1024  # 10MB
 
     def __init__(self, **kwargs):
         self.__dict__.update(kwargs)
@@ -24,23 +24,27 @@ class AbstractUploadBackend(object):
         """Overriden to performs any actions needed post-upload, and returns
         a dict to be added to the render / json context"""
 
-    def upload(self, uploaded, filename, raw_data):
-        try:
-            if raw_data:
-                mailer.info('uploaded raw data via ajax and is being streamed')
+    def upload(self, uploaded, filename, raw_data, max_size=None):
+        if raw_data:
+            mailer.info('uploaded raw data via ajax and is being streamed')
 
-                # File was uploaded via ajax, and is streaming in.
+            # File was uploaded via ajax, and is streaming in.
+            total_size = 0
+            chunk = uploaded.read(self.BUFFER_SIZE)
+            while len(chunk) > 0:
+                total_size += self.BUFFER_SIZE
+                if max_size is not None and total_size > max_size * 1024 * 1024:
+                    return False
+                self.upload_chunk(chunk)
                 chunk = uploaded.read(self.BUFFER_SIZE)
-                while len(chunk) > 0:
-                    self.upload_chunk(chunk)
-                    chunk = uploaded.read(self.BUFFER_SIZE)
-            else:
-                mailer.info('uploaded via a POST and is here')
+        else:
+            mailer.info('uploaded via a POST and is here')
 
-                # File was uploaded via a POST, and is here.
-                for chunk in uploaded.chunks():
-                    self.upload_chunk(chunk)
-            return True
-        except:
-            # things went badly.
-            return False
+            # File was uploaded via a POST, and is here.
+            total_size = 0
+            for chunk in uploaded.chunks():
+                total_size += self.BUFFER_SIZE
+                if max_size and total_size > max_size:
+                    return False
+                self.upload_chunk(chunk)
+        return True

@@ -4,6 +4,8 @@ import datetime
 import os
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseBadRequest, Http404, HttpResponseRedirect
 from django.shortcuts import render_to_response
+
+from source.settings import CONTIG_MAX_SIZE_MB
 from upload_backend import ContigsUploadBackend, ReferenceUploadBackend, GenesUploadBackend, OperonsUploadBackend
 from django.conf import settings
 from wsgiref.util import FileWrapper
@@ -23,7 +25,7 @@ mailer = logging.getLogger('quast_mailer')
 
 
 from ajaxuploader.views import AjaxFileUploader
-contigs_uploader = AjaxFileUploader(backend=ContigsUploadBackend)
+contigs_uploader = AjaxFileUploader(backend=ContigsUploadBackend, max_size=CONTIG_MAX_SIZE_MB)
 # reference_uploader = AjaxFileUploader(backend=ReferenceUploadBackend)
 # genes_uploader = AjaxFileUploader(backend=GenesUploadBackend)
 # operons_uploader = AjaxFileUploader(backend=OperonsUploadBackend)

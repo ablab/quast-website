@@ -1,20 +1,23 @@
 import json
 from django.core.serializers.json import DjangoJSONEncoder
 
-from django.http import HttpResponse, HttpResponseBadRequest, Http404
+from django.http import HttpResponse, HttpResponseBadRequest, Http404, HttpResponseForbidden
 
 from ajaxuploader.backends.local import LocalUploadBackend
 from quast_app.models import UserSession
 
 import logging
+
+from source.ajaxuploader.backends.base import MaxSizeExceedError
 logger = logging.getLogger('quast')
 
 
 class AjaxFileUploader(object):
-    def __init__(self, backend=None, **kwargs):
+    def __init__(self, backend=None, max_size=None, **kwargs):
         if backend is None:
             backend = LocalUploadBackend
         self.get_backend = lambda: backend(**kwargs)
+        self.max_size = max_size
 
     def upload(self, request):
         logger.info('ajaxuploaer.views.upload')
@@ -120,12 +123,19 @@ class AjaxFileUploader(object):
             else:
                 logger.info('setup for %s: success' % filename)
 
-            success = backend.upload(upload, filename, is_raw)
+            try:
+                size_ok = backend.upload(upload, filename, is_raw, max_size=self.max_size)
+            except:
+                success = False
+                size_ok = None
+            else:
+                success = size_ok
+
             # callback
             extra_context = backend.upload_complete(request, filename)
 
             # let Ajax Upload know whether we saved it or not
-            ret_json = {'success': success, 'filename': filename}
+            ret_json = {'success': success, 'sizeExceeded': not size_ok, 'filename': filename}
             if extra_context is not None:
                 ret_json.update(extra_context)
 

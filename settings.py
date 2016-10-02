@@ -65,6 +65,8 @@ MANAGERS = ADMINS
 
 SEND_BROKEN_LINK_EMAILS = False
 
+CONTIG_MAX_SIZE_MB = 100
+
 
 # BROKER_URL = 'redis://localhost/0'
 # BROKER_URL = 'amqp'
