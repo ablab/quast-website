@@ -8,7 +8,6 @@ from quast_app.models import UserSession
 
 import logging
 
-from source.ajaxuploader.backends.base import MaxSizeExceedError
 logger = logging.getLogger('quast')
 
 
