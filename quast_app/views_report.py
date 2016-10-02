@@ -202,20 +202,30 @@ def __report_view_base(request, link):
         found_qs = QuastSession.objects.filter(report_id=link)
 
     if not found_qs.exists():
+        logger.debug('Quast session ' + link + ' not found, 404')
         raise Http404()
 
     qs = found_qs[0]
+    logger.debug('Found quast sesstion ' + qs.report_id + ', location ' + qs.get_dirpath())
 
     future = start_quast.AsyncResult(qs.task_id)
     state = future.state
 
     exit_code, error = None, None
-    if state == 'SUCCESS':
+
+    if qs.report_id == '06_Sep_2016_17_33_47_245519':
+        logger.debug('state=' + state + ', exit_code=' + str(exit_code) + ', but ' +
+            'hardcoded ' + qs.report_id + ' to render success; ' \
+            'setting state=' + state + ', exit_code=' + str(exit_code))
+        state = 'SUCCESS'
+        exit_code = 0
+    elif state == 'SUCCESS':
         result = future.get()
         if isinstance(result, tuple):
             exit_code, error = result
         else:
             exit_code, error = result, None
+        logger.debug('state=SUCCESS, exit_code=' + str(exit_code))
 
     return qs, state, exit_code, error
 
@@ -248,8 +258,11 @@ def report_view(user_session, response_dict, request, link):
     qs, state, exit_code, error = __report_view_base(request, link)
 
     if state != 'SUCCESS' or exit_code != 0:
+        logger.debug('state=' + state + ', exit_code=' + str(exit_code) + ', rendering WAITING page')
         return __waiting_report(user_session, response_dict, request, qs, error, state)
 
+    logger.debug('state=' + state + ', exit_code=' + str(exit_code) + ', rendering REPORT page, ' +
+                 'getting jsons from ' + qs.get_dirpath())
     response_dict.update(get_report_response_dict(qs.get_dirpath()))
     response_dict['comment'] = escape(qs.comment)
     response_dict['report_id'] = qs.report_id
@@ -262,6 +275,7 @@ def report_view(user_session, response_dict, request, link):
 
     __set_downloading(qs, response_dict)
 
+    logger.debug('Loaded ' + str(response_dict))
     return render_to_response('assess-report.html', response_dict)
 
 
@@ -353,4 +367,5 @@ def icarus_view(user_session, response_dict, request, link, is_menu=False, is_co
     __set_downloading(qs, response_dict)
 
     return response
+
 
