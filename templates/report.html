@@ -26,8 +26,11 @@
 
     <script type="text/javascript" src="/static/dragtable.js"></script>
 
-    <script type="text/javascript">var colors = ["#FF0000", "#0000FF", "#008000", "#A22DCC",  "#FFA500",  "#800000", 
-        "#00CCCC",  "#B2DF8A",  "#333300",  "#CCCC00",  "#000080",  "#008080", "#00FF00"]</script>
+    <script type="text/javascript">
+        var colors = ["#FF0000", "#0000FF", "#008000", "#A22DCC",  "#FFA500",  "#800000",
+        "#00CCCC",  "#B2DF8A",  "#333300",  "#CCCC00",  "#000080",  "#008080", "#00FF00"];
+        var broken_scaffolds_labels = {{ broken_scaffolds }};
+    </script>
 
     {% block before_report_extra_head %}{% endblock %}
 
@@ -91,8 +94,16 @@
                                 "<span class='val'></span>"
                             </span>
 
+                            <span style="display: none;" id="est_reference_length">Estimated reference size:
+                                <span class='val'></span><span class='rhs'>&nbsp;</span>bp
+                            </span>
+
                             <span style="display: none;" id="reference_length">|
                                 <span class='val'></span><span class='rhs'>&nbsp;</span>bp
+                            </span>
+
+                            <span style="display: none;" id="reference_fragments">|
+                                <span class='val'></span><span class='rhs'>&nbsp;</span>fragment<span style="display: none;" class='plural_ending'>s</span>
                             </span>
 
                             <span style="display: none;" id="reference_gc">|
@@ -100,7 +111,7 @@
                             </span>
 
                             <span style="display: none;" id="reference_chr">|
-                                <span class='val'></span> chromosomes
+                                <span class='val'></span> chromosome<span style="display: none;" class='plural_ending'>s</span>
                             </span>
 
                             <span style="display: none;" id="reference_genes"><br>

@@ -52,7 +52,6 @@ def get_report_response_dict(results_dirpath):
     contigs_lengths         = get('contigs_lengths', is_required=True)
     reference_length        = get('ref_length')
     assemblies_lengths      = get('assemblies_lengths')
-    aligned_contigs_lengths = get('aligned_contigs_lengths')
     genes_in_contigs        = get('genes_in_contigs')
     operons_in_contigs      = get('operons_in_contigs')
     gc_info                 = get('gc')
@@ -62,6 +61,7 @@ def get_report_response_dict(results_dirpath):
     coord_nax               = get('coordNAx')
     coord_ngax              = get('coordNGAx')
     icarus                  = get('icarus')
+    broken_scaffolds        = get('broken_scaffolds')
 
     if not settings.QUAST_DIRPATH in sys.path:
         sys.path.insert(1, settings.QUAST_DIRPATH)
@@ -73,7 +73,6 @@ def get_report_response_dict(results_dirpath):
     return {
         'totalReport': total_report,
         'contigsLengths': contigs_lengths,
-        'alignedContigsLengths': aligned_contigs_lengths,
         'assembliesLengths': assemblies_lengths,
         'referenceLength': reference_length,
         'genesInContigs': genes_in_contigs,
@@ -85,11 +84,12 @@ def get_report_response_dict(results_dirpath):
         'coordNAx': coord_nax,
         'coordNGAx': coord_ngax,
         'icarus': icarus,
+        'broken_scaffolds': broken_scaffolds,
 
       # 'qualities': quality_dict,
       # 'mainMetrics': main_metrics,
 
-        'glossary': glossary,
+        'glossary': glossary
     }
 
 
