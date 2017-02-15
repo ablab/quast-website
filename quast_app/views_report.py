@@ -61,7 +61,7 @@ def get_report_response_dict(results_dirpath):
     coord_nax               = get('coordNAx')
     coord_ngax              = get('coordNGAx')
     icarus                  = get('icarus')
-    broken_scaffolds        = get('broken_scaffolds')
+    broken_scaffolds        = get('broken_scaffolds') or []
 
     if not settings.QUAST_DIRPATH in sys.path:
         sys.path.insert(1, settings.QUAST_DIRPATH)
