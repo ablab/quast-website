@@ -60,6 +60,7 @@ def get_report_response_dict(results_dirpath):
     coord_ngx               = get('coordNGx')
     coord_nax               = get('coordNAx')
     coord_ngax              = get('coordNGAx')
+    coord_misassemblies     = get('coordmisassemblies')
     icarus                  = get('icarus')
     broken_scaffolds        = get('broken_scaffolds') or []
 
@@ -83,6 +84,7 @@ def get_report_response_dict(results_dirpath):
         'coordNGx': coord_ngx,
         'coordNAx': coord_nax,
         'coordNGAx': coord_ngax,
+        'coordmisassemblies': coord_misassemblies,
         'icarus': icarus,
         'broken_scaffolds': broken_scaffolds,
 

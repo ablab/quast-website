@@ -19,6 +19,7 @@
     <script type="text/javascript" src="/static/scripts/build_total_report.js"></script>
     <script type="text/javascript" src="/static/scripts/draw_cumulative_plot.js"></script>
     <script type="text/javascript" src="/static/scripts/draw_nx_plot.js"></script>
+    <script type="text/javascript" src="/static/scripts/draw_frc_plot.js"></script>
     <script type="text/javascript" src="/static/scripts/draw_gc_plot.js"></script>
     <script type="text/javascript" src="/static/scripts/draw_genes_plot.js"></script>
     <script type="text/javascript" src="/static/scripts/build_report_common.js"></script>
@@ -213,10 +214,14 @@
                         </td>
                     </tr>
                     <tr id="plots-into-tr">
-                        <td>
+                        <td colspan="3" id="plot-caption" style="display: none;">
                             <p id="contigs_are_ordered">Contigs are ordered from largest (contig #1) to smallest.</p>
-                            <p id="gc_info">Contigs are broken into nonoverlapping 100<span class="rhs">&nbsp;</span>bp windows.
-                                Plot shows numbers of windows for each GC percentage.</p>
+                            <p id="frc_info">FRCurve:
+                                Y is the total number of aligned bases divided by the reference length,
+                                in the contigs having the total number of <span class="frc_plot_name"></span> at most X.</p>
+                            <p id="gc_info">Contigs are broken into nonoverlapping 100 bp windows.
+                                Plot shows number of windows for each GC percentage.</p>
+                            <p id="gc_contigs_info">Plot shows number of contigs with GC percentage in a certain range.</p>
                         </td>
                     </tr>
                 </table>
@@ -278,6 +283,9 @@
                 </div>
                 <div id='coord-ngax-json'>
                     {{ coordNGAx }}
+                </div>
+                <div id='coord-misassemblies-json'>
+                   {{ coordmisassemblies }}
                 </div>
                 <div id='genes-in-contigs-json'>
                     {{ genesInContigs }}
