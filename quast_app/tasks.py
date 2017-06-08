@@ -48,7 +48,7 @@ def start_quast((args, quast_session, user_session)):
             return
 
         if fail:
-            subject = 'Sorry, the assessment failed'
+            subject = 'Failed' if to_me else 'Sorry, the assessment failed'
         else:
             subject = 'OK' if to_me else 'Quality assessment report'
 
@@ -72,7 +72,7 @@ def start_quast((args, quast_session, user_session)):
         email.attach_alternative(html_content, "text/html")
         email.send()
 
-    my_email = 'vladsaveliev@me.com'
+    my_email = settings.SUPPORT_EMAIL
     if quast_session.user:
         user_email = quast_session.user.email
     else:
@@ -116,7 +116,7 @@ def start_quast((args, quast_session, user_session)):
             send_result_mail(user_email, to_me=False, fail=True, error_msg=error_msg)
 
         else:  # OK
-            send_result_mail(my_email, to_me=True, add_to_end=add_to_end)
+            # send_result_mail(my_email, to_me=True, add_to_end=add_to_end)
             send_result_mail(user_email, to_me=False)
 
         return exit_code, error_msg
