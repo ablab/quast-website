@@ -48,16 +48,19 @@ urlpatterns = [
     url(r'^e\.coli-single-cell/report\.html$', quast_app.example_reports_views.e_coli_sc),
     url(r'^e\.coli-single-cell/?$', lambda _: redirect(quast_app.example_reports_views.e_coli_sc)),
     url(r'^e\.coli-single-cell/icarus\.html$', quast_app.example_reports_views.e_coli_sc_icarus),
-    url(r'^reports/(?P<link>.+)/icarus_viewers/alignment_viewer.*\.html$', quast_app.views.icarus_alignment_viewer),
-    url(r'^reports/(?P<link>.+)/icarus_viewers/contig_size_viewer.*\.html$', quast_app.views.icarus_contig_size_viewer),
+    url(r'^e\.coli-single-cell/icarus_viewers/alignment_viewer*\.html$', quast_app.example_reports_views.e_coli_sc_icarus_alignment),
+    url(r'^e\.coli-single-cell/icarus_viewers/contig_size_viewer*\.html$', quast_app.example_reports_views.e_coli_sc_icarus_contig_size),
     url(r'^e\.coli-single-cell/(?P<download_fname>.+)/?$', quast_app.example_reports_views.e_coli_sc_download),
 
     url(r'^e\.coli-isolate/report\.html$', quast_app.example_reports_views.e_coli_mc),
     url(r'^e\.coli-isolate/?$', lambda _: redirect(quast_app.example_reports_views.e_coli_mc)),
     url(r'^e\.coli-isolate/icarus\.html$', quast_app.example_reports_views.e_coli_mc_icarus),
+    url(r'^e\.coli-isolate/icarus_viewers/alignment_viewer*\.html$', quast_app.example_reports_views.e_coli_mc_icarus_alignment),
+    url(r'^e\.coli-isolate/icarus_viewers/contig_size_viewer*\.html$', quast_app.example_reports_views.e_coli_mc_icarus_contig_size),
+    url(r'^e\.coli-isolate/(?P<download_fname>.+)/?$', quast_app.example_reports_views.e_coli_mc_download),
+
     url(r'^reports/(?P<link>.+)/icarus_viewers/alignment_viewer*\.html$', quast_app.views.icarus_alignment_viewer),
     url(r'^reports/(?P<link>.+)/icarus_viewers/contig_size_viewer*\.html$', quast_app.views.icarus_contig_size_viewer),
-    url(r'^e\.coli-isolate/(?P<download_fname>.+)/?$', quast_app.example_reports_views.e_coli_mc_download),
 
     url(r'^paper/$', quast_app.example_reports_views.paper),
     url(r'^paper/e\.coli/(?P<download_fname>.+)?/?$', quast_app.example_reports_views.e_coli),
