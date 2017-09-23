@@ -61,7 +61,7 @@ DEBUG_PASSWORD = '1234'
 SUPPORT_EMAIL = 'quast.support@bioinf.spbau.ru'
 
 ADMINS = (
-    ('Vlad Saveliev', 'vladsaveliev@me.com'),
+    ('Vlad Saveliev', 'vladislav.sav@gmail.com'),
 )
 MANAGERS = ADMINS
 
@@ -260,15 +260,8 @@ LOGGING = {
             'class': 'logging.StreamHandler',
             'formatter': 'verbose',
         },
-        'mail_warning': {
-            'level': 'WARNING',
-            'filters': ['require_debug_false'],
-            'class': 'django.utils.log.AdminEmailHandler',
-            'include_html': True,
-            'formatter': 'verbose',
-        },
-        'mail_info': {
-            'level': 'INFO',
+        'mail_error': {
+            'level': 'ERROR',
             'filters': ['require_debug_false'],
             'class': 'django.utils.log.AdminEmailHandler',
             'include_html': True,
@@ -293,7 +286,7 @@ LOGGING = {
     },
     'loggers': {
         'django.request': {
-            'handlers': ['mail_warning', 'file_warning'],
+            'handlers': ['mail_error', 'file_warning'],
             'level': 'WARNING',
             'propagate': False,
             'formatter': 'verbose',
@@ -303,12 +296,12 @@ LOGGING = {
             'formatter': 'verbose',
         },
         'quast': {
-            'handlers': ['mail_warning', 'file_debug', 'file_warning', 'console_debug'],
+            'handlers': ['mail_error', 'file_debug', 'file_warning', 'console_debug'],
             'level': 'DEBUG',
             'formatter': 'verbose',
         },
         'quast_mailer': {
-            'handlers': ['mail_info', 'file_debug', 'file_warning', 'console_debug'],
+            'handlers': ['file_debug', 'file_warning', 'console_debug'],
             'level': 'DEBUG',
             'formatter': 'verbose',
         },
