@@ -68,6 +68,7 @@ def start_quast((args, quast_session, user_session)):
         arguments['add_to_end'] = add_to_end.replace('\n', '<br>\n')
         html_content = render_to_string('emails/report_ready.html', arguments)
 
+        logger.info('Sending email to ' + str(address))
         email = EmailMultiAlternatives(subject, text_content, settings.SUPPORT_EMAIL, [address])
         email.attach_alternative(html_content, "text/html")
         email.send()
@@ -86,6 +87,7 @@ def start_quast((args, quast_session, user_session)):
         exit_code = os.system(' '.join(args))
 
     except Exception, e:
+        logger.info('Run exit with exception')
         trace_back = traceback.format_exc()
         add_to_end = '\n' + \
                      '\n\nUser email: ' + str(user_email) + \
@@ -98,6 +100,7 @@ def start_quast((args, quast_session, user_session)):
         send_result_mail(user_email, to_me=False, fail=True)
 
     else:
+        logger.info('Run finished with exit code=' + str(exit_code))
         add_to_end = '\n' + \
                      '\n\nUser email: ' + str(user_email) + \
                      '\n\nSession key: ' + user_session.session_key + \
