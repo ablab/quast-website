@@ -58,7 +58,7 @@ class User(models.Model):
         return os.path.join(settings.RESULTS_ROOT_DIRPATH, self.get_dirname())
 
     default_data_set = models.ForeignKey('DataSet', related_name='+', blank=True, null=True)
-    min_contig = models.IntegerField(default=qconfig.min_contig)
+    min_contig = models.IntegerField(default=qconfig.DEFAULT_MIN_CONTIG)
     scaffolds = models.BooleanField(default=False)
     eukaryotic = models.BooleanField(default=False)
     estimated_ref_size = models.IntegerField(null=True, blank=True)
@@ -146,7 +146,7 @@ class UserSession(models.Model):
         self.save()
 
     default_data_set = models.ForeignKey('DataSet', related_name='+', blank=True, null=True)
-    min_contig = models.IntegerField(default=qconfig.min_contig)
+    min_contig = models.IntegerField(default=qconfig.DEFAULT_MIN_CONTIG)
     scaffolds = models.BooleanField(default=False)
     eukaryotic = models.BooleanField(default=False)
     estimated_ref_size = models.IntegerField(null=True, blank=True)
