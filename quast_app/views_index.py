@@ -327,7 +327,7 @@ def assess_with_quast(us, qs, contigs_paths,
                 args.append('--gene-finding')
 
             if qs.scaffolds:
-                args.append('--scaffolds')
+                args.append('--split-scaffolds')
 
             res_dirpath = qs.get_dirpath()
             args.append('-J')
