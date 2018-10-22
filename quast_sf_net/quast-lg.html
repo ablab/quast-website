@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QUAST-LG</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+    <link rel="shortcut icon" href="img/logos/quast_icon.ico">
+
+    <link rel="stylesheet" type="text/css" href="quast.css">
+
+    <script src="jquery-1.8.2.js"></script> 
+    <script> 
+    $(function(){
+      $("#common_header").load("common_header.html"); 
+    });
+    </script>  
+</head>
+
+<body>
+    <div id="common_header"></div>
+
+    <div class="content">
+        <div id='header'>
+            <br>
+            <img alt="QUAST-LG" src="img/logos/quast_lg_logo.svg" style="height: 28px">
+        </div>
+
+        <p>QUAST-LG is an extension of <a href="quast.html">QUAST</a> intended for evaluating large-scale genome assemblies (up to mammalian-size). <br>Significant speedup of the tool was achieved by both use of new fast aligner (<a href="https://github.com/lh3/minimap2">minimap2</a>) and the refactoring of core QUAST alignment analyzing modules. <br>QUAST-LG also introduced new quality metrics and methods which should be useful when evaluating large eukaryotic assemblies:</p>
+        <ul style="padding: 10px; padding-top: 0px">
+                <li>K-mer-based coompleteness and correctness</li>
+                <li>Number of full and partial <a href="https://busco.ezlab.org/">BUSCO</a> genes (especially helpful in the reference-free mode)</li>
+                <li>The concept of upper bound assembly (theoretical limits on the assembly completeness and contiguity for a given genome and set of reads)</li>
+        </ul>
+        
+        <p>QUAST-LG is distributed as a command-line tool&nbsp;<strong>within</strong> QUAST package since version <strong>5.0.0</strong>.</p>           
+        
+        <p>
+            <a href="https://sourceforge.net/projects/quast/files/latest/download" rel="nofollow"><img alt="Download QUAST" src="https://img.shields.io/sourceforge/dm/quast.svg"></a>
+        </p>
+
+        <p>To run QUAST in QUAST-LG mode you should just add <strong>--large</strong> option to your running command.</p>
+
+        <p><strong>Citation:</strong>
+            <div style='margin-top: 5px; padding-right: 30px; padding-left: 30px; padding-top: 5px; padding-bottom: 5px; background-color: #EEE; display: inline-block'>
+                Alla Mikheenko, Andrey Prjibelski, Vladislav Saveliev, Dmitry Antipov, Alexey Gurevich,<br>
+                Versatile genome assembly evaluation with QUAST-LG, <br>
+                <i>Bioinformatics</i> (2018) 34 (13): i142-i150. doi: <a href="https://doi.org/10.1093/bioinformatics/bty266">10.1093/bioinformatics/bty266</a><br>
+                First published online: June 27, 2018
+            </div>
+        </p>
+            
+        <p>
+        We benchmarked QUAST-LG on six eukaryotic datasets (yeast [2], worm [1], fruit fly [1], and human [2]) assembled by the leading genome assembly software. <br>You may find additional information about the datasets, links to raw reads and ready assemblies, and QUAST-LG reports on <a href="http://cab.spbu.ru/software/quast-lg/">the tool page</a> on the CAB website.
+        </p>
+
+        <div style="height: 5px;">&nbsp;</div>
+        <p>Below is the sample plot generated in QUAST-LG run on a human dataset (using <a href="http://circos.ca/">Circos</a> and <a href="icarus.html">Icarus</a> software). <br>Click on it to go to the full report on this dataset.</p>
+
+            <div><a href="http://cab.spbu.ru/files/quast/quast-lg/Human_NP/report.html"><img alt="QUAST-LG hg38 Circos plot" src="img/human_nano_circos.png" style="width: 800px;"></a></div>
+
+        <p><em>Please help us to make QUAST-LG better by sending your comments, bug reports, and suggestions to&nbsp;<a href="mailto:quast.support@cab.spbu.ru">quast.support@cab.spbu.ru</a>.</em></p>
+    </div>
+</body>
+</html>
