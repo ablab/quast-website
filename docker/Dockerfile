@@ -3,9 +3,8 @@ FROM ubuntu:16.04
 # Setup a base system
 RUN apt-get update && \
     apt-get install -y curl wget g++ make libboost-all-dev git \
-        tar gzip bzip2 build-essential \
-        python2.7-dev python-setuptools python-pip python-virtualenv \
-        zlib1g-dev default-jdk perl mysql-server && \
+        tar gzip bzip2 build-essential python2.7-dev python-setuptools
+        python-pip zlib1g-dev default-jdk perl mysql-server && \
     apt-get upgrade -y libstdc++6
 
 ### Install conda
