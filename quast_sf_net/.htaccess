@@ -1,8 +1,7 @@
 Options Indexes FollowSymLinks MultiViews
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^manual.html$ http://quast.bioinf.spbau.ru/manual.html [R=301,L]
-RewriteRule ^manual$ http://quast.bioinf.spbau.ru/manual.html [R=301,L]
-RewriteRule ^wi$ http://quast.bioinf.spbau.ru/ [R=301,L]
-RewriteRule ^web_interface.html$ http://quast.bioinf.spbau.ru/ [R=301,L]
+RewriteRule ^manual.html$ http://quast.sourceforge.net/docs/manual.html [R=301,L]
+RewriteRule ^manual$ http://quast.sourceforge.net/docs/manual.html [R=301,L]
+RewriteRule ^wi$ http://quast.sourceforge.net/web_interface.html [R=301,L]
 RewriteRule ^([^\.]+)$ $1.html [NC,L]

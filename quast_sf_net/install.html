@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QUAST</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+    <link rel="shortcut icon" href="img/logos/quast_icon.ico">
+
+    <link rel="stylesheet" type="text/css" href="quast.css">
+
+    <script src="jquery-1.8.2.js"></script> 
+    <script> 
+    $(function(){
+      $("#common_header").load("common_header.html"); 
+    });
+    </script>  
+</head>
+
+<body>
+    <div id="common_header"></div>
+
+    <div class="content">
+        <div id='header'>
+            <h2>Installation</h2>
+        </div>
+
+        <p> The detailed installation instructions and requirements are listed in <a href="http://quast.sourceforge.net/docs/manual.html#sec1">the manual</a>. However, in most cases, QUAST works fine straight out of the box on any Linux (64-bit and 32-bit with slightly limited functionality) or macOS machine. So, we just provide here the main ways of getting the QUAST package. If you encourage any problems with installation, please check out our <a href="http://quast.sourceforge.net/docs/manual.html">manual</a> and <a href="https://github.com/ablab/quast/issues">GitHub issue tracker</a>. Do not hesitate to write to our <a href="mailto:quast.support@cab.spbu.ru">support email</a> if you cannot solve the issue yourself.
+        </p>
+
+        <p><h2>Getting stable release package</h2></p>
+
+        <p>
+            The current stable release is <a href="https://downloads.sourceforge.net/project/quast/quast-5.0.2.tar.gz">v5.0.2</a>. The package includes everything needed for running <a href="quast.html">QUAST</a>, <a href="metaquast.html">MetaQUAST</a>, <a href="quast-lg.html">QUAST-LG</a>, and <a href="icarus.html">Icarus</a>. After downloading the tar.gz package, just unpack it with <strong>tar -xzf quast-&lt;VERSION&gt;.tar.gz</strong> and start using QUAST on your data or check the installation with <strong>quast.py --test</strong>.
+        </p>
+        
+        <br>
+
+        <p><h2>Installation via package managers</h2></p>
+
+        <p>
+        The fully-functional QUAST toolkit is available in popular package managers, namely <a href="https://pypi.org/project/pip/">pip</a>, <a href="https://github.com/brewsci/homebrew-bio">Brewsci/bio</a>, and <a href="https://bioconda.github.io/">Bioconda</a>. To install it from there, make sure that the corresponding package manager is properly installed and configured on your machine and execute one of the following commands, respectively: </p>
+            <pre class="code" style='margin-top: 5px; background-color: #EEE; display: inline-block; padding-left: 5px; padding-right: 15px;'>
+            pip install quast
+            brew install quast
+            conda install -c bioconda quast</pre>
+
+        <p><h2>Getting the cutting edge version</h2></p>
+        <p>You can enjoy the latest development version of QUAST by clonning our GitHub repository:</p>
+            <pre class="code" style='margin-top: 5px; background-color: #EEE; display: inline-block; padding-left: 5px; padding-right: 15px;'>
+            git clone git@github.com:ablab/quast.git</pre>
+
+        <p>
+        Note that this version may be unstable, please report any bugs to our <a href="https://github.com/ablab/quast/issues">GitHub issue tracker</a> or <a href="mailto:quast.support@cab.spbu.ru">support email</a>. Also note that QUAST GitHub repository is rather large, so the initial clonning may take some time.</p>
+
+        
+        <p><h2>Access to previous releases</h2></p>
+
+        <p>
+            All QUAST releases are available on <a href="https://sourceforge.net/projects/quast/files/">SourceForge</a> and starting from v4.0 on <a href="https://github.com/ablab/quast/releases">GitHub</a>, too.
+        </p>
+
+        <p>
+            <a href="https://sourceforge.net/projects/quast/files/latest/download" rel="nofollow"><img alt="Download QUAST" src="https://img.shields.io/sourceforge/dm/quast.svg"></a> 
+        </p>
+    </div>
+</body>
+</html>
