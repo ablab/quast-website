@@ -2,11 +2,11 @@ import sys
 from os.path import isdir
 import os
 
-ALLOWED_HOSTS = [*]
+ALLOWED_HOSTS = [u'quast.bioinf.spbau.ru', u'new-quast.bioinf.spbau.ru']
 
 SOURCE_DIRPATH              = os.path.abspath(os.path.dirname(__file__))
 HOME_DIRPATH                = os.path.join(SOURCE_DIRPATH, '..')
-VIRTUALENV_PATH             = os.path.join(SOURCE_DIRPATH, 'virtualenv')
+VIRTUALENV_PATH             = os.path.join(HOME_DIRPATH, 'virtualenv')
 
 DATA_DIRPATH                = os.path.join(HOME_DIRPATH, 'data')
 INPUT_ROOT_DIRPATH          = os.path.join(DATA_DIRPATH, 'input')
@@ -36,7 +36,7 @@ EXAMPLE_DIRPATH             = os.path.join(FILES_DIRPATH, 'example')
 IDBA_DIRPATH                = os.path.join(FILES_DIRPATH, 'idba')
 PAPER_DIRPATH               = os.path.join(FILES_DIRPATH, 'paper')
 
-REPORT_LINK_BASE            = '/quast/reports/'
+REPORT_LINK_BASE            = '/reports/'
 
 database = 'sqlite'
 
@@ -48,7 +48,7 @@ if os.environ.get('DEVELOPMENT'):
 
 else:
     DEBUG = False
-    ADDRESS = 'http://cab.cc.spbu.ru/quast/'
+    ADDRESS = 'http://quast.bioinf.spbau.ru/'
     database = 'mysql'
     EMAIL_HOST = 'localhost'
     database = 'mysql'
@@ -58,7 +58,7 @@ REPORTS_SHOW_LIMIT = 8
 
 DEBUG_PASSWORD = '1234'
 
-SUPPORT_EMAIL = 'quast.support@cab.spbu.ru'
+SUPPORT_EMAIL = 'quast.support@bioinf.spbau.ru'
 
 ADMINS = (
     ('Vlad Saveliev', 'vladislav.sav@gmail.com'),

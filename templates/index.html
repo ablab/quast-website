@@ -305,7 +305,7 @@
                                 'and the sending was stopped. You may want to' +
                                 ' try again after reloading the page. If that doesn\'t' +
                                 ' help, please, report us: <a href="mailto:quast.support' +
-                                '@bioinf.spbau.ru">quast.support@bioinf.spbau.ru</a>').show();
+                                '@cab.spbu.ru">quast.support@cab.spbu.ru</a>').show();
                         evaluateButton.prop('disabled', false);
                         evaluateButton.removeClass('disabled');
                     } else {
@@ -474,7 +474,7 @@
                             </p>
                             <p style="margin-top: 30px;"><i>
                                 We will be thankful if you help us make <span class='smallcapitals'>QUAST</span> better by sending your comments, bug reports, and suggestions
-                                to&nbsp;<a href="mailto:quast.support@bioinf.spbau.ru">quast.support@bioinf.spbau.ru</a>.
+                                to&nbsp;<a href="mailto:quast.support@cab.spbu.ru">quast.support@cab.spbu.ru</a>.
                             </i></p>
                         </div>
 
@@ -550,7 +550,7 @@
                             </td>
                         </tr>
                     </table>
-                    <form enctype="multipart/form-data" name='eval_form' id="eval_form" action="/" method="POST">{% csrf_token %}
+                    <form enctype="multipart/form-data" name='eval_form' id="eval_form" action="/quast/" method="POST">{% csrf_token %}
                         <div style="display: none;">
                             {{ qs_form.contigs }}
                         </div>
@@ -761,7 +761,7 @@
                                     {% if quast_sessions %}
                                     <tr class='reports_header_tr'>
                                         <td>
-                                            <span style="font-size: 1.2em;"><a href="/reports/">Reports</a></span>
+                                            <span style="font-size: 1.2em;"><a href="/quast/reports/">Reports</a></span>
                                         </td>
                                         <td>
                                             Assemblies
@@ -842,7 +842,7 @@
                                     {% endfor %}
 {#                                    {% if show_more_link %}#}
 {#                                        <tr><td></td></tr>#}
-{#                                        <tr><td><a href="/reports/">Older reports</a></td></tr>#}
+{#                                        <tr><td><a href="/quast/reports/">Older reports</a></td></tr>#}
 {#                                    {% endif %}#}
 {#                                    <tr>#}
 {#                                        <td>&nbsp;</td>#}

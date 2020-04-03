@@ -109,10 +109,10 @@ class DataSetForm(forms.Form):
                                  help_text='FASTA file with the reference genome sequence.')
 
     genes = fields.FileField(required=False, widget=widgets.FileInput(attrs={'tabindex': '10'}),
-                             help_text='See <a href="http://quast.bioinf.spbau.ru/manual.html#sec2.2">manual</a> for file formats.')
+                             help_text='See <a href="http://cab.cc.spbu.ru/quast/manual.html#sec2.2">manual</a> for file formats.')
 
     operons = fields.FileField(required=False, widget=widgets.FileInput(attrs={'tabindex': '11'}),
-                               help_text='See <a href="http://quast.bioinf.spbau.ru/manual.html#sec2.2">manual</a> for file formats.')
+                               help_text='See <a href="http://cab.cc.spbu.ru/quast/manual.html#sec2.2">manual</a> for file formats.')
 
     caption = fields.CharField(required=False, widget=widgets.TextInput(attrs={'tabindex': '12', 'style': 'width: 302px;'}))
 

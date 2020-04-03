@@ -15,7 +15,7 @@
     <h1>Reports</h1>
     <div class='blocks_reports'>
         {% if not quast_sessions %}
-            Here you will find your <a href="/">quality assessment</a> reports. You can check out <a href='/#example'>an example</a>.
+            Here you will find your <a href="/quast/">quality assessment</a> reports. You can check out <a href='/#example'>an example</a>.
         {% endif %}
 {#        {% for quast_session in quast_sessions %}#}
 {#            <tr class='highlighted_tr'>#}
@@ -48,7 +48,7 @@
             {% if quast_sessions %}
                 <tr class='reports_header_tr'>
                     <td>
-                        <!--<span style="font-size: 1.2em;"><a href="/reports/">Reports</a></span>-->
+                        <!--<span style="font-size: 1.2em;"><a href="/quast/reports/">Reports</a></span>-->
                     </td>
                     <td>
                         Contigs
@@ -129,7 +129,7 @@
             {% endfor %}
             {#                                    {% if show_more_link %}#}
             {#                                        <tr><td></td></tr>#}
-            {#                                        <tr><td><a href="/reports/">Older reports</a></td></tr>#}
+            {#                                        <tr><td><a href="/quast/reports/">Older reports</a></td></tr>#}
             {#                                    {% endif %}#}
             {#                                    <tr>#}
             {#                                        <td>&nbsp;</td>#}
