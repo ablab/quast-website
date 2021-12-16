@@ -2,7 +2,7 @@ import sys
 from os.path import isdir
 import os
 
-ALLOWED_HOSTS = [*]
+ALLOWED_HOSTS = ['*']
 
 SOURCE_DIRPATH              = os.path.abspath(os.path.dirname(__file__))
 HOME_DIRPATH                = os.path.join(SOURCE_DIRPATH, '..')
@@ -50,10 +50,11 @@ else:
     DEBUG = False
     ADDRESS = 'http://cab.cc.spbu.ru/quast/'
     database = 'mysql'
-    EMAIL_HOST = 'localhost'
-    database = 'mysql'
     CONTIG_MAX_SIZE_MB = 100
-
+    EMAIL_USE_TLS = True 
+    EMAIL_HOST = 'localhost'
+    EMAIL_HOST_USER = "quast.support@cab.spbu.ru"
+    EMAIL_PORT = 587
 REPORTS_SHOW_LIMIT = 8
 
 DEBUG_PASSWORD = '1234'
