@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="/static/index.css"/>
     <link rel="stylesheet" href="/static/reports.css"/>
 
+    <link rel="stylesheet" type="text/css" href="/static/cookieconsent.min.css" />
+
     <script src="/static/chosen/chosen.jquery.js" type="text/javascript"></script>
 
     <script>
@@ -901,3 +903,23 @@
     <p>There is an <a href='e.coli-isolate'>assessment of the same assemblers</a> working with isolate <i>E. coli</i> data set as well.</p>
 {% endblock %}
 
+{% block cookies %}
+<script src="/static/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#edeff5",
+      "text": "#838391"
+    },
+    "button": {
+      "background": "#4b81e8"
+    }
+  },
+  "theme": "classic",
+  "content": {
+    "message": "This website uses cookies to make your experience better. By using our site you agree to our use of cookies."
+  }
+});
+</script>
+{% endblock %}
