@@ -137,12 +137,13 @@ ul.errorlist li:last-child:after {
 
 #add-data-set-toggle-link {
     width: 100%;
-    margin: -20px -10px -15px -10px;
-    padding: 10px 10px 0 10px;
     height: 30px;
     cursor: pointer;
 }
 
+#add-data-set-toggle-link input {
+    visibility:hidden;
+}
 .form-layout-table input {
     font-size: 1em;
 }

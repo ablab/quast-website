@@ -110,14 +110,20 @@
                 event.preventDefault();
 
                 var checkBox = $('#id_is_created');
+                var genomeBtn = $('#btn-genome');
+                var genomeId = $('#id_name_selected_chzn');
                 var addDataSet = $('#add-data_set');
 
                 addDataSet.stop().slideToggle('fast', function() {
                     $('#id_name_created').focus();
 
                     if (addDataSet.is(':visible')) {
+                        genomeId.hide();
+                        genomeBtn.html('Select reference from the list');
                         checkBox.prop('checked', true);
                     } else {
+                        genomeId.show();
+                        genomeBtn.html('Use custom reference genome');
                         checkBox.prop('checked', false);
                     }
                 });
@@ -180,6 +186,18 @@
                         var areaText = $('.area-text');
                         areaText.css('display', 'none');
                         allComplete = false;
+                        var number_of_files = 0;
+                        $('.qq-upload-file').each(function(index) {
+                            number_of_files++;
+                        });
+                        if (number_of_files >= 50) {
+                            var uploadButton = $('#upload-button');
+                            $('.qq-upload-max-assemblies-text').show();
+                            uploadButton.prop('disabled', true);
+                            uploadButton.addClass('disabled');
+                            $('.qq-uploader').addClass('disabled');
+                            return false;
+                        }
                     },
                     onProgress: function(id, fileName, loaded, total) {
                         if (total > {{ contig_max_size_mb }} * 1024 * 1024) {
@@ -195,6 +213,17 @@
                         } else if (responseJSON.sizeExceeded) {
                             $('.qq-upload-size-exceeded-text').show();
                             sizeExceeded = true;
+                        }
+                        var number_of_files = 0;
+                        $('.qq-upload-file').each(function(index) {
+                            number_of_files++;
+                        });
+                        if (number_of_files >= 50) {
+                            var uploadButton = $('#upload-button');
+                            $('.qq-upload-max-assemblies-text').show();
+                            uploadButton.prop('disabled', true);
+                            uploadButton.addClass('disabled');                            
+                            $('.qq-uploader').addClass('disabled');
                         }
                     },
                     onAllComplete: function(uploads) {
@@ -220,6 +249,13 @@
                             var areaText = $('.area-text');
                             areaText.css('display', 'block');
                         }
+                        if (number_of_files < 50) {
+                            var uploadButton = $('#upload-button');
+                            $('.qq-upload-max-assemblies-text').hide();
+                            uploadButton.prop('disabled', false);
+                            uploadButton.removeClass('disabled');
+                            $('.qq-uploader').removeClass('disabled');
+                        }
                     },
                     onInitFiles: function(files){
                         var areaText = $('.area-text');
@@ -243,8 +279,9 @@
                     },
                     template:
                             '<div class="qq-uploader">' +
-                                '<span class="upload-button btn">' + parameters[i].btnText + '</span>&nbsp;&nbsp;&nbsp;' +
+                                '<span id="upload-button" class="upload-button btn">' + parameters[i].btnText + '</span>&nbsp;&nbsp;&nbsp;' +
                             '           <span class="upload-comment" style="vertical-align: -2px;">' + parameters[i].btnComment + '<span>' +
+                            '<span class="qq-upload-max-assemblies-text"  style="margin-left: 10px;">Maximum number of assemblies (50) reached</span>' +
                                 '<div>' +
                                     '<div class="' + parameters[i].areaClass + '">' +
                                         '<div class="upload-list-div">' +
@@ -411,123 +448,11 @@
 
 {% block extra_content %}
     <div id="index" style="margin-top: -3px;">
-        <div class="blue-panel">
-        <table class="layout-table">
-            <tr>
-                <td class="layout-table-td layout-table-fst-td" style="vertical-align: top; padding-right: 20px;">
-                    <div style=''>
-{#                        <div class='row-fluid'>#}
-                        <table>
-                            <tr>
-                            <td style="vertical-align: top; width: 50%; padding-right: 30px;">
-                                <div class="" style="padding-right: 10px;">
-                                    <p style="margin-top: 11px; font-weight: bold;"><span class='smallcapitals'>QUAST</span>
-                                        evaluates genome assemblies by computing various metrics, including</p>
-                                    <ul class="list">
-                                        <li><span class='define' key='N50'><span class='smallcapitals'>N</span>50</span>,
-                                            length for which the collection of all contigs of that length or longer covers at least 50% of assembly length,</li>
-                                        <li><span class='define' key='NG50'><span class='smallcapitals'>NG</span>50</span>,
-                                            where length of the reference genome is being covered,</li>
-                                        <li><span class='define' key='NA50'><span class='smallcapitals'>NA</span>50</span>
-                                            and <span class='define' key='NGA50'><span class='smallcapitals'>NGA</span>50</span>,
-                                            where aligned blocks instead of contigs are taken,</li>
-                                        <li>misassemblies, misassembled and unaligned contigs or contigs bases,</li></li>
-                                        <li><span class='define' key='Genes covered'>genes</span> and <span class='define' key='Operons covered'>operons</span> covered.</li>
-                                    </ul>
-                                </div>
-                            </td>
-                            <td style="vertical-align: top;">
-                                <div class="" style="padding-right: 10px;">
-                                    <p style="font-weight: bold;">Builds convenient plots for different metrics</p>
-                                    <ul class="list">
-                                        <li>cumulative contigs length,</li>
-                                        <li>all kinds of N-metrics,</li>
-                                        <li>genes and operons covered,</li>
-                                        <li><span class='smallcapitals'>GC</span> content.</li>
-                                    </ul>
-                                    <a class="dotted-link js" id="report_example_anchor" href="#reportexample">Report example</a>
-                                    <br>
-                                    <br>
-                                    <div class="space_2px"></div>
-                                    <p>
-                                        More details are on <a href='http://cab.spbu.ru/software/quast'>the project page</a>
-                                        and in <a href='http://dx.doi.org/10.1093/bioinformatics/btt086 '>Gurevich et al (2013), Bioinformatics</a>.
-                                        Supplementary <a href='paper'>material</a> for the paper.
-                                    </p>
-                                </div>
-                            <div style="clear: both;"></div>
-                            </td>
-                            </tr>
-                        </table>
-{#                        </div>#}
-                    </div>
-                </td>
-
-                <td class="layout-table-td layout-table-snd-td" style="vertical-align: top;">
-                    <div class="row-fluid">
-                        <div class="span12" style='max-width: 300px; margin-top: 0px; margin-bottom: 30px;'>
-                {#        <div style="float: left; max-width: 300px; margin-top: -10px">#}
-                            <p>
-                                <a href="https://sourceforge.net/projects/quast/files/" class='btn btn-primary btn-large' style='text-align: left; margin-left: 1px;'>Download console tool</a>
-                            </p>
-                            <p>
-                                For installation details and usage instructions,
-                                please read <a href="manual.html">the manual</a>.<br>
-                            </p>
-                            <p style="margin-top: 30px;"><i>
-                                We will be thankful if you help us make <span class='smallcapitals'>QUAST</span> better by sending your comments, bug reports, and suggestions
-                                to&nbsp;<a href="mailto:quast.support@cab.spbu.ru">quast.support@cab.spbu.ru</a>.
-                            </i></p>
-                        </div>
-
-{#                        <div class='span6' style="max-width: 300px; padding-left: 40px; padding-right: 30px;">#}
-{#                            <p><b>7 Oct 2012</b><br> <span style="margin-left: -0.4em;">”</span>QUAST: Quality Assessment for Genome Assemblies” paper was submitted to <a href="http://bioinformatics.oxfordjournals.org/">Bioinformatics</a>.</p>#}
-{#                        </div>#}
-                    </div>
-                </td>
-            </tr>
-        </table>
-        </div>
-        <div class="yellow_block">
-        <table class="layout-table">
-            <tr class="yellow_tr">
-                <td class="layout-table-td layout-table-fst-td" >
-                    <div style="max-width: 500px; margin-left: 148px;">
-                    <b style="font-size: 2em;">QUAST 2.1 released</b><br>
-                    <p>
-                        Improved indels computation: now counting consecutive single nucleotide
-                        indels as a single indel.
-                        <p>
-                        Reporting short (≤ 5<span class="rhs">&nbsp;</span>bp) and
-                        long (> 5<span class="rhs">&nbsp;</span>bp) indels; total length of all indels is reported as well.
-                    </div>
-                </td>
-                <td class="layout-table-td layout-table-snd-td" >
-                    <div style="max-width: 500px; margin-left: 73px; margin-top: 1em;">
-                    <b>We fixed some important bugs:</b><br>
-                        <div class="space_10px"></div>
-                    — in the code for finding misassemblies,<br>
-                        <div class="space_10px"></div>
-                    — in the SNPs detection algorithm,<br>
-                        <div class="space_10px"></div>
-                    — in processing circular chromosomes procedure (affects genome fraction, # genes, # operons)
-                    </div>
-                </td>
-            </tr>
-        </table>
-        </div>
-    </div>
-
-    <div style="clear: both;"></div>
 
     <div style="height: 30px;">
     </div>
 
     <div id="quality_assessment">
-{#        <p>#}
-{#            <a style="font-size: 2em;" href="evaluate">Quality Assessment</a>#}
-{#        </p>#}
-
         <noscript>
             <div><br>
                 Unfortunately, <span style="font-weight: bold">JavaScript</span> in your browser <span style="font-weight: bold">is disabled</span> or is not supported.</br>
@@ -538,7 +463,6 @@
         <table class="layout-table">
             <tr>
             <td class="layout-table-td layout-table-fst-td">
-                <h2 style='font-size: 1.8em; font-weight: normal;'>Quality Assessment</h2>
 
                 <div id='form-wrapper'>
                     <table class='form-layout-table'>
@@ -576,7 +500,7 @@
                         </label>
 
                         <label for="id_find_genes"> {% comment %}@declare id="id_find_genes"{% endcomment %}
-                            {{ qs_form.find_genes }} {{ qs_form.find_genes.label }}
+                            {{ qs_form.find_genes }} {{ qs_form.find_genes.label|safe }}
                          {# <div class="space_1px"></div> #}
                          {# <div class="comment_to_field" style="margin-left: 20px;">{{ qs_form.find_genes.help_text }}</div><br>#}
                         </label>
@@ -622,13 +546,13 @@
                                 <td class='form-layout-td' style="padding-top: 9px;"></td>
 
                                 <td class='form-layout-td'>
-                                    <div id="add-data-set-toggle-link" style="margin-left: -15px; padding-left: 15px;">
+                                    <div id="add-data-set-toggle-link"  style="margin-left: -15px; padding-left: -105px;">
                                         <div style="margin-left: 0px;">
                                             <label for="id_is_created">
                                                 {{ qs_form.is_created }}
-{#                                                <input type="checkbox" tabindex="7" class='dotted-link' name="is_created" id="id_is_created"/>#}
+                                                {#<input type="button" tabindex="7" class='btn btn-primary' name="is_created" id="id_is_created" value="Another genome"/>#}
     {#                                                {{ qs_form.created_or_selected }}#}
-                                                <a class='dotted-link'>Another genome</a>
+                                                <a class="btn btn-primary" id="btn-genome">Use custom reference genome</a>
                                             </label>
                                         </div>
                                     </div>
@@ -892,15 +816,7 @@
         <br><br><br>
 
          {# anchor #}
-        <span id="reportexample"></span>
-        <h2><a class='dotted-link js' id='report_example_toggle' href="#reportexample" tabindex="14">Report Example</a></h2>
-        <p class='report_outer_object' style='font-weight: bold;'>E. coli single-cell assemblies</p>
     </div>
-{% endblock %}
-
-{% block after_content %}
-    <p>You can also see a <a href='e.coli-single-cell'>comparison of more assemblers</a> on this data set (MDA single-cell <i>E. coli</i>).</p>
-    <p>There is an <a href='e.coli-isolate'>assessment of the same assemblers</a> working with isolate <i>E. coli</i> data set as well.</p>
 {% endblock %}
 
 {% block cookies %}
