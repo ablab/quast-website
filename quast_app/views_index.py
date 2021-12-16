@@ -324,7 +324,7 @@ def assess_with_quast(us, qs, contigs_paths,
                 args.append('--eukaryote')
 
             if qs.find_genes:
-                args.append('--gene-finding')
+                args.append('--glimmer')
 
             if qs.scaffolds:
                 args.append('--split-scaffolds')

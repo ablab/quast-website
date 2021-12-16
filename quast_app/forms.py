@@ -51,13 +51,14 @@ class DataSetForm(forms.Form):
 
     find_genes = fields.BooleanField(
         required=False,
+        label='Find genes <span style="color: #888;">(GlimmerHMM)</span>',
         widget=widgets.CheckboxInput(attrs={'tabindex': '4'}),
         help_text='Takes time')
 
     domain = fields.ChoiceField(
         required=True,
-        choices=[(False, 'Prokaryotic <span style="color: #888;">(<span class="find_genes_notion">find genes with GeneMarkS, </span>process circular chromosomes)</span>'),
-                 (True, 'Eukaryotic<span class="find_genes_notion"> <span style="color: #888;">(find genes with GeneMark-ES)</span></span>')],
+        choices=[(False, 'Prokaryotic <span style="color: #888;">(process circular chromosomes)</span>'),
+                 (True, 'Eukaryotic')],
         widget=widgets.RadioSelect(attrs={'tabindex': '5'}))
 
     estimated_ref_size = fields.IntegerField(
