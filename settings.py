@@ -50,7 +50,7 @@ else:
     DEBUG = False
     ADDRESS = 'http://cab.cc.spbu.ru/quast/'
     database = 'mysql'
-    CONTIG_MAX_SIZE_MB = 100
+    CONTIG_MAX_SIZE_MB = 250
     EMAIL_USE_TLS = True 
     EMAIL_HOST = 'localhost'
     EMAIL_HOST_USER = "quast.support@cab.spbu.ru"
