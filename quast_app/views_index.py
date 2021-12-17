@@ -68,6 +68,7 @@ def index_view(us, response_dict, request):
             qs.eukaryotic = form.cleaned_data['domain'] == 'True'
             qs.estimated_ref_size = form.cleaned_data['estimated_ref_size']
             qs.find_genes = form.cleaned_data['find_genes']
+            qs.use_test_data = form.cleaned_data['use_test_data']
             qs.data_set = get_data_set(request, form, us, default_name=qs.report_id)
 
             us.set_min_contig(qs.min_contig)
@@ -85,9 +86,9 @@ def index_view(us, response_dict, request):
 
             logger.info('quast_app.views.index.POST: '
                         'caption = %s, link = %s, data set = %s, '
-                        'min_contig = %d, scaffolds = %r, eukaryotic = %r, find_genes = %r',
+                        'min_contig = %d, scaffolds = %r, eukaryotic = %r, find_genes = %r, use_test_data = %r',
                         qs.caption, qs.get_report_html_link(), qs.data_set.name if qs.data_set else '<unknown>',
-                        qs.min_contig, qs.scaffolds, qs.eukaryotic, qs.find_genes)
+                        qs.min_contig, qs.scaffolds, qs.eukaryotic, qs.find_genes, qs.use_test_data)
 
             # Starting Quast
             start_quast_session(us, qs)
@@ -117,6 +118,7 @@ def index_view(us, response_dict, request):
             'domain': qs.eukaryotic,
             'estimated_ref_size': qs.estimated_ref_size,
             'find_genes': qs.find_genes,
+            'use_test_data': qs.use_test_data
         })
 
         response_dict['report_id'] = qs.report_id
@@ -238,9 +240,6 @@ def start_quast_session(user_session, qs):
 
     # contigs_files = filter(lambda cf: cf.fname in contigs_fnames, all_contigs_files)
 
-    contigs_files = qs.contigs_files.all()
-    logger.info('quast_app.views.index.POST: data set name = %s', str(contigs_files))
-
     #    for c_fn in contigs_files:
     #        QuastSession_ContigsFile.objects.create(quast_session=quast_session, contigs_file=c_fn)
 
@@ -262,8 +261,16 @@ def start_quast_session(user_session, qs):
     #    for contigs_file in contigs_files:
     #        contigs_file.user_session
 
-    contigs_dirpath = qs.get_contigs_dirpath()
-    contigs_fpaths = [os.path.join(contigs_dirpath, c_f.fname) for c_f in contigs_files]
+    if qs.use_test_data:
+        contigs_dirpath = os.path.join(settings.DATA_SETS_ROOT_DIRPATH, 'test_data')
+        logger.info('quast_app.views.index.POST: data set path = %s', str(contigs_dirpath))
+        contigs_fpaths = [os.path.join(contigs_dirpath, c_f) for c_f in os.listdir(contigs_dirpath)]
+        logger.info('quast_app.views.index.POST: data set path = %s', str(" ".join(contigs_fpaths)))
+    else:
+        contigs_files = qs.contigs_files.all()
+        logger.info('quast_app.views.index.POST: data set name = %s', str(contigs_files))
+        contigs_dirpath = qs.get_contigs_dirpath()
+        contigs_fpaths = [os.path.join(contigs_dirpath, c_f.fname) for c_f in contigs_files]
 
     # Preparing data set files
     data_set = qs.data_set

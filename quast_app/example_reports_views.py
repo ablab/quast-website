@@ -31,6 +31,21 @@ def b_impatiens(request, download_fname):
     return common_view('paper/', 'B. impatiens', 'b.impatiens', download_fname)
 
 
+def sample_data(request):
+    return report_view('', 'E. coli K-12', 'sample_data')
+
+def sample_data_download(request, download_fname):
+    return download_report_view(download_fname)
+
+def sample_data_icarus(request):
+    return example_icarus_view('', 'E. coli K-12', 'sample_data', is_menu=True)
+
+def sample_data_icarus_alignment(request):
+    return example_icarus_view('', 'E. coli K-12', 'sample_data')
+
+def sample_data_icarus_contig_size(request):
+    return example_icarus_view('', 'E. coli K-12', 'sample_data', is_contig_size_plot=True)
+
 def e_coli_sc(request):
     return report_view('', 'E. coli, single cell', 'e.coli-single-cell')
 

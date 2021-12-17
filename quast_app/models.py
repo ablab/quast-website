@@ -63,6 +63,7 @@ class User(models.Model):
     eukaryotic = models.BooleanField(default=False)
     estimated_ref_size = models.IntegerField(null=True, blank=True)
     find_genes = models.BooleanField(default=False)
+    use_test_data = models.BooleanField(default=False)
 
     def __unicode__(self):
         return self.email
@@ -151,6 +152,7 @@ class UserSession(models.Model):
     eukaryotic = models.BooleanField(default=False)
     estimated_ref_size = models.IntegerField(null=True, blank=True)
     find_genes = models.BooleanField(default=False)
+    use_test_data = models.BooleanField(default=False)
 
     def set_default_data_set(self, data_set):
         (self.user or self).default_data_set = data_set
@@ -188,6 +190,11 @@ class UserSession(models.Model):
     def get_find_genes(self):
         return (self.user or self).find_genes
 
+    def set_use_test_data(self, use_test_data):
+        (self.user or self).use_test_data = use_test_data
+
+    def get_use_test_data(self):
+        return (self.user or self).use_test_data
     # def add_quast_session(self, quast_session):
     #     if self.user:
     #         quast_session.user = self.user
@@ -321,6 +328,7 @@ class QuastSession(models.Model):
     eukaryotic = models.BooleanField(default=False)
     estimated_ref_size = models.IntegerField(blank=True, null=True)
     find_genes = models.BooleanField(default=False)
+    use_test_data = models.BooleanField(default=False)
 
     caption = models.CharField(max_length=1024, blank=True, null=True)
     comment = models.TextField(max_length=200000, blank=True, null=True)
@@ -350,7 +358,8 @@ class QuastSession(models.Model):
             scaffolds=us.get_scaffolds(),
             eukaryotic=us.get_eukaryotic(),
             estimated_ref_size=us.get_estimated_ref_size(),
-            find_genes=us.get_find_genes())
+            find_genes=us.get_find_genes(),
+            use_test_data=us.get_use_test_data())
 
         result_dirpath = qs.get_dirpath()
         if os.path.exists(result_dirpath):

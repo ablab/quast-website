@@ -62,6 +62,11 @@ def get_reports_response_dict(user_session, after_evaluation=False, limit=None):
                 if exit_code != 0:
                     state_repr = 'FAILURE'
 
+            contigs = [cf.fname for cf in qs.contigs_files.all()]
+            if qs.use_test_data:
+                contigs_dirpath = os.path.join(settings.DATA_SETS_ROOT_DIRPATH, 'test_data')
+                contigs = [c_f for c_f in os.listdir(contigs_dirpath)]
+            logger.info(contigs)
             quast_session_info = {
                 'date': qs.date,
                 'report_link': qs.get_report_html_link(),
@@ -71,7 +76,7 @@ def get_reports_response_dict(user_session, after_evaluation=False, limit=None):
                 'data_set_name': qs.data_set.name if qs.data_set and qs.data_set.remember else '',
                 'state': state_repr,
                 'report_id': qs.report_id,
-                'contigs': [cf.fname for cf in qs.contigs_files.all()],
+                'contigs': contigs,
             }
             quast_sessions_dict.append(quast_session_info)
 

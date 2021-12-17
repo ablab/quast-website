@@ -45,6 +45,15 @@ urlpatterns = [
     url(r'^quast/metaquast/hmp\.tar\.gz$', RedirectView.as_view(url='/static/metaquast/hmp.tar.gz')),
     url(r'^quast/metaquast/metahit\.tar\.gz$', RedirectView.as_view(url='/static/metaquast/metahit.tar.gz')),
 
+    url(r'^quast/sample_data/report\.html$', quast_app.example_reports_views.sample_data),
+    url(r'^quast/sample_data/?$', lambda _: redirect(quast_app.example_reports_views.sample_data)),
+    url(r'^quast/sample_data/icarus\.html$', quast_app.example_reports_views.sample_data_icarus),
+    url(r'^quast/sample_data/icarus_viewers/alignment_viewer*\.html$',
+        quast_app.example_reports_views.sample_data_icarus_alignment),
+    url(r'^quast/sample_data/icarus_viewers/contig_size_viewer*\.html$',
+        quast_app.example_reports_views.sample_data_icarus_contig_size),
+    url(r'^quast/sample_data/(?P<download_fname>.+)/?$', quast_app.example_reports_views.sample_data_download),
+
     url(r'^quast/e\.coli-single-cell/report\.html$', quast_app.example_reports_views.e_coli_sc),
     url(r'^quast/e\.coli-single-cell/?$', lambda _: redirect(quast_app.example_reports_views.e_coli_sc)),
     url(r'^quast/e\.coli-single-cell/icarus\.html$', quast_app.example_reports_views.e_coli_sc_icarus),

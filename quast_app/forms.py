@@ -55,6 +55,11 @@ class DataSetForm(forms.Form):
         widget=widgets.CheckboxInput(attrs={'tabindex': '4'}),
         help_text='Takes time')
 
+    use_test_data = fields.BooleanField(
+        required=False,
+        label='Load sample data <span style="color: #888;">(E.coli assembles)</span>',
+        widget=widgets.CheckboxInput())
+
     domain = fields.ChoiceField(
         required=True,
         choices=[(False, 'Prokaryotic <span style="color: #888;">(process circular chromosomes)</span>'),
