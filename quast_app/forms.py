@@ -109,7 +109,7 @@ class DataSetForm(forms.Form):
 
     name_created = fields.CharField(required=False,
                                     widget=widgets.TextInput(attrs={'tabindex': '8'}),
-                                    help_text='If you fill&nbsp;in this field, we will remember the data set using this name.')
+                                    help_text='The genome will be added to the references list above with this name if specified. The uploaded genomes are visible only for you.')
 
     reference = fields.FileField(required=False, widget=widgets.FileInput(attrs={'tabindex': '9'}),
                                  help_text='FASTA file with the reference genome sequence.')

@@ -119,11 +119,11 @@
                     $('#id_name_created').focus();
 
                     if (addDataSet.is(':visible')) {
-                        genomeId.hide();
+                        genomeId.css('visibility', 'hidden');
                         genomeBtn.html('Select reference from the list');
                         checkBox.prop('checked', true);
                     } else {
-                        genomeId.show();
+                        genomeId.css('visibility', 'visible');
                         genomeBtn.html('Use custom reference genome');
                         checkBox.prop('checked', false);
                     }
@@ -722,8 +722,6 @@
                                 and&nbsp;contact you if any problems arise.<br>
                                 <div class="bottom-line" style="width: 100%; margin-bottom: 5px; margin-left: 0px;"></div>
                                 If you leave the email address blank, your reports will be visible for your browsing session. Bookmark them to prevent accidental losses.
-                                <br><br>
-                                We keep results on the webserver for several months and delete them afterward. Please <b>download essential reports before they expire.</b><br>
                                 <br>
                             </div>
                         </form>
@@ -843,6 +841,7 @@
                         {% if quast_sessions %}
                         <tr><td>
                         <span style='margin-left: -1px;'>The reports are visible only for you.</span>
+                        <span style='margin-left: -1px;'>We keep results on the webserver<br>for several months and delete them afterward.<br>Please <b>download essential reports before they expire.</b></span>
                         </td></tr>
                         {% endif %}
                     </table>
