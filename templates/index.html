@@ -93,43 +93,6 @@
             });
         });
 
-        $(function() {
-            var assemblies=['IDBA-UD.fasta','SOAPdenovo.fasta', 'SPAdes.fasta', 'Velvet.fasta'];
-            var text = '<ul class="upload-list">';
-            for (var i = 0; i < assemblies.length; i++) {
-                text= text+'<li class="qq-upload-success"><span class="qq-upload-file">'+assemblies[i] + '</span></li>';
-            }
-            text=text+"</ul>";
-            $('#contigs-test').html(text);
-
-            var evaluateButton = $('#evaluate-button');
-            var canEvaluate = !evaluateButton.prop('disabled');
-            $('#id_use_test_data').change(function(event) {
-                //event.preventDefault();
-                var uploadBox = $('#contigs-uploader');
-                var testBox = $('#contigs-test');
-                //var checkBox = $('#id_use_test_data');
-$('#id_name_selected_chzn').find("span").val('E. coli');
-                if (this.checked) {
-                    canEvaluate = !evaluateButton.prop('disabled');
-                    uploadBox.hide();
-                    testBox.show();
-console.log(1)
-                    if (!canEvaluate) {
-                        evaluateButton.prop('disabled', false);
-                        evaluateButton.removeClass('disabled');
-                    }
-                } else {
-                    uploadBox.show();
-                    testBox.hide();
-
-                    if (!canEvaluate) {
-                        evaluateButton.prop('disabled', true);
-                        evaluateButton.addClass('disabled');
-                    }
-                }
-            });
-        });
 
         $(function() {
             $("#add-data-set-toggle-link").mouseenter(function() {
@@ -320,8 +283,9 @@ console.log(1)
                                 '<span id="upload-button" class="upload-button btn">' + parameters[i].btnText + '</span>&nbsp;&nbsp;&nbsp;' +
                             '           <span class="upload-comment" style="vertical-align: -2px;">' + parameters[i].btnComment + '<span>' +
                             '<span class="qq-upload-max-assemblies-text"  style="margin-left: 10px;">Maximum number of assemblies (50) reached</span>' +
-                                '<div>' +
-                                    '<div class="' + parameters[i].areaClass + '">' +
+                                '<div>' + '<span style="color: #888;">Files should be in the FASTA format (.fasta, .fna, or .fa);<br> could be compressed with gzip (.gz)</span>' +
+                                    '<div id="contigs-test" class="upload-drop-area"></div>' +
+                                    '<div id="drop-area" class="' + parameters[i].areaClass + '">' +
                                         '<div class="upload-list-div">' +
                                             '<ul class="upload-list"></ul>' +
                                         '</div>' +
@@ -365,6 +329,48 @@ console.log(1)
         }
 
         $(initUploaders);
+
+        $(function() {
+            var evaluateButton = $('#evaluate-button');
+            var canEvaluate = !evaluateButton.prop('disabled');
+            var uploadBox = $('#drop-area');
+            var uploadBtn = $('#upload-button');
+            var testBox = $('#contigs-test');
+
+            var assemblies=['IDBA-UD.fasta','SOAPdenovo.fasta', 'SPAdes.fasta', 'Velvet.fasta'];
+            var testAssemblies = '<ul class="upload-list">';
+            for (var i = 0; i < assemblies.length; i++) {
+                testAssemblies = testAssemblies+'<li class="qq-upload-success"><span class="qq-upload-file">'+assemblies[i] + '</span></li>';
+            }
+            testAssemblies = testAssemblies+"</ul>";
+            testBox.html(testAssemblies);
+            testBox.hide();
+
+            $('#id_use_test_data').change(function(event) {
+                // $('#id_name_selected_chzn').find("span").val('E. coli');
+                if (this.checked) {
+                    canEvaluate = !evaluateButton.prop('disabled');
+                    uploadBox.hide();
+                    testBox.show();
+                    uploadBtn.prop('disabled', true);
+                    uploadBtn.addClass('disabled');
+                    if (!canEvaluate) {
+                        evaluateButton.prop('disabled', false);
+                        evaluateButton.removeClass('disabled');
+                    }
+                } else {
+                    uploadBox.show();
+                    testBox.hide();
+                    uploadBtn.prop('disabled', false);
+                    uploadBtn.removeClass('disabled');
+
+                    if (!canEvaluate) {
+                        evaluateButton.prop('disabled', true);
+                        evaluateButton.addClass('disabled');
+                    }
+                }
+            });
+        });
 
         function submitDataSetForm(dataSetForm) {
             document.eval_form.elements['report_id'].value = '{{ report_id }}';
@@ -512,8 +518,7 @@ console.log(1)
                             </td>
 
                             <td class='form-layout-td'>
-                                <div id="contigs-uploader" class="uploader-div" style="margin-bottom: 10px; height: 175px;"></div><div style="clear: both"></div>
-                                <div id="contigs-test" class="upload-drop-area"  style="margin-bottom: 10px; height: 175px; display: none"></div>
+                                <div id="contigs-uploader" class="uploader-div" style="margin-bottom: 10px; min-height: 195px;height: 195px; min-width:324px;"></div><div style="clear: both"></div>
                             </td>
 
                             <td>
@@ -718,7 +723,7 @@ console.log(1)
                                 <div class="bottom-line" style="width: 100%; margin-bottom: 5px; margin-left: 0px;"></div>
                                 If you leave the email address blank, your reports will be visible for your browsing session. Bookmark them to prevent accidental losses.
                                 <br><br>
-                                Usually, we keep results on the webserver for several months and delete the oldest reports when we are short in space. We encourage you to download essential reports before they expire.<br>
+                                We keep results on the webserver for several months and delete them afterward. Please <b>download essential reports before they expire.</b><br>
                                 <br>
                             </div>
                         </form>
