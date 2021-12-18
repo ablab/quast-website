@@ -508,9 +508,9 @@
         <table class="layout-table">
             <tr>
             <td class="layout-table-td layout-table-fst-td">
+                <div id='form-wrapper'>
                     <form enctype="multipart/form-data" name='eval_form' id="eval_form" action="/quast/" method="POST">{% csrf_token %}
 
-                <div id='form-wrapper'>
                     <table class='form-layout-table'>
                         <tr>
                             <td class='form-layout-td' style="padding-top: 3px;">
@@ -528,7 +528,8 @@
                                  {# <div class="comment_to_field" style="margin-left: 20px;">{{ qs_form.find_genes.help_text }}</div><br>#}
                                 </label>
                                 <p><a href="http://cab.cc.spbu.ru/quast/e.coli-isolate/test_dataset.zip">Download sample data</a></p>
-                                <p><a href="sample_data">View sample report</a></p>
+                                <p><a href="sample_data_no_ref">View sample report without reference</a></p>
+                                <p><a href="sample_data">View sample report with E. coli reference</a></p>
                             </td>
                         </tr>
                     </table>
@@ -871,6 +872,7 @@
         <br><br><br>
 
          {# anchor #}
+        </div>
     </div>
 {% endblock %}
 
