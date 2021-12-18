@@ -23,7 +23,7 @@
 
 More details are on the [project page](http://cab.spbu.ru/software/quast) and in [Gurevich et al., Bioinformatics, 2013](http://dx.doi.org/10.1093/bioinformatics/btt086).  
 You may also want to check out the [Help](help.md) page with a step-by-step tutorial on using this website and interpreting its output.  
-Thorough metric descriptions are available in the [online manual](http://cab.cc.spbu.ru/quast/manual.html#sec3.1).  
+Thorough metric descriptions are available in the [online manual](http://cab.cc.spbu.ru/quast/manual.html#sec3.1). A nice illustrated explanation of N50 and similar metrics by Elin Videvall (with assistance from the QUAST team) is [here](https://www.molecularecologist.com/2017/03/29/whats-n50/).  
 Finally, we invite you to read all QUAST publications listed [below](#citations) to understand the algorithms behind the tool and its applicability to various domains.
 
 Don't hesitate to [contact us](contact.md) if you still have any questions!
