@@ -30,6 +30,11 @@ contigs_uploader = AjaxFileUploader(backend=ContigsUploadBackend, max_size=setti
 # operons_uploader = AjaxFileUploader(backend=OperonsUploadBackend)
 
 
+def about(request):
+    with open(settings.ABOUT_FPATH) as f:
+        return HttpResponse(f.read())
+
+
 def manual(request):
     with open(settings.MANUAL_FPATH) as f:
         return HttpResponse(f.read())
