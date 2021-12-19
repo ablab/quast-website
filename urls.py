@@ -36,7 +36,8 @@ urlpatterns = [
     url(r'^quast/benchmarking/?$', quast_app.views.benchmarking),
     url(r'^quast/example/?$', quast_app.views.example),
     url(r'^quast/ecoli/?$', quast_app.views.idba),
-    url(r'^quast/about.*$', quast_app.views.about),
+
+    url(r'^quast/about.*', TemplateView.as_view(template_name='about.html')),
 
     url(r'^quast/quast3/demo\.html$', RedirectView.as_view(url='/static/quast3/demo.html')),
     url(r'^quast/metaquast/cami/summary/report\.html$', RedirectView.as_view(url='/static/metaquast/cami/summary/report.html')),
