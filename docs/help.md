@@ -8,38 +8,43 @@ If you didn't find answers here or there, [ask us](contact.md)!
 
 ### Submitting your data
 
-1. QUAST expects assemblies in the form of `.fasta/.fa` files, optionally compressed with gzip. You can upload your files via a file selection dialogue using "Select files" button, or just drag and drop them into the "drop files here" field. 
+1. QUAST expects assemblies in the [FASTA format](https://en.wikipedia.org/wiki/FASTA_format) (typically `.fasta/.fa` files), optionally compressed with gzip. You can upload your files via a file selection dialogue using the "Select files" button, or drag and drop them into the "drop files here" field. 
 
-![Main view](img/quast_main_view.png)
+     ![Main view](img/quast_main_view.png)
 
-2. You can parametrize your QUAST job, e.g.: whether your sequences are scaffolds, whether you want to enable gene detection, and whether the genome is circular.
+2. You can parametrize your QUAST job, e.g., whether your sequences are scaffolds, whether you want to enable gene detection, and whether the genome is circular (typical for bacteria).
 
-3. QUAST can work without a reference genome. However, if a model genome for an organism is available, QUAST would be able to report many more interesting results. You can upload a reference genome though the "Genome" selection menu.  A set of popular genomes are already pre-uploaded.
+3. QUAST can work without a reference genome. However, if a model genome for an organism is available, QUAST would report many more exciting results. You can upload a reference genome through the "Genome" selection menu. A set of popular genomes are already pre-uploaded.
 
-4. Press "Evaluate" to queue a QUAST job. Normally it will be run immediately, however in the periods of high load it might take longer for a job to start. Before submitting, you can title your job using the "Caption" text field, otherwise a current timestamp would be used as a default title.
+4. Press "Evaluate" to queue a QUAST job. Normally, it will be run immediately; however, it might take longer for a job to start in periods of high load. Before submitting, you can title your job using the "Caption" text field; otherwise, a current timestamp would be used as a default title.
 
-5. Your submitted jobs will appear on the right side of the main page. Clicking on a title will send you to the job page, which will have a QUAST report once it's completed. For heavy jobs, you can your add your email address, and you will be notified when your jobs are completed.
+5. Your submitted jobs will appear on the right side of the main page. Clicking on a title will send you to the job page, which will have a QUAST report once it's completed. You can add your email address for heavy jobs, and you will be notified when the jobs are completed.
 
 ### Interpreting the output
 
-1. If a reference genome was provided, its basic characteristics will shown on the top.
+1. If a reference genome was provided, its basic characteristics will be shown on the top.
 
-2. The main table summarizes all quality metrics for given assemblies. See QUAST documentation for details on reported metrics: http://quast.sourceforge.net/docs/manual.html#sec3.1. The web page provides some convenient UI that allows you to:
+2. The main table summarizes all quality metrics for given assemblies. See the QUAST manual for [details on reported metrics](http://cab.cc.spbu.ru/quast/manual.html#sec3.1). The web page provides some convenient UI that allows you to:
 	* Reorder columns using drag and drop.
-	* Use color scheme to range values from the worst (red) to the best (blue).
+	* Use the color scheme to range values from the worst (red) to the best (blue).
 	* Point over a metric name for a tooltip with an explanation of this metric.
 
-![Report view](img/quast_report_view.png)
+    ![Report view](img/quast_report_view.png)
 
 3. More metrics are available by clicking on "Extended report".
-4. Checkboxes on the left allow to select assemblies that would be displayed on the plots.
+4. Checkboxes on the right allow selecting assemblies displayed on the plots.
 5. Users can switch between different plots by clicking on the tabs.
-6. A standalone version of the report is available for downloading. In addition, a tarball contains Latex and tab-separated versions of the table suitable for parsing, along with plots in PDF.
-7. You can view the assembly in Icarus contig browser.
+6. A standalone version of the report is available for download. In addition, a tarball contains Latex and tab-separated versions of the table suitable for parsing, along with plots in PDF.
+7. You can browser the assembly alignments and contig sizes in the Icarus browser; see the example below and find more details in [Mikheenko et al, 2016](https://doi.org/10.1093/bioinformatics/btw379).
 
-### Icarus browser
+#### Icarus browser
 
-![Icarus view](img/quast_icarus.png)
+1. If a reference genome was provided, the default Icarus view is the Contig alignment viewer. Otherwise, the Contig size viewer would be opened. Use the "Main menu" button in the top-left corner to switch between the viewers or return to the QUAST report. Click on "Icarus" to return to the webserver homepage.
+
+    ![Icarus view](img/quast_icarus.png)
+
+2. Click on a contig/aligned block to get the detailed information on it in the right pane. 
+3. The controls in the top panel allow moving and zooming and showing/hiding all types of detected misassemblies. The Legend on the right explains the color coding scheme.
 
 <a name="compatibility"></a>
 ### Browser compatibility
