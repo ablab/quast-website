@@ -60,7 +60,7 @@ If you didn't find answers here or there, [ask us](contact.md)!
 | --------| ------------------|--------|---------|------|--------|
 | Linux   | CentOS 7          | not tested | not tested | not tested | not tested |
 | MacOS   | Big Sur 11.6.1    | 96.0.4664.93 (Official Build) (x86_64) | 94 | not tested  | Version 15.2 (16612.3.6.1.8, 16612) |
-| Windows | 10 	              | 95.0.4638.54 (Official Build) (64-bit) | 94 | not tested | not tested |
+| Windows | 10 	              | 95.0.4638.54 (Official Build) (64-bit) | 94 | 96 | not tested |
 
 
 [To the top](#top)
