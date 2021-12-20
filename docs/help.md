@@ -43,4 +43,14 @@ If you didn't find answers here or there, [ask us](contact.md)!
 
 <a name="compatibility"></a>
 ### Browser compatibility
-The website was tested in [Chrome](https://www.google.com/chrome/) (tested with v49.0.x), Safari (tested with v8.0.x), and Firefox (tested with v41.0.x and v45.0.x). Most of the functionality works in Internet Explorer 9 and higher, but we do not recommend this browser due to slow animation.
+
+| OS      | Version           | Chrome | Firefox | Edge | Safari |
+| --------| ------------------|--------|---------|------|--------|
+| Linux   | CentOS 7          | not tested | not tested | not tested | not tested |
+| MacOS   | Big Sur 11.6.1    | Version 96.0.4664.93 (Official Build) (x86_64) | not tested | not tested  | Version 15.2 (16612.3.6.1.8, 16612) |
+| Windows | 10 	              | not tested | not tested | not tested | not tested |
+
+
+
+
+
