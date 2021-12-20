@@ -27,7 +27,7 @@
 * genes and operons covered
 * GC content
 
-**QUAST can work with and without a reference genome**, though the output is considerably smaller in the latter case. The pipeline relies on multiple open-source tools, including [minimap2](https://github.com/lh3/minimap2) and [GlimmerHMM](https://ccb.jhu.edu/software/glimmerhmm/).  
+**QUAST can work with and without a reference genome**, though the output is considerably smaller in the latter case. The pipeline relies on multiple open-source tools, including [minimap2](https://github.com/lh3/minimap2), [GlimmerHMM](https://ccb.jhu.edu/software/glimmerhmm/), and [BUSCO](https://busco.ezlab.org/).  
 
 <a name="further"></a>
 ### Further reading
