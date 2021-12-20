@@ -104,6 +104,8 @@ Over the years, the QUAST development was supported by many funding agencies/sou
 * [St. Petersburg State University](https://english.spbu.ru/science-4)
 * [The EOSS program](https://chanzuckerberg.com/eoss/) of The Chan Zuckerberg Initiative
 
+The server is running using computational resources provided by the [Computer Center of Research park](http://www.cc.spbu.ru/en) of St. Petersburg State University.
+
 <a name="license"></a>
 ### License and Terms of use
 
