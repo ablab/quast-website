@@ -1,0 +1,19 @@
+{% extends "base-quast.html" %}
+
+{% block title %}Download QUAST{% endblock %}
+
+{% block extra_head %}
+    <link rel="stylesheet" href="/static/docs.css" />
+{% endblock %}
+
+{% block content %}
+    <h2 id="download">Download</h2>
+    <p>QUAST is an open-source project, you can browse, download or contribute to the source code of both the <a href="https://github.com/ablab/quast-website/">web server</a> and its <a href="https://github.com/ablab/quast/">command-line engine</a> at GitHub.</p>
+    <p>For installing the command-line version of QUAST (works on Linux and macOS), we recommend using common package managers:</p>
+    <p><a href="https://docs.conda.io/en/latest/">Conda</a>: <code>conda install -c bioconda quast</code><br />
+    <a href="https://brew.sh/">Homebrew</a> (<a href="https://github.com/brewsci/homebrew-bio">Brewsci/bio</a>): <code>brew install quast</code><br />
+    <a href="https://pypi.org/">PyPI</a>: <code>pip install quast</code></p>
+    <p>You may also download the latest and older QUAST releases from SourceForge (<a href="https://sourceforge.net/projects/quast/files/latest/download">latest</a>, <a href="https://sourceforge.net/projects/quast/files/">all versions</a>) or GitHub (<a href="https://github.com/ablab/quast/releases/latest">latest</a>, <a href="https://github.com/ablab/quast/releases">all versions</a>). Installation is pretty straightforward and <a href="http://cab.cc.spbu.ru/quast/manual.html#sec1">described in the manual</a>.</p>
+    <p>We distribute relatively stable but not thoroughly tested <em>pre-release</em> versions at GitHub only (check out the latest one <a href="https://github.com/ablab/quast/releases">here</a>). With caution, you may also clone and use the cutting-edge developers’ version from GitHub:<br />
+    <code>git clone git@github.com:ablab/quast.git</code></p>
+{% endblock %}
