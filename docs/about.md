@@ -1,5 +1,15 @@
+<a name="top"></a>
 ## About
 
+[Short intro](#intro)  
+[Further reading](#further)  
+[How to cite](#citations)  
+[Brief project history](#history)  
+[Authors](#authors)  
+[Funding](#funding)  
+[License and Terms of use](#license)
+
+<a name="intro"></a>
 ### Short intro
 
 **QUAST evaluates genome assemblies by computing various metrics, including**
@@ -19,6 +29,7 @@
 
 **QUAST can work with and without a reference genome**, though the output is considerably smaller in the latter case. The pipeline relies on multiple open-source tools, including [minimap2](https://github.com/lh3/minimap2) and [GlimmerHMM](https://ccb.jhu.edu/software/glimmerhmm/).  
 
+<a name="further"></a>
 ### Further reading
 
 More details are on the [project page](http://cab.spbu.ru/software/quast) and in [Gurevich et al., Bioinformatics, 2013](http://dx.doi.org/10.1093/bioinformatics/btt086).  
@@ -49,7 +60,7 @@ Alla Mikheenko, Vladislav Saveliev, Alexey Gurevich
 Alexey Gurevich, Vladislav Saveliev, Nikolay Vyahhi and Glenn Tesler  
 *Bioinformatics* (2013) DOI: [10.1093/bioinformatics/btt086](https://doi.org/10.1093/bioinformatics/btt086)
 
-
+<a name="history"></a>
 ### Brief project history
 
 **2011, July** — project start  
@@ -62,6 +73,7 @@ Alexey Gurevich, Vladislav Saveliev, Nikolay Vyahhi and Glenn Tesler
 **2020, April 4** — the web server relauched at its [current location](http://cab.cc.spbu.ru/quast/)  
 **2021, August 31** — [CZI acknowledged](https://chanzuckerberg.com/newsroom/czi-awards-16-million-for-foundational-open-source-software-tools-essential-to-biomedicine/) QUAST as an essential software tool for biomedicine and supported with a grant (jointly with [SPAdes](https://cab.spbu.ru/software/spades))
 
+<a name="authors"></a>
 ### Authors 
 
 **Core developers** (in alphabetical order):  
@@ -82,7 +94,7 @@ Nikolay Vyahhi
 
 **Logo design** by Elena Strelnikova
 
-
+<a name="funding"></a>
 ### Funding
 
 Over the years, the QUAST development was supported by many funding agencies/sources:  
@@ -92,9 +104,11 @@ Over the years, the QUAST development was supported by many funding agencies/sou
 * [St. Petersburg State University](https://english.spbu.ru/science-4)
 * [The EOSS program](https://chanzuckerberg.com/eoss/) of The Chan Zuckerberg Initiative
 
-
+<a name="license"></a>
 ### License and Terms of use
 
 QUAST is licensed under GPL v2 and it is free to use for everybody; there is no login requirement for the web server. However, some of build-in third-party tools are not under GPL v2. See [LICENSE](http://cab.cc.spbu.ru/quast/LICENSE.txt) for details. In particular, the [GeneMark](http://opal.biology.gatech.edu/GeneMark/) gene prediction software has a stricter license, so it is not included in the web server pipeline, but can be used with the command-line version if you are eligible. 
 
 **Liability**: the QUAST webserver is developed and maintained in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+
+[To the top](#top)
