@@ -3,6 +3,7 @@
 
 [Submitting your data](#submit)  
 [Interpreting the output](#output)  
+[Icarus browser basics](#icarus)  
 [Browser compatibility](#compatibility)  
 
 This page will guide you step-by-step from submitting your data to interpreting the results. This page also contains info on the [browser compatibility](#compatibility), so if something is not working correctly, please [let us know](contact.md) and consider changing your browser as a possible workaround.
@@ -44,7 +45,8 @@ If you didn't find answers here or there, [ask us](contact.md)!
 6. A standalone version of the report is available for download. In addition, a tarball contains Latex and tab-separated versions of the table suitable for parsing, along with plots in PDF.
 7. You can browser the assembly alignments and contig sizes in the Icarus browser; see the example below and find more details in [Mikheenko et al, 2016](https://doi.org/10.1093/bioinformatics/btw379).
 
-#### Icarus browser
+<a name="icarus"></a>
+### Icarus browser basics
 
 1. If a reference genome was provided, the default Icarus view is the Contig alignment viewer. Otherwise, the Contig size viewer would be opened. Use the "Main menu" button in the top-left corner to switch between the viewers or return to the QUAST report. Click on "Icarus" to return to the webserver homepage.
 
@@ -58,9 +60,9 @@ If you didn't find answers here or there, [ask us](contact.md)!
 
 | OS      | Version           | Chrome | Firefox | Edge | Safari |
 | --------| ------------------|--------|---------|------|--------|
-| Linux   | CentOS 7          | not tested | not tested | not tested | not tested |
-| MacOS   | Big Sur 11.6.1    | 96.0.4664.93 (Official Build) (x86_64) | 94 | not tested  | Version 15.2 (16612.3.6.1.8, 16612) |
-| Windows | 10 	              | 95.0.4638.54 (Official Build) (64-bit) | 94 | 96 | not tested |
+| Linux   | Ubuntu 20.04      | 96 | 94 | not tested | not tested |
+| MacOS   | Big Sur 11.6.1    | 96 | 94 | not tested  | 15.2 |
+| Windows | 10 	              | 95 | 94 | 96 | not tested |
 
 
 [To the top](#top)
