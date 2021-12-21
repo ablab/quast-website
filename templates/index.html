@@ -72,7 +72,7 @@
                 }).fail(function(xhr) {
                     login_msg.hide();
 
-                    var msg = 'Error. Try reloading page.';
+                    var msg = 'Sorry, email notifications are temporary broken. We are working on fixing it!';
                     if (xhr.status && xhr.status == 400) {
                         msg = xhr.responseText;
                     }

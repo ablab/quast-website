@@ -57,7 +57,7 @@ class DataSetForm(forms.Form):
 
     use_test_data = fields.BooleanField(
         required=False,
-        label='Load sample data <span style="color: #888;">(E.coli assembles)</span>',
+        label='Load sample data <span style="color: #888;">(E.coli K-12 assemblies)</span>',
         widget=widgets.CheckboxInput())
 
     use_busco = fields.BooleanField(
