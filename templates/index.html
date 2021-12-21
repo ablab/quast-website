@@ -515,7 +515,7 @@
                         <tr>
                             <td class='form-layout-td' style="padding-top: 3px;">
                                 <div style="padding-top: 13px;">Assemblies</div>
-                                <p style="color: red">REQUIRED</p>
+                                <p style="color: FireBrick">REQUIRED</p>
                             </td>
 
                             <td class='form-layout-td'>
@@ -556,6 +556,12 @@
                             <div class="comment_to_field" style="margin-left: 18px; max-width: 500px;">{{ qs_form.scaffolds.help_text|safe }}</div><br>
                         </label>
 
+                        <br>
+                        <label for="id_use_busco"> {% comment %}@declare id="id_find_genes"{% endcomment %}
+                            {{ qs_form.use_busco }} {{ qs_form.use_busco.label|safe }}
+                        </label>
+
+                        <br>
                         <label for="id_find_genes"> {% comment %}@declare id="id_find_genes"{% endcomment %}
                             {{ qs_form.find_genes }} {{ qs_form.find_genes.label|safe }}
                          {# <div class="space_1px"></div> #}
@@ -724,9 +730,10 @@
                                 We will also notify you when your report is&nbsp;finished,
                                 and&nbsp;contact you if any problems arise.<br>
                                 <div class="bottom-line" style="width: 100%; margin-bottom: 5px; margin-left: 0px;"></div>
-                                If you leave the email address blank, your reports will be visible for your browsing session. Bookmark them to prevent accidental losses.
+                                If you leave the email address blank, your reports will be visible for your browsing session.
+                                Bookmark them or save <a href="{{ personal_link }}">this link</a> to prevent accidental losses.
                                 <br>
-                            </div>
+                            </a>
                         </form>
                     </div>
 
@@ -843,8 +850,8 @@
                         </tr>
                         {% if quast_sessions %}
                         <tr><td>
-                        <span style='margin-left: -1px;'>The reports are visible only for you.</span>
-                        <span style='margin-left: -1px;'>We keep results on the web server<br>for several months and delete them afterward.<br>Please <b>download essential reports before they expire.</b></span>
+                        <span style='margin-left: -1px;'>The reports are visible only for you.</span><br>
+                        <span style='margin-left: -1px;'>We keep results on the web server for several months and delete them afterward.<br>Please <b>download essential reports before they expire.</b></span>
                         </td></tr>
                         {% endif %}
                     </table>

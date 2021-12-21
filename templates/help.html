@@ -1,0 +1,106 @@
+{% extends "base-quast.html" %}
+
+{% block title %}Help{% endblock %}
+
+{% block extra_head %}
+    <link rel="stylesheet" href="/static/docs.css" />
+{% endblock %}
+
+{% block content %}
+    <h2><a name="top"></a> Help</h2>
+    <p><a href="#submit">Submitting your data</a><br />
+    <a href="#output">Interpreting the output</a><br />
+    <a href="#icarus">Icarus browser basics</a><br />
+    <a href="#compatibility">Browser compatibility</a></p>
+
+    <p>This page will guide you step-by-step from submitting your data to interpreting the results. This page also contains info on the <a href="#compatibility">browser compatibility</a>, so if something is not working correctly, please <a href="http://cab.cc.spbu.ru/quast/contact.html">let us know</a> and consider changing your browser as a possible workaround.</p>
+    <p>If you are new to QUAST, you may want to check out the <a href="http://cab.cc.spbu.ru/quast/about.html">About</a> page first.<br />
+    If you are an advanced QUAST user, you may want to consult the <a href="http://cab.cc.spbu.ru/quast/manual.html">online manual</a> instead, e.g., detailed <a href="http://cab.cc.spbu.ru/quast/manual.html#sec3.1">quality metric descriptions</a> or <a href="http://cab.cc.spbu.ru/quast/manual.html#sec7">FAQ</a>.<br />
+    If you didn’t find answers here or there, <a href="http://cab.cc.spbu.ru/quast/contact.html">ask us</a>!</p>
+    <h3><a name="submit"></a> Submitting your data</h3>
+    <ol type="1">
+    <li><p>QUAST expects assemblies in the <a href="https://en.wikipedia.org/wiki/FASTA_format">FASTA format</a> (typically <code>.fasta/.fa</code> files), optionally compressed with gzip. You can upload your files via a file selection dialogue using the “Select files” button, or drag and drop them into the “drop files here” field.</p>
+    <figure>
+    <img src="/static/quast_main_view.png" alt="" width="80%" />
+    </figure></li>
+    <li><p>You can parametrize your QUAST job, e.g., whether your sequences are scaffolds, whether you want to enable gene detection, and whether the genome is circular (typical for bacteria).</p></li>
+    <li><p>QUAST can work without a reference genome. However, if a model genome for an organism is available, QUAST would report many more exciting results. You can upload a reference genome through the “Genome” selection menu. A set of popular genomes are already pre-uploaded.</p></li>
+    <li><p>Press “Evaluate” to queue a QUAST job. Normally, it will be run immediately; however, it might take longer for a job to start in periods of high load. Before submitting, you can title your job using the “Caption” text field; otherwise, a current timestamp would be used as a default title.</p></li>
+    <li><p>Your submitted jobs will appear on the right side of the main page. Clicking on a title will send you to the job page, which will have a QUAST report once it’s completed. You can add your email address for heavy jobs, and you will be notified when the jobs are completed.</p></li>
+    </ol>
+    <h3><a name="output"></a> Interpreting the output</h3>
+    <ol type="1">
+    <li><p>If a reference genome was provided, its basic characteristics will be shown on the top.</p></li>
+    <li><p>The main table summarizes all quality metrics for given assemblies. See the QUAST manual for <a href="http://cab.cc.spbu.ru/quast/manual.html#sec3.1">details on reported metrics</a>. The web page provides some convenient UI that allows you to:</p>
+    <ul>
+    <li>Reorder columns using drag and drop.</li>
+    <li>Use the color scheme to range values from the worst (red) to the best (blue).</li>
+    <li>Point over a metric name for a tooltip with an explanation of this metric.</li>
+    </ul>
+    <figure>
+    <img src="/static/quast_report_view.png" alt="" width="80%"/>
+    </figure></li>
+    <li><p>More metrics are available by clicking on “Extended report”.</p></li>
+    <li><p>Checkboxes on the right allow selecting assemblies displayed on the plots.</p></li>
+    <li><p>Users can switch between different plots by clicking on the tabs.</p></li>
+    <li><p>A standalone version of the report is available for download. In addition, a tarball contains Latex and tab-separated versions of the table suitable for parsing, along with plots in PDF.</p></li>
+    <li><p>You can browser the assembly alignments and contig sizes in the Icarus browser; see the example below and find more details in <a href="https://doi.org/10.1093/bioinformatics/btw379">Mikheenko et al, 2016</a>.</p></li>
+    </ol>
+    <h3><a name="icarus"></a>id="icarus-browser">Icarus browser</h3>
+    <ol type="1">
+    <li><p>If a reference genome was provided, the default Icarus view is the Contig alignment viewer. Otherwise, the Contig size viewer would be opened. Use the “Main menu” button in the top-left corner to switch between the viewers or return to the QUAST report. Click on “Icarus” to return to the webserver homepage.</p>
+    <figure>
+    <img src="/static/quast_icarus.png" alt=""  width="80%" />
+    </figure></li>
+    <li><p>Click on a contig/aligned block to get the detailed information on it in the right pane.</p></li>
+    <li><p>The controls in the top panel allow moving and zooming and showing/hiding all types of detected misassemblies. The Legend on the right explains the color coding scheme.</p></li>
+    </ol>
+    <h3><a name="compatibility"></a> Browser compatibility</h3>
+    <table style="width:60%;">
+    <colgroup>
+    <col style="width: 14%" />
+    <col style="width: 31%" />
+    <col style="width: 14%" />
+    <col style="width: 15%" />
+    <col style="width: 10%" />
+    <col style="width: 14%" />
+    </colgroup>
+    <thead>
+    <tr class="header">
+    <th>OS</th>
+    <th>Version</th>
+    <th>Chrome</th>
+    <th>Firefox</th>
+    <th>Edge</th>
+    <th>Safari</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="odd">
+    <td>Linux</td>
+    <td>Ubuntu 20.04</td>
+    <td>96</td>
+    <td>94</td>
+    <td>not tested</td>
+    <td>not tested</td>
+    </tr>
+    <tr class="even">
+    <td>MacOS</td>
+    <td>Big Sur 11.6.1</td>
+    <td>96</td>
+    <td>94</td>
+    <td>not tested</td>
+    <td>15.2</td>
+    </tr>
+    <tr class="odd">
+    <td>Windows</td>
+    <td>10</td>
+    <td>95</td>
+    <td>94</td>
+    <td>96</td>
+    <td>not tested</td>
+    </tr>
+    </tbody>
+    </table>
+    <p><a href="#top">To the top</a></p>
+{% endblock %}
