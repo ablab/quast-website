@@ -18,7 +18,7 @@ def add_refs(request):
     dataset.save()
 
     dataset = DataSet(
-        name = 'E. coli',
+        name = 'E. coli strain K-12 substrain MG1655',
         remember = True,
         genes_fname = 'genes.txt',
         operons_fname = 'operons.txt',
@@ -34,6 +34,61 @@ def add_refs(request):
         remember = True,
         reference_fname = 'sars_cov2.fasta',
         dirname = 'sars_cov2',
+        user_session = None,
+        user = None
+    )
+    dataset.save()
+
+    dataset = DataSet(
+        name = 'S. aureus NCTC 8325',
+        remember = True,
+        genes_fname = 'genes.gff',
+        reference_fname = 'reference.fasta',
+        dirname = 's_aureus',
+        user_session = None,
+        user = None
+    )
+    dataset.save()
+
+    dataset = DataSet(
+        name = 'K. pneumoniae HS11286',
+        remember = True,
+        genes_fname = 'genes.gff',
+        reference_fname = 'reference.fasta',
+        dirname = 'k_pneumoniae',
+        user_session = None,
+        user = None
+    )
+    dataset.save()
+
+    dataset = DataSet(
+        name = 'S. cerevisiae S288C',
+        remember = True,
+        genes_fname = 'genes.gff',
+        reference_fname = 'reference.fasta',
+        dirname = 's_cerevisiae',
+        user_session = None,
+        user = None
+    )
+    dataset.save()
+
+    dataset = DataSet(
+        name = 'C. elegans WBcel235',
+        remember = True,
+        genes_fname = 'genes.gff',
+        reference_fname = 'reference.fasta',
+        dirname = 'c_elegans',
+        user_session = None,
+        user = None
+    )
+    dataset.save()
+
+    dataset = DataSet(
+        name = 'D. melanogaster Release 6 plus ISO1 MT',
+        remember = True,
+        genes_fname = 'genes.gff',
+        reference_fname = 'reference.fasta',
+        dirname = 'd_melanogaster',
         user_session = None,
         user = None
     )
