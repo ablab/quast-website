@@ -62,6 +62,7 @@ class User(models.Model):
     scaffolds = models.BooleanField(default=False)
     eukaryotic = models.BooleanField(default=False)
     estimated_ref_size = models.IntegerField(null=True, blank=True)
+    use_busco = models.BooleanField(default=False)
     find_genes = models.BooleanField(default=False)
     use_test_data = models.BooleanField(default=False)
 
@@ -122,6 +123,7 @@ class UserSession(models.Model):
             user.eukaryotic = self.get_eukaryotic()
             user.estimated_ref_size = self.get_estimated_ref_size()
             user.find_genes = self.get_find_genes()
+            user.use_busco = self.get_use_busco()
             user.save()
 
         if self.user is None:  # Needed to move data sets and quast sessions from this user_session to user
@@ -151,6 +153,7 @@ class UserSession(models.Model):
     scaffolds = models.BooleanField(default=False)
     eukaryotic = models.BooleanField(default=False)
     estimated_ref_size = models.IntegerField(null=True, blank=True)
+    use_busco = models.BooleanField(default=False)
     find_genes = models.BooleanField(default=False)
     use_test_data = models.BooleanField(default=False)
 
@@ -189,6 +192,12 @@ class UserSession(models.Model):
 
     def get_find_genes(self):
         return (self.user or self).find_genes
+
+    def set_use_busco(self, use_busco):
+        (self.user or self).use_busco = use_busco
+
+    def get_use_busco(self):
+        return (self.user or self).use_busco
 
     def set_use_test_data(self, use_test_data):
         (self.user or self).use_test_data = use_test_data
@@ -328,6 +337,7 @@ class QuastSession(models.Model):
     eukaryotic = models.BooleanField(default=False)
     estimated_ref_size = models.IntegerField(blank=True, null=True)
     find_genes = models.BooleanField(default=False)
+    use_busco = models.BooleanField(default=False)
     use_test_data = models.BooleanField(default=False)
 
     caption = models.CharField(max_length=1024, blank=True, null=True)
@@ -358,6 +368,7 @@ class QuastSession(models.Model):
             scaffolds=us.get_scaffolds(),
             eukaryotic=us.get_eukaryotic(),
             estimated_ref_size=us.get_estimated_ref_size(),
+            use_busco=us.get_use_busco(),
             find_genes=us.get_find_genes(),
             use_test_data=us.get_use_test_data())
 

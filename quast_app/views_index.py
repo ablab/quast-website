@@ -68,6 +68,7 @@ def index_view(us, response_dict, request):
             qs.eukaryotic = form.cleaned_data['domain'] == 'True'
             qs.estimated_ref_size = form.cleaned_data['estimated_ref_size']
             qs.find_genes = form.cleaned_data['find_genes']
+            qs.use_busco = form.cleaned_data['use_busco']
             qs.use_test_data = form.cleaned_data['use_test_data']
             qs.data_set = get_data_set(request, form, us, default_name=qs.report_id)
 
@@ -76,6 +77,7 @@ def index_view(us, response_dict, request):
             us.set_eukaryotic(qs.eukaryotic)
             us.set_estimated_ref_size(qs.estimated_ref_size)
             us.set_find_genes(qs.find_genes)
+            us.set_use_busco(qs.use_busco)
             us.set_default_data_set(qs.data_set)
             us.save()
 
@@ -86,9 +88,9 @@ def index_view(us, response_dict, request):
 
             logger.info('quast_app.views.index.POST: '
                         'caption = %s, link = %s, data set = %s, '
-                        'min_contig = %d, scaffolds = %r, eukaryotic = %r, find_genes = %r, use_test_data = %r',
+                        'min_contig = %d, scaffolds = %r, eukaryotic = %r, use_busco = %r, find_genes = %r, use_test_data = %r',
                         qs.caption, qs.get_report_html_link(), qs.data_set.name if qs.data_set else '<unknown>',
-                        qs.min_contig, qs.scaffolds, qs.eukaryotic, qs.find_genes, qs.use_test_data)
+                        qs.min_contig, qs.scaffolds, qs.eukaryotic, qs.use_busco, qs.find_genes, qs.use_test_data)
 
             # Starting Quast
             start_quast_session(us, qs)
@@ -118,6 +120,7 @@ def index_view(us, response_dict, request):
             'domain': qs.eukaryotic,
             'estimated_ref_size': qs.estimated_ref_size,
             'find_genes': qs.find_genes,
+            'use_busco': qs.use_busco,
             'use_test_data': qs.use_test_data
         })
 
@@ -335,6 +338,9 @@ def assess_with_quast(us, qs, contigs_paths,
 
             if qs.scaffolds:
                 args.append('--split-scaffolds')
+
+            if qs.use_busco:
+                args.append('-b')
 
             res_dirpath = qs.get_dirpath()
             args.append('-J')
