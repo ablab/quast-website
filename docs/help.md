@@ -58,11 +58,13 @@ If you didn't find answers here or there, [ask us](contact.md)!
 <a name="compatibility"></a>
 ### Browser compatibility
 
+**Note**: we recommend using **Chrome**; we tested this browser most. There are known issues with displaying contigs in Icarus viewers in Firefox; we are working on fixing it asap. 
+
 | OS      | Version           | Chrome | Firefox | Edge | Safari |
 | --------| ------------------|--------|---------|------|--------|
-| Linux   | Ubuntu 20.04      | 96 | 94 | not tested | not tested |
-| MacOS   | Big Sur 11.6.1    | 96 | 94 | not tested  | 15.2 |
-| Windows | 10 	              | 95 | 94 | 96 | not tested |
+| Linux   | Ubuntu 20.04      | 96 | 94 (Icarus issues) | not tested | not tested |
+| MacOS   | Big Sur 11.6.1    | 96 | 95 (Icarus issues) | not tested  | 15.2 |
+| Windows | 10 	              | 95 | 94 (Icarus issues) | 96 | not tested |
 
 
 [To the top](#top)
