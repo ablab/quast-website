@@ -21,9 +21,19 @@ def add_refs(request):
         name = 'E. coli strain K-12 substrain MG1655',
         remember = True,
         genes_fname = 'genes.txt',
-        operons_fname = 'operons.txt',
         reference_fname = 'reference.fa',
         dirname = 'e_coli',
+        user_session = None,
+        user = None
+    )
+    dataset.save()
+
+    dataset = DataSet(
+        name = 'E. coli strain K-12 substrain W3110',
+        remember = True,
+        genes_fname = 'genes.gff',
+        reference_fname = 'reference.fa',
+        dirname = 'e_coli_w3110',
         user_session = None,
         user = None
     )
