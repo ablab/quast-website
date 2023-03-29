@@ -43,12 +43,6 @@ urlpatterns = [
     url(r'^quast/help.*', TemplateView.as_view(template_name='help.html')),
 
     url(r'^quast/quast3/demo\.html$', RedirectView.as_view(url='/static/quast3/demo.html')),
-    url(r'^quast/metaquast/cami/summary/report\.html$', RedirectView.as_view(url='/static/metaquast/cami/summary/report.html')),
-    url(r'^quast/metaquast/hmp/summary/report\.html$', RedirectView.as_view(url='/static/metaquast/hmp/summary/report.html')),
-    url(r'^quast/metaquast/metahit/summary/report\.html$', RedirectView.as_view(url='/static/metaquast/metahit/summary/report.html')),
-    url(r'^quast/metaquast/cami\.tar\.gz$', RedirectView.as_view(url='/static/metaquast/cami.tar.gz')),
-    url(r'^quast/metaquast/hmp\.tar\.gz$', RedirectView.as_view(url='/static/metaquast/hmp.tar.gz')),
-    url(r'^quast/metaquast/metahit\.tar\.gz$', RedirectView.as_view(url='/static/metaquast/metahit.tar.gz')),
 
     url(r'^quast/sample_data/report\.html$', quast_app.example_reports_views.sample_data),
     url(r'^quast/sample_data/?$', lambda _: redirect(quast_app.example_reports_views.sample_data)),
