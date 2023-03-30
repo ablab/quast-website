@@ -49,7 +49,7 @@ if os.environ.get('DEVELOPMENT'):
 else:
     DEBUG = False
     ADDRESS = 'http://cab.cc.spbu.ru/quast/'
-    database = 'mysql'
+    # database = 'mysql'
     CONTIG_MAX_SIZE_MB = 250
     EMAIL_USE_TLS = True 
     EMAIL_HOST = 'localhost'
