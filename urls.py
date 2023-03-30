@@ -11,7 +11,7 @@ from django.conf.urls import include, url
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.generic import TemplateView, RedirectView
 
-from quast_app import views, login_views, example_reports_views
+from quast_app import views, login_views, example_reports_views, add_default_references
 
 import logging
 logger = logging.getLogger('quast')
@@ -25,6 +25,9 @@ urlpatterns = [
         url=('/static/img/favicon_debug.ico' if settings.DEBUG else '/static/img/favicon.ico'))),
 
     url(r'^quast/$', quast_app.views.index),
+
+    # open to update reference database
+    # url(r'^quast/add_refs.*$', quast_app.add_default_references.add_refs),
 
     url(r'^quast/manual.*$', quast_app.views.manual),
     url(r'^quast/changes.*$', quast_app.views.changes),
