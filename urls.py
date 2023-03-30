@@ -16,6 +16,9 @@ from quast_app import views, login_views, example_reports_views, add_default_ref
 import logging
 logger = logging.getLogger('quast')
 
+class QuastView(TemplateView):
+    support_email = settings.SUPPORT_EMAIL
+
 
 urlpatterns = [
     url(r'^robots\.txt$', RedirectView.as_view(url='/static/robots.txt')),
@@ -40,10 +43,10 @@ urlpatterns = [
     url(r'^quast/example/?$', quast_app.views.example),
     url(r'^quast/ecoli/?$', quast_app.views.idba),
 
-    url(r'^quast/about.*', TemplateView.as_view(template_name='about.html')),
-    url(r'^quast/contact.*', TemplateView.as_view(template_name='contact.html')),
-    url(r'^quast/download.*', TemplateView.as_view(template_name='download.html')),
-    url(r'^quast/help.*', TemplateView.as_view(template_name='help.html')),
+    url(r'^quast/about.*', QuastView.as_view(template_name='about.html', support_email=settings.SUPPORT_EMAIL)),
+    url(r'^quast/contact.*', QuastView.as_view(template_name='contact.html', support_email=settings.SUPPORT_EMAIL)),
+    url(r'^quast/download.*', QuastView.as_view(template_name='download.html', support_email=settings.SUPPORT_EMAIL)),
+    url(r'^quast/help.*', QuastView.as_view(template_name='help.html')),
 
     url(r'^quast/quast3/demo\.html$', RedirectView.as_view(url='/static/quast3/demo.html')),
 
@@ -66,6 +69,8 @@ urlpatterns = [
     url(r'^quast/sample_data_close_ref/report\.html$', quast_app.example_reports_views.sample_data_close_ref),
     url(r'^quast/sample_data_close_ref/?$', lambda _: redirect(quast_app.example_reports_views.sample_data_close_ref)),
     url(r'^quast/sample_data_close_ref/icarus\.html$', quast_app.example_reports_views.sample_data_close_ref_icarus),
+    url(r'^quast/sample_data_close_ref/icarus_viewers/alignment_viewer*\.html$',
+        quast_app.example_reports_views.sample_data_close_ref_icarus_alignment),
     url(r'^quast/sample_data_close_ref/icarus_viewers/contig_size_viewer*\.html$',
         quast_app.example_reports_views.sample_data_close_ref_icarus_contig_size),
     url(r'^quast/sample_data_close_ref/(?P<download_fname>.+)/?$',
