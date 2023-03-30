@@ -47,14 +47,14 @@ urlpatterns = [
 
     url(r'^quast/quast3/demo\.html$', RedirectView.as_view(url='/static/quast3/demo.html')),
 
-    url(r'^quast/sample_data/report\.html$', quast_app.example_reports_views.sample_data),
-    url(r'^quast/sample_data/?$', lambda _: redirect(quast_app.example_reports_views.sample_data)),
-    url(r'^quast/sample_data/icarus\.html$', quast_app.example_reports_views.sample_data_icarus),
-    url(r'^quast/sample_data/icarus_viewers/alignment_viewer*\.html$',
+    url(r'^quast/sample_data_true_ref/report\.html$', quast_app.example_reports_views.sample_data),
+    url(r'^quast/sample_data_true_ref/?$', lambda _: redirect(quast_app.example_reports_views.sample_data)),
+    url(r'^quast/sample_data_true_ref/icarus\.html$', quast_app.example_reports_views.sample_data_icarus),
+    url(r'^quast/sample_data_true_ref/icarus_viewers/alignment_viewer*\.html$',
         quast_app.example_reports_views.sample_data_icarus_alignment),
-    url(r'^quast/sample_data/icarus_viewers/contig_size_viewer*\.html$',
+    url(r'^quast/sample_data_true_ref/icarus_viewers/contig_size_viewer*\.html$',
         quast_app.example_reports_views.sample_data_icarus_contig_size),
-    url(r'^quast/sample_data/(?P<download_fname>.+)/?$', quast_app.example_reports_views.sample_data_download),
+    url(r'^quast/sample_data_true_ref/(?P<download_fname>.+)/?$', quast_app.example_reports_views.sample_data_download),
 
     url(r'^quast/sample_data_no_ref/report\.html$', quast_app.example_reports_views.sample_data_no_ref),
     url(r'^quast/sample_data_no_ref/?$', lambda _: redirect(quast_app.example_reports_views.sample_data_no_ref)),
@@ -62,6 +62,14 @@ urlpatterns = [
     url(r'^quast/sample_data_no_ref/icarus_viewers/contig_size_viewer*\.html$',
         quast_app.example_reports_views.sample_data_no_ref_icarus_contig_size),
     url(r'^quast/sample_data_no_ref/(?P<download_fname>.+)/?$', quast_app.example_reports_views.sample_data_no_ref_download),
+
+    url(r'^quast/sample_data_close_ref/report\.html$', quast_app.example_reports_views.sample_data_close_ref),
+    url(r'^quast/sample_data_close_ref/?$', lambda _: redirect(quast_app.example_reports_views.sample_data_close_ref)),
+    url(r'^quast/sample_data_close_ref/icarus\.html$', quast_app.example_reports_views.sample_data_close_ref_icarus),
+    url(r'^quast/sample_data_close_ref/icarus_viewers/contig_size_viewer*\.html$',
+        quast_app.example_reports_views.sample_data_close_ref_icarus_contig_size),
+    url(r'^quast/sample_data_close_ref/(?P<download_fname>.+)/?$',
+        quast_app.example_reports_views.sample_data_close_ref_download),
 
     url(r'^quast/e\.coli-single-cell/report\.html$', quast_app.example_reports_views.e_coli_sc),
     url(r'^quast/e\.coli-single-cell/?$', lambda _: redirect(quast_app.example_reports_views.e_coli_sc)),

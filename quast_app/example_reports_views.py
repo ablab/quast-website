@@ -32,19 +32,19 @@ def b_impatiens(request, download_fname):
 
 
 def sample_data(request):
-    return report_view('', 'E. coli K-12', 'sample_data')
+    return report_view('', 'E. coli K-12 MG1655', 'sample_data_true_ref')
 
 def sample_data_download(request, download_fname):
     return download_report_view(download_fname)
 
 def sample_data_icarus(request):
-    return example_icarus_view('', 'E. coli K-12', 'sample_data', is_menu=True)
+    return example_icarus_view('', 'E. coli K-12 MG1655', 'sample_data_true_ref', is_menu=True)
 
 def sample_data_icarus_alignment(request):
-    return example_icarus_view('', 'E. coli K-12', 'sample_data')
+    return example_icarus_view('', 'E. coli K-12 MG1655', 'sample_data_true_ref')
 
 def sample_data_icarus_contig_size(request):
-    return example_icarus_view('', 'E. coli K-12', 'sample_data', is_contig_size_plot=True)
+    return example_icarus_view('', 'E. coli K-12 MG1655', 'sample_data_true_ref', is_contig_size_plot=True)
 
 
 def sample_data_no_ref(request):
@@ -58,6 +58,23 @@ def sample_data_no_ref_icarus(request):
 
 def sample_data_no_ref_icarus_contig_size(request):
     return example_icarus_view('', 'Unknown genome', 'sample_data_no_ref', is_contig_size_plot=True)
+
+
+def sample_data_close_ref(request):
+    return report_view('', 'E. coli K-12 W3110', 'sample_data_close_ref')
+
+def sample_data_close_ref_download(request, download_fname):
+    return download_report_view(download_fname)
+
+def sample_data_close_ref_icarus(request):
+    return example_icarus_view('', 'E. coli K-12 W3110', 'sample_data_close_ref', is_menu=True)
+
+def sample_data_icarus_alignment(request):
+    return example_icarus_view('', 'E. coli K-12 W3110', 'sample_data_close_ref')
+
+def sample_data_close_ref_icarus_contig_size(request):
+    return example_icarus_view('', 'E. coli K-12 W3110', 'sample_data_close_ref', is_contig_size_plot=True)
+
 
 
 def e_coli_sc(request):
