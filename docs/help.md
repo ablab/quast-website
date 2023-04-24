@@ -5,11 +5,12 @@
 [Interpreting the output](#output)  
 [Icarus browser basics](#icarus)  
 [Browser compatibility](#compatibility)  
+[WebQUAST FAQ](#faq)  
 
 This page will guide you step-by-step from submitting your data to interpreting the results. This page also contains info on the [browser compatibility](#compatibility), so if something is not working correctly, please [let us know](contact.md) and consider changing your browser as a possible workaround.
 
 If you are new to QUAST, you may want to check out the [About](about.md) page first.  
-If you are an advanced QUAST user, you may want to consult the [online manual](http://cab.cc.spbu.ru/quast/manual.html) instead, e.g., detailed [quality metric descriptions](http://cab.cc.spbu.ru/quast/manual.html#sec3.1) or [FAQ](http://cab.cc.spbu.ru/quast/manual.html#sec7).  
+If you are an advanced QUAST user, you may want to consult the [online manual](http://cab.cc.spbu.ru/quast/manual.html) instead, e.g., detailed [quality metric descriptions](http://cab.cc.spbu.ru/quast/manual.html#sec3.1) or [general/command-line FAQ](http://cab.cc.spbu.ru/quast/manual.html#sec7). We also have a short [FAQ](#faq) specific to the web version of the tool.   
 If you didn't find answers here or there, [ask us](contact.md)!
 
 <a name="submit"></a>
@@ -65,6 +66,20 @@ If you didn't find answers here or there, [ask us](contact.md)!
 | Linux   | Ubuntu 20.04      | 96 | 94 (Icarus issues) | not tested | not tested |
 | MacOS   | Big Sur 11.6.1    | 96 | 95 (Icarus issues) | not tested  | 15.2 |
 | Windows | 10 	              | 95 | 94 (Icarus issues) | 96 | not tested |
+
+<a name="faq"></a>
+### WebQUAST FAQ  
+
+This FAQ is primarily for WebQUAST; the answers to many common questions about the command-line utility and QUAST, in general, are [here](http://cab.cc.spbu.ru/quast/manual.html#sec7). Note that for any WebQUAST report, you can always get the full command-line QUAST output (the standalone report) by pressing the *Download report* button, see step 6 in the [Interpreting the output](#output) section. 
+
+**Q1. How can find out which commands and parameters of the third-party tools (e.g., minimap2, BUSCO) WebQUAST used in my analysis?**  
+The standalone report includes the detailed log file (`<downloaded_report>/full_output/quast.log`) listing all used commands.
+ 
+**Q2. Is it possible to get the list of misassemblies for an assembly?**    
+Yes! The list of misassemblies in the [GFF3 format](https://www.ensembl.org/info/website/upload/gff3.html) and the sequences of the misassembled contigs in the FASTA format are available in the standalone report. For an assembly labeled `<assembly_name>`, the corresponding files are `<assembly_name>.misassemblies.gff` and `<assembly_name>.mis_contigs.fa` in the `<downloaded_report>/full_output/contigs_reports/` folder. 
+
+**Q3. Can I check whether misassemblies are co-located with specific genomic features, e.g., repeats or gene-dense regions?**  
+This feature is not nicely implemented yet, but there is a workaround. You can upload any genome annotation, such as coordinates of repeated regions, as a *Genes* file corresponding to your reference genome (see step 3 in the [Submitting your data](#submit) section). The BEG, GFF, and plain text formats are supported, see more detail in the [online manual](http://cab.cc.spbu.ru/quast/manual.html#sec2.2). When the evaluation against this reference is complete, you might visually match misassemblies to the track with your annotations in the [Icarus browser](#icarus). You might also search for a specific feature by its name using the search field in the top right corner.
 
 
 [To the top](#top)
