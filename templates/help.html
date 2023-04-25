@@ -11,11 +11,12 @@
     <p><a href="#submit">Submitting your data</a><br />
     <a href="#output">Interpreting the output</a><br />
     <a href="#icarus">Icarus browser basics</a><br />
-    <a href="#compatibility">Browser compatibility</a></p>
+    <a href="#compatibility">Browser compatibility</a><br />
+    <a href="#faq">WebQUAST FAQ</a></p>
 
     <p>This page will guide you step-by-step from submitting your data to interpreting the results. This page also contains info on the <a href="#compatibility">browser compatibility</a>, so if something is not working correctly, please <a href="http://cab.cc.spbu.ru/quast/contact.html">let us know</a> and consider changing your browser as a possible workaround.</p>
     <p>If you are new to QUAST, you may want to check out the <a href="http://cab.cc.spbu.ru/quast/about.html">About</a> page first.<br />
-    If you are an advanced QUAST user, you may want to consult the <a href="http://cab.cc.spbu.ru/quast/manual.html">online manual</a> instead, e.g., detailed <a href="http://cab.cc.spbu.ru/quast/manual.html#sec3.1">quality metric descriptions</a> or <a href="http://cab.cc.spbu.ru/quast/manual.html#sec7">FAQ</a>.<br />
+    If you are an advanced QUAST user, you may want to consult the <a href="http://cab.cc.spbu.ru/quast/manual.html">online manual</a> instead, e.g., detailed <a href="http://cab.cc.spbu.ru/quast/manual.html#sec3.1">quality metric descriptions</a> or <a href="http://cab.cc.spbu.ru/quast/manual.html#sec7">general/command-line FAQ</a>. We also have a short <a href="#faq">FAQ</a> specific to the web version of the tool.<br />
     If you didn’t find answers here or there, <a href="http://cab.cc.spbu.ru/quast/contact.html">ask us</a>!</p>
     <h3><a name="submit"></a> Submitting your data</h3>
     <ol type="1">
@@ -103,5 +104,10 @@
     </tr>
     </tbody>
     </table>
+    <h3 id="webquast-faq"><a name="faq"></a>WebQUAST FAQ</h3>
+    <p>This FAQ is primarily for WebQUAST; the answers to many common questions about the command-line utility and QUAST, in general, are <a href="http://cab.cc.spbu.ru/quast/manual.html#sec7">here</a>. Note that for any WebQUAST report, you can always get the full command-line QUAST output (the standalone report) by pressing the <em>Download report</em> button, see step 6 in the <a href="#output">Interpreting the output</a> section. </p>
+    <p><strong>Q1. How can find out which commands and parameters of the third-party tools (e.g., minimap2, BUSCO) WebQUAST used in my analysis?</strong><br>The standalone report includes the detailed log file (<code>&lt;downloaded_report&gt;/full_output/quast.log</code>) listing all used commands.</p>
+    <p><strong>Q2. Is it possible to get the list of misassemblies for an assembly?</strong><br>Yes! The list of misassemblies in the <a href="https://www.ensembl.org/info/website/upload/gff3.html">GFF3 format</a> and the sequences of the misassembled contigs in the FASTA format are available in the standalone report. For an assembly labeled <code>&lt;assembly_name&gt;</code>, the corresponding files are <code>&lt;assembly_name&gt;.misassemblies.gff</code> and <code>&lt;assembly_name&gt;.mis_contigs.fa</code> in the <code>&lt;downloaded_report&gt;/full_output/contigs_reports/</code> folder. </p>
+    <p><strong>Q3. Can I check whether misassemblies are co-located with specific genomic features, e.g., repeats or gene-dense regions?</strong><br>This feature is not nicely implemented yet, but there is a workaround. You can upload any genome annotation, such as coordinates of repeated regions, as a <em>Genes</em> file corresponding to your reference genome (see step 3 in the <a href="#submit">Submitting your data</a> section). The BEG, GFF, and plain text formats are supported, see more detail in the <a href="http://cab.cc.spbu.ru/quast/manual.html#sec2.2">online manual</a>. When the evaluation against this reference is complete, you might visually match misassemblies to the track with your annotations in the <a href="#icarus">Icarus browser</a>. You might also search for a specific feature by its name using the search field in the top right corner.</p>
     <p><a href="#top">To the top</a></p>
 {% endblock %}
