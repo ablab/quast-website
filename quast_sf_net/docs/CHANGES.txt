@@ -1,5 +1,28 @@
 -- Version history --
 
+5.3.0
+      1. Compatibility changes:
+       - Linux 32-bit systems are not supported anymore.
+       - Python2 compatibility is not guaranteed anymore.
+
+      2. New option:
+       - "--no-krona" for not drawing Krona pie charts (MetaQUAST de novo mode).
+
+      3. Update in embedded tools:
+       - miminap2 updated from v.2.24 to 2.28 (alignments should remain the same);
+       - new GeneMark license files.
+
+      4. Minor fixes:
+       - proper assembly coloring in the MetaQUAST HTML report for more than 14 assemblies;
+       - catching the Krona charts crashes prematurely;
+       - proper checking of user BED files in the read alignment mode;
+       - prevent crashes due to multi-threading on macOS and Python 3.8+ (switch to single-thread);
+       - cosmetic changes in warning/error messages.
+
+      5. Documentation:
+       - actualized copyrights, citations and support email.
+
+
 5.2.0
       1. Core alignment changes (might affect all alignment-based metrics!):
        - new version of minimap2 (2.24; pre-installed minimap2 in PATH accepted if >=2.19);
